@@ -1,12 +1,13 @@
 ---
+description: "SYSTEM_USER (Transact-SQL)"
 title: "SYSTEM_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SYSTEM_USER_TSQL"
   - "SYSTEM_USER"
@@ -23,12 +24,12 @@ helpviewer_keywords:
   - "system usernames [SQL Server]"
   - "users [SQL Server], names"
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSTEM_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   
@@ -36,10 +37,12 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSTEM_USER  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types  
  **nvarchar(128)**  
   
@@ -59,8 +62,8 @@ SYSTEM_USER
 ### A. Using SYSTEM_USER to return the current system user name  
  The following example declares a `char` variable, stores the current value of `SYSTEM_USER` in the variable, and then prints the value stored in the variable.  
   
-```  
-DECLARE @sys_usr char(30);  
+```sql
+DECLARE @sys_usr CHAR(30);  
 SET @sys_usr = SYSTEM_USER;  
 SELECT 'The current system user is: '+ @sys_usr;  
 GO  
@@ -78,15 +81,15 @@ The current system user is: WillisJo
 ### B. Using SYSTEM_USER with DEFAULT constraints  
  The following example creates a table with `SYSTEM_USER` as a `DEFAULT` constraint for the `SRep_tracking_user` column.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Sales.Sales_Tracking  
 (  
-    Territory_id int IDENTITY(2000, 1) NOT NULL,  
-    Rep_id  int NOT NULL,  
-    Last_sale datetime NOT NULL DEFAULT GETDATE(),  
-    SRep_tracking_user varchar(30) NOT NULL DEFAULT SYSTEM_USER  
+    Territory_id INT IDENTITY(2000, 1) NOT NULL,  
+    Rep_id INT NOT NULL,  
+    Last_sale DATETIME NOT NULL DEFAULT GETDATE(),  
+    SRep_tracking_user VARCHAR(30) NOT NULL DEFAULT SYSTEM_USER  
 );  
 GO  
 INSERT Sales.Sales_Tracking (Rep_id)  
@@ -104,7 +107,7 @@ GO
   
  The following query to selects all the information from the `Sales_Tracking` table:  
   
-```  
+```sql
 SELECT * FROM Sales_Tracking ORDER BY Rep_id;  
 GO  
 ```  
@@ -128,7 +131,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 ### C: Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  
   
-```  
+```sql
 SELECT SYSTEM_USER;  
 ```  
   

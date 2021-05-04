@@ -1,4 +1,5 @@
 ---
+description: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard"
 title: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard  | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/31/2019
@@ -7,18 +8,16 @@ ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
-  - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1"
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 The [SQL Server Import and Export Wizard](../../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) is a tool that allows you to copy data from a source to a destination. This document describes how to use the SQL Server Import and Export Wizard if a source and/or a destination is a SQL Server database containing columns protected with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -63,15 +62,7 @@ The following data providers in the SQL Server Import and Export Wizard support 
 
 ## Permissions for encrypting or decrypting data during migration
 
-To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database.
-
-You also need access to column master keys configured for the columns storing data you're encrypting or decrypting:
-
-- **Certificate Store - Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** - you need the _get_, _unwrapKey_, and _verify_ permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** - the required permission and credentials; you might be prompted when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** - the required permission and credentials; you might be prompted when using a key store or a key, depending on the store and the CSP configuration.
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database. You also need key store permissions to access and use your column master key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

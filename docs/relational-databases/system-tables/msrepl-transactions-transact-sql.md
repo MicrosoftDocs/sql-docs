@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_transactions (Transact-SQL)"
 title: "MSrepl_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSrepl_transactions_TSQL"
   - "MSrepl_transactions"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_transactions system table"
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSrepl_transactions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSrepl_transactions** table contains one row for each replicated transaction. This table is stored in the distribution database.  
   

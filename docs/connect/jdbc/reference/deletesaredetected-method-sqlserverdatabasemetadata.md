@@ -1,4 +1,5 @@
 ---
+description: "deletesAreDetected Method (SQLServerDatabaseMetaData)"
 title: "deletesAreDetected Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.deletesAreDetected"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # deletesAreDetected Method (SQLServerDatabaseMetaData)
 

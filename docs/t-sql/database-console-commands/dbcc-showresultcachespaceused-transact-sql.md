@@ -1,5 +1,6 @@
 ---
-title: "DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL) | Microsoft Docs"
+description: "DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)"
+title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/03/2019"
 ms.prod: sql
@@ -11,11 +12,12 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
+
 # DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
   
@@ -23,10 +25,13 @@ Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](..
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Remarks
 
 The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.
@@ -44,11 +49,10 @@ Requires VIEW SERVER STATE permission.
 |index_space|bigint|Space used for indexes, in KB.|  
 |unused_space|bigint|Space that is part of the reserved space and not used, in KB.|  
 
-
 ## See also
 
 [Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
-[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
-[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
-[SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>
-[DBCC DROPRESULTSETCACHE  &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)
+[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../statements/alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)</br>
+[ALTER DATABASE &#40;Transact-SQL&#41;](../statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)</br>
+[SET RESULT SET CACHING &#40;Transact-SQL&#41;](../statements/set-result-set-caching-transact-sql.md)</br>
+[DBCC DROPRESULTSETCACHE  &#40;Transact-SQL&#41;](./dbcc-dropresultsetcache-transact-sql.md)

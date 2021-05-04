@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_exec_requests (Transact-SQL)"
 title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_exec_requests_TSQL"
   - "sys.dm_exec_requests"
@@ -19,11 +20,11 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
    
@@ -84,11 +85,11 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |query_plan_hash|**binary(8)**|Binary hash value calculated on the query execution plan and used to identify similar query execution plans. You can use query plan hash to find the cumulative cost of queries with similar execution plans.|  
 |statement_sql_handle|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> SQL handle of the individual query.<br /><br />This column is NULL if Query Store is not enabled for the database. |  
 |statement_context_id|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> The optional foreign key to sys.query_context_settings.<br /><br />This column is NULL if Query Store is not enabled for the database. |  
-|dop |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> The degree of parallelism of the query. |  
-|parallel_worker_count |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> The number of reserved parallel workers if this is a parallel query.  |  
-|external_script_request_id |**uniqueidentifier** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> The external script request ID associated with the current request. |  
-|is_resumable |**bit** |**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and later.<br /><br /> Indicates whether the request is a resumable index operation. |  
-|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|dop |**int** |**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> The degree of parallelism of the query. |  
+|parallel_worker_count |**int** |**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> The number of reserved parallel workers if this is a parallel query.  |  
+|external_script_request_id |**uniqueidentifier** |**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> The external script request ID associated with the current request. |  
+|is_resumable |**bit** |**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br /> Indicates whether the request is a resumable index operation. |  
+|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed by this request. Is not nullable.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -99,6 +100,9 @@ When executing parallel requests in [row mode](../../relational-databases/query-
 
 ## Permissions
 If the user has `VIEW SERVER STATE` permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session. `VIEW SERVER STATE` cannot be granted in Azure SQL Database so `sys.dm_exec_requests` is always limited to the current connection.
+
+In Always-On scenarios, if the secondary replica is set to **read-intent only**, the connection to the secondary must specify its application intent in connection string parameters by adding `applicationintent=readonly`. Otherwise, the access check for `sys.dm_exec_requests` won't pass for databases in the availability group, even if `VIEW SERVER STATE` permission is present.
+
   
 ## Examples  
   

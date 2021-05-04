@@ -1,5 +1,6 @@
 ---
 title: "Administer a Report Server Database (Native Mode) | Microsoft Docs"
+description: Learn about administering a Reporting Services deployment, including backup and restore of report server databases and managing encryption keys.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,7 +30,7 @@ ms.author: maggies
   
 -   To copy existing database content to another report server database, you can attach a copy of a report server database and use it with a different report server instance. Or, you can create and run a script that uses SOAP calls to recreate report server content in a new database. You can use the **rs** utility to run the script.  
   
--   To manage connections between the report server and report server database, and to find out which database is used for a particular report server instance, you can use Database Setup page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration tool. To learn more about the report server connection to the report server database, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   To manage connections between the report server and report server database, and to find out which database is used for a particular report server instance, you can use Database Setup page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration tool. To learn more about the report server connection to the report server database, see [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## SQL Server Login and Database Permissions  
  The report server databases are used internally by the report server. Connections to either database are made by the Report Server service. You use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the report server connection to the report server database.  
@@ -73,15 +74,16 @@ SET READ_COMMITTED_SNAPSHOT OFF
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], explicit information about the database version is not available. However, because database versions are always synchronized to product versions, you can use product version information to tell when the database version has changed. Product version information for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is indicated through file version information that appears in the log files, in the headers of all SOAP calls, and when you connect to the report server URL (for example, when you open a browser to `https://localhost/reportserver`).  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+
+ [Create a Native Mode Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configure the Report Server Service Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Create a Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Store Encrypted Report Server Data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configure and Manage Encryption Keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

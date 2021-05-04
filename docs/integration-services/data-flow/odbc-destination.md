@@ -1,4 +1,5 @@
 ---
+description: "ODBC Destination"
 title: "ODBC Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # ODBC Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The ODBC destination bulk loads data into ODBC-supported database tables. The ODBC destination uses an ODBC connection manager to connect to the data source.  
@@ -28,7 +29,7 @@ ms.author: chugu
  The ODBC destination has one regular output and one error output.  
   
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Load Options  
- The ODBC destination can use one of two access load modules. You set the mode in the [ODBC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). The two modes are:  
+ The ODBC destination can use one of two access load modules. You set the mode in the [ODBC Source Editor &#40;Connection Manager Page&#41;](./odbc-source.md). The two modes are:  
   
 -   **Batch**: In this mode the ODBC destination attempts to use the most efficient insertion method based on the perceived ODBC provider capabilities. For most modern ODBC providers, this would mean preparing an INSERT statement with parameters and then using a row-wise array parameter binding (where the array size is controlled by the **BatchSize** property). If you select **Batch** and the provider does not support this method, the ODBC destination automatically switches to the **Row-by-row** mode.  
   
@@ -43,7 +44,7 @@ ms.author: chugu
   
 -   The standard output data columns.  
   
- Depending on the error behavior setting, the ODBC destination supports returning errors (data conversion, truncation) that occur during the extraction process in the error output. For more information, see [ODBC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
+ Depending on the error behavior setting, the ODBC destination supports returning errors (data conversion, truncation) that occur during the extraction process in the error output. For more information, see [ODBC Source Editor &#40;Error Output Page&#41;](./odbc-source.md).  
   
 ## Parallelism  
  There is no limitation on the number of ODBC destination components that can run in parallel against the same table or different tables, on the same machine or on different machines (other than normal global session limits).  
@@ -60,11 +61,11 @@ ms.author: chugu
   
  For more information, see one of the following topics:  
   
--   [ODBC Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC Destination Editor &#40;Connection Manager Page&#41;]()  
   
--   [ODBC Destination Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC Destination Editor &#40;Mappings Page&#41;]()  
   
--   [ODBC Destination Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC Destination Editor &#40;Error Output Page&#41;]()  
   
  The **Advanced Editor** dialog box contains the properties that can be set programmatically.  
   
@@ -178,4 +179,3 @@ ms.author: chugu
   
 #### Redirect Flow  
  The row that is causing the error or the truncation is directed to the error output of the ODBC destination. For more information, see ODBC Destination.  
-  

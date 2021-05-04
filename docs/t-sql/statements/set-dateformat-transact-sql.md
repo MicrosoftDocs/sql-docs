@@ -1,12 +1,13 @@
 ---
+description: "SET DATEFORMAT (Transact-SQL)"
 title: "SET DATEFORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATEFORMAT"
   - "SET DATEFORMAT"
@@ -24,12 +25,12 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEFORMAT"
   - "dateparts [SQL Server], dateformat"
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sets the order of the month, day, and year date parts for interpreting date character strings. These strings are of type **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset**.  
   
@@ -39,11 +40,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET DATEFORMAT { format | @format_var }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *format* | **@**_format_var_  
  Is the order of the date parts. Valid parameters are **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Can be either Unicode or double-byte character sets (DBCS) converted to Unicode. The U.S. English default is **mdy**. For the default DATEFORMAT of all support languages, see [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
@@ -64,17 +67,17 @@ SET DATEFORMAT { format | @format_var }
 ## Examples  
  The following example uses different date strings as inputs in sessions with the same `DATEFORMAT` setting.  
   
-```  
+```sql
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '31/12/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '31/12/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: 2008-12-31 09:01:01.123  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '12/31/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '12/31/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  

@@ -1,9 +1,10 @@
 ---
 title: "Metadata Visibility Configuration | Microsoft Docs"
+description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -19,10 +20,10 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata Visibility Configuration
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The visibility of metadata is limited to securables that a user either owns or on which the user has been granted some permission. For example, the following query returns a row if the user has been granted a permission such as SELECT or INSERT on the table `myTable`.  
   
 ```  
@@ -36,21 +37,43 @@ GO
   
 ## Scope and Impact of Metadata Visibility Configuration  
  Metadata visibility configuration only applies to the following securables.  
-  
-|||  
-|-|-|  
-|Catalog views|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures|  
-|Metadata exposing built-in functions|Information schema views|  
-|Compatibility views|Extended properties|  
+
+:::row:::
+    :::column:::
+        Catalog views
+
+        Metadata exposing built-in functions
+
+        Compatibility views
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures
+
+        Information schema views
+
+        Extended properties
+    :::column-end:::
+:::row-end:::
   
  Metadata visibility configuration does not apply to the following securables.  
-  
-|||  
-|-|-|  
-|Log shipping system tables|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent system tables|  
-|Database maintenance plan system tables|Backup system tables|  
-|Replication system tables|Replication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** stored procedures|  
-  
+
+:::row:::
+    :::column:::
+        Log shipping system tables
+
+        Database maintenance plan system tables
+
+        Replication system tables
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent system tables
+
+        Backup system tables
+
+        Replication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** stored procedures
+    :::column-end:::
+:::row-end:::
+
  Limited metadata accessibility means the following:  
   
 -   Applications that assume **public** metadata access will break.  
@@ -111,26 +134,28 @@ GO
     -   The user has not been denied VIEW DEFINITION permission on the object and has CONTROL, ALTER, or TAKE OWNERSHIP permission on the object. All other users will see NULL.  
   
 -   The definition columns found in the following catalog views:  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   The **ctext** column in the **syscomments** compatibility view.  
   
 -   The output of the **sp_helptext** procedure.  
   
--   The following columns in the information schema views:  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   The following columns in the information schema views:
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   OBJECT_DEFINITION() function  
   
 -   The value stored in the password_hash column of **sys.sql_logins**.  A user that does not have CONTROL SERVER permission will see a NULL value in this column.  
@@ -154,6 +179,9 @@ GO
   
 ### Scope of Permissions  
  Permissions at one scope imply the ability to see metadata at that scope and at all enclosed scopes. For example, SELECT permission on a schema implies that the grantee has SELECT permission on all securables that are contained by that schema. The granting of SELECT permission on a schema therefore enables a user to see the metadata of the schema and also all tables, views, functions, procedures, queues, synonyms, types, and XML schema collections within it. For more information about scopes, see [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ 
+ > [!NOTE]  
+>  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others.
   
 ### Precedence of DENY  
  DENY typically takes precedence over other permissions. For example, if a database user is granted EXECUTE permission on a schema but has been denied EXECUTE permission on a stored procedure in that schema, the user cannot view the metadata for that stored procedure.  
@@ -163,26 +191,84 @@ GO
  For another example, if a user has been granted and denied EXECUTE permission on a stored procedure, which is possible through your various role memberships, DENY takes precedence and the user cannot view the metadata of the stored procedure.  
   
 ### Visibility of Subcomponent Metadata  
- The visibility of subcomponents, such as indexes, check constraints, and triggers is determined by permissions on the parent. These subcomponents do not have grantable permissions. For example, if a user has been granted some permission on a table, the user can view the metadata for the tables, columns, indexes, check constraints, triggers, and other such subcomponents.  
+ The visibility of subcomponents, such as indexes, check constraints, and triggers is determined by permissions on the parent. These subcomponents do not have grantable permissions. For example, if a user has been granted some permission on a table, the user can view the metadata for the tables, columns, indexes, check constraints, triggers, and other such subcomponents.  Another example is granting SELECT on only an individual column of a given table: this will allow the grantee to view the matadata of the whole table, including all columns. One way to think of it, is that the VIEW DEFINITION permission only works on entity-level (the table in this case) and is not available for Sub-entity lists (such as column or security expressions).
+ 
+The following code demonstrates this behavior:
+```sql
+CREATE TABLE t1
+(
+	c1 int,
+	c2 varchar
+ );
+GO
+CREATE USER testUser WITHOUT LOGIN;
+GO
+
+EXECUTE AS USER='testUser';
+SELECT OBJECT_SCHEMA_NAME(object_id), OBJECT_NAME(object_id), name FROM sys.columns;
+SELECT * FROM sys.tables
+-- this returns no data, as the user has no permissions
+REVERT;
+GO
+
+-- granting SELECT on only 1 column of the table:
+GRANT SELECT ON t1(c1) TO testUser;
+GO
+EXECUTE AS USER='testUser';
+SELECT OBJECT_SCHEMA_NAME(object_id), OBJECT_NAME(object_id), name FROM sys.columns;
+SELECT * FROM sys.tables
+-- this returns metadata for all columns of the table and thge table itself
+REVERT;
+GO
+
+DROP TABLE t1
+DROP USER testUser
+```
   
 #### Metadata That Is Accessible to All Database Users  
  Some metadata must be accessible to all users in a specific database. For example, filegroups do not have conferrable permissions; therefore, a user cannot be granted permission to view the metadata of a filegroup. However, any user that can create a table must be able to access filegroup metadata to use the ON *filegroup* or TEXTIMAGE_ON *filegroup* clauses of the CREATE TABLE statement.  
   
  The metadata that is returned by the DB_ID() and DB_NAME() functions is visible to all users.  
   
- The following table lists the catalog views that are visible to the **public** role.  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ This is a list of the catalog views that are visible to the **public** role.  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

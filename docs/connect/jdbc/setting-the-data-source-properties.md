@@ -1,5 +1,6 @@
 ---
-title: "Setting the data source properties | Microsoft Docs"
+title: "Setting the data source properties"
+description: "Learn about data sources in JDBC and how to set their properties to configure database access with Java."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Setting the data source properties

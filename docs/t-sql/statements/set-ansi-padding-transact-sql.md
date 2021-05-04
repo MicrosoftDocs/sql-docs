@@ -1,12 +1,13 @@
 ---
+description: "SET ANSI_PADDING (Transact-SQL)"
 title: "SET ANSI_PADDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ANSI_PADDING_TSQL"
   - "ANSI_PADDING"
@@ -21,32 +22,32 @@ helpviewer_keywords:
   - "SET ANSI_PADDING statement"
   - "trailing blanks"
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_PADDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Controls the way the column stores values shorter than the defined size of the column, and the way the column stores values that have trailing blanks in **char**, **varchar**, **binary**, and **varbinary** data.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
-  
-```
--- Syntax for SQL Server
-
+ 
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 
+```syntaxsql
 SET ANSI_PADDING { ON | OFF }
 ```
 
-```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
-
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+```syntaxsql
 SET ANSI_PADDING ON
 ```
 
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  Columns defined with **char**, **varchar**, **binary**, and **varbinary** data types have a defined size.  
   
  This setting affects only the definition of new columns. After the column is created, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the values based on the setting when the column was created. Existing columns are not affected by a later change to this setting.  

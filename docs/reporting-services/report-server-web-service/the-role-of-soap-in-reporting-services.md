@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
-author: maggiesMSFT
 ms.author: maggies
 ---
 # The Role of SOAP in Reporting Services
@@ -57,8 +56,7 @@ public void DeleteItem(string item);
   
 ## See Also  
  [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
   

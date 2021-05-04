@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysschedules (Transact-SQL)"
 title: "dbo.sysschedules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysschedules_TSQL"
   - "sysschedules"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysschedules system table"
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job schedules. This table is stored in the **msdb** database.  
   

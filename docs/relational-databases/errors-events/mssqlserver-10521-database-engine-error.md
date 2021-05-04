@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_10521"
 title: "MSSQLSERVER_10521 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "10521 (Database Engine error)"
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_10521
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10521|  
 |Event Source|MSSQLSERVER|  

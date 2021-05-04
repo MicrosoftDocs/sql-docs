@@ -1,6 +1,6 @@
 ---
 title: "Handling null values"
-description: "Demonstrates how to work with GUID and uniqueidentifier values in SQL Server and .NET."
+description: "Demonstrates how to work with null values in SQL Server and .NET and how they differ from empty values."
 ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
@@ -9,8 +9,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Handling null values
@@ -20,7 +20,7 @@ ms.reviewer: v-kaywon
 A null value in a relational database is used when the value in a column is unknown or missing. A null is neither an empty string (for character or datetime data types) nor a zero value (for numeric data types). The ANSI SQL-92 specification states that a null must be the same for all data types, so that all nulls are handled consistently. The <xref:System.Data.SqlTypes> namespace provides null semantics by implementing the <xref:System.Data.SqlTypes.INullable> interface. Each of the data types in <xref:System.Data.SqlTypes> has its own `IsNull` property and a `Null` value that can be assigned to an instance of that data type.  
   
 > [!NOTE]
->  The .NET Framework version 2.0 and .NET Core version 1.0 introduced support for nullable types, which allow programmers to extend a value type to represent all values of the underlying type. These CLR nullable types represent an instance of the <xref:System.Nullable> structure. This capability is especially useful when value types are boxed and unboxed, providing enhanced compatibility with object types. CLR nullable types are not intended for storage of database nulls because an ANSI SQL null does not behave the same way as a `null` reference (or `Nothing` in Visual Basic). For working with database ANSI SQL null values, use <xref:System.Data.SqlTypes> nulls rather than <xref:System.Nullable>. For more information on working with CLR nullable types in C# see [Nullable Types](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/), and for C# see [Using Nullable Types](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
+>  The .NET Framework version 2.0 and .NET Core version 1.0 introduced support for nullable types, which allow programmers to extend a value type to represent all values of the underlying type. These CLR nullable types represent an instance of the <xref:System.Nullable> structure. This capability is especially useful when value types are boxed and unboxed, providing enhanced compatibility with object types. CLR nullable types are not intended for storage of database nulls because an ANSI SQL null does not behave the same way as a `null` reference (or `Nothing` in Visual Basic). For working with database ANSI SQL null values, use <xref:System.Data.SqlTypes> nulls rather than <xref:System.Nullable>. For more information on working with CLR nullable types in C# see [Nullable Types](/dotnet/csharp/programming-guide/nullable-types/), and for C# see [Using Nullable Types](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
   
 ## Nulls and three-valued logic  
 Allowing null values in column definitions introduces three-valued logic into your application. A comparison can evaluate to one of three conditions:  
@@ -101,7 +101,7 @@ In addition, the following rules apply for an instance of `DataRow.["columnName"
   
 - The <xref:System.Data.DataRow.IsNull%2A> method returns `true` for both `DbNull.Value` and `INullable.Null`.  
   
-## Assigning null values  
+## Assigning null values to SqlTypes  
 The default value for any <xref:System.Data.SqlTypes> instance is null.  
   
 Nulls in <xref:System.Data.SqlTypes> are type-specific and cannot be represented by a single value, such as `DbNull`. Use the `IsNull` property to check for nulls.  

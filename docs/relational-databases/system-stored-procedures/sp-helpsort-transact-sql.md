@@ -1,4 +1,5 @@
 ---
+description: "sp_helpsort (Transact-SQL)"
 title: "sp_helpsort (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_helpsort_TSQL"
   - "sp_helpsort"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpsort"
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpsort (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Displays the sort order and character set for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: "SQL-92 Compliance"
 title: "SQL-92 Compliance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "SQL-92 compliance [ODBC]"
   - "ODBC desktop database drivers [ODBC], SQL-92 compliance"
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL-92 Compliance
 The ODBC Desktop Database Drivers and the underlying Microsoft Jet engine are not SQL-92 compliant. They support many features that have been defined in SQL-92. Some features supported in the driver are not supported in SQL-92. For more information, see the *Microsoft Jet Database Engine Programmer's Guide*. The following are the major differences between the two:  

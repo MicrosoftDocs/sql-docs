@@ -17,10 +17,10 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Tutorial: Configure replication between two fully connected servers (transactional)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Transactional replication is a good solution to the problem of moving data between continuously connected servers. By using the Replication Wizard, you can easily configure and administer a replication topology. 
 
-This tutorial shows you how to configure a transactional replication topology for continuously connected servers. For more information about how transactional replication works, see the [overview of transactional replication](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
+This tutorial shows you how to configure a transactional replication topology for continuously connected servers. For more information about how transactional replication works, see the [overview of transactional replication](./transactional/transactional-replication.md). 
   
 ## What you will learn  
 This tutorial teaches you to publish data from one database to another by using transactional replication.  
@@ -44,13 +44,13 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
   
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](../backup-restore/restore-a-database-backup-using-ssms.md). 
  
 >[!NOTE]
 > - Replication is not supported on SQL Server instances that are more than two versions apart. For more information, see [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the publisher and subscriber by using a login that is a member of the **sysadmin** fixed server role. For more information on this role, see [Server-level roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the publisher and subscriber by using a login that is a member of the **sysadmin** fixed server role. For more information on this role, see [Server-level roles](../security/authentication-access/server-level-roles.md).  
   
   
 **Estimated time to complete this tutorial: 60 minutes**  
@@ -162,7 +162,7 @@ In this section, you add a subscriber to the publication that you previously cre
 
    !["Publication" page with publication selected](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. On the **Distribution Agent Location** page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, see [Subscribe to publications](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications).
+4. On the **Distribution Agent Location** page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, see [Subscribe to publications](./subscribe-to-publications.md).
 
    !["Distribution Agent Location" page with the option selected to run all agents at the distributor](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

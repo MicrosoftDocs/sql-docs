@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_7711"
 title: "MSSQLSERVER_7711 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "7711 (Database Engine error)"
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_7711
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|7711|  
 |Event Source|MSSQLSERVER|  

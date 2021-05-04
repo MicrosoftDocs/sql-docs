@@ -1,4 +1,5 @@
 ---
+description: "getBlob Method (SQLServerCallableStatement)"
 title: "getBlob Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getBlob"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getBlob Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

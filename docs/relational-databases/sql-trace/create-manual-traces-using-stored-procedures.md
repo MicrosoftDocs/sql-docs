@@ -1,4 +1,5 @@
 ---
+description: "Create Manual Traces using Stored Procedures"
 title: "Create Manual Traces using Stored Procedures"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
@@ -12,7 +13,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create Manual Traces using Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides [!INCLUDE[tsql](../../includes/tsql-md.md)] system stored procedures to create traces on an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. These system stored procedures can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. This allows you to write custom applications specific to the needs of your enterprise.  
   
 ## In This Section  

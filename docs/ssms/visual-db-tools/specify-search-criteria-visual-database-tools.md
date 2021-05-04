@@ -1,4 +1,5 @@
 ---
+description: "Specify Search Criteria (Visual Database Tools)"
 title: Specify Search Criteria
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,12 +22,11 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Specify Search Criteria (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use search criteria to restrict the number of rows returned by a query.  
   
 For details about the particular steps to creating search criteria, refer to the topics listed in the following table.  

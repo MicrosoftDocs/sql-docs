@@ -1,5 +1,6 @@
 ---
-title: "Overview of the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Overview of the Microsoft Drivers for PHP for SQL Server"
+description: "Learn an overview of the Microsoft SQLSRV and PDO_SQSRV Drivers for PHP for SQL Server and how you can use them in a PHP application for database access."
 ms.custom: ""
 ms.date: "03/27/2018"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Overview of the Microsoft Drivers for PHP for SQL Server
 
@@ -37,8 +38,6 @@ To use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you must h
 
 ## See Also
 
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)  
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)  
+[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

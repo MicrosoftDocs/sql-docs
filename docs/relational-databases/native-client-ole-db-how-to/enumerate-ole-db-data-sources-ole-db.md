@@ -1,25 +1,26 @@
 ---
-title: "Enumerate OLE DB Data Sources (OLE DB) | Microsoft Docs"
+description: "Enumerate SQL Server Native Client OLE DB Data Sources (OLE DB)"
+title: "Enumerate OLE DB data sources (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data sources [OLE DB]"
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Enumerate OLE DB Data Sources (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Enumerate SQL Server Native Client OLE DB Data Sources (OLE DB)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to use the enumerator object to list the data sources available.  
   
- To list the data sources visible to the SQLOLEDB enumerator, the consumer calls the [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) method. This method returns a rowset of information about the currently visible data sources.  
+ To list the data sources visible to the SQLOLEDB enumerator, the consumer calls the [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) method. This method returns a rowset of information about the currently visible data sources.  
   
  Depending on the network library used, the appropriate domain is searched for the data sources. For named pipes, it is the domain to which the client is logged on. For AppleTalk, it is the default zone. For SPX/IPX, it is the list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations found in the bindery. For Banyan VINES, it is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations found on the local network. Multiprotocol and TCP/IP sockets are not supported.  
   
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To enumerate OLE DB data sources  
   
@@ -45,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  Retrieve data from the rowset's copy of the row by calling **IRowset::GetData**, and process it.  
   
 ## Example  
- Compile with ole32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
+ Compile with ole32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  
@@ -273,5 +274,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

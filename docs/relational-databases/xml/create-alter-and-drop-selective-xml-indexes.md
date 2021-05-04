@@ -1,5 +1,6 @@
 ---
 title: "Create, Alter, and Drop Selective XML Indexes | Microsoft Docs"
+description: Learn how to create a new selective XML index, or alter or drop an existing selective XML index.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Create, Alter, and Drop Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Describes how to create a new selective XML index, or alter or drop an existing selective XML index.  
   
  For more information about selective XML indexes, see [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  

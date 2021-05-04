@@ -1,5 +1,6 @@
 ---
 title: Validation Stored Procedure
+description: Learn how to use the mdm.udpValidateModel stored procedure to apply business rules to all members in the model version in Master Data Services.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Validation Stored Procedure (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validate a version to apply business rules to all members in the model version.  
   

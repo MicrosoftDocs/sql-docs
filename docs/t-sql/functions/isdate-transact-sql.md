@@ -1,12 +1,10 @@
 ---
-title: "ISDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+description: "ISDATE (Transact-SQL)"
+title: ISDATE (Transact-SQL)
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ISDATETIME"
   - "ISDATE_TSQL"
@@ -28,12 +26,17 @@ helpviewer_keywords:
   - "time [SQL Server], validate"
   - "ISDATE function [SQL Server]"
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 03/14/2017
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # ISDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns 1 if the *expression* is a valid **date**, **time**, or **datetime** value; otherwise, 0.  
   
@@ -45,11 +48,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-ISDATE ( expression )  
-```  
-  
-## Arguments  
+```syntaxsql
+ISDATE ( expression )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is a character string or [expression](../../t-sql/language-elements/expressions-transact-sql.md) that can be converted to a character string. The expression must be less than 4,000 characters. Date and time data types, except datetime and smalldatetime, are not allowed as the argument for ISDATE.  
   
@@ -79,7 +84,7 @@ ISDATE ( expression )
 ### A. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     PRINT 'VALID'  
 ELSE  
@@ -89,7 +94,7 @@ ELSE
 ### B. Showing the effects of the SET DATEFORMAT and SET LANGUAGE settings on return values  
  The following statements show the values that are returned as a result of the settings of `SET DATEFORMAT` and `SET LANGUAGE`.  
   
-```  
+```sql  
 /* Use these sessions settings. */  
 SET LANGUAGE us_english;  
 SET DATEFORMAT mdy;  
@@ -139,7 +144,7 @@ SET DATEFORMAT mdy;
 ### C. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     SELECT 'VALID';  
 ELSE  
@@ -147,7 +152,4 @@ ELSE
 ```  
   
 ## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
-
+ [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

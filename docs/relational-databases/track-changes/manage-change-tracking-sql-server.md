@@ -1,4 +1,5 @@
 ---
+description: "Manage Change Tracking (SQL Server)"
 title: "Manage Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
@@ -15,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Change Tracking (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic describes how to manage change tracking. It also describes how to configure security and determine the effects on storage and performance when change tracking is used.  
   

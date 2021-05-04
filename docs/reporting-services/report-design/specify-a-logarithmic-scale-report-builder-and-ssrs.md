@@ -1,5 +1,6 @@
 ---
 title: "Specify a Logarithmic Scale (Report Builder) | Microsoft Docs"
+description: Improve the appearance of your chart by making your data more manageable with a logarithmic scale on a chart in a paginated report.  
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

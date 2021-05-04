@@ -1,4 +1,5 @@
 ---
+description: "sp_addextendedproperty (Transact-SQL)"
 title: "sp_addextendedproperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addextendedproperty"
   - "sp_addextendedproperty_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addextendedproperty"
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Adds a new extended property to a database object.  
   

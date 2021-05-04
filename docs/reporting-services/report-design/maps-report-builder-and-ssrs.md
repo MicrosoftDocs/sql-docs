@@ -1,5 +1,6 @@
 ---
 title: "Maps (Report Builder) | Microsoft Docs"
+description: Get acquainted with how to add a map to your paginated report showing business data against a geographical background in your paginated report in Report Builder. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -156,7 +157,7 @@ ms.author: maggies
   
  For step-by-step instructions, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- For more information about tiles, see [Bing Maps Tile System](https://go.microsoft.com/fwlink/?linkid=147315). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
+ For more information about tiles, see [Bing Maps Tile System](/bingmaps/articles/bing-maps-tile-system). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="MapLayers"></a> Understanding Map Layers and Map Elements  
  A map can have multiple layers. There are three types of layers. Each layer displays one type of spatial data:  
@@ -175,7 +176,7 @@ ms.author: maggies
   
  To work with layers, select a map on the report design surface to display the Map pane. The Map pane displays the list of layers that are defined for the map. Use this pane to select a layer to change the options, to change the drawing order of layers, to add a layer or run the Map Layer wizard, to hide or show a layer, and to change the view center and zoom level for the map viewport. The following figure shows a viewport:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Screenshot of the Map Layers section that points out the Layer Toolbar, Layer visibility, Layer name, Type of spacial data source, Layer type, Adjust Zoom Level, and Adjust View Center options.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  For more information about map layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -247,5 +248,4 @@ ms.author: maggies
  [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
   

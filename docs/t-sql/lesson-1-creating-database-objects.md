@@ -1,4 +1,5 @@
 ---
+description: "T-SQL Tutorial: Create & query database objects"
 title: "T-SQL Tutorial: Create & query database objects| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2018"
@@ -9,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lesson 1: Create and query database objects
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,11 +32,11 @@ To run [!INCLUDE[tsql](../includes/tsql-md.md)] statements in [!INCLUDE[ssManStu
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 If you don't have a SQL Server instance, create one. To create one, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md).
 
 ## Create a database
 Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [`CREATE DATABASE`](statements/create-database-transact-sql.md) statement has a required parameter: the name of the database.` CREATE DATABASE` also has many optional parameters, such as the disk location where you want to put the database files. When you execute `CREATE DATABASE` without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters.
@@ -220,11 +221,23 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
   
 ### Useful functions in a SELECT Statement  
 For information about some functions that you can use to work with data in SELECT statements, see the following topics:  
-  
-|||  
-|-|-|  
-|[String Functions &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Mathematical Functions &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+
+:::row:::
+    :::column:::
+        [String Functions &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [Mathematical Functions &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Text and Image Functions &#40;Transact-SQL&#41;](./functions/text-and-image-functions-textptr-transact-sql.md)
+    :::column-end:::
+:::row-end:::
 
 ## Create views and stored procedures
 A view is a stored SELECT statement, and a stored procedure is one or more [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute as a batch.  
@@ -285,6 +298,5 @@ The next article teaches you how to configure permissions on database objects. T
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
 > [Next steps](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

@@ -1,11 +1,12 @@
 ---
+description: "Transactions Event Category"
 title: "Transactions Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL Server event classes, Transactions event category"
   - "event classes [SQL Server], Transactions event category"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transactions Event Category
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Transactions** event classes can be used to monitor the status of transactions. The event class names that are prefixed with **TM:** are used to track the transaction-related operations that are sent through the transaction management interface.  
   
 ## In This Section  

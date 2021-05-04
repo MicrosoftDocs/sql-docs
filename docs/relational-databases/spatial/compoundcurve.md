@@ -1,6 +1,7 @@
 ---
+description: "CompoundCurve"
 title: "CompoundCurve | Microsoft Docs"
-ms.date: "06/02/2016"
+ms.date: "07/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -9,16 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A **CompoundCurve** is a collection of zero or more continuous **CircularString** or **LineString** instances of either geometry or geography types.  
   
-> [!IMPORTANT]  
->  For a detailed description and examples of the new spatial features in this release, including the **CompoundCurve** subtype, download the white paper, [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
-  
- An empty **CompoundCurve** instance can be instantiated, but for a **CompoundCurve** to be valid it must meet the following criteria:  
+An empty **CompoundCurve** instance can be instantiated, but for a **CompoundCurve** to be valid it must meet the following criteria:  
   
 1.  It must contain at least one **CircularString** or **LineString** instance.  
   
@@ -29,7 +27,7 @@ If a **CompoundCurve** contains a sequence of multiple **CircularString** and **
 ## CompoundCurve instances  
 The following illustration shows valid **CompoundCurve** types.  
   
-![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
+![CompoundCurve examples](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
 ### Accepted instances  
  **CompoundCurve** instance is accepted if it is an empty instance or meets the following criteria.  

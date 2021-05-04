@@ -1,4 +1,5 @@
 ---
+description: "Create Queries with Unnamed Parameters (Visual Database Tools)"
 title: Create Queries with Unnamed Parameters
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Create Queries with Unnamed Parameters (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can create a query with an unnamed parameter by specifying a question mark (?) as a placeholder for a literal value. Query and View Designer will give it a temporary name. You can specify as many unnamed parameters in the query as you need.  
   
 When you run the query in the Query and View Designer, the Query Parameters Dialog Box is displayed with the temporary name.  

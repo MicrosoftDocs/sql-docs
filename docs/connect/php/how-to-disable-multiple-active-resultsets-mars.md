@@ -1,7 +1,8 @@
 ---
-title: "How to: Disable Multiple Active Resultsets (MARS) | Microsoft Docs"
+title: "How to: disable multiple active resultsets (MARS)"
+description: "Learn how to disable Multiple Active Resultsets support when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "multiple active result sets, disabling"
   - "MARS, disabling"
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Disable Multiple Active Resultsets (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +34,7 @@ If you need to connect to a SQL Server data source that does not enable Multiple
   
     The connection cannot process this operation because there is a statement with pending results.  To make the connection available for other queries either fetch all results, cancel or free the statement. For more information about the MultipleActiveResultSets connection option, see [Connection Options](../../connect/php/connection-options.md).  
   
-## Example  
+## SQLSRV example  
 The following example shows how to disable MARS support, using the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  
@@ -53,7 +54,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Example  
+## PDO_SQLSRV example  
 The following example shows how to disable MARS support, using the PDO_SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: "Constructing SQL Statements"
 title: "Constructing SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Constructing SQL Statements
 SQL statements can be constructed in one of three ways: hard-coded during development, constructed at run time, or entered directly by the user.  

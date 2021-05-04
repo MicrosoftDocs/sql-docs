@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Examples: Model Deployment Packages (MDS)"
 title: Model Deployment Package examples
 ms.custom: ""
 ms.date: "07/28/2017"
@@ -16,16 +17,16 @@ ms.author: lle
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Sample model packages with data are included when you install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. The default location for these package files is \<drive>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  For instructions on how to deploy the sample model packages, see [Deploying Sample Models and Data](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). You deploy the sample model packages by using the [MDSModelDeploy tool](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Sample Updates in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Sample Updates in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]**  
 > 
->  The sample packages were updated to support the following new capabilities.  
+>  The sample packages support the following capabilities.  
 > 
 >  -   Show Many-to-Many Relationships.  
 > 

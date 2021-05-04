@@ -1,4 +1,5 @@
 ---
+description: "Loading and Running a Remote Package Programmatically"
 title: "Loading and Running a Remote Package Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Loading and Running a Remote Package Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To run remote packages from a local computer that does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, start the packages so that they run on the remote computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed. You do this by having the local computer use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, a Web service, or a remote component to start the packages on the remote computer. If you try to start the remote packages directly from the local computer, the packages will load onto and try to run from the local computer. If the local computer does not have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, the packages will not run.  
@@ -414,11 +415,10 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## External Resources  
   
--   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx), on technet.microsoft.com  
+-   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Loading and Running a Local Package Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Loading the Output of a Local Package](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
-  
   

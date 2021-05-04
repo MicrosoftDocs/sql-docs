@@ -1,4 +1,5 @@
 ---
+description: "sys.server_permissions (Transact-SQL)"
 title: "sys.server_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.server_permissions_TSQL"
   - "sys.server_permissions"
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns one row for each server-level permission.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifies class of thing on which permission exists.<br /><br /> 100 = Server<br /><br /> 101 = Server-principal<br /><br /> 105 = Endpoint|  
-|**class_desc**|**nvarchar(60)**|Description of class on which permission exists. One of the following values:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class**|**tinyint**|Identifies class of thing on which permission exists.<br /><br /> 100 = Server<br /><br /> 101 = Server-principal<br /><br /> 105 = Endpoint<br /><br /> 108 = Availability Group|  
+|**class_desc**|**nvarchar(60)**|Description of class on which permission exists. One of the following values:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**<br /><br /> **AVAILABILITY GROUP**|  
 |**major_id**|**int**|ID of the securable on which permission exists, interpreted according to class. For most, this is just the kind of ID that applies to what the class represents. Interpretation for non-standard is as follows:<br /><br /> 100 = Always 0|  
 |**minor_id**|**int**|Secondary ID of thing on which permission exists, interpreted according to class.|  
 |**grantee_principal_id**|**int**|Server-principal-ID to which the permissions are granted.|  

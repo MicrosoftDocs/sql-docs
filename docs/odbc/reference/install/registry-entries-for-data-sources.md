@@ -1,4 +1,5 @@
 ---
+description: "Registry Entries for Data Sources"
 title: "Registry Entries for Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "data sources [ODBC], configuring"
   - "registry entries for data sources [ODBC]"
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Registry Entries for Data Sources
 > [!NOTE]  

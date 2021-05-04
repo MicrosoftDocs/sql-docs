@@ -1,5 +1,6 @@
 ---
 title: "OLE DB Connection Type | Microsoft Docs"
+description: Use the information in this article about the OLE DB connection type to learn how to build a data source.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -53,7 +54,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  To successfully retrieve the data that you want, you must provide query syntax that is supported by the data provider. Parameter support varies by data provider. For more information, see topics that are specific to the data provider that you select. For example:  
   
--   [Analysis Services OLE DB Provider &#40;Analysis Services - Multidimensional Data&#41;](https://docs.microsoft.com/analysis-services/instances/data-providers-used-for-analysis-services-connections
+-   [Analysis Services OLE DB Provider &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/instances/data-providers-used-for-analysis-services-connections
 )  
    
   
@@ -95,5 +96,4 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

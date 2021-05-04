@@ -1,5 +1,6 @@
 ---
 title: "Supported DDL for Natively Compiled T-SQL modules | Microsoft Docs"
+description: Learn about supported DDL constructs for natively compiled T-SQL modules, such as stored procedures, scalar UDFs, inline TVFs, and triggers.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported DDL for Natively Compiled T-SQL modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic lists the supported DDL constructs for natively compiled T-SQL modules, such as stored procedures, scalar UDFs, inline TVFs, and triggers.  
   
  For information on features and T-SQL surface area that can be used as part of natively compiled T-SQL modules, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
@@ -51,6 +52,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      For more information, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md) and [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md).  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

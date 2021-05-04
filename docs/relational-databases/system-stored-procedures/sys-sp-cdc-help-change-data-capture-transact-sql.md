@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_help_change_data_capture (Transact-SQL)"
 title: "sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_cdc_help_change_data_capture_TSQL"
   - "sys.sp_cdc_help_change_data_capture_TSQL"
@@ -19,13 +20,13 @@ helpviewer_keywords:
   - "sys.sp_cdc_help_change_data_capture"
   - "sp_cdc_help_change_data_capture"
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_help_change_data_capture (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns the change data capture configuration for each table enabled for change data capture in the current database. Up to two rows can be returned for each source table, one row for each capture instance. Change data capture is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Returns the change data capture configuration for each table enabled for change data capture in the current database. Up to two rows can be returned for each source table, one row for each capture instance. Change data capture is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,5 +106,4 @@ GO
 EXECUTE sys.sp_cdc_help_change_data_capture;  
 GO  
 ```  
-  
   

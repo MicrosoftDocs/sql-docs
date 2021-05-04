@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microsoft Docs"
+description: In this tutorial, you create a pie chart in a Reporting Services paginated report in Report Builder. Then you add percentages and modify the pie chart.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

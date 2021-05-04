@@ -1,20 +1,21 @@
 ---
+description: "sys.dm_pdw_network_credentials (Transact-SQL)"
 title: "sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-author: stevestein
-ms.author: sstein
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Returns a list of all network credentials stored in the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance for all target servers. Results are listed for the Control node, and every Compute node.  
   
@@ -32,6 +33,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
  The key for this dynamic management view is *pdw_node_id* plus *target_server_name*.  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

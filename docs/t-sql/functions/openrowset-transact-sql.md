@@ -1,4 +1,5 @@
 ---
+description: "OPENROWSET (Transact-SQL)"
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OPENROWSET_TSQL"
   - "OPENROWSET"
@@ -22,13 +23,13 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). The `OPENROWSET` function can be referenced in the FROM clause of a query as if it were a table name. The `OPENROWSET` function can also be referenced as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 
@@ -38,11 +39,11 @@ Includes all connection information that is required to access remote data from 
 
 ## Syntax
 
-```
+```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
@@ -55,7 +56,7 @@ OPENROWSET
    [ , DATASOURCE = 'data_source_name' ]
 
    [ , ERRORFILE = 'file_name' ]
-   [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ , MAXERRORS = maximum_errors ]
 
    [ , FIRSTROW = first_row ]
@@ -68,8 +69,10 @@ OPENROWSET
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
-   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -150,8 +153,8 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
@@ -162,12 +165,12 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, t
 `ERRORFILE` ='*file_name*' specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
 
 The error file is created at the start of the command execution. An error will be raised if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This file references each row in the error file and provides error diagnostics. After the errors have been corrected, the data can be loaded.
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `error_file_path` can be in Azure blob storage.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `error_file_path` can be in Azure blob storage.
 
 ##### ERRORFILE_DATA_SOURCE_NAME
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ##### MAXERRORS
 `MAXERRORS` =*maximum_errors* specifies the maximum number of syntax errors or nonconforming rows, as defined in the format file, that can occur before OPENROWSET throws an exception. Until MAXERRORS is reached, OPENROWSET ignores each bad row, not loading it, and counts the bad row as one error.
@@ -231,7 +234,7 @@ SELECT *
 #### BULK Input file format options
 
 ##### CODEPAGE
-`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' }
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
 
 > [!IMPORTANT]
@@ -245,11 +248,11 @@ Specifies the code page of the data in the data file. CODEPAGE is relevant only 
 |ACP|Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
 |OEM (default)|Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
 |RAW|No conversion occurs from one code page to another. This is the fastest option.|
-|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|
+|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] do not support code page 65001 (UTF-8 encoding).|
 
 ##### FORMAT
 `FORMAT` **=** 'CSV'
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
 ```sql
@@ -268,12 +271,12 @@ A format file is required to define column types in the result set. The only exc
 
 For information about format files, see [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ##### FIELDQUOTE
 `FIELDQUOTE` **=** 'field_quote'
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
 ## Remarks
@@ -391,8 +394,8 @@ FROM Northwind.dbo.Customers AS c
  The following example creates a small table for demonstration purposes, and inserts file data from a file named `Text1.txt` located in the `C:` root directory into a `varbinary(max)` column.
 
 ```sql
-CREATE TABLE myTable(FileName nvarchar(60),
-  FileType nvarchar(60), Document varbinary(max));
+CREATE TABLE myTable(FileName NVARCHAR(60),
+  FileType NVARCHAR(60), Document VARBINARY(max));
 GO
 
 INSERT INTO myTable(FileName, FileType, Document)
@@ -411,7 +414,7 @@ GO
 
 The following example uses a format file to retrieve rows from a tab-delimited text file, `values.txt` that contains the following data:
 
-```sql
+```
 1     Data Item 1
 2     Data Item 2
 3     Data Item 3
@@ -419,7 +422,7 @@ The following example uses a format file to retrieve rows from a tab-delimited t
 
 The format file, `values.fmt`, describes the columns in `values.txt`:
 
-```sql
+```
 9.0
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                      SQL_Latin1_General_Cp437_BIN
@@ -448,7 +451,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### G. Accessing data from a CSV file with a format file
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 
 ```sql
 SELECT *
@@ -470,8 +473,8 @@ SELECT * FROM OPENROWSET(
 ```
 
 ```sql
-select *
-from openrowset
+SELECT *
+FROM OPENROWSET
    (  'MSDASQL'
      ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
      ,'select * from E:\Tlog\TerritoryData.csv')
@@ -485,7 +488,7 @@ from openrowset
 
 ### I. Accessing data from a file stored on Azure Blob storage
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 The following example uses an external data source that points to a container in an Azure storage account and a database scoped credential created for a shared access signature.
 
 ```sql
@@ -531,7 +534,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database only supports reading from Azure Blob Storage.
+> Azure SQL Database only supports reading from Azure Blob Storage using SAS token.
 
 ### Additional Examples
 

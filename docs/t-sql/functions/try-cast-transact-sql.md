@@ -1,4 +1,5 @@
 ---
+description: "TRY_CAST (Transact-SQL)"
 title: "TRY_CAST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TRY_CAST_TSQL"
   - "TRY_CAST"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_CAST function"
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||>= aps-pdw-2016||= azure-sqldw-latest"
 ---
 # TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.  
   
@@ -28,12 +29,13 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TRY_CAST ( expression AS data_type [ ( length ) ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  The value to be cast. Any valid expression.  
   
@@ -112,7 +114,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### C. TRY_CAST succeeds  
  This example demonstrates that the expression must be in the expected format.  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  

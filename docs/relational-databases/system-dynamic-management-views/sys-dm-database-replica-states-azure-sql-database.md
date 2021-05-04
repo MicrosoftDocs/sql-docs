@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_database_replica_states (Azure SQL Database)"
 title: "sys.dm_database_replica_states (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_database_replica_states_TSQL"
   - "sys.dm_database_replica_states"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_database_replica_states dynamic management view"
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_database_replica_states (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns a row for the database, exposing state for the local replica.  
   
@@ -64,7 +65,7 @@ ms.author: sstein
 |**last_commit_lsn**|**numeric(25,0)**|Actual log sequence number corresponding to the last commit record in the transaction log.<br /><br /> On the primary database, this corresponds to the last commit record processed. Rows for secondary databases show the log sequence number that the secondary replica has sent to the primary replica.<br /><br /> On the secondary replica, this is the last commit record that was redone.|  
 |**last_commit_time**|**datetime**|Time corresponding to the last commit record.<br /><br /> On the secondary database, this time is the same as on the primary database.<br /><br /> On the primary replica, each secondary database row displays the time that the secondary replica that hosts that secondary database has reported back to the primary replica. The difference in time between the primary-database row and a given secondary-database row represents approximately the recovery point objective (RPO), assuming that the redo process is caught up and that the progress has been reported back to the primary replica by the secondary replica.|  
 |**low_water_mark_for_ghosts**|**bigint**|A monotonically increasing number for the database indicating a low water mark used by ghost cleanup on the primary database. If this number is not increasing over time, it implies that ghost cleanup might not happen. To decide which ghost rows to clean up, the primary replica uses the minimum value of this column for this database across all availability replicas (including the primary replica).|  
-|**secondary_lag_seconds**|**bigint**|The number of seconds that the secondary replica is behind the primary replica during synchronization.<br /><br />**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
+|**secondary_lag_seconds**|**bigint**|The number of seconds that the secondary replica is behind the primary replica during synchronization.<br /><br />**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.|  
 |**quorum_commit_lsn**|**numeric(25,0)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |**quorum_commit_time**|**datetime**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 

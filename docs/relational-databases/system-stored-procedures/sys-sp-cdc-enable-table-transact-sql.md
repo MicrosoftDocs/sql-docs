@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_enable_table (Transact-SQL)"
 title: "sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_cdc_enable_table_TSQL"
   - "sp_cdc_enable_table_TSQL"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "sys.sp_cdc_enable_table"
   - "sp_cdc_enable_table"
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables change data capture for the specified source table in the current database. When a table is enabled for change data capture, a record of each data manipulation language (DML) operation applied to the table is written to the transaction log. The change data capture process retrieves this information from the log and writes it to change tables that are accessed by using a set of functions.  
   
@@ -101,7 +102,12 @@ sys.sp_cdc_enable_table
   
 > [!IMPORTANT]  
 >  SWITCH PARTITION is a metadata operation, but it causes data changes. The data changes that are associated with this operation are not captured in the change data capture change tables. Consider a table that has three partitions, and changes are made to this table. The capture process will track user insert, update, and delete operations that are executed against the table. However, if a partition is switched out to another table (for example, to perform a bulk delete), the rows that were moved as part of this operation will not be captured as deleted rows in the change table. Similarly, if a new partition that has prepopulated rows is added to the table, these rows will not be reflected in the change table. This can cause data inconsistency when the changes are consumed by an application and applied to a destination.  
-  
+ 
+> [!NOTE] 
+> If you enable partition switching on SQL Server 2008 R2 through the current version, you might also need split and merge operations in near future. Before executing a split or merge operation on a replicated or CDC enabled table ensure that the partition in question does not have any pending replicated commands. You should also ensure that no DML operations are executed on the partition during the split and merge operations. If there are transactions which the log reader or CDC capture job has not processed, or if DML operations are performed on a partition of a replicated or CDC enabled table while a split or merge operation is executed (involving the same partition), it could lead to a processing error (error 608 - No catalog entry found for partition ID) with log reader agent or CDC capture job. In order to correct the error, it might require a reinitialization of the subscription or disabling CDC on that table or database.
+
+
+
 ## Return Code Values  
  **0** (success) or **1** (failure)  
   

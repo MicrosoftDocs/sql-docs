@@ -1,4 +1,5 @@
 ---
+description: "Gathering a List for the ForEach Loop with the Script Task"
 title: "Gathering a List for the ForEach Loop with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Gathering a List for the ForEach Loop with the Script Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Foreach from Variable Enumerator enumerates over the items in a list that is passed to it in a variable and performs the same tasks on each item. You can use custom code in a Script task to populate a list for this purpose. For more information about the enumerator, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -245,6 +246,5 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## See Also  
  [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)   
- [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-  
+ [Configure a Foreach Loop Container](../control-flow/foreach-loop-container.md)  
   

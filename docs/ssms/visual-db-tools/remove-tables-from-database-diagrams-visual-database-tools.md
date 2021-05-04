@@ -1,4 +1,5 @@
 ---
+description: "Remove Tables from Database Diagrams (Visual Database Tools)"
 title: Remove Tables from Database Diagrams
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,11 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Remove Tables from Database Diagrams (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can remove a table from your database diagram. Removing a table does not alter your database. The table and its relationships to other tables continue to exist in the database.  
   
 ### To remove a table from a database diagram  

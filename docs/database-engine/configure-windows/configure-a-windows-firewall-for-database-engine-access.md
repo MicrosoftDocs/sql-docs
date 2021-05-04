@@ -1,5 +1,6 @@
 ---
 title: "Configure a Windows Firewall for Database Engine Access | Microsoft Docs"
+description: Find out how to configure a Windows firewall so that client computers can access an instance of the SQL Server Database Engine through the firewall.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
   - "firewall systems, [Database Engine]"
   - "security [SQL Server], firewalls"
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure a Windows Firewall for Database Engine Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
-  This topic describes how to configure a Windows firewall for Database Engine access in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. Firewall systems help prevent unauthorized access to computer resources. To access an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] through a firewall, you must configure the firewall on the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allow access.  
+  This topic describes how to configure a Windows firewall for Database Engine access in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Configuration Manager. Firewall systems help prevent unauthorized access to computer resources. To access an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] through a firewall, you must configure the firewall on the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allow access.  
   
  For more information about the default Windows firewall settings, and a description of the TCP ports that affect the [!INCLUDE[ssDE](../../includes/ssde-md.md)], Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). There are many firewall systems available. For information specific to your system, see the firewall documentation.  
   
@@ -90,6 +91,5 @@ ms.author: mikeray
 7.  In the **Name** dialog box, type a name and description for this rule, and then click **Finish**.  
   
 ## See Also  
- [How to: Configure Firewall Settings (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
+ [How to: Configure Firewall Settings (Azure SQL Database)](/azure/azure-sql/database/firewall-configure)  
   

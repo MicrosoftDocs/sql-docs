@@ -1,5 +1,6 @@
 ---
 title: "Create Views over XML Columns | Microsoft Docs"
+description: Learn how to create a view in which the value from an xml type column is retrieved using the value() method of the xml data type.  
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -9,11 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "views [XML in SQL Server]"
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Create Views over XML Columns
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can use an **xml** type column to create views. The following example creates a view in which the value from an `xml` type column is retrieved using the **value()** method of the **xml** data type.  
   
 ```  

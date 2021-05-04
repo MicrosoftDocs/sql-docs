@@ -1,5 +1,6 @@
 ---
 title: "Convert Data Sources (Report Builder) | Microsoft Docs"
+description: Learn how to convert your data sources in Report Builder and Report Designer by using options in the Report Data pane. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,9 +18,9 @@ ms.author: maggies
 # Convert Data Sources (Report Builder and SSRS)
   Each data source in the Report Data pane is embedded and specific to the report or is shared. In Report Builder, a shared data source points to a published shared data source on a report server or SharePoint site. In Report Designer, a shared data source points to a shared data source in the **Shared Data Sources** folder in Solution Explorer.  
   
- For more information about the differences between embedded and shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
+ For more information about the differences between embedded and shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](./data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- For more information on how to create a shared data source, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b).  
+ For more information on how to create a shared data source, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](/previous-versions/sql/).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,5 +59,4 @@ ms.author: maggies
 ## See Also  
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   

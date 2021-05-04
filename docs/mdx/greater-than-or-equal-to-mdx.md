@@ -1,4 +1,5 @@
 ---
+description: "&gt;= (Greater Than or Equal To) (MDX)"
 title: "&gt;= (Greater Than or Equal To) (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

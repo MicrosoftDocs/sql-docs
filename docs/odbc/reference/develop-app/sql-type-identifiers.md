@@ -1,4 +1,5 @@
 ---
+description: "SQL Type Identifiers"
 title: "SQL Type Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "identifiers [ODBC], SQL type"
   - "SQL type identifiers [ODBC]"
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL Type Identifiers
 Each data source defines its own SQL data types. ODBC defines type identifiers and describes the general characteristics of the SQL data types that might be mapped to each type identifier. It is driver-specific how each data type in the underlying data source is mapped to an SQL type identifier of ODBC.  

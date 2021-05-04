@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_hadr_availability_group_states (Transact-SQL)"
 title: "sys.dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_hadr_availability_group_states"
   - "sys.dm_hadr_availability_group_states_TSQL"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_availability_group_states dynamic management view"
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_hadr_availability_group_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each Always On availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
   
@@ -31,7 +32,7 @@ ms.author: mikeray
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Unique identifier of the availability group.|  
-|**primary_replica**|**varchar(128)**|Name of the server instance that is hosting the current primary replica.<br /><br /> NULL = Not the primary replica or unable to communicate with the WSFC failover cluster.|  
+|**primary_replica**|**varchar(128)**|Name of the server instance that is hosting the current primary replica.<br /><br /> NULL = Not the primary replica and unable to communicate with the WSFC failover cluster.|  
 |**primary_recovery_health**|**tinyint**|Indicates the recovery health of the primary replica, one of:<br /><br /> 0 = In progress<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> On secondary replicas the **primary_recovery_health** column is NULL.|  
 |**primary_recovery_health_desc**|**nvarchar(60)**|Description of **primary_replica_health**, one of:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indicates the recovery health of a secondary replica replica,one of:<br /><br /> 0 = In progress<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> On the primary replica, the **secondary_recovery_health** column is NULL.|  

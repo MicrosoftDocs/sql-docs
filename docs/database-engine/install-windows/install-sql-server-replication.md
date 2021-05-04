@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Replication | Microsoft Docs"
+description: Install replication components by using the SQL Server Installation Wizard or in a Command Prompt window.
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -13,13 +14,13 @@ helpviewer_keywords:
   - "replication [SQL Server], installing"
   - "command prompt [SQL Server replication]"
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server replication
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Replication components can be installed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard or at a command prompt. Install replication when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or when you modify an existing instance.  
   
@@ -36,11 +37,11 @@ After replication components are installed, you must configure the server before
 ## Installing Replication from the Command Prompt  
  **To install replication when installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- See [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+- See [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
 ## See also  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
- [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Features Supported by the Editions of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  
+ [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
+ [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
+ [Features Supported by the Editions of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   

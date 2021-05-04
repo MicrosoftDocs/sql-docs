@@ -1,4 +1,5 @@
 ---
+description: "Literal Prefixes and Suffixes"
 title: "Literal Prefixes and Suffixes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "interoperability of SQL statements [ODBC], literal prefixes and suffixes"
   - "literals [ODBC], prefixes and suffixes"
 ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Literal Prefixes and Suffixes
 In an SQL statement, a *literal* is a character representation of an actual data value. For example, in the following statement, ABC, FFFF, and 10 are literals:  

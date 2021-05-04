@@ -1,24 +1,24 @@
 ---
 title: "Recover from failover cluster instance failure"
-description: Describes how to recover from a failover of a SQL Server failover cluster instance. 
+description: Learn how to recover from a failover of a failover cluster instance by using the Failover Cluster Manager snap-in after a failover occurs in SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: failover-cluster-instance
+ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], recovery from failure"
   - "failover clustering [SQL Server], recovery from failure"
   - "hardware failures [SQL Server]"
   - "recovering failover cluster failures [SQL Server]"
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Recover from failover cluster instance failure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to recover from cluster failures by using the Failover Cluster Manager snap-in after a failover occurs in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The Failover Cluster Manager snap-in is the cluster management application for the Windows Serer Failover Clustering (WSFC) service.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to recover from cluster failures by using the Failover Cluster Manager snap-in after a failover occurs in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. The Failover Cluster Manager snap-in is the cluster management application for the Windows Serer Failover Clustering (WSFC) service.  
   
 -   [Recover from an irreparable failure](#Scenario1)  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.http_endpoints (Transact-SQL)"
 title: "sys.http_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.http_endpoints"
   - "http_endpoints"
@@ -17,11 +18,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.http_endpoints catalog view"
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.http_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
 
   Contains a row for each endpoint created in the server that uses the HTTP protocol.  
   

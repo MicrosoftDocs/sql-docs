@@ -1,24 +1,25 @@
 ---
+description: "Columnstore indexes - Data Warehouse"
 title: "Columnstore indexes - Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data Warehouse
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Columnstore indexes, in conjunction with partitioning, are essential for building a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse.  
   
 ## What's new  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduces these features for columnstore performance enhancements:  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduces these features for columnstore performance enhancements:  
   
 -   Always On supports querying a columnstore index on a readable secondary replica.  
 -   Multiple Active Result Sets (MARS) supports columnstore indexes.  
@@ -32,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Snapshot isolation for database compatibility level 130 and higher.  
   
 ## Improve performance by combining nonclustered and columnstore indexes  
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
+ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
   
 ### Example: Improve efficiency of table seeks with a nonclustered index  
  To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don't require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
@@ -94,7 +95,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### Improve performance by enabling row-level and row-group-level locking  
- To complement the nonclustered index on a columnstore index feature, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offers granular locking capability for select, update, and delete operations. Queries can run with row-level locking on index seeks against a nonclustered index and rowgroup-level locking on full table scans against the columnstore index. Use this to achieve higher read/write concurrency by using row-level and rowgroup-level locking appropriately.  
+ To complement the nonclustered index on a columnstore index feature, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] offers granular locking capability for select, update, and delete operations. Queries can run with row-level locking on index seeks against a nonclustered index and rowgroup-level locking on full table scans against the columnstore index. Use this to achieve higher read/write concurrency by using row-level and rowgroup-level locking appropriately.  
   
 ```sql  
 --Granular locking example  

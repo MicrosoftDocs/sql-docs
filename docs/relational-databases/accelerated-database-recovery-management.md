@@ -1,6 +1,7 @@
 ---
-title: "Accelerated database recovery | Microsoft Docs"
-ms.date: "08/12/2019"
+description: "Manage accelerated database recovery"
+title: "Manage accelerated database recovery | Microsoft Docs"
+ms.date: "02/02/2021"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -11,15 +12,15 @@ helpviewer_keywords:
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver2019.md)]
 
 ## Enabling and controlling ADR
 
-ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], and can be controlled using DDL syntax:
+ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
 ```sql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
@@ -98,6 +99,9 @@ Changing the location of the PVS is a three-step process.
 
 ## Troubleshooting
 
+> [!NOTE]
+> This section also applies to Azure SQL Database.
+
 Query `sys.dm_tran_persistent_version_store_stats` to check PVS sizes.
 
 Check `% of DB` size. Also note the difference from typical size.
@@ -108,7 +112,30 @@ PVS is considered large if it's significantly larger than baseline or if it is c
 
    Active transactions prevent cleaning up PVS.
 
-1. If the database is part of an availability group, check the `secondary_low_water_mark`. This is the same as the `low_water_mark_for_ghosts` reported by `sys.dm_hadr_database_replica_states`. Query `sys.dm_hadr_database_replica_states` to see whether one of the replicas is holding this value behind, since this will also prevent PVS cleanup.
-1. Check `min_transaction_timestamp` (or `online_index_min_transaction_timestamp` if the online PVS is holding up) and based on that check `sys.dm_tran_active_snapshot_database_transactions` for the column `transaction_sequence_num` to find the session that has the old snapshot transaction holding up PVS cleanup.
-1. If none of the above applies, then it means that the cleanup is held by aborted transactions. Check the last time the `aborted_version_cleaner_last_start_time`  and `aborted_version_cleaner_last_end_time` to see if the aborted transaction cleanup has completed. The `oldest_aborted_transaction_id` should be moving higher after the aborted transaction cleanup completes.
-1. If the aborted transaction hasn’t completed successfully recently, check the error log for messages reporting `VersionCleaner` issues.
+2. If the database is part of an availability group, check the `secondary_low_water_mark`. This is the same as the `low_water_mark_for_ghosts` reported by `sys.dm_hadr_database_replica_states`. Query `sys.dm_hadr_database_replica_states` to see whether one of the replicas is holding this value behind, since this will also prevent PVS cleanup.
+3. Check `min_transaction_timestamp` (or `online_index_min_transaction_timestamp` if the online PVS is holding up) and based on that check `sys.dm_tran_active_snapshot_database_transactions` for the column `transaction_sequence_num` to find the session that has the old snapshot transaction holding up PVS cleanup.
+4. If none of the above applies, then it means that the cleanup is held by aborted transactions. Check the last time the `aborted_version_cleaner_last_start_time`  and `aborted_version_cleaner_last_end_time` to see if the aborted transaction cleanup has completed. The `oldest_aborted_transaction_id` should be moving higher after the aborted transaction cleanup completes.
+5. If the aborted transaction hasn’t completed successfully recently, check the error log for messages reporting `VersionCleaner` issues.
+
+Use the sample query below as a troubleshooting aid:
+
+```sql
+SELECT pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
+       pvss.online_index_version_store_size_kb / 1024. / 1024 AS online_index_version_store_size_gb,
+       pvss.current_aborted_transaction_count,
+       pvss.aborted_version_cleaner_start_time,
+       pvss.aborted_version_cleaner_end_time,
+       dt.database_transaction_begin_time AS oldest_transaction_begin_time,
+       asdt.session_id AS active_transaction_session_id,
+       asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds
+FROM sys.dm_tran_persistent_version_store_stats AS pvss
+LEFT JOIN sys.dm_tran_database_transactions AS dt
+ON pvss.oldest_active_transaction_id = dt.transaction_id
+   AND
+   pvss.database_id = dt.database_id
+LEFT JOIN sys.dm_tran_active_snapshot_database_transactions AS asdt
+ON pvss.min_transaction_timestamp = asdt.transaction_sequence_num
+   OR
+   pvss.online_index_min_transaction_timestamp = asdt.transaction_sequence_num
+WHERE pvss.database_id = DB_ID();
+```

@@ -1,4 +1,5 @@
 ---
+description: "Extract Data by Using the ODBC Source"
 title: "Extract Data by Using the ODBC Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Extract Data by Using the ODBC Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to extract data by using an ODBC source. To add and configure an ODBC source, the package must already include at least one Data Flow task.  
@@ -49,8 +50,7 @@ ms.author: chugu
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [ODBC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC Source Editor &#40;Connection Manager Page&#41;](./odbc-source.md)   
+ [ODBC Source Editor &#40;Columns Page&#41;](./odbc-source.md)   
+ [ODBC Source Editor &#40;Error Output Page&#41;](./odbc-source.md)  
   

@@ -1,9 +1,10 @@
 ---
+description: "Query Processing Architecture Guide"
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2020"
+ms.date: "02/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -17,7 +18,7 @@ author: "pmasl"
 ms.author: "pelopes"
 ---
 # Query Processing Architecture Guide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
@@ -142,7 +143,7 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 - Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
 - Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
 - Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
-- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
@@ -476,13 +477,61 @@ GO
 
 Changing any of the following SET options for a given execution will affect the ability to reuse plans, because the [!INCLUDE[ssde_md](../includes/ssde_md.md)] performs [constant folding](#ConstantFolding) and these options affect the results of such expressions:
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### Caching multiple plans for the same query 
 Queries and execution plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
@@ -641,7 +690,10 @@ The following examples illustrate which execution plans get removed from the pla
 * An execution plan is frequently referenced so that its cost never goes to zero. The plan remains in the plan cache and is not removed unless there is memory pressure and the current cost is zero.
 * An ad-hoc execution plan is inserted and is not referenced again before memory pressure exists. Since ad-hoc plans are initialized with a current cost of zero, when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines the execution plan, it will see the zero current cost and remove the plan from the plan cache. The ad-hoc execution plan remains in the plan cache with a zero current cost when memory pressure does not exist.
 
-To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
+To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) can also be used to clear any cache, including plan cache. Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope. 
+A change in some configuration settings via [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) and [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) will also cause plans to be removed from plan cache. You can find the list of these configuration settings in the Remarks section of the [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) article. A configuration change like this will log the following informational message in the error log:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
 ### Recompiling Execution Plans
 
@@ -666,16 +718,70 @@ Statement-level recompilation benefits performance because, in most cases, a sma
 The `sql_statement_recompile` extended event (xEvent) reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
 The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
-|||
-|----|----|  
-|Schema changed|Statistics changed|  
-|Deferred compile|SET option changed|  
-|Temporary table changed|Remote rowset changed|  
-|`FOR BROWSE` permission changed|Query notification environment changed|  
-|Partitioned view changed|Cursor options changed|  
-|`OPTION (RECOMPILE)` requested|Parameterized plan flushed|  
-|Plan affecting database version changed|Query Store plan forcing policy changed|  
-|Query Store plan forcing failed|Query Store missing the plan|
+:::row:::
+    :::column:::
+        Schema changed
+    :::column-end:::
+    :::column:::
+        Statistics changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Deferred compile
+    :::column-end:::
+    :::column:::
+        SET option changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Temporary table changed
+    :::column-end:::
+    :::column:::
+        Remote rowset changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE` permission changed
+    :::column-end:::
+    :::column:::
+        Query notification environment changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Partitioned view changed
+    :::column-end:::
+    :::column:::
+        Cursor options changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` requested
+    :::column-end:::
+    :::column:::
+        Parameterized plan flushed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Plan affecting database version changed
+    :::column-end:::
+    :::column:::
+        Query Store plan forcing policy changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Query Store plan forcing failed
+    :::column-end:::
+    :::column:::
+        Query Store missing the plan
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents are not available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
@@ -892,13 +998,13 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute m
 * The application can control when the execution plan is created and when it is reused.
 * The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="ParamSniffing"></a> Parameter Sniffing
-"Parameter sniffing" refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
+### <a name="ParamSniffing"></a> Parameter Sensitivity
+Parameter sensitivity, also known as "parameter sniffing", refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
 
 -  Stored procedures
--  Queries submitted via sp_executesql 
+-  Queries submitted via `sp_executesql` 
 -  Prepared queries
 
 For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview).
@@ -916,7 +1022,7 @@ During query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Constructs that inhibit parallelism include:
 -   **Scalar UDFs**        
-    For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
     
 -   **Remote Query**        
     For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
@@ -926,17 +1032,41 @@ Constructs that inhibit parallelism include:
     
 -   **Recursive queries**        
     For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
-](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
+](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
 
--   **Table Valued Functions (TVFs)**        
-    For more information on TVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Multi-statement table-valued functions (MSTVFs)**        
+    For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **TOP keyword**        
     For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
+A query execution plan may contain the **NonParallelPlanReason** attribute in the **QueryPlan** element which describes why parallelism was not used.  Values for this attribute include:
+
+|NonParallelPlanReason Value|Description|
+|----|----|
+|MaxDOPSetToOne|Maximum degree of parallelism set to 1.|
+|EstimatedDOPIsOne|Estimated degree of parallelism is 1.|
+|NoParallelWithRemoteQuery|Parallelism is not supported for remote queries.|
+|NoParallelDynamicCursor|Parallel plans not supported for dynamic cursors.|
+|NoParallelFastForwardCursor|Parallel plans not supported for fast forward cursors.|
+|NoParallelCursorFetchByBookmark|Parallel plans not supported for cursors that fetch by bookmark.|
+|NoParallelCreateIndexInNonEnterpriseEdition|Parallel index creation not supported for non-Enterprise edition.|
+|NoParallelPlansInDesktopOrExpressEdition|Parallel plans not supported for Desktop and Express edition.|
+|NonParallelizableIntrinsicFunction|Query is referencing a non-parallelizable intrinsic function.|
+|CLRUserDefinedFunctionRequiresDataAccess|Parallelism not supported for a CLR UDF that requires data access.|
+|TSQLUserDefinedFunctionsNotParallelizable|Query is referencing a T-SQL User Defined Function that was not parallelizable.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Table variable transactions do not support parallel nested transactions.|
+|DMLQueryReturnsOutputToClient|DML query returns output to client and is not parallelizable.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|Unsupported mix of serial and parallel plans for a single online index build.|
+|CouldNotGenerateValidParallelPlan|Verifying parallel plan failed, failing back to serial.|
+|NoParallelForMemoryOptimizedTables|Parallelism not supported for referenced In-Memory OLTP tables.|
+|NoParallelForDmlOnMemoryOptimizedTable|Parallelism not supported for DML on an In-Memory OLTP table.|
+|NoParallelForNativelyCompiledModule|Parallelism not supported for referenced natively compiled modules.|
+|NoRangesResumableCreate|Range generation failed for a resumable create operation.|
+
 After exchange operators are inserted, the result is a parallel-query execution plan. A parallel-query execution plan can use more than one worker thread. A serial execution plan, used by a non-parallel (serial) query, uses only one worker thread for its execution. The actual number of worker threads used by a parallel query is determined at query plan execution initialization and is determined by the complexity of the plan and the degree of parallelism. 
 
-Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specififed by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
+Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specified by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does not use a parallel execution plan for a query if any one of the following conditions is true:
 
@@ -962,7 +1092,13 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
  
 At execution time, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines whether the current system workload and configuration information previously described allow for parallel execution. If parallel execution is warranted, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines the optimal number of worker threads and spreads the execution of the parallel plan across those worker threads. When a query or index operation starts executing on multiple worker threads for parallel execution, the same number of worker threads is used until the operation is completed. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] re-examines the optimal number of worker thread decisions every time an execution plan is retrieved from the plan cache. For example, one execution of a query can result in the use of a serial plan, a later execution of the same query can result in a parallel plan using three worker threads, and a third execution can result in a parallel plan using four worker threads.
 
-In a parallel query execution plan, the insert, update, and delete operators are executed serially. However, the WHERE clause of an UPDATE or a DELETE statement, or the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database.
+The update and delete operators in a parallel query execution plan are executed serially, but the WHERE clause of an UPDATE or a DELETE statement may be executed in parallel. The actual data changes are then serially applied to the database.
+
+Up to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the insert operator is also executed serially. However, the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database. 
+
+Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and database compatibility level 110, the `SELECT … INTO` statement can be executed in parallel. Other forms of insert operators work the same way as described for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
+
+Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] and database compatibility level 130, the `INSERT … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI), and using the TABLOCK hint. Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint. For more information, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Static and keyset-driven cursors can be populated by parallel execution plans. However, the behavior of dynamic cursors can be provided only by serial execution. The Query Optimizer always generates a serial execution plan for a query that is part of a dynamic cursor.
 
@@ -972,7 +1108,7 @@ The degree of parallelism sets the number of processors to use in parallel plan 
 1.  Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
-    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../sql-server/install/instance-configuration.md#maxdop).
+    > [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../sql-server/install/instance-configuration.md#maxdop).
 
 2.  Workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
@@ -1136,7 +1272,8 @@ When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes rel
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This topic describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects. 
 
 > [!NOTE]
-> Partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
+> Until [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.   
+> Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition. 
 
 ### New Partition-Aware Seek Operation
 
@@ -1188,7 +1325,7 @@ SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
 ```
 
-The following illustration shows the properties of the `Clustered Index Seek` operator in the compile-time execution plan for this query. To view the definition of the `fact_sales` table and the partition definition, see "Example" in this topic.  
+The following illustration shows the properties of the `Clustered Index Seek` operator in the runtime execution plan for this query. To view the definition of the `fact_sales` table and the partition definition, see "Example" in this topic.  
 
 ![clustered_index_seek](../relational-databases/media/clustered-index-seek.gif)
 
@@ -1301,7 +1438,7 @@ To improve the performance of queries that access a large amount of data from la
 * Use a server with fast processors and as many processor cores as you can afford, to take advantage of parallel query processing capability.
 * Ensure the server has sufficient I/O controller bandwidth. 
 * Create a clustered index on every large partitioned table to take advantage of B-tree scanning optimizations.
-* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx), when bulk loading data into partitioned tables.
+* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), when bulk loading data into partitioned tables.
 
 ### Example
 

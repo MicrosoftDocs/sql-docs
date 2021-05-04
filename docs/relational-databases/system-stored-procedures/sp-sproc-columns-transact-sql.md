@@ -1,12 +1,13 @@
 ---
+description: "sp_sproc_columns (Transact-SQL)"
 title: "sp_sproc_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_sproc_columns"
   - "sp_sproc_columns_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_sproc_columns"
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_sproc_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns column information for a single stored procedure or user-defined function in the current environment.  
   
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_sproc_columns [[@procedure_name = ] 'name']   
     [ , [@procedure_owner = ] 'owner']   

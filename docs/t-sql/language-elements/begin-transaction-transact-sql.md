@@ -1,12 +1,13 @@
 ---
+description: "BEGIN TRANSACTION (Transact-SQL)"
 title: "BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BEGIN_TRANSACTION_TSQL"
   - "TRANSACTION_TSQL"
@@ -27,12 +28,12 @@ helpviewer_keywords:
   - "starting point marked for transactions"
   - "starting transactions"
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BEGIN TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Marks the starting point of an explicit, local transaction. Explicit transactions start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.  
 
@@ -40,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 --Applies to SQL Server and Azure SQL Database
  
 BEGIN { TRAN | TRANSACTION }   
@@ -50,15 +51,17 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]  
 ```  
  
-```  
---Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
+```syntaxsql
+--Applies to Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
 ```  
 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *transaction_name*  
  **APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
  
@@ -108,7 +111,7 @@ BEGIN TRANSACTION starts a local transaction for the connection issuing the stat
   
  BEGIN TRAN *new_name* WITH MARK can be nested within an already existing transaction that is not marked. Upon doing so, *new_name* becomes the mark name for the transaction, despite the name that the transaction may already have been given. In the following example, `M2` is the name of the mark.  
   
-```  
+```sql  
 BEGIN TRAN T1;  
 UPDATE table1 ...;  
 BEGIN TRAN M2 WITH MARK;  
@@ -139,11 +142,11 @@ COMMIT TRAN T1;
 ## Examples  
   
 ### A. Using an explicit transaction
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 This example uses AdventureWorks. 
 
-```
+```sql
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -151,13 +154,12 @@ COMMIT;
 ```
 
 ### B. Rolling back a transaction
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
 
-```
- 
-CREATE TABLE ValueTable (id int);  
+```sql
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -170,7 +172,7 @@ ROLLBACK;
 
 The following example shows how to name a transaction.  
   
-```  
+```sql
 DECLARE @TranName VARCHAR(20);  
 SELECT @TranName = 'MyTransaction';  
   
@@ -188,7 +190,7 @@ GO
 
 The following example shows how to mark a transaction. The transaction `CandidateDelete` is marked.  
   
-```  
+```sql  
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  

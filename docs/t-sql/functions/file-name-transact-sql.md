@@ -1,4 +1,5 @@
 ---
+description: "FILE_NAME (Transact-SQL)"
 title: "FILE_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILE_NAME_TSQL"
   - "FILE_NAME"
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "FILE_NAME function"
   - "logical file names [SQL Server]"
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # FILE_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the logical file name for a given file identification (ID) number.  
   
@@ -35,11 +36,13 @@ This function returns the logical file name for a given file identification (ID)
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_NAME ( file_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *file_id*  
 The file identification number whose file name `FILE_NAME` will return. *file_id* has an **int** data type.  
   

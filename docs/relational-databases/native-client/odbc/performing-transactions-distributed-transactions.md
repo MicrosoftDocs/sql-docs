@@ -1,9 +1,10 @@
 ---
 title: "Create a distributed transactions | Microsoft Docs"
+description: Applications can use MSDTC to extend or distribute a transaction across several instances of SQL Server. A .NET class can also distribute a transaction.
 ms.custom: ""
 ms.date: "05/13/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -14,13 +15,13 @@ helpviewer_keywords:
   - "transactions [ODBC]"
   - "ODBC, transactions"
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a distributed transaction
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 <!--
 The following includes .md file is Empty, as of long before 2019/May/13.
@@ -53,11 +54,11 @@ _(1)_ MSDTC can be invoked without ODBC. In such a case, MSDTC becomes the trans
 
 Suppose that your C++ Native Client ODBC application is enlisted in a distributed transaction. Next the application enlists in a second distributed transaction. In this case, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver leaves the original distributed transaction, and enlists in the new distributed transaction.
 
-For more information, see [DTC Programmer's Reference](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+For more information, see [DTC Programmer's Reference](/previous-versions/windows/desktop/ms686108(v=vs.85)).
 
 ## C# alternative for SQL Database in the cloud
 
-MSDTC isn't supported for either Azure SQL Database or Azure SQL Data Warehouse.
+MSDTC isn't supported for either Azure SQL Database or Azure Synapse Analytics.
 
 However, a distributed transaction can be created for SQL Database by having your C# program use the .NET class [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope).
 

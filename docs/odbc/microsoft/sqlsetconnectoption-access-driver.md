@@ -1,4 +1,5 @@
 ---
+description: "SQLSetConnectOption (Access Driver)"
 title: "SQLSetConnectOption (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLSetConnectOption"
   - "SQLSetConnectOption function [ODBC], Access Driver"
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectOption (Access Driver)
 > [!NOTE]  

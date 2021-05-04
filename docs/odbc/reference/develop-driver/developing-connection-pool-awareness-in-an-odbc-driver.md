@@ -1,4 +1,5 @@
 ---
+description: "Developing Connection-Pool Awareness in an ODBC Driver"
 title: "Developing Connection-Pool Awareness in an ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Developing Connection-Pool Awareness in an ODBC Driver
 This topic discusses the details of developing an ODBC driver that contains information about how the driver should provide connection pooling services.  
@@ -61,7 +62,7 @@ This topic discusses the details of developing an ODBC driver that contains info
 ## The Connection Rating  
  Compared to establishing a new connection, you can get better performance by resetting some connection information (such as DATABASE) in a pooled connection. So, you may not want the database name to be in your set of key attributes. Otherwise, you can have a separate pool for each database, which may not be good in mid-tier applications, where customers use various different connection strings.  
   
- Whenever you reuse a connection that has some attribute mismatch, you should reset the mismatched attributes based on the new application request, so that the returned connection is identical to the application request (see the discussion of the attribute SQL_ATTR_DBC_INFO_TOKEN in [SQLSetConnectAttr Function](https://go.microsoft.com/fwlink/?LinkId=59368)). However, resetting those attributes may decrease performance. For example, resetting a database requires a network call to server. Therefore, reuse a connection that is perfectly matched, if one is available.  
+ Whenever you reuse a connection that has some attribute mismatch, you should reset the mismatched attributes based on the new application request, so that the returned connection is identical to the application request (see the discussion of the attribute SQL_ATTR_DBC_INFO_TOKEN in [SQLSetConnectAttr Function](../syntax/sqlsetconnectattr-function.md)). However, resetting those attributes may decrease performance. For example, resetting a database requires a network call to server. Therefore, reuse a connection that is perfectly matched, if one is available.  
   
  A rating function in the driver can evaluate an existing connection with a new connection request. For example, the driver's rating function can determine:  
   

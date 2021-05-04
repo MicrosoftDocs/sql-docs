@@ -1,20 +1,21 @@
 ---
+description: "SQL:StmtStarting Event Class"
 title: "SQL:StmtStarting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL:StmtStarting event class"
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:StmtStarting Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The SQL:StmtStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has started.  
   
 ## SQL:StmtStarting Event Class Data Columns  

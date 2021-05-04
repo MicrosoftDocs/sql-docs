@@ -8,14 +8,14 @@ ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article explains the two sets of system views that relate to extended events in SQL Server and in Azure SQL Database. The article illustrates:
@@ -74,7 +74,7 @@ To SELECT from the system views, the following permission is necessary:
 
 This section matches and correlates three different technological perspectives on the same defined event session. The session has been defined and is visible in the **Object Explorer** of SQL Server Management Studio (SSMS.exe), but the session is not currently running.
 
-Every month it is wise to [install the latest update of SSMS](https://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
+Every month it is wise to [install the latest update of SSMS](../../ssms/download-sql-server-management-studio-ssms.md), to avoid unexpected failures.
 
 
 Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -885,5 +885,3 @@ Here is the contents of the first XML cell, from the preceding returned rowset.
   </action>
 </event>
 ```
-
-

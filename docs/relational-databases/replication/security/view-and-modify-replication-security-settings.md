@@ -1,5 +1,6 @@
 ---
 title: "View and Modify Replication Security Settings | Microsoft Docs"
+description: Learn how to view and modify replication security settings in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View and Modify Replication Security Settings
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  This topic describes how to view and modify replication security settings in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
+  This topic describes how to view and modify replication security settings in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **In This Topic**  
   
@@ -98,7 +99,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
     > [!NOTE]  
-    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>**dialog box. See below for the procedure to change the context.  
+    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. See below for the procedure to change the context.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -119,7 +120,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
     > [!NOTE]  
-    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>**dialog box. Change the context using the next procedure.  
+    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. Change the context using the next procedure.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -291,7 +292,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 1.  At the Publisher on the publication database, execute [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), specifying `@publication` and `@subscriber`. This returns subscription properties, including security settings for the Distribution Agent running at the Distributor.  
   
-2.  At the Publisher on the publication database, execute [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specifying `@publication`, `@subscriber`, `@subscriber_db**`, a value of `all` for `@article`, the name of the security property for `@property`, and the new value of the property for `@value`.  
+2.  At the Publisher on the publication database, execute [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specifying `@publication`, `@subscriber`, `@subscriber_db`, a value of `all` for `@article`, the name of the security property for `@property`, and the new value of the property for `@value`.  
   
 3.  Repeat step 2 for each of the following security properties being changed:  
   
@@ -411,7 +412,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To change all instances of a password stored on a replication server  
   
@@ -428,7 +429,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     -   *password* - the new password value.  
   
         > [!IMPORTANT]  
-        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
+        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the Windows .NET Framework.  
   
         > [!NOTE]  
         >  Only a member of the **sysadmin** fixed server role can call this method.  
@@ -573,5 +574,4 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "SQLServerCallableStatement Methods"
 title: "SQLServerCallableStatement Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2af91aa4-f725-4cfe-9fbc-b91b4784c437
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerCallableStatement Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "ProcessId Class (SqlService Class)"
 title: "ProcessId Class (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProcessId property"
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProcessId Class (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the system process ID that uniquely identifies a service.  
   
 ## Syntax  

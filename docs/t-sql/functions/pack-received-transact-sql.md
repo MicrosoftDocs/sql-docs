@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;PACK_RECEIVED (Transact-SQL)"
 title: "@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@PACK_RECEIVED_TSQL"
   - "@@PACK_RECEIVED"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of input packets read from the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
   
@@ -29,11 +30,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -42,7 +45,7 @@ ms.author: vanto
 ## Examples  
  The following example shows the usage of `@@PACK_RECEIVED`.  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

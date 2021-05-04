@@ -1,24 +1,25 @@
 ---
+description: "Execute Method (RDS)"
 title: "Execute Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 helpviewer_keywords: 
   - "Execute method [ADO]"
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Execute Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.5 and later.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  
   
 ## Syntax  
   
@@ -42,7 +43,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  Indicates the type of asynchronous fetching.  
   
- For more information, see [FetchOptions Property (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
+ For more information, see [FetchOptions Property (RDS)](./fetchoptions-property-rds.md).  
   
  *TableID*  
  A **Variant** of type either VT_EMPTY or VT_BSTR. If this value is of type VT_EMPTY, it is ignored. If it is of type VT_BSTR, the recordset is created by using **adCmdTableDirect** and the value specified here and the *QueryString* parameter is ignored.  
@@ -75,6 +76,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  The *HandlerString* parameter may be null. What happens in this case depends on how the RDS server is configured. A handler string of "MSDFMAP.handler" indicates that the Microsoft supplied handler (Msdfmap.dll) should be used. A handler string of "MASDFMAP.handler,sample.ini" indicates that the Msdfmap.dll handler should be used and that the argument "sample.ini" should be passed to the handler. MSDFMAP.dll will interpret the argument as a direction to use the sample.ini to check the connection and query strings.  
   
 ## Applies To  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)

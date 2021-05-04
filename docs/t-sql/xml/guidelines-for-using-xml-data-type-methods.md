@@ -1,24 +1,25 @@
 ---
-title: "Guidelines for Using xml Data Type Methods | Microsoft Docs"
+description: "Guidelines for Using xml Data Type Methods"
+title: Guidelines for Using xml Data Type Methods
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs:
   - "TSQL"
 helpviewer_keywords:
   - "xml data type [SQL Server], methods"
   - "methods [XML in SQL Server]"
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 
 # Guidelines for Using xml Data Type Methods
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes guidelines for using the **xml** data type methods.
 
@@ -27,7 +28,7 @@ This topic describes guidelines for using the **xml** data type methods.
 The **xml** data type methods cannot be used in the PRINT statement as shown in the following example. The **xml** data type methods are treated as subqueries, and subqueries are not allowed in the PRINT statement. As a result, the following example returns an error:
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -35,10 +36,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 A solution is to first assign the result of the **value()** method to a variable of **xml** type and then specify the variable in the query.
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -71,8 +72,8 @@ Location steps, function parameters, and operators that require singletons will 
 In this example, the **nodes()** method generates a separate row for each `<book>` element. The **value()** method that is evaluated on a `<book>` node extracts the value of `@genre` and, being an attribute, is a singleton.
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 XML schema is used for type checking of typed XML. If a node is specified as a singleton in the XML schema, the compiler uses that information and no error occurs. Otherwise, an ordinal that selects a single node is required. In particular, the use of descendant-or-self axis (//) axis, such as in `/book//title`, looses singleton cardinality inference for the `<title>` element, even if the XML schema specifies it to be so. Therefore, you should rewrite it as `(/book//title)[1]`.
@@ -84,22 +85,22 @@ It is important to remain aware of the difference between `//first-name[1]` and 
 The following query on an untyped XML column results in a static, compilation error.This is because **value()** expects a singleton node as the first argument and the compiler cannot determine whether only one `<last-name>` node will occur at run time:
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Following is a solution that you could consider:
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 However, this solution does not solve the error, because multiple `<author>` nodes may occur in each XML instance. The following rewrite works:
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 This query returns the value of the first `<last-name>` element in each XML instance.

@@ -1,4 +1,5 @@
 ---
+description: "Collation and Unicode support"
 title: "Collation and Unicode support | Microsoft Docs"
 ms.custom: ""
 ms.date: 12/05/2019
@@ -31,11 +32,11 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "pmasl"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Collation and Unicode support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types, such as **char** and **varchar**, dictate the code page and corresponding characters that can be represented for that data type. 
 
 Whether you're installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it's important to understand the locale requirements, sorting order, and case and accent sensitivity of the data that you're working with. To list the collations that are available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -58,7 +59,7 @@ A collation specifies the bit patterns that represent each character in a datase
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] statement results can vary when the statement is run in the context of different databases that have different collation settings. If possible, use a standardized collation for your organization. This way, you don't have to specify the collation in every character or Unicode expression. If you must work with objects that have different collation and code page settings, code your queries to consider the rules of collation precedence. For more information, see [Collation Precedence (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-The options associated with a collation are case sensitivity, accent sensitivity, kana sensitivity, width sensitivity, and variation-selector sensitivity. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces an additional option for [UTF-8](https://www.wikipedia.org/wiki/UTF-8) encoding. 
+The options associated with a collation are case sensitivity, accent sensitivity, kana sensitivity, width sensitivity, and variation-selector sensitivity. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces an additional option for [UTF-8](https://www.wikipedia.org/wiki/UTF-8) encoding. 
 
 You can specify these options by appending them to the collation name. For example, the collation **Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** is case-sensitive, accent-sensitive, kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, the collation **Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** is case-insensitive, accent-insensitive, kana-sensitive, width-sensitive, variation-selector-sensitive, and it uses non-Unicode encoding. 
 
@@ -70,7 +71,7 @@ The behavior associated with these various options is described in the following
 |Accent-sensitive (\_AS)|Distinguishes between accented and unaccented characters. For example, "a" is not equal to "ấ". If this option isn't selected, the collation is accent-insensitive. That is, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers the accented and unaccented versions of letters to be identical for sorting purposes. You can explicitly select accent insensitivity by specifying \_AI.|    
 |Kana-sensitive (\_KS)|Distinguishes between the two types of Japanese kana characters: Hiragana and Katakana. If this option isn't selected, the collation is kana-insensitive. That is, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers Hiragana and Katakana characters to be equal for sorting purposes. Omitting this option is the only method of specifying kana-insensitivity.|   
 |Width-sensitive (\_WS)|Distinguishes between full-width and half-width characters. If this option isn't selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers the full-width and half-width representation of the same character to be identical for sorting purposes. Omitting this option is the only method of specifying width-insensitivity.|  
-|Variation-selector-sensitive (\_VSS)|Distinguishes between various ideographic variation selectors in the Japanese collations **Japanese_Bushu_Kakusu_140** and **Japanese_XJIS_140**, which are introduced in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. A variation sequence consists of a base character plus an additional variation selector. If this \_VSS option isn't selected, the collation is variation-selector-insensitive, and the variation selector isn't considered in the comparison. That is, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers characters built upon the same base character with differing variation selectors to be identical for sorting purposes. For more information, see [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/).<br/><br/> Variation-selector-sensitive (\_VSS) collations aren't supported in full-text search indexes. Full-text search indexes support only Accent-Sensitive (\_AS), Kana-sensitive (\_KS), and Width-sensitive (\_WS) options. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML and CLR engines don't support (\_VSS) Variation selectors.|      
+|Variation-selector-sensitive (\_VSS)|Distinguishes between various ideographic variation selectors in the Japanese collations **Japanese_Bushu_Kakusu_140** and **Japanese_XJIS_140**, which are introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. A variation sequence consists of a base character plus an additional variation selector. If this \_VSS option isn't selected, the collation is variation-selector-insensitive, and the variation selector isn't considered in the comparison. That is, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers characters built upon the same base character with differing variation selectors to be identical for sorting purposes. For more information, see [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/).<br/><br/> Variation-selector-sensitive (\_VSS) collations aren't supported in full-text search indexes. Full-text search indexes support only Accent-Sensitive (\_AS), Kana-sensitive (\_KS), and Width-sensitive (\_WS) options. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML and CLR engines don't support (\_VSS) Variation selectors.|      
 |Binary (\_BIN)<sup>1</sup>|Sorts and compares data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables based on the bit patterns defined for each character. Binary sort order is case-sensitive and accent-sensitive. Binary is also the fastest sorting order. For more information, see the [Binary collations](#Binary-collations) section in this article.|      
 |Binary-code point (\_BIN2)<sup>1</sup> | Sorts and compares data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables based on Unicode code points for Unicode data. For non-Unicode data, Binary-code point uses comparisons that are identical to those for binary sorts.<br/><br/> The advantage of using a Binary-code point sort order is that no data resorting is required in applications that compare sorted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. As a result, a Binary-code point sort order provides simpler application development and possible performance increases. For more information, see the [Binary collations](#Binary-collations) section in this article.|
 |UTF-8 (\_UTF8)|Enables UTF-8 encoded data to be stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this option isn't selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default non-Unicode encoding format for the applicable data types. For more information, see the [UTF-8 Support](#utf8) section in this article.| 
@@ -173,12 +174,12 @@ The following table shows the default collation designations, as determined by t
 |Arabic (Yemen)|0x2401|0x0401|Arabic_CI_AS|
 |Armenian (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
 |Assamese (India)|0x044d|0x044d|Not available at server level|
-|Azeri (Azerbaijan, Cyrillic)|0x082c|0x082c|Deprecated, not available at server level|
-|Azeri (Azerbaijan, Latin)|0x042c|0x042c|Deprecated, not available at server level|
+|Azerbaijani (Azerbaijan, Cyrillic)|0x082c|0x082c|Deprecated, not available at server level|
+|Azerbaijani (Azerbaijan, Latin)|0x042c|0x042c|Deprecated, not available at server level|
 |Bashkir (Russia)|0x046d|0x046d|Latin1_General_CI_AI|
 |Basque (Basque)|0x042d|0x0409|Latin1_General_CI_AS|
 |Belarusian (Belarus)|0x0423|0x0419|Cyrillic_General_CI_AS|
-|Bengali (Bangladesh)|0x0845|0x0445|Not available at server level|
+|Bangla (Bangladesh)|0x0845|0x0445|Not available at server level|
 |Bengali (India)|0x0445|0x0439|Not available at server level|
 |Bosnian (Bosnia and Herzegovina, Cyrillic)|0x201a|0x201a|Latin1_General_CI_AI|
 |Bosnian (Bosnia and Herzegovina, Latin)|0x141a|0x141a|Latin1_General_CI_AI|
@@ -230,7 +231,7 @@ The following table shows the default collation designations, as determined by t
 |French (Monaco)|0x180c|0x040c|French_CI_AS|
 |French (Switzerland)|0x100c|0x040c|French_CI_AS|
 |Frisian (Netherlands)|0x0462|0x0462|Latin1_General_CI_AI|
-|Galician (Spain)|0x0456|0x0409|Latin1_General_CI_AS|
+|Galician|0x0456|0x0409|Latin1_General_CI_AS|
 |Georgian (Georgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Georgian (Georgia)|0x0437|0x0419|Latin1_General_CI_AS|
 |German - Phone Book Sort (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -270,7 +271,7 @@ The following table shows the default collation designations, as determined by t
 |Lithuanian (Lithuania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Lower Sorbian (Germany)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgish (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonian (Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonian (North Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malay (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malay (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Not available at server level|
@@ -285,7 +286,7 @@ The following table shows the default collation designations, as determined by t
 |Norwegian (Bokmål, Norway)|0x0414|0x0414|Latin1_General_CI_AI|
 |Norwegian (Nynorsk, Norway)|0x0814|0x0414|Latin1_General_CI_AI|
 |Occitan (France)|0x0482|0x040c|French_CI_AS|
-|Oriya (India)|0x0448|0x0439|Not available at server level|
+|Odia (India)|0x0448|0x0439|Not available at server level|
 |Pashto (Afghanistan)|0x0463|0x0463|Not available at server level|
 |Persian (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polish (Poland)|0x0415|0x0415|Polish_CI_AS|
@@ -298,6 +299,7 @@ The following table shows the default collation designations, as determined by t
 |Romanian (Romania)|0x0418|0x0418|Romanian_CI_AS|
 |Romansh (Switzerland)|0x0417|0x0417|Latin1_General_CI_AI|
 |Russian (Russia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sahka (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Sami (Inari, Finland)|0x243b|0x083b|Latin1_General_CI_AI|
 |Sami (Lule, Norway)|0x103b|0x043b|Latin1_General_CI_AI|
 |Sami (Lule, Sweden)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -361,14 +363,10 @@ The following table shows the default collation designations, as determined by t
 |Welsh (United Kingdom)|0x0452|0x0452|Latin1_General_CI_AI|
 |Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
 |Xhosa/isiXhosa (South Africa)|0x0434|0x0409|Latin1_General_CI_AS|
-|Yakut (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (PRC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (South Africa)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Unicode-only collations can't be selected during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, because they aren't supported as server-level collations.    
-    
 After you've assigned a collation to the server, you can change it only by exporting all database objects and data, rebuilding the *master* database, and importing all database objects and data. Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify the desired collation when you create a new database or database column.    
 
 To query the server collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the `SERVERPROPERTY` function:
@@ -425,7 +423,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Locale    
-A locale is a set of information that's associated with a location or a culture. The information can include the name and identifier of the spoken language, the script that's used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
+A locale is a set of information that's associated with a location or a culture. The information can include the name and identifier of the spoken language, the script that's used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).    
     
 ###  <a name="Code_Page_Defn"></a> Code page    
 A code page is an ordered set of characters of a given script in which a numeric index, or code point value, is associated with each character. A Windows code page is typically referred to as a *character set* or a *charset*. Code pages are used to provide support for the character sets and keyboard layouts that are used by different Windows system locales.     
@@ -458,7 +456,7 @@ If you store character data that reflects multiple languages in [!INCLUDE[ssNoVe
 > [!NOTE]
 > For Unicode data types, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can represent up to 65,535 characters using UCS-2, or the full Unicode range (‭1,114,111‬ characters) if supplementary characters are used. For more information about enabling supplementary characters, see [Supplementary Characters](#Supplementary_Characters).
 
-Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, previously non-Unicode data types (**char** and **varchar**) become Unicode data types using UTF-8 encoding. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] doesn't change the behavior of previously existing Unicode data types (**nchar**, **nvarchar**, and **ntext**), which continue to use UCS-2 or UTF-16 encoding. For more information, see [Storage differences between UTF-8 and UTF-16](#storage_differences).
+Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, previously non-Unicode data types (**char** and **varchar**) become Unicode data types using UTF-8 encoding. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] doesn't change the behavior of previously existing Unicode data types (**nchar**, **nvarchar**, and **ntext**), which continue to use UCS-2 or UTF-16 encoding. For more information, see [Storage differences between UTF-8 and UTF-16](#storage_differences).
 
 ### Unicode considerations
 Significant limitations are associated with non-Unicode data types. This is because a non-Unicode computer is limited to using a single code page. You might experience performance gain by using Unicode, because it requires fewer code-page conversions. Unicode collations must be selected individually at the database, column, or expression level because they aren't supported at the server level.    
@@ -470,7 +468,7 @@ When you move data from a server to a client, your server collation might not be
 >
 > To use the UTF-16 collations that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later) to improve searching and sorting of some Unicode characters (Windows collations only), you can select either one of the supplementary characters (\_SC) collations or one of the version 140 collations.    
  
-To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding-enabled collations(\_UTF8).
+To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], and to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding-enabled collations(\_UTF8).
  
 -   The UTF8 flag can be applied to:    
     -   Linguistic collations that already support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
@@ -481,8 +479,8 @@ To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../
     -   The BIN or BIN2<sup>2</sup> binary collations
     -   The SQL\_* collations  
     
-<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 replaced collation **UTF8_BIN2** with **Latin1_General_100_BIN2_UTF8**.        
-<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 replaced collation **UTF8_BIN2** with **Latin1_General_100_BIN2_UTF8**.        
+<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3.    
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It's a good practice to standardize the collation that's used on systems across your organization, and to deploy Unicode servers and clients wherever possible.    
     
@@ -509,7 +507,7 @@ But the Unicode Consortium has established 16 additional "planes" of characters,
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new family of supplementary character (\_SC) collations that can be used with the **nchar**, **nvarchar**, and **sql_variant** data types to represent the full Unicode character range (000000–10FFFF). For example: **Latin1_General_100_CI_AS_SC** or, if you're using a Japanese collation, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] extends supplementary character support to the **char** and **varchar** data types with the new UTF-8 enabled collations ([\_UTF8](#utf8)). These data types are also capable of representing the full Unicode character range.   
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] extends supplementary character support to the **char** and **varchar** data types with the new UTF-8 enabled collations ([\_UTF8](#utf8)). These data types are also capable of representing the full Unicode character range.   
 
 > [!NOTE]
 > Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all new \_140 collations automatically support supplementary characters.
@@ -542,7 +540,7 @@ The following table compares the behavior of some string functions and string op
 ## <a name="GB18030"></a> GB18030 support    
 GB18030 is a separate standard that's used in the People's Republic of China for encoding Chinese characters. In GB18030, characters can be 1, 2, or 4 bytes in length. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for GB18030-encoded characters by recognizing them when they enter the server from a client-side application and converting and storing them natively as Unicode characters. After they're stored in the server, they're treated as Unicode characters in any subsequent operations. 
 
-You can use any Chinese collation, preferably the latest 100 version. All \_100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations that are available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting.    
+You can use any Chinese collation, preferably the latest 100 version. All \_100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations that are available in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to improve searching and sorting.    
 
 > [!NOTE]
 > Ensure that your client tools, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], use the Dengxian font to correctly display strings that contain GB18030-encoded characters.
@@ -556,9 +554,9 @@ You can use any Chinese collation, preferably the latest 100 version. All \_100 
     
 Database applications that interact with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must use controls that support complex scripts. Standard Windows form controls that are created in managed code are complex-script-enabled.    
 
-## <a name="Japanese_Collations"></a> Japanese collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="Japanese_Collations"></a> Japanese collations added in  [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
  
-Starting with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, and \_VSS). 
+Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, and \_VSS). 
 
 To list these collations, you can query the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 
@@ -574,12 +572,12 @@ These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)]
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> UTF-8 support
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, and as database-level or column-level collation for string data. UTF-8 is allowed in the **char** and **varchar** data types, and it's enabled when you create or change an object's collation to a collation that has a *UTF8* suffix. One example is changing **LATIN1_GENERAL_100_CI_AS_SC** to **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, and as database-level or column-level collation for string data. UTF-8 is allowed in the **char** and **varchar** data types, and it's enabled when you create or change an object's collation to a collation that has a *UTF8* suffix. One example is changing **LATIN1_GENERAL_100_CI_AS_SC** to **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 is available only to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **nchar** and **nvarchar** data types allow UCS-2 or UTF-16 encoding only, and they remain unchanged.
 
 ### <a name="storage_differences"></a> Storage differences between UTF-8 and UTF-16
-The Unicode Consortium allocates to each character a unique code point, which is a value in the range 000000–10FFFF. With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], both UTF-8 and UTF-16 encodings are available to represent the full range:    
+The Unicode Consortium allocates to each character a unique code point, which is a value in the range 000000–10FFFF. With [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], both UTF-8 and UTF-16 encodings are available to represent the full range:    
 -  With UTF-8 encoding, characters in the ASCII range (000000–00007F) require 1 byte, code points 000080–0007FF require 2 bytes, code points 000800–00FFFF require 3 bytes, and code points 0010000–0010FFFF require 4 bytes. 
 -  With UTF-16 encoding, code points 000000–00FFFF require 2 bytes, and code points 0010000–0010FFFF require 4 bytes. 
 
@@ -644,11 +642,12 @@ For more information, see the following related content:
 * [UTF-8 Support in OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
 * [SQL Server Collation Name (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)  
 * [Windows Collation Name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
-* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
+* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)      
+* [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)      
+* [Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)    
     
 ## See also    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     
 [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
-[Single-Byte and Multibyte Character Sets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 
+[Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

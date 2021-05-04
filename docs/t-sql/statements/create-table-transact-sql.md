@@ -1,12 +1,13 @@
 ---
-title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
+description: "CREATE TABLE (Transact-SQL)"
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
-ms.date: 02/24/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILESTREAM_TSQL"
   - "TABLE"
@@ -43,34 +44,35 @@ helpviewer_keywords:
   - "CREATE TABLE statement"
   - "number of columns per table"
   - "maximum number of bytes per row"
+  - "data retention policy"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]
-> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Simple Syntax
 
-```
+```syntaxsql
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
 
 ## Full Syntax
 
-```
+```syntaxsql
 -- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -100,7 +102,7 @@ column_name <data_type>
     [ COLLATE collation_name ]
     [ SPARSE ]
     [ MASKED WITH ( FUNCTION = ' mask_function ') ]
-    [ CONSTRAINT constraint_name [ DEFAULT constant_expression ] ]
+    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
     [ IDENTITY [ ( seed,increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
@@ -230,14 +232,21 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON  
+	      {( 
+             FILTER_COLUMN = column_name,   
+             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }
+        )}  
+     ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -258,7 +267,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 <partition_number_expression> TO <partition_number_expression>
 ```
 
-```
+## Syntax for memory optimized table
+
+```syntaxsql
 -- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -337,6 +348,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *database_name*
@@ -390,7 +403,7 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 `TEXTIMAGE_ON` is not allowed if there are no large value columns in the table. `TEXTIMAGE_ON` cannot be specified if *partition_scheme* is specified. If **"default"** is specified, or if `TEXTIMAGE_ON` is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in `CREATE TABLE` cannot be subsequently altered.
 
 > [!NOTE]
-> Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8,000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is sorted in-row and the rest is stored out of row in the LOB storage space. 0 is the default value, which indicates that all values are stored directly in the data row.
+> Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8,000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is stored in-row and the rest is stored out of row in the LOB storage space. 0 is the default value, which indicates that all values are stored directly in the data row.
 >
 > `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row.
 >
@@ -412,7 +425,7 @@ As with ON and `TEXTIMAGE_ON`, the value set by using `CREATE TABLE` for `FILEST
 - A [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement converts a heap into a clustered index. In this case, a different FILESTREAM filegroup, partition scheme, or NULL can be specified.
 - A [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) statement converts a clustered index into a heap. In this case, a different FILESTREAM filegroup, partition scheme, or **"default"** can be specified.
 
-The filegroup in the `FILESTREAM_ON <filegroup>` clause, or each FILESTREAM filegroup that is named in the partition scheme, must have one file defined for the filegroup. This file must be defined by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement; otherwise, an error is raised.
+The filegroup in the `FILESTREAM_ON <filegroup>` clause, or each FILESTREAM filegroup that is named in the partition scheme, must have one file defined for the filegroup. This file must be defined by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement; otherwise, an error is raised.
 
 For related FILESTREAM topics, see [Binary Large Object - Blob Data](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
@@ -471,7 +484,7 @@ NOT FOR REPLICATION
 In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specified for the IDENTITY property, FOREIGN KEY constraints, and CHECK constraints. If this clause is specified for the `IDENTITY` property, values are not incremented in identity columns when replication agents perform inserts. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.
 
 GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies that a specified `datetime2` column will be used by the system to record either the start time for which a record is valid or the end time for which a record is valid. The column must be defined as `NOT NULL`. If you attempt to specify them as `NULL`, the system will throw an error. If you do not explicitly specify NOT NULL for a period column, the system will define the column as `NOT NULL` by default. Use this argument in conjunction with the `PERIOD FOR SYSTEM_TIME` and `WITH SYSTEM_VERSIONING = ON` arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -553,7 +566,7 @@ If you are using Always Encrypted with secure enclaves, randomized encryption is
 Columns must be of a qualifying data type.
 
 ALGORITHM
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
 
@@ -564,7 +577,7 @@ Indicates that the column is a sparse column. The storage of sparse columns is o
 
 MASKED WITH ( FUNCTION = ' *mask_function* ')
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
- ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+ ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. Four functions are available:
 
@@ -622,7 +635,7 @@ Is the name of the table referenced by the FOREIGN KEY constraint, and the schem
 **(** *ref_column* [ **,**... *n* ] **)**
 Is a column, or list of columns, from the table referenced by the FOREIGN KEY constraint.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table created, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -647,7 +660,7 @@ If a `DELETE` statement is executed on a row in the **Vendor** table, and an `ON
 
 Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -703,12 +716,12 @@ Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make e
 Is the name of the column set. A column set is an untyped XML representation that combines all of the sparse columns of a table into a structured output. For more information about column sets, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).
 
 PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* )
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument in conjunction with the GENERATED ALWAYS AS ROW { START | END } and WITH SYSTEM_VERSIONING = ON arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 COMPRESSION_DELAY
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 For a memory-optimized, delay specifies the minimum number of minutes a row must remain in the table, unchanged, before it is eligible for compression into the columnstore index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selects specific rows to compress according to their last update time. For example, if rows are changing frequently during a two-hour period of time, you could set `COMPRESSION_DELAY = 120 Minutes` to ensure updates are completed before SQL Server compresses the row.
 
@@ -735,12 +748,12 @@ Table or specified partitions are compressed by using page compression.
 
 COLUMNSTORE
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE specifies to compress with the most performant columnstore compression. This is the typical choice.
 
 COLUMNSTORE_ARCHIVE
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.
 
@@ -801,7 +814,7 @@ When ON, row locks are allowed when you access the index. The [!INCLUDE[ssDE](..
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 When ON, page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used. When OFF, page locks are not used. The default is ON.
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later. <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later. <BR>
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
 
 FILETABLE_DIRECTORY = *directory_name*
@@ -838,12 +851,12 @@ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
 Specifies the name to be used for the unique constraint that is automatically created on the **parent_path_locator** and **name** columns in the FileTable. If this value is not specified, the system generates a name for the constraint.
 
 SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 Enables system versioning of the table if the datatype, nullability constraint, and primary key constraint requirements are met. If the `HISTORY_TABLE` argument is not used, the system generates a new history table matching the schema of the current table in the same filegroup as the current table, creating a link between the two tables and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. By default, the history table is **PAGE** compressed. If the `HISTORY_TABLE` argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table. If the name of a history table is specified during history table creation, you must specify the schema and table name. When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records do not overlap. Performing the data consistency check is the default. Use this argument in conjunction with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -856,7 +869,7 @@ When you enable Stretch for a table by specifying `ON`, you can optionally speci
 **Permissions**. Enabling Stretch for a database or a table requires db_owner permissions. Enabling Stretch for a table also requires ALTER permissions on the table.
 
 [ FILTER_PREDICATE = { null | *predicate* } ]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more info, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
@@ -868,7 +881,7 @@ If you don't specify a filter predicate, the entire table is migrated.
 When you specify a filter predicate, you also have to specify *MIGRATION_STATE*.
 
 MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 - Specify `OUTBOUND` to migrate data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 - Specify `INBOUND` to copy the remote data for the table from [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to disable Stretch for the table. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
@@ -877,10 +890,32 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-MEMORY_OPTIMIZED
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance does not support memory optimized tables.
+[DATA_DELETION = ON  
+	{( 
+	   FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }
+)}]
+**Applies to:** Azure SQL Edge *only*
 
-The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
+Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
+
+- FILTER_COLUMN = { column_name }  
+Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS
+                  \| MONTH \| MONTHS \| YEAR \| YEARS }}       
+Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit.   
+
+MEMORY_OPTIMIZED
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance does not support memory optimized tables.
+
+The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
 The default value OFF indicates that the table is disk-based.
 
@@ -917,7 +952,7 @@ Hash indexes are supported only on memory-optimized tables.
 
 For information about the number of allowed tables, columns, constraints and indexes, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).
 
-Space is generally allocated to tables and indexes in increments of one extent at a time. When the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE` is set to TRUE, or always prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], when a table or index is created, it is allocated pages from mixed extents until it has enough pages to fill a uniform extent. After it has enough pages to fill a uniform extent, another extent is allocated every time the currently allocated extents become full. For a report about the amount of space allocated and used by a table, execute `sp_spaceused`.
+Space is generally allocated to tables and indexes in increments of one extent at a time. When the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE` is set to TRUE, or always prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], when a table or index is created, it is allocated pages from mixed extents until it has enough pages to fill a uniform extent. After it has enough pages to fill a uniform extent, another extent is allocated every time the currently allocated extents become full. For a report about the amount of space allocated and used by a table, execute `sp_spaceused`.
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not enforce an order in which DEFAULT, IDENTITY, ROWGUIDCOL, or column constraints are specified in a column definition.
 
@@ -1009,7 +1044,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database
 
-For the troubleshooting the tempdb, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use).
+For troubleshooting tempdb, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use).
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1047,7 +1082,7 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 - FOREIGN KEY constraints can reference only tables within the same database on the same server. Cross-database referential integrity must be implemented through triggers. For more information, see [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
 - FOREIGN KEY constraints can reference another column in the same table. This is referred to as a self-reference.
 - The REFERENCES clause of a column-level FOREIGN KEY constraint can list only one reference column. This column must have the same data type as the column on which the constraint is defined.
-- The REFERENCES clause of a table-level FOREIGN KEY constraint must have the same number of reference columns as the number of columns in the constraint column list. The data type of each reference column must also be the same as the corresponding column in the column list.
+- The REFERENCES clause of a table-level FOREIGN KEY constraint must have the same number of reference columns as the number of columns in the constraint column list. The data type of each reference column must also be the same as the corresponding column in the column list. The reference columns must be specified in the same order that was used when specifying the columns of the primary key or unique constraint on the referenced table.
 - CASCADE, SET NULL or SET DEFAULT cannot be specified if a column of type **timestamp** is part of either the foreign key or the referenced key.
 - CASCADE, SET NULL, SET DEFAULT and NO ACTION can be combined on tables that have referential relationships with each other. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters NO ACTION, it stops and rolls back related CASCADE, SET NULL and SET DEFAULT actions. When a DELETE statement causes a combination of CASCADE, SET NULL, SET DEFAULT and NO ACTION actions, all the CASCADE, SET NULL and SET DEFAULT actions are applied before the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for any NO ACTION.
 - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not have a predefined limit on either the number of FOREIGN KEY constraints a table can contain that reference other tables, or the number of FOREIGN KEY constraints that are owned by other tables that reference a specific table.
@@ -1402,7 +1437,7 @@ CREATE TABLE T1
 
 ### P. Creating a system-versioned disk-based temporal table
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 The following examples show how to create a temporal table linked to a new history table, and how to create a temporal table linked to an existing history table. Note that the temporal table must have a primary key defined to be enabled for the table to be enabled for system versioning. For examples showing how to add or remove system versioning on an existing table, see System Versioning in [Examples](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). For use cases, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -1452,7 +1487,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### Q. Creating a system-versioned memory-optimized temporal table
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 The following example shows how to create a system-versioned memory-optimized temporal table linked to a new disk-based history table.
 
@@ -1661,6 +1696,20 @@ Addressing system object in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### W. Enable Data Retention Policy on a table
+
+The following example creates a table with data retention enabled and a retention period of 1 week. This example applies to **Azure SQL Edge** only.
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## Next steps

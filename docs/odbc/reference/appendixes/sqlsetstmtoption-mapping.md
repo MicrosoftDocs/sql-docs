@@ -1,4 +1,5 @@
 ---
+description: "SQLSetStmtOption Mapping"
 title: "SQLSetStmtOption Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLSetStmtOption"
   - "SQLSetStmtOption function [ODBC], mapping"
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetStmtOption Mapping
 When an application calls **SQLSetStmtOption** through an ODBC *3.x* driver, the call to  

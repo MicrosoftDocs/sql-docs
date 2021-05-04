@@ -1,4 +1,5 @@
 ---
+description: "Save Metadata (AccessToSQL)"
 title: "Save Metadata (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Save Metadata (AccessToSQL)
 The **Save Metadata** dialog box prompts you to load metadata into your SSMA project before saving it. This lets you have a complete project file that you can use offline and send to other people, such as technical support personnel.  

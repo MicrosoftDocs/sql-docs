@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - HEADERONLY (Transact-SQL)"
 title: "RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "HEADERONLY"
   - "RESTORE HEADERONLY"
@@ -22,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -36,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE HEADERONLY   
 FROM <backup_device>   
 [ WITH   
@@ -93,7 +93,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Expiration date for the backup set.|  
 |**Compressed**|**BIT(1)**|Whether the backup set is compressed using software-based compression:<br /><br /> **0** = No<br /><br /> **1** = Yes|  
 |**Position**|**smallint**|Position of the backup set in the volume (for use with the FILE = option).|  
-|**DeviceType**|**tinyint**|Number corresponding to the device used for the backup operation.<br /><br /> Disk:<br /><br /> **2** = Logical<br /><br /> **102** = Physical<br /><br /> Tape:<br /><br /> **5** = Logical<br /><br /> **105** = Physical<br /><br /> Virtual Device:<br /><br /> **7** = Logical<br /><br /> **107** = Physical<br /><br /> Logical device names and device numbers are in **sys.backup_devices**; for more information, see [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Number corresponding to the device used for the backup operation.<br /><br /> Disk:<br /><br /> **2** = Logical<br /><br /> **102** = Physical<br /><br /> Tape:<br /><br /> **5** = Logical<br /><br /> **105** = Physical<br /><br /> Virtual Device:<br /><br /> **7** = Logical<br /><br /> **107** = Physical<br /><br /> URL<br /><br /> **9** = Logical<br /><br /> **109** = Physical<br /><br />  Logical device names and device numbers are in **sys.backup_devices**; for more information, see [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|User name that performed the backup operation.|  
 |**ServerName**|**nvarchar(128)**|Name of the server that wrote the backup set.|  
 |**DatabaseName**|**nvarchar(128)**|Name of the database that was backed up.|  
@@ -162,10 +162,9 @@ FROM <backup_device>
 ## Examples  
  The following example returns the information in the header for the disk file `C:\AdventureWorks-FullBackup.bak`.  
   
-```  
+```sql 
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   

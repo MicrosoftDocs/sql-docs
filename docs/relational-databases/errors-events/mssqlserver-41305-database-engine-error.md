@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_41305"
 title: "MSSQLSERVER_41305 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "41305 (Database Engine error)"
 ms.assetid: a96e5083-ff97-4003-a900-07942454151d
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_41305
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|41305|  
 |Event Source|MSSQLSERVER|  

@@ -1,6 +1,7 @@
 ---
 title: Replay a Trace File
 titleSuffix: SQL Server Profiler
+description: Get help troubleshooting problems by replaying trace files in SQL Server Profiler. Learn about replay capabilities and options.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/14/2017
 
 # Replay a Trace File (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Replay is the ability to open a saved trace and replay it again. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] features a multithreaded playback engine that can simulate user connections and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Replay is useful to troubleshoot an application or process problem. When you identify the problem and implement corrections, run the trace that found the potential problem against the corrected application or process. Then, replay the original trace and compare results.  
   

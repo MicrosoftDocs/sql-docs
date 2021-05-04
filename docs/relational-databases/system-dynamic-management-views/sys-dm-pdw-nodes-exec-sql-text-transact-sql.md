@@ -6,17 +6,17 @@ ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.  
    
@@ -31,13 +31,13 @@ Returns the text of the SQL batch that is identified by the specified *sql_handl
 |**text**|**nvarchar(max)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
 
 ## Remarks  
-The same remarks in [sys.dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15) apply.  
+The same remarks in [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md) apply.  
   
 ## Permissions  
  Require **sysadmin** server role or `VIEW SERVER STATE` permission on the server.  
   
 ## See also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## Next steps
- For more development tips, see [SQL Data Warehouse development overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ For more development tips, see [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

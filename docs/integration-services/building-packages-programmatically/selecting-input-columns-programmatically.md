@@ -1,4 +1,5 @@
 ---
+description: "Selecting Input Columns Programmatically"
 title: "Selecting Input Columns Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -24,7 +25,7 @@ ms.author: chugu
 ---
 # Selecting Input Columns Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After you have programmatically connected components, select the columns from upstream components that you will transform or pass through to downstream components. If you do not select input columns for your component, the component does not receive any rows from the data flow task.  

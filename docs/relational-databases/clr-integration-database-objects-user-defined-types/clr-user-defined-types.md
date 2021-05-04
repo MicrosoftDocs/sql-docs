@@ -1,5 +1,6 @@
 ---
 title: "CLR User-Defined Types | Microsoft Docs"
+description: This article describes the process for creating user-defined types (UDTs) to store CLR objects in a SQL Server database.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -33,7 +34,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR User-Defined Types
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you the ability to create database objects that are programmed against an assembly created in the .NET Framework common language runtime (CLR). Database objects that can take advantage of the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  
   
 > [!NOTE]  

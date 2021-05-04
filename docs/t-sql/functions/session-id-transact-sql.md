@@ -1,20 +1,21 @@
 ---
+description: "SESSION_ID (Transact-SQL)"
 title: "SESSION_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # SESSION_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Returns the ID of the current [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] session.  
   
@@ -22,8 +23,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 SESSION_ID ( )  
 ```  
   
@@ -40,12 +41,12 @@ SESSION_ID ( )
 ## Examples  
  The following example returns the current session ID.  
   
-```  
+```sql  
 SELECT SESSION_ID();  
 ```  
   
 ## See Also  
  [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
- [VERSION &#40;SQL Data Warehouse&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
+ [VERSION &#40;Azure Synapse Analytics&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
   
   

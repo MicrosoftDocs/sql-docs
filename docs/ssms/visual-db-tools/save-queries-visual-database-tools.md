@@ -1,4 +1,5 @@
 ---
+description: "Save Queries (Visual Database Tools)"
 title: Save Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Save Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Save your query when you want to work with it later. Note that running your query does not save your changes.  
   
 ### To save a query  

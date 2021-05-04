@@ -1,4 +1,5 @@
 ---
+description: "Deliver a Snapshot Through FTP"
 title: "Deliver a Snapshot Through FTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
@@ -16,8 +17,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Deliver a Snapshot Through FTP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to deliver a snapshot through FTP in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to deliver a snapshot through FTP in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
 
 By default, snapshots are stored in folders defined as Universal Naming Convention (UNC) shares. Replication also allows you to specify a File Transfer Protocol (FTP) share instead of a UNC share. To use FTP, you must configure an FTP server and then configure a publication and one or more subscriptions to use FTP. For information about how to configure an FTP server, see the Internet Information Services (IIS) documentation. If you specify FTP information for a publication, subscriptions to that publication use FTP by default. FTP is only used with Web synchronization when the computer that is running IIS is separated from the Distributor by a firewall. In this case, FTP can be used to transfer the snapshot from the Distributor and the computer that is running IIS. (The snapshot is always transferred to the Subscriber by using HTTPS.)  
   
@@ -153,11 +154,11 @@ For more information about modifying the snapshot folder location properties, se
 3.  (Optional) To disable FTP snapshot delivery, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `enabled_for_internet` for `@property` and a value of `false` for `@value`.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
- The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  
   
- The following example creates a subscription to a merge publication, where the Subscriber obtains the snapshot using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ The following example creates a subscription to a merge publication, where the Subscriber obtains the snapshot using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_2.sql)]  
   
@@ -167,5 +168,4 @@ For more information about modifying the snapshot folder location properties, se
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-  
   

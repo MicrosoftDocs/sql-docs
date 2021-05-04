@@ -1,9 +1,10 @@
 ---
-title: "IBCPSession::BCPInit (OLE DB) | Microsoft Docs"
+description: "IBCPSession::BCPInit (Native Client OLE DB provider)"
+title: "IBCPSession::BCPInit (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -13,12 +14,12 @@ apitype: "COM"
 helpviewer_keywords: 
   - "BCPInit method"
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# IBCPSession::BCPInit (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# IBCPSession::BCPInit (Native Client OLE DB Provider)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Initializes the bulk copy structure, performs some error checking, verifies that the data and format file names are correct, and then opens them.  
   
@@ -75,7 +76,7 @@ HRESULT BCPInit(
  The method succeeded.  
   
  E_FAIL  
- A provider specific error occurred' for detailed information, use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider specific error occurred' for detailed information, use the [ISQLServerErrorInfo](isqlservererrorinfo-geterrorinfo-ole-db.md) interface.  
   
  E_OUTOFMEMORY  
  Out-of-memory error.  
@@ -86,5 +87,4 @@ HRESULT BCPInit(
 ## See Also  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
-  
   

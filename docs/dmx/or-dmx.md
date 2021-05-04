@@ -1,16 +1,17 @@
 ---
+description: "OR (DMX)"
 title: "OR (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # OR (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A logical operator that performs a logical disjunction on two numeric expressions.  
   

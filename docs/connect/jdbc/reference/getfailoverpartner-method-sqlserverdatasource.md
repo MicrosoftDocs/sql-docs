@@ -1,4 +1,5 @@
 ---
+description: "getFailoverPartner Method (SQLServerDataSource)"
 title: "getFailoverPartner Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDataSource.getFailoverPartner"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getFailoverPartner Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "rowDeleted Method (SQLServerResultSet)"
 title: "rowDeleted Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.rowDeleted"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # rowDeleted Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

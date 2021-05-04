@@ -1,4 +1,5 @@
 ---
+description: "CONTAINSTABLE (Transact-SQL)"
 title: "CONTAINSTABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2015"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "CONTAINSTABLE"
   - "CONTAINSTABLE_TSQL"
@@ -32,10 +33,10 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a table of zero, one, or more rows for those columns containing precise or fuzzy (less precise) matches to single words and phrases, the proximity of words within a certain distance of one another, or weighted matches. CONTAINSTABLE is used in the [FROM clause](../../t-sql/queries/from-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement and is referenced as if it were a regular table name. It performs a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
@@ -277,10 +278,9 @@ GO
 ## See Also  
  [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

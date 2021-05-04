@@ -7,8 +7,8 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+ms.date: 10/19/2020
+monikerRange: ">=sql-server-2016"
 ---
 
 # Server Properties Advanced Page - Power BI Report Server & Reporting Services
@@ -46,7 +46,17 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 
 (Power BI Report Server January 2020, Reporting Services 2019 and later only)
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
+Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default in Reporting Services 2019, there are no custom headers and the value is blank. By default in Power BI Report Server January 2020 and later, the value is this:
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > Too many headers may impact performance. 
@@ -67,7 +77,7 @@ We recommend validating the configuration of your topology to ensure the set of 
 
 #### Setting the CustomHeaders property
 
-- You can set it using [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
+- You can set it using [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
 - You can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeaders property
 
 #### Example
@@ -78,8 +88,8 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
-        <Pattern>\/Reports\/mobilereport</Pattern>
-        <Value>max-age=86400</Value>
+        <Pattern>(.+)\/Reports\/mobilereport(.+)</Pattern>
+        <Value>max-age=86400; includeSubDomains=true</Value>
     </Header>
     <Header>
         <Name>Embed</Name>
@@ -89,7 +99,7 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
 </CustomHeaders>
 ```
 
-The first header in the above XML adds `Strict-Transport-Security: max-age=86400` header to the matched requests.
+The first header in the above XML adds `Strict-Transport-Security: max-age=86400; includeSubDomains=true` header to the matched requests.
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and will set HSTS header
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Match Failed
 

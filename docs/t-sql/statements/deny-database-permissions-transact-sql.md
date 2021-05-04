@@ -1,12 +1,13 @@
 ---
+description: "DENY Database Permissions (Transact-SQL)"
 title: "DENY Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Database Permissions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Denies permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -29,7 +30,7 @@ Denies permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 ## Syntax
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]
@@ -47,6 +48,8 @@ DENY <permission> [ ,...n ]
   | Database_user_mapped_to_asymmetric_key
   | Database_user_with_no_login
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -110,18 +113,18 @@ A database is a securable contained by the server that is its parent in the perm
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
-|ALTER ANY EXTERNAL LIBRARY <br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |
+|ALTER ANY EXTERNAL LIBRARY <br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].|CONTROL|CONTROL SERVER |
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
-|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -160,7 +163,7 @@ A database is a securable contained by the server that is its parent in the perm
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
-|EXECUTE ANY EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE ANY EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
@@ -219,7 +222,7 @@ GO
 
 - [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
 - [Permissions](../../relational-databases/security/permissions-database-engine.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)

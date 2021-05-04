@@ -1,4 +1,5 @@
 ---
+description: "ADO Connection Manager"
 title: "ADO Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # ADO Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   An ADO connection manager enables a package to connect to ActiveX Data Objects (ADO) objects, such as a recordset. This connection manager is typically used in custom tasks written in an earlier version of a language, such as Microsoft Visual Basic 6.0, or in custom tasks that are part of an existing application that uses ADO to connect to a data source.  
@@ -29,7 +30,7 @@ ms.author: chugu
   
 |SQL Server Data type|Result|  
 |--------------------------|------------|  
-|**time**, **datetimeoffset**|The package fails unless the package uses parameterized SQL commands. To use parameterized SQL commands, use the Execute SQL Task in your package. For more information, see [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
+|**time**, **datetimeoffset**|The package fails unless the package uses parameterized SQL commands. To use parameterized SQL commands, use the Execute SQL Task in your package. For more information, see [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../control-flow/execute-sql-task.md).|  
 |**datetime2**|The ADO connection manager truncates the millisecond value.|  
   
 > [!NOTE]  
@@ -50,11 +51,10 @@ ms.author: chugu
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+-   [Configure OLE DB Connection Manager](./ole-db-connection-manager.md)  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

@@ -1,5 +1,6 @@
 ---
 title: "Distributor and Publisher Information Script | Microsoft Docs"
+description: Use this script to answer commonly asked questions about objects at the Distributor and Publisher in SQL Server.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distributor and Publisher Information Script
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This script uses system tables and replication stored procedures to answer questions commonly asked about objects at the Distributor and Publisher. The script can be used "as-is" and can also provide the basis for customized scripts. The script might require two modifications to run in your environment:  
   
 -   Change the line `use AdventureWorks2012` to use the name of your publication database.  
@@ -92,7 +93,7 @@ SELECT object_name(object_id) AS merge_published_table, name AS published_column
 ```  
   
 ## See Also  
- [Frequently Asked Questions for Replication Administrators](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Frequently Asked Questions for Replication Administrators](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)   
  [sp_get_distributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   

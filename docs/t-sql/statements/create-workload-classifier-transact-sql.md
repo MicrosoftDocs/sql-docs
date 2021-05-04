@@ -1,12 +1,13 @@
 ---
+description: "CREATE WORKLOAD Classifier (Transact-SQL)"
 title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/11/2020
+ms.date: 04/27/2020
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse"
+ms.prod_service: "synapse-analytics"
 ms.reviewer: "jrasnick"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WORKLOAD CLASSIFIER"
   - "WORKLOAD_CLASSIFIER_TSQL"
@@ -19,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 
 author: ronortloff
 ms.author: rortloff
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Creates a classifier object for use in workload management.  The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.
 
@@ -34,7 +35,7 @@ Creates a classifier object for use in workload management.  The classifier assi
   
 ## Syntax
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     (   WORKLOAD_GROUP = 'name'  
@@ -47,6 +48,7 @@ WITH
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 
@@ -60,6 +62,9 @@ WITH
 
  *MEMBERNAME* = *'security_account'*    
  The security account used to classified against.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
+
+> [!NOTE]
+> Use the ```user_name()``` function, when connected to the system, to verify the membername that the classification process will use to classify the request.  Verifying the membername with the ```user_name()``` function can be helpful troubleshooting AAD or service principle classification issues.  If ```user_name()``` returns "dbo" you can use "dbo" as the membername to classify the requests.  Keep in mind all members of the "dbo" role will be classified.  Additional classification parameters such as *WLM_LABEL* or *WLM_CONTEXT* can also be used to specifically classify requests from multiple AAD accounts mapping to the "dbo" role.
  
  *WLM_LABEL*   
  Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) in the request to match the classifier configuration.
@@ -78,7 +83,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
+Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
 
 Example:
 
@@ -112,7 +117,7 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,END_TIME       = '02:00' )
 ```
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Specifies the relative importance of a request.  Importance is one of the following:
 
 - LOW
@@ -173,7 +178,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## See Also
 
-[SQL Data Warehouse Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)</br>
 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)

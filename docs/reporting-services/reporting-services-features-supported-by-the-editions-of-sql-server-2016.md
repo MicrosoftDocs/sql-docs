@@ -1,6 +1,6 @@
 ---
 title: Features supported by different editions - SQL Server Reporting Services | Microsoft Docs
-description: "This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period."
+description: Learn about SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. 
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -68,7 +68,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 > SQL Server Express with Tools and SQL Server Express don't support SQL Server Reporting Services.
   
 ## Edition requirements for the report server database
- When you create a report server database, not all editions of SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ When you create a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services,|Use this edition of the Database Engine instance to host the database.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  

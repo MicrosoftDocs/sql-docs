@@ -16,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Advanced Merge Replication Conflict - Resolving in Logical Record
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic covers the various combinations of conflict detection and conflict resolution approaches possible when using logical records. A conflict in merge replication occurs when more than one node changes the same data, or merge replication encounters certain types of errors, such as a constraint violation, when replicating changes. For more information about conflict detection and resolution, see [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  To specify the conflict tracking and resolution level for an article, see [Modify Merge Replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
@@ -70,7 +70,7 @@ ms.author: "mathoma"
   
  Because the conflicts are resolved at the logical record level, the winning changes made at the Publisher replace the changes made in the Subscriber tables during replication processing.  
   
- ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series of tables showing changes to related rows")  
+ ![First series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series of tables showing changes to related rows")  
   
 ### Row Level Detection, Logical Record Resolution  
  In this example, the publication is configured with:  
@@ -85,7 +85,7 @@ ms.author: "mathoma"
   
  Because the conflicts are resolved at the logical record level, during synchronization the winning changes made at the Publisher replace the changes made in the Subscriber tables.  
   
- ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series of tables showing changes to related rows")  
+ ![Second series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series of tables showing changes to related rows")  
   
 ### Logical Record Detection, Logical Record Resolution  
  In this example, the publication is configured with:  
@@ -98,7 +98,7 @@ ms.author: "mathoma"
   
  Because the conflicts are also resolved at the logical record level, during synchronization the winning change made at the Publisher replaces the change made in the Subscriber tables.  
   
- ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
+ ![Third series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
   
 ## See Also  
  [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

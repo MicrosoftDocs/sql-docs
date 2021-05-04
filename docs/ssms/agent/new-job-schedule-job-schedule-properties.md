@@ -1,4 +1,5 @@
 ---
+description: "New Job Schedule - Job Schedule Properties"
 title: "New Job Schedule - Job Schedule Properties"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,15 +13,14 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # New Job Schedule - Job Schedule Properties
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 Use this page to view and change the properties of the schedule.  
   
@@ -99,4 +99,3 @@ Select the time for the job to run.
 ## See Also  
 [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
-  

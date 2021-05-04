@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server with SysPrep"
+description: SQL Server SysPrep allows you to prepare a stand-alone instance of SQL Server on a computer and to complete the configuration later.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -7,13 +8,13 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Considerations for Installing SQL Server Using SysPrep
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep allows you to prepare a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer and to complete the configuration at a later time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep involves a two-step process to get to a configured stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The steps include the following:  
   
@@ -36,7 +37,7 @@ You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPre
   
 - In combination with the Windows System Preparation tool (also known as Windows SysPrep); you can create an image of the operating system including the unconfigured prepared instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the source computer. You can then deploy the operating system image to multiple computers. After you complete the configuration of the operating system, you can configure the prepared instances by using the Complete Image step of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
-    The Windows SysPrep tool is used to prepare Windows operating system images. It is used to capture a customized image of the operating system for deployment throughout an organization. For more information about SysPrep and its uses, see [SysPrep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+    The Windows SysPrep tool is used to prepare Windows operating system images. It is used to capture a customized image of the operating system for deployment throughout an organization. For more information about SysPrep and its uses, see [SysPrep](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
   
 ## Installation Media Considerations  
  If you are using a full version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consider the following:  
@@ -54,15 +55,16 @@ You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPre
     - You cannot specify Product IDs for a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express editions.  
   
 ## Supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations  
-SysPrep in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports all features, including tools, of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+SysPrep in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports all features, including tools.  
   
-You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or earlier versions. The features of these instances must support SysPrep.  
+You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or earlier versions. The features of these instances must support SysPrep.  
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is automatically installed and completed at the end of the prepare image step.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer are automatically prepared when you prepare an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They are completed when you complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the Complete Image step.  
   
-For information about supported editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+For information about supported editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
+[SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)  
   
 You can perform an edition upgrade while configuring a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This option is not supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express editions.  
   
@@ -90,4 +92,4 @@ You can complete the prepared instances of [!INCLUDE[ssNoVersion](../../includes
 - Access the **Image completion of a prepared stand-alone instance** step on the **Advanced** page of the **Installation Center**.  
   
 ## See Also  
-[Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)  
+[Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)

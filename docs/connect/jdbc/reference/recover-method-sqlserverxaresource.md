@@ -1,4 +1,5 @@
 ---
+description: "recover Method (SQLServerXAResource)"
 title: "recover Method (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerXAResource.recover"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # recover Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

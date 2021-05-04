@@ -1,4 +1,5 @@
 ---
+description: "sys.xml_schema_types (Transact-SQL)"
 title: "sys.xml_schema_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.xml_schema_types_TSQL"
   - "xml_schema_types_TSQL"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_types catalog view"
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.xml_schema_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per XML schema component that is a Type, **symbol_space** of **T**.  
   

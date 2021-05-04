@@ -1,4 +1,5 @@
 ---
+description: "Consistency Check"
 title: "Consistency Check | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "descriptors [ODBC], consistency checks"
   - "consistency checks [ODBC]"
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Consistency Check
 A consistency check is performed by the driver automatically whenever an application sets the SQL_DESC_DATA_PTR field of the APD, ARD, or IPD. Whenever this field is set, the driver checks that the value of the SQL_DESC_TYPE field and the values applicable to the SQL_DESC_TYPE field in the same record are valid and consistent.  

@@ -1,10 +1,11 @@
 ---
+description: "sys.dm_db_resource_stats (Azure SQL Database)"
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2020"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_resource_stats"
   - "sys.dm_db_resource_stats_TSQL"
@@ -18,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns CPU, I/O, and memory consumption for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database. One row exists for every 15 seconds, even if there is no activity in the database. Historical data is maintained for approximately one hour.  
   
@@ -29,7 +30,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC time indicates the end of the current reporting interval.|  
 |avg_cpu_percent|**decimal (5,2)**|Average compute utilization in percentage of the limit of the service tier.|  
-|avg_data_io_percent|**decimal (5,2)**|Average data I/O utilization in percentage of the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
+|avg_data_io_percent|**decimal (5,2)**|Average data I/O utilization in percentage of the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5,2)**|Average transaction log writes (in MBps) as percentage of the service tier limit.|  
 |avg_memory_usage_percent|**decimal (5,2)**|Average memory utilization in percentage of the limit of the service tier.<br /><br /> This includes memory used for  buffer pool pages and storage of In-Memory OLTP objects.|  
 |xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|  
@@ -44,7 +45,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |||
   
 > [!TIP]  
-> For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Manually tune query performance in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/), and [SQL Database resource limits and resource governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+> For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models), [Manually tune query performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance), and [SQL Database resource limits and resource governance](/azure/sql-database/sql-database-resource-limits-database-server).
   
 ## Permissions
  This view requires VIEW DATABASE STATE permission.  
@@ -96,4 +97,4 @@ FROM sys.dm_db_resource_stats;
   
 ## See Also  
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)
- [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+ [Service Tiers](/azure/azure-sql/database/purchasing-models)

@@ -1,14 +1,15 @@
 ---
+description: "Azure Key Vault sample version 6.0.0"
 title: "Azure Key Vault sample version 6.0.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Azure Key Vault sample version 6.0.0
 
@@ -16,7 +17,7 @@ ms.author: genemi
 
 ## Sample application using Azure Key Vault feature
 
-This application is runnable using JDBC Driver 6.0.0 and Azure-Keyvault (version 0.9.7),  Adal4j (version 1.3.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+This application is runnable using JDBC Driver 6.0.0, Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -221,5 +222,6 @@ public class AKV_600 {
 
 ## See also
 
+[Azure Key vault sample version 9.2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
 [Azure Key Vault sample version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Azure Key Vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

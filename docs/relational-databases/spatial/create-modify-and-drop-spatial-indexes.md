@@ -1,4 +1,5 @@
 ---
+description: "Create, Modify, and Drop Spatial Indexes"
 title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Modify, and Drop Spatial Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A spatial index can more efficiently perform certain operations on a column of the **geometry** or **geography** data type (a *spatial column*). More than one spatial index can be specified on a spatial column. This is useful, for example, for indexing different tessellation parameters in a single column.  
   
  There are a number of restrictions on creating spatial indexes. For more information, see [Restrictions on Spatial Indexes](#restrictions) in this topic.  
@@ -85,7 +86,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  In the **Spatial Indexes** dialog box, click **Add**.  
   
-5.  Select the new index in the **Selected Spatial Index** list, and in the grid to the right, set the properties for the spatial index. For information about the properties, see [Spatial Indexes Dialog Box &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
+5.  Select the new index in the **Selected Spatial Index** list, and in the grid to the right, set the properties for the spatial index. For information about the properties, see [Spatial Indexes Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md).  
   
   
 ###  <a name="alter"></a> To alter a spatial index  
@@ -150,5 +151,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
   

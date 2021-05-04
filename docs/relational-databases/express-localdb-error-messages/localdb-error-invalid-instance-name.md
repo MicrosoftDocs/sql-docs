@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INVALID_INSTANCE_NAME"
 title: "LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -7,16 +8,16 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INVALID_INSTANCE_NAME
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|283|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

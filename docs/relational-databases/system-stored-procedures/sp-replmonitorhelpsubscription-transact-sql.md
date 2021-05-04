@@ -1,4 +1,5 @@
 ---
+description: "sp_replmonitorhelpsubscription (Transact-SQL)"
 title: "sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_replmonitorhelpsubscription_TSQL"
   - "sp_replmonitorhelpsubscription"
 helpviewer_keywords: 
   - "sp_replmonitorhelpsubscription"
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns current status information for subscriptions belonging to one or more publications at the Publisher and returns one row for each returned subscription. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

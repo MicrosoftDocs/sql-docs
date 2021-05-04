@@ -1,4 +1,5 @@
 ---
+description: "Change Tracking Functions (Transact-SQL)"
 title: "Change Tracking Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
@@ -6,19 +7,19 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "functions [SQL Server], change tracking"
   - "change tracking [SQL Server], functions"
 ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Change tracking records insert, update, and delete activity applied to tracked tables, supplying the details of the changes in an easily consumed relational format. The following functions return information about the changes.  
   

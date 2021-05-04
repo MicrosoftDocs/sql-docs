@@ -1,5 +1,6 @@
 ---
 title: "Create an Encrypted Backup | Microsoft Docs"
+description: This article shows you how to create an encrypted backup in SQL Server using Transact-SQL. You can back up to disk or to Azure Storage.
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Create an Encrypted Backup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the steps necessary to create an encrypted backup using Transact-SQL.  For an example using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Full Database Backup (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
 ## Backup to Disk with Encryption  
@@ -70,7 +71,7 @@ ms.author: mikeray
   
  **Prerequisites:**  
   
--   A windows storage account and a container. For more information, see. [Lesson 1: Create Azure Storage Objects](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   A windows storage account and a container. For more information, see. [Lesson 1: Create Azure Storage Objects](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130)).  
   
 -   A Database Master Key for the master database, and a certificate or asymmetric key  on the instance of SQL Server. For encryption requirements and permissions, see [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -122,5 +123,4 @@ ms.author: mikeray
     GO  
   
     ```  
-  
   

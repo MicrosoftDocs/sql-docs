@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergepullsubscription (Transact-SQL)"
 title: "sp_addmergepullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addmergepullsubscription_TSQL"
   - "sp_addmergepullsubscription"
 helpviewer_keywords: 
   - "sp_addmergepullsubscription"
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergepullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a pull subscription to a merge publication. This stored procedure is executed at the Subscriber on the subscription database.  
   

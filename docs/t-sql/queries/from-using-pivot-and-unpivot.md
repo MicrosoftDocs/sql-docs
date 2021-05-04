@@ -1,12 +1,12 @@
 ---
 title: "Using PIVOT and UNPIVOT | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for PIVOT and UNPIVOT relational operators. Use these operators on SELECT statements to change a table-valued expression into another table."
 ms.date: "10/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PIVOT_TSQL"
 helpviewer_keywords: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM - Using PIVOT and UNPIVOT
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output. And `PIVOT` runs aggregations where they're required on any remaining column values that are wanted in the final output. `UNPIVOT` carries out the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
   
@@ -36,7 +36,7 @@ The syntax for `PIVOT` provides is simpler and more readable than the syntax tha
 ## Syntax  
 The following syntax summarizes how to use the `PIVOT` operator.  
   
-```  
+```syntaxsql  
 SELECT <non-pivoted column>,  
     [first pivoted column] AS <column name>,  
     [second pivoted column] AS <column name>,  
@@ -158,8 +158,8 @@ The unique values returned by the `EmployeeID` column become fields in the final
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
-CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
-    Emp3 int, Emp4 int, Emp5 int);  
+CREATE TABLE pvt (VendorID INT, Emp1 INT, Emp2 INT,  
+    Emp3 INT, Emp4 INT, Emp5 INT);  
 GO  
 INSERT INTO pvt VALUES (1,4,3,5,4,4);  
 INSERT INTO pvt VALUES (2,4,1,5,5,5);  

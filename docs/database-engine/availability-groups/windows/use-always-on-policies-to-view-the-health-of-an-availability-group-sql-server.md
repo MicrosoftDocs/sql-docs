@@ -5,18 +5,18 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to determine the operational health of an Always On availability group by using an Always On policy in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For information about Always On Policy Based Management, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
+  This topic describes how to determine the operational health of an Always On availability group by using an Always On policy in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. For information about Always On Policy Based Management, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, the names of Always On category should never be modified.  
@@ -98,24 +98,24 @@ ms.author: mathoma
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
  **SQL Server Always On Team Blogs-Monitoring Always On Health with PowerShell:**  
   
--   [Part 1: Basic Cmdlet Overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+-   [Part 1: Basic Cmdlet Overview](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [Part 2: Advanced Cmdlet Usage](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+-   [Part 2: Advanced Cmdlet Usage](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
--   [Part 3: A Simple Monitoring Application](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+-   [Part 3: A Simple Monitoring Application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
--   [Part 4: Integration with SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+-   [Part 4: Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -123,6 +123,3 @@ ms.author: mathoma
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
-  
-
-

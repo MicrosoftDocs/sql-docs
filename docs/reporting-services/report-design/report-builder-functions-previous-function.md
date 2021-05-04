@@ -1,5 +1,6 @@
 ---
 title: "Previous Function (Report Builder) | Microsoft Docs"
+description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

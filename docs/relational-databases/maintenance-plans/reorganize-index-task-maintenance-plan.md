@@ -1,4 +1,5 @@
 ---
+description: "Reorganize Index Task (Maintenance Plan)"
 title: "Reorganize Index Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "Reorganize Index Task dialog box"
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Reorganize Index Task (Maintenance Plan)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use the **ReorganizeIndex Task** dialog to move index pages into a more efficient search order. This task uses the `ALTER INDEX REORGANIZE` statement with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Use the **ReorganizeIndex Task** dialog to move index pages into a more efficient search order. This task uses the `ALTER INDEX REORGANIZE` statement with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] databases.  
   
 ## Options  
  **Connection**  

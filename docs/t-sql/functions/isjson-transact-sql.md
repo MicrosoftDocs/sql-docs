@@ -1,12 +1,11 @@
 ---
+description: "ISJSON (Transact-SQL)"
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ISJSON"
   - "ISJSON_TSQL"
@@ -16,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
+ms.reviewer: chadam
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # ISJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Tests whether a string contains valid JSON.  
   
@@ -28,11 +27,11 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
   
 ## Syntax  
   
-```sql  
+```syntaxsql  
 ISJSON ( expression )  
 ```  
   
-## Arguments  
+## Arguments
  *expression*  
  The string to test.  
   
@@ -57,7 +56,6 @@ IF (ISJSON(@param) > 0)
 BEGIN  
      -- Do something with the valid JSON value of @param.  
 END
- 
 ```  
   
 ### Example 2  

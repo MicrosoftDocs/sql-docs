@@ -1,5 +1,6 @@
 ---
 title: "Specify a Chart Area for a Series (Report Builder) | Microsoft Docs"
+description: Find out about the chart area as a top-level container that includes the outer border, the chart title, and the legend in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

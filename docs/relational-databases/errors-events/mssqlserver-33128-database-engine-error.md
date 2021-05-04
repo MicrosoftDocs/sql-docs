@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_33128"
 title: "MSSQLSERVER_33128 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "33128 (Database Engine error)"
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_33128
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|33128|  
 |Event Source|MSSQLSERVER|  

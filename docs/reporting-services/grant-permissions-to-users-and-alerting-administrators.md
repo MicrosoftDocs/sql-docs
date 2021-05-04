@@ -1,5 +1,6 @@
 ---
 title: "Grant Permissions to Users and Alerting Administrators | Microsoft Docs"
+description: Learn how to grant permissions to users and alerting administrators in SQL Server Reporting Services (SSRS).
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -10,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Grant Permissions to Users and Alerting Administrators
 
@@ -25,7 +26,7 @@ Before users and alerting administrators can create, edit, delete, and view data
 
 **Alerting administrators**-Permissions must include the Manage Alert SharePoint permission. By default only the Full Control permission level includes this permission for sites created with the Team Site site template. If you use other site templates, you will see different lists of default SharePoint groups. You can add the Manage Alert permission to one of the built-in permission levels or create a custom permission level with the permission required to support alerting administrators that view and delete data alerts.
 
-To learn more about SharePoint permissions, see [User permissions and permission levels (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).
+To learn more about SharePoint permissions, see [User permissions and permission levels (SharePoint Server 2010)](/SharePoint/sites/user-permissions-and-permission-levels).
 
 ## Grant permissions
   

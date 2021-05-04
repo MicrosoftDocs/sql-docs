@@ -1,11 +1,12 @@
 ---
+description: "OLEDB Event Category"
 title: "OLEDB Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "OLEDB event category"
   - "SQL Server event classes, OLEDB event category"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Event Category
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **OLEDB** event category contains general OLEDB events.  
   
 ## In This Section  

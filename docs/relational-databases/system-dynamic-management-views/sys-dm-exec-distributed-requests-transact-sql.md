@@ -1,12 +1,13 @@
 ---
+description: "sys.dm_exec_distributed_requests (Transact-SQL)"
 title: "sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "DM_EXEC_DISTRIBUTED_REQUESTS"
   - "DM_EXEC_DISTRIBUTED_REQUESTS_TSQL"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "PolyBase"
   - "dm_exec_distributed_sql_requests management view"
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Holds information about all requests currently or recently active in PolyBase queries. It lists one row per request/query.  
   
@@ -41,8 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded." The maximum value in milliseconds is equivalent to 24.8 days.|  
   
 ## See Also  
- [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

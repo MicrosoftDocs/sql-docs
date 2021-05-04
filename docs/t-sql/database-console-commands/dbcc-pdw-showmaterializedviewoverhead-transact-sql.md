@@ -1,21 +1,23 @@
 ---
+description: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)"
 title: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
+
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
@@ -23,11 +25,13 @@ Displays the number of incremental changes in the base tables that are held for 
   
 ## Syntax
 
-```
+```syntaxsql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments
 
  *schema_name*     
@@ -66,7 +70,7 @@ Output:
 
 Create a table
 ```sql
-CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+CREATE TABLE t1 (c1 INT NOT NULL, c2 INT NOT NULL, c3 INT NOT NULL)
 ```
 Insert five rows to t1
 ```sql
@@ -78,11 +82,11 @@ INSERT INTO t1 VALUES (5, 5, 5)
 ```
 Create materialized views MV1
 ```sql
-CREATE materialized view MV1 
+CREATE MATERIALIZED VIEW MV1 
 WITH (DISTRIBUTION = HASH(c1))  
 AS
-SELECT c1, count(*) total_number 
-FROM dbo.t1 where c1 < 3
+SELECT c1, COUNT(*) total_number 
+FROM dbo.t1 WHERE c1 < 3
 GROUP BY c1  
 ```
 Selecting from the materialized view returns two rows.
@@ -104,7 +108,7 @@ Output:
 
 Update the base table.  This query updates the same column in the same row 100 times to the same value.  The materialized view content does not change.
 ```sql
-DECLARE @p int
+DECLARE @p INT
 SELECT @p = 1
 WHILE (@p < 101)
 BEGIN
@@ -130,7 +134,7 @@ After rebuilding the materialized view, all tracking rows for incremental data c
 
 ```sql
 ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
-go
+GO
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
 Output
@@ -142,12 +146,12 @@ Output
 ## See also
 
 [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
-[EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

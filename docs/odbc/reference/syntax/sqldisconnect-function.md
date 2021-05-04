@@ -1,4 +1,5 @@
 ---
+description: "SQLDisconnect Function"
 title: "SQLDisconnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLDisconnect"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDisconnect function [ODBC]"
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDisconnect Function
 **Conformance**  

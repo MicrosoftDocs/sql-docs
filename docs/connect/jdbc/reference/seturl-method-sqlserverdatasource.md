@@ -1,4 +1,5 @@
 ---
+description: "setURL Method (SQLServerDataSource)"
 title: "setURL Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDataSource.setURL"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setURL Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

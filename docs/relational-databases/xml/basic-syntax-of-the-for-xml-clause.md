@@ -1,5 +1,6 @@
 ---
 title: "Basic Syntax of the FOR XML Clause | Microsoft Docs"
+description: Learn the basic syntax of the FOR XML clause and how it is used to determine the shape of XML resulting from an SQL query.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "FOR XML clause, syntax"
   - "FOR XML clause, ROOT directive"
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Basic Syntax of the FOR XML Clause
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The FOR XML mode can be RAW, AUTO, EXPLICIT, or PATH. It determines the shape of the resulting XML.  
   

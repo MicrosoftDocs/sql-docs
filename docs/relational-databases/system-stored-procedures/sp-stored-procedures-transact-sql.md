@@ -1,4 +1,5 @@
 ---
+description: "sp_stored_procedures (Transact-SQL)"
 title: "sp_stored_procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_stored_procedures_TSQL"
   - "sp_stored_procedures"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_stored_procedures"
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_stored_procedures (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a list of stored procedures in the current environment.  
   

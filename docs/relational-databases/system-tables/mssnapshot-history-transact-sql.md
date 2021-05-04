@@ -1,4 +1,5 @@
 ---
+description: "MSsnapshot_history (Transact-SQL)"
 title: "MSsnapshot_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSsnapshot_history"
   - "MSsnapshot_history_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshot_history system table"
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSsnapshot_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsnapshot_history** table contains history rows for the Snapshot Agents associated with the local Distributor. This table is stored in the distribution database.  
   

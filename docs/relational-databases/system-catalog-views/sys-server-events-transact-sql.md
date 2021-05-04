@@ -1,4 +1,5 @@
 ---
+description: "sys.server_events (Transact-SQL)"
 title: "sys.server_events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "server_events_TSQL"
   - "sys.server_events_TSQL"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_events catalog view"
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.server_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each event for which a server-level event-notification or server-level DDL trigger fires. The columns **object_id** and **type** uniquely identify the server event.  
 

@@ -1,4 +1,5 @@
 ---
+description: "SQLFetchScroll Function"
 title: "SQLFetchScroll Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLFetchScroll"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFetchScroll function [ODBC]"
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFetchScroll Function
 **Conformance**  

@@ -1,4 +1,5 @@
 ---
+description: "Create a Database Mail Profile"
 title: "Create a Database Mail Profile | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -16,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Create a Database Mail Profile
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../../includes/tsql-md.md)] to create Database Mail public and private profiles. For more information about mail profiles see [Database Mail Profile](database-mail-configuration-objects.md).
   
 -   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  

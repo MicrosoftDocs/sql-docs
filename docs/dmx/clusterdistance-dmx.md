@@ -1,16 +1,17 @@
 ---
+description: "ClusterDistance (DMX)"
 title: "ClusterDistance (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # ClusterDistance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The **ClusterDistance** function returns the distance of the input case from the specified cluster, or if no cluster is specified, the distance of the input case from the most likely cluster.  
   
@@ -30,7 +31,7 @@ ClusterDistance([<ClusterID expression>])
 ## Remarks  
  The **ClusterDistance** function returns the distance between the input case and the cluster that has the highest probability for that input case.  
   
- In case of K-Means clustering, since any case can belong to only one cluster, with a membership weight of 1.0, the cluster distance is always 0. However, in K-Means, each cluster is assumed to have a centroid. You can obtain the value of the centroid by querying or browsing the NODE_DISTRIBUTION nested table in the mining model content. For more information, see [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
+ In case of K-Means clustering, since any case can belong to only one cluster, with a membership weight of 1.0, the cluster distance is always 0. However, in K-Means, each cluster is assumed to have a centroid. You can obtain the value of the centroid by querying or browsing the NODE_DISTRIBUTION nested table in the mining model content. For more information, see [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
   
  In the case of the default EM clustering method, all the points inside the cluster are considered equally likely; therefore, by design there is no centroid for the cluster. The value of **ClusterDistance** between a particular case and a particular cluster *N* is calculated as follows:  
   
@@ -122,6 +123,5 @@ NATURAL PREDICTION JOIN
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+ [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   

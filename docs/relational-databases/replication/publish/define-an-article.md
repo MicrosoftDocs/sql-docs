@@ -1,4 +1,5 @@
 ---
+description: "Define an Article"
 title: "Define an Article | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,8 +21,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Define an Article
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to define an article in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to define an article in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
   
@@ -46,7 +47,7 @@ ms.author: "mathoma"
 -   Article names cannot include any of the following characters: % , * , [ , ] , | , : , " , ? , ' , \ , / , < , >. If objects in the database include any of these characters and you want to replicate them, you must specify an article name that is different from the object name.  
   
 ##  <a name="Security"></a> Security  
- When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+ When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Create publications and define articles with the New Publication Wizard. After a publication is created, view and modify publication properties in the **Publication Properties - \<Publication>** dialog box. For information about creating a publication from an Oracle database, see [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
@@ -153,5 +154,4 @@ ms.author: "mathoma"
  [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
   

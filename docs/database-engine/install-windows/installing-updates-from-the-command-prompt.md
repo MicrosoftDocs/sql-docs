@@ -1,5 +1,6 @@
 ---
 title: "Installing Updates from the Command Prompt | Microsoft Docs"
+description: This article describes command syntax for SQL Server update installation. You can test and modify installation scripts to meet the needs of your organization.
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
@@ -7,13 +8,13 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Installing Updates from the Command Prompt
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Test and modify installation scripts to meet the needs of your organization. 
  
@@ -27,37 +28,37 @@ The name of the update package can vary and may include a language, edition, and
     ```
     or 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>
     ```
 
 - Setup can integrate the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time. You can prepare an installation of database engine instance to include product update: 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine
     ```
 
 - Update [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared components only, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch
     ```
 
 - Update all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer and all shared components, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances. 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances
     ```
 
 - Remove an update from a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and all shared components, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance. 
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance
     ```
 
 - Remove an update from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared components only, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /Action=RemovePatch 
+    <package_name>.exe /qs /Action=RemovePatch
     ```
 
   > [!NOTE] 
@@ -83,6 +84,5 @@ The name of the update package can vary and may include a language, edition, and
  *You cannot specify this parameter to apply an update to a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You must specify the /instanceID parameter instead. 
  
 ## See also 
- [Overview of SQL Server Servicing Installation](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
- 
+ [Overview of SQL Server Servicing Installation](./install-sql-server-servicing-updates.md) 
  

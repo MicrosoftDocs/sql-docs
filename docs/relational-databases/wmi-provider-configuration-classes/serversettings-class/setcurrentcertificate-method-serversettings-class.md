@@ -1,4 +1,5 @@
 ---
+description: "SetCurrentCertificate Method (ServerSettings Class)"
 title: "SetCurrentCertificate Method (ServerSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetCurrentCertificate method"
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetCurrentCertificate Method (ServerSettings Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the current security certificate.  
   
 ## Syntax  

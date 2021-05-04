@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_cursor_columns (Transact-SQL)"
 title: "sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_cursor_columns"
   - "sp_describe_cursor_columns_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_cursor_columns"
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_describe_cursor_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports the attributes of the columns in the result set of a server cursor.  
   

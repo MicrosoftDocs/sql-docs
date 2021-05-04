@@ -1,4 +1,5 @@
 ---
+description: "SELECT Clause (Transact-SQL)"
 title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SELECT Clause"
   - "SELECT_Clause_TSQL"
@@ -28,7 +29,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies the columns to be returned by the query.  
   
@@ -36,8 +37,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
 <select_list>   
@@ -57,7 +57,9 @@ SELECT [ ALL | DISTINCT ]
     } [ ,...n ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Specifies that duplicate rows can appear in the result set. ALL is the default.  
   
@@ -114,13 +116,13 @@ SELECT [ ALL | DISTINCT ]
   
  The following example selects the values for the `Location` column, defined as type `point`, from the `Cities` table, by invoking a method of the type called `Distance`:  
   
-```  
+```sql
 CREATE TABLE dbo.Cities (  
-     Name varchar(20),  
-     State varchar(20),  
-     Location point );  
+     Name VARCHAR(20),  
+     State VARCHAR(20),  
+     Location POINT);  
 GO  
-DECLARE @p point (32, 23), @distance float;  
+DECLARE @p POINT (32, 23), @distance FLOAT;  
 GO  
 SELECT Location.Distance (@p)  
 FROM Cities;  

@@ -1,4 +1,5 @@
 ---
+description: "Job Activity Monitor Refresh"
 title: "Job Activity Monitor Refresh | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Job Activity Monitor Refresh
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Refresh Settings** dialog box to configure how often Job Activity Monitor obtains new information about server activity. Job Activity Monitor must run queries on the monitored server to obtain information for the Job Activity Monitor grid. When the auto-refresh interval is set to less than 30 seconds, the time used to run these queries can affect server performance.  
   
  To open this dialog, click **View refresh settings**, in the **Status** section of Job Activity Monitor.  

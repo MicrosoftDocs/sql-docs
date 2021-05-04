@@ -1,11 +1,11 @@
 ---
+description: "sp_delete_firewall_rule (Azure SQL Database)"
 title: "sp_delete_firewall_rule"
 titleSuffix: Azure SQL Database
-ms.custom: ""
 ms.date: "07/27/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_firewall_rule_TSQL"
   - "sp_delete_firewall_rule"
@@ -19,10 +19,10 @@ ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # sp_delete_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Removes server-level firewall settings from your [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. This stored procedure is only available in the master database to the server-level principal login.  
 
@@ -54,11 +54,8 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
 ```  
   
 ## See Also  
- [Azure SQL Database Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [How to: Configure Firewall Settings (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Azure SQL Database Firewall](/azure/azure-sql/database/firewall-configure)   
+ [How to: Configure Firewall Settings (Azure SQL Database)](/azure/azure-sql/database/firewall-configure)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   
-  
-
-

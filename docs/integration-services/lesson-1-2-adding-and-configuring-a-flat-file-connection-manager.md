@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-2: Add and configure a Flat File connection manager"
 title: "Step 2: Add and configure a Flat File connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-2: Add and configure a Flat File connection manager
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -41,7 +42,7 @@ In this lesson, you configure the following properties in your Flat File connect
   
 4.  In the **Open** dialog box, locate the **SampleCurrencyData.txt** file on your computer.  
   
-5.  Clear the column names in the first data row checkbox.  
+5.  Clear the **Column names in the first data row** checkbox.  
   
 ### Set locale-sensitive properties  
   

@@ -5,17 +5,17 @@ ms.custom: "seodec18"
 ms.date: "05/18/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Manage a replicated Publisher database as part of an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic discusses special considerations for maintaining a publication database when you use Always On availability groups.  
   
@@ -57,7 +57,7 @@ ms.author: mathoma
   
      Do not remove the remote server for the original publisher from the distributor, even if the server can no longer be accessed. The server metadata for the original publisher is needed at the distributor to satisfy publication metadata queries.  
   
--   If a complete availability group is removed, the behavior with regard to a member replicated database is the same as when a published database is removed from an availability group. Replication can be resumed from the last primary as soon as the database has been restored and the redirection has been modified. If the database is restored at its original publisher, redirection should be removed. If the database is restored at a different host, redirection should be explicitly directed to the new host.  
+-   If a complete availability group is removed, the behavior regarding a member replicated database is the same as when a published database is removed from an availability group. Replication can be resumed from the last primary as soon as the database has been restored and the redirection has been modified. If the database is restored at its original publisher, redirection should be removed. If the database is restored at a different host, redirection should be explicitly directed to the new host.  
   
     > [!NOTE]  
     >  When an availability group is removed that has published member databases, or a published database is removed from an availability group, all copies of the published databases will be left in the recovering state. If restored, each will appear as a published database. Only one copy should be retained with publication metadata. To disable replication for a published database copy, first remove all subscriptions and publications from the database.  
@@ -93,6 +93,27 @@ ms.author: mathoma
     ```  
   
      At this point, the copy of the published database can be retained or dropped.  
+
+## Remove original publisher
+
+There may be instances (replacing older server, OS upgrade, etc.) where you want to remove an original publisher from an Always On availability group. Follow the steps in this section to remove the publisher from the availability group. 
+
+Assume you have servers N1, N2, and D1, where N1 and N2 are the primary and secondary replica of availability group AG1, N1 is the original publisher of a transactional publication and D1 is the distributor. You would like to replace the original publisher N1 with the new publisher N3. 
+
+To remove the publisher, follow these steps: 
+
+1. Install and configure SQL Server to the node N3. The version of SQL Server must be the same as the original publisher. 
+1. On distributor server D1, add N3 as a publisher using [sp_adddistpublisher](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). 
+1. Configure N3 as a publisher with D1 as its distributor. 
+1. Add N3 as a replica to availability group AG1. 
+1. On the N3 replica, verify that the push subscribers for the publication appear as linked servers. Use either [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or SQL Server Management Studio. 
+1. Once N3 is synchronized, fail the availability group over to N3 as primary. 
+1. Remove N1 from availability group AG1. 
+
+Please consider the following:
+- Do not remove remote server of the original publisher (N1 in this case) or any metadata associated with it from the distributor, even if the server can no longer be accessed. The server metadata for the original publisher is needed at the distributor to satisfy publication metadata queries and without it replication will fail. 
+- For SQL Server 2014, once the original publisher is removed, you will not be able to use original publisher name for administering replication in Replication Monitor. If you try to register new replica/s as publisher in Replication Monitor, information will not show as there is no metadata associated with it. For administering replication in this scenario, you will have to right-click individual publications and subscriptions in SQL Server Management Studio (SSMS).
+- For SQL Server 2016 SP2-CU3, SQL Server 2017 CU6 and above, register the listener of the availability group publisher in Replication Monitor to administer replication using SQL Server Management Studio version 17.7 and above. 
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -100,7 +121,7 @@ ms.author: mathoma
   
 -   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)  
   
 -   [Replication Subscribers and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

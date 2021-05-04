@@ -1,12 +1,13 @@
 ---
+description: "DATALENGTH (Transact-SQL)"
 title: "DATALENGTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATALENGTH_TSQL"
   - "DATALENGTH"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "lengths [SQL Server], data"
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.author: pelopes
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATALENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the number of bytes used to represent any expression.
 
@@ -35,11 +36,13 @@ This function returns the number of bytes used to represent any expression.
   
 ## Syntax  
   
-```
+```syntaxsql
 DATALENGTH ( expression )   
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any data type.
   

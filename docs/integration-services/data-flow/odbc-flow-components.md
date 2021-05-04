@@ -1,4 +1,5 @@
 ---
+description: "ODBC Flow Components"
 title: "ODBC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # ODBC Flow Components
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic describes the concepts necessary for creating an ODBC data flow using [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

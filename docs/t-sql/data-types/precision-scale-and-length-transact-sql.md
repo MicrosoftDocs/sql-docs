@@ -1,4 +1,5 @@
 ---
+description: "Precision, scale, and length (Transact-SQL)"
 title: "Precision, scale, and length (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -23,7 +24,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Precision, scale, and Length (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Precision is the number of digits in a number. Scale is the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a precision of 5 and a scale of 2.
   
@@ -73,7 +74,7 @@ Integral part (precision-scale = 21) is less than 32, so this case is case (1) i
 
 The following expression returns result `0.000001` to fit into `decimal(38,6)`:
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 In this case precision is 61, and scale is 20.
 Scale is greater than 6 and integral part (`precision-scale = 41`) is greater than 32. This case is case (3) in multiplication rules and result type is `decimal(38,6)`.

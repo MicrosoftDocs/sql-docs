@@ -1,4 +1,5 @@
 ---
+description: "CALCULATE Statement (MDX)"
 title: "CALCULATE Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -34,7 +35,6 @@ CALCULATE
   
 ## See Also  
  [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
- [Define Assignments and Other Script Commands](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
+ [Define Assignments and Other Script Commands](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

@@ -1,4 +1,5 @@
 ---
+description: "Advanced Editor"
 title: "Advanced Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Advanced Editor
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object.  
@@ -40,11 +41,11 @@ ms.author: chugu
   
  The properties displayed vary by component. For more information on the properties that may be displayed in the **Advanced Editor**, see the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Path Properties](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Path Properties](./data-flow/integration-services-paths.md)  
   
  For more information about the specific component that you are editing, see the description of the component in the Data Flow Elements section of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Objects and Concepts documentation:  
   
@@ -52,5 +53,4 @@ ms.author: chugu
   
 ## See Also  
  [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

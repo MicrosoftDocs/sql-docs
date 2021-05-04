@@ -1,4 +1,5 @@
 ---
+description: "sys.endpoints (Transact-SQL)"
 title: "sys.endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "endpoints"
   - "sys.endpoints"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.endpoints catalog view"
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row per endpoint that is created in the system. There is always exactly one SYSTEM endpoint.  
   

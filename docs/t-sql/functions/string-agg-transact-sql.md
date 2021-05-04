@@ -1,4 +1,5 @@
 ---
+description: "STRING_AGG (Transact-SQL)"
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
@@ -13,12 +14,15 @@ f1_keywords:
 helpviewer_keywords: 
   - "STRING_AGG function"
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
+
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
  
@@ -26,12 +30,14 @@ Concatenates the values of string expressions and places separator values betwee
   
 ## Syntax  
   
-```  
+```syntaxsql
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -44,7 +50,7 @@ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of
 <order_clause>   
 Optionally specify order of concatenated results using `WITHIN GROUP` clause:
 
-```
+```syntaxsql
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
@@ -81,7 +87,7 @@ The following example produces a list of names in a single result cell, separate
 ```sql
 USE AdventureWorks2016
 GO
-SELECT STRING_AGG (CONVERT(nvarchar(max),FirstName), CHAR(13)) AS csv 
+SELECT STRING_AGG (CONVERT(NVARCHAR(max),FirstName), CHAR(13)) AS csv 
 FROM Person.Person;  
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -102,7 +108,7 @@ The following example replaces null values with 'N/A' and returns the names sepa
 ```sql
 USE AdventureWorks2016
 GO
-SELECT STRING_AGG(CONVERT(nvarchar(max),ISNULL(FirstName,'N/A')), ',') AS csv 
+SELECT STRING_AGG(CONVERT(NVARCHAR(max), ISNULL(FirstName,'N/A')), ',') AS csv 
 FROM Person.Person; 
 ```
 
@@ -120,7 +126,7 @@ FROM Person.Person;
 ```sql
 USE AdventureWorks2016
 GO
-SELECT STRING_AGG(CONVERT(nvarchar(max),CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')')), CHAR(13)) AS names 
+SELECT STRING_AGG(CONVERT(NVARCHAR(max), CONCAT(FirstName, ' ', LastName, '(', ModifiedDate, ')')), CHAR(13)) AS names 
 FROM Person.Person; 
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -166,7 +172,7 @@ The following query finds the email addresses of employees and groups them by ci
 USE AdventureWorks2016
 GO
 
-SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') AS emails 
+SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') AS emails 
 FROM Person.BusinessEntityAddress AS BEA  
 INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
 INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
@@ -200,7 +206,7 @@ Similar to previous example, the following query finds the email addresses of em
 USE AdventureWorks2016
 GO
 
-SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
+SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
 FROM Person.BusinessEntityAddress AS BEA  
 INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
 INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 

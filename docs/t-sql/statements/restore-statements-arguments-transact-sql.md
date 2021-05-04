@@ -1,23 +1,23 @@
 ---
-title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
+description: "RESTORE Statements - Arguments (Transact-SQL)"
+title: "RESTORE Arguments (Transact-SQL)"
 ms.custom: ""
 ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "RESTORE statement, arguments"
   - "RESTORE statement"
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic documents the arguments that are described in the Syntax sections of the RESTORE {DATABASE|LOG} statement and of the associated set of auxiliary statements: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY. Most of the arguments are supported by only a subset of these six statements. The support for each argument is indicated in the description of the argument.  
   
@@ -38,7 +38,9 @@ This topic documents the arguments that are described in the Syntax sections of 
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  DATABASE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
@@ -249,7 +251,7 @@ CREDENTIAL
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
 > [!NOTE]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] or later, and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
   
  REPLACE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -630,6 +632,3 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
-  
-  
-

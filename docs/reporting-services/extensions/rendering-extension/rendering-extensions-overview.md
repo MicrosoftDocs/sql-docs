@@ -1,6 +1,7 @@
 ---
 title: "Rendering Extensions Overview | Microsoft Docs"
-ms.date: 03/14/2017
+description: See which data rendering extensions are included with Reporting Services. Learn how to add custom rendering extensions to generate reports in other formats.
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: extensions
@@ -49,8 +50,6 @@ ms.author: maggies
 -   Add custom formatting and presentation features by combining XSL Transformations (XSLT) with the output of the XML rendering format.  
   
  Writing a custom rendering extension is difficult. A rendering extension must typically support all possible combinations of report elements and requires that you implement hundreds of classes, interfaces, methods, and properties. If you must render a report in a format that is not included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and decide to write your own managed code implementation of a rendering extension, the rendering extension code must implement the **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** interface, which is required by the report server.  
-  
- For supplemental documentation and whitepapers on [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], see the latest technical resources at the [Reporting Services Web site](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## See Also  
  [Implementing a Rendering Extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

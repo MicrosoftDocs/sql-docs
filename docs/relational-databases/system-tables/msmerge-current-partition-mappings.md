@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_current_partition_mappings"
 title: "MSmerge_current_partition_mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSmerge_current_partition_mappings"
   - "MSmerge_current_partition_mappings_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_current_partition_mappings system table"
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_current_partition_mappings** table stores one row for each partition id a given changed row belongs to. This table is stored in the publication database.  
   

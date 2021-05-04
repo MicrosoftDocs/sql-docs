@@ -1,4 +1,5 @@
 ---
+description: "REVOKE System Object Permissions (Transact-SQL)"
 title: "REVOKE System Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,7 +18,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE System Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on system objects such as stored procedures, extended stored procedures, functions, and views from a principal.  
   
@@ -25,12 +26,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [**sys.**] .  
  The **sys** qualifier is required only when you are referring to catalog views and dynamic management views.  
   
@@ -60,7 +62,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## Examples  
  The following example revokes `EXECUTE` permission on `sp_addlinkedserver` from `public`.  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  

@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_delete_policy_execution_history (Transact-SQL)"
 title: "sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_syspolicy_delete_policy_execution_history"
   - "sp_syspolicy_delete_policy_execution_history_TSQL"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_delete_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes execution history for policies in Policy-Based Management. You can use this stored procedure to delete execution history for a specific policy or for all policies, and to delete execution history before a specific date.  
   

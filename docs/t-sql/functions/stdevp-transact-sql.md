@@ -1,12 +1,13 @@
 ---
+description: "STDEVP (Transact-SQL)"
 title: "STDEVP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STDEVP"
   - "STDEVP_TSQL"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical standard deviation"
   - "statistical standard deviation"
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STDEVP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the statistical standard deviation for the population for all values in the specified expression.  
   
@@ -30,8 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 -- Aggregate Function Syntax   
 STDEVP ( [ ALL | DISTINCT ] expression )  
   
@@ -39,7 +39,9 @@ STDEVP ( [ ALL | DISTINCT ] expression )
 STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Applies the function to all values. ALL is the default.  
   
@@ -65,7 +67,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### A: Using STDEVP  
  The following example returns the standard deviation for the population for all bonus values in the `SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT STDEVP(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -76,7 +78,7 @@ GO
 ### B: Using STDEVP  
  The following example returns the `STDEVP` of the sales quota values in the table `dbo.FactSalesQuota`. The first column contains the standard deviation of all distinct values and the second column contains the standard deviation of all values including any duplicates values.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEVP(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEVP(SalesAmountQuota) AS All_Values  
@@ -95,7 +97,7 @@ Distinct_Values   All_Values
 ### C. Using STDEVP with OVER  
  The following example returns the `STDEVP` of the sales quota values for each quarter in a calendar year. Notice that the `ORDER BY` in the `OVER` clause orders the `STDEVP` and the `ORDER BY` of the `SELECT` statement orders the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

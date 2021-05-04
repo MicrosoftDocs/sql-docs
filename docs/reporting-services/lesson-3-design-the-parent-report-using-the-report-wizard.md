@@ -1,5 +1,6 @@
 ---
 title: "Lesson 3: Design the Parent Report using the Report Wizard | Microsoft Docs"
+description: Learn how to design the parent report using the Report Wizard in Report Designer after you create a data connection and data table for your parent report.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

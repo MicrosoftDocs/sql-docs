@@ -1,4 +1,5 @@
 ---
+description: "setTypeMap Method (SQLServerConnection)"
 title: "setTypeMap Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnection.setTypeMap"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setTypeMap Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

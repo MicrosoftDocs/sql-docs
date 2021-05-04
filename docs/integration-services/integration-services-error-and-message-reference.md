@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Error and Message Reference"
 title: "Integration Services Error and Message Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2020"
@@ -17,10 +18,10 @@ ms.author: chugu
 ---
 # Integration Services Error and Message Reference
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The following tables list predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors, warnings, and informational messages, in ascending numerical order within each category, along with their numeric codes and symbolic names. Each of these errors is defined as a field in the <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> class in the <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  
+  The following tables list predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors, warnings, and informational messages, in ascending numerical order within each category, along with their numeric codes and symbolic names. Each of these errors is defined as a field in the [Microsoft.SqlServer.Dts.Runtime.Hresults](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) class in the <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  
   
  This list may be useful when you encounter an error code without its description. The list does not include troubleshooting information at this time.  
   
@@ -235,9 +236,9 @@ ms.author: chugu
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|The login attempt failed for "%1". This error occurs when the login credentials provided are incorrect. Verify the login credentials.|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|The server name specified in the URL %1 cannot be resolved.|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|Proxy authentication failed. This error occurs when login credentials are not provided, or the credentials are incorrect.|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|SSL certificate response obtained from the server was not valid. Cannot process the request.|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|TLS/SSL certificate response obtained from the server was not valid. Cannot process the request.|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|The request has timed out. This error can occur when the timeout specified was too short, or a connection to the server or proxy cannot be established. Ensure that the server and >proxy URL are correct.|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Client certificate is missing. This error occurs when the server is expecting an SSL client certificate and the user has provided an invalid certificate, or has not provided a >certificate. A client certificate must be configured for this connection.|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Client certificate is missing. This error occurs when the server is expecting a TLS/SSL client certificate and the user has provided an invalid certificate, or has not provided a >certificate. A client certificate must be configured for this connection.|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|The specified server, URL %1, has a redirect and the redirect request failed.|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|Server authentication failed. This error occurs when login credentials are not provided, or the credentials are incorrect.|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|Request cannot be processed. Try again later.|  

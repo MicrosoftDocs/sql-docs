@@ -1,4 +1,5 @@
 ---
+description: "Configure Email Notifications (Master Data Services)"
 title: Configure Email Notifications
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Configure Email Notifications (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Configure notification emails when you want [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to send email messages automatically.  
   

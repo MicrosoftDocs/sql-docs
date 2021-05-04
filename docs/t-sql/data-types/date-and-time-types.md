@@ -1,4 +1,5 @@
 ---
+description: "Date and time types"
 title: "Date and time types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Date and time types
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following date and time types.
   

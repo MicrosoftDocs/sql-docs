@@ -1,4 +1,5 @@
 ---
+description: "EditionName Property (WMI MSReportServer_Instance)"
 title: "EditionName Property (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services

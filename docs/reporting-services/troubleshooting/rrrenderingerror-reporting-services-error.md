@@ -1,5 +1,6 @@
 ---
 title: "rrRenderingError - Reporting Services Error | Microsoft Docs"
+description: "In this error reference page, learn about event ID 'rrRenderingError': An error occurred during rendering of the report."
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +18,7 @@ ms.author: maggies
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|rrRenderingError|  
@@ -44,7 +45,7 @@ ms.author: maggies
   
  A message that indicates that the border style is not supported is typically caused when the border style specified is not valid. Specify a supported border style and then try again.  
   
- A message that indicates that the image mimetype is not supported is typically caused when the specified mimetype for an image report item is not valid. Specify a supported mimetype for the report item and then try again.  
+ A message that indicates that the image mime type is not supported is typically caused when the specified mime type for an image report item is not valid. Specify a supported mime type for the report item and then try again.  
   
  A message that indicates that the number of rows exceeds the maximum possible rows per sheet is typically caused when the number of rows in an Excel worksheet is exceeded. Excel supports up to 65,000 rows.  
   

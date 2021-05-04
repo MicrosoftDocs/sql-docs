@@ -1,4 +1,5 @@
 ---
+description: "sp_addtype (Transact-SQL)"
 title: "sp_addtype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addtype"
   - "sp_addtype_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addtype"
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addtype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an alias data type.  
   
@@ -44,17 +45,18 @@ sp_addtype [ @typename = ] type,
 `[ @phystype = ] system_data_type`
  Is the physical, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied, data type on which the alias data type is based.*system_data_type* is **sysname**, with no default, and can be one of these values:  
   
-||||  
-|-|-|-|  
-|**bigint**|**binary(n)**|**bit**|  
-|**char(n)**|**datetime**|**decimal**|  
-|**float**|**image**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**numeric**|**nvarchar(n)**|**real**|  
-|**smalldatetime**|**smallint**|**smallmoney**|  
-|**sql_variant**|**text**|**tinyint**|  
-|**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
-  
+:::row:::
+   :::column span="":::
+      **bigint**<br>      **char(n)**<br>      **float**<br>      **money**<br>      **numeric**<br>      **smalldatetime**<br>      **sql_variant**<br>      **uniqueidentifier**
+   :::column-end:::
+   :::column span="":::
+      **binary(n)**<br>      **datetime**<br>      **image**<br>      **nchar(n)**<br>      **nvarchar(n)**<br>      **smallint**<br>      **text**<br>      **varbinary(n)**
+   :::column-end:::
+   :::column span="":::
+      **bit**<br>      **decimal**<br>      **int**<br>      **ntext**<br>      **real**<br>      **smallmoney**<br>      **tinyint**<br>      **varchar(n)**
+    :::column-end:::
+:::row-end:::
+ 
  Quotation marks are required around all parameters that have embedded blank spaces or punctuation marks. For more information about available data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
  *n*  

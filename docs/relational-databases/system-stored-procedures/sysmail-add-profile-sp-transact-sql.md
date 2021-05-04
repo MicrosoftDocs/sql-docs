@@ -1,4 +1,5 @@
 ---
+description: "sysmail_add_profile_sp (Transact-SQL)"
 title: "sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmail_add_profile_sp_TSQL"
   - "sysmail_add_profile_sp"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_profile_sp"
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_add_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new Database Mail profile.  
   

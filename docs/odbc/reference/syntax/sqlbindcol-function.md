@@ -1,4 +1,5 @@
 ---
+description: "SQLBindCol Function"
 title: "SQLBindCol Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLBindCol"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC]"
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindCol Function
 **Conformance**  
@@ -38,7 +39,7 @@ SQLRETURN SQLBindCol(
       SQLSMALLINT    TargetType,  
       SQLPOINTER     TargetValuePtr,  
       SQLLEN         BufferLength,  
-      SQLLEN *       StrLen_or_Ind);  
+      SQLLEN *       StrLen_or_IndPtr);  
 ```  
   
 ## Arguments  
@@ -258,13 +259,13 @@ SQLRETURN SQLBindCol(
   
     -   Sets the SQL_DESC_OCTET_LENGTH field to the value of *BufferLength*.  
   
-    -   Sets the SQL_DESC_DATA_PTR field to the value of *TargetValue*.  
+    -   Sets the SQL_DESC_DATA_PTR field to the value of *TargetValuePtr*.  
   
-    -   Sets the SQL_DESC_INDICATOR_PTR field to the value of *StrLen_or_Ind*. (See the following paragraph.)  
+    -   Sets the SQL_DESC_INDICATOR_PTR field to the value of *StrLen_or_IndPtr*. (See the following paragraph.)  
   
-    -   Sets the SQL_DESC_OCTET_LENGTH_PTR field to the value of *StrLen_or_Ind*. (See the following paragraph.)  
+    -   Sets the SQL_DESC_OCTET_LENGTH_PTR field to the value of *StrLen_or_IndPtr*. (See the following paragraph.)  
   
- The variable that the *StrLen_or_Ind* argument refers to is used for both indicator and length information. If a fetch encounters a null value for the column, it stores SQL_NULL_DATA in this variable; otherwise, it stores the data length in this variable. Passing a null pointer as *StrLen_or_Ind* keeps the fetch operation from returning the data length but makes the fetch fail if it encounters a null value and has no way to return SQL_NULL_DATA.  
+ The variable that the *StrLen_or_IndPtr* argument refers to is used for both indicator and length information. If a fetch encounters a null value for the column, it stores SQL_NULL_DATA in this variable; otherwise, it stores the data length in this variable. Passing a null pointer as *StrLen_or_IndPtr* keeps the fetch operation from returning the data length but makes the fetch fail if it encounters a null value and has no way to return SQL_NULL_DATA.  
   
  If the call to **SQLBindCol** fails, the content of the descriptor fields that it would have set in the ARD are undefined and the value of the SQL_DESC_COUNT field of the ARD is unchanged.  
   

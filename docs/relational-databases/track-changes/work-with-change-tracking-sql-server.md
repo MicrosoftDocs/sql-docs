@@ -1,4 +1,5 @@
 ---
+description: "Work with Change Tracking (SQL Server)"
 title: "Work with Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
@@ -21,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with Change Tracking (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Applications that use change tracking must be able to obtain tracked changes, apply these changes to another data store, and update the source database. This topic describes how to perform these tasks, and also the role change tracking plays when a failover occurs and a database must be restored from a backup.  
   
@@ -51,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Is used to obtain the current version that will be used the next time when querying changes. This version represents the version of the last committed transaction.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION() function  
- Is used to obtain the minimum valid version that a client can have and still obtain valid results from CHANGETABLE(). The client should check the last synchronization version against the value thatis returned by this function. If the last synchronization version is less than the version returned by this function, the client will be unable to obtain valid results from CHANGETABLE() and will have to reinitialize.  
+ Is used to obtain the minimum valid version that a client can have and still obtain valid results from CHANGETABLE(). The client should check the last synchronization version against the value that is returned by this function. If the last synchronization version is less than the version returned by this function, the client will be unable to obtain valid results from CHANGETABLE() and will have to reinitialize.  
   
 ### Obtaining Initial Data  
  Before an application can obtain changes for the first time, the application must send a query to obtain the initial data and the synchronization version. The application must obtain the appropriate data directly from the table, and then use CHANGE_TRACKING_CURRENT_VERSION() to obtain the initial version. This version will be passed to CHANGETABLE(CHANGES ...) the first time that changes are obtained.  
@@ -149,7 +150,7 @@ END
 ```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
-  SELECT COUNT(*) FROM sys.change_tracking_tables  
+  SELECT 1 FROM sys.change_tracking_tables  
   WHERE min_valid_version > @last_synchronization_version )  
 BEGIN  
   -- Handle invalid version & do not enumerate changes  

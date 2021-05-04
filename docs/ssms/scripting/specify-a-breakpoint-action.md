@@ -1,8 +1,9 @@
 ---
 title: Specify a Breakpoint Action
+description: Learn now to specify a What Hit action - a custom task for the Transact-SQL debugger to perform when a breakpoint is hit and certain other conditions are satisfied.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint action"
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Specify a Breakpoint Action
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 A breakpoint **When Hit** action specifies a custom task that the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger performs for a breakpoint. If the specified hit count is reached and any specified breakpoint condition is satisfied, the debugger performs the action specified for the breakpoint.
 
@@ -67,5 +68,5 @@ A print message is specified in the **Print a Message** option, and is specified
 3.  Click **OK** to implement the changes, or **Cancel** to exit without applying the changes.  
   
 ## See Also  
- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)   
+ [Specify a Hit Count](./specify-a-hit-count.md)

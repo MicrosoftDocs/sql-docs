@@ -1,19 +1,97 @@
 ---
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "3/2/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for MySQL contains the following changes:
+
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for MySQL contains the following changes:
+
+* Add support for computed columns
+* Fix issues when converting `INSERT` statement for tables with unique constraints and primary keys
+* Update parser to respect `ANSI_QUOTES` and `NO_BACKSLASH_ESCAPES` server modes
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for MySQL contains the following changes:
+
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for MySQL requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for MySQL contains the following changes:
+
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for MySQL contains the following changes:
+
+* Conversion of temporary tables DDL
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for MySQL contains the following changes:
+
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for MySQL contains minor performance improvements and bug fixes.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for MySQL contains the following changes:
+
+* Fix for data migration of spatial types
+* Fix for the issue with special characters in project name
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for MySQL includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
 
 ## SSMA v8.7
 
@@ -78,9 +156,9 @@ The v8.1 release of SSMA for MySQL is enhanced with targeted fixes that are desi
 
 The v8.0 release of SSMA for MySQL is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -202,8 +280,8 @@ The January 2016 maintenance release of SSMA for MySQL contains the following ch
 
 The July 2014 release of SSMA for MySQL contains the following changes:
   
-* Improved Azure SQL DB code conversion.
-* Extension pack functionality moved to schema to support Azure SQL DB.
+* Improved Azure SQL Database code conversion.
+* Extension pack functionality moved to schema to support Azure SQL Database.
 * Performance improvements tested for databases with over 10k objects.
 * UI improvements for dealing with large number of objects.
 * Highlighting of well-known LOB schemas (so they can be ignored in conversion).

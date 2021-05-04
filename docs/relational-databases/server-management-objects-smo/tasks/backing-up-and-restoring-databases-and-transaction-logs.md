@@ -1,4 +1,5 @@
 ---
+description: "Backing Up and Restoring Databases and Transaction Logs"
 title: "Backing Up and Restoring Databases and Transaction Logs"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
@@ -20,10 +21,10 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: "markingmyname"
 ms.author: "maghan"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Backing Up and Restoring Databases and Transaction Logs
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In SMO, the <xref:Microsoft.SqlServer.Management.Smo.Backup> class and the <xref:Microsoft.SqlServer.Management.Smo.Restore> class are utility classes that provide the tools to accomplish the specific tasks of backing up and restoring. A <xref:Microsoft.SqlServer.Management.Smo.Backup> object represents a specific backup task that is required instead of a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] object on the server instance.  
   

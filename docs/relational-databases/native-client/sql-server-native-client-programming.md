@@ -1,5 +1,6 @@
 ---
-title: "SQL Server Native Client Programming | Microsoft Docs"
+title: "Programming"
+description: Use these resources to understand SQL Server Native Client, a stand-alone data access API, used for both OLE DB and ODBC. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "SQLNCLI"
   - "native data access [SQL Server Native Client]"
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Programming
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is a stand-alone data access application programming interface (API), used for both OLE DB and ODBC, that was introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client combines the SQL OLE DB provider and the SQL ODBC driver into one native dynamic-link library (DLL). It also provides new functionality above and beyond that supplied by the Windows Data Access Components (Windows DAC, formerly Microsoft Data Access Components, or MDAC). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client can be used to create new applications or enhance existing applications that need to take advantage of features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], such as multiple active result sets (MARS), user-defined data types (UDT), query notifications, snapshot isolation, and XML data type support.  
   
@@ -62,12 +63,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Finding More SQL Server Native Client Information](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  Provides additional resources about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, including links to external resources and getting further assistance.  
   
- [SQL Server Native Client Errors](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
+ [SQL Server Native Client Errors](./sql-server-native-client-error-mssqlserver-50000.md)  
  Contains topics about runtime errors associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  
  [Updating an Application from SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

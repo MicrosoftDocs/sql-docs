@@ -1,4 +1,5 @@
 ---
+description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"
@@ -16,12 +17,12 @@ ms.author: chugu
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
-[![Download SSIS Feature Pack for Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Download**
+[![Download SSIS Feature Pack for Azure](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Download**
 
 - For SQL Server 2019 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - For SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
@@ -123,7 +124,7 @@ The following Java builds have been tested.
 
 ### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
 
-This should be done via [custom setup interface](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
+This should be done via [custom setup interface](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
 Suppose `zulu8.33.0.1-jdk8.0.192-win_x64.zip` is used.
 The blob container could be organized as follows.
 
@@ -173,20 +174,32 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Use the Azure HDInsight Blob Download Task to download the Pig/Hive output data from the Azure Blob Storage.
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![Screenshot showing the SSIS Azure Connector Big Data Scenario.](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## Scenario: Managing data in the cloud
  Use the Azure Blob Destination in an SSIS package to write output data to Azure Blob Storage, or use the Azure Blob Source to read data from an Azure Blob Storage.
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![Screenshot showing the data flow from the OLE DB Source to the Azure Blob Destination.](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Screenshot showing the data flow from the Azure Blob Source to the OLE DB Destination.](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Use the Foreach Loop Container with the Azure Blob Enumerator to process data in multiple blob files.
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![Screenshot showing the control flow Foreach Loop container.](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## Release Notes
+
+### Version 1.19.0
+
+#### Improvements
+
+1. Added support for shared access signature authentication to Azure Storage connection manager.
+
+### Version 1.18.0
+
+#### Improvements
+
+1. For Flexible File task, three are three improvements: (1) wildcard support for copy/delete operations is added; (2) user can enable/disable recursive searching for delete operation; and (3) the file name of Destination for copy operation can be empty to keep the source file name.
 
 ### Version 1.17.0
 
@@ -213,4 +226,4 @@ This is a hotfix version released for SQL Server 2019 only.
 #### Bugfixes
 
 1. In certain cases, test connection malfunctions for Data Lake Storage Gen2 with the error message "Attempted to access an element as a type incompatible with the array"
-1. Bring back support for Azure storage emulator
+1. Bring back support for Azure Storage Emulator

@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with CLR Integration | Microsoft Docs"
+description: This article describes the namespaces and libraries required to compile database objects using the Microsoft SQL Server integration with the .NET Framework CLR.
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
@@ -27,7 +28,7 @@ ms.author: "jroth"
 ---
 # Getting Started with CLR Integration
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 This topic provides an overview of the namespaces and libraries required to compile database objects using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). The topic also shows you how to write, compile, and run a simple CLR stored procedure written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
@@ -83,7 +84,7 @@ End Class
   
 ```  
   
-This simple program contains a single static method on a public class. This method uses two new classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** and **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, for creating managed database objects to output a simple text message. The method also assigns the string "Hello world!" as the value of an out parameter. This method can be declared as a stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and then run in the same manner as a [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure.  
+This simple program contains a single static method on a public class. This method uses two new classes, **[SqlContext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** and **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)**, for creating managed database objects to output a simple text message. The method also assigns the string "Hello world!" as the value of an out parameter. This method can be declared as a stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and then run in the same manner as a [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure.  
   
 Compile this program as a library, load it into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and run it as a stored procedure.  
   
@@ -168,7 +169,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 For more information about CLR integration in SQL Server, see the following articles:
 
-- [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [CLR Stored Procedures](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [SQL Server In-Process Specific Extensions to ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [Debugging CLR Database Objects](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)

@@ -1,4 +1,5 @@
 ---
+description: "API Functions (ODBC Driver for Oracle)"
 title: "API Functions (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], functions"
   - "API functions [ODBC]"
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

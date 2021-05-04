@@ -1,5 +1,6 @@
 ---
 title: "Deleting Backup Blob Files with Active Leases | Microsoft Docs"
+description: If a SQL Server backup or restore fails, a blob in Azure Storage can become orphaned. Learn how to delete an orphaned blob.
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.prod: sql
@@ -8,16 +9,16 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Delete backup blob files with active leases
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 When backing up to or restoring from Microsoft Azure storage, SQL Server acquires an infinite lease to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blobs. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means the blob cannot be written to or deleted until the lease is released. This topic describes how to release (break) the lease and delete the blob.
   
-For more information on lease types, read this [article](https://go.microsoft.com/fwlink/?LinkId=275664).  
+For more information on lease types, read this [article](/rest/api/storageservices/Lease-Blob).  
   
 If the backup operation fails, it can result in an invalid backup file. The backup blob file might also have an active lease, preventing it from being deleted or overwritten. To delete or overwrite such blobs, the lease should first be released (broken). If there are backup failures, we recommend that you clean up leases and delete blobs. You can also periodically clean up leases and delete blobs as part of your storage management tasks.  
   
@@ -29,7 +30,7 @@ The follow steps describe how to clean up after failed backup or restore activit
   
 1. **Identify blobs with leases:** If you have a script or a process that runs the backup processes, you might be able to capture the failure within the script or process and use that to clean up the blobs.  You can also use the LeaseStats and LeastState properties to identify blobs with leases on them. Once you have identified the blobs, review the list and verify the validity of the backup file before deleting the blob.  
   
-1. **Break the lease:** An authorized request can break the lease without supplying a lease ID. See [here](https://go.microsoft.com/fwlink/?LinkID=275664) for more information.  
+1. **Break the lease:** An authorized request can break the lease without supplying a lease ID. See [here](/rest/api/storageservices/Lease-Blob) for more information.  
   
     > [!TIP]  
     > SQL Server issues a lease ID to establish exclusive access during the restore operation. The restore lease ID is BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -39,7 +40,7 @@ The follow steps describe how to clean up after failed backup or restore activit
 ###  <a name="Code_Example"></a> PowerShell script example  
   
 > [!IMPORTANT]
-> If you are running PowerShell 2.0, you may have problems loading the Microsoft WindowsAzure.Storage.dll assembly. We recommend that you upgrade [Powershell](https://docs.microsoft.com/powershell/) to solve the issue. You can also use the following workaround to create or modify the powershell.exe.config file to load .NET 2.0 and .NET 4.0 assemblies at runtime with the following:  
+> If you are running PowerShell 2.0, you may have problems loading the Microsoft WindowsAzure.Storage.dll assembly. We recommend that you upgrade [Powershell](/powershell/) to solve the issue. You can also use the following workaround to create or modify the powershell.exe.config file to load .NET 2.0 and .NET 4.0 assemblies at runtime with the following:  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -121,4 +122,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## See also
 
-[SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

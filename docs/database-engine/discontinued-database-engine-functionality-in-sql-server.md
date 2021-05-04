@@ -2,7 +2,7 @@
 title: Discontinued database engine functionality
 description: Learn which database engine functionality and features were discontinued in SQL Server 2019 (15.x), SQL Server 2016 (13.x), and previous versions.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -35,14 +35,14 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
 ---
 # Discontinued database engine functionality in SQL Server
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
+  This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
 
-## Discontinued features in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]  
 
 - The following database scoped configuration options are discontinued:
 
@@ -53,23 +53,25 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
 For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 >[!NOTE]
->No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
+>No features were discontinued in [!INCLUDE[sssql14](../includes/sssql17-md.md)].
 
-## Discontinued features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## Discontinued features in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
+- [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
 
 - Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 - ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
 
-- Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true).
 
 - Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
+- `precompute rank` Server configuration option was discontinued beginning with SQL Server 2008. The article has been removed from documentation.
+
 ## Previous Versions
 
-- [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Discontinued Database Engine Functionality in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
 
 ### See also
 

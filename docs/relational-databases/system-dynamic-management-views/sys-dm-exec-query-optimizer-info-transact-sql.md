@@ -1,12 +1,13 @@
 ---
+description: "sys.dm_exec_query_optimizer_info (Transact-SQL)"
 title: "sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_exec_query_optimizer_info_TSQL"
   - "dm_exec_query_optimizer_info"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_optimizer_info dynamic management view"
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns detailed statistics about the operation of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer. You can use this view when tuning a workload to identify query optimization problems or improvements. For example, you can use the total number of optimizations, the elapsed time value, and the final cost value to compare the query optimizations of the current workload and any changes observed during the tuning process. Some counters provide data that is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal diagnostic use. These counters are marked as "Internal only."  
   
@@ -39,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
     
 ## Remarks  
  **sys.dm_exec_query_optimizer_info** contains the following properties (counters). All occurrence values are cumulative and are set to 0 at system restart. All values for value fields are set to NULL at system restart. All value-column values that specify an average use the occurrence value from the same row as the denominator in the calculation of the average. All query optimizations are measured when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determines changes to **dm_exec_query_optimizer_info**, including both user- and system-generated queries. Execution of an already-cached plan does not change values in **dm_exec_query_optimizer_info**, only optimizations are significant.  
@@ -125,6 +126,3 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

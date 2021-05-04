@@ -1,4 +1,5 @@
 ---
+description: "SET CONTEXT_INFO (Transact-SQL)"
 title: "SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_CONTEXT_INFO_TSQL"
   - "SET CONTEXT_INFO"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "CONTEXT_INFO option"
   - "SET CONTEXT_INFO statement"
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET CONTEXT_INFO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Associates up to 128 bytes of binary information with the current session or connection.  
   
@@ -29,12 +30,14 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binary_str*  
  Is a **binary** constant, or a constant that is implicitly convertible to **binary**, to associate with the current session or connection.  
   
@@ -61,7 +64,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
 ### A. Setting context information by using a constant  
  The following example demonstrates `SET CONTEXT_INFO` by setting the value and displaying the results. Note that querying `sys.dm_exec_sessions` requires SELECT and VIEW SERVER STATE permissions, whereas using the CONTEXT_INFO function does not.  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -73,7 +76,7 @@ GO
 ### B. Setting context information by using a function  
  The following example demonstrates using the output of a function to set the context value, where the value from the function must be first placed in a **binary** variable.  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  
@@ -83,9 +86,11 @@ GO
 ```  
   
 ## See Also  
+ [Row Level Security](../../relational-databases/security/row-level-security.md) 
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [SESSION_CONTEXT  &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
-  
+ [sp_set_session_context  &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
   

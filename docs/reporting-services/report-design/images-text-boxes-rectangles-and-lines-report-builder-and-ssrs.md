@@ -1,5 +1,6 @@
 ---
 title: "Images, Text Boxes, Rectangles, and Lines (Report Builder) | Microsoft Docs"
+description: Add visual interest, highlight key information, or provide related information in Report Builder. Add images, text boxes, rectangles, and lines. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

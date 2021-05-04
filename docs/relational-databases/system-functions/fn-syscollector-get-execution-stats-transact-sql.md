@@ -1,4 +1,5 @@
 ---
+description: "fn_syscollector_get_execution_stats (Transact-SQL)"
 title: "fn_syscollector_get_execution_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_syscollector_get_execution_stats"
   - "fn_syscollector_get_execution_stats_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_syscollector_get_execution_stats function"
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # fn_syscollector_get_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns detailed statistics about the collection set or package, including the number of error rows that are logged by a package data flow task. A data flow task is an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component that processes data. This data is in relational format, so it has an input and an output dataset consisting of rows.  
   

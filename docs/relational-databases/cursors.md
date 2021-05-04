@@ -1,5 +1,6 @@
 ---
-title: "Cursors | Microsoft Docs"
+description: "Cursors (SQL Server)"
+title: "Cursors (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/11/2020
 ms.prod: sql
@@ -18,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Cursors
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# SQL Server Cursors
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Operations in a relational database act on a complete set of rows. For example, the set of rows returned by a `SELECT` statement consists of all the rows that satisfy the conditions in the `WHERE` clause of the statement. This complete set of rows returned by the statement is known as the result set. Applications, especially interactive online applications, cannot always work effectively with the entire result set as a unit. These applications need a mechanism to work with one row or a small block of rows at a time. Cursors are an extension to result sets that provide that mechanism.  
   
  Cursors extend result processing by:  

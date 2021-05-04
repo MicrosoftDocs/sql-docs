@@ -1,4 +1,5 @@
 ---
+description: "How to Create a Visual C# SMO Project in Visual Studio .NET"
 title: "Create a Visual C# SMO Project in Visual Studio .NET"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: "markingmyname"
 ms.author: "maghan"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How to Create a Visual C# SMO Project in Visual Studio .NET
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This section describes how to build a simple SMO console application.  
   

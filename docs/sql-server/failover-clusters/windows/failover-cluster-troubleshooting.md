@@ -1,21 +1,22 @@
 ---
 title: "Failover Cluster Troubleshooting | Microsoft Docs"
+description: Learn about troubleshooting failover clusters, including recovering from a failure, resolving common problems, and using extended stored procedures/COM objects.
 ms.custom: ""
 ms.date: "10/21/2015"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: failover-cluster-instance
+ms.topic: how-to
 helpviewer_keywords: 
   - "troublshooting, failover clustering"
   - "failover clustering, troubleshooting"
   - "cluster troubleshooting"
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Failover Cluster Troubleshooting
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic provides information about the following issues:  
   
 -   Basic troubleshooting steps.  
@@ -27,7 +28,7 @@ ms.author: mathoma
 -   Using extended stored procedures and COM objects.  
   
 ## Basic Troubleshooting Steps  
- The first diagnostic step is to run a fresh cluster validation check. For details on validation, see [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster](https://technet.microsoft.com/library/cc732035.aspx).  This can be completed without any interruption of service as it does not affect any online cluster resources. Validation can be run at any time once the Failover Clustering feature has been installed, including before the cluster has been deployed, during cluster creation and while the cluster is running. In fact, additional tests are executed once the cluster is in use, which check that best practices are being followed for highly-available workloads. Across these dozens of tests, only a few of them will impact running cluster workloads and these are all within the storage category, so skipping this entire category is an easy way to avoid disruptive tests.  
+ The first diagnostic step is to run a fresh cluster validation check. For details on validation, see [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)).  This can be completed without any interruption of service as it does not affect any online cluster resources. Validation can be run at any time once the Failover Clustering feature has been installed, including before the cluster has been deployed, during cluster creation and while the cluster is running. In fact, additional tests are executed once the cluster is in use, which check that best practices are being followed for highly-available workloads. Across these dozens of tests, only a few of them will impact running cluster workloads and these are all within the storage category, so skipping this entire category is an easy way to avoid disruptive tests.  
 Failover Clustering comes with a built-in safeguard to prevent accidental downtime when running the storage tests during validation. If the cluster has any online groups when validation is initiated, and the storage tests remain selected, it will prompt the user for confirmation whether they want to run all the tests (and cause downtime), or to skip testing the disks of any online groups to avoid downtime. If the entire storage category was excluded from being tested, then this prompt is not displayed. This will enable cluster validation with no downtime.  
   
 #### How to revalidate your cluster  
@@ -182,5 +183,4 @@ Failover Clustering comes with a built-in safeguard to prevent accidental downti
  [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [How Extended Stored Procedures Work](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Execution Characteristics of Extended Stored Procedures](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

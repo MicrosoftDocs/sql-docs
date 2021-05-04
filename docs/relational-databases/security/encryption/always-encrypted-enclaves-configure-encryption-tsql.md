@@ -1,7 +1,8 @@
 ---
+description: "Configure column encryption in-place with Transact-SQL"
 title: "Configure column encryption in-place with Transact-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -9,10 +10,11 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
+monikerRange: ">= sql-server-ver15" 
 ---
 # Configure column encryption in-place with Transact-SQL
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This article describes how to perform cryptographic operations in-place on columns using Always Encrypted with secure enclaves with the [ALTER TABLE Statement](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
@@ -22,23 +24,24 @@ With the `ALTER TABLE` or `ALTER COLUMN` statement, you can set the target encry
 - If the column is currently encrypted, it will be re-encrypted if you specify the `ENCRYPTED WITH` clause and the specified column encryption type or the column encryption key are different from the currently used encryption type or the column encryption key. 
 
 > [!NOTE]
-> You cannot combine cryptographic operations with other changes in a single an `ALTER TABLE`/`ALTER COLUMN` statement, except changing the column to `NULL` or `NOT NULL`, or changing a collation. For example, you cannot encrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
+> You cannot combine cryptographic operations with other changes in a single `ALTER TABLE`/`ALTER COLUMN` statement, except changing the column to `NULL` or `NOT NULL`, or changing a collation. For example, you cannot encrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 
 As any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COLUMN` statement that triggers in-place encryption must be sent over a connection with Always Encrypted and enclave computations enabled. 
 
-The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
+The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from Azure Data Studio or your application. 
 
 > [!NOTE]
-> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
+> Currently, the [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
 
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites
 - Pre-requisites described in [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
-- SQL Server Management Studio 18.3 or higher.
+- SQL Server Management Studio 18.3 or higher when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SQL Server Management Studio 18.8 or higher when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Steps
 1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
-2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying an enclave-enabled column encryption key in the `ENCRYPTED WITH` clause. If your column is a string column (for example, `char`, `varchar`, `nchar`, `nvarchar`), you may also need to change the collation to a BIN2 collation. 
+2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying the target encryption configuration for a column you want to encrypt, decrypt or re-encrypt. If you are encrypting or re-encrypting the column, using the `ENCRYPTED WITH` clause. If your column is a string column (for example, `char`, `varchar`, `nchar`, `nvarchar`), you may also need to change the collation to a BIN2 collation. 
     
     > [!NOTE]
     > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.
@@ -60,7 +63,7 @@ The remainder of this article describes how to trigger in-place encryption using
 #### Encrypting a column in-place
 The below example assumes:
 - `CEK1` is an enclave-enabled column encryption key.
-- The `SSN` column is plaintext and is currently using the default database collation, e.g. a Latin1, non-BIN2 collation (for example, `Latin1_General_CI_AI_KS_WS`).
+- The `SSN` column is plaintext and is currently using the default database collation, such as Latin1, non-BIN2 collation (for example, `Latin1_General_CI_AI_KS_WS`).
 
 The statement encrypts the `SSN` column using randomized encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
@@ -118,7 +121,7 @@ The below example assumes:
 - The `SSN` column is encrypted using an enclave-enabled column encryption key.
 - The current collation, set at the column level, is `Latin1_General_BIN2`.
 
-The below statement decrypts the column (and keeps the collation unchanged - alternatively, you can choose to change the collation, for example, to a non-BIN2 collation in the same statement).
+The below statement decrypts the column and keeps the collation unchanged. Alternatively, you can choose to change the collation. For example, change the collation to a non-BIN2 collation in the same statement.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -130,11 +133,13 @@ GO
 ```
 
 ## Next Steps
-- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See Also  
+- [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

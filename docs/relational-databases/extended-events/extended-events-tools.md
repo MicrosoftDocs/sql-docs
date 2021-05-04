@@ -11,13 +11,13 @@ helpviewer_keywords:
   - "extended events [SQL Server], using"
   - "extended events [SQL Server], options for using"
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Extended Events Tools
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   You can use the following tools to create and manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events sessions:  
   
@@ -83,8 +83,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
+ [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](../system-tables/system-tables-transact-sql.md)   
  [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Use the PowerShell Provider for Extended Events](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
-  
   

@@ -3,7 +3,7 @@ title: "SUSE: Install SQL Server on Linux"
 description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -11,7 +11,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
 # Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -20,7 +20,7 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
 
@@ -42,27 +42,27 @@ You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 You must have a SLES v12 SP2, SP3, SP4 or SP5 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ::: moniker-end
 
-To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
+To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
 
 If you have previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Install SQL Server
+## <a id="install"></a>Install SQL Server 2017
 
-To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
+To configure SQL Server 2017 on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2017 SLES repository configuration file:
 
@@ -81,6 +81,12 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+   To ensure that the Microsoft package signing key is installed on your system, please import it using the command below: 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. Run the following commands to install SQL Server:
@@ -117,11 +123,11 @@ At this point, SQL Server is running on your SLES machine and is ready to use!
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-## <a id="install"></a>Install SQL Server
+## <a id="install"></a>Install SQL Server 2019
 
-To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
+To configure SQL Server 2019 on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2019 SLES repository configuration file:
 
@@ -133,6 +139,12 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+
+   To ensure that the Microsoft package signing key is installed on your system, use the following command to import the key: 
+
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. Run the following commands to install SQL Server:
@@ -178,7 +190,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Install **mssql-tools** with the unixODBC developer package.
+1. Install **mssql-tools** with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

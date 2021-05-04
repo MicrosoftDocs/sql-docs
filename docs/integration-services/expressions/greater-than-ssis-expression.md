@@ -1,4 +1,5 @@
 ---
+description: "&gt; (Greater Than) (SSIS Expression)"
 title: "&gt; (Greater Than) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # &gt; (Greater Than) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a comparison to determine if the first expression is greater than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

@@ -1,4 +1,5 @@
 ---
+description: "Raw File Source"
 title: "Raw File Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Raw File Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing. This means that the Raw File source can read data more quickly than other sources such as the Flat File and the OLE DB sources.  
@@ -42,7 +43,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Raw File Custom Properties](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -51,7 +52,7 @@ ms.author: chugu
   
 ## Related Content  
   
--   Blog entry, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com  
+-   Blog entry, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), on sqlservercentral.com  
   
 ## Raw File Source Editor (Connection Manager Page)
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
@@ -60,5 +61,4 @@ ms.author: chugu
 ## See Also  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
   

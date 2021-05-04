@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Data Sources in the Script Component"
 title: "Connecting to Data Sources in the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,12 +16,12 @@ ms.author: chugu
 ---
 # Connecting to Data Sources in the Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A connection manager is a convenient unit that encapsulates and stores the information that is required to connect to a data source of a particular type. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- You can make existing connection managers available for access by the custom script in the source or destination component by clicking the **Add** and **Remove** buttons on the **Connection Managers** page of the **Script Transformation Editor**. However, you must write your own custom code to load or save your data, and possibly to open and close the connection to the data source. For more information about the **Connection Managers** page of the **Script Transformation Editor**, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) and [Script Transformation Editor &#40;Connection Managers Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ You can make existing connection managers available for access by the custom script in the source or destination component by clicking the **Add** and **Remove** buttons on the **Connection Managers** page of the **Script Transformation Editor**. However, you must write your own custom code to load or save your data, and possibly to open and close the connection to the data source. For more information about the **Connection Managers** page of the **Script Transformation Editor**, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) and [Script Transformation Editor &#40;Connection Managers Page&#41;](../../data-flow/transformations/script-component.md).  
   
  The Script component creates a **Connections** collection class in the **ComponentWrapper** project item that contains a strongly-typed accessor for each connection manager that has the same name as the connection manager itself. This collection is exposed through the **Connections** property of the **ScriptMain** class. The accessor property returns a reference to the connection manager as an instance of <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. For example, if you have added a connection manager named `MyADONETConnection` on the Connection Managers page of the dialog box, you can obtain a reference to it in your script by adding the following code:  
   
@@ -54,6 +55,5 @@ ms.author: chugu
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Create Connection Managers](../../connection-manager/integration-services-ssis-connections.md)  
   

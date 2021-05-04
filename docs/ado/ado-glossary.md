@@ -1,8 +1,9 @@
 ---
+description: "ADO Glossary Terms"
 title: "ADO Glossary Terms | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, glossary"
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Glossary Terms
 This topic defines terms relevant to ADO.
@@ -171,14 +172,14 @@ This topic defines terms relevant to ADO.
  hierarchical Recordset
  A **Recordset** that contains another **Recordset**. See also data shaping, chapter.
 
- For more information, see [Accessing Rows in a Hierarchical Recordset](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ For more information, see [Accessing Rows in a Hierarchical Recordset](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
  hierarchy
  In general, a hierarchy is a ranked structure with a top level and subordinate levels. In ADO, hierarchical **Recordsets** are used to represent the parent-child relationship between a record and a chapter. Also in ADO, **Record** and **Stream** objects can be used to access hierarchical tree structures such as a folder and documents. ADO MD also includes **Hierarchy** objects to represent a relationship between the levels of a dimension in an OLAP cube. See also hierarchical Recordsets, parent-child relationship, chapter, tree.
 
 ## I-L
  ISAPI (Internet Server Application Programming Interface)
- A set of functions for Internet servers, such as a Windows NT® Server/Windows 2000 Server running Microsoft® Internet Information Services (IIS).
+ A set of functions for Internet servers, such as a Windows NT&reg; Server/Windows 2000 Server running Microsoft&reg; Internet Information Services (IIS).
 
  Key
  A column or columns in a table that uniquely identify a row; often used to index a table.

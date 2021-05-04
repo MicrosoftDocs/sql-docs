@@ -1,20 +1,22 @@
 ---
-title: "Transactions (SQL Data Warehouse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Transactions (Azure Synapse Analytics)
+description: A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back.
+ms.custom:
+ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer:
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: language-reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
-# Transactions (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# Transactions (Azure Synapse Analytics)
+
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back. Each transaction is atomic, consistent, isolated, and durable (ACID). If the transaction succeeds, all statements within it are committed. If the transaction fails, that is at least one of the statements in the group fails, then the entire group is rolled back.  
   
@@ -28,7 +30,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -72,7 +74,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  If an error other than a run-time statement error prevents the successful completion of an explicit transaction, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection to an instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
   
- If a run-time statement error occurs in a batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ If a run-time statement error occurs in a batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## General Remarks  
  A session can only run one transaction at a given time; save points and nested transactions are not supported.  
@@ -86,7 +88,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## Limitations and Restrictions  
  You cannot roll back a transaction after a COMMIT statement is issued because the data modifications have been made a permanent part of the database.  
   
- The [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
+ The [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] does not have a transaction sharing mechanism. This implies that at any given point in time, only one session can be doing work on any transaction in the system.  
   
@@ -97,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ### A. Using an explicit transaction  
   
-```  
+```sql  
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -107,8 +109,8 @@ COMMIT;
 ### B. Rolling back a transaction  
  The following example shows the effect of rolling back a transaction.  In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.  
   
-```  
-CREATE TABLE ValueTable (id int);  
+```sql  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -118,21 +120,21 @@ ROLLBACK;
 ### C. Setting AUTOCOMMIT  
  The following example sets the AUTOCOMMIT setting to `ON`.  
   
-```  
+```sql  
 SET AUTOCOMMIT ON;  
 ```  
   
  The following example sets the AUTOCOMMIT setting to `OFF`.  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
 ```  
   
 ### D. Using an implicit multi-statement transaction  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  
@@ -142,5 +144,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

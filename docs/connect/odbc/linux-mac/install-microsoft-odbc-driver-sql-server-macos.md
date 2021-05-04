@@ -1,15 +1,15 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (macOS)
-ms.date: 03/05/2020
+description: "Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity."
+ms.date: 02/12/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
-author: rothja
-ms.author: v-jizho2
-manager: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (macOS)
@@ -18,12 +18,15 @@ This article explains how to install the Microsoft ODBC Driver for SQL Server on
 
 This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
+> [!Note]
+> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture. The Apple M1 is not supported.
+
 ## Microsoft ODBC 17
 
 To install Microsoft ODBC driver 17 for SQL Server on macOS, run the following commands:
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
@@ -41,7 +44,7 @@ The following sections provide instructions for installing previous versions of 
 Use the following commands to install the Microsoft ODBC driver 13.1 for SQL Server on OS X 10.11 (El Capitan) and macOS 10.12 (Sierra):
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
@@ -65,7 +68,14 @@ The driver needs to load the resource file in order to function. This file is ca
 
 ## Troubleshooting
 
-If you are unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
+Some users encounter an issue when trying to connect after installing the ODBC driver and receive an error like: `"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"`. It may be the case that unixODBC is not configured correctly to find registered drivers. In these cases, creating a couple symbolic links can resolve the issue.
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
+
+For additional cases where you are unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
 
 ## Next steps
 

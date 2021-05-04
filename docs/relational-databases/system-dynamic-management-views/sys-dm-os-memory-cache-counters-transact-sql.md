@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_os_memory_cache_counters (Transact-SQL)"
 title: "sys.dm_os_memory_cache_counters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_memory_cache_counters_TSQL"
   - "dm_os_memory_cache_counters_TSQL"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_cache_counters dynamic management view"
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_memory_cache_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a snapshot of the health of a cache in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys.dm_os_memory_cache_counters** provides run-time information about the cache entries allocated, their use, and the source of memory for the cache entries.  
   
@@ -44,11 +45,8 @@ ms.author: sstein
 ## Permissions 
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ## See Also  
   [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-

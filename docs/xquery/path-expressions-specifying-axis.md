@@ -1,5 +1,6 @@
 ---
 title: "Specifying Axis in a Path Expression Step | Microsoft Docs"
+description: Learn how to specify an axis step in an XQuery path expression.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -23,7 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Path Expressions - Specifying Axis
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   An axis step in a path expression includes the following components:  
   

@@ -1,12 +1,13 @@
 ---
+description: "SIGN (Transact-SQL)"
 title: "SIGN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SIGN_TSQL"
   - "SIGN"
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "0 (zero)"
   - "negative values"
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SIGN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.  
   
@@ -34,12 +35,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SIGN ( numeric_expression )  
 ```  
   
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
@@ -56,8 +59,8 @@ SIGN ( numeric_expression )
 ## Examples  
  The following example returns the SIGN values of numbers from -1 to 1.  
   
-```  
-DECLARE @value real  
+```sql  
+DECLARE @value REAL  
 SET @value = -1  
 WHILE @value < 2  
    BEGIN  
@@ -94,7 +97,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the SIGN values of three numbers.  
   
-```  
+```sql  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
 ```  
   

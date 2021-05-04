@@ -1,12 +1,11 @@
 ---
-title: "xml (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
+title: xml (Transact-SQL)
+description: xml (Transact-SQL)
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
+  - "XML_TSQL"
   - "xml_TSQL"
   - "xml"
 dev_langs: 
@@ -14,11 +13,15 @@ dev_langs:
 helpviewer_keywords: 
   - "xml data type [SQL Server], about xml data type"
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/26/2017"
 ---
+
 # xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
@@ -26,12 +29,13 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  CONTENT  
  Restricts the **xml** instance to be a well-formed XML fragment. The XML data can contain multiple zero or more elements at the top level. Text nodes are also allowed at the top level.  
   
@@ -50,11 +54,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## Examples  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
-SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+DECLARE @DemographicData XML (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData = (SELECT TOP 1 Demographics FROM Person.Person);  
 SELECT @DemographicData;  
 GO  
 ```  

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Phantom Processor | Microsoft Docs"
+description: Learn about the SQL Server XTP Phantom Processor performance object, which contains counters for the In-Memory OLTP engine's phantom processing subsystem.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server XTP Phantom Processor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQL Server XTP Phantom Processor performance object contains counters related to the In-Memory OLTP engine's phantom processing subsystem. This component is responsible for detecting phantom rows in transactions running at the SERIALIZABLE isolation level, as well as constraint validation in concurrency scenarios.  
   

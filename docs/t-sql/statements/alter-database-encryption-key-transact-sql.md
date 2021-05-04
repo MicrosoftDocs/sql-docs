@@ -1,9 +1,10 @@
 ---
+description: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/16/2018"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_DATABASE_ENCRYPTION_KEY_TSQL"
   - "ALTER DATABASE ENCRYPTION"
@@ -17,9 +18,11 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+
+[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
 
   Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -27,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER DATABASE ENCRYPTION KEY  
@@ -39,9 +42,10 @@ ALTER DATABASE ENCRYPTION KEY
         ASYMMETRIC KEY Encryptor_Name  
     }  
 [ ; ]  
-```  
+```
   
-```  
+  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
@@ -55,9 +59,11 @@ ALTER DATABASE ENCRYPTION KEY
     }  
 [ ; ]  
 ```  
-  
-## Arguments  
- REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
+ 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ REGENERATE WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY }  
  Specifies the encryption algorithm that is used for the encryption key.  
   
  ENCRYPTION BY SERVER CERTIFICATE *Encryptor_Name*  
@@ -79,7 +85,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## Examples  
  The following example alters the database encryption key to use the `AES_256` algorithm.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 ALTER DATABASE ENCRYPTION KEY  

@@ -1,8 +1,9 @@
 ---
+description: "Visual C++ ADO Programming"
 title: "Visual C++ ADO Programming | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "ADO, Visual C++"
   - "Visual C++ [ADO]"
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Visual C++ ADO Programming
 The ADO API Reference describes the functionality of the ADO application programming interface (API) using a syntax similar to Microsoft Visual Basic. Though the intended audience is all users, ADO programmers employ diverse languages such as Visual Basic, Visual C++ (with and without the **#import** directive), and Visual J++ (with the ADO/WFC class package).  
@@ -22,7 +23,7 @@ The ADO API Reference describes the functionality of the ADO application program
 > [!NOTE]
 > Microsoft ended support for Visual J++ in 2004.
 
- To accommodate this diversity, the [ADO for Visual C++ Syntax Indexes](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) provide Visual C++ language-specific syntax with links to common descriptions of functionality, parameters, exceptional behaviors, and so on, in the API Reference.  
+ To accommodate this diversity, the [ADO for Visual C++ Syntax Indexes](./using-ado-with-microsoft-visual-c.md) provide Visual C++ language-specific syntax with links to common descriptions of functionality, parameters, exceptional behaviors, and so on, in the API Reference.  
   
  ADO is implemented with COM (Component Object Model) interfaces. However, it is easier for programmers to work with COM in certain programming languages than others. For example, nearly all the details of using COM are handled implicitly for Visual Basic programmers, whereas Visual C++ programmers must attend to those details themselves.  
   
@@ -198,7 +199,7 @@ pRecordset->NextRecordset(NULL);
   
  Remember, these are ADO errors: they result from the ADO operation failing. Errors returned by the underlying provider appear as **Error** objects in the **Connection** object **Errors** collection.  
   
- The **#import** directive creates only error handling routines for methods and properties declared in the ADO .dll. However, you can take advantage of this same error handling mechanism by writing your own error checking macro or inline function. See the topic, [Visual C++ Extensions](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md), or the code in the following sections for examples.  
+ The **#import** directive creates only error handling routines for methods and properties declared in the ADO .dll. However, you can take advantage of this same error handling mechanism by writing your own error checking macro or inline function. See the topic, [Visual C++ Extensions](./visual-c-extensions-for-ado.md), or the code in the following sections for examples.  
   
 ## Visual C++ Equivalents of Visual Basic Conventions  
  The following is a summary of several conventions in the ADO documentation, coded in Visual Basic, as well as their equivalents in Visual C++.  

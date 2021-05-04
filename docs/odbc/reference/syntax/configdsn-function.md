@@ -1,4 +1,5 @@
 ---
+description: "ConfigDSN Function"
 title: "ConfigDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "ConfigDSN"
 apilocation: 
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigDSN [ODBC]"
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ConfigDSN Function
 **Conformance**  

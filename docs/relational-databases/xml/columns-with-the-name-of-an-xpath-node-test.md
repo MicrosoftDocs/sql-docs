@@ -1,5 +1,6 @@
 ---
 title: "Columns with the Name of an XPath Node Test | Microsoft Docs"
+description: Learn how XML content is mapped when an SQL query contains columns with the name of an XPath node test, such as text() or comment().
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "names [SQL Server], columns with"
   - "XPath node test"
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Columns with the Name of an XPath Node Test
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   If the column name is one of the XPath node tests, the content is mapped as shown in the following table. When the column name is an XPath node test, the content is mapped to the corresponding node. If the SQL type of the column is **xml**, an error is returned.  
   
 |Column Name|Behavior|  

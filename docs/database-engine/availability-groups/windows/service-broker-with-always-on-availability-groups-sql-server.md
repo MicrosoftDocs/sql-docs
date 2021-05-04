@@ -5,19 +5,19 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Service Broker, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Service Broker with Always On Availability Groups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
   
 ##  <a name="ReceiveRemoteMessages"></a> Requirements for a Service in an Availability Group to Receive Remote Messages  
@@ -49,7 +49,7 @@ ms.author: mathoma
      For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Broker is not Multisubnet aware. Be sure to use "registerallprovidersip" set to 0, and check if you are not using static IPs on DNS giving the required permission to cluster on DNS as defined on https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker may delay message with status "CONVERSING" trying to use disabled IP.
+    SQL Server Service Broker is not MultiSubnet aware. Set `RegisterAllProvidersIP` to 0 and verify that the cluster has required permission in DNS to use static IP addresses. See [configure availability group listener](create-or-configure-an-availability-group-listener-sql-server.md) to learn more. Service Broker may delay message with status "CONVERSING" trying to use a disabled IP address.
 
 3.  **Grant CONNECT permission on the endpoint.**  
   

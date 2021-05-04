@@ -1,12 +1,12 @@
 ---
 title: Extending the Database Features
+description: Find out how to extend database features. View information on custom test conditions, build and deployment contributors, and other feature extensions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

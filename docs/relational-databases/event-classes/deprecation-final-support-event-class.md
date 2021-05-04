@@ -1,21 +1,22 @@
 ---
+description: "Deprecation Final Support Event Class"
 title: "Deprecation Final Support Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Deprecation Final Support event class"
   - "deprecation [SQL Server], events final support"
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deprecation Final Support Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Deprecation Final Support** event class occurs when you use a feature that will be removed from the next major release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For greatest longevity of your applications, do not use features that cause the **Deprecation Final Support** event class or the **Deprecation Announcement** event class. Modify applications that use final deprecation features as soon as possible.  
   
 ## Deprecation Final Support Event Class Data Columns  

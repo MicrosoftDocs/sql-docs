@@ -7,8 +7,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Writing secure dynamic SQL in SQL Server

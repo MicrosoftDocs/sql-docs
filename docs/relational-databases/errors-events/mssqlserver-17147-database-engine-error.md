@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_17147"
 title: "MSSQLSERVER_17147 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "17147 (Database Engine error)"
 ms.assetid: c7fe3109-8c10-4725-ab19-28e244f5aeee
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_17147
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|17147|  
 |Event Source|MSSQLSERVER|  

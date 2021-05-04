@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (DB2ToSQL)"
 title: "Appendix - 1 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Appendix - 1 (DB2ToSQL)
 Quick view of the SSMA Console command line options:  
@@ -25,5 +26,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executing the SSMA Console](./executing-the-ssma-console-db2tosql.md)  

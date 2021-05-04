@@ -1,4 +1,5 @@
 ---
+description: "How to Work with CDC Services"
 title: "How to Work with CDC Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # How to Work with CDC Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to use the CDC Service Configuration Console to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to work with Oracle CDC Services and to create a new CDC service.  

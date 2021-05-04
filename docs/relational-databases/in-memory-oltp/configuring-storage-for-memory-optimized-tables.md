@@ -1,5 +1,6 @@
 ---
 title: "Configuring Storage for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how to configure storage capacity and input/output operations per second (IOPS) for memory-optimized tables in SQL Server.
 ms.custom: ""
 ms.date: "1/15/2020"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Configuring Storage for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You need to configure storage capacity and input/output operations per second (IOPS).  
   
 ## Storage Capacity  
@@ -37,7 +38,7 @@ A good starting point for sizing storage for this area is to reserve four times 
 -   Checkpoint files are usually distributed uniformly across all containers, space permitting. With SQL Server 2014 you need to provision an odd number of  containers in order to achieve a uniform distribution - starting 2016, both odd and even numbers of containers lead to a uniform distribution.
   
 ## Encryption  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later versions, storage for memory-optimized tables will be encrypted at rest as part of enabling Transparent Data Encryption (TDE) on the database. For more information, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] checkpoint files are not encrypted even if TDE is enabled on the database.
+ In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, storage for memory-optimized tables will be encrypted at rest as part of enabling Transparent Data Encryption (TDE) on the database. For more information, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] checkpoint files are not encrypted even if TDE is enabled on the database.
 
  Data in [non-durable](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) memory-optimized tables is not written to disk at any time. Therefore, TDE does not apply to such tables.
   

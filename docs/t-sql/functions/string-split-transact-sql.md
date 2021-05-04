@@ -1,12 +1,12 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
 ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "jrasnick"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STRING_SPLIT"
   - "STRING_SPLIT_TSQL"
@@ -15,9 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "STRING_SPLIT function"
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017" 
 ---
 # STRING_SPLIT (Transact-SQL)
 
@@ -31,13 +31,18 @@ STRING_SPLIT requires the compatibility level to be at least 130. When the level
 
 To change the compatibility level of a database, refer to [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
 
+> [!NOTE]
+> Compatibility configuration is not needed for STRING_SPLIT in Azure Synapse Analytics.
+
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 
-```
+```syntaxsql
 STRING_SPLIT ( string , separator )  
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -183,10 +188,10 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 
 ## See Also
 
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
-[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
+- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
+- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

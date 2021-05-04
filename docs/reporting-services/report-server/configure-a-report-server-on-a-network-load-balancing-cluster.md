@@ -1,12 +1,13 @@
 ---
 title: "Configure a Report Server on a Network Load Balancing Cluster | Microsoft Docs"
+description: Learn how to configure a report server scale-out to run on an NLB. Implement an NLB cluster solution to support a Reporting Services scale-out deployment.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
+ms.date: 03/23/2021
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster
@@ -30,18 +31,18 @@ ms.date: 12/11/2019
 |1|Before you install Reporting Services on server nodes in an NLB cluster, check the requirements for scale-out deployment.|[Configure a Native Mode Report Server Scale-Out Deployment](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Configure the NLB cluster and verify it is working correctly.<br /><br /> Be sure to map a host header name to the virtual server IP of the NLB cluster. The host header name is used in the report server URL, and is easier to remember and type than an IP address.|For more information, see the Windows Server product documentation for the version of the Windows operating system that you run.|  
 |3|Add the NetBIOS and Fully Qualified Domain Name (FQDN) for the host header to the list of **BackConnectionHostNames** stored in the Windows Registry.<br /><br /> For example, if the host header name \<MyServer> is a virtual name for the Windows computer name of "contoso", you can probably reference the FQDN form as "contoso.domain.com". You will need to add both the hostheader name (MyServer ) and FQDN name (contoso.domain.com) to the list in **BackConnectionHostNames**.  <br /><br /> Then reboot the computer to ensure the changes take effect.|This step is required if your server environment involves NTLM authentication on the local computer, creating a loop back connection.<br /><br /> If this is the case, you will experience the requests between Report Manager and Report Server to fail with 401 (Unauthorized).|  
-|4|Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in files-only mode on nodes that are already part of an NLB cluster, and configure the report server instances for scale-out deployment.<br /><br /> The scale-out that you configure might not respond to requests that are directed to the virtual server IP. Configuring the scale-out to use the virtual server IP occurs at a later step, after you configure view state validation.|[Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
+|4|Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in files-only mode on nodes that are already part of an NLB cluster, and configure the report server instances for scale-out deployment.<br /><br /> The scale-out that you configure might not respond to requests that are directed to the virtual server IP. Configuring the scale-out to use the virtual server IP occurs at a later step, after you configure view state validation.|[Configure a Native Mode Report Server Scale-Out Deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configure view state validation.<br /><br /> For best results, perform this step after you configure the scale-out deployment, and before you configure the report server instances to use the virtual server IP. By configuring view state validation first, you can avoid exceptions about failed state validation when users attempt to access interactive reports.|[How to Configure View State Validation](#ViewState) in this topic.|  
 |6|Configure **Hostname** and **UrlRoot** to use the virtual server IP of the NLB cluster.|[How to Configure Hostname and UrlRoot](#SpecifyingVirtualServerName) in this topic.|  
 |7|Verify the servers are accessible through the host name you specified.|[Verify Report Server Access](#Verify) in this topic.|  
   
 ## <a name="ViewState"></a> How to Configure View State Validation
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.  You must do this for the Report Server Web Service.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.
 ::: moniker-end
   
@@ -49,27 +50,26 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  To work around this issue, you can generate an arbitrary validation key to support view state validation, and then manually configure each report server node to use the same key. You can use any randomly generated hexadecimal sequence. The validation algorithm (such as SHA1) determines how long the hexadecimal sequence must be.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`machineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid.  
   
     ```xml
-    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Report Manager Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Save the file.  
   
 4. Repeat the previous step for each report server in the scale-out deployment.  
   
-5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`machineKey`> elements in the <`system.web`> section.  
+5. Verify that all Web.Config files for all report servers in the scale-out deployment contain identical <`machineKey`> elements in the <`system.web`> section.  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single \<**MachineKey**> entry that you can paste into the RSReportServer.config file for each report server instance in the scale-out deployment.
 
@@ -79,13 +79,13 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. Save the file.
+2. Open the RSReportServer.config file for Reportserver, and in the <`Configuration`> section paste the \<**MachineKey**> element that you generated. By default, the RSReportServer.config file is located in \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\RSReportServer.config for Reporting Services and \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer\RSReportServer.config for Power BI Report Server.  
 
-3. Repeat the previous step for each report server in the scale-out deployment.  
+3. Save the file.
 
-4. Verify that all RSReportServer.config files in the \Reporting Services\Report Server folders contain identical \<**MachineKey**> elements.
+4. Repeat the previous step for each report server in the scale-out deployment.  
 
-::: moniker-end
+5. Verify that all RSReportServer.config files for all report servers in the scale-out deployment contain identical \<**MachineKey**> elements in the <`Configuration`> section.
 
 ## <a name="SpecifyingVirtualServerName"></a> How to Configure Hostname and UrlRoot
 
@@ -99,7 +99,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  If you integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] with [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 or [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007, or you host your reports in a custom Web application, you might need to configure only the **UrlRoot** property. In this case, configure the **UrlRoot** property to be the URL of the SharePoint site or Web application. This will direct network traffic for the reporting environment to the application that handles the reports rather than to the report server or NLB cluster.  
   
- Do not modify **ReportServerUrl**. If you modify this URL, you will introduce an extra roundtrip through the virtual server each time an internal request is handled. For more information, see [URLs in Configuration Files  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). For more information about editing the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Do not modify **ReportServerUrl**. If you modify this URL, you will introduce an extra roundtrip through the virtual server each time an internal request is handled. For more information, see [URLs in Configuration Files  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). For more information about editing the configuration file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 1. Open RSReportServer.config in a text editor.  
   
@@ -137,7 +137,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
 ## See Also
 
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configure a Native Mode Report Server Scale-Out Deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

@@ -1,4 +1,5 @@
 ---
+description: "sp_marksubscriptionvalidation (Transact-SQL)"
 title: "sp_marksubscriptionvalidation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_marksubscriptionvalidation"
   - "sp_marksubscriptionvalidation_TSQL"
 helpviewer_keywords: 
   - "sp_marksubscriptionvalidation"
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_marksubscriptionvalidation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Marks the current open transaction to be a subscription-level validation transaction for the specified subscriber. This stored procedure is executed at the Publisher on the publication database.  
   

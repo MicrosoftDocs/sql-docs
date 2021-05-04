@@ -1,28 +1,28 @@
 ---
 title: "Execute Stored Procedure with RPC and Process Output | Microsoft Docs"
-description: "Execute Stored Procedure with RPC and process output"
+description: Learn how to run SQL Server stored procedures with RPC, and process return codes and output parameters in this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Execute Stored Procedure with RPC and Process Output
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when **IMultipleResults::GetResult** returns DB_S_NORESULT, or when the **IMultipleResults** interface is completely released, whichever occurs first.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To process return codes and output parameters  
   
@@ -393,5 +393,4 @@ GO
   
 ## See Also  
  [Processing Results How-to Topics &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "Project Settings(Synchronization) (OracleToSQL)"
 title: "Project Settings(Synchronization) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Project Settings(Synchronization) (OracleToSQL)
 The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads and refreshes database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

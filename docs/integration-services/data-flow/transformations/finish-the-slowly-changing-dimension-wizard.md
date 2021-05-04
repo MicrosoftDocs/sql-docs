@@ -1,4 +1,5 @@
 ---
+description: "Finish the Slowly Changing Dimension Wizard"
 title: "Finish the Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Finish the Slowly Changing Dimension Wizard
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Finish the Slowly Changing Dimension Wizard** dialog box to verify your choices before the wizard builds support for slowly changing dimensions.  

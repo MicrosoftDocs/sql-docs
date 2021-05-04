@@ -1,4 +1,5 @@
 ---
+description: "sys.service_contract_usages (Transact-SQL)"
 title: "sys.service_contract_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "service_contract_usages"
   - "sys.service_contract_usages"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_usages catalog view"
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.service_contract_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row per (service, contract) pair.  
   

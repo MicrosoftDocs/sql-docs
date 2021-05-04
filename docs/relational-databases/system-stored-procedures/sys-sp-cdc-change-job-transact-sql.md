@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_change_job (Transact-SQL)"
 title: "sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_cdc_change_job_TSQL"
   - "sys.sp_cdc_change_job"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_change_job"
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_change_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifies the configuration of a change data capture cleanup or capture job in the current database. To view the current configuration of a job, query the [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) table, or use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   

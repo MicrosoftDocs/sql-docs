@@ -1,4 +1,5 @@
 ---
+description: "Manage DQS Databases"
 title: "Manage DQS Databases"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ ms.author: sawinark
 ---
 # Manage DQS Databases
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   
@@ -35,7 +36,7 @@ ms.author: sawinark
 -   The default recovery model of the DQS databases is set to **Simple**. In the Simple recovery model, transactions are minimally logged, and the log truncation happens automatically after the transaction is complete to free up space in the transaction log (.ldf file). For detailed information about the simple recovery model, see [Full Database Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]
->  -   In the Simple recovery model, when log records remain active for a long time (for example, a long and time-consuming transaction), log truncation can be delayed, and therefore can result in the filling up of transaction log. Also, log truncation does not reduce the size of the physical log file (.ldf file). To reduce the size of a physical log file, you need to shrink the log file. For information about troubleshooting issues around transaction log, see [The Transaction Log &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) or the Microsoft Support article at [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   In the Simple recovery model, when log records remain active for a long time (for example, a long and time-consuming transaction), log truncation can be delayed, and therefore can result in the filling up of transaction log. Also, log truncation does not reduce the size of the physical log file (.ldf file). To reduce the size of a physical log file, you need to shrink the log file. For information about troubleshooting issues around transaction log, see [The Transaction Log &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) or the Microsoft Support article at [https://go.microsoft.com/fwlink/?LinkId=237446](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
 > -   You must regularly perform a Full or Differential backup of the DQS databases and back up the transaction log as well to perform point-in-time recovery of data. For more information, see [Full Database Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) and [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Detach/Attach the DQS Databases  
@@ -52,5 +53,4 @@ ms.author: sawinark
   
 ## See Also  
  [DQS Administration](../data-quality-services/dqs-administration.md)  
-  
   

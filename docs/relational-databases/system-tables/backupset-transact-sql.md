@@ -1,12 +1,13 @@
 ---
+description: "backupset (Transact-SQL)"
 title: "backupset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "12/24/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "backupset"
   - "backupset_TSQL"
@@ -17,18 +18,17 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupset system table"
   - "backup sets [SQL Server]"
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contains a row for each backup set. A *backup set* contains the backup from a single, successful backup operation. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY, and RESTORE VERIFYONLY statements operate on a single backup set within the media set on the specified backup device or devices.  
   
  This table is stored in the **msdb** database.  
 
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Unique backup set identification number that identifies the backup set. Identity, primary key.|  
@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] major version number. Can be NULL.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minor version number. Can be NULL.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] build number. Can be NULL.|  
-|**time_zone**|**smallint**|Difference between local time (where the backup operation is taking place) and Coordinated Universal Time (UTC) in 15-minute intervals. Values can be -48 through +48, inclusive. A value of 127 indicates unknown. For example, -20 is Eastern Standard Time (EST) or five hours after UTC. Can be NULL.|  
+|**time_zone**|**smallint**|Difference between local time (where the backup operation is taking place) and Coordinated Universal Time (UTC) in 15-minute intervals using the time zone information at the time the backup operation started. Values can be -48 through +48, inclusive. A value of 127 indicates unknown. For example, -20 is Eastern Standard Time (EST) or five hours after UTC. Can be NULL.|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format minor version number. Can be NULL.|  
 |**first_lsn**|**numeric(25,0)**|Log sequence number of the first or oldest log record in the backup set. Can be NULL.|  
 |**last_lsn**|**numeric(25,0)**|Log sequence number of the next log record after the backup set. Can be NULL.|  
@@ -95,10 +95,10 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**encryptor_thumbprint**|**varbinary(20)**|The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. In the case where the backup was not encrypted, this value is NULL.|  
 |**encryptor_type**|**nvarchar(32)**|The type of encryptor used: Certificate or Asymmetric Key. . In the case where the backup was not encrypted, this value is NULL.|  
   
-## Remarks  
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY populates the column of the **backupmediaset** table with the appropriate values from the media-set header.  
-  
- To reduce the number of rows in this table and in other backup and history tables, execute the [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
+## Remarks
+- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY populates the column of the **backupmediaset** table with the appropriate values from the media-set header.  
+- To reduce the number of rows in this table and in other backup and history tables, execute the [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
+- For SQL Managed Instance, backupset table only shows the backup history for user-initiated [Copy-Only backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). The backupset table does not show backup history for automatic backups performed by the service. 
   
 ## See Also  
  [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

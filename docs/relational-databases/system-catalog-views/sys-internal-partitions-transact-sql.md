@@ -1,4 +1,5 @@
 ---
+description: "sys.internal_partitions (Transact-SQL)"
 title: "sys.internal_partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
@@ -6,16 +7,17 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Returns one row for each rowset that tracks internal data for columnstore indexes on disk-based tables. These rowsets are internal to columnstore indexes and track deleted rows, rowgroup mappings, and delta store rowgroups. They track data for each for each table partition; every table has at least one partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-creates the rowsets each time it rebuilds the columnstore index.   
   
@@ -56,6 +58,6 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ## See Also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)  
   
   

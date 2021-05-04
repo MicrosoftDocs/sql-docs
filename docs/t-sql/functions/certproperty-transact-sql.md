@@ -1,4 +1,5 @@
 ---
+description: "CERTPROPERTY (Transact-SQL)"
 title: "CERTPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CERTPROPERTY"
   - "CERTPROPERTY_TSQL"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CERTPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the value of a specified certificate property.
   
@@ -29,7 +30,7 @@ Returns the value of a specified certificate property.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CertProperty ( Cert_ID , '<PropertyName>' )  
   
 <PropertyName> ::=  
@@ -37,7 +38,9 @@ CertProperty ( Cert_ID , '<PropertyName>' )
    | Cert_Serial_Number | Subject | SID | String_SID   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *Cert_ID*  
 The certificate ID value, of data type int.
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_stats_histogram (Transact-SQL)"
 title: "sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,17 +18,19 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_stats_histogram dynamic management function"
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Returns the statistics histogram for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> This DMF is available starting with [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> This DMF is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU2
 
 ## Syntax  
   
@@ -69,7 +72,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histogram")  
   
  For each histogram step:  
   

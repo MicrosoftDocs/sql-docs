@@ -1,4 +1,5 @@
 ---
+description: "ALL (Transact-SQL)"
 title: "ALL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALL_TSQL"
   - "ALL"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "single-column set of values [SQL Server]"
   - "ALL (Transact-SQL)"
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compares a scalar value with a single-column set of values.  
   
@@ -28,16 +29,17 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is a comparison operator.  
   
  *subquery*  
@@ -61,10 +63,10 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## Examples  
  The following example creates a stored procedure that determines whether all the components of a specified `SalesOrderID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database can be manufactured in the specified number of days. The example uses a subquery to create a list of the number of `DaysToManufacture` values for all of the components of the specific `SalesOrderID`, and then confirms that all the `DaysToManufacture` are within the number of days specified.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE DaysToBuild @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE DaysToBuild @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays >= ALL  
@@ -78,12 +80,11 @@ IF
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
 PRINT 'Some items for this order can''t be manufactured in specified number of days or less.' ;  
-  
 ```  
   
  To test the procedure, execute the procedure by using the `SalesOrderID 49080`, which has one component requiring `2` days and two components that require 0 days. The first statement below meets the criteria. The second query doesn't.  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 2 ;  
 ```  
   
@@ -91,7 +92,7 @@ EXECUTE DaysToBuild 49080, 2 ;
   
  `All items for this order can be manufactured in specified number of days or less.`  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 1 ;  
 ```  
   

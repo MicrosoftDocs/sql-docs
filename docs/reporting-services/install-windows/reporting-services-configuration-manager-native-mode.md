@@ -1,5 +1,6 @@
 ---
-title: "Reporting Services Configuration Manager (Native Mode) | Microsoft Docs"
+description: "Report Server Configuration Manager (Native Mode)"
+title: "Report Server Configuration Manager (Native Mode) | Microsoft Docs"
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -14,7 +15,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Reporting Services Configuration Manager (Native Mode)
+# Report Server Configuration Manager (Native Mode)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -25,7 +26,7 @@ Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configurat
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is not designed to manage SharePoint mode report servers. SharePoint mode is managed and configured by using SharePoint Central Administration and PowerShell scripts.  
   
-##  <a name="bkmk_scenarios"></a> Scenarios to use Reporting Services Configuration Manager  
+##  <a name="bkmk_scenarios"></a> Scenarios to use Report Server Configuration Manager  
  You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to perform the following tasks:  
   
 -   Configure the Report Server service account. The account is initially configured during setup, but can be modified by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager if you update the password or want to use a different account.  
@@ -58,19 +59,19 @@ To use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configu
 
 - Before you can connect to and configure a remote report server instance, you must enable remote Windows Management Instrumentation (WMI) calls to pass through Windows Firewall. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
-The Reporting Services Configuration Manager is installed automatically when you install SQL Server Reporting Services.
+The Report Server Configuration Manager is installed automatically when you install SQL Server Reporting Services.
 
-##  <a name="bkmk_start_configuration_manager"></a> To Start the Reporting Services Configuration Manager
+##  <a name="bkmk_start_configuration_manager"></a> To Start the Report Server Configuration Manager
 
 1.  Use the following step that is appropriate for your version of Microsoft Windows:
 
-    - From the Windows start screen, type **Reporting** and select **Reporting Services Configuration Manager** from the search results.
+    - From the Windows start screen, type **Reporting** and select **Report Server Configuration Manager** from the search results.
 
     - Select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then point to **Configuration Tools**.
 
          If you want to configure a report server instance from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], open the program folder for that version. For example, point to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instead of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] to open the configuration tools for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] server components.
 
-         Select **Reporting Services Configuration Manager**.
+         Select **Report Server Configuration Manager**.
 
 2. The **Reporting Services Configuration Connection** dialog box appears so that you can select the report server instance you want to configure. Select **Connect**.
 

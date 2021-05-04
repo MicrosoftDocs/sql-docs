@@ -1,22 +1,23 @@
 ---
+description: "System Functions by category for Transact-SQL"
 title: "System Functions by category"
 ms.date: "11/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "system stored functions [SQL Server]"
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 # System Functions by category for Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following groups of system functions.  
   

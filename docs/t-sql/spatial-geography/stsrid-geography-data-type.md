@@ -1,4 +1,5 @@
 ---
+description: "STSrid (geography Data Type)"
 title: "STSrid (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STSrid (geography Data Type)"
   - "STSrid_TSQL"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STSrid (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **STSrid** is an integer representing the spatial reference identifier (SRID) of the instance.  
   
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STSrid  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **int**  
   
  CLR type: **SqlInt32**  

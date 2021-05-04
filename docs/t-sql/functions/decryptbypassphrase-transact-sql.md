@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYPASSPHRASE (Transact-SQL)"
 title: "DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DECRYPTBYPASSPHRASE"
   - "DECRYPTBYPASSPHRASE_TSQL"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function decrypts data originally encrypted with a passphrase.  
   
@@ -29,30 +30,21 @@ This function decrypts data originally encrypted with a passphrase.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }  
     , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *passphrase*  
 The passphrase used to generate the decryption key.  
   
  @passphrase  
-A variable of type
-
-+ **char**
-+ **nchar**
-+ **nvarchar**
-
-or
-
-+ **varchar**
-
-containing the passphrase used to generate the decryption key.  
+A variable of type **char**, **nchar**, **nvarchar**, or **varchar** containing the passphrase used to generate the decryption key.  
   
 '*ciphertext*'  
 The string of data encrypted with the key. *ciphertext* has a **varbinary** data type.  
@@ -85,16 +77,16 @@ If an authenticator was included at the time of the ciphertext encryption, `DECR
 ## Examples  
 This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
--- Get the pass phrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+-- Get the passphrase from the user.  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   
 -- Decrypt the encrypted record.  
 SELECT CardNumber, CardNumber_EncryptedbyPassphrase   
-    AS 'Encrypted card number', CONVERT(nvarchar,  
+    AS 'Encrypted card number', CONVERT(varchar,  
     DecryptByPassphrase(@PassphraseEnteredByUser, CardNumber_EncryptedbyPassphrase, 1   
     , CONVERT(varbinary, CreditCardID)))  
     AS 'Decrypted card number' FROM Sales.CreditCard   

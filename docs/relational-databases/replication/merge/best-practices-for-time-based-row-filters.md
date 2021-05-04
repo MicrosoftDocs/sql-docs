@@ -1,4 +1,5 @@
 ---
+description: "Best Practices for Time-Based Row Filters"
 title: "Best Practices for Time-Based Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Best Practices for Time-Based Row Filters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Users of applications often require a time-based subset of data from a table. For instance, a salesperson might require data for orders in the last week, or an event planner might require data for events in the upcoming week. In many cases, applications use queries containing the **GETDATE()** function to accomplish this. Consider the following row filter statement:  
   
 ```  

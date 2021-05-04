@@ -1,4 +1,5 @@
 ---
+description: "Set Domain Properties"
 title: "Set Domain Properties"
 ms.date: "11/08/2011"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: sawinark
 ---
 # Set Domain Properties
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
@@ -34,7 +35,7 @@ ms.author: sawinark
   
 2.  Set properties on a new domain after creating it as described in [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Setting Domain Properties  
  After you set domain properties, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
@@ -83,5 +84,4 @@ ms.author: sawinark
   
 ###  <a name="Syntax"></a> Disable Syntax Error Algorithms  
  If the data type is **String**, select to specify that syntax errors will not be identified by DQS in the domain during cleansing. Select this checkbox when identifying syntax errors for that domain is irrelevant. For example, identifying syntax errors may not matter for a serial number. This control is only available for the string data type. DQS will not check non-string data types for syntax errors.  
-  
   

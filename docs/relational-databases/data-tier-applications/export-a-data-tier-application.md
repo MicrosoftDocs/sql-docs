@@ -1,4 +1,5 @@
 ---
+description: "Export a Data-tier Application"
 title: "Export a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,10 +23,10 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create an archive, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## Before You Begin  
@@ -41,12 +42,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  A DAC or database can only be exported from a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later.  
   
- You cannot export a database that has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ You cannot export a database that has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ###  <a name="Permissions"></a> Permissions  
  Exporting a DAC requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, as well as SELECT permissions on **sys.sql_expression_dependencies**. Exporting a DAC can be done by members of the securityadmin fixed server role who are also members of the database_owner fixed database role in the database from which the DAC is exported. Members of the sysadmin fixed server role or the built-in SQL Server system administrator account named **sa** can also export a DAC.
  
-On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELECT permission on all tables or on specific tables
+On Azure SQL Database you need to grant **for each database** VIEW DEFINITION and SELECT permission on all tables or on specific tables
 
   
 ##  <a name="UsingDeployDACWizard"></a> Using the Export Data-tier Application Wizard  
@@ -124,5 +125,4 @@ On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELE
 ## See Also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extract a DAC From a Database](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
-  
   

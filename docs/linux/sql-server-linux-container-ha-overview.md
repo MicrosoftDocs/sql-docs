@@ -1,14 +1,14 @@
 ---
 title: High availability for SQL Server containers
-description: This article introduces high availability for SQL Server containers
-author: MikeRayMSFT
-ms.author: mikeray
+description: Learn about high availability for SQL Server containers. Also learn about deploying a container with SQL server on Kubernetes.
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # High availability for SQL Server containers
 
@@ -37,5 +37,5 @@ To create a container in Kubernetes, see [Deploy a SQL Server container in Kuber
 ## Next steps
 
 To deploy SQL Server containers in Azure Kubernetes Service (AKS), see these examples:
-* [Deploy SQL Server in Docker container](sql-server-linux-configure-docker.md)
+* [Deploy SQL Server in Docker container](./sql-server-linux-docker-container-deployment.md)
 * [Deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)

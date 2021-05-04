@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_clr_loaded_assemblies (Transact-SQL)"
 title: "sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_clr_loaded_assemblies"
   - "sys.dm_clr_loaded_assemblies_TSQL"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_clr_loaded_assemblies dynamic management view"
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each managed user assembly loaded into the server address space. Use this view to understand and troubleshoot CLR integration managed database objects that are executing in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,10 +1,10 @@
 ---
-title: "Data Source Information Properties | Microsoft Docs"
-description: "Data Source information properties"
+title: "Data source information properties (OLE DB driver) | Microsoft Docs"
+description: Learn about the data source information properties for the provider-specific property set DBPROPSET_SQLSERVERDATASOURCEINFO in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "data source properties [OLE DB]"
   - "information properties [OLE DB]"
   - "OLE DB data source properties [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Source Information Properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

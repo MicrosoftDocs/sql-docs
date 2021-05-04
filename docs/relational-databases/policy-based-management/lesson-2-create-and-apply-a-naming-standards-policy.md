@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Some types of Policy-Based Management policies can create triggers to enforce future compliance with the policy. In this lesson, you create a policy that enforces a naming standard for tables. Then, you test the policy by trying to create a table that violates the policy.  
 
 
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## Create the Finance database  
@@ -154,4 +154,4 @@ This tutorial is finished. To return to the start, visit [Tutorial: Administerin
 For a list of tutorials, see [Tutorials for SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
 ## See Also  
-[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

@@ -1,5 +1,6 @@
 ---
-title: "Utility Explorer F1 Help | Microsoft Docs"
+title: Utility Explorer F1 Help
+description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
 ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
@@ -20,8 +21,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # Utility Explorer F1 Help
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following sections document [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility functionality and associated operations.  
   
   ## Utility Dashboard (SQL Server Utility)
@@ -30,7 +33,7 @@ ms.author: mikeray
  For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### UIElement List  
+### UI element list  
  Managed Instance Health  
  Health status for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is displayed on the left side of the Utility Explorer content pane.  
   
@@ -60,7 +63,7 @@ ms.author: mikeray
   
  Notice that when you click on a link for a utilization category, the corresponding node in the Utility Explorer navigation pane is appended with **(filtered)** - that is, **Managed Instances** is labeled **Managed Instances (filtered)**. To view filter settings, right-click on the node in the navigation pane and select **Filter**, then click on **Filter Settings**. To clear filter settings, right-click on the node in the navigation pane and select **Filter**, then click on **Remove Filter**.  
   
- For more information about viewing health status for individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to view or change policy configuration settings, see [Managed Instance Details &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
+ For more information about viewing health status for individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to view or change policy configuration settings, see [Managed Instance Details &#40;SQL Server Utility&#41;]().  
   
  Utility Summary  
  Displays the number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the number of data-tier applications managed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
@@ -88,10 +91,10 @@ ms.author: mikeray
   
 -   No Data Available - Data is not available for data-tier applications because the managed instance of SQL Server that contains the data-tier application is not reporting data.  
   
- Detailed status for each health parameter is listed in sliding indicators. The fraction to the right of the sliding indicators shows how many data-tier applications are in each status category. For more information about viewing health status for individual data-tier applications, or to view or change policy configuration settings, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Detailed status for each health parameter is listed in sliding indicators. The fraction to the right of the sliding indicators shows how many data-tier applications are in each status category. For more information about viewing health status for individual data-tier applications, or to view or change policy configuration settings, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
  Utility Storage Utilization History  
- Utilization history is shown in a time graph at the bottom of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic.  
+ Utilization history is shown in a time graph at the bottom of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) topic.  
   
  Use the radio buttons to the left of the display area to change the reporting period for the graph.  
   
@@ -113,19 +116,19 @@ ms.author: mikeray
  ## Deployed Data-tier Application Details (SQL Server Utility)
   Information in the Deployed Data-tier Applications view of Utility Explorer provides utilization data for individual data-tier applications, CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the data-tier application level for CPU utilization and for database data files and log files. You can also view property details for individual data-tier applications.  
   
-### UIElement List  
+### UI element list  
  List view  
  The list view in the top pane displays data about individual data-tier applications. Health state icons provide summary status for each data-tier application by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - :::image type="icon" source="media/well-utilized.png" border="false"::: - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![up arrow](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
- To access filter options for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility list view, right-click on the **Deployed Data-tier applications** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Deployed Data-tier Applications** node in Utility Explorer will be labeled **Deployed Data-tier Applications (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ To access filter options for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility list view, right-click on the **Deployed Data-tier applications** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Deployed Data-tier Applications** node in Utility Explorer will be labeled **Deployed Data-tier Applications (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  By default, the following columns display health state information about each data-tier application.  
   
@@ -171,7 +174,7 @@ ms.author: mikeray
   
 -   Recovery Model: (Simple, Full, or Bulk-Logged)  
   
--   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic.  
+-   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) topic.  
   
  CPU Utilization tab  
  The CPU utilization tab shows side-by-side graphs of historical data for data-tier application and computer CPU utilization.  
@@ -189,7 +192,7 @@ ms.author: mikeray
 -   1 Year, displayed in 1-month intervals.  
   
  Storage Utilization tab  
- The Storage Utilization tab has a tree view that displays storage utilization details for database files and log files that belong to the data-tier application selected in the list view. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic.  
+ The Storage Utilization tab has a tree view that displays storage utilization details for database files and log files that belong to the data-tier application selected in the list view. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) topic.  
   
  Display can be grouped by filegroup or by volume. To use the filegroup tree view, select the **Filegroup** radio button in the **Group files by:** selection.  
   
@@ -248,26 +251,26 @@ ms.author: mikeray
   
 -   Recovery Model: (Simple, Full, or Bulk-Logged)  
   
--   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic.
+-   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) topic.
 
 ## Managed Instance Details (SQL Server Utility)
  Information in the Managed Instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### UIElement List  
+### UI element list  
  List view  
  The list view in the top pane displays data about individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listed in rows by ComputerName\InstanceName.  
   
  Health state icons provide summary status for each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - ![green check](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![up arrow](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
- To access filter options for the Utility list view, right-click on the **Managed Instances** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Managed Instances** node in Utility Explorer will be labeled **Managed Instances (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ To access filter options for the Utility list view, right-click on the **Managed Instances** node in the Utility Explorer navigation pane, and select **Filter**. After filter settings have been implemented, the **Managed Instances** node in Utility Explorer will be labeled **Managed Instances (filtered)**. For more information, see [Filter Settings &#40;Object Explorer and Utility Explorer&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  By default, the following columns display health state information about each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -311,7 +314,7 @@ ms.author: mikeray
   
 -   Language:  
   
--   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic.  
+-   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) topic.  
   
  CPU Utilization tab  
  The CPU utilization tab shows side-by-side graphs of historical data for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and computer CPU utilization.  
@@ -329,7 +332,7 @@ ms.author: mikeray
 -   1 Year, displayed in 1-month intervals.  
   
  Storage Utilization tab  
- The Storage Utilization tab has a tree view that displays storage utilization details. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic.  
+ The Storage Utilization tab has a tree view that displays storage utilization details. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) topic. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) topic.  
   
  Display can be grouped by database or by volume. To use the database tree view, select the **Database** radio button in the **Group files by:** selection. To view storage utilization status for individual database files, click on the plus sign next to a database name in the tree view. The database files listed include all system and user databases that belong to the managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you selected in the list view.  
   
@@ -411,7 +414,7 @@ ms.author: mikeray
 ## Utility Administration (SQL Server Utility)
 Use the Utility Administration tabs to manage policy, security, and data warehouse settings for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### UIElement List
+### UI element list
  **Policy tab** - Use the policy tab to view or specify global monitoring policies.  
   
  Set global data-tier application monitoring policies. To expand the list of values for this option, click on the arrow next to the policy name, or click on the policy title.  
@@ -505,6 +508,5 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Troubleshoot the SQL Server Utility](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

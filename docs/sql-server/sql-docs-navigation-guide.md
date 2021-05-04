@@ -1,22 +1,23 @@
 ---
 title: SQL Server docs navigation tips 
 description: Tips and tricks for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and how to use the version filter. 
-ms.date: 10/15/2019
+ms.date: 08/12/2020
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ""
 ms.custom: ""
 ms.topic: conceptual
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
-# SQL Server docs navigation guide 
+# SQL Server docs navigation guide
 
 This topic provides some tips and tricks for navigating the SQL Server technical documentation space.  
 
 ## Hub page
 
-The SQL Server hub page can be found at [https://aka.ms/sqldocs](https://aka.ms/sqldocs) and is the entry point for finding relevant SQL Server content.
+The SQL Server hub page can be found at [https://aka.ms/sqldocs](../index.yml?WT.mc_id=akams) and is the entry point for finding relevant SQL Server content.
 
 You can always navigate back to this page by selecting **SQL Docs** from the header at the top of every page within the SQL Server technical documentation set: 
 
@@ -24,7 +25,7 @@ You can always navigate back to this page by selecting **SQL Docs** from the hea
 
 ## Offline documentation
 
-If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
+If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](./sql-server-offline-documentation.md). 
 
 If you'd like to create a PDF, select the **Download PDF** link found at the bottom of every table of contents.
 

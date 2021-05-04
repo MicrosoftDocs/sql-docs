@@ -1,12 +1,13 @@
 ---
+description: "= (Equals) (Transact-SQL)"
 title: "= (Equals) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "="
   - "= (Equals)"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "equals operator (=)"
   - "= (equals operator)"
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # = (Equals) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Compares the equality of two expressions (a comparison operator) in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -31,11 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression = expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). If the expressions are not of the same data type, the data type for one expression must be implicitly convertible to the data type of the other. The conversion is based on the rules of [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
@@ -59,13 +62,12 @@ For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/st
 ### A. Using = in a simple query  
  The following example uses the Equals operator to return all rows in the `HumanResources.Department` table in which the value in the `GroupName` column is equal to the word 'Manufacturing'.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE GroupName = 'Manufacturing';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -84,7 +86,7 @@ DepartmentID Name
 ### B. Comparing NULL and non-NULL values  
  The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and nonnull values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI_NULLS` setting.  
   
-```  
+```sql  
 -- Create table t1 and insert 3 rows.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 VALUES (NULL),(0),(1);  
@@ -149,7 +151,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -1,4 +1,5 @@
 ---
+description: "TOKEN  (SSIS Expression)"
 title: "TOKEN  (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # TOKEN  (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a token (substring) from a string based on the specified delimiters that separate tokens in the string and the number of the token that denotes which token to be returned.  
@@ -88,7 +89,7 @@ TOKEN("        a little white dog", " ", 1)
  In the following example, the TOKEN function returns the year from a date string.  
   
 ```  
-TOKEN("2009/01/01", "/"), 1  
+TOKEN("2009/01/01", "/", 1)
 ```  
   
  In the following example, the TOKEN function returns the file name from the specified path. For example, if the value of User::Path is "c:\program files\data\myfile.txt", the TOKEN function returns "myfile.txt". The TOKENCOUNT function returns 4 and the TOKEN function return the 4th token, "myfile.txt".  

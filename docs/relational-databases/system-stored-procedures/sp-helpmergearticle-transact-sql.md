@@ -1,4 +1,5 @@
 ---
+description: "sp_helpmergearticle (Transact-SQL)"
 title: "sp_helpmergearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_helpmergearticle"
   - "sp_helpmergearticle_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergearticle"
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about an article. This stored procedure is executed at the Publisher on the publication database or at a republishing Subscriber on the subscription database.  
   

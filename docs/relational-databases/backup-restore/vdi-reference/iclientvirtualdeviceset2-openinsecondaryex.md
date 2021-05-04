@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **OpenInSecondaryEx** function opens the virtual device set in a secondary client. The primary client must have already used CreateEx and GetConfiguration to set up the virtual device set.
 

@@ -1,12 +1,13 @@
 ---
+description: "SQRT (Transact-SQL)"
 title: "SQRT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SQRT"
   - "SQRT_TSQL"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "SQRT function"
   - "square root values"
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQRT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the square root of the specified float value.  
   
@@ -29,11 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SQRT ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to float.  
   
@@ -43,8 +46,8 @@ SQRT ( float_expression )
 ## Examples  
  The following example returns the square root of numbers between `1.00` and `10.00`.  
   
-```  
-DECLARE @myvalue float;  
+```sql  
+DECLARE @myvalue FLOAT;  
 SET @myvalue = 1.00;  
 WHILE @myvalue < 10.00  
    BEGIN  
@@ -80,7 +83,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the square root of numbers `1.00` and `10.00`.  
   
-```  
+```sql  
 SELECT SQRT(1.00), SQRT(10.00);  
 ```  
   

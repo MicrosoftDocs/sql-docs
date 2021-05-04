@@ -1,5 +1,6 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
+description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
 ms.custom: ""
 ms.date: "02/24/2019"
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
   - "CE (cardinality estimator)"
   - "estimating cardinality"
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Cardinality Estimation (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 
@@ -43,12 +44,7 @@ In the following cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 
 This article illustrates how you can assess and choose the best CE configuration for your system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan.  
   
-Your application system could possibly have an important query whose plan is changed to a slower plan due to the new CE. Such a query might be like one of the following:  
-  
-- An OLTP (online transaction processing) query that runs so frequently that multiple instance of it often run concurrently.  
-- A SELECT with substantial aggregation that runs during your OLTP business hours.  
-  
-You have techniques for identifying a query that performs slower with the new CE. And you have options for how to address the performance issue.
+Your application system could possibly have an important query whose plan is changed to a slower plan due to changes in the CE throughout versions. You have techniques and tools for identifying a query that performs slower due to CE issues. And you have options for how to address the ensuing performance issues.
   
 ## Versions of the CE
 
@@ -84,7 +80,7 @@ GO
   
 For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 or above, activation of the [trace flag 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) forces the system to use the CE version 70.  
   
-**Legacy CE:** For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the CE version 70 can be can be activated by using the at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Legacy CE:** For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the CE version 70 can be can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -97,7 +93,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
 GO
 ```  
  
-Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+Or starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -106,7 +102,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**Query store:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the query store is a handy tool for examining the performance of your queries. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], in the **Object Explorer** under your database node, a **Query Store** node is displayed when the query store is enabled.  
+**Query store:** Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the query store is a handy tool for examining the performance of your queries. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], in the **Object Explorer** under your database node, a **Query Store** node is displayed when the query store is enabled.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -124,7 +120,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> We recommend that you install the latest release of [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) and update it often.  
+> We recommend that you install the latest release of [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) and update it often.  
+
+> [!IMPORTANT] 
+> Ensure the Query Store is correctly configured for your database and workload. For more information, see [Best practices with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md). 
   
 Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
   
@@ -155,7 +154,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).  
   
 ## Steps to assess the CE version  
   
@@ -171,7 +170,7 @@ Next are steps you can use to assess whether any of your most important queries 
   
     3.  Ensure that your database has its `LEGACY_CARDINALITY_ESTIMATION` configuration turned OFF.  
   
-    4.  CLEAR your query store. Of course, ensure your query store is ON.  
+    4.  Clear your Query Store. Ensure your Query Store is ON.  
   
     5.  Run the statement: `SET NOCOUNT OFF;`  
   
@@ -277,8 +276,8 @@ With extense new research on modern workloads and actual business data reveal th
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  
@@ -286,9 +285,9 @@ WHERE s.ticket = r.ticket AND
   
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)

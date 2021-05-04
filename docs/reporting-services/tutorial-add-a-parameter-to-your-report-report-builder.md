@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Add a Parameter to Your Report (Report Builder) | Microsoft Docs"
+description: Learn how to add a parameter to a Reporting Services paginated report so report readers can filter report data for one or more values.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,7 +14,7 @@ ms.author: maggies
 # Tutorial: Add a Parameter to Your Report (Report Builder)
 In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report so report readers can filter report data for one or more values. 
   
-![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
+![Screenshot showing that you can add a parameter to a paginated report.](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 Report parameters are created automatically for each query parameter that you include in a dataset query. The parameter data type determines how it appears on the report view toolbar. 
    
@@ -416,7 +417,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 19. From the drop-down list, click **Select All** to clear the list, click "Contoso Catalog Store" and "Contoso Asia Online Store", and then click **View Report**.  
 
-    ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
+    ![Screenshot showing that you can multi-select parameters to add to a report.](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
 ## <a name="Boolean"></a>8. Add a Boolean Parameter for Conditional Visibility  

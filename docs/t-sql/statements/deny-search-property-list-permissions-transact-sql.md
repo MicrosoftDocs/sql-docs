@@ -5,10 +5,10 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Search Property List Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Denies permissions on a search property list.  
  
@@ -31,14 +31,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
     TO database_principal [ ,...n ] [ CASCADE ]  
     [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   

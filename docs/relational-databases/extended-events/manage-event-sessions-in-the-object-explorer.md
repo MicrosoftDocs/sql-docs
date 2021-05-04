@@ -8,13 +8,13 @@ ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Event Sessions in the Object Explorer
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic discusses the actions you can take in **Object Explorer** that affect Extended Events:  
   
@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Delete an Extended Events Session  
   
 ## Create an Extended Events Session  
- For more information about creating an Extended Events session, see [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
+ For more information about creating an Extended Events session, see [Create an Extended Events Session](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130)).  
   
 ## Starting or Stopping an Extended Events Session  
  You can start or stop an Extended Events session through the **Query Editor** using the **ALTER EVENT SESSION** statement, or by using the **Extended Events** node of **Object Explorer**.  
@@ -146,5 +146,4 @@ STATE = STOP
 DROP EVENT SESSION [session_name]  
 ON SERVER  
 ```  
-  
   

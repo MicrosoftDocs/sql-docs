@@ -1,7 +1,8 @@
 ---
 title: "Data Compression | Microsoft Docs"
+description: Apply row and page data compression, or columnstore and columnstore archival compression, using SQL Server and Azure SQL Database.
 ms.custom: ""
-ms.date: "08/31/2017"
+ms.date: "02/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,14 +21,15 @@ helpviewer_keywords:
   - "data compression [Database Engine]"
   - "compressed tables [SQL Server]"
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Data Compression
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Data compression
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] support row and page compression for rowstore tables and indexes, and supports columnstore and columnstore archival compression for columnstore tables and indexes.  
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE [sssdsmifull-md](../../includes/sssdsmifull-md.md)] support row and page compression for rowstore tables and indexes, and support columnstore and columnstore archival compression for columnstore tables and indexes.  
   
  For rowstore tables and indexes, use the data compression feature to help reduce the size of the database. In addition to saving space, data compression can help improve performance of I/O intensive workloads because the data is stored in fewer pages and queries need to read fewer pages from disk. However, extra CPU resources are required on the database server to compress and decompress the data, while data is exchanged with the application. You can configure row and page compression on the following database objects:   
 -   A whole table that is stored as a heap.  
@@ -44,8 +46,9 @@ For columnstore tables and indexes, all columnstore tables and indexes always us
 > [!NOTE]  
 > Data can also be compressed using the GZIP algorithm format. This is an additional step and is most suitable for compressing portions of the data when archiving old data for long-term storage. Data compressed using the `COMPRESS` function cannot be indexed. For more information, see [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
-## Considerations for When You Use Row and Page Compression  
- When you use row and page compression, be aware the following considerations:  
+## Row and page compression
+
+When you use row and page compression, be aware the following considerations:  
 -   The details of data compression are subject to change without notice in service packs or subsequent releases.
 -   Compression is available in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
 -   Compression is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -72,20 +75,17 @@ For columnstore tables and indexes, all columnstore tables and indexes always us
 -   Tables that implemented the vardecimal storage format in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], retain that setting when upgraded. You can apply row compression to a table that has the vardecimal storage format. However, because row compression is a superset of the vardecimal storage format, there is no reason to retain the vardecimal storage format. Decimal values gain no additional compression when you combine the vardecimal storage format with row compression. You can apply page compression to a table that has the vardecimal storage format; however, the vardecimal storage format columns probably will not achieve additional compression.  
   
     > [!NOTE]  
-    > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports the vardecimal storage format; however, because row-level compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > All supported versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support the vardecimal storage format; however, because data compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## Using Columnstore and Columnstore Archive Compression  
-  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
-  
-### Basics  
- Columnstore tables and indexes are always stored with columnstore compression. You can further reduce the size of columnstore data by configuring an additional compression called archival compression.  To perform archival compression, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs the Microsoft XPRESS compression algorithm on the data. Add or remove archival compression by using the following data compression types:  
+## Columnstore and columnstore archive compression  
+
+Columnstore tables and indexes are always stored with columnstore compression. You can further reduce the size of columnstore data by configuring an additional compression called archival compression.  To perform archival compression, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs the Microsoft XPRESS compression algorithm on the data. Add or remove archival compression by using the following data compression types:  
 -   Use **COLUMNSTORE_ARCHIVE** data compression to compress columnstore data with archival compression.  
 -   Use **COLUMNSTORE** data compression to decompress archival compression. The resulting data continue to be compressed with columnstore compression.  
   
 To add archival compression, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
-#### Examples:  
+For example:
 
 ```sql  
 ALTER TABLE ColumnstoreTable1   
@@ -99,9 +99,9 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
 ```  
   
 To remove archival compression and restore the data to columnstore compression, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE.  
-  
-#### Examples:  
-  
+
+For example:
+
 ```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
@@ -123,19 +123,22 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### Performance  
+### Performance
+
  Compressing columnstore indexes with archival compression, causes the index to perform slower than columnstore indexes that do not have the archival compression. Use archival compression only when you can afford to use extra time and CPU resources to compress and retrieve the data.  
   
  The benefit of archival compression, is reduced storage, which is useful for data that is not accessed frequently. For example, if you have a partition for each month of data, and most of your activity is for the most recent months, you could archive older months to reduce the storage requirements.  
   
-### Metadata  
+### Metadata
+
 The following system views contain information about data compression for clustered indexes:  
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - The **type** and **type_desc** columns include CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE.  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - The **data_compression** and **data_compression_desc** columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
   
 The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) can also apply to columnstore indexes.  
   
-## How Compression Affects Partitioned Tables and Indexes  
+## Impact on partitioned tables and indexes
+
  When you use data compression with partitioned tables and indexes, be aware of the following considerations:  
 -   When partitions are split by using the `ALTER PARTITION` statement, both partitions inherit the data compression attribute of the original partition.  
 -   When two partitions are merged, the resultant partition inherits the data compression attribute of the destination partition.  
@@ -165,8 +168,7 @@ The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../.
   
      To drop a clustered index OFFLINE is a very fast operation, because only the upper levels of clustered indexes are removed. When a clustered index is dropped ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must rebuild the heap two times, once for step 1 and once for step 2.  
   
-## How Compression Affects Replication 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).   
+## How compression affects replication
 
 When you are using data compression with replication, be aware of the following considerations:  
 -   When the Snapshot Agent generates the initial schema script, the new schema uses the same compression settings for both the table and its indexes. Compression cannot be enabled on just the table and not the index.  
@@ -184,8 +186,9 @@ The following table shows replication settings that control compression during r
 |To not replicate the partition scheme and not compress the data on the Subscriber.|False|False|Does not script partition or compression settings.|  
 |To compress the table on the Subscriber if all the partitions are compressed on the Publisher, but not replicate the partition scheme.|False|True|Checks if all the partitions are enabled for compression.<br /><br /> Scripts out compression at the table level.|  
   
-## How Compression Affects Other SQL Server Components 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).  
+## Impact on other SQL server components
+
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
    
  Compression occurs in the storage engine and the data is presented to most of the other components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in an uncompressed state. This limits the effects of compression on the other components to the following:  
 -   Bulk import and export operations  
@@ -197,7 +200,7 @@ The following table shows replication settings that control compression during r
 -   Data compression is incompatible with sparse columns. Therefore, tables containing sparse columns cannot be compressed nor can sparse columns be added to a compressed table.  
 -   Enabling compression can cause query plans to change because the data is stored using a different number of pages and number of rows per page.  
   
-## See Also  
+## See also  
  [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Page Compression Implementation](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Unicode Compression Implementation](../../relational-databases/data-compression/unicode-compression-implementation.md)   

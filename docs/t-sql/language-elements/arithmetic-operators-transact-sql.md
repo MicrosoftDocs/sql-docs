@@ -1,12 +1,13 @@
 ---
+description: "Arithmetic Operators (Transact-SQL)"
 title: "Arithmetic Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "arithmetic operators"
   - "math operations [Transact-SQL]"
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Arithmetic Operators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Arithmetic operators run mathematical operations on two expressions of one or more data types. They're run from the numeric data type category. For more information about data type categories, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   

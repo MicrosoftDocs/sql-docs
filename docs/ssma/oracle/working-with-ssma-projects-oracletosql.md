@@ -1,5 +1,6 @@
 ---
 title: "Working with SSMA Projects (OracleToSQL) | Microsoft Docs"
+description: Learn how to create an SSMA project that contains metadata for Oracle databases to migrate and SQL Server, along with settings and connection information.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Customizing Project Settings"
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Working with SSMA Projects (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you first create an SSMA project. The project is a file that contains the following information:  
@@ -74,7 +75,7 @@ To migrate data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/s
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 ## Customizing Project Settings  
 In addition to defining default project settings that apply to all new SSMA projects, you can customize the settings for each project. For more information, see [Setting Project Options &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
@@ -114,10 +115,9 @@ When you open a project, it is disconnected from Oracle and from [!INCLUDE[ssNoV
 3.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], on the **File** menu, click **Reconnect to SQL Server**.  
   
 ## Next Step  
-The next step in the migration process is to [Connecting to Oracle Database (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
+The next step in the migration process is to [Connecting to Oracle Database (OracleToSQL)](./connecting-to-oracle-database-oracletosql.md).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
 [Connecting to Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [Connecting to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-  

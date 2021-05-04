@@ -1,11 +1,12 @@
 ---
-title: "WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs"
+description: "WITH XMLNAMESPACES"
+title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WITH_XMLNAMESPACES_TSQL"
   - "WITH XMLNAMESPACES"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "WITH XMLNAMESPACES clause"
   - "declaring XML namespaces"
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Declares one or more XML namespaces.  
   
@@ -31,7 +32,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 WITH XMLNAMESPACES ( <XML namespace declaration item>  
 [ { , <XML namespace declaration item> }...] )   
@@ -42,19 +43,21 @@ WITH XMLNAMESPACES ( <XML namespace declaration item>
 <xml_namespace_uri> ::= <character string literal>  
 ```  
   
-```  
+```syntaxsql
   
 <xml_namespace_prefix> ::= <identifier>  
 ```  
   
-```  
+```syntaxsql
   
 <XML default namespace declaration item> ::=  
 DEFAULT <xml_namespace_uri>  
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *xml_namespace_uri*  
  A Uniform Resource Identifier (URI) that identifies the XML namespace that is being declared. *xml_namespace_uri* is an SQL string.  
   

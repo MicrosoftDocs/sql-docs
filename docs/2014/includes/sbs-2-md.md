@@ -1,1 +1,0 @@
-Windows Small Business Server

@@ -1,4 +1,5 @@
 ---
+description: "sp_help_jobserver (Transact-SQL)"
 title: "sp_help_jobserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_help_jobserver"
   - "sp_help_jobserver_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobserver"
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the server for a given job.  
   

@@ -1,12 +1,13 @@
 ---
+description: "ERROR_PROCEDURE (Transact-SQL)"
 title: "ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ERROR_PROCEDURE_TSQL"
   - "ERROR_PROCEDURE"
@@ -21,24 +22,28 @@ helpviewer_keywords:
   - "messages [SQL Server], stored procedure where occurred"
   - "errors [SQL Server], trigger where occurred"
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
-This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute.  
-  
+This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute. 
+- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-ver15.md) returns schema_name.stored_procedure_name
+- SQL Server 2016 returns stored_procedure_name
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_PROCEDURE ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 **nvarchar(128)**  
   
 ## Return Value  
@@ -58,7 +63,7 @@ When called in a CATCH block, `ERROR_PROCEDURE` returns the name of the stored p
 ### A. Using ERROR_PROCEDURE in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_PROCEDURE` returns the name of the stored procedure where the error occurred.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -79,7 +84,10 @@ BEGIN CATCH
     SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
 END CATCH;  
 GO  
+```  
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```  
 -----------
 
 (0 row(s) affected)
@@ -89,14 +97,13 @@ ErrorProcedure
 usp_ExampleProc
 
 (1 row(s) affected)
-
 ```  
+
   
 ### B. Using ERROR_PROCEDURE in a CATCH block with other error-handling tools  
 This example shows a stored procedure that generates a divide-by-zero error. Along with the name of the stored procedure where the error occurred, the stored procedure returns information about the error.  
   
-```  
-  
+```sql
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -122,8 +129,11 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage,  
         ERROR_LINE() AS ErrorLine;  
         END CATCH;  
-GO  
+GO
+``` 
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+``` 
 -----------
 
 (0 row(s) affected)
@@ -134,7 +144,8 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 
 (1 row(s) affected)
 
-```  
+``` 
+
   
 ## See Also  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   

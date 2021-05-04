@@ -1,12 +1,13 @@
 ---
-title: "ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
+description: "ALTER SYMMETRIC KEY (Transact-SQL)"
+title: "ALTER SYMMETRIC KEY (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER SYMMETRIC KEY"
   - "ALTER_SYMMETRIC_KEY_TSQL"
@@ -21,18 +22,20 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Changes the properties of a symmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)]
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   
 <alter_option> ::=  
@@ -48,8 +51,10 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
    |  
    ASYMMETRIC KEY Asym_Key_Name  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Is the name by which the symmetric key to be changed is known in the database.  
   
@@ -89,7 +94,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## Examples  
  The following example changes the encryption method that is used to protect a symmetric key. The symmetric key `JanainaKey043` is encrypted using certificate `Shipping04` when the key was created. Because the key can never be stored unencrypted, in this example, encryption is added by password, and then encryption is removed by certificate.  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey043 WITH ALGORITHM = AES_256   
     ENCRYPTION BY CERTIFICATE Shipping04;  
 -- Open the key.   

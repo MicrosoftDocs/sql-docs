@@ -1,4 +1,5 @@
 ---
+description: "sp_showrowreplicainfo (Transact-SQL)"
 title: "sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_showrowreplicainfo_TSQL"
   - "sp_showrowreplicainfo"
 helpviewer_keywords: 
   - "sp_showrowreplicainfo"
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays information about a row in a table that is being used as an article in merge replication. This stored procedure is executed at the Publisher on the publication database.  
   

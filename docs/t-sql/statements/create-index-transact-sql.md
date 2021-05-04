@@ -1,12 +1,13 @@
 ---
+description: "CREATE INDEX (Transact-SQL)"
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/17/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE INDEX"
   - "INDEX"
@@ -52,12 +53,12 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.author: pelopes
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Creates a relational index on a table or view. Also called a rowstore index because it is either a clustered or nonclustered B-tree index. You can create a rowstore index before there is data in the table. Use a rowstore index to improve query performance, especially when the queries select from specific columns or require values to be sorted in a particular order.
 
@@ -83,7 +84,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **Key scenario:**
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], use a nonclustered index on a columnstore index to improve data warehousing query performance. For more information, see [Columnstore Indexes - Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], use a nonclustered index on a columnstore index to improve data warehousing query performance. For more information, see [Columnstore Indexes - Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 For additional types of indexes, see:
 
@@ -97,7 +98,7 @@ For additional types of indexes, see:
 
 ### Syntax for SQL Server and Azure SQL Database
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )
     [ INCLUDE ( column_name [ ,...n ] ) ]
@@ -125,13 +126,13 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }
   | DROP_EXISTING = { ON | OFF }
   | ONLINE = { ON | OFF }
-  | RESUMABLE = {ON | OF }
+  | RESUMABLE = { ON | OFF }
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
-  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | MAXDOP = max_degree_of_parallelism
-  | DATA_COMPRESSION = { NONE | ROW | PAGE}
+  | DATA_COMPRESSION = { NONE | ROW | PAGE }
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
      [ , ...n ] ) ]
 }
@@ -162,7 +163,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 > Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature.
 > Use the syntax structure specified in <relational_index_option> instead.
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )
     [ WITH <backward_compatible_index_option> [ ,...n ] ]
@@ -185,11 +186,11 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 }
 ```
 
-### Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+### Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
-```
+```syntaxsql
 
-CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
     [ORDER (column[,...n])]
     [WITH ( DROP_EXISTING = { ON | OFF } )]
@@ -204,6 +205,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -241,7 +244,7 @@ If not otherwise specified, the default index type is NONCLUSTERED.
 *column*      
  Is the column or columns on which the index is based. Specify two or more column names to create a composite index on the combined values in the specified columns. List the columns to be included in the composite index, in sort-priority order, inside the parentheses after *table_or_view_name*.
 
-Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].
 
 Columns that are of the large object (LOB) data types **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, or **image** cannot be specified as key columns for an index. Also, a view definition cannot include **ntext**, **text**, or **image** columns, even if they are not referenced in the CREATE INDEX statement.
 
@@ -342,7 +345,7 @@ Is the name of the table or view to be indexed.
 
 The view must be defined with SCHEMABINDING to create an index on it. A unique clustered index must be created on a view before any nonclustered index is created. For more information about indexed views, see the Remarks section.
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the object can be a table stored with a clustered columnstore index.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the object can be a table stored with a clustered columnstore index.
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format _database_name_.[_schema_name_]._object_name_ when the *database_name* is the current database or the _database_name_ is `tempdb` and the _object_name_ starts with #.
 
@@ -465,7 +468,7 @@ ONLINE = { ON | **OFF** }
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.
 
 > [!IMPORTANT]
-> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 ON      
 Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created; or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
@@ -489,7 +492,7 @@ For more information, see [How Online Index Operations Work](../../relational-da
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  Specifies whether an online index operation is resumable.
 
@@ -501,7 +504,7 @@ Index operation is not resumable.
 
 MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**)   
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused.
 
@@ -534,7 +537,7 @@ OFF
 Page locks are not used.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](#sequential-keys) section for more information.
 
@@ -557,7 +560,7 @@ Uses the actual number of processors or fewer based on the current system worklo
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 DATA_COMPRESSION      
 Specifies the data compression option for the specified index, partition number, or range of partitions. The options are as follows:
@@ -612,7 +615,7 @@ Indexes support extended properties.
 Creating a clustered index on a table (heap) or dropping and re-creating an existing clustered index requires additional workspace to be available in the database to accommodate data sorting and a temporary copy of the original table or existing clustered index data. For more information about clustered indexes, see [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
 ## Nonclustered Indexes
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can create a nonclustered index on a table stored as a clustered columnstore index. If you first create a nonclustered index on a table stored as a heap or clustered index, the index will persist if you later convert the table to a clustered columnstore index. It is also not necessary to drop the nonclustered index when you rebuild the clustered columnstore index.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can create a nonclustered index on a table stored as a clustered columnstore index. If you first create a nonclustered index on a table stored as a heap or clustered index, the index will persist if you later convert the table to a clustered columnstore index. It is also not necessary to drop the nonclustered index when you rebuild the clustered columnstore index.
 
 Limitations and Restrictions:
 
@@ -633,7 +636,7 @@ When partitioning a non-unique, clustered index, the [!INCLUDE[ssDE](../../inclu
 
 Indexed views can be created on partitioned tables in the same manner as indexes on tables. For more information about partitioned indexes, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.
 
 ## Filtered Indexes
 A filtered index is an optimized nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.
@@ -673,7 +676,7 @@ For information about spatial indexes, see [CREATE SPATIAL INDEX](../../t-sql/st
 For information about XML indexes see, [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) and [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## Index Key Size
-The maximum size for an index key is 900 bytes for a clustered index and 1,700 bytes for a nonclustered index. (Before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the limit was always 900 bytes.) Indexes on **varchar** columns that exceed the byte limit can be created if the existing data in the columns do not exceed the limit at the time the index is created; however, subsequent insert or update actions on the columns that cause the total size to be greater than the limit will fail. The index key of a clustered index cannot contain **varchar** columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail.
+The maximum size for an index key is 900 bytes for a clustered index and 1,700 bytes for a nonclustered index. (Before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] the limit was always 900 bytes.) Indexes on **varchar** columns that exceed the byte limit can be created if the existing data in the columns do not exceed the limit at the time the index is created; however, subsequent insert or update actions on the columns that cause the total size to be greater than the limit will fail. The index key of a clustered index cannot contain **varchar** columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail.
 
 Nonclustered indexes can include non-key columns in the leaf level of the index. These columns are not considered by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when calculating the index key size . For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -745,7 +748,7 @@ The following guidelines apply for performing index operations online:
 For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
 ### <a name="resumable-indexes"></a>Resumable index operations
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 The following guidelines apply for resumable index operations:
 
@@ -788,7 +791,7 @@ When `ALLOW_ROW_LOCKS = ON` and `ALLOW_PAGE_LOCK = ON`, row-, page-, and table-l
 When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level lock is allowed when accessing the index.
 
 ## Sequential Keys
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Last-page insert contention is a common performance problem that occurs when a large number of concurrent threads attempt to insert rows into an index with a sequential key. An index is considered sequential when the leading key column contains values that are always increasing (or decreasing), such as an identity column or a date that defaults to the current date/time. Because the keys being inserted are sequential, all new rows will be inserted at the end of the index structure - in other words, on the same page. This leads to contention for the page in memory which can be observed as several threads waiting on PAGELATCH_EX for the page in question.
 
@@ -814,7 +817,7 @@ The following restrictions apply to partitioned indexes:
 To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.
 
 ## Permissions
-Requires `ALTER` permission on the table or view. User must be a member of the `sysadmin` fixed server role or the `db_ddladmin` or `db_owner` fixed database roles.
+Requires `ALTER` permission on the table or view or membership in the `db_ddladmin` fixed database role.
 
 ## Limitations and Restrictions
 In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you cannot create:
@@ -888,7 +891,7 @@ INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
 
 The resulting error message is:
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
@@ -950,7 +953,7 @@ GO
 
 Here are the results of the second `INSERT` statement.
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 5
 Cannot insert duplicate key row in object '#Test' with unique index
 'AK_Index'. The statement has been terminated.
@@ -1095,7 +1098,7 @@ GO
 ```
 
 ### M. Create, resume, pause, and abort resumable index operations
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1124,7 +1127,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### N. Basic syntax
 Create, resume, pause, and abort resumable index operations       
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1197,4 +1200,4 @@ WITH (DROP_EXISTING = ON);
 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)     
 [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)    
 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)     
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)     
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)

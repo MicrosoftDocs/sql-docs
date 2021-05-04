@@ -7,8 +7,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Asynchronous operations
@@ -20,7 +20,7 @@ Some database operations, such as command executions, can take significant time 
 The .NET provides several standard asynchronous design patterns that developers can use to take advantage of background threads and free the user interface or high-priority threads to complete other operations in its <xref:Microsoft.Data.SqlClient.SqlCommand> class. Specifically, the <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, and <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> methods, paired with the <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>, and <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> methods, provide the asynchronous support.  
   
 > [!NOTE]
->  Asynchronous programming is a core feature of the .NET. For more information about the different asynchronous techniques available to developers, see [Calling Synchronous Methods Asynchronously](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
+>  Asynchronous programming is a core feature of the .NET. For more information about the different asynchronous techniques available to developers, see [Calling Synchronous Methods Asynchronously](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
   
 Although using asynchronous techniques with ADO.NET features does not add any special considerations, it is important to be aware of the benefits and pitfalls of creating multithreaded applications. The examples that follow in this section point out several important issues that developers will need to take into account when building applications that incorporate multithreaded functionality.  
   
@@ -36,4 +36,4 @@ Provides an example demonstrating the use of polling to wait for the completion 
   
 ## Next steps
 - [SQL Server and ADO.NET](index.md)
-- [Calling Synchronous Methods Asynchronously](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)
+- [Calling Synchronous Methods Asynchronously](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

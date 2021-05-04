@@ -1,8 +1,9 @@
 ---
 title: "Specify a Breakpoint Filter"
+description: Learn how to implement a breakpoint filter to limit the breakpoint to acting only when debugging is on specified computers, operating system processes, and threads.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint filter"
@@ -12,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Specify a Breakpoint Filter
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 A breakpoint filter limits the breakpoint to acting only on specified computers, operating system processes, and threads. Breakpoint filters are typically used when debugging parallel applications.
 
@@ -46,6 +47,6 @@ Breakpoint filters are not typically used with the [!INCLUDE[tsql](../../include
 3.  Click **OK** to implement the changes, or **Cancel** to exit without applying the changes.  
   
 ## See Also  
- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)   
- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)   
+ [Specify a Hit Count](./specify-a-hit-count.md)   
+ [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)

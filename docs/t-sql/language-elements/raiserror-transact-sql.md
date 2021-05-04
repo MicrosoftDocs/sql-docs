@@ -1,12 +1,13 @@
 ---
+description: "RAISERROR (Transact-SQL)"
 title: "RAISERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RAISERROR"
   - "RAISERROR_TSQL"
@@ -26,13 +27,16 @@ helpviewer_keywords:
   - "CATCH block"
   - "messages [SQL Server], RAISERROR statement"
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # RAISERROR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!NOTE]
+> The **RAISERROR** statement does not honor **SET XACT_ABORT**. New applications should use **THROW** instead of **RAISERROR**.
 
   Generates an error message and initiates error processing for the session. RAISERROR can either reference a user-defined message stored in the sys.messages catalog view or build a message dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY...CATCH construct. New applications should use [THROW](../../t-sql/language-elements/throw-transact-sql.md) instead.  
   
@@ -40,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -49,8 +53,8 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
     { ,severity ,state }  
@@ -58,7 +62,9 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *msg_id*  
  Is a user-defined error message number stored in the sys.messages catalog view using sp_addmessage. Error numbers for user-defined error messages should be greater than 50000. When *msg_id* is not specified, RAISERROR raises an error message with an error number of 50000.  
   
@@ -121,16 +127,14 @@ RAISERROR ( { msg_str | @local_variable }
  Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *\@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
   
  *severity*  
- Is the user-defined severity level associated with this message. When using *msg_id* to raise a user-defined message created using sp_addmessage, the severity specified on RAISERROR overrides the severity specified in sp_addmessage.  
-  
- Severity levels from 0 through 18 can be specified by any user. Severity levels from 19 through 25 can only be specified by members of the sysadmin fixed server role or users with ALTER TRACE permissions. For severity levels from 19 through 25, the WITH LOG option is required. Severity levels less than 0 are interpreted as 0. Severity levels greater than 25 are interpreted as 25.  
-  
+ Is the user-defined [severity level](../../relational-databases/errors-events/database-engine-error-severities.md) associated with this message. When using *msg_id* to raise a user-defined message created using sp_addmessage, the severity specified on RAISERROR overrides the severity specified in sp_addmessage.  
+For severity levels from 19 through 25, the WITH LOG option is required. Severity levels less than 0 are interpreted as 0. Severity levels greater than 25 are interpreted as 25.    
 > [!CAUTION]  
 >  Severity levels from 20 through 25 are considered fatal. If a fatal severity level is encountered, the client connection is terminated after receiving the message, and the error is logged in the error and application logs.  
   
  You can specify -1 to return the severity value associated with the error as shown in the following example.  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -175,7 +179,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  Typically, successive arguments replace successive conversion specifications; the first argument replaces the first conversion specification, the second argument replaces the second conversion specification, and so on. For example, in the following `RAISERROR` statement, the first argument of `N'number'` replaces the first conversion specification of `%s`; and the second argument of `5` replaces the second conversion specification of `%d.`  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -189,7 +193,7 @@ GO
   
  For example, both of the following `RAISERROR` statements return the same string. One specifies the width and precision values in the argument list; the other specifies them in the conversion specification.  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -204,7 +208,11 @@ RAISERROR (N'<\<%7.3s>>', -- Message text.
            N'abcde'); -- First argument supplies the string.  
 -- The message text returned is: <<    abc>>.  
 GO  
-```  
+```
+
+ ## Permissions  
+   Severity levels from 0 through 18 can be specified by any user. Severity levels from 19 through 25 can only be specified by members of the sysadmin fixed server role or users with ALTER TRACE permissions. 
+
   
 ## Examples  
   
@@ -214,7 +222,7 @@ GO
 > [!NOTE]  
 >  RAISERROR only generates errors with state from 1 through 127. Because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] may raise errors with state 0, we recommend that you check the error state returned by ERROR_STATE before passing it as a value to the state parameter of RAISERROR.  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -246,7 +254,7 @@ END CATCH;
 ### B. Creating an ad hoc message in sys.messages  
  The following example shows how to raise a message stored in the sys.messages catalog view. The message was added to the sys.messages catalog view by using the `sp_addmessage` system stored procedure as message number `50005`.  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -264,7 +272,7 @@ GO
 ### C. Using a local variable to supply the message text  
  The following code example shows how to use a local variable to supply the message text for a `RAISERROR` statement.  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

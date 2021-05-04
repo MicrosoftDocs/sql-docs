@@ -1,12 +1,13 @@
 ---
+description: "&#x40;&#x40;LANGUAGE (Transact-SQL)"
 title: "@@LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@LANGUAGE_TSQL"
   - "@@LANGUAGE"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "current language in use"
   - "names [SQL Server], language in use"
 ms.assetid: 3e13b477-7dfa-4da6-9948-da2050d42527
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the name of the language currently being used.  
   
@@ -31,11 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LANGUAGE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  
@@ -44,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  The following example returns the language for the current session.  
   
-```  
+```sql  
 SELECT @@LANGUAGE AS 'Language Name';  
 ```  
   

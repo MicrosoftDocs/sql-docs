@@ -5,16 +5,16 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Start Data Movement on an Always On Secondary Database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains information about how to start data synchronization after you add a database to an Always On availability group. For each new primary replica, secondary databases must be prepared on the server instances that host the secondary replicas. Then each of these secondary databases must be manually joined to the availability group.  
   

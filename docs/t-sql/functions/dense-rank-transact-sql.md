@@ -1,12 +1,13 @@
 ---
+description: "DENSE_RANK (Transact-SQL)"
 title: "DENSE_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DENSE_RANK_TSQL"
   - "DENSE_RANK"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "tied rows [SQL Server]"
   - "ranking rows"
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the rank of each row within a result set partition, with no gaps in the ranking values. The rank of a specific row is one plus the number of distinct rank values that come before that specific row.  
   
@@ -31,11 +32,13 @@ This function returns the rank of each row within a result set partition, with n
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<partition_by_clause>  
 First divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions, and then the `DENSE_RANK` function is applied to each partition. See [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) for the `PARTITION BY` syntax.  
   
@@ -57,7 +60,7 @@ The sort order used for the whole query determines the order of the rows in the 
 ### A. Ranking rows within a partition  
 This example ranks the products in inventory, by the specified inventory locations, according to their quantities. `DENSE_RANK` partitions the result set by `LocationID` and logically orders the result set by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they both have the same quantity value, they both have a rank value of one.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -94,7 +97,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### B. Ranking all rows in a result set  
 This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specify a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -129,7 +132,7 @@ This example shows the four ranking functions
 
 used in the same query. See each ranking function for function-specific examples.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -171,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### D: Ranking rows within a partition  
 This example ranks the sales representatives in each sales territory according to their total sales. `DENSE_RANK` partitions the rowset by `SalesTerritoryGroup`, and sorts the result set by `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

@@ -1,5 +1,6 @@
 ---
 title: Create an Empty SQL Server Unit Test
+description: Learn how to create SQL Server unit tests. See how to use the same TestInitialize and TestCleanup scripts that other tests use and how to use different scripts.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,7 +9,6 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -91,10 +91,9 @@ After you have configured the test project and created the unit test, the next s
 -   Add test conditions or other assert statement to verify the script results.  
   
 > [!NOTE]  
-> The Inconclusive test condition is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions. For more information, see [How to: Add Test Conditions to Database Unit Tests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> The Inconclusive test condition is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions. For more information, see [How to: Add Test Conditions to Database Unit Tests](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100)).  
   
 ## See Also  
 [How to: Run SQL Server Unit Tests](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Creating Unit Tests](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[Creating Unit Tests](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

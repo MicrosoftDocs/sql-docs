@@ -5,22 +5,22 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
   - "FileTables [SQL Server], Availability Groups"
   - "FILESTREAM [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Use FILESTREAM and FileTable with Always On availability groups
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
-  This topic contains information about the using the FILESTREAM and FileTable features with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  This topic contains information about the using the FILESTREAM and FileTable features with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  All FILESTREAM functionality is supported. After a failover, FILESTREAM data is accessible on both readable secondary replicas and on the new primary.  
   

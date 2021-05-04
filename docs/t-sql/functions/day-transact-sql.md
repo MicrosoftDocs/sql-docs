@@ -1,12 +1,13 @@
 ---
+description: "DAY (Transact-SQL)"
 title: "DAY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DAY_TSQL"
   - "DAY"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "dateparts [SQL Server], day"
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DAY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns an integer that represents the day (day of the month) of the specified *date*.
   
@@ -35,11 +36,13 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DAY ( date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *date*  
 An expression that resolves to one of the following data types:
 

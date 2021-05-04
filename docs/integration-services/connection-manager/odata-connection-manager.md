@@ -1,4 +1,5 @@
 ---
+description: "OData Connection Manager"
 title: "OData Connection Manager | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # OData Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Connect to an OData data source with an OData connection manager. An OData Source component uses an OData connection manager to connect to an OData data source and consume data from the service. For more info, see [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -48,20 +49,24 @@ For anonymous access, select the Windows Authentication option.
 To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you can't use the **Microsoft Online Services** authentication option. You also can't use any option that's configured for multi-factor authentication. Currently Modern authentication is not supported. 
   
 ### Specifying and Securing Credentials  
- If the OData service requires basic authentication, you can specify a username and password in the [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md). The values you enter in the editor are persisted in the package. The password value is encrypted according to the package protection level.  
+ If the OData service requires basic authentication, you can specify a username and password in the [OData Connection Manager Editor](). The values you enter in the editor are persisted in the package. The password value is encrypted according to the package protection level.  
   
  There are several ways to parameterize the username and password values or to store them outside the package. For example, you can use parameters, or set the connection manager properties directly when you run the package from SQL Server Management Studio.  
   
 ## OData Connection Manager Properties  
  The following list describes the properties of the OData connection manager.  
   
-|||  
-|-|-|  
-|Property|Description|  
-|Url|URL to the service document.|  
-|UserName|User name to use for authentication, if required.|  
-|Password|Password to use for authentication, if required.|  
-|ConnectionString|Includes other properties of the connection manager.|  
+|Property|Default Value|Description|  
+|-|-|-|
+|Keep Alive|False|Value of the “Keep-Alive” header when sending web request.|
+|Max Received Message Size|4TB|The max received message size in byte when sending web request.|
+|Retry Count|5|Retry count when sending web request.|
+|Retry Sleep|100|Sleep time in millisecond for retry when sending web request.|
+|Time Out|600|Timeout in second when sending web request.|
+|Url||URL to the service document.|  
+|UserName||User name to use for authentication, if required.|  
+|Password||Password to use for authentication, if required.|  
+|ConnectionString||Includes other properties of the connection manager.|  
   
 ## OData Connection Manager Editor
   Use the **OData Connection Manager Editor** dialog box to add a connection or edit an existing connection to an OData data source.  
@@ -86,4 +91,4 @@ If you select an option other than Windows Authentication, enter the **user name
 To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you can't use the **Microsoft Online Services** authentication option. You also can't use any option that's configured for multi-factor authentication.
 
  **Test Connection**  
- Click this button to test the connection to the OData source.  
+ Click this button to test the connection to the OData source.

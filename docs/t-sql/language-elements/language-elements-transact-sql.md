@@ -1,21 +1,22 @@
 ---
+description: "Language Elements (Transact-SQL)"
 title: "Language Elements (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Language Elements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following language elements.  
   
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [NULL and UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[Transactions (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[Transactions (Azure Synapse Analytics)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

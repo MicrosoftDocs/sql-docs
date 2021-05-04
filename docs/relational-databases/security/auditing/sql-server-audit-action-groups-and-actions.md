@@ -1,10 +1,11 @@
 ---
 title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
+description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
 ms.custom: ""
-ms.date: "10/19/2016"
+ms.date: "07/13/2020"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: VanMSFT
-ms.author: vanto
+author: DavidTrigano
+ms.author: datrigan
 ---
 # SQL Server Audit Action Groups and Actions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and individual events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audits consist of zero or more audit action items. These audit action items can be either a group of actions, such as Server_Object_Change_Group, or individual actions such as SELECT operations on a table.  
@@ -71,9 +72,11 @@ ms.author: vanto
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|This event is raised whenever a password is changed for an application role. Equivalent to the [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|This event is raised whenever any audit is created, modified or deleted. This event is raised whenever any audit specification is created, modified, or deleted. Any change to an audit is audited in that audit. Equivalent to the [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|This event is raised whenever a backup or restore command is issued. Equivalent to the [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|BATCH_COMPLETED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation completes executing. It is raised after the batch completes and will audit the entire batch or stored procedure text, as sent from the client, including the result. **Added in SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation starts to execute. It is raised before execution and will audit the entire batch or stored procedure text, as sent from the client. **Added in SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|This event is raised to report audit messages related to Service Broker transport security. Equivalent to the [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|This event is raised when a database is created, altered, or dropped. This event is raised whenever any database is created, altered or dropped. Equivalent to the [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|This event is raised when a contained database user logs out of a database.|  
+|DATABASE_LOGOUT_GROUP|This event is raised when a contained database user logs out of a database Equivalent to the [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|This event is raised to report audit messages related to database mirroring transport security. Equivalent to the [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|This event is raised whenever database objects such as message type, assembly, contract are accessed. This event is raised for any access to any database. Note: This could potentially lead to large audit records.<br /><br /> Equivalent to the [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|This event is raised when a CREATE, ALTER, or DROP statement is executed on database objects, such as schemas. This event is raised whenever any database object is created, altered or dropped. Note: This could lead to very large quantities of audit records.<br /><br /> Equivalent to the [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -117,7 +120,7 @@ ms.author: vanto
  Server-level actions do not allow for detailed filtering on database-level actions. A database-level audit, such as audit of SELECT actions on the Customers table for logins in the Employee group is required to implement detailed action filtering. Do not include server-scoped objects, such as the system views, in a user database audit specification.  
 
  > [!NOTE]
- > Because of the overhead involved in enabling transaction-level auditing, starting with [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, transaction-level auditing is disabled by default unless you have Common Criteria Compliance enabled.  If Common Criteria Compliance is disabled, you will still be able to add an action from TRANSACTION_GROUP to an audit specification, but it will not actually collect any transaction actions.  If you intend to configure any auditing actions from TRANSACTION_GROUP, be sure that the transaction-level auditing infrastructure is enabled by enabling Common Criteria Compliance starting with [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 and later.  Note that in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] transaction-level auditing may also be disabled with trace flag 3427 starting with SP1 CU2.
+ > Because of the overhead involved in enabling transaction-level auditing, starting with [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, transaction-level auditing is disabled by default unless you have Common Criteria Compliance enabled.  If Common Criteria Compliance is disabled, you will still be able to add an action from TRANSACTION_GROUP to an audit specification, but it will not actually collect any transaction actions.  If you intend to configure any auditing actions from TRANSACTION_GROUP, be sure that the transaction-level auditing infrastructure is enabled by enabling Common Criteria Compliance starting with [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 and later.  Note that in [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] transaction-level auditing may also be disabled with trace flag 3427 starting with SP1 CU2.
   
 ## Database-Level Audit Action Groups  
  Database-Level Audit Action Groups are actions similar to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Audit Event classes. For more information about event classes, see [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -129,8 +132,10 @@ ms.author: vanto
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|This event is raised whenever a password is changed for an application role. Equivalent to the [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|This event is raised whenever any audit is created, modified or deleted. This event is raised whenever any audit specification is created, modified, or deleted. Any change to an audit is audited in that audit. Equivalent to the [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|This event is raised whenever a backup or restore command is issued. Equivalent to the [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|BATCH_COMPLETED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation completes executing. It is raised after the batch completes and will audit the entire batch or stored procedure text, as sent from the client, including the result.|  
+|BATCH_STARTED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation starts to execute. It is raised before execution and will audit the entire batch or stored procedure text, as sent from the client.|  
 |DATABASE_CHANGE_GROUP|This event is raised when a database is created, altered, or dropped. Equivalent to the [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|This event is raised when a contained database user logs out of a database. Equivalent to the [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|This event is raised when a contained database user logs out of a database.|  
 |DATABASE_OBJECT_ACCESS_GROUP|This event is raised whenever database objects such as certificates and asymmetric keys are accessed. Equivalent to the [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|This event is raised when a CREATE, ALTER, or DROP statement is executed on database objects, such as schemas. Equivalent to the [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|This event is raised when a change of owner for objects within database scope occurs. Equivalent to the [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  

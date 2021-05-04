@@ -1,5 +1,6 @@
 ---
 title: "Cross-Database Queries | Microsoft Docs"
+description: Learn how to use memory-optimized table variables in cross-database queries to move data from one database to memory-optimized tables in another in SQL Server.
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cross-Database Queries
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], memory-optimized tables do not support cross-database transactions. You cannot access another database from the same transaction or the same query that also accesses a memory-optimized table. You cannot easily copy data from a table in one database, to a memory-optimized table in another database.  
   
@@ -115,6 +116,5 @@ This example illustrates a method to transfer data from one database into a memo
     ```
    
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

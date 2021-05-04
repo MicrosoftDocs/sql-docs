@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Format Text (Report Builder) | Microsoft Docs"
+description: Learn how to format text in various ways in a Reporting Services paginated report. For example, you can experiment with different formats.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +18,7 @@ In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ss
 
 After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you will create.  
   
-![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
+![Screenshot of a formatted report builder report.](../reporting-services/media/report-build-format-report.png) 
   
 In one step, you make a mistake on purpose so you can see why it is a mistake. Then you correct the mistake to achieve the desired effect.  
     
@@ -179,7 +180,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 3.  On the **Arrange fields** page, drag the **Territory**, **LinkText**, and **Product** fields to **Row groups**, drag the **Sales** field to **Values**, then click **Next**.  
 
-    ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![Screenshot showing how to arrange text fields in report builder.](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  On the **Choose the layout** page, clear the **Expand/collapse groups** check box so you can see the whole table, then click **Next**. 
   
@@ -189,7 +190,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
     The table looks OK, but it has two Total rows. The **LinkText** column doesn't need a Total row.  
     
-    ![report-builder-format-2-totals](../reporting-services/media/report-builder-format-2-totals.png)
+    ![Screenshot showing two totals in the report builder report.](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  Click **Design** to return to design view.  
   
@@ -197,13 +198,13 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 11. With those three cells selected, right-click one of those cells and click **Delete Rows**.  
 
-    ![report-builder-format-delete-rows](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![Screenshot showing how to delete rows from a report builder report.](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. Click **Run**.  
 
     Now it has only one Total row.
     
-    ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
+    ![Screenshot showing one total in the report builder report.](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="AddHyperlink"></a>Add a Hyperlink to the Report  
 In this section, you add a hyperlink to text in the table from the previous section.  
@@ -226,7 +227,7 @@ In this section, you add a hyperlink to text in the table from the previous sect
   
     The text now looks like a link.  
     
-    ![report-builder-format-hyperlink](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![Screenshot showing hyperlinked text in the report builder report.](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. Click a link. If the computer is connected to the Internet, a browser will open to a Report Builder Help topic.  
   
@@ -246,7 +247,7 @@ In this section, you rotate some of the text in the table from the previous sect
     > [!NOTE]  
     > When the properties in the Properties pane are organized into categories, WritingMode is in the **Localization** category. Be sure you have selected the cell and not the text. WritingMode is a property of the text box, not of the text.  
 
-    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![Screenshot of the Territory field in the report builder report.](../reporting-services/media/report-builder-select-territory-cell.png)
    
 6.  On the **Home** tab > **Paragraph** section, select **Middle** and **Center** to locate the text in the center of the cell both vertically and horizontally.  
   
@@ -254,7 +255,7 @@ In this section, you rotate some of the text in the table from the previous sect
   
 Now the text in the `[Territory]` cell runs vertically from the bottom to the top of the cells.  
 
-![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![Screenshot showing the Territory values rotated 270 degrees.](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="FormatCurrency"></a>Format Currency  
   
@@ -266,7 +267,7 @@ Now the text in the `[Territory]` cell runs vertically from the bottom to the to
   
 4.  (Optional)     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value, in the **Numbers** group, click **Placeholder Styles** > **Sample Values**.  
 
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot of the Sample Values option in the report builder.](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Optional) On the **Home** tab, in the **Number** group, click the **Decrease Decimals** button twice to display dollar figures with no cents.  
   
@@ -274,7 +275,7 @@ Now the text in the `[Territory]` cell runs vertically from the bottom to the to
   
 The report now displays formatted data and is easier to read.  
 
-![report-build-format-report](../reporting-services/media/report-build-format-report.png)
+![Screenshot showing the reformatted report build format report.](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="FormatHTML"></a>Displaying Text with HTML Formatting  
   
@@ -316,7 +317,7 @@ The report now displays formatted data and is easier to read.
   
 The text in the text box is displayed as a heading, paragraph, and bulleted list.  
   
-![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
+![Screenshot showing formatted text in a report builder report.](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="Save"></a>Save the Report  
 You can save reports to a report server, SharePoint library, or your computer.  

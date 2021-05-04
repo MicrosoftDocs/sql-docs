@@ -1,4 +1,5 @@
 ---
+description: "Disable Stretch Database and bring back remote data"
 title: "Disable Stretch Database and bring back remote data"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
@@ -13,7 +14,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Disable Stretch Database and bring back remote data
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   To disable Stretch Database for a table, select **Stretch** for a table in SQL Server Management Studio. Then select one of the following options.  

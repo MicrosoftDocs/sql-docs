@@ -1,20 +1,21 @@
 ---
+description: "Record (ADO for Visual C++ Syntax)"
 title: "Record (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Record collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Record (ADO for Visual C++ Syntax)
 ## Methods  
@@ -47,4 +48,4 @@ get_State(ObjectStateEnum *pState)
 ```  
   
 ## See Also  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record Object (ADO)](./record-object-ado.md)

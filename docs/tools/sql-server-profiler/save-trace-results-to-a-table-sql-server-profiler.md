@@ -1,6 +1,7 @@
 ---
 title: Save Trace Results to a Table
 titleSuffix: SQL Server Profiler
+description: Learn how to use SQL Server Profiler to save trace results to a table in a SQL Server database. Find out how you can specify the maximum number of rows to save.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/14/2017
 
 # Save Trace Results to a Table (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to save trace results to a database table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -38,7 +39,7 @@ This topic describes how to save trace results to a database table by using [!IN
   
 6.  In the **Table** list, type or select the table name for the trace results. Click **OK.**  
   
-7.  In the **Trace Properties** dialog box, select the **Set maximum rows (in thousands)**check box to specify the maximum number of rows to save.  
+7.  In the **Trace Properties** dialog box, select the **Set maximum rows (in thousands)** check box to specify the maximum number of rows to save.  
   
 ## See Also  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

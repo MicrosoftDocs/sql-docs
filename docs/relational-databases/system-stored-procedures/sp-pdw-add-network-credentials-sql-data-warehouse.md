@@ -1,21 +1,21 @@
 ---
+description: "sp_pdw_add_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_add_network_credentials"
-titleSuffix: Azure SQL Data Warehouse
-ms.custom: ""
+titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
 ---
-# sp_pdw_add_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# sp_pdw_add_network_credentials (Azure Synapse Analytics)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   This stores network credentials in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and associates them with a server. For example, use this stored procedure to give [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appropriate read/write permissions to perform database backup and restore operations on a target server, or to create a backup of a certificate used for TDE.  
   
@@ -23,12 +23,13 @@ ms.custom: seo-dt-2019
   
 ## Syntax  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
-sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
+sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
  '*target_server_name*'  
  Specifies the target server host name or IP address. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will access this server by using the username and password credentials passed to this stored procedure.  
@@ -62,7 +63,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### A. Add credentials for performing a database backup  
  The following example associates the user name and password credentials for the domain user seattle\david with a target server that has an IP address of 10.172.63.255. The user seattle\david has read/write permissions to the target server. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will store these credentials and use them to read and write to and from the target server, as necessary for backup and restore operations.  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   
@@ -72,7 +73,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  To perform the database backup over InfiniBand, be sure to use the InfiniBand IP address of the backup server.  
   
 ## See Also  
- [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

@@ -1,21 +1,22 @@
 ---
-title: "Step 3: Proof of concept connecting to SQL using pyodbc | Microsoft Docs"
+title: "Step 3: Connecting to SQL using pyodbc"
+description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pyODBC. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
-ms.date: "03/01/2020"
+ms.date: "03/02/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
-author: arob98
-ms.author: angrobe
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 
 This example is a proof of concept. The sample code is simplified for clarity, and doesn't necessarily represent best practices recommended by Microsoft.  
 
-To get started, run the following sample script. Create a file called test.py, and add each code snippet as you go. 
+To get started, run the following sample script. Create a file called test.py, and add each code snippet as you go.
 
 ```
 > python test.py
@@ -36,13 +37,11 @@ cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';
 cursor = cnxn.cursor()
 
 ```  
-  
-  
+
 ## Run query  
   
 The cursor.executefunction can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone()
-  
-  
+
 ```python
 #Sample select query
 cursor.execute("SELECT @@version;") 
@@ -55,28 +54,23 @@ while row:
   
 ## Insert a row  
   
-In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters, which protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
-  
-  
+In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters. The parameters protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).
+
 ```python
 #Sample insert query
-cursor.execute("""
+count = cursor.execute("""
 INSERT INTO SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) 
 VALUES (?,?,?,?,?)""",
-'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP) 
+'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP).rowcount
 cnxn.commit()
-row = cursor.fetchone()
-
-while row: 
-    print('Inserted Product key is ' + str(row[0]))
-    row = cursor.fetchone()
+print('Rows inserted: ' + str(count))
 ```  
 
 ## Azure Active Directory and the connection string
 
 pyODBC uses the Microsoft ODBC driver for SQL Server.
 If your version of the ODBC driver is 17.1 or later, you can use the Azure Active Directory interactive mode of the ODBC driver through pyODBC.
-This interactive option works if Python and pyODBC permit the ODBC driver to display the dialog. The option is only available on Windows operating systems. 
+This interactive option works if Python and pyODBC permit the ODBC driver to display the dialog. The option is only available on Windows operating systems.
 
 ### Example connection string for Azure Active Directory interactive authentication
 

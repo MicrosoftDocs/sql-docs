@@ -1,4 +1,5 @@
 ---
+description: "catalog.master_properties (SSISDB Database)"
 title: "catalog.master_properties (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -13,10 +14,7 @@ ms.author: chugu
 ---
 # catalog.master_properties (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Displays the properties of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master.
 

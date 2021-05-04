@@ -1,4 +1,5 @@
 ---
+description: "Create a Version Flag (Master Data Services)"
 title: Create a Version Flag
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,7 +18,7 @@ ms.author: lle
 ---
 # Create a Version Flag (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a version flag to assign to a version. The flag can indicate the version that users or subscribing systems should use.  
   

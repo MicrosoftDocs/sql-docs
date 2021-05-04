@@ -1,12 +1,13 @@
 ---
-title: "sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs"
+description: "sys.dm_db_index_usage_stats (Transact-SQL)"
+title: "sys.dm_db_index_usage_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "03/12/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_index_usage_stats_TSQL"
   - "sys.dm_db_index_usage_stats"
@@ -16,23 +17,22 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_db_index_usage_stats dynamic management view"
-ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_usage_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns counts of different types of index operations and the time each type of operation was last performed.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   
 > [!NOTE]  
->  **sys.dm_db_index_usage_stats** does not return information about memory-optimized indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+> The DMV `sys.dm_db_index_usage_stats` does not return information about memory-optimized indexes or spatial indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  To call this view from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  To call this view from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use `sys.dm_pdw_nodes_db_index_usage_stats`.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -60,17 +60,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Remarks  
  Every individual seek, scan, lookup, or update on the specified index by one query execution is counted as a use of that index and increments the corresponding counter in this view. Information is reported both for operations caused by user-submitted queries, and for operations caused by internally generated queries, such as scans for gathering statistics.  
   
- The **user_updates** counter indicates the level of maintenance on the index caused by insert, update, or delete operations on the underlying table or view. You can use this view to determine which indexes are used only lightly by your applications. You can also use the view to determine which indexes are incurring maintenance overhead. You may want to consider dropping indexes that incur maintenance overhead, but are not used for queries, or are only infrequently used for queries.  
+ The `user_updates` column is a counter of maintenance on the index caused by insert, update, or delete operations on the underlying table or view. You can use this view to determine which indexes are used only lightly by your applications. You can also use the view to determine which indexes are incurring maintenance overhead. You may want to consider dropping indexes that incur maintenance overhead, but are not used for queries, or are only infrequently used for queries.  
   
- The counters are initialized to empty whenever the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) service is started. In addition, whenever a database is detached or is shut down (for example, because AUTO_CLOSE is set to ON), all rows associated with the database are removed.  
+ The counters are initialized to empty whenever the database engine is started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time. In addition, whenever a database is detached or is shut down (for example, because AUTO_CLOSE is set to ON), all rows associated with the database are removed.  
   
- When an index is used, a row is added to **sys.dm_db_index_usage_stats** if a row does not already exist for the index. When the row is added, its counters are initially set to zero.  
+ When an index is used, a row is added to `sys.dm_db_index_usage_stats` if a row does not already exist for the index. When the row is added, its counters are initially set to zero.  
   
- During upgrade to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], entries in sys.dm_db_index_usage_stats are removed. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], entries are retained as they were prior to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+ During upgrade to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], entries in `sys.dm_db_index_usage_stats` are removed. Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], entries are retained as they were prior to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.  
   
 ## See Also  
 
@@ -79,8 +79,5 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
-  
-
-
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    
+ [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)    

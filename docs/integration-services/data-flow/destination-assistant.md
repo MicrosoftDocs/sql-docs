@@ -1,4 +1,5 @@
 ---
+description: "Destination Assistant"
 title: "Destination Assistant | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Destination Assistant
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Destination Assistant component helps create a destination component and connection manager. The component is located in the **Favorites** section of the SSIS Toolbox.  

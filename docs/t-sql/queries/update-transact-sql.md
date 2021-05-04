@@ -1,12 +1,13 @@
 ---
+description: "UPDATE (Transact-SQL)"
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2019"
+ms.date: "05/19/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "UPDATE_TSQL"
   - "UPDATE"
@@ -37,18 +38,18 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Changes existing data in a table or view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For examples, see [Examples](#UpdateExamples).  
+  Changes existing data in a table or view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -97,8 +98,29 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql 
+-- Syntax for Azure Synapse Analysis
+
+[ WITH <common_table_expression> [ ,...n ] ]
+UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
+SET { column_name = { expression | NULL } } [ ,...n ]  
+FROM [ database_name . [ schema_name ] . | schema_name . ] table_name   
+JOIN {<join_table_source>}[ ,...n ] 
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( LABEL = label_name ) ]  
+[;]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
 
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
@@ -108,7 +130,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  
   
@@ -140,7 +164,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, and NOEXPAND are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  Specifies a [table](../../t-sql/data-types/table-transact-sql.md) variable as a table source.  
@@ -160,7 +184,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  Specifies that the default value defined for the column is to replace the existing value in the column. This can also be used to change the column to NULL if the column has no default and is defined to allow null values.  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  Compound assignment operator:  
  +=                       Add and assign  
  -=                        Subtract and assign  
@@ -197,7 +221,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@**_variable_ = *column* = *expression* sets the variable to the same value as the column. This differs from SET **@**_variable_ = _column_, _column_ = _expression_, which sets the variable to the pre-update value of the column.  
   
  \<OUTPUT_Clause>  
- Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Specifies that a table, view, or derived table source is used to provide the criteria for the update operation. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
@@ -253,10 +277,10 @@ IF OBJECT_ID ('dbo.Table2', 'U') IS NOT NULL
     DROP TABLE dbo.Table2;  
 GO  
 CREATE TABLE dbo.Table1   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2   
-    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT PRIMARY KEY NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  
@@ -283,10 +307,10 @@ IF OBJECT_ID ('dbo.Table2', 'U') IS NOT NULL
     DROP TABLE dbo.Table2;  
 GO  
 CREATE TABLE dbo.Table1  
-    (c1 int PRIMARY KEY NOT NULL, c2 int NOT NULL);  
+    (c1 INT PRIMARY KEY NOT NULL, c2 INT NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2  
-    (d1 int PRIMARY KEY NOT NULL, d2 int NOT NULL);  
+    (d1 INT PRIMARY KEY NOT NULL, d2 INT NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES (1, 10);  
 INSERT INTO dbo.Table2 VALUES (1, 20), (2, 30);  
@@ -398,8 +422,8 @@ To achieve the same functionality of **\.WRITE** with other character or binary 
 USE tempdb;  
 GO  
 -- UPDATE statement with CTE references that are correctly matched.  
-DECLARE @x TABLE (ID int, Value int);  
-DECLARE @y TABLE (ID int, Value int);  
+DECLARE @x TABLE (ID INT, Value INT);  
+DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
 INSERT @y VALUES (1, 100),(2, 200);  
   
@@ -427,8 +451,8 @@ UPDATE statement with CTE references that are incorrectly matched.
 ```sql  
 USE tempdb;  
 GO  
-DECLARE @x TABLE (ID int, Value int);  
-DECLARE @y TABLE (ID int, Value int);  
+DECLARE @x TABLE (ID INT, Value INT);  
+DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
 INSERT @y VALUES (1, 100),(2, 200);  
   
@@ -452,7 +476,7 @@ ID     Value
 ```  
 
 ## Locking behavior  
- An UPDATE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive lock, no other transactions can modify data. You can specify table hints to override this default behavior for the duration of the UPDATE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) for more details on locking mechanics in SQL Server.  
   
 ## Logging behavior  
  The UPDATE statement is logged; however, partial updates to large value data types using the **\.WRITE** clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section "Data Types".  
@@ -612,7 +636,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NewPrice int = 10;  
+DECLARE @NewPrice INT = 10;  
 UPDATE Production.Product  
 SET ListPrice += @NewPrice  
 WHERE Color = N'Red';  
@@ -693,10 +717,10 @@ JOIN Production.WorkOrder AS wo
 USE AdventureWorks2012;  
 GO  
 -- Create the table variable.  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
   
 -- Populate the table variable with employee ID values from HumanResources.Employee.  
 INSERT INTO @MyTableVar (EmpID)  
@@ -755,7 +779,7 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Updating rows in a remote table  
- Examples in this section demonstrate how to update rows in a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
+ Examples in this section demonstrate how to update rows in a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../functions/opendatasource-transact-sql.md) to reference the remote table.  
   
 #### O. Updating data in a remote table by using a linked server  
  The following example updates a table on a remote server. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkedServer`, is then specified as part of the four-part object name in the form server.catalog.schema.object. Note that you must specify a valid server name for `@datasrc`.  
@@ -807,9 +831,9 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table (  
-    SummaryBefore nvarchar(max),  
-    SummaryAfter nvarchar(max));  
+DECLARE @MyTableVar TABLE (  
+    SummaryBefore NVARCHAR(max),  
+    SummaryAfter NVARCHAR(max));  
 UPDATE Production.Document  
 SET DocumentSummary .WRITE (N'features',28,10)  
 OUTPUT deleted.DocumentSummary,   
@@ -897,7 +921,7 @@ GO
   
 ```sql  
 UPDATE Archive.dbo.Records  
-SET [Chart] = CAST('Xray 1' as varbinary(max))  
+SET [Chart] = CAST('Xray 1' as VARBINARY(max))  
 WHERE [SerialNumber] = 2;  
 ```  
   
@@ -957,7 +981,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE Production.uspProductUpdate  
-@Product nvarchar(25)  
+@Product NVARCHAR(25)  
 AS  
 SET NOCOUNT ON;  
 UPDATE Production.Product  
@@ -980,10 +1004,10 @@ EXEC Production.uspProductUpdate 'BK-%';
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
     ModifiedDate datetime);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25,  
@@ -1013,7 +1037,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
-@NewHours smallint  
+@NewHours SMALLINT  
 AS   
 SET NOCOUNT ON;  
 UPDATE HumanResources.Employee  
@@ -1114,8 +1138,8 @@ OPTION (LABEL = N'label1');
 -- Uses AdventureWorks  
   
 CREATE TABLE YearlyTotalSales (  
-    YearlySalesAmount money NOT NULL,  
-    Year smallint NOT NULL )  
+    YearlySalesAmount MONEY NOT NULL,  
+    Year SMALLINT NOT NULL )  
 WITH ( DISTRIBUTION = REPLICATE );  
   
 INSERT INTO YearlyTotalSales VALUES (0, 2004);  
@@ -1130,94 +1154,38 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### AH. ANSI join replacement for update statements
-You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.  
-
-Imagine you had to update this table:  
+### AH. ANSI join for update statements
+This example shows how to update data based on the result from joining another table.
 
 ```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN
-)
-;  
+CREATE TABLE dbo.Table1   
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
+GO  
+CREATE TABLE dbo.Table2   
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+UPDATE dbo.Table2   
+SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
+GO  
+SELECT ColA, ColB   
+FROM dbo.Table2;
+GO
 ```
 
-The original query might have looked something like this:  
-
-```
-UPDATE  acs
-SET     [TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM    [dbo].[AnnualCategorySales]     AS acs
-JOIN    (
-        SELECT  [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ,       SUM([SalesAmount])              AS [TotalSalesAmount]
-        FROM    [dbo].[FactInternetSales]       AS s
-        JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-        JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-        JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-        JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-        WHERE   [CalendarYear] = 2004
-        GROUP BY
-                [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ) AS fis
-ON  [acs].[EnglishProductCategoryName]  = [fis].[EnglishProductCategoryName]
-AND [acs].[CalendarYear]                = [fis].[CalendarYear]
-;  
-```
-
-Since [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] does not support ANSI joins in the FROM clause of an UPDATE statement, you cannot copy this code over without changing it slightly.  
-
-You can use a combination of a CTAS and an implicit join to replace this code:  
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT  ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)    AS [EnglishProductCategoryName]
-,       ISNULL(CAST([CalendarYear] AS SMALLINT),0)                      AS [CalendarYear]
-,       ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)                     AS [TotalSalesAmount]
-FROM    [dbo].[FactInternetSales]       AS s
-JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-WHERE   [CalendarYear] = 2004
-GROUP BY
-        [EnglishProductCategoryName]
-,       [CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-  
 ## See Also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](../functions/text-and-image-functions-textptr-transact-sql.md)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Single-Byte and Multibyte Character Sets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
- 
+ [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  

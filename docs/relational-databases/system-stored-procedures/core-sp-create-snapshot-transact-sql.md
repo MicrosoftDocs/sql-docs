@@ -1,4 +1,5 @@
 ---
+description: "core.sp_create_snapshot (Transact-SQL)"
 title: "core.sp_create_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_create_snapshot"
   - "sp_create_snapshot_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "core.sp_create_snapshot stored procedure"
   - "sp_create_snapshot"
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserts a row in the management data warehouse core.snapshots view. This procedure is called every time an upload package starts uploading data to the management data warehouse.  
   

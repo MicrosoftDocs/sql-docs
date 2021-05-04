@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;IO_BUSY (Transact-SQL)"
 title: "@@IO_BUSY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@IO_BUSY"
   - "@@IO_BUSY_TSQL"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "input operations [SQL Server]"
   - "time [SQL Server], I/O operations"
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;IO_BUSY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent performing input and output operations since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. The result is in CPU time increments ("ticks"), and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.  
   
@@ -35,11 +36,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@IO_BUSY  
 ```  
-  
-## Return Types  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -48,7 +51,7 @@ ms.author: mikeray
 ## Examples  
  The following example shows returning the number of milliseconds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent performing input/output operations between the start time and the current time. To avoid arithmetic overflow when converting the value to microseconds, the example converts one of the values to the **float** data type.  
   
-```  
+```sql  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   
    GETDATE() AS 'as of';  
 ```  

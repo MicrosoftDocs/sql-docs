@@ -1,5 +1,6 @@
 ---
 title: "Native Compilation Advisor | Microsoft Docs"
+description: Learn how to use the Native Compilation Advisor to migrate an interpreted stored procedure to native compilation as part of migrating to In-Memory OLTP.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,20 +12,20 @@ f1_keywords:
   - "sql13.swb.nativecompilationwizard.f1"
   - "swb.nativecompilationwizard.f1"
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation Advisor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Transaction Performance Analysis reports tells you which interpreted stored procedures in your database will benefit if ported to use native compilation. For details see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   
- After you identify a stored procedure that you would like to port to use native compilation, you can use the Native Compilation Advisor (NCA) to help you migrate the interpreted stored procedure to native compilation. For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ After you identify a stored procedure that you would like to port to use native compilation, you can use the Native Compilation Advisor (NCA) to help you migrate the interpreted stored procedure to native compilation. For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
  In a given interpreted stored procedure, the NCA allows you to identify all the features that are not supported in native modules. The NCA provides documentation links to work-arounds or solutions.  
   
- For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).  
   
 ## Walkthrough Using the Native Compilation Advisor  
  In **Object Explorer**, right click the stored procedure you want to convert, and select **Native Compilation Advisor**. This will display the welcome page for the **Stored Procedure Native Compilation Advisor**. Click **Next** to continue.  
@@ -98,7 +99,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [Requirements for Using Memory-Optimized Tables](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

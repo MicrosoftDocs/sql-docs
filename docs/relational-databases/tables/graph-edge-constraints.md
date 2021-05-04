@@ -1,4 +1,5 @@
 ---
+description: "Graph edge constraints"
 title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/09/2019
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "SQL Graph" 
 author: "shkale-msft"
 ms.author: "shkale"
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
 Edge constraints can be used to enforce data integrity and specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database.
 
@@ -45,7 +46,7 @@ Consider that you have `Product` and `Customer` nodes in your graph and you use 
 Creating an edge constraint does not automatically create a corresponding index on `$from_id` and `$to_id` columns in the edge table. Manually creating an index on a `$from_id`, `$to_id` pair is recommended if you have point lookup queries or OLTP workload.
 
 ### ON DELETE referential actions on edge constraints
-Cascading actions on an edge constraint let users define the acations that the database engine takes when a user deletes the node(s), which the given edge connects. The following referential actions can be defined:  
+Cascading actions on an edge constraint let users define the actions that the database engine takes when a user deletes the node(s), which the given edge connects. The following referential actions can be defined:  
 *NO ACTION*   
 The database engine raises an error when you try to delete a node that has connecting edge(s).  
 
@@ -337,5 +338,4 @@ WHERE EC.parent_object_id = object_id('bought');
 [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
 
-For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md?view=sql-server-2017).
-
+For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md).

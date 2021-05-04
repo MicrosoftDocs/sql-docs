@@ -1,4 +1,5 @@
 ---
+description: "Using Kerberos integrated authentication to connect to SQL Server"
 title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/29/2020"
@@ -8,15 +9,15 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using Kerberos integrated authentication to connect to SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on Kerberos, see [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
+Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on Kerberos, see [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).
 
 When using integrated authentication with the Java **Krb5LoginModule**, you can configure the module using [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -66,9 +67,9 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)
+- [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [Using Kerberos with SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Using Kerberos with SQL Server](/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Before 6.2 release of JDBC driver, for proper use of Cross Realm Kerberos, you would need to explicitly set the **serverSpn**.

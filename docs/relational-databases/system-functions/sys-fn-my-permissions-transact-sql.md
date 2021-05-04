@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_my_permissions (Transact-SQL)"
 title: "sys.fn_my_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_my_permissions_TSQL"
   - "fn_my_permissions_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "fn_my_permissions function"
   - "sys.fn_my_permissions function"
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of the permissions effectively granted to the principal on a securable. A related function is [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
@@ -75,7 +76,11 @@ GO
 ```  
   
  If DEFAULT is supplied as the value of *securable* or *securable_class*, the value will be interpreted as NULL.  
-  
+ 
+   
+## Permissions  
+ Requires membership in the public role.  
+ 
 ## Examples  
   
 ### A. Listing effective permissions on the server  

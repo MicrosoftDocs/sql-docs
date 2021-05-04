@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Configure Alerts to Notify Policy Administrators of Policy Failures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When Policy-Based Management policies are executed in one of the three automated evaluation modes, if a policy violation occurs, a message is written to the event log. To be notified when this message is written to the event log, you can create an alert to detect the message and perform an action. The alert should detect the messages as shown in the following table.  
   
 |Execution mode|Message number|  

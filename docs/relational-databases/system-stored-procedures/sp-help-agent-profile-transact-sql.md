@@ -1,4 +1,5 @@
 ---
+description: "sp_help_agent_profile (Transact-SQL)"
 title: "sp_help_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_help_agent_profile"
   - "sp_help_agent_profile_TSQL"
 helpviewer_keywords: 
   - "sp_help_agent_profile"
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Displays the profile of a specified agent. This stored procedure is executed at the Distributor on any database.  
   

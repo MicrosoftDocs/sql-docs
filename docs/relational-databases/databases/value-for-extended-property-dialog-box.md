@@ -1,4 +1,5 @@
 ---
+description: "Value for Extended Property Dialog Box"
 title: "Value for Extended Property Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Value for Extended Property Dialog Box
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Use the **Value for** _\<property name>_ dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  
   
-## UIElement List  
+## UI element list  
  **Extended property name**  
  The name of the extended property being viewed or set.  
   

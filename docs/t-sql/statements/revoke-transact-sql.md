@@ -1,12 +1,13 @@
 ---
+description: "REVOKE (Transact-SQL)"
 title: "REVOKE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "REVOKE_TSQL"
   - "REVOKE"
@@ -28,10 +29,10 @@ helpviewer_keywords:
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes a previously granted or denied permission.  
   
@@ -39,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for REVOKE  
@@ -54,8 +55,8 @@ REVOKE [ GRANT OPTION FOR ]
       [ CASCADE] [ AS principal ]  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 REVOKE   
     <permission> [ ,...n ]  
@@ -78,7 +79,9 @@ REVOKE
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked. This is required when you are using the CASCADE argument.  
   
@@ -190,6 +193,31 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 |User|[REVOKE Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |View|[REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML Schema Collection|[REVOKE XML Schema Collection Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+
+  
+## Examples  
+  
+### A. Grant and revoke
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+  
+The following example creates a schema, a contained database user, and a new role on a user database. It adds the user to the role, grants SELECT permission on the schema to the role, and then removes (`REVOKE`) that permission to the role.
+
+  
+```sql  
+CREATE SCHEMA Sales;  
+GO
+CREATE USER Joe without login;
+GO
+CREATE ROLE Vendors;
+GO
+ALTER ROLE Vendors ADD MEMBER Joe; 
+GO
+GRANT SELECT ON SCHEMA :: Sales TO Vendors;
+GO
+REVOKE SELECT ON SCHEMA :: Sales TO Vendors;
+GO
+ 
+```  
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

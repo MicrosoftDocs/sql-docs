@@ -1,4 +1,5 @@
 ---
+description: "sys.server_principals (Transact-SQL)"
 title: "sys.server_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "server_principals"
   - "sys.server_principals_TSQL"
@@ -19,10 +20,10 @@ helpviewer_keywords:
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contains a row for every server-level principal.  
   
@@ -31,8 +32,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**name**|**sysname**|Name of the principal. Is unique within a server.|  
 |**principal_id**|**int**|ID number of the Principal. Is unique within a server.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) of the principal. If Windows principal, then it matches Windows SID.|  
-|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /><br /> U = Windows login<br /><br /> G = Windows group<br /><br /> R = Server role<br /><br /> C = Login mapped to a certificate<br /><br /> K = Login mapped to an asymmetric key|  
-|**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /><br /> U = Windows login<br /><br /> G = Windows group<br /><br /> R = Server role<br /><br /> C = Login mapped to a certificate<br /><br /> E = External Login from Azure Active Directory<br /><br /> X = External group from Azure Active Directory group or applications<br /><br /> K = Login mapped to an asymmetric key|  
+|**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Login is disabled.|  
 |**create_date**|**datetime**|Time at which the principal was created.|  
 |**modify_date**|**datetime**|Time at which the principal definition was last modified.|  

@@ -1,6 +1,7 @@
 ---
+description: "Full-Text Search"
 title: "Full-Text Search | Microsoft Docs"
-ms.date: "04/10/2018"
+ms.date: "12/29/2020"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -11,10 +12,10 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Full-Text Search in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.
   
@@ -233,7 +234,7 @@ Only one full-text index is allowed per table. For a full-text index to be creat
 |Grouped within the same database into one or more full-text catalogs.|Not grouped.|  
 
 ##  <a name="components"></a> Full-Text search linguistic components and language support
- Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bengali, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.  
+ Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bangla, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.  
   
  Language-specific components include the following:  
   
@@ -247,5 +248,4 @@ Only one full-text index is allowed per table. For a full-text index to be creat
   
  Word breakers (and stemmers) and filters run in the filter daemon host process (fdhost.exe).  
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 

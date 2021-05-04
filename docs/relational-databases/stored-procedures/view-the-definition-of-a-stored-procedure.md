@@ -1,5 +1,6 @@
 ---
 title: "View the Definition of a Stored Procedure | Microsoft Docs"
+description: Learn how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Definition of a Stored Procedure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
     
-##  <a name="Top"></a> You can view the definition of a stored procedure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using Object Explorer menu options or in the Query Editor using [!INCLUDE[tsql](../../includes/tsql-md.md)]. This topic describes how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.  
+##  <a name="Top"></a> View the definition of a stored procedure 
+
+This topic describes how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.  
   
 -   **Before you begin:**  [Security](#Security)  
   

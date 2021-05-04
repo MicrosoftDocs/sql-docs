@@ -1,4 +1,5 @@
 ---
+description: "Exists (MDX)"
 title: "Exists (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -12,7 +13,7 @@ author: minewiskan
 # Exists (MDX)
 
 
-  Returns the set of tuples of the first set specified that exist with one or more tuples of the second set specified. This function performs manually what auto exists performs automatically. For more information about auto exists, see [Key Concepts in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Returns the set of tuples of the first set specified that exist with one or more tuples of the second set specified. This function performs manually what auto exists performs automatically. For more information about auto exists, see [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
  If the optional \<Measure Group Name> is provided, the function returns tuples that exist with one or more tuples from the second set and those tuples that have associated rows in the fact table of the specified measure group.  
   
@@ -92,5 +93,4 @@ FROM [Adventure Works]
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
-  
   

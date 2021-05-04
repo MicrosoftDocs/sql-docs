@@ -1,4 +1,5 @@
 ---
+description: "DISABLE TRIGGER (Transact-SQL)"
 title: "DISABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DISABLE_TSQL"
   - "DISABLE"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "triggers [SQL Server], disabling"
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DISABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Disables a trigger.  
   
@@ -33,12 +34,14 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the trigger belongs. *schema_name* cannot be specified for DDL or logon triggers.  
   
@@ -104,7 +107,7 @@ GO
 ### C. Disabling all triggers that were defined with the same scope  
  The following example disables all DDL triggers that were created at the server scope.  
   
-```  
+```sql  
 DISABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

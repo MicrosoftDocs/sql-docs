@@ -17,8 +17,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Enable Updating Subscriptions for Transactional Publications
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to enable updating subscriptions for transactional publications in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to enable updating subscriptions for transactional publications in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > **NOTE!!** [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -104,6 +104,5 @@ ms.author: "mathoma"
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Use sqlcmd with Scripting Variables](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [Use sqlcmd with Scripting Variables](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

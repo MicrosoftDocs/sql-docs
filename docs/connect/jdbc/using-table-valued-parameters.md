@@ -1,5 +1,6 @@
 ---
-title: "Using table-valued parameters | Microsoft Docs"
+title: "Using table-valued parameters"
+description: "Table-valued parameters provide an efficient way to send multiple rows of data from a client to SQL Server in a single parameterized command."
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using table-valued parameters
 
@@ -28,8 +29,8 @@ Column values in table-valued parameters can be accessed using standard Transact
   
 | Resource                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Table-Valued Parameters (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
-| [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
+| [Table-Valued Parameters (Database Engine)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
+| [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
 | The [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
   
 ## Passing multiple rows in previous versions of SQL Server  
@@ -42,11 +43,11 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Create a series of individual SQL statements for data modifications that affect multiple rows. Changes can be submitted to the server individually or batched into groups. However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.  
   
-- Use the bcp utility program or [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
+- Use the bcp utility program or [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
   
 ## Creating table-valued parameter types  
 
-Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
+Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -308,4 +309,4 @@ The following methods have been added to this class to support passing of table-
 
 ## See also
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

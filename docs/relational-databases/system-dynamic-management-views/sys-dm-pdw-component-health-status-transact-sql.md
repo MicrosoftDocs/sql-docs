@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_component_health_status (Transact-SQL)"
 title: "sys.dm_pdw_component_health_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -7,12 +8,12 @@ ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
-author: stevestein
-ms.author: sstein
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Holds information about the current health of appliance components.  
   
@@ -26,6 +27,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |update_time|**datetime**|The last time the metric was updated.|NOT NULL|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

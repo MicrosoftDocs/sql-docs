@@ -1,5 +1,6 @@
 ---
 title: "Compare Typed XML to Untyped XML | Microsoft Docs"
+description: Learn about the differences between typed and untyped XML.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "XML [SQL Server], untyped"
   - "xml data type [SQL Server], parameters"
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Compare Typed XML to Untyped XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can create variables, parameters, and columns of the **xml** type. You can optionally associate a collection of XML schemas with a variable, parameter, or column of **xml** type. In this case, the **xml** data type instance is called *typed*. Otherwise, the XML instance is called *untyped*.  
   
 ## Well-formed XML and the xml Data Type  

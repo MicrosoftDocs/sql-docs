@@ -1,5 +1,6 @@
 ---
 title: "Use Nested FOR XML Queries | Microsoft Docs"
+description: Learn how to use nested FOR XML queries.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,11 +13,11 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], nested FOR XML"
   - "nested FOR XML queries"
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use Nested FOR XML Queries
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The **xml** data type and the [TYPE directive in FOR XML queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md) enable the XML returned by the FOR XML queries to be processed on the server as well as on the client.  
   
 ## Processing with xml Type Variables  

@@ -1,22 +1,23 @@
 ---
 title: "Remove Log Shipping (SQL Server) | Microsoft Docs"
+description: Learn how to remove log shipping by using SQL Server Management Studio or Transact-SQL in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], removing"
   - "removing log shipping"
   - "deleting log shipping"
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Remove Log Shipping (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to remove log shipping in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to remove log shipping in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
   

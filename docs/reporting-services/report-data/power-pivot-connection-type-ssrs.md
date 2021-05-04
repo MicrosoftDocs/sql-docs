@@ -1,5 +1,6 @@
 ---
 title: "Power Pivot Connection Type | Microsoft Docs"
+description: Use the information in this article about the Power Pivot connection type to learn how to build a data source.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -57,7 +58,6 @@ ms.author: maggies
 -   The report contains only [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source.  
   
 ## See Also  
- [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](/previous-versions/sql/)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

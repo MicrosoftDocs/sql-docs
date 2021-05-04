@@ -1,4 +1,5 @@
 ---
+description: "SQLRemoveDefaultDataSource Function"
 title: "SQLRemoveDefaultDataSource Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLRemoveDefaultDataSource"
 apilocation: 
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDefaultDataSource function [ODBC]"
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveDefaultDataSource Function
 **Conformance**  

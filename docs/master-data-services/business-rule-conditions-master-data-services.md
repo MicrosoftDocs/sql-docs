@@ -1,4 +1,5 @@
 ---
+description: "Business Rule Conditions (Master Data Services)"
 title: Business Rule Conditions
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Business Rule Conditions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule conditions determine the conditions that must be true for one or more actions to be taken.  
   
@@ -36,8 +37,8 @@ ms.author: lle
 |**does not end with**|The selected attribute **does not end with** a specific attribute, a specific attribute value, or is blank.<br /><br /> This condition is valid for text and link values.|  
 |**contains**|The selected attribute **contains** a specific attribute, a specific attribute value, or is blank.<br /><br /> This condition is valid for text and link values.|  
 |**does not contain**|The selected attribute **does not contain** a specific attribute, a specific attribute value, or is blank.<br /><br /> This condition is valid for text and link values.|  
-|**contains the pattern**|The selected attribute **contains the pattern** of a specific attribute, a specific attribute value, or is blank. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN Library.<br /><br /> This condition is valid for text and link values.|  
-|**does not contain the pattern**|The selected attribute **does not contain the pattern** of a specific attribute, a specific attribute value, or is blank. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN Library.<br /><br /> This condition is valid for text and link values.|  
+|**contains the pattern**|The selected attribute **contains the pattern** of a specific attribute, a specific attribute value, or is blank. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](/dotnet/standard/base-types/regular-expression-language-quick-reference) in the MSDN Library.<br /><br /> This condition is valid for text and link values.|  
+|**does not contain the pattern**|The selected attribute **does not contain the pattern** of a specific attribute, a specific attribute value, or is blank. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](/dotnet/standard/base-types/regular-expression-language-quick-reference) in the MSDN Library.<br /><br /> This condition is valid for text and link values.|  
 |**contains the subset**|The selected attribute **contains the subset** of a specific attribute or a specific attribute value. You must specify the starting position for the search (for example, 1 means start searching at the first character).<br /><br /> This condition is valid for text and link values.|  
 |**does not contain the subset**|The selected attribute **does not contain the subset** of a specific attribute or a specific attribute value. You must specify the starting position for the search (for example, 1 means start searching at the first character).<br /><br /> This condition is valid for text and link values.|  
 |**has changed**|The selected attribute **has changed** since the last time business rules were applied to the member. You must specify the change group the attribute is a member of.<br /><br /> For more information on change tracking groups, see [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).<br /><br /> This condition is valid for text, number, date, and link values.|  
@@ -52,5 +53,4 @@ ms.author: lle
  [Business Rule Actions &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

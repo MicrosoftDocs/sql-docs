@@ -1,4 +1,5 @@
 ---
+description: "sp_helptrigger (Transact-SQL)"
 title: "sp_helptrigger (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_helptrigger"
   - "sp_helptrigger_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helptrigger"
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptrigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the type or types of DML triggers defined on the specified table for the current database. sp_helptrigger cannot be used with DDL triggers. Query the [system stored procedures](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) catalog view instead.  
   

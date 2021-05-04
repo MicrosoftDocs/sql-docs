@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], role changes"
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "log shipping [SQL Server], failover"
   - "failover [SQL Server], log shipping"
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   After you have failed over a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a secondary server, you can configure your secondary database to act as the primary database. Then, you will be able to swap primary and secondary databases as needed.  
   
 ## Performing the Initial Role Change  

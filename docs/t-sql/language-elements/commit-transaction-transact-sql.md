@@ -1,12 +1,13 @@
 ---
+description: "COMMIT TRANSACTION (Transact-SQL)"
 title: "COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2016"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COMMIT"
   - "COMMIT TRANSACTION"
@@ -26,12 +27,12 @@ helpviewer_keywords:
   - "COMMIT TRANSACTION statement"
   - "rolling back transactions, COMMIT TRANSACTION"
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Marks the end of a successful implicit or explicit transaction. If @@TRANCOUNT is 1, COMMIT TRANSACTION makes all data modifications since the start of the transaction a permanent part of the database, frees the transaction's resources, and decrements @@TRANCOUNT to 0. When @@TRANCOUNT is greater than 1, COMMIT TRANSACTION decrements @@TRANCOUNT only by 1 and the transaction stays active.  
   
@@ -39,22 +40,24 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Applies to SQL Server (starting with 2008) and Azure SQL Database
   
 COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
 [ ; ]  
 ```  
  
-```  
--- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
+```syntaxsql
+-- Applies to Azure Synapse Analytics and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
 [ ; ]  
 ``` 
  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *transaction_name*  
  **APPLIES TO:** SQL Server and Azure SQL Database
  
@@ -89,11 +92,11 @@ Is the name of a user-defined variable containing a valid transaction name. The 
 ## Examples  
   
 ### A. Committing a transaction  
-**APPLIES TO:** SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse   
+**APPLIES TO:** SQL Server, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 The following example deletes a job candidate. It uses AdventureWorks. 
   
-```   
+```sql   
 BEGIN TRANSACTION;   
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;   
@@ -105,17 +108,17 @@ COMMIT TRANSACTION;
 
 The following example creates a table, generates three levels of nested transactions, and then commits the nested transaction. Although each `COMMIT TRANSACTION` statement has a *transaction_name* parameter, there's no relationship between the `COMMIT TRANSACTION` and `BEGIN TRANSACTION` statements. The *transaction_name* parameters help the programmer ensure that the correct number of commits are coded to decrement `@@TRANCOUNT` to 0 and so to commit the outer transaction. 
   
-```   
+```sql   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
     DROP TABLE TestTran;  
 GO  
-CREATE TABLE TestTran (Cola int PRIMARY KEY, Colb char(3));  
+CREATE TABLE TestTran (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 -- This statement sets @@TRANCOUNT to 1.  
 BEGIN TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after BEGIN OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 INSERT INTO TestTran VALUES (1, 'aaa');  
  
@@ -123,7 +126,7 @@ INSERT INTO TestTran VALUES (1, 'aaa');
 BEGIN TRANSACTION Inner1;  
  
 PRINT N'Transaction count after BEGIN Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (2, 'bbb');  
   
@@ -131,7 +134,7 @@ INSERT INTO TestTran VALUES (2, 'bbb');
 BEGIN TRANSACTION Inner2;  
   
 PRINT N'Transaction count after BEGIN Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (3, 'ccc');  
   
@@ -140,21 +143,21 @@ INSERT INTO TestTran VALUES (3, 'ccc');
 COMMIT TRANSACTION Inner2;  
  
 PRINT N'Transaction count after COMMIT Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 -- This statement decrements @@TRANCOUNT to 1.  
 -- Nothing is committed.  
 COMMIT TRANSACTION Inner1;  
  
 PRINT N'Transaction count after COMMIT Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 -- This statement decrements @@TRANCOUNT to 0 and  
 -- commits outer transaction OuterTran.  
 COMMIT TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after COMMIT OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 ```  
   
 ## See Also  

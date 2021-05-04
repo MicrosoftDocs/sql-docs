@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # IServerVirtualDeviceSet2::OpenDevice (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **OpenDevice** function obtains virtual device interfaces from the virtual device set.
 

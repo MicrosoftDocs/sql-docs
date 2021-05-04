@@ -1,12 +1,13 @@
 ---
+description: "sys.dm_io_pending_io_requests (Transact-SQL)"
 title: "sys.dm_io_pending_io_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_io_pending_io_requests"
   - "dm_io_pending_io_requests"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_io_pending_io_requests dynamic management view"
 ms.assetid: d1fb46dd-5c74-4c04-9ecf-8934b1bedb5b 
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_io_pending_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row for each pending I/O request in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -34,7 +35,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**io_completion_request_address**|**varbinary(8)**|Memory address of the IO request. Is not nullable.|  
 |**io_type**|**nvarchar(60)**|Type of pending I/O request. Is not nullable.|  
 |**io_pending_ms_ticks**|**bigint**|Internal use only. Is not nullable.| 
-|**io_pending**|**int**|Indicates whether the I/O request is pending or has been completed by Windows. An I/O request can still be pending even when Windows has completed the request, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not yet performed a context switch in which it would process the I/O request and remove it from this list. Is not nullable.|  
+|**io_pending**|**int**|Indicates whether the I/O request is pending (1) or has been completed by the operating system (0). An I/O request can still be pending even when OS has completed the request, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not yet performed a context switch in which it would process the I/O request and remove it from this list. Is not nullable. <br /> **Value** <br /> 0 = Pending SQL Server <br /> 1 = Pending OS <br />|  
+
 |**io_completion_routine_address**|**varbinary(8)**|Internal function to call when the I/O request is completed. Is nullable.|  
 |**io_user_data_address**|**varbinary(8)**|Internal use only. Is nullable.|  
 |**scheduler_address**|**varbinary(8)**|Scheduler on which this I/O request was issued. The I/O request will appear on the pending I/O list of the scheduler. For more information, see [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). Is not nullable.|  
@@ -46,12 +48,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

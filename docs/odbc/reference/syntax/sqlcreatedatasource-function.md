@@ -1,4 +1,5 @@
 ---
+description: "SQLCreateDataSource Function"
 title: "SQLCreateDataSource Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLCreateDataSource"
 apilocation: 
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCreateDataSource function [ODBC]"
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCreateDataSource Function
 **Conformance**  

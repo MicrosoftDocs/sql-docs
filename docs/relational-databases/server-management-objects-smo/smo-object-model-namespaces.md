@@ -1,4 +1,5 @@
 ---
+description: "SMO Object Model Namespaces"
 title: "SMO Namespaces | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: "markingmyname"
 ms.author: "maghan"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model Namespaces
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) has various namespaces. The different namespaces represent different areas of functionality within SMO.  
   

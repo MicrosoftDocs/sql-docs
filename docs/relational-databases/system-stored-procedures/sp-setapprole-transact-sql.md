@@ -1,4 +1,5 @@
 ---
+description: "sp_setapprole (Transact-SQL)"
 title: "sp_setapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_setapprole"
   - "sp_setapprole_TSQL"
@@ -20,7 +21,7 @@ ms.author: vanto
 ---
 # sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Activates the permissions associated with an application role in the current database.  
   
@@ -48,7 +49,7 @@ sp_setapprole [ @rolename = ] 'role',
  The encrypt option is not supported on connections that are using **SqlClient**.  
   
 > [!IMPORTANT]  
-> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use SSL or IPSec.
+> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use TLS or IPSec.
   
  **@encrypt = 'none'**  
  Specifies that no obfuscation be used. The password is passed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as plain text. This is the default.  
@@ -71,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## Remarks
 
- After an application role is activated by using **sp_setapprole**, the role remains active until the user either disconnects from the server or executes **sp_unsetapprole**. **sp_setapprole** can be executed only by direct [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. **sp_setapprole** cannot be executed within another stored procedure or within a user-defined transaction.  
+ After an application role is activated by using **sp_setapprole**, the role remains active until the user either disconnects from the server or executes **sp_unsetapprole**. **sp_setapprole** can be executed only by direct [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, at the ad hoc level and not within another stored procedure, trigger or within a user-defined transaction.  
   
  For an overview of application roles, see [Application Roles](../../relational-databases/security/authentication-access/application-roles.md).  
   
@@ -116,8 +117,8 @@ GO
 
 ## See Also
 
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)
- [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)
- [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)
+ [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

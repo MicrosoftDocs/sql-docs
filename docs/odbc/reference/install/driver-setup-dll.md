@@ -1,4 +1,5 @@
 ---
+description: "Driver Setup DLL"
 title: "Driver Setup DLL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], driver setup DLL"
   - "driver setup DLL [ODBC]"
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver Setup DLL
 > [!NOTE]  

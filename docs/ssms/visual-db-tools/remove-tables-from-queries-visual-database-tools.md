@@ -1,4 +1,5 @@
 ---
+description: "Remove Tables from Queries (Visual Database Tools)"
 title: Remove Tables from Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Remove Tables from Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can remove a table - or any table-valued object - from the query.  
   
 > [!NOTE]  
-> Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [How to: Delete Tables from a Database](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
+> Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [How to: Delete Tables from a Database](../../relational-databases/tables/delete-tables-database-engine.md).  
   
 ### To remove a table or table-structured object  
   
@@ -41,4 +41,3 @@ When you remove a table or table-valued object, the Query and View Designer auto
 [Specify Search Criteria](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Perform Basic Operations with Queries](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-  

@@ -1,5 +1,6 @@
 ---
 title: "TYPE Directive in FOR XML Queries | Microsoft Docs"
+description: Learn how to use the TYPE directive with the FOR XML clause to request that the result of a query be returned as XML data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "FOR XML clause, TYPE directive"
   - "TYPE directive"
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # TYPE Directive in FOR XML Queries
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for the [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) enables you to optionally request that the result of a FOR XML query be returned as **xml** data type by specifying the TYPE directive. This allows you to process the result of a FOR XML query on the server. For example, you can specify an XQuery against it, assign the result to an **xml** type variable, or write [Nested FOR XML queries](../../relational-databases/xml/use-nested-for-xml-queries.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for the [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) datatype enables you to optionally request that the result of a FOR XML query be returned as **xml** data type by specifying the TYPE directive. This allows you to process the result of a FOR XML query on the server. For example, you can specify an XQuery against it, assign the result to an **xml** type variable, or write [Nested FOR XML queries](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns XML data type instance data to the client as a result of different server-constructs such as FOR XML queries that use the TYPE directive, or where the **xml** data type is used to return XML instance data values from SQL table columns and output parameters. In client application code, the ADO.NET provider requests this XML data type information to be sent in a binary encoding from the server. However, if you are using FOR XML without the TYPE directive, the XML data comes back as a string type. In any case, the client provider will always be able to handle either form of XML. Note that top-level FOR XML without the TYPE directive cannot be used with cursors.  

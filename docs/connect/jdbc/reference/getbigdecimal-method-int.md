@@ -1,4 +1,5 @@
 ---
+description: "getBigDecimal Method (int)"
 title: "getBigDecimal Method (int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getBigDecimal Method (int)"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f74030d8-3789-463b-b414-2eb01cef8a30
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getBigDecimal Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

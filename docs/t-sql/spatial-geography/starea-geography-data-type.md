@@ -1,4 +1,5 @@
 ---
+description: "STArea (geography Data Type)"
 title: "STArea (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STArea (geography Data Type)"
   - "STArea_TSQL"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STArea (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the total surface area of a **geography** instance. Results for STArea() are the squared unit of measure used by the **geography** instance's spatial reference identifier. For example, if the SRID of the instance is 4326, STArea() returns results in square meters.  
   
@@ -30,7 +31,9 @@ Returns the total surface area of a **geography** instance. Results for STArea()
 .STArea ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   
 CLR return type: **SqlDouble**  

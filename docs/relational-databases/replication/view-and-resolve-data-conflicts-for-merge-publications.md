@@ -17,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Conflict resolution for Merge Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Conflicts in merge replication are resolved based on the resolver specified for each article. By default, conflicts are resolved without the need for user intervention. But conflicts can be viewed, and the outcome of the resolution can be changed, in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer.  
   
  Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period (with a default of 14 days). To set the conflict retention period, either:  

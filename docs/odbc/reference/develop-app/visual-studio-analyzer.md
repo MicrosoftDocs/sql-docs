@@ -1,4 +1,5 @@
 ---
+description: "Visual Studio Analyzer"
 title: "Visual Studio Analyzer | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Visual Studio Analyzer [ODBC], about Visual Studio Analyzer"
   - "Visual Studio Analyzer [ODBC]"
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Visual Studio Analyzer
 > [!IMPORTANT]  

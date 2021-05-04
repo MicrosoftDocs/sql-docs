@@ -1,5 +1,6 @@
 ---
 title: "Specifying Node Test in a Path Expression Step | Microsoft Docs"
+description: Learn how to specify a node test in the axis step of an XQuery path expression.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Path Expressions - Specifying Node Test
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   An axis step in a path expression includes the following components:  
   

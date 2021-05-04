@@ -1,10 +1,11 @@
 ---
+description: "sys.resource_usage (Azure SQL Database)"
 title: "sys.resource_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_usage_TSQL"
   - "resource_usage"
@@ -18,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.resource_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
     
 > [!IMPORTANT]

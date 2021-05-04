@@ -1,4 +1,5 @@
 ---
+description: "Remove Steps from a SQL Server Agent Master Job"
 title: "Remove Steps from a SQL Server Agent Master Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -9,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Remove Steps from a SQL Server Agent Master Job
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to remove steps from a SQL Server Agent master job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to remove steps from a SQL Server Agent master job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -70,5 +70,4 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
     GO  
     ```  
   
-For more information, see [sp_delete_jobstep (Transact-SQL)](https://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3).  
-  
+For more information, see [sp_delete_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md).  

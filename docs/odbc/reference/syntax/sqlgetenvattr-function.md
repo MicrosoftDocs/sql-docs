@@ -1,4 +1,5 @@
 ---
+description: "SQLGetEnvAttr Function"
 title: "SQLGetEnvAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetEnvAttr"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetEnvAttr function [ODBC]"
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetEnvAttr Function
 **Conformance**  
@@ -56,7 +57,7 @@ SQLRETURN SQLGetEnvAttr(
  [Input] If *ValuePtr* points to a character string, this argument should be the length of \**ValuePtr*. If \**ValuePtr* is an integer, *BufferLength* is ignored. If *\*ValuePtr* is a Unicode string (when calling **SQLGetEnvAttrW**), the *BufferLength* argument must be an even number. If the attribute value is not a character string, *BufferLength* is unused.  
   
  *StringLengthPtr*  
- [Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in *\*ValuePtr*. If *ValuePtr* is a null pointer, no length is returned. If the attribute value is a character string and the number of bytes available to return is greater than or equal to *BufferLength*, the data in \**ValuePtr* is truncated to *BufferLength* minus the length of a null-termination character and is null-terminated by the driver.  
+ [Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in *\*ValuePtr*. If the attribute value is a character string and the number of bytes available to return is greater than or equal to *BufferLength*, the data in \**ValuePtr* is truncated to *BufferLength* minus the length of a null-termination character and is null-terminated by the driver.  
   
 ## Returns  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  

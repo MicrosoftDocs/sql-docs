@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_stats_properties (Transact-SQL)"
 title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_stats_properties_TSQL"
   - "sys.dm_db_stats_properties"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_stats_properties"
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns properties of statistics for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For partitioned tables, see the similar [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
  
@@ -50,8 +51,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Total number of rows sampled for statistics calculations.|  
 |steps|**int**|Number of steps in the histogram. For more information, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Total number of rows in the table before applying the filter expression (for filtered statistics). If statistics are not filtered, unfiltered_rows is equal to the value returns in the rows column.|  
-|modification_counter|**bigint**|Total number of modifications for the leading statistics column (the column on which the histogram is built) since the last time statistics were updated.<br /><br /> Memory-optimized tables: starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] this column contains: total number of modifications for the table since the last time statistics were updated or the database was restarted.|  
-|persisted_sample_percent|**float**|Persisted sample percentage used for statistic updates that do not explicitly specify a sampling percentage. If value is zero, then no persisted sample percentage is set for this statistic.<br /><br /> **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|Total number of modifications for the leading statistics column (the column on which the histogram is built) since the last time statistics were updated.<br /><br /> Memory-optimized tables: starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] this column contains: total number of modifications for the table since the last time statistics were updated or the database was restarted.|  
+|persisted_sample_percent|**float**|Persisted sample percentage used for statistic updates that do not explicitly specify a sampling percentage. If value is zero, then no persisted sample percentage is set for this statistic.<br /><br /> **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> Remarks  
  **sys.dm_db_stats_properties** returns an empty rowset under any of the following conditions:  

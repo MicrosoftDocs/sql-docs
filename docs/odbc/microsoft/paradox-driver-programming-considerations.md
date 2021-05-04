@@ -1,4 +1,5 @@
 ---
+description: "Paradox Driver Programming Considerations"
 title: "Paradox Driver Programming Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Paradox driver"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Paradox Driver Programming Considerations
 This section contains the following topics:  

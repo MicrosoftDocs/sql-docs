@@ -1,10 +1,11 @@
 ---
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
+description: This article discusses compute capacity limits for SQL Server 2019 and how they differ in physical and virtualized environments with hyperthreaded processors.
 ms.custom: ""
 ms.date: "11/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
@@ -15,8 +16,8 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # Compute capacity limits by edition of SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This article discusses compute capacity limits for editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and how they differ in physical and virtualized environments with hyperthreaded processors.  
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+  This article discusses compute capacity limits for editions of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] and how they differ in physical and virtualized environments with hyperthreaded processors.  
   
  ![Mappings to compute capacity limits](../sql-server/media/compute-capacity-limits.gif "Mappings to compute capacity limits")  
   
@@ -69,7 +70,7 @@ Each edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has two c
   
 These limits apply to a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. They represent the maximum compute capacity that a single instance will use. They do not constrain the server where the instance may be deployed. In fact, deploying multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the same physical server is an efficient way to use the compute capacity of a physical server with more sockets and/or cores than the capacity limits allow.  
   
-The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
+The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
@@ -90,7 +91,7 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Editions and components of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Features supported by the editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Maximum capacity specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Quickstart installation of SQL Server 2016](https://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
+ [Quickstart installation of SQL Server 2016](../database-engine/install-windows/install-sql-server.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

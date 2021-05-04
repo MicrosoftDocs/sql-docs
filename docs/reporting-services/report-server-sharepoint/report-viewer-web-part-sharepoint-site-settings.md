@@ -1,5 +1,6 @@
 ---
 title: "SharePoint site settings for the Report Viewer web part - SSRS | Microsoft Docs"
+description: Learn about how to configure SharePoint site settings in the Report Viewer web part in SQL Server Reporting Server.
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -32,5 +33,5 @@ The site settings can be accessed by:
 
 |Setting|Comments|  
 |-------------|--------------|  
-|Collect usage data|Enables error and usage information to be sent to Microsoft to help improve our products. For the Microsoft error reporting data collection policy, see the [Microsoft SQL Server Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).|  
-|Enable Accessibility Metadata for Reports|Sets the [`AccessibleTablix` device info](../html-device-information-settings.md) for rendered reports.| 
+|Collect usage data|Enables error and usage information to be sent to Microsoft to help improve our products. For the Microsoft error reporting data collection policy, see the [Microsoft SQL Server Privacy Statement](../../sql-server/sql-server-privacy.md).|  
+|Enable Accessibility Metadata for Reports|Sets the [`AccessibleTablix` device info](../html-device-information-settings.md) for rendered reports.|

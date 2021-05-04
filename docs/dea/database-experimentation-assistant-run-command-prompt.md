@@ -1,6 +1,6 @@
 ---
 title: Run Database Experimentation Assistant at a command prompt
-description: Run Database Experimentation Assistant at a command prompt
+description: Learn how to capture a trace in Database Experimentation Assistant (DEA) and then analyze the results, all from a command prompt.
 ms.custom: "seo-lt-2019"
 ms.date: 02/25/2020
 ms.prod: sql
@@ -9,8 +9,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 
@@ -29,11 +29,11 @@ This article describes how to capture a trace in Database Experimentation Assist
 
 To start a new workload capture, at a command prompt, run the following command:
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **Example**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
 **Additional options**
 
@@ -98,11 +98,11 @@ If you are using  InBuilt Replay, you won't have to set up Distributed Replay. T
 
 To start a new trace analysis, at a command prompt, run the following command:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **Example**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 To view the analysis reports of these trace files, you need to use the GUI to view charts and organized metrics.  However, the analysis database is written to the SQL Server instance specified, so you can also  query the generated analysis tables directly.
 

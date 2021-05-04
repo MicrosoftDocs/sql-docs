@@ -1,7 +1,7 @@
 ---
-title: "Install PolyBase on Windows | Microsoft Docs"
+title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
-ms.date: 09/24/2018
+ms.date: 02/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # Install PolyBase on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only ](../../includes/applies-to-version/sql-windows-only.md)]
 
 To install a trial version of SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
@@ -30,8 +30,7 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
   
 - Recommended: Minimum of 16-GB RAM.
    
-- TCP/IP must be enabled for PolyBase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
-
+- PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
 
 >[!NOTE] 
 > PolyBase can be installed on only one SQL Server instance per machine.
@@ -111,7 +110,7 @@ Use the values in this table to create installation scripts. The SQL Server Poly
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
@@ -155,11 +154,12 @@ After installation, PolyBase must be enabled to access its features. Use the fol
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
 RECONFIGURE;
 ```
-
-
 ## Post-installation notes  
 
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue. These databases are for PolyBase use. Don't alter or delete them.  
+
+> [!CAUTION]
+> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a id="confirminstall"></a> How to confirm installation  
 

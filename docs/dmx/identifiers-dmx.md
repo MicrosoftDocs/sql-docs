@@ -1,16 +1,17 @@
 ---
+description: "Identifiers (DMX)"
 title: "Identifiers (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Identifiers (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   All objects in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] must have an identifier. An object's name is its identifier. Servers, databases, and database objects such as data sources, data source views, cubes, dimensions, mining models, and so on have identifiers.  
   
@@ -69,7 +70,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   When you use reserved words for object names or parts of object names.  
   
-     We recommend that you do not use reserved keywords as object names. Databases that you upgrade from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words that were not reserved in the earlier version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but that are reserved words for[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can use a delimited identifier to refer to such an object until you can change the object's name.  
+     We recommend that you do not use reserved keywords as object names. Databases that you upgrade from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words that were not reserved in the earlier version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but that are reserved words for[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can use a delimited identifier to refer to such an object until you can change the object's name.  
   
 -   When you use characters that are not listed as qualified identifiers.  
   

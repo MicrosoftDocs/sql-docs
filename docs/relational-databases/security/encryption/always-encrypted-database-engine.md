@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data and can view it, and those who manage the data but should have no access. By ensuring on-premises database administrators, cloud database operators, or other high-privileged unauthorized users, can't access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to store their data in Azure, and enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff.
 
- Always Encrypted provides confidential computing capabilities by enabling the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to process some queries on encrypted data, while preserving the confidentiality of the data and providing the above security benefits. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supports equality comparison via deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting--deterministic-or-randomized-encryption). 
+ Always Encrypted provides confidential computing capabilities by enabling the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to process some queries on encrypted data, while preserving the confidentiality of the data and providing the above security benefits. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supports equality comparison via deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting--deterministic-or-randomized-encryption). 
 
   > [!NOTE] 
-  > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+  > In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
  Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
   
- Always Encrypted is available in all editions of [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], starting with [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and all service tiers of [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Prior to [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted was limited to the Enterprise Edition.) For a Channel 9 presentation that includes Always Encrypted, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+ Always Encrypted is available in all editions of [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], starting with [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and all service tiers of [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Prior to [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1, Always Encrypted was limited to the Enterprise Edition.) For a Channel 9 presentation that includes Always Encrypted, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
 
   
 ## Typical Scenarios  
@@ -64,9 +64,12 @@ For details of how to develop applications using Always Encrypted with particula
 
 ## Remarks
 
-Encryption and decryption occurs via the client driver. This means that some actions that occur only server-side will not work when using Always Encrypted. Examples include copying data from one columng to another via an UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
+Encryption and decryption occurs via the client driver. This means that some actions that occur only server-side will not work when using Always Encrypted. These actions include (but are not limited to): 
+- Copying data from one column to another via an UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
+- Triggers, temporal tables, sparse columns, full-text, in-memory OLTP, and Change Data Capture (CDC). 
 
-Here's an example of an UPDATE that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
+
+The following is an example of an UPDATE that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -109,7 +112,7 @@ For details on Always Encrypted cryptographic algorithms, see [Always Encrypted 
 |Encrypting existing data in selected database columns|Yes|Yes|No|
 
 > [!NOTE]
-> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], does support encrypting existing data using Trasact-SQL. It also eliminates the need to move the data outside of the data for cryptographic operations.
+> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], does support encrypting existing data using Transact-SQL. It also eliminates the need to move the data outside of the database for cryptographic operations.
 
 > [!NOTE]
 > Make sure you run key provisioning or data encryption tools in a secure environment, on a computer that is different from the computer hosting your database. Otherwise, sensitive data or the keys could leak to the server environment, which would reduce the benefits of the using Always Encrypted.  
@@ -142,7 +145,7 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
   
 -   Queries on columns encrypted by using randomized encryption can't perform operations on any of those columns. Indexing columns encrypted using randomized encryption isn't supported.  
  > [!NOTE] 
- > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], addresses the above limitation by enabling pattern matching, comparison operators and indexing on columns using randomized encryption.
+ > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], addresses the above limitation by enabling pattern matching, comparison operators and indexing on columns using randomized encryption.
 
 -   A column encryption key can have up to two different encrypted values, each encrypted with a different column master key. This facilitates column master key rotation.  
   
@@ -157,21 +160,20 @@ Always Encrypted isn't supported for the columns with the below characteristics.
 - Columns with the `IDENTITY` property.  
 - Columns with `ROWGUIDCOL` property.  
 - String (`varchar`, `char`, etc.) columns with non-bin2 collations.  
-- Columns that are keys for nonclustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine).  
-- Columns that are keys for clustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine).  
-- Columns that are keys for fulltext indices containing encrypted columns both randomized and deterministic.  
+- Columns that are keys for clustered and nonclustered indices when using randomized encryption (deterministic encryption is supported).
+- Columns included in full-text indexes (Always Encrypted does not support [Full Text Search](../../../relational-databases/search/full-text-search.md)).  
 - Computed columns.
 - Columns referenced by computed columns (when the expression does unsupported operations for Always Encrypted).  
 - Sparse column set.  
-- Columns that are referenced by statistics.  
-- Columns using alias type.  
+- Columns that are referenced by statistics when using randomized encryption (deterministic encryption is supported).  
+- Columns using alias types.  
 - Partitioning columns.  
 - Columns with default constraints.  
 - Columns referenced by unique constraints when using randomized encryption (deterministic encryption is supported).  
 - Primary key columns when using randomized encryption (deterministic encryption is supported).  
 - Referencing columns in foreign key constraints when using randomized encryption or when using deterministic encryption, if the referenced and referencing columns use different keys or algorithms.  
 - Columns referenced by check constraints.  
-- Columns in tables that use change data capture.  
+- Columns captured/tracked using change data capture.  
 - Primary key columns on tables that have change tracking.  
 - Columns that are masked (using Dynamic Data Masking).  
 - Columns in Stretch Database tables. (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)  
@@ -207,7 +209,7 @@ Tool Requirements
   
  The following table summarizes the permissions required for common actions.  
   
-|Scenario|`ALTER ANY COLUMN MASTER KEY`|`ALTER ANY COLUMN ENCRYPTION KEY`|`VIEW ANY COLUMN MASTER KEY DEFINITION`|`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`|  
+|Scenario|<code>ALTER ANY COLUMN MASTER KEY</code>|<code>ALTER ANY COLUMN ENCRYPTION KEY</code>|<code>VIEW ANY COLUMN MASTER KEY DEFINITION</code>|<code>VIEW ANY COLUMN ENCRYPTION KEY DEFINITION</code>|  
 |--------------|-----------------------------------|---------------------------------------|---------------------------------------------|-------------------------------------------------|  
 |Key management (creating/changing/reviewing key metadata in the database)|X|X|X|X|  
 |Querying encrypted columns|||X|X|  

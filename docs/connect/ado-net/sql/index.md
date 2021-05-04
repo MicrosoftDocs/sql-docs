@@ -1,14 +1,14 @@
 ---
 title: "SQL Server and ADO.NET"
-description: "Describes how to work with features and functionality that are specific to SQL Server"
+description: "Provides an overview of Microsoft.Data.SqlClient features and functionality that are specific to SQL Server."
 ms.date: "10/15/2019"
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # SQL Server and ADO.NET

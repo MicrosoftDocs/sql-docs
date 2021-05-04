@@ -2,19 +2,19 @@
 title: "Plan for Host Guardian Service attestation"
 description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with secure enclaves."
 ms.custom: ""
-ms.date: "10/12/2019"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Plan for Host Guardian Service attestation
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 When you use [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), make sure that the client application is talking to a trustworthy enclave within the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process. For a virtualization-based security (VBS) enclave, this requirement includes verifying both the code inside the enclave is valid and the computer hosting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is trustworthy. Remote attestation achieves this goal by introducing a third party that can validate the identity (and optionally, the configuration) of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer. Before [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can use an enclave to run a query, it must provide information to the attestation service about its operating environment to obtain a health certificate. This health certificate is then sent to the client, which can independently verify its authenticity with the attestation service. Once the client trusts the health certificate, it knows it is talking to a trustworthy VBS enclave and will issue the query that will use that enclave.
 
@@ -37,7 +37,7 @@ The computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md
 ### High availability
 
 The HGS feature automatically installs and configures a failover cluster.
-In a production environment, it's recommended to use three HGS servers for high availability. Refer to the [failover cluster documentation](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum) for details on how cluster quorum is determined and alternative configurations, including two node clusters with an external witness.
+In a production environment, it's recommended to use three HGS servers for high availability. Refer to the [failover cluster documentation](/windows-server/failover-clustering/manage-cluster-quorum) for details on how cluster quorum is determined and alternative configurations, including two node clusters with an external witness.
 
 Shared storage is not required between the HGS nodes. A copy of the attestation database is stored on each HGS server and is automatically replicated over the network by the cluster service.
 
@@ -63,7 +63,7 @@ HGS supports two attestation modes for use with [!INCLUDE [ssnoversion-md](../..
 In general, we make the following recommendations:
 
 - For **physical production servers**, we recommend using TPM attestation for the additional assurances it provides.
-- For **virtual production servers**, we recommend host key attestation since most virtual machines do not have virtual TPMs or Secure Boot. If you're using a security-enhanced VM like an [on-premises shielded VM](https://aka.ms/shieldedvms), you may choose to use TPM mode. In all virtualized deployments, the attestation process only analyzes your VM environment -- not the virtualization platform underneath the VM.
+- For **virtual production servers**, we recommend host key attestation since most virtual machines do not have virtual TPMs or Secure Boot. If you're using a security-enhanced VM like an [on-premises shielded VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), you may choose to use TPM mode. In all virtualized deployments, the attestation process only analyzes your VM environment -- not the virtualization platform underneath the VM.
 - For **dev/test scenarios**, we recommend host key attestation because it is easier to set up.
 
 ### Trust model
@@ -111,21 +111,32 @@ Do not join the HGS computer(s) to a domain before you start.
 
 ### [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer prerequisites
 
-The computer(s) running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] must meet both the [Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) and the [Hyper-V hardware requirements](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+The computer(s) running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] must meet both the [Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) and the [Hyper-V hardware requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 These requirements include:
 
-- [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] or later
+- [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] or later
 - Windows 10 Enterprise version 1809 or later; or Windows Server 2019 Datacenter edition. Other editions of Windows 10 and Windows Server don't support attestation with HGS.
 - CPU support for virtualization technologies:
   - Intel VT-x with Extended Page Tables.
   - AMD-V with Rapid Virtualization Indexing.
   - If you're running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. See the [trust model](#trust-model) section for information on the assurances when running VBS enclaves in a VM.
-    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - In Azure, select a VM size that supports nested virtualization. All v3 series VMs support nested virtualization, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-    - On VMWare vSphere 6.7 or later, enable virtualization-based security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - On VMware vSphere 6.7 or later, enable virtualization-based security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
 - If you plan to use TPM attestation, you'll need a TPM 2.0 rev 1.16 chip ready for use in the server. At this time, HGS attestation doesn't work with TPM 2.0 rev 1.38 chips. Additionally, the TPM must have a valid Endorsement Key Certificate.
+
+## Roles and responsibilities when configuring attestation with HGS
+
+Setting up attestation with HGS involves configuring components of different types: HGS, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances, and applications that trigger enclave attestation. Configuring components of each type is performed by users assuming one of the below distinct roles:
+
+- HGS administrator - deploys HGS, registers [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers with HGS, and shares the HGS attestation URL with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrators and client application administrators.
+- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator - installs attestation client components, enables VBS on [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers, provides the HGS administrator with the information required to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers with HGS, configures the attestation URL on [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers, and verifies [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers can successfully attest with HGS.
+- DBA - configures secure enclaves in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instances.
+- Application administrator - configures application with the attestation URL obtained from the HGS administrator.
+
+In production environments (handling real sensitive data), it is important your organization adheres to role separation when configuring attestation, where each distinct role is assumed by different people. In particular, if the goal of deploying Always Encrypted in your organization is to reduce the attack surface area by ensuring [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrators and DBAs cannot access sensitive data, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] administrators and DBAs should not control the HGS servers.
 
 ## Dev/test environment considerations
 

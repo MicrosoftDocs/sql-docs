@@ -1,4 +1,5 @@
 ---
+description: "Design-time Methods of a Data Flow Component"
 title: "Design-time Methods of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.author: chugu
 ---
 # Design-time Methods of a Data Flow Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Before execution, the data flow task is said to be in a design-time state, as it undergoes incremental changes. Changes may include the addition or removal of components, the addition or removal of the path objects that connect components, and changes to the metadata of the components. When metadata changes occur, the component can monitor and react to the changes. For example, a component can disallow certain changes or make additional changes in response to a change. At design time, the designer interacts with a component through the design-time <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> interface.  
@@ -98,7 +99,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- For more information, see "Generalized Type Conversion" and "Implementing a Type Converter" in the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ For more information, see "Generalized Type Conversion" and "Implementing a Type Converter" in the [MSDN Library](../../../sql-server/index.yml).  
   
  You can specify a custom editor dialog box for the value of your custom property by using the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> property, as shown in the following example. First, you must create a custom type editor that inherits from **System.Drawing.Design.UITypeEditor**, if you cannot locate an existing UI type editor class that fits your needs.  
   
@@ -132,9 +133,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- For more information, see "Implementing a UI Type Editor" in the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ For more information, see "Implementing a UI Type Editor" in the [MSDN Library](../../../sql-server/index.yml).  
   
 ## See Also  
  [Run-time Methods of a Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

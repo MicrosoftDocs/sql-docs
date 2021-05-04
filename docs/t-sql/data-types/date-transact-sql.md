@@ -1,12 +1,13 @@
 ---
+description: "date (Transact-SQL)"
 title: "date (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "date_TSQL"
   - "date"
@@ -21,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # date (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
+
 ## date description
   
 |Property|Value|  
@@ -57,7 +60,7 @@ The following tables show the valid string literal formats for the **date** data
   
 |Alphabetical|Description|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** represents the full month name or the month abbreviation given in the current language. Commas are optional and capitalization is ignored.<br /><br /> To avoid ambiguity, use four-digit years.<br /><br /> If the day is missing, the first day of the month is supplied.|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** represents the full month name or the month abbreviation given in the current language. Commas are optional and capitalization is ignored.<br /><br /> To avoid ambiguity, use four-digit years.<br /><br /> If the day is missing, the first day of the month is supplied.|  
   
 |ISO 8601|Description|  
 |--------------|----------------|  
@@ -206,9 +209,11 @@ SELECT
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29. 1234567|  
+|**datetime2**|2007-05-08 12:35:29.1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
-  
+
+First introduced in SQL Server 2008.
+
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

@@ -1,4 +1,5 @@
 ---
+description: "Replication Functions - PUBLISHINGSERVERNAME"
 title: "PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PUBLISHINGSERVERNAME_TSQL"
   - "PUBLISHINGSERVERNAME"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "PUBLISHINGSERVERNAME function"
   - "Publishers [SQL Server replication], names"
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Replication Functions - PUBLISHINGSERVERNAME
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the name of the originating Publisher for a published database participating in a database mirroring session. This function is executed at a Publisher instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the publication database. Use it to determine the original Publisher of the published database.  
   
@@ -28,12 +29,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PUBLISHINGSERVERNAME()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  
@@ -45,6 +47,5 @@ PUBLISHINGSERVERNAME()
   
 ## See Also  
  [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [Replication Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
-  
+ [Replication Functions &#40;Transact-SQL&#41;]()  
   

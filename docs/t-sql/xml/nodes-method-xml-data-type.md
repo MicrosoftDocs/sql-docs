@@ -1,22 +1,23 @@
 ---
-title: "nodes() Method (xml Data Type) | Microsoft Docs"
+description: "nodes() Method (xml Data Type)"
+title: nodes() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "nodes() method"
   - "nodes method"
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # nodes() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The **nodes()** method is useful when you want to shred an **xml** data type instance into relational data. It allows you to identify nodes that will be mapped into a new row.  
   
@@ -28,12 +29,13 @@ You can retrieve multiple values from the rowset. For example, you can apply the
   
 ## Syntax  
   
-```sql
-  
+```syntaxsql
 nodes (XQuery) as Table(Column)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *XQuery*  
 Is a string literal, an XQuery expression. If the query expression constructs nodes, these constructed nodes are exposed in the resulting rowset. If the query expression results in an empty sequence, the rowset is empty as well. If the query expression statically results in a sequence that contains atomic values instead of nodes, a static error is raised.  
   
@@ -44,12 +46,12 @@ Is the table name and the column name for the resulting rowset.
 As an example, assume that you have the following table:  
   
 ```sql
-T (ProductModelID int, Instructions xml)  
+T (ProductModelID INT, Instructions XML)  
 ```  
   
 The following manufacturing instructions document is stored in the table. Only a fragment is shown. Notice that there are three manufacturing locations in the document.  
   
-```sql
+```
 <root>  
   <Location LocationID="10"...>  
      <step>...</step>  
@@ -67,7 +69,7 @@ The following manufacturing instructions document is stored in the table. Only a
   
 A `nodes()` method invocation with the query expression `/root/Location` would return a rowset with three rows, each containing a logical copy of the original XML document, and with the context item set to one of the `<Location>` nodes:  
   
-```sql
+```
 Product  
 ModelID      Instructions  
 ----------------------------------  
@@ -86,13 +88,13 @@ You can then query this rowset by using **xml** data type methods. The following
   
 ```sql
 SELECT T2.Loc.query('.')  
-FROM   T  
-CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
+FROM T  
+CROSS APPLY Instructions.nodes('/root/Location') AS T2(Loc)   
 ```  
   
 Here is the result:  
   
-```sql
+```
 ProductModelID  Instructions  
 ----------------------------------  
 1        <Location LocationID="10" ... />  
@@ -120,7 +122,7 @@ USE AdventureWorks;
 GO  
   
 CREATE FUNCTION XTest()  
-RETURNS xml  
+RETURNS XML  
 AS  
 BEGIN  
 RETURN '<document/>';  
@@ -145,7 +147,7 @@ In the following example, there's an XML document that has a <`Root`> top-level 
 The query then returns the context node from each row:  
   
 ```sql
-DECLARE @x xml   
+DECLARE @x XML   
 SET @x='<Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -158,7 +160,7 @@ GO
   
 In the following example result, the query method returns the context item and its content:  
   
-```sql
+```
 <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
 <row id="2"><name>moe</name></row>  
 <row id="3"/>  
@@ -169,12 +171,12 @@ Applying the parent accessor on the context nodes returns the <`Root`> element f
 ```sql
 SELECT T.c.query('..') AS result  
 FROM   @x.nodes('/Root/row') T(c)  
-go  
+GO  
 ```  
   
 Here is the result:  
   
-```sql
+```
 <Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -226,7 +228,7 @@ Note the following:
   
   Here is the partial result:  
   
-    ```sql
+    ```
     <MI:Location LocationID="10"  ...>  
        <MI:step ... />  
           ...  
@@ -248,22 +250,22 @@ Note the following:
 - `nodes()` is applied to the `T1 (Locations)` rowset and returns the `T2 (steps)` rowset. This rowset contains logical copies of the original manufacturing instructions document, with `/root/Location/step` element as the item context.  
   
 ```sql
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-./MI:step ') as T2(steps)         
+./MI:step ') AS T2(steps)         
 WHERE ProductModelID=7         
 GO         
 ```  
   
 Here is the result:  
   
-```sql
+```
 ProductModelID LocID Step         
 ----------------------------         
 7      10   <step ... />         
@@ -279,13 +281,13 @@ The query declares the `MI` prefix two times. Instead, you can use `WITH XMLNAME
   
 ```sql
 WITH XMLNAMESPACES (  
-   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS MI)  
   
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         

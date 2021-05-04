@@ -1,9 +1,10 @@
 ---
 title: "Estimate the Size of a Table | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store data in a table in SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
@@ -25,10 +26,10 @@ helpviewer_keywords:
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Table
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can use the following steps to estimate the amount of space required to store data in a table:  
   
 1.  Calculate the space required for the heap or clustered index following the instructions in [Estimate the Size of a Heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md) or [Estimate the Size of a Clustered Index](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md).  

@@ -1,4 +1,5 @@
 ---
+description: "UPPER (SSIS Expression)"
 title: "UPPER (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # UPPER (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a character expression after converting lowercase characters to uppercase characters.  

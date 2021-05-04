@@ -1,15 +1,16 @@
 ---
-title: "updateAsciiStream Method (java.io.InputStream, long) | Microsoft Docs"
+description: "updateAsciiStream Method (int, java.io.InputStream, long)"
+title: updateAsciiStream method (int, java.io.InputStream, long)
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateAsciiStream Method (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

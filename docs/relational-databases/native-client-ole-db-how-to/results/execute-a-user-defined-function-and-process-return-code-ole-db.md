@@ -1,28 +1,29 @@
 ---
+description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
 title: "User-Defined Function, Return Code (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [OLE DB]"
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Execute a User-Defined Function and Process Return Code (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  
   
  This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ## Example  
  Execute the first ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to create the stored procedure used by the application.  
@@ -362,5 +363,4 @@ go
   
 ## See Also  
  [Processing Results How-to Topics &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

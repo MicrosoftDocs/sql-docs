@@ -20,7 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Debug a Business Logic Handler (Replication Programming)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use a business logic handler to invoke custom business logic when a merge subscription is synchronized. For more information, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
  The Merge Replication Reconciler (replrec.dll) calls the managed code assembly containing the business logic. In most cases, replrec.dll and the custom business logic is executed on the computer where the Merge Agent runs (at the Subscriber for a pull subscription or at the Distributor for a push subscription). In the case of Web synchronization, or in the case of a [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscriber, the reconciler and the custom business logic is executed on the Web server.  

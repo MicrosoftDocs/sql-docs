@@ -1,4 +1,5 @@
 ---
+description: "Connect to SQL Server (AccessToSQL)"
 title: "Connect to SQL Server (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connect to SQL Server (AccessToSQL)
 Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  

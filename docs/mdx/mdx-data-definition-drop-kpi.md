@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - DROP KPI"
 title: "DROP KPI Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

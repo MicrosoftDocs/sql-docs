@@ -1,16 +1,17 @@
 ---
+description: "Reserved Keywords (DMX)"
 title: "Reserved Keywords (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Reserved Keywords (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserves certain keywords for its exclusive use. These keywords cannot be used anywhere in Data Mining Extensions (DMX) statements except in the positions that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] defines in the DMX language reference. These restricted DMX keywords include the following members:  
   

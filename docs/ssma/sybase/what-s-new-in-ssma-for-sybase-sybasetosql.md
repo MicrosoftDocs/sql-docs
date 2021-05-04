@@ -1,19 +1,95 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
+author: nahk-ivanov
 
-ms.custom: ""
-ms.date: "3/2/2020"
 ms.prod: sql
+ms.custom: ""
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for SAP ASE contains the following changes:
+
+* Store and run test cases on the client-side
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for SAP ASE contains the following changes:
+
+* Add support for computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for SAP ASE contains the following changes:
+
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for SAP ASE contains the following changes:
+
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for SAP ASE requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for SAP ASE contains the following changes:
+
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for SAP ASE contains minor performance improvements and bug fixes.
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for SAP ASE contains the following changes:
+
+* Fix conversion of temporary tables
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for SAP ASE contains minor performance improvements and bug fixes.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for SAP ASE contains the following changes:
+
+* Improve date and time format conversion
+* Fix for the issue with missing characters in SQL definitions for objects
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for SAP ASE includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
+* Fix for the issue with missing characters in SQL definitions for objects
 
 ## SSMA v8.7
 
@@ -78,9 +154,9 @@ The v8.1 release of SSMA for SAP ASE is enhanced with targeted fixes that are de
 
 The v8.0 release of SSMA for SAP ASE is enhanced with targeted fixes designed to improve quality and conversion metrics. In addition, this release offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL Database MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -200,8 +276,8 @@ The January 2016 maintenance release of SSMA for Sybase contains the following c
 
 The July 2014 release of SSMA for Sybase contains the following changes:
 
-* Improved Azure SQL DB code conversion.
-* Moved extension pack functionality to schema to support Azure SQL DB.
+* Improved Azure SQL Database code conversion.
+* Moved extension pack functionality to schema to support Azure SQL Database.
 * Added performance improvements tested for databases with over 10k objects.
 * Added UI improvements for dealing with large number of objects.
 * Added the ability to highlight well-known LOB schemas (so they can be ignored in conversion).

@@ -1,4 +1,5 @@
 ---
+description: "Choose Toolbox Items (Maintenance Tasks Page)"
 title: "Choose Toolbox Items (Maintenance Tasks Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -17,10 +18,9 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Choose Toolbox Items (Maintenance Tasks Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This tab of the **Customize Toolbox** dialog box displays a list of all maintenancetask components registered on your computer and makes it possible for you to change the ones that are displayed in the Toolbox. You can open the **Customize Toolbox** dialog box from the **Tools** menu. To sort the list of components, select any column heading.  
   
-## Options  
 The **Maintenance Tasks** tab includes the following columns of information.  
   
 **Name**  
@@ -34,7 +34,6 @@ Displays the date when the component was last modified.
   
 Click on a name to show the attributes of the component in the **Language** and **Version** boxes, along with the icon.  
   
-## Options  
 **Language**  
 The language of the component.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Securable Items"
 title: "Securable Items | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -56,7 +57,6 @@ ms.author: maggies
 ## See Also  
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Grant User Access to a Report Server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)   
  [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

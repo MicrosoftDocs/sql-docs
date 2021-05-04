@@ -1,5 +1,6 @@
 ---
 title: "Parameters Collection References (Report Builder) | Microsoft Docs"
+description: Discover how to use parameters in an expression to customize report data and appearance based on user choices in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

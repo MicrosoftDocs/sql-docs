@@ -1,12 +1,13 @@
 ---
+description: "SWITCHOFFSET (Transact-SQL)"
 title: "SWITCHOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SWITCHTZ"
   - "SWITCHTZ_TSQL"
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "date and time [SQL Server], SWITCHOFFSET"
   - "time zones [SQL Server]"
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a **datetimeoffset** value that is changed from the stored time zone offset to a specified new time zone offset.  
   
@@ -36,19 +37,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
+```syntaxsql
+SWITCHOFFSET ( datetimeoffset_expression, timezoneoffset_expression )   
 ```  
   
-## Arguments  
- *DATETIMEOFFSET*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *datetimeoffset_expression*  
  Is an expression that can be resolved to a **datetimeoffset(n)** value.  
   
- *time_zone*  
- Is a character string in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted.  
+ *timezoneoffset_expression*  
+ Is an expression in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted.  
   
 ## Return Type  
- **datetimeoffset** with the fractional precision of the *DATETIMEOFFSET* argument.  
+ **datetimeoffset** with the fractional precision of the *datetimeoffset_expression* argument.  
   
 ## Remarks  
  Use SWITCHOFFSET to select a **datetimeoffset** value into a time zone offset that is different from the time zone offset that was originally stored. SWITCHOFFSET does not update the stored *time_zone* value.  
@@ -57,17 +60,16 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  Using SWITCHOFFSET with the function GETDATE() can cause the query to run slowly. This is because the query optimizer is unable to obtain accurate cardinality estimates for the datetime value. To resolve this problem, use the OPTION (RECOMPILE) query hint to force the query optimizer to recompile a query plan the next time the same query is executed. The optimizer will then have accurate cardinality estimates and will produce a more efficient query plan. For more information about the RECOMPILE query hint, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
 SELECT * FROM t    
 WHERE c1 > @dt OPTION (RECOMPILE);  
-  
 ```  
   
 ## Examples  
  The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
   
-```  
+```sql  
 CREATE TABLE dbo.test   
     (  
     ColDatetimeoffset datetimeoffset  

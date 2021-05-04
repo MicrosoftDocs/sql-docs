@@ -5,18 +5,18 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Manage logins for jobs using databases in an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   You should routinely maintain the same set of user logins and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs on every primary database of an Always On availability group and the corresponding secondary databases. The logins and jobs must be reproduced on every instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts an availability replica for the availability group.  
   
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs**  
@@ -48,7 +48,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  This problem affects Windows local accounts on different computers. However, this problem does not occur for domain accounts because the SID is the same on each of the computers.  
   
- For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (a Database Engine blog).  
+ For more information, see [Orphaned Users with Database Mirroring and Log Shipping](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -64,5 +64,4 @@ ms.author: mathoma
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Contained Databases](../../../relational-databases/databases/contained-databases.md)   
  [Create Jobs](../../../ssms/agent/create-jobs.md)  
-  
   

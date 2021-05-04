@@ -1,5 +1,6 @@
 ---
 title: "Primary Expressions (XQuery) | Microsoft Docs"
+description: Learn about XQuery primary expressions that include literals, variable references, context item expressions, constructors, and function calls.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Primary Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   The XQuery primary expressions include literals, variable references, context item expressions, constructors, and function calls.  
   

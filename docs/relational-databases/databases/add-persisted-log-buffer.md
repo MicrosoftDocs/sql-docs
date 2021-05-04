@@ -1,4 +1,5 @@
 ---
+description: "Add persisted log buffer to a database"
 title: "Add persisted log buffer to a database"
 ms.custom: ""
 ms.date: "10/30/2019"
@@ -21,9 +22,9 @@ manager: amitban
 ---
 
 # Add persisted log buffer to a database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Permissions
 
@@ -51,6 +52,8 @@ ALTER DATABASE <MyDB>
   );
 ```
 
+Note that the log file on the DAX volume will be sized at 20MB regardless of the size specified wih the ADD FILE command.
+
 The volume or mount the new log file is placed must be formatted with DAX (NTFS) or mounted with the DAX option (XFS/EXT4).
 
 ## Remove a persisted log buffer
@@ -77,6 +80,6 @@ Normal restore conditions apply. If persisted log buffer is restored to a DAX vo
   
 ## Next steps
 
-- [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)
+- [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm)
 - [Data exposed: Latency and Durability with SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016)
-- [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)
+- [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)

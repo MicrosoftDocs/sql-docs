@@ -1,4 +1,5 @@
 ---
+description: "Discovering Data Flow Components Programmatically"
 title: "Discovering Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -22,7 +23,7 @@ ms.author: chugu
 ---
 # Discovering Data Flow Components Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After you have added a data flow task to a package, your next step may be to determine what data flow components are available for your use. You can programmatically discover the data flow sources, transformations, and destinations that are installed and available on the local computer. For information about adding a data flow task to the package, see [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md).  

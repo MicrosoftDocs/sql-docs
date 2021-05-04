@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUP_NAME (Transact-SQL)"
 title: "FILEGROUP_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILEGROUP_NAME_TSQL"
   - "FILEGROUP_NAME"
@@ -22,11 +23,11 @@ helpviewer_keywords:
   - "names [SQL Server], filegroups"
   - "viewing filegroup names"
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the filegroup name for the specified filegroup identification (ID) number.  
   
@@ -34,11 +35,13 @@ This function returns the filegroup name for the specified filegroup identificat
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_id*  
 
 The filegroup ID number whose filegroup name `FILEGROUP_NAME` will return. *filegroup_id* has a **smallint** data type.  
@@ -52,7 +55,7 @@ The filegroup ID number whose filegroup name `FILEGROUP_NAME` will return. *file
 ## Examples  
 This example returns the filegroup name for filegroup ID `1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

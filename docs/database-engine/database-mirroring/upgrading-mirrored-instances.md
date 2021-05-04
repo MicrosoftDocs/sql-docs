@@ -1,11 +1,12 @@
 ---
 title: "Upgrading Mirrored Instances | Microsoft Docs"
+description: Learn how to reduce downtime when upgrading a SQL Server mirrored instance by using a rolling upgrade. This article includes best practices.
 ms.custom: ""
 ms.date: "02/01/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading SQL Server, rolling upgrade of mirrored databases"
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Upgrading Mirrored Instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When upgrading a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mirrored  instance to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]service pack or cumulative update, or to a new Windows service pack or cumulative update, you can reduce downtime for each mirrored database to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). A rolling upgrade is a multi-stage process that in its simplest form involves upgrading the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance that is currently acting as the mirror server in a mirroring session, then manually failing over the mirrored database, upgrading the former principal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance, and resuming mirroring. In practice, the exact process will depend on the operating mode and the number and layout of mirroring session running on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instances that you are upgrading.  
   
 > [!NOTE]  
@@ -149,7 +150,7 @@ ms.author: mikeray
   
 ## See Also  
  [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Install SQL Server 2016 from the Command Prompt](../install-windows/install-sql-server-from-the-command-prompt.md)   
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
@@ -158,5 +159,4 @@ ms.author: mikeray
  [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
-  
   

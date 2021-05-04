@@ -1,4 +1,5 @@
 ---
+description: "sys.type_assembly_usages (Transact-SQL)"
 title: "sys.type_assembly_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.type_assembly_usages"
   - "sys.type_assembly_usages_TSQL"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.type_assembly_usages catalog view"
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.type_assembly_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row per type to assembly reference.  
   

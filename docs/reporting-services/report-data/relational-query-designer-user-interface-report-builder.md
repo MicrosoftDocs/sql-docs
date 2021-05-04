@@ -1,5 +1,6 @@
 ---
 title: "Relational Query Designer User Interface (Report Builder) | Microsoft Docs"
+description: Learn to use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -85,7 +86,7 @@ ms.author: maggies
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Both dialects of the SQL language support the clause, keyword, and aggregates that the query designer provides.  
   
- For more information about [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+ For more information about [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/language-reference.md).  
   
  The following table list the aggregates and provides brief descriptions of them.  
   
@@ -141,7 +142,8 @@ ms.author: maggies
   
 -   **Edit Fields** Opens the **Edit Related Fields** dialog box in which you add and modify relationships between tables. You chose the fields in the right and left tables to join. You can join multiple fields from the left table and right table to specify multiple join conditions in a relationship. The two fields that join the left and right tables do not need to have the same name. The joined fields must have compatible data types.  
   
--   **Delete Relationship**  Deletes the selected relationship**.**  
+-   **Delete Relationship**  Deletes the selected relationship. 
+
   
 -   **Move Up** and **Move Down** Moves relationships up or down the **Relationship** list. The sequence in which relationships are placed in the query can impact the query results. The relationships are added to the query in the order they appear in the **Relationship** list.  
   
@@ -192,5 +194,4 @@ ms.author: maggies
   
 ## See Also  
  [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
   

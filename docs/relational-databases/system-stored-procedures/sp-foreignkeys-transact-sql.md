@@ -1,4 +1,5 @@
 ---
+description: "sp_foreignkeys (Transact-SQL)"
 title: "sp_foreignkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_foreignkeys_TSQL"
   - "sp_foreignkeys"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_foreignkeys"
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_foreignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the foreign keys that reference primary keys on the table in the linked server.  
   

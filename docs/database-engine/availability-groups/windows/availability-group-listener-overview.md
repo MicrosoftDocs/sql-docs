@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # What is an availability group listener?  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 An availability group listener is a virtual network name (VNN) that clients can connect to in order to access a database in a primary or secondary replica of an Always On availability group. A listener allows a client to connect to a replica without having to know the physical instance name of the SQL Server. Since the listener routes traffic, the client connection string does not need to be modified after a failover occurs. 
 

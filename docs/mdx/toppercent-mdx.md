@@ -1,4 +1,5 @@
 ---
+description: "TopPercent (MDX)"
 title: "TopPercent (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -45,7 +46,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Like the [BottomPercent](../mdx/bottompercent-mdx.md) function, the **TopPercent** function always breaks the hierarchy.  
   
-## Example  
+## Examples  
+
+### A. Return TopPercent
+
  The following example returns the best cities that help make the top 10% of the resellers' sales, for the Bike category. The result is sorted in descending order, beginning with the city that has the highest value of sales.  
   
 ```  
@@ -61,7 +65,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  The above expression produces the following results:  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3,508,904.84|  
 |London|$1,521,530.09|  
@@ -82,7 +86,8 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## Example  
+### B. Understand the effect of negative values
+
  The following walkthrough will help understand the effect of negative values in the *Numeric_Expression*. First let's build some context where we can present the behavior.  
   
  The following query returns a table of Resellers 'Sales Amount', 'Total Product Cost' and 'Gross Profit', sorted in descending order of profit. Please note there are only negative values for profit; so, the smallest loss appears at the top.  
@@ -96,7 +101,7 @@ FROM [Adventure Works]
   
  The above query returns the following results; rows from the middle section were removed for readability.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Touring Bikes|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
 |Touring-2000 Blue, 46|$321,027.03|$333,021.50|($11,994.47)|  
@@ -116,7 +121,7 @@ FROM [Adventure Works]
   
  Please note that the query asks for one hundred percent (100%); that means all rows should be returned. However, because there are negative values in the *Numeric_Expression* , only one row is returned.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Touring Bikes|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   

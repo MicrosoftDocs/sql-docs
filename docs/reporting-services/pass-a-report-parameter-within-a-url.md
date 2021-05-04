@@ -1,5 +1,6 @@
 ---
 title: "Pass a Report Parameter Within a URL | Microsoft Docs"
+description: Learn how to pass report parameters directly to the report processing engine by including them in a report URL.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

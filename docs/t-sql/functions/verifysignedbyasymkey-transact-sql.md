@@ -1,4 +1,5 @@
 ---
+description: "VERIFYSIGNEDBYASYMKEY (Transact-SQL)"
 title: "VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "VERIFYSIGNEDBYASYMKEY_TSQL"
   - "VERIFYSIGNEDBYASYMKEY"
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # VERIFYSIGNEDBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Tests whether digitally signed data has been changed since it was signed.  
   
@@ -32,12 +33,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
  Is the ID of an asymmetric key certificate in the database.  
   
@@ -63,7 +65,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### A. Testing for data with a valid signature  
  The following example returns 1 if the selected data has not been changed since it was signed with asymmetric key `WillisKey74`. The example returns 0 if the data has been tampered with.  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -76,7 +78,7 @@ RETURN;
 ### B. Returning a result set that contains data with a valid signature  
  The following example returns rows in `SignedData04` that contain data that has not been changed since it was signed with asymmetric key `WillisKey74`. The example calls the function `AsymKey_ID` to obtain the ID of the asymmetric key from the database.  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  

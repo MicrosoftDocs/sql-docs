@@ -1,4 +1,5 @@
 ---
+description: "Level 2 Interface Conformance"
 title: "Level 2 Interface Conformance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,13 +13,13 @@ helpviewer_keywords:
   - "level 2 interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Level 2 Interface Conformance
 The Level 2 interface conformance level includes the Level 1 interface conformance-level functionality plus the following features:  
   
-|||  
+|Feature number|Description|  
 |-|-|  
 |201|Use three-part names of database tables and views. (For more information, see the two-part naming support feature 101 in [Level 1 Interface Conformance](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
 |202|Describe dynamic parameters, by calling **SQLDescribeParam**.|  

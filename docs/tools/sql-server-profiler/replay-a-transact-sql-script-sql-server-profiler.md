@@ -1,6 +1,7 @@
 ---
 title: Replay a Transact-SQL Script
 titleSuffix: SQL Server Profiler
+description: Discover how to use SQL Server Profiler to replay Transact-SQL scripts so that you can compare different possible solutions to a performance problem.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/14/2017
 
 # Replay a Transact-SQL Script (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 When you test possible solutions to a performance problem, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to replay [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, and compare performance before and after your changes.  
   

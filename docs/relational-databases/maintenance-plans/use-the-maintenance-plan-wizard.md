@@ -1,5 +1,6 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
+description: Learn how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in SQL Server.
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -36,8 +37,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Use the Maintenance Plan Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
     
  
 ##  <a name="Restrictions"></a> Limitations and Restrictions  
@@ -252,7 +253,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
      Selecting this option also activates Low Priority Used, which uses the `WAIT_AT_LOW_PRIORITY` option. Online index rebuild operations will wait for low priority locks for `MAX_DURATION` minutes, allowing other operations to proceed while the online index build operation is waiting.  
   
-    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      **MAXDOP** check box  
      Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
@@ -411,7 +412,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **Set backup compression**  list  
      In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or later versions), select one the following [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) values:  
   
-    |||  
+    |Value|Description|  
     |-|-|  
     |**Use the default server setting**|Click to use the server-level default. This default is set by the **backup compression default** server-configuration option. For information about how to view the current setting of this option, see [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
     |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by the Resource Governor. For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  

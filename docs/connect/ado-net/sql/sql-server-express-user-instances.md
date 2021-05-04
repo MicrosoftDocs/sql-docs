@@ -9,8 +9,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # SQL Server Express user instances
@@ -137,7 +137,7 @@ User instance scenarios include:
   
 - Any single-user application where sharing data is not required.  
   
-- ClickOnce deployment. If the .NET Framework 2.0 (or later) or .NET Core 1.0 (or later) and SQL Server Express are already installed on the target computer, the installation package downloaded as a result of a ClickOnce action can be installed and used by non-administrator users. Note that an administrator must install SQL Server Express if that is part of the setup. For more information, see [ClickOnce Deployment for Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
+- ClickOnce deployment. If the .NET Framework 2.0 (or later) or .NET Core 1.0 (or later) and SQL Server Express are already installed on the target computer, the installation package downloaded as a result of a ClickOnce action can be installed and used by non-administrator users. Note that an administrator must install SQL Server Express if that is part of the setup. For more information, see [ClickOnce Deployment for Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
   
 - Dedicated ASP.NET hosting using Windows Authentication. A single SQL Server Express instance can be hosted on an intranet. The application connects using the ASPNET Windows account, not by using impersonation. User instances should not be used for third-party or shared hosting scenarios where all applications would share the same user instance and would no longer remain isolated from each other.  
   

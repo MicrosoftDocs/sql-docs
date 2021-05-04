@@ -1,5 +1,6 @@
 ---
 title: "Data Collection | Microsoft Docs"
+description: Learn introductory information about the data collector, a component of SQL Server 2019 that collects different sets of data.
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
@@ -15,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Data Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The Data Collector is a component of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that collects different sets of data. Data collection either runs constantly or on a user-defined schedule. The data collector stores the collected data in a relational database known as the management data warehouse.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  The Data Collector is a component of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] that collects different sets of data. Data collection either runs constantly or on a user-defined schedule. The data collector stores the collected data in a relational database known as the management data warehouse.  
   
 ## What is Data Collector? 
- The data collector is a core component of the data collection platform for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and the tools that are provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data collector provides one central point for data collection across your database servers and applications. This collection point can obtain data from a variety of sources and is not limited to performance data, unlike SQL Trace.  
+ The data collector is a core component of the data collection platform for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and the tools that are provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data collector provides one central point for data collection across your database servers and applications. This collection point can obtain data from a variety of sources and is not limited to performance data, unlike SQL Trace.  
   
  The data collector enables you to adjust the scope of data collection to suit your test and production environments. The data collector also uses a data warehouse, a relational database that enables you to manage the data that you collect by setting different retention periods for your data.  
   
- The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md).  
   
- The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  ![The Data Collector's Role in Data Management](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "The Data Collector's Role in Data Management")  
   
@@ -44,7 +45,7 @@ ms.author: mathoma
   
 -   Proxy accounts  
   
- For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) is used to execute packages that collect data from individual data providers. You should be familiar with the following [!INCLUDE[ssIS](../../includes/ssis-md.md)] tools and concepts:  
   
@@ -112,5 +113,3 @@ ms.author: mathoma
 |Use the Management Data Warehouse to collect data from a server that is a data collection target.|[Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Exploit the server-side trace capabilities of SQL Server Profiler to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type| [Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

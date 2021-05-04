@@ -1,4 +1,5 @@
 ---
+description: "CREATE SYMMETRIC KEY (Transact-SQL)"
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/11/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE SYMMETRIC KEY"
   - "SYMMETRIC KEP"
@@ -22,19 +23,22 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Generates a symmetric key and specifies its properties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all symmetric keys before exporting.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)] 
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE SYMMETRIC KEY key_name   
     [ AUTHORIZATION owner_name ]  
     [ FROM PROVIDER provider_name ]  
@@ -62,7 +66,9 @@ CREATE SYMMETRIC KEY key_name
     | ASYMMETRIC KEY asym_key_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Specifies the unique name by which the symmetric key is known in the database. Temporary keys are designated when the _key_name_ begins with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
   
@@ -108,7 +114,7 @@ CREATE SYMMETRIC KEY key_name
  \<algorithm>  
 Specify the encrypting algorithm.   
 > [!WARNING]  
-> Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended), you must set the database to database compatibility level 120 or lower.  
+> Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended), you must set the database to database compatibility level 120 or lower.  
   
 ## Remarks  
  When a symmetric key is created, the symmetric key must be encrypted by using at least one of the following: certificate, password, symmetric key, asymmetric key, or PROVIDER. The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.  
@@ -142,7 +148,7 @@ Specify the encrypting algorithm.
  Repeated use of the same RC4 or RC4_128 KEY_GUID on different blocks of data, results in the same RC4 key because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide a salt automatically. Using the same RC4 key repeatedly is a well known error that will result in very weak encryption. Therefore we have deprecated the RC4 and RC4_128 keywords. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
->  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
+>  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
   
 ## Permissions  
  Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
@@ -152,7 +158,7 @@ Specify the encrypting algorithm.
 ### A. Creating a symmetric key  
  The following example creates a symmetric key called `JanainaKey09` by using the `AES 256` algorithm, and then encrypts the new key with certificate `Shipping04`.  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey09   
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY CERTIFICATE Shipping04;  
@@ -162,8 +168,7 @@ GO
 ### B. Creating a temporary symmetric key  
  The following example creates a temporary symmetric key called `#MarketingXXV` from the pass phrase: `The square of the hypotenuse is equal to the sum of the squares of the sides`. The key is provisioned with a GUID that is generated from the string `Pythagoras` and encrypted with certificate `Marketing25`.  
   
-```  
-  
+```sql 
 CREATE SYMMETRIC KEY #MarketingXXV   
 WITH ALGORITHM = AES_128,  
 KEY_SOURCE   
@@ -176,7 +181,7 @@ GO
 ### C. Creating a symmetric key using an Extensible Key Management (EKM) device  
  The following example creates a symmetric key called `MySymKey` by using a provider called `MyEKMProvider` and a key name of `KeyForSensitiveData`. It assigns authorization to `User1` and assumes that the system administrator has already registered the provider called `MyEKMProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY MySymKey  
 AUTHORIZATION User1  
 FROM PROVIDER EKMProvider  

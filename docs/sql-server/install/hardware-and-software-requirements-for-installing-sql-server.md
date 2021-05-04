@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "02/19/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Setup [SQL Server], software"
@@ -43,11 +43,11 @@ helpviewer_keywords:
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-author: MashaMSFT
-ms.author: mathoma
+ms.author: chadam
+author: cawrites
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2016 and SQL Server 2017 on the Windows operating system.  
 
@@ -83,7 +83,7 @@ The following software requirements apply to all installations:
   
 |Component|Requirement|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br/><br/> **Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br/><br/> **Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
@@ -94,7 +94,7 @@ The following software requirements apply to all installations:
   
   
 > [!IMPORTANT]
-> There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+> There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
 
 
@@ -131,24 +131,49 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 
 For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562). 
 
-> [!NOTE]  
-> Exceptions to the operating system support noted in this section are the following Business Intelligence features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and earlier, which can be installed on Windows Server 2008 R2 SP1 or later:  
->  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
-
 
 ### Server Core support
 
 Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| &nbsp; | &nbsp; |
+:::row:::
+    :::column:::
+        Windows Server 2019 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2019 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2016 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 R2 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 R2  Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
@@ -209,7 +234,7 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online.
 -   Shared Storage  
--   [Storage Spaces Direct \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+-   [Storage Spaces Direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 -   SMB File Share  
     - SMB storage is not supported for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files for either standalone or clustered installations. Use direct attached storage, a storage area network, or S2D instead. 
     - SMB storage can be hosted by a Windows File Server or a third-party SMB storage device. If Windows File Server is used, the Windows File Server version should be 2008 or later. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using SMB file share as a storage option, see [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
@@ -246,4 +271,3 @@ Alternatively, you can create an [Azure virtual machine already running SQL Serv
 ## Next steps
 
 Once you've reviewed the hardware and software requirements for installing SQL Server, you can start to [Plan a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
-

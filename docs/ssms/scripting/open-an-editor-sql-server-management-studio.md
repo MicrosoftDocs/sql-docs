@@ -1,19 +1,23 @@
 ---
 title: "Open an Editor (SQL Server Management Studio)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+description: Learn how to open the Database Engine Query, MDX, DMX, and XML/A editors in SQL Server Management Studio. 
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "03/14/2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Open an Editor (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX, or XML/A editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When opened, each editor window appears as a tab in the central pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX, or XML/A editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When opened, each editor window appears as a tab in the central pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Before You Begin  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] supports four editors: the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor for editing [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, the DMX and MDX editors for editing scripts using those languages, and the XML/A editor for editing XML/A scripts or XML files. Any of the editors can also be used to edit text files.  
@@ -43,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Using the File/Open Menu  
  On the **File** menu, click **Open**, and then navigate to a file and open it. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens the appropriate type of editor for the file extension, copies the contents of the file into the editor window, and also opens a connection dialog if needed. For example, if you open a file with a .sql extension, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window, copies in the contents of the .sql file, and opens a connection dialog. If you open a file with an extension not associated with a specific editor, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a text editor window and copies in the contents of the file.  
   
- For more information, see [Associate File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ For more information, see [Associate File Extensions to a Code Editor](./associate-file-extensions-to-a-code-editor.md).  
   
 ### Using the Toolbar  
  On the **Standard** toolbar, click one of the following buttons:  
@@ -74,6 +78,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   The **Template Browser** window appears in the right pane.  
   
--   Double-click a template to open a Database Engine Query window with the text of the template. For example, to open a CREATE DATABASE template, open the **SQL Server Templates** folder, open the **Databases** folder, and double-click **create database**.  
-  
-  
+-   Double-click a template to open a Database Engine Query window with the text of the template. For example, to open a CREATE DATABASE template, open the **SQL Server Templates** folder, open the **Databases** folder, and double-click **create database**.

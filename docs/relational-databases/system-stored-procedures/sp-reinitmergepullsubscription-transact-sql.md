@@ -1,4 +1,5 @@
 ---
+description: "sp_reinitmergepullsubscription (Transact-SQL)"
 title: "sp_reinitmergepullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_reinitmergepullsubscription"
   - "sp_reinitmergepullsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_reinitmergepullsubscription"
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_reinitmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Marks a merge pull subscription for reinitialization the next time the Merge Agent runs. This stored procedure is executed at the Subscriber in the subscription database.  
   
@@ -54,10 +55,14 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
   
  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
   
-## Example  
- [!code-sql[HowTo#sp_reinitmergepullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_1.sql)]  
+## Examples  
+
+### A. Reinitialize the pull subscription and lose pending changes
+
+[!code-sql[HowTo#sp_reinitmergepullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_1.sql)]  
   
-## Example  
+### B. Reinitialize the pull subscription and upload pending changes
+
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## Permissions  

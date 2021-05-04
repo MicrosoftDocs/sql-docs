@@ -1,8 +1,9 @@
 ---
+description: "Shape Commands in General"
 title: "Shape Commands in General | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "shape commands [ADO]"
   - "data shaping [ADO], shape commands"
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Shape Commands in General
 Data shaping defines the columns of a shaped **Recordset**, the relationships between the entities represented by the columns, and the manner in which the **Recordset** is populated with data.  
@@ -39,7 +40,7 @@ Data shaping defines the columns of a shaped **Recordset**, the relationships be
   
  You can access the **Recordset** components of the shaped **Recordset** programmatically or through an appropriate visual control.  
   
- Microsoft provides a visual tool that generates shape commands (see the [Data Environment Designer](https://go.microsoft.com/fwlink/?LinkId=5689) in the Visual Basic 6 documentation) and another that displays hierarchical cursors (see "Using the Microsoft Hierarchical Flexgrid Control" in the Visual Basic 6 documentation).  
+ Microsoft provides a visual tool that generates shape commands (see the [Data Environment Designer](/previous-versions/visualstudio/aa445793(v=vs.60)) in the Visual Basic 6 documentation) and another that displays hierarchical cursors (see "Using the Microsoft Hierarchical Flexgrid Control" in the Visual Basic 6 documentation).  
   
  For information about navigating a hierarchical **Recordset**, see [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

@@ -1,9 +1,10 @@
 ---
-title: "Setting Large Data | Microsoft Docs"
+description: "Setting Large Data in SQL Server Native Client"
+title: Setting large data (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, BLOBs"
   - "large data, OLE objects"
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Setting Large Data
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Setting Large Data in SQL Server Native Client
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, you can set BLOB data by passing a pointer to a consumer storage object.  
   

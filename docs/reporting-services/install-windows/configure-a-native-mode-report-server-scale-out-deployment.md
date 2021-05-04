@@ -1,4 +1,5 @@
 ---
+description: "Configure a Native Mode Report Server Scale-Out Deployment"
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -57,7 +58,7 @@ For SQL Server 2016 Reporting Services and earlier, SharePoint mode report serve
   
          To avoid database compatibility errors when connecting the server instances to the shared database, be sure that all instances are the same version. For example, if you create the report server database using a SQL Server 2016 report server instance, all other instances in the same deployment must also be SQL Server 2016.  
   
-    -   Use the Reporting Services Configuration manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
+    -   Use the Report Server Configuration Manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
   
     -   Use the Reporting Services Configuration tool to complete the scale-out by joining new report server instances to the first report server instance already connected to the report server database.  
   

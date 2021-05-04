@@ -1,4 +1,5 @@
 ---
+description: "Percentage Sampling Transformation"
 title: "Percentage Sampling Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -24,7 +25,7 @@ ms.author: chugu
 ---
 # Percentage Sampling Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Percentage Sampling transformation creates a sample data set by selecting a percentage of the transformation input rows. The sample data set is a random selection of rows from the transformation input, to make the resultant sample representative of the input.  
@@ -49,7 +50,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -72,5 +73,4 @@ ms.author: chugu
   
  **Use the following random seed**  
  Specify the sampling seed for the random number generator that the transformation uses to create a sample. This is only recommended for development and testing. The transformation uses the Microsoft Windows tick count if a random seed is not specified.  
-  
   

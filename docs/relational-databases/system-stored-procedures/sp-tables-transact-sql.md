@@ -1,12 +1,13 @@
 ---
+description: "sp_tables (Transact-SQL)"
 title: "sp_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_tables"
   - "sp_tables_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tables"
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a list of objects that can be queried in the current environment. This means any table or view, except synonym objects.  
   
@@ -31,8 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+```syntaxsql  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
      [ , [ @table_owner = ] 'owner' ]   
@@ -83,21 +84,21 @@ sp_tables [ [ @table_name = ] 'name' ]
  **sp_tables** is equivalent to **SQLTables** in ODBC. The results returned are ordered by **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, and **TABLE_NAME**.  
   
 ## Permissions  
- Requires SELECT permission on the schema.  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
   
 ### A. Returning a list of objects that can be queried in the current environment  
  The following example returns a list of objects that can be queries in the current environment.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### B. Returning information about the tables in a specified schema  
  The following example returns information about the tables that belong to the `Person` schema in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +112,14 @@ EXEC sp_tables
 ### C. Returning a list of objects that can be queried in the current environment  
  The following example returns a list of objects that can be queries in the current environment.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### D. Returning information about the tables in a specified schema  
  The following example returns information about the dimension tables in the `AdventureWorksPDW201` database.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   

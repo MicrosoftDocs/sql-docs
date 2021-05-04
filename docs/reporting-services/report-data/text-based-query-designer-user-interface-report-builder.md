@@ -1,5 +1,6 @@
 ---
 title: "Text-based Query Designer User Interface (Report Builder) | Microsoft Docs"
+description: Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. 
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -81,7 +82,7 @@ uspGetWhereUsedProductID
   
  Click the **Run** (**!**) button. When prompted for the query parameters, use the following table to enter values.  
   
-|||  
+|Parameter|Value|  
 |-|-|  
 |*\@StartProductID*|820|  
 |*\@CheckDate*|20010115|  

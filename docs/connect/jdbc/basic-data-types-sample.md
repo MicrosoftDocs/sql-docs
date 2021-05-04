@@ -1,15 +1,16 @@
 ---
-title: "Basic data types sample | Microsoft Docs"
+title: Basic data types sample
+description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use result set methods to retrieve and update values in the database.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Basic data types sample
@@ -18,7 +19,7 @@ ms.author: genemi
 
 This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type values, and how to use result set update methods to update those values.
 
-The code file for this sample is named BasicDT.java, and it can be found in the following location:
+The code file for this sample is named BasicDataTypes.java, and it can be found in the following location:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
@@ -26,18 +27,18 @@ The code file for this sample is named BasicDT.java, and it can be found in the 
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 The sample will create the required table and insert sample data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](reference/sqlserverresultset-class.md) class.
 
-Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.
+Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.
 
 Finally, the sample refreshes the data in the result set and then calls the custom displayRow method again to display the data in the result set.
 
@@ -56,7 +57,8 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 import microsoft.sql.DateTimeOffset;
 
-public class BasicDataTypes {
+
+public class DatatypesTest {
     private static final String tableName = "DataTypesTable";
 
     public static void main(String[] args) {
@@ -87,6 +89,8 @@ public class BasicDataTypes {
             rs.updateDate(8, new Date(timeInMillis));
             rs.updateTime(9, new Time(timeInMillis));
             rs.updateTimestamp(10, ts);
+            rs.updateTimestamp(11, ts);
+            rs.updateObject(12, 987654321L, microsoft.sql.Types.SQL_VARIANT);
 
             // -480 indicates GMT - 8:00 hrs
             ((SQLServerResultSet) rs).updateDateTimeOffset(11, DateTimeOffset.valueOf(ts, -480));
@@ -104,20 +108,20 @@ public class BasicDataTypes {
         }
     }
 
-    private static void displayRow(String title,
-            ResultSet rs) throws SQLException {
+    private static void displayRow(String title, ResultSet rs) throws SQLException {
         System.out.println(title);
-        System.out.println(rs.getInt(1) + " , " +                 // SQL integer type.
-                rs.getString(2) + " , " +                         // SQL char type.
-                rs.getString(3) + " , " +                         // SQL varchar type.
-                rs.getBoolean(4) + " , " +                        // SQL bit type.
-                rs.getDouble(5) + " , " +                         // SQL decimal type.
-                rs.getDouble(6) + " , " +                         // SQL money type.
-                rs.getTimestamp(7) + " , " +                      // SQL datetime type.
-                rs.getDate(8) + " , " +                           // SQL date type.
-                rs.getTime(9) + " , " +                           // SQL time type.
-                rs.getTimestamp(10) + " , " +                     // SQL datetime2 type.
-                ((SQLServerResultSet) rs).getDateTimeOffset(11)); // SQL datetimeoffset type.
+        System.out.println(rs.getInt(1) + " , " + // SQL integer type
+                rs.getString(2) + " , " + // SQL char type
+                rs.getString(3) + " , " + // SQL varchar type
+                rs.getBoolean(4) + " , " + // SQL bit type
+                rs.getDouble(5) + " , " + // SQL decimal type
+                rs.getDouble(6) + " , " + // SQL money type
+                rs.getTimestamp(7) + " , " + // SQL datetime type
+                rs.getDate(8) + " , " + // SQL date type
+                rs.getTime(9) + " , " + // SQL time type
+                rs.getTimestamp(10) + " , " + // SQL datetime2 type
+                ((SQLServerResultSet) rs).getDateTimeOffset(11) + " , " + // SQL datetimeoffset type
+                rs.getObject(12)); // SQL sqlvariant type
         System.out.println();
     }
 
@@ -126,13 +130,13 @@ public class BasicDataTypes {
 
         String sql = "create table " + tableName + " (" + "c1 int, " + "c2 char(20), " + "c3 varchar(20), " + "c4 bit, "
                 + "c5 decimal(10,5), " + "c6 money, " + "c7 datetime, " + "c8 date, " + "c9 time(7), "
-                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + ");";
+                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + "c12 sql_variant" + ");";
 
         stmt.execute(sql);
     }
 
     private static void insertOriginalData(Connection con) throws SQLException {
-        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?" + ")";
+        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?,?" + ")";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setObject(1, 100);
             pstmt.setObject(2, "original text");
@@ -145,13 +149,13 @@ public class BasicDataTypes {
             pstmt.setObject(9, new java.util.Date(1453500034839L));
             pstmt.setObject(10, new java.util.Date(1453500034839L));
             pstmt.setObject(11, new java.util.Date(1453500034839L));
+            pstmt.setObject(12, 123456789L, microsoft.sql.Types.SQL_VARIANT);
             pstmt.execute();
         }
     }
 }
-
 ```
 
 ## See also
 
-[Working with data types &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)
+[Working with data types &#40;JDBC&#41;](working-with-data-types-jdbc.md)

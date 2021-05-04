@@ -1,4 +1,5 @@
 ---
+description: "SQLSetConnectInfo Function"
 title: "SQLSetConnectInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetConnectInfo function [ODBC]"
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectInfo Function
 **Conformance**  

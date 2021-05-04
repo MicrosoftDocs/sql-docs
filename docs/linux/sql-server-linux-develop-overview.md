@@ -11,14 +11,14 @@ ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
 # How to get started developing applications for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 You can create applications that connect to and use SQL Server on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> These same development options also enable you to target SQL Server on other platforms. Applications can target SQL Server running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure SQL Data Warehouse.
+> These same development options also enable you to target SQL Server on other platforms. Applications can target SQL Server running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure Synapse Analytics.
 
 ## Try the tutorials
 
@@ -56,7 +56,7 @@ See the following topics for more information:
 
 You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com) on Linux, macOS, and Windows. For a step-by-step walkthrough, see the following tutorial:
 
-- [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Use Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 You can also use new command-line tools that are native for Linux. These tools include the following:
 

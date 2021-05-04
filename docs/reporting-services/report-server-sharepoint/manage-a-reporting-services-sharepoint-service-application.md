@@ -1,5 +1,6 @@
 ---
 title: "Manage a Reporting Services SharePoint Service Application | Microsoft Docs"
+description: Learn how to manage SQL Server Reporting Services service applications in SharePoint Central Administration.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -9,7 +10,7 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Manage a Reporting Services SharePoint service application
 

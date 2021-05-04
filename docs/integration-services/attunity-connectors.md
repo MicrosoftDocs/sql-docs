@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)"
 title: "Microsoft Connectors for Oracle and Teradata by Attunity | Microsoft Docs"
 
 ms.date: "08/16/2019"
@@ -14,7 +15,7 @@ ms.author: chugu
 ---
 # Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 > [!NOTE]
 > Atunity Connectors for Oracle and Teradata support SQL Server 2017 and below.

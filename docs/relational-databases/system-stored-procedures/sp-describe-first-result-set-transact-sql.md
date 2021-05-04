@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_first_result_set (Transact-SQL)"
 title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_first_result_set"
   - "sp_describe_first_result_set_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_first_result_set"
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the metadata for the first possible result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Returns an empty result set if the batch returns no results. Raises an error if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot determine the metadata for the first query that will be executed by performing a static analysis. The dynamic management view [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) returns the same information.  
   
@@ -217,6 +218,66 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
+  
+### C. Storing results in a table
+
+In some scenarios you would need to put the results of the `sp_describe_first_result_set` procedure in some table so your can further process the schema. 
+First you need to create a table that matches the output of the `sp_describe_first_result_set` procedure:
+
+```sql
+create table #frs (
+    is_hidden bit not null,
+    column_ordinal int not null,
+    name sysname null,
+    is_nullable bit not null,
+    system_type_id int not null,
+    system_type_name nvarchar(256) null,
+    max_length smallint not null,
+    precision tinyint not null,
+    scale tinyint not null,
+    collation_name sysname null,
+    user_type_id int null,
+    user_type_database sysname null,
+    user_type_schema sysname null,
+    user_type_name sysname null,
+    assembly_qualified_type_name nvarchar(4000),
+    xml_collection_id int null,
+    xml_collection_database sysname null,
+    xml_collection_schema sysname null,
+    xml_collection_name sysname null,
+    is_xml_document bit not null,
+    is_case_sensitive bit not null,
+    is_fixed_length_clr_type bit not null,
+    source_server sysname null,
+    source_database sysname null,
+    source_schema sysname null,
+    source_table sysname null,
+    source_column sysname null,
+    is_identity_column bit null,
+    is_part_of_unique_key bit null,
+    is_updateable bit null,
+    is_computed_column bit null,
+    is_sparse_column_set bit null,
+    ordinal_in_order_by_list smallint null,
+    order_by_list_length smallint null,
+    order_by_is_descending smallint null,
+    tds_type_id int not null,
+    tds_length int not null,
+    tds_collation_id int null,
+    tds_collation_sort_id tinyint null
+);
+```
+
+When you create a table, you can store the schema of some query in that table.
+
+```sql
+declare @tsql nvarchar(max) = 'select top 0 * from sys.credentials';
+
+insert #frs
+exec sys.sp_describe_first_result_set @tsql;
+
+select * from #frs;
+```
   
 ### Examples of problems  
  The following examples use two tables for all examples. Execute the following statements to create the example tables.  

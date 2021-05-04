@@ -1,12 +1,12 @@
 ---
 title: Run SQL Server Unit Tests
+description: Find out how to run SQL Server unit tests. See steps for running tests from various windows and tools in different versions of Visual Studio.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -53,7 +53,6 @@ This step runs all tests in the current test run. As soon as you start a test ru
   
 ## See Also  
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
-[How to: Run Automated Tests from Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[Running Automated Tests from the Command Line (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[Testing the Application (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
-  
+[How to: Run Automated Tests from Microsoft Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))  
+[Running Automated Tests from the Command Line (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182486(v=vs.100))  
+[Testing the Application (Visual Studio 2012)](/azure/devops/test/overview)  

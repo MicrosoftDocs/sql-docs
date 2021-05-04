@@ -1,4 +1,5 @@
 ---
+description: "Use the Copy Database Wizard"
 title: "Use the Copy Database Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2016"
@@ -27,7 +28,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Use the Copy Database Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The Copy Database Wizard moves or copies databases and certain server objects easily from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  to another instance, with no server downtime. By using this wizard, you can do the following: 
   
 -   Pick a source and destination server.  
@@ -381,9 +382,11 @@ In this example the `Sales` database will be copied and created as `SalesCopy` o
 
   
 ##  <a name="FollowUp"></a> Follow up: After upgrading a database  
- After you use the Copy Database Wizard to upgrade a database from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ After you use the Copy Database Wizard to upgrade a database from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
- If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+After the upgrade, the database compatibility level remains at the compatibility level before the upgrade, unless the previous compatibility level is not supported on the new version. In this case, the upgraded database compatibility level is set to the lowest supported compatibility level.
+
+For example, if you attach a database that was compatibility level 90 before attaching it to an instance of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], after the upgrade the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
  
  ## <a name="Post"></a> Post copy or move considerations
  Consider whether to perform the following steps after a **Copy** or **Move**:

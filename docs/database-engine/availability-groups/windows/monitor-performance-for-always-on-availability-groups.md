@@ -5,14 +5,14 @@ ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ---
 # Monitor performance for Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The performance aspect of Always On Availability Groups is crucial to maintaining the service-level agreement (SLA) for your mission-critical databases. Understanding how availability groups ship logs to secondary replicas can help you estimate the recovery time objective (RTO) and recovery point objective (RPO) of your availability implementation and identify bottlenecks in poorly performing availability groups or replicas. This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.  
    
 ##  Data synchronization process  
@@ -20,14 +20,13 @@ ms.author: jroth
   
  ![Availability group data synchronization](media/always-onag-datasynchronization.gif "Availability group data synchronization")  
   
-|||||  
+|Sequence|Step description|Comments|Useful metrics|  
 |-|-|-|-|  
-|**Sequence**|**Step description**|**Comments**|**Useful metrics**|  
 |1|Log generation|Log data is flushed to disk. This log must be replicated to the secondary replicas. The log records enter the send queue.|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capture|Logs for each database is captured and sent to the corresponding partner queue (one per database-replica pair). This capture process runs continuously as long as the availability replica is connected and data movement is not suspended for any reason, and the database-replica pair is shown to be either Synchronizing or Synchronized. If the capture process is not able to scan and enqueue the messages fast enough, the log send queue builds up.|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), which is an aggregation of the sum of all database messages queued for that availability replica.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) and [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) on the primary replica.|  
 |3|Send|The messages in each database-replica queue is dequeued and sent across the wire to the respective secondary replica.|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Receive and cache|Each secondary replica receives and caches the message.|Performance counter [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|5|Harden|Log is flushed on the secondary replica for hardening. After the log flush, an acknowledgement is sent back to the primary replica.<br /><br /> Once the log is hardened, data loss is avoided.|Performance counter [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wait type [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
+|5|Harden|Log is flushed on the secondary replica for hardening. After the log flush, an acknowledgment is sent back to the primary replica.<br /><br /> Once the log is hardened, data loss is avoided.|Performance counter [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wait type [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Redo|Redo the flushed pages on the secondary replica. Pages are kept in the redo queue as they wait to be redone.|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) and [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Wait type [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  Flow control gates  
@@ -35,13 +34,12 @@ ms.author: jroth
   
  After the logs have been captured on the primary replica, they are subject to two levels of flow controls, as shown in the following table.  
   
-|||||  
+|Level|Number of gates|Number of messages|Useful metrics|  
 |-|-|-|-|  
-|**Level**|**Number of gates**|**Number of messages**|**Useful metrics**|  
 |Transport|1 per availability replica|8192|Extended event **database_transport_flow_control_action**|  
 |Database|1 per availability database|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
   
- Once the message threshold of either gate is reached, log messages are no longer sent to a specific replica or for a specific database. Messages can be sent once acknowledgement messages are received for the sent messages to bring the number of sent messages below the threshold.  
+ Once the message threshold of either gate is reached, log messages are no longer sent to a specific replica or for a specific database. Messages can be sent once acknowledgment messages are received for the sent messages to bring the number of sent messages below the threshold.  
   
  In addition to the flow control gates, there is another factor that can prevent the log messages from being sent. The synchronization of replicas ensures that the messages are sent and applied in the order of the log sequence numbers (LSN). Before a log message is sent, its LSN also checked against the lowest acknowledged LSN number to make sure that it is less than one of thresholds (depending on the message type). If the gap between the two LSN numbers is larger than the threshold, the messages are not sent. Once the gap is below the threshold again, the messages are sent.  
   
@@ -55,7 +53,7 @@ ms.author: jroth
 > [!IMPORTANT]  
 >  If an availability group contains more than one availability database, then the availability database with the highest Tfailover becomes the limiting value for RTO compliance.  
   
- The failure detection time, Tdetection, is the time it takes for the system to detect the failure. This time depends on cluster-level settings and not on the individual availability replicas. Depending on the automatic failover condition that is configured, a failover can be triggered as an instant response to a critical SQL Server internal error, such as orphaned spinlocks. In this case, detection can be as fast as the [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) error report is sent to the WSFC cluster (the default interval is 1/3 of the health check timeout). A failover can also be triggered because of a timeout, such as the cluster health check timeout has expired (30 seconds by default) or the lease between the resource DLL and the SQL Server instance has expired (20 seconds by default). In this case, detection time is as long as the timeout interval. For more information, see [Flexible failover policy for automatic failover of an availability group &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx).  
+ The failure detection time, Tdetection, is the time it takes for the system to detect the failure. This time depends on cluster-level settings and not on the individual availability replicas. Depending on the automatic failover condition that is configured, a failover can be triggered as an instant response to a critical SQL Server internal error, such as orphaned spinlocks. In this case, detection can be as fast as the [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) error report is sent to the WSFC cluster (the default interval is 1/3 of the health check timeout). A failover can also be triggered because of a timeout, such as the cluster health check timeout has expired (30 seconds by default) or the lease between the resource DLL and the SQL Server instance has expired (20 seconds by default). In this case, detection time is as long as the timeout interval. For more information, see [Flexible failover policy for automatic failover of an availability group &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014).  
   
  The only thing that the secondary replica needs to do to become ready for a failover is for the redo to catch up to the end of log. The redo time, Tredo, is calculated using the following formula:  
   
@@ -86,7 +84,7 @@ To view the RTO and RPO within the dashboard, do the following:
 1. In SQL Server Management Studio, expand the **Always On High Availability** node, right-click the name of your availability group, and select **Show Dashboard**. 
 1. Select **Add/Remove Columns** under the **Group by** tab. Check both **Estimated Recovery Time(seconds)** [RTO] and **Estimated Data Loss (time)** [RPO]. 
 
-   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+   ![Screenshot showing the RTO RPO dashboard.](media/rto-rpo-dashboard.png)
 
 ### Calculation of secondary database RTO 
 The recovery time calculation determines how much time is needed to recover the *secondary database* after a failover happens.  The failover time is usually short and constant. The detection time depends on cluster-level settings and not on the individual availability replicas. 
@@ -306,7 +304,7 @@ It is possible to query the DMVs [sys.dm_hadr_database_replica_states](../../../
 
   
 ##  Monitoring for RTO and RPO  
- This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).  
   
  Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#estimating-failover-time-rto) and [Estimating potential data loss (RPO)](#estimating-potential-data-loss-rpo) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
   
@@ -450,4 +448,4 @@ To create the policies, follow the instructions below on all server instances th
 |hadr_worker_pool_task|`alwayson`|Debug|Primary|  
 |hadr_dump_primary_progress|`alwayson`|Debug|Primary|  
 |hadr_dump_log_progress|`alwayson`|Debug|Primary|  
-|hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|  
+|hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|

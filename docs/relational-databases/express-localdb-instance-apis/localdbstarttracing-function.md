@@ -1,4 +1,5 @@
 ---
+description: "LocalDBStartTracing Function"
 title: "LocalDBStartTracing Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,11 +14,11 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBStartTracing Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Enables tracing of API calls for all the SQL Server Express LocalDB instances owned by the current Windows user.  
   
  **Header file:** sqlncli.h  

@@ -1,9 +1,10 @@
 ---
+description: "Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output"
 title: "Stored Procedure, ODBC CALL, Output"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -11,17 +12,17 @@ helpviewer_keywords:
   - "stored procedures [ODBC]"
   - "ODBC CALL syntax"
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Execute Stored Procedure with ODBC CALL and Process Output
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when **IMultipleResults::GetResult** returns DB_S_NORESULT or the **IMultipleResults** interface is completely released, whichever occurs first.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To process return codes and output parameters  
   
@@ -352,5 +353,4 @@ GO
   
 ## See Also  
  [Processing Results How-to Topics &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

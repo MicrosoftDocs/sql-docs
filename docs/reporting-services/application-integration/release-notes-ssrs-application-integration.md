@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for Report Viewer controls"
 description: The release notes for the Report Viewer controls of WebForms and WinForms, related to Reporting Services.
-ms.date: 01/16/2020
+ms.date: 11/30/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -18,6 +18,20 @@ ms.author: rhys
 These are the release notes for the Report Viewer controls of WebForms and WinForms, related to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 For the release notes for SSRS, see [Release notes for SQL Server Reporting Services (SSRS) 2017 and later](../release-notes-reporting-services.md).
+
+## 150.1427.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Fixed an issue with links not looking visited after being clicked. |
+|           | Fixed a datetime parsing issue affecting certain locales. |
+| &nbsp; | &nbsp; |
+
+## 150.1404.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Fixed an issue with tab ordering of the toolbar in WebForms. |
+|           | Improved HTML rendering accessibility for tables. |
+| &nbsp; | &nbsp; |
 
 ## 150.1400.0
 | Change description | Details |

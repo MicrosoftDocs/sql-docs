@@ -1,11 +1,11 @@
 ---
 title: "Reporting Services with availability groups"
-description: Learn about configuring SQL Server Reporting Services (SSRS) with Always On availability groups. 
+description: Learn about configuring Reporting Services to work with Always On availability groups in SQL Server. Supported functionality differs for different scenarios.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 
 
 ms.topic: conceptual
@@ -13,21 +13,21 @@ helpviewer_keywords:
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  This topic contains information about configuring [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The three scenarios for using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are databases for report data sources, report server databases, and report design. The supported functionality and required configuration is different for the three scenarios.  
+  This topic contains information about configuring [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. The three scenarios for using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are databases for report data sources, report server databases, and report design. The supported functionality and required configuration is different for the three scenarios.  
   
  A key benefit of using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data sources is to leverage readable secondary replicas as a reporting data source while, at the same time the secondary replicas are providing a failover for a primary database.  
   
- For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Always On FAQ for SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
+ For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Always On FAQ for SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and Always On Availability Groups  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
   
  To use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014, and earlier, you need to download and install a hotfix for .Net 3.5 SP1. The hotfix adds support to SQL Client for AG features and support of the connection string properties **ApplicationIntent** and **MultiSubnetFailover**. If the Hotfix is not installed on each computer that hosts a report server, then users attempting to preview reports will see an error message similar to the following, and the error message will be written to the report server trace log:  
   
@@ -121,7 +121,7 @@ manager: erikre
   
 -   ReportServerTempDB  
   
- Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode, you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
+ Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode, you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14)).  
   
 > [!NOTE]
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  
@@ -177,5 +177,3 @@ manager: erikre
  [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

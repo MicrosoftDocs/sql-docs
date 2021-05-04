@@ -1,4 +1,5 @@
 ---
+description: "DENY Symmetric Key Permissions (Transact-SQL)"
 title: "DENY Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a symmetric key.  
   
@@ -29,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         TO <database_principal> [ ,...n ] [ CASCADE ]  
@@ -46,7 +47,9 @@ DENY permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a symmetric key. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -105,7 +108,7 @@ DENY permission [ ,...n ]
 ## Examples  
  The following example denies `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

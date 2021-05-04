@@ -1,10 +1,11 @@
 ---
-title: "Using NTLM authentication to connect to SQL Server | Microsoft Docs"
+title: Using NTLM authentication to connect to SQL Server
+description: Learn how to establish a SQL database connection using NTLM authentication with the JDBC driver.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 03/31/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.suite: "sql"
 ms.technology: connectivity
 ms.topic: conceptual
@@ -18,7 +19,7 @@ manager: kenvh
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] allows an application to use the **authenticationScheme** connection property to indicate that it wants to connect to a database using NTLM v2 Authentication. 
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] allows an application to use the **authenticationScheme** connection property to indicate that it wants to connect to a database using NTLM v2 Authentication.
 
 The following properties are also used for NTLM Authentication:
 
@@ -27,17 +28,17 @@ The following properties are also used for NTLM Authentication:
 - **password = password**
 - **integratedSecurity = true**
 
-Other than **domain**, the other properties are mandatory, the driver will throw an error if any are missing when the **NTLM** authenticationScheme property is used. 
+Other than **domain**, the other properties are mandatory, the driver will throw an error if any are missing when the **NTLM** authenticationScheme property is used.
 
-For more information on connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+For more information on connection properties, see [Setting the connection properties](setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## Remarks
 
-See [Network security: LAN Manager authentication level](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication. 
+See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication.
 
 ## Logging
 
-A new logger has been added to support NTLM authentication: com.microsoft.sqlserver.jdbc.internals.NTLMAuthentication. For more information, see [Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md).
+A new logger has been added to support NTLM authentication: com.microsoft.sqlserver.jdbc.internals.NTLMAuthentication. For more information, see [Tracing Driver Operation](tracing-driver-operation.md).
 
 ## DataSource
 
@@ -73,30 +74,30 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [Service Principal Name (SPN) Support in Client Connections](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [Service Principal Name (SPN) Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 
-> [!NOTE]  
+> [!NOTE]
 > The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.
 
 > Before 6.2 release of JDBC driver, you would need to explicitly set the **serverSpn**. As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
 
 ## Security risks
 
-The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It's replaced with Kerberos, which is a lot more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
+The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a weak cryptographic scheme and is vulnerable to attacks. NTLM has been replaced by Kerberos, which much more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
 
-The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It'ss also recommended to enable Extended Protection, or use SSL Encryption for increased security. 
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It's also recommended to enable Extended Protection, or use TLS Encryption for increased security.
 
 For more information on how to enable Extended Protection and, see:
 
 - [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
 
-For more information on connecting with SSL Encryption, see:
+For more information on connecting with encryption, see:
 
-- [Connecting with SSL encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)
+- [Connecting with encryption](connecting-with-ssl-encryption.md)
 
 > [!NOTE]
 > For the 7.4 release, enabling **both** Extended Protection and Encryption is not supported.
 
 ## See also
 
-[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

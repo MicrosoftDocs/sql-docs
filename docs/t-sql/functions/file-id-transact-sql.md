@@ -1,4 +1,5 @@
 ---
+description: "FILE_ID (Transact-SQL)"
 title: "FILE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILE_ID"
   - "FILE_ID_TSQL"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_ID"
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # FILE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 For the given logical name for a component file of the current database, this function returns the file identification (ID) number.  
   
@@ -35,11 +36,13 @@ For the given logical name for a component file of the current database, this fu
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_ID ( file_name )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *file_name*  
 An expression of type **sysname**, representing the logical name of the file whose file ID value `FILE_ID` will return.  
   

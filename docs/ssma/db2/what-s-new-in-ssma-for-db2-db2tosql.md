@@ -1,19 +1,116 @@
 ---
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) for each release.
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "3/2/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for DB2 contains the following changes:
+
+* Improve `TIMESTAMP_FORMAT` emulation function
+* Improve foreign keys discovery for z/OS platform
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for DB2 contains the following changes:
+
+* Add support for identity columns
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for DB2 contains the following changes:
+
+* Improve conversion of TRANSLATE function
+* Fix data migration for tables with computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for DB2 contains the following changes:
+
+* Fix conversion of column aliases with special characters
+* Fix conversion for `SELECTIVITY` clause
+* Improve conversion for `WITH ROW MOVEMENT` clause
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for DB2 contains the following changes:
+
+* Fix conversion of `MIN`/`MAX` aggregate functions with date/time arguments
+* Fix bug in `VARCHAR_FORMAT` emulation function when `DD` placeholder is used
+* Improve type mappings for `TIME` data type
+* Improve conversion of `ROUND` and `TRUNC` functions with numeric arguments
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for DB2 requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for DB2 contains the following changes:
+
+* Support for filtered unique indexes
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for DB2 contains the following changes:
+
+* Conversion of `STRIP` function
+* Improved parsing of procedure options
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for DB2 contains the following changes:
+
+* Support for DB2 for i (v7.1 and above)
+* Translation of `SQLSTATE` and `SQLCODE`
+* Conversion error message for side-effecting operators within a function
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for DB2 addresses a regression in foreign keys discovery and contains minor performance improvements.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for DB2 contains the following changes:
+
+* Fix for conversion of `TIMESTAMPDIFF` function
+* Fix for indexes discovery when partitioned index is present
+* Fix for foreign keys discovery when primary index is defined in another schema
+* Improved conversion for columns that match built-in function names
+* Fix for the issue with special characters in project name
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for DB2 includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
+* Updated mapping from `ROWID` to `varbinary(40)` to facilitate data migration
+* Improved conversion of `SELECT ... FROM NEW/OLD TABLE` statements
+* New conversion of `ALTER` statements for procedures and functions
+* New conversion of destructuring assignments
 
 ## SSMA v8.7
 
@@ -26,7 +123,7 @@ In addition, SSMA for DB2 now provides:
 * Improved conversion for `COUNT` function in MQ tables.
 * Conversion of `SAVEPOINT` statements.
 * Conversion to emulate DB2's behavior for `NULL` values in `ORDER BY` clause.
-* Parsing support for ASSOCIATE RESULT SET statement.
+* Parsing support for `ASSOCIATE RESULT SET` statement.
 
 > [!IMPORTANT]
 > With SSMA v8.5 and later, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -105,9 +202,9 @@ The v8.1 release of SSMA for DB2 is enhanced to provide targeted fixes that are 
 
 The v8.0 release of SSMA for DB2 is enhanced to provide targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

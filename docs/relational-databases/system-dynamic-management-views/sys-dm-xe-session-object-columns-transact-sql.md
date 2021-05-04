@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_xe_session_object_columns (Transact-SQL)"
 title: "sys.dm_xe_session_object_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_xe_session_object_columns_TSQL"
   - "sys.dm_xe_session_object_columns_TSQL"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "xe"
   - "sys.dm_xe_session_object_columns dynamic management view"
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_xe_session_object_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Shows the configuration values for objects that are bound to a session.  
   

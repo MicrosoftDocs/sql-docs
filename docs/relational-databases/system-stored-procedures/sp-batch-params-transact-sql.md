@@ -1,4 +1,5 @@
 ---
+description: "sp_batch_params (Transact-SQL)"
 title: "sp_batch_params (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_batch_params"
   - "sp_batch_params_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_batch_params"
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a rowset that contains information about the parameters included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. **sp_batch_params** only parses the batch specified and returns information about embedded parameter values. It does not execute the batch or modify the execution environment.  
   
@@ -74,7 +75,6 @@ EXECUTE sp_batch_params @SQLString;
   
 ## See Also  
  [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)   
  [Running Stored Procedures &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
-  
   

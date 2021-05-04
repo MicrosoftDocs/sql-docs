@@ -7,13 +7,13 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: jukoesma
 ms.technology: xevents
 ms.topic: reference
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System objects that support extended events
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The present article provides links to other articles that relate to extended events. They are articles that describe the following:
 

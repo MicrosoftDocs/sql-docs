@@ -1,7 +1,8 @@
 ---
-title: "Create Partitioned Tables and Indexes | Microsoft Docs"
+description: "Create Partitioned Tables and Indexes"
+title: "Create Partitioned Tables and Indexes"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "5/3/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -25,14 +26,13 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], creating"
   - "partition functions [SQL Server]"
   - "partition schemes [SQL Server]"
-ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  You can create a partitioned table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  You can create a partitioned table or index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  
   
  Creating a partitioned table or index typically happens in four parts:  
   
@@ -43,6 +43,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  Create a partition scheme that maps the partitions of a partitioned table or index to the new filegroups.  
   
 4.  Create or modify a table or index and specify the partition scheme as the storage location.  
+ 
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
  **In This Topic**  
   
@@ -89,7 +92,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  Under **Rows**, click **Add**. In the new row, enter the filegroup name.  
   
     > [!WARNING]  
-    >  You must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
+    >  When specifying multiple filegroups, you must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
 4.  Continue adding rows until you have created all of the filegroups for the partitioned table.  
   
@@ -131,7 +134,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      After completing this page, click **Next**.  
   
-6.  On the **Map Partitions** page, under **Range**, select either **Left boundary** or **Right boundary** to specify whether to include the highest or lowest bounding value within each filegroup you create. You must always enter one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
+6.  On the **Map Partitions** page, under **Range**, select either **Left boundary** or **Right boundary** to specify whether to include the highest or lowest bounding value within each filegroup you create. When specifying multiple filegroups, you must always enter one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
      In the **Select filegroups and specify boundary values** grid, under **Filegroup**, select the filegroup into which you want to partition your data. Under **Boundary**, enter the boundary value for each filegroup. If boundary value is left empty, the partition function maps the whole table or index into a single partition using the partition function name.  
   
@@ -264,7 +267,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates new filegroups, a partition function, and a partition scheme. A new table is created with the partition scheme specified as the storage location.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Adds four new filegroups to the AdventureWorks2012 database  
@@ -338,12 +341,40 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         ON myRangePS1 (col1) ;  
     GO  
     ```  
+
+
+#### To create a partitioned table in Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+
+In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup.
+  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+1.  On the Standard bar, click **New Query**.  
+  
+1.  Copy and paste the following example into the query window and click **Execute**. This example creates a partition function and a partition scheme. A new table is created with the partition scheme specified as the storage location. 
+
+    ```sql
+    -- Creates a partition function called myRangePF1 that will partition a table into four partitions  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    GO  
+    -- Creates a partition scheme called myRangePS1 that applies myRangePF1 to the PRIMARY filegroup 
+    CREATE PARTITION SCHEME myRangePS1  
+        AS PARTITION myRangePF1  
+        ALL TO ('PRIMARY') ;  
+    GO  
+    -- Creates a partitioned table called PartitionTable that uses myRangePS1 to partition col1  
+    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+        ON myRangePS1 (col1) ;  
+    GO
+    ```  
+
   
 #### To determine if a table is partitioned  
   
 1.  The following query returns one or more rows if the table `PartitionTable` is partitioned. If the table is not partitioned, no rows are returned.  
   
-    ```  
+    ```sql
     SELECT *   
     FROM sys.tables AS t   
     JOIN sys.indexes AS i   
@@ -359,7 +390,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  The following query returns the boundary values for each partition in the `PartitionTable` table.  
   
-    ```  
+    ```sql
     SELECT t.name AS TableName, i.name AS IndexName, p.partition_number, p.partition_id, i.data_space_id, f.function_id, f.type_desc, r.boundary_id, r.value AS BoundaryValue   
     FROM sys.tables AS t  
     JOIN sys.indexes AS i  
@@ -378,9 +409,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 #### To determine the partition column for a partitioned table  
   
-1.  The following query returns the name of the partitioning column for table. `PartitionTable`.  
+1.  The following query returns the name of the partitioning column for table `PartitionTable`.  
   
-    ```  
+    ```sql
     SELECT   
         t.[object_id] AS ObjectID   
         , t.name AS TableName   
@@ -402,15 +433,49 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     WHERE t.name = 'PartitionTable' ;   
     GO  
     ```  
-  
- For more information, see:  
-  
--   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
--   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
-  
--   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)  
-  
--   [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
+
+#### To determine the rows in each partition, and comparison descriptions
+
+1. The following query returns the rows by partition for table `PartitionTable`, and a description of the comparison operators for the partition scheme in use. *Query original provided by Kalen Delaney.*
+    
+    ```sql
+    SELECT t.name AS TableName, i.name AS IndexName , p.partition_number, f.name, f.type_desc, p.rows, rv.value, 
+    CASE WHEN ISNULL(rv.value, rv2.value) IS NULL THEN 'N/A' 
+    ELSE
+        CASE WHEN boundary_value_on_right = 0 AND rv2.value IS NULL THEN '>=' 
+            WHEN boundary_value_on_right = 0 THEN '>' 
+            ELSE '>=' 
+        END + ' ' + ISNULL(CONVERT(varchar(15), rv2.value), 'Min Value') + ' ' + 
+            CASE boundary_value_on_right WHEN 1 THEN 'and <' 
+                    ELSE 'and <=' END 
+            + ' ' + ISNULL(CONVERT(varchar(15), rv.value), 'Max Value') 
+    END AS TextComparison
+    FROM sys.tables AS t  
+    JOIN sys.indexes AS i  
+        ON t.object_id = i.object_id  
+    JOIN sys.partitions AS p  
+        ON i.object_id = p.object_id AND i.index_id = p.index_id   
+    JOIN  sys.partition_schemes AS s   
+        ON i.data_space_id = s.data_space_id  
+    JOIN sys.partition_functions AS f   
+        ON s.function_id = f.function_id  
+    LEFT JOIN sys.partition_range_values AS r   
+        ON f.function_id = r.function_id and r.boundary_id = p.partition_number  
+    LEFT JOIN sys.partition_range_values AS rv
+        ON f.function_id = rv.function_id
+        AND p.partition_number = rv.boundary_id     
+    LEFT JOIN sys.partition_range_values AS rv2
+        ON f.function_id = rv2.function_id
+        AND p.partition_number - 1= rv2.boundary_id
+    WHERE i.type <= 1 AND t.name = 'PartitionTable'
+    ORDER BY t.name, p.partition_number;
+    ```
+
+
+## See also
+- [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
+- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)  
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   
   

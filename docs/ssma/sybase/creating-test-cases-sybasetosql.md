@@ -1,4 +1,5 @@
 ---
+description: "Creating Test Cases (SybaseToSQL)"
 title: "Creating Test Cases (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester component,Test Case Wizard"
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Creating Test Cases (SybaseToSQL)
 Use the Test Case Wizard to create a test. This wizard lets you create test cases by choosing tested and verified objects and by specifying the testing parameters.  

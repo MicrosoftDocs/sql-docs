@@ -1,4 +1,5 @@
 ---
+description: "Inferred Dimension Members (Slowly Changing Dimension Wizard)"
 title: "Inferred Dimension Members (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Inferred Dimension Members (Slowly Changing Dimension Wizard)
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Inferred Dimension Members** dialog box to specify options for using inferred members. Inferred members exist when a fact table references dimension members that are not yet loaded. When data for the inferred member is loaded, you can update the existing record rather than create a new one.  

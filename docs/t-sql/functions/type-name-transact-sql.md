@@ -1,12 +1,13 @@
 ---
+description: "TYPE_NAME (Transact-SQL)"
 title: "TYPE_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TYPE_NAME_TSQL"
   - "TYPE_NAME"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "data types [SQL Server], names"
   - "TYPE_NAME function"
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TYPE_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the unqualified type name of a specified type ID.  
   
@@ -32,11 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TYPE_NAME ( type_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *type_id*  
  Is the ID of the type that will be used. *type_id* is an **int**, and it can refer to a type in any schema that the caller has permission to access.  
   
@@ -58,7 +61,7 @@ TYPE_NAME ( type_id )
 ## Examples  
  The following example returns the object name, column name, and type name for each column in the `Vendor` table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql
 SELECT o.name AS obj_name, c.name AS col_name,  
        TYPE_NAME(c.user_type_id) AS type_name  
 FROM sys.objects AS o   
@@ -88,14 +91,14 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the `TYPE ID` for the data type with id `1`.  
   
-```  
+```sql
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
  For a list of types, query sys.types.  
   
-```  
+```sql
 SELECT * FROM sys.types;  
 GO  
 ```  

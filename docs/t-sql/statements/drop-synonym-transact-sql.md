@@ -1,12 +1,13 @@
 ---
-title: "DROP SYNONYM (Transact-SQL) | Microsoft Docs"
+description: "DROP SYNONYM (Transact-SQL)"
+title: "DROP SYNONYM (Transact-SQL)"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP SYNONYM"
   - "DROP_SYNONYM_TSQL"
@@ -18,12 +19,11 @@ helpviewer_keywords:
   - "removing synonyms"
   - "DROP SYNONYM statement"
   - "dropping synonyms"
-ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a synonym from a specified schema.  
   
@@ -31,14 +31,15 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).
   
  Conditionally drops the synonym only if it already exists.  
   
@@ -65,7 +66,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ## Examples  
  The following example first creates a synonym, `MyProduct`, and then drops the synonym.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 -- Create a synonym for the Product table in AdventureWorks2012.  
@@ -82,5 +83,3 @@ GO
 ## See Also  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  

@@ -1,5 +1,6 @@
 ---
-title: "Programming guide for JDBC SQL driver | Microsoft Docs"
+title: "Programming guide for JDBC SQL driver"
+description: "Get started with the Microsoft JDBC Driver for SQL Server and learn the basics of programming database applications using Java."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Programming guide for JDBC SQL driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

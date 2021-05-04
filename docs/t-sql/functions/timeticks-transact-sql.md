@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TIMETICKS (Transact-SQL)"
 title: "@@TIMETICKS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@TIMETICKS_TSQL"
   - "@@TIMETICKS"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "time [SQL Server], ticks"
   - "number of microseconds per tick"
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;TIMETICKS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of microseconds per tick.  
   
@@ -31,12 +32,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@TIMETICKS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -44,7 +46,7 @@ ms.author: mikeray
   
 ## Examples  
   
-```  
+```sql
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   

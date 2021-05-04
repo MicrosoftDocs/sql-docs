@@ -1,20 +1,21 @@
 ---
+description: "RPC Output Parameter Event Class"
 title: "RPC Output Parameter Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RPC Output Parameter event class"
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RPC Output Parameter Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The RPC Output Parameter event class traces the output parameter values of remote procedure calls (RPCs) after execution.  
   
  Use this class to examine the output values returned by stored procedures. For example, if an application is not producing the expected output values after executing a remote procedure call, you can use this event class to help isolate the problem between the client code and the server code.  

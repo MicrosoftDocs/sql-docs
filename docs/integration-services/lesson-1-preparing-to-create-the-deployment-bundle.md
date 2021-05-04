@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Preparing to Create the Deployment Bundle"
 title: "Lesson 1: Preparing to Create the Deployment Bundle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1: Preparing to Create the Deployment Bundle
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this lesson, you will create the working folders and environment variables that support the tutorial, create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, add several packages and their supporting files to the project, and implement configurations in packages.  

@@ -1,4 +1,5 @@
 ---
+description: "Installer DLL"
 title: "Installer DLL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "installing ODBC components [ODBC], installer DLL functions"
   - "installer DLL [ODBC]"
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installer DLL
 > [!NOTE]  

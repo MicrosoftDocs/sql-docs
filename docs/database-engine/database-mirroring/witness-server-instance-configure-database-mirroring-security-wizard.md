@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify information about the server instance that is to serve as the witness for the session.  
   
 > [!NOTE]

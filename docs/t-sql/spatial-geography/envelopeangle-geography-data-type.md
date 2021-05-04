@@ -1,4 +1,5 @@
 ---
+description: "EnvelopeAngle (geography Data Type)"
 title: "EnvelopeAngle (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EnvelopeAngle"
   - "EnvelopeAngle_TSQL"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # EnvelopeAngle (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the maximum angle between the point returned by `EnvelopeCenter()` and a point in the **geography** instance in degrees.  
   
@@ -31,7 +32,9 @@ ms.author: mlandzic
   
 EnvelopeAngle( )  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   

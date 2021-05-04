@@ -1,9 +1,10 @@
 ---
+description: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_CRYPTOGRAPHIC_TSQL"
   - "CRYPTOGRAPHIC PROVIDER"
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -32,13 +33,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Is the name of the Extensible Key Management provider.  
   
@@ -64,7 +66,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## Examples  
  The following example creates a cryptographic provider called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a .dll file. The .dll file is named `c:\SecurityProvider\SecurityProvider_v1.dll` and it is installed on the server. The provider's certificate must first be installed on the server.  
   
-```  
+```sql  
 -- Install the provider  
 CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider  
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  
@@ -76,5 +78,8 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Set up SQL Server TDE Extensible Key Management by using Azure Key Vault](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
+ [sys.cryptographic_providers](../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)  
+ [sys.dm_cryptographic_provider_properties](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)
   
   

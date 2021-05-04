@@ -1,4 +1,5 @@
 ---
+description: "Connect to Data Sources with the SQL Server Import and Export Wizard"
 title: "Connect to Data Sources (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Connect to Data Sources with the SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 The topics in this section show you how to connect to many commonly used data sources when you run the SQL Server Import and Export Wizard. You have to provide connection info for your data sources on the **Choose a Data Source** and **Choose a Destination** pages of the wizard.
@@ -50,10 +51,8 @@ Here are some other basic tasks.
 
 -   **Start the wizard.** If you're ready to run the wizard and just want to know how to start it, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Get the wizard.** If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+-   **Get the wizard.** If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
-

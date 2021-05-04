@@ -1,4 +1,5 @@
 ---
+description: "updateObject Method (java.lang.String, java.lang.Object, int)"
 title: "updateObject Method (java.lang.String, java.lang.Object, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.updateObject (java.lang.String, java.lang.Object, int)"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateObject Method (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "xp_msver (Transact-SQL)"
 title: "xp_msver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "xp_msver_TSQL"
   - "xp_msver"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_msver"
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns version information about [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **xp_msver** also returns information about the actual build number of the server and information about the server environment. The information that **xp_msver** returns can be used within [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, batches, stored procedures, and so on, to enhance logic for platform-independent code.  
   

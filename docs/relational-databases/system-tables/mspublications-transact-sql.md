@@ -1,4 +1,5 @@
 ---
+description: "MSpublications (Transact-SQL)"
 title: "MSpublications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSpublications"
   - "MSpublications_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublications system table"
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSpublications** table contains one row for each publication that is replicated by a Publisher. This table is stored in the distribution database.  
   

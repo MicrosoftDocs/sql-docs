@@ -1,4 +1,5 @@
 ---
+description: "Configure Severity Levels for DQS Log Files"
 title: "Configure Severity Levels for DQS Log Files"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ ms.author: sawinark
 ---
 # Configure Severity Levels for DQS Log Files
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure severity levels for various activities and modules in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Severity levels define the intensity of events that occur in DQS. DQS events have the following severity levels, in the decreasing order of severity:  
   

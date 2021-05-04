@@ -1,4 +1,5 @@
 ---
+description: "SHUTDOWN (Transact-SQL)"
 title: "SHUTDOWN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SHUTDOWN_TSQL"
   - "SHUTDOWN"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "immediately stopping SQL Server"
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Immediately stops SQL Server.  
   
@@ -31,12 +32,13 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH NOWAIT  
  Optional. Shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without performing checkpoints in every database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exits after attempting to terminate all user processes. When the server restarts, a rollback operation occurs for uncompleted transactions.  
   

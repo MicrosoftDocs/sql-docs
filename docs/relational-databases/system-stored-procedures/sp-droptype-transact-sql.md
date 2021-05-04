@@ -1,4 +1,5 @@
 ---
+description: "sp_droptype (Transact-SQL)"
 title: "sp_droptype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_droptype_TSQL"
   - "sp_droptype"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droptype"
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_droptype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes an alias data type from **systypes**.  
   

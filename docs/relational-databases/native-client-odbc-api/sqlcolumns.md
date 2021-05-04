@@ -1,9 +1,10 @@
 ---
+description: "SQLColumns"
 title: "SQLColumns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -11,12 +12,12 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLColumns function"
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLColumns** returns SQL_SUCCESS whether or not values exist for the *CatalogName*, *TableName*, or *ColumnName* parameters. **SQLFetch** returns SQL_NO_DATA when invalid values are used in these parameters.  
   
@@ -85,7 +86,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColumns Function](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns Function](../../odbc/reference/syntax/sqlcolumns-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "User defined types"
 title: "User defined types | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # User defined types

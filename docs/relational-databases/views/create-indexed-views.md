@@ -1,9 +1,10 @@
 ---
+description: "Create Indexed Views"
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -17,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexed Views
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This article describes how to create indexes on a view. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view does not have to be referenced in the query for the optimizer to consider that view for a substitution.
 
@@ -32,8 +33,9 @@ The following steps are required to create an indexed view and are critical to t
 1. Verify the SET options are correct for all existing tables that will be referenced in the view.
 2. Verify that the SET options for the session are set correctly before you create any tables and the view.
 3. Verify that the view definition is deterministic.
-4. Create the view by using the `WITH SCHEMABINDING` option.
-5. Create the unique clustered index on the view.
+4. Verify that the base table has the same owner as the view.
+5. Create the view by using the `WITH SCHEMABINDING` option.
+6. Create the unique clustered index on the view.
 
 > [!IMPORTANT]
 > When executing DML<sup>1</sup> on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those referenced indexed views will have to be updated as well. As a result, DML query performance can degrade significantly, or in some cases, a query plan cannot even be produced.
@@ -101,10 +103,14 @@ In addition to the SET options and deterministic function requirements, the foll
 
 - The view must be created by using the `WITH SCHEMABINDING` option.
 - The view must reference only base tables that are in the same database as the view. The view cannot reference other views.
+
+- If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
+- If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+
 - The SELECT statement in the view definition must not contain the following Transact-SQL elements:
 
-   ||||
-   |-|-|-|
+   | Transact-SQL elements | (continued) | (continued) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)|`OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)|
    |Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)|Self-joins|Specifying columns by using `SELECT *` or `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`|Common table expression (CTE)|
@@ -114,16 +120,12 @@ In addition to the SET options and deterministic function requirements, the foll
    |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
    |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
+   |`CHECKSUM_AGG`|`STRING_AGG`||
 
-- If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
-- If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+   <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
-> [!IMPORTANT]
-> Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
+   > [!IMPORTANT]
+   > Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
 
 ### <a name="Recommendations"></a> Recommendations
 
@@ -149,7 +151,11 @@ Indexes on tables and views can be disabled. When a clustered index on a table i
 
 #### <a name="Permissions"></a> Permissions
 
-Requires **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created.
+To create the view, a user needs to hold the **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum. If the User creating the Index differs from the Users who created the View, for the Index creation alone the **ALTER**-permission on the View is required (covered by ALTER on the schema).
+
+> [!NOTE]  
+> Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. Therefore its possible to create a view and not be the owner of the view. On the other hand is also possible that individual objects within a schema have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 

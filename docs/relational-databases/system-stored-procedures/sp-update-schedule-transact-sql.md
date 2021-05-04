@@ -1,4 +1,5 @@
 ---
+description: "sp_update_schedule (Transact-SQL)"
 title: "sp_update_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_update_schedule"
   - "sp_update_schedule_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_schedule"
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the settings for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedule.  
   
@@ -53,16 +54,16 @@ sp_update_schedule
  The identifier of the schedule to modify. *schedule_id* is **int**, with no default. Either *schedule_id* or *schedule_name* must be specified.  
   
 `[ @name = ] 'schedule_name'`
- The name of the schedule to modify. *schedule_name*is **sysname**, with no default. Either *schedule_id* or *schedule_name* must be specified.  
+ The name of the schedule to modify. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* must be specified.  
   
 `[ @new_name = ] new_name`
  The new name for the schedule. *new_name* is **sysname**, with a default of NULL. When *new_name* is NULL, the name of the schedule is unchanged.  
   
 `[ @enabled = ] enabled`
- Indicates the current status of the schedule. *enabled*is **tinyint**, with a default of **1** (enabled). If **0**, the schedule is not enabled. When the schedule is not enabled, no jobs will run on this schedule.  
+ Indicates the current status of the schedule. *enabled* is **tinyint**, with a default of **1** (enabled). If **0**, the schedule is not enabled. When the schedule is not enabled, no jobs will run on this schedule.  
   
 `[ @freq_type = ] freq_type`
- A value indicating when a job is to be executed. *freq_type*is **int**, with a default of **0**, and can be one of these values.  
+ A value indicating when a job is to be executed. *freq_type* is **int**, with a default of **0**, and can be one of these values.  
   
 |Value|Description|  
 |-----------|-----------------|  

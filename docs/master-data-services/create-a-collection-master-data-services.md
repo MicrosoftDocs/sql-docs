@@ -1,4 +1,5 @@
 ---
+description: "Create a Collection (Master Data Services)"
 title: Create a Collection
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Create a Collection (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a collection when you want to create flat lists of leaf and consolidated members. Collections do not need to include all members from the entity.  
   

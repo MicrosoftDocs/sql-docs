@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Facet Properties Dialog Box, General Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to view the properties of a Policy-Based Management facet. Each facet can be applied to one or more target types, for example: server, database, or table. Use this page to view which target types are related to this facet. The properties of a facet are defined when a facet is created and cannot be changed by using this page.  
   
 ## Options  

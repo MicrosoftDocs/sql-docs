@@ -1,5 +1,6 @@
 ---
-title: "Link Access Applications to SQL Server - Azure SQL DB | Microsoft Docs"
+title: "Link Access Applications to SQL Server - Azure SQL Database | Microsoft Docs"
+description: Learn how to link your Access tables to the migrated tables so that you can use your existing Access applications with SQL Server or Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
 ms.date: "08/17/2017"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "slow performance"
   - "unlinking tables"
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
-# Linking Access applications to SQL Server - Azure SQL DB (AccessToSQL)
-If you want to use your existing Access applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. Linking modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database instead of the data in your Access database.  
+# Linking Access applications to SQL Server - Azure SQL Database (AccessToSQL)
+If you want to use your existing Access applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. Linking modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database instead of the data in your Access database.  
   
 > [!NOTE]  
 > Your Access tables remain in Access, but are not updated together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure updates. After you link the tables and verify functionality, you might want to delete your Access tables.  

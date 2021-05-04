@@ -1,14 +1,11 @@
 ---
-title: "CREATE XML INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2017"
+title: CREATE XML INDEX (Transact-SQL)
+description: "CREATE XML INDEX (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
-  - "XML_TSQL"
   - "CREATE_XML_INDEX_TSQL"
   - "XML INDEX"
   - "CREATE_XML_TSQL"
@@ -16,7 +13,6 @@ f1_keywords:
   - "CREATE XML"
   - "CREATE XML INDEX"
   - "XML_INDEX_TSQL"
-  - "FOR_XML_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -25,11 +21,15 @@ helpviewer_keywords:
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/10/2017"
 ---
+
 # CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates an XML index on a specified table. An index can be created before there is data in the table. XML indexes can be created on tables in another database by specifying a qualified database name.  
   
@@ -40,9 +40,8 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
-Create XML Index   
+```syntaxsql
+--Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
     ON <object> ( xml_column_name )  
     [ USING XML INDEX xml_index_name   
@@ -65,10 +64,11 @@ CREATE [ PRIMARY ] XML INDEX index_name
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
 }  
-  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [PRIMARY] XML  
  Creates an XML index on the specified **xml** column. When PRIMARY is specified, a clustered index is created with the clustered key formed from the clustering key of the user table and an XML node identifier. Each table can have up to 249 XML indexes. Note the following when you create an XML index:  
   
@@ -185,7 +185,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  An offline index operation that creates, rebuilds, or drops a XML index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation.  
   
 > [!NOTE]
->  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Specifies whether row locks are allowed. The default is ON.  
@@ -225,7 +225,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ## Remarks  
  Computed columns derived from **xml** data types can be indexed either as a key or included nonkey column as long as the computed column data type is allowable as an index key column or nonkey column. You cannot create a primary XML index on a computed **xml** column.  
@@ -290,5 +290,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
-  
-

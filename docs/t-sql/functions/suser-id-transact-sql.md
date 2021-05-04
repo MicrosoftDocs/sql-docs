@@ -1,4 +1,5 @@
 ---
+description: "SUSER_ID (Transact-SQL)"
 title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SUSER_ID_TSQL"
   - "SUSER_ID"
@@ -22,10 +23,10 @@ helpviewer_keywords:
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SUSER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the login identification number of the user.  
   
@@ -36,12 +37,13 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SUSER_ID ( [ 'login' ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *login* **'**  
  Is the login name of the user. *login* is **nchar**. If *login* is specified as **char**, *login* is implicitly converted to **nchar**. *login* can be any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If *login* is not specified, the login identification number for the current user is returned. If the parameter contains the word NULL will return NULL.  
   
@@ -58,7 +60,7 @@ SUSER_ID ( [ 'login' ] )
 ## Examples  
  The following example returns the login identification number for the `sa` login.  
   
-```  
+```sql
 SELECT SUSER_ID('sa');  
 ```  
   

@@ -1,19 +1,128 @@
 ---
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "3/2/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for Oracle contains the following changes:
+
+* Store and run test cases on the client-side
+* Improve resolution logic in `SELECT` list when user-defined column names match system functions
+* Ignore system-defined columns (`SYS_STS*`) and indexes (`SYS_IL*`)
+* Fix issue with packages disappearing from the objects tree after reconnect to Oracle database
+* Fix CLR assemblies deployment issue on [!INCLUDE [ssazure](../../includes/ssazure_md.md)] in 32-bit SSMA package
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for Oracle contains the following changes:
+
+* Fix sequences loading for Oracle 12c Release 1 (12.1)
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for Oracle contains the following changes:
+
+* Add support for computed columns
+* Fix parser issues when culture-specific operator characters are used in expressions
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for Oracle contains the following changes:
+
+* Add support for identity columns
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for Oracle contains the following changes:
+
+* Add setting to use full type specification for `%type` and `%rowtype` attributes
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for Oracle contains the following changes:
+
+* Stores full source/target server version in the project metadata (requires project upgrade)
+* Use DBA data dictionaries for objects discovery when possible
+* Fix multiple parsers issues (`PIVOT`/`UNPIVOT`, `MERGE`, alternative quoting)
+* Fix conversion of `INSERTING`/`DELETING`/`UPDATING` special functions in triggers
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for Oracle contains the following changes:
+
+* Fix conversion of `SQLCODE` and `SQLERRM` special functions in local procedures
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for Oracle contains the following changes:
+
+* Support for subquery factoring clauses within `INSERT`/`UPDATE`/`MERGE`/`DELETE` statements
+* Conversion message for `ON DELETE SET NULL` clause in cases of multi-path or circular references
+* Improved conversion of cursors created from dynamic SQL string
+* Update ODP.NET to v19.8
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for Oracle contains the following changes:
+
+* Support for subqueries in `INSERT ... VALUES` statement
+* Improved conversion of `COMMIT` statement
+* Fix bug in `CONNECT BY LEVEL` clause conversion
+* Updated parser error recovery logic to be less greedy
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for Oracle contains minor performance improvements as well as the following changes:
+
+* Fix for the Tester issue with index-organized tables
+* Fix for the names of extended stored procedures in extension pack
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for Oracle contains the following changes:
+
+* Conversion of dynamic SQL string literals
+* Conversion for `LAG`, `FIRST_VALUE` and `LAST_VALUE` analytical functions
+* Add support for basic `ALTER TRIGGER`/`ALTER INDEX` DDL (enable/disable, etc.)
+* Improved conversion for columns that match built-in function names
+* Generate filtered unique indexes for `NULL`-able columns
+* Improved variable declaration conversion for Azure Synapse Analytics
+* Fix for the issue with special characters in project name
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for Oracle includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
+* Improved conversion of analytical `OVER PARTITION` clauses
+* New conversion for `LEAD` analytical function
+* New conversion for subquery factoring clauses
+* New `REPLICATE` distribution option for Azure Synapse Analytics
+* Brand new Oracle syntax parser to further improve conversion performance
 
 ## SSMA v8.7
 
@@ -103,16 +212,16 @@ The v8.1 release of SSMA for Oracle is enhanced with targeted fixes that are des
 
 The v8.0 release of SSMA for Oracle is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Database Managed Instance:
+  > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Managed Instance:
   >
   > ![SSMA for Oracle Extension Pack](../media/ssma-oracle-ext-pack.png)
 
-  Some features, including Tester and Server-side data migration, are not supported when targeting Azure SQL Database Managed Instance. Read more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Some features, including Tester and Server-side data migration, are not supported when targeting Azure SQL Managed Instance. Read more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -178,7 +287,7 @@ The v7.5 release of SSMA for Oracle contains the following changes:
 
 The v7.4 release of SSMA for Oracle contains the following changes:
 
-* SSMA for Oracle now supports Azure SQL Data Warehouse as a target platform for migration.
+* SSMA for Oracle now supports Azure Synapse Analytics as a target platform for migration.
 
   ![New Project window](../media/new-project.png)
   * Supports the Data Warehouse storage options as shown in the following image:
@@ -280,8 +389,8 @@ The January 2014 Maintenance release of SSMA for Oracle contains the following c
 
 The July 2014 release of SSMA for Oracle contains the following changes:
 
-* Added support for Azure SQL DB.
-* Extension pack functionality moved to schema to support Azure SQL DB.
+* Added support for Azure SQL Database.
+* Extension pack functionality moved to schema to support Azure SQL Database.
 * Added support for Oracle Materialized views.
 * Added support for SQL Server 2014 Memory optimized tables.
 * Included performance improvements tested for databases with over 10k objects.

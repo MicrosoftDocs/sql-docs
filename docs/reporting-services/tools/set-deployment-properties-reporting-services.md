@@ -1,5 +1,6 @@
 ---
 title: "Set Deployment Properties (Reporting Services) | Microsoft Docs"
+description: Learn how to set the deployment properties that are used by SQL Server Data Tools (SSDT) or Visual Studio to build, preview, and deploy reports.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
@@ -22,7 +23,7 @@ ms.date: 05/15/2019
  Use Configuration Manager to create and manage sets of project properties in project configurations. Configuration Manager is a feature supported by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], on which [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is based.  
   
 > [!NOTE]  
-> Do not confuse this feature with the Reporting Services Configuration Manager, which is used to configure Reporting Services after installation. For more information, see [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+> Do not confuse this feature with the Report Server Configuration Manager, which is used to configure Reporting Services after installation. For more information, see [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
 >
 > [!NOTE]  
 > In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], the action of publishing reports from a Report Server project or solution is known as *deploying reports*.  
@@ -59,7 +60,7 @@ ms.date: 05/15/2019
   
 10. In the **TargetServerURL** text box, type the URL of the target report server. Before you publish a report, you must set this property to a valid report server URL. When publishing to a report server running in native mode, use the URL of the virtual directory of the report server (for example, http:*//server/reportserver* or https:*//server/reportserver)*. This is the virtual directory of the report server, not the web portal.  
   
-     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used, (for example, <https://*servername*>, <https://*servername*/*site*>, or <https://*servername*/*site*/*subsite*>).  
+     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used, (for example, `https://*servername*`, `https://*servername*/*site*`, or `https://*servername*/*site*/*subsite*`).  
   
 ## To set Configuration Manager properties  
   

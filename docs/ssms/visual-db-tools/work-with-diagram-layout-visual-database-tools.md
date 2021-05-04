@@ -1,4 +1,5 @@
 ---
+description: "Work with Diagram Layout (Visual Database Tools)"
 title: Work with Diagram Layout
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,11 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Work with Diagram Layout (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can customize the way your database diagrams look.  
   
 ## In This Section  

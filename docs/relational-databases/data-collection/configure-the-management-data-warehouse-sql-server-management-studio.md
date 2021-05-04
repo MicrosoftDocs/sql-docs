@@ -1,5 +1,6 @@
 ---
 title: "Configure the Management Data Warehouse (SSMS)"
+description: Learn how to configure the management data warehouse to support data storage on one or more instances of SQL Server that are using the data collector. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -24,7 +25,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to configure the management data warehouse to support data storage on a single instance or multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are using the data collector. These instances can be on the same server or on different servers. This topic also provides descriptions of the user interface for the [Configure Data Management Warehouse Wizard](#Wizard) dialog box. For information about configuring a data collector, see [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
@@ -66,7 +67,7 @@ ms.author: mathoma
  Use this page to select a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and management data warehouse. The management data warehouse is a relational database that will store collected data.  
   
 > [!NOTE]  
->  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
+>  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
   
  **Server name**  
  Specifies the name of the server that will host the management data warehouse.  
@@ -132,5 +133,4 @@ ms.author: mathoma
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

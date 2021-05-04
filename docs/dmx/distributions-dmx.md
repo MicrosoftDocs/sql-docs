@@ -1,16 +1,17 @@
 ---
+description: "Distributions (DMX)"
 title: "Distributions (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Distributions (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can define the content of columns in a mining structure, to affect how algorithms process the data in those columns when you create mining models. For some algorithms, it is useful to define the distribution of any continuous columns before you process the model, if the columns are known to contain common distributions of values. If you do not define the distributions, the resulting mining models may produce less accurate predictions than if the distributions were defined, because the algorithms will have less information from which to interpret the data.  
   
@@ -25,12 +26,12 @@ author: minewiskan
  **UNIFORM**  
  The values for the continuous column form a flat curve, in which all values are equally likely.  
   
- For more information about [!INCLUDE[msCoName](../includes/msconame-md.md)] data mining algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Third-party algorithm providers may support additional distribution types. To determine which distribution types an algorithm supports, use the **SUPPORTED_DISTRIBUTION_FLAGS** schema rowset.  
+ For more information about [!INCLUDE[msCoName](../includes/msconame-md.md)] data mining algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Third-party algorithm providers may support additional distribution types. To determine which distribution types an algorithm supports, use the **SUPPORTED_DISTRIBUTION_FLAGS** schema rowset.  
   
- For more information about distribution types, see [Column Distributions &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
+ For more information about distribution types, see [Column Distributions &#40;Data Mining&#41;](/analysis-services/data-mining/column-distributions-data-mining).  
   
 ## See Also  
- [Content Types &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
+ [Content Types &#40;Data Mining&#41;](/analysis-services/data-mining/content-types-data-mining)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -40,5 +41,4 @@ author: minewiskan
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

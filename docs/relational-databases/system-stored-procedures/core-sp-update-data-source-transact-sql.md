@@ -1,4 +1,5 @@
 ---
+description: "core.sp_update_data_source (Transact-SQL)"
 title: "core.sp_update_data_source (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_update_data_source"
   - "sp_update_data_source_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "core.sp_update_data_source stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates an existing row or inserts a new row in the management data warehouse core.source_info_internal table. This procedure is called by the data collector run-time component every time an upload package starts uploading data to the management data warehouse.  
   

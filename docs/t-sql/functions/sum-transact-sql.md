@@ -1,12 +1,13 @@
 ---
+description: "SUM (Transact-SQL)"
 title: "SUM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SUM"
   - "SUM_TSQL"
@@ -22,12 +23,12 @@ helpviewer_keywords:
   - "totals [SQL Server], SUM"
   - "summary values [SQL Server]"
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the sum of all the values, or only the DISTINCT values, in the expression. SUM can be used with numeric columns only. Null values are ignored.  
   
@@ -35,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Aggregate Function Syntax    
 SUM ( [ ALL | DISTINCT ] expression )  
 
@@ -43,7 +44,9 @@ SUM ( [ ALL | DISTINCT ] expression )
 SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  ALL  
  Applies the aggregate function to all values. ALL is the default.  
   
@@ -77,7 +80,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### A. Using SUM to return summary data  
  The following examples show using the SUM function to return summary data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
 FROM Production.Product  
 WHERE Color IS NOT NULL   
@@ -103,14 +106,14 @@ White           19.00                 6.7926
 ### B. Using the OVER clause  
  The following example uses the SUM function with the OVER clause to provide a cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the SUM function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The cumulative sales total for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
   
-```  
+```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -141,13 +144,13 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  In this example, the OVER clause does not include PARTITION BY. This means that the function will be applied to all rows returned by the query. The ORDER BY clause specified in the OVER clause determines the logical order to which the SUM function is applied. The query returns a cumulative total of sales by year for all sales territories specified in the WHERE clause. The ORDER BY clause specified in the SELECT statement determines the order in which the rows of the query are displayed.  
   
-```  
+```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -177,7 +180,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ### C. A simple SUM example  
  The following example returns the total number of each product sold in the year 2003.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductKey, SUM(SalesAmount) AS TotalPerProduct  
@@ -203,7 +206,7 @@ ProductKey  TotalPerProduct
 ### D. Calculating group totals with more than one column  
  The following example calculates the sum of the `ListPrice` and `StandardCost` for each color listed in the `Product` table.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT Color, SUM(ListPrice)AS TotalList,   

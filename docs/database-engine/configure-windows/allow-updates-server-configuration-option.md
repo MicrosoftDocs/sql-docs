@@ -1,5 +1,6 @@
 ---
 title: "allow updates Server Configuration Option | Microsoft Docs"
+description: "Learn about the obsolete SQL Server configuration option 'allow updates.' See how using this option will cause RECONFIGURE statements to fail."
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "allow updates option"
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # allow updates Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This option is still present in the **sp_configure** stored procedure, although its functionality is unavailable in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The setting has no effect. Direct updates to the system tables are not supported.  
   

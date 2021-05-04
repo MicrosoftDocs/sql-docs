@@ -1,4 +1,5 @@
 ---
+description: "Create Unique Constraints"
 title: "Create Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2020"
@@ -16,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Unique Constraints
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  You can create a unique constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to ensure no duplicate values are entered in specific columns that do not participate in a primary key. Creating a unique constraint automatically creates a corresponding unique index.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+  You can create a unique constraint in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to ensure no duplicate values are entered in specific columns that do not participate in a primary key. Creating a unique constraint automatically creates a corresponding unique index.  
   
 > [!NOTE]    
-> See [Primary key, foreign key, and unique key in Azure Synapse Analytics](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) for information on unique constraints in Azure Synapse Analytics.
+> See [Primary key, foreign key, and unique key in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) for information on unique constraints in Azure Synapse Analytics.
   
  **In This Topic**  
   
@@ -55,9 +57,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Indexes/Keys** dialog box, click **Add**.  
   
-4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property.  
+4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property, and then click **Close**.  
   
-5.  On the **File** menu, click **Save**_table name_.  
+5.  On the **File** menu, click **Save** _table name_.  
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -98,7 +100,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     ```  
   
-#### To create a unique constraint in an new table  
+#### To create a unique constraint on a new table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -120,4 +122,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), and [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

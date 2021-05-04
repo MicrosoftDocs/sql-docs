@@ -1,5 +1,6 @@
 ---
 title: "Add a Filter (Report Builder) | Microsoft Docs"
+description: Find out how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

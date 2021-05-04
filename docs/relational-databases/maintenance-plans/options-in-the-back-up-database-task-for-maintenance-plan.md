@@ -1,5 +1,6 @@
 ---
 title: "Back Up Database Task (Maintenance Plan) | Microsoft Docs"
+description: Learn how to add a backup task to a maintenance plan in SQL Server by using the Back Up Database Task.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Options in the Back Up Database Task for Maintenance Plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Back Up Database Task** dialog to add a backup task to the maintenance plan. Backing up the database is important in case of system or hardware failure (or user errors) that cause the database to be damaged in some way, thus requiring a backed-up copy to be restored. This task allows you to perform full, differential, files and filegroups, and transaction log backups.  
   
  **To create a backup database task**  
@@ -91,7 +92,7 @@ ms.author: mikeray
  **Set backup compression**  
  In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or a later version), select one the following [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) values:  
   
-|||  
+|Value|Description|  
 |-|-|  
 |**Use the default server setting**|Click to use the server-level default.<br /><br /> This default is set by the **backup compression default** server-configuration option. For information about how to view the current setting of this option,  see [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
 |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  

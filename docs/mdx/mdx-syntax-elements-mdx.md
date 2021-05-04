@@ -1,4 +1,5 @@
 ---
+description: "MDX Syntax Elements (MDX)"
 title: "MDX Syntax Elements (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -23,9 +24,8 @@ author: minewiskan
 |[Functions](../mdx/functions-mdx-syntax.md)|Functions are syntax elements that take zero, one, or more input values, and return a scalar value or an object. Examples include the [Sum](../mdx/sum-mdx.md) function for adding several values, the [Members](../mdx/members-set-mdx.md) function for returning a set of members from a dimension or level, and so on.|  
 |[Comments](../mdx/comments-mdx-syntax.md)|Comments are pieces of text that are inserted into MDX statements or scripts to explain the purpose of the statement. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not execute comments .|  
 |[Reserved Keywords](../mdx/reserved-keywords-mdx-syntax.md)|Reserved keywords are words that are reserved for the use of MDX and should not be used for object names used in MDX statements.|  
-|[Members, Tuples, and Sets](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Members, tuples and sets are core concepts of multidimensional data that you must understand before you create an MDX query.|  
+|[Members, Tuples, and Sets](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Members, tuples and sets are core concepts of multidimensional data that you must understand before you create an MDX query.|  
   
 ## See Also  
  [Multidimensional Expressions &#40;MDX&#41; Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
   

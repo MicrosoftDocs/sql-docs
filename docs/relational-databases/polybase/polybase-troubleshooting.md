@@ -1,24 +1,26 @@
 ---
-title: "Monitor and troubleshoot PolyBase | Microsoft Docs"
+title: "Monitor and troubleshoot PolyBase"
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
-ms.date: 04/23/2019
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs: 
+-  "TSQL"
+-  "XML"
 f1_keywords: 
    - "PolyBase, monitoring"
    - "PolyBase, performance monitoring"
 helpviewer_keywords: 
    - "PolyBase, troubleshooting"
-ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # Monitor and troubleshoot PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 To troubleshoot PolyBase, use the techniques found in this topic.
 
@@ -26,22 +28,60 @@ To troubleshoot PolyBase, use the techniques found in this topic.
 
 Use the catalog views listed here to manage PolyBase operations.
 
-|||  
-|-|-|  
 |View|Description|  
+|-|-|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifies external tables.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifies external data sources.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifies external file formats.|  
 
 ## Dynamic Management Views  
 
-|||  
-|-|-|  
-|[sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)|[sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)|  
-|[sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|[sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|[sys.dm_exec_distributed_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-requests-transact-sql.md)|[sys.dm_exec_distributed_sql_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-sql-requests-transact-sql.md)|  
-|[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
+:::row:::
+    :::column:::
+        [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_exec_distributed_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-requests-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_distributed_sql_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-sql-requests-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 PolyBase queries are broken into a series of steps within sys.dm_exec_distributed_request_steps. The following table provides a mapping from the step name to the associated DMV.
 
@@ -127,7 +167,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## To view the  PolyBase query plan (To be changed) 
+## To view the PolyBase query plan (To be changed) 
 
 1. In SSMS, enable **Include Actual Execution Plan** (Ctrl + M) and run the query.
 
@@ -215,10 +255,35 @@ PolyBase does not interface with Name Node HA services like Zookeeper or Knox to
 Work Around:
 Use DNS name to reroute connections to the active Name Node. In order to do this, you will need to ensure that the External Data Source is using a DNS name to communicate with the Name Node. When Name Node Failover occurs, you will need to change the IP address associated with the DNS name used in the External Data Source definition. This will reroute all new connections to the correct Name Node. Existing connections will fail when failover occurs. To automate this process, a "heartbeat" can ping the active Name Node. If the heart beat fails, one can assume a failover has occurred and automatically switch to the secondaries IP address.
 
+## Log file locations
+
+In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+
+In Linux servers, the logs are located by default in /var/opt/mssql/log/polybase.
+
+PolyBase data movement log files:  
+- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+
+PolyBase engine service log files:  
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+
+In Windows, PolyBase Java log files:
+- <SERVERNAME> Dms polybase.log
+- <SERVERNAME>_DWEngine_polybase.log
+ 
+In Linux, PolyBase Java log files:
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_dms.log
+
+
 ## Error messages and possible solutions
 
-To troubleshoot external table errors, see Murshed Zaman's blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions").
+For common troubleshooting scenarios, see [PolyBase Errors and Possible Solutions](polybase-errors-and-possible-solutions.md).
 
 ## See also
 
-[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)
+[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
+[PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

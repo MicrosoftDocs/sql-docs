@@ -1,21 +1,22 @@
 ---
+description: "Microsoft ActiveX Data Objects (ADO)"
 title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, about"
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft ActiveX Data Objects (ADO)
 
-ADO is used in C++ programs to connect to SQL Server. Of course, it also works to connect to Azure SQL Database in the cloud.
+ActiveX Data Objects is a programming model, which means that it is not dependent upon any given back-end engine. Currently, however, the only engine supporting the ADO model is OLE-DB. There are many native OLE-DB Providers as well as an OLE-DB Provider for ODBC. ADO is used in C++ and Visual Basic programs to connect to SQL Server and other databases. Of course, it also works to connect to Azure SQL Database in the cloud.
 
 Each section in this article describes a component of ADO.
 
@@ -35,7 +36,7 @@ Each section in this article describes a component of ADO.
  Remote Data Service (RDS) is a feature of ADO, with which you can move data from a server to a client application or Web page, manipulate the data on the client, and return updates to the server in a single round trip.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to  [WCF Data Service](/dotnet/framework/wcf/).  
   
 ## ADOX  
  Microsoft ActiveX Data Objects Extensions for Data Definition Language and Security (ADOX) is an extension to the ADO objects and programming model. ADOX includes objects for schema creation and modification, as well as security. Because it is an object-based approach to schema manipulation, you can write code that will work against various data sources regardless of differences in their native syntaxes.  
@@ -43,21 +44,19 @@ Each section in this article describes a component of ADO.
  ADOX is a companion library to the core ADO objects. It exposes additional objects for creating, modifying, and deleting schema objects, such as tables and procedures. It also includes security objects to maintain users and groups and to grant and revoke permissions on objects.  
   
 ## Documentation  
- [ADO Security Design Issues](../ado/guide/ado-security-design-issues.md)  
+ [ADO Security Design Issues](./guide/ado-security-design-issues.md)  
   
- [ADO Programmer's Guide](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO Programmer's Guide](./guide/ado-programmer-s-guide.md)  
   
  An introduction to using ADO, RDS, ADO MD, and ADOX.  
   
- [ADO Programmer's Reference](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO Programmer's Reference](./reference/ado-programmer-s-reference.md)  
   
  This section of the ADO documentation contains topics for each ADO, RDS, ADO MD, and ADOX object, collection, property, dynamic property, method, event, and enumeration.  
   
- [ADO Glossary](../ado/ado-glossary.md)  
+ [ADO Glossary](./ado-glossary.md)  
   
 ## Support  
  For free help with ADO issues, try posting to the ADO public newsgroup. This newsgroup is monitored by Microsoft Product Support Services (PSS) support professionals who cover ADO, and by other experienced ADO developers.  
   
  Further information about support options can be found on the Microsoft Help and Support Web site.
-
-

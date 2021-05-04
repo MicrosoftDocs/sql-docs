@@ -1,7 +1,8 @@
 ---
-title: "Connecting with bcp | Microsoft Docs"
+title: "Connecting with bcp"
+description: "Learn how to use the bcp utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/24/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,13 +11,13 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
+The [bcp](../../../tools/bcp-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
   
 - The field terminator is a tab ("\t").  
   
@@ -31,7 +32,7 @@ The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available i
 > -   -r"\n"  
 > -   -r'\n'  
   
-The following is a sample command invocation of `bcp` to copy table rows to a text file:  
+The following example is a command invocation of `bcp` to copy table rows to a text file:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -55,7 +56,7 @@ Uses a character data type.
 Specifies the database to connect to.  
   
 - -D  
-Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file*
 Specifies the full path of an error file used to store any rows that the `bcp` utility cannot transfer from the file to the database.  
@@ -68,7 +69,14 @@ Specifies the full path of a format file.
   
 - -F *first_row*  
 Specifies the number of the first row to export from a table or import from a data file.  
-  
+
+- -G  
+This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+
+> [!IMPORTANT]
+> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
+
 - -k  
 Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.  
   
@@ -79,7 +87,7 @@ Specifies a login timeout. The -l option specifies the number of seconds before 
 Specifies the number of the last row to export from a table or import from a data file.  
   
 - -m *max_errors*  
-Specifies the maximum number of syntax errors that can occur before the `bcp` operation is cancelled.  
+Specifies the maximum number of syntax errors that can occur before the `bcp` operation is canceled.  
   
 - -n  
 Uses the native (database) data types of the data to perform the bulk-copy operation.  
@@ -142,4 +150,5 @@ Used with the format and -f format_file options, generates an XML-based format f
   
 ## See Also
 
-[Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Connecting with **sqlcmd**](connecting-with-sqlcmd.md)  
+[Release Notes](release-notes-tools.md)

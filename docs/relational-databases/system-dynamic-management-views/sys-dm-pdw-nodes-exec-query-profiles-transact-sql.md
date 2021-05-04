@@ -6,21 +6,23 @@ ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Monitors real time data warehouse query progress while the query is in execution.   
   
-## Table returned  
+## Table returned
+  
 The counters returned are per operator per thread. The results are dynamic and do not match the results of existing options such as `SET STATISTICS XML ON` which only create output when the query is finished.  
   
 |Column name|Data type|Description|  
@@ -61,17 +63,20 @@ The counters returned are per operator per thread. The results are dynamic and d
 |segment_read_count|**int**|Number of segment read-aheads so far.|  
 |segment_skip_count|**int**|Number of segments skipped so far.| 
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
-|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
+|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
   
-## Remarks  
-The same remarks in [sys.dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) apply.  
+## Remarks
+
+The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) apply.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
 
-## See also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## See also
+
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## Next steps
- For more development tips, see [SQL Data Warehouse development overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## Next steps 
+
+Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

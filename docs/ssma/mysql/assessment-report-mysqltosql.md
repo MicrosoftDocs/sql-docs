@@ -1,4 +1,5 @@
 ---
+description: "Assessment Report (MySQLToSQL)"
 title: "Assessment Report (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Assessment Report (MySQLToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  
@@ -17,9 +18,8 @@ To access the Assessment Report, select objects to convert in source metadata ex
   
 ## Options  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Conversion statistics**|Shows the conversion statistics by statement type. This pane is visible when a group object, such as a schema, or an object without code is selected in the left pane.|  
 |**Objects by Categories**|Shows the number of objects by category. This pane is visible only when a group object, such as a schema, or an object without code is selected in the left pane.|  
 |**Statistics**|Shows the conversion statistics for the selected object. This pane is visible only when an individual object with code is selected in the left pane. You might have to expand **Statistics**, which is immediately above the **Source** pane, to view this pane.|  

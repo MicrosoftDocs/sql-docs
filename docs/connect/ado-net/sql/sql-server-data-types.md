@@ -7,8 +7,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # SQL Server data types and ADO.NET
@@ -19,7 +19,7 @@ SQL Server and the .NET are based on different type systems, which can result in
   
 SQL Server 2008 introduces new data types that are designed to meet business needs to work with date and time, structured, semi-structured, and unstructured data. These are documented in SQL Server 2008 Books Online.  
   
-The SQL Server data types that are available for use in your application depends on the version of SQL Server that you are using. For more information, see [Data Types (Database Engine)](https://go.microsoft.com/fwlink/?LinkID=107468) from SQL Server Books Online.
+The SQL Server data types that are available for use in your application depends on the version of SQL Server that you are using. For more information, see [Data Types (Database Engine)](/previous-versions/sql/sql-server-2008-r2/ms187594(v=sql.105)) from SQL Server Books Online.
   
 ## In this section  
 [SqlTypes and the DataSet](sqltypes-dataset.md)  

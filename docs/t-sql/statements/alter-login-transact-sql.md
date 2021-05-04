@@ -1,12 +1,13 @@
 ---
+description: "ALTER LOGIN (Transact-SQL)"
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/10/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_LOGIN_TSQL"
   - "ALTER LOGIN"
@@ -23,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER LOGIN (Transact-SQL)
 
@@ -31,16 +32,27 @@ Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## Click a product!
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
-
-||||||
-|-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
-||||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -48,7 +60,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER LOGIN login_name
@@ -158,12 +170,12 @@ If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON
 
 If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LOGIN statement that has this combination of options will fail.
 
-You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
+You cannot use ALTER LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER LOGIN [*domain\group*] DISABLE will return the following error message:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
-    This is by design.
+This is by design.
   
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -273,21 +285,35 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_**
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## SQL Server
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
@@ -436,20 +462,34 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Managed Instance \*_**
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 ## Syntax
 
-```
--- Syntax for SQL Server and Azure SQL Database managed instance
+```syntaxsql
+-- Syntax for SQL Server and Azure SQL Managed Instance
 
 ALTER LOGIN login_name
     {
@@ -487,8 +527,8 @@ ALTER LOGIN login_name
 > [!NOTE]
 > The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-```
--- Syntax for Azure SQL Database managed instance using Azure AD logins
+```syntaxsql
+-- Syntax for Azure SQL Managed Instance using Azure AD logins
 
 ALTER LOGIN login_name
   {
@@ -584,8 +624,8 @@ If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LO
 
 You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. This is by design. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -647,7 +687,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database managed instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -677,7 +717,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database managed instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -703,11 +743,25 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_**
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -715,7 +769,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
@@ -863,11 +917,25 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+:::row:::
+    :::column:::
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_**
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -875,7 +943,7 @@ GO
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER LOGIN login_name
@@ -952,8 +1020,8 @@ If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LO
 
 You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. This is by design. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 

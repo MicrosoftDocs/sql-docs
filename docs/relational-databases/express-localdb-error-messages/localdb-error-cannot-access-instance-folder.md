@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER"
 title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -7,15 +8,15 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|261|  

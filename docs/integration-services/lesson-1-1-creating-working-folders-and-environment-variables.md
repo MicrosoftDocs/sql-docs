@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-1 - Creating Working Folders and Environment Variables"
 title: "Step 1: Creating Working Folders and Environment Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-1 - Creating Working Folders and Environment Variables
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will create the working folder (C:\DeploymentTutorial) and the new system environment variables (`DataTransfer` and `LoadXMLData`) that you will use in later tutorial tasks.  
@@ -54,7 +55,7 @@ If you plan to deploy the packages to a different computer, you must create two 
   
 8.  Click **OK** to exit the **Environment Variables** dialog box.  
   
-9. Click **OK** to exit the **System Properties** dialog box.\  
+9. Click **OK** to exit the **System Properties** dialog box.
   
 10. Optionally, restart your computer. If you do not restart the computer, the name of the new variable will not be displayed in the Package Configuration Wizard, but you can still use it.  
   
@@ -76,7 +77,7 @@ If you plan to deploy the packages to a different computer, you must create two 
   
 8.  Click **OK** to exit the **Environment Variables** dialog box.  
   
-9. Click **OK** to exit the **System Properties** dialog box.\  
+9. Click **OK** to exit the **System Properties** dialog box.
   
 10. Optionally, restart your computer.  
   

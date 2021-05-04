@@ -1,12 +1,13 @@
 ---
+description: "STR (Transact-SQL)"
 title: "STR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STR"
   - "STR_TSQL"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "character data [SQL Server]"
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns character data converted from numeric data. The character data is right-justified, with a specified length and decimal precision. 
   
@@ -31,11 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 STR ( float_expression [ , length [ , decimal ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an expression of approximate numeric (**float**) data type with a decimal point.  
   
@@ -57,7 +60,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## Examples  
  The following example converts an expression that is made up of five digits and a decimal point to a six-position character string. The fractional part of the number is rounded to one decimal place.  
   
-```  
+```sql
 SELECT STR(123.45, 6, 1);  
 GO  
 ```  
@@ -73,7 +76,7 @@ GO
   
  When the expression exceeds the specified length, the string returns `**` for the specified length.  
   
-```  
+```sql
 SELECT STR(123.45, 2, 2);  
 GO  
 ```  
@@ -89,7 +92,7 @@ GO
   
  Even when numeric data is nested within `STR`, the result is character data with the specified format.  
   
-```  
+```sql
 SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  

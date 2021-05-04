@@ -1,7 +1,8 @@
 ---
 title: "Back Up the Service Master Key | Microsoft Docs"
+description: Learn how to back up the service master key in SQL Server by using Transact-SQL. The service master key is the root of the encryption hierarchy.
 ms.custom: ""
-ms.date: "01/02/2019"
+ms.date: "04/02/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,20 +14,13 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # Back Up the Service Master Key
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This article describes how to back up the Service Master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This article describes how to back up the Service Master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
+  
+We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
+  
+## Permissions
 
-## Before You Begin  
-  
-### Limitations and Restrictions  
-
-- The master key must be open and, therefore, decrypted before it is backed up. If it is encrypted with the service master key, the master key does not have to be explicitly opened; however, if the master key is encrypted only with a password, it must be explicitly opened.  
-  
-- We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
-  
-## Security  
-  
-### Permissions
 Requires CONTROL permission on the database.  
   
 ## Using Transact-SQL  
@@ -63,4 +57,11 @@ Requires CONTROL permission on the database.
   
 9. Store the backup in a secure, off-site location.  
 
- For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
+## Next steps
+
+- [Restore the Service Master Key](restore-the-service-master-key.md)
+
+## See also
+
+- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)
+- [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)

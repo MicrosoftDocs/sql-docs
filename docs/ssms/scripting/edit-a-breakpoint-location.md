@@ -1,9 +1,10 @@
 ---
 title: Edit a Breakpoint Location
+description: Learn how to move a breakpoint in a Transact-SQL script file to another location in the script, or to a different script. 
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Edit a Breakpoint Location
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The breakpoint location specifies the line and character where the breakpoint resides in a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file. You can edit the breakpoint location to move the breakpoint to another location in the script, or to a different script.
 
@@ -40,7 +41,7 @@ When you edit a breakpoint location, the breakpoint moves to the new location, c
   
 ## See Also
 
-- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)
-- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)
-- [Specify a Breakpoint Filter](../../relational-databases/scripting/specify-a-breakpoint-filter.md)
+- [Specify a Hit Count](./specify-a-hit-count.md)
+- [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)
+- [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)
+- [Specify a Breakpoint Filter](./specify-a-breakpoint-filter.md)

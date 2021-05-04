@@ -5,11 +5,11 @@ ms.custom: seo-lt-2019
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid:
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 
@@ -92,7 +92,7 @@ The delay values determine the wait time between heartbeats from the cluster ser
 To list all current cluster values, on any node in the target cluster open an elevated PowerShell terminal. Run the following command:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 To update any of these values, run the following command in an elevated PowerShell terminal:
@@ -105,7 +105,17 @@ When increasing the Delay \* Threshold product to make the cluster timeout more 
 
 ### Lease Timeout 
 
-The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. To navigate to this value in Failover Cluster Manager:
+The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. A lease timeout may result in the following errors: 
+
+``` 
+Error 35201:
+A connection timeout has occurred while attempting to establish a connection to availability replica 'replicaname'
+Error 35206:
+A connection timeout has occurred on a previously established connection to availability replica 'replicaname'
+```
+
+To modify the lease time out value, use the Failover Cluster Manager and follow these steps: 
+
 
 1. In the roles tab, find the target AG role. Click on the target AG role. 
 2. Right-click the AG resource at the bottom of the window and select **Properties**. 
@@ -119,6 +129,8 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
 
    Depending on the AG's configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
 
+> [!NOTE]  
+>  The new value of property 'LeaseTimeout' will take effect after the resource is taken offline and brought online again.
    
 ### Health Check Values 
 
@@ -147,12 +159,11 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome 
+ | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome |
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Lease timeout </br> **Default: 20000** | Prevent splitbrain | Primary to Cluster </br> (HADR) | [Windows event objects](/windows/desktop/Sync/event-objects)| Used in both | OS not responding, low virtual memory, working set paging, generating dump, pegged CPU, WSFC down (loss of quorum) | AG resource offline-online, failover |  
  | Session timeout </br> **Default: 10000** | Inform of communication issue between Primary and Secondary | Secondary to Primary </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS not responding, resource contention | Secondary - DISCONNECTED | 
- |HealthCheck timeout  </br> **Default: 30000** | Indicate timeout while trying to determine health of the Primary replica | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS not responding, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, FCI restart/failover |  
-  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
+ |HealthCheck timeout  </br> **Default: 30000** | Indicate timeout while trying to determine health of the Primary replica | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS not responding, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-online or Failover, FCI restart/failover |  
 
 ## See Also    
 

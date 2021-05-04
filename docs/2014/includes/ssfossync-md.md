@@ -1,1 +1,0 @@
-synchronous\-commit failover set

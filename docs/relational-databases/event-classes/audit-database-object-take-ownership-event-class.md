@@ -1,20 +1,21 @@
 ---
+description: "Audit Database Object Take Ownership Event Class"
 title: "Audit Database Object Take Ownership Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Database Object Take Ownership event class"
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object Take Ownership Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Database Object Take Ownership** event class occurs when a change of owner for objects within database scope occurs.  
   
 ## Audit Database Object Take Ownership Event Class Data Columns  

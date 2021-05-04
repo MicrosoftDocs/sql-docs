@@ -1,4 +1,5 @@
 ---
+description: "sp_estimate_data_compression_savings (Transact-SQL)"
 title: "sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_estimate_data_compression_savings_TSQL"
   - "sp_estimate_data_compression_savings"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "compression [SQL Server], estimating"
   - "sp_estimate_data_compression_savings"
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_estimate_data_compression_savings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the current size of the requested object and estimates the object size for the requested compression state. Compression can be evaluated for whole tables or parts of tables. This includes heaps, clustered indexes, nonclustered indexes, columnstore indexes, indexed views, and table and index partitions. The objects can be compressed by using row, page, columnstore or columnstore archive compression. If the table, index, or partition is already compressed, you can use this procedure to estimate the size of the table, index, or partition if it is recompressed.  
   
@@ -103,10 +104,10 @@ sp_estimate_data_compression_savings
  Prior to SQL Server 2019, this procedure did not apply to columnstore indexes, and therefore did not accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE.  Starting with SQL Server 2019, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.
 
  > [!IMPORTANT]
- > When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], creation of columnstore indexes on temporary tables is not supported. Because of this limitation, sp_estimate_data_compression_savings is not supported with the COLUMNSTORE and COLUMNSTORE_ARCHIVE data compression parameters when Memory-Optimized TempDB Metadata is enabled.
+ > When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], creation of columnstore indexes on temporary tables is not supported. Because of this limitation, sp_estimate_data_compression_savings is not supported with the COLUMNSTORE and COLUMNSTORE_ARCHIVE data compression parameters when Memory-Optimized TempDB Metadata is enabled.
 
 ## Considerations for Columnstore Indexes
- Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `sp_estimate_compression_savings` supports estimating both columnstore and columnstore archive compression. Unlike page and row compression, applying columnstore compression to an object requires creating a new columnstore index. For this reason, when using the COLUMNSTORE and COLUMNSTORE_ARCHIVE options of this procedure, the type of the source object provided to the procedure determines the type of columnstore index used for the compressed size estimate. The following table illustrates the reference objects used to estimate compression savings for each source object type when the @data_compression parameter is set to either COLUMNSTORE or COLUMNSTORE_ARCHIVE.
+ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], `sp_estimate_compression_savings` supports estimating both columnstore and columnstore archive compression. Unlike page and row compression, applying columnstore compression to an object requires creating a new columnstore index. For this reason, when using the COLUMNSTORE and COLUMNSTORE_ARCHIVE options of this procedure, the type of the source object provided to the procedure determines the type of columnstore index used for the compressed size estimate. The following table illustrates the reference objects used to estimate compression savings for each source object type when the @data_compression parameter is set to either COLUMNSTORE or COLUMNSTORE_ARCHIVE.
 
  |Source Object|Reference Object|
  |-----------------|---------------|

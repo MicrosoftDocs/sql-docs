@@ -1,4 +1,5 @@
 ---
+description: "TRY_PARSE (Transact-SQL)"
 title: "TRY_PARSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TRY_PARSE_TSQL"
   - "TRY_PARSE"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_PARSE function"
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns the result of an expression, translated to the requested data type, or null if the cast fails in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use TRY_PARSE only for converting from string to date/time and number types.  
   
@@ -28,12 +29,13 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-201
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TRY_PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_value*  
  **nvarchar(4000)** value representing the formatted value to parse into the specified data type.  
   
@@ -124,7 +126,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ### A. Simple example of TRY_PARSE  
   
-```  
+```sql
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -140,7 +142,7 @@ NULL
   
 ### B. Detecting nulls with TRY_PARSE  
   
-```  
+```sql
 SELECT  
     CASE WHEN TRY_PARSE('Aragorn' AS decimal USING 'sr-Latn-CS') IS NULL  
         THEN 'True'  
@@ -161,10 +163,9 @@ True
   
 ### C. Using IIF with TRY_PARSE and implicit culture setting  
   
-```  
+```sql
 SET LANGUAGE English;  
-SELECT IIF(TRY_PARSE('01/01/2011' AS datetime2) IS NULL, 'True', 'False') AS Result;  
-  
+SELECT IIF(TRY_PARSE('01/01/2011' AS datetime2) IS NULL, 'True', 'False') AS Result;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

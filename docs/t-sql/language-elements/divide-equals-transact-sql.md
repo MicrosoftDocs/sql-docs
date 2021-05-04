@@ -1,12 +1,13 @@
 ---
+description: "/= (Division Assignment) (Transact-SQL)"
 title: "(Division Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "/=_TSQL"
   - "/="
@@ -18,13 +19,13 @@ helpviewer_keywords:
   - "augmented operators, /="
   - "/= (divide equals)"
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # /= (Division Assignment) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Divides one number by another and sets a value to the result of the operation. For example, if a variable @x equals 34, then `@x /= 2` takes the original value of @x, divides by 2 and sets @x to that new value (17).  
   
@@ -32,11 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression /= expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types in the numeric category except the **bit** data type.  
   
@@ -49,7 +52,7 @@ expression /= expression
 ## Examples  
 The following example, sets a variable to 17. Then uses the `/=` operator to set the variable to half of it's original value.  
 ```sql  
-DECLARE @myVariable decimal(5,2);
+DECLARE @myVariable DECIMAL(5,2);
 SET @myVariable = 17.5;
 SET @myVariable /= 2;
 SELECT @myVariable AS ResultVariable;  

@@ -6,7 +6,7 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configdbmsecurwiz.inclwitness.f1"
@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Include Witness Server (Configure Database Mirroring Security Wizard)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify whether you want to include a witness server in this security configuration for database mirroring.  
   
  **To configure database mirroring by using SQL Server Management Studio**  

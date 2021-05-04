@@ -1,5 +1,6 @@
 ---
 title: "Page Compression Implementation | Microsoft Docs"
+description: Learn how the SQL Server Database Engine implements page compression to help you plan the storage space that you need for your data.
 ms.custom: ""
 ms.date: "06/30/2016"
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "page compression [Database Engine]"
   - "compression [SQL Server], page"
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Page Compression Implementation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic summarizes how the [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements page compression. This summary provides basic information to help you plan the storage space that you need for your data.  
   

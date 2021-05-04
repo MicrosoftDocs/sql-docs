@@ -12,13 +12,13 @@ helpviewer_keywords:
   - "extended events [SQL Server], PowerShell"
   - "PowerShell [SQL Server], extended events"
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the PowerShell Provider for Extended Events
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   You can manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider. The XEvent subfolder is available under the SQLSERVER drive. You can access the folder by using either of the following methods:  
   
@@ -108,8 +108,7 @@ $session.Create()
  To create, alter, or drop an Extended Events session, you must have the ALTER ANY EVENT SESSION permission.  
   
 ## See Also  
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
+ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)  
-  
   

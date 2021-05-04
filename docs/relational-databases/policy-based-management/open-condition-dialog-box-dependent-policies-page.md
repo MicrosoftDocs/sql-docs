@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Open Condition Dialog Box, Dependent Policies Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to display a list of policies that currently reference this Policy-Based Management condition. For more information about how conditions relate to facets and policies, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## Options  

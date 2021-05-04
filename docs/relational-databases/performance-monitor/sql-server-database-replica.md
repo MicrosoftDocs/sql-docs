@@ -1,7 +1,8 @@
 ---
 title: "SQL Server, Database Replica | Microsoft Docs"
+description: Learn about the SQLServer:Database Replica performance object, which contains performance counters about secondary databases of an Always On availability group.
 ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: "01/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,13 +14,13 @@ helpviewer_keywords:
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Database Replica
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an Always On availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an Always On availability group in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
   
 |Counter Name|Description|View on...|  
 |------------------|-----------------|--------------|  
@@ -35,7 +36,7 @@ ms.author: jrasnick
 |**Redo Bytes Remaining**|The amount of log, in kilobytes, remaining to be redone to finish the reverting phase.|Secondary replica|  
 |**Redone Bytes/sec**|Amount of log records redone on the secondary database in the last second.|Secondary replica|  
 |**Total Log requiring undo**|Total kilobytes of log that must be undone.|Secondary replica|  
-|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)|Primary replica|  
+|**Transaction Delay**|Total delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)|Primary replica|  
   
 ## See Also
   
@@ -43,4 +44,3 @@ ms.author: jrasnick
  [SQL Server, Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

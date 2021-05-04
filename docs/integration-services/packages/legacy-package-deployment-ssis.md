@@ -1,4 +1,5 @@
 ---
+description: "Legacy Package Deployment (SSIS)"
 title: "Legacy Package Deployment (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,14 +35,14 @@ ms.author: chugu
 ---
 # Legacy Package Deployment (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes tools and wizards that make it simple to deploy packages from the development computer to the production server or to other computers.  
   
  There are four steps in the package deployment process:  
   
-1.  The first optional step is optional and involves creating package configurations that update properties of package elements at run time. The configurations are automatically included when you deploy the packages.  
+1.  The first step is optional and involves creating package configurations that update properties of package elements at run time. The configurations are automatically included when you deploy the packages.  
   
 2.  The second step is to build the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to create a package deployment utility. The deployment utility for the project contains the packages that you want to deploy  
   
@@ -52,7 +53,7 @@ ms.author: chugu
 ## Package Configurations
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides package configurations that you can use to update the values of properties at run time.  
   
-> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
+> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md).   
   
  A configuration is a property/value pair that you add to a completed package. Typically, you create a package set properties on the package objects during package development, and then add the configuration to the package. When the package runs, it gets the new values of the property from the configuration. For example, by using a configuration, you can change the connection string of a connection manager, or update the value of a variable.  
   
@@ -99,7 +100,7 @@ ms.author: chugu
   
 -   You cannot use the **/ConfigFile** option to load configurations that replace the configurations that you specified at design time.  
   
- For more information about these options, and how the behavior of these options differs between [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] and earlier versions, see [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+ For more information about these options, and how the behavior of these options differs between [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] and earlier versions, see [Behavior Changes to Integration Services Features in SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130)).  
   
 ### Package Configuration Types  
  The following table describes the package configuration types.  
@@ -175,7 +176,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **NOTES:**
 > You can also access the **Package Configuration Organizer** by clicking the ellipsis button next to the **Configuration** property. The Configuration property appears in the properties window for the package.  
 > 
-> Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
+> Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md).    
 > 
 > In the **Package Configuration Organizer** dialog box, you can enable packages to use configurations, add and delete configurations, and set the preferred order in which configurations should be loaded. 
 > 
@@ -235,9 +236,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  On the welcome page of the Package Configuration Wizard page, click **Next**.  
   
-7.  On the Select Configuration Type page, specify the configuration type, and then set the properties that are relevant to the configuration type. For more information, see [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md).  
+7.  On the Select Configuration Type page, specify the configuration type, and then set the properties that are relevant to the configuration type. For more information, see [Package Configuration Wizard UI Reference]().  
   
-8.  On the Select Properties to Export page, select the properties of package objects to include in the configuration. If the configuration type supports only one property, the title of this wizard page is Select Target Property. For more information, see [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md).  
+8.  On the Select Properties to Export page, select the properties of package objects to include in the configuration. If the configuration type supports only one property, the title of this wizard page is Select Target Property. For more information, see [Package Configuration Wizard UI Reference]().  
   
     > **NOTE:** Only the **XML Configuration File** and **SQL Server** configuration types support including multiple properties in a configuration.  
   
@@ -250,13 +251,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## Package Configurations Organizer
   Use the **Package Configurations Organizer** dialog box to enable package configurations, view a list of configurations for the current package, and specify the preferred order in which the configurations should be loaded.  
   
-> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
+> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md).    
   
  If multiple configurations update the same property, values from configurations listed lower in the configuration list will replace values from configurations higher in the list. The last value loaded into the property is the value that is used when the package runs. Also, if the package uses a combination of direct configuration such as an XML configuration file and an indirect configuration such as an environment variable, the indirect configuration that points to the location of the direct configuration must be higher in the list.  
   
 > **NOTE:** When package configurations load in the preferred order, configurations load from the top of the list shown in the **Package Configuration Organizer** dialog box to the bottom of the list. However, at run time, package configurations might not load in the preferred order. In particular, Parent Package Configurations load after configurations of other types.  
   
- Package configurations update the values of properties of package objects at run time. When a package is loaded, the values from the configurations replace the values that were set when the package was developed. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports different configuration types. For example, you can use an XML file that can contain multiple configurations, or an environment variable that contains a single configuration. For more information, see [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Package configurations update the values of properties of package objects at run time. When a package is loaded, the values from the configurations replace the values that were set when the package was developed. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports different configuration types. For example, you can use an XML file that can contain multiple configurations, or an environment variable that contains a single configuration. For more information, see [Package Configurations]().  
   
 ### Options  
  **Enable package configurations**  
@@ -290,9 +291,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Select a configuration and use the up and down arrows to move it up or down in the list. Configurations are loaded in the sequence in which they appear in the list.  
 
 ## Package Configuration Wizard UI Reference
-  Use the **Package Configuration Wizard** to create configurations that update the properties of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and its objects at run time. This wizard runs when you add a new configuration or modify an existing one in the **Package Configurations Organizer** dialog box. To open the **Package Configurations Organizer** dialog box, select **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Create Package Configurations](../../integration-services/packages/create-package-configurations.md).  
+  Use the **Package Configuration Wizard** to create configurations that update the properties of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and its objects at run time. This wizard runs when you add a new configuration or modify an existing one in the **Package Configurations Organizer** dialog box. To open the **Package Configurations Organizer** dialog box, select **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Create Package Configurations]().  
   
-> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTE:** Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md).  
   
  The following sections describe pages of the Wizard.  
   
@@ -309,7 +310,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### Select Configuration Type Page  
  Use the **Select Configuration Type** page to specify the type of configuration to create.  
   
- If you need additional information to determine which type of configuration to use, see [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ If you need additional information to determine which type of configuration to use, see [Package Configurations]().  
   
 #### Static Options  
  **Configuration type**  
@@ -427,7 +428,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  You can also pass values to a child package by configuring the Execute Package Task to map parent package variables or parameters, or project parameters, to child package parameters. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
- It is not necessary to create the variable in the parent package before you create the package configuration in the child package. You can add the variable to the parent package at any time, but you must use the exact name of the parent variable in the package configuration. However, before you can create a parent variable configuration, there must be an existing variable in the child package that the configuration can update. For more information about adding and configuring variables, see [Add, Delete, Change Scope of User-Defined Variable in a Package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+ It is not necessary to create the variable in the parent package before you create the package configuration in the child package. You can add the variable to the parent package at any time, but you must use the exact name of the parent variable in the package configuration. However, before you can create a parent variable configuration, there must be an existing variable in the child package that the configuration can update. For more information about adding and configuring variables, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../integration-services-ssis-variables.md).  
   
  The scope of the variable in the parent package that is used in a parent variable configuration can be set to the Execute Package task, to the container that has the task, or to the package. If multiple variables with the same name are defined in a package, the variable that is closest in scope to the Execute Package task is used. The closest scope to the Execute Package task is the task itself.  
   
@@ -509,7 +510,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## Deploy Packages by Using the Deployment Utility
   When you have built a deployment utility to install packages from an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project on a different computer than the one on which the deployment utility was built, you must first copy the deployment folder to the destination computer.  
   
- The path of the deployment folder is specified in the DeploymentOutputPath property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project for which you created the deployment utility. The default path is bin\Deployment, relative to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. For more information, see [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md).  
+ The path of the deployment folder is specified in the DeploymentOutputPath property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project for which you created the deployment utility. The default path is bin\Deployment, relative to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. For more information, see [Create a Deployment Utility]().  
   
  You use the Package Installation Wizard to install the packages. To launch the wizard, double-click the deployment utility file after you have copied the deployment folder to the server. This file is named \<project name>.SSISDeploymentManifest, and can be found in the deployment folder on the destination computer.  
   
@@ -561,7 +562,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Before you deploy packages, you can create configurations and then deploy them with the packages. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses configurations to dynamically update properties of packages and package objects at run time. For example, the connection string of an OLE DB connection can be set dynamically at run time by providing a configuration that maps a value to the property that contains the connection string.  
   
- You cannot run the Package Installation Wizard until you build an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project and create a deployment utility. For more information, see [Deploy Packages by Using the Deployment Utility](../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+ You cannot run the Package Installation Wizard until you build an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project and create a deployment utility. For more information, see [Deploy Packages by Using the Deployment Utility]().  
   
  The following sections describe pages of the wizard.  
   
@@ -584,7 +585,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Configuration file**  
  Edit the contents of a configuration file by selecting the file from the list.  
   
- **Related Topics:** [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)  
+ **Related Topics:** [Create Package Configurations]()  
   
  **Path**  
  View the path of the property to be configured.  
@@ -694,5 +695,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Use the **Finish the Package Installation Wizard** page to view a summary of the package installation results. This page provides details such as the name of the deployed [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, the packages that were installed, the configuration files, and the installation location.  
   
  **Finish**  
- Exit the wizard by clicking **Finish**.  
-
+ Exit the wizard by clicking **Finish**.

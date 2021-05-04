@@ -1,4 +1,5 @@
 ---
+description: "sp_configure (Transact-SQL)"
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_configure"
   - "sp_configure_TSQL"
@@ -15,9 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_configure"
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -31,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlal
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 sp_configure [ [ @configname = ] 'option_name'   
@@ -107,7 +108,10 @@ RECONFIGURE
  For more information, see [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## Advanced Options  
- Some configuration options, such as **affinity mask** and **recovery interval**, are designated as advanced options. By default, these options are not available for viewing and changing. To make them available, set the **ShowAdvancedOptions** configuration option to 1.  
+ Some configuration options, such as **affinity mask** and **recovery interval**, are designated as advanced options. By default, these options are not available for viewing and changing. To make them available, set the **Show Advanced Options** configuration option to 1. 
+ 
+> [!CAUTION]  
+> When the option **Show Advanced Options** is set to 1, this setting applies to all users. It is recommended to only use this state temporarily and switch back to 0 when done with the task that required viewing the advanced options.  
   
  For more information about the configuration options and their settings, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   

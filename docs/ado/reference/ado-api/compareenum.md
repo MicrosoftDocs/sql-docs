@@ -1,20 +1,21 @@
 ---
+description: "CompareEnum"
 title: "CompareEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "CompareEnum"
 helpviewer_keywords: 
   - "CompareEnum enumeration [ADO]"
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CompareEnum
 Specifies the relative position of two records represented by their bookmarks.  
@@ -39,7 +40,7 @@ Specifies the relative position of two records represented by their bookmarks.
 |AdoEnums.Compare.NOTEQUAL|  
   
 ## Applies To  
- [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks Method (ADO)](./comparebookmarks-method-ado.md)  
   
 ## See Also  
- [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)
+ [CompareBookmarks Method (ADO)](./comparebookmarks-method-ado.md)

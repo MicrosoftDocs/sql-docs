@@ -1,5 +1,6 @@
 ---
 title: "Copy Databases with Backup and Restore | Microsoft Docs"
+description: In SQL Server, you can create a new database by restoring a backup of a user database created by using some previous versions.
 ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql
@@ -20,11 +21,12 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Copy Databases with Backup and Restore
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can create a new database by restoring a backup of a user database created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. However, backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Also, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] backups cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you can create a new database by restoring a backup of a user database created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. However, backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Also, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] backups cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANT!** SQL Server 2016 uses a different default path than earlier versions. Therefore, to restore backups of a database created in the default location of earlier versions you must use the MOVE option. For information about the new default path see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). For more information about moving database files, see "Moving the Database Files," later in this topic.  
+> [!IMPORTANT]
+> SQL Server 2016 uses a different default path than earlier versions. Therefore, to restore backups of a database created in the default location of earlier versions you must use the MOVE option. For information about the new default path see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). For more information about moving database files, see "Moving the Database Files," later in this topic.  
   
 ## General steps for using Backup and Restore to copy a database  
  When you use backup and restore to copy a database to another instance of SQL Server, the source and destination computers can be any platform on which SQL Server runs.  

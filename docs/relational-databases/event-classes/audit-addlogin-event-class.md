@@ -1,20 +1,21 @@
 ---
+description: "Audit Addlogin Event Class"
 title: "Audit Addlogin Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Addlogin event class"
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Addlogin Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Addlogin** event class occurs when a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
   
  If you set additional properties when the login is added, such as default database, the information about these properties will be found in the **TextData** column of this event. If you set these properties while adding a login, the **Audit Login Change Property Event** will not occur.  

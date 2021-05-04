@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_host_info (Transact-SQL)"
 title: "sys.dm_os_host_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/10/2017"
@@ -16,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_host_info dynamic management view"
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Returns one row that displays operating system version information.  
   
@@ -31,8 +32,8 @@ Returns one row that displays operating system version information.
 |**host_distribution** |**nvarchar(256)** |Description of the operating system. |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system release (version number). For a list of values and descriptions, see [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> For Linux, returns an empty string. |  
 |**host_service_pack_level**|**nvarchar(256)**|Service pack level of the Windows operating system. <br> For Linux, returns an empty string. |  
-|**host_sku**|**int**|Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](https://msdn.microsoft.com/library/ms724358.aspx). Is nullable. <br> For Linux, returns NULL. |  
-|**os_language_version**|**int**|Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Cannot be null.|  
+|**host_sku**|**int**|Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo). Is nullable. <br> For Linux, returns NULL. |  
+|**os_language_version**|**int**|Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Cannot be null.|  
 
 ## Remarks  
 This view is similar to [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), adding columns to differentiate Windows and Linux.
@@ -43,7 +44,7 @@ This view is similar to [sys.dm_os_windows_info](../../relational-databases/syst
 The `SELECT` permission on `sys.dm_os_host_info` is granted to the `public` role by default. If revoked, requires `VIEW SERVER STATE` permission on the server.   
  
 > [!CAUTION]
->  Beginning with version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 requires `SELECT` permission on `sys.dm_os_host_info` in order to connect to [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. If `SELECT` permission is revoked from `public`, only logins with `VIEW SERVER STATE` permission can connect with the newest version of SSMS. (Other tools, such as `sqlcmd.exe` can connect without `SELECT` permission on `sys.dm_os_host_info`.)
+>  Beginning with version [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 requires `SELECT` permission on `sys.dm_os_host_info` in order to connect to [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. If `SELECT` permission is revoked from `public`, only logins with `VIEW SERVER STATE` permission can connect with the newest version of SSMS. (Other tools, such as `sqlcmd.exe` can connect without `SELECT` permission on `sys.dm_os_host_info`.)
 
   
 ## Examples  
@@ -71,5 +72,3 @@ Here is a sample result set on Linux:
 ## See Also  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
- 
-

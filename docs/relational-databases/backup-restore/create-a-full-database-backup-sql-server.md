@@ -1,10 +1,10 @@
 ---
 title: "Create a Full Database Backup | Microsoft Docs"
+description: This article shows you how to create a full database backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.custom: "sqlfreshmay19"
 ms.date: "09/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,15 +13,14 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: carlrab
+author: cawrites
+ms.author: chadam
 ---
 # Create a Full Database Backup
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
+This topic describes how to create a full database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
 For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -203,7 +202,7 @@ In this example, the `SQLTestDB` database will be backed up with encryption to t
 
 The example below performs a full database backup of `SQLTestDB` to the Azure Blob storage service. This example assumes that you already have a storage account with a blob container. This example creates a shared access signature for you; this example fails of the container has an existing shared access signature.
 
-If you do not have an Azure blob container in a storage account, create one before continuing. For more information, see [Create a general purpose storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+If you do not have an Azure blob container in a storage account, create one before continuing. For more information, see [Create a general purpose storage account](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
 
@@ -365,7 +364,7 @@ Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a ful
 > [!NOTE]
 > These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install this module, run `Install-Module -Name SqlServer` in an administrator session of PowerShell.
 >
-> For more information, see [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
+> For more information, see [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
 
 > [!IMPORTANT]
 > If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
@@ -376,7 +375,7 @@ Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a ful
 
 The following example creates a full database backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**.
 
-For the full syntax and additional examples, see [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
+For the full syntax and additional examples, see [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase).
 
 ```powershell
 $credential = Get-Credential
@@ -393,7 +392,7 @@ $credential = Get-Credential
 $container = 'https://<myStorageAccount>blob.core.windows.net/<myContainer>'
 $fileName = '<myDatabase>.bak'
 $server = '<myServer>'
-$database = '<myDatabase>
+$database = '<myDatabase>'
 $backupFile = $container + '/' + $fileName
 
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential

@@ -1,5 +1,6 @@
 ---
 title: "Durability for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how In-Memory OLTP provides full durability for memory-optimized tables, by using transaction logging and by saving data changes to on-disk storage.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Durability for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] provides full durability for memory-optimized tables. When a transaction that changed a memory-optimized table commits, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (as it does for disk-based tables), guarantees that the changes are permanent (will survive a database restart), provided the underlying storage is available. There are two key components of durability: transaction logging and persisting data changes to on-disk storage.  
   
@@ -31,11 +32,11 @@ ms.author: "carlrab"
 ### The Data File  
  A data file contains rows from one or more memory-optimized tables that were inserted by multiple transactions as part of INSERT or UPDATE operations. For example, one row can be from memory-optimized table T1 and the next row can be from memory-optimized table T2. The rows are appended to the data file in the order of transactions in the transaction log, making data access sequential. This enables an order of magnitude better I/O throughput compared to random I/O.  
   
- Once the data file is full, the rows inserted by new transactions are stored in another data file. Over time, the rows from durable memory-optimized tables are stored in one of more data files and each data file containing rows from a disjoint but contiguous range of transactions. For example a data file with transaction commit timestamp in the range of (100, 200) has all the rows inserted by transactions that have commit timestamp greater than 100 and less than or equal to 200. The commit timestamp is a monotonically increasing number assigned to a transaction when it is ready to commit. Each transaction has a unique commit timestamp.  
+ Once the data file is full, the rows inserted by new transactions are stored in another data file. Over time, the rows from durable memory-optimized tables are stored in one of more data files and each data file containing rows form a disjoint but contiguous range of transactions. For example a data file with transaction commit timestamp in the range of (100, 200) has all the rows inserted by transactions that have commit timestamp greater than 100 and less than or equal to 200. The commit timestamp is a monotonically increasing number assigned to a transaction when it is ready to commit. Each transaction has a unique commit timestamp.  
   
  When a row is deleted or updated, the row is not removed or changed in-place in the data file but the deleted rows are tracked in another type of file: the delta file. Update operations are processed as a tuple of delete and insert operations for each row. This eliminates random IO on the data file.  
  
-   Size: Each data file is sized approximately to 128MB for computers with memory greater than 16GB, and 16MB for computers with less than or equal to 16GB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server can use large checkpoint mode if it deems the storage subsystem is fast enough. In large checkpoint mode, data files are sized at 1GB. This allows for greater efficiency in the storage subsystem for high-throughput workloads.  
+   Size: Each data file is sized approximately to 128MB for computers with memory greater than 16GB, and 16MB for computers with less than or equal to 16GB. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SQL Server can use large checkpoint mode if it deems the storage subsystem is fast enough. In large checkpoint mode, data files are sized at 1GB. This allows for greater efficiency in the storage subsystem for high-throughput workloads.  
    
 ### The Delta File  
  Each data file is paired with a delta file that has the same transaction range and tracks the deleted rows inserted by transactions in the transaction range. This data and delta file is referred to as a Checkpoint File Pair (CFP) and it is the unit of allocation and deallocation as well as the unit for Merge operations. For example, a delta file corresponding to transaction range (100, 200) will store deleted rows that were inserted by transactions in the range (100, 200). Like data files, the delta file is accessed sequentially.  
@@ -43,7 +44,7 @@ ms.author: "carlrab"
  When a row is deleted, the row is not removed from the data file but a reference to the row is appended to the delta file associated with the transaction range where this data row was inserted. Since the row to be deleted already exists in the data file, the delta file only stores the reference information `{inserting_tx_id, row_id, deleting_tx_id }` and it follows the transactional log order of the originating delete or update operations.  
   
 
- Size: Each delta file is sized approximately to 16MB for computers with memory greater than 16GB, and 1MB for computers with less than or equal to 16GB. Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server can use large checkpoint mode if it deems the storage subsystem is fast enough. In large checkpoint mode, delta files are sized at 128MB.  
+ Size: Each delta file is sized approximately to 16MB for computers with memory greater than 16GB, and 1MB for computers with less than or equal to 16GB. Starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SQL Server can use large checkpoint mode if it deems the storage subsystem is fast enough. In large checkpoint mode, delta files are sized at 128MB.  
  
 ## Populating Data and Delta Files  
  Data and delta file are populated based on the transaction log records generated by committed transactions on memory-optimized tables and appends information about the inserted and deleted rows into appropriate data and delta files. Unlike disk-based tables where data/index pages are flushed with random I/O when checkpoint is done, the persistence of memory-optimized table is continuous background operation. Multiple delta files are accessed because a transaction can delete or update any row that was inserted by any previous transaction. Deletion information is always appended at the end of the delta file. For example, a transaction with a commit timestamp of 600 inserts one new row and deletes rows inserted by transactions with a commit timestamp of 150, 250 and 450 as shown in the picture below. All 4 file I/O operations (three for deleted rows and 1 for the newly inserted rows), are append-only operations to the corresponding delta and data files.  
@@ -54,7 +55,7 @@ ms.author: "carlrab"
  Data and delta file pairs are accessed when the following occurs.  
   
  Offline checkpoint worker(s)  
- This thread appends inserts and deletes to memory-optimized data rows, to the corresponding data and delta file pairs. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] there is one offline checkpoint worker; starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] there are multiple checkpoint workers.  
+ This thread appends inserts and deletes to memory-optimized data rows, to the corresponding data and delta file pairs. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] there is one offline checkpoint worker; starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] there are multiple checkpoint workers.  
   
  Merge operation  
  The operation merges one or more data and delta file pairs and creates a new data and delta file pair.  

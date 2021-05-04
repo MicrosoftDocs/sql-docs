@@ -1,4 +1,5 @@
 ---
+description: "Extend a Dataset by Using the Merge Join Transformation"
 title: "Extend a Dataset by Using the Merge Join Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Extend a Dataset by Using the Merge Join Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Merge Join transformation, the package must already include at least one Data Flow task and two data flow components that provide inputs to the Merge Join transformation.  

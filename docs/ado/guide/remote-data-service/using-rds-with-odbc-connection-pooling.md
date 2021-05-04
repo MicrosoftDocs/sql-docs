@@ -1,8 +1,9 @@
 ---
+description: "Using RDS with ODBC Connection Pooling"
 title: "Using RDS with ODBC Connection Pooling | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "connection pooling in RDS [ADO]"
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using RDS with ODBC Connection Pooling
 If you're using an ODBC data source, you can use the connection pooling option in Internet Information Services (IIS) to achieve high performance handling of client load. Connection pooling is a resource manager for connections, maintaining the open state on frequently used connections.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  
   
  To enable connection pooling, refer to the Internet Information Services documentation.  
   
@@ -118,26 +119,4 @@ If you're using an ODBC data source, you can use the connection pooling option i
 5.  Click OK, and then OK again to exit the utility.  
   
 ## See Also  
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [RDS Fundamentals](./rds-fundamentals.md)

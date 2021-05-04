@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_REQUEST_ID (Transact-SQL)"
 title: "CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CURRENT_REQUEST_ID_TSQL"
   - "CURRENT_REQUEST_ID"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CURRENT_REQUEST_ID"
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the ID of the current request within the current session.
   
@@ -27,10 +28,12 @@ This function returns the ID of the current request within the current session.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_REQUEST_ID()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **smallint**
   

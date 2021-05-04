@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_802 - Database Engine error"
 title: "MSSQLSERVER_802 - Database Engine error | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "802 (Database Engine error)"
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_802 - Database Engine error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|802|  
 |Event Source|MSSQLSERVER|  

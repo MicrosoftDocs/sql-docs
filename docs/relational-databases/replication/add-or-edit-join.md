@@ -1,4 +1,5 @@
 ---
+description: "Add or Edit Join"
 title: "Add or Edit Join | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -9,12 +10,13 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.addeditjoin.f1"
+  - "sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1"
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Add or Edit Join
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  
   
 > [!NOTE]  

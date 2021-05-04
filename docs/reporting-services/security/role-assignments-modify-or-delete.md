@@ -1,4 +1,5 @@
 ---
+description: "Modify or Delete a Role Assignment (SSRS web portal)"
 title: "Modify or Delete a Role Assignment (SSRS web portal) | Microsoft Docs"
 ms.date: 05/07/2019
 ms.prod: reporting-services

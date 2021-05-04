@@ -1,4 +1,5 @@
 ---
+description: "sp_addremotelogin (Transact-SQL)"
 title: "sp_addremotelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addremotelogin_TSQL"
   - "sp_addremotelogin"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a new remote login ID on the local server. This enables remote servers to connect and execute remote procedure calls.  
   

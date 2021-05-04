@@ -1,11 +1,11 @@
 ---
+description: "Errors and Warnings Event Category (Database Engine)"
 title: "Errors and Warnings Event Category"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Errors and Warnings event category [SQL Server]"
   - "SQL Server event classes, Errors and Warnings event category"
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Errors and Warnings Event Category (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Errors and Warnings** event category contains general error and warning events.  
   
 ## In This Section  

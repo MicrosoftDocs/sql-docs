@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_db_log_stats (Transact-SQL)"
 title: "sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_log_stats_TSQL"
   - "sys.dm_db_log_stats"
@@ -16,9 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_stats dynamic management function"
 ms.assetid: 
-author: stevestein
-ms.author: sstein
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]

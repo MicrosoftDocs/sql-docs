@@ -1,5 +1,6 @@
 ---
 title: "Make Schema Changes on Publication Databases | Microsoft Docs"
+description: Replication supports a range of schema changes to published objects. Learn about schema changes that are propagated by default to all SQL Server Subscribers.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -17,10 +18,10 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Make Schema Changes on Publication Databases
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, that change is propagated by default to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
   
 -   ALTER TABLE  

@@ -1,5 +1,7 @@
 ---
+description: "Restore a SQL Server Database to a Point in Time (Full Recovery Model)"
 title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model) | Microsoft Docs"
+decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -12,13 +14,13 @@ helpviewer_keywords:
   - "point in time recovery [SQL Server]"
   - "restoring databases [SQL Server], point in time"
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to restore a database to a point in time in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that use the full or bulk-logged recovery models.  
+  This topic describes how to restore a database to a point in time in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that use the full or bulk-logged recovery models.  
   
 > [!IMPORTANT]  
 >  Under the bulk-logged recovery model, if a log backup contains bulk-logged changes, point-in-time recovery is not possible to a point within that backup. The database must be recovered to the end of the transaction log backup.  
@@ -148,7 +150,7 @@ ms.author: mikeray
   
 3.  Restore the last differential database backup, if any,  without recovering the database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Apply each transaction log backup in the same sequence in which they were created, specifying the time at which you intend to stop restoring log (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
+4.  Apply each transaction log backup in the same sequence in which they were created, specifying the time at which you intend to stop restoring log (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY).  
   
     > [!NOTE]  
     >  The RECOVERY and STOPAT options. If the transaction log backup does not contain the requested time (for example, if the time specified is beyond the end of the time covered by the transaction log), a warning is generated and the database remains unrecovered.  

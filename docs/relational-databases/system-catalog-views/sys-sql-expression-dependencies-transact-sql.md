@@ -1,12 +1,13 @@
 ---
+description: "sys.sql_expression_dependencies (Transact-SQL)"
 title: "sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sql_expression_dependencies"
   - "sql_expression_dependencies_TSQL"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sql_expression_dependencies catalog view"
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Contains one row for each by-name dependency on a user-defined entity in the current database. This includes dependences between natively compiled, scalar user-defined functions and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, when a table is referenced in the definition of a view, the view, as the referencing entity, depends on the table, the referenced entity. If the table is dropped, the view is unusable.  
   
@@ -62,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
  The following table lists the types of entities for which dependency information is created and maintained. Dependency information is not created or maintained for rules, defaults, temporary tables, temporary stored procedures, or system objects.  
 
 > [!NOTE]
-> Azure SQL Data Warehouse and Parallel Data Warehouse support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list.  Dependency information is created and maintained for tables, views, and filtered statistics only.  
+> Azure Synapse Analytics and Parallel Data Warehouse support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list.  Dependency information is created and maintained for tables, views, and filtered statistics only.  
   
 |Entity type|Referencing entity|Referenced entity|  
 |-----------------|------------------------|-----------------------|  

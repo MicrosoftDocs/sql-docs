@@ -1,19 +1,101 @@
 ---
 title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for Access (AccessToSQL) for each release.
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "3/2/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for Access contains the following changes:
+
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for Access contains the following changes:
+
+* Show SQL text for queries in the HTML conversion report
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for Access contains the following changes:
+
+* Ignore indexes auto-created for foreign keys
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for Access requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for Access contains the following changes:
+
+* Fix `ORDER BY` conversion with `UNION` clause
+* Support for filtered unique indexes
+* Consider implicit type casts when converting procedure and function calls
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for Access contains the following changes:
+
+* Support for `BigInt` (`Large Number`) data type
+* Improved column type resolution
+* Improved conversion of column validation rules
+* Using latest available ACE OLE DB provider for data migration
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for Access contains the following changes:
+
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for Access contains minor performance improvements and bug fixes.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for Access contains the following changes:
+
+* Improved conversion for self-referencing queries
+* Fix for the issue with special characters in project name
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for Access includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
+* Brand new Access syntax parser to further improve conversion performance
 
 ## SSMA v8.7
 
@@ -74,9 +156,9 @@ The v8.1 release of SSMA for Access is enhanced with targeted fixes that are des
 
 The v8.0 release of SSMA for Access is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
@@ -183,7 +265,7 @@ The March 2016 preview release of SSMA for Access adds support for migration to 
 The January 2016 maintenance release of SSMA for Access contains the following changes:
 
 * Fixed invalid function for default of a GUID field (RFC 3894811).
-* Fixed hang on importing records to SQL Database (Azure) (RFC 4919573).
+* Fixed issue where system stops responding when importing records to SQL Database (Azure) (RFC 4919573).
 * Added View Log Menu Item to SSMA (RFC 5706203).
 * Added Telemetry.
 
@@ -191,8 +273,8 @@ The January 2016 maintenance release of SSMA for Access contains the following c
 
 The July 2014 release of SSMA for Access contains the following changes:
 
-* Improved Azure SQL DB code conversion.
-* Moved extension pack functionality to schema to support Azure SQL DB.
+* Improved Azure SQL Database code conversion.
+* Moved extension pack functionality to schema to support Azure SQL Database.
 * Tested performance improvements for databases with over 10k objects.
 * Added UI improvements for dealing with large number of objects.
 * Added support for highlighting of "well known" LOB schemas (so they can be ignored in conversion).

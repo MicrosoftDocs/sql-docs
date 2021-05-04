@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Connection for Instance Creation"
 title: "SQL Server Connection for Instance Creation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # SQL Server Connection for Instance Creation
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   One of the first steps when creating an Oracle CDC Instance is the creation of a CDC database on the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This CDC database is enabled for SQL Server CDC and this enablement requires a login that is a member of the `sysadmin` fixed-server role.  

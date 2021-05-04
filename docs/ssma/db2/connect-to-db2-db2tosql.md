@@ -1,4 +1,5 @@
 ---
+description: "Connect To DB2 (DB2ToSQL)"
 title: "Connect To DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connect To DB2 (DB2ToSQL)
 Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.  
@@ -63,7 +64,6 @@ If you use the Connection String mode, enter the full connection string for the 
   
 Connection strings consist of parameter name and value pairs.  
   
--   For OLE DB connection string information, see [Microsoft OLE DB Provider for DB2](https://go.microsoft.com/fwlink/?LinkId=85640) article at the MSDN Library.  
+-   For OLE DB connection string information, see [Microsoft OLE DB Provider for DB2](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) article at the MSDN Library.  
   
 For SSMA connection strings, always include the Provider parameter. Also, make sure that you include the Port parameter when you connect to DB2.  
-  

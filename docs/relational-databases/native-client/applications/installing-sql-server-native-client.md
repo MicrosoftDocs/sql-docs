@@ -1,12 +1,13 @@
 ---
-title: "Installing SQL Server Native Client | Microsoft Docs"
+title: "Installing"
+description: SQL Server Native Client 11.0 is installed with SQL Server 2016. Learn where components are installed. There is also a redistributable installation program.
 ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: native-client
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, uninstalling"
@@ -20,17 +21,17 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], installing SQL Server Native Client"
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Installing SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 is installed when you install [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]. 
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 is installed when you install [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]. 
  
  There is no SQL Server 2016 Native Client. For more information, see [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md). 
  
-You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To download the most recent version of the SQL Server Native Client, go to [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065). If a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client earlier than SQL Server 2012 is also installed on the computer, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 will be installed side-by-side with the earlier version.  
+You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To download the most recent version of the SQL Server Native Client, go to [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041). If a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client earlier than SQL Server 2012 is also installed on the computer, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 will be installed side-by-side with the earlier version.  
   
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client files (sqlncli11.dll, sqlnclir11.rll, and s11ch_sqlncli.chm) are installed to the following location:  
   
@@ -45,7 +46,7 @@ You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To 
   
  In addition to installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client as part of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation, there is also a redistributable installation program named sqlncli.msi, which can be found on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation disk in the following location: `%CD%\Setup\`.  
   
- You can distribute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client through sqlncli.msi. You might have to install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client when you deploy an application. One way to install multiple packages in what seems to the user to be a single installation is to use chainer and bootstrapper technology. For more information, see [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) and [Adding Custom Prerequisites](https://go.microsoft.com/fwlink/?LinkId=115668).  
+ You can distribute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client through sqlncli.msi. You might have to install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client when you deploy an application. One way to install multiple packages in what seems to the user to be a single installation is to use chainer and bootstrapper technology. For more information, see [Authoring a Custom Bootstrapper Package for Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) and [Adding Custom Prerequisites](/visualstudio/deployment/creating-bootstrapper-packages).  
   
  The x64 and Itanium versions of sqlncli.msi also install the 32-bit version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. If your application targets a platform other than the one it was developed on, you can download versions of sqlncli.msi for x64, Itanium, and x86 from the Microsoft Download Center.  
   
@@ -65,6 +66,5 @@ You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To 
   
 ## See Also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Installation How-to Topics](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Installation How-to Topics](/previous-versions/sql/)  
   

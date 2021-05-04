@@ -1,4 +1,5 @@
 ---
+description: "Configure compatible SQL Server features with Stretch Database"
 title: "Configure compatible SQL Server features"
 ms.date: "03/14/2017"
 ms.service: sql-server-stretch-database
@@ -10,7 +11,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Configure compatible SQL Server features with Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Take simple steps to configure the following SQL Server features to work with Stretch Database.

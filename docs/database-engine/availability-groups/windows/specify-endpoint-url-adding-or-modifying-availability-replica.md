@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
   - "Endpoint URLs (HADR)"
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   To host an availability replica for an availability group, a server instance must possess a database mirroring endpoint. The server instance uses this endpoint to listen for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] messages from availability replicas hosted by other server instances. To define an availability replica for an availability group, you must specify the endpoint URL of the server instance that will host the replica. The *endpoint URL* identifies the transport protocol of the database mirroring endpoint-TCP, the system address of the server instance, and the port number associated with the endpoint.  
   
 > [!NOTE]  
@@ -138,11 +138,10 @@ ms.author: mathoma
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## See Also  
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
-  
   

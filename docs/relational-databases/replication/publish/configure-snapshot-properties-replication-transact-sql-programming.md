@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Snapshot Properties (Replication Transact-SQL Programming)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Snapshot properties can be defined and modified programmatically using replication stored procedures, where the stored procedures used depend on the type of publication.  
   
 ### To configure snapshot properties when creating a snapshot or transactional publication  

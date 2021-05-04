@@ -1,4 +1,5 @@
 ---
+description: "Change Publication and Article Properties"
 title: "Change Publication and Article Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Change Publication and Article Properties
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   After a publication has been created, most publication and article properties can be changed, but some require that the snapshot be regenerated and/or subscriptions be reinitialized. This topic provides information about all properties that require one or both of these actions if they are changed.  
   
 ## Publication Properties for Snapshot and Transactional Replication  
@@ -89,7 +90,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)   
  [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

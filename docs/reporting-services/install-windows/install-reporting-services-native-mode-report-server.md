@@ -1,4 +1,5 @@
 ---
+description: "Install Reporting Services 2016 native mode report server"
 title: "Install Reporting Services 2016 native mode report server | Microsoft Docs"
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -53,7 +54,7 @@ Setup installs the following [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 
 - Connection information, also known as the data source name (DSN), for the report server databases.
 
- Setup does not configure the unattended execution account, report server e-mail, back up the encryption keys, or a scale-out deployment. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure these properties. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ Setup does not configure the unattended execution account, report server e-mail, back up the encryption keys, or a scale-out deployment. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure these properties. For more information, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="bkmk_whentoinstalldefaultconfig"></a> When to install the default configuration for native mode
 
@@ -86,7 +87,7 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 
 |Part|Description|
 |----------|-----------------|
-|Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup will try to create URL reservations that use the HTTPS prefix.|
+|Prefix|The default prefix is HTTP. If you previously installed a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate, Setup will try to create URL reservations that use the HTTPS prefix.|
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver`.|
 |Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web application in a browser window.|
 |Virtual directory|By default, virtual directories are created in the format of ReportServer_\<*instance_name*> for the Report Server Web service and Reports_\<*instance_name*> for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], the default virtual directory is **reports**.|
@@ -184,7 +185,7 @@ For more information, see the Native section of the following two topics:
 [Configure a Report Server Database Connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
 [Files-Only Installation &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)  
 [Initialize a Report Server](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-[Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

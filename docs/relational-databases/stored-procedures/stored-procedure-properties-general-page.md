@@ -1,5 +1,6 @@
 ---
 title: "Stored Procedure Properties (General Page) | Microsoft Docs"
+description: Learn how to use the Stored Properties (General Page) to view read-only information about a stored procedure.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -12,10 +13,10 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedure Properties (General Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Displays information about a stored procedure. All information is read-only.  
   
 ## Options  

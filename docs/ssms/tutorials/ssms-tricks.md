@@ -1,12 +1,12 @@
 ---
 title: Tips and tricks using SSMS
-description:  Learn to comment and uncomment your code, indent your text, filter objects in object explorer, access your SQL Server error log, and find your SQL Server instance name using SQL Server Management Studio.
-ms.topic: tutorial
+description: Learn to comment & uncomment code, indent text, filter objects, access error logs, & find SQL Server instance names with SQL Server Management Studio.
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
   - "source controls [SQL Server Management Studio], tutorials"
@@ -23,34 +23,34 @@ ms.date: 03/13/2018
 
 # Tips and tricks for using SQL Server Management Studio (SSMS)
 
-This article gives you some tips and tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
+This article gives you some tips and tricks for using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). This article shows you how to: 
 
 > [!div class="checklist"]
 > * Comment/uncomment your Transact-SQL (T-SQL) text
 > * Indent your text
 > * Filter objects in Object Explorer
-> * Access your SQL Server error log
-> * Find the name of your SQL Server instance
+> * Access your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log
+> * Find the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
 
 ## Prerequisites
 
-To test out the steps provided in this article, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
+To test out the steps provided in this article, you need [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], access to a SQL server, and an AdventureWorks database. 
 
-* Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-* Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+* Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
+* Install [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## Comment/uncomment your T-SQL code
 
 You can comment and uncomment portions of your text by using the **Comment** button on the toolbar. Text that is commented out is not executed.
 
-1. Open SQL Server Management Studio.
+1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 2. Connect to your SQL server.
 
 3. Open a New Query window.
 
-4. Paste the following T-SQL code in your text window.
+4. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your text window.
 
     ```sql
     USE master
@@ -100,7 +100,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 1. Open a New Query window.
 
-2. Paste the following T-SQL code in your text window:
+2. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your text window:
 
     ```sql
     USE master
@@ -158,11 +158,11 @@ In databases that have many objects, you can use filtering to search for specifi
 
 ## Access your SQL Server error log
 
-The error log is a file that contains details about things that occur in your SQL Server instance. You can browse and query the error log in SSMS. The error log is a .log file that's located on your disk.
+The error log is a file that contains details about things that occur in your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. You can browse and query the error login SSMS. The error log is a .log file that's located on your disk.
 
 ### Open the error log in SSMS
 
-1. Connect to your SQL server.  
+1. Connect to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 2. Expand **Management** > **SQL Server Logs**. 
 
@@ -176,7 +176,7 @@ The error log is a file that contains details about things that occur in your SQ
 
 2. Open a New Query window.
 
-3. Paste the following T-SQL code in your query window:
+3. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your query window:
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -190,11 +190,11 @@ The error log is a file that contains details about things that occur in your SQ
 
 ### Find the error log location if you're connected to SQL Server
 
-1. Connect to your SQL server.
+1. Connect to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 2. Open a New Query window.
 
-3. Paste the following T-SQL code in your query window, and then select **Execute**:
+3. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in your query window, and then select **Execute**:
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -206,13 +206,13 @@ The error log is a file that contains details about things that occur in your SQ
 
 ### Find the error log location if you can't connect to SQL Server
 
-The path for your SQL Server errog log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your SQL Server error log. *Your path may vary from the path indicated below*.
+The path for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. *Your path may vary from the path indicated below*.
 
 1. Open SQL Server Configuration Manager.
 
 2. Expand **Services**.
 
-3. Right-click your SQL Server instance, and then select **Properties**:
+3. Right-click your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then select **Properties**:
 
     ![Configuration Manager server properties](media/ssms-tricks/serverproperties.PNG)
 
@@ -222,13 +222,13 @@ The path for your SQL Server errog log can vary depending on your configuration 
 
     ![Error log](media/ssms-tricks/errorlog.png)
 
-    There are several errorlog.* files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
+    There are several error log files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
 
-6. Open the errorlog.log file in Notepad. 
+6. Open the errorlog.log file in Notepad.
 
-## <a name="determine-sql-server-name"></a>Find SQL Server instance name
+## Find SQL Server instance name
 
-You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
+You have a few options for finding the name of your SQL server before and after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ### Before you connect to SQL Server
 
@@ -238,7 +238,7 @@ You have a few options for finding the name of your SQL server before and after 
 
 3. Search for the text *Server name is*.
 
-    Whatever is listed in the single quotes is the name of the SQL Server instance that you'll be connecting to:
+    Whatever is listed in the single quotes is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you'll be connecting to:
 
     ![Find the server name in the error log](media/ssms-tricks/servernameinlog.png)
 
@@ -246,7 +246,7 @@ You have a few options for finding the name of your SQL server before and after 
 
 ### When you're connected to SQL Server
 
-When you're connected to SQL Server, you can find the server name in three locations: 
+When you're connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can find the server name in three locations: 
 
 1. The name of the server is listed in Object Explorer:
 
@@ -261,19 +261,19 @@ When you're connected to SQL Server, you can find the server name in three locat
 
 ### If you're connected to an alias or Availability Group listener
 
-If you're connected to an alias or to an Availability Group listener, that information appears in Object Explorer and Properties. In this case, the SQL Server name might not be readily apparent, and must be queried:
+If you're connected to an alias or to an Availability Group listener, that information appears in Object Explorer and Properties. In this case, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] name might not be readily apparent, and must be queried:
 
 1. Connect to your SQL server.
 
 2. Open a New Query window.
 
-3. Paste the following T-SQL code in the window:
+3. Paste the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code in the window:
 
       ```sql
        select @@Servername
      ```
 
-4. View the results of the query to identify the name of the SQL Server instance you're connected to: 
+4. View the results of the query to identify the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you're connected to: 
 
     ![Query the SQL Server name](media/ssms-tricks/queryservername.png)
 
@@ -281,7 +281,7 @@ If you're connected to an alias or to an Availability Group listener, that infor
 
 The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Connect to and query an instance](connect-query-sql-server.md)
+* [Connect to and query an instance](../quickstarts/ssms-connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)

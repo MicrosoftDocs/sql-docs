@@ -1,5 +1,6 @@
 ---
 title: "Use XML Data in Applications | Microsoft Docs"
+description: Learn about the options that are available for working with the xml data type in your applications.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "xml data type [SQL Server], ADO.NET"
   - "XML [SQL Server], SQL Server Native Client"
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use XML Data in Applications
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes the options that are available to you for working with the **xml** data type in your application. The topic includes information about the following:  
   
 -   Handling XML from an **xml** type column by using ADO and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  

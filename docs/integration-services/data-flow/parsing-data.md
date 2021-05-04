@@ -1,4 +1,5 @@
 ---
+description: "Parsing Data"
 title: "Parsing Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Parsing Data
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Data flows in packages extract and load data between heterogeneous data stores, which may use a variety of standard and custom data types. In a data flow, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sources do the work of extracting data, parsing string data, and converting data to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. Subsequent transformations may parse data to convert it to a different data type, or create column copies with different data types. Expressions used in components may also cast arguments and operands to different data types. Finally, when the data is loaded into a data store, the destination may parse the data to convert it to a data type that the destination uses. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -198,5 +199,4 @@ The fast parse property must be set for each column of the source or transformat
 ## Standard Parse
 Standard parse is a locale-sensitive set of parsing routines that support all the data type conversions provided by the Automation data type conversion APIs that are available in Oleaut32.dll and Ole2dsip.dll. Standard parse is equivalent to the OLE DB parsing APIs.  
   
- Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse. For more information about the Automation data type conversion API, see "Data Type Conversion APIs" in the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427). 
- 
+ Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse. For more information about the Automation data type conversion API, see "Data Type Conversion APIs" in the [MSDN Library](/documentation/). 

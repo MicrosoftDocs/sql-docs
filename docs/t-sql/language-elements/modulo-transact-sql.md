@@ -1,12 +1,13 @@
 ---
+description: "% (Modulus) (Transact-SQL)"
 title: "% (Modulus) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "modulo"
   - "modulus"
@@ -22,13 +23,13 @@ helpviewer_keywords:
   - "modulo operator (%)"
   - "modulus operator (%)"
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # % (Modulus) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the remainder of one number divided by another.  
   
@@ -36,11 +37,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 dividend % divisor  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *dividend*  
  Is the numeric expression to divide. *dividend* must be a valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types in the integer and monetary data type categories, or the **numeric** data type.  
   
@@ -58,19 +61,18 @@ dividend % divisor
 ### A. Simple example  
  The following example divides the number 38 by 5. This results in 7 as the integer portion of the result and demonstrates how modulo returns the remainder of 3.  
   
-```  
-SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
-  
+```sql  
+SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### B. Example using columns in a table  
  The following example returns the product ID number, the unit price of the product, and the modulo (remainder) of dividing the price of each product, converted to an integer value, into the number of products ordered.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(100)ProductID, UnitPrice, OrderQty,  
-   CAST((UnitPrice) AS int) % OrderQty AS Modulo  
+   CAST((UnitPrice) AS INT) % OrderQty AS Modulo  
 FROM Sales.SalesOrderDetail;  
 GO  
 ```  
@@ -80,7 +82,7 @@ GO
 ### C: Simple example  
  The following example shows results for the `%` operator when dividing 3 by 2.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(1) 3%2 FROM dimEmployee;  

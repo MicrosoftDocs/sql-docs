@@ -1,4 +1,5 @@
 ---
+description: "MultiPolygon"
 title: "MultiPolygon | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -12,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiPolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A **MultiPolygon** instance is a collection of zero or more **Polygon** instances.  
   
 ## Polygon Instances  

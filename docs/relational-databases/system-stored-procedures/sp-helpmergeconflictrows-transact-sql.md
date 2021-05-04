@@ -1,4 +1,5 @@
 ---
+description: "sp_helpmergeconflictrows (Transact-SQL)"
 title: "sp_helpmergeconflictrows (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_helpmergeconflictrows_TSQL"
   - "sp_helpmergeconflictrows"
 helpviewer_keywords: 
   - "sp_helpmergeconflictrows"
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergeconflictrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the rows in the specified conflict table. This stored procedure is run on the computer where the conflict table is stored.  
   
@@ -72,7 +73,6 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role, and the **replmonitor** role in the distribution database can execute **sp_helpmergeconflictrows**.  
   
 ## See Also  
- [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
   

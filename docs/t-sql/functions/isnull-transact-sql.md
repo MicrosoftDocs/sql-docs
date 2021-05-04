@@ -1,30 +1,33 @@
 ---
-title: "ISNULL (Transact-SQL) | Microsoft Docs"
+description: "ISNULL (Transact-SQL)"
+title: ISNULL (Transact-SQL)
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ISNULL"
   - "ISNULL_TSQL"
   - "IFNULL_TSQL"
 dev_langs: 
-  - "TSQL"
+  - "TSQL" 
 helpviewer_keywords: 
   - "replacing null values"
   - "null values [SQL Server], ISNULL"
   - "null values [SQL Server], replacement values"
   - "ISNULL function"
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# ISNULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+# ISNULL (Transact-SQL) 
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Replaces NULL with the specified replacement value.  
   
@@ -32,11 +35,13 @@ Replaces NULL with the specified replacement value.
   
 ## Syntax  
   
-```  
+```syntaxsql
 ISNULL ( check_expression , replacement_value )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *check_expression*  
  Is the [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be checked for NULL. *check_expression* can be of any type.  
   
@@ -57,7 +62,7 @@ ISNULL ( check_expression , replacement_value )
 ### A. Using ISNULL with AVG  
  The following example finds the average of the weight of all products. It substitutes the value `50` for all NULL entries in the `Weight` column of the `Product` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT AVG(ISNULL(Weight, 50))  
@@ -77,7 +82,7 @@ GO
 ### B. Using ISNULL  
  The following example selects the description, discount percentage, minimum quantity, and maximum quantity for all special offers in `AdventureWorks2012`. If the maximum quantity for a particular special offer is NULL, the `MaxQty` shown in the result set is `0.00`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description, DiscountPct, MinQty, ISNULL(MaxQty, 0.00) AS 'Max Quantity'  
@@ -111,7 +116,7 @@ GO
 ### C. Testing for NULL in a WHERE clause  
  Do not use ISNULL to find NULL values. Use IS NULL instead. The following example finds all products that have `NULL` in the weight column. Note the space between `IS` and `NULL`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight  
@@ -125,7 +130,7 @@ GO
 ### D. Using ISNULL with AVG  
  The following example finds the average of the weight of all products in a sample table. It substitutes the value `50` for all NULL entries in the `Weight` column of the `Product` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT AVG(ISNULL(Weight, 50))  
@@ -142,7 +147,7 @@ FROM dbo.DimProduct;
 ### E. Using ISNULL  
  The following example uses ISNULL to test for NULL values in the column `MinPaymentAmount` and display the value `0.00` for those rows.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ResellerName,   
@@ -166,7 +171,7 @@ ORDER BY ResellerName;
 ### F. Using IS NULL to test for NULL in a WHERE clause  
  The following example finds all products that have `NULL` in the `Weight` column. Note the space between `IS` and `NULL`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName, Weight  

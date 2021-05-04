@@ -1,9 +1,10 @@
 ---
 title: Enable, Disable, and Delete Breakpoints
+description: Learn how to use the Breakpoints window to view, delete, disable, and enable breakpoints.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname
@@ -11,19 +12,19 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Enable, Disable, and Delete Breakpoints
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 To view and manage all the open breakpoints, you can use the **Breakpoints** window. Use the window to view breakpoint information and to take actions such as deleting, disabling, or enabling breakpoints.
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## The Breakpoints Window  
- The **Breakpoints** window lists information such as which line of code the breakpoint is located on. In the **Breakpoints** window, you can also delete, disable, and enable breakpoints. For more information about the **Breakpoints** window, see [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)  
+ The **Breakpoints** window lists information such as which line of code the breakpoint is located on. In the **Breakpoints** window, you can also delete, disable, and enable breakpoints. For more information about the **Breakpoints** window, see [Breakpoints Window](./transact-sql-debugger-breakpoints-window.md)  
   
  Disabling a breakpoint prevents it from pausing execution, but leaves the definition in place in case you want to enable the breakpoint later. Deleting a breakpoint removes it permanently. You must toggle a new breakpoint to pause execution on the statement.  
   
@@ -90,11 +91,10 @@ To view and manage all the open breakpoints, you can use the **Breakpoints** win
   
  You can delete all breakpoints in one of the following ways:  
   
--   On the **Debug** menu, cllick **Delete All Breakpoints**.  
+-   On the **Debug** menu, click **Delete All Breakpoints**.  
   
 -   On the toolbar of the **Breakpoints** window, click the **Delete All Breakpoints** button.  
   
 ## See Also  
- [Toggle a Breakpoint](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Toggle a Breakpoint](./toggle-a-breakpoint.md)  
   

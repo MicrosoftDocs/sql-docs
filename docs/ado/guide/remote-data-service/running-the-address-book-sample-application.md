@@ -1,8 +1,9 @@
 ---
+description: "Running the Address Book Sample Application"
 title: "Running the Address Book Sample Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -11,17 +12,17 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Running the Address Book Sample Application
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  
   
  To run the Address Book application, follow this procedure.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  
   
 ### To run this application  
   
@@ -36,8 +37,4 @@ ms.author: genemi
 3.  You can then try various scenarios in the Address Book sample application, such as searching for a person based on his or her e-mail name, listing all people with the title "Program Manager," or editing existing records. Click **Find** to fill the data grid with all the available names.  
   
 ## See Also  
- [Address Book Data-Binding Object](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [Address Book Data-Binding Object](./address-book-data-binding-object.md)

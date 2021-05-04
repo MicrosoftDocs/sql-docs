@@ -1,9 +1,10 @@
 ---
 title: "Strong Passwords | Microsoft Docs"
+description: Learn about passwords in SQL Server and find out what constitutes a strong password to enhance security for your deployment.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -18,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Strong Passwords
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Passwords can be the weakest link in a server security deployment. Take great care when you select a password. A strong password has the following characteristics:  
   
 -   Is at least eight characters long.  

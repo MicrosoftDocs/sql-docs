@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)"
 title: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_hadr_distributed_ag_database_replica"
   - "sys.fn_hadr_distributed_ag_database_replica_TSQL"
@@ -21,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Used to  map a database in a distributed availability group to the database in the local availability group.  
    
@@ -64,8 +65,7 @@ GO
 ## See Also  
  [Always On Availability Groups Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

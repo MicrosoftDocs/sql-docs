@@ -1,4 +1,5 @@
 ---
+description: "WMI Connection Manager"
 title: "WMI Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # WMI Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A WMI connection manager enables a package to use Windows Management Instrumentation (WMI) to manage information in an enterprise environment. The Web Service task that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes uses a WMI connection manager.  
@@ -37,7 +38,7 @@ ms.author: chugu
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [WMI Connection Manager Editor](../../integration-services/connection-manager/wmi-connection-manager-editor.md).  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [WMI Connection Manager Editor]().  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -73,4 +74,4 @@ ms.author: chugu
   
 ## See Also  
  [Web Service Task](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

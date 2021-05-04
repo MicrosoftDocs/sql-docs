@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_object_stats (Transact-SQL)"
 title: "sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_xtp_object_stats_TSQL"
   - "sys.dm_db_xtp_object_stats"
@@ -17,16 +18,16 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_object_stats dynamic management view"
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-author: stevestein
-ms.author: sstein
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_object_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reports the number rows affected by operations on each of the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects since the last database restart. Statistics are updated when the operation executes, regardless of whether the transaction commits or was rolled back.  
   
- sys.dm_db_xtp_object_stats can help you identify which memory-optimized tables are changing the most. You may decide to remove unused or rarely used indexes on the table, as each index affects performance. If there are hash indexes, you should periodically re-evaluate the bucket-count. For more information, see [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
+ sys.dm_db_xtp_object_stats can help you identify which memory-optimized tables are changing the most. You may decide to remove unused or rarely used indexes on the table, as each index affects performance. If there are hash indexes, you should periodically re-evaluate the bucket-count. For more information, see [Determining the Correct Bucket Count for Hash Indexes](/previous-versions/sql/).  
   
  sys.dm_db_xtp_object_stats can help you identify which memory-optimized tables incur write-write conflicts, which can affect the performance of your application. For example, if you have transaction retry logic, the same statement may need to be executed more than once. Also, you can use this information to identify the tables (and therefore business logic) that require write-write error handling.  
   
@@ -49,5 +50,4 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

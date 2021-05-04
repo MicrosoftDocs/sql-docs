@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_virtualfilestats (Transact-SQL)"
 title: "sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_virtualfilestats_TSQL"
   - "fn_virtualfilestats"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "sys.fn_virtualfilestats function"
   - "statistical information [SQL Server], I/O"
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns I/O statistics for database files, including log files. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information is also available from the [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) dynamic management view.  
 
@@ -49,7 +50,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Database ID.|  
 |**FileId**|**smallint**|File ID.|  
-|**TimeStamp**|**bigint**|Database timestamp at which the data was taken. **int** in versions before [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**TimeStamp**|**bigint**|Database timestamp at which the data was taken. **int** in versions before [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]. |  
 |**NumberReads**|**bigint**|Number of reads issued on the file.|  
 |**BytesRead**|**bigint**|Number of bytes read issued on the file.|  
 |**IoStallReadMS**|**bigint**|Total amount of time, in milliseconds, that users waited for the read I/Os to complete on the file.|  

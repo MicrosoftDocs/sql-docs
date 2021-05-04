@@ -1,5 +1,6 @@
 ---
 title: "Aggregate Function (Report Builder) | Microsoft Docs"
+description: The Aggregate Function returns a custom aggregate of a specified expression as the expression is defined by the data provider.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -35,7 +36,7 @@ Aggregate(expression, scope)
  Return type is determined by the data provider. Returns **Nothing** if the data provider does not support this function or data is not available.  
   
 ## Remarks  
- The **Aggregate** function provides a way to use aggregates that are calculated on the external data source. Support for this feature is determined by the data extension. For example, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension retrieves flattened rowsets from an MDX query. Some rows in the result set can contain aggregate values calculated on the data source server. These are known as *server aggregates*. To view server aggregates in the graphical query designer for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the **Show Aggregate** button on the toolbar. For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+ The **Aggregate** function provides a way to use aggregates that are calculated on the external data source. Support for this feature is determined by the data extension. For example, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension retrieves flattened rowsets from an MDX query. Some rows in the result set can contain aggregate values calculated on the data source server. These are known as *server aggregates*. To view server aggregates in the graphical query designer for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the **Show Aggregate** button on the toolbar. For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](/previous-versions/sql/).  
   
  When you display the combination of aggregate and detail dataset values on detail rows of a Tablix data region, server aggregates would not typically be included because they are not detail data. However, you may want to display all values retrieved for the dataset and customize the way aggregate data is calculated and displayed.  
   
@@ -75,5 +76,4 @@ Aggregate(expression, scope)
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

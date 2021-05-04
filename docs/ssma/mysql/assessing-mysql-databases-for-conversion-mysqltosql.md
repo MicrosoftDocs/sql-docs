@@ -1,4 +1,5 @@
 ---
+description: "Assessing MySQL Databases for Conversion (MySQLToSQL)"
 title: "Assessing MySQL Databases for Conversion (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Assessment reports"
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Assessing MySQL Databases for Conversion (MySQLToSQL)
 Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you should determine how complex the migration will be and how much time the migration will take. SSMA can create an assessment report that shows the percentage of objects that will be successfully converted. SSMA also lets you view the specific issues that cause conversion failures.  
@@ -76,5 +77,5 @@ The Conversion Statistics pane shows the conversion statistics. If the percentag
 [Converting MySQL Databases &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

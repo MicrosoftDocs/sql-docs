@@ -1,6 +1,7 @@
 ---
 title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft Docs"
-ms.date: 02/12/2020
+description: Learn how to create an SPN for the Report Server service if it runs as a domain user, if your network uses Kerberos for authentication.
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -19,7 +20,7 @@ ms.author: maggies
   
  To create an SPN, you can use the **SetSPN** command line utility. For more information, see the following:  
   
--   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
+-   [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
@@ -27,10 +28,10 @@ ms.author: maggies
   
 ## Syntax  
 
-When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an SPN is `<serviceclass>/host:<por>`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
+When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an HTTP SPN is `http/host`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** is available with Windows Server. The **-s** argument adds a SPN after validating no duplicate exists. **NOTE:-s** is available in Windows Server starting with Windows Server 2008.  
@@ -52,20 +53,19 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  Copy the following command, replacing placeholder values with actual values that are valid for your network:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    For example: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    For example: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Run the command.  
   
 6.  Open the **RsReportServer.config** file and locate the `<AuthenticationTypes>` section.  
   
-7.  Add `<RSWindowsNegotiate/>` as the first entry in this section to enable Kerberos.  
+7.  Add `<RSWindowsNegotiate />` as the first entry in this section to enable Kerberos.  
   
 ## See Also  
- [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure a Service Account &#40;Report Server Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
   

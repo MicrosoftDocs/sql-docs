@@ -1,5 +1,6 @@
 ---
 title: "Check Parameters System Configuration Checker"
+description: During SQL Server Setup, the System Configuration Checker for conditions that prevent a successful SQL Server installation. 
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -19,13 +20,13 @@ helpviewer_keywords:
   - "configuration checkers [SQL Server]"
   - "Setup [SQL Server], system configuration checker"
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Check parameters for the System Configuration Checker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the System Configuration Checker (SCC) scans the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be installed. The SCC checks for conditions that prevent a successful [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Before Setup starts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard, the SCC retrieves the status of each item. It then compares the result with required conditions and provides guidance for removal of blocking issues.  
   

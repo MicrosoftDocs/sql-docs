@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitordropalert (Transact-SQL)"
 title: "sp_dbmmonitordropalert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_dbmmonitordropalert_TSQL"
   - "sp_dbmmonitordropalert"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
   - "sp_dbmmonitordropalert"
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitordropalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops the warning for a specified performance metric, by setting the threshold to NULL.  
   

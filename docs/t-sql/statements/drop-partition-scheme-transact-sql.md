@@ -1,4 +1,5 @@
 ---
+description: "DROP PARTITION SCHEME (Transact-SQL)"
 title: "DROP PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP PARTITION SCHEME"
   - "DROP_PARTITION_SCHEME_TSQL"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "removing partition schemes"
   - "partition schemes [SQL Server], removing"
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a partition scheme from the current database. Partition schemes are created by using [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) and modified by using [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
   
@@ -31,12 +32,13 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme to be dropped.  
   
@@ -55,7 +57,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## Examples  
  The following example drops the partition scheme `myRangePS1` from the current database:  
   
-```  
+```sql  
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   

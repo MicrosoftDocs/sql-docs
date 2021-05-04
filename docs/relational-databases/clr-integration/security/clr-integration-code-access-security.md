@@ -1,5 +1,6 @@
 ---
 title: "CLR Integration Code Access Security | Microsoft Docs"
+description: For SQL Server CLR integration, CLR supports code access security for managed code, where permissions are granted to assemblies based on code identity.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration Code Access Security
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The common language runtime (CLR) supports a security model called code access security for managed code. In this model, permissions are granted to assemblies based on the identity of the code. For more information, see the "Code Access Security" section in the .NET Framework software development kit.  
   
  The security policy that determines the permissions granted to assemblies is defined in three different places:  
@@ -81,8 +82,18 @@ ms.author: "jroth"
   
  **UNSAFE** assemblies are given **FullTrust**.  
   
-> [!IMPORTANT]  
->  **SAFE** is the recommended permission setting for assemblies that perform computation and data management tasks without accessing resources outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **EXTERNAL_ACCESS** is recommended for assemblies that access resources outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **EXTERNAL_ACCESS** assemblies by default execute as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account. It is possible for **EXTERNAL_ACCESS** code to explicitly impersonate the caller's Windows Authentication security context. Since the default is to execute as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account, permission to execute **EXTERNAL_ACCESS** should only be given to logins trusted to run as the service account. From a security perspective, **EXTERNAL_ACCESS** and **UNSAFE** assemblies are identical. However, **EXTERNAL_ACCESS** assemblies provide various reliability and robustness protections that are not in **UNSAFE** assemblies. Specifying **UNSAFE** allows the code in the assembly to perform illegal operations against the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process space, and hence can potentially compromise the robustness and scalability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information about creating CLR assemblies in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Managing CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+## Recommended permission settings
+
+**SAFE** is the recommended permission setting for assemblies that perform computation and data management tasks without accessing resources outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+
+**EXTERNAL_ACCESS** is recommended for assemblies that access resources outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **EXTERNAL_ACCESS** assemblies by default execute as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account. It is possible for **EXTERNAL_ACCESS** code to explicitly impersonate the caller's Windows Authentication security context. Since the default is to execute as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account, permission to execute **EXTERNAL_ACCESS** should only be given to logins trusted to run as the service account. 
+
+From a security perspective, **EXTERNAL_ACCESS** and **UNSAFE** assemblies are identical. However, **EXTERNAL_ACCESS** assemblies provide various reliability and robustness protections that are not in **UNSAFE** assemblies. 
+
+Specifying **UNSAFE** allows the code in the assembly to perform illegal operations against the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process space, and hence can potentially compromise the robustness and scalability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information about creating CLR assemblies in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Managing CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains CLR assemblies that the database engine engine uses to provide certain functionality. The `Microsoft.SQLServer.Types` assembly that is included with SQL Server installation appears in the metadata as an **UNSAFE** assembly. This is by design. These assemblies are considered trusted & secure by default.
   
 ## Accessing External Resources  
  If a user-defined type (UDT), stored procedure, or other type of construct assembly is registered with the **SAFE** permission set, then managed code executing in the construct is unable to access external resources. However, if either the **EXTERNAL_ACCESS** or **UNSAFE** permission sets are specified, and managed code attempts to access external resources, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applies the following rules:  
@@ -97,14 +108,13 @@ ms.author: "jroth"
 ## Permission Set Summary  
  The following chart summarizes the restrictions and permissions granted to the **SAFE**, **EXTERNAL_ACCESS**, and **UNSAFE** permission sets.  
   
-|||||  
+|Functionality|**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
-|**Code Access Security Permissions**|Execute only|Execute + access to external resources|Unrestricted (including P/Invoke)|  
-|**Programming model restrictions**|Yes|Yes|No restrictions|  
-|**Verifiability requirement**|Yes|Yes|No|  
-|**Local data access**|Yes|Yes|Yes|  
-|**Ability to call native code**|No|No|Yes|  
+|Code Access Security Permissions|Execute only|Execute + access to external resources|Unrestricted (including P/Invoke)|  
+|Programming model restrictions|Yes|Yes|No restrictions|  
+|Verifiability requirement|Yes|Yes|No|  
+|Local data access|Yes|Yes|Yes|  
+|Ability to call native code|No|No|Yes|  
   
 ## See Also  
  [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

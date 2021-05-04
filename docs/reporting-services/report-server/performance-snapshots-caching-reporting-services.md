@@ -1,5 +1,6 @@
 ---
 title: "Performance, Snapshots, Caching (Reporting Services) | Microsoft Docs"
+description: Learn how to get baseline data and run tests to understand performance factors specific to your installation and to produce the results you want.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,7 +16,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Performance, Snapshots, Caching (Reporting Services)
-  Report server performance is affected by a combination of factors that include hardware, number of concurrent users accessing reports, the amount of data in a report, and output format. To understand the performance factors that are specific to your installation and which remedies will produce the results you want, you will need to get baseline data and run tests. For more information about tools and guidelines, see the following publications on MSDN: [Reporting Services Performance Optimization](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+  Report server performance is affected by a combination of factors that include hardware, number of concurrent users accessing reports, the amount of data in a report, and output format. To understand the performance factors that are specific to your installation and which remedies will produce the results you want, you will need to get baseline data and run tests. For more information about tools and guidelines, see the following publications on MSDN: [Reporting Services Performance Optimization](/archive/blogs/sqlcat/reporting-services-performance-and-optimization) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90)).  
   
  General principles to consider include the following:  
   
@@ -58,5 +59,4 @@ ms.author: maggies
 ## See Also  
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
  [Verifying a Report Run](../../reporting-services/report-server/verifying-a-report-run.md)  
-  
   

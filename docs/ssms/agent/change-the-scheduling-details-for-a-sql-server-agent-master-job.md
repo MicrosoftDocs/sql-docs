@@ -1,4 +1,5 @@
 ---
+description: "Change the Scheduling Details for a SQL Server Agent Master Job"
 title: Change the Scheduling Details for a Master Job
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -7,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
 # Change the Scheduling Details for a SQL Server Agent Master Job
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to change the scheduling details for a job definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to change the scheduling details for a job definition in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -72,4 +72,4 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
     GO  
     ```  
   
-For more information, see [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).
+For more information, see [sp_update_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md).

@@ -1,4 +1,5 @@
 ---
+description: "supportsStoredProcedures Method (SQLServerDatabaseMetaData)"
 title: "supportsStoredProcedures Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.supportsStoredProcedures"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsStoredProcedures Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

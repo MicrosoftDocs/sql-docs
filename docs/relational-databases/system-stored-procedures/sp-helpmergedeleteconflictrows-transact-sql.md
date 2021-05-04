@@ -1,4 +1,5 @@
 ---
+description: "sp_helpmergedeleteconflictrows (Transact-SQL)"
 title: "sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_helpmergedeleteconflictrows"
   - "sp_helpmergedeleteconflictrows_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergedeleteconflictrows"
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergedeleteconflictrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information on data rows that lost delete conflicts. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database when decentralized conflict logging is used.  
   

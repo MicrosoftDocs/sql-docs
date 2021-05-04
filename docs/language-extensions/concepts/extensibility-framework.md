@@ -1,25 +1,25 @@
 ---
 title: Extensibility architecture in SQL Server Language Extensions
 titleSuffix:
-description: Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java is supported. The code executes in a language runtime environment as an extension to the core database engine..
+description: Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java, Python and R are supported. The code executes in a language runtime environment as an extension to the core database engine..
 author: dphansen
 ms.author: davidph 
 ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # Extensibility architecture in SQL Server Language Extensions
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java is supported. The code executes in a language runtime environment as an extension to the core database engine.
+Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java, Python and R are supported. The code executes in a language runtime environment as an extension to the core database engine.
 
 ## Background
 
-The purpose of the extensibility framework is to provide an interface between SQL Server and external languages such as Java. By executing a trusted language within a secure framework managed by SQL Server, database administrators can maintain security while allowing data scientists access to enterprise data.
+The purpose of the extensibility framework is to provide an interface between SQL Server and external languages. By executing a trusted language within a secure framework managed by SQL Server, database administrators can maintain security while allowing data scientists access to enterprise data.
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -49,11 +49,7 @@ Components include a **Launchpad** service used to invoke external runtimes (for
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages the life-time, resources, and security boundaries of the external process that’s responsible for script execution. This is similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
-| Trusted launchers | Extension | SQL Server versions |
-|-------------------|-----------|---------------------|
-| JavaLauncher.dll for Java | Java extension | SQL Server 2019 |
-
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup** which uses [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup** which uses [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
 
 A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server Machine Language Extensions. There is one Launchpad service for each database engine instance, so if you have multiple instances with external script support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the Launchpad service created for the same instance.
 
@@ -81,7 +77,7 @@ Communication protocols among components and data platforms are described in thi
 
 + **Other protocols**
 
-  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
+  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
 
 ## Next steps
 

@@ -1,12 +1,12 @@
 ---
 title: "backupmediaset (Transact-SQL) | Microsoft Docs"
+description: Reference for backupmediaset, which contains one row for each backup media set.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "backupmediaset"
   - "backupmediaset_TSQL"
@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "backup media [SQL Server], backupmediaset system table"
   - "backupmediaset system table"
-ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # backupmediaset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contains one row for each backup media set. This table is stored in the **msdb** database.  
- 
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Contains one row for each backup media set. This table is stored in the **msdb** database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

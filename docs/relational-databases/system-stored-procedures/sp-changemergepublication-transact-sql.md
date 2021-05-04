@@ -1,4 +1,5 @@
 ---
+description: "sp_changemergepublication (Transact-SQL)"
 title: "sp_changemergepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_changemergepublication_TSQL"
   - "sp_changemergepublication"
 helpviewer_keywords: 
   - "sp_changemergepublication"
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the properties of a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   

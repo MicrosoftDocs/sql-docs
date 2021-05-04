@@ -23,8 +23,8 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Administer Servers by Using Policy-Based Management
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use is to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+   Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use it to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
 
 For example, as the database administrator, you may want to ensure that certain servers do not have Database Mail enabled, so you  create a condition and a policy that sets that server option. 
    
@@ -42,7 +42,7 @@ For example, as the database administrator, you may want to ensure that certain 
   
  For failed policies, Object Explorer indicates a critical health warning as a red icon next to the target and the nodes that are higher in the Object Explorer tree.  
   
-> **NOTE:** When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **NOTE:** When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## Three Policy-Based Management components  
  Policy-Based Management has three components:  
@@ -115,4 +115,4 @@ For example, as the database administrator, you may want to ensure that certain 
  
  - [Tutorial: Create and apply an off-by-default policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutorial: Create and apply naming standards policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
- - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)

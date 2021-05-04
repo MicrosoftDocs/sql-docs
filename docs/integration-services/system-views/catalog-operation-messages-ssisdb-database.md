@@ -1,4 +1,5 @@
 ---
+description: "catalog.operation_messages (SSISDB Database)"
 title: "catalog.operation_messages (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -16,10 +17,7 @@ ms.author: chugu
 ---
 # catalog.operation_messages (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   Displays messages that are logged during operations in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

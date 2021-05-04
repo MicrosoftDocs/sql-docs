@@ -1,15 +1,16 @@
 ---
-title: "Converting Data Types | Microsoft Docs"
+title: "Converting data types"
+description: "Learn how to specify data types and provide details about default data types when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Converting Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

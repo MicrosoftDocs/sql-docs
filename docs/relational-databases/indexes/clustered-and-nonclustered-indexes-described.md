@@ -1,4 +1,5 @@
 ---
+description: "Clustered and Nonclustered Indexes Described"
 title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2019"
@@ -13,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Clustered and Nonclustered Indexes Described
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 An index is an on-disk structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to find the row or rows associated with the key values quickly and efficiently.
 

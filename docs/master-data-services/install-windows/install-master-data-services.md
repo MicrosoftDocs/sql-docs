@@ -1,11 +1,12 @@
 ---
 title: Installation Tasks
+description: This article provides an overview of installation of Master Data Services, including installation and pre-installation and post-installation tasks.
 ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Installation Tasks for Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
@@ -45,7 +46,7 @@ ms.author: lle
 |Create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database for your master data.|[Create a Master Data Services Database](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Create a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to create and configure a web application to host [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Associate a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database with a web application|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to associate your [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application with your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|[Associate a Master Data Services Database and Web Application](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Configure Internet Explorer Enhanced Security|When you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a Windows Server 2012 computer, you might have to configure Internet Explorer Enhanced Security to allow scripting for the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site. Otherwise, browsing to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site on the server computer will fail.|[Internet Explorer: Enhanced Security Configuration](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|Configure Internet Explorer Enhanced Security|When you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a Windows Server 2012 computer, you might have to configure Internet Explorer Enhanced Security to allow scripting for the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site. Otherwise, browsing to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site on the server computer will fail.|[Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))|  
 |Install the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Users who will work with master data can install the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |Enable Data Quality Services (DQS) integration|For users of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], enable integration with the DQS feature, which can be used to match similar data.|[Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |Deploy a sample model|Sample model packages are installed with Master Data Services, and can be deployed using MDSModelDeploy.exe.|[Deploying MDS Samples in SQL Server](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
@@ -56,5 +57,4 @@ ms.author: lle
   
 ## See Also  
  [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  
   

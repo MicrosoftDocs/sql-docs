@@ -1,5 +1,6 @@
 ---
 title: "FOR XML Support for Various SQL Server Data Types | Microsoft Docs"
+description: View information about the various SQL Server data types that are supported by the FOR XML clause in an SQL query.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "FOR XML clause, data type support"
   - "data types [SQL Server], FOR XML clause"
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FOR XML Support for Various SQL Server Data Types
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The topics in this section describe FOR XML support for data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## In This Section  

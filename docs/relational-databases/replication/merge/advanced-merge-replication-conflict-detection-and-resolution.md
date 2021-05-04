@@ -22,7 +22,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Advanced Merge Replication - Conflict Detection and Resolution
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver (which is specified when an article is added to a publication) to determine which data is accepted and propagated to other sites.  
 
  Merge replication offers a variety of methods to detect and resolve conflicts. For most applications, the default method is appropriate:  
@@ -59,7 +59,7 @@ ms.author: "mathoma"
  After a conflict is detected, the Merge Agent launches the selected conflict resolver and uses the resolver to determine the conflict winner. The winning row is applied at the Publisher and Subscriber, and the data from the losing row is written to a conflict table. Conflicts are resolved immediately after the resolver executes, unless you select to resolve conflicts interactively.  
 
 Resolve Merge Replication Conflicts  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]  
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver to determine which data will be accepted and propagated to other sites.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ Resolve Merge Replication Conflicts
  The most straightforward way to view conflicts is to use the Replication Conflict Viewer, available from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also provides stored procedures that allow the conflict tables to be queried.). The Conflict Viewer and Interactive Resolver are similar tools, but the Interactive Resolver allows you to resolve conflicts as synchronization occurs, whereas the Conflict Viewer is designed for viewing conflicts after they have been resolved. If the conflict metadata is still available in the system tables (conflict metadata is retained for 14 days by default), you can override conflict resolution outcomes in the Conflict Viewer, but if direct intervention is regularly required, consider using the Interactive Resolver.  
   
 > [!NOTE]  
->  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
  The Conflict Viewer displays information from three system tables:  
   
@@ -142,9 +142,8 @@ Resolve Merge Replication Conflicts
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## See Also  
  [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  
-  
   

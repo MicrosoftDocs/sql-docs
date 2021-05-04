@@ -1,4 +1,5 @@
 ---
+description: "Tracing and Replaying Events"
 title: "Tracing and Replaying Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: "markingmyname"
 ms.author: "maghan"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tracing and Replaying Events
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In SMO, the **Trace** and **Replay** objects in the <xref:Microsoft.SqlServer.Management.Trace> namespace provide programmatic access to the [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] functionality, which is used for monitoring an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You can capture and save data about each event to a file or table to analyze later. For example, you can monitor a production environment to see which procedures are impeding performance by executing too slowly.  
   
@@ -51,9 +52,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
  The SMO trace objects reside in the <xref:Microsoft.SqlServer.Management.Trace> namespace, which requires a reference to the Microsoft.SQLServer.ConnectionInfo.dll file.  
   
- The **Trace** and **Replay** objects require a [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)<xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> object to establish a connection with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) object resides in the [Microsoft.SqlServer.Management.Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) namespace, which requires a reference to the Microsoft.SQLServer.ConnectionInfo.dll file.  
+ The **Trace** and **Replay** objects require a [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))<xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> object to establish a connection with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) object resides in the [Microsoft.SqlServer.Management.Common](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120)) namespace, which requires a reference to the Microsoft.SQLServer.ConnectionInfo.dll file.  
   
 > [!NOTE]  
 >  The **Trace** and **Replay** objects are not supported on a 64-bit platform.  
-  
   

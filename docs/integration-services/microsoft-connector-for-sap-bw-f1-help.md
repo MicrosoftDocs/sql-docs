@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Connector for SAP BW F1 Help"
 title: "Microsoft Connector for SAP BW F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Microsoft Connector for SAP BW F1 Help
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  
@@ -30,7 +31,7 @@ ms.author: chugu
   
 ### SAP BW Connection Manager F1 Help  
   
--   [SAP BW Connection Manager Editor](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW Connection Manager Editor](./connection-manager/sap-bw-connection-manager.md)  
   
 ### SAP BW Source F1 Help  
   
@@ -78,5 +79,4 @@ ms.author: chugu
   
 ## See Also  
  [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

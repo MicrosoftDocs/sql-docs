@@ -1,12 +1,13 @@
 ---
+description: "TOP (Transact-SQL)"
 title: "TOP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TOP_TSQL"
   - "TOP"
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
+Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -33,23 +34,25 @@ Limits the rows returned in a query result set to a specified number of rows or 
  
  Following is the syntax for SQL Server and Azure SQL Database:
 
-```sql  
+```syntaxsql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
 ]  
 ```  
 
-Following is syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
+Following is syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
-```sql  
+```syntaxsql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 The numeric expression that specifies the number of rows to be returned. *expression* is implicitly converted to a **float** value if you specify PERCENT. Otherwise, *expression* is converted to **bigint**.  
   
@@ -71,7 +74,7 @@ Use TOP (or OFFSET and FETCH) instead of SET ROWCOUNT to limit the number of row
 -   As a part of a SELECT statement, the query optimizer can consider the value of *expression* in the TOP or FETCH clauses during query optimization. Because you use SET ROWCOUNT outside of a statement that runs a query, its value can't be considered in a query plan.  
   
 ## Compatibility Support  
-For backward compatibility, the parentheses are optional in SELECT statements. We recommend that you always use parentheses for TOP in SELECT statements. Doing so provides consistency with its required use in INSERT, UPDATE, MERGE, and DELETE statements. 
+For backward compatibility, the parentheses are optional in SELECT statements if the expression is an integer constant. We recommend that you always use parentheses for TOP in SELECT statements. Doing so provides consistency with its required use in INSERT, UPDATE, MERGE, and DELETE statements. 
   
 ## Interoperability  
 The TOP expression doesn't affect statements that might run because of a trigger. The **inserted** and **deleted** tables in the triggers return only the rows that are truly affected by the INSERT, UPDATE, MERGE, or DELETE statements. For example, if an INSERT TRIGGER fires as the result of an INSERT statement that used a TOP clause.  
@@ -83,7 +86,7 @@ When specified in the MERGE statement, the TOP clause applies *after* the entire
 Use caution when you're specifying the TOP clause in a query that contains a UNION, UNION ALL, EXCEPT, or INTERSECT operator. It's possible to write a query that returns unexpected results because the order in which the TOP and ORDER BY clauses are logically processed isn't always intuitive when these operators are used in a select operation. For example, given the following table and data, assume that you want to return the least expensive red car and the least expensive blue car. That is, the red sedan and the blue van.  
   
 ```sql  
-CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
+CREATE TABLE dbo.Cars(Model VARCHAR(15), Price MONEY, Color VARCHAR(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
@@ -181,7 +184,7 @@ The following example uses a variable to specify the number of employees that ar
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @p AS int = 10;  
+DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
 ORDER BY VacationHours DESC;  
@@ -256,10 +259,10 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   nvarchar(11) NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  YearlySales  money NOT NULL  
+( EmployeeID   NVARCHAR(11) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  YearlySales  MONEY NOT NULL  
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  

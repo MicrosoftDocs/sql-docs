@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Destination"
 title: "SQL Server Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,7 +25,7 @@ ms.author: chugu
 ---
 # SQL Server Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The SQL Server destination connects to a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and bulk loads data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and views. You cannot use the SQL Server destination in packages that access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. Instead, the packages should use the OLE DB destination. For more information, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -92,7 +93,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [SQL Server Destination Custom Properties](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -110,9 +111,9 @@ ms.author: chugu
   
 ## Related Content  
   
--   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482), on support.microsoft.com.  
+-   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](/troubleshoot/sql/integration-services/error-you-run-ssis-package), on support.microsoft.com.  
   
--   Technical article, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), on msdn.microsoft.com.  
+-   Technical article, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), on msdn.microsoft.com.  
   
 -   Technical article, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
   
@@ -199,5 +200,3 @@ ms.author: chugu
   
 ## See Also  
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
-  

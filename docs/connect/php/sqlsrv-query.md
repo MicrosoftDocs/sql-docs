@@ -1,12 +1,13 @@
 ---
-title: "sqlsrv_query | Microsoft Docs"
+title: "sqlsrv_query"
+description: "The sqlsrv_query function provides a method to execute a query with a minimum amount of code and can be used to execute parameterized queries."
 ms.custom: ""
 ms.date: "04/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_query"
 apitype: "NA"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "executing queries"
   - "API Reference, sqlsrv_query"
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,7 +67,7 @@ The **sqlsrv_query** function is well-suited for one-time queries and should be 
   
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## Example  
+## Example 1  
 In the following example, a single row is inserted into the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 > [!NOTE]  
@@ -113,7 +114,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## Example  
+## Example 2  
 The following example updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
@@ -150,9 +151,9 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## Example  
+## Example 3  
 This code sample shows how to bind a decimal value as an input parameter.  
 
 ```
@@ -176,8 +177,8 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
-This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+## Example 4
+This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
 ```
 <?php
@@ -245,4 +246,3 @@ Second field:  test_data
 
 [Using Directional Parameters](../../connect/php/using-directional-parameters.md)  
 
-  

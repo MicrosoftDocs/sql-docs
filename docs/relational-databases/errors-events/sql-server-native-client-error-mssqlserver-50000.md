@@ -1,9 +1,10 @@
 ---
 title: "MSSQLSERVER_50000 | Microsoft Docs"
+description: An error from an attempt was made to install or update SQL Server Native Client. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: "reference"
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# SQL Server Native Client Error MSSQLSERVER_50000
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Error MSSQLSERVER_50000 in SQL Server Native Client 
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Product Version|11.0|  
 |Event ID|50000|  

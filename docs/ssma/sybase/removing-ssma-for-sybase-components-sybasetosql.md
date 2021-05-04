@@ -1,4 +1,5 @@
 ---
+description: "Removing SSMA for Sybase Components (SybaseToSQL)"
 title: "Removing SSMA for Sybase Components (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Removing SSMA for Sybase Components (SybaseToSQL)
 When you have finished migrating databases from Sybase Adaptive Server Enterprise (ASE) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time, but you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless you are sure that your migrated databases no longer use functions in the **ssma_syb** schema of the **sysdb** database.  

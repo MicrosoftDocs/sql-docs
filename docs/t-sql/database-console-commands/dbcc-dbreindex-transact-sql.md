@@ -1,4 +1,5 @@
 ---
+description: "DBCC DBREINDEX (Transact-SQL)"
 title: "DBCC DBREINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -24,19 +25,19 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Rebuilds one or more indexes for a table in the specified database.
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC DBREINDEX   
 (   
     table_name   
@@ -45,7 +46,9 @@ DBCC DBREINDEX
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table containing the specified index or indexes to rebuild. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md)*.*  
   
@@ -114,5 +117,3 @@ GO
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
-  
-

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_update_principalprofile_sp (Transact-SQL)"
 title: "sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmail_update_principalprofile_sp"
   - "sysmail_update_principalprofile_sp_TSQL"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the information for an association between a principal and a profile.  
   

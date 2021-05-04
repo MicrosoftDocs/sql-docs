@@ -1,4 +1,5 @@
 ---
+description: "CREATE FUNCTION (Transact-SQL)"
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/16/2020
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FUNCTION"
   - "CREATE FUNCTION"
@@ -38,12 +39,12 @@ helpviewer_keywords:
   - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:
 
@@ -66,13 +67,13 @@ Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnover
 > [!NOTE]
 >
 > - The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-> - For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
+> - For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION (Azure Synapse Analytics)](../../t-sql/statements/create-function-sql-data-warehouse.md).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
-```
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
@@ -90,7 +91,7 @@ RETURNS return_data_type
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
@@ -105,7 +106,7 @@ RETURNS TABLE
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Multi-Statement Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
@@ -124,7 +125,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Function Clauses
 <function_option>::=
 {
@@ -185,7 +186,7 @@ column_name AS computed_column_expression
 }
 ```
 
-```
+```syntaxsql
 -- CLR Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
@@ -198,7 +199,7 @@ RETURNS { return_data_type }
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- CLR Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
@@ -212,7 +213,7 @@ RETURNS TABLE <clr_table_type_definition>
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- CLR Function Clauses
 <order_clause> ::=
 {
@@ -233,7 +234,7 @@ RETURNS TABLE <clr_table_type_definition>
 ( { column_name data_type } [ ,...n ] )
 ```
 
-```
+```syntaxsql
 -- In-Memory OLTP: Syntax for natively compiled, scalar user-defined function
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
@@ -259,15 +260,17 @@ RETURNS return_data_type
 
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *OR ALTER*
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Conditionally alters the function only if it already exists.
 
 > [!NOTE]
-> Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.
+> Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU1.
 
 *schema_name*
 Is the name of the schema to which the user-defined function belongs.
@@ -362,7 +365,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
 Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.
 
 *\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] )
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
 
 Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.
 
@@ -574,7 +577,7 @@ Functions have the following properties. The values of these properties determin
 |**SystemDataAccess**|Function accesses system data (system catalogs or virtual system tables) in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].||
 |**UserDataAccess**|Function accesses user data in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Includes user-defined tables and temp tables, but not table variables.|
 
-The precision and determinism properties of [!INCLUDE[tsql](../../includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).
+The precision and determinism properties of [!INCLUDE[tsql](../../includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).
 
 To display the current values for these properties, use [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).
 

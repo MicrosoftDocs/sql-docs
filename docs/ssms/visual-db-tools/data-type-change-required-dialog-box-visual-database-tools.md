@@ -1,4 +1,5 @@
 ---
+description: "Data Type Change Required Dialog Box (Visual Database Tools)"
 title: Data Type Change Required Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,11 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Appears when you change the data type, length, scale, precision, or collation of a column that participates in a relationship.  
   
 ## Options  

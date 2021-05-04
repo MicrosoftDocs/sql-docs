@@ -13,16 +13,16 @@ ms.reviewer: maghan
 ---
 # Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This tutorial shows you how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog in Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
 
 ## Prerequisites
 
-Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-Also make sure that you have set up the SSISDB database in Azure and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Deploy SQL Server Integration Services packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Also make sure that you have set up the SSISDB database in Azure and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Deploy SQL Server Integration Services packages to Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## For Azure SQL Database, get the connection info
 
@@ -85,7 +85,7 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
 
 2. On the **Select Source** page, select the existing SSIS project to deploy.
     -   To deploy a project deployment file that you created, select **Project deployment file** and enter the path to the .ispac file.
-    -   To deploy a project that resides in an SSIS catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog.
+    -   To deploy a project that resides in an SSIS catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog. Only projects that reside in SSISDB hosted by SQL Server can be redeployed in this step.
     -   Select **Next** to see the **Select Destination** page.
   
 3.  On the **Select Destination** page, select the destination for the project.
@@ -145,7 +145,7 @@ if ($folders.Count -gt 0)
 {
     foreach ($filefolder in $folders)
     {
-        Write-Host "Creating Folder " $filefolder.Name " ..."
+        Write-Host "Creating Folder " + $filefolder.Name + " ..."
 
         # Create a new folder
         $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
@@ -157,7 +157,7 @@ if ($folders.Count -gt 0)
             foreach($projectfile in $projects)
             {
                 $projectfilename = $projectfile.Name.Replace(".ispac", "")
-                Write-Host "Deploying " $projectfilename " project ..."
+                Write-Host "Deploying " + $projectfilename + " project ..."
 
                 # Read the project file, and deploy it to the folder
                 [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
@@ -186,7 +186,7 @@ To view the status of currently running Integration Services operations on the I
 
 You can also select a package in Object Explorer, right-click and select **Reports**, then **Standard Reports**, then **All Executions**.
 
-For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](../performance/monitor-running-packages-and-other-operations.md).
 
 ## Monitor the Execute SSIS Package activity
 
@@ -198,7 +198,7 @@ If you're running a package as part of an Azure Data Factory pipeline with the E
 
 To get status info about the Azure-SSIS Integration Runtime in which packages are running, use the following PowerShell commands. For each of the commands, provide the names of the Data Factory, the Azure-SSIS IR, and the resource group.
 
-For more info, see [Monitor Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+For more info, see [Monitor Azure-SSIS integration runtime](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### Get metadata about the Azure-SSIS Integration Runtime
 

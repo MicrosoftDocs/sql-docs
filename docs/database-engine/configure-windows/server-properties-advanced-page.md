@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Advanced Page) | Microsoft Docs"
+description: Get acquainted with SQL Server advanced server settings. Learn about FILESTREAM options, various thresholds, full-text upgrade alternatives, and other settings.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.advanced.f1"
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Server Properties - Advanced Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your advanced server settings.  
   
  **To view the Server Properties pages**  
@@ -82,7 +83,7 @@ ms.author: mikeray
 > [!NOTE]  
 >  The full-text upgrade option can also be set by using the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option action.  
   
- After you attach, restore, or copy a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database becomes available immediately and is then automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ After you attach, restore, or copy a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database, the database becomes available immediately and is then automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Max Text Replication Size**  
  Specifies the maximum size (in bytes) of **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**, and **image** data that can be added to a replicated column or captured column in a single INSERT, UPDATE, WRITETEXT, or UPDATETEXT statement. Changing the setting takes effect immediately. For more information, see [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  

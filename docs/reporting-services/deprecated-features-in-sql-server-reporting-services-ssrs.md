@@ -1,5 +1,6 @@
 ---
 title: "Deprecated features in SQL Server 2016 Reporting Services | Microsoft Docs"
+description: Learn about the deprecated SQL Server 2016 Reporting Services features. The features are still available in the release in which they are deprecated. 
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,6 @@
 ---
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
+description: Learn how to copy content items and settings from one SQL Server Reporting Services report server to another by using the RS.exe utility to run a Reporting Services RSS script.
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -261,7 +262,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 > [!TIP]  
-> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Azure virtual machines, see [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Azure virtual machines, see [Use PowerShell to Create an Azure VM With a Native Mode Report Server](/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on an Azure virtual machine. 
  The following example migrates content:  
@@ -315,5 +316,4 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ## See also  
  [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
-  
   

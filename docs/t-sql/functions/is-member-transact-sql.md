@@ -1,12 +1,13 @@
 ---
+description: "IS_MEMBER (Transact-SQL)"
 title: "IS_MEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IS_MEMBER"
   - "IS_MEMBER_TSQL"
@@ -26,10 +27,10 @@ helpviewer_keywords:
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IS_MEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role. The IS_MEMBER function is not supported for Azure Active Directory Groups.  
   
@@ -37,12 +38,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *group* **'**  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
@@ -77,7 +79,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## Examples  
  The following example checks whether the current user is a member of a database role or a Windows domain group.  
   
-```  
+```sql  
 -- Test membership in db_owner and print appropriate message.  
 IF IS_MEMBER ('db_owner') = 1  
    PRINT 'Current user is a member of the db_owner role'  

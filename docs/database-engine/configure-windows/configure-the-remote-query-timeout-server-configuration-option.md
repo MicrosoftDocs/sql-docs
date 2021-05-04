@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote query timeout Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "remote query timeout" option. See how it determines the number of seconds that a remote operation can take before SQL Server times out.'
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: sql
@@ -11,13 +12,13 @@ helpviewer_keywords:
   - "time limit for remote queries [SQL Server]"
   - "remote query timeout option"
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the remote query timeout Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to configure the **remote query timeout** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote query timeout** option specifies how long, in seconds, a remote operation can take before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] times out. The default value for this option is 600, which allows a 10-minute wait. This value applies to an outgoing connection initiated by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a remote query. This value has no effect on queries received by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To disable the time-out, set the value to 0. A query will wait until it completes.  
+  This topic describes how to configure the **remote query timeout** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote query timeout** option specifies how long, in seconds, a remote operation can take before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] times out. The default value for this option is 600, which allows a 10-minute wait. This value applies to an outgoing connection initiated by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a remote query. This value has no effect on queries received by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To disable the time-out, set the value to 0. A query will wait until it completes.  
   
  For heterogeneous queries, **remote query timeout** specifies the number of seconds (initialized in the command object using the DBPROP_COMMANDTIMEOUT rowset property) that a remote provider should wait for result sets before the query times out. This value is also used to set DBPROP_GENERALTIMEOUT if supported by the remote provider. This will cause any other operations to time out after the specified number of seconds.  
   

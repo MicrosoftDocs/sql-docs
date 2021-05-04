@@ -1,4 +1,5 @@
 ---
+description: "sp_addqueued_artinfo (Transact-SQL)"
 title: "sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addqueued_artinfo"
   - "sp_addqueued_artinfo_TSQL"
 helpviewer_keywords: 
   - "sp_addqueued_artinfo"
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addqueued_artinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
@@ -47,9 +47,9 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
 ## <a id="createuser"></a> Create AD user (or MSA) for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
 > [!NOTE]
-> The following steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
+> The following steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
-1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. The following example names the account `mssql`, but the account name can be anything you like. You'll be prompted to enter a new password for the account.
+1. On your domain controller, run the [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell command to create a new AD user with a password that never expires. The following example names the account `mssql`, but the account name can be anything you like. You'll be prompted to enter a new password for the account.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -58,13 +58,17 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
    ```
 
    > [!NOTE]
-   > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can optionally reuse an existing AD account if you know the account's password (which is required to generate a keytab file in the next step). Additionally, the account should be enabled to support 128-bit and 256-bit Kerberos AES encryption (**msDS-SupportedEncryptionTypes** attribute) on the user account.
+   > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can optionally reuse an existing AD account if you know the account's password (which is required to generate a keytab file in the next step). Additionally, the account should be enabled to support 128-bit and 256-bit Kerberos AES encryption (**msDS-SupportedEncryptionTypes** attribute) on the user account. To validate the account is enabled for AES encryption, locate the account in **Active Directory Users and Computers** utility, and select **Properties**. Locate **Accounts** tab in the **Properties** and validate two checkboxes titled following are selected. 
+   >
+   > 1. **This account supports Kerberos AES 128 bit encryption**
+   >
+   > 2. **This account supports Kerberos AES 256 bit encryption**
 
 2. Set the ServicePrincipalName (SPN) for this account using the **setspn.exe** tool. The SPN must be formatted exactly as specified in the following example. You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. The TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
 
    ```PowerShell
-   setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
    ```
 
    > [!NOTE]
@@ -90,11 +94,11 @@ Configuring AD authentication for SQL Server on Linux requires an AD account (MS
    ```bash
    kinit user@CONTOSO.COM
    kvno user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
+   kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > SPNs can take several minutes to propagate through your domain, especially if the domain is large. If you receive the error, `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, please wait a few minutes and try again.</br></br> The above commands will only work if the server has been joined to an AD domain, which was covered in the previous section.
+   > SPNs can take several minutes to propagate through your domain, especially if the domain is large. If you receive the error, `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM`, please wait a few minutes and try again.</br></br> The above commands will only work if the server has been joined to an AD domain, which was covered in the previous section.
 
 1. Using [**ktpass**](/windows-server/administration/windows-commands/ktpass), add keytab entries for each SPN using the following commands on a Windows machine Command Prompt:
 

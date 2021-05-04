@@ -1,11 +1,12 @@
 ---
 title: "Removing Database Mirroring (SQL Server) | Microsoft Docs"
+description: Learn about the impact of stopping a database mirroring session, which a database owner can do at any time on either partner in SQL Server.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], removing"
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Removing Database Mirroring (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The database owner can manually stop a database mirroring session at any time, at either partner.  
   
 ## Impact of Removing Mirroring  

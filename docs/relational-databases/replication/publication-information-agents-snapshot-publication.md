@@ -13,10 +13,10 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, Agents (Snapshot Publication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Agents** tab displays summary information on the Snapshot Agent for the selected publication.  
   
 ## Options  

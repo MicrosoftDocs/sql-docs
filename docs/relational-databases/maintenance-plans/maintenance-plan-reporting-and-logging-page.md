@@ -1,4 +1,5 @@
 ---
+description: "Maintenance Plan (Reporting and Logging Page)"
 title: "Maintenance Plan (Reporting and Logging Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Maintenance Plan (Reporting and Logging Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Reporting and Logging** dialog box to configure the reports and logs that are generated when maintenance plans are executed.  
   
 ## Options  

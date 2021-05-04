@@ -1,12 +1,13 @@
 ---
-title: "sqlsrv_fetch_array | Microsoft Docs"
+title: "sqlsrv_fetch_array"
+description: "API reference for the sqlsrv_fetch_array function in the Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_fetch_array"
 apitype: "NA"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "retrieving data, as an array"
   - "API Reference, sqlsrv_fetch_array"
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +68,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-If the result set returned by the `SELECT SCOPE_IDENTITY()` portion of this statement is retrieved as an associative array, the key for the returned value will be an empty string ("") because the returned column has no name. To avoid this, you can retrieve the result as a numeric array, or you can specify a name for the returned column in the Transact-SQL statement. The following is one way to specify a column name in Transact-SQL:  
+If the result set returned by the `SELECT SCOPE_IDENTITY()` portion of this statement is retrieved as an associative array, the key for the returned value will be an empty string ("") because the returned column has no name. To avoid this, you can retrieve the result as a numeric array, or you can specify a name for the returned column in the Transact-SQL statement. The following statement is one way to specify a column name in Transact-SQL:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -75,7 +76,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 If a result set contains multiple columns without names, the value of the last unnamed column will be assigned to the empty string ("") key.  
   
-## Example  
+## Associative array example  
 The following example retrieves each row of a result set as an associative **array**. The example assumes that the SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
@@ -114,7 +115,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Example  
+## Indexed array xample  
 The following example retrieves each row of a result set as a numerically indexed array.  
   
 The example retrieves product information from the *Purchasing.PurchaseOrderDetail* table of the AdventureWorks database for products that have a specified date and a stocked quantity (*StockQty*) less than a specified value.  

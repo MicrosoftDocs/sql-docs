@@ -1,14 +1,14 @@
 ---
-title: "FILESTREAM data"
-description: "Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute."
-ms.date: "08/15/2019"
+title: FILESTREAM data
+description: Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.
+ms.date: 04/20/2021
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 
@@ -21,7 +21,7 @@ The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary
 > [!NOTE]
 > You must install the .NET Framework 3.5 SP1 (or later) or .NET Core to work with FILESTREAM data using SqlClient.
 
-Specifying the FILESTREAM attribute on a varbinary(max) column causes SQL Server to store the data on the local NTFS file system instead of in the database file. Although it is stored separately, you can use the same Transact-SQL statements that are supported for working with varbinary(max) data that is stored in the database.
+Specifying the FILESTREAM attribute on a varbinary(max) column causes SQL Server to store the data on the local NTFS file system instead of in the database file. Although it's stored separately, you can use the same Transact-SQL statements that are supported for working with varbinary(max) data that is stored in the database.
 
 ## SqlClient support for FILESTREAM
 
@@ -29,7 +29,7 @@ The Microsoft SqlClient Data Provider for SQL Server, <xref:Microsoft.Data.SqlCl
 
 ### Creating the SQL Server table
 
-The following Transact-SQL statements creates a table named employees and inserts a row of data. Once you have enabled FILESTREAM storage, you can use this table in conjunction with the code examples that follow. The links to resources in SQL Server Books Online are located at the end of this topic.
+The following Transact-SQL statements create a table named employees and inserts a row of data. Once you have enabled FILESTREAM storage, you can use this table with the code examples that follow. The links to resources in SQL Server Books Online are located at the end of this article.
 
 ```sql
 CREATE TABLE employees
@@ -182,12 +182,13 @@ For another sample, see [How to store and fetch binary data into a file stream c
 
 The complete documentation for FILESTREAM is located in the following sections in SQL Server Books Online.
 
-|Topic|Description|
+|Article|Description|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|Describes when to use FILESTREAM storage and how it integrates the SQL Server Database Engine with an NTFS file system.|
 |[Create Client Applications for FILESTREAM Data](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|Describes the Windows API functions for working with FILESTREAM data.|
-|[FILESTREAM and Other SQL Server Features](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|Provides considerations, guidelines and limitations for using FILESTREAM data with other features of SQL Server.|
+|[FILESTREAM and Other SQL Server Features](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|Provides considerations, guidelines, and limitations for using FILESTREAM data with other features of SQL Server.|
 
 ## Next steps
+
 - [SQL Server data types and ADO.NET](sql-server-data-types.md)
 - [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)

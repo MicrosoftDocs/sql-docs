@@ -1,12 +1,13 @@
 ---
+description: "CREATE QUEUE (Transact-SQL)"
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2019"
+ms.date: "03/06/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "QUEUE_TSQL"
   - "CREATE QUEUE"
@@ -23,12 +24,12 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts the message on the queue associated with the service.
 
@@ -36,7 +37,7 @@ Creates a new queue in a database. Queues store messages. When a message arrives
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -60,6 +61,8 @@ CREATE QUEUE <object>
 { database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -156,7 +159,7 @@ The following table lists the columns in a queue.
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|
 |validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|
 |message_body|**varbinary(max)**|Content of the message.|
-|message_id|**uniqueidentifier**|Unique identifier for the message.|
+|message_enqueue_time|**datetime**|Time when the message was enqueued.|
 
 ## Permissions
 

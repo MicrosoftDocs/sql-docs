@@ -1,4 +1,5 @@
 ---
+description: "Creating a Custom Foreach Enumerator"
 title: "Creating a Custom Foreach Enumerator | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Creating a Custom Foreach Enumerator
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The steps involved in creating a custom foreach enumerator are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  

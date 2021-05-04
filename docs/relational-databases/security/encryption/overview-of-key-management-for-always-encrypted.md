@@ -1,5 +1,6 @@
 ---
 title: "Overview of key management for Always Encrypted | Microsoft Docs"
+description: "Learn how to manage the two types of cryptographic keys Always Encrypted uses to protect your data in SQL Server: column encryption key and column master key."
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,10 +11,10 @@ ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview of key management for Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) uses two types of cryptographic keys to protect your data - one key to encrypt your data, and another key to encrypt the key that encrypts your data. The column encryption key encrypts your data, the column master key encrypts the column encryption key. This article provides a detailed overview for managing these encryption keys.  
@@ -61,7 +62,7 @@ When Always Encrypted keys are managed without role separation, a single person 
 
 ## Tools for Managing Always Encrypted Keys
 
-Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) and [PowerShell](../../scripting/sql-server-powershell.md):
+Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) and [PowerShell](../../../powershell/sql-server-powershell.md):
 
 - **SQL Server Management Studio (SSMS)** - provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
     - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
@@ -94,9 +95,5 @@ To ensure Always Encrypted is effective in preventing these types of attacks, yo
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [Always Encrypted Wizard tutorial (Windows Certificate Store)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [Always Encrypted Wizard tutorial (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [Always Encrypted Wizard tutorial (Windows Certificate Store)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

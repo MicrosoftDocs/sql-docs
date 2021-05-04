@@ -1,5 +1,6 @@
 ---
 title: "Add Scale Breaks to a Chart (Report Builder) | Microsoft Docs"
+description: Find out about using a scale break to display two distinct ranges in the same chart area in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -46,6 +47,6 @@ ms.author: maggies
 
 [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Axis Properties Dialog Box, Axis Options](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Axis Properties Dialog Box, Axis Options](/previous-versions/sql/)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

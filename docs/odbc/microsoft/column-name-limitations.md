@@ -1,4 +1,5 @@
 ---
+description: "Column Name Limitations"
 title: "Column Name Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], column names"
   - "ODBC desktop database drivers [ODBC], column names"
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Column Name Limitations
 Column names can contain any valid characters (for example, spaces). If column names contain any characters except letters, numbers, and underscores, the name must be delimited by enclosing it in back quotes (`).  

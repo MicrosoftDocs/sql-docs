@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Migration Assistant | Microsoft Docs"
+description: Learn about SQL Server Migration Assistant, a tool that automates database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
 ms.custom: ""
 ms.date: "10/10/2019"
 ms.prod: sql
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-author: "Jtoland"
-ms.author: "Jtoland"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # SQL Server Migration Assistant
 
@@ -38,7 +39,8 @@ The following target versions are supported for SSMA.
 - SQL Server 2017 on Windows and Linux
 - SQL Server 2019 on Windows and Linux
 - Azure SQL Database
-- Azure SQL Data Warehouse**
+- Azure SQL Managed Instance
+- Azure Synapse Analytics**
 
 ** This target is supported only by SSMA for Oracle.
 
@@ -58,9 +60,9 @@ The following target versions are supported for SSMA.
   
 - **SQL Server community forums** - Ask a question in the SQL Server Community  
   
-  - [SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455) -   Newsgroups and forums that are monitored by the SQL Server community. This site also lists community information sources, such as blogs and Web sites.  
+  - [SQL Server Community](../sql-server/index.yml) -   Newsgroups and forums that are monitored by the SQL Server community. This site also lists community information sources, such as blogs and Web sites.  
   
-  - [SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456) -  Newsgroups, forums, and other community resources that are useful to SQL Server developers  
+  - [SQL Server Developer Center Community](../sql-server/index.yml) -  Newsgroups, forums, and other community resources that are useful to SQL Server developers  
   
 - **Assisted support** - Go to [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) and search for 'SQL Server Migration Assistant'.  Select your version, then select "start request."  Assisted support is included with the SQL Server Migration Assistant Tool.  
   
@@ -94,4 +96,4 @@ In some cases, a particular feature is not something that customers should use d
   
 Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support does not support databases or applications that leverage or use undocumented entry points.  
   
-Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
+Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.

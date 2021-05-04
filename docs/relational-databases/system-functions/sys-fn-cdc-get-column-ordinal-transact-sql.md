@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
 title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/25/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_get_column_ordinal"
   - "fn_cdc_get_column_ordinal_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal"
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the column ordinal of the specified column as it appears in the [change table](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associated with the specified capture instance.  
   

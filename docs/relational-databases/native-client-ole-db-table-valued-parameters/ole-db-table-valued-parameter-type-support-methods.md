@@ -1,21 +1,22 @@
 ---
+description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Methods)"
 title: "OLE DB Table-Valued Parameter type (Methods)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (methods)"
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# OLE DB Table-Valued Parameter Type Support (Methods)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Methods)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The following standard OLE DB methods support table-valued parameters:  
   

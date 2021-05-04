@@ -1,12 +1,12 @@
 ---
 title: "OVER Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the OVER clause, which defines a user-specified set of rows within a query result set."
 ms.date: "08/11/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OVER_TSQL"
   - "OVER"
@@ -24,10 +24,10 @@ helpviewer_keywords:
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - OVER Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determines the partitioning and ordering of a rowset before the associated window function is applied. That is, the OVER clause defines a window or user-specified set of rows within a query result set. A window function then computes a value for each row in the window. You can use the OVER clause with functions to compute aggregated values such as moving averages, cumulative aggregates, running totals, or a top N per group results.  
   
@@ -43,8 +43,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse  
+```syntaxsql
+-- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics  
   
 OVER (   
        [ <PARTITION BY clause> ]  
@@ -95,22 +95,104 @@ ORDER BY order_by_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  
 ```  
   
-## Arguments  
- PARTITION BY  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+Window functions might have the following arguments in their `OVER` clause:
+- [PARTITION BY](#partition-by) that divides the query result set into partitions.
+- [ORDER BY](#order-by) that defines the logical order of the rows within each partition of the result set. 
+- [ROWS/RANGE](#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition. It requires `ORDER BY` argument and the default value is from the start of partition to the current element if the `ORDER BY` argument is specified.
+
+If you don't specify any argument, the window functions will be applied on the entire result set.
+```sql
+select 
+	  object_id
+	, [min]	= min(object_id) over()
+	, [max]	= max(object_id) over()
+from sys.objects
+```
+ 
+|object_id | min | max |
+|---|---|---|
+| 3	| 3 | 2139154666 |
+| 5	| 3 | 2139154666 |
+| ... | ... | ... |
+| 2123154609 |	3 | 2139154666 |
+| 2139154666 |	3 | 2139154666 |
+
+### PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
+
+```syntaxsql
+PARTITION BY *value_expression* 
+```
+ 
+ If PARTITION BY is not specified, the function treats all rows of the query result set as a single partition.
+ Function will be applied on all rows in the partition if you don't specify `ORDER BY` clause.
   
- *value_expression*  
- Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable.  
+#### PARTITION BY *value_expression*  
+ Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable. 
+ 
+ ```sql
+ select 
+	  object_id, type
+	, [min]	= min(object_id) over(partition by type)
+	, [max]	= max(object_id) over(partition by type)
+from sys.objects
+```
+
+|object_id | type | min | max |
+|---|---|---|---|
+| 68195293	| PK	| 68195293	| 711673583 |
+| 631673298	| PK	| 68195293	| 711673583 |
+| 711673583	| PK	| 68195293	| 711673583 |
+| ... | ...	| ... |
+| 3	| S | 3	| 98 |
+| 5	| S |	3	| 98 |
+| ... | ...	| ... |
+| 98	| S |	3	| 98 |
+| ... | ...	| ... |
   
- \<ORDER BY clause>  
- Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window functioncalculation is performed.  
-  
+### ORDER BY  
+
+```syntaxsql
+ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
+```
+
+ Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed. 
+ - If it is not specified, the default order is `ASC` and window function will use all rows in partition.
+ - If it is specified, and a ROWS/RANGE is not specified, then default `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` is used as default for window frame by the functions that can accept optional ROWS/RANGE specification (for example `min` or `max`). 
+ 
+```sql
+select 
+	  object_id, type
+	, [min]	= min(object_id) over(partition by type order by object_id)
+	, [max]	= max(object_id) over(partition by type order by object_id)
+from sys.objects
+```
+
+|object_id | type | min | max |
+|---|---|---|---|
+| 68195293	| PK	| 68195293	| 68195293 |
+| 631673298	| PK	| 68195293	| 631673298 |
+| 711673583	| PK	| 68195293	| 711673583 |
+| ... | ...	| ... |
+| 3	| S | 3	| 3 |
+| 5	| S |	3 | 5 |
+| 6	| S |	3 | 6 |
+| ... | ...	| ... |
+| 97	| S |	3 | 97 |
+| 98	| S |	3 | 98 |
+| ... | ...	| ... |
+
+
  *order_by_expression*  
  Specifies a column or expression on which to sort. *order_by_expression* can only refer to columns made available by the FROM clause. An integer cannot be specified to represent a column name or alias.  
   
@@ -120,17 +202,40 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  **ASC** | DESC  
  Specifies that the values in the specified column should be sorted in ascending or descending order. ASC is the default sort order. Null values are treated as the lowest possible values.  
   
- ROWS | RANGE  
+### ROWS or RANGE  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Further limits the rows within the partition by specifying start and end points within the partition. This is done by specifying a range of rows with respect to the current row either by logical association or physical association. Physical association is achieved by using the ROWS clause.  
   
  The ROWS clause limits the rows within a partition by specifying a fixed number of rows preceding or following the current row. Alternatively, the RANGE clause logically limits the rows within a partition by specifying a range of values with respect to the value in the current row. Preceding and following rows are defined based on the ordering in the ORDER BY clause. The window frame "RANGE ... CURRENT ROW ..." includes all rows that have the same values in the ORDER BY expression as the current row. For example, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW means that the window of rows that the function operates on is three rows in size, starting with 2 rows preceding until and including the current row.  
+ 
+```sql
+select
+	  object_id
+	, [preceding]	= count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+	, [central]	= count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+	, [following]	= count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+from sys.objects
+order by object_id asc
+```
+
+|object_id | preceding | central | following |
+|---|---|---|---|
+| 3	| 1	| 3	| 156 |
+| 5	| 2	| 4	| 155 |
+| 6	| 3	| 5	| 154 |
+| 7	| 4	| 5	| 153 |
+| 8	| 5	| 5	| 152 |
+| ...   | ...	| ...   | ... |
+| 2112726579	| 153	| 5	| 4 |
+| 2119678599	| 154	| 5	| 3 |
+| 2123154609	| 155	| 4	| 2 |
+| 2139154666	| 156	| 3	| 1 | 
   
 > [!NOTE]  
 >  ROWS or RANGE requires that the ORDER BY clause be specified. If ORDER BY contains multiple order expressions, CURRENT ROW FOR RANGE considers all columns in the ORDER BY list when determining the current row.  
   
- UNBOUNDED PRECEDING  
+#### UNBOUNDED PRECEDING  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies that the window starts at the first row of the partition. UNBOUNDED PRECEDING can only be specified as window starting point.  
@@ -138,17 +243,20 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> PRECEDING  
  Specified with \<unsigned value specification>to indicate the number of rows or values to precede the current row. This specification is not allowed for RANGE.  
   
- CURRENT ROW  
+#### CURRENT ROW  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Specifies that the window starts or ends at the current row when used with ROWS or the current value when used with RANGE. CURRENT ROW can be specified as both a starting and ending point.  
   
- BETWEEN \<window frame bound > AND \<window frame bound >  
+#### BETWEEN AND  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
+```syntaxsql
+BETWEEN <window frame bound > AND <window frame bound >  
+```
  Used with either ROWS or RANGE to specify the lower (starting) and upper (ending) boundary points of the window. \<window frame bound> defines the boundary starting point and \<window frame bound> defines the boundary end point. The upper bound cannot be smaller than the lower bound.  
   
- UNBOUNDED FOLLOWING  
+#### UNBOUNDED FOLLOWING  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Specifies that the window ends at the last row of the partition. UNBOUNDED FOLLOWING can only be specified as a window end point. For example RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING defines a window that starts with the current row and ends with the last row of the partition.  
@@ -317,11 +425,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -354,10 +462,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -390,9 +498,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -420,9 +528,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -457,7 +565,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

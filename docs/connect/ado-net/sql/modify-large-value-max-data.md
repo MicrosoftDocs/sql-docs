@@ -9,8 +9,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Modifying large-value (max) data in ADO.NET
@@ -21,7 +21,7 @@ Large object (LOB) data types are those that exceed the maximum row size of 8 ki
   
 The `max` data types can be used for comparisons, as Transact-SQL variables, and for concatenation. They can also be used in the DISTINCT, ORDER BY, GROUP BY clauses of a SELECT statement as well as in aggregates, joins, and subqueries.
 
-See [Using Large-Value Data Types](https://go.microsoft.com/fwlink/?LinkId=120498) from SQL Server Books Online more details on large-value data types.
+See [Using Large-Value Data Types](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100)) from SQL Server Books Online more details on large-value data types.
   
 ## Large-value type restrictions  
 The following restrictions apply to the `max` data types, which do not exist for smaller data types:  

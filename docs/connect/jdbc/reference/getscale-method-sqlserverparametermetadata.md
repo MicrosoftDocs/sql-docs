@@ -1,4 +1,5 @@
 ---
+description: "getScale Method (SQLServerParameterMetaData)"
 title: "getScale Method (SQLServerParameterMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerParameterMetaData.getScale"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getScale Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

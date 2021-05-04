@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYASYMKEY (Transact-SQL)"
 title: "DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DECRYPTBYASYMKEY"
   - "DECRYPTBYASYMKEY_TSQL"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses an asymmetric key to decrypt encrypted data.  
   
@@ -29,13 +30,14 @@ This function uses an asymmetric key to decrypt encrypted data.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
 The ID of an asymmetric key in the database. *Asym_Key_ID* has an **int** data type.  
   
@@ -60,8 +62,8 @@ Compared to symmetric encryption / decryption, asymmetric key encryption / decry
 ## Examples  
 This example decrypts ciphertext originally encrypted with asymmetric key `JanainaAsymKey02`. `AdventureWorks2012.ProtectedData04` stored this asymmetric key. The example decrypted the returned data with asymmetric key `JanainaAsymKey02`. The example used password `pGFD4bb925DGvbd2439587y` to decrypt this asymmetric key. The example converted the returned plaintext to type **nvarchar**.  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

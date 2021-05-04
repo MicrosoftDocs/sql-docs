@@ -1,4 +1,5 @@
 ---
+description: "GeometryCollection"
 title: "GeometryCollection | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GeometryCollection
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A **GeometryCollection** is a collection of zero or more **geometry** or **geography** instances. A **GeometryCollection** can be empty.  
   
 ## GeometryCollection Instances  

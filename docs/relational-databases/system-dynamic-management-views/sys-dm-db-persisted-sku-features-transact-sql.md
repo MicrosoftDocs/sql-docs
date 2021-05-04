@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_db_persisted_sku_features (Transact-SQL)"
 title: "sys.dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_persisted_sku_features_TSQL"
   - "sys.dm_db_persisted_sku_features"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "editions [SQL Server]"
   - "sys.dm_db_persisted_sku_features dynamic management view"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Some features of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] change the way that [!INCLUDE[ssDE](../../includes/ssde-md.md)] stores information in the database files. These features are restricted to specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A database that contains these features cannot be moved to an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not support them. Use the sys.dm_db_persisted_sku_features dynamic management view to list edition-specific features that are enabled in the current database.
   
@@ -59,7 +60,7 @@ ms.author: sstein
 -   **TransparentDataEncryption.** Indicates that a database is encrypted by using transparent data encryption. To remove transparent data encryption, use the ALTER DATABASE statement. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, these features, except **TransparentDataEncryption.** are available across multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1, these features, except **TransparentDataEncryption.** are available across multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
 
  To determine whether a database uses any features that are restricted to specific editions, execute the following statement in the database:  
   

@@ -1,5 +1,6 @@
 ---
 title: "SqlXmlCommand Object (SQLXML)"
+description: Learn about the methods and properties of the SqlXmlCommand object. 
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -27,13 +28,13 @@ helpviewer_keywords:
   - "ClientSideXML property"
   - "CommandStream property"
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML Managed Classes - SqlXmlCommand Object
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This is the constructor for the SqlXmlCommand object:  
   
 ```  

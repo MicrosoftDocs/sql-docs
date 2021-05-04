@@ -1,5 +1,6 @@
 ---
-title: "Using a stored procedure with an update count | Microsoft Docs"
+title: "Using a stored procedure with an update count"
+description: "Learn how to use a stored procedure and return a count of the number of rows affected (also called the update count) using the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using a stored procedure with an update count

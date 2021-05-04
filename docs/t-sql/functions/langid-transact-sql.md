@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LANGID (Transact-SQL)"
 title: "@@LANGID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@LANGID"
   - "@@LANGID_TSQL"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "ID for language in use"
   - "local language IDs [SQL Server]"
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;LANGID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the local language identifier (ID) of the language that is currently being used.  
   
@@ -31,11 +32,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LANGID  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **smallint**  
   
 ## Remarks  
@@ -44,7 +47,7 @@ ms.author: mikeray
 ## Examples  
  The following example sets the language for the current session to `Italian`, and then uses `@@LANGID` to return the ID for Italian.  
   
-```  
+```sql  
 SET LANGUAGE 'Italian'  
 SELECT @@LANGID AS 'Language ID'  
 ```  

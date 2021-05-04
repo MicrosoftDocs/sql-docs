@@ -1,4 +1,5 @@
 ---
+description: "EXPLAIN (Transact-SQL)"
 title: "EXPLAIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -9,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse (preview).
-  
- For more information about query plans, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
+  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
   
 ## Syntax  
   
-```
+```syntaxsql
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments
 
@@ -32,13 +33,13 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
 
-*WITH_RECOMMENDATIONS* (Preview)
+*WITH_RECOMMENDATIONS* 
 
 Return the query plan with recommendations to optimize the SQL statement performance.  
   
 ## Permissions
 
- Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE &#40;Azure Synapse Analytics, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## Return Value
 
@@ -92,7 +93,7 @@ Return the query plan with recommendations to optimize the SQL statement perform
   
  The submitted command for this example is:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXPLAIN   
@@ -610,12 +611,12 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 ```
 
 ## See also
-[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+[Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

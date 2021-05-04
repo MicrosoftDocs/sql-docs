@@ -1,4 +1,5 @@
 ---
+description: "LOGINPROPERTY (Transact-SQL)"
 title: "LOGINPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BadPasswordCount_TSQL"
   - "BadPasswordTime_TSQL"
@@ -32,9 +33,10 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # LOGINPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns information about login policy settings.  
   
@@ -42,12 +44,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 LOGINPROPERTY ( 'login_name' , 'property_name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *login_name*  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for which login property status will be returned.  
   
@@ -116,7 +119,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ### A. Checking whether a login must change its password  
  The following example checks whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `John3` must change its password the next time it connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
 GO  
 ```  
@@ -124,7 +127,7 @@ GO
 ### B. Checking whether a login is locked out  
  The following example checks whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `John3` is locked.  
   
-```  
+```sql  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  
 GO  
 ```  

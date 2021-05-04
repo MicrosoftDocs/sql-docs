@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Agent Fixed Database Roles"
 title: "SQL Server Agent Fixed Database Roles"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # SQL Server Agent Fixed Database Roles
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has the following **msdb** database fixed database roles, which give administrators finer control over access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. The roles listed from least to most privileged access are:  
   
@@ -45,7 +45,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent database rol
 **SQLAgentUserRole** is the least privileged of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. It has permissions on only operators, local jobs, and job schedules. Members of **SQLAgentUserRole** have permissions on only local jobs and job schedules that they own. They cannot use multiserver jobs (master and target server jobs), and they cannot change job ownership to gain access to jobs that they do not already own. **SQLAgentUserRole** members can view a list of available proxies only in the **Job Step Properties** dialog box of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Only the **Jobs** node in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer is visible to members of **SQLAgentUserRole**.  
   
 > [!IMPORTANT]  
-> Consider the security implications before granting proxy access to members of **the** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. The **SQLAgentReaderRole** and the **SQLAgentOperatorRole** are automatically members of the **SQLAgentUserRole**. This means that members of **SQLAgentReaderRole** and **SQLAgentOperatorRole** have access to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies that have been granted to the **SQLAgentUserRole** and can use those proxies.  
+> Consider the security implications before granting proxy access to members of **the** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent database roles**. The **SQLAgentReaderRole** and the **SQLAgentOperatorRole** are automatically members of the **SQLAgentUserRole**. This means that members of **SQLAgentReaderRole** and **SQLAgentOperatorRole** have access to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies that have been granted to the **SQLAgentUserRole** and can use those proxies.  
   
 The following table summarizes **SQLAgentUserRole** permissions on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent objects.  
   
@@ -109,8 +109,7 @@ Members of the **sysadmin** fixed server role have access to all [!INCLUDE[ssNoV
   
 ## See Also  
 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
-[sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623)  
-[sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe)  
-[sp_notify_operator (Transact-SQL)](https://msdn.microsoft.com/c440f5c9-9884-4196-b07c-55d87afb17c3)  
-[sp_purge_jobhistory (Transact-SQL)](https://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)  
-  
+[sp_update_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)  
+[sp_update_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+[sp_notify_operator (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
+[sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)  

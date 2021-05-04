@@ -1,4 +1,5 @@
 ---
+description: "Query Spatial Data for Nearest Neighbor"
 title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -9,10 +10,10 @@ ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Spatial Data for Nearest Neighbor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A common query used with spatial data is the Nearest Neighbor query. Nearest Neighbor queries are used to find the closest spatial objects to a specific spatial object. For example a store locater for a Web site often must find the closest store locations to a customer location.  
   
  A Nearest Neighbor query can be written in a variety of valid query formats, but for the Nearest Neighbor query to use a spatial index the following syntax must be used.  
@@ -69,7 +70,7 @@ SELECT TOP ( number )
   
  It is recommended that the new spatial index tessellations be used for indexes used in Nearest Neighbor queries. For more information on spatial index tessellations, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## Example  
+## Example 1  
  The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2016` database.  
   
 ```sql  
@@ -83,7 +84,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Create a spatial index on the column SpatialLocation to see how a Nearest Neighbor query uses a spatial index. For more information on creating spatial indexes, see [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## Example  
+## Example 2  
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
 ```sql  

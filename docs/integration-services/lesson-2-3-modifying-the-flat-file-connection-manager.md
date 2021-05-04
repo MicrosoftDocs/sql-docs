@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-3: Modify the Flat File connection manager"
 title: "Step 3: Modify the Flat File connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -13,9 +14,7 @@ ms.author: chugu
 ---
 # Lesson 2-3: Modify the Flat File connection manager
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 In this task, you modify the Flat File connection manager from Lesson 1. That Flat File connection manager is configured to statically load a single file. To enable the Flat File connection manager to iteratively load files, you change the ConnectionString property of the connection manager to use the user-defined variable `User::varFileName`, which contains the path of the file to be loaded at run time.  
   

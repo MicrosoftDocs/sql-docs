@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 title: "sys.fn_cdc_decrement_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn"
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_decrement_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the previous log sequence number (LSN) in the sequence based upon the specified LSN.  
   

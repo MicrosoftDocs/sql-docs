@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_update_collector_type (Transact-SQL)"
 title: "sp_syscollector_update_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_syscollector_update_collector_type_TSQL"
   - "sp_syscollector_update_collector_type"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_syscollector_update_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates a collector type for a collection item. Given the name and GUID of a collector type, updates the collector type configuration, including the collection and upload package, the parameter schema, and the parameter formatter schema.  
   

@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACEON (Transact-SQL)"
 title: "DBCC TRACEON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -22,7 +23,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Enables the specified trace flags.
   
@@ -30,11 +31,13 @@ Enables the specified trace flags.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *trace#*  
 Is the number of the trace flag to turn on.  
   
@@ -56,7 +59,7 @@ Trace flags are used to customize certain characteristics by controlling how [!I
   
 After turning on a trace flag that affects query plans, execute `DBCC FREEPROCCACHE;` so that cached plans are recompiled using the new plan-affecting behavior.
 
-Azure SQL Database Managed Instance supports the following global Trace Flags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316, and 11024
+Azure SQL Managed Instance supports the following global Trace Flags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316, and 11024
 
 ## Result Sets  
  DBCC TRACEON returns the following result set (message):  

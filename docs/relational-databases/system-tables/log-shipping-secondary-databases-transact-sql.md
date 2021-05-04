@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_secondary_databases (Transact-SQL)"
 title: "log_shipping_secondary_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "log_shipping_secondary_databases_TSQL"
   - "log_shipping_secondary_databases"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_secondary_databases system table"
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_secondary_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stores one record per secondary database in a log shipping configuration. This table is stored in the **msdb** database.  
   

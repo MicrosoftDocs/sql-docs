@@ -1,4 +1,5 @@
 ---
+description: "sp_certify_removable (Transact-SQL)"
 title: "sp_certify_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_certify_removable_TSQL"
   - "sp_certify_removable"
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_certify_removable"
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies that a database is correctly configured for distribution on removable media and reports any problems to the user.  
   
-> **IMPORTANT!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
+> **IMPORTANT!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-transact-sql.md) instead.  
   
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -91,5 +92,4 @@ EXEC sp_certify_removable inventory, AUTO;
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

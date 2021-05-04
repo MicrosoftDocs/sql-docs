@@ -1,5 +1,6 @@
 ---
-title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support | Microsoft Docs"
+title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support"
+description: "Learn how to send and retrieve UTF-8 encoded data using UTF-8 support built in to the drivers for PHP."
 ms.custom: ""
 ms.date: "03/23/2018"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "converting data types"
   - "updating data"
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ To send or retrieve UTF-8 encoded data to the server:
   
 You can pass UTF-8 or SQLSRV_ENC_CHAR to **CharacterSet**, but you cannot pass SQLSRV_ENC_BINARY. The default encoding is SQLSRV_ENC_CHAR.  
   
-## Example  
+## Connection example  
 The following example demonstrates how to send and retrieve UTF-8 encoded data by specifying the UTF-8 character set when making the connection. The example updates the Comments column of the Production.ProductReview table for a specified review ID. The example also retrieves the newly updated data and displays it. Note that the Comments column is of type **nvarchar(3850).** Also note that before data is sent to the server it is converted to UTF-8 encoding using the PHP **utf8_encode** function. This is done for demonstration purposes only. In a real application scenario, you would begin with UTF-8 encoded data.  
   
 The example assumes that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
@@ -119,9 +120,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-For information about storing Unicode data, see [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx).  
+For information about storing Unicode data, see [Working with Unicode Data](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)).  
   
-## Example  
+## Column example  
 The following example is similar to the first sample but instead of specifying the UTF-8 character set on the connection, this sample shows how to specify the UTF-8 character set on the column.  
   
 ```  
@@ -224,4 +225,3 @@ sqlsrv_close( $conn);
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

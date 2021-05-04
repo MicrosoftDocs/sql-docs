@@ -11,14 +11,14 @@ helpviewer_keywords:
   - "SQL Trace, convert script to extended events"
   - "extended events [SQL Server], convert SQL Trace script"
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   If you have an existing SQL Trace script that you want to convert to an Extended Events session, you can use the procedures in this topic to create an equivalent Extended Events session. By using the information in the trace_xe_action_map and trace_xe_event_map system tables, you can collect the information that you must have to do the conversion.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_help_jobs_in_schedule (Transact-SQL)"
 title: "sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_help_jobs_in_schedule_TSQL"
   - "sp_help_jobs_in_schedule"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobs_in_schedule"
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the jobs that a particular schedule is attached to.  
   

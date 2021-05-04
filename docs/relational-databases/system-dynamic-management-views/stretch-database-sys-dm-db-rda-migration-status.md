@@ -1,11 +1,12 @@
 ---
 title: "sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs"
+description: Learn how sys.dm_db_rda_migration_status contains one row for each batch of migrated data from each Stretch-enabled table on the local instance of SQL Server.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_rda_migration_status"
   - "sys.dm_db_rda_migration_status_TSQL"
@@ -20,13 +21,13 @@ author: pmasl
 ms.author: pelopes
 ---
 # Stretch Database - sys.dm_db_rda_migration_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Contains one row for each batch of migrated data from each Stretch-enabled table on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Batches are identified by their start time and end time.  
   
  **sys.dm_db_rda_migration_status** is scoped to the current database context. Make sure you're in the database context of the Stretch-enable tables for which you want to see migration status.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the output of **sys.dm_db_rda_migration_status** is limited to 200 rows.  
+ In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the output of **sys.dm_db_rda_migration_status** is limited to 200 rows.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,5 +1,6 @@
 ---
 title: "SQL_VARIANT in a memory-optimized table"
+description: Use this example to learn how to implement SQL_VARIANT in a memory-optimized table in SQL Server and Azure SQL Database.
 ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing SQL_VARIANT in a Memory-Optimized Table
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Consider an example of a table with **SQL_VARIANT** column:  
   
@@ -118,6 +119,5 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
 ```  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

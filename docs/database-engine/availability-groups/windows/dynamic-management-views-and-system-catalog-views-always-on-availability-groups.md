@@ -5,14 +5,14 @@ ms.custom: "seo-lt-2019"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: troubleshooting
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
 ---
 # Dynamic management views and system catalog views (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic shows you some of the common queries on the Always On dynamic management views (DMV) that you can use to monitor and troubleshoot availability groups.  
   
 > [!TIP]  

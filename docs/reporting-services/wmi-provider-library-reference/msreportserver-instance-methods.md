@@ -1,4 +1,5 @@
 ---
+description: "MSReportServer_Instance Methods"
 title: "MSReportServer_Instance Methods | Microsoft Docs"
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -23,7 +24,7 @@ ms.author: maggies
   
 ## Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Lists URLs users can use to access the report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].|  
   

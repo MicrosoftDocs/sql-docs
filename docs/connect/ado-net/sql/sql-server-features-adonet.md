@@ -1,14 +1,14 @@
 ---
 title: "SQL Server features and ADO.NET"
 description: "Describes SQL Server features that are useful for ADO.NET application developers."
-ms.date: "08/15/2019"
+ms.date: "07/09/2020"
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # SQL Server features and ADO.NET
@@ -17,7 +17,7 @@ ms.reviewer: v-kaywon
 
 The topics in this section discuss features in SQL Server that are targeted at developing database applications using ADO.NET.  
   
-For more information, see [Development (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245) from SQL Server Books Online.
+For more information, see [Development (Database Engine)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100)) from SQL Server Books Online.
   
 ## In this section  
 [Enumerating instances of SQL Server (ADO.NET)](enumerate-instances-sql-server.md)  
@@ -49,6 +49,9 @@ Describes SqlClient support for LocalDB databases.
 
 [SqlClient support for Always Encrypted](sqlclient-support-always-encrypted.md)  
 Describes SqlClient support for the Always Encrypted feature.
+
+[SqlClient support for Data Discovery and Classification](data-classification.md)  
+Describes how to access Data Discovery and Classification information through SqlClient.
 
 ## Next steps
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)

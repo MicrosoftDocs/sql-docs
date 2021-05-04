@@ -1,4 +1,5 @@
 ---
+description: "Create a File Attribute (Master Data Services)"
 title: Create a File Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Create a File Attribute (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a file attribute to populate attribute values with files.
 

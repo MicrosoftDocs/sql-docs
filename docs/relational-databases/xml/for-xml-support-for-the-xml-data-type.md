@@ -1,5 +1,6 @@
 ---
 title: "FOR XML Support for the xml Data Type | Microsoft Docs"
+description: Learn about the use of FOR XML queries on SQL database columns of the xml data type. 
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], XML"
   - "xml data type [SQL Server], FOR XML clause"
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FOR XML Support for the xml Data Type
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   If a FOR XML query specifies a column of **xml** type in the SELECT clause, column values are mapped as elements in the returned XML, regardless of whether you specify the ELEMENTS directive. Any XML declaration in the **xml** type column is not serialized.  
   
  For example, the following query retrieves customer contact information such as the `BusinessEntityID`, `FirstName`, and `LastName` columns, and the telephone numbers from the `AdditionalContactInfo` column of **xml** type.  

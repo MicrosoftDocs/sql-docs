@@ -2,20 +2,23 @@
 title: Generate code for data wrangling tasks
 titleSuffix: Azure Data Studio
 description: This article describes how to use the PROSE Code Accelerator in Azure Data Studio to automatically generate code for common data wrangling tasks.
-author: MikeRayMSFT 
-ms.author: mikeray
+author: dphansen 
+ms.author: davidph
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
 # Data Wrangling using PROSE Code Accelerator
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-PROSE Code Accelerator generates readable Python code for your data wrangling tasks. You can mix the generated code with your hand-written code in a seamless manner while working in a notebook within Azure Data Studio. This article provides an overview of how you can use the Code Accelerator.
+PROSE Code Accelerator generates readable Python code for your data wrangling tasks. 
+You can mix the generated code with your hand-written code while working in a notebook within Azure Data Studio.
+
+This article provides an overview of how you can use the Code Accelerator.
 
  > [!NOTE]
  > Program Synthesis using Examples, aka PROSE, is a Microsoft technology that generates human-readable code using AI. It does so by analyzing a user's intent as well as data, generating several candidate programs, and picking the best program using ranking algorithms. To know more about the PROSE technology, visit the [PROSE homepage](https://microsoft.github.io/prose/).
@@ -32,13 +35,15 @@ In the current release, the Code Accelerator can intelligently generate Python c
 - Fixing data types in a dataframe.
 - Finding regular expressions representing patterns in a list of strings.
 
-To get a general overview of Code Accelerator methods, see the [documentation](https://aka.ms/prose-codeaccelerator-overview).
+To get a general overview of Code Accelerator methods, see the [documentation](/python/api/overview/azure/prose/intro).
 
 ## Reading data from a file to a dataframe
 
-Often, reading files to a dataframe involves looking at the content of the file and determining the correct parameters to pass to a data-loading library. Depending on the complexity of the file, identifying the correct parameters may require several iterations.
+Reading files to a dataframe involves looking at the content of the file and determining the correct parameters to pass to a data-loading library.
 
-PROSE Code Accelerator solves this problem by analyzing the structure of the data file and automatically generating code to load the file. In most cases, the generated code parses the data correctly. In a few cases, you might need to tweak the code to meet your needs.
+Depending on the complexity of the file, identifying the correct parameters may require several iterations.
+
+PROSE Code Accelerator solves this problem by analyzing the structure of the data file and automatically generating code to load the file. Normally, the generated code parses the data correctly. In a few cases, you might need to tweak the code to meet your needs.
 
 Consider the following example:
 
@@ -81,13 +86,13 @@ def read_file(file):
     return df
  ```
 
-Code Accelerator can generate code to load delimited, JSON, and fixed-width files to a dataframe. For reading fixed-width files, the `ReadFwfBuilder` optionally takes a human-readable schema file that it can parse to get the column positions. To learn more, see the [documentation](https://aka.ms/prose-codeaccelerator-docs).
+Code Accelerator can generate code to load delimited, JSON, and fixed-width files to a dataframe. For reading fixed-width files, the `ReadFwfBuilder` optionally takes a human-readable schema file that it can parse to get the column positions. To learn more, see the [documentation](/python/api/overview/azure/prose/intro).
 
 ## Fixing data types in a dataframe
 
-It is common to have a pandas or pyspark dataframe with wrong data types. Often, this happens because of a few non-conforming values in a column. As a result, Integers are read as Float or Strings, and Dates are read as Strings. The effort required to manually fix the data types is proportional to the number of columns.
+It's common to have a pandas or pyspark dataframe with wrong data types. The incorrect datatype happens because of a few non-conforming values in a column. As a result, Integers are read as Float or Strings, and Dates are read as Strings. The effort required to manually fix the data types is proportional to the number of columns.
 
-You can use the `DetectTypesBuilder` in these situations. It analyzes the data, and rather than fixing the data types in a black-box manner, it generates code for fixing the data types. The code serves as a starting point. You can review, use, or modify it as needed.
+You can use the `DetectTypesBuilder` in these situations. It analyzes the data and generates code to fix the data types. The code serves as a starting point. You can review, use, or modify it as needed.
 
 ```python
 import prose.codeaccelerator as cx
@@ -101,15 +106,15 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-To learn more, see the [documentation](https://aka.ms/prose-codeaccelerator-fixtypes).
+To learn more, see the [documentation](/python/api/overview/azure/prose/fixdatatypes).
 
 ## Identifying patterns in Strings
 
-Another common scenario is to detect patterns in a string column for the purpose of cleaning or grouping. For example, you may have a date column with dates in multiple different formats. In order to standardize the values, you might want to write conditional statements using regular expressions.
+p.
 
 
-|   |Name                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|Row|Name                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
@@ -138,4 +143,4 @@ Here are the regular expressions generated by the `FindPatternsBuilder` for the 
 ^Unknown$
 ```
 
-Apart from generating Regular Expressions, `FindPatternsBuilder` can also generate code for clustering the values based on generated regexes. It can also assert that all the values in a column conform to the generated regular expressions. To learn more and see other useful scenarios, see the [documentation](https://aka.ms/prose-codeaccelerator-findpatterns).
+Apart from generating Regular Expressions, `FindPatternsBuilder` can also generate code for clustering the values based on generated regexes. It can also assert that all the values in a column conform to the generated regular expressions. To learn more and see other useful scenarios, see the [documentation](/python/api/overview/azure/prose/findpatterns).

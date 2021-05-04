@@ -1,5 +1,6 @@
 ---
 title: "Executing XPath Queries (SQLXML)"
+description: Learn how to execute an XPath query against a mapping schema using SQLXML Managed Classes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,13 +14,13 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], XPath queries"
   - "SQLXML Managed Classes, executing XPath queries"
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXML Managed Classes)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates how XPath queries are executed against a mapping schema.  
   
  Consider this schema:  

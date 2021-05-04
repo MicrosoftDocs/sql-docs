@@ -1,4 +1,5 @@
 ---
+description: "Developing Specific Types of Script Components"
 title: "Developing Specific Types of Script Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Developing Specific Types of Script Components
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script component is a configurable tool that you can use in the data flow of a package to fill almost any requirement that is not met by the sources, transformations, and destinations that are included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. This section contains Script component code samples that demonstrate the four options for configuring the Script component:  

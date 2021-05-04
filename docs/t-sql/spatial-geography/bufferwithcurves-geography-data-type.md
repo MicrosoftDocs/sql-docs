@@ -1,4 +1,5 @@
 ---
+description: "BufferWithCurves (geography Data Type)"
 title: "BufferWithCurves (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BufferWithCurves"
   - "BufferWithCurves_TSQL"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # BufferWithCurves (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a **geography** instance that represents the set of all points whose distance from the calling **geography** instance is less than or equal to the *distance* parameter.  
   
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .BufferWithCurves ( distance )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *distance*  
  Is a **float** indicating the maximum distance that points forming the buffer can be from the geography instance.  
   

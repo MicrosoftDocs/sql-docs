@@ -1,5 +1,6 @@
 ---
 title: "Example: Constructing Siblings with EXPLICIT Mode | Microsoft Docs"
+description: View an example of an SQL query that uses EXPLICIT mode with the FOR XML clause to construct XML siblings.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EXPLICIT FOR XML mode"
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Constructing Siblings with EXPLICIT Mode
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Assume that you want to construct XML that provides sales order information. Note that <`SalesPerson`> and <`OrderDetail`> elements are siblings. Each Order has one <`OrderHeader`> element, one <`SalesPerson`> element, and one or more <`OrderDetail`> elements.  
   
 ```  

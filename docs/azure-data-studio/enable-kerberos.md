@@ -1,38 +1,40 @@
 ---
-title: Use Active Directory Authentication (Kerberos)
-titleSuffix: Azure Data Studio
-description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
-ms.prod: sql
+title: Connect your SQL Server instance using Windows authentication (Kerberos)
+description: Learn how to connect Azure Data Studio to your SQL Server instance by using Microsoft Kerberos integrated authentication.
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
-ms.topic: conceptual
-author: "meet-bhagdev"
-ms.author: "meetb"
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.topic: how-to
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
 ---
 
-# Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
+# Connect Azure Data Studio to SQL Server using Windows authentication - Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] supports connecting to SQL Server using Kerberos.
+Azure Data Studio supports connecting to SQL Server by using Kerberos.
 
-In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
+To use integrated authentication (Windows Authentication) on macOS or Linux, you need to set up a *Kerberos ticket* that links your current user to a Windows domain account.
 
 ## Prerequisites
 
-- Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be SPNs registered for each instance of Sql Server you are trying to connect to. For more information, see [Registering a Service Principal Name](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
+To get started, you need:
+
+- Access to a Windows domain-joined machine to query your Kerberos domain controller.
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is supported only by using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be service principal names (SPNs) registered for each instance of SQL Server you're trying to connect to. For more information, see [Registering a service principal name](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats).
 
 
-## Checking if Sql Server has Kerberos Setup
+## Check if SQL Server has a Kerberos setup
 
-Login to the host machine of Sql Server. From Windows Command Prompt, use the `setspn -L %COMPUTERNAME%` to list all the Service Principal Names for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com which means that Sql Server has registered an SPN and is ready to accept Kerberos authentication. 
-- If you don't have access to the Host of the Sql Server, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>` where <SQLSERVER_NETBIOS> is the computer name of the host of the Sql Server.
+Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com, which means that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
+
+If you don't have access to the host of the SQL Server instance, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>`, where *<SQLSERVER_NETBIOS>* is the computer name of the host of the SQL Server instance.
 
 
 ## Get the Kerberos Key Distribution Center
 
-Find the Kerberos KDC (Key Distribution Center) configuration value. Run the following command on a Windows computer that is joined to your Active Directory Domain: 
+Find the Kerberos Key Distribution Center (KDC) configuration value. Run the following command on a Windows computer that's joined to your Active Directory domain.
 
 Start `cmd.exe` and run `nltest`.
 
@@ -45,16 +47,16 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-Copy the DC name that is the required KDC configuration value, in this case dc-33.domain.company.com
+Copy the DC name that's the required KDC configuration value. In this case, it's dc-33.domain.company.com.
 
-## Join your OS to the Active Directory Domain Controller
+## Join your OS to the Active Directory domain controller
 
 ### Ubuntu
 ```bash
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
+Edit the `/etc/network/interfaces` file so that your Active Directory domain controller's IP address is listed as dns-nameserver. For example:
 
 ```/etc/network/interfaces
 <...>
@@ -66,7 +68,7 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> The network interface (eth0) might differ for different machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+> The network interface (eth0) might differ for different machines. To find out which one you're using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
 
 After editing this file, restart the network service:
 
@@ -74,7 +76,7 @@ After editing this file, restart the network service:
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-Now check that your `/etc/resolv.conf` file contains a line like the following:  
+Now check that your `/etc/resolv.conf` file contains a line like the following one:
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -91,7 +93,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 sudo yum install realmd krb5-workstation
 ```
 
-Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
+Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your Active Directory domain controller's IP address is listed as a DNS server:
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -105,7 +107,7 @@ After editing this file, restart the network service:
 sudo systemctl restart network
 ```
 
-Now check that your `/etc/resolv.conf` file contains a line like the following:  
+Now check that your `/etc/resolv.conf` file contains a line like the following one:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -120,13 +122,11 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### macOS
 
-- Join your macOS to the Active Directory Domain Controller by following these steps:
-
-
+Join your macOS to the Active Directory domain controller by following these steps.
 
 ## Configure KDC in krb5.conf
 
-Edit the `/etc/krb5.conf` in an editor of your choice. Configure the following keys
+Edit the `/etc/krb5.conf` file in an editor of your choice. Configure the following keys:
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -140,10 +140,10 @@ DOMAIN.COMPANY.COM = {
 }
 ```
 
-Then save the krb5.conf file and exit
+Then save the krb5.conf file and exit.
 
 > [!NOTE]
-> Domain must be in ALL CAPS
+> The domain must be in ALL CAPS.
 
 
 ## Test the Ticket Granting Ticket retrieval
@@ -154,7 +154,7 @@ Get a Ticket Granting Ticket (TGT) from KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-View the available tickets using klist. If the kinit was successful, you should see a ticket. 
+View the available tickets by using klist. If the kinit was successful, you should see a ticket.
 
 ```bash
 klist
@@ -162,12 +162,12 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## Connect using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Connect by using Azure Data Studio
 
-* Create a new connection profile
+1. Create a new connection profile.
 
-* Choose **Windows Authentication** as the authentication type
+1. Select **Windows Authentication** as the authentication type.
 
-* Complete the connection profile, click **Connect**
+1. Complete the connection profile, and select **Connect**.
 
-After successfully connecting, your server appears in the *Servers* sidebar.
+After successfully connecting, your server appears in the **SERVERS** sidebar.

@@ -1,4 +1,5 @@
 ---
+description: "Graph processing with SQL Server and Azure SQL Database"
 title: "Graph processing"
 titleSuffix:  SQL Server and Azure SQL Database
 ms.date: "06/26/2019"
@@ -14,10 +15,10 @@ ms.assetid:
 author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers graph database capabilities to model many-to-many relationships. The graph relationships are integrated into [!INCLUDE[tsql-md](../../includes/tsql-md.md)] and receive the benefits of using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the foundational database management system.
 
@@ -36,7 +37,7 @@ A relational database can achieve anything a graph database can. However, a grap
 -    Your application has complex many-to-many relationships; as application evolves, new relationships are added.
 -    You need to analyze interconnected data and relationships.
 
-## Graph features introduced in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## Graph features introduced in [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 
 We are starting to add graph extensions to SQL Server, to make storing and querying graph data easier. Following features are introduced in the first release. 
 
 
@@ -48,7 +49,7 @@ CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")  
+![Diagram showing the Nodes and Edges are stored as tables.](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")  
 Nodes and Edges are stored as tables  
 
 ### Query language extensions  

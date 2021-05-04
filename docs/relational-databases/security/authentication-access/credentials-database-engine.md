@@ -1,9 +1,10 @@
 ---
 title: "Credentials (Database Engine) | Microsoft Docs"
+description: Learn about credentials in SQL Server. Get acquainted with the authentication information required to connect to a resource outside SQL Server.
 ms.custom: ""
 ms.date: "06/27/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -21,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Credentials (Database Engine)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A credential is a record that contains the authentication information (credentials) required to connect to a resource outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This information is used internally by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Most credentials contain a Windows user name and password.  
   

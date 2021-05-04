@@ -1,4 +1,5 @@
 ---
+description: "Walkthrough: Publish an SSIS Package as a SQL View"
 title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -23,7 +24,7 @@ ms.author: chugu
 ## Prerequisites  
  You must have the following software installed on your computer to perform this walkthrough.  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or later with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
@@ -249,7 +250,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout indicates the number of seconds that the OLE DB provider for SSIS can wait before new data arrives from the SSIS package. By default, the timeout is 60 seconds. You can specify an integer value for the timeout between 20 and 32000.  
   
- Parameters contain the value of both package parameters and project parameters. The rules for parameters are same as parameters in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
+ Parameters contain the value of both package parameters and project parameters. The rules for parameters are same as parameters in [DTExec](../packages/dtexec-utility.md).  
   
  The following list specifies the special characters allowed in the query clause:  
   
@@ -263,6 +264,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## See Also  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configure Data Streaming Destination](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Configure Data Streaming Destination](./data-streaming-destination.md)  
   

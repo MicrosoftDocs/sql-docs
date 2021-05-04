@@ -1,9 +1,10 @@
 ---
-title: "IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs"
+description: "IBCPSession::BCPColFmt (Native Client OLE DB provider)"
+title: "IBCPSession::BCPColFmt (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -13,12 +14,12 @@ apitype: "COM"
 helpviewer_keywords: 
   - "BCPColFmt method"
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# IBCPSession::BCPColFmt (Native Client OLE DB Provider)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Creates a binding between program variables and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columns.  
   
@@ -111,7 +112,7 @@ HRESULT BCPColFmt(
  The method succeeded.  
   
  E_FAIL  
- A provider specific error occurred, for detailed information use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider specific error occurred, for detailed information use the [ISQLServerErrorInfo](isqlservererrorinfo-geterrorinfo-ole-db.md) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) method was not called before calling this method.  
@@ -125,5 +126,4 @@ HRESULT BCPColFmt(
 ## See Also  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
-  
   

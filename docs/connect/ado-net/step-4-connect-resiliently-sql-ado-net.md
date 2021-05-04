@@ -1,6 +1,6 @@
 ---
-title: "Step 4: Connect resiliently to SQL with ADO.NET | Microsoft Docs"
-description: "Describes how to connection resiliently to SQL"
+title: "Step 4: Connect resiliently to SQL with ADO.NET"
+description: "Learn how to use retry logic to improve connection resiliency to a SQL database using ADO.NET."
 ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql
@@ -10,8 +10,8 @@ ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
@@ -35,7 +35,7 @@ The ADO.NET classes for connecting to your local Microsoft SQL Server can also c
   
 Your program must distinguish between transient errors versus persistent errors. Transient errors are error conditions that may clear up within a short period of time, such as transient network problems.  An example of a persistent error would be, if your program has a misspelling of the target database name - in this case, the "No such database found" error would persist, and has no chance of clearing up within a short period of time.  
   
-The list of error numbers that are categorized as transient faults is available at [Error messages for SQL Database client applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+The list of error numbers that are categorized as transient faults is available at [Error messages for SQL Database client applications](/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## Step 2: Create and run sample application  
   
@@ -313,4 +313,4 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
   
 ## Next steps  
   
-To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](/azure/azure-sql/database/develop-overview)

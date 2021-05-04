@@ -1,4 +1,5 @@
 ---
+description: "cursor (Transact-SQL)"
 title: "cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A data type for variables or stored procedure OUTPUT parameters that contain a reference to a cursor.
   

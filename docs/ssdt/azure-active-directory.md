@@ -1,22 +1,22 @@
 ---
 title: Azure Active Directory in SSDT
+description: "Learn about the Azure Active Directory authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure Synapse Analytics."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: jroth
+author: markingmyname
+ms.author: maghan
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 
 # Azure Active Directory support in SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) provides several [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) authentication methods.
+SQL Server Data Tools (SSDT) provides several [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis) authentication methods.
 
 In Visual Studio, open the **SQL Server Object Explorer** (in the **View** menu), and select **Add SQL Server**:
 
@@ -27,7 +27,7 @@ In Visual Studio, open the **SQL Server Object Explorer** (in the **View** menu)
 This article discusses Azure AD for the following list of *Azure SQL products* in the [Azure cloud](https://azure.microsoft.com/):
 
 - Azure SQL Database
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ## Active Directory Password Authentication
 
@@ -36,18 +36,18 @@ This article discusses Azure AD for the following list of *Azure SQL products* i
 - You are logged in to Windows with credentials from a domain that is not federated with Azure, or
 - You are using Azure AD authentication with Azure AD, and it is based on the initial or client domain.
 
-For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication).  
 
 ## Active Directory Integrated Authentication
 
-*Active Directory Integrated Authentication* is a mechanism of connecting to the listed Azure SQL products by using identities in Azure Active Directory (Azure AD). Use this method for connecting if you are logged in to Windows using your Azure Active Directory credentials from a federated domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+*Active Directory Integrated Authentication* is a mechanism of connecting to the listed Azure SQL products by using identities in Azure Active Directory (Azure AD). Use this method for connecting if you are logged in to Windows using your Azure Active Directory credentials from a federated domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication).
 
 ## Active Directory Interactive Authentication
 
-*Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) or a later version.
+*Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) or a later version.
 
 - [Download and install for .NET Framework, any version](https://www.microsoft.com/net/download/all).
-- [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), or a later version.
+- [Visual Studio 2017 version 15.6](/visualstudio/releasenotes/vs2017-relnotes), or a later version.
 
 #### Multi-Factor Authentication (MFA)
 
@@ -75,15 +75,14 @@ The MFA enforcement is provided by Azure AD through this additional MFA pop-up w
 - *Active Directory Interactive Authentication* is only supported when connecting to the Azure SQL products that were listed at the start of this article. It is not supported for SQL Server (on-prem or on a VM).
 - *Active Directory Interactive Authentication* is not supported in the connection dialog in *Server Explorer*. You must connect by using SSDT with *SQL Server Object Explorer*.
 - Single sign-on integration with the currently logged in Visual Studio account is not supported for SSDT.
-- The SQLPackage.exe that is installed into the Extensions directory during Visual Studio installation is not meant to be used from that location. To use SQLPackage.exe with Azure AD, go to [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
+- The SQLPackage.exe that is installed into the Extensions directory during Visual Studio installation is not meant to be used from that location. To use SQLPackage.exe with Azure AD, go to [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=55088) 
 - SSDT Data Compare is not supported for Azure AD authentication.  
 
 
 ## See Also  
 
-[Multi-factor authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[Azure Active Directory authentication with SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[Multi-factor authentication](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[Azure Active Directory authentication with SQL Database](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)  
-[DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
-[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[SSDT Team Blog](/archive/blogs/ssdt/)  
+[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

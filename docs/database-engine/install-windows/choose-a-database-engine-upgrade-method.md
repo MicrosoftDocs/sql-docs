@@ -1,5 +1,6 @@
 ---
 title: "Choose a database engine upgrade method | Microsoft Docs"
+description: This article describes upgrade paths for the Database Engine in SQL Server, including upgrade in-place, migrate to a new installation, and a rolling upgrade.
 ms.custom: ""
 ms.date: "07/19/2017"
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Choose a database engine upgrade method
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 There are several approaches to consider when you are planning to upgrade the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from a prior release of SQL Server in order to minimize downtime and risk. You can perform an upgrade in-place, migrate to a new installation, or perform a rolling upgrade. The following diagram will help you to choose amongst these approaches. Each of the approaches in the diagram are also discussed below. To assist you with the decision points in the diagram, please also review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
@@ -26,12 +27,12 @@ There are several approaches to consider when you are planning to upgrade the [!
   
 > [!NOTE]  
 >  You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These articles are out of scope for this article, but here are some links:
->   - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
->   - [Selecting a SQL Server option in Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
+>   - [Selecting a SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).  
   
 ## Upgrade in-place  
- With this approach, the SQL Server setup program upgrades the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation by replacing the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bits with the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bits and then upgrades each of the system and user databases.  The upgrade in-place  approach is easiest, requires some amount of downtime, takes longer to fallback if a fallback is necessary, and it is not supported for all scenarios. For more information on supported and unsupported upgrade in-place scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
+ With this approach, the SQL Server setup program upgrades the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation by replacing the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bits with the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bits and then upgrades each of the system and user databases.  The upgrade in-place  approach is easiest, requires some amount of downtime, takes longer to fallback if a fallback is necessary, and it is not supported for all scenarios. For more information on supported and unsupported upgrade in-place scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md).  
   
  This approach is frequently used in the following scenarios:  
   
@@ -74,15 +75,15 @@ There are several approaches to consider when you are planning to upgrade the [!
  After migrating the user database(s), you point new users to the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using one of a variety of methods (e.g. renaming the  server, using a DNS entry, modifying connection strings).  The new installation  approach reduces risk and downtime as compared to an in-place upgrade , and facilitates hardware and operating system upgrades in conjunction with the upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  If you already have a high availability (HA) solution in place or some other multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance environment, go [Rolling upgrade](#rolling-upgrade). If you do not have a high availability solution in place, you can consider either temporarily configuring [Database Mirroring](../database-mirroring/setting-up-database-mirroring-sql-server.md) to further minimize downtime to facilitate this upgrade or taking this opportunity to configure an [Always On Availability Group](https://msdn.microsoft.com/library/hh510260.aspx) as a   permanent HA solution.  
+>  If you already have a high availability (HA) solution in place or some other multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance environment, go [Rolling upgrade](#rolling-upgrade). If you do not have a high availability solution in place, you can consider either temporarily configuring [Database Mirroring](../database-mirroring/setting-up-database-mirroring-sql-server.md) to further minimize downtime to facilitate this upgrade or taking this opportunity to configure an [Always On Availability Group](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) as a   permanent HA solution.  
   
  For example, you may use this approach to upgrade:  
   
 -   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an unsupported operating system.    
--   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support x86 installations.   
+-   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support x86 installations.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to new hardware and/or a new version of the operating system.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with server consolidation.   
--   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+-   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 The steps required for a new installation upgrade vary slightly depending upon whether you are using attached storage or SAN storage.  
@@ -107,4 +108,4 @@ The steps required for a new installation upgrade vary slightly depending upon w
   
 ## Next steps
  [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [Complete the Database Engine Upgrade](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [Complete the Database Engine Upgrade](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

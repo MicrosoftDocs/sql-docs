@@ -4,13 +4,13 @@ description: This tutorial shows you how to use SQL Server Language Extensions a
 author: dphansen
 ms.author: davidph 
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Tutorial: Search for a string using regular expressions (regex) in Java
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) to create a Java class that receives two columns (ID and text) from SQL Server and a regular expression (regex) as an input parameter. The class returns two columns back to SQL Server (ID and text).
 
@@ -20,7 +20,7 @@ This sample code uses a regular expression that checks if a text contains the wo
 
 ## Prerequisites
 
-+ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/install-sql-server-language-extensions-on-windows.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
++ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/windows-java.md) or [on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio or Azure Data Studio for executing T-SQL.
 
@@ -211,11 +211,11 @@ GO
 
 To execute Java code, a user needs to be granted external script execution on that specific language.
 
-For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+For more information, see [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## Create external libraries
 
-Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) to create an external library for your `.jar` files. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
+Use [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) to create an external library for your `.jar` files. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
@@ -250,7 +250,7 @@ In this sample, you will create two external libraries. One for the SDK and one 
 > [!NOTE]
 > Skip this step, if you use external libraries in the previous step. The recommended way is to create an external library from your `.jar` file.
 
-If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/install-sql-server-language-extensions-on-windows.md).
+If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/windows-java.md).
 
 ### On Linux
 

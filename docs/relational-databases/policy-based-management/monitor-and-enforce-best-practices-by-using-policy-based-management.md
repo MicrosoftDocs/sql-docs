@@ -15,20 +15,20 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Monitor and Enforce Best Practices by Using Policy-Based Management
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Policy-Based Management allows you to monitor best practices for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of policy files you can import as best practice policies, and then evaluate the policies against a target set that includes instances, instance objects, databases, or database objects. Evaluate policies manually, set policies to evaluate a target set according to a schedule, or set policies to evaluate a target set according to an event. For more information about Policy-Based Management, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Policy-Based Management allows you to monitor best practices for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  Evaluate policies manually, set policies to evaluate a target set according to a schedule, or set policies to evaluate a target set according to an event. For more information about Policy-Based Management, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  A set of [sample policy files](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) is available that you can import as best practice policies, and then evaluate the policies against a target set that includes instances, instance objects, databases, or database objects.
   
 ## Policy and Rules for Database Engine  
- The following table lists the policies included with the installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and information about the best practices rules each policy evaluates. The policies are stored as XML files and must be imported into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to import policies, see [Import a Policy-Based Management Policy](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+ The following table lists the policies included in the set of [sample policies](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) and information about the best practices rules each policy evaluates. The policies are stored as XML files and must be imported into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to import policies, see [Import a Policy-Based Management Policy](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Policy name|Best practice rule|  
 |-----------------|------------------------|  
 |Asymmetric Key Encryption Algorithm|[Asymmetric Keys Encryption Strength](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Backup and Data File Location|[Backup Files Must Be on Separate Devices from the Database Files](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Backup and Data File Location|[Backup Files Must Be on Separate Devices from the Database Files](../backup-restore/backup-devices-sql-server.md)|  
 |Data and Log File Location|[Place Data and Log Files on Separate Drives](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Database Auto Close|[Set the AUTO_CLOSE Database Option to OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Database Auto Shrink|[Set the AUTO_SHRINK Database Option to OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Database Collation|[Set the Collation of User-defined Databases to Match Those of the master and model Databases](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Database Collation|[Set the Collation of User-defined Databases to Match Those of the master and model Databases](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |Database Page Verification|[Set the PAGE_VERIFY Database Option to CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Database Page Status|[Check Integrity of Database with Suspect Pages](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Guest Permissions|[Guest Permissions on User Databases](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -64,5 +64,4 @@ ms.author: vanto
   
 ## See Also  
  [Working with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

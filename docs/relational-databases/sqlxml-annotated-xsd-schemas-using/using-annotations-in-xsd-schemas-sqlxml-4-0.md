@@ -1,5 +1,6 @@
 ---
 title: "Using Annotations in XSD Schemas (SQLXML)"
+description: Learn how to use the annotations supported by the XSD schema language in SQLXML 4.0 to specify XML-to-relational mapping within an XSD schema.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,14 +14,14 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "mapping schema [SQLXML], scenarios for using"
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotations in XSD Schemas (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports annotations in a manner similar to the annotations introduced in the XML-Data Reduced (XDR) schema language. There are additional annotations introduced in XSD that are not supported in XDR.  
   
  These annotations can be used within the XSD schema to specify XML-to-relational mapping. This includes mapping between elements and attributes in the XSD schema to tables (views) and columns in the databases.  

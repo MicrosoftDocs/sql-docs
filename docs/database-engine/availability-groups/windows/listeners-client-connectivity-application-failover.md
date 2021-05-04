@@ -1,12 +1,12 @@
 ---
 title: "Connect to an availability group listener"
-description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use SSL, and Kerberos." 
-ms.custom: "seodec18"
+description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use TLS/SSL, and Kerberos." 
+ms.custom: contperf-fy21q1
 ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Connect to an Always On availability group listener 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   
 Once you've [configured your availability group listener](create-or-configure-an-availability-group-listener-sql-server.md), you'll need to update your connection string to connect to the Always On availability group listener. This will route traffic from your application automatically to the intended replica without having to manually update the connection string after every failover. 
   
@@ -62,7 +62,7 @@ Connections are automatically routed to the read-only replica if the following a
  
 -   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are [configured to support read-only routing](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+-   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
 
 -   The connection string references an availability group listener, and the application intent of the incoming connection is set to read-only (for example, by using the **Application Intent=ReadOnly** keyword in the ODBC or OLEDB connection strings or connection attributes or properties). 
 
@@ -115,7 +115,7 @@ Alternatively, while migrating from database mirroring to [!INCLUDE[ssHADR](../.
 > [!NOTE]  
 >  We recommend this setting for both single and multi-subnet connections to availability groups listeners and to SQL Server Failover Cluster Instance names.  Enabling this option adds additional optimizations, even for single-subnet scenarios.  
   
- The **MultiSubnetFailover** connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ The **MultiSubnetFailover** connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  An example of the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
   
@@ -125,27 +125,63 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  The **MultiSubnetFailover** connection option should be set to **True** even if the availability group only spans a single subnet.  This allows you to preconfigure new clients to support future spanning of subnets without any need for future client connection string changes and also optimizes failover performance for single subnet failovers.  While the **MultiSubnetFailover** connection option is not required, it does provide the benefit of a faster subnet failover.  This is because the client driver will attempt to open up a TCP socket for each IP address in parallel associated with the availability group.  The client driver will wait for the first IP to respond with success and once it does, will then use it for the connection.  
   
-##  <a name="SSLcertificates"></a> Listeners & SSL certificates  
+##  <a name="SSLcertificates"></a> Listeners & TLS/SSL certificates  
 
- When connecting to an availability group listener, if the participating instances of SQL Server use SSL certificates in conjunction with session encryption, the connecting client driver will need to support the Subject Alternate Name in the SSL certificate in order to force encryption.  SQL Server driver support for certificate Subject Alternative Name is planned for ADO.NET (SqlClient), Microsoft JDBC, and SQL Native Client (SNAC).  
+When connecting to an availability group listener, if the participating instances of SQL Server use TLS/SSL certificates in conjunction with session encryption, the connecting client driver will need to support the Subject Alternate Name in the TLS/SSL certificate in order to force encryption.  SQL Server driver support for certificate Subject Alternative Name is planned for ADO.NET (SqlClient), Microsoft JDBC, and SQL Native Client (SNAC).  
   
- An X.509 certificate must be configured for each participating server node in the failover cluster with a list of all availability group listeners set in the Subject Alternate Name of the certificate.  
-  
- For example, if the WSFC has three availability group listeners with the names `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`, and `AG3_listener.Adventure-Works.com`, the Subject Alternative Name for the certificate should be set as follows:  
-  
+An X.509 certificate must be configured for each participating server node in the failover cluster with a list of all availability group listeners set in the Subject Alternate Name of the certificate. 
+
+The format for the certificate values is: 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+For example, you have the following values: 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+For a WSFC that has a single availability group, the certificate should have the fully qualified domain name (FQDN) of the server, and the FQDN of the listener: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+With this configuration, your connections will be encrypted when connecting to the instance (`WIN2019\SQL2019`), or the the listener (`Listener2019`). 
+
+Depending on how networking is configured, there is a small subset of customers that may need to add the NetBIOS to the SAN as well. In which case, the certificate values should be: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+If the WSFC has three availability group listeners, such as: Listener1, Listener2, Listener3
+
+Then the certificate values should be: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="SPNs"></a> Listeners and Kerberos (SPNs) 
 
 A domain administrator must configure a Service Principal Name (SPN) in Active Directory for each availability group listener to enable Kerberos for client connections to the listener. When registering the SPN, you must use the service account of the server instance that hosts the availability replica. For the SPN to work across all replicas, the same service account must be used for all instances in the WSFC cluster that hosts the availability group.  
   
- Use the **setspn** Windows command line tool to configure the SPN.  For example to configure an SPN for an availability group named `AG1listener.Adventure-Works.com` hosted on a set of instances of SQL Server all configured to run under the domain account `corp/svclogin2`:  
+ Use the **setspn** Windows command line tool to configure the SPN.  For example to configure an SPN for an availability group named `AG1listener.Adventure-Works.com` hosted on a set of instances of SQL Server all configured to run under the domain account `corp\svclogin2`:  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  For more information about manual registration of a SPN for SQL Server, see [Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
@@ -156,4 +192,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 
 Once you've successfully connected to the listener, consider offloading [read-only workloads](overview-of-always-on-availability-groups-sql-server.md) and [backups](configure-backup-on-availability-replicas-sql-server.md) to the secondary replica to improve performance. You can also review various [availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md) to ensure the health of your availability group. 
 
-For more information about availability groups, see the  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+For more information about availability groups, see the  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

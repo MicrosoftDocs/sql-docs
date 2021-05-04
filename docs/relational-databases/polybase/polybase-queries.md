@@ -17,11 +17,11 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # PolyBase query scenarios
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article provides examples of queries using the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server (starting with 2016). Before using these examples, you must first install and configure PolyBase. For more information, see the [PolyBase overview](polybase-guide.md).
   

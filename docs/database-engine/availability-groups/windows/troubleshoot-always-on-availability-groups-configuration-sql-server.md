@@ -249,7 +249,12 @@ ms.author: chadam
     ```
 
     - Does the name resolve to the correct IP address? Does the IP address resolve to the correct name?
-    - Check for local HOSTS file entries
+    - Check for local HOSTS file entries on each node that may be pointing to an incorrect server. From Command Prompt print the HOSTS file using this:
+
+    ```DOS
+    type C:\WINDOWS\system32\drivers\etc\hosts
+    ```
+
     - Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas 
   
 7. Ensure your SQL Server is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2).

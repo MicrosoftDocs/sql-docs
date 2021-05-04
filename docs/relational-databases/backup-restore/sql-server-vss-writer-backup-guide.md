@@ -726,6 +726,7 @@ If the server instance is the default instance on the machine, the logical path 
 
     
 ## See Also  
+ [SQL Server Back up Applications - SQL Writer logging](sql-server-vss-writer-logging.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

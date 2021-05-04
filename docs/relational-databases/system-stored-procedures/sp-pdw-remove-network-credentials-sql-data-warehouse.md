@@ -6,7 +6,6 @@ ms.date: "03/14/2017"
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

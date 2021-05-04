@@ -15,9 +15,9 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## Sample application using Azure Key Vault feature
+## Sample application using Azure Key Vault
 
-This application is runnable using JDBC Driver 6.2.2 and 6.4.0, Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+This application is runnable using JDBC Driver 6.2.2 and 6.4.0, Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described in the [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;

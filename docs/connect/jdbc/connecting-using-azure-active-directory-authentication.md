@@ -178,8 +178,8 @@ JDK comes with `kinit`, which you can use to get a TGT from Key Distribution Cen
   - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
-> [!NOTE]
-> You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
+  > [!NOTE]
+  > You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
 
 #### Linux and macOS
 
@@ -220,8 +220,8 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
 
   Then save the krb5.conf file and exit
 
-> [!NOTE]
-> Domain must be in ALL CAPS.
+  > [!NOTE]
+  > Domain must be in ALL CAPS.
 
 ##### Step 3: Testing the ticket granting ticket retrieval
 

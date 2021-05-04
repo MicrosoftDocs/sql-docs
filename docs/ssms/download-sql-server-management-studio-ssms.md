@@ -23,7 +23,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 4/20/2021
+ms.date: 4/20/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -38,8 +38,7 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.9.1](https://aka.ms/ssmsfullsetup)**
 
-
-SSMS 18.9.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9.1 upgrades it to 18.9.1.
+SSMS 18.9.1 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9.1 upgrades it to 18.9.1.
 
 - Release number: 18.9.1
 - Build number: 15.0.18384.0
@@ -69,7 +68,7 @@ SQL Server Management Studio 18.9.1:
 
 ## What's new
 
-For details and more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
+For details and more information about what's new in this release, see [Release notes for SQL Server Management Studio](release-notes-ssms.md).
 
 There are a few [known issues](release-notes-ssms.md#known-issues-1891) with this release.
 

@@ -1,6 +1,6 @@
 ---
-title: "Feature dependencies of the Microsoft JDBC Driver"
-description: "Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them."
+title: Feature dependencies
+description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
 ms.custom: ""
 ms.date: "04/29/2021"
 ms.prod: sql
@@ -127,9 +127,9 @@ If you're using Maven to build or test your project, Maven will automatically do
 
 ## Dependency requirements for the JDBC driver
 
-### Working with the Azure Key Vault provider:
+### Working with the Azure Key Vault provider
 
-- JDBC driver version 9.2.1 - Dependency versions: Azure-keyvault(version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
+- JDBC driver version 9.2.1 - Dependency versions: Azure-security-keyvault-keys (version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 8.4.1 - Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 8.2.2 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
@@ -144,7 +144,7 @@ If you're using Maven to build or test your project, Maven will automatically do
 >
 > This problem is resolved with latest driver version(s) (7.0.0 onwards). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
 
-### Working with Azure Active Directory authentication:
+### Working with Azure Active Directory authentication
 
 - JDBC driver version 9.2.1 - Dependency versions: Azure-identity(version 1.1.3), and their dependencies.
 - JDBC Driver version 8.4.1 - Dependency versions: Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies.
@@ -163,7 +163,6 @@ For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by defaul
 From driver version 8.2.2 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. For example, 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
 In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Azure Active Directory Authentication Library (**ADAL.DLL**) also needs to be installed for Active Directory Integrated authentication. ADAL can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
-
 
 You can get a [sample application](connecting-using-azure-active-directory-authentication.md) that uses this feature.
 

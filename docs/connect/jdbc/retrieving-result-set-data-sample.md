@@ -1,8 +1,8 @@
 ---
-title: "Retrieving result set data sample"
-description: "Learn how to retrieve a set of data from a SQL database and display that information in a Java application."
+title: Retrieving result set data sample
+description: Learn how to retrieve a set of data from a SQL database and display that information in a Java application.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

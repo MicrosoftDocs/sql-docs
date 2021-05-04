@@ -17,7 +17,7 @@ ms.date: 03/19/2021
 
 In this guide, you learn how to migrate your Oracle databases to SQL Server by using SQL Server Migration Assistant for Oracle (SSMA for Oracle). 
 
-For other migration guides, see [Azure Database Migration Guides](https://docs.microsoft.com/data-migration). 
+For other migration guides, see [Azure Database Migration Guides](/data-migration). 
 
 ## Prerequisites 
 
@@ -192,7 +192,7 @@ To publish your schema and migrate the database, do the following:
 
 
 In addition to using SSMA, you can use SQL Server Integration Services (SSIS) to migrate the data. To learn more, see: 
-- [Get started with SQL Server Integration Services](https://docs.microsoft.com//sql/integration-services/sql-server-integration-services) (article)
+- [Get started with SQL Server Integration Services](/sql/integration-services/sql-server-integration-services) (article)
 - [SQL Server Integration Services: SSIS for Azure and Hybrid Data Movement](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx) (technical white paper)
 
 ## Post-migration 

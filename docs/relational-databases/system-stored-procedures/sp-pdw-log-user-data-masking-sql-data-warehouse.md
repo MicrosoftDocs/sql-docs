@@ -3,7 +3,8 @@ description: "sp_pdw_log_user_data_masking (Azure Synapse Analytics)"
 title: "sp_pdw_log_user_data_masking (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 

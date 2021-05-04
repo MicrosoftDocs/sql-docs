@@ -134,26 +134,26 @@ This event leads to a more sizeable set of entries.
 In order of appearance, we can see the following information is logged :
 
 - A full “OnIdentify” section, which as already indicated often leads a backup.
-- Mention of every main VSS phases of backup, with pattern “Entering SQL Writer xxxx”.
+- Mention of every main VSS phase of backup, with pattern “Entering SQL Writer xxxx”.
   -  First one here being ‘Entering SQL Writer OnPrepareBackup.
 - A very conspicuous entry indicating the start of a VSS SQL Backup 
-  - (id being the threadId that is doing the logging for that backup attempt in SQLWriter)
+  - (ID being the threadId that is doing the logging for that backup attempt in SQLWriter)
 - The VSS backup API selected by the VSS requestor, “component” or “non-component / Volume”
 - The count of Databases included in the component-list sent by VSS requestor, here a single DB (1).
 - A confirmation that each Requestor-provided database name (here ‘db_on_G’) is found (or not found) on the [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] instance it’s been associated with by the VSS requestor (here default instance ‘GF19’).
 - The Flavor of VSS backup requested. Usually VSS_BT_FULL or VSS_BT_COPY. See the VSS_BACKUP_TYPE enum. 
 - Another OnIdentify section
-- A block reporting main phases of VSS Backup (Freeze, Thaw, etc)
+- A block reporting main phases of VSS Backup (Freeze, Thaw, .)
 - A final OnIdentify Section.
-- A final VSS phase report which names makes it a useful “closing event” : OnBackupComplete.
+- A final VSS phase report, which names makes it a useful “closing event”: OnBackupComplete.
 
 These entries provide details on the VSS operations that were previously very difficult to establish on the fly and required advanced tracing to do so, most notably the "Component" vs "non-Component" mode of any backup request. With [!INCLUDE[ssql19-md](../../includes/sssql19-md.md)] SQL Writer, they are logged for every single VSS request by default and are easily accessible.
 
 
 
-### Failure Situation : torn database
+### Failure Situation: torn database
 
-In order to illustrate the earlier statement that SQL Writer logging complements original EventLog architecture, let’s look at the entries associated to a well-known failure situation : a Torn Database. This can occur when a volume-based VSS backup attempts to snapshot a drive where only a subset of Database Files are present (as opposed to making sure all drives supporting the Databases Files are included to the snapshot set). SQL Writer will block this as per VSS conventions.
+In order to illustrate the earlier statement that SQL Writer logging complements original EventLog architecture, let’s look at the entries associated to a well-known failure situation: a Torn Database. This can occur when a volume-based VSS backup attempts to snapshot a drive where only a subset of Database Files is present (as opposed to making sure all drives supporting the Databases Files are included to the snapshot set). SQL Writer will block this as per VSS conventions.
 
 This is the content of **SqlWriterLogger.txt** for the operation :
 
@@ -197,7 +197,7 @@ Sqllib error: Database db_on_G_and_H of SQL Server instance GF19  is stored on m
 ```
 The event provides a full user-friendly formatted message explaining the situation.
 
-The OS VSS framework will also report the issue in Event Logs, using its own nomenclature (VSS manages ‘components’ which in context of SQL Server are ‘databases’).
+The OS VSS framework will also report the issue in Event Logs, using its own nomenclature (VSS manages ‘components’, which in context of SQL Server are ‘databases’).
 
 ``` txt
 Log Name:      Application
@@ -235,7 +235,7 @@ Event Log is therefore the better source of information on the error itself here
 SQL Writer logging can be configured by editing the SqlWriterConfig.INI text file. The file itself contains a quick inline description of the available parameters which we’ll review below.
 
 > [!IMPORTANT]
-> The .ini file is under a Windows-Protected folder (Program Files). As such it requires elevated administrator privileges to edit. A double-click in explorer will open Notepad without elevation : this will allow to read the content, but attempts to save any change will fail.   
+> The .ini file is under a Windows-Protected folder (Program Files). As such it requires elevated administrator privileges to edit. A double-click in explorer will open Notepad without elevation: this will allow to read the content, but attempts to save any change will fail.   
 Either start Notepad as administrator and then open SqlWriterConfig.INI, or use a text editor which is able to prompt for elevation as needed at ‘save file’ time.
 
 Duplicating the SqlWriterConfig.ini file comments here :
@@ -244,7 +244,7 @@ Duplicating the SqlWriterConfig.ini file comments here :
 ; EnableLogging = TRUE | FALSE(true is the default behavior)
 ; TraceFile = C:\Program Files\Microsoft SQL Server\90\Shared\SqlWriterLog.txt // default location for the trace file is the SQLWriter.exe folder)
 ; TraceLevel = DEFAULT | MINIMAL | VERBOSE // DEFAULT is the initial value
-; TraceFileSizeMb = Default size is 1 MB. Once the log is full it will be written to old_TraceFile. Any pre existing old_TraceFile will be over written.
+; TraceFileSizeMb = Default size is 1MB. Once the log is full it will be written to old_TraceFile. Any pre existing old_TraceFile will be over written.
 ; ForceFlush = TRUE | FALSE(FALSE is the default value, force flush is used when a crash is expected and the log will flush for each write)
 ```
 
@@ -265,11 +265,11 @@ SQL Writer will report active parameters in its log file upon (re)start, as can 
 
 ## TraceLevel details
 
-The INI files lists the following level : DEFAULT | MINIMAL | VERBOSE.
+The INI file lists the following level: DEFAULT | MINIMAL | VERBOSE.
 
-- **Default** : The default verbosity parameters should be adequate for most needs : refer to the ‘Review of typical logging entries’ section to observe what is already generated by default. On top of any error, successful VSS calls along with key VSS metadata will be logged by default.
-- **Minimal** : This level will retain the formatting of Default mode, as well as all its events. In addition, it will also generate output in many key places of the code. Most notably it will log all the files and database iterations that are commonplace in the SQLWriter logic. This can increase the number of entries logged for each VSS operation (including mundane OnIdentify event) by a very large margin, especially on instances hosting a large number of databases, as every single file of every single Database may be reported more than once over the course of a VSS backup. This level only helps to give a more precise idea of the logical position of SQL Writer logic at the time of a failure or for exploration purposes. As such it’s usually not useful to keep it active beyond momentary investigations. Note that keeping it active for long duration will greatly reduce the history depth of the default 1 MB file size as each operation will generate at least 5 times as many entries : increasing the TraceFileSizeMb value may be relevant.
-- **Verbose** : Currently this level reports the very same events as Minimal, but prefixes each entry with source code object and methods descriptors. This makes the output wider (and therefore even larger in size than Minimal) and less readable. The added information would not be very useful outside of interactions with Microsoft Support Services. The same comment as minimal would apply : keeping this level active for long duration will greatly reduce the history depth of the default 1 MB file size as each operation will generate at least 5 times as many entries, and wider entries : increasing the TraceFileSizeMb value may be relevant.
+- **Default**: The default verbosity parameters should be adequate for most needs: refer to the ‘Review of typical logging entries’ section to observe what is already generated by default. On top of any error, successful VSS calls along with key VSS metadata will be logged by default.
+- **Minimal**: This level will retain the formatting of Default mode, as well as all its events. In addition, it will also generate output in many key places of the code. Most notably it will log all the files and database iterations that are commonplace in the SQLWriter logic. This can increase the number of entries logged for each VSS operation (including mundane OnIdentify event) by a very large margin, especially on instances hosting a large number of databases, as every single file of every single Database may be reported more than once over the course of a VSS backup. This level only helps to give a more precise idea of the logical position of SQL Writer logic at the time of a failure or for exploration purposes. As such it’s usually not useful to keep it active beyond momentary investigations. Note that keeping it active for long duration will greatly reduce the history depth of the default 1MB file size as each operation will generate at least five times as many entries: increasing the TraceFileSizeMb value may be relevant.
+- **Verbose**: Currently this level reports the very same events as Minimal, but prefixes each entry with source code object and methods descriptors. This makes the output wider (and therefore even larger in size than Minimal) and less readable. The added information would not be very useful outside of interactions with Microsoft Support Services. The same comment as minimal would apply: keeping this level active for long duration will greatly reduce the history depth of the default 1 MB file size as each operation will generate at least five times as many entries, and wider entries: increasing the TraceFileSizeMb value may be relevant.
 
 > [!NOTE]
 > **Minimal** (and **Verbose**) level will *not* provide additional error details in case of failure, only additional *progress details* for each low level operation related to SQL Writer activities.

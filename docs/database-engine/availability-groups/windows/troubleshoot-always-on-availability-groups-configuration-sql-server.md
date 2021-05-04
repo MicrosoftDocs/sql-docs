@@ -115,7 +115,10 @@ ms.author: chadam
  This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command.  
   
 ##  <a name="JoinDbFails"></a> Join Database Fails (SQL Server Error 35250)  
- This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active.  
+ This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active. This is the full error message:
+
+`Msg 35250 The connection to the primary replica is not active.  The command cannot be processed.`
+
   
  **Resolution:**  
   
@@ -150,9 +153,9 @@ ms.author: chadam
 2. Check if you can connect to the endpoint
     - Use Telnet to validate connectivity. Here are examples of commands you can use:
 
-    ```sql
-    Telnet ServerName Port
-    Telnet IP_Address Port
+    ```DOS
+    telnet ServerName Port
+    telnet IP_Address Port
     ```
 
     - If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
@@ -193,8 +196,8 @@ ms.author: chadam
 
     `DNS Lookup failed with error '11001(No such host is known)' `
 
-4. Ensure the endpoint is configured for the correct IP/port that AG is defined for. 
-    - Run the following query from on the Primary and then each  Secondary replica t hat is not connecting to find the endpoint URL and port
+4. Ensure the endpoint is configured for the correct IP/port that AG is defined for.
+    - Run the following query on the Primary and then each Secondary replica that is failing to connect. This will help you find the endpoint URL and port
 
     ```sql 
     select endpoint_ur l from sys.availability_replicas
@@ -243,13 +246,18 @@ ms.author: chadam
 6. Check for possible name resolution issues
     - Validate DNS resolution by using NSLookup on the IP address and the name:
 
-    ```dos
+    ```DOS
     nslookup IP_Address
     nslookup ServerName
     ```
 
     - Does the name resolve to the correct IP address? Does the IP address resolve to the correct name?
-    - Check for local HOSTS file entries
+    - Check for local HOSTS file entries on each node that may be pointing to an incorrect server. From Command Prompt print the HOSTS file using this:
+
+    ```DOS
+    type C:\WINDOWS\system32\drivers\etc\hosts
+    ```
+
     - Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas 
   
 7. Ensure your SQL Server is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2).

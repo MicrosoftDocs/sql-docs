@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 4/16/2021
+ms.date: 04/16/2021
 ---
 
 # Download and install Azure Data Studio
@@ -29,6 +29,9 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 > Azure Data Studio currently does not support ARM64 architecture.
 
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
+
+> [!Note]
+> Azure Data Studio currently does not support the ARM architecture.
 
 ## Get Azure Data Studio for Windows
 

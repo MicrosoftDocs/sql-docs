@@ -1,5 +1,5 @@
 ---
-title: Download Microsoft JDBC Driver for SQL Server
+title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
 ms.date: 03/02/2021
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Step 3: Connecting to SQL using Java
+title: "Step 3: Connecting to SQL using Java"
 description: Step 3 is a proof of concept, which shows how you can connect to SQL Server using Java and JDBC. The basic examples demonstrate selecting and inserting data.
 ms.custom: ""
 ms.date: 08/12/2019

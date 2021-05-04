@@ -1,6 +1,6 @@
 ---
 title: Finding additional information
-description: For more information about the Microsoft JDBC Driver for SQL Server and SQL development in general, see these additional resources.
+description: For more information about the Microsoft JDBC Driver for SQL Server and SQL development in general, see these other resources.
 ms.custom: ""
 ms.date: 08/12/2019
 ms.prod: sql

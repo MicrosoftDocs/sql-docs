@@ -1,6 +1,6 @@
 ---
 title: Support for High Availability, disaster recovery
-description: This topic discusses Microsoft JDBC Driver for SQL Server support for high-availability, disaster recovery (AlwaysOn Availability Groups).
+description: This article discusses Microsoft JDBC Driver for SQL Server support for high-availability, disaster recovery (AlwaysOn Availability Groups).
 ms.custom: ""
 ms.date: 07/13/2020
 ms.prod: sql
@@ -17,7 +17,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  This topic discusses [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] support for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Books Online.
+  This article discusses [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] support for high-availability, disaster recovery: [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Books Online.
 
  Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you can specify the availability group listener of a (high-availability, disaster-recovery) availability group (AG) in the connection property. If a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] application is connected to an AlwaysOn database that fails over, the original connection is broken, and the application must open a new connection to continue work after the failover. The following [connection properties](setting-the-connection-properties.md) were added in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:
 
@@ -25,11 +25,11 @@ ms.author: v-daenge
 
 - **applicationIntent**
 
-Specify multiSubnetFailover=true when connecting to the availability group listener of an availability group or a Failover Cluster Instance. Note that **multiSubnetFailover** is false by default. Use **applicationIntent** to declare the application workload type. See sections below for more details.
+Specify multiSubnetFailover=true when connecting to the availability group listener of an availability group or a Failover Cluster Instance. Note: **multiSubnetFailover** is false by default. Use **applicationIntent** to declare the application workload type. For more details, see the sections below.
 
 Beginning in version 6.0 of the Microsoft JDBC Driver for SQL Server, a new connection property **transparentNetworkIPResolution** (TNIR) is added for transparent connection to Always On availability groups or to a server that has multiple IP addresses associated. When **transparentNetworkIPResolution** is true, the driver attempts to connect to the first IP address available. If the first attempt fails, the driver tries to connect to all IP addresses in parallel until the timeout expires, discarding any pending connection attempts when one of them succeeds.
 
-Note that:
+Note:
 
 - transparentNetworkIPResolution is true by default
 - transparentNetworkIPResolution is ignored if multiSubnetFailover is true
@@ -47,17 +47,17 @@ Note that:
 
  Always specify **multiSubnetFailover=true** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Failover Cluster Instance. **multiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instances in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will aggressively retry the TCP connection.
 
- The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This behavior enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.
+ The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This behavior enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and applies to both single- and multi-subnet Availability Groups and Failover Cluster Instances.
 
  For more information about connection string keywords in the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Setting the Connection Properties](setting-the-connection-properties.md).
 
- Specifying **multiSubnetFailover=true** when connecting to something other than an availability group listener or Failover Cluster Instance may result in a negative performance impact, and is not supported.
+ Specifying **multiSubnetFailover=true** when connecting to something other than an availability group listener or Failover Cluster Instance may result in a negative performance impact, and isn't supported.
 
- If the security manager is not installed, the Java Virtual Machine caches virtual IP addresses (VIPs) for a finite period of time, by default, defined by your JDK implementation and the Java properties networkaddress.cache.ttl and networkaddress.cache.negative.ttl. If the JDK security manager is installed, the Java Virtual Machine will cache VIPs, and will not refresh the cache by default. You should set "time-to-live" (networkaddress.cache.ttl) to one day for the Java Virtual Machine cache. If you don't change the default value to one day (or so), the old value will not be purged from the Java Virtual Machine cache when a VIP is added or updated. For more information about networkaddress.cache.ttl and networkaddress.cache.negative.ttl, see [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).
+ If the security manager isn't installed, the Java Virtual Machine caches virtual IP addresses (VIPs) for a finite period of time, by default, defined by your JDK implementation and the Java properties networkaddress.cache.ttl and networkaddress.cache.negative.ttl. If the JDK security manager is installed, the Java Virtual Machine will cache VIPs, and won't refresh the cache by default. You should set "time-to-live" (networkaddress.cache.ttl) to one day for the Java Virtual Machine cache. If you don't change the default value to one day (or so), the old value won't be purged from the Java Virtual Machine cache when a VIP is added or updated. For more information about networkaddress.cache.ttl and networkaddress.cache.negative.ttl, see [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).
 
  Use the following guidelines to connect to a server in an availability group or Failover Cluster Instance:
 
-- The driver will generate an error if the **instanceName** connection property is used in the same connection string as the **multiSubnetFailover** connection property. This error reflects the fact that SQL Browser is not used in an availability group. However, if the **portNumber** connection property is also specified, the driver will ignore **instanceName** and use **portNumber**.
+- The driver will generate an error if the **instanceName** connection property is used in the same connection string as the **multiSubnetFailover** connection property. This error reflects the fact that SQL Browser isn't used in an availability group. However, if the **portNumber** connection property is also specified, the driver will ignore **instanceName** and use **portNumber**.
 
 - Use the **multiSubnetFailover** connection property when connecting to a single subnet or multi-subnet, it will improve performance for both.
 
@@ -65,15 +65,15 @@ Note that:
 
 - Connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance configured with more than 64 IP addresses will cause a connection failure.
 
-- Behavior of an application that uses the **multiSubnetFailover** connection property is not affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, Kerberos Authentication, or Windows Authentication.
+- Behavior of an application that uses the **multiSubnetFailover** connection property isn't affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, Kerberos Authentication, or Windows Authentication.
 
 - Increase the value of **loginTimeout** to accommodate for failover time and reduce application connection retry attempts.
 
-- Distributed transactions are not supported.
+- Distributed transactions aren't supported.
 
-If read-only routing is not in effect, connecting to a secondary replica location in an availability group will fail in the following situations:
+If read-only routing isn't in effect, connecting to a secondary replica location in an availability group will fail in the following situations:
 
-1. If the secondary replica location is not configured to accept connections.
+1. If the secondary replica location isn't configured to accept connections.
 
 2. If an application uses **applicationIntent=ReadWrite** (discussed below) and the secondary replica location is configured for read-only access.
 

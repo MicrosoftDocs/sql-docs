@@ -1,5 +1,5 @@
 ---
-title: Step 2: Create a SQL database for Java
+title: "Step 2: Create a SQL database for Java"
 description: Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database for use in this Java sample.
 ms.custom: ""
 ms.date: 01/19/2017

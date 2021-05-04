@@ -18,7 +18,7 @@ ms.author: v-daenge
 
 The JDBC driver provides support for the JDBC 4.0 API, which includes new national character set conversion API methods. This support includes new setter, getter, and updater methods for **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, and **NCLOB** JDBC types.
 
-The following is a list of new getter, setter, and updater methods to support the national character set conversion:
+The following list shows new getter, setter, and updater methods to support the national character set conversion:
 
 - [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md): [setNString](reference/setnstring-method-int-java-lang-string.md), [setNCharacterStream](reference/setncharacterstream-method-sqlserverpreparedstatement.md), [setNClob](reference/setnclob-method-sqlserverpreparedstatement.md).
 
@@ -29,7 +29,7 @@ The following is a list of new getter, setter, and updater methods to support th
 > [!NOTE]
 > You must set the classpath to include the sqljdbc4.jar file to use these methods in your application.
 
-In order to send String parameters to the server in Unicode format, the applications should either use the new JDBC 4.0 national character methods; or set the **sendStringParametersAsUnicode** connection property to "**true**" when using the non-national character methods. The recommended way is to use the new JDBC 4.0 national character methods where possible. For more information about the **sendStringParametersAsUnicode** connection property, see [Setting the Connection Properties](setting-the-connection-properties.md).
+To send String parameters to the server in Unicode format, the applications should either use the new JDBC 4.0 national character methods; or set the **sendStringParametersAsUnicode** connection property to "**true**" when using the non-national character methods. The recommended way is to use the new JDBC 4.0 national character methods where possible. For more information about the **sendStringParametersAsUnicode** connection property, see [Setting the Connection Properties](setting-the-connection-properties.md).
 
 ## See also
 

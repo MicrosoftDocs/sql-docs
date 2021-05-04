@@ -25,7 +25,11 @@ ms.author: v-daenge
 
 - **applicationIntent**
 
-Specify multiSubnetFailover=true when connecting to the availability group listener of an availability group or a Failover Cluster Instance. Note: **multiSubnetFailover** is false by default. Use **applicationIntent** to declare the application workload type. For more details, see the sections below.
+Specify multiSubnetFailover=true when connecting to the availability group listener of an availability group or a Failover Cluster Instance. 
+
+>[!Note]
+>**multiSubnetFailover** is false by default. Use **applicationIntent** to declare the application workload type. For more details, see the sections below.
+
 
 Beginning in version 6.0 of the Microsoft JDBC Driver for SQL Server, a new connection property **transparentNetworkIPResolution** (TNIR) is added for transparent connection to Always On availability groups or to a server that has multiple IP addresses associated. When **transparentNetworkIPResolution** is true, the driver attempts to connect to the first IP address available. If the first attempt fails, the driver tries to connect to all IP addresses in parallel until the timeout expires, discarding any pending connection attempts when one of them succeeds.
 
@@ -73,9 +77,10 @@ Note:
 
 If read-only routing isn't in effect, connecting to a secondary replica location in an availability group will fail in the following situations:
 
-1. If the secondary replica location isn't configured to accept connections.
+* If the secondary replica location isn't configured to accept connections.
 
-2. If an application uses **applicationIntent=ReadWrite** (discussed below) and the secondary replica location is configured for read-only access.
+* If an application uses **applicationIntent=ReadWrite** (discussed below) and the secondary replica location is configured for read-only access.
+
 
 A connection will fail if a primary replica is configured to reject read-only workloads and the connection string contains **ApplicationIntent=ReadOnly**.
 

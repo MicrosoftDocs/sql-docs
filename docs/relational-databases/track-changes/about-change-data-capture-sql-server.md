@@ -16,10 +16,8 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ---
-# About Change Data Capture (SQL Server)
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
-
-
+# About Change Data Capture 
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Change data capture records insert, update, and delete activity that applies to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This makes the details of the changes available in an easily consumed relational format. Column information and the metadata that is required to apply the changes to a target environment is captured for the modified rows and stored in change tables that mirror the column structure of the tracked source tables. Table-valued functions are provided to allow systematic access to the change data by consumers.  
   

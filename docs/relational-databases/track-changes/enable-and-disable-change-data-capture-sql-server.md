@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Enable and Disable Change Data Capture (SQL Server)
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
   
 ## Enable Change Data Capture for a Database  
@@ -94,7 +94,7 @@ GO
   
  **A role for controlling access to a change table.**  
   
- The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Members of either the **sysadmin** or **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
+ The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Members of either the **sysadmin** (not available in CDC for Azure SQL Database) or **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
   
  If you do not want to use a gating role, explicitly set the *\@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
   

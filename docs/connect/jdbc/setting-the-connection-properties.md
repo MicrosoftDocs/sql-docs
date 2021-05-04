@@ -122,9 +122,7 @@ The following table lists all the currently available connection string properti
 > 1. First, install Maven on your system
 > 2. Go to the [GitHub page](https://github.com/Microsoft/mssql-jdbc) of the driver
 > 3. Download the pom.xml file
-
-> 4. Run  the following Maven command to download the library and its dependencies:
->    `mvn dependency:copy-dependencies`
+> 4. Run  the following Maven command to download the library and its dependencies: `mvn dependency:copy-dependencies`
 
 ## See also
 

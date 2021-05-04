@@ -20,7 +20,7 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] or client has 
 
 This article first describes how to supply the trust material in the client computer. Then it describes how to import a server certificate to the client computer's trust store when the instance of SQL Server's Transport Layer Security (TLS) certificate is issued by a private certificate authority.
 
-For more information about validating the server certificate, see the Validating Server TLS Certificate section in [Understanding encryption support](../../connect/jdbc/understanding-ssl-support.md).
+For more information about validating the server certificate, see the Validating Server TLS Certificate section in [Understanding encryption support](understanding-ssl-support.md).
 
 ## Configuring the client trust store
 

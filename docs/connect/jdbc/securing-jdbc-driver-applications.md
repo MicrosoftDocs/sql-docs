@@ -1,5 +1,5 @@
 ---
-title: Securing JDBC driver applications
+title: Securing applications
 description: These articles describe some common security concerns including connection strings, validating user input, and general application security.
 ms.custom: ""
 ms.date: 03/31/2021

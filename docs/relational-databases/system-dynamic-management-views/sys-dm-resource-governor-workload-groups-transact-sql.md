@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
-title: "sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/15/2020"
+ms.date: "05/04/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_resource_governor_workload_groups dynamic management view"
-ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -60,7 +59,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |max_dop|**int**|Configured maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.| 
 |effective_max_dop|**int**|**Applies to**: Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br />Effective maximum degree of parallelism for the workload group. Is not nullable.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].<br /><br />Total CPU time used while in preemptive mode scheduling for the workload group, measured in ms. Is not nullable.<br /><br />To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode.| 
-|request_max_memory_grant_percent_numeric|**float**|**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].<br /><br />Current setting for the maximum memory grant, as a percentage, for a single request. Is not nullable.| 
+|request_max_memory_grant_percent_numeric|**float**|**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].<br /><br />Current setting for the maximum memory grant, as a percentage, for a single request. Similar to **request_max_memory_grant_percent**, which returns an `integer`, **request_max_memory_grant_percent_numeric** returns a `float`. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the parameter **REQUEST_MAX_MEMORY_GRANT_PERCENT** accepts values with a possible range of 0-100 and stores them as the `float` data type. Prior to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], **REQUEST_MAX_MEMORY_GRANT_PERCENT** is an `integer` with possible range of 1-100. Is not nullable.<BR><BR>For more information, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md). | 
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  

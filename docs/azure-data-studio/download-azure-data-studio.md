@@ -27,6 +27,9 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
 
+> [!Note]
+> Azure Data Studio currently does not support the ARM architecture.
+
 ## Get Azure Data Studio for Windows
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]

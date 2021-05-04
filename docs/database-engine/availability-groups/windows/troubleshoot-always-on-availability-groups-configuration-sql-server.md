@@ -115,7 +115,10 @@ ms.author: chadam
  This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command.  
   
 ##  <a name="JoinDbFails"></a> Join Database Fails (SQL Server Error 35250)  
- This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active.  
+ This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active. This is the full error message:
+
+`Msg 35250 The connection to the primary replica is not active.  The command cannot be processed.`
+
   
  **Resolution:**  
   

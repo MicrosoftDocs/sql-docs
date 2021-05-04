@@ -1,6 +1,6 @@
 ---
-description: Sparse columns are ordinary columns that have an optimized storage for null values. They save space when most values will be null.
 title: Sparse columns
+description: Sparse columns are ordinary columns that have an optimized storage for null values. They save space when most values will be null.
 ms.custom: ""
 ms.date: 04/20/2021
 ms.prod: sql

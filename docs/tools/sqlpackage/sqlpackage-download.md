@@ -127,7 +127,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
    $ sudo apt-get install libicu55      # for 16.x
    $ sudo apt-get install libicu57      # for 17.x
    $ sudo apt-get install libicu60      # for 18.x
-   $ sudo apt-get install libicu60      # for 20.x
+   $ sudo apt-get install libicu66      # for 20.x
    ```
 
 ## Uninstall sqlpackage

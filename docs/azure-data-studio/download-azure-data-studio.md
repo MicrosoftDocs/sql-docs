@@ -25,6 +25,9 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2160874) | April 15, 2021 | 1.28.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2160876)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2160875)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2160782) | April 15, 2021 | 1.28.0 |
 
+> [!Note]
+> Azure Data Studio currently does not support ARM64 architecture.
+
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
 
 > [!Note]

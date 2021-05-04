@@ -3,7 +3,6 @@ description: "sp_special_columns_100 (Azure Synapse Analytics)"
 title: "sp_special_columns_100 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod_service: "synapse-analytics, pdw"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""

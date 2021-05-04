@@ -59,7 +59,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |max_dop|**int**|Configured maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.| 
 |effective_max_dop|**int**|**Applies to**: Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br />Effective maximum degree of parallelism for the workload group. Is not nullable.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].<br /><br />Total CPU time used while in preemptive mode scheduling for the workload group, measured in ms. Is not nullable.<br /><br />To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode.| 
-|request_max_memory_grant_percent_numeric|**float**|**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].<br /><br />Current setting for the maximum memory grant, as a percentage, for a single request. Similar to **request_max_memory_grant_percent**, which returns an `integer`, **request_max_memory_grant_percent_numeric** returns a `float`. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the parameter **REQUEST_MAX_MEMORY_GRANT_PERCENT** accepts values with a possible range of 0-100 and stores them as the `float` data type. Prior to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], **REQUEST_MAX_MEMORY_GRANT_PERCENT** is an `integer` with possible range of 1-100. Is not nullable.<BR><BR>For more information, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md). | 
+|request_max_memory_grant_percent_numeric|**float**|**Applies to**: [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].<br /><br />Current setting for the maximum memory grant, as a percentage, for a single request. Similar to **request_max_memory_grant_percent**, which returns an `integer`, **request_max_memory_grant_percent_numeric** returns a `float`. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the parameter **REQUEST_MAX_MEMORY_GRANT_PERCENT** accepts values with a possible range of 0-100 and stores them as the `float` data type. Prior to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], **REQUEST_MAX_MEMORY_GRANT_PERCENT** is an `integer` with possible range of 1-100. For more information, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md).<BR><BR>Is not nullable.| 
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  
@@ -70,9 +70,10 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 ## Permissions  
  Requires `VIEW SERVER STATE` permission.  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+## See also  
+ - [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ - [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ - [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ - [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ - [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md)
   

@@ -179,15 +179,7 @@ You may have missing dependencies. Use the following commands to install these d
 You may have missing dependencies. Use the following commands to install these dependencies.
 
    ```bash
-   sudo apt-get install libxss1
-   ```
-
-   ```bash
-   sudo apt-get install libgconf-2-4
-   ```
-
-   ```bash
-   sudo apt-get install libunwind8
+   sudo apt-get install libxss1 libgconf-2-4 libunwind8
    ```
 
 #### Windows Subsystem for Linux (WSL)

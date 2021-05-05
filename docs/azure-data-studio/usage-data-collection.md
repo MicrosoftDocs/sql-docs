@@ -75,15 +75,15 @@ In addition to supporting the General Data Protection Regulation (GDPR), the Azu
 
 To ensure GDPR compliance, we made several updates to Azure Data Studio.
 
-- Making it easier to opt out of telemetry collection by placing a notification in product for all existing and new users.
+- Making it more accessible to opt-out of telemetry collection by placing a notification in the product for all existing and new users.
 - Reviewing and classifying the telemetry that we send.
-- Ensuring that we have valid data retention policies in place for any data we do collect, for example crash dumps.
+- Ensuring that we have valid data retention policies in place for any data we collect, for example, crash dumps.
 
-In short, we've worked hard to do the right thing, for all users, as these practices apply to all geographies, not just Europe.
+In short, we've worked hard to do the right thing for all users, as these practices apply to all geographies, not just Europe.
 
-One question we expect people to ask is to see the data we collect. However, we don't have a reliable way to do this as Azure Data Studio doesn't have a *sign-in* experience that would uniquely identify a user. We do send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC) but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it’s not reliable enough for us to 'provide your data'.
+One question we expect people to ask is to see the data we collect. However, we don't have a reliable way to do this as Azure Data Studio doesn't have a *sign-in* experience that uniquely identifies a user. We send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC), but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it's not reliable enough for us to 'provide your data'.
 
-We expect our approach to evolve as we learn more about GDPR and the expectations of our users. We greatly appreciate the data users do send to us, as it's valuable and Azure Data Studio is a better product for everyone because of it. And again, if you're worried about privacy, we offer the ability to disable sending telemetry as described in disable telemetry reporting.
+We expect our approach to evolve as we learn more about GDPR and the expectations of our users. We greatly appreciate the data users send to us, as it's valuable, and Azure Data Studio is a better product for everyone. And again, if you're worried about privacy, we offer the ability to disable sending telemetry as described in disable telemetry reporting.
 
 For general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 

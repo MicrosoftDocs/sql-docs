@@ -202,7 +202,7 @@ After performing data loads, you can have multiple small row groups in the delta
 
 ## What to consider before performing index maintenance
 
-Index maintenance, performed by either reorganizing or rebuilding an index, is resource-intensive. It causes a significant increase in CPU utilization, memory used, and storage I/O. However, depending on the database workload and other factors, the benefits it provides range from vitally important to miniscule.
+Index maintenance, performed by either reorganizing or rebuilding an index, is resource-intensive. It causes a significant increase in CPU utilization, memory used, and storage I/O. However, depending on the database workload and other factors, the benefits it provides range from vitally important to minuscule.
 
 To avoid unnecessary resource utilization that may be detrimental to query workloads, Microsoft does not recommend performing index maintenance indiscriminately. Instead, performance benefits from index maintenance should be determined empirically for each workload using the recommended [strategy](#index-maintenance-strategy), and weighed against resource costs and workload impact needed to achieve these benefits.
 

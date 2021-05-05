@@ -4,7 +4,7 @@ description: This article describes index maintenance concepts, and a recommende
 ms.custom: ""
 ms.date: "04/16/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.prod_service: "database-engine, sql-database, pdw"
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
@@ -27,14 +27,13 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: dimitri-furman
 ms.author: dfurman
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Optimize index maintenance to improve query performance and reduce resource consumption
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 This article helps you decide when and how to perform index maintenance. It covers concepts such as index fragmentation and page density, and their impact on query performance and resource consumption. It describes index maintenance methods, [reorganizing an index](#reorganize-an-index) and [rebuilding an index](#rebuild-an-index), and suggests an index maintenance strategy that balances potential performance improvements against resource consumption required for maintenance.
 

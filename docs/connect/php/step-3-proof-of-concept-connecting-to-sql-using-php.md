@@ -101,11 +101,14 @@ In this example, you'll see how to execute an [INSERT](../../t-sql/statements/in
 
 This code example demonstrates the use of transactions in which you:
 
--Begin a transaction
+- Begin a transaction
 
--Insert a row of data, Update another row of data
 
--Commit your transaction if the insert and update were successful and roll back the transaction if one of them wasn't
+- Insert a row of data, Update another row of data
+
+
+- Commit your transaction if the insert and update were successful and roll back the transaction if one of them wasn't
+
 
 ```php
     function Transactions()

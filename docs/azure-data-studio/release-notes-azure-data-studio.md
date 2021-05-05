@@ -8,26 +8,71 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 4/16/2021
+ms.date: 05/04/2021
 ---
 
 # Release notes for Azure Data Studio
 
+This article provides details about updates, improvements, and bug fixes for the current and previous versions of Azure Data Studio.
+
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-## April 2021
+## Current Azure Data Studio release
 
-April 16, 2021 &nbsp; / &nbsp; version: 1.28.0
+### April 2021
 
-&nbsp;
+Azure Data Studio 1.28.0 is the latest general availability (GA) release.
 
-| Change | Details |
-| ------ | ------- |
-| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md)|
-| New Notebook features | Added Add Notebook and Remove Notebook commands |
-| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22). |
+- Release number: 1.28.0
+- Release date: April 15, 2021
 
-## March 2021
+#### What's new in 1.28.0
+
+| New item | Details |
+|----------|---------|
+| Extension(s) update | [Kusto (KQL)](extensions/kusto-extension.md) |
+| Extension(s) update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Extension(s) update | [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Extension(s) update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Notebook features | Added *Add Notebook* and *Remove Notebook commands* |
+
+#### Bug fixes in 1.28.0
+
+| New Item | Details |
+|----------|---------|
+| IntelliSense | Fixed issue where column names were omitted from suggestions and error indicators are falsely displayed under the column names. [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/43176843) |
+
+#### Known issues in 1.28.0
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .Net Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+
+You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+is:closed+milestone:%22April+2021+Release%22) for other known issues and to provide feedback to the product team.
+
+## Previous Azure Data Studio releases
+
+| Azure Data Studio version | Build number | Release date |
+|---------------------------|--------------|--------------|
+| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
+| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
+| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
+| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
+| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
+### March 2021
 
 March 17, 2021 &nbsp; / &nbsp; version: 1.27.0
 
@@ -962,32 +1007,6 @@ The *January Public Preview* includes some feature suggestions and high-priority
 | Fix incorrect pinned Start Menu icon. | &nbsp; |
 | Fix missing Azure Account branding icon. | &nbsp; |
 | &nbsp; | &nbsp; |
-
-## December 2017
-
-December 19, 2017 &nbsp; / &nbsp; version: 0.24.1 &nbsp; / &nbsp; Public Preview
-
-The *December Public Preview* includes several bugs fixes across all feature areas, as well as the following enhancements:
-
-&nbsp;
-
-| Change | Details |
-| :----- | :------ |
-| Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure Synapse Analytics. | &nbsp; |
-| Added Windows Setup, and Linux DEB and RPM installation packages. | &nbsp; |
-| Manage Dashboard visual layout editor. | &nbsp; |
-| *Script As Alter* and *Script As Execute* commands. | &nbsp; |
-| *Run Current Query with Actual Plan* command. | &nbsp; |
-| Integrate VS Code 1.18.1 editor platform. | &nbsp; |
-| Enable Sideloading of VSIX Extension files. | &nbsp; |
-| Support "GO N" batch iteration syntax. | &nbsp; |
-| &nbsp; | &nbsp; |
-
-## November 2017
-
-November 15, 2017 &nbsp; / &nbsp; version: 0.23.6
-
-- Initial release of Azure Data Studio.
 
 ## Next Steps
 

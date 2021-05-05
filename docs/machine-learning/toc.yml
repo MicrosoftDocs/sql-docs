@@ -248,8 +248,6 @@ items:
       items:
       - name: Load R objects using ODBC
         href: ../machine-learning/data-exploration/save-and-load-r-objects-from-sql-server-using-odbc.md
-      - name: Predictive modeling with R
-        href: ../machine-learning/r/data-exploration-and-predictive-modeling-with-r.md
       - name: Create multiple models using rxExecBy
         href: ../machine-learning/r/creating-multiple-models-using-rxexecby.md
   - name: Data type conversions

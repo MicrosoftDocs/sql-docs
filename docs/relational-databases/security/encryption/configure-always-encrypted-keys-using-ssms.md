@@ -40,7 +40,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
         > The **New Column Master Key** dialog does not currently support key vaults using role permissions for authorization. Only key vaults using access policies are supported.
 
         > [!NOTE]
-        > Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
+        > Using column master keys stored in a [managed HSM](/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
 
     - **Key Store Provider (KSP)** - indicates a key store that is accessible via a key store provider (KSP) that implements the Cryptography Next Generation (CNG) API. Typically, this type of a store is a hardware security module (HSM). After you select this option, you'll need to pick a KSP. **Microsoft Software Key Store Provider** is selected by default. If you want to use a column master key stored in an HSM, select a KSP for your device (it must be installed and configured on the computer before you open the dialog).
     -	**Cryptographic Service Provider (CSP)** - a key store that is accessible via a cryptographic service provider (CSP) that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM). After you select this option, you'll need to pick a CSP.  If you want to use a column master key stored in an HSM, select a CSP for your device (it must be installed and configured on the computer before you open the dialog).
@@ -84,7 +84,7 @@ The **New Column Encryption Key** dialog allows you to generate a column encrypt
 Once you complete the dialog, SQL Server Management Studio generates a new column encryption key and then it retrieves the metadata for the column master key you selected from the database. SSMS then uses the column master key metadata to contact the key store containing your column master key and encrypt the column encryption key. Finally, SSMS creates the metadata data for the new column encryption in the database by generating and issuing a [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement.
 
 > [!NOTE]
-> Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
+> Using column master keys stored in a [managed HSM](/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
 
 ### Permissions for provisioning a column encryption key
 

@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-This component requires both the built-in [Windows Installer 5](https://docs.microsoft.com/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
@@ -825,7 +825,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  **Miscellaneous Commands**  
   **:r \<** _filename_ **>**  
- Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<**_filename_**>**into the statement cache.  
+ Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<** _filename_ **>** into the statement cache.  
   
  If the file contains Transact-SQL statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
   

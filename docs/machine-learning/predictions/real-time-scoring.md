@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 Learn how to perform real-time scoring with the [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.
 
-Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no dependencies on the R or Python runtimes in [Machine Learning Services](../sql-server-machine-learning-services.md) or [Machine Learning Server](../r/r-server-standalone.md). Using a model created and trained using Microsoft functions and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
+Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no dependencies on the R or Python runtimes in [Machine Learning Services](../sql-server-machine-learning-services.md). Using a model created and trained using Microsoft functions and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
 
 ## How real-time scoring works
 

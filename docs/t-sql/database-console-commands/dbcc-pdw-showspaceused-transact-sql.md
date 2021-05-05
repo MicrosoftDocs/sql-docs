@@ -2,7 +2,7 @@
 description: "DBCC PDW_SHOWSPACEUSED (Transact-SQL)"
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "04/22/2021"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -27,11 +27,11 @@ Displays the number of rows, disk space reserved, and disk space used for a spec
   
 ```syntaxsql
 -- Show the space used for all user tables and system tables in the current database  
-DBCC PDW_SHOWSPACEUSED  
+DBCC PDW_SHOWSPACEUSED [ WITH IGNORE_REPLICATED_TABLE_CACHE ] 
 [;]  
   
 -- Show the space used for a table  
-DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name .] table_name  " )  
+DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name .] table_name  " ) [ WITH IGNORE_REPLICATED_TABLE_CACHE ] 
 [;]  
 ```  
 
@@ -41,6 +41,9 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
 The one, two, or three-part name of the table to be displayed. For two or three-part table names, the name must be enclosed with double quotes (""). Using quotes around a one-part table name is optional. When no table name is specified, the information is displayed for the current database.  
+
+`WITH IGNORE_REPLICATED_TABLE_CACHE`
+An optional parameter to view the size of the table without the replicated table cache size included.  The size of the replicated table cache is variable depending on the service level objective.  For further details see: [What is a replicated table?](/azure/sql-data-warehouse/design-guidance-for-replicated-tables#what-is-a-replicated-table)
   
 ## Permissions
 

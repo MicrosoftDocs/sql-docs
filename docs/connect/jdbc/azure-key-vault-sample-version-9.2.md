@@ -1,9 +1,8 @@
 ---
-description: "This JDBC code example demonstrates how to use Azure Key Vault as your key store provider when using Always Encrypted."
-title: "Azure Key Vault sample"
+title: Azure Key Vault sample
+description: This JDBC code example demonstrates how to use Azure Key Vault as your key store provider when using Always Encrypted.
 ms.custom: ""
-ms.date: "01/29/2021"
-
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
@@ -16,9 +15,9 @@ ms.author: v-susanh
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## Sample application using Azure Key Vault feature
+## Sample application using Azure Key Vault
 
-This application is runnable using JDBC Driver 9.2 and above, Azure-Security-Keyvault (version 4.2.1), Azure-Identity (version 1.1.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+This application is runnable using JDBC Driver 9.2 and above, Azure-Security-Keyvault (version 4.2.1), Azure-Identity (version 1.1.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -243,6 +242,6 @@ public class AKV {
 
 ## See also
 
-[Azure Key vault sample version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
-[Azure Key vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
-[Azure Key vault sample version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md) 
+[Azure Key vault sample version 7.0](azure-key-vault-sample-version-7.0.md)  
+[Azure Key vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)  
+[Azure Key vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md) 

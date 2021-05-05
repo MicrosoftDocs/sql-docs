@@ -15,11 +15,11 @@ dev_langs:
 ms.technology: big-data-cluster
 ---
 
-# What is application deployment on a SQL Server big data cluster?
+# What is application deployment on a [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Application deployment enables the deployment of applications on a SQL Server big data cluster (BDC) by providing interfaces to create, manage, and run applications. Applications deployed on a BDC benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are: R, Python, dtexec, and MLeap.
+Application deployment enables the deployment of applications on a [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] (BDC) by providing interfaces to create, manage, and run applications. Applications deployed on a Big Data Cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are: R, Python, dtexec, and MLeap.
 
 The following sections describe the architecture and functionality of application deployment.
 
@@ -77,14 +77,14 @@ allowedCapabilities:
 ...
 ```
 
-## How to work with app deploy inside big data cluster
+## How to work with app deploy inside Big Data Cluster
 
 The two main interfaces for application deployment are: 
 
 - [Command line interface [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
-It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](app-consume.md).
+It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on Big Data Clusters](app-consume.md).
 
 ## App deploy scenarios
 
@@ -136,11 +136,11 @@ You can create the basic folder and file structure needed to deploy a Python app
 azdata app init --template python --name hello-py --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
-#### App deploy Python runtime limitations
+#### Limitations of app deploy Python runtime
 
-App deploy Python runtime doesn't support scheduling scenario, once Python app is deployed, then up and running in BDC, a RESTful endpoint is configured to listen for incoming requests.
+App deploy Python runtime doesn't support scheduling scenario. Once Python app is deployed, and running in BDC, a RESTful endpoint is configured to listen for incoming requests.
 
 ### Use app deploy R runtime
 
@@ -181,17 +181,17 @@ You can create the basic folder and file structure needed to deploy a new R appl
 azdata app init --template r --name hello-r --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
-#### More details on limitations
+#### Limitations of R runtime
 
-The limitation aligns with the [Microsoft R Application Network](https://mran.microsoft.com/open).
+These limitations align with the [Microsoft R Application Network](https://mran.microsoft.com/open).
 
 ### Using app deploy dtexec runtime
 
-In app deploy, BDC runtime integrated dtexec utility which is from SSIS on Linux (mssql-server-is) . App deploy uses dtexec utility to load packages from *.dtsx files. It supports running SSIS packages on cron-style schedule or on-demand through web service requests.
+In app deploy, the Big Data Cluster runtime integrated dtexec utility is from SSIS on Linux (mssql-server-is). App deploy uses the dtexec utility to load packages from *.dtsx files. It supports running SSIS packages on cron-style schedule or on-demand through web service requests.
 
-This feature uses `/opt/ssis/bin/dtexec /FILE` from SQL Server 2019 Integration Service on Linux, it supports dtsx format for [SQL Server 2019 Integration Service on Linux (mssql-server-is 15.0.2)](../linux/sql-server-linux-setup-ssis.md). To learn more about dtexec utility, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).
+This feature uses `/opt/ssis/bin/dtexec /FILE` from SQL Server 2019 Integration Service on Linux. It supports dtsx format for [SQL Server 2019 Integration Service on Linux (mssql-server-is 15.0.2)](../linux/sql-server-linux-setup-ssis.md). To learn more about dtexec utility, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).
 
 In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
@@ -233,11 +233,11 @@ The example also creates a sample `hello.dtsx` package.
 
 All of your app files are in the same directory as your `spec.yaml`. The `spec.yaml` must be at the root level of your app source code directory including the dtsx file.
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
-#### Limitations of dtsx utility
+#### Limitations of the dtexec utility runtime
 
-All limitations and known issue for SQL Server Integration Services (SSIS) on Linux are applied for this feature. You can find out more from [Limitations and known issues for SSIS on Linux](../linux/sql-server-linux-ssis-known-issues.md)
+All limitations and known issues for SQL Server Integration Services (SSIS) on Linux are applicable in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. You can find out more from [Limitations and known issues for SSIS on Linux](../linux/sql-server-linux-ssis-known-issues.md).
 
 ### Using app deploy MLeap runtime
 
@@ -266,11 +266,11 @@ You can create the basic folder and file structure needed to deploy a new MLeap 
 azdata app init --template mleap --name hello-mleap --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
-#### MLeap limitations
+#### Limitations of MLeap runtime
 
-The limitations aligns with the vision from MLeap open-source project from combust on [GitHub](https://github.com/combust/mleap).
+The limitations align with the vision from the MLeap open-source project [Combust on GitHub](https://github.com/combust/mleap).
 
 ## Next steps
 
@@ -278,7 +278,7 @@ To learn more about how to create and run applications on [!INCLUDE[big-data-clu
 
 - [Deploy applications using azdata](app-create.md)
 - [Deploy applications using the app deploy extension](app-deployment-extension.md)
-- [Consume applications on big data clusters](app-consume.md)
+- [Consume applications on Big Data Clusters](app-consume.md)
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 

@@ -76,7 +76,11 @@ GO
 ```  
   
  If DEFAULT is supplied as the value of *securable* or *securable_class*, the value will be interpreted as NULL.  
-  
+ 
+   
+## Permissions  
+ Requires membership in the public role.  
+ 
 ## Examples  
   
 ### A. Listing effective permissions on the server  

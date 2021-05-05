@@ -1,8 +1,8 @@
 ---
-title: "Release notes for the JDBC Driver"
-description: "This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described."
+title: Release notes
+description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 ms.custom: ""
-ms.date: "03/02/2021"
+ms.date: 03/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -63,14 +63,14 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault via interactive authentication. | See [Connecting using Azure Active Directory authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault via interactive authentication. | See [Connecting using Azure Active Directory authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### Added support for Azure Active Directory Service Principal Authentication
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault using the client ID and secret of a service principal identity. | See [Connecting using Azure Active Directory authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault using the client ID and secret of a service principal identity. | See [Connecting using Azure Active Directory authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### Updated Azure Key Vault library to use modern Azure Key Vault library
@@ -84,7 +84,7 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 
 | useBulkCopyForBatchInsert changes for non Azure Synapse Analytics servers | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 9.2 now allows bulk copy API for batch insert operation against non-Azure Synapse Analytics servers. | See [Using bulk copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
+| Microsoft JDBC Driver 9.2 now allows bulk copy API for batch insert operation against non-Azure Synapse Analytics servers. | See [Using bulk copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md). |
 | &nbsp; | &nbsp; |
 
 ## Previous releases
@@ -131,14 +131,14 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Extended support for bulk copy for Azure Data Warehouse
 
 | Bulk copy changes for Azure Data Warehouse | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](using-bulk-copy-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Added support for Azure SQL DNS caching
@@ -159,7 +159,7 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | Client certificate authentication | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
+| Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](client-certification-authentication-for-loopback-scenarios.md). |
 
 ## <a id="82"></a> 8.2
 
@@ -208,7 +208,7 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | Always Encrypted change | Details |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
-| More details and sample code. | See [Always Encrypted with secure enclaves](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
+| More details and sample code. | See [Always Encrypted with secure enclaves](using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Performance Improvement when Retrieving Temporal Datatypes from SQL Server <sup>1</sup>

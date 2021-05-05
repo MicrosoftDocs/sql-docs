@@ -18,7 +18,7 @@ ms.date: 03/19/2021
 
 In this guide, you learn how to migrate your SAP ASE databases to SQL Server by using SQL Server Migration Assistant for SAP ASE (SSMA for SAP ASE).
 
-For other migration guides, see [Azure Database Migration Guides](https://docs.microsoft.com/data-migration).
+For other migration guides, see [Azure Database Migration Guides](/data-migration).
 
 ## Prerequisites
 
@@ -113,6 +113,6 @@ For more assistance with completing this migration scenario, see the following r
 ## Next steps
 
 - For an overview of the Azure Database Migration Guide and the information it contains, see the video [How to Use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/).
-- For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
+- For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
 - For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
 - For a migration video, see [Overview of the migration journey and the tools/services recommended for performing assessment and migration](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

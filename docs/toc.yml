@@ -335,9 +335,9 @@ items:
         - name: Deploy
           items:
           - name: Operationalize using stored procedures
-            href: machine-learning/r/operationalizing-your-r-code.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            href: /sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
           - name: Convert R code for SQL Server
-            href: machine-learning/r/converting-r-code-for-use-in-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            href: /sql/machine-learning/deploy/modify-r-python-code-to-run-in-sql-server?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
         - name: Predictions
           items:
           - name: Native scoring with PREDICT T-SQL
@@ -5050,7 +5050,7 @@ items:
       - name: Best practices
         href: relational-databases/replication/administration/best-practices-for-replication-administration.md
       - name: Frequently asked questions
-        href: relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md
+        href: relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml
     - name: How-to guides
       items:
       - name: Configure replication
@@ -6087,6 +6087,8 @@ items:
   - name: Database Migration Assistant (DMA)
     href: dma/dma-overview.md
     items:
+    - name: Usage and Diagnostic Data
+      href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whatsnew.md
     - name: Assess SQL Server Integration Services (SSIS)
@@ -8351,16 +8353,17 @@ items:
     - name: Issue Element
       href: tools/ssbdiagnose/issue-element-ssbdiagnose.md
   - name: SQL Server Data Tools (SSDT)
-    href: ssdt/sql-server-data-tools.md
     items:
+    - name: SQL Server Data Tools Overview
+      href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Release notes for SSDT
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-    - name: SQL Server Data Tools
-      href: ssdt/sql-server-data-tools.md
+    - name: Anonymous Usage Data
+      href: ssdt/anonymous-usage-data.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development

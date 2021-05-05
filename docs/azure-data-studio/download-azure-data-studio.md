@@ -41,7 +41,7 @@ If you have comments or suggestions or want to report issues, the best way to co
 
 ## Install Azure Data Studio
 
-### Windows
+### Windows install
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -69,7 +69,38 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
-### macOS
+#### Unattended install for Windows
+
+You can also install Azure Data Studio using a command prompt script.
+
+If you want to install Azure Data Studio in the background with no GUI prompts, and you're on the Windows platform, then follow the steps below.
+
+1. Launch the command prompt with elevated permissions.
+
+2. Type the command below in the command prompt.
+
+    ```console
+    <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    ```
+
+    Example:
+
+    ```console
+    %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
+    ```
+
+    > [!Note]
+    > The example also works with the system installer file.
+    > 
+    > ```console
+    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    > ```
+
+    You can also pass */SILENT* instead of */VERYSILENT* to see the setup UI.
+
+3. If all goes well, you can see Azure Data Studio installed.
+
+### macOS install
 
 1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2160874).
 
@@ -77,7 +108,7 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
-### Linux
+### Linux install
 
 #### .deb Installation
 
@@ -137,7 +168,7 @@ You may have missing dependencies. Use the following commands to install these d
    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
    echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
    source ~/.bashrc
-  ```
+   ```
 
 3. To launch Azure Data Studio
 
@@ -181,7 +212,7 @@ It's recommended to [download the GA release of Azure Data Studio](#download-azu
 
 Azure Data Studio runs on Windows, macOS, and Linux and is supported on the following platforms:
 
-### Windows
+### Windows operating systems
 
 - Windows 10 (64-bit)
 - Windows 8.1 (64-bit)
@@ -193,7 +224,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)
 
-### macOS
+### macOS operating systems
 
 - macOS 10.15 Catalina
 - macOS 10.14 Mojave
@@ -201,7 +232,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 - macOS 10.12 Sierra
 - macOS 11.1  Big Sur
 
-### Linux
+### Linux operating systems
 
 - Red Hat Enterprise Linux (RHEL) 8.3
 - Red Hat Enterprise Linux (RHEL) 8.2
@@ -325,42 +356,10 @@ rpm -e azuredatastudio
 yum remove azuredatastudio
 ```
 
-## Unattended install for Windows
-
-You can also install Azure Data Studio using a command prompt script.
-
-If you want to install Azure Data Studio in the background with no GUI prompts, and you're on the Windows platform, then follow the steps below.
-
-1. Launch the command prompt with elevated permissions.
-
-2. Type the command below in the command prompt.
-
-    ```console
-    <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
-    ```
-
-    Example:
-
-    ```console
-    %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
-    ```
-
-    > [!Note]
-    > The example also works with the system installer file.
-    > 
-    > ```console
-    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
-    > ```
-
-    You can also pass */SILENT* instead of */VERYSILENT* to see the setup UI.
-
-3. If all goes well, you can see Azure Data Studio installed.
-
 ## Next Steps
 
 - [What is Azure Data Studio](what-is-azure-data-studio.md)
 - [Azure Data Studio release notes](release-notes-azure-data-studio.md)
-
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

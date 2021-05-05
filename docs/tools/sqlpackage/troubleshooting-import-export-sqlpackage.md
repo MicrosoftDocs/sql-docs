@@ -22,19 +22,20 @@ As general guideline, better performance can be obtained via the .NET Core versi
 For issues related to timeouts, the properties `CommandTimeout` and `LongRunningCommandTimeout` can be used to tune the connection between SqlPackage.exe and the SQL instance.
 
 ## Diagnostics
-Logs are essential to any troubleshooting. Capture the diagnostic logs from any SqlPackage operation to a file with the `/DiagnosticsFile:<filename>` parameter. 
-Additional performance-related data can be logged by setting the environment variable `DACFX_PERF_TRACE=true`.  To set this environment variable in PowerShell, use the following command:
+Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
+
+Additional performance-related trace data can be logged by setting the environment variable `DACFX_PERF_TRACE=true` before running SqlPackage.  To set this environment variable in PowerShell, use the following command:
 ``` powershell
 Set-Item -Path Env:DACFX_PERF_TRACE -Value true
 ```
 
 ## Import action Tips
-For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. Those and other properties are available to tune the [SqlPackage.exe Import](sqlpackage-import.md) operation.
+For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage.exe Import](sqlpackage-import.md) operation.
 
 ## Export action Tips
-As an alternative operation to obtain the database schema and data while skipping the schema validation , perform an [Extract](sqlpackage-extract.md) with `/p:ExtractAllTableData=True` and `/p:VerifyExtraction=True`.
+As an alternative operation to obtain the database schema and data while skipping the schema validation, perform an [Extract](sqlpackage-extract.md) with `/p:ExtractAllTableData=True` and `/p:VerifyExtraction=True`.
 
-In scenarios where disk space is limited and running out during the export, the use of `/p:TempDirectoryForTableData` allows the data to be buffered from an alternative disk. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
+In scenarios where disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
 
 ## Next Steps
 

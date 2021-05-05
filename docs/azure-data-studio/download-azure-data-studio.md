@@ -360,6 +360,10 @@ yum remove azuredatastudio
 
 - [What is Azure Data Studio](what-is-azure-data-studio.md)
 - [Azure Data Studio release notes](release-notes-azure-data-studio.md)
+- [SQL tools](../tools/overview-sql-tools.md)
+- [Latest updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Architecture Guide](/azure/architecture/data-guide/)
+- [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

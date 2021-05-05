@@ -34,7 +34,6 @@ Azure Data Studio 1.28.0 is the latest general availability (GA) release.
 | Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
 | Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
 | Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
-| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
 | Notebook features | Added *Add Notebook* and *Remove Notebook commands* |
 
 #### Bug fixes in 1.28.0

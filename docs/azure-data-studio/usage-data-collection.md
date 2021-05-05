@@ -6,9 +6,9 @@ ms.technology: azure-data-studio
 ms.topic: how-to
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu, maghan"
+ms.reviewer: "alayu"
 ms.custom: seo-lt-2019
-ms.date: 05/03/2021
+ms.date: 05/05/2021
 ---
 
 # Enable or disable usage data collection for Azure Data Studio
@@ -37,11 +37,11 @@ When tracing telemetry events, the events are also logged to a local file teleme
 
 ## Disable telemetry reporting
 
-To not send usage data to Microsoft, you can set the `telemetry.enableTelemetry` user [setting](/docs/getstarted/settings.md) to `false`.
+To not send usage data to Microsoft, you can set the `telemetry.enableTelemetry` [user settings](settings.md) to `false`.
 
 Go to **File** > **Preferences** > **Settings** (macOS: **Code** > **Preferences** > **Settings**) and search for `telemetry`, and uncheck the **Telemetry: Enable Telemetry** setting. With this setting, you silence all telemetry events from Azure Data Studio going forward. Telemetry information may have been collected and sent up until the point when you disable the setting.
 
-:::image type="content" source="media/usage-data-collection/disable-telemetry.png" alt-text="disable telemetry":::
+:::image type="content" source="media/usage-data-collection/disable-telemetry.png" alt-text="disable telemetry.":::
 
 If you use the JSON editor for your settings, add the following line:
 
@@ -53,13 +53,17 @@ If you use the JSON editor for your settings, add the following line:
 
 Azure Data Studio collects data about any crashes that occur and sends it to Microsoft to help improve our products and services.
 
-If you don't want to send, crash data to Microsoft, you can change the `enable-crash-reporter` runtime argument to `false`
+If you don't want to send, crash data to Microsoft, you can change the `enable-crash-reporter` runtime argument to `false`.
 
-* Open the Command Palette (`kb(workbench.action.showCommands)`).
-* Run the **Preferences: Configure Runtime Arguments** command.
-* This command opens a `argv.json` file to configure runtime arguments.
-* Edit `"enable-crash-reporter": false`.
-* Restart Azure Data Studio.
+1. Open the Command Palette (`kb(workbench.action.showCommands)`).
+
+2. Run the **Preferences: Configure Runtime Arguments** command.
+
+3. This command opens a `argv.json` file to configure runtime arguments.
+
+4. Edit `"enable-crash-reporter": false`.
+
+5. Restart Azure Data Studio.
 
 ## Extensions and telemetry
 
@@ -77,9 +81,11 @@ To ensure GDPR compliance, we made several updates to Azure Data Studio.
 
 In short, we've worked hard to do the right thing, for all users, as these practices apply to all geographies, not just Europe.
 
-One question we expect people to ask is to see the data we collect. However, we don't have a reliable way to do this as Azure Data Studio doesn't have a *sign-in* experience that would uniquely identify a user. We do send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC) but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it'sn't reliable enough for us to 'provide your data'.
+One question we expect people to ask is to see the data we collect. However, we don't have a reliable way to do this as Azure Data Studio doesn't have a *sign-in* experience that would uniquely identify a user. We do send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC) but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it’s not reliable enough for us to 'provide your data'.
 
 We expect our approach to evolve as we learn more about GDPR and the expectations of our users. We greatly appreciate the data users do send to us, as it's valuable and Azure Data Studio is a better product for everyone because of it. And again, if you're worried about privacy, we offer the ability to disable sending telemetry as described in disable telemetry reporting.
+
+For general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## More resources
 - [Workspace and User settings](settings.md)

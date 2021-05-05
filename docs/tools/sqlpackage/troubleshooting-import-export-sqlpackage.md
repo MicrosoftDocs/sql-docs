@@ -16,7 +16,7 @@ ms.date: 5/5/2021
 
 In some scenarios, import or export operations take longer than expected or fail to complete.  The following are some frequently suggested tactics to troubleshoot import and export operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage Import or Export operations.
 
-## Overall Strategies
+## Overall strategies
 As general guideline, better performance can be obtained via the .NET Core version of SqlPackage.exe.
 
 For issues related to timeouts, the properties `CommandTimeout` and `LongRunningCommandTimeout` can be used to tune the connection between SqlPackage.exe and the SQL instance.
@@ -29,15 +29,15 @@ Additional performance-related trace data can be logged by setting the environme
 Set-Item -Path Env:DACFX_PERF_TRACE -Value true
 ```
 
-## Import action Tips
+## Import action tips
 For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage.exe Import](sqlpackage-import.md) operation.
 
-## Export action Tips
+## Export action tips
 As an alternative operation to obtain the database schema and data while skipping the schema validation, perform an [Extract](sqlpackage-extract.md) with `/p:ExtractAllTableData=True` and `/p:VerifyExtraction=True`.
 
 In scenarios where disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
 
-## Next Steps
+## Next steps
 
 - Learn more about [SqlPackage Import](sqlpackage-import.md)
 - Learn more about [SqlPackage Export](sqlpackage-export.md)

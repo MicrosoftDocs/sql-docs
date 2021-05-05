@@ -115,12 +115,17 @@ We recommend the *user installer* because it doesn't require administrator privi
    **Ubuntu:**
 
    ```bash
-   sudo apt-get install libxss1
-
-   sudo apt-get install libgconf-2-4
-
-   sudo apt-get install libunwind8
+   sudo apt-get install libxss1 libgconf-2-4 libunwind8
    ```
+
+## Get Azure Data Studio for Windows Subsystem for Linux (WSL)
+
+1. Install **Azure Data Studio** for Windows. then use the `azuredatastudio` command in a WSL terminal just as you would in a normal command prompt. By default the application is stored in your AppData foler. 
+2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
+
+```bash
+'/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
+```
 
 ## Download Insiders build of Azure Data Studio
 

@@ -1,30 +1,36 @@
 ---
 description: "Local audit for SSMS usage and diagnostic data collection"
 title: Usage and Diagnostic Data
-ms.custom: seo-lt-2019
-ms.date: "04/16/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 05/03/2021
 ---
 
 # Local audit for SSMS usage and diagnostic data collection
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SSMS may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We do not collect your name, address, or other contact information. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
+SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. 
+
+SQL Server Management Studio (SSMS) may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of SSMS. 
+
+SQL Server Management Studio (SSMS) doesn't collect your name, address, or other data related to an identified or identifiable individual.
+
+For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 
 ## Audit feature usage and diagnostic data
 
-To see feature usage data that is collected by SSMS, perform the following steps:
+To see feature usage data that is collected by SSMS, follow the steps below:
 
-1.	Launch SSMS.
-2.	Click **View**, then click **Output** in the main menu to show the **Output** window. 
-3.	When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
+1. Launch SSMS.
+2. Select **View**, then Select **Output** in the main menu to show the **Output** window. 
+3. When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
 
 While you use SSMS to interact with your databases, the **Output** window shows the data that is collected.
 
@@ -32,7 +38,7 @@ While you use SSMS to interact with your databases, the **Output** window shows 
 
 To opt in or out of usage data collection for SSMS:
 
-- For SQL Server Management Studio 17:
+- For SQL Server Management Studio (17 and later):
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
 
@@ -40,11 +46,11 @@ To opt in or out of usage data collection for SSMS:
 
   Entry type `DWORD`: `0` is opt out; `1` is opt in
 
-  Additionally, SSMS 17.x is based on the Visual Studio 2015 shell, and the Visual Studio installation enables customer feedback by default.  
+  Additionally, SSMS is based on the Visual Studio shell, and the Visual Studio installation enables customer feedback by default.  
 
   To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string `0`: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
 
-  For example, change the subkey to the following:  
+  For example, change the subkey:  
   `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
 
   Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage and diagnostic data collection.

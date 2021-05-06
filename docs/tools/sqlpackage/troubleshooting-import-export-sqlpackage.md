@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting import/export with SqlPackage
+title: Troubleshooting Import/Export with SqlPackage
 description: Learn how to troubleshoot import and export with SqlPackage.exe.
 ms.prod: sql
 ms.prod_service: sql-tools

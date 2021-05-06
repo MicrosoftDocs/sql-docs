@@ -16,8 +16,24 @@ ms.date: 5/5/2021
 
 In some scenarios, import or export operations take longer than expected or fail to complete.  The following are some frequently suggested tactics to troubleshoot import and export operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage Import or Export operations.
 
-## Overall strategies
-As general guideline, better performance can be obtained via the .NET Core version of SqlPackage.exe.
+## Overall strategy
+As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#get-sqlpackage-net-core-for-windows) of SqlPackage.exe.
+
+1. [Download](sqlpackage-download.md#get-sqlpackage-net-core-for-windows) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
+2. Unzip archive as directed on the download page.
+3. Open a command prompt and change directory (`cd`) to the SqlPackage folder.
+
+For Import, an example command is:
+```bash
+./SqlPackage /Action:Import /sf:<source-bacpac-file-path> /tsn:<full-target-server-name> /tdn:<a new or empty database> /tu:<target-server-username> /tp:<target-server-password> /df:<log-file>
+```
+
+For Export, an example command is:
+```bash
+./SqlPackage /Action:Export /tf:<target-bacpac-file-path> /ssn:<full-source-server-name> /sdn:<source-database-name> /su:<source-server-username> /sp:<source-server-password> /df:<log-file>
+```
+
+Alternative to username and password, [Universal Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview) can be used to authenticate via Azure AD with MFA.  Substitute the username and password parameters for `/ua:true` and `/tid:"yourdomain.onmicrosoft.com"`.
 
 For issues related to timeouts, the properties `CommandTimeout` and `LongRunningCommandTimeout` can be used to tune the connection between SqlPackage.exe and the SQL instance.
 

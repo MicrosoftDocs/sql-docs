@@ -163,24 +163,38 @@ column_name <data_type>
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *schema_name*  
- Is the name of the schema to which the alias data type or user-defined type belongs.  
-  
- *type_name*  
- Is the name of the alias data type or user-defined type. Type names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
- *base_type*  
- Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
-  
-|||||  
-|-|-|-|-|  
-|**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
-|**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**image**|**int**|  
-|**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
-|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
-|**smallmoney**|**sql_variant**|**text**|**time**|  
-|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
+*schema_name*  
+Is the name of the schema to which the alias data type or user-defined type belongs.  
+
+*type_name*  
+Is the name of the alias data type or user-defined type. Type names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
+
+*base_type*  
+Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
+
+:::row:::
+   :::column span="":::
+      **bigint**<br>            **binary(** *n* **)**<br>            **bit**<br>            **char(** *n* **)**
+   :::column-end:::
+   :::column span="":::
+      **date**<br>            **datetime**<br>            **datetime2**<br>            **datetimeoffset**
+   :::column-end:::
+   :::column span="":::
+      **decimal**<br>            **float**<br>            **image**<br>            **int**
+   :::column-end:::
+   :::column span="":::
+      **money**<br>            **nchar(** *n* **)**<br>            **ntext**<br>            **numeric**
+   :::column-end:::
+   :::column span="":::
+      **nvarchar(** *n* &#124; **max)**<br>            **real**<br>            **smalldatetime**<br>            **smallint**
+   :::column-end:::
+   :::column span="":::
+      **smallmoney**<br>            **sql_variant**<br>            **text**<br>            **time**
+   :::column-end:::
+   :::column span="":::
+      **tinyint**<br>            **uniqueidentifier**<br>            **varbinary(** *n* &#124; **max)**<br>            **varchar(** *n* &#124; **max)**
+   :::column-end:::
+:::row-end:::
   
  *base_type* can also be any data type synonym that maps to one of these system data types.  
   

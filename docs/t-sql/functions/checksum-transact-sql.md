@@ -4,7 +4,7 @@ title: "CHECKSUM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

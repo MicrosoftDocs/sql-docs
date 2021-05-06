@@ -4,7 +4,7 @@ title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Micro
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"

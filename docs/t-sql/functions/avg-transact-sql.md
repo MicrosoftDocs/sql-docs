@@ -4,7 +4,7 @@ title: "AVG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -62,7 +62,7 @@ The evaluated result of *expression* determines the return type.
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** category (p, s)|**decimal(38, min(s,6))**|  
+|**decimal** category (p, s)|**decimal(38, max(s,6))**|  
 |**money** and **smallmoney** category|**money**|  
 |**float** and **real** category|**float**|  
   

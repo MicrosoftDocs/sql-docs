@@ -1,10 +1,10 @@
 ---
 description: "sys.all_parameters (Transact-SQL)"
-title: "sys.all_parameters (Transact-SQL) | Microsoft Docs"
+title: "sys.all_parameters (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/30/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.all_parameters catalog view"
-ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -41,8 +40,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**is_cursor_ref**|**bit**|1 = Parameter is a cursor reference parameter.|  
 |**has_default_value**|**bit**|1 = Parameter has a default value.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only maintains default values for CLR objects in this catalog view; therefore, this column will always have a value of 0 for [!INCLUDE[tsql](../../includes/tsql-md.md)] objects. To view the default value of a parameter in a [!INCLUDE[tsql](../../includes/tsql-md.md)] object, query the **definition** column of the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view, or use the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) system function.|  
 |**is_xml_document**|**bit**|1 = Content is a complete XML document.<br /><br /> 0 = Content is a document fragment or the data type of the column is not **xml**.|  
-|**default_value**|**sql_variant**|If **has_default_value** is 1, the value of this column is the value of the default for the parameter; otherwise, NULL.|  
+|**default_value**|**sql_variant**|If **has_default_value** is 1, the value of this column is the value of the default for the parameter; otherwise `NULL`.|  
 |**xml_collection_id**|**int**|Is the ID of the XML schema collection used to validate the parameter.<br /><br /> Nonzero if the data type of the parameter is **xml** and the XML is typed.<br /><br /> 0 = There is no XML schema collection, or the parameter is not XML.|  
+|**is_readonly**|**bit**|1 =  Parameter is READONLY; otherwise, 0.|  
+|**is_nullable**|**bit**|1 = Parameter is nullable. (the default).<br /><br /> 0 = Parameter is not nullable, for more efficient execution of natively-compiled stored procedures.|  
+|**encryption_type**|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Encryption type:<br /><br /> 1 = Deterministic encryption<br /><br /> 2 = Randomized encryption|  
+|**encryption_type_desc**|**nvarchar(64)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Encryption type description:<br /><br /> RANDOMIZED<br /><br /> DETERMINISTIC|  
+|**encryption_algorithm_name**|**sysname**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Name of encryption algorithm.<br /><br /> Only AEAD_AES_256_CBC_HMAC_SHA_512 is supported.|  
+|**column_encryption_key_id**|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID of the CEK.|  
+|**column_encryption_key_database_name**|**sysname**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> The name of the database where the column encryption key exists if different than the database of the column. Is `NULL` if the key exists in the same database as the column.|  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

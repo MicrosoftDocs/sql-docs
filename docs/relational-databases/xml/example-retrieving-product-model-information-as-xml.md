@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, retrieving XML information example"
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Retrieving Product Model Information as XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

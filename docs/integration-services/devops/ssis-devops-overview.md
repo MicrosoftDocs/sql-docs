@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Integration Services DevOps overview | Microsoft Docs"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
-ms.date: "12/06/2019"
+ms.date: "4/21/2021"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -16,7 +16,7 @@ ms.author: chugu
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 
-**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**..
+**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**.
 
 - **[SSIS Build](#ssis-build-task)** task supports building dtproj files in project deployment model or package deployment model.
 
@@ -69,6 +69,26 @@ cat log.txt
 ```
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will stop responding and time out during execution.
+
+## SSIS Build task version 1.* (Preview)
+
+Enhancements in version 1.*:
+
+- Remove the dependency on Visual Studio and SSIS designer. Build task can run on Microsoft-hosted agent or self-hosted agent with Windows OS and .NET framework 4.6.2 or higher.
+
+- No need of installing out-of-box components.
+
+- Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+
+### Version 1.* only properties
+
+#### Project Password
+
+Password of the SSIS project and its packages. This argument is only valid when the protection level of the SSIS project and packages is EncryptSensitiveWithPassword or EncryptAllWithPassword. For package deployment model, all packages must share the same password specified by this argument.
+
+#### Strip Sensitive Data
+
+Convert the protection level of the SSIS project to DontSaveSensitve if this value is true. When protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword, the argument Project Password must be correctly set. This option is only valid for project deployment model.
 
 ## SSIS Deploy task
 
@@ -146,6 +166,18 @@ SSIS Deploy Task doesn't support the following scenarios currently:
 - Configure environment in SSIS catalog.
 - Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
+
+## SSIS Deploy task version 1.* (Preview)
+
+Enhancements in version 1.*:
+
+- Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+
+### Version 1.* only properties
+
+#### Project Password
+
+Password to decrypt the ISPAC or DTSX files. This argument is only valid when the protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword.
 
 ## SSIS Catalog Configuration task
 
@@ -338,6 +370,17 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.4
+
+Release Date: April 21, 2021
+
+- SSIS Build task version 1.* (Preview)
+    - Remove the dependency on Visual Studio and SSIS designer. Build task can run on Microsoft-hosted agent or self-hosted agent with Windows OS and .NET framework 4.6.2 or higher.
+    - No need of installing out-of-box components.
+    - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+- SSIS Deploy task version 1.* (Preview)
+    - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
 
 ### Version 1.0.3
 

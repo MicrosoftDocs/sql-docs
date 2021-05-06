@@ -4,7 +4,7 @@ description: Learn how a consumer in OLE DB Driver for SQL Server executes a com
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"

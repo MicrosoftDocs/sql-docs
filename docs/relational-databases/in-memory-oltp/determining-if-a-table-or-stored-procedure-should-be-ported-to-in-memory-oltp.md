@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Analyze, Migrate, Report"
   - "AMR"
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP

@@ -37,5 +37,5 @@ Access for publish can be authorized via a storage account key or a shared acces
 ## Next Steps
 - Learn more about [Extract](sqlpackage-extract.md)
 - Learn more about [Publish](sqlpackage-publish.md)
-- Learn more about [Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
-- Learn more about [Azure Storage Account Keys](https://docs.microsoft.com/azure/storage/common/storage-account-keys-manage)
+- Learn more about [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction)
+- Learn more about [Azure Storage Account Keys](/azure/storage/common/storage-account-keys-manage)

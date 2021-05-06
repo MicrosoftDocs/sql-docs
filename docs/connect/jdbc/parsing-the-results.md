@@ -1,16 +1,16 @@
 ---
-description: "Parsing the results"
-title: "Parsing the results | Microsoft Docs"
+title: Parsing the results
+description: Learn about fully processing results, including multiple result sets, from a query execution in the JDBC driver.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ""
-author: rene-ye
-ms.author: v-reye
+author: DavidEngel
+ms.author: v-daenge
 manager: kenvh
 ---
 # Parsing the results
@@ -21,9 +21,10 @@ This article describes how SQL Server expects users to fully process results ret
 
 ## Update counts and result sets
 
-This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned; users are expected to handle both when processing results.
+This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned. Users are expected to handle both when processing results.
 
 The following code is an example of how a user could iterate through all results from the server:
+
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -43,7 +44,8 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## Exceptions
-When you execute a statement that results in an error or an informational message, SQL Server will respond differently depending on whether it can generate an execution plan. The error message can be thrown immediately after statement execution or it might require a separate result set. In the latter case, the applications need to parse the result set to retrieve the exception.
+
+When you execute a statement that results in an error or an informational message, SQL Server can respond differently. For example, if it can't generate an execution plan, the error message will be thrown immediately on `execute()`. If an error is related to statement processing, the application needs to parse the result set to see the exception.
 
 When SQL Server is unable to generate an execution plan, the exception is thrown immediately.
 
@@ -94,7 +96,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-In the case of `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, exception is thrown immediately on `execute()` and `SELECT 1` isn't executed at all.
+For example, `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, throws an exception immediately on `execute()` and `SELECT 1` isn't executed at all.
 
 If the error from SQL Server has severity of `0` to `9`, it's considered as an informational message and returned as `SQLWarning`.
 
@@ -109,4 +111,4 @@ try (Statement statement = connection.createStatement();) {
 
 ## See also
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

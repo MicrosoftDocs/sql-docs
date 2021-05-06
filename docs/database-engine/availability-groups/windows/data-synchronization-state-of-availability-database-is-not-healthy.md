@@ -21,12 +21,10 @@ manager: erikre
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Database Data Synchronization State|  
-|**Issue**|Data synchronization state of availability database is not healthy.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability database|  
+- **Policy Name**: Availability Database Data Synchronization State
+- **Issue**: Data synchronization state of availability database is not healthy.
+- **Category**: **Warning**
+- **Facet**: Availability database  
   
 ## Description  
  This policy rolls up the data synchronization state of all availability databases (also known as "database replicas") in the availability replica. The policy is in an unhealthy sate when any database replica is not in the expected data synchronization state. The policy is otherwise in a healthy state.  

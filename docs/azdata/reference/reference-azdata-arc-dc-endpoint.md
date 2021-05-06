@@ -5,7 +5,7 @@ description: Reference article for azdata arc dc endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,17 +25,13 @@ The following article provides reference for the **sql** commands in the **azdat
 ## azdata arc dc endpoint list
 List the data controller endpoint.
 ```bash
-azdata arc dc endpoint list [--endpoint-name -e] 
-                            
+azdata arc dc endpoint list 
 ```
 ### Examples
-Lists the data controller endpoint in a particular namespace.
+Lists all available data controller endpoints.
 ```bash
-azdata arc dc endpoint list --namespace <ns>
+azdata arc dc endpoint list
 ```
-### Optional Parameters
-#### `--endpoint-name -e`
-Arc data controller endpoint name.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -53,4 +49,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

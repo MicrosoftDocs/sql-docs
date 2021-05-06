@@ -5,7 +5,7 @@ ms.custom:
 ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.prod_service: "sql-data-warehouse"
+ms.prod_service: "synapse-analytics"
 ms.reviewer: "jrasnick"
 ms.topic: "reference"
 dev_langs: 
@@ -24,7 +24,7 @@ monikerRange: "=azure-sqldw-latest"
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|Unique ID of the workload group. Is not nullable.||
 |name|**sysname**|Name of the workload group. Must be unique to the instance.  Is not nullable.||
-|importance|**nvarchar(128)**|Is the relative importance of a request in this workload group and across workload groups for shared resources. Is not nullable.|low, below_normal, normal (default), above_normal, high||
+|importance|**nvarchar(128)**|Is the relative importance of a request in this workload group and across workload groups for shared resources. Is not nullable.|low, below_normal, normal (default), above_normal, high|
 |min_percentage_resource|**tinyint**|Guaranteed amount of resources for requests in the workload group. Resources are not shared with other workload groups. Is not nullable.||
 |cap_percentage_resource|**tinyint**|Hard cap on the resource percentage allocation for requests in the workload group. Limits the maximum resources allocated to the specified level. The allowed range for value is from 1 through 100.||
 |request_min_resource_grant_percent|**decimal(5,2)**|Specifies the minimum amount of resources allocated to a request. The allowed range for value is from 0.75 to 100.||

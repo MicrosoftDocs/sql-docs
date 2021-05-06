@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/18/2021
+ms.date: 04/16/2021
 ---
 
 # Download and install Azure Data Studio
@@ -21,9 +21,12 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 | Platform | Download | Release date | Version |
 |----------|----------|--------------|---------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2154985)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2155159)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2155221) | February 18, 2021 | 1.26.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2155096) | February 18, 2021 | 1.26.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2155223)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2155222)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2154986) | February 18, 2021 | 1.26.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2160781)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2160780)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2160923) | April 15, 2021 | 1.28.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2160874) | April 15, 2021 | 1.28.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2160876)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2160875)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2160782) | April 15, 2021 | 1.28.0 |
+
+> [!Note]
+> Azure Data Studio currently does not support the ARM architecture.
 
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
 
@@ -37,32 +40,32 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 **User Installer** (recommended)
 
-1. Download and run the [Azure Data Studio *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2154985&clcid=0x409).
+1. Download and run the [Azure Data Studio *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2160781).
 2. Start the Azure Data Studio app.
 
 **System Installer**
 
-1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2155159).
+1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2160780).
 2. Start the Azure Data Studio app.
 
 **.zip file**
 
-1. Download [Azure Data Studio .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2155221).
+1. Download [Azure Data Studio .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2160923).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2155096).
+1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2160874).
 2. To expand the contents of the zip, double-click it.
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download Azure Data Studio for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2155223)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2155222)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2154986)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2160876)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2160875)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2160782)
 1. To extract the file and launch Azure Data Studio, open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -112,12 +115,17 @@ We recommend the *user installer* because it doesn't require administrator privi
    **Ubuntu:**
 
    ```bash
-   sudo apt-get install libxss1
-
-   sudo apt-get install libgconf-2-4
-
-   sudo apt-get install libunwind8
+   sudo apt-get install libxss1 libgconf-2-4 libunwind8
    ```
+
+## Get Azure Data Studio for Windows Subsystem for Linux (WSL)
+
+1. Install **Azure Data Studio** for Windows. then use the `azuredatastudio` command in a WSL terminal just as you would in a normal command prompt. By default the application is stored in your AppData foler. 
+2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
+
+```bash
+'/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
+```
 
 ## Download Insiders build of Azure Data Studio
 

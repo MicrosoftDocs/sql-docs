@@ -3,7 +3,7 @@ title: "DECLARE @local_variable (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for using DECLARE to define local variables for use in a batch or procedure."
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

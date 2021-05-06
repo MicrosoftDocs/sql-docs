@@ -4,7 +4,7 @@ title: "SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

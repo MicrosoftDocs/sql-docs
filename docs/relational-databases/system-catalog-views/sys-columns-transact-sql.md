@@ -1,10 +1,10 @@
 ---
 description: "sys.columns (Transact-SQL)"
-title: "sys.columns (Transact-SQL) | Microsoft Docs"
+title: "sys.columns (Transact-SQL)"
 ms.custom: ""
-ms.date: "11/21/2017"
+ms.date: "04/30/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.columns catalog view"
-ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -51,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |max_length|**smallint**|Maximum length (in bytes) of the column.<br /><br /> -1 = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br /> For **text** columns, the max_length value will be 16 or the value set by sp_tableoption 'text in row'.|  
 |precision|**tinyint**|Precision of the column if numeric-based; otherwise, 0.|  
 |scale|**tinyint**|Scale of column if numeric-based; otherwise, 0.|  
-|collation_name|**sysname**|Name of the collation of the column if character-based; otherwise, NULL.|  
+|collation_name|**sysname**|Name of the collation of the column if character-based; otherwise `NULL`.|  
 |is_nullable|**bit**|1 = Column is nullable.|  
 |is_ansi_padded|**bit**|1 = Column uses ANSI_PADDING ON behavior if character, binary, or variant.<br /><br /> 0 = Column is not character, binary, or variant.|  
 |is_rowguidcol|**bit**|1 = Column is a declared ROWGUIDCOL.|  
@@ -74,9 +73,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |encryption_type_desc|**nvarchar(64)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Encryption type description:<br /><br /> RANDOMIZED<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Name of encryption algorithm.<br /><br /> Only AEAD_AES_256_CBC_HMAC_SHA_512 is supported.|  
 |column_encryption_key_id|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID of the CEK.|  
-|column_encryption_key_database_name|**sysname**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> The name of the database where the column encryption key exists if different than the database of the column. NULL if the key exists in the same database as the column.|  
+|column_encryption_key_database_name|**sysname**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> The name of the database where the column encryption key exists if different than the database of the column. `NULL` if the key exists in the same database as the column.|  
 |is_hidden|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is hidden:<br /><br /> 0 = regular, not-hidden, visible column<br /><br /> 1 = hidden column|  
 |is_masked|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is masked by a dynamic data masking:<br /><br /> 0 = regular, not-masked column<br /><br /> 1 = column is masked|  
+|graph_type |**int** |Internal column with a set of values. The values are between 1-8 for graph columns and `NULL` for others.  |
+|graph_type_desc |**nvarchar(60)**  |internal column with a set of values |
 
 
  

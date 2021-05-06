@@ -64,11 +64,11 @@ AS PARTITION partition_function_name
  *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  Specifies the names of the filegroups to hold the partitions specified by *partition_function_name*. *file_group_name* must already exist in the database.  
   
- If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL is specified, only one *file_group_name* can be specified. Partitions are assigned to filegroups, starting with partition 1, in the order in which the filegroups are listed in [**,**_...n_]. The same *file_group_name* can be specified more than one time in [**,**_...n_]. If *n* is not sufficient to hold the number of partitions specified in *partition_function_name*, CREATE PARTITION SCHEME fails with an error.  
+ If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL is specified, only one *file_group_name* can be specified. Partitions are assigned to filegroups, starting with partition 1, in the order in which the filegroups are listed in [ **,**_...n_]. The same *file_group_name* can be specified more than one time in [ **,**_...n_]. If *n* is not sufficient to hold the number of partitions specified in *partition_function_name*, CREATE PARTITION SCHEME fails with an error.  
   
  If *partition_function_name* generates less partitions than filegroups, the first unassigned filegroup is marked NEXT USED, and an information message displays naming the NEXT USED filegroup. If ALL is specified, the sole *file_group_name* maintains its NEXT USED property for this *partition_function_name*. The NEXT USED filegroup will receive an additional partition if one is created in an ALTER PARTITION FUNCTION statement. To create additional unassigned filegroups to hold new partitions, use ALTER PARTITION SCHEME.  
   
- When you specify the primary filegroup in *file_group_name* [ 1**,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
+ When you specify the primary filegroup in *file_group_name* [ **,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
   
  Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. See example E below. 
   
@@ -95,13 +95,14 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- The partitions of a table that uses partition function `myRangePF1` on partitioning column **col1** would be assigned as shown in the following table.  
-  
-||||||  
-|-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**Partition**|1|2|3|4|  
-|**Values**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
+The partitions of a table that uses partition function `myRangePF1` on partitioning column **col1** would be assigned as shown in the following table.  
+
+|Filegroup|Partition|Values|
+|-|-|-|
+|`test1fg`|1|**col1** <= `1`|
+|`test2fg`|2|**col1** > `1` AND **col1** <= `100`|
+|`test3fg`|3|**col1** > `100` AND **col1** <= `1000`|
+|`test4fg`|4|**col1** > `1000`|
   
 ### B. Creating a partition scheme that maps multiple partitions to the same filegroup  
  If all the partitions map to the same filegroup, use the ALL keyword. But if multiple, but not all, partitions are mapped to the same filegroup, the filegroup name must be repeated, as shown in the following example.  
@@ -117,12 +118,13 @@ TO ( test1fg, test1fg, test1fg, test2fg );
   
  The partitions of a table that uses partition function `myRangePF2` on partitioning column **col1** would be assigned as shown in the following table.  
   
-||||||  
-|-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**Partition**|1|2|3|4|  
-|**Values**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
-  
+|Filegroup|Partition|Values|
+|-|-|-|
+|`test1fg`|1|**col1** <= `1`|
+|`test1fg`|2|**col1** > `1` AND **col1** <= `100`|
+|`test1fg`|3|**col1** > `100` AND **col1** <= `1000`|
+|`test2fg`|4|**col1** > `1000`|
+
 ### C. Creating a partition scheme that maps all partitions to the same filegroup  
  The following example creates the same partition function as in the previous examples, and a partition scheme is created that maps all partitions to the same filegroup.  
   

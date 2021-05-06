@@ -3,7 +3,7 @@ title: "IF...ELSE (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQl language reference for IF-ELSE statements to provide control flow in Transact-SQL statements."
 ms.date: "07/11/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

@@ -41,14 +41,14 @@ Spark Service
 Update the default number of cores to 2 and default memory to 7424m for the Spark service.
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
+azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=2,spark-defaults-conf.spark.driver.memory=7424m
 ```
 
 ### Change the default number of cores and memory for the Spark executors in the Storage Pool
 Update the default number of executor cores to 4 for the Storage Pool.
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
+azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
 ### View the pending settings changes staged in the BDC

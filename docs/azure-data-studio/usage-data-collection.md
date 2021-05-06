@@ -71,23 +71,20 @@ If you don't want to send, crash data to Microsoft, you can change the `enable-c
 
 Azure Data Studio lets you add features to the product by installing Microsoft and third-party extensions. These extensions may be collecting their own usage data and are not controlled by the `telemetry.enableTelemetry` setting. Consult the specific extension's documentation to learn about its telemetry reporting and whether it can be disabled.
 
-## GDPR and Azure Data Studio
+## Data privacy
 
-In addition to supporting the General Data Protection Regulation (GDPR), the Azure Data Studio team takes privacy seriously. That's both for Microsoft as a company and specifically within the Azure Data Studio team.
+The Azure Data Studio team takes privacy seriously. That's both for Microsoft as a company and specifically within the Azure Data Studio team.
 
-To ensure GDPR compliance, we made several updates to Azure Data Studio.
+Several updates to Azure Data Studio to help ensure data privacy.
 
 - Making it more accessible to opt-out of telemetry collection by placing a notification in the product for all existing and new users.
 - Reviewing and classifying the telemetry that we send.
 - Ensuring that we have valid data retention policies in place for any data we collect, for example, crash dumps.
 
-In short, we've worked hard to do the right thing for all users, as these practices apply to all geographies, not just Europe.
-
-One question we expect people to ask is to see the data we collect. However, we don't have a reliable way to do this as Azure Data Studio doesn't have a *sign-in* experience that uniquely identifies a user. We send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC), but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it's not reliable enough for us to 'provide your data'.
-
-For general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+We expect people to ask to see the data we collect. However, Azure Data Studio doesn't have a way to collect personal data as Azure Data Studio doesn't have a *sign-in* experience that uniquely identifies a user. We send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC), but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it's not reliable enough for us to *provide your data*.
 
 ## More resources
+
 - [Workspace and User settings](settings.md)
 - [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
 - [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview?rtc=1) 

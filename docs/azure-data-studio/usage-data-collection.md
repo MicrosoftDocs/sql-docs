@@ -21,7 +21,7 @@ Azure Data Studio doesn't collect your name, address, or other data related to a
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 
-[!INCLUDE [gdpr-related-guidance](../includes/gdpr-related-guidance.md)]
+[!INCLUDE [gdpr-related-guidance](../includes/gdpr-intro-sentence.md)]
 
 ## Audit feature usage and diagnostic data
 

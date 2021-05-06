@@ -1,5 +1,5 @@
 ---
-title: "Keyboard shortcuts in paginated reports | Microsoft Docs"
+title: "Keyboard shortcuts for Report Builder"
 description: When you create and edit paginated reports in Report Builder and Power BI Report Builder, you can use keyboard shortcuts for accessibility and navigation.
 ms.date: 05/04/2021
 ms.prod: reporting-services
@@ -15,7 +15,7 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Keyboard shortcuts in paginated reports
+# Keyboard shortcuts for Report Builder
 
 When you create and edit paginated reports in Report Builder and Power BI Report Builder, you can use keyboard shortcuts for accessibility and navigation. You can select from several standard keyboard mapping schemes.  
   

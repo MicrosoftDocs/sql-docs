@@ -73,9 +73,7 @@ Azure Data Studio lets you add features to the product by installing Microsoft a
 
 ## Data privacy
 
-The Azure Data Studio team takes privacy seriously. That's both for Microsoft as a company and specifically within the Azure Data Studio team.
-
-Several updates to Azure Data Studio to help ensure data privacy.
+Several updates made to Azure Data Studio to help ensure data privacy.
 
 - Making it more accessible to opt-out of telemetry collection by placing a notification in the product for all existing and new users.
 - Reviewing and classifying the telemetry that we send.

@@ -193,9 +193,9 @@ additionalContent:
           summary: Willis Towers Watson achieves seamless scalability in the cloud by migrating to Azure SQL Database.
           url: https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure
         # Card
-        - title: Thomson Reuters Elite
-          summary: Thomson Reuters Elite enhances world-class financial management solution using Azure SQL Database.
-          url: https://customers.microsoft.com/story/740191-thomson-reuters-professional-services-azure
+        - title: Paychex (United States)
+          summary: Paychex relies on Azure SQL Database Elastic Pools to handle explosive growth.
+          url: https://customers.microsoft.com/story/paychex-azure-sql-database-us
         # Card
         - title: Innovative Systems (United States)
           summary: Innovative Systems unites its far-flung databases in the cloud by powering migrations using Azure Database Migration Service.

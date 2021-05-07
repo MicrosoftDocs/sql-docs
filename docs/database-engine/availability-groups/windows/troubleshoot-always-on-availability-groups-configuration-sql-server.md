@@ -157,10 +157,9 @@ ms.author: chadam
 
 - Use Telnet to validate connectivity. Here are examples of commands you can use:
 
-  ```DOS
-  telnet ServerName Port
-  telnet IP_Address Port
-  ```
+   ```DOS
+   telnet ServerName Port
+   telnet IP_Address Port
 
 - If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
 - If Telnet connection to the IP address works but to the ServerName it does not, there is likely a DNS or name resolution issue
@@ -169,15 +168,13 @@ ms.author: chadam
 Run the following PowerShell script to examine for disabled inbound traffic rules
 - If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
-  ```powershell
-  Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
-  ```
+   ```powershell
+   Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
 
 - Capture a NETSTAT -a output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
 
-  ```dos
-  netstat -a
-  ```  
+   ```dos
+   netstat -a
 
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  

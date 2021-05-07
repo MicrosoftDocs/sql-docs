@@ -2,7 +2,7 @@
 description: "MSSQLSERVER_35250"
 title: "MSSQLSERVER_35250 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/05/2021"
+ms.date: "05/06/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -109,30 +109,30 @@ This message occurs when attempting to join secondary databases to an Always On 
 4. Ensure the endpoint is configured for the correct IP/port that AG is defined for.
     - Run the following query on the Primary and then each Secondary replica that is failing to connect. This will help you find the endpoint URL and port
 
-    ```sql 
-    select endpoint_url from sys.availability_replicas
-    ```
+     ```sql 
+     select endpoint_url from sys.availability_replicas
+     ```
 
     - Run the following query to find the endpoints and ports
 
-    ```sql
-    SELECT
-      tep.name as EndPointName,
-      sp.name As CreatedBy,
-      tep.type_desc,
-      tep.state_desc,
-      tep.port
-    FROM
-      sys.tcp_endpoints tep
-      INNER JOIN sys.server_principals sp ON tep.principal_id = sp.principal_id
-    WHERE
-      tep.type = 4
-    ```
+     ```sql
+     SELECT
+       tep.name as EndPointName,
+       sp.name As CreatedBy,
+       tep.type_desc,
+       tep.state_desc,
+       tep.port
+     FROM
+       sys.tcp_endpoints tep
+       INNER JOIN sys.server_principals sp ON tep.principal_id = sp.principal_id
+     WHERE
+       tep.type = 4
+     ```
 
     - Compare endpoint_url and port from each query and ensure the port from the endpoint_url matches the port defined for the endpoint on each respective replica
 
-> [!NOTE]  
-> If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
+   > [!NOTE]  
+   > If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
 
 5. Check whether the network service account has CONNECT permission to the endpoint. Run the following queries to list the accounts that have connect permission to the endpoint on the server(s) in question, and to show the permission assigned to each relevant endpoint.
 
@@ -167,17 +167,17 @@ This message occurs when attempting to join secondary databases to an Always On 
 6. Check for possible name resolution issues
     - Validate DNS resolution by using NSLookup on the IP address and the name:
 
-    ```DOS
-    nslookup IP_Address
-    nslookup ServerName
-    ```
+     ```DOS
+     nslookup IP_Address
+     nslookup ServerName
+     ```
 
     - Does the name resolve to the correct IP address? Does the IP address resolve to the correct name?
     - Check for local HOSTS file entries on each node that may be pointing to an incorrect server. From Command Prompt print the HOSTS file using this:
 
-    ```DOS
-    type C:\WINDOWS\system32\drivers\etc\hosts
-    ```
+     ```DOS
+     type C:\WINDOWS\system32\drivers\etc\hosts
+     ```
 
     - Check if there are [Server Aliases for Use by a Client](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas
   

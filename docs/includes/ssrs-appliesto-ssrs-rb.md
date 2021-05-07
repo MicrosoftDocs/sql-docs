@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
-✔ Reporting Services (SSRS) Report Builder
+✔ Microsoft Report Builder (SSRS)

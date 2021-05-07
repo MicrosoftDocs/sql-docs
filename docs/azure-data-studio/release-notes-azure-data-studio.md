@@ -651,7 +651,7 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1). |
 | &nbsp; | &nbsp; |
 
-### Next Steps
+## Next steps
 
 See one of the following quickstarts to get started:
 

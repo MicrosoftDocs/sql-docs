@@ -90,6 +90,7 @@ Keyboard shortcuts are the same in [Report Builder](../../reporting-services/rep
 |Accelerator mode for pan and zoom in map view area when a map viewport is selected.|CTRL +Left click|  
   
 ## See also  
- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
- [Power BI Report Builder](/power-bi/paginated-reports/report-builder-power-bi)
- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)
+
+- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+- [Power BI Report Builder](/power-bi/paginated-reports/report-builder-power-bi)
+- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)

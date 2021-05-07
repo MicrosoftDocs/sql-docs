@@ -51,7 +51,7 @@ SSMS 18.9.1 is the latest general availability (GA) release of SSMS. If you need
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
-| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .Net Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .NET Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
@@ -142,14 +142,14 @@ Download previous SSMS versions by selecting the download link in the related se
 | SMO/Scripting | Fixed script generation for DW databases where it only worked if the object explorer was connected to logical master instead of the user database. |
 | SSMS Setup | Fixed an issue where SSMS Setup was not properly executing the Post-Install Custom Action, thus not running "ssms.exe /setup". This is believe to be the cause for some sporadic issues when SSMS is started after an upgrade (see known issue session for AS). |
 | Vulnerability Assessment | Disabling menu options "Tasks -> Vulnerability Assessment" for Azure SQL databases and adding collapsible message tip for better user experience for Azure SQL VM users. |
-| XEvent UI | Fixed capability to filter Extended Events using the event name instead of id. Supports the use of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Originally added in [SSMS 18.8](#whats-new-in-187). |
+| XEvent UI | Fixed capability to filter Extended Events using the event name instead of ID. Supports the use of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Originally added in [SSMS 18.8](#whats-new-in-187). |
 
 #### Known issues (18.9)
 
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
-| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .Net Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .NET Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | IntelliSense | Column names are omitted from suggestions and error indicators are falsely displayed under the column names. |

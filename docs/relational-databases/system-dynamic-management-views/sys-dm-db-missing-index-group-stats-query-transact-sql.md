@@ -2,7 +2,7 @@
 description: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 title: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/12/2021"
+ms.date: "05/06/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -34,10 +34,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
 |**group_handle**|**int**|Identifies a group of missing indexes. This identifier is unique across the server.<br /><br /> The other columns provide information about all queries for which the index in the group is considered missing.<br /><br /> An index group contains only one index.<BR><BR>Can be joined to `index_group_handle` in [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md).|  
 |**query_hash**|**binary(8)**|Binary hash value calculated on the query and used to identify queries with similar logic. You can use the query hash to determine the aggregate resource usage for queries that differ only by literal values.|  
 |**query_plan_hash**|**binary(8)**|Binary hash value calculated on the query execution plan and used to identify similar query execution plans. You can use query plan hash to find the cumulative cost of queries with similar execution plans.<br /><br /> Will always be 0x000 when a natively compiled stored procedure queries a memory-optimized table.|  
-|**last_sql_handle**|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure of the last compiled statement that needed this index.<BR><BR>`last_sql_handle` can be used to retrieve the SQL text of the query by calling the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management function.|
+|**last_sql_handle**|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure of the last compiled statement that needed this index.<BR><BR>The `last_sql_handle` can be used to retrieve the SQL text of the query by calling the dynamic management function [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).|
 |**last_statement_start_offset**|**int**|Indicates, in bytes, beginning with 0, the starting position of the query that the row describes within the text of its batch or persisted object for the last compiled statement that needed this index in its SQL batch.|
 |**last_statement_end_offset**|**int**|Indicates, in bytes, beginning with 0, the ending position of the query that the row describes within the text of its batch or persisted object for the last compiled statement that needed this index in its SQL batch.|
-|**last_statement_sql_handle**|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure of the last compiled statement that needed this index.<BR><BR>`last_statement_sql_handle`, together with `last_statement_start_offset` and `last_statement_end_offset`, can be used to retrieve the SQL text of the query by calling the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management function.<BR><BR>If Query Store was not enabled when the query was compiled, returns 0.|
+|**last_statement_sql_handle**|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure of the last compiled statement that needed this index. Used by Query Store. Unlike `last_sql_handle`, `sys.query_store_query_text` references the `statement_sql_handle` used by the Query Store catalog view [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md).<BR><BR>If Query Store was not enabled when the query was compiled, returns 0.|
 |**user_seeks**|**bigint**|Number of seeks caused by user queries that the recommended index in the group could have been used for.|  
 |**user_scans**|**bigint**|Number of scans caused by user queries that the recommended index in the group could have been used for.|  
 |**last_user_seek**|**datetime**|Date and time of last seek caused by user queries that the recommended index in the group could have been used for.|  
@@ -74,23 +74,24 @@ SELECT TOP 10
             sql_text.text,
             misq.last_statement_start_offset / 2 + 1,
             (
-            CASE misq.last_statement_Start_offset
-                WHEN -1 THEN datalength(sql_text.text)
+            CASE misq.last_statement_start_offset
+                WHEN -1 THEN DATALENGTH(sql_text.text)
                 ELSE misq.last_statement_end_offset
             END - misq.last_statement_start_offset
             ) / 2 + 1
     ),
     misq.*
 FROM sys.dm_db_missing_index_group_stats_query AS misq
-CROSS APPLY sys.dm_exec_sql_text(last_sql_handle) AS sql_text
-ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans) DESC; 
+CROSS APPLY sys.dm_exec_sql_text(misq.last_sql_handle) AS sql_text
+ORDER BY misq.avg_total_user_cost * misq.avg_user_impact * (misq.user_seeks + misq.user_scans) DESC; 
 ```
   
-## See Also  
- [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+## See also  
+ - [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ - [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ - [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ - [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)   
+ - [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+ - [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+ - [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)

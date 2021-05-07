@@ -153,7 +153,32 @@ ms.author: chadam
     For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ##  <a name="NetworkAccess"></a> Network Access  
- Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains).  
+ Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains).  Check if you can connect to the endpoints by following these steps:
+
+- Use Telnet to validate connectivity. Here are examples of commands you can use:
+
+  ```DOS
+  telnet ServerName Port
+  telnet IP_Address Port
+  ```
+
+- If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
+- If Telnet connection to the IP address works but to the ServerName it does not, there is likely a DNS or name resolution issue
+- If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections.
+- If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
+Run the following PowerShell script to examine for disabled inbound traffic rules
+- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+
+  ```powershell
+  Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
+  ```
+
+- Capture a NETSTAT -a output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
+
+  ```dos
+  netstat -a
+  ```  
+
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
  This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command.  

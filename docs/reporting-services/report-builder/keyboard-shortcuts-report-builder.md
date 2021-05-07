@@ -19,7 +19,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)]
 
-Keyboard shortcuts are the same in [Report Builder](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) for Reporting Services and [Power BI Report Builder](/power-bi/paginated-reports/report-builder-power-bi). When you create and edit paginated reports in either tool, you can use keyboard shortcuts for accessibility and navigation. You can select from several standard keyboard mapping schemes.  
+Keyboard shortcuts are the same in [Report Builder](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) for Reporting Services and in [Power BI Report Builder](/power-bi/paginated-reports/report-builder-power-bi). When you create and edit paginated reports in either tool, you can use keyboard shortcuts for accessibility and navigation. You can select from several standard keyboard mapping schemes.  
   
  You can navigate through the Report Builder window, or select and change options in dialog boxes, without using the mouse.  
   
@@ -90,7 +90,6 @@ Keyboard shortcuts are the same in [Report Builder](../../reporting-services/rep
 |Accelerator mode for pan and zoom in map view area when a map viewport is selected.|CTRL +Left click|  
   
 ## See also  
- [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
-
-  
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+ [Power BI Report Builder](/power-bi/paginated-reports/report-builder-power-bi)
+ [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)

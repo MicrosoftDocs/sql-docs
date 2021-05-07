@@ -5,10 +5,9 @@
  author: maggiesMSFT
  ms.service: 
  ms.topic: include
- ms.date: 03/26/2018
+ ms.date: 05/06/2021
  ms.author: maggies
  ms.custom: include file
 ---
 
-
-✔ SQL Server Reporting Services (2017)
+✔ Microsoft Report Builder (SSRS)

@@ -41,7 +41,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure Synapse Analytics|
 |result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure Synapse Analytics| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative integer values = Reasons why result set caching was not used.  See remarks section for details.|
 |client_correlation_id|**nvarchar(255)**|Optional user-defined name for a client session.  To set for a session, call sp_set_session_context 'client_correlation_id', '<CorrelationIDName>'.  Run `SELECT SESSION_CONTEXT(N'client_correlation_id')` to retrieve its value.|
-|command2|**nvarchar(max)**|Holds the full text of the request as submitted by the user. Holds queries that are longer than 4000 characters.| Any valid query or request text.  NULL = Queries that are 4000 characters long or less, for these queries the full text can be found under the command column.|
+|command2|**nvarchar(max)**|Null| Null|
 ||||
 
 ## Remarks 

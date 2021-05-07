@@ -10,7 +10,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "35250 (Database Engine error)"
 ms.assetid: 
-author: JosephPilov-msft
+author: pijocoder
 ms.author: mathoma
 ---
 # MSSQLSERVER_35250
@@ -179,7 +179,7 @@ This message occurs when attempting to join secondary databases to an Always On 
     type C:\WINDOWS\system32\drivers\etc\hosts
     ```
 
-    - Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas
+    - Check if there are [Server Aliases for Use by a Client](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas
   
 7. Ensure your SQL Server is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2).
 

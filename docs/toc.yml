@@ -10941,7 +10941,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,3000 to 16,000
+      - name: Errors 12,300 to 16,000
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -11103,6 +11103,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-33128-database-engine-error.md
         - name: 33129
           href: relational-databases/errors-events/mssqlserver-33129-database-engine-error.md
+      - name: Errors 34,001 to 40,999
+        items:
+        - name: 35250
+          href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
       - name: Errors 41,000 to 41,400
         items:
         - name: 41030

@@ -3,7 +3,8 @@
  description: include file
  services: 
  author: maggiesMSFT
- ms.service: 
+ ms.service: powerbi
+ ms.subservice: report-builder
  ms.topic: include
  ms.date: 05/10/2021
  ms.author: maggies

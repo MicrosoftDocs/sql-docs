@@ -8353,16 +8353,17 @@ items:
     - name: Issue Element
       href: tools/ssbdiagnose/issue-element-ssbdiagnose.md
   - name: SQL Server Data Tools (SSDT)
-    href: ssdt/sql-server-data-tools.md
     items:
+    - name: SQL Server Data Tools Overview
+      href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Release notes for SSDT
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-    - name: SQL Server Data Tools
-      href: ssdt/sql-server-data-tools.md
+    - name: Anonymous Usage Data
+      href: ssdt/anonymous-usage-data.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development
@@ -9803,6 +9804,8 @@ items:
       href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage for Azure Synapse Analytics
       href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
+    - name: Troubleshooting Import/Export
+      href: tools/sqlpackage/troubleshooting-import-export-sqlpackage.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -10936,7 +10939,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,3000 to 16,000
+      - name: Errors 12,300 to 16,000
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -11098,6 +11101,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-33128-database-engine-error.md
         - name: 33129
           href: relational-databases/errors-events/mssqlserver-33129-database-engine-error.md
+      - name: Errors 34,001 to 40,999
+        items:
+        - name: 35250
+          href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
       - name: Errors 41,000 to 41,400
         items:
         - name: 41030

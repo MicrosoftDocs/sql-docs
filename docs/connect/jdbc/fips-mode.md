@@ -1,6 +1,6 @@
 ---
+title: FIPS mode
 description: Learn how to use the JDBC Driver for SQL Server in FIPS mode to keep your application FIPS 140 compliant.
-title: FIPS mode in JDBC
 ms.custom: ""
 ms.date: 03/21/2021
 ms.prod: sql

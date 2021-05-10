@@ -53,7 +53,7 @@ ms.author: vanto
 
 ## Arguments
 
- LOOP \| HASH \| MERGE  
+ LOOP | HASH | MERGE  
  Specifies that the join in the query should use looping, hashing, or merging. Using LOOP |HASH | MERGE JOIN enforces a particular join between two tables. LOOP cannot be specified together with RIGHT or FULL as a join type. For more information, see [Joins](../../relational-databases/performance/joins.md).
   
  REMOTE  

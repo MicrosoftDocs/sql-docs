@@ -6,9 +6,9 @@
  ms.service: powerbi
  ms.subservice: report-builder
  ms.topic: include
- ms.date: 05/06/2021
+ ms.date: 05/10/2021
  ms.author: maggies
  ms.custom: include file
 ---
 
-✔ Power BI Report Builder
+❌ Power BI Report Builder

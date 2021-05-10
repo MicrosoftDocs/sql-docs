@@ -341,6 +341,9 @@ ms.author: sstein
   
  **Profile Name**  
  Displays the name of the profile.  
+ 
+> [!NOTE]  
+>  If your are configuring database mail for an SQL Managed Instance, and you want to send messages using SQL Agent jobs, you will need a profile named '**AzureManagedInstance_dbmail_profile**', otherwise Managed Instance will be unable to send emails via SQL Agents. [Sending emails in Azure SQL Managed Instances](https://techcommunity.microsoft.com/t5/azure-sql/sending-emails-in-azure-sql-managed-instance/ba-p/386235).  
   
  **Default Profile**  
  Select this option to make the specified profile the default profile.  

@@ -6127,6 +6127,8 @@ items:
     items:
     - name: Overview
       href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+    - name: What's new
+      href: tools/synapse-pathway/pathway-whatsnew.md
     - name: Azure Synapse Pathway FAQ
       href: tools/synapse-pathway/pathway-faq.md
     - name: Behind the Scenes

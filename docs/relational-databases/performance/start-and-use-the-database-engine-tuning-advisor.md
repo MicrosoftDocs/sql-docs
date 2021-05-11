@@ -322,7 +322,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
     -   Using your favorite XML tool, generate an instance from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema.  
   
-3.  After creating the XML input file, use it as input to the **dta** command-line utility to tune the workload. For information about using XML input files with this utility, see the section [Use the dta utilty](#dta) earlier in this article.  
+3.  After creating the XML input file, use it as input to the **dta** command-line utility to tune the workload. For information about using XML input files with this utility, see the section [Use the dta utility](#dta) earlier in this article.  
   
 > [!NOTE]  
 >  If you want to use an inline workload, which is a workload that is specified directly in the XML input file, use the sample [XML Input File Sample with Inline Workload &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  

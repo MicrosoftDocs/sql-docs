@@ -63,6 +63,8 @@ sp_addserver [ @server = ] 'server' ,
  **sp_addserver** cannot be used inside a user-defined transaction.
 
  Using **sp_addserver** to add a remote server is discontinued. Use [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) instead.
+ 
+ Using **sp_addserver** to change the local server name may cause undesired effects or unsupported configurations such as when using Availbility Groups or Replication.
 
 ## Permissions
  Requires membership in the **setupadmin** fixed server role.

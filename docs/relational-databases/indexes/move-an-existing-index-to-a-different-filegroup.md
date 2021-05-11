@@ -24,7 +24,7 @@ ms.author: mikeray
 
   This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
-For design considerations including why you might want to place a nonclustered index on a different filegroup, see [Index Placement on Filegroups or Partitions Schemes](../sql-server-index-design-guide.md#a-nameindex_placementa-index-placement-on-filegroups-or-partitions-schemes).
+For design considerations including why you might want to place a nonclustered index on a different filegroup, see [Index Placement on Filegroups or Partitions Schemes](../sql-server-index-design-guide.md#index_placement).
 
 ##  <a name="BeforeYouBegin"></a> Before you begin  
   

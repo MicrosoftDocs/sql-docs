@@ -1,10 +1,10 @@
 ---
 title: Azure Synapse Pathway Preview FAQ 
 description: Frequently asked question for Azure Synapse Pathway
-author: anshul82-ms
-ms.author: anrampal
+author: twounder
+ms.author: mausher
 ms.topic: overview 
-ms.date: 03/02/2021
+ms.date: 05/10/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
@@ -43,7 +43,7 @@ A. Synapse Pathway preview version supports code translation of tables, schemas,
 | Source Platform| Statement Types Supported | 
 |:-------------------:|:------------------|
 | IBM Netezza  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
-|Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table | 
+| Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View | 
 | Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |                       
 
   

@@ -1,6 +1,6 @@
 ---
-title: What's new in Azure Synapse Pathway
-description: What's new for Azure Synapse Pathway
+title: Release notes - Azure Synapse Pathway
+description: Azure Synapse Pathway release notes
 author: twounder
 ms.author: mausher
 ms.topic: overview 
@@ -10,7 +10,8 @@ ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# What's new in Azure Synapse Pathway
+# Azure Synapse Pathway - release notes
+
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 This article lists the additions in each release of Azure Synapse Pathway.

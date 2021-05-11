@@ -3,7 +3,6 @@
  description: include file
  services: 
  author: maggiesMSFT
- ms.service: 
  ms.topic: include
  ms.date: 05/06/2021
  ms.author: maggies

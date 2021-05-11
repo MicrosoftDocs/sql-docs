@@ -44,7 +44,7 @@ This tutorial is intended for database administrators who are not familiar with 
 You must install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com).  
   
 ## After you finish this tutorial  
-After you finish the lessons in this tutorial, refer to the following topics for more information about Database Engine Tuning Advisor:  
+After you finish the lessons in this tutorial, refer to the following articles for more information about Database Engine Tuning Advisor:  
   
 -   [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) for descriptions of how to perform tasks with this tool.  
   

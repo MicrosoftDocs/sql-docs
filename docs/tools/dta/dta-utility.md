@@ -81,7 +81,7 @@ dta
  Displays usage information.  
   
  **-A** _time_for_tuning_in_minutes_  
- Specifies the tuning time limit in minutes. **dta** uses the specified amount of time to tune the workload and generate a script with the recommended physical design changes. By default **dta** assumes a tuning time of 8 hours. Specifying 0allows unlimited tuning time. **dta** might finish tuning the entire workload before the time limit expires. However, to make sure that the entire workload is tuned, we recommend that you specify unlimited tuning time (-A 0).  
+ Specifies the tuning time limit in minutes. **dta** uses the specified amount of time to tune the workload and generate a script with the recommended physical design changes. By default **dta** assumes a tuning time of 8 hours. Specifying 0 allows unlimited tuning time. **dta** might finish tuning the entire workload before the time limit expires. However, to make sure that the entire workload is tuned, we recommend that you specify unlimited tuning time (-A 0).  
   
  **-a**  
  Tunes workload and applies the recommendation without prompting you.  

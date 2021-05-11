@@ -33,7 +33,7 @@ ms.author: wiassaf
   
 -   Use the Database Engine Tuning Advisor graphical user interface to connect to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Start the Database Engine Tuning Advisor](#Start) later in this topic.  
   
--   Use the **dta** utility to tune the first workload. For more information, see [Use the dta Utility](#dta) later in this topic.  
+-   Use the **dta** utility to tune the first workload. For more information, see [Use the dta utility](#dta) later in this topic.  
   
 ##  <a name="Start"></a> Start the Database Engine Tuning Advisor  
  You can start the Database Engine Tuning Advisor graphical user interface (GUI) in several different ways to support database tuning in a variety of scenarios. The different ways to start Database Engine Tuning Advisor include: from the **Start** menu, from the **Tools** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], from the Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and from the **Tools** menu in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. When you first start Database Engine Tuning Advisor, the application displays a **Connect to Server** dialog box where you can specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to which you want to connect.  
@@ -122,7 +122,7 @@ ms.author: wiassaf
   
  You can also use the **Starting** versions of these trace events. For example, **SQL:BatchStarting**. However, the **Completed** versions of these trace events include the **Duration** column, which allows Database Engine Tuning Advisor to more effectively tune the workload. Database Engine Tuning Advisor does not tune other types of trace events. For more information about these trace events, see [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) and [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md). For information about using the SQL Trace stored procedures to create a trace file workload, see [Create a Trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-### Trace File or Trace Table Workloads That Contain the LoginName Data Column  
+### Trace File or Trace Table workloads that contain the loginname data column  
  Database Engine Tuning Advisor submits Showplan requests as part of the tuning process. When a trace table or file that contains the **LoginName** data column is consumed as a workload, Database Engine Tuning Advisor impersonates the user specified in **LoginName**. If this user has not been granted the SHOWPLAN permission, which enables the user to execute and produce Showplans for the statements contained in the trace, Database Engine Tuning Advisor will not tune those statements.  
   
 ##### To avoid granting the SHOWPLAN permission to each user specified in the LoginName column of the trace  
@@ -137,16 +137,16 @@ ms.author: wiassaf
   
  Database Engine Tuning Advisor will tune the new workload because login information is not specified in the trace. If the **LoginName** does not exist for a statement, Database Engine Tuning Advisor tunes that statement by impersonating the user who started the tuning session (a member of either the **sysadmin** fixed server role or the **db_owner** fixed database role).  
   
-##  <a name="Tune"></a> Tune a Database  
+##  <a name="Tune"></a> Tune a database  
  To tune a database, you can use the Database Engine Tuning Advisor GUI or the **dta** utility.  
   
 > [!NOTE]  
 >  Make sure that tracing has stopped before using a trace table as a workload for Database Engine Tuning Advisor. Database Engine Tuning Advisor does not support using a trace table to which trace events are still being written as a workload.  
   
-### Use the Database Engine Tuning Advisor Graphical User Interface  
+### Use the Database Engine Tuning Advisor graphical user interface  
  On the Database Engine Tuning Advisor GUI, you can tune a database by using the plan cache, workload files, or workload tables. You can use the Database Engine Tuning Advisor GUI to easily view the results of your current tuning session and results of previous tuning sessions. For information about user interface options, see [User Interface Descriptions](#UI) later in this topic. For more information about working with the output after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
 
-####  <a name="PlanCache"></a> To tune a database by using the Query Store
+####  <a name="PlanCache"></a> To tune a database by using the query store
 See [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
   
 ####  <a name="PlanCache"></a> To tune a database by using the plan cache  
@@ -217,7 +217,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
 > [!NOTE]  
 >  Pausing Database Engine Tuning Advisor is not supported. If you click the **Start Analysis** toolbar button after clicking either the **Stop Analysis** or **Stop Analysis (With Recommendations)** toolbar buttons, Database Engine Tuning Advisor starts a new tuning session.  
   
-###  <a name="dta"></a> Use the dta Utility  
+###  <a name="dta"></a> Use the dta utility  
  The [dta utility](../../tools/dta/dta-utility.md) provides a command prompt executable file that you can use to tune databases. It enables you to use Database Engine Tuning Advisor functionality in batch files and scripts. The **dta** utility takes plan cache entries, trace files, trace tables, and [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts as workloads. It also takes XML input that conforms to the Database Engine Tuning Advisor XML schema, which is available at this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Consider the following before you begin tuning a workload with the **dta** utility:  
@@ -228,7 +228,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
 -   If a tuning session continues running longer than you had anticipated it would run, you can press CTRL+C to stop the tuning session and generate recommendations based on the analysis **dta** has completed up to this point. You will be prompted to decide whether you want to generate recommendations or not. Press CTRL+C again to stop the tuning session without generating recommendations.  
   
- For more information about **dta** utility syntax and examples, see [dta Utility](../../tools/dta/dta-utility.md).  
+ For more information about **dta** utility syntax and examples, see [dta utility](../../tools/dta/dta-utility.md).  
   
 #### To tune a database by using the plan cache  
   
@@ -299,7 +299,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
      where `-E` specifies a trusted connection, `-S` specifies a remote server and instance, or a named instance on the local server, `-s` specifies a tuning session name, and `-ix` specifies the XML input file to use for the tuning session.  
   
-5.  After the utility finishes tuning the workload, you can view the results of tuning sessions with the Database Engine Tuning Advisor GUI. As an alternative, you can also specify that the tuning recommendations be written to an XML file with the **-ox** option. For more information, see [dta Utility](../../tools/dta/dta-utility.md).  
+5.  After the utility finishes tuning the workload, you can view the results of tuning sessions with the Database Engine Tuning Advisor GUI. As an alternative, you can also specify that the tuning recommendations be written to an XML file with the **-ox** option. For more information, see [dta utility](../../tools/dta/dta-utility.md).  
   
 ##  <a name="XMLInput"></a> Create an XML Input File  
  If you are an experienced XML developer, you can create XML-formatted files that [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor can use to tune workloads. To create these XML files, use your favorite XML tools to edit a sample file or to generate an instance from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema.  
@@ -327,9 +327,9 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
 > [!NOTE]  
 >  If you want to use an inline workload, which is a workload that is specified directly in the XML input file, use the sample [XML Input File Sample with Inline Workload &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-##  <a name="UI"></a> User Interface Descriptions  
+##  <a name="UI"></a> User interface descriptions  
   
-### Tools Menu/Options Page  
+### Tools menu/options page  
  Use this dialog box to specify general configuration parameters for the Database Engine Tuning Advisor.  
   
  **On startup**  
@@ -350,7 +350,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
  **Ask before stopping session analysis**  
  Display a confirmation dialog box before stopping analysis of a workload.  
   
-#### General Tab Options  
+#### General tab options  
  You must configure the fields in the **General** tab before starting a tuning session. You do not have to modify the settings of the **Tuning Options** tab before starting a tuning session.  
   
  **Session name**  
@@ -403,7 +403,7 @@ database_name.owner_name.table_name
 > [!NOTE]  
 >  Database Engine Tuning Advisor does not automatically update the rows information for the tables displayed on the **General** tab. Instead it relies upon the metadata in the database. If you suspect that the rows information is outdated, run the DBCC UPDATEUSAGE command for the relevant objects.  
   
-##### Tuning Tab Options  
+##### Tuning tab options  
  Use the **Tuning Options** tab to modify default settings of general tuning options. You do not have to modify the settings of the **Tuning Options** tab before starting a tuning session.  
   
  **Limit tuning time**  
@@ -484,7 +484,7 @@ database_name.owner_name.table_name
  **Keep aligned partitioning**  
  Keep partitioning structures that are currently aligned, but recommend dropping unnecessary indexed views, indexes, and non-aligned partitioning. Any additional partitioning recommended will align with the current partitioning scheme.  
   
-###### Progress Tab Options  
+###### Progress tab options  
  The **Progress** tab of Database Engine Tuning Advisor appears after Database Engine Tuning Advisor begins analyzing a workload.  
   
  If you want to stop the tuning session after it has started, choose one of the following options on the **Actions** menu:  
@@ -512,6 +512,6 @@ database_name.owner_name.table_name
  Contains information regarding this tuning session. To print this log, right-click the log, and then click **Print**.  
   
 ## See Also  
- [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)    
+ [View and work with the output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
+ [dta utility](../../tools/dta/dta-utility.md)    
  [Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)

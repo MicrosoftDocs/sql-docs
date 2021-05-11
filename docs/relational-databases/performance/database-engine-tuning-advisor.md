@@ -109,15 +109,15 @@ The Database Engine Tuning Advisor is designed to handle the following types of 
   
 -   Specify only the physical database design structures you want Database Engine Tuning Advisor to analyze. Database Engine Tuning Advisor provides many options, but specifies only those that are necessary.  
   
-## Dependency on xp_msver Extended Stored Procedure  
+## Dependency on xp_msver extended stored procedure  
  Database Engine Tuning Advisor depends on the **xp_msver** extended stored procedure to provide full functionality. This extended stored procedure is turned on by default. Database Engine Tuning Advisor uses this extended stored procedure to fetch the number of processors and available memory on the computer where the database that you are tuning resides. If **xp_msver** is unavailable, Database Engine Tuning Advisor assumes the hardware characteristics of the computer where Database Engine Tuning Advisor is running. If the hardware characteristics of the computer where Database Engine Tuning Advisor is running are not available, one processor and 1024 megabytes (MBs) of memory are assumed.  
   
  This dependency affects partitioning recommendations because the number of partitions recommended depends on these two values (number of processors and available memory). The dependency also affects your tuning results when you use a test server to tune your production server. In this scenario, Database Engine Tuning Advisor uses **xp_msver** to fetch hardware properties from the production server. After tuning the workload on the test server, Database Engine Tuning Advisor uses these hardware properties to generate a recommendation. For more information, see [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
-## Database Engine Tuning Advisor Tasks  
+## Database Engine Tuning Advisor tasks  
  The following table lists common Database Engine Tuning Advisor tasks and the topics that describe how to perform them.  
   
-|Database Engine Tuning Advisor Task|Topic|  
+|Database Engine Tuning Advisor task|topic|  
 |-----------------------------------------|-----------|  
 |Initialize and start the Database Engine Tuning Advisor.<br /><br /> Create a workload by specifying the plan cache, by creating a script, or by generating a trace file or trace table.<br /><br /> Tune a database by using the Database Engine Tuning Advisor graphical user interface tool.<br /><br /> Create XML input files to tune workloads.<br /><br /> View descriptions of the Database Engine Tuning Advisor user interface options.|[Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |View the results of the database tuning operation.<br /><br /> Select and implement tuning recommendations.<br /><br /> Perform what-if exploratory analysis against the workload.<br /><br /> Review existing tuning sessions, clone sessions based on existing ones <br />or edit existing tuning recommendations for further evaluation or implementation.<br /><br /> View descriptions of the Database Engine Tuning Advisor user interface options.|[View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  

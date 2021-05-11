@@ -6127,17 +6127,19 @@ items:
     items:
     - name: Overview
       href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+    - name: Release notes
+      href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
       href: tools/synapse-pathway/pathway-faq.md
-    - name: Behind the Scenes
+    - name: Behind the scenes
       href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Tutorial - Run Azure Synapse Pathway
       href: tools/synapse-pathway/synapse-pathway-assessment.md
-    - name: Tutorial - Save and Load
+    - name: Tutorial - Save and load
       href: tools/synapse-pathway/tutorial-save-load-assessment.md
-    - name: Generate Reports
+    - name: Generate reports
       href: tools/synapse-pathway/report-generation.md
 - name: Manage, monitor, & tune
   items:

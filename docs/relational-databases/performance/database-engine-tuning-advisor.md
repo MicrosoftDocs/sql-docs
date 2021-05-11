@@ -1,21 +1,20 @@
 ---
-title: "Database Engine Tuning Advisor | Microsoft Docs"
+title: "Database Engine Tuning Advisor"
 description: Learn how to use Database Engine Tuning Advisor to troubleshoot, tune a large set of queries, analyze design changes, and manage storage space in SQL Server.
 ms.custom: ""
-ms.date: "01/09/2017"
+ms.date: "05/11/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.general.f1"
-ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you can use to optimize query performance. You can use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Using the DTA, you can perform the following tasks.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you can use to optimize query performance. You can use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Using the DTA, you can perform the following tasks:
   
 -   Troubleshoot the performance of a specific problem query  
   
@@ -25,6 +24,10 @@ ms.author: wiassaf
   
 -   Manage storage space  
   
+  
+> [!NOTE]
+> The Database Engine Tuning Advisor is not supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
+
 ## Database Engine Tuning Advisor Benefits  
  Optimizing query performance can be difficult without a full understanding the database structure and the queries that are run against the database. The **Database Engine Tuning Advisor (DTA)** can make this task easier by analyzing the current query plan cache or by analyzing a workload of [!INCLUDE[tsql](../../includes/tsql-md.md)] queries that you create and recommending an appropriate physical design. For more advanced database administrators, DTA exposes a powerful mechanism to perform exploratory what-if analysis of different physical design alternatives. The DTA can provide the following information.  
   

@@ -1,8 +1,8 @@
 ---
-title: "Start and Use the Database Engine Tuning Advisor | Microsoft Docs"
+title: "Start and Use the Database Engine Tuning Advisor"
 description: Learn how to start and use Database Engine Tuning Advisor in SQL Server to create workloads, tune databases, and create XML input files.
 ms.custom: ""
-ms.date: "01/09/2017"
+ms.date: "05/11/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -15,8 +15,7 @@ f1_keywords:
   - "sql13.dta.progress.f1"
   - "sql13.dta.options.f1"
 helpviewer_keywords: 
-  - "Database Engine Tuning Advisor [SQL Server], starting"
-ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
+  - "Database Engine Tuning Advisor [SQL Server], starting" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -24,6 +23,9 @@ ms.author: wiassaf
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
+> [!NOTE]
+> The Database Engine Tuning Advisor is not supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
+
 ##  <a name="Initialize"></a> Initialize the Database Engine Tuning Advisor  
  On first use, a user who is member of the **sysadmin** fixed server role must initialize the Database Engine Tuning Advisor. This is because several system tables must be created in the **msdb** database to support tuning operations. Initialization also enables users that are members of the **db_owner** fixed database role to tune workloads on tables in databases that they own.  
   

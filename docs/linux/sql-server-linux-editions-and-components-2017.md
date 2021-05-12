@@ -73,9 +73,9 @@ For features supported by Developer, Enterprise Core, and Evaluation editions, s
 The Developer edition continues to support only one client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale limits  
-  
-|Feature|Enterprise|Standard|Web|Express| 
-|-------------|----------------|--------------|---------|------------------------|
+
+|Feature|Enterprise|Standard|Web|Express|
+|-------|----------|--------|---|-------|
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores| 
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|
 |Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|

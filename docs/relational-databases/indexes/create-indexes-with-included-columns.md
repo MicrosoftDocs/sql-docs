@@ -1,6 +1,6 @@
 ---
-description: "Create Indexes with Included Columns"
-title: "Create Indexes with Included Columns | Microsoft Docs"
+description: "Create indexes with included columns"
+title: "Create indexes with included columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -23,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create Indexes with Included Columns
+# Create indexes with included columns
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic describes how to add included (or nonkey) columns to extend the functionality of nonclustered indexes in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By including nonkey columns, you can create nonclustered indexes that cover more queries. This is because the nonkey columns have the following benefits:  
@@ -42,9 +42,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Redesign nonclustered indexes that have a large index key size so that only columns used for searching and lookups are key columns. Make all other columns that cover the query into nonkey columns. In this way, you will have all columns needed to cover the query, but the index key itself is small and efficient.  
   
--   Include nonkey columns in a nonclustered index to avoid exceeding the current index size limitations of a maximum of 32 key columns and a maximum index key size of 1,700 bytes (16 key columns and 900 bytes prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]). The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not consider nonkey columns when calculating the number of index key columns or index key size.  
+-   Include nonkey columns in a nonclustered index to avoid exceeding the current index size limitations of a maximum of 32 key columns and a maximum index key size of 1,700 bytes (16 key columns and 900 bytes prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]). The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not consider nonkey columns when calculating the number of index key columns or index key size.
+
+-   The order of nonkey columns in the index definition does not impact the performance of queries that use the index.
+
+-   Avoid very wide nonclustered indexes where the included columns don’t represent a narrow enough subset of the underlying table columns. If adding wide indexes, always verify if the cost of updating one extra wide index offsets the cost of reading directly from the table.
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   Nonkey columns can only be defined on nonclustered indexes.  
   

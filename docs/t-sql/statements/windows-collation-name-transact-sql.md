@@ -4,10 +4,10 @@ title: "Windows Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "collations [SQL Server], Windows collations"
   - "Collation Designator"
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Windows Collation Name (Transact-SQL)
 
@@ -32,10 +32,10 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 
 ```syntaxsql
 <Windows_collation_name> :: =
-CollationDesignator_<ComparisonStyle>
+<CollationDesignator>_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
+{ <CaseSensitivity>_<AccentSensitivity> [ _<KanatypeSensitive> ] [ _<WidthSensitive> ] [ _<VariationSelectorSensitive> ] 
 }
 | { _UTF8 }
 | { _BIN | _BIN2 }
@@ -69,12 +69,12 @@ Omitting this option specifies kanatype-insensitive, **KS** specifies kanatype-s
 Omitting this option specifies width-insensitive, **WS** specifies width-sensitive.
 
 *VariationSelectorSensitivity*  
-- **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Applies to**: Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 
 
 - Omitting this option specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
 
 **UTF8**  
-- **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   
 
 - Specifies UTF-8 encoding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -128,7 +128,7 @@ To list the Windows collations supported by your instance of [!INCLUDE[ssNoVersi
 SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
-The following table lists all Windows collations supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+The following table lists all Windows collations supported in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 |Windows locale|Collation Version 100|Collation Version 90|
 |--------------------|---------------------------|--------------------------|
@@ -242,7 +242,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 - [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [Constants](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [table](../../t-sql/data-types/table-transact-sql.md)

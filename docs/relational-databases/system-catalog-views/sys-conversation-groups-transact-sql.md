@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "conversation_groups_TSQL"
   - "conversation_groups"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.conversation_groups catalog view"
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.conversation_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

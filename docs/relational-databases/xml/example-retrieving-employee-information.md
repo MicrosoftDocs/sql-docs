@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EXPLICIT mode"
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Retrieving Employee Information
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -4,10 +4,10 @@ title: "STIntersects (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STIntersects (geography Data Type)"
   - "STIntersects_TSQL"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic 
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STIntersects (geography Data Type)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

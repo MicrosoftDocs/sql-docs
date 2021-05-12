@@ -8516,6 +8516,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/configure-windows/precompute-rank-server-configuration-option.md",
+      "redirect_url": "/docs/database-engine/discontinued-database-engine-functionality-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md",
       "redirect_url": "/previous-versions/sql/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections",
       "redirect_document_id": false
@@ -41186,6 +41191,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/big-data-cluster/configure-cluster.md",
+      "redirect_url": "/sql/big-data-cluster/configure-bdc-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
       "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
       "redirect_document_id": true
@@ -41811,27 +41821,27 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-verify.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-verify.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": true
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
       "redirect_document_id": true
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
       "redirect_document_id": false
     },
@@ -42343,6 +42353,11 @@
     {
       "source_path": "docs/advanced-analytics/r/converting-r-code-for-use-in-sql-server.md",
       "redirect_url": "/sql/machine-learning/r/converting-r-code-for-use-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/converting-r-code-for-use-in-sql-server.md",
+      "redirect_url": "/sql/machine-learning/deploy/modify-r-python-code-to-run-in-sql-server",
       "redirect_document_id": true
     },
     {
@@ -42356,6 +42371,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/r/creating-workflows-that-use-r-in-sql-server.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md",
       "redirect_url": "/sql/machine-learning/r/data-exploration-and-predictive-modeling-with-r",
       "redirect_document_id": true
@@ -42363,7 +42383,12 @@
     {
       "source_path": "docs/advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
       "redirect_url": "/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils",
-      "redirect_document_id": true
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
+      "redirect_url": "/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md",
@@ -42383,7 +42408,7 @@
     {
       "source_path": "docs/advanced-analytics/r/operationalizing-your-r-code.md",
       "redirect_url": "/sql/machine-learning/r/operationalizing-your-r-code",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r/performance-case-study-r-services.md",
@@ -42898,6 +42923,26 @@
     {
       "source_path": "docs/machine-learning/predictions/how-to-do-realtime-scoring.md",
       "redirect_url": "/sql/machine-learning/predictions/native-scoring-predict-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/data-science-scenarios-and-solution-templates.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-tutorials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md",
+      "redirect_url": "/sql/machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/deploy/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
       "redirect_document_id": false
     },
     {
@@ -47472,17 +47517,17 @@
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -47522,12 +47567,12 @@
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -52422,7 +52467,7 @@
     },
     {
       "source_path": "docs/ssms/tutorials/tutorial-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -56411,6 +56456,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant#legal-notice-ssma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
+      "redirect_url": "/sql/ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/2014/analysis-services/data-mining/index.md",
       "redirect_url": "/sql/analysis-services/data-mining/data-mining-ssas?view=sql-server-2014",
       "redirect_document_id": false
@@ -59072,7 +59127,7 @@
     },
     {
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
-      "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -59088,6 +59143,36 @@
     {
       "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
       "redirect_url": "/sql/ssma/db2/connecting-to-sql-server-db2tosql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage-download.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-download",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage-pipelines.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-pipelines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/release-notes-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/release-notes-sqlpackage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
       "redirect_document_id": true
     }
   ]

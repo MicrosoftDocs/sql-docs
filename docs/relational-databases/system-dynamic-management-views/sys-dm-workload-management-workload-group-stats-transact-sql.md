@@ -6,12 +6,12 @@ ms.date: "11/02/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 author: ronortloff
 ms.author: rortloff
-monikerRange: "= azure-sqldw-latest||= sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]

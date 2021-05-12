@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "FileTableRootPath_TSQL"
   - "FileTableRootPath"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTableRootPath function"
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

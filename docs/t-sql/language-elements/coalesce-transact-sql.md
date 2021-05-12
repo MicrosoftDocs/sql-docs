@@ -3,10 +3,10 @@ title: "COALESCE (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for COALESCE, which returns the value of the first expression that does not evaluate to NULL."
 ms.date: "08/30/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COALESCE"
   - "COALESCE_TSQL"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "first nonnull expressions [SQL Server]"
   - "nonnull expressions"
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COALESCE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

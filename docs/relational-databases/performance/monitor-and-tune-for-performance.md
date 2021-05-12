@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "database monitoring [SQL Server]"
   - "monitoring server performance [SQL Server], about monitoring server performance"
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Tune for Performance
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

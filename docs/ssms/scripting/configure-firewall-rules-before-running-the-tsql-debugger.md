@@ -22,7 +22,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.date: "10/20/2016"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Configure firewall rules before running the TSQL Debugger

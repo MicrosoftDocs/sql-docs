@@ -9,7 +9,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2017"
 ---
 # Install packages with Python tools on SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]

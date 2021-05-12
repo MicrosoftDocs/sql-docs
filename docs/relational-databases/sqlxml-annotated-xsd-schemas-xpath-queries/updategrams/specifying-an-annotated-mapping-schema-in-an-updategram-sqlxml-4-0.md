@@ -18,10 +18,10 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], updategrams"
   - "sql:inverse"
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

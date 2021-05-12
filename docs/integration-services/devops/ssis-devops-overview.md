@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Integration Services DevOps overview | Microsoft Docs"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
-ms.date: "12/06/2019"
+ms.date: "4/21/2021"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -14,9 +14,9 @@ ms.author: chugu
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 
-If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
+If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 
-**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**..
+**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**.
 
 - **[SSIS Build](#ssis-build-task)** task supports building dtproj files in project deployment model or package deployment model.
 
@@ -52,13 +52,13 @@ Name of the project configuration to be used for build. If not supplied, it defa
 
 #### Output path
 
-Path of a separate folder to save build results, which can be published as build artifact via [publish build artifacts task](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
+Path of a separate folder to save build results, which can be published as build artifact via [publish build artifacts task](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops&preserve-view=true).
 
 ### Limitations and known issues
 
 - SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
-- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
+- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops&preserve-view=true) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&preserve-view=true) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -69,6 +69,26 @@ cat log.txt
 ```
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will stop responding and time out during execution.
+
+## SSIS Build task version 1.* (Preview)
+
+Enhancements in version 1.*:
+
+- Remove the dependency on Visual Studio and SSIS designer. Build task can run on Microsoft-hosted agent or self-hosted agent with Windows OS and .NET framework 4.6.2 or higher.
+
+- No need of installing out-of-box components.
+
+- Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+
+### Version 1.* only properties
+
+#### Project Password
+
+Password of the SSIS project and its packages. This argument is only valid when the protection level of the SSIS project and packages is EncryptSensitiveWithPassword or EncryptAllWithPassword. For package deployment model, all packages must share the same password specified by this argument.
+
+#### Strip Sensitive Data
+
+Convert the protection level of the SSIS project to DontSaveSensitve if this value is true. When protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword, the argument Project Password must be correctly set. This option is only valid for project deployment model.
 
 ## SSIS Deploy task
 
@@ -147,6 +167,18 @@ SSIS Deploy Task doesn't support the following scenarios currently:
 - Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
 
+## SSIS Deploy task version 1.* (Preview)
+
+Enhancements in version 1.*:
+
+- Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+
+### Version 1.* only properties
+
+#### Project Password
+
+Password to decrypt the ISPAC or DTSX files. This argument is only valid when the protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword.
+
 ## SSIS Catalog Configuration task
 
 ![catalog configuration task](media/ssis-catalog-configuation-task.png)
@@ -166,7 +198,7 @@ Refer to details on how to [define configuration JSON](#define-configuration-jso
 
 Path of the SSIS catalog configuration JSON file. This property is only visible when selecting "File path" as configuration file source.
 
-To use [pipeline variables](/azure/devops/pipelines/process/variables) in configuration JSON file, you need to add a [File Transform task](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution).
+To use [pipeline variables](/azure/devops/pipelines/process/variables) in configuration JSON file, you need to add a [File Transform task](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops&preserve-view=true) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops&preserve-view=true#json-variable-substitution).
 
 #### Inline configuration JSON
 
@@ -338,6 +370,17 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.4
+
+Release Date: April 21, 2021
+
+- SSIS Build task version 1.* (Preview)
+    - Remove the dependency on Visual Studio and SSIS designer. Build task can run on Microsoft-hosted agent or self-hosted agent with Windows OS and .NET framework 4.6.2 or higher.
+    - No need of installing out-of-box components.
+    - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+- SSIS Deploy task version 1.* (Preview)
+    - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
 
 ### Version 1.0.3
 

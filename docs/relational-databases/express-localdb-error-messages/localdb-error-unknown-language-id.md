@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

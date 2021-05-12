@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "PathName_TSQL"
   - "PathName"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PathName FILESTREAM [SQL Server]"
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

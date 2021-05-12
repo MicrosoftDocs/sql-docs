@@ -4,10 +4,10 @@ title: "sys.time_zone_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.time_zone_info"
   - "sys.time_zone_info_TSQL"
@@ -16,9 +16,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.time_zone_info system table"
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.time_zone_info (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

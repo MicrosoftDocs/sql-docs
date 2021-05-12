@@ -1,8 +1,7 @@
 ---
-title: "Database Properties (Query Store Page) | Microsoft Docs"
+title: "Database Properties (Query Store Page)"
 description: "Learn how to use the Query Store tab in the Database Properties dialog box to configure query store modes, intervals, thresholds, and other properties."
 ms.custom: ""
-ms.date: "11/09/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,17 +9,14 @@ ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.querystore.f1"
-ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: "stevestein"
 ms.author: "sstein"
+ms.date: "01/25/2021"
 ---
 # Database Properties (Query Store Page)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+
   Access this page from the principal database, and use it to configure and to modify the properties of the database query store. These options can also be configure by using the [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md). For information about the query store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## Options  
  Operation Mode  

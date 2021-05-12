@@ -5,15 +5,15 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.listeners.f1"
   - "sql13.swb.addreplicawizard.specifyreplicas.f1"
   - "sql13.swb.newagwizard.specifyreplicas.f1"
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

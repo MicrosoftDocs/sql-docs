@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC], Cursor Library"
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d

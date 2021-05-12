@@ -30,20 +30,22 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. When asked, select **Yes** to upgrade the Python packages.
+2. You may be prompted to upgrade your Python packages when your packages need updating.
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
 3. Install Kqlmagic:
 
    ```python
-   !pip install Kqlmagic --no-cache-dir --upgrade
+   import sys
+   !{sys.executable} -m pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
    Verify it's installed:
 
    ```python
-   !pip list
+   import sys
+   !{sys.executable} -m pip list
    ```
 
    ![List](media/notebooks-kqlmagic/install-list.png)
@@ -249,9 +251,9 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 Learn more about notebooks and Kqlmagic:
 
-- [Kusto (KQL) extension for Azure Data Studio (Preview)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
-- [Create and run a Kusto (KQL) notebook (Preview)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
+- [Kusto (KQL) extension for Azure Data Studio (Preview)](../extensions/kusto-extension.md)
+- [Create and run a Kusto (KQL) notebook (Preview)](./notebooks-kusto-kernel.md)
 - [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
-- [Extension (Magic) to Jupyter notebook and Jupyter lab](https://github.com/Microsoft/jupyter-Kqlmagic), that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data.
+- [Extension (Magic) to Jupyter Notebook and Jupyter lab](https://github.com/Microsoft/jupyter-Kqlmagic), that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)

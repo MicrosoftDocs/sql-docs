@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_XML_SCHEMA_COLLECTION_TSQL"
   - "ALTER XML SCHEMA COLLECTION"
@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "schema collections [SQL Server], modifying"
   - "multiple schema namespaces"
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

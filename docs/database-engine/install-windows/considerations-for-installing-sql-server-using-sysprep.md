@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Considerations for Installing SQL Server Using SysPrep
 
@@ -55,15 +55,16 @@ You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPre
     - You cannot specify Product IDs for a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express editions.  
   
 ## Supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations  
-SysPrep in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports all features, including tools, of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+SysPrep in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports all features, including tools.  
   
-You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or earlier versions. The features of these instances must support SysPrep.  
+You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or earlier versions. The features of these instances must support SysPrep.  
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is automatically installed and completed at the end of the prepare image step.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer are automatically prepared when you prepare an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They are completed when you complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the Complete Image step.  
   
-For information about supported editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+For information about supported editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
+[SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)  
   
 You can perform an edition upgrade while configuring a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This option is not supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express editions.  
   

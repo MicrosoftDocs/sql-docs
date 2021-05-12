@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SHOWPLAN_TEXT"
   - "SET_SHOWPLAN_TEXT_TSQL"
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -5,7 +5,7 @@ ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja

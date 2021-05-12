@@ -36,7 +36,7 @@ landingContent:
       - text: Supported platforms
         url: sql-server-linux-release-notes-2019.md
       - text: Frequently asked questions
-        url: sql-server-linux-faq.md 
+        url: sql-server-linux-faq.yml 
 
 
   - title: "Module 3: Install/deploy & connect"
@@ -54,7 +54,7 @@ landingContent:
       - text: Tools overview
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (tool)
-        url: ../azure-data-studio/what-is.md
+        url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: Channel 9 - Cross-platform SQL tools (optional)
         url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 

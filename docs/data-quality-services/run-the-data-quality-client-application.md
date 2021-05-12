@@ -33,7 +33,7 @@ ms.author: sawinark
 ##  <a name="Run"></a> Run Data Quality Client  
  To run [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] on the computer where you have installed it:  
   
-1.  Click **Start**, point to **All Programs**, click **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, click **Data Quality Services**, and then click **Data Quality Client**.  
+1.  In the **Start** menu, select the **[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]** **Data Quality Client**.  
   
 2.  In the **Connect to Server** dialog box:  
   

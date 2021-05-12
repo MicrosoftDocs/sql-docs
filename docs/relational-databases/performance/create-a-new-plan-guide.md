@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "creating plan guides"
   - "plan guides [SQL Server]. creating"
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Create a New Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

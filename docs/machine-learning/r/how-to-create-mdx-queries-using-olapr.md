@@ -4,17 +4,17 @@ description: Learn how to use the olapR package library in SQL Server to write M
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 05/22/2019
+ms.date: 05/04/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # How to create MDX queries in R using olapR
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-The [olapR](/machine-learning-server/r-reference/olapr/olapr) package supports MDX queries against cubes hosted in SQL Server Analysis Services. You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
+The [olapR](/machine-learning-server/r-reference/olapr/olapr) in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) package supports MDX queries against cubes hosted in [SQL Server Analysis Services](/analysis-services/ssas-overview). You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
 
 This article describes the two main uses of the **olapR** package:
 

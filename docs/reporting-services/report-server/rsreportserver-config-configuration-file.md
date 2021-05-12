@@ -179,7 +179,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**FileShareStorageLocation**|Specifies a single folder on the file system for storing temporary snapshots. Although you can specify the folder path as a UNC path, doing so is not recommended. The default value is empty.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S,P|  
 |**IsRdceEnabled**|Specifies whether Report Definition Customization Extension (RDCE) is enabled. Valid values are **True** and **False**.|N,S,P|
 |**IsDataModelRefreshService**|Specifies whether the Server should process Power BI Reports refresh. Valid values are **True** and **False**.|P|
-|**MaxCatalogConnectionPoolSizePerProcess**|Specifies the maximum size of the connection pool when connecting to the server catalog. The default value is 0. If you choose 0, the report server determines the maximum number of connections for the reportingservices.exe process, for the other processes it is the .[Sql Client Default](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize).|P|  
+|**MaxCatalogConnectionPoolSizePerProcess**|Specifies the maximum size of the connection pool when connecting to the server catalog. The default value is 0. If you choose 0, the report server determines the maximum number of connections for the reportingservices.exe process, for the other processes it is the .[Sql Client Default](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize).|P|  
 
   
 ##  <a name="bkmk_UI"></a> UI (RSReportServer.config file)  
@@ -396,7 +396,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**MaxConnections**|Specifies the maximum number of connections to Bing Maps Web Services.|  
 |**Timeout**|Specifies the timeout in seconds to wait for a response from Bing Maps Web Services.|  
 |**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. **(Default)** specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
-|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is **Default**. For more information, see [HttpRequestCacheLevel Enumeration](https://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is **Default**. For more information, see [HttpRequestCacheLevel Enumeration](/dotnet/api/system.net.cache.httprequestcachelevel).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Default Configuration File for a Native Mode Report Server  
  The rsreportserver.config file is installed to the following location by default:  
@@ -856,5 +856,4 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
  More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

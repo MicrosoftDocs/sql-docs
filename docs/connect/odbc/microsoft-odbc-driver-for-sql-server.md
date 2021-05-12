@@ -53,7 +53,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Connecting with **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Connecting with **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Data Access Tracing](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [Frequently Asked Questions](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+- [Frequently Asked Questions](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml)
 - [Installing the Driver Manager](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [Known Issues](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Programming Guidelines](../../connect/odbc/linux-mac/programming-guidelines.md)

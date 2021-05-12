@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_has_column_changed_TSQL"
   - "sys.fn_cdc_has_column_changed"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_cdc_has_column_changed"
   - "fn_cdc_has_column_changed"
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

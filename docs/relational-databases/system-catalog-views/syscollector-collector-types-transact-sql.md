@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syscollector_collector_types"
   - "syscollector_collector_types_TSQL"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_collector_types view"
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

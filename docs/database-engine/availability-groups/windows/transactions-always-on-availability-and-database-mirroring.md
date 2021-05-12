@@ -6,7 +6,7 @@ ms.custom: seo-lt-2019
 ms.date: "12/11/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Transactions - availability groups and database mirroring
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,9 +28,9 @@ This article describes cross-database and distributed transactions support for A
 SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes databases on the same instance of SQL Server or databases on different instances of SQL Server. Distributed transactions are not supported for databases configured for database mirroring.
 
 > [!NOTE]
-> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. 
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. 
 > 
-> In [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported.
+> In [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported.
 
 To configure an availability group for distributed transactions, see [Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md).
 

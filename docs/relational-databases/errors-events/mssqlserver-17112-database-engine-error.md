@@ -6,7 +6,7 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "17112 (Database Engine error)"
 ms.assetid: 
@@ -30,7 +30,7 @@ ms.author: ramakoni
 
 ## Explanation
 
-This error indicates that an invalid [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options) was specified. When a startup option is not properly specified, SQL Server either fails to start or may not run as expected. Error 17112 is also raised.
+This error indicates that an invalid [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) was specified. When a startup option is not properly specified, SQL Server either fails to start or may not run as expected. Error 17112 is also raised.
 
 In some cases, the instance might start, but when you review the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Error log, the startup parameters do not look right:
 
@@ -61,5 +61,5 @@ Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration 
 
 Refer to the following topics for more information on this topic:
 
-- [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options)
-- [SCM Services - Configure Server Startup Options](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options)
+- [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+- [SCM Services - Configure Server Startup Options](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

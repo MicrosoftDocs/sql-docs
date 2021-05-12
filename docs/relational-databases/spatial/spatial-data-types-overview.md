@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data Types Overview
 
@@ -78,7 +78,7 @@ In an ellipsoidal system, a polygon without an orientation has no meaning, or is
 
 The interior of the polygon in an ellipsoidal system is defined by the "left-hand rule": if you imagine yourself walking along the ring of a geography Polygon, following the points in the order in which they are listed, the area on the left is being treated as the interior of the Polygon, and the area on the right as the exterior of the Polygon.
 
-When the compatibility level is 100 or below in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] then the **geography** data type has the following restrictions:
+When the compatibility level is 100 or below in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] then the **geography** data type has the following restrictions:
 
 - Each **geography** instance must fit inside a single hemisphere. No spatial objects larger than a hemisphere can be stored.
 
@@ -86,7 +86,7 @@ When the compatibility level is 100 or below in [!INCLUDE[ssCurrent](../../inclu
 
 - The **geography** data type methods that require the input of two **geography** instances, such as STIntersection(), STUnion(), STDifference(), and STSymDifference(), will return null if the results from the methods do not fit inside a single hemisphere. STBuffer() will also return null if the output exceeds a single hemisphere.  
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** is a special type of Polygon that covers the entire globe. It has an area, but no borders or vertices.  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], **FullGlobe** is a special type of Polygon that covers the entire globe. It has an area, but no borders or vertices.  
 
 ### Outer and inner rings in `geography` data type
 

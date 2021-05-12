@@ -18,7 +18,7 @@ This quickstart shows how to use Azure Data Studio to connect to SQL Server, and
 
 To complete this quickstart, you need Azure Data Studio, and access to SQL Server.
 
-- [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
+- [Install Azure Data Studio](./download-azure-data-studio.md).
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 

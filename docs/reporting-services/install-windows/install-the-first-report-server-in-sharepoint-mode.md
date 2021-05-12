@@ -8,7 +8,7 @@ ms.prod_service: "reporting-services-sharepoint"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Install the first Report Server in SharePoint mode
 
@@ -36,7 +36,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
  > [!NOTE]
  > For SharePoint 2016, Excel Services has moved to the Office Online Server and cannot be used in a single server deployment. Office Online Server has to be deployed to a different server. For more information, see [Office Online Server overview](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) and [Configure Excel Online administrative settings](https://technet.microsoft.com/library/jj219698\(v=office.16\).aspx).
   
-|||  
+|Component|Description|  
 |-|-|  
 |**(1)**|SharePoint service installed from SQL Server installation. You can create one or more Reporting Services service applications.|  
 |**(2)**|Reporting Services add-in for SharePoint products provides the user interface components on the SharePoint Servers.|  

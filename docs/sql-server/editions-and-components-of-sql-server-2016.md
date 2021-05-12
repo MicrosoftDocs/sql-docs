@@ -5,7 +5,7 @@ description: This article describes features supported by the various editions o
 ms.custom: 
    - seo-lt-2019
    - sqlfreshmay19
-ms.date: 07/22/2020
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -34,7 +34,6 @@ helpviewer_keywords:
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
   - "CPSA"
-ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
@@ -47,7 +46,7 @@ For information about other versions, see:
 
 * [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
-* [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
+* [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014&preserve-view=true).
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -61,7 +60,7 @@ For the latest release notes and what's new information, see the following:
 
 ### Try SQL Server!    
     
-> [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Download from Evaluation Center](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
 > ![Azure Virtual Machine small](/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**   
   
@@ -136,7 +135,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions. 
+<sup>2</sup> Applies to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions. 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -178,7 +177,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Table and index partitioning|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |Data compression|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |Resource Governor|Yes|No|No|No|No|  
-|Partitioned Table Parallelism|Yes|No|No|No|No|
+|Partitioned Table Parallelism|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
@@ -189,7 +188,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a Common Programmability Surface Area (CPSA) across editions. Aggregate Pushdown, String Predicate Pushdown, and SIMD Optimizations are [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition scalability enhancements. For more detail, see [Columnstore indexes - what's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
+<sup>2</sup> Applies to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 as part of creating a Common Programmability Surface Area (CPSA) across editions. Aggregate Pushdown, String Predicate Pushdown, and SIMD Optimizations are [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition scalability enhancements. For more detail, see [Columnstore indexes - what's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 
@@ -209,7 +208,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.      
+<sup>1</sup> Applies to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.      
 
 ##  <a name="Replication"></a> Replication  
   
@@ -270,7 +269,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.      
+<sup>2</sup> Applies to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -308,7 +307,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.     
+<sup>2</sup> Applies to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.     
   
 ## <a name="IS"></a> Integration Services
 
@@ -330,7 +329,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   
 |Global batch aggregation|Yes|No|No|No|No| 
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.     
+<sup>1</sup> Applies to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.     
 
 ##  <a name="SSAS"></a> Analysis Services  
   
@@ -383,9 +382,8 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
   
-> [![Download SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
+> [![Download SSMS](/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## See Also  
  [Install SQL Server](../database-engine/install-windows/install-sql-server.md)  
  
-  

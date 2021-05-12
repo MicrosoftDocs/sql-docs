@@ -19,7 +19,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
   
 ## To manually add snapshots to report history
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the drop-down arrow.
   
@@ -70,10 +70,8 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
-## To manually add snapshots to report history
-  
 1. In the web portal, navigate to the item that you want to view history for and right-click it.  
   
 2. In the drop-down menu, select **Manage**.  

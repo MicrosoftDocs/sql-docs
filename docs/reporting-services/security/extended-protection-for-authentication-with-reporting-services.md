@@ -17,12 +17,12 @@ ms.author: maggies
 
   Extended Protection is a set of enhancements to recent versions of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system. Extended protection enhances how credentials and authentication can be protected by applications. The feature itself does not directly provide protection against specific attacks such as credential forwarding, but it provides an infrastructure for applications such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to enforce Extended Protection for Authentication.  
   
- The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922).  
+ The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90)).  
   
 SQL Server Reporting Services (SSRS) supports and enforces Extended Protection that has been enabled in the operating system and configured in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication and could therefore benefit from Extended Protection support in the operating system and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extended protection features.  
   
 > [!IMPORTANT]  
->  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](https://go.microsoft.com/fwlink/?LinkID=178431). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=183362).  
+>  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](https://support.microsoft.com/topic/microsoft-security-advisory-extended-protection-for-authentication-7dd2ee6d-c2e9-3484-2d8e-466261d3f0c7). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
 
 ## Reporting Services Extended Protection Overview
 
@@ -156,8 +156,8 @@ For more information, see [Register a Service Principal Name &#40;SPN&#41; for a
 ## Next steps
 
 [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[Extended Protection for Authentication Overview](https://go.microsoft.com/fwlink/?LinkID=177943)   
-[Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[Extended Protection for Authentication Overview](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+[Integrated Windows Authentication with Extended Protection](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))   
 [Microsoft Security Advisory: Extended protection for authentication](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

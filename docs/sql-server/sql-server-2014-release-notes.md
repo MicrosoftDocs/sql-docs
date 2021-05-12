@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ In addition, note the following fixes:
 SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.
 
 > [!NOTE]
-> If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
+> If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/topic/kb3018269-error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050-0-7f34525c-d517-6399-a31b-e7033db13706).
 
 ### Download pages and more information for SP1
 

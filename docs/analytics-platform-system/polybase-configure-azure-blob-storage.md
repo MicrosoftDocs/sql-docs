@@ -1,6 +1,6 @@
 ---
-title: "Use PolyBase to access external data in Azure Blob storage"
-description: Explains how to use PolyBase on a Parallel Data Warehouse (APS) to query external data in Azure Blob storage. 
+title: "Use PolyBase to access external data in Azure Blob Storage"
+description: Explains how to use PolyBase on a Parallel Data Warehouse (APS) to query external data in Azure Blob Storage. 
 author: mzaman1 
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,28 +10,28 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
-# Configure PolyBase to access external data in Azure Blob storage
+# Configure PolyBase to access external data in Azure Blob Storage
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Azure Blob storage.
+The article explains how to use PolyBase on a SQL Server instance to query external data in Azure Blob Storage.
 
 > [!NOTE]
-> APS currently only supports standard general purpose v1 locally redundant (LRS) Azure Blob storage.
+> APS currently only supports standard general purpose v1 locally redundant (LRS) Azure Blob Storage.
 
 ## Prerequisites
 
- - Azure Blob storage in your subscription.
- - A container created in the Azure Blob storage.
+ - Azure Blob Storage in your subscription.
+ - A container created in the Azure Blob Storage.
 
-### Configure Azure Blob storage connectivity
+### Configure Azure Blob Storage connectivity
 
-First, configure APS to use Azure Blob storage.
+First, configure APS to use Azure Blob Storage.
 
-1. Run [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) with 'hadoop connectivity' set to an Azure Blob storage provider. To find the value for providers, see [PolyBase Connectivity Configuration](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Run [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) with 'hadoop connectivity' set to an Azure Blob Storage provider. To find the value for providers, see [PolyBase Connectivity Configuration](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure Blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 
@@ -43,7 +43,7 @@ First, configure APS to use Azure Blob storage.
   
 ## Configure an external table
 
-To query the data in your Azure Blob storage, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
+To query the data in your Azure Blob Storage, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
 1. Create a master key on the database. It is required to encrypt the credential secret.
 
@@ -51,7 +51,7 @@ To query the data in your Azure Blob storage, you must define an external table 
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Create a database scoped credential for Azure Blob storage.
+1. Create a database scoped credential for Azure Blob Storage.
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -75,7 +75,7 @@ To query the data in your Azure Blob storage, you must define an external table 
 1. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
-   -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+   -- FORMAT TYPE: Type of format in Azure Blob Storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
    -- In this example, the files are pipe (|) delimited
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
@@ -118,7 +118,7 @@ The following queries provide example with fictional car sensor data.
 
 ### Ad hoc queries  
 
-The following ad hoc query joins relational with data in Azure Blob storage. It selects customers who drive faster than 35 mph, joining structured customer data stored in SQL Server with car sensor data stored in Azure Blob storage.  
+The following ad hoc query joins relational with data in Azure Blob Storage. It selects customers who drive faster than 35 mph, joining structured customer data stored in SQL Server with car sensor data stored in Azure Blob Storage.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -149,10 +149,10 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### Exporting data  
 
-The following query exports data from APS to Azure Blob storage. It can be used to archive relational data to Azure Blob storage while still be able to query it.
+The following query exports data from APS to Azure Blob Storage. It can be used to archive relational data to Azure Blob Storage while still be able to query it.
 
 ```sql
--- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
+-- Export data: Move old data to Azure Blob Storage while keeping it query-able via an external table.  
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] 
 WITH (  
       LOCATION='/archive/customer/2009',  

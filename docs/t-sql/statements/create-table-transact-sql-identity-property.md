@@ -4,10 +4,10 @@ title: "IDENTITY (Property) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IDENTITY_TSQL"
   - "IDENTITY"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -51,7 +51,7 @@ IDENTITY [ (seed , increment) ]
  Is the incremental value that is added to the identity value of the previous row that was loaded.
 
  > [!NOTE]
- > In Azure Synapse Analytics values for identity are not incremental due to the distributed architecture of the data warehouse. Please see [Using IDENTITY to create surrogate keys in Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values) for more information.
+ > In Azure Synapse Analytics values for identity are not incremental due to the distributed architecture of the data warehouse. Please see [Using IDENTITY to create surrogate keys in a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values) for more information.
   
  You must specify both the seed and increment or neither. If neither is specified, the default is (1,1).  
   
@@ -67,7 +67,7 @@ IDENTITY [ (seed , increment) ]
 -   **Uniqueness of the value** - Uniqueness must be enforced by using a **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. - 
  
 > [!NOTE]
-> Azure Synapse Analytics does not support **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. Please see [Using IDENTITY to create surrogate keys in Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) for more information.
+> Azure Synapse Analytics does not support **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. Please see [Using IDENTITY to create surrogate keys in a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) for more information.
 
 -   **Consecutive values within a transaction** - A transaction inserting multiple rows is not guaranteed to get consecutive values for the rows because other concurrent inserts might occur on the table. If values must be consecutive then the transaction should use an exclusive lock on the table or use the **SERIALIZABLE** isolation level.  
   

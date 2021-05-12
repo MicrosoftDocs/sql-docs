@@ -4,13 +4,13 @@ title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - what&#39;s new
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -18,12 +18,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
+ > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
  
 ## Feature Summary for Product Releases  
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |Batch mode execution for multi-threaded queries|yes|yes|yes|yes|yes|yes|yes| 
 |Batch mode execution for single-threaded queries|||yes|yes|yes|yes|yes|  
@@ -32,28 +32,28 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Specify columnstore index when creating a table|||yes|yes|yes|yes|yes|  
 |Always On supports columnstore indexes|yes|yes|yes|yes|yes|yes|yes| 
 |Always On readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|  
-|Always On readable secondary supports updateable columnstore indexes|||yes||yesyes|||  
+|Always On readable secondary supports updateable columnstore indexes|||yes||yes|||  
 |Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|  
 |Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|yes|  
 |Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|  
-|Updateable clustered columnstore index||yes|yes|yes||yesyes|yes|  
-|B-tree index on a clustered columnstore index|||yes|yes||yesyes|yes|  
-|Columnstore index on a memory-optimized table|||yes|yes||yesyes|yes|  
+|Updateable clustered columnstore index||yes|yes|yes||yes|yes|  
+|B-tree index on a clustered columnstore index|||yes|yes||yes|yes|  
+|Columnstore index on a memory-optimized table|||yes|yes||yes|yes|  
 |Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|yes|  
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|yes|||   
-|Tuple mover background merge support||||||yes|yes|yes|
+|Tuple mover background merge support|||||yes|yes|yes|
   
  <sup>1</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
  
 > [!NOTE]
 > The degree of parallelism (DOP) for [batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
- [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] adds these new features.
+## [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] adds these new features.
 
 ### Functional
-- Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. Previously, an index reorganize operation was needed to merge rowgroups with partially deleted data. This improves the columnstore index quality over time. 
+- Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the tuple mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. Previously, an index reorganize operation was needed to merge rowgroups with partially deleted data. This improves the columnstore index quality over time. 
 
 ## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
  [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] adds these new features.
@@ -61,8 +61,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Functional
 - [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] supports non-persisted computed columns in clustered columnstore indexes. Persisted computed columns are not supported in clustered columnstore indexes. You cannot create a nonclustered index on a columnstore index that has a computed column. 
 
-## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. These improvements enhance data warehousing scenarios and enable real-time operational analytics.  
+## [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. These improvements enhance data warehousing scenarios and enable real-time operational analytics.  
   
 ### Functional  
   

@@ -13,7 +13,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions" 
+monikerRange: ">= sql-server-2016" 
 ---
 
 # Transact-SQL debugger
@@ -71,4 +71,4 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 
 ## See also
 
-[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
+[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

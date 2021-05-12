@@ -40,7 +40,7 @@ To bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../include
 For more information, see the following topics.
 - [Import and Export Bulk Data by Using the bcp Utility (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Import Bulk Data by Using BULK INSERT or OPENROWSET (BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [How to import XML into SQL Server with the XML Bulk Load component.](https://support.microsoft.com/kb/316005)
+- [How to import XML into SQL Server with the XML Bulk Load component.](https://mskb.pkisolutions.com/kb/316005)
 - [XML Schema Collections (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## Examples  

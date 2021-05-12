@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "drop table command [ODBC]"
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8

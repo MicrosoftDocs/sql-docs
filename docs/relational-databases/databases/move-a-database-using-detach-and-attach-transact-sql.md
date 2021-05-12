@@ -21,7 +21,7 @@ ms.custom: seo-dt-2019
 ---
 # Move a database using detach and attach (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to move a detached database to another location and re-attach it to the same or a different server instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. However, we recommend that you move databases by using the ALTER DATABASE planned relocation procedure, instead of using detach and attach. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
+  This topic describes how to move a detached database to another location and re-attach it to the same or a different server instance in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. However, we recommend that you move databases by using the ALTER DATABASE planned relocation procedure, instead of using detach and attach. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
 >  We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  

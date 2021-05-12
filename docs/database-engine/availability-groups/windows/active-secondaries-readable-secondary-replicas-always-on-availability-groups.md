@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "06/06/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Offload read-only workload to secondary replica of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -98,7 +98,7 @@ ms.author: mathoma
   
     -   Change Data Capture cannot be enabled only on a secondary replica database. Change Data Capture can be enabled on the primary replica database and the changes can be read from the CDC tables using the functions on the secondary replica database.  
   
--   Because read operations are mapped to snapshot isolation transaction level, the cleanup of ghost records on the primary replica can be blocked by transactions on one or more secondary replicas. The ghost record cleanup task will automatically clean up the ghost records for disk-based tables on the primary replica when they are no longer needed by any secondary replica.  This is similar to what is done when you run transaction(s) on the primary replica. In the extreme case on the secondary database, you will need to kill a long running read-query that is blocking the ghost cleanup. Note, the ghost clean can be blocked if the secondary replica gets disconnected or when data movement is suspended on the secondary database. This state also prevents log truncation, so if this state persists, we recommend that you remove this secondary database from the availability group. There is no ghost record cleanup issue with memory-optimized tables because the row versions are kept in memory and are independent of the row versions on the primary replica.  
+-   Because read operations are mapped to snapshot isolation transaction level, the cleanup of ghost records on the primary replica can be blocked by transactions on one or more secondary replicas. The ghost record cleanup task will automatically clean up the ghost records for disk-based tables on the primary replica when they are no longer needed by any secondary replica.  This is similar to what is done when you run transaction(s) on the primary replica. In the extreme case on the secondary database, you will need to kill a long running read-query that is blocking the ghost cleanup. Note, the ghost clean can be blocked if the secondary replica gets disconnected or when data movement is suspended on the secondary database. Ghost records use physical space in a data file, this can cause space reuse issues, please see [ghost cleanup](../../../relational-databases/ghost-record-cleanup-process-guide.md) for more information. This state also prevents log truncation, so if this state persists, we recommend that you remove this secondary database from the availability group. There is no ghost record cleanup issue with memory-optimized tables because the row versions are kept in memory and are independent of the row versions on the primary replica.  
   
 -   The DBCC SHRINKFILE operation on files containing disk-based tables might fail on the primary replica if the file contains ghost records that are still needed on a secondary replica.  
   
@@ -128,7 +128,7 @@ ms.author: mathoma
  This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Always On Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Data Latency on databases with memory-optimized tables  
- In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] there were special considerations around data latency on active secondaries - see [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Active Secondaries: Readable Secondary Replicas](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Starting [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] there are no special considerations around data latency for memory-optimized tables. The expected data latency for memory-optimized tables is comparable to the latency for disk-based tables.  
+ In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] there were special considerations around data latency on active secondaries - see [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Active Secondaries: Readable Secondary Replicas](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Starting [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] there are no special considerations around data latency for memory-optimized tables. The expected data latency for memory-optimized tables is comparable to the latency for disk-based tables.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Read-Only Workload Impact  
  When you configure a secondary replica for read-only access, your read-only workloads on the secondary databases consume system resources, such as CPU and I/O (for disk-based tables) from redo threads, especially if the read-only workloads on disk-based tables are highly I/O-intensive. There is no IO impact when accessing memory-optimized tables because all the rows reside in memory.  
@@ -156,7 +156,7 @@ ms.author: mathoma
   
  Only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor their properties using the same tools that you use for permanent statistics:  
   
--   Delete temporary statistics using the [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
+-   Delete temporary statistics using the [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
 -   Monitor statistics using the **sys.stats** and **sys.stats_columns** catalog views. **sys_stats** includes a column, **is_temporary**, to indicate which statistics are permanent and which are temporary.  
   

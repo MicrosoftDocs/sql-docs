@@ -8,7 +8,7 @@ ms.date: 11/11/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # Install SQL Server Java Language Extension on Windows
 
@@ -144,7 +144,7 @@ If you did not install the default Zulu Open JRE that was included with SQL Serv
 1. Give AppContainer permissions
 
     ```cmd
-    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
+    icacls "<PATH to JRE>" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
     > [!NOTE]

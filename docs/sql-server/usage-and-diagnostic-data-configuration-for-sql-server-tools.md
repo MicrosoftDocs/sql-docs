@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 
@@ -19,7 +19,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft identify ways to make our software better.  You can configure tools to opt in or out at any time.  
   
 > [!NOTE]  
-> For an explanation of the user data collection and use practices for Microsoft SQL Server releases, please refer to this [privacy statement](https://go.microsoft.com/fwlink/?LinkID=868444).  
+> For an explanation of the user data collection and use practices for Microsoft SQL Server releases, please refer to this [privacy statement](./sql-server-privacy.md).  
   
 ## Opting in and out of CEIP for SQL Server Data Tools  
 
@@ -68,10 +68,10 @@ Value = (DWORD)
 > [!CAUTION]  
 >  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer. You can also use the Last Known Good Configuration startup option if you encounter problems after manual changes have been applied.  
   
- For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).  
+ For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement](./sql-server-privacy.md).  
  
 ### Choice and Control over CEIP and SQL Server Data Tools for Visual Studio 2015  
- SSDT for Visual Studio 2015 is the data modeling tool that ships with SQL Server 2016. It uses the CEIP options that are built into Visual Studio 2015. You can learn more about how to submit feedback through CEIP in Visual Studio 2015 from this [help document from Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
+ SSDT for Visual Studio 2015 is the data modeling tool that ships with SQL Server 2016. It uses the CEIP options that are built into Visual Studio 2015. You can learn more about how to submit feedback through CEIP in Visual Studio 2015 from this [help document from Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
   
  For preview versions of SQL Server 2016, CEIP is turned on by default. You can turn it off, or back on again, by following the instructions below.  
   
@@ -110,7 +110,7 @@ Value = (DWORD)
 > [!CAUTION]  
 >  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer. You can also use the Last Known Good Configuration startup option if you encounter problems after manual changes have been applied.  
   
- For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).  
+ For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement](./sql-server-privacy.md).  
   
 ### Choice and Control for CEIP and SQL Server Data Tools - BI (SSDT-BI)  
  If you are using SSDT-BI, you will be given an opportunity to participate in CEIP during installation. Later, CEIP configuration changes for SSDT-BI can be made through client tools or by editing registry settings.  
@@ -142,5 +142,4 @@ Value = (DWORD)
 -   0 is opt out  
   
 -   1 is opt in  
-  
   

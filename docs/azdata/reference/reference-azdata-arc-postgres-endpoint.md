@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,23 +21,22 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata arc postgres endpoint list](#azdata-arc-postgres-endpoint-list) | List PostgreSQL server group endpoints.
+[azdata arc postgres endpoint list](#azdata-arc-postgres-endpoint-list) | List Azure Arc enabled PostgreSQL Hyperscale server group endpoints.
 ## azdata arc postgres endpoint list
-List PostgreSQL server group endpoints.
+List Azure Arc enabled PostgreSQL Hyperscale server group endpoints.
 ```bash
-azdata arc postgres endpoint list --name -n 
-                                  [--engine-version -ev]
+azdata arc postgres endpoint list [--name -n] 
+                                  []
 ```
 ### Examples
-List PostgreSQL server group endpoints.
+List Azure Arc enabled PostgreSQL Hyperscale server group endpoints.
 ```bash
 azdata arc postgres endpoint list -n postgres01
 ```
-### Required Parameters
-#### `--name -n`
-Name of the PostgreSQL server group.
 ### Optional Parameters
-#### `--engine-version -ev`
+#### `--name -n`
+Name of the Azure Arc enabled PostgreSQL Hyperscale server group.
+#### ``
 --engine-version can be used in conjunction with --name to identify a PostgreSQL Hyperscale server group when two server groups of different engine version have the same name. --engine-version is optional and when used to identify a server group, it must be 11 or 12.
 ### Global Arguments
 #### `--debug`
@@ -56,4 +55,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

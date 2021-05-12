@@ -38,6 +38,9 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Download [AdventureWorks2016 sample databases](../samples/adventureworks-install-configure.md).
 - Assign the user account to the role of [db_backupoperator](./security/authentication-access/database-level-roles.md) and grant [alter any credential](../t-sql/statements/alter-credential-transact-sql.md) permissions. 
 
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction), ensure that [hierarchical namespace](/azure/storage/blobs/data-lake-storage-namespace) is not enabled on the storage account used for this tutorial.
+
 ## 1 - Create stored access policy and shared access storage
 
 In this section, you will use an [Azure PowerShell](/powershell/azure/) script to create a shared access signature on an Azure Blob container using a stored access policy.  
@@ -176,7 +179,7 @@ To create a SQL Server credential, follow these steps:
 In this section, you will back up the AdventureWorks2016 database in your on-premises SQL Server 2016 instance to the Azure container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) to backup to URL using the WITH CREDENTIAL syntax.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the WITH CREDENTIAL syntax.  
   
 To back up a database to Blob storage, follow these steps:  
   

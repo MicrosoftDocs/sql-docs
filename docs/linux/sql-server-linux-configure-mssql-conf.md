@@ -44,9 +44,9 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 |Parameter|Description|
 |---|---|
@@ -553,7 +553,7 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | distributedtransaction.tracefilepath | Folder in which trace files should be stored |
 | distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="mlservices-eula"></a> Accept MLServices EULAs
 
@@ -583,7 +583,7 @@ accepteula = Y
 accepteulaml = Y
 ```
 :::moniker-end
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="mlservices-outbound-access"></a> Enable outbound network access
 
@@ -777,7 +777,7 @@ traceflag = 3456
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ```ini
 [EULA]

@@ -6,7 +6,7 @@ ms.date: "06/09/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "18456 (Database Engine error)"
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
@@ -98,7 +98,7 @@ In this example, the authentication error state is 8. This indicates that the pa
 > When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed using Windows Authentication mode and is later changed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode, the **sa** login is initially disabled. This causes the state 7 error: "Login failed for user 'sa'." To enable the **sa** login, see [Change Server Authentication Mode](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## User Action  
-If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured in Mixed Authentication Mode. For more information on changing SQL Server authentication mode review [Change server authentication mode](https://docs.microsoft.com/sql/database-engine/configure-windows/change-server-authentication-mode)
+If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured in Mixed Authentication Mode. For more information on changing SQL Server authentication mode review [Change server authentication mode](../../database-engine/configure-windows/change-server-authentication-mode.md)
   
 If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login exists and that you have spelled it properly.  
   
@@ -110,4 +110,4 @@ If you are trying to connect using your administrator credentials, start you app
   
 If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] supports contained databases, confirm that the login was not deleted after migration to a contained database user.  
   
-When connecting locally to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connections from services running under **NT AUTHORITY\NETWORK SERVICE** must authenticate using the computers fully qualified domain name. For more information, see [How To: Use the Network Service Account to Access Resources in ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))  
+When connecting locally to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connections from services running under **NT AUTHORITY\NETWORK SERVICE** must authenticate using the computers fully qualified domain name. For more information, see [How To: Use the Network Service Account to Access Resources in ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))

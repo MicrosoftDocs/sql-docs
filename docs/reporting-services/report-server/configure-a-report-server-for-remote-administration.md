@@ -36,7 +36,7 @@ ms.author: maggies
   
  Some organizations have group policies that prevent remote server administration for certain operating systems or users. Before you begin modifying firewall settings, check with your network administrator to verify whether there are restrictions on remote administration.  
   
- For more information, see [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) in the Platform SDK documentation on MSDN.  
+ For more information, see [Connecting Through Windows Firewall](/windows/win32/wmisdk/connecting-to-wmi-remotely-with-vbscript) in the Platform SDK documentation on MSDN.  
   
 ## Tasks  
  Tasks that enable remote report server configuration include the following:  
@@ -137,5 +137,4 @@ ms.author: maggies
   
 ## See Also  
  [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-  
   

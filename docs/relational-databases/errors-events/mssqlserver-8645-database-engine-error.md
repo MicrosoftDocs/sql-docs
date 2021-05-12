@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "8645 (Database Engine error)"
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
@@ -47,7 +47,7 @@ The following list outlines general steps that will help in troubleshooting memo
   
     -   **min memory per query**  
   
-    Notice unusual settings. Correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
+    Notice unusual settings. Correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
   
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   

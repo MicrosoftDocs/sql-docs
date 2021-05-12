@@ -4,7 +4,7 @@ title: "sys.database_service_objectives"
 titleSuffix: Azure SQL Database
 ms.date: "03/21/2018"
 ms.service: sql-database
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: conceptual
 keywords: 
@@ -13,10 +13,10 @@ keywords:
 f1_keywords: 
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -26,7 +26,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
   
  For information on pricing, see [SQL Database options and performance: SQL Database Pricing](https://azure.microsoft.com/pricing/details/sql-database/) and [Azure Synapse Analytics Pricing](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- To change the service settings, see [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) and [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ To change the service settings, see [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) and [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
   
  The sys.database_service_objectives view contains the following columns.  
   

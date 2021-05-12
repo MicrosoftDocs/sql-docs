@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Plan and test the database engine upgrade plan
 
@@ -21,8 +21,9 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ## Release notes and known upgrade issues  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:
 
+- [SQL Server 2019 Release Notes](../../sql-server/sql-server-version-15-release-notes.md)
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
-- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
+- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md)
 - [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md) article.  
   
 ## Pre-upgrade planning checklist  
@@ -32,7 +33,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 -   **Current environment:** Research your current environment to understand the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that are being used and the clients that connect to your environment.  
   
-    -   **Client providers:** While upgrading does not require you to update the provider for each of your clients, you may choose to do so. If you are upgrading from [!INCLUDE[sql14](../../includes/sssql14-md.md)] or older, the following [!INCLUDE[sql15](../../includes/sssql15-md.md)] features either require an updated provider for each client or an updated provider to provide additional functionality:  
+    -   **Client providers:** While upgrading does not require you to update the provider for each of your clients, you may choose to do so. If you are upgrading from [!INCLUDE[sql14](../../includes/sssql14-md.md)] or older, the following [!INCLUDE[sql15](../../includes/sssql16-md.md)] features either require an updated provider for each client or an updated provider to provide additional functionality:  
   
        -   [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
@@ -42,24 +43,21 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
        -   TLS Security update  
 
-   >[!NOTE]
-   >The preceding list also applies to [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
-  
 -   **Third-party components:** Determine the compatibility of third-party components, such as integrated backup.  
   
 -   **Target environment:** Verify that your target environment meets the hardware and software requirements and that it can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  
   
--   **Edition:** Determine the appropriate edition of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] for your upgrade and determine the valid upgrade paths for the upgrade. For detailed information, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Before you upgrade from one edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, verify that the functionality that you are currently using is supported in the edition to which you are upgrading.  
+-   **Edition:** Determine the appropriate edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] for your upgrade and determine the valid upgrade paths for the upgrade. For detailed information, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Before you upgrade from one edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, verify that the functionality that you are currently using is supported in the edition to which you are upgrading.  
   
     > [!NOTE]  
-    >  When you upgrade [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+    >  When you upgrade [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Backward compatibility:** Review the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] database engine  backward compatibility article to review changes in behavior between [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
+-   **Backward compatibility:** Review the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database engine  backward compatibility article to review changes in behavior between [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 -   **Data Migration Assistant:** Run the Data Migration Assistant to assist in diagnosing issues that might either block the upgrade process or require modification to existing scripts or applications due to a breaking change.
     You can download the Data Migration Assistant [here](https://aka.ms/get-dma).  
   
--   **System configuration checker:** Run the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] System Configuration Checker (SCC) to determine if the SQL Server setup program detects any blocking issues before you schedule the upgrade. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   **System configuration checker:** Run the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] System Configuration Checker (SCC) to determine if the SQL Server setup program detects any blocking issues before you schedule the upgrade. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   **Upgrading memory-optimized tables:** When upgrading a SQL Server 2014 database instance containing memory-optimized tables to SQL Server 2016, the upgrade process requires additional time to convert the memory-optimized tables to the new on-disk format (and the database is offline while these steps are happening.   The amount of time is dependent upon the size of the memory-optimized tables and the speed of the I/O subsystem. The upgrade requires three sizes of data operations for in-place and new installation upgrades (step 1 is not required for rolling upgrades, but steps 2 and 3 are required):  
   
@@ -92,4 +90,4 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## Additional resources 
-[Database Migration Guide](https://aka.ms/datamigration)
+[Database Migration Guide](/data-migration/)

@@ -1,24 +1,25 @@
 ---
-title: "sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics) | Microsoft Docs"
+title: sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
+description: Use **sp_pdw_database_encryption_regenerate_system_keys** to rotate the certificate and database encryption key for internal databases that are encrypted when TDE is enabled on the appliance. 
 ms.custom: ""
 ms.date: "03/03/2017"
-# ms.service: sql-data-warehouse
 ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 author: ronortloff
 ms.author: rortloff
 ms.reviewer: ""
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Use **sp_pdw_database_encryption_regenerate_system_keys** to rotate the certificate and database encryption key for internal databases that are encrypted when TDE is enabled on the appliance. This includes `tempdb`. This will succeed only if TDE is enabled.  
+Use **sp_pdw_database_encryption_regenerate_system_keys** to rotate the certificate and database encryption key for internal databases that are encrypted when TDE is enabled on the appliance. This includes `tempdb`. This will succeed only if TDE is enabled.  
   
 ## Syntax  
   

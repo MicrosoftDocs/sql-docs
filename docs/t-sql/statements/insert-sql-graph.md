@@ -7,7 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.custom: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "shkale-msft"
 ms.author: "shkale"
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (SQL Graph)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

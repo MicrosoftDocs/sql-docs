@@ -2,18 +2,18 @@
 description: "Always On Availability Groups Dynamic Management Views - Functions"
 title: "Always On Availability Groups Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/01/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Always On Availability Groups Dynamic Management Views - Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,12 @@ ms.author: maghan
 
 :::row:::
     :::column:::
+
+        [sys.dm_hadr_ag_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads-transact-sql.md)
+
         [sys.dm_hadr_auto_page_repair](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)
+
+        [sys.dm_hadr_automatic_seeding](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-automatic-seeding.md)
 
         [sys.dm_hadr_availability_group_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)
 
@@ -37,6 +42,7 @@ ms.author: maghan
         [sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)
 
         [sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)
+
     :::column-end:::
     :::column:::
         [sys.dm_hadr_cluster_networks](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)
@@ -45,11 +51,16 @@ ms.author: maghan
 
         [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)
 
+        [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads-transact-sql.md)
+
         [sys.dm_hadr_instance_node_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md)
 
         [sys.dm_hadr_name_id_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)
 
+        [sys.dm_hadr_physical_seeding_stats](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-physical-seeding-stats.md)
+
         [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)
+
     :::column-end:::
 :::row-end:::
 

@@ -3,16 +3,16 @@ title: SQL loopback connection in Python and R
 description: Learn how to use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. 
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/20/2020
+ms.date: 03/22/2021
 ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Loopback connection to SQL Server from a Python or R script
-[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later, and SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 Learn how to use a loopback connection with [Machine Learning Services](../sql-server-machine-learning-services.md) to connect back to SQL Server over [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) to read or write data from a Python or R script executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
 
@@ -42,7 +42,10 @@ Here is an example of the loopback connection string on Linux:
 
 The server address, client certificate file location, and client key file location are unique to every `sp_execute_external_script` and can be obtained by the use of the API **rx_get_sql_loopback_connection_string()** for Python or **rxGetSqlLoopbackConnectionString()** for R.
 
-For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
+For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](../../connect/odbc/dsn-connection-string-attribute.md#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
+
+### Connection string on Azure SQL Managed Instance
+To generate the connection string for Azure SQL Managed Instance, see the examples in the next sections. Use **ODBC Driver 11 for SQL Server** as the ODBC driver for loopback connections.
 
 ## Generate connection string with revoscalepy for Python
 
@@ -92,6 +95,23 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
+Example for Azure SQL Managed Instance:
+
+```sql
+EXECUTE sp_execute_external_script
+@language = N'Python',
+@script = N'
+from revoscalepy import rx_get_sql_loopback_connection_string, RxSqlServerData, rx_data_step
+loopback_connection_string = rx_get_sql_loopback_connection_string(odbc_driver="ODBC Driver 11 for SQL Server", name_of_database="DBName")
+print("Connection String:{0}".format(loopback_connection_string))
+data_set = RxSqlServerData(sql_query = "select col1, col2 from tableName",
+                           connection_string = loopback_connection_string)
+OutputDataSet = rx_data_step(data_set)
+'
+WITH RESULT SETS ((col1 int, col2 int))
+GO
+```
+
 ## Generate connection string with RevoScaleR for R
 
 You can use the API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/ref-r-revoscaler.md) to generate a correct connection string for a loopback connection in an R script.
@@ -131,6 +151,22 @@ EXECUTE sp_execute_external_script
                                                                   odbcDriver ="ODBC Driver 17 for SQL Server")
     print(paste("Connection String:", loopbackConnectionString))
     dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", 
+                               connectionString = loopbackConnectionString)
+    OutputDataSet <- rxDataStep(dataSet)
+'
+WITH RESULT SETS ((col1 int, col2 int))
+GO
+```
+
+Example for Azure SQL Managed Instance:
+
+```sql
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+    loopbackConnectionString <- rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="ODBC Driver 11 for SQL Server")
+    print(paste("Connection String:", loopbackConnectionString))
+    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName",
                                connectionString = loopbackConnectionString)
     OutputDataSet <- rxDataStep(dataSet)
 '

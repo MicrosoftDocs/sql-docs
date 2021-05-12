@@ -8,9 +8,9 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Hardware considerations for In-Memory OLTP in SQL Server
 

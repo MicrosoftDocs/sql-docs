@@ -4,10 +4,10 @@ title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/16/2020"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DUMP_CERTIFICATE_TSQL"
   - "BACKUP CERTIFICATE"
@@ -28,10 +28,10 @@ helpviewer_keywords:
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
 
   Exports a certificate to a file.  
   
@@ -52,11 +52,9 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
     ]  
 ```  
   
-> [!Note]
-> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
    
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
       WITH PRIVATE KEY   
@@ -65,7 +63,6 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

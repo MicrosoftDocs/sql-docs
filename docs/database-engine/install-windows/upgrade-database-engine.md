@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade Database Engine
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-  The articles in this section will help you upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine from a prior release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  The articles in this section will help you upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine from a prior release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
   
 1.  [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Before beginning an upgrade, you need to understand the various upgrade methods. This article discusses the upgrade methods and the steps involved with each upgrade method.  
   
 2.  [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). After reviewing the upgrade methods, you are ready to develop the appropriate upgrade method for your environment and then test the upgrade method before upgrading the existing environment. This article discusses developing an upgrade plan and testing it.  
   
-3.  [Complete the Database Engine Upgrade](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). After your database engine has been upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and databases are online, there are additional steps you need to take, including taking a new backup, upgrading the databases functionality to enable new features, and repopulating full-text catalogs. This article discusses these steps.  
+3.  [Complete the Database Engine Upgrade](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). After your database engine has been upgraded and databases are online, there are additional steps you need to take, including taking a new backup, upgrading the databases functionality to enable new features, and repopulating full-text catalogs. This article discusses these steps.  
   
 4.  Upgrade the [Database Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). One of the steps to take after your databases are online in the new version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], may be to upgrade the databases functionality mode to enable new features, by changing the database compatibility level. This can be done manually or through the Query Tuning Assistant. 
 

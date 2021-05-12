@@ -6,7 +6,7 @@ ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_child_instances"
   - "sys.dm_os_child_instances_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_os_child_instances dynamic management view"
   - "monitoring server health"
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

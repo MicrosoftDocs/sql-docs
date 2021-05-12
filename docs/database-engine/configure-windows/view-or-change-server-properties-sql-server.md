@@ -1,10 +1,8 @@
 ---
-title: "View or Change Server Properties (SQL Server) | Microsoft Docs"
+title: View or Change Server Properties (SQL Server)
 description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
-ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
@@ -18,8 +16,11 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
+ms.reviewer: ""
+ms.custom: contperf-fy20q4
+ms.date: 03/14/2017
 ---
+
 # View or Change Server Properties (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or change the properties of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Configuration Manager.  
@@ -88,15 +89,15 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to return information about each server configuration option on the current server. The example returns the name (`name`) and description (`description`) of the option and whether the option is an advanced option (`is_advanced`).  
+3.  Copy and paste the following example into the query window and select **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to return information about each server configuration option on the current server. The example returns the name (`name`) and description (`description`) of the option, its value (`value`), and whether the option is an advanced option (`is_advanced`).  
   
     ```wmimof  
     USE AdventureWorks2012;   
     GO  
-    SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
+    SELECT name, description, value, is_advanced  
+    FROM sys.configurations;   
     GO  
   
     ```  
@@ -105,9 +106,9 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to change a server property. The example changes the value of the `fill factor` option to `100`. The server must be restarted before the change can take effect.  
+3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to change a server property. The example changes the value of the `fill factor` option to `100`. The server must be restarted before the change can take effect.  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -131,11 +132,11 @@ GO
   
 1.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
   
-2.  In **SQL Server Configuration Manager**, click **SQL Server Services**.  
+2.  In **SQL Server Configuration Manager**, select **SQL Server Services**.  
   
-3.  In the details pane, right-click **SQL Server (\<**_instancename_**>)**, and then click **Properties**.  
+3.  In the details pane, right-click **SQL Server (\<**_instancename_**>)**, and then select **Properties**.  
   
-4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
+4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then select **OK**.  
   
 ## <a name="FollowUp"></a>Restart after changes
 

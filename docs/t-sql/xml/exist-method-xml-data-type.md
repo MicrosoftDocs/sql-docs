@@ -6,15 +6,15 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "exist() method"
   - "exist method"
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # exist() Method (xml Data Type)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

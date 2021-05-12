@@ -21,7 +21,7 @@ ms.reviewer: v-chmalh
 
 In earlier versions of ADO.NET, compile-time checking of connection strings with concatenated string values did not occur, so that at run time, an incorrect keyword generated an <xref:System.ArgumentException>. The Microsoft SqlClient Data Provider for SQL Server includes the strongly typed connection string builder class <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> that inherits from <xref:System.Data.Common.DbConnectionStringBuilder>.
 
-## Connection String Injection Attacks
+## Connection string injection attacks
 
 A connection string injection attack can occur when dynamic string concatenation is used to build connection strings that are based on user input. If the string is not validated and malicious text or characters not escaped, an attacker can potentially access sensitive data or other resources on the server. For example, an attacker could mount an attack by supplying a semicolon and appending an additional value. The connection string is parsed by using a "**last one wins**" algorithm, and the hostile input is substituted for a legitimate value.
 
@@ -38,7 +38,7 @@ data source=(local);Integrated Security=True;
 initial catalog="AdventureWorks;NewValue=Bad"
 ```
 
-## Building Connection Strings from Configuration Files
+## Build connection strings from configuration files
 
 If certain elements of a connection string are known beforehand, they can be stored in a configuration file and retrieved at run time to construct a complete connection string. For example, the name of the database might be known in advance, but not the name of the server. Or you might want a user to supply a name and password at run time without being able to inject other values into the connection string.
 
@@ -67,4 +67,5 @@ This example demonstrates retrieving a partial connection string from a configur
   
 ## See also
 
-- [Connection Strings](connection-strings.md)
+- [Connection strings](connection-strings.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

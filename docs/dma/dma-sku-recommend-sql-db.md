@@ -1,6 +1,6 @@
 ---
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
-description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
+description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database or Azure SQL Managed Instance SKU for your on-premises database
 ms.custom: ""
 ms.date: "05/06/2019"
 ms.prod: sql
@@ -16,22 +16,16 @@ author: rajeshsetlem
 ms.author: rajpo
 ---
 
-# Identify the right Azure SQL Database/Managed Instance SKU for your on-premises database
+# Identify the right Azure SQL Database or SQL Managed Instance SKU for your on-premises database
 
-Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure database target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
+Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure SQL Database or SQL Managed Instance target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
 
-This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database and Azure SQL Managed Instance have several deployment options, including:
 
-- Single database
-- Elastic pools
-- Managed Instance
-
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases.
-
-> [!NOTE]
-> This functionality is currently available only via the Command Line Interface (CLI).
+The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases. This functionality is currently available only via the Command Line Interface (CLI).
 
 The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## Prerequisites
 
@@ -39,7 +33,7 @@ The following are instructions to help you determine the SKU recommendations and
 - Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > To collect machine information, the data collection script uses the Get-WmiObject cmdlet, which was deprecated in PowerShell 6. To run this script in PowerShell 6 or 7, you must replace the WMI cmdlets with the newer CIM cmdlets.
-- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Ensure that your computer has the Azure PowerShell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
 - Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
 
@@ -202,8 +196,15 @@ To input provisioning information and make changes to the recommendations, updat
     - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
     - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
     - **Server Name** - The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
-    - **Admin Username** - The server admin username.
-    - **Admin Password** - The server admin password. The password must be at least eight characters and no more than 128 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). The password cannot contain all or part (3+ consecutive letters) from the username.
+    - **Admin Username** - The server admin username. Make sure your login name meets the following requirements:
+      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
+      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
+      - Your login name must not start with numbers or symbols.
+
+    - **Admin Password** - The server admin password. 
+      - Your password must be at least 8 characters in length and no more than 128 characters in length.
+      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
 
 2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
 
@@ -220,8 +221,16 @@ To input provisioning information and make changes to the recommendations, updat
     - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
     - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
     - **Instance Name** – The instance of Azure SQL Managed Instance to which you want to migrate the databases. The instance name can contain only lowercase letters, numbers, and ‘-‘, but it can’t begin or end with ‘-‘ or have more than 63 characters.
-    - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements - It's a SQL Identifier, and not a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.), or a built-in database user or role (like dbo, guest, public, etc.). Make sure your name doesn't contain whitespaces, Unicode characters, or nonalphabetic characters, and that it doesn't begin with numbers or symbols. 
-    - **Instance Admin Password** - The instance admin password. Your password must be at least 16 characters and no more than 128 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). The password cannot contain all or part (3+ consecutive letters) from the username.
+    - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements:
+      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
+      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
+      - Your login name must not start with numbers or symbols.
+
+    - **Instance Admin Password** - The instance admin password. 
+      - Your password must be at least 16 characters in length and no more than 128 characters in length.
+      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
+
     - **Vnet Name** – The VNet name under which the managed instance should be provisioned. Enter an existing VNet name.
     - **Subnet Name** – The Subnet name under which the managed instance should be provisioned. Enter an existing Subnet name.
 
@@ -234,4 +243,4 @@ To input provisioning information and make changes to the recommendations, updat
 
 ## Next step
 
-- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md?view=sql-server-2017).
+- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md).

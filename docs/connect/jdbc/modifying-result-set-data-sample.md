@@ -1,8 +1,8 @@
 ---
-title: "Modifying result set data sample"
-description: "This JDBC Driver for SQL Server sample application demonstrates how to retrieve an updateable set of data from a database and insert, update, and delete rows."
+title: Modifying result set data sample
+description: This JDBC Driver for SQL Server sample application demonstrates how to retrieve an updateable set of data from a database. Then you can insert, update, and delete rows.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -34,11 +34,11 @@ To run this sample application, you must set the classpath to include the mssql-
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
+The sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
 
-Next, the sample code uses the [moveToInsertRow](reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row, uses a series of [updateString](reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row, and then calls the [insertRow](reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.
+Next, the sample code uses the [moveToInsertRow](reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row. It then uses a series of [updateString](reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row. After that, it calls the [insertRow](reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.
 
-After inserting the new row of data, the sample code uses an SQL statement to retrieve the previously inserted row, and then uses the combination of updateString and [updateRow](reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it back to the database.
+After inserting the new row of data, the sample code uses an SQL statement to retrieve the previously inserted row. From there, it uses the combination of `updateString` and [updateRow](reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it back to the database.
 
 Finally, the sample code retrieves the previously updated row of data and then deletes it from the database using the [deleteRow](reference/deleterow-method-sqlserverresultset.md) method.
 

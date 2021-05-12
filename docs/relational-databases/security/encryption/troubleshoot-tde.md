@@ -6,14 +6,14 @@ helpviewer_keywords:
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
-author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: jaszymas
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
 
@@ -62,17 +62,17 @@ _401 AzureKeyVaultNoServerIdentity - The server identity is not correctly config
 
 Use the following cmdlet or command to ensure that an identity has been assigned to the logical SQL Server instance:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer) 
 
-- Azure CLI: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az_sql_server_show)
 
 **Mitigation**
 
 Use the following cmdlet or command to configure an Azure AD identity (an AppId) for the logical SQL Server instance:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) with the `-AssignIdentity` option.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver) with the `-AssignIdentity` option.
 
-- Azure CLI: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) with the `--assign_identity` option.
+- Azure CLI: [az sql server update](/cli/azure/sql/server#az_sql_server_update) with the `--assign_identity` option.
 
 In the Azure portal, go to the key vault, and then go to **Access policies**. Complete these steps: 
 
@@ -97,9 +97,9 @@ To identify the key URI and the key vault:
 
 1. Use the following cmdlet or command to get the key URI of a specific logical SQL Server instance:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
 
-    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az_sql_server_tdekey_show) 
 
 1. Use the key URI to identify the key vault:
 
@@ -159,7 +159,7 @@ Confirm that the logical SQL Server instance has permissions to the key vault an
 
 ## Getting TDE status from the Activity log
 
-To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabaseName: 
+To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+ResourceGroup+ServerName+DatabaseName: 
 
 **Event when the service loses access to the Azure Key Vault key**
 

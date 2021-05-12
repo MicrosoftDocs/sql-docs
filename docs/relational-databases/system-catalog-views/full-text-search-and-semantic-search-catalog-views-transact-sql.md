@@ -6,7 +6,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

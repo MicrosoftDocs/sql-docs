@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Collation Information
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     EXECUTE sp_helpsort;  
     ```  
   
- **To view all collations supported by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
+ **To view all collations supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**  
   
 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and on the toolbar, click **New Query**.  
   

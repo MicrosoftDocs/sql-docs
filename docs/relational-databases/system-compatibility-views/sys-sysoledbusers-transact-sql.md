@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sysoledbusers"
   - "sys.sysoledbusers_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysoledbusers system table"
   - "sys.sysoledbusers compatibility view"
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysoledbusers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

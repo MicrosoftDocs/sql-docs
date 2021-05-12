@@ -25,7 +25,7 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: "stevestein"
 ms.author: "sstein"
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import a BACPAC File to Create a New User Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

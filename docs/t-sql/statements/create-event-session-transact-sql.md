@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EVENT SESSION"
   - "SESSION"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
   - "plan guides [SQL Server], enabling"
   - "disabling plan guides"
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Enable or Disable a Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  You can disable and enable plan guides in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Either a single plan guides or all plan guides in a database can be enabled or disabled.  
+  You can disable and enable plan guides in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Either a single plan guides or all plan guides in a database can be enabled or disabled.  
   
  **In This Topic**  
   

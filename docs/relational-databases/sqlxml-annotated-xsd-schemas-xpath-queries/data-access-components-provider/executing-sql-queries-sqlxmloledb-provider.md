@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing SQL queries"
   - "SQL queries [SQLXML]"
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries (SQLXMLOLEDB Provider)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

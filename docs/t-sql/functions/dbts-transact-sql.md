@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@DBTS_TSQL"
   - "@@DBTS"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # &#x40;&#x40;DBTS (Transact-SQL)

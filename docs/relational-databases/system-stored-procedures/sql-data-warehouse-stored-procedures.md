@@ -3,16 +3,16 @@ description: "Azure Synapse Analytics Stored Procedures"
 title: "Azure Synapse Analytics Stored Procedures"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.service: sql-data-warehouse
-ms.subservice: design
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # Azure Synapse Analytics Stored Procedures
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -56,7 +56,7 @@ ms.author: chadam
   
 4.  Use `Start-ClusterNode` with `-FixQuorum` to force the cluster service to start.  
   
-5.  Use `Get-ClusterNode` with `-Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
+5.  Use `Get-ClusterNode` with `-Property NodeWeight = 1` to set the value the guarantees that the node is a voting member of the quorum.  
   
 6.  Output the cluster node properties in a readable format.  
   

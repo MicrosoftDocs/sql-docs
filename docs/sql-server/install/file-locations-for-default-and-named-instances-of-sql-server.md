@@ -34,9 +34,9 @@ ms.author: chadam
 
 |Version|\*nnn*|{nn}|
 |-----|-----|--------|
-|[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
-|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
-|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]| 130| 13 | 
+|[!INCLUDE[ssqlv15](../../includes/sssql19-md.md)]| 150| 15| 
+|[!INCLUDE[ssqlv14](../../includes/sssql17-md.md)]| 140| 14| 
+|[!INCLUDE[ssqlv13](../../includes/sssql16-md.md)]| 130| 13 | 
 |[!INCLUDE[ssqlv12](../../includes/sssql14-md.md)]  | 120|12 | 
 |[!INCLUDE[sssql11](../../includes/sssql11-md.md)] | 110|11 | 
   
@@ -53,14 +53,14 @@ ms.author: chadam
   
  Examples of default instance IDs in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are as follows:  
   
--   MSSQL\{nn}.MSSQLSERVER for a default instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   MSSQL\{nn}.MSSQLSERVER for a default instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 -   MSAS\{nn}.MSSQLSERVER for a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.  
   
--   MSSQL\{nn}.MyInstance for a named instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] named "MyInstance."  
+-   MSSQL\{nn}.MyInstance for a named instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] named "MyInstance."  
   
 
- The directory structure for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] named instance that includes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], named "MyInstance", and installed to the default directories would be as follows:  
+ The directory structure for a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] named instance that includes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], named "MyInstance", and installed to the default directories would be as follows:  
   
 -   C:\Program Files\Microsoft SQL Server\MSSQL\{nn}.MyInstance\  
   

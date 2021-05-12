@@ -5,7 +5,7 @@ description: Configure advanced data security for Azure Arc enabled SQL Server i
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -15,9 +15,13 @@ You can enable advanced data security for your SQL Server instances on premises 
 
 ## Prerequisites
 
-* Your SQL Server instance is onboarded to Arc-enabled SQL Server. Follow these the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
+* Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
+
+   > [!NOTE]
+   > Azure Defender currently limited to SQL Server running on Windows machines.
 
 * Your user account is assigned one of the [Security Center Roles (RBAC)](/azure/security-center/security-center-permissions)
+
 
 ## Create a Log Analytics workspace
 
@@ -44,17 +48,17 @@ The next step is needed only if you have not yet configured the MMA agent on the
 
 1. For more details, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions)
 
-## Enable advanced data security
+## Enable Azure Defender
 
-Next, you need to enable advanced data security for SQL Server instance.
+Next, you need to enable Azure Defender for SQL Server instance.
 
 1. Go to Security Center and open the **Pricing & settings** page from the sidebar.
 
 1. Select the workspace that you have configured for the MMA extension in the previous step
 
-1. Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is enabled.
+1. Select **Azure Defender On**. Make sure the option for **SQL servers on machines** is turned on.
 
-   ![Upgrade workspace](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
+   ![Upgrade workspace](media/configure-advanced-data-security/enable-azure-defender.png)
 
  > [!NOTE]
    > The first scan to generate the vulnerability assessment will happen within 24 hours after enabling advanced data security. After that, auto scans will be performed every week on Sunday.

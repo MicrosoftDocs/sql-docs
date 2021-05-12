@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_SERVICE_TSQL"
   - "SERVICE"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "CREATE SERVICE statement"
   - "contracts [Service Broker], service creation"
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

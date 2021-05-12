@@ -2,21 +2,30 @@
 title: "Quickstart: Backup & restore to Azure Blob storage service"
 description: "Quickstart: learn how to write backups to and restore from the Azure Blob Storage Service. Create an Azure Blob Container, write a backup, and then restore."
 ms.custom: seo-dt-2019
-ms.date: "04/09/2018"
+ms.date: "12/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.technology: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.technology: performance
 ms.topic: quickstart
-ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: "rothja"
-ms.author: "jroth"
+author: cawrites 
+ms.author: chadam 
 ---
+
 # Quickstart: SQL backup and restore to Azure Blob storage service
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdbmi](../includes/applies-to-version/sqlserver2016-asdbmi.md)]
+
 This quickstart helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
+
+> [!NOTE]
+> SQL Server 2012 SP1 CU2 introduced support for back up to Azure Blob storage. SQL Server 2014 and prior does not support the Shared Access Signature (SAS) that is described in this quickstart article.
+>
+> For SQL Server 2014 and prior, use [Tutorial: SQL Server 2014 Backup and Restore to Microsoft Azure Blob storage](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url).
+>
   
-## Prerequisites  
+## Prerequisites
+
 To complete this quickstart, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax.  You need an Azure storage account, SQL Server Management Studio (SSMS), and access to either a server that's running SQL Server or Azure SQL Managed Instance. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
 
 - Get a free [Azure Account](https://azure.microsoft.com/offers/ms-azr-0044p/).
@@ -61,9 +70,9 @@ GO
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
-	ID INT NOT NULL PRIMARY KEY,
-	c1 VARCHAR(100) NOT NULL,
-	dt1 DATETIME NOT NULL DEFAULT getdate()
+    ID INT NOT NULL PRIMARY KEY,
+    c1 VARCHAR(100) NOT NULL,
+    dt1 DATETIME NOT NULL DEFAULT getdate()
 )
 GO
 
@@ -209,12 +218,12 @@ In this step, restore the database using either the GUI in SQL Server Management
 
    ![Select restore file](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. Select **OK** to close the **Select backup devices** dialog box. 
-1. Select **OK** to restore your database. 
+1. Select **OK** to close the **Select backup devices** dialog box.
+1. Select **OK** to restore your database.
 
 # [Transact-SQL](#tab/tsql)
 
-To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window. 
+To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window.
 
 ```sql
 USE [master]

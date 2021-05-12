@@ -3,7 +3,7 @@ description: "ADD SIGNATURE (Transact-SQL)"
 title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
@@ -17,14 +17,14 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 03/16/2021
 ---
 
 # ADD SIGNATURE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.
+Adds a digital signature to a stored procedure, function, assembly, or DML-trigger. Also adds a countersignature to a stored procedure, function, assembly, or DML-trigger.
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -78,7 +78,7 @@ The module being signed or countersigned and the certificate or asymmetric key u
 > [!CAUTION]
 > Module signing should only be used to grant permissions, never to deny or revoke permissions.  
   
- Inline table-valued functions cannot be signed.  
+ Data definition language (DDL) triggers and Inline table-valued functions cannot be signed.  
   
  Information about signatures is visible in the sys.crypt_properties catalog view.  
   
@@ -88,16 +88,18 @@ The module being signed or countersigned and the certificate or asymmetric key u
 ## Countersignatures  
  When executing a signed module, the signatures will be temporarily added to the SQL token, but the signatures are lost if the module executes another module or if the module terminates execution. A countersignature is a special form of signature. By itself, a countersignature doesn't grant any permissions, however, it allows signatures made by the same certificate or asymmetric key to be kept for the duration of the call made to the countersigned object.  
   
- For example, presume that user Alice calls procedure ProcSelectT1ForAlice, which calls procedure procSelectT1, which selects from table T1. Alice has EXECUTE permission on ProcSelectT1ForAlice and procSelectT1, but she doesn't have SELECT permission on T1, and no ownership chaining is involved in this entire chain. Alice cannot access table T1, either directly, or through the use of ProcSelectT1ForAlice and procSelectT1. Since we want Alice to always use ProcSelectT1ForAlice for access, we don't want to grant her permission to execute procSelectT1. How can we accomplish this?  
+ For example, presume that user Alice calls procedure ProcForAlice, which calls procedure ProcSelectT1, which selects from table T1. Alice has EXECUTE permission on ProcForAlice and ProcSelectT1, but she doesn't have SELECT permission on T1, and no ownership chaining is involved in this entire chain. Alice cannot access table T1, either directly, or through the use of ProcForAlice and ProcSelectT1. Since we want Alice to always use ProcForAlice for access, we don't want to grant her permission to execute ProcSelectT1. How can we accomplish this?  
   
--   If we sign procSelectT1, such that procSelectT1 can access T1, then Alice can invoke procSelectT1 directly and she doesn't have to call ProcSelectT1ForAlice.  
+-   If we sign ProcSelectT1, such that ProcSelectT1 can access T1, then Alice can invoke ProcSelectT1 directly and she doesn't have to call ProcForAlice.  
   
--   We could deny EXECUTE permission on procSelectT1 to Alice, but then Alice would not be able to call procSelectT1 through ProcSelectT1ForAlice.
+-   We could deny EXECUTE permission on ProcSelectT1 to Alice, but then Alice would not be able to call ProcSelectT1 through ProcForAlice.
   
--   Signing ProcSelectT1ForAlice would not work by itself, because the signature would be lost in the call to procSelectT1.  
+-   Signing ProcForAlice would not work by itself, because the signature would be lost in the call to ProcSelectT1.  
   
-However, by countersigning procSelectT1 with the same certificate used to sign ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will keep the signature across the call chain and will allow access to T1. If Alice attempts to call procSelectT1 directly, she cannot access T1, because the countersignature doesn't grant any rights. Example C below, shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] for this example.  
-  
+However, by countersigning ProcSelectT1 with the same certificate used to sign ProcForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the signature will be kept across the call chain and will allow access to T1. If Alice attempts to call ProcSelectT1 directly, she cannot access T1, because the countersignature doesn't grant any rights. Example C below, shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] for this example.  
+
+:::image type="content" source="media/signing-and-countersignature.png" alt-text="signature example":::
+
 ## Permissions  
 
 Requires ALTER permission on the object and CONTROL permission on the certificate or asymmetric key. If an associated private key is protected by a password, the user also must have the password.  
@@ -206,42 +208,42 @@ BEGIN
     SELECT * FROM T1;  
 END;  
 GO  
-GRANT EXECUTE ON procSelectT1 to public;  
+GRANT EXECUTE ON ProcSelectT1 to public;  
   
 -- Create special procedure for accessing T1  
-CREATE PROCEDURE  procSelectT1ForAlice AS  
+CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  
    IF USER_ID() <> USER_ID('Alice')  
     BEGIN  
         PRINT 'Only Alice can use this.';  
         RETURN  
     END  
-   EXEC procSelectT1;  
+   EXEC ProcSelectT1;  
 END;  
 GO;  
-GRANT EXECUTE ON procSelectT1ForAlice TO PUBLIC;  
+GRANT EXECUTE ON ProcForAlice TO PUBLIC;  
   
 -- Verify procedure works for a sysadmin user  
-EXEC procSelectT1ForAlice;  
+EXEC ProcForAlice;  
   
 -- Alice still can't use the procedure yet  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
+    EXEC ProcForAlice;  
 REVERT;  
   
 -- Sign procedure to grant it SELECT permission  
-ADD SIGNATURE TO procSelectT1ForAlice BY CERTIFICATE csSelectT   
+ADD SIGNATURE TO ProcForAlice BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
--- Counter sign proc_select_t, to make this work  
-ADD COUNTER SIGNATURE TO procSelectT1 BY CERTIFICATE csSelectT   
+-- Counter sign ProcSelectT1, to make this work  
+ADD COUNTER SIGNATURE TO ProcSelectT1 BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
 -- Now the proc works.   
--- Note that calling procSelectT1 directly still doesn't work  
+-- Note that calling ProcSelectT1 directly still doesn't work  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
-    EXEC procSelectT1;  
+    EXEC ProcForAlice;  
+    EXEC ProcSelectT1;  
 REVERT;  
   
 -- Cleanup  

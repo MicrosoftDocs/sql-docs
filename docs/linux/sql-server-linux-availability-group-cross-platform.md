@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2017"
 ---
 # Configure SQL Server Always On Availability Group on Windows and Linux (cross-platform)
 

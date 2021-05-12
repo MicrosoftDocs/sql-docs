@@ -44,9 +44,9 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  IMPORTANCE is local to the resource pool; workload groups of different importance inside the same resource pool affect each other, but do not affect workload groups in another resource pool.  
   
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
- Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT.  
+ Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT. Default value is 25.
 
-*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](sssqlv15-md.md)]. Default value is 25. The allowed range for *value* is from 1 through 100.
+*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and the allowed range is from 1 through 100. Starting with [!INCLUDE[sql-server-2019](sssql19-md.md)], the value is a `float` data type and the allowed range is from 0 through 100.
   
 > [!NOTE]  
 > The amount specified only refers to query execution grant memory.  
@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL15](sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
+> Starting with [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for memory grant (work buffer memory) to become available.  

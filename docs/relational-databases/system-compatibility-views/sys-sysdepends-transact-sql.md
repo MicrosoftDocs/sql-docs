@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sysdepends_TSQL"
   - "sysdepends"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysdepends system table"
   - "sys.sysdepends compatibility view"
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysdepends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

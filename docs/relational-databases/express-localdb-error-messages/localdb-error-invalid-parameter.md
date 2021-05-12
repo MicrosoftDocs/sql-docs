@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INVALID_PARAMETER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

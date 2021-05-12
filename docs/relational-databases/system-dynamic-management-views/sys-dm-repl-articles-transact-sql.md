@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_repl_articles_TSQL"
   - "dm_repl_articles"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_articles dynamic management function"
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

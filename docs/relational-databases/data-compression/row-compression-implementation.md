@@ -1,8 +1,8 @@
 ---
-title: "Row Compression Implementation | Microsoft Docs"
+title: "Row Compression Implementation"
 description: Learn how the SQL Server Database Engine implements row compression to help you plan the storage space that you need for your data.
 ms.custom: ""
-ms.date: "06/30/2016"
+ms.date: "03/27/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -11,10 +11,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "compression [SQL Server], row"
   - "row compression [Database Engine]"
-ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row Compression Implementation
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +40,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**smallint**|Yes|If the value fits in 1 byte, only 1 byte will be used.|  
 |**int**|Yes|Uses only the bytes that are needed. For example, if a value can be stored in 1 byte, storage will take only 1 byte.|  
 |**bigint**|Yes|Uses only the bytes that are needed. For example, if a value can be stored in 1 byte, storage will take only 1 byte.|  
-|**decimal**|Yes|This storage is exactly same as the vardecimal storage format.|  
-|**numeric**|Yes|This storage is exactly same as the vardecimal storage format.|  
+|**decimal**|Yes|Uses only the bytes that are needed, regardless of the precision specified. For example, if a value can be stored in 3 bytes, storage will take only 3 byte. The storage footprint is exactly the same as the vardecimal storage format.|  
+|**numeric**|Yes|Uses only the bytes that are needed, regardless of the precision specified. For example, if a value can be stored in 3 bytes, storage will take only 3 byte. The storage footprint is exactly the same as the vardecimal storage format.|  
 |**bit**|Yes|The metadata overhead brings this to 4 bits.|  
 |**smallmoney**|Yes|Uses the integer data representation by using a 4-byte integer. Currency value is multiplied by 10000 and the resulting integer value is stored by removing any digits after the decimal point. This type has a storage optimization similar to that for integer types.|  
 |**money**|Yes|Uses the integer data representation by using an 8-byte integer. Currency value is multiplied by 10000 and the resulting integer value is stored by removing any digits after the decimal point. This type has a larger range than **smallmoney**. This type has a storage optimization similar to that for integer types.|  

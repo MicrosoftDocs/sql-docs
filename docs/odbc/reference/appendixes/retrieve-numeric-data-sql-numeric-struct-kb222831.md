@@ -5,7 +5,7 @@ editor: ""
 ms.prod: sql
 ms.technology: connectivity
 ms.devlang: cpp
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: ""
 ms.date: "07/14/2017"
 ms.author: v-daenge

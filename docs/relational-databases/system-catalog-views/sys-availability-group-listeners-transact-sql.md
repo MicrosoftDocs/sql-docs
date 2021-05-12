@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "availability_group_listeners_TSQL"
   - "sys.availability_group_listeners"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.availability_group_listeners catalog view"
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

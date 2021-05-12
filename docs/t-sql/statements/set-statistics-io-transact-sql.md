@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_STATISTICS_IO_TSQL"
   - "IO"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SET STATISTICS IO statement"
   - "statistical information [SQL Server], disk activity"
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

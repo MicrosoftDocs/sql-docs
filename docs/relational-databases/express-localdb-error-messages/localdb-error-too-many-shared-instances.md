@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

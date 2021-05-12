@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server end of support options 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

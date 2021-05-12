@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud. (quick link: https://aka.ms/sqldocs)"
+summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
-   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud. (quick link: https://aka.ms/sqldocs)"
+   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -31,27 +31,27 @@ productDirectory:
     links:
       - url: sql-server/index.yml
         text: On-premises
-      - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
+      - url: /azure/azure-sql/virtual-machines/windows/
         text: On an Azure VM
-      - url: https://docs.microsoft.com/previous-versions/sql/
+      - url: /previous-versions/sql/
         text: Previous Versions (SQL 2005-2012)  
   - title: SQL on Azure 
     imageSrc: media/index/azure.svg
     links:
-      - url: https://docs.microsoft.com/azure/azure-sql/database/
+      - url: /azure/azure-sql/database/
         text: Azure SQL Database
-      - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
+      - url: /azure/azure-sql/managed-instance/
         text: Azure SQL Managed Instance      
-      - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+      - url: /azure/azure-sql-edge/overview
         text: Azure SQL Edge       
-      - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-        text: Azure Synapse Analytics (SQL DW)
+      - url: /azure/synapse-analytics/overview-what-is/
+        text: Azure Synapse Analytics
   - title: SQL Server on Linux
     imageSrc: media/index/linux.svg
     links:
       - url: linux/sql-server-linux-overview.md
         text: On-premises
-      - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
+      - url: /azure/azure-sql/virtual-machines/linux/
         text: On an Azure VM
 
 
@@ -63,7 +63,7 @@ conceptualContent:
           url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
         - text: Connect & query (SSMS)
-          url: ssms/tutorials/connect-query-sql-server.md
+          url: ssms/quickstarts/ssms-connect-query-sql-server.md
           itemType: quickstart
         - text: Writing Transact-SQL
           url: t-sql/tutorial-writing-transact-sql-statements.md
@@ -77,16 +77,16 @@ conceptualContent:
     - title: What's new
       links:
         - text: SQL Server 2019
-          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
+          url: ./sql-server/what-s-new-in-sql-server-ver15.md
           itemType: whats-new
         - text: SQL Server Big Data Cluster
-          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+          url: ./big-data-cluster/big-data-cluster-overview.md
           itemType: whats-new
         - text: Azure Data Studio
           url: azure-data-studio/release-notes-azure-data-studio.md
           itemType: whats-new
         - text: Azure Database Migration Service
-          url: https://docs.microsoft.com/azure/dms/dms-overview
+          url: /azure/dms/dms-overview
           itemType: whats-new
         - text: SQL Server Machine Learning Services
           url: machine-learning/index.yml
@@ -103,10 +103,10 @@ conceptualContent:
           url: ssms/download-sql-server-management-studio-ssms.md
           itemType: deploy
         - text: Azure Data Studio
-          url: azure-data-studio/download.md
+          url: ./azure-data-studio/download-azure-data-studio.md
           itemType: deploy
         - text: Analysis Services (SSAS)
-          url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+          url: /analysis-services/instances/install-windows/install-analysis-services/
           itemType: deploy
         - text: Integration Services (SSIS)
           url: integration-services/install-windows/install-integration-services.md
@@ -120,10 +120,10 @@ conceptualContent:
           url: https://datamigration.microsoft.com/
           itemType: overview
         - text: Database Compatibility Certification 
-          url: https://aka.ms/dbcompat
+          url: ./database-engine/install-windows/compatibility-certification.md
           itemType: overview
         - text: Azure Database Migration Service (DMS)
-          url: https://docs.microsoft.com/azure/dms/dms-overview
+          url: /azure/dms/dms-overview
           itemType: overview
         - text: Database Migration Assistant (DMA)
           url: dma/dma-overview.md
@@ -151,9 +151,9 @@ additionalContent:
           - text: DevOps using SQL Server 
             url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
           - text: Azure SQL Database applications
-            url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+            url: /azure/sql-database/sql-database-develop-overview
           - text: Azure SQL Database connectivity libraries
-            url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+            url: /azure/sql-database/sql-database-connect-query#libraries
           - text: Transact-SQL (T-SQL)
             url: t-sql/language-reference.md
           - text: SQL PowerShell
@@ -164,27 +164,25 @@ additionalContent:
       - title: Reporting & analysis
         links: 
           - text: Power BI Report Server
-            url: https://docs.microsoft.com/power-bi/report-server/get-started
+            url: /power-bi/report-server/get-started
           - text: Power BI Service
-            url: https://docs.microsoft.com/power-bi/service-get-started
+            url: /power-bi/service-get-started
           - text: SQL Server Reporting Services (SSRS)
             url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
           - text: SQL Server Analysis Services (SSAS)
-            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+            url: /analysis-services/analysis-services-overview
           - text: Azure Analysis Services
-            url: https://docs.microsoft.com/azure/analysis-services/
+            url: /azure/analysis-services/
 
       - title: Big data & machine learning
         links:
           - text: SQL Server Big Data Clusters
-            url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+            url: ./big-data-cluster/big-data-cluster-overview.md
           - text: Data Virtualization with Polybase
             url: relational-databases/polybase/polybase-guide.md
-          - text: Azure Synapse Analytics (SQL DW)
-            url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+          - text: Azure Synapse Analytics
+            url: /azure/synapse-analytics/overview-what-is/
           - text: Microsoft Analytics Platform System
-            url: analytics-platform-system/index.md
+            url: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
           - text: SQL Server Machine Learning Services (R & Python)
             url: machine-learning/index.yml
-
-

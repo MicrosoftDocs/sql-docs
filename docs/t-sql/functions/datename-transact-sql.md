@@ -4,10 +4,10 @@ title: "DATENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATENAME_TSQL"
   - "DATENAME"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "comparing dates times [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -129,7 +129,7 @@ Use `DATENAME` in the following clauses:
 + SELECT \<list>
 + WHERE
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATENAME implicitly casts string literals as a **datetime2** type. In other words, `DATENAME` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], DATENAME implicitly casts string literals as a **datetime2** type. In other words, `DATENAME` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 ## Examples  
 This example returns the date parts for the specified date. Substitute a *datepart* value from the table for the `datepart` argument in the SELECT statement:

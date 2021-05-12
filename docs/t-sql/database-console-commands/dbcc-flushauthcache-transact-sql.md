@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 
 # DBCC FLUSHAUTHCACHE (Transact-SQL)

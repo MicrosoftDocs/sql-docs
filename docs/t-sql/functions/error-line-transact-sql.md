@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ERROR_LINE"
   - "ERROR_LINE_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ERROR_LINE function"
   - "CATCH block"
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # ERROR_LINE (Transact-SQL)

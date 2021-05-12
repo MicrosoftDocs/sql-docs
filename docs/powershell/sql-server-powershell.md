@@ -18,7 +18,7 @@ ms.date: 06/11/2020
 
 **[Install SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-There are two SQL Server PowerShell modules; **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** and **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)**.
+There are two SQL Server PowerShell modules; **[SqlServer](/powershell/module/sqlserver)** and **[SQLPS](/powershell/module/sqlps)**.
 
 The **SqlServer** module is the current PowerShell module to use.
 

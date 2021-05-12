@@ -4,14 +4,14 @@ title: "Columnstore indexes - Design guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Design guidance
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 ## Add B-tree nonclustered indexes for efficient table seeks
 
-Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
+Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
 By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since a non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
@@ -78,7 +78,7 @@ Consider using a B-tree index on a columnstore index to:
 
 ## Use a nonclustered columnstore index for real-time analytics
 
-Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have a nonclustered columnstore index on a rowstore disk-based table or an in-memory OLTP table. This makes it possible to run the analytics in real-time on a transactional table. While transactions are occurring on the underlying table, you can run analytics on the columnstore index. Since one table manages both indexes, changes are available in real-time to both the rowstore and the columnstore indexes.
+Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can have a nonclustered columnstore index on a rowstore disk-based table or an in-memory OLTP table. This makes it possible to run the analytics in real-time on a transactional table. While transactions are occurring on the underlying table, you can run analytics on the columnstore index. Since one table manages both indexes, changes are available in real-time to both the rowstore and the columnstore indexes.
 
 Since a columnstore index achieves 10x better data compression than a rowstore index, it only needs a small amount of extra storage. For example, if the compressed rowstore table takes 20 GB, the columnstore index might require an additional 2 GB. The additional space required also depends on the number of columns in the nonclustered columnstore index. 
 
@@ -88,7 +88,7 @@ Since a columnstore index achieves 10x better data compression than a rowstore i
   
 *   Eliminate the need for a separate data warehouse. Traditionally, companies run transactions on a rowstore table and then load the data into a separate data warehouse to run analytics. For many workloads, you can eliminate the loading process and the separate data warehouse by creating a nonclustered columnstore index on transactional tables.
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offers several strategies to make this scenario performant. It's very easy to try it since you can enable a nonclustered columnstore index with no changes to your OLTP application. 
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] offers several strategies to make this scenario performant. It's very easy to try it since you can enable a nonclustered columnstore index with no changes to your OLTP application. 
 
 To add additional processing resources, you can run the analytics on a readable secondary. Using a readable secondary separates the processing of the transactional workload and the analytics workload. 
 
@@ -165,11 +165,11 @@ These are tasks for creating and maintaining columnstore indexes.
   
 |Task|Reference Topics|Notes|  
 |----------|----------------------|-----------|  
-|Create a table as a columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create the table as a clustered columnstore index. You do not have to first create a rowstore table and then convert it to columnstore.|  
-|Create a memory table with a columnstore index.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create a memory-optimized table with a columnstore index. The columnstore index can also be added after the table is created, using the ALTER TABLE ADD INDEX syntax.|  
+|Create a table as a columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. You do not have to first create a rowstore table and then convert it to columnstore.|  
+|Create a memory table with a columnstore index.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create a memory-optimized table with a columnstore index. The columnstore index can also be added after the table is created, using the ALTER TABLE ADD INDEX syntax.|  
 |Convert a rowstore table to a columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convert an existing heap or binary tree to a columnstore. Examples show how to handle existing indexes and also the name of the index when performing this conversion.|  
 |Convert a columnstore table to a rowstore.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) or [Convert a columnstore table back to a rowstore heap](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |Usually this conversion isn't necessary, but there can be times when you need to convert. Examples show how to convert a columnstore to a heap or clustered index.|   
-|Create a columnstore index on a rowstore table.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|A rowstore table can have one columnstore index.  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the columnstore index can have a filtered condition. Examples show the basic syntax.|  
+|Create a columnstore index on a rowstore table.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|A rowstore table can have one columnstore index.  Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the columnstore index can have a filtered condition. Examples show the basic syntax.|  
 |Create performant indexes for operational analytics.|[Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Describes how to create complementary columnstore and B-tree indexes so that OLTP queries use B-tree indexes and analytics queries use columnstore indexes.|  
 |Create performant columnstore indexes for data warehousing.|[Columnstore indexes - data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Describes how to use B-tree indexes on columnstore tables to create performant data warehousing queries.|  
 |Use a B-tree index to enforce a primary key constraint on a columnstore index.|[Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Shows how to combine B-tree and columnstore indexes to enforce primary key constraints on the columnstore index.|  

@@ -224,7 +224,7 @@ Use the Error Output page of the Teradata Destination Editor dialog box to selec
 
 Select how the Teradata destination should handle errors in a flow: ignore the failure, redirect the row, or fail the component.
 
-**Related Topics**: [Error Handing in Data](./error-handling-in-data.md?view=sql-server-2017)
+**Related Topics**: [Error Handing in Data](./error-handling-in-data.md)
 
 **Truncation**
 

@@ -39,7 +39,7 @@ ms.date: 09/11/2019
 |How to use **Template Explorer** to build and manage files of boilerplate text that you use to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
 |How to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
 |How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
+|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](./f1-help/database-engine-query-editor-sql-server-management-studio.md)
 
 ## SQL Server Management Studio for Business Intelligence
 
@@ -97,8 +97,8 @@ For more information about different locale with previous versions, reference [I
 ## Next steps
 
 - [Install non-English language versions of SSMS](install-other-languages.md)
-- [Connect to and query a SQL Server instance](./quickstarts/connect-query-sql-server.md)
+- [Connect to and query a SQL Server instance](./quickstarts/ssms-connect-query-sql-server.md)
 - [Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 ---
 # Install Reporting Services 2016 at the Command Prompt
 

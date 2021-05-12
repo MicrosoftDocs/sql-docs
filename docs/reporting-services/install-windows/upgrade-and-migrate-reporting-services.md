@@ -11,7 +11,7 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 05/01/2020
+ms.date: 05/06/2021
 ---
 
 # Upgrade and Migrate Reporting Services
@@ -38,7 +38,7 @@ ms.date: 05/01/2020
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  For the latest information regarding issues with SQL Server, see [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  For the latest information regarding issues with SQL Server, see [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Side By Side Installations  
@@ -64,7 +64,7 @@ ms.date: 05/01/2020
 
 * [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
+* [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
   
   
 ##  <a name="bkmk_upgrade_checklist"></a> Pre-Upgrade Checklist  
@@ -85,7 +85,9 @@ ms.date: 05/01/2020
 -   Remove invalid TLS/SSL certificates.  This includes certificates that are expired and you do not plan to update prior to upgrading Reporting Services.  Invalid certificates will cause upgrade to fail and an error message similar to the following will be written to the Reporting Services Log file: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.**.  
   
  Before you upgrade a production environment, always run a test upgrade in a pre-production environment that has the same configuration as your production environment.  
-  
+ 
+> [!IMPORTANT]
+> These steps must be completed in full for a later rollback to be possible. Microsoft Support cannot recover backups, encryption keys, or configuration files that were not backed up.
   
 ## Overview of Migration Scenarios  
  If you are upgrading from a supported version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can usually run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard to upgrade the report server program files, database, and all application data.  
@@ -118,9 +120,9 @@ ms.date: 05/01/2020
   
     2.  Report server configuration tools and utilities that are upgraded to the new version include the Native Mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, command line utilities such as RS.exe, and Report Builder.  
   
-    3.  Other client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are a separate download and need to be upgraded separately. For more information, see [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+    3.  Other client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are a separate download and need to be upgraded separately. For more information, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [SQL Server Data Tools in Visual Studio 2015](/previous-versions/mt186501(v=msdn.10)).  
   
 6.  Setup reuses the service entry in Service Control Manager for the SQL Server Reporting Services Report Server service. This service entry includes the Report Server Windows service account.  
   
@@ -143,7 +145,30 @@ ms.date: 05/01/2020
 4.  Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to add the report servers back to the scale-out deployment. For more information, see [Configure a Native Mode Report Server Scale-Out Deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      For each server, repeat the upgrade and Scale-out steps.  
-  
+
+## <a name="rollback_native"></a> Roll back a Reporting Services Cumulative Update
+
+Cumulative Updates in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] versions 2017 and later support in-place upgrade but cannot be selectively uninstalled. To roll back an upgrade, you must uninstall the entire service and reinstall the prior version following the directions below:
+
+> [!IMPORTANT]
+> These steps require that the pre-upgrade checklist has been followed completely. Step 2 will render existing configuration files, service configurations, and encryption keys irrecoverable. Microsoft Support cannot recover these configuration files or decrypt these encryption keys to assist in rollback. 
+
+1. Take note of any custom configurations including service credentials, email or file share settings, or report server URLs.
+
+2. Uninstall SQL Server Reporting Services. In a scale-out deployment, repeat for all nodes in the scale-out. For more information, see [Uninstall Native Mode](../../sql-server/install/uninstall-reporting-services.md)
+
+3. Restore backups of ReportServer database. For more information, see [Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)
+
+4. Reinstall the prior update of SQL Server Reporting Services.
+
+5. Restore pre-upgrade configuration files.
+
+6. Restore the encryption key backup. For more information, see [Back Up and Restore Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
+
+7. Recreate all of the custom configurations noted in step 1.
+
+8. In a scale-out deployment, repeat steps 4 through 7 for all other nodes in the scale-out deployment.
+
 ##  <a name="bkmk_sharePoint_scenarios"></a> SharePoint Mode Upgrade and Migration Scenarios  
  The following sections describe the issues and basic steps needed to upgrade or migrate from specified versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode to SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.  
   
@@ -231,13 +256,13 @@ ms.date: 05/01/2020
   
 -   [Overview of the upgrade process to SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Overview of the upgrade process to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Overview of the upgrade process to SharePoint 2013](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013).
   
--   [Clean up preparations before an upgrade to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Clean up preparations before an upgrade to SharePoint 2013](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013).  
   
 -   [Upgrade databases from SharePoint 2013 to SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Upgrade databases from SharePoint 2010 to SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013).  
 
 ## Next steps
 

@@ -4,10 +4,10 @@ title: "TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TO_DATETIMEOFFSET_TSQL"
   - "SWITCH_TZ_TSQL"
@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,26 +36,27 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-TODATETIMEOFFSET ( expression , time_zone )  
+TODATETIMEOFFSET ( datetime_expression , timezoneoffset_expression )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *expression*  
+ *datetime_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) that resolves to a [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) value.  
   
 > [!NOTE]  
 >  The expression cannot be of type **text**, **ntext**, or **image** because these types cannot be implicitly converted to **varchar** or **nvarchar**.  
   
- *time_zone*  
- Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.  
+ *timezoneoffset_expression*  
+ Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified timezoneoffset_expression.  
+
   
 > [!NOTE]  
 >  If expression is a character string, it must be in the format {+|-}TZH:THM.  
   
 ## Return Type  
- **datetimeoffset**. The fractional precision is the same as the *datetime* argument.  
+ **datetimeoffset**. The fractional precision is the same as the *datetime_expression* argument.  
   
 ## Examples  
   

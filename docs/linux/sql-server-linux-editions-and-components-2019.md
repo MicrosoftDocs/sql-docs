@@ -91,7 +91,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Backup compression|Yes|Yes|No|No| 
-|Database snapshot|Yes|No|No|No|
+|Database snapshot|Yes|Yes|No|No|
 |Always On failover cluster instance<sup>1</sup>|Yes|Yes|No|No| 
 |Always On availability groups<sup>2</sup>|Yes|No|No|No|
 |Basic availability groups <sup>3</sup>|No|Yes|No|No|
@@ -225,8 +225,8 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers | 
-| &nbsp; | AD Authentication for Availability Groups (AGs) | 
+| &nbsp; | AD Authentication for Linked Servers |
+| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |

@@ -30,9 +30,9 @@ ms.author: lle
  The [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database can be hosted on the following editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Enterprise (64-bit) x64  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Enterprise (64-bit) x64  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Developer (64-bit) x64  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Developer (64-bit) x64  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence (64-bit) x64  
   

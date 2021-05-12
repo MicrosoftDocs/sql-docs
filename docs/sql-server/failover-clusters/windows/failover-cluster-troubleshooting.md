@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "10/21/2015"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "troublshooting, failover clustering"

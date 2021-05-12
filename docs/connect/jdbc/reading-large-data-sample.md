@@ -1,8 +1,8 @@
 ---
-title: "Reading large data sample"
-description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to retrieve large column values from a database using the getCharacterStream method."
+title: Reading large data sample
+description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to retrieve large column values from a database using the getCharacterStream method.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

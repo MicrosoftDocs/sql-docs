@@ -3,7 +3,7 @@ description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 author: DavidTrigano
 ms.author: datrigan
 ms.reviewer: vanto
@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "rank"
 ms.custom: ""
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -33,7 +33,7 @@ Adds metadata about the sensitivity classification to one or more database colum
 
 For SQL Server, this was introduced in SQL Server 2019.
 
-Classifying sensitive data in your database environment helps achieve extended visibility and better protection. Additional information can be found in [Getting started with SQL Information Protection](https://aka.ms/sqlip)
+Classifying sensitive data in your database environment helps achieve extended visibility and better protection. Additional information can be found in [Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)
 
 ## Syntax
 
@@ -124,5 +124,5 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 - [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 - [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-- [Permissions (Database Engine)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
-- [Getting started with SQL Information Protection](https://aka.ms/sqlip)
+- [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md)
+- [Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FULLTEXTSERVICEPROPERTY_TSQL"
   - "FULLTEXTSERVICEPROPERTY"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "services [SQL Server], full-text search properties"
   - "test"
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

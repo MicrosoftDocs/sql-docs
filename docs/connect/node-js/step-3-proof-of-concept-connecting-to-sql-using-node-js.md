@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Connecting to SQL using Node.js"
-description: "This example should be considered a proof of concept showing how to connect to SQL using node.js and is simplified for clarity."
+description: "This example should be considered a proof of concept showing how to connect to SQL using Node.js and is simplified for clarity."
 ms.custom: ""
 ms.date: "07/23/2019"
 ms.prod: sql
@@ -45,7 +45,10 @@ The **new Connection** function is used to connect to SQL Database.
     connection.on('connect', function(err) {  
         // If no error, then good to proceed.
         console.log("Connected");  
-    });  
+    });
+    
+    connection.connect();
+
 ```  
   
 ## Step 2:  Execute a query  
@@ -77,6 +80,8 @@ All SQL statements are executed using the **new Request()** function. If the sta
         console.log("Connected");  
         executeStatement();  
     });  
+    
+    connection.connect();
   
     var Request = require('tedious').Request;  
     var TYPES = require('tedious').TYPES;  
@@ -133,8 +138,10 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
         // If no error, then good to proceed.  
         console.log("Connected");  
         executeStatement1();  
-    });  
-  
+    });
+    
+    connection.connect();
+    
     var Request = require('tedious').Request  
     var TYPES = require('tedious').TYPES;  
   

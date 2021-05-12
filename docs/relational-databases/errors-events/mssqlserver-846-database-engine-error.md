@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "846 (Database Engine error)"
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3

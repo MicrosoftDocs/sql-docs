@@ -4,12 +4,12 @@ description: Understand the different ways to secure SQL Server Docker container
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 ---
 
 # Secure SQL Server Docker containers
@@ -181,14 +181,14 @@ Follow the \"Register the certificate on your client machine\" and \"Example con
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-2017)
+- Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md)
 
 ::: moniker-end
 

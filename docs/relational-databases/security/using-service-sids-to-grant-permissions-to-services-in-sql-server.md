@@ -101,7 +101,7 @@ GO
   > Removing the service SID logins or removing them from the sysadmin server role can cause problems for various components of SQL Server that connect to the SQL Server Database Engine. Some problems include the following:
   > - SQL Server Agent cannot start or connect to a SQL Server service
   > - SQL Server Setup programs encounter the problem that is mentioned in the following Microsoft Knowledge Base article:
-  > https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  > https://mskb.pkisolutions.com/kb/955813
   >
   > For a default instance of SQL Server, you can correct this situation by adding the service SID using the following Transact-SQL commands:
   >

@@ -4,7 +4,7 @@ description: Learn about SQL Server Management Studio Performance Dashboard, whi
 ms.custom: ""
 ms.date: 11/13/2020
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -70,7 +70,7 @@ The **Missing Indexes** report shows potentially missing indexes that the Query 
 
 The **Waits** report filters out all idle and sleep waits. For more information about waits, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) and [SQL Server 2005 Performance Tuning Using Waits and Queues](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
-The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts because the data in the underlying DMVs is cleared. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], detailed information about expensive queries can be found in the Query Store. 
+The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts because the data in the underlying DMVs is cleared. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], detailed information about expensive queries can be found in the Query Store. 
 
 
 > [!NOTE]

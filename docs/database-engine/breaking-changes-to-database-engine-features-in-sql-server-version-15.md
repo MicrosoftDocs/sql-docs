@@ -14,9 +14,9 @@ helpviewer_keywords:
 ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
-# Breaking changes to database engine in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# Breaking changes to database engine in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 2019 does not introduce breaking changes.

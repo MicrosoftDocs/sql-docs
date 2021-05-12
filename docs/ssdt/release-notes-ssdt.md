@@ -11,7 +11,7 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
 # Release notes for SQL Server Data Tools (SSDT)
@@ -39,6 +39,59 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## 15.9.8,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; Apr 27, 2021  
+_Build Number:_ &nbsp; 14.0.16236.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Add ExecuteOnProxy property on Execute SQL Task and Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis). |
+| Integration Services (SSIS) | Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. |
+| Integration Services (SSIS) | List available locations based on selected subscription in Integration Runtime Creation Wizard. |
+| Integration Services (SSIS) | Fixed an issue that test connection on Analysis Services connection manager may fail due to fail to load managed ADAL component. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| &nbsp; | &nbsp; |
+
+
+## 15.9.7,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; Jan 5, 2021  
+_Build Number:_ &nbsp; 14.0.16228.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Make creating SSISDB optional in IR Creation Wizard. |
+| Integration Services (SSIS) | Fixed an issue that Azure Subscription ComboBox items are duplicated in IR Creation Wizard and Azure-Enabled Project Wizard when different subscriptions have the same name. |
+| Integration Services (SSIS) | Fixed an issue that sometimes Connect button cannot be enabled in IR Creation Wizard. |
+| Integration Services (SSIS) | Fixed an issue that Azure Subscription ComboBox items are duplicated in IR Creation Wizard and Azure-Enabled Project Wizard when different subscriptions have the same name. |
+| Integration Services (SSIS) | Fixed an issue that auto-generated code under bufferwrapper.cs of script component adds extra double-quotes when current locale is Germany. |
+| Integration Services (SSIS) | Fixed an issue that download WSDL button is not displayed when target server version is SQL Server 2012, 2014, 2016. |
+| Integration Services (SSIS) | Fixed an issue that building large projects may fail due to out of memory exception. |
+| Integration Services (SSIS) | Fixed an issue that the package is not downgraded to current target server version of the project when it is saved as copy to file system or MSDB in package deployment model. |
+| Integration Services (SSIS) | Fixed an issue that Dimension Processing Destination doesn't work due to "No such interface" error. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high-DPI. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| &nbsp; | &nbsp; |
+
 
 ## 15.9.6,&nbsp; SSDT for VS 2017
 
@@ -286,7 +339,7 @@ _SSDT for Visual Studio 2017._
 
 **SSIS:**
 
-1. Add support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+1. Add support for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 2. Remove support for SQL Server 2012.
 
 ### Known issues:

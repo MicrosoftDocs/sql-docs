@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 ---
 # Choose the right tool to manage SQL Server on Linux
 
@@ -26,7 +26,7 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 
 ## Azure Data Studio
 
-The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio](../azure-data-studio/what-is.md).
+The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
 
 ## SQL Server Management Studio on Windows
 

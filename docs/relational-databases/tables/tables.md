@@ -4,7 +4,7 @@ title: "Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/18/2019
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tables
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ Tables are database objects that contain all the data in a database. In tables, 
 
 ### Partitioned Tables
 
-Partitioned tables are tables whose data is horizontally divided into units which may be spread across more than one filegroup in a database. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. By default, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports up to 15,000 partitions. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Partitioned tables are tables whose data is horizontally divided into units which may be spread across more than one filegroup in a database. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. By default, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports up to 15,000 partitions. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ### Temporary Tables
 
@@ -41,7 +41,7 @@ Temporary tables are stored in **tempdb**. There are two types of temporary tabl
 
 #### <a name="ctp23"></a> Reduced recompilations for workloads using temporary tables across multiple scopes
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] under all database compatibility levels reduces recompilations for workloads using temporary tables across multiple scopes. This feature is also enabled in Azure SQL Database under database compatibility level 150 for all deployment models.  Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+[!INCLUDE[ss2019](../../includes/sssql19-md.md)] under all database compatibility levels reduces recompilations for workloads using temporary tables across multiple scopes. This feature is also enabled in Azure SQL Database under database compatibility level 150 for all deployment models.  Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
 - Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
 - Keep track of any data definition language (DDL) changes made at initial compilation and compare them with DDL operations for consecutive executions.

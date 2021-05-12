@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "RAW mode, requesting schema example"
   - "RAW mode, with XMLDATA and XMLSCHEMA"
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 ---
 # Request schemas as results with XMLDATA & XMLSCHEMA

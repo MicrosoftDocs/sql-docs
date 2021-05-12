@@ -179,9 +179,9 @@ ms.author: chugu
   
 -   Technical article, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), on msdn.microsoft.com.  
   
--   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), on sqlcat.com.  
+-   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163), on sqlcat.com.  
   
--   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
+-   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/), on sqlcat.com.  
   
 -   Blog post, [Troubleshooting SSIS Package Performance Issues](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), on blogs.msdn.com  
   
@@ -195,7 +195,7 @@ ms.author: chugu
   
 -   Video, [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), on channel9.msdn.com.  
   
--   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://go.microsoft.com/fwlink/?LinkId=217660), on sqlcat.com.  
+-   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), on sqlcat.com.  
   
 -   Video, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
   

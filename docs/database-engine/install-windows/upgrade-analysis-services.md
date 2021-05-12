@@ -2,7 +2,7 @@
 description: "Upgrade Analysis Services"
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "12/09/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: "Minewiskan"
 ms.author: "owend"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 manager: erikre
 ---
 # Upgrade Analysis Services
@@ -75,6 +75,7 @@ manager: erikre
   
 |Database model|Compatibility level|Compatible versions|  
 |-|-|-|  
+|Tabular|1500|SQL Server 2019|
 |Tabular|1400|SQL Server 2017|
 |Tabular|1200|SQL Server 2016|  
 |Tabular|1103|SQL Server 2014|  

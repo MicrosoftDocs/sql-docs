@@ -4,10 +4,10 @@ title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "column_definition"
   - "column_definition_TSQL"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column definitions [SQL Server]"
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -153,7 +153,7 @@ DEFAULT
 WITH VALUES   
  When adding a column AND a DEFAULT constraint, if the column allows NULLS using WITH VALUES will, for existing rows, set the new column's value to the value given in DEFAULT *constant_expression*. 
  If the column being added does not allow NULLS, for existing rows, the column's value will always be set to the value given in the DEFAULT *constant expression*. 
- Starting in SQL Server 2012 this may be a meta data operation [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Starting in SQL Server 2012 this may be a meta data operation [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
  If this is used when the related column isn't also being added then it has no effect.
  
  Specifies that the value given in DEFAULT *constant_expression* is stored in a new column that is added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column that is added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column, in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
@@ -212,14 +212,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Columns must be of a qualifying data type.  
   
 ALGORITHM  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
   
  For more information including feature constraints, see [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. The following functions are available:  
   

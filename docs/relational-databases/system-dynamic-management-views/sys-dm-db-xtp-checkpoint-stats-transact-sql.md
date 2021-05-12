@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: in-memory-oltp
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_stats"
   - "dm_db_xtp_checkpoint_stats_TSQL"
@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_stats dynamic management view"
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -36,8 +36,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] is substantially different from more recent versions and is discussed lower in the topic at [SQL Server 2014](#bkmk_2014).**
   
-## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later  
- The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+## [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later  
+ The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, beginning with **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]**.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  

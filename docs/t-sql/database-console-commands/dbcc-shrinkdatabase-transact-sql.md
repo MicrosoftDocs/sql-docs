@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
-monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -49,7 +49,7 @@ DBCC SHRINKDATABASE
 ```  
 
 ```syntaxsql
--- Azure Synapse Analytics (formerly SQL DW)
+-- Azure Synapse Analytics
 
 DBCC SHRINKDATABASE   
 ( database_name   

@@ -4,7 +4,7 @@ title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_CRYPTOGRAPHIC_TSQL"
   - "CRYPTOGRAPHIC PROVIDER"

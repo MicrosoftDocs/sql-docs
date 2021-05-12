@@ -1,13 +1,13 @@
 ---
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
-title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/08/2020
+ms.date: 04/13/2021
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EXTERNAL FILE FORMAT"
   - "CREATE_EXTERNAL_FILE_FORMAT"
@@ -17,15 +17,15 @@ helpviewer_keywords:
   - "External"
   - "External, file format"
   - "PolyBase, external file format"
-ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
 Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with External Streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
+To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
 The following file formats are supported:
   
@@ -33,15 +33,12 @@ The following file formats are supported:
   
 - Hive RCFile  - Does not apply to Azure Synapse Analytics.
   
-- Hive ORC
+- Hive ORC - Does not apply to Azure Synapse Analytics.
   
 - Parquet
 
-- JSON - Applies to Azure SQL Edge only.
+- JSON - Applies to Azure SQL Edge only. For information on using OPENROWSET to import JSON data in other platforms, see [Import JSON documents into SQL Server](../../relational-databases/json/import-json-documents-into-sql-server.md) or [Query JSON files using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-json-files).
 
-
-To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
@@ -63,7 +60,7 @@ WITH (
 {  
     FIELD_TERMINATOR = field_terminator  
     | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -411,7 +408,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
+### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics Only)
  This example creates an external file format for CSV file with a single header row. 
   
 ```sql  

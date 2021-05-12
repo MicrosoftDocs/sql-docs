@@ -115,11 +115,11 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
 **Specify Administrators**: You must specify at least one server administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The users or groups that you specify become members of the server administrator role of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance you're installing. These members must have Windows domain user accounts in the same domain as the computer on which you're installing the software.  
   
 > [!NOTE]  
-> User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see the [User Account Control step-by-step guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+> User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see the [User Account Control step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc709691(v=ws.10)) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### See also
   
-* [Configure service accounts &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
+* [Configure service accounts &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## Analysis Services Configuration - Data Directories page
@@ -187,7 +187,7 @@ The default directories in the following table are user-configurable during [!IN
 #### See also
 
 * For more information about directories, file locations, and instance ID naming, see [File locations for default and named instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
-* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
+* [Share and NTFS permissions on a file server](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
 ## <a name="serverconfig"></a> Database Engine Configuration - Server Configuration page
 
@@ -361,11 +361,11 @@ Configure the settings for **tempdb** according to your workload and requirement
   
 * **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by Setup. As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files. If contention occurs, increase the number of data files by multiples of 4 (up to the number of logical processors) until contention falls to acceptable levels, or make changes to the workload or code.
   
-* **Initial size (MB)** is the initial size in megabytes for each **tempdb** data file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] has a maximum initial file size of 1024 MB. All **tempdb** data files are the same initial size. Because **tempdb** is re-created every time SQL Server starts or fails over, specify a size that's close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during startup, enable [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
+* **Initial size (MB)** is the initial size in megabytes for each **tempdb** data file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssql17](../../includes/sssql17-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] has a maximum initial file size of 1024 MB. All **tempdb** data files are the same initial size. Because **tempdb** is re-created every time SQL Server starts or fails over, specify a size that's close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during startup, enable [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 * **Total initial size (MB)** is the cumulative size of all the **tempdb** data files.  
   
-* **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file automatically grows by when it runs out of space. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] and later, all data files grow at the same time by the amount specified in this setting.  
+* **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file automatically grows by when it runs out of space. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, all data files grow at the same time by the amount specified in this setting.  
   
 * **Total autogrowth (MB)** is the cumulative size of each autogrowth event.  
 * **Data directories** shows all the directories that hold **tempdb** data files. When there are multiple directories, data files are placed in directories in a round-robin manner. For example, if you create 3 directories and specify 8 data files, data files 1, 4, and 7 are created in the first directory. Data files 2, 5, and 8 are created in the second directory. Data files 3 and 6 are in the third directory.  
@@ -376,7 +376,7 @@ Configure the settings for **tempdb** according to your workload and requirement
   
 **Tempdb log file** is the name of the log file. This file is created automatically. The following settings apply only to **tempdb** log files:  
   
-* **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] has a maximum initial file size of 1024 MB. Because **tempdb** is re-created every time SQL Server starts or fails over, specify a size that's close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during startup, enable [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
+* **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssql17](../../includes/sssql17-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] has a maximum initial file size of 1024 MB. Because **tempdb** is re-created every time SQL Server starts or fails over, specify a size that's close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during startup, enable [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
   > [!NOTE]
   > **Tempdb** uses minimal logging. The **tempdb** log file can't be backed up. It is re-created every time SQL Server starts or when a cluster instance fails over.
@@ -406,17 +406,17 @@ The following recommendations apply to the SMB file server:
 ### See also
 
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
+* [Share and NTFS permissions on a file server](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.
 -->
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
 
-**Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
+**Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
 
 If this page is skipped during setup, the default MaxDOP value is the recommended value displayed in this page instead of the default [!INCLUDE[ssde_md](../../includes/ssde_md.md)] value for previous versions (0). You can also manually configure this setting on this page, and you can modify this setting after installation. 
 

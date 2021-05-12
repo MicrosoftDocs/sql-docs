@@ -9,14 +9,14 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table and Row Size in Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](?viewFallbackFrom=sql-server-2014). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in Azure SQL Database it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
+Prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](?viewFallbackFrom=sql-server-2014). However, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in Azure SQL Database it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
   
 Columns that do not fit in the 8060 byte row size limit are placed off-row, in a separate internal table. Each off-row column has a corresponding internal table, which in turn has a single nonclustered index. For details about these internal tables used for off-row columns see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  

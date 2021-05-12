@@ -16,8 +16,8 @@ To manage your SQL Server services, choose from a wide variety of industry-leadi
 ## Our management partners
 
 | Partner | Description | Links |
-| --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on SQL Servers to help ensure compliance with regulatory and data security requirements.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+| --- | --- | --- |
+|![idera][1] |**IDERA**<br>SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on SQL Servers to help ensure compliance with regulatory and data security requirements.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
 
 ## Next steps
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][monitor_partners], and [development partners][dev_partners].

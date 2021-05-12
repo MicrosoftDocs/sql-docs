@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "cdc.ddl_history_TSQL"
   - "cdc.ddl_history"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.ddl_history"
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -23,6 +23,7 @@ In this task, you enable logging for the data flow in the Lesson 3.dtsx package.
 ## Add logging to the package  
   
 1.  On the **SSIS** menu, select **Logging**.  
+    In Visual Studio 2019, the **SSIS** menu is located under Extensions -> SSIS. Make sure you have the **Data Flow** tab selected and not **Control Flow**
   
 2.  In the **Configure SSIS Logs** dialog, in the **Containers** pane, make sure the topmost object is selected. This object represents the Lesson 3 package.
   

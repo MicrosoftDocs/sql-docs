@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_FULLTEXT_INDEX_TSQL"
   - "DROP FULLTEXT INDEX"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP FULLTEXT INDEX statement"
   - "dropping full-text indexes"
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

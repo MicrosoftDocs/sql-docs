@@ -4,10 +4,10 @@ title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_get_audit_file_TSQL"
   - "sys.fn_get_audit_file_TSQL"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -109,7 +109,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | Current login. Is nullable. |  
 | server_principal_sid | **varbinary** | Current login SID. Is nullable. |  
 | session_id | **smallint** | ID of the session on which the event occurred. Is not nullable. |  
-| session_server_principal_name | **sysname** | Server principal for session. Is nullable. |  
+| session_server_principal_name | **sysname** | Server principal for session. Is nullable. Returns the identity of the original login which was connected to the instance of SQL Server in case there were explicit or implicit context switches.|  
 | statement | **nvarchar(4000)** | TSQL statement if it exists. Is nullable. Returns NULL if not applicable. |  
 | succeeded | **bit** | Indicates whether the action that triggered the event succeeded. Is not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.<br /> 1 = success<br /> 0 = fail |
 | target_database_principal_id | **int** | The database principal the GRANT/DENY/REVOKE operation is performed on. Is not nullable. Returns 0 if not applicable. |  
@@ -123,8 +123,9 @@ fn_get_audit_file ( file_pattern,
 
   
 ## Remarks  
- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
-  
+- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
+- **fn_get_audit_file** cannot be used when the audit is created with the **APPLICATION_LOG**, **SECURITY_LOG**, or **EXTERNAL_MONITOR** options.
+
 ## Permissions
 
 - **SQL Server**: Requires the **CONTROL SERVER** permission.  

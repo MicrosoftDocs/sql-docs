@@ -4,10 +4,10 @@ title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/23/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATABASEPROPERTYEX"
   - "DATABASEPROPERTYEX_TSQL"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "displaying database properties"
   - "database properties [SQL Server]"
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,11 +80,11 @@ An expression specifying the name of the database property to return. *property*
 |IsSubscribed|Database is subscribed to a publication.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
 |IsSyncWithBackup|The database is either a published database or a distribution database, and it supports a restore that will not disrupt transactional replication.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
 |IsTornPageDetectionEnabled|The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detects incomplete I/O operations caused by power failures or other system outages.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
-|IsVerifiedClone|Database is a schema- and statistics- only copy of a user database, created using the WITH VERIFY_CLONEDB option of DBCC CLONEDATABASE. See this [Microsoft Support Article](https://support.microsoft.com/help/3177838) for more information.|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
-|IsXTPSupported|Indicates whether the database supports In-Memory OLTP, i.e., creation and use of memory-optimized tables and natively compiled modules.<br /><br /> Specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported is independent of the existence of any MEMORY_OPTIMIZED_DATA filegroup, which is required for creating In-Memory OLTP objects.|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later), and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input, an error, or not applicable<br /><br /> Base data type: **int**|  
-|LastGoodCheckDbTime|The date and time of the last successful DBCC CHECKDB that ran on the specified database.<sup>1</sup> If DBCC CHECKDB has not been run on a database, 1900-01-01 00:00:00.000 is returned.|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beginning with SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] beginning with CU9.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] or later.</br>Azure SQL Database.<br/><br/>A datetime value<br /><br /> NULL: Invalid input<br /><br /> Base data type: **datetime**| 
+|IsVerifiedClone|Database is a schema- and statistics- only copy of a user database, created using the WITH VERIFY_CLONEDB option of DBCC CLONEDATABASE. See this [Microsoft Support Article](https://support.microsoft.com/help/3177838) for more information.|**Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
+|IsXTPSupported|Indicates whether the database supports In-Memory OLTP, i.e., creation and use of memory-optimized tables and natively compiled modules.<br /><br /> Specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported is independent of the existence of any MEMORY_OPTIMIZED_DATA filegroup, which is required for creating In-Memory OLTP objects.|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later), and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input, an error, or not applicable<br /><br /> Base data type: **int**|  
+|LastGoodCheckDbTime|The date and time of the last successful DBCC CHECKDB that ran on the specified database.<sup>1</sup> If DBCC CHECKDB has not been run on a database, 1900-01-01 00:00:00.000 is returned.|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] beginning with SP2.</br>[!INCLUDE[sssql17](../../includes/sssql17-md.md)] beginning with CU9.</br>[!INCLUDE[sssql19](../../includes/sssql19-md.md)] or later.</br>Azure SQL Database.<br/><br/>A datetime value<br /><br /> NULL: Invalid input<br /><br /> Base data type: **datetime**| 
 |LCID|The collation Windows locale identifier (LCID).|LCID value (in decimal format).<br /><br /> Base data type: **int**|  
-|MaxSizeInBytes|Maximum database size, in bytes.|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Azure SQL Database and Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – Value is based on SLO unless additional storage has been purchased.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – Value is in 1GB increments up to max size.<br /><br />NULL: Database is not started<br /><br /> Base data type: **bigint**|  
+|MaxSizeInBytes|Maximum database size, in bytes.|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Azure SQL Database and Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – Value is based on SLO unless additional storage has been purchased.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – Value is in 1GB increments up to max size.<br /><br />NULL: Database is not started<br /><br /> Base data type: **bigint**|  
 |Recovery|Database recovery model|FULL: Full recovery model<br /><br /> BULK_LOGGED: Bulk logged model<br /><br /> SIMPLE: Simple recovery model<br /><br /> Base data type: **nvarchar(128)**|  
 |ServiceObjective|Describes the performance level of the database in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] or [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|One of the following:<br /><br /> Null: database not started<br /><br /> Shared (for Web/Business editions)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (for master DB)<br /><br /> Base data type: **nvarchar(32)**|  
 |ServiceObjectiveId|The id of the service objective in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** that identifies the service objective.|  

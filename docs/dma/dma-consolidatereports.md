@@ -20,6 +20,8 @@ ms.custom: "seo-lt-2019"
 
 The following step-by-step instructions help you use the Data Migration Assistant to perform a successful scaled assessment for upgrading on-premises SQL Server or  SQL Server running on Azure VMs, or for migrating to Azure SQL Database.
 
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
 ## Prerequisites
 
 - Designate a tools computer on your network from which DMA will be initiated. Ensure that this computer has connectivity to your SQL Server targets.
@@ -29,7 +31,7 @@ The following step-by-step instructions help you use the Data Migration Assistan
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 or above.
   - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17.0 or above.
   - [Power BI desktop](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Azure PowerShell Modules](/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell Modules](/powershell/azure/install-az-ps)
 - Download and extract:
   - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - The [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).

@@ -6,13 +6,13 @@ ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,6 +41,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure Synapse Analytics|
 |result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure Synapse Analytics| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative integer values = Reasons why result set caching was not used.  See remarks section for details.|
 |client_correlation_id|**nvarchar(255)**|Optional user-defined name for a client session.  To set for a session, call sp_set_session_context 'client_correlation_id', '<CorrelationIDName>'.  Run `SELECT SESSION_CONTEXT(N'client_correlation_id')` to retrieve its value.|
+|command2|**nvarchar(max)**|Null| Null|
 ||||
 
 ## Remarks 

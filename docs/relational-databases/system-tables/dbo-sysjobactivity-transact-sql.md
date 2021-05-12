@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysjobactivity_TSQL"
   - "dbo.sysjobactivity"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobactivity system table"
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

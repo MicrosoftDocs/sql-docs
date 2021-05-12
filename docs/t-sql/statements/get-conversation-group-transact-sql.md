@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "GET"
   - "CONVERSATION_GROUP_TSQL"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "GET CONVERSATION GROUP statement"
   - "conversations [Service Broker], groups"
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

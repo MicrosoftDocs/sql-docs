@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.master_files"
   - "master_files_TSQL"
@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.master_files catalog view"
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -63,6 +63,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
 > [!NOTE]  
 >  When you drop or rebuild large indexes, or drop or truncate large tables, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sys.master_files immediately after dropping or truncating a large object may not reflect the actual disk space available.  
+
+> [!NOTE]  
+>  For tempdb, view sys.master_files shows initial tempdb size. The values are used as a template for tempdb creation at startup of SQL Server. So, when tempdb grows it is not reflected in the view. To get current size of tempdb files, query `tempdb.sys.database_files`.
   
 ## Permissions  
  The minimum permissions that are required to see the corresponding row are CREATE DATABASE, ALTER ANY DATABASE, or VIEW ANY DEFINITION.  

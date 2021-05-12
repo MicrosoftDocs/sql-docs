@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_CONTRACT_TSQL"
   - "DROP CONTRACT"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], dropping"
   - "DROP CONTRACT statement"
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

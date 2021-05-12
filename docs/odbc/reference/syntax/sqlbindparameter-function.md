@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLBindParameter"
 apilocation: 
@@ -125,7 +125,7 @@ SQLRETURN SQLBindParameter(
  If *ParameterNumber* in the call to **SQLBindParameter** is greater than the value of SQL_DESC_COUNT, **SQLSetDescField** is called to increase the value of SQL_DESC_COUNT to *ParameterNumber*.  
   
 ## InputOutputType Argument  
- The *InputOutputType* argument specifies the type of the parameter. This argument sets the SQL_DESC_PARAMETER_TYPE field of the IPD. All parameters in SQL statements that do not call procedures, such as **INSERT** statements, are *input**parameters*. Parameters in procedure calls can be input, input/output, or output parameters. (An application calls **SQLProcedureColumns** to determine the type of a parameter in a procedure call; parameters whose type cannot be determined are assumed to be input parameters.)  
+ The *InputOutputType* argument specifies the type of the parameter. This argument sets the SQL_DESC_PARAMETER_TYPE field of the IPD. All parameters in SQL statements that do not call procedures, such as **INSERT** statements, are *input* *parameters*. Parameters in procedure calls can be input, input/output, or output parameters. (An application calls **SQLProcedureColumns** to determine the type of a parameter in a procedure call; parameters whose type cannot be determined are assumed to be input parameters.)  
   
  The *InputOutputType* argument is one of the following values:  
   

@@ -25,11 +25,11 @@ helpviewer_keywords:
   - "table mapping [SQLXML], explicit mapping"
   - "element/attribute mapping [SQLXML]"
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Custom XSD mappings to tables/columns (SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

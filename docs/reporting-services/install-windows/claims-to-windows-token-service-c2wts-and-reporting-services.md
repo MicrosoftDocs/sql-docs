@@ -26,7 +26,7 @@ The Report Viewer web part can be used to embed SQL Server Reporting Services na
 
 1. Configure your Reporting Services (Native Mode) instance for Kerberos Authentication by determining the SSRS Service account, setting an SPN, and updating the rsreportserver.config file to use RSWindowsNegotiate Authentication Type. [Register a Service Principal Name (SPN) for a Report Server](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Follow steps from [Steps needed to configure c2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Follow steps from [Steps needed to configure c2WTS](#steps-needed-to-configure-c2wts)
  
 
 ## SharePoint mode integration
@@ -79,7 +79,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
     * Select **Users or Computers...&#42;** and enter the account that hosts the service. For example, if a SQL Server is running under an account named *sqlservice*, enter `sqlservice`. 
 	  For the **Report Viewer web part**, this will be the service account for the Reporting Services (Native Mode) Instance.
 
-    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](#report-viewer-native-mode-web-part-configuration).
 
     * Select OK to get out of the dialogs.
 

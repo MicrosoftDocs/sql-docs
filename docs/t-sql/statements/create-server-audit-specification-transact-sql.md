@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_SERVER_AUDIT_SPECIFICATION_TSQL"
   - "CREATE SERVER AUDIT SPECIFICATION"
@@ -60,7 +60,7 @@ FOR SERVER AUDIT audit_name
 ## Permissions  
  Users with the ALTER ANY SERVER AUDIT permission can create server audit specifications and bind them to any audit.  
   
- After a server audit specification is created, it can be viewed by principals with the, CONTROL SERVER, or ALTER ANY SERVER AUDIT permissions, the sysadmin account, or principals having explicit access to the audit.  
+ After a server audit specification is created, it can be viewed by users with CONTROL SERVER permission, the sysadmin account, or principals having explicit access to the audit.  
   
 ## Examples  
  The following example creates a server audit specification called `HIPAA_Audit_Specification` that audits failed logins, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit called `HIPAA_Audit`.  

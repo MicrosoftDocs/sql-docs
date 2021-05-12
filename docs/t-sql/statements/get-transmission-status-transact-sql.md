@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STATUS_TSQL"
   - "TRANSMISSION"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "status information [SQL Server], conversations"
   - "GET_TRANSMISSION_STATUS statement"
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

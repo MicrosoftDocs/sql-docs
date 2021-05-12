@@ -3,14 +3,14 @@ title: Known issues for Python and R
 description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/13/2020
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: contperfq4
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+ms.custom: contperf-fy21q3
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Known issues in SQL Server Machine Learning Services
+# Known issues for Python and R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
@@ -93,7 +93,7 @@ SQL Server 2016 requires that the R libraries on the client exactly match the R 
 
 The version of R that is installed with SQL Server R Services is updated whenever a SQL Server service release is installed. To ensure that you always have the most up-to-date versions of R components, be sure to install all service packs.
 
-To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
+To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://web.archive.org/web/20190415073655/https://support.microsoft.com/en-us/help/3210262/fix-version-of-r-client-is-incompatible-with-the-microsoft-r-server-ve).
 
 To avoid problems with R packages, you can also upgrade the version of the R libraries that are installed on the server, by changing your servicing agreement to use the Modern Lifecycle Support policy, as described in [the next section](#bkmk_sqlbindr). When you do so, the version of R that's installed with SQL Server is updated on the same schedule used for updates of machine Learning Server (formerly Microsoft R Server).
 
@@ -121,7 +121,7 @@ This issue is fixed in the release version. Also, this limitation does not apply
 
 **Applies to:** SQL Server 2017 with Python
 
-### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
@@ -129,7 +129,7 @@ When you run R code in a SQL Server 2016 compute context, you might see the foll
 
 This message is displayed if either of the following two statements is true,
 
-+ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
++ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](/machine-learning-server/install/r-server-install-windows).
 
 To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](../install/upgrade-r-and-python.md).
@@ -162,7 +162,7 @@ Look for Launchpad in the `Binn` folder for the instance. For example, in a defa
 
 ### 9. Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**. You can also leave the rule enabled, but change the security property to **Allow if secure**.
 
@@ -364,7 +364,7 @@ You cannot use in an R script the following types of query results:
 
 Using string type variables as factors can greatly increase the amount of memory used for R operations. This is a known issue with R in general, and there are many articles on the subject. For example, see [Factors are not first-class citizens in R, by John Mount, in R-bloggers)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) or [stringsAsFactors: An unauthorized biography, by Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/). 
 
-Although the issue is not specific to SQL Server, it can greatly affect performance of R code run in SQl Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
+Although the issue is not specific to SQL Server, it can greatly affect performance of R code run in SQL Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
 
 If you do not absolutely require a string data type for other operations, mapping the string values to a numeric (integer) data type as part of data preparation would be beneficial from a performance and scale perspective.
 
@@ -384,7 +384,7 @@ For more information, see [R libraries and data types](../r/r-libraries-and-data
 
 Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
 
-To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) or use nvarchar type for the same.
 
 ### 13. Only one value of type `raw` can be returned from `sp_execute_external_script`
 
@@ -712,7 +712,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### 9. Cannot install **tensorflow** package using **sqlmlutils**
 
-The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. You need to download, install, and update the [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/). However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
+The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md) is used to install Python packages in SQL Server 2019. You need to download, install, and update the [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/). However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
 
 **Workaround**
 
@@ -728,7 +728,7 @@ Using a command prompt in administrator mode, run the following command, replaci
 
 ## Revolution R Enterprise and Microsoft R Open
 
-This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server or Microsoft R Server.
 
@@ -748,4 +748,4 @@ Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisio
 
 ## Next steps
 
-[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-overview.md)
+[Collect data to troubleshoot SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)

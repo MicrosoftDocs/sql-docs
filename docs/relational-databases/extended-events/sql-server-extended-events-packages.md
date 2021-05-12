@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "extended events [SQL Server], packages"
   - "xe"
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Packages
 

@@ -19,7 +19,7 @@ ms.reviewer: v-chmalh
 
 The <xref:Microsoft.Data.SqlClient> has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property. The specific connection string syntax for the SqlClient provider is documented in its `ConnectionString` property. For more information on connection string syntax, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-## Connection String Builders
+## Connection string builders
 
  Microsoft SqlClient Data Provider for SQL Server introduced the following connection string builder.
 
@@ -27,7 +27,7 @@ The <xref:Microsoft.Data.SqlClient> has a `Connection` object that inherits from
 
 The connection string builders allow you to construct syntactically valid connection strings at run time, so you do not have to manually concatenate connection string values in your code. For more information, see [Connection String Builders](connection-string-builders.md).
 
-## Windows Authentication
+## Windows authentication
 
 We recommend using Windows Authentication (sometimes referred to as *integrated security*) to connect to data sources that support it. The following table shows the Windows Authentication syntax used with the Microsoft SqlClient Data Provider for SQL Server.
 
@@ -35,7 +35,7 @@ We recommend using Windows Authentication (sometimes referred to as *integrated 
 |--------------|------------|  
 |`SqlClient`|`Integrated Security=true;`<br /><br /> `-- or --`<br /><br /> `Integrated Security=SSPI;`|  
 
-## SqlClient Connection Strings
+## SqlClient connection strings
 
 The syntax for a <xref:Microsoft.Data.SqlClient.SqlConnection> connection string is documented in the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> property. You can use the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> property to get or set a connection string for a SQL Server database. The connection string keywords also map to properties in the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.
 
@@ -63,7 +63,7 @@ Windows Authentication is preferred for connecting to SQL Server. However, if SQ
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-When you connect to Azure SQL Database or to Azure SQL Data Warehouse and provide a login in the format `user@servername`, make sure that the `servername` value in the login matches the value provided for `Server=`.
+When you connect to Azure SQL Database or to Azure Synapse Analytics and provide a login in the format `user@servername`, make sure that the `servername` value in the login matches the value provided for `Server=`.
 
 > [!NOTE]
 > Windows authentication takes precedence over SQL Server logins. If you specify both Integrated Security=true as well as a user name and password, the user name and password will be ignored and Windows authentication will be used.
@@ -78,17 +78,17 @@ To connect to a named instance of SQL Server, use the *server name\instance name
 
 You can also set the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> property of the `SqlConnectionStringBuilder` to the instance name when building a connection string. The <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> property of a <xref:Microsoft.Data.SqlClient.SqlConnection> object is read-only.
 
-### Type System Version Changes
+### Type system version changes
 
 The `Type System Version` keyword in a <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> specifies the client-side representation of SQL Server types. See <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> for more information about the `Type System Version` keyword.
 
-## Connecting and Attaching to SQL Server Express User Instances
+## Connect and Attach to SQL Server Express user instances
 
 User instances are a feature in SQL Server Express. They allow a user running on a least-privileged local Windows account to attach and run a SQL Server database without requiring administrative privileges. A user instance executes with the user's Windows credentials, not as a service.
 
 For more information on working with user instances, see [SQL Server Express User Instances](./sql/sql-server-express-user-instances.md).
 
-## Using TrustServerCertificate
+## Use TrustServerCertificate
 
 The `TrustServerCertificate` keyword is valid only when connecting to a SQL Server instance with a valid certificate. When `TrustServerCertificate` is set to `true`, the transport layer will use TLS/SSL to encrypt the channel and bypass walking the certificate chain to validate trust.
 
@@ -99,7 +99,7 @@ The `TrustServerCertificate` keyword is valid only when connecting to a SQL Serv
 > [!NOTE]
 > If `TrustServerCertificate` is set to `true` and encryption is turned on, the encryption level specified on the server will be used even if `Encrypt` is set to `false` in the connection string. The connection will fail otherwise.
 
-### Enabling Encryption
+### Enable encryption
 
 To enable encryption when a certificate has not been provisioned on the server, the **Force Protocol Encryption** and the **Trust Server Certificate** options must be set in SQL Server Configuration Manager. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
 
@@ -117,9 +117,10 @@ The following table describes all cases.
 |Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate; otherwise, the connection attempt fails.|  
 |Yes|Yes|Yes|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
 
-For more information, see [Using Encryption Without Validation](/sql/relational-databases/native-client/features/using-encryption-without-validation).
+For more information, see [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 ## See also
 
-- [Connection Strings](connection-strings.md)
-- [Connecting to a Data Source](connecting-to-data-source.md)
+- [Connection strings](connection-strings.md)
+- [Connecting to a data source](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

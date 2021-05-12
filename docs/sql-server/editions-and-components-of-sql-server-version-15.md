@@ -1,8 +1,8 @@
 ---
-description: "Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
-title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
+description: "Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
+title: "Editions and supported features of SQL Server 2019"
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
-# Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
+This topic provides details of features supported by the various editions of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 For information about older versions, see:
 
@@ -52,10 +52,10 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Evaluation edition is
 
 For the latest release notes and what's new information, see the following:
 
-* [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
+* [[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
 * [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions
 
@@ -98,12 +98,12 @@ Use the information in the following tables to determine the set of features tha
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes server and client components for creating, managing, and deploying tabular, matrix, graphical, and free-form reports. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is also an extensible platform that you can use to develop report applications.|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a set of graphical tools and programmable objects for moving, copying, and transforming data. It also includes the [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) component for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. MDS can be configured to manage any domain (products, customers, accounts) and includes hierarchies, granular security, transactions, data versioning, and business rules, as well as an [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] that can be used to manage data.|
-|Machine Learning Services (In-Database)|Machine Learning Services (In-Database) supports distributed, scalable machine learning solutions using enterprise data sources. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, the R language was supported. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] supports R and Python.|
-|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supports deployment of distributed, scalable machine learning solutions on multiple platforms and using multiple enterprise data sources, including Linux and Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, the R language was supported. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] supports R and Python.|
+|Machine Learning Services (In-Database)|Machine Learning Services (In-Database) supports distributed, scalable machine learning solutions using enterprise data sources. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, the R language was supported. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] supports R and Python.|
+|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supports deployment of distributed, scalable machine learning solutions on multiple platforms and using multiple enterprise data sources, including Linux and Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, the R language was supported. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] supports R and Python.|
 
 |Management tools|Description|
 |----------------------|-----------------|
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The latest edition of SSMS updates SMO, which includes the S[QL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Download and install <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The latest edition of SSMS updates SMO, which includes the [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Download and install <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager provides basic configuration management for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services, server protocols, client protocols, and client aliases.|
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] provides a graphical user interface to monitor an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor|[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor helps create optimal sets of indexes, indexed views, and partitions.|
@@ -198,7 +198,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|
 |Data compression|Yes|Yes|Yes|Yes|Yes|
 |Resource governor|Yes|No|No|No|No|
-|Partitioned table parallelism|Yes|No|No|No|No|
+|Partitioned table parallelism|Yes|Yes|Yes|Yes|Yes|
 |Multiple filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA aware and large page memory and buffer array allocation|Yes|No|No|No|No|
 |Buffer pool extension|Yes|Yes|No|No|No|

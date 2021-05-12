@@ -106,7 +106,7 @@ To use managed identity authentication for Azure SQL Managed Instance, follow th
     
 1. [Provision an Azure Active Directory administrator](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) for your managed instance on the Azure portal, if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip step 2-4. The administrator will have full access to the database.
 
-1. [Create logins](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current) for the data factory managed identity. In SQL Server Management Studio (SSMS), connect to your Managed Instance using a SQL Server account that is a **sysadmin**. In **master** database, run the following T-SQL:
+1. [Create logins](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) for the data factory managed identity. In SQL Server Management Studio (SSMS), connect to your Managed Instance using a SQL Server account that is a **sysadmin**. In **master** database, run the following T-SQL:
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
@@ -118,7 +118,7 @@ To use managed identity authentication for Azure SQL Managed Instance, follow th
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Grant the data factory managed identity needed permissions as you normally do for SQL users and others. Run the following code. For more options, see [this document](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current).
+1. Grant the data factory managed identity needed permissions as you normally do for SQL users and others. Run the following code. For more options, see [this document](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];

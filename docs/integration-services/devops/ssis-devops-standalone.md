@@ -123,6 +123,13 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 ## Release notes
 
+### Version 0.1.2 Preview
+
+Release Date: January 14, 2021
+
+- Fixed an issue that SSISBuild.exe fails to build project with NullReference exception when package parameter metadata in SSIS project file and SSIS package mismatches.
+- Fixed an issue that package fails to be executed with error starting with “Failed to decrypt protected XML node” though the package is deployed to SSISDB successfully with SSISDeploy.exe, when the SSIS project containing the package is encrypted with EncryptSensitiveWithUserKey and the package contains CM with sensitive data.
+
 ### Version 0.1.1 Preview
 
 Release Date: November 11, 2020

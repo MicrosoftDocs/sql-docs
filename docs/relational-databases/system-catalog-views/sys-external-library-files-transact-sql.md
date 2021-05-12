@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/25/2020"
 ms.prod: sql
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "external_library_files"
   - "external_library_files_TSQL"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.external_library_files (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

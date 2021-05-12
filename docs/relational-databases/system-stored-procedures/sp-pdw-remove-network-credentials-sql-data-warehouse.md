@@ -3,17 +3,15 @@ description: "sp_pdw_remove_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_remove_network_credentials"
 titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.service: sql-data-warehouse
-ms.subservice: design
-ms.topic: "language-reference"
+ms.prod: sql
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
 ---
 # sp_pdw_remove_network_credentials (Azure Synapse Analytics)

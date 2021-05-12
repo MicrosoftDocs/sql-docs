@@ -142,7 +142,7 @@ GO
   
 -   When you attach or restore a database, the operation fails if the new database has a value for **DIRECTORY_NAME** that already exists in the target instance. Specify a unique value for **DIRECTORY_NAME** when you call **CREATE DATABASE FOR ATTACH** or **RESTORE DATABASE**.  
   
--   When you upgrade an existing database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the value of **DIRECTORY_NAME** is null.  
+-   When you upgrade an existing database, the value of **DIRECTORY_NAME** is null.  
   
 -   When you enable or disable non-transactional access at the database level, the operation does not check whether the directory name has been specified or whether it is unique.  
   

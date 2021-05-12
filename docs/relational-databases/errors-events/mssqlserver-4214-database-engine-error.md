@@ -6,7 +6,7 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "4214 (Database Engine error)"
 ms.assetid: 
@@ -42,4 +42,4 @@ Perform a full database backup before you try to backup the transaction log for 
 
 ## More information
 
-For more information you can, see: [Back Up and Restore of SQL Server Databases](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
+For more information you can, see: [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).

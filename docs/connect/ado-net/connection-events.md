@@ -26,9 +26,9 @@ The Microsoft SqlClient Data Provider for SQL Server has **Connection** objects 
 |**InfoMessage**|Occurs when an informational message is returned from a data source. Informational messages are messages from a data source that do not result in an exception being thrown.|  
 |**StateChange**|Occurs when the state of the **Connection** changes.|  
 
-## Working with the InfoMessage Event
+## Work with the InfoMessage event
 
-You can retrieve warnings and informational messages from a SQL Server data source using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown. However, the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that are not associated with an error. In the case of Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event. For more information, see the [Database Engine Error Severities](/sql/relational-databases/errors-events/database-engine-error-severities) article.
+You can retrieve warnings and informational messages from a SQL Server data source using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown. However, the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that are not associated with an error. In the case of Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event. For more information, see the [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md) article.
 
 The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event receives an <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> object containing, in its **Errors** property, a collection of the messages from the data source. You can query the **Error** objects in this collection for the error number and message text, as well as the source of the error. The Microsoft SqlClient Data Provider for SQL Server also includes detail about the database, stored procedure, and line number that the message came from.
 
@@ -38,7 +38,7 @@ The following code example shows how to add an event handler for the <xref:Micro
 
 [!code-csharp[SqlConnection_._InfoMessage#1](~/../sqlclient/doc/samples/SqlConnection_InfoMessage_StateChange.cs#1)]
 
-## Handling Errors as InfoMessages
+## Handle errors as InfoMessages
 
 The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event will normally fire only for informational and warning messages that are sent from the server. However, when an actual error occurs, the execution of the **ExecuteNonQuery** or **ExecuteReader** method that initiated the server operation is halted and an exception is thrown.
 
@@ -47,7 +47,7 @@ If you want to continue processing the rest of the statements in a command regar
 > [!NOTE]
 > An error with a severity level of 17 or above that causes the server to stop processing the command must be handled as an exception. In this case, an exception is thrown regardless of how the error is handled in the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event.
 
-## Working with the StateChange Event
+## Work with the StateChange event
 
 The **StateChange** event occurs when the state of a **Connection** changes. The **StateChange** event receives <xref:System.Data.StateChangeEventArgs> that enable you to determine the change in state of the **Connection** by using the **OriginalState** and **CurrentState** properties. The **OriginalState** property is a <xref:System.Data.ConnectionState> enumeration that indicates the state of the **Connection** before it changed. **CurrentState** is a <xref:System.Data.ConnectionState> enumeration that indicates the state of the **Connection** after it changed.
 
@@ -57,4 +57,5 @@ The following code example uses the **StateChange** event to write a message to 
 
 ## See also
 
-- [Connecting to a Data Source](connecting-to-data-source.md)
+- [Connecting to a data source](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

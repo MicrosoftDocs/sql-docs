@@ -26,8 +26,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+ms.date: 02/24/2021
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
 # sqlcmd Utility
@@ -52,7 +52,7 @@ The utility uses ODBC to execute Transact-SQL batches.
 **[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 **Version Information**
 
@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
+This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
@@ -175,8 +175,9 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
-> The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) version 17.6.1 or higher and a properly configured Kerberos environment.
+> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md).
+
 
 - **Azure Active Directory Username and Password:** 
 
@@ -195,7 +196,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 - **Azure Active Directory Integrated**
 
    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password.
-   *AAD Integrated Authentication is not currently supported on Linux or macOS*.
+   *AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md).*.
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -214,7 +215,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 
     The Azure AD Interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](https://aka.ms/downloadmsodbcsql).  
+   Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](../connect/odbc/download-odbc-driver-for-sql-server.md).  
 
    To enable interactive authentication, provide -G option with user name (-U) only, without a password.
 
@@ -414,7 +415,7 @@ We recommend that you use a strong password.
  If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
  **-t** _query_timeout_  
- Specifies the number of seconds before a command (or SQL statement) times out. This option sets the **sqlcmd** scripting variable SQLCMDSTATTIMEOUT. If a *time_out* value is not specified, the command does not time out. The *query**time_out* must be a number between 1 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message.  
+ Specifies the number of seconds before a command (or SQL statement) times out. This option sets the **sqlcmd** scripting variable SQLCMDSTATTIMEOUT. If a *time_out* value is not specified, the command does not time out. The *query* *time_out* must be a number between 1 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message.  
   
 > [!NOTE]  
 >  The actual time out value may vary from the specified *time_out* value by several seconds.  
@@ -464,11 +465,10 @@ We recommend that you use a strong password.
   
 - **image**  
   
-> [!NOTE]  
->  UDTs can be of fixed length depending on the implementation. If this length of a fixed length UDT is shorter that *display_width*, the value of the UDT returned is not affected. However, if the length is longer than *display_width*, the output is truncated.  
-   
+> [!NOTE]
+> UDTs can be of fixed length depending on the implementation. If this length of a fixed length UDT is shorter that *display_width*, the value of the UDT returned is not affected. However, if the length is longer than *display_width*, the output is truncated.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Use the **-y 0** option with extreme caution because it may cause serious performance issues on both the server and the network, depending on the size of data returned.  
   
  **-Y** _fixed_length_type_display_width_  
@@ -511,7 +511,7 @@ We recommend that you use a strong password.
  Lists the locally configured server computers, and the names of the server computers that are broadcasting on the network. This parameter cannot be used in combination with other parameters. The maximum number of server computers that can be listed is 3000. If the server list is truncated because of the size of the buffer a warning message is displayed.  
   
 > [!NOTE]  
->  Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.  
+> Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.  
   
  If the optional parameter **c** is specified, the output appears without the **Servers:** header line, and each server line is listed without leading spaces. This presentation is referred to as clean output. Clean output improves the processing performance of scripting languages.  
   
@@ -611,17 +611,78 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
 ## sqlcmd Commands  
  In addition to Transact-SQL statements within **sqlcmd**, the following commands are also available:  
   
-|||  
-|-|-|  
-|**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
-|**:r**|**:Help**|  
-|**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
-|**:Setvar**|**:Listvar**|  
+:::row:::
+   :::column span="":::
+      **GO** [*count*]
+   :::column-end:::
+   :::column span="":::
+      **:List**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **RESET**
+   :::column-end:::
+   :::column span="":::
+      **:Error**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **ED**
+   :::column-end:::
+   :::column span="":::
+      **:Out**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **!!**
+   :::column-end:::
+   :::column span="":::
+      **:Perftrace**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **QUIT**
+   :::column-end:::
+   :::column span="":::
+      **:Connect**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **EXIT**
+   :::column-end:::
+   :::column span="":::
+      **:On Error**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:r**
+   :::column-end:::
+   :::column span="":::
+      **:Help**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:ServerList**
+   :::column-end:::
+   :::column span="":::
+      **:XML** [**ON** &#124; **OFF**]
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:Setvar**
+   :::column-end:::
+   :::column span="":::
+      **:Listvar** 
+   :::column-end:::
+:::row-end:::
   
  Be aware of the following when you use **sqlcmd** commands:  
   
@@ -764,7 +825,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  **Miscellaneous Commands**  
   **:r \<** _filename_ **>**  
- Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<**_filename_**>**into the statement cache.  
+ Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<** _filename_ **>** into the statement cache.  
   
  If the file contains Transact-SQL statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
   
@@ -914,13 +975,21 @@ Use the following practices to help maximize security and efficiency.
 
 - Use integrated security.  
 
-- Use **-X** in automated environments.  
+- Use **-X[1]** in automated environments.
 
 - Secure input and output files by using appropriate NTFS file system permissions.
 
 - To increase performance, do as much in one **sqlcmd** session as you can, instead of in a series of sessions.
 
 - Set time-out values for batch or query execution higher than you expect it will take to execute the batch or query.
+
+Use the following practices to help maximize correctness:
+
+- Use **-V16** to log any [severity 16 level messages](../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Severity 16 messages indicates general errors that can be corrected by the user.
+
+- Check the exit code and DOS ERRORLEVEL variable after the process has exited.  **sqlcmd** will return 0 normally, otherwise it will set the ERRORLEVEL as configured by **-V**.  In other words, ERRORLEVEL shouldn't be expected to be the same value as the Error Number reported from SQL Server. The Error Number is a SQL Server-specific value corresponding to the system function [**@@ERROR**](../t-sql/functions/error-transact-sql.md).  ERRORLEVEL is a SQLCMD-specific value to indicate why it (i.e. SQLCMD) terminated, and it's value is influenced by specifying **-b** command line argument.
+
+Using **-V16** in combination with checking the exit code and DOS ERRORLEVEL can help catch errors in automated environments, particularly quality gates before a production release.
 
 ## Next steps
 

@@ -8,17 +8,17 @@ ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15"
 ---
 # Configure persistent memory (PMEM) for SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to configure the persistent memory (PMEM) for [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] on Linux.
+This article describes how to configure the persistent memory (PMEM) for [!INCLUDE[sqlv15](../includes/sssql19-md.md)] on Linux.
 
 ## Overview
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] has a number of in-memory features that use persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Linux.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] has a number of in-memory features that use persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Linux.
 
 > [!NOTE]
 > The term _enlightenment_ was introduced to convey the concept of working with a persistent memory aware file system. Direct access to the file system from user-space applications is facilitated using memory mapping (`mmap()`). When a memory mapping for a file is created the application can issue load/store instructions bypassing the I/O stack completely. This is considered an "enlightened" file access method from the perspective of the host extension application (which is the black box code that allows SQLPAL interact with the Windows or Linux OS).

@@ -62,9 +62,8 @@ ms.author: maggies
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL schema|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL schema|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server only|Upgrades 2003 RDL and 2005 RDL to the 2008 RDL schema locally.|  
   
- For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865).  
+ For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1).  
   
 ## See Also  
  [Publishing Data Sources and Reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
-  
   

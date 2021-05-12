@@ -4,7 +4,7 @@ description: SQL Server 2019 supports non-XML format files and XML format files 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Non-XML Format Files (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*.  
+  In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*.  
   
  **In this Topic:**  
   

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: "article"
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)
 
 [!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
+[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
 For  example, the connection string can target a secondary replica. Depending on the configuration of the availability group (AG) replica and the settings in the connection string, the connection can be automatically redirected to the primary replica. 
 
 ## Use cases
 
-Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continues to support the AG listener functionality and adds replica connection redirection for scenarios that cannot include a listener. For example:
+Prior to [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)], the AG listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] continues to support the AG listener functionality and adds replica connection redirection for scenarios that cannot include a listener. For example:
 
 * The cluster technology that SQL Server availability groups integrates with does not offer a listener like capability 
 * A multi-subnet configuration like in the cloud or multi-subnet floating IP with Pacemaker where configurations become complex, prone to errors, and difficult to troubleshoot due to multiple components involved
@@ -46,7 +46,7 @@ In order for a secondary replica to redirect read/write connection requests:
 
 To configure read/write connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
 
-In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification. See the following topics: 
+In [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)], `READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification. See the following topics: 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
@@ -61,7 +61,7 @@ By default, read/write replica connection redirection is not set for a replica. 
 |`ApplicationIntent=ReadWrite`<br/> Default|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
-The preceding table shows the default behavior, which is the same as versions of SQL Server before [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
+The preceding table shows the default behavior, which is the same as versions of SQL Server before [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)]. 
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
 

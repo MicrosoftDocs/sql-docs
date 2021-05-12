@@ -17,7 +17,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
 # Write the Job Status to the Windows Application Log
@@ -27,7 +27,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to write job status to the Windows application event log by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
+This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to write job status to the Windows application event log by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
   
 Job responses ensure that database administrators know when jobs complete and how frequently they run. Typical job responses include:  
   
@@ -54,11 +54,11 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 4.  Check **Write to Windows application event log**, and choose one of the following:  
   
-    -   Click**When the job succeeds**to log the job status when the job completes successfully.  
+    -   Click **When the job succeeds** to log the job status when the job completes successfully.  
   
-    -   Click**When the job fails**to log the job status when the job completes unsuccessfully.  
+    -   Click **When the job fails** to log the job status when the job completes unsuccessfully.  
   
-    -   Click**When the job completes** to log the job status regardless of completion status.  
+    -   Click **When the job completes** to log the job status regardless of completion status.  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To write job status to the Windows application log**  

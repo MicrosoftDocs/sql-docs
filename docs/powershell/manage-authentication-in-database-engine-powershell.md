@@ -5,7 +5,6 @@ titleSuffix: SQL Server on Linux
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
@@ -61,10 +60,10 @@ function sqldrive
 }  
   
 ## Use the sqldrive function to create a SQLAuth virtual drive.  
-sqldrive SQLAuth  
+sqldrive SQLAuth
   
-## CD to the virtual drive, which invokes the supplied authentication credentials.  
-cd SQLAuth  
+## Set-Location to the virtual drive, which invokes the supplied authentication credentials.  
+sl SQLAuth:
 ```
 
 ## SQL Server Authentication Using Invoke-Sqlcmd

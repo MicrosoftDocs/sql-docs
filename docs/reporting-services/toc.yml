@@ -349,11 +349,11 @@
     - name: Monitoring Report Server Performance
       href: ../reporting-services/report-server/monitoring-report-server-performance.md
       items:
-      - name: Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects (Native Mode)
+      - name: Performance Counters, MSRS 2016 Web Service & MSRS 2016 Windows Service Performance Objects (Native Mode)
         href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
-      - name: Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)
+      - name: Performance Counters, MSRS 2016 Web Service SharePoint Mode & MSRS 2016 Windows Service SharePoint Mode Performance Objects
         href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
-      - name: "Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects"
+      - name: "Performance Counters, ReportServer:Service & ReportServerSharePoint:Service Performance Objects"
         href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
     - name: Set Report Processing Properties
       href: ../reporting-services/report-server/set-report-processing-properties.md
@@ -417,8 +417,6 @@
     href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
   - name: Enable and disable RDL sandboxing
     href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
-  - name: Configure Reporting Services to use a subject alternative name
-    href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Report Viewer web part on a SharePoint site
   href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
   items:
@@ -443,6 +441,8 @@
     items:
     - name: Set default options for Report Builder
       href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+    - name: Configure Report Builder Access
+      href: ../reporting-services/report-server/configure-report-builder-access.md
   - name: Report Design View
     href: ../reporting-services/report-builder/report-design-view-report-builder.md
     items:
@@ -1269,6 +1269,8 @@
         href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
   - name: Configure SSL Connections on a Native Mode Report Server
     href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+  - name: Configure Reporting Services to use a subject alternative name
+    href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Report subscriptions
   items:
   - name: SSRS Schedules Overview

@@ -1,13 +1,13 @@
 ---
 description: "DATETIMEFROMPARTS (Transact-SQL)"
-title: "DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
+title: "DATETIMEFROMPARTS (Transact-SQL)"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "01/29/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATETIMEFROMPARTS_TSQL"
   - "DATETIMEFROMPARTS"
@@ -15,10 +15,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DATETIMEFROMPARTS function"
-ms.assetid: 6008148b-bf75-4c98-9392-68a89fa0711c
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +62,7 @@ An integer expression that specifies milliseconds.
 ## Remarks  
 `DATETIMEFROMPARTS` returns a fully initialized **datetime** value. `DATETIMEFROMPARTS` will raise an error if at least one required argument has an invalid value. `DATETIMEFROMPARTS` returns null if at least one required argument has a null value.
   
-This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function is capable of being remoted to [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] servers and above. It is not remoted to servers that have a version below [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## Examples  
   

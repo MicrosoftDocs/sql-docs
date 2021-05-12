@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmail_sentitems_TSQL"
   - "sysmail_sentitems"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_sentitems database mail view"
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

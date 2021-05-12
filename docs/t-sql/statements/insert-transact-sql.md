@@ -4,10 +4,10 @@ title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "INSERT_TSQL"
   - "INSERT"
@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], INSERT statement"
   - "inserting data"
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -204,7 +204,10 @@ OUTPUT Clause
  If the values in the Value list are not in the same order as the columns in the table or do not have a value for each column in the table, *column_list* must be used to explicitly specify the column that stores each incoming value.  
   
  You can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] row constructor (also called a table value constructor) to specify multiple rows in a single INSERT statement. The row constructor consists of a single VALUES clause with multiple value lists enclosed in parentheses and separated by a comma. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
-  
+
+> [!NOTE]  
+> In Azure Synapse Analytics, insert values can only be constant literal values or variable references. To insert a non-literal, set a variable to non-constant value and insert the variable.
+
  DEFAULT  
  Forces the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to load the default value defined for a column. If a default does not exist for the column and the column allows null values, NULL is inserted. For a column defined with the **timestamp** data type, the next timestamp value is inserted. DEFAULT is not valid for an identity column.  
   
@@ -313,7 +316,7 @@ Rows that are inserted into a heap as the result of an insert action in a MERGE 
   
 Unlike the `BULK INSERT` statement, which holds a less restrictive Bulk Update (BU) lock, `INSERT INTO … SELECT` with the `TABLOCK` hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using multiple insert operations executing simultaneously. 
 
-However, starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
+However, starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
 
 Parallelism for the statement above has the following requirements, which are similar to the requirements for minimal logging:  
 -   The target table is an empty or non-empty heap.  
@@ -439,7 +442,10 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### B. Inserting multiple rows of data  
- The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.  
+ The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.
+
+>[!NOTE]
+> The table vaule constructor is not supported in Azure Synapse Analytics.  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -779,7 +785,7 @@ GO
 #### P. Inserting into an external table created using PolyBase  
  Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   

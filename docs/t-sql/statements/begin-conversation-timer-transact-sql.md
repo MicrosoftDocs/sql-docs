@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONVERSATION"
   - "BEGIN_CONVERSATION_TSQL"
@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "starting timers [Service Broker]"
   - "https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

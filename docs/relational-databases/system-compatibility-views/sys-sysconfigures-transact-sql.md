@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sysconfigures"
   - "sysconfigures"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysconfigures compatibility view"
   - "sysconfigures system table"
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysconfigures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

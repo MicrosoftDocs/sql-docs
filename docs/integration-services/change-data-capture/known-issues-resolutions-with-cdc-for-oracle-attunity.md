@@ -58,7 +58,7 @@ Before spending too much time troubleshooting, it is important to use the latest
 - Some changes are missed and are not replicated to the SQL Server database. This issue occurs when a table contains more than one character large binary object (CLOB) and one of the CLOBs has a large value. 
     - Fixed in _Cumulative Update 1 for SQL Server 2014 SP1_ and _Cumulative Update 8 for SQL Server 2014 RTM_ as described in KB [3029096](https://support.microsoft.com/kb/3029096). 
 - Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type.
-    - Fixed in _Cumulative Update 5 for SQL Server 2014 SP1_ and _Cumulative Update 12 for SQL 2014 RTM_ as described in KB [3145983](https://support.microsoft.com/kb/3145983).
+    - Fixed in _Cumulative Update 5 for SQL Server 2014 SP1_ and _Cumulative Update 12 for SQL 2014 RTM_ as described in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d).
 
 ### SQL Server 2012
 
@@ -83,7 +83,7 @@ Before spending too much time troubleshooting, it is important to use the latest
 - The metadata validation for Oracle table cdc.table_name failed. Column column_name index is out of range. Fixed in _Cumulative Update 7 for SQL Server 2012 SP1_ as described in KB [2883524](https://support.microsoft.com/kb/2883524).
 - Oracle CDC service shows aborted status when you use CDC for Oracle by Attunity in SQL Server 2012. Fixed in _Cumulative Update 8 for SQL Server 2012 SP1_ as described in KB [2923839](https://support.microsoft.com/kb/2923839).  
 - Some changes are missed and are not replicated to the SQL Server databases. This issue occurs when a table contains more than one character large binary object (CLOB) and one of the CLOBs has a large value. Fixed in _Cumulative Update 8 for SQL Server 2012 SP1_ as described in KB [2923839](https://support.microsoft.com/kb/2923839).   
-- Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type. Fixed in _Cumulative Update 2 for SQL Server 2012 SP3_ and _Cumulative Update 11 for SQL 2012 SP2_  as described in KB [3145983](https://support.microsoft.com/kb/3145983). 
+- Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type. Fixed in _Cumulative Update 2 for SQL Server 2012 SP3_ and _Cumulative Update 11 for SQL 2012 SP2_  as described in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d). 
 
 ## Collect detailed logs 
 

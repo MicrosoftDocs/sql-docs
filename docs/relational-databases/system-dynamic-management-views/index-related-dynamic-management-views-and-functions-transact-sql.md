@@ -6,15 +6,15 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "index dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], index"
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Index Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

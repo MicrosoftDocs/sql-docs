@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_exec_input_buffer"
   - "sys.dm_exec_input_buffer _tsql"
@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_input_buffer dynamic management function"
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_input_buffer (Transact-SQL)
 
@@ -83,13 +83,13 @@ GO
 
 ### B. Using cross apply to additional information
 
-The following example lists the input buffer for sessions with session ID greater than 50.
+The following example lists the input buffer for user sessions.
 
 ```sql
 SELECT es.session_id, ib.event_info
 FROM sys.dm_exec_sessions AS es
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib
-WHERE es.session_id > 50;
+WHERE es.is_user_process = 1;
 GO
 ```
 

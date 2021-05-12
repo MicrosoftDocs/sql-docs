@@ -1,5 +1,6 @@
 ---
-title: "SQL Server documentation include files | Microsoft Docs"
+title: "SQL Server documentation include files"
+description: Explanation of SQL Server includes files for versioning and applies-to.
 ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql
@@ -8,7 +9,7 @@ ms.technology: release-landing
 author: MashaMSFT
 ms.author: mathoma
 ms.topic: conceptual
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # SQL Server include files for versioning and applies-to
 
@@ -28,10 +29,10 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL 2012 | sssql11-md.md | `[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]` | SQL Server 2012 (11.x) |
 | SQL 2012 SP1 | sssql11sp1-md.md | `[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]` | SQL Server 2012 SP1 (11.0.3x) |
 | SQL 2014 | sssql14-md.md | `[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]` | SQL Server 2014 (12.x) |
-| SQL 2016 | sssql15-md.md | `[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]` | SQL Server 2016 (13.x) |
+| SQL 2016 | sssql16-md.md | `[!INCLUDE[sssql15-md](../includes/sssql16-md.md)]` | SQL Server 2016 (13.x) |
 | SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x) |
-| SQL 2017 | sssqlv14-md.md | `[!INCLUDE[sssqlv14](../includes/sssqlv14-md.md)]` | SQL Server 2017 (14.x) |
-| SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
+| SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql14](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x) |
+| SQL vNext | sssql19-md.md | `[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
 ## SQL Server Applies-to (non-version-specific)

@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "Transparent Data Encryption, about"
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: jaszymas
-ms.author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ms.reviewer: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Transparent Data Encryption (TDE)
@@ -222,7 +222,7 @@ To encrypt a database encryption key with an asymmetric key, the asymmetric key 
 
 To enable TDE on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must do an encryption scan. The scan reads each page from the data files into the buffer pool and then writes the encrypted pages back out to disk.
 
-To give you more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan, which has a suspend and resume syntax. You can pause the scan while the workload on the system is heavy or during business-critical hours and then resume the scan later.
+To give you more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] introduces TDE scan, which has a suspend and resume syntax. You can pause the scan while the workload on the system is heavy or during business-critical hours and then resume the scan later.
 
 Use the following syntax to pause the TDE encryption scan:
 
@@ -239,6 +239,9 @@ ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 The encryption_scan_state column has been added to the sys.dm_database_encryption_keys dynamic management view. It shows the current state of the encryption scan. There's also a new column called encryption_scan_modify_date, which contains the date and time of the last encryption-scan state change.
 
 If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance restarts while its encryption scan is suspended, a message is logged in the error log on startup. The message indicates that an existing scan has been paused.
+
+> [!IMPORTANT]
+> Suspend and Resume TDE scan feature is currently not available in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics.
 
 ## TDE and transaction logs
 
@@ -309,7 +312,7 @@ When you encrypt a database using TDE, files related to buffer pool extension (B
 
 ## TDE and In-Memory OLTP
 
-You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
+You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
 
 ## Related tasks
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COL_LENGTH"
   - "COL_LENGTH_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

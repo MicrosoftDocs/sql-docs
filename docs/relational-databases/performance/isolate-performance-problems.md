@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "database performance [SQL Server], isolating problems"
   - "server performance [SQL Server], isolating problems"
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Isolate Performance Problems
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "COMPRESS function"
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

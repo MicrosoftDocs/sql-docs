@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Considerations and Limitations
 
@@ -47,7 +47,7 @@ Consider the following when working with temporal tables:
 - Usage of replication technologies is limited:
 
   - **Always On:** Fully supported
-  - **Change Data Capture and Change Data Tracking:** Supported only on the current table
+  - **Change Data Capture and Change Tracking:** Supported only on the current table
   - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. Due to this behavior SysStartTime and SysEndTime are populated to the begin time of the first transaction that distribution agent starts. Consequently, it may be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having SysStartTime and SysEndTime populated with a time that is close to the current system time is important to your application or organization. Use of multiple subscribers is not supported as this may lead to inconsistent temporal data due to dependency on local system clock.
   - **Merge replication:** Not supported for temporal tables
 

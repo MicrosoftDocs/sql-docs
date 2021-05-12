@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "10/28/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,34 @@ ms.author: alexiva
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for MySQL contains the following changes:
+
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for MySQL contains the following changes:
+
+* Add support for computed columns
+* Fix issues when converting `INSERT` statement for tables with unique constraints and primary keys
+* Update parser to respect `ANSI_QUOTES` and `NO_BACKSLASH_ESCAPES` server modes
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
 
 ## SSMA v8.15
 

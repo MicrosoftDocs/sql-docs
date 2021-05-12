@@ -4,10 +4,10 @@ title: "KILL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "KILL_TSQL"
   - "KILL"
@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "KILL statement"
   - "terminating process"
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,8 @@ KILL ends a normal connection, which internally stops the transactions that are 
 ```syntaxsql  
 -- Syntax for SQL Server  
   
-KILL { session ID | UOW } [ WITH STATUSONLY ]   
+KILL { session ID [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBACK ] }    
+
 ```  
   
 ```syntaxsql  
@@ -63,26 +64,37 @@ KILL 'session_id'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
-_session ID_  
-Is the session ID of the process to end. _session ID_ is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
+
+_session ID_   
+Is the session ID of the process to end. `session_id` is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
+
 The following query can help you identify the `session_id` that you want to kill:  
+
  ```sql  
  SELECT conn.session_id, host_name, program_name,
      nt_domain, login_name, connect_time, last_request_end_time 
 FROM sys.dm_exec_sessions AS sess
 JOIN sys.dm_exec_connections AS conn
     ON sess.session_id = conn.session_id;
+
 ```  
+
+
+_UOW_   
+Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the `sys.dm_tran_locks` dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   
-_UOW_  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
-  
-Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
-  
-Use KILL _UOW_ to stop orphaned distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify orphaned transactions by querying the session ID column in sys.dm_tran_locks, sys.dm_exec_sessions, or sys.dm_exec_requests dynamic management views.  
-  
-WITH STATUSONLY  
-Generates a progress report about a specified _session ID_ or _UOW_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the _session ID_ or _UOW_. The command only displays the current progress of the rollback.  
+Use KILL \<UOW> to stop unresolved distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify unresolved transactions by querying the session ID column in `sys.dm_tran_locks`,` sys.dm_exec_sessions`, or `sys.dm_exec_requests` dynamic management views.  
+
+_WITH STATUSONLY_   
+Is used to generate a progress report for a specified _UOW_ or `session_id` that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the UOW or session ID. The command only displays the current progress of the rollback.
+
+_WITH COMMIT_   
+Is used to kill an unresolved distributed transaction with commit. Only applicable to distributed transactions, you must specify a _UOW_ to use this option.  See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information.
+
+_WITH ROLLBACK_   
+Is used to kill an unresolved distributed transaction with rollback. Only applicable to distributed transactions, you must specify a _UOW_ to use this option.  See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information.
+
+
   
 ## Remarks  
 KILL is commonly used to end a process that is blocking other important processes with locks. KILL can also be used to stop a process that is executing a query that is using necessary system resources. System processes and processes running an extended stored procedure can't be ended.  

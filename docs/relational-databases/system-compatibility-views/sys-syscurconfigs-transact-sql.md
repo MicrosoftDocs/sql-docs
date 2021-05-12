@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.syscurconfigs"
   - "sys.syscurconfigs_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.syscurconfigs compatibility view"
   - "syscurconfigs system table"
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syscurconfigs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

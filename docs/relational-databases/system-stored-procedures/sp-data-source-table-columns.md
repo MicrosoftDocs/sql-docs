@@ -1,20 +1,23 @@
 ---
-description: "sp_data_source_table_columns (Transact-SQL)"
-title: "sp_data_source_table_columns | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2020"
+title: sp_data_source_table_columns
+description: sp_data_source_table_columns (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords: 
-  - "sp_data_source_table_columns"
+  - sp_data_source_table_columns_TSQL
+dev_langs:
+  - TSQL
 helpviewer_keywords: 
   - "PolyBase"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.custom: ""
+ms.date: "11/10/2020"
 ---
+
 # sp_data_source_table_columns (Transact-SQL)
 
 [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]

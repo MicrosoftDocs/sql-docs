@@ -72,7 +72,7 @@ To continue the tutorial with this option, you need the following things:
 
 - The [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. The SQL DW Upload task is a component of the Feature Pack.
 
-- An [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into your dedicated SQL pool.
+- An [Azure Blob Storage](/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into your dedicated SQL pool.
 
 ### Add and configure the SQL DW Upload Task
 

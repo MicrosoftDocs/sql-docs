@@ -29,7 +29,7 @@ ms.author: maghan
     Secondary replicas maintain the in-memory state of the durable memory-optimized tables. In the event of automatic or forced failover, the time to fail over to the new primary is comparable to disk-bases tables as no recovery is needed. Memory-optimized tables created as SCHEMA_ONLY are supported in this configuration. However, changes to these tables aren't logged so no data will exist in these tables on the secondary replica.  
   
 -   **Readable Secondary**   
-    You can access and query memory-optimized tables on the secondary replica if2 it has been configured for read access. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the read timestamp on the secondary replica is in close synchronization with the read timestamp on the primary replica, which means that changes on the primary become visible on the secondary quickly. This close synchronization behavior is different from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] In-Memory OLTP.  
+    You can access and query memory-optimized tables on the secondary replica if2 it has been configured for read access. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the read timestamp on the secondary replica is in close synchronization with the read timestamp on the primary replica, which means that changes on the primary become visible on the secondary quickly. This close synchronization behavior is different from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] In-Memory OLTP.  
 
 ### Considerations
 

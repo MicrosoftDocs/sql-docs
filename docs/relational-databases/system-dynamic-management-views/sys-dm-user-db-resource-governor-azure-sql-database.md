@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_governance"
   - "sys.resource_governance_TSQL"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack
-monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_user_db_resource_governance (Transact-SQL)
 

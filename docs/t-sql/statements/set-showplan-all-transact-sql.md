@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET SHOWPLAN_ALL"
   - "SET_SHOWPLAN_ALL_TSQL"
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

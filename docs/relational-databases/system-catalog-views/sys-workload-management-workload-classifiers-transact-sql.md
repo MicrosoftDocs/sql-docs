@@ -5,14 +5,14 @@ ms.custom:
 ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.prod_service: "sql-data-warehouse"
+ms.prod_service: "synapse-analytics"
 ms.reviewer: "jrasnick"
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_classifiers (Transact-SQL)
 

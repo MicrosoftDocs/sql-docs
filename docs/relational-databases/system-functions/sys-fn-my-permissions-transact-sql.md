@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_my_permissions_TSQL"
   - "fn_my_permissions_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_my_permissions function"
   - "sys.fn_my_permissions function"
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,11 @@ GO
 ```  
   
  If DEFAULT is supplied as the value of *securable* or *securable_class*, the value will be interpreted as NULL.  
-  
+ 
+   
+## Permissions  
+ Requires membership in the public role.  
+ 
 ## Examples  
   
 ### A. Listing effective permissions on the server  

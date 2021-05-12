@@ -14,7 +14,7 @@ ms.author: maggies
 # Create, Delete, or Modify a Folder - Reporting Services
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that should not be widely distributed.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## To create a folder  
   
@@ -64,7 +64,7 @@ ms.author: maggies
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## To create a folder  
   

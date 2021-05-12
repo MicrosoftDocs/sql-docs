@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP PARTITION FUNCTION"
   - "DROP_PARTITION_FUNCTION_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "dropping partition functions"
   - "removing partition functions"
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

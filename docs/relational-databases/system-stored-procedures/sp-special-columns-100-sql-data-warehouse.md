@@ -3,17 +3,16 @@ description: "sp_special_columns_100 (Azure Synapse Analytics)"
 title: "sp_special_columns_100 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: sql-data-warehouse
-ms.subservice: design
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

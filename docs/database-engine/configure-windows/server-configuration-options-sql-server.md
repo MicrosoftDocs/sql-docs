@@ -1,11 +1,8 @@
 ---
-title: "Server Configuration Options (SQL Server) | Microsoft Docs"
+title: Server Configuration Options (SQL Server)
 description: Find out how to manage and optimize SQL Server resources. View available configuration options, possible settings, default values, and restart requirements.
-ms.custom: ""
-ms.date: "07/20/2020"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 keywords: 
@@ -27,10 +24,13 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], configuration options"
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
-ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/20/2020"
 ---
+
 # Server Configuration Options (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -126,7 +126,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
 | [PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A) | 1 | 3600 | 60 |
 | [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) <br/><br/>[!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]| 0 | 1 | 0 |
 | [polybase network encryption](../../relational-databases/polybase/polybase-installation.md#enable) | 0 | 1 | 1 |
-| [precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A) | 0 | 1 | 0 |
+| [precompute rank](/docs/database-engine/discontinued-database-engine-functionality-in-sql-server) (A) | 0 | 1 | 0 |
 | [priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A) | 0 | 2147483647 | 0 |
 | [query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md) (A) | -1 | 2147483647 | -1 |
@@ -149,11 +149,9 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
 | [two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A) | 1753 | 9999 | 2049 |
 | [user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md) (A, RR, SC) | 0 | 32767 | 0 |
 | [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) | 0 | 32767 | 0 |
-| [xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A) | 0 | 1 | 0 |  |
+| [xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A) | 0 | 1 | 0 |
 
 ## See also
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
-
-

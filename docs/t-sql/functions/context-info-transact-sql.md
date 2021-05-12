@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONTEXT_INFO_TSQL"
   - "CONTEXT_INFO"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,5 +66,7 @@ GO
   
 ## See also
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
+[SESSION_CONTEXT  &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
+[sp_set_session_context  &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
   
-  
+

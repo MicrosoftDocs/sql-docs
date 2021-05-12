@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET"
   - "SET_TSQL"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "statistical information [SQL Server], SET statements"
   - "locking [SQL Server], SET statements"
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # SET Statements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

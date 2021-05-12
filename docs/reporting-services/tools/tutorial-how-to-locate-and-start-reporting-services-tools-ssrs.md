@@ -84,7 +84,7 @@ Before you can open the Web Portal, you must have sufficient permissions (initia
 
 ## <a name="bkmk_managements_studio"></a> Management Studio
 
-Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see the [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio) tutorial.
+Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see the [SQL Server Management Studio](../../ssms/quickstarts/ssms-connect-query-sql-server.md) tutorial.
 
 ### To Start SQL Server Management Studio
 
@@ -110,7 +110,7 @@ You have a choice of two different tools for creating [!INCLUDE[ssNoVersion](../
 
 Report Designer is available in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. The Report Designer design surface includes tabbed windows, wizards, and menus used to access report authoring features. The report designer tool becomes available when you choose a Report Server Project or a Report Server Wizard template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. To learn more, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
-Download [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ### To start Report Designer
 
@@ -134,7 +134,7 @@ To get started on your first report, see [Create a Basic Table Report &#40;SSRS 
 
 [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) is a stand-alone application you can use to create paginated reports outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can customize and update all existing reports, regardless of whether they were created in Report Designer or in previous versions of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or from the Microsoft Download Center.
 
-When your paginated report is ready, publish it to a report server or [save it to the Power BI service](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service).\
+When your paginated report is ready, publish it to a report server or [save it to the Power BI service](/power-bi/paginated-reports-save-to-power-bi-service).\
 [Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138) from the Microsoft Download Center.
 
 ### To start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
@@ -176,7 +176,7 @@ You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
 [Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138)  
-[Download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[Download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
 [Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)  

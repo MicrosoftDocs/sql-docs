@@ -1,8 +1,8 @@
 ---
-title: "Connecting to an Azure SQL database"
-description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
+title: Connecting to an Azure SQL database
+description: This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 12/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -27,7 +27,7 @@ This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../incl
 ## Details
 
 When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## Connections dropped
 
@@ -37,7 +37,13 @@ When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle co
 
 - Idle by the Azure SQL Gateway, where TCP **keepalive** messages might be occurring (making the connection not idle from a TCP perspective), but not had an active query in 30 minutes. In this scenario, the Gateway will determine that the TDS connection is idle at 30 minutes and terminate the connection.  
   
-To avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
+To address the second point and avoid the Gateway terminating idle connections, you can:
+
+* Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
+
+* Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
+
+To address the first point and avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
   
 |Registry Setting|Recommended Value|  
 |----------------------|-----------------------|  
@@ -47,7 +53,13 @@ To avoid dropping idle connections by a network component, the following registr
   
 Restart the computer for the registry settings to take effect.  
 
-To accomplish this when running in Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settings will have the effect of disconnecting an unresponsive connection within 10 to 40 seconds. After a keep alive packet is sent, if no response is received, it will be retried every second up to 10 times. If no response is received during that time, the client-side socket is disconnected. Depending on your environment, you may want to increase the KeepAliveInterval to accommodate known disruptions (like virtual machine migrations) that might cause a server to be unresponsive for longer than 10 seconds.
+
+> [!NOTE]
+> TcpMaxDataRetransmissions is not controllable on Windows Vista or Windows 2008 and higher.
+
+To perform this configuration when running in Azure, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+
 
 ```xml
 <Startup>  
@@ -56,7 +68,7 @@ To accomplish this when running in Azure create a startup task to add the regist
 </Startup>  
 ```
 
-Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following is a sample AddKeepAlive.cmd file:  
+Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following script is a sample AddKeepAlive.cmd file:  
 
 ```bat
 if exist keepalive.txt goto done  

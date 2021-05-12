@@ -13,7 +13,7 @@ ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article shows how to use [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) and [SqlPackage.exe](../tools/sqlpackage.md) to export and import a database on SQL Server on Linux. SSMS and SqlPackage.exe are Windows applications, so use this technique when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This article shows how to use [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) and [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) to export and import a database on SQL Server on Linux. SSMS and SqlPackage.exe are Windows applications, so use this technique when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 You should always install and use the most recent version of SQL Server Management Studio (SSMS) as described in [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-manage-ssms.md)
 
@@ -58,7 +58,7 @@ The *.BACPAC file is imported to create a new database in the target server you 
 
 ## <a id="sqlpackage"></a> SqlPackage command-line option
 
-It is also possible to use the SQL Server Data Tools (SSDT) command-line tool, [SqlPackage.exe](../tools/sqlpackage.md), to export and import BACPAC files.
+It is also possible to use the SQL Server Data Tools (SSDT) command-line tool, [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md), to export and import BACPAC files.
 
 The following example command exports a BACPAC file:
 
@@ -74,4 +74,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## See also
-For more information on how to use SSMS, see [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). For more information on SqlPackage.exe, see the [SqlPackage reference documentation](../tools/sqlpackage.md).
+For more information on how to use SSMS, see [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). For more information on SqlPackage.exe, see the [SqlPackage reference documentation](../tools/sqlpackage/sqlpackage.md).

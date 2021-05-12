@@ -8,9 +8,9 @@ ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: markingmyname
-ms.author: maghan
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_active_alerts (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

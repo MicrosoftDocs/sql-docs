@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Service Pack release notes
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -226,7 +226,7 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 -   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   
-Full SqlPackage.exe documentation on MSDN can be found [here](../tools/sqlpackage.md).  
+Full SqlPackage.exe documentation on MSDN can be found [here](../tools/sqlpackage/sqlpackage.md).  
   
 **Package compatibility**  
   

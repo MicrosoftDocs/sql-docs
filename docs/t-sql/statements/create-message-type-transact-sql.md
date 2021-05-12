@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_MESSAGE_TSQL"
   - "MESSAGE_TSQL"
@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "binary [SQL Server], message types"
   - "CREATE MESSAGE TYPE statement"
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

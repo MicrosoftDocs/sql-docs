@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage retention of historical data in system-versioned temporal tables
 
@@ -45,9 +45,9 @@ Once you determine your data retention period, your next step is to develop a pl
 ## Using stretch database approach
 
 > [!NOTE]
-> Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> Using the Stretch Database approach only applies to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
 
 Using the Stretch Database approach, you can stretch some or all of your temporal history tables to Azure and SQL Server will silently move historical data to Azure. Stretch-enabling a history table does not change how you interact with the temporal table in terms of data modification and temporal querying.
 
@@ -64,7 +64,7 @@ You can configure a temporal history table for Stretch using either the Stretch 
 
 ### Using the Stretch Wizard to stretch the entire history table
 
-The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you cannot right-click the temporal history table itself and click Stretch.
+The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you cannot right-click the temporal history table itself and click Stretch.
 
 1. Right-click your database and point to **Tasks**, point to **Stretch**, and then click **Enable** to launch the wizard.
 2. In the **Select tables** window, select the checkbox for the temporal history table and click Next.
@@ -368,14 +368,15 @@ DECLARE @periodColumnName sysname
 
 /*Generate script to discover history table name and end of period column for given temporal table name*/
 EXECUTE sp_executesql
-    N'SELECT @hst_tbl_nm = t2.name, @hst_sch_nm = s.name, @period_col_nm = c.name
+    N'SELECT @hst_tbl_nm = t2.name, @hst_sch_nm = s2.name, @period_col_nm = c.name
         FROM sys.tables t1
             JOIN sys.tables t2 on t1.history_table_id = t2.object_id
-        JOIN sys.schemas s on t2.schema_id = s.schema_id
-            JOIN sys.periods p on p.object_id = t1.object_id
+        JOIN sys.schemas s1 on t1.schema_id = s1.schema_id
+        JOIN sys.schemas s2 on t2.schema_id = s2.schema_id
+           JOIN sys.periods p on p.object_id = t1.object_id
            JOIN sys.columns c on p.end_column_id = c.column_id and c.object_id = t1.object_id
                   WHERE
-                 t1.name = @tblName and s.name = @schName'
+                 t1.name = @tblName and s1.name = @schName'
                 , N'@tblName sysname
                 , @schName sysname
                 , @hst_tbl_nm sysname OUTPUT
@@ -414,7 +415,7 @@ COMMIT;
 ## Using temporal history retention policy approach
 
 > [!NOTE]
-> Using the Temporal History Retention Policy approach applies to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 1.3.
+> Using the Temporal History Retention Policy approach applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and SQL Server 2017 starting from CTP 1.3.
 
 Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
 

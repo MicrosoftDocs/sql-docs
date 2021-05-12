@@ -9,7 +9,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Enable or disable remote package management for SQL Server
 [!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]

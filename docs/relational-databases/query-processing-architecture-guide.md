@@ -4,7 +4,7 @@ title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -690,7 +690,7 @@ The following examples illustrate which execution plans get removed from the pla
 * An execution plan is frequently referenced so that its cost never goes to zero. The plan remains in the plan cache and is not removed unless there is memory pressure and the current cost is zero.
 * An ad-hoc execution plan is inserted and is not referenced again before memory pressure exists. Since ad-hoc plans are initialized with a current cost of zero, when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines the execution plan, it will see the zero current cost and remove the plan from the plan cache. The ad-hoc execution plan remains in the plan cache with a zero current cost when memory pressure does not exist.
 
-To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) can also be used to clear any cache, including plan cache. Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope. 
+To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) can also be used to clear any cache, including plan cache. Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope. 
 A change in some configuration settings via [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) and [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) will also cause plans to be removed from plan cache. You can find the list of these configuration settings in the Remarks section of the [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) article. A configuration change like this will log the following informational message in the error log:
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
@@ -1022,7 +1022,7 @@ During query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Constructs that inhibit parallelism include:
 -   **Scalar UDFs**        
-    For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
     
 -   **Remote Query**        
     For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
@@ -1098,7 +1098,7 @@ Up to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the insert operator is als
 
 Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and database compatibility level 110, the `SELECT … INTO` statement can be executed in parallel. Other forms of insert operators work the same way as described for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
-Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] and database compatibility level 130, the `INSERT … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI), and using the TABLOCK hint. Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint. For more information, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
+Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] and database compatibility level 130, the `INSERT … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI), and using the TABLOCK hint. Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint. For more information, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Static and keyset-driven cursors can be populated by parallel execution plans. However, the behavior of dynamic cursors can be provided only by serial execution. The Query Optimizer always generates a serial execution plan for a query that is part of a dynamic cursor.
 
@@ -1108,7 +1108,7 @@ The degree of parallelism sets the number of processors to use in parallel plan 
 1.  Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
-    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../sql-server/install/instance-configuration.md#maxdop).
+    > [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../sql-server/install/instance-configuration.md#maxdop).
 
 2.  Workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
@@ -1273,7 +1273,7 @@ When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes rel
 
 > [!NOTE]
 > Until [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.   
-> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition. 
+> Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition. 
 
 ### New Partition-Aware Seek Operation
 
@@ -1333,13 +1333,15 @@ The following illustration shows the properties of the `Clustered Index Seek` op
 
 When an operator such as an Index Seek is executed on a partitioned table or index, the `Partitioned` attribute appears in the compile-time and run-time plan and is set to `True` (1). The attribute does not display when it is set to `False` (0).
 
-The `Partitioned` attribute can appear in the following physical and logical operators:  
-|||
-|--------|--------|
-|Table Scan|Index Scan|
-|Index Seek|Insert|
-|Update|Delete|
-|Merge||
+The `Partitioned` attribute can appear in the following physical and logical operators:
+
+- Table Scan
+- Index Scan
+- Index Seek
+- Insert
+- Update
+- Delete
+- Merge
 
 As shown in the previous illustration, this attribute is displayed in the properties of the operator in which it is defined. In the XML Showplan output, this attribute appears as `Partitioned="1"` in the `RelOp` node of the operator in which it is defined.
 

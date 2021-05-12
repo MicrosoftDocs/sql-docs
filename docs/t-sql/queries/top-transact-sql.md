@@ -4,10 +4,10 @@ title: "TOP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TOP_TSQL"
   - "TOP"
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
+Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +74,7 @@ Use TOP (or OFFSET and FETCH) instead of SET ROWCOUNT to limit the number of row
 -   As a part of a SELECT statement, the query optimizer can consider the value of *expression* in the TOP or FETCH clauses during query optimization. Because you use SET ROWCOUNT outside of a statement that runs a query, its value can't be considered in a query plan.  
   
 ## Compatibility Support  
-For backward compatibility, the parentheses are optional in SELECT statements. We recommend that you always use parentheses for TOP in SELECT statements. Doing so provides consistency with its required use in INSERT, UPDATE, MERGE, and DELETE statements. 
+For backward compatibility, the parentheses are optional in SELECT statements if the expression is an integer constant. We recommend that you always use parentheses for TOP in SELECT statements. Doing so provides consistency with its required use in INSERT, UPDATE, MERGE, and DELETE statements. 
   
 ## Interoperability  
 The TOP expression doesn't affect statements that might run because of a trigger. The **inserted** and **deleted** tables in the triggers return only the rows that are truly affected by the INSERT, UPDATE, MERGE, or DELETE statements. For example, if an INSERT TRIGGER fires as the result of an INSERT statement that used a TOP clause.  

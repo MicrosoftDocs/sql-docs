@@ -38,7 +38,7 @@ ms.author: "sstein"
 |Primary data|modeldev|model.mdf|Autogrow by 64 MB until the disk is full.|  
 |Log|modellog|modellog.ldf|Autogrow by 64 MB to a maximum of 2 terabytes.|  
 
-For SQL Server 2014, see [model Database](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014) for default file growth values.  
+For SQL Server 2014, see [model Database](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014&preserve-view=true) for default file growth values.  
 
  To move the **model** database or log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
@@ -84,37 +84,23 @@ For SQL Server 2014, see [model Database](/previous-versions/sql/2014/relational
 ## Restrictions  
  The following operations cannot be performed on the **model** database:  
   
--   Adding files or filegroups.  
-  
--   Changing collation. The default collation is the server collation.  
-  
--   Changing the database owner. **model** is owned by **sa**.  
-  
--   Dropping the database.  
-  
--   Dropping the **guest** user from the database.  
-  
--   Enabling change data capture.  
-  
--   Participating in database mirroring.  
-  
--   Removing the primary filegroup, primary data file, or log file.  
-  
--   Renaming the database or primary filegroup.  
-  
--   Setting the database to OFFLINE.  
-  
--   Setting the primary filegroup to READ_ONLY.  
-  
--   Creating procedures, views, or triggers using the WITH ENCRYPTION option. The encryption key is tied to the database in which the object is created. Encrypted objects created in the **model** database can only be used in **model**.  
+- Adding files or filegroups.  
+- Changing collation. The default collation is the server collation.  
+- Changing the database owner. **model** is owned by **sa**.  
+- Dropping the database.  
+- Dropping the **guest** user from the database.  
+- Enabling change data capture.  
+- Participating in database mirroring.  
+- Removing the primary filegroup, primary data file, or log file.  
+- Renaming the database or primary filegroup.  
+- Setting the database to OFFLINE.  
+- Setting the primary filegroup to READ_ONLY.  
+- Creating procedures, views, or triggers using the WITH ENCRYPTION option. The encryption key is tied to the database in which the object is created. Encrypted objects created in the **model** database can only be used in **model**.  
   
 ## Related Content  
- [System Databases](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
+- [System Databases](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
   
   

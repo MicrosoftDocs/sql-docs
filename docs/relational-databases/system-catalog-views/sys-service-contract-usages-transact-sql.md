@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "service_contract_usages"
   - "sys.service_contract_usages"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_usages catalog view"
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.service_contract_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

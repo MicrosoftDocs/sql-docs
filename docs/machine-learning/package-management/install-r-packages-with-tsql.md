@@ -9,7 +9,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2017"
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server

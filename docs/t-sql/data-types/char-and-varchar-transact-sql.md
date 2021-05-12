@@ -4,10 +4,10 @@ title: char and varchar (Transact-SQL)
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "varchar"
   - "varchar_TSQL"
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # char and varchar (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Character data types that are either fixed-size, **char**, or variable-size, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](https://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
+Character data types that are either fixed-size, **char**, or variable-size, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](https://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
 
 ## Arguments
 
@@ -53,11 +53,11 @@ Objects that use **char** or **varchar** are assigned the default collation of t
 Multibyte encodings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include:
 
 - Double-byte character sets (DBCS) for some East Asian languages using code pages 936 and 950 (Chinese), 932 (Japanese), or 949 (Korean).
-- UTF-8 with code page 65001. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+- UTF-8 with code page 65001. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]))
 
 If you have sites that support multiple languages:
 
-- Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], consider using a UTF-8 enabled collation to support Unicode and minimize character conversion issues.
+- Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], consider using a UTF-8 enabled collation to support Unicode and minimize character conversion issues.
 - If using a lower version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues.
 
 If you use **char** or **varchar**, we recommend to:

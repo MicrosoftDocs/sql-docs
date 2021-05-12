@@ -23,7 +23,7 @@ This article serves as an addendum to the overall [Microsoft Privacy Statement](
 
 - [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - [SQL Server Data Tools (SSDT)](../ssdt/anonymous-usage-data.md)
-- Azure Data Studio
+- [Azure Data Studio](../azure-data-studio/usage-data-collection.md)
 - [Database Migration Assistant (DMA)](../dma/dma-diagnostic-data-collection.md)
 - [SQL Server Migration Assistant (SSMA)](../ssma/ssma-diagnostic-data-collection.md)
 

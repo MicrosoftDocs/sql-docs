@@ -45,6 +45,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 -   Include nonkey columns in a nonclustered index to avoid exceeding the current index size limitations of a maximum of 32 key columns and a maximum index key size of 1,700 bytes (16 key columns and 900 bytes prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]). The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not consider nonkey columns when calculating the number of index key columns or index key size.
 
 -   The order of nonkey columns in the index definition does not impact the performance of queries that use the index.
+
+-   Avoid very wide nonclustered indexes where the included columns don’t represent a narrow enough subset of the underlying table columns. If adding wide indexes, always verify if the cost of updating one extra wide index offsets the cost of reading directly from the table.
   
 ###  <a name="Restrictions"></a> Limitations and restrictions  
   

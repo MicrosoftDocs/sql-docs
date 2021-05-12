@@ -1,7 +1,7 @@
 ---
 description: "Change the Word Breaker Used for US English and UK English"
 title: "Change the Word Breaker Used for US English and UK English | Microsoft Docs"
-ms.date: "03/14/2017"
+ms.date: "05/11/2020"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  Some previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] used different word breakers represented by different CLSIDs for US English (LCID 1033) and UK English (LCID 2057). Starting with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], both LCIDs use the same components with the same CLSIDs, as shown in the following table:  
   
-|LCID|Word breaker installed by previous versions<br /><br /> version 12.0.6828.0|Stemmer installed by previous versions|Word breaker installed with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md) and higher versions<br /><br /> version 14.0.4999.1038|Stemmer installed with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md) and higher versions|  
+|LCID|Word breaker installed by previous versions<br /><br /> version 12.0.6828.0|Stemmer installed by previous versions|Word breaker installed with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] and higher versions<br /><br /> version 14.0.4999.1038|Stemmer installed with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] and higher versions|  
 |----------|-------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|  
 |1033<br />(US English)|188D6CC5-CB03-4C01-912E-47D21295D77E|EEED4C20-7F1B-11CE-BE57-00AA0051FE20|9FAED859-0B30-4434-AE65-412E14A16FB8|E1E5EF84-C4A6-4E50-8188-99AEF3DE2659|  
 |2057<br />(UK English)|173C97E2-AEBE-437C-9445-01B237ABF2F6|D99F7670-7F1A-11CE-BE57-00AA0051FE20|9FAED859-0B30-4434-AE65-412E14A16FB8|E1E5EF84-C4A6-4E50-8188-99AEF3DE2659|  

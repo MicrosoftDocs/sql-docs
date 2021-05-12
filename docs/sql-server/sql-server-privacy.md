@@ -1,6 +1,6 @@
 ---
-title: "SQL Server privacy supplement
-description: "SQL Server privacy supplement"
+title: SQL Server privacy supplement
+description: SQL Server privacy supplement
 ms.date: 05/12/2021
 ms.prod: sql
 ms.technology: release-landing

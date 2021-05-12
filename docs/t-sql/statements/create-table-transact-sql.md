@@ -1014,7 +1014,7 @@ Transactions that include creating ledger table are captured in **sys.database_l
 - `[ APPEND_ONLY = ON | OFF ]` Specifies whether the ledger table being created is append-only or updatable. The default is `ON`.
 
 `<ledger_view_option>::=` Specifies one or more ledger view options. Each of the ledger view option specifies a name of a column, the system will add to the view, in addition to the columns defined in the ledger table.
-- `[ TRANSACTION_ID_COLUMN_NAME = transaction_id_column_name ]` Specifies the name of the column storing the id of the transaction that created or deleted a row version. The default column name is `ledger_transaction_id`.
+- `[ TRANSACTION_ID_COLUMN_NAME = transaction_id_column_name ]` Specifies the name of the column storing the ID of the transaction that created or deleted a row version. The default column name is `ledger_transaction_id`.
 - `[ SEQUENCE_NUMBER_COLUMN_NAME = sequence_number_column_name ]` Specifies the name of the columns storing the sequence number of a row-level operation within the transaction on the table. The default column name is `ledger_sequence_number`.
 - `[ OPERATION_TYPE_COLUMN_NAME = operation_type_id column_name]` Specifies the name of the columns storing the operation type ID. The default column name is ledger_operation_type.
 -` [ OPERATION_TYPE_DESC_COLUMN_NAME = operation_type_desc_column_name ]` Specifies the name of the columns storing the operation type description. The default column name is `ledger_operation_type_desc`.

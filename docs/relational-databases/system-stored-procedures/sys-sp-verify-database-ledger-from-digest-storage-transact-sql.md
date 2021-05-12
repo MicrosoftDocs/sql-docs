@@ -31,7 +31,7 @@ sp_verify_database_ledger_from_digest_storage [@locations = ] 'JSON_document_wit
 
 ## Arguments
 
-`[@locations = ] 'JSON_document_with_digest_storage_locations'`
+[ @locations = ] '*JSON_document_with_digest_storage_locations*'
 
 A JSON document containing a list of ledger digests locations:
 

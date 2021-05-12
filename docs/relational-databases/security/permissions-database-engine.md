@@ -359,7 +359,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 
 ## <a name="asdbpermissions"></a> Azure SQL Database Permissions
 
-These permissions currently only apply to Azure SQL Database, but are not the only permissions for Azure SQL Database. See the [Permission](#permissions) section above for additional Azure SQL Database permissions.
+These permissions currently only apply to Azure SQL Database, but are not the only permissions for Azure SQL Database. See the [Permission](#_permissions) section above for additional Azure SQL Database permissions.
 
 | Base securable | Granular permissions on base securable | Permission type code | Securable that contains base securable | Permission on container securable that implies granular permission on base securable |Description |
 |--|--|--|--|--|--|

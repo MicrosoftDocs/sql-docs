@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
 ms.custom: "references_regions"
-ms.date: 12/11/2020
+ms.date: 05/25/2021
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -929,6 +929,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
   | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+  | LEDGER = {ON | OFF}
 }
 
 <edition_options> ::=
@@ -1183,6 +1184,10 @@ The name of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server where the s
 *source_database_name*
 
 The name of the database that is to be copied.
+
+LEDGER = {ON | OFF}
+
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default of `OFF`. The value of the `LEDGER` option cannot be changed once the database is created.
 
 ## Remarks
 

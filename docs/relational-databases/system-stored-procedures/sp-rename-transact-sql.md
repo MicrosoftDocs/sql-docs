@@ -2,7 +2,7 @@
 description: "sp_rename (Transact-SQL)"
 title: "sp_rename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/14/2020"
+ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -95,9 +95,16 @@ In sp_rename (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynap
 
 **Applies to** SQL Server (all supported versions), Azure SQL Database, and Azure Synapse Analytics  
  You can change the name of an object or data type in the current database only. The names of most system data types and system objects cannot be changed.  
+
+**Applies to** Azure SQL Database
+
+- Transactions that include renaming a ledger table are captured in sys.database_ledger_transactions.
+- Renaming a ledger table is captured in sys.ledger_table_history.
   
 ## Permissions  
- To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles  
+ To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles
+
+ If the statement drops a ledger table, **ALTER LEDGER** permission is required.
   
 ## Examples  
   

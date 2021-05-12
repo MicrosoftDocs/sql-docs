@@ -2,7 +2,7 @@
 description: "Security Catalog Views (Transact-SQL)"
 title: "Security Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/27/2017"
+ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -167,6 +167,30 @@ ms.author: vanto
     :::column-end:::
     :::column:::
         [sys.database_audit_specification_details](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
+## Ledger Views
+
+:::row:::
+    :::column:::
+        [sys.database_ledger_transaction](../../relational-databases/system-catalog-views/sys-database-ledger-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.database_ledger_blocks](../../relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.ledger_table_history](../../relational-databases/system-catalog-views/sys-ledger-table-history-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.ledger_column_history](../../relational-databases/system-catalog-views/sys-ledger-column-history-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.database_ledger_digest_locations](../../relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
     :::column-end:::
 :::row-end:::
 

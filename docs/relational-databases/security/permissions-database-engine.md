@@ -364,9 +364,7 @@ These permissions currently only apply to Azure SQL Database, but are not the on
 | Base securable | Granular permissions on base securable | Permission type code | Securable that contains base securable | Permission on container securable that implies granular permission on base securable |Description |
 |--|--|--|--|--|--|
 |DATABASE|ENABLE LEDGER|EL|SERVER|CONTROL|Enables the grantee to create new ledger tables.|
-
 |DATABASE|ALTER LEDGER|ALR|SERVER|CONTROL|Enables the grantee to drop ledger tables.|
-
 |DATABASE|VIEW LEDGER CONTENT|VLC|SERVER|CONTROL|Enables the grantee to view database-level ledger catalog views and invoke verification.|
 |DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|Enables the grantee to generate a ledger digest.|
   

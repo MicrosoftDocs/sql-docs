@@ -6,8 +6,8 @@ ms.date: 08/08/2019
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

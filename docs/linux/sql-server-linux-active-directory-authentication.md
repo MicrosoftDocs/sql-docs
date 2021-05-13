@@ -262,7 +262,7 @@ CONTOSO.COM = {
 > [!NOTE]
 > SQL Server login using FQDN (for example, CONTOSO.COM\Username) is not supported. Use CONTOSO\Username format.
 > 
-> Due to a KRB5 limitation, you will not be able to add SQL Server logins from Domain Local Groups.
+> SQL Server logins from Domain Local Groups is not supported. Use Global Security Domain Groups instead.
  
 ## Next steps
 

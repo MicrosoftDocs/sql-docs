@@ -115,7 +115,7 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
      - **RESTORE WITH RECOVERY** is the default behavior that leaves the database ready for use by rolling back the uncommitted transactions. No additional transaction logs cannot be restored. Select this option if you're restoring all of the necessary backups now.    
     
-     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Another transaction logs can be restored. The database cannot be used until it's recovered.    
+     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it's recovered.    
     
      - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
     

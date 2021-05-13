@@ -16,7 +16,7 @@ ms.author: vanto
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Captures the current and the historical ledger digest storage endpoints.
+Captures the current and the historical ledger digest storage endpoints for the ledger feature.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|

@@ -100,7 +100,8 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ## Permissions  
  Requires ALTER permission on the schema to which the table belongs, CONTROL permission on the table, or membership in the **db_ddladmin** fixed database role.
 
- If the statement renames a ledger table, `ALTER LEDGER` permission is required.
+ If the statement drops a ledger table, `ALTER LEDGER` permission is required.
+
   
 ## Examples  
   

@@ -44,7 +44,7 @@ A JSON document containing a list of ledger digests locations:
 Example of the input JSON document:
 
 ```json
-[{"path": “https://panantstorage.blob.core.windows.net/sqldbledgerdigests/serverName/DatabaseName/2020-1-1 00:00:00Z”, “last_digest_block_id”:42, "is_current:true"} , … ]
+[{"path": “https://mystorage.blob.core.windows.net/sqldbledgerdigests/serverName/DatabaseName/2020-1-1 00:00:00Z”, “last_digest_block_id”:42, "is_current:true"} , … ]
 ```
 
 ## Return code values

@@ -16,7 +16,7 @@ ms.author: vanto
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-Captures the cryptographically protected history of database transactions that update ledger tables in the database. A row in this view represents a database transaction.
+Captures the cryptographically protected history of database transactions against ledger tables in the database. A row in this view represents a database transaction.
 
 | Column name | Data type | Description |
 | --- | --- | --- |

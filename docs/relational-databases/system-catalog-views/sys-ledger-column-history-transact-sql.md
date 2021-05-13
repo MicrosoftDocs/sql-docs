@@ -23,7 +23,7 @@ Captures the cryptographically protected history of operations on columns of led
 |**object_id**|**int**|The object ID of the ledger table.|
 |**column_id**|**int**|The column ID of the column in a ledger table. |
 |**column_name**|**sysname**|The name of the column in ledger table. If the operation has changed the column name, this column captures the new column name.|
-|**operation_type**|**tinyint**|The numeric value indicating the type of the operation<br/><br/>0 = CREATE – creating a column as part of creating the table containing the column using CREATE TABLE.<br/>1 = ADD – adding a column in a ledger table, using ALTER TABLE/ADD COLUMN.<br/>2 = RENAME – renaming a column in a ledger table.<br/>3 = DROP – dropping a column in a ledger table.|
+|**operation_type**|**tinyint**|The numeric value indicating the type of the operation<br/><br/>0 = CREATE – creating a column as part of creating the table containing the column using CREATE TABLE.<br/>1 = ADD – adding a column in a ledger table, using ALTER TABLE/ADD COLUMN..|
 |**operation_type_desc**|**nvarchar(60)**|Textual description of the value of operation_type.|
 
 ## Permissions

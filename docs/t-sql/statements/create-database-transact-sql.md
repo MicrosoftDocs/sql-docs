@@ -1187,7 +1187,7 @@ The name of the database that is to be copied.
 
 LEDGER = {ON | OFF}
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default of `OFF`. The value of the `LEDGER` option cannot be changed once the database is created.
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created.
 
 ## Remarks
 

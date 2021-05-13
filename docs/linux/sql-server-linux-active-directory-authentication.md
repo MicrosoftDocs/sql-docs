@@ -260,9 +260,9 @@ CONTOSO.COM = {
 > While it is not recommended, it is possible to use utilities, such as **realmd**, that set up SSSD while joining the Linux host to the domain, while configuring **disablesssd** to true so that SQL Server uses openldap calls instead of SSSD for Active Directory related calls.
 
 > [!NOTE]
-> SQL Server login using FQDN (for example, CONTOSO.COM\Username) is not supported. Use CONTOSO\Username format.
+> SQL Server login by using an FQDN (for example, CONTOSO.COM\Username) is not supported. Use the CONTOSO\Username format.
 > 
-> SQL Server logins from Domain Local Groups are not supported. Use Global Security Domain Groups instead.
+> SQL Server logins from Domain Local groups are not supported. Use Global Security Domain groups instead.
  
 ## Next steps
 

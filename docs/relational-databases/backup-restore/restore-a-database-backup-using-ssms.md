@@ -1,8 +1,8 @@
 ---
 title: "Restore a Database Backup Using SSMS | Microsoft Docs"
 description: This article explains how to restore a full SQL Server database backup using SQL Server Management Studio.
-ms.custom: ""
-ms.date: "11/16/2016"
+ms.custom: "contperf-fy21q4-portal"
+ms.date: "05/12/2021"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -31,13 +31,13 @@ Before you can restore a database under the full or bulk-logged recovery model, 
 
 When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).   
     
-To restore an encrypted database, you need access to the certificate or asymmetric key used to encrypt that database. Without the certificate or asymmetric key, you cannot restore that database. You must retain the certificate used to encrypt the database encryption key for as long as you need to save the backup. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).    
+To restore an encrypted database, you need access to the certificate or asymmetric key used to encrypt that database. Without the certificate or asymmetric key, you can't restore that database. Save the certificate used to encrypt the database encryption key for as long as you need to save the backup. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).    
     
-If you restore an older version database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], that database will automatically upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This precludes the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, this relates to metadata upgrade and does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+If you restore an older version database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], that database will automatically upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This prevents the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, this relates to metadata upgrade and doesn't affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds the indexes, depending on the setting of the **Full-Text Upgrade Option** server property. If you set upgrade option to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours; rebuilding will take up to ten times longer.     
+Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds the indexes, depending on the setting of the **Full-Text Upgrade Option** server property. If you set upgrade option to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours; rebuilding will take up to 10 times longer.     
     
-When you set upgrade option to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+When you set upgrade option to **Import**, if a full-text catalog isn't available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 For information on SQL Server restore from the Microsoft Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -88,14 +88,14 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
              After you add the devices you want to the **Backup media** list box, click **OK** to return to the **General** page.    
     
-         In the **Source: Device: Database** list box, select the name of the database which should be restored.    
+         In the **Source: Device: Database** list box, select the name of the database that should be restored.    
     
          > [!NOTE]
          > This list is only available when **Device** is selected. Only databases that have backups on the selected device will be available.    
      
 4.  In the **Destination** section, the **Database** box is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in the **Database** box.    
     
-5.  In the **Restore to** box, leave the default as **To the last backup taken** or click on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. For more information on designating a specific point in time, see [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).    
+5.  In the **Restore to** box, leave the default as **To the last backup taken** or click on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action. For more information on selecting a specific point in time, see [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).    
     
 6.  In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, you can change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected. For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).    
     
@@ -113,17 +113,17 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
    2. Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.    
     
-     - **RESTORE WITH RECOVERY** is the default behavior which leaves the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. Select this option if you are restoring all of the necessary backups now.    
+     - **RESTORE WITH RECOVERY** is the default behavior that leaves the database ready for use by rolling back the uncommitted transactions. No additional transaction logs cannot be restored. Select this option if you're restoring all of the necessary backups now.    
     
-     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and does not roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it is recovered.    
+     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Another transaction logs can be restored. The database cannot be used until it's recovered.    
     
      - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
     
    3. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
   
-   4. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
+   4. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before the restore operations, and sets the database to multi-user mode when complete.    
   
-   5. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.    
+   5. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This isn't necessary unless the database is large and you wish to monitor the status of the restore operation.    
     
 For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
@@ -135,7 +135,7 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your backup. Click **OK** after you have selected your disk backup file(s).
+4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your backup. Click **OK** after you,ve selected your disk backup file(s).
 5.  Click **OK** to return to the **General** page.
 6.  Click **Options** in the **Select a page** pane.
 7.  Under the **Restore options** section, check **Overwrite the existing database (WITH REPLACE)**.
@@ -148,7 +148,7 @@ The following example restores an earlier disk backup of `Sales` and overwrites 
     > [!NOTE]
     > Not all restore scenarios require a tail-log backup. You do not need a tail-log backup if the recovery point is contained in an earlier log backup. Also, a tail-log backup is unnecessary if you are moving or replacing (overwriting) a database and do not need to restore it to a point of time after its most recent backup. For more information, see [Tail-Log Backups (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
-    This option is not available for databases in the SIMPLE recovery model.
+    This option isn't available for databases in the SIMPLE recovery model.
 
 9.  Under the **Server connections** section, check **Close existing connections to destination database**.
 
@@ -163,7 +163,7 @@ The following example restores an earlier disk backup of `Sales` and creates a n
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
 2.  Right-click **Databases** and select **Restore Database...**  
 3.  On the **General** page, select **Device** under the **Source** section.
-4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your backup. Click **OK** after you have selected your disk backup file(s).
+4.  Click the browse (**...**) button to open the **Select backup devices** dialog box. Click **Add** and navigate to your backup. Click **OK** after you've selected your disk backup file(s).
 5.  Click **OK** to return to the **General** page.
 6.  In the **Destination** section, the **Database** box is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in the **Database** box.
 7.  Click **Options** in the **Select a page** pane.
@@ -179,7 +179,7 @@ The following example restores an earlier disk backup of `Sales` and creates a n
     > "System.Data.SqlClient.SqlError: The tail of the log for the database "`Sales`" has not been backed up. Use `BACKUP LOG WITH NORECOVERY` to backup the log if it contains work you do not want to lose. Use the `WITH REPLACE` or `WITH STOPAT` clause of the `RESTORE` statement to just overwrite the contents of the log. (Microsoft.SqlServer.SmoExtended)".      
     > Then you likely did not enter the new database name from Step 6, above. Restore normally prevents accidentally overwriting a database with a different database. If the database specified in a `RESTORE` statement already exists on the current server and the specified database family GUID differs from the database family GUID recorded in the backup set, the database is not restored. This is an important safeguard.
 
-### D.  Restore earlier disk backups to a point in time
+### D.  Restore to a point in time
 The following example restores a database to its state as of `1:23:17 PM` on `May 30, 2016` and shows a restore operation that involves multiple log backups. The database does not currently exist on the server.
 
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
@@ -189,7 +189,7 @@ The following example restores a database to its state as of `1:23:17 PM` on `Ma
 5.  Click **OK** to return to the **General** page.
 6.  In the **Destination** section, click on **Timeline** to access the **Backup Timeline** dialog box to manually select a point in time to stop the recovery action.
 7.  Select **Specific date and time**.  
-8.  Change the **Timeline interval** to **Hour** in the drop down box (optional).  
+8.  Change the **Timeline interval** to **Hour** in the drop-down box (optional).  
 9.  Move the slider to the desired time.
 10. Click **OK** to return to the General page.
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
@@ -222,7 +222,7 @@ A stored access policy has been created with read, write, delete, and list right
 1. Click **OK**.
 
 #### E2.   A shared access signature does not exist
-In this example the `Sales` database does not currently exist on the server.
+In this example,, the `Sales` database doesn't currently exist on the server.
 1. Click **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
 1. Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
 1. Click **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
@@ -232,7 +232,7 @@ In this example the `Sales` database does not currently exist on the server.
 1. Click **OK**.
 
 #### F.	Restore local backup to Microsoft Azure storage (URL)
-The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it cannot be created through the **Restore** task.  The `Sales` database does not currently exist on the server.
+The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it cannot be created through the **Restore** task.  The `Sales` database doesn't currently exist on the server.
 1.	In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 2.	Right-click **Databases** and select **Restore Database...**.
 3.	On the **General** page, select **Device** under the **Source** section.

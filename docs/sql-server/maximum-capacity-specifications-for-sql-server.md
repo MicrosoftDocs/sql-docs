@@ -26,7 +26,9 @@ author: MikeRayMSFT
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article shows maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components.
+This article shows maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 and later.
+
+For SQL Server 2014, see [/previous-versions/sql/2014/sql-server/maximum-capacity-specifications-for-sql-server].
 
 >[!NOTE]
 >In addition to the information in this article, you might also find the following links helpful:

@@ -20,7 +20,7 @@ ms.author: chadam
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This content describes how to create a full database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
+This topic describes how to create a full database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
 For more information, see [SQL Server Backup and Restore with Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 

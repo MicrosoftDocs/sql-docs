@@ -112,7 +112,7 @@ Here's the screen that you see after entering the connection string.
 
 ## Connect to SQL Server with the Microsoft OLE DB Provider for SQL Server or SQL Server Native Client
 
-[Microsoft OLE DB Provider for SQL Server](/../../connect/connect-history#ole-db) is the current OLE DB provider for SQL Server.
+[Microsoft OLE DB Provider for SQL Server](/../connect/connect-history#ole-db) is the current OLE DB provider for SQL Server.
 
 ## Other data providers and more info
 For info about how to connect to SQL Server with a data provider that's not listed here, see [SQL Server connection strings](https://www.connectionstrings.com/sql-server/). This third-party site also contains more info about the data providers and the connection parameters described on this page.

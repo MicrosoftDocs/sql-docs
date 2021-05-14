@@ -72,7 +72,7 @@ Customer data is defined as data stored within user tables, directly or indirect
 
 Data received from a user, or generated from their use of the product.
 - Linkable to an individual user.
-- doesn't contain customer data.
+- Doesn't contain customer data.
 
 ### Examples of personal data
 
@@ -115,7 +115,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
 ## Non-personal data
 
-1. Data received from an organization, or generated from their use of the product. it's linkable to an organization and doesn't contain customer data.
+1. Data received from an organization, or generated from their use of the product. It's linkable to an organization and doesn't contain customer data.
 
    - Example
      - Organization name (example: Microsoft Corp.)

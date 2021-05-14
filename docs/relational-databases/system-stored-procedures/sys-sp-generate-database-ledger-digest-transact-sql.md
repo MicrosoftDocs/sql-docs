@@ -19,7 +19,7 @@ ms.author: vanto
 
 Generates the ledger digest, which is the hash of the last block in sys.database_ledger_blocks. If the last block is open (transactions have been grouped to the block but no final block hash has been generated), this stored procedure will close the block and generate the hash. Future transactions will then be assigned to the next block.
 
-For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 

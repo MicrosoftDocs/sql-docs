@@ -21,7 +21,7 @@ Verifies the database ledger and the table ledgers using digests at the specifie
 
 This stored procedure implements the same ledger verification algorithm as [sp_verify_database_ledger](sys-sp-verify-database-ledger-transact-sql.md). A caller is expected to provider a JSON, which contains the paths pointing to digest storage locations, such as [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) containers.
 
-For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 

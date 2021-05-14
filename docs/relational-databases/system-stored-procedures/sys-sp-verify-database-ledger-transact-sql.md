@@ -28,7 +28,7 @@ Verifies the database ledger and the table ledgers. For each row in the sys.data
 
 In addition, the stored procedure verifies all non-clustered indexes are consistent with the specified ledger table. If no ledger table is specified, it verifies all non-clustered indexes for each existing ledger table referenced in the table_hashes column in any row of sys.database_ledger.
 
-For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 

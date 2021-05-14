@@ -18,7 +18,7 @@ ms.author: vanto
 
 Captures the cryptographically protected history of operations on ledger tables: creating ledger tables, renaming ledger tables or ledger views, and dropping ledger tables.
 
-For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|

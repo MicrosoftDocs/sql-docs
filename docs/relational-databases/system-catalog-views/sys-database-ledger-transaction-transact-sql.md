@@ -18,7 +18,7 @@ ms.author: vanto
 
 Captures the cryptographically protected history of database transactions against ledger tables in the database. A row in this view represents a database transaction.
 
-For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 | Column name | Data type | Description |
 | --- | --- | --- |

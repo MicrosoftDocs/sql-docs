@@ -29,7 +29,7 @@ For more information on database ledger, see [Azure SQL Database ledger](/azure/
 
 ## Permissions
 
-Requires the **VIEW LEDGER CONTENT** or **ALTER LEDGER CONFIGURATION** permission.
+Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 

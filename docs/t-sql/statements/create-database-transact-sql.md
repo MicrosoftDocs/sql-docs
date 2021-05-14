@@ -1322,6 +1322,12 @@ CREATE DATABASE test_zone_redundancy
   WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
+### Create a ledger database
+
+```sql
+CREATEDATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
+```
+
 ## See also
 
 - [sys.dm_database_copies - Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)

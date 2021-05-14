@@ -19,7 +19,9 @@ ms.author: vanto
 
 Verifies the database ledger and the table ledgers using digests at the specified external digest storage locations.
 
-This stored procedure implements the same ledger verification algorithm as sp_verify_database_ledger. A caller is expected to provider a JSON, which contains the paths pointing to digest storage locations, such as [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) containers.
+This stored procedure implements the same ledger verification algorithm as [sp_verify_database_ledger](sys-sp-verify-database-ledger-transact-sql.md). A caller is expected to provider a JSON, which contains the paths pointing to digest storage locations, such as [Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction) containers.
+
+For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
@@ -68,3 +70,4 @@ Requires the **VIEW LEDGER CONTENT** permission.
 - [sys.database_ledger_digest_locations (Transact-SQL)](../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
 - [sys.sp_generate_database_ledger_digest (Transact-SQL)](sys-sp-generate-database-ledger-digest-transact-sql.md)
 - [sys.sp_verify_database_ledger (Transact-SQL)](sys-sp-verify-database-ledger-transact-sql.md)
+- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)

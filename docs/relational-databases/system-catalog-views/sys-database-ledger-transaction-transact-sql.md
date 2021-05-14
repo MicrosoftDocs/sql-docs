@@ -18,6 +18,8 @@ ms.author: vanto
 
 Captures the cryptographically protected history of database transactions against ledger tables in the database. A row in this view represents a database transaction.
 
+For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+
 | Column name | Data type | Description |
 | --- | --- | --- |
 | **transaction_id** | **bigint** | A transaction ID that is unique for the database (it corresponds to a transaction ID in the database transaction log). |
@@ -40,3 +42,5 @@ Requires the **VIEW LEDGER CONTENT** permission.
 - [sys.sp_generate_database_ledger_digest (Transact-SQL)](../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
 - [sys.sp_verify_database_ledger (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
 - [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
+- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+

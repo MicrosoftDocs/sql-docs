@@ -17,6 +17,8 @@ ms.author: vanto
 
 Captures the cryptographically chained blocks, each of which represents a block of transactions against ledger tables.
 
+For information database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|
 |**block_id**|**bigint**|A sequence number identifying the row in this view.|
@@ -37,3 +39,4 @@ Requires the **VIEW LEDGER CONTENT** permission.
 - [sys.sp_generate_database_ledger_digest (Transact-SQL)](../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
 - [sys.sp_verify_database_ledger (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
 - [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
+- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)

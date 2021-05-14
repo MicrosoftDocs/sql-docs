@@ -11,12 +11,15 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
+monikerRange: "=azuresqldb-current"
 ---
 # sys.database_ledger_digest_locations (Transact-SQL)
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
 Captures the current and the historical ledger digest storage endpoints for the ledger feature.
+
+For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|
@@ -37,3 +40,4 @@ Requires the **VIEW LEDGER CONTENT** or **ALTER LEDGER CONFIGURATION** permissio
 - [sys.sp_generate_database_ledger_digest (Transact-SQL)](../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
 - [sys.sp_verify_database_ledger (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
 - [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
+- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).

@@ -11,6 +11,7 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
+monikerRange: "=azuresqldb-current"
 ---
 # sys.database_ledger_blocks (Transact-SQL)
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]

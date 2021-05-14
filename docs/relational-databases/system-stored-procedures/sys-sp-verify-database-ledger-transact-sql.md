@@ -11,6 +11,7 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
+monikerRange: "=azuresqldb-current"
 ---
 
 # sys.sp_verify_database_ledger (Transact-SQL)

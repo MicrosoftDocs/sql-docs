@@ -11,7 +11,9 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
+monikerRange: "=azuresqldb-current"
 ---
+
 # sys.ledger_table_history (Transact-SQL)
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]

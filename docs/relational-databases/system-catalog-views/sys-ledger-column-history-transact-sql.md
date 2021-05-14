@@ -11,6 +11,7 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
+monikerRange: "=azuresqldb-current"
 ---
 # sys.ledger_column_history (Transact-SQL)
 

@@ -1,16 +1,15 @@
 ---
+title: Usage and Diagnostic Data for SQL Server Data Tools (SSDT)
 description: "SQL Server Data Tools (SSDT) usage and diagnostic data collection"
-title: Usage and Diagnostic Data
-ms.custom: seo-lt-2019
-ms.date: "04/30/2021"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssdt
+ms.prod_service: "sql-tools"
 ms.topic: conceptual
-ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: "dzsquared"
 ms.author: "drskwier"
+ms.reviewer: "maghan"
+ms.custom: seo-lt-2019
+ms.date: "04/30/2021"
 ---
 
 # SQL Server Data Tools usage and diagnostic data collection
@@ -19,7 +18,7 @@ The SQL Server Data Tools (SSDT) component is enabled through the Data workload 
 
 For more information about the VSCEIP, including how to opt in or opt out, see the [VSCEIP Overview](https://docs.microsoft.com/visualstudio/ide/visual-studio-experience-improvement-program).
 
-For more information about the diagnostic system-generated logs collected, see the documentation on [system-generated logs](https://docs.microsoft.com/visualstudio/ide/diagnostic-data-collection).
+For more information about the system-generated diagnostic logs collected, see the documentation on [system-generated logs](https://docs.microsoft.com/visualstudio/ide/diagnostic-data-collection).
 
 
-We do not collect your name, address, or any other data that relates to an identified or identifiable individual. For more information about the information collected, processed, or transmitted by the VSCEIP, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+We don't collect your name, address, or any other data that relates to an identified or identifiable individual. For more information about the information collected, processed, or transmitted by the VSCEIP, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).

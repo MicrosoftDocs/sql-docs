@@ -26,7 +26,9 @@ author: MikeRayMSFT
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article shows maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components.
+This article shows maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 and later.
+
+For SQL Server 2014, see [Maximum capacity specifications for SQL Server 2014](/previous-versions/sql/2014/sql-server/maximum-capacity-specifications-for-sql-server).
 
 >[!NOTE]
 >In addition to the information in this article, you might also find the following links helpful:
@@ -45,7 +47,7 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 |Batch size|65,536 * (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
 |Bytes per short string column|8,000||
 |Bytes per `GROUP BY`, `ORDER BY`|8,060||
-|Bytes per index key|900 bytes for a clustered index. 1,700 for a nonclustered index.|The maximum number of bytes in a clustered index key cannot exceed 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a nonclustered index key, the maximum is 1700 bytes.<br /><br /> You can define a key using variable-length columns whose maximum sizes add up to more than the limit. However, the combined sizes of the data in those columns can never exceed the limit.<br /><br /> In a nonclustered index, you can include extra non-key columns, and they do not count against the size limit of the key. The non-key columns might help some queries perform better.|
+|Bytes per index key|900 bytes for a clustered index. 1,700 for a nonclustered index. Before SQL Server 2016, all versions supported 900 bytes for all index types.|The maximum number of bytes in a clustered index key cannot exceed 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a nonclustered index key, the maximum is 1700 bytes.<br /><br /> You can define a key using variable-length columns whose maximum sizes add up to more than the limit. However, the combined sizes of the data in those columns can never exceed the limit.<br /><br /> In a nonclustered index, you can include extra non-key columns, and they do not count against the size limit of the key. The non-key columns might help some queries perform better.|
 |Bytes per index key for memory-optimized tables|2500 bytes for a nonclustered index. No limit for a hash index, as long as all index keys fit in-row.|On a memory-optimized table, a nonclustered index cannot have key columns whose maximum declared sizes exceed 2500 bytes. It is irrelevant whether the actual data in the key columns would be shorter than the maximum declared sizes.<br /><br /> For a hash index key, there is no hard limit on size.<br /><br /> For indexes on memory-optimized tables, there is no concept of included columns, since all indexes inherently cover of all columns.<br /><br /> For a memory-optimized table, even though the row size is 8060 bytes, some variable-length columns can be physically stored outside those 8060 bytes. However, the maximum declared sizes of all key columns for all indexes on a table, plus any additional fixed-length columns in the table, must fit in the 8060 bytes.|
 |Bytes per foreign key|900||
 |Bytes per primary key|900||

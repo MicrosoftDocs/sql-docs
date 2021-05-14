@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_languages catalog view"
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: ">=sql-server-ver15"
@@ -29,7 +29,7 @@ This catalog view provides a list of the external language extension files in th
 
 When an external language is created from a file_spec, the extension itself and its properties are listed in this view. This view will contain one entry per language, per OS.
 
-## sys.external_languages
+## sys.external_language_files
 
 The catalog view sys.external_language_files lists a row for each external language extension in the database. Parameters
 
@@ -37,11 +37,11 @@ The catalog view sys.external_language_files lists a row for each external langu
 |------|------|------|
 |external_language_id |int | ID of the external language|
 |content|varbinary(max) |Content of the external language extension file|
-|file_name|nvarchar(266)|Name of the language extension file|
+|file_name|sysname|Name of the language extension file|
 |platform|tinyint|ID of the host platform on which SQL Server is installed|
 |platform_desc |nvarchar(60)|Name of the host platform. Valid values are 'WINDOWS', 'LINUX'.|
-|parameters|nvarchar(4000)|External language prameters|
-|environment_variables |nvarchar(4000)|External language environment variables|
+|parameters|sysname|External language prameters|
+|environment_variables|sysname|External language environment variables|
 
 ## See also  
 

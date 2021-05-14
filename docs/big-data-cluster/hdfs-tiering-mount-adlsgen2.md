@@ -2,8 +2,8 @@
 title: Mount ADLS Gen2 for HDFS tiering
 titleSuffix: How to mount ADLS Gen2
 description: This article provide an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data source.
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 06/29/2020
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 description: "sp_query_store_clear_hints (Transact-SQL)"
 title: "sp_query_store_clear_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/28/2021"
+ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "sp_query_store_clear_hints"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sp_query_store_clear_hints (Transact-SQL)
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Removes [Query Store hints](../performance/query-store-hints.md).
+  Removes all [Query Store hints](../performance/query-store-hints.md) for a given query_id.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -19,8 +19,11 @@ ms.author: mikeray
 
 This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can install the SQL Server IaaS Agent Extension on your virtual machine and register your SQL virtual machine resource with the SQL VM resource provider, as described [here](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register).
 
-This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It doesn't apply to the items:
+Refer to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) for more information about privacy. 
 
+The data classification in this article only applies to versions of the SQL Server on-premises product.
+
+It doesn't apply to the items listed below:
 - [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - [SQL Server Data Tools (SSDT)](../ssdt/anonymous-usage-data.md)
 - [Azure Data Studio](../azure-data-studio/usage-data-collection.md)

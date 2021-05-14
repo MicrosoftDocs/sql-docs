@@ -42,13 +42,13 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 
 ## Unsupported Features
 
-The following features haven't been verified to work correctly in this release of the ODBC driver on macOS and Linux:
+The following features haven't been verified to work correctly in the ODBC driver on macOS and Linux:
 
 - Failover Cluster Connection
 - [Transparent Network IP Resolution](../using-transparent-network-ip-resolution.md) (before ODBC Driver 17)
-- [Linux and macOS ODBC Driver BID Tracing](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-SQL-Driver-BID-Trace#linux-and-mac-odbc-driver-bid-tracing) (ODBC Driver 17.3+)
+- [Linux and macOS ODBC Driver BID Tracing](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-SQL-Driver-BID-Trace#linux-and-mac-odbc-driver-bid-tracing) (before ODBC Driver 17.3)
 
-The following features aren't available in this release of the ODBC driver on macOS and Linux:
+The following features aren't available in the ODBC driver on macOS and Linux:
 
 - Distributed Transactions (SQL_ATTR_ENLIST_IN_DTC attribute isn't supported)
 - Database Mirroring

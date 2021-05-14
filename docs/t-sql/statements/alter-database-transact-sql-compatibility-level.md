@@ -2,7 +2,7 @@
 description: "ALTER DATABASE Compatibility Level (Transact-SQL)"
 title: "ALTER DATABASE Compatibility Level (Transact-SQL)"
 ms.custom: ""
-ms.date: 01/26/2021
+ms.date: 06/09/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -146,7 +146,7 @@ For more details, including the recommended workflow for upgrading Database Comp
 >
 > Examples of breaking changes **not protected** by compatibility level are:
 >
-> - Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column *single_pages_kb* in sys.dm_os_sys_info was renamed to *pages_kb*. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
+> - Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column *single_pages_kb* in `sys.dm_os_sys_info` was renamed to *pages_kb*. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
 > - Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` will produce error 2812 (Could not find stored procedure 'sp_dboption').
 >
 > For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2019](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md), [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), and [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
@@ -172,7 +172,7 @@ The fundamental plan-affecting changes added only to the default compatibility l
     > - At the server level, with [trace flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
     > - At the database level, with the `QUERY_OPTIMIZER_HOTFIXES` option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
     > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) by modifying the query.
-    > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` without code changes, using the [Query Store Hint (Preview)](../../relational-databases/performance/query-store-hints.md) feature. 
+    > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` without code changes, using the [Query Store hint (Preview)](../../relational-databases/performance/query-store-hints.md) feature. 
     
     Later, when [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] was released, all the Query Optimizer fixes released after [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM became automatically enabled for databases using the [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] default compatibility level (140). This is a cumulative behavior that includes all previous versions fixes as well. Again, only post-RTM Query Optimizer fixes need to be explicitly enabled.  
     
@@ -439,14 +439,16 @@ SELECT @v = BusinessEntityID FROM
 SELECT @v;
 ```
 
-## See Also 
-[Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)       
-[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)       
-[Reserved Keywords](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
-[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
-[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
-[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
-[View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
-[Change the Database Compatibility Mode and use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
-[Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
+## See also 
+
+ - [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)       
+ - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)       
+ - [Reserved Keywords](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
+ - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
+ - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
+ - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
+ - [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
+ - [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
+ - [Change the Database Compatibility Mode and use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
+ - [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
+ - [Query Store hints](../../relational-databases/performance/query-store-hints.md)   

@@ -2,7 +2,7 @@
 description: "sys.query_store_query_hints (Transact-SQL)"
 title: "sys.query_store_query_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/28/2021"
+ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,10 +20,10 @@ helpviewer_keywords:
   - "query_store_query_hints catalog view"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_hints (Transact-SQL)
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  Contains query hints from the [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature.
   

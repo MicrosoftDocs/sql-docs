@@ -2,7 +2,7 @@
 title: "Cardinality Estimation (SQL Server)"
 description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
 ms.custom: ""
-ms.date: "02/11/2021"
+ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,7 +21,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 # Cardinality Estimation (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 
@@ -271,7 +272,7 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HIN
  
 The Query Store gives you different ways that you can force the system to use a particular query plan:  
   
-- Execute **sp_query_store_force_plan**.  
+- Execute `sys.sp_query_store_force_plan`.  
   
 - In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then click **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.  
   
@@ -316,11 +317,12 @@ WHERE s.ticket = r.ticket AND
       r.date = '2016-05-11';  
 ```  
   
-## See Also  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))  
- [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     
- [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
- [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
+## See also  
+ - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ - [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))  
+ - [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     
+ - [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ - [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
+ - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ - [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
+ - [Query Store Hints](query-store-hints.md)

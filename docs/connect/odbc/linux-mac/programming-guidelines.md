@@ -1,5 +1,6 @@
 ---
-title: Programming Guidelines
+title: Programming guidelines
+
 description: The programming features of the ODBC Driver for SQL Server on macOS and Linux contain some differences from the Windows versions.
 ms.custom: ""
 ms.date: 05/14/2021
@@ -131,7 +132,8 @@ At the time of this writing the default stack size in MUSL is 128K, which is eno
 
 ## Additional Notes
 
-1. You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:
+* You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:
+
 
     ```bash
     sqlcmd -U <user> -P <pwd> -S <host>,33000
@@ -140,9 +142,11 @@ At the time of this writing the default stack size in MUSL is 128K, which is eno
     > [!NOTE]
     > DAC connections must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.
 
-2. The UnixODBC driver manager returns "invalid attribute/option identifier" for all statement attributes when they're passed through SQLSetConnectAttr. On Windows, when SQLSetConnectAttr receives a statement attribute value, it causes the driver to set that value on all active statements, which are children of the connection handle.
+* The UnixODBC driver manager returns "invalid attribute/option identifier" for all statement attributes when they're passed through SQLSetConnectAttr. On Windows, when SQLSetConnectAttr receives a statement attribute value, it causes the driver to set that value on all active statements, which are children of the connection handle.
 
-3. When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, higher performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this option may cause applications that pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
+
+* When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, higher performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this option may cause applications that pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
+
 
 ## See Also
 

@@ -95,15 +95,13 @@ Depending on the components that you decide to install, SQL Server Setup install
 
 ## CEIP services installed by SQL Server
 
-The [Customer Experience Improvement Program (CEIP) service](../../sql-server/usage-and-diagnostic-data-in-local-audit.md)** sends [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
-
-This service is installed during a SQL Server installation. 
+The [Customer Experience Improvement Program (CEIP) service](../../sql-server/usage-and-diagnostic-data-in-local-audit.md) sends [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
 
 Depending on the components that you decide to install, SQL Server setup installs the following CEIP services:
 
-- **[SQLTELEMETRY](../../sql-server/usage-and-diagnostic-data-in-local-audit.md)** - The Customer Experience Improvement Program that sends [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
-- **SSASTELEMETRY** - The Customer Experience Improvement Program that sends [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
-- **SSISTELEMETRY** - The Customer Experience Improvement Program that sends [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
+- **[SQLTELEMETRY](../../sql-server/usage-and-diagnostic-data-in-local-audit.md)** - The Customer Experience Improvement Program that sends database engine [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
+- **SSASTELEMETRY** - The Customer Experience Improvement Program that sends SSAS [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
+- **SSISTELEMETRY** - The Customer Experience Improvement Program that sends SSIS [telemetry](../../sql-server/sql-server-privacy.md) data back to Microsoft.
 
 ## <a name="Serv_Prop"></a> Service Properties and Configuration
 

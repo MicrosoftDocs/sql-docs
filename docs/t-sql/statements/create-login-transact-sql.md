@@ -275,6 +275,27 @@ CHECK_POLICY = OFF,
 CHECK_EXPIRATION = OFF ;
 ```
 
+
+### H. Creating a SQL login with hashed password
+
+The following example shows how to create SQL Logins with the same password as existing Logins as done in a migration scenario. The first step is to retrieve the password hash from existing Logins on the source database server. Then the same hash will be used to create the Login on a new database server. By doing this the new Login will have the same password as on the old server.
+
+```sql
+-- run this to retrieve the password hash for an individual Login:
+SELECT LOGINPROPERTY('Andreas','PASSWORDHASH') AS password_hash;
+-- as an alternative, the catalog view sys.sql_logins can be used to retrieve the password hashes for multiple accounts at once. (This could be used to create a dynamic sql statemnt from the result set)
+SELECT name, password_hash
+FROM sys.sql_logins
+  WHERE
+    principal_id > 1	-- excluding sa
+    AND
+    name NOT LIKE '##MS_%##' -- excluding special MS system accounts
+-- create the new SQL Login on the new database server using the hash of the source server
+CREATE LOGIN Andreas
+  WITH PASSWORD = 0x02000A1A89CD6C6E4C8B30A282354C8EA0860719D5D3AD05E0CAE1952A1C6107A4ED26BEBA2A13B12FAB5093B3CC2A1055910CC0F4B9686A358604E99BB9933C75B4EA48FDEA HASHED;
+```
+
+
 ## See Also
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)

@@ -1,51 +1,10 @@
 ---
-title: Configure Windows Service Accounts and Permissions
+title: Configure windows service accounts and permissions
 description: Get acquainted with the service accounts that are used to start and run services in SQL Server. See how to configure them and assign appropriate permissions.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: reference
-helpviewer_keywords: 
-  - "startup service states [SQL Server]"
-  - "Setup [SQL Server], user accounts"
-  - "Windows permissions [SQL Server]"
-  - "modifying user accounts"
-  - "default accounts"
-  - "domains [SQL Server], user accounts"
-  - "startup accounts [SQL Server]"
-  - "system accounts [SQL Server]"
-  - "services [SQL Server], permissions"
-  - "ACL (access control list)"
-  - "local system accounts [SQL Server]"
-  - "instance-aware services [SQL Server]"
-  - "permissions [SQL Server], services"
-  - "SQL Server Agent service, user accounts"
-  - "Windows NT permissions [SQL Server]"
-  - "user accounts [SQL Server]"
-  - "identifying instance-unaware services [SQL Server]"
-  - "installing SQL Server, user accounts"
-  - "disabled startup state [SQL Server]"
-  - "user accounts [SQL Server], users"
-  - "Local Service account [SQL Server]"
-  - "SQL Server Installation Wizard"
-  - "instance-unaware services [SQL Server]"
-  - "services [SQL Server], configuring at installation"
-  - "Windows accounts [SQL Server]"
-  - "SQL Server services, user accounts"
-  - "user accounts [SQL Server], services"
-  - "MSSQLServer"
-  - "identifying instance-aware services [SQL Server]"
-  - "services [SQL Server], accounts"
-  - "access control lists"
-  - "optional accounts [SQL Server]"
-  - "service accounts [SQL Server]"
-  - "accounts [SQL Server], services"
-  - "built-in system accounts [SQL Server]"
-  - "automatic startup state"
-  - "domains [SQL Server]"
-  - "manual startup state [SQL Server]"
-  - "accounts [SQL Server], user"
-ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -200,7 +159,8 @@ Managed service accounts, group-managed service accounts, and virtual accounts a
 
 For more information on Managed Service Accounts and Virtual Accounts, see the **Managed service account and virtual account concepts** section of [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) and [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).
 
-**Security Note:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use a [MSA](#MSA), [gMSA](#GMSA) or [virtual account](#VA_Desc) when possible. When MSA, gMSA and virtual accounts aren't possible, use a specific low-privilege user account or domain account instead of a shared account for SQL Server services. Use separate accounts for different SQL Server services. Don't grant additional permissions to the SQL Server service account or the service groups. Permissions are granted through group membership or granted directly to a service SID, where a service SID is supported.
+> [!Note]
+> [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use a [MSA](#MSA), [gMSA](#GMSA) or [virtual account](#VA_Desc) when possible. When MSA, gMSA and virtual accounts aren't possible, use a specific low-privilege user account or domain account instead of a shared account for SQL Server services. Use separate accounts for different SQL Server services. Don't grant additional permissions to the SQL Server service account or the service groups. Permissions are granted through group membership or granted directly to a service SID, where a service SID is supported.
 
 ### <a name="Auto_Start"></a> Automatic startup
 

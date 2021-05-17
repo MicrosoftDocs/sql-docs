@@ -1,5 +1,5 @@
 ---
-title: Make a Master Server
+title: Make a master server
 description: Make a Master Server
 ms.prod: sql
 ms.prod_service: sql-tools

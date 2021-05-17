@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 05/05/2021
+ms.date: 05/19/2021
 ---
 
 # Release notes for Azure Data Studio
@@ -19,12 +19,12 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### April 2021
+### May 2021
 
-Azure Data Studio 1.28.0 is the latest general availability (GA) release.
+Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 
-- Release number: 1.28.0
-- Release date: April 15, 2021
+- Release number: 1.29.0
+- Release date: May 19, 2021
 
 #### What's new in 1.28.0
 
@@ -50,6 +50,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------
+| [April 2021](#april-2021) | 1.28.0 | April 15, 2021 | N/A |
 | [March 2021](#march-2021) | 1.27.0 | March 17, 2021 | N/A |
 | [February 2021](#february-2021) | 1.26.0 | February 18, 2021 | N/A |
 | [December 2020](#december-2020) | 1.27.0 | December 9, 2020 | [hotfix](#december-2020-hotfix) |
@@ -75,6 +76,28 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | [March 2019](#march-2019) | 1.5.1 | March 18, 2019 | [hotfix](#march-2019-hotfix) |
 | [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
 | [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |
+
+### April 2021
+
+April 15, 2021 &nbsp; / &nbsp; version: 1.28.0
+
+#### What's new in 1.28.0
+
+| New item | Details |
+|----------|---------|
+| Extension update | [Kusto (KQL)](extensions/kusto-extension.md) |
+| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Notebook features | Added *Add Notebook* and *Remove Notebook commands* |
+
+#### Bug fixes in 1.28.0
+
+For the list of the bug fixes addressed for the April 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22).
+
+#### Known issues in 1.28.0
+
+For the list of known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### March 2021
 

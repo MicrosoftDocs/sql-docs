@@ -1,5 +1,5 @@
 ---
-title: Configure windows service accounts and permissions
+title: Configure Windows service accounts and permissions
 description: Get acquainted with the service accounts that are used to start and run services in SQL Server. See how to configure them and assign appropriate permissions.
 ms.prod: sql
 ms.prod_service: high-availability

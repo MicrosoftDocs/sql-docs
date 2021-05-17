@@ -84,7 +84,7 @@ GO
 |ASYNCSTATSLIST|Internal use only.|
 |BACKUP|Internal use only.|
 |BACKUP_COPY_CONTEXT|Internal use only.|
-|BACKUP_CTX|Internal use only.|
+|BACKUP_CTX|Protects access to list of pages involved in I/O while a backup is happening on that particular database. High spins could be observed when long checkpoints or lazwriter activity happen during backup operations. You can obtain relief using one of the following methods: <br /><br /> - a) Use [indirect checkpoint](../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt) instead of [automatic checkpoint](../../relational-databases/logs/database-checkpoints-sql-server.md#AutomaticChkpt) <br /><br /> - b) Minimize lazywriter activity by properly allocating memory required for this instance <br /><br /> - c) Avoid too many concurrent backups for databases on the instance|
 |BASE_XACT_HASH|Internal use only.|
 |BLOCKER_ENUM|Internal use only.|
 |BPREPARTITION|Internal use only.|

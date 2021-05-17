@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: wopeter
 ms.custom: seo-lt-2019
-ms.date: 05/06/2021
+ms.date: 05/17/2021
 ---
 
 # Enable or disable usage data collection for Azure Data Studio
@@ -16,6 +16,8 @@ ms.date: 05/06/2021
 Azure Data Studio contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
 
 Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of Azure Data Studio.
+
+Azure Data Studio doesn't collect your name, address, but Azure Data Studio does collect data related to an identified or identifiable individual such as a hashed MAC address.
 
 Several updates made to Azure Data Studio to help ensure data privacy.
 

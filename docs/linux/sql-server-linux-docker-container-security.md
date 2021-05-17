@@ -1,8 +1,8 @@
 ---
 title: Secure SQL Server Docker containers
 description: Understand the different ways to secure SQL Server Docker containers and how you can run containers as different non-root user on the host
-author: vin-yu
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
 ms.date: 09/07/2020

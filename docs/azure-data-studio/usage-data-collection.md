@@ -4,9 +4,9 @@ description: This article explains how to control if usage and crash reporting d
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: how-to
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: "wopeter"
+author: alayu
+ms.author: yualan
+ms.reviewer: wopeter
 ms.custom: seo-lt-2019
 ms.date: 05/06/2021
 ---
@@ -16,8 +16,6 @@ ms.date: 05/06/2021
 Azure Data Studio contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
 
 Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of Azure Data Studio.
-
-Azure Data Studio doesn't collect your name, address, or other data related to an identified or identifiable individual.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 
@@ -78,8 +76,6 @@ Several updates made to Azure Data Studio to help ensure data privacy.
 - Making it more accessible to opt-out of telemetry collection by placing a notification in the product for all existing and new users.
 - Reviewing and classifying the telemetry that we send.
 - Ensuring that we have valid data retention policies in place for any data we collect, for example, crash dumps.
-
-We expect people to ask to see the data we collect. However, Azure Data Studio doesn't have a way to collect personal data as Azure Data Studio doesn't have a *sign-in* experience that uniquely identifies a user. We send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC), but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it's not reliable enough for us to *provide your data*.
 
 ## More resources
 

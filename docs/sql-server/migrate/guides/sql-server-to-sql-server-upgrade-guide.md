@@ -47,7 +47,7 @@ The following table details all available methods to migrate / upgrade your SQL 
 |**Azure Database Migration Service (DMS)** | Azure Database Migration Service (DMS) is a fully managed migration service that help migrate databases to Azure at scale.|
 |**Data Migration Assistant (DMA)** | Data Migration Assistant [DMA](/../../dma/dma-overview.md) assesses SQL Server on-premises and then seamlessly upgrades to later versions of SQL Server or migrates to SQL Server on Azure VMs, Azure SQL Database or Azure SQL Managed Instance.|
 |**Log Shipping** | Log shipping replicates transactional log files from on-premises on to an instance of SQL Server on an Azure VM. This provides minimal downtime during failover and has less configuration overhead than setting up an Always On availability group.|
-|**Bulk load** | SQL Server supports exporting data in bulk (_bulk data_) from a SQL Server table and importing bulk data into a SQL Server table or nonpartitioned view. Learn more on [Methods for bulk importing and exporting data](/../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server?view=sql-server-ver15)|
+|**Bulk load** | SQL Server supports exporting data in bulk (_bulk data_) from a SQL Server table and importing bulk data into a SQL Server table or nonpartitioned view. Learn more on [Methods for bulk importing and exporting data](/../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server)|
 
 
 > [!NOTE]
@@ -114,7 +114,7 @@ For additional assistance with completing this migration scenario, see the follo
 
 ## Next steps
 
--   To start upgrading your SQL Server databases to Azure SQL Managed Instance, see the  [SQL Server upgrade guide](TBC).
+-   To start upgrading your SQL Server databases to Azure SQL Managed Instance, see the  [SQL Server upgrade guide](./sql-server-to-sql-server-upgrade-guide.md).
     
 -   For a matrix of services and tools that can help you with database and data migration scenarios as well as specialty tasks, see  [Services and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
   

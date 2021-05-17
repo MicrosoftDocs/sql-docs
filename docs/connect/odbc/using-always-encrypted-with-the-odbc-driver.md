@@ -699,8 +699,8 @@ For more information, see [Migrate Sensitive Data Protected by Always Encrypted]
 
 ### Connection attributes
 
-| Name | Type | Description |  |
-|--|--|--|--|
+| Name | Type | Description |
+|--|--|--|
 | `SQL_COPT_SS_COLUMN_ENCRYPTION` | Pre-connect | `SQL_COLUMN_ENCRYPTION_DISABLE` (0) - Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) - Enable Always Encrypted<br> pointer to `*attestation protocol*,*attestation URL*` string - (version 17.4 and later) enable with secure enclave |
 | `SQL_COPT_SS_CEKEYSTOREPROVIDER` | Post-connect | [Set] - Attempt to load CEKeystoreProvider<br>[Get] - Return a CEKeystoreProvider name |
 | `SQL_COPT_SS_CEKEYSTOREDATA` | Post-connect | [Set] - Write data to CEKeystoreProvider<br>[Get] - Read data from CEKeystoreProvider |
@@ -709,8 +709,8 @@ For more information, see [Migrate Sensitive Data Protected by Always Encrypted]
 
 ### Statement attributes
 
-| Name | Description |  |
-|--|--|--|
+| Name | Description |
+|--|--|
 | `SQL_SOPT_SS_COLUMN_ENCRYPTION` | `SQL_CE_DISABLED` (0) - Always Encrypted is disabled for the statement <br>`SQL_CE_RESULTSETONLY` (1) - Decryption Only. Result sets and return values are decrypted, and parameters aren't encrypted <br>`SQL_CE_ENABLED` (3) - Always Encrypted is enabled and used for both parameters and results |
 
 ### Descriptor fields

@@ -17,7 +17,7 @@ Azure Data Studio contains Internet-enabled features that can collect and send a
 
 Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of Azure Data Studio.
 
-Azure Data Studio doesn't collect your name, address, but Azure Data Studio does collect data related to an identified or identifiable individual such as a hashed MAC address.
+Azure Data Studio doesn't collect your name or address, but Azure Data Studio gathers data that helps approximate a single user for diagnostic purposes (based on a hash of the network adapter NIC).
 
 Several updates made to Azure Data Studio to help ensure data privacy.
 
@@ -26,8 +26,6 @@ Several updates made to Azure Data Studio to help ensure data privacy.
 - Ensuring that we have valid data retention policies in place for any data we collect, for example, crash dumps.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
-
-[!INCLUDE [gdpr-related-guidance](../includes/gdpr-intro-sentence.md)]
 
 ## Audit feature usage and diagnostic data
 

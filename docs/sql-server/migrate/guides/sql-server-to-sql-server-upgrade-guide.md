@@ -5,8 +5,8 @@ ms.date: 03/19/2021
 ms.prod: sql
 ms.technology: migration-guide
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Overview - Upgrade SQL Server to SQL Server (Part 1)
@@ -41,17 +41,17 @@ The following table details all available methods to migrate / upgrade your SQL 
 
 | **Upgrade option** | **Description** |
 | --- | --- |
-| **Backup & Restore** | This is a simple and well-tested technique for moving databases across machines. Use compression to minimize backup size for transfer. You can use [Transact-SQL (T-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/statements/backup-transact-sql) to backup databases using scripting.| 
+| **Backup & Restore** | This is a simple and well-tested technique for moving databases across machines. Use compression to minimize backup size for transfer. You can use [Transact-SQL (T-SQL)](/../../t-sql/statements/backup-transact-sql) to backup databases using scripting.| 
 |**Transactional Replication** | Replicate data from source SQL Server database tables to target SQL Server database by providing a publisher-subscriber type migration option while maintaining transactional consistency.|
-|**Always On availability groups** | Introduced in SQL Server 2012, Always On availability groups is a feature that provides an enterprise level high-availability and disaster-recovery solution. The feature provides secondary replicas that support synchronous or asynchronous availability modes.|
+|**Always On availability groups** | Introduced in SQL Server 2012, Always On availability groups are a feature that provides an enterprise-level high-availability and disaster-recovery solution. The feature provides secondary replicas that support synchronous or asynchronous availability modes.|
 |**Azure Database Migration Service (DMS)** | Azure Database Migration Service (DMS) is a fully managed migration service that help migrate databases to Azure at scale.|
-|**Data Migration Assistant (DMA)** | Data Migration Assistant [DMA](https://docs.microsoft.com/en-us/sql/dma/dma-overview) assesses SQL Server on-premises and then seamlessly upgrades to later versions of SQL Server or migrates to SQL Server on Azure VMs, Azure SQL Database or Azure SQL Managed Instance.|
+|**Data Migration Assistant (DMA)** | Data Migration Assistant [DMA](/../../dma/dma-overview.md) assesses SQL Server on-premises and then seamlessly upgrades to later versions of SQL Server or migrates to SQL Server on Azure VMs, Azure SQL Database or Azure SQL Managed Instance.|
 |**Log Shipping** | Log shipping replicates transactional log files from on-premises on to an instance of SQL Server on an Azure VM. This provides minimal downtime during failover and has less configuration overhead than setting up an Always On availability group.|
-|**Bulk load** | SQL Server supports exporting data in bulk (_bulk data_) from a SQL Server table and importing bulk data into a SQL Server table or nonpartitioned view. Learn more on [Methods for bulk importing and exporting data](https://docs.microsoft.com/sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server?view=sql-server-ver15#MethodsForBuliIE)|
+|**Bulk load** | SQL Server supports exporting data in bulk (_bulk data_) from a SQL Server table and importing bulk data into a SQL Server table or nonpartitioned view. Learn more on [Methods for bulk importing and exporting data](/../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server?view=sql-server-ver15)|
 
 
 > [!NOTE]
-> It's now possible to lift and shift both your [failover cluster instance](sql-server-failover-cluster-instance-to-sql-on-azure-vm.md) and [availability group](sql-server-availability-group-to-sql-on-azure-vm.md) solution to SQL Server on Azure VMs using Azure Migrate. 
+> It's now possible to lift and shift both your [failover cluster instance](https://docs.microsoft.com/azure/azure-sql/migration-guides/virtual-machines/sql-server-failover-cluster-instance-to-sql-on-azure-vm) and [availability group](https://docs.microsoft.com/azure/azure-sql/migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm) solution to SQL Server on Azure VMs using Azure Migrate.
 
 ## Considerations for upgrade
 
@@ -102,12 +102,12 @@ When upgrading from SQL Server 2016, the following migration options are support
 
 ### Migration assets from real-world engagements
 
-For additional assistance with completing this migration scenario, please see the following resources, which were developed in support of a real-world migration project engagement.
+For additional assistance with completing this migration scenario, see the following resources, which were developed in support of a real-world migration project engagement.
 
 | **Title/link** | **Description** |
 | -------------- | --------------- |
 | [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested “best fit” target platforms, cloud readiness, and application/database remediation level for a given workload. It offers simple, one-click calculation and report generation that greatly helps to accelerate large estate assessments by providing and automated and uniform target platform decision process.                                                                        |
-| [Optimization Guide for Mainframe App/Data recompiled to .NET & SQL Server](https://aka.ms/dmj-wp-mainframe-optimize)                                   | This guide offers optimization advice for executing point-lookups against SQL Server from .NET as efficiently as possible. Customers wishing to migrate from mainframe databases to SQL Server may desire to migrate existing mainframe-optimized design patterns, especially when using 3rd party tools (such as Raincode Compiler) to automatically migrate mainframe code (COBOL/JCL etc) to T-SQL and C\## .NET. |
+| [Optimization Guide for Mainframe App/Data recompiled to .NET & SQL Server](https://aka.ms/dmj-wp-mainframe-optimize)                                   | This guide offers optimization advice for executing point-lookups against SQL Server from .NET as efficiently as possible. Customers wishing to migrate from mainframe databases to SQL Server may desire to migrate existing mainframe-optimized design patterns, especially when using third-party tools (such as Raincode Compiler) to automatically migrate mainframe code (COBOL/JCL etc.) to T-SQL and C\## .NET. |
 
 > [!NOTE]
 > The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
@@ -116,13 +116,13 @@ For additional assistance with completing this migration scenario, please see th
 
 -   To start upgrading your SQL Server databases to Azure SQL Managed Instance, see the  [SQL Server upgrade guide](TBC).
     
--   For a matrix of services and tools that can help you with database and data migration scenarios as well as specialty tasks, see  [Services and tools for data migration](https://docs.microsoft.com/en-gb/azure/dms/dms-tools-matrix).
+-   For a matrix of services and tools that can help you with database and data migration scenarios as well as specialty tasks, see  [Services and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
   
 -   To assess the application access layer, see  [Data Access Migration Toolkit (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit).
     
--   For details on how to perform A/B testing at the data access layer, see  [Database Experimentation Assistant](https://docs.microsoft.com/en-us/sql/dea/database-experimentation-assistant-overview).
+-   For details on how to perform A/B testing at the data access layer, see  [Database Experimentation Assistant](/../../dea/database-experimentation-assistant-overview.md).
 
-# Guide - Upgrade SQL Server to SQL Server (Part 2)
+## Guide - Upgrade SQL Server to SQL Server (Part 2)
 
 ## Prerequisites
 
@@ -305,7 +305,7 @@ To use DEA for database migration testing, perform the following steps.
 
       ![New trace capture](./media/sql-server-to-sql-server-upgrade-guide/deanewcapture.png)
    1. To start a new capture, select **New Capture**.
-   1. To configure the capture, speficy the trace name, duration, SQL Server instance name, database name, and the share location for storing the trace file on the computer running SQL Server.
+   1. To configure the capture, specify the trace name, duration, SQL Server instance name, database name, and the share location for storing the trace file on the computer running SQL Server.
 
       ![Provide trace capture inputs](./media/sql-server-to-sql-server-upgrade-guide/deacaptureinputs.png)
    1. Select **Start** to begin trace capture.
@@ -314,7 +314,7 @@ To use DEA for database migration testing, perform the following steps.
 
       ![New trace replay](./media/sql-server-to-sql-server-upgrade-guide/deanewreplay.png)
    1. To start a new replay, select **New Replay**.
-   1. To configure the replay, specify the replay name, controller machine name, path to source trace file on controller, SQL Server instance name, and the pathfor storing the target trace file on the computer running SQL Server.
+   1. To configure the replay, specify the replay name, controller machine name, path to source trace file on controller, SQL Server instance name, and the path for storing the target trace file on the computer running SQL Server.
    1. Select **Start** to begin replay of your capture.
 1. **Create a new Analysis Report**
    1. On the left navigation tree, select the checklist icon to go to **Analysis Reports**.
@@ -324,7 +324,7 @@ To use DEA for database migration testing, perform the following steps.
 
       You will see the list of all reports in the server.
    1. Select **New Report**.
-   1. To configure the report, specify the report name, and specify paths to the traces fon the source and target SQL Server instances.
+   1. To configure the report, specify the report name, and specify paths to the traces for the source and target SQL Server instances.
 
       ![Provide report analysis inputs](./media/sql-server-to-sql-server-upgrade-guide/deaanalysisinput.png)
 1. **Review an analysis report**
@@ -349,7 +349,7 @@ To use DEA for database migration testing, perform the following steps.
 
 ### Optimize
 
-The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, as well as addressing performance issues with the workload.
+The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
 
 > [!NOTE]
-> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](https://docs.microsoft.com/sql/relational-databases/post-migration-validation-and-optimization-guide).
+> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).

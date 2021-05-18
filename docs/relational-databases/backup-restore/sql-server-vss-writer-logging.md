@@ -25,12 +25,12 @@ As [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL W
 - It's on by default
 - It's system-wide (it will trace SQL Writer activity against all SQL Server instances running on the server)
 - It's text-based
-- Its working directory is **`C:\Program Files\Microsoft SQL Server\90\Shared`**
+- Its working directory is `C:\Program Files\Microsoft SQL Server\90\Shared`
 - Within that directory:
-  - Logging takes place in file **`SqlWriterLogger.txt`**
+  - Logging takes place in file `SqlWriterLogger.txt`
   - This file gets renamed to `SqlWriterLogger1.txt` when reaching a maximum size (by default 1 MB), with logging continuing in main `SqlWriterLogger.txt`. 
   - There's only one rollover file, so the second rollover would overwrite the existing `SqlWriterLogger1.txt`.
-  - Parameters are managed by file **`SqlWriterConfig.ini`**
+  - Parameters are managed by file `SqlWriterConfig.ini`
 
 SQL Writer being a [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] shared component, it has a single instance on a system and its major version will be the same as the highest major version of any installed [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] Instance. For example, if instances of, say,[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] are collocated on the same system, the SQL Writer binary will be the one provided by [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and will service all running instances from all major versions (even though its home directory remains under \90). Local instances and versions will benefit from the new [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] tracing described here. It also implies that only [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] cumulative updates will upgrade SQL Writer binaries in this situation.
 
@@ -160,7 +160,7 @@ These entries provide details on the VSS operations that were previously difficu
 
 To illustrate the earlier statement that SQL Writer logging complements original EventLog architecture, let’s look at the entries associated to a well-known failure situation: a Torn Database. It can occur when a  VSS backup attempts to create a snapshot set of volumes where only a partial set of files of a given database is included. SQL Writer will block it as per VSS conventions.
 
-This extract is the content of **`SqlWriterLogger.txt`** for the operation:
+This extract is the content of `SqlWriterLogger.txt` for the operation:
 
 ``` txt
 [01/11/2021 02:57:00, TID 5a88] Entering SQL Writer OnIdentify.
@@ -183,7 +183,7 @@ This extract is the content of **`SqlWriterLogger.txt`** for the operation:
 [01/11/2021 02:57:03, TID 5a88] Entering SQL Writer OnAbort.
 ```
 
-From SqlWriterLogger.txt we see that a failure occurred, however the only details we have on failure is the `0x80780002 HResult`. This value is difficult to interpret without the error code references (it *does* identify the Torn Database situation though).
+From SqlWriterLogger.txt we see that a failure occurred, however the only details we have on failure is the `0x80780002 HResult`. This value is difficult to interpret without the error code references. It *does* identify the Torn Database situation though.
 
 Now let’s check the contents of Windows Application Event Logs:
 

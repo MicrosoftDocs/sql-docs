@@ -202,7 +202,7 @@ Sqllib error: Database db_on_G_and_H of SQL Server instance GF19  is stored on m
 ```
 The event provides a full user-friendly formatted message explaining the situation.
 
-The OS VSS framework will also report the issue in Event Logs, using its nomenclature (VSS manages ‘components,’ which in context of SQL Server is ‘databases’).
+The OS VSS framework will also report the issue in Event Logs, using its nomenclature (VSS manages ‘components,’ which in context of SQL Server are ‘databases’).
 
 ``` txt
 Log Name:      Application
@@ -266,7 +266,7 @@ Duplicating the `SqlWriterConfig.ini` file comments here:
 Any change to the settings requires a restart of SQL Writer service to activate. 
 
 > [!TIP]
->Restarting SQL Writer is extremely fast and can be done at will as SQL Writer doesn’t have any activity and doesn’t retain any stateful information in-between VSS calls. The only precaution is to avoid a restart while a VSS operation (backup, restore) is taking place.
+>Restarting SQL Writer is extremely fast and can be done at will as SQL Writer doesn’t retain any stateful information nor has any activity in-between VSS calls. The only precaution is to avoid a restart while a VSS operation (backup, restore) is taking place.
 
 SQL Writer will report active parameters in its log file upon (re)start, as can be seen in [Service Start](#service-start) sample extract.
 

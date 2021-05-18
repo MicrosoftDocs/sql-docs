@@ -21,4 +21,4 @@ For more information about the VSCEIP, including how to opt in or opt out, see t
 For more information about the system-generated diagnostic logs collected, see the documentation on [system-generated logs](https://docs.microsoft.com/visualstudio/ide/diagnostic-data-collection).
 
 
-We don't collect your name, address, or any other data that relates to an identified or identifiable individual. For more information about the information collected, processed, or transmitted by the VSCEIP, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+SSDT doesn't collect your name, address, or any other data related to an identified or identifiable individual. For more information about the information collected, processed, or transmitted by the VSCEIP, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).

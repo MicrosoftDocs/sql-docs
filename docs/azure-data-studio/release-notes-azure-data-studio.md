@@ -65,6 +65,8 @@ For a full list of bug fixes addressed for the May 2021 release, visit the [bugs
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
+## Feedback
+
 You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/new/choose) for other known issues and to provide feedback to the product team.
 
 ## Previous Azure Data Studio releases

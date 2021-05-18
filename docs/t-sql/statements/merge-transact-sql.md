@@ -54,7 +54,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
 ```syntaxsql
 
 -- SQL Server and Azure SQL Database
@@ -103,9 +103,11 @@ MERGE
     <search_condition> 
 ```
 
-::: moniker range="=azure-sqldw-latest"
-
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
 
 ```syntaxsql
 -- MERGE (Preview) for Azure Synapse Analytics 

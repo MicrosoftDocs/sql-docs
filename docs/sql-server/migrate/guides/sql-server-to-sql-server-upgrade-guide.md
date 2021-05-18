@@ -116,7 +116,7 @@ For additional assistance with completing this migration scenario, see the follo
 
 -   To start upgrading your SQL Server databases to Azure SQL Managed Instance, see the  [SQL Server upgrade guide](./sql-server-to-sql-server-upgrade-guide.md).
     
--   For a matrix of services and tools that can help you with database and data migration scenarios as well as specialty tasks, see  [Services and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
+-   For a matrix of services and tools that can help you with database and data migration scenarios as well as specialty tasks, see  [Services and tools for data migration](/azure/dms/dms-tools-matrix).
   
 -   To assess the application access layer, see  [Data Access Migration Toolkit (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit).
     

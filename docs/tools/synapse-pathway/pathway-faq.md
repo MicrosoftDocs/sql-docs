@@ -19,7 +19,7 @@ In this guide, you'll find the most frequently asked questions on Azure Synapse 
 
 ### Q. What is Azure Synapse Pathway?
 
-A. Azure Synapse Pathway is code translation tool that helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse to make it complaint with T-SQL based Azure Synapse SQL.
+A. Azure Synapse Pathway is code translation tool that helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse to make it compliant with T-SQL based Azure Synapse SQL.
 
 ### Q. How can I download Azure Synapse Pathway?
 

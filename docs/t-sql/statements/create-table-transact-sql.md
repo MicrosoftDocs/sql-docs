@@ -925,7 +925,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
 
 - FILTER_COLUMN = { column_name }  
-Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+Specifies the column, that should be used to determine if the rows in the table are obsolete or not. The following data types are allowed for the filter column.
   - Date
   - DateTime
   - DateTime2

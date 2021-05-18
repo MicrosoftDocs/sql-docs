@@ -30,7 +30,7 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 
 | New item | Details |
 |----------|---------|
-
+| Notebooks | Added runs with a parameters option. |
 
 #### Bug fixes in 1.29.0
 

@@ -120,17 +120,6 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                    [ HIDDEN ] [ NOT NULL ][ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES] ,
                 start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
-                   [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
-            DEFAULT constant_expression [WITH VALUES],
-                end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
-                   [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
-            DEFAULT constant_expression [WITH VALUES],
-                start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
-                   [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
-            DEFAULT constant_expression [WITH VALUES],
-                end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
-                   [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
-            DEFAULT constant_expression [WITH VALUES]
         ]
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )
     | DROP
@@ -181,11 +170,6 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | LEDGER = 
-                {
-                  ON ( <ledger_option> [, …n ] ) 
-                | OFF
-                }
             | DATA_DELETION =  
                 {
                       OFF 
@@ -262,20 +246,6 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 {
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ],
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )
-}
-
-<ledger_option>::= 
-{
-    [ LEDGER_VIEW = schema_name.ledger_view_name  [ ( <ledger_view_option> [,...n ] ) ]
-    [ APPEND_ONLY = ON | OFF ]
-}
-
-<ledger_view_option>::= 
-{
-    [ TRANSACTION_ID_COLUMN_NAME = transaction_id_column_name ]
-    [ SEQUENCE_NUMBER_COLUMN_NAME = sequence_number_column_name ]
-    [ OPERATION_TYPE_COLUMN_NAME = operation_type_id column_name]
-    [ OPERATION_TYPE_DESC_COLUMN_NAME = operation_type_desc_column_name ]
 }
 ```
 
@@ -821,7 +791,7 @@ If you specify *partition_scheme_name*, the rules for [CREATE TABLE](../../t-sql
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table does not exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md). Use the `SYSTEM_VERSIONING = ON` argument in conjunction with the `LEDGER = ON` argument to make an existing table an updatable ledger table. Using existing history tables with ledger tables is not allowed. You cannot disable system versioning if a table is an updatable ledger table.
+Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table does not exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1038,53 +1008,6 @@ IF EXISTS
 
 Conditionally drops the column or constraint only if it already exists.
 
-LEDGER = ON ( <ledger_option> [, …n ] ) | OFF
-
-**Applies to:** Azure SQL Database
-
-> [!NOTE]
-> **Permissions**: If the statement creates a ledger table, `ENABLE LEDGER` permission is required.
-
-Indicates whether the table being created is a ledger table (ON) or not (OFF). The default is OFF. If the `APPEND_ONLY = ON` option is specified, the system creates an append-only ledger table allowing only inserting new rows. Otherwise, the system creates an updatable ledger table. An updatable ledger table also requires the `SYSTEM_VERSIONING = ON` argument. An updatable ledger table must also be a system-versioned table. However, an updatable ledger table does not have to be a temporal table (it does not require the `PERIOD FOR SYSTEM_TIME` parameter). If the history table is specified with `SYSTEM_VERSIONING = ON`, it must not reference an existing table.
-
-An updatable ledger table must contain four `GENERATED ALWAYS` columns, exactly one column defined with each of the following arguments:
-- GENERATED ALWAYS AS TRANSACTION_ID START
-- GENERATED ALWAYS AS TRANSACTION_ID END
-- GENERATED ALWAYS AS SEQUENCE_NUMBER START
-- GENERATED ALWAYS AS SEQUENCE_NUMBER END
-
-An append-only ledger table must contain exactly one column defined with each of the following arguments:
-- GENERATED ALWAYS AS TRANSACTION_ID START
-- GENERATED ALWAYS AS SEQUENCE_NUMBER START
-
-If any of the required generated always columns is not defined in the `CREATE TABLE` statement and the statement includes `LEDGER = ON`, the system will automatically attempt to add the column using an applicable column definition from the below list. If there is a name conflict with an already defined column, the system will raise an error.
-- [ledger_start_transaction_id] BIGINT GENERATED ALWAYS AS TRANSACTION_ID START HIDDEN NOT NULL
-- [ledger_end_transaction_id] BIGINT GENERATED ALWAYS AS TRANSACTION_ID END HIDDEN NULL
-- [ledger_start_sequence_number] BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NOT NULL
-- [ledger_end_sequence_number] BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER END HIDDEN NULL
-
-The `<ledger_view_option>` specifies the schema and the name of the [ledger view](/azure/azure-sql/database/ledger-updatable-ledger-tables#ledger-view) the system automatically creates and links to the table. If the option is not specified, the system generates the ledger view name by appending `_Ledger` to the name of the table being created (`database_name.schema_name.table_name`). If a view with the specified or generated name exists, the system will raise an error. If the table is an updatable ledger table, the ledger view is created as a union on the table and its history table.
-Each row in the ledger view represents either the creation or deletion of a row version in the ledger table. The ledger view contains all columns of the ledger table, except the generated always columns listed above. The ledger view also contains the following additional columns:
-
-| Column name | Data type | Description |
-| --- | --- | --- |
-| Specified using the `TRANSACTION_ID_COLUMN_NAME` option. `ledger_transaction_id` if not specified. | bigint | The ID of the transaction that created or deleted a row version. |
-| Specified using the `SEQUENCE_NUMBER_COLUMN_NAME` option. `ledger_sequence_number` if not specified. | bigint | The sequence number of a row-level operation within the transaction on the table. |
-| Specified using the `OPERATION_TYPE_COLUMN_NAME` option. `ledger_operation_type` if not specified. | tinyint | Contains `0` (**INSERT**) or `1` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view containing `0` in this column. Deleting a row from the ledger table produces a new row in the ledger view containing `1` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `1` (**DELETE**) and the other row contains `1` (**INSERT**) in this column. |
-| Specified using the `OPERATION_TYPE_DESC_COLUMN_NAME` option. `ledger_operation_type_desc` if not specified. | nvarchar(128) | Contains `INSERT` or `DELETE`. See above for details. |
-
-Transactions that include creating ledger table are captured in **sys.database_ledger_transactions** view.
-
-`<ledger_option>::=` Specifies a ledger option.
-- `[ LEDGER_VIEW = schema_name.ledger_view_name [ ( <ledger_view_option> [,...n ] ) ]` Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view. 
-- `[ APPEND_ONLY = ON | OFF ]` Specifies whether the ledger table being created is append-only or updatable. The default is `ON`.
-
-`<ledger_view_option>::=` Specifies one or more ledger view options. Each of the ledger view option specifies a name of a column, the system will add to the view, in addition to the columns defined in the ledger table.
-- `[ TRANSACTION_ID_COLUMN_NAME = transaction_id_column_name ]` Specifies the name of the column storing the ID of the transaction that created or deleted a row version. The default column name is `ledger_transaction_id`.
-- `[ SEQUENCE_NUMBER_COLUMN_NAME = sequence_number_column_name ]` Specifies the name of the columns storing the sequence number of a row-level operation within the transaction on the table. The default column name is `ledger_sequence_number`.
-- `[ OPERATION_TYPE_COLUMN_NAME = operation_type_id column_name]` Specifies the name of the columns storing the operation type ID. The default column name is ledger_operation_type.
--` [ OPERATION_TYPE_DESC_COLUMN_NAME = operation_type_desc_column_name ]` Specifies the name of the columns storing the operation type description. The default column name is `ledger_operation_type_desc`.
-
 ## Remarks
 
 To add new rows of data, use [INSERT](../../t-sql/statements/insert-transact-sql.md). To remove rows of data, use [DELETE](../../t-sql/statements/delete-transact-sql.md) or [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). To change the values in existing rows, use [UPDATE](../../t-sql/queries/update-transact-sql.md).
@@ -1193,8 +1116,6 @@ If you've defined any columns in the ALTER TABLE statement to be of a common lan
 
 Adding or altering a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
 
-If the statement converts an existing table to a ledger table, `ENABLE LEDGER` permission is required. If the statement converts an existing ledger table to a regular table (that is not a ledger table), `ALTER LEDGER` permission is required.
-
 ## <a name="Example_Top"></a> Examples
 
 |Category|Featured syntax elements|
@@ -1206,7 +1127,6 @@ If the statement converts an existing table to a ledger table, `ENABLE LEDGER` p
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 |[Online operations](#online)|ONLINE|
 |[System versioning](#system_versioning)|SYSTEM_VERSIONING|
-|[Convert an existing table to a ledger table](#convert_ledger)|LEDGER * LEDGER_VIEW * APPEND_ONLY|
 | &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding Columns and Constraints
@@ -1918,88 +1838,6 @@ ALTER TABLE Department
 ALTER TABLE Department
 DROP PERIOD FOR SYSTEM_TIME ;
 DROP TABLE DepartmentHistory ;
-```
-
-### <a name="convert_ledger"></a>Convert an existing table to a ledger table
-
-The examples in this section assume the two existing tables have been created using the below statements:
-
-```sql
-CREATE SCHEMA [HR];
-GO
-CREATE TABLE [HR].[Employees]
-(
-    EmployeeID INT NOT NULL,
-    Salary Money NOT NULL
-)
-WITH (SYSTEM_VERSIONING = ON, LEDGER = ON);
-GO
-
-CREATE SCHEMA [AccessControl];
-GO
-CREATE TABLE [AccessControl].[KeyCardEvents]
-(
-    EmployeeID INT NOT NULL,
-    AccessOperationDescription NVARCHAR (MAX) NOT NULL,
-    [Timestamp] Datetime2 NOT NULL
-);
-GO
-```
-
-#### A. Convert to an updatable ledger table
-
-The following statement converts the `Employees` table into an updatable ledger table. The statement causes the system to generate the history name for system versioning to automatically add the definitions of the generated always columns to the table (and its history table), and to use the default names of the additional ledger columns in the ledger view.
-
-```sql
-ALTER TABLE [HR].[Employees]
-SET (SYSTEM_VERSIONING = ON, 
-    LEDGER = ON (
-        LEDGER_VIEW = dbo.EmployeesLedger)
-    );
-GO
-```
-
-#### B. Explicitly add generated always columns when converting to an updatable ledger table
-
-The following statements converts the `Employees` table into an updatable ledger table. The statements explicitly add the required generated always columns. Both the history table name and the names of the additional ledger columns in the ledger view are also specified explicitly.
-
-```sql
-ALTER TABLE [HR].[Employees]
-    ADD
-        StartTransactionId BIGINT GENERATED ALWAYS AS TRANSACTION_ID START HIDDEN NOT NULL 
-            DEFAULT 0 WITH VALUES,
-        EndTransactionId BIGINT GENERATED ALWAYS AS TRANSACTION_ID START HIDDEN NULL,
-        StartSeqNum BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NOT NULL 
-            DEFAULT 0 WITH VALUES,
-        EndSeqNum BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NULL;
-GO
-
-ALTER TABLE [HR].[Employees]
-SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),
-    LEDGER = ON (
-        LEDGER_VIEW = [HR].[EmployeesLedger]( 
-            TRANSACTION_ID_COLUMN_NAME = TransactionId,
-            SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
-            OPERATION_TYPE_ID_COLUMN_NAME = OperationId, 
-        OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
-        )
-    );
-GO
-```
-
-#### C. Convert to an append-only ledger table
-
-The following statement converts the `KeyCardEvents` table into an append-only ledger table. It causes the system to automatically add the definitions of the generated always columns to the table and to use the default names of the additional ledger columns in the ledger view.
-
-```sql
-ALTER TABLE [AccessControl].[KeyCardEvents]
-SET (SYSTEM_VERSIONING = ON, 
-    LEDGER = ON (
-        LEDGER_VIEW = [AccessControl].[KeyCardEventsLedger], 
-APPEND_ONLY = ON 
-)
-    );
-GO
 ```
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]

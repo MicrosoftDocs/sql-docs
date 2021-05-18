@@ -64,7 +64,7 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [sys.database_ledger_transaction (Transact-SQL)](../system-catalog-views/sys-database-ledger-transaction-transact-sql.md)
+- [sys.database_ledger_transactions (Transact-SQL)](../system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
 - [sys.database_ledger_blocks (Transact-SQL)](../system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
 - [sys.ledger_table_history (Transact-SQL)](../system-catalog-views/sys-ledger-table-history-transact-sql.md)
 - [sys.ledger_column_history (Transact-SQL)](../system-catalog-views/sys-ledger-column-history-transact-sql.md)

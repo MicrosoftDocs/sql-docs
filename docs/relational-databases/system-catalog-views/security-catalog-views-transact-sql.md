@@ -174,7 +174,7 @@ ms.author: vanto
 
 :::row:::
     :::column:::
-        [sys.database_ledger_transaction](../../relational-databases/system-catalog-views/sys-database-ledger-transaction-transact-sql.md)
+        [sys.database_ledger_transactions](../../relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
     :::column-end:::
     :::column:::
         [sys.database_ledger_blocks](../../relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql.md)

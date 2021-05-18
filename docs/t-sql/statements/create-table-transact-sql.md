@@ -507,7 +507,7 @@ Specifies a column used by the system to automatically record information about 
 | Parameter | Required data type | Required nullability | Description |
 |--|--|--|--|
 | ROW | datetime2 | START: `NOT NULL` <br />END: `NOT NULL` | Either the start time for which a row version is valid (START) or the end time for which a row version is valid (END). Use this argument with the `PERIOD FOR SYSTEM_TIME` argument to create a temporal table. |
-| TRANSACTION_ID | bigint | START: `NOT NULL` <br />END: `NULL` | The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the `sys.database_ledger_transactions` view. <br />**Applies to:** Azure SQL Database. |
+| TRANSACTION_ID | bigint | START: `NOT NULL` <br />END: `NULL` | The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view. <br />**Applies to:** Azure SQL Database. |
 | SEQUENCE_NUMBER | bigint | START: `NOT NULL` <br />END: `NULL` | The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. <br />**Applies to:** Azure SQL Database. |
 
 If you attempt to specify a column that does not meet the above data type or nullability requirements, the system will throw an error. If you do not explicitly specify nullability, the system will define the column as `NULL` or `NOT NULL` per the above requirements.
@@ -981,6 +981,9 @@ LEDGER = ON ( <ledger_option> [, …n ] ) | OFF
 
 Indicates whether the table being created is a ledger table (ON) or not (OFF). The default is OFF. If the `APPEND_ONLY = ON` option is specified, the system creates an append-only ledger table allowing only inserting new rows. Otherwise, the system creates an updatable ledger table. An updatable ledger table also requires the `SYSTEM_VERSIONING = ON` argument. An updatable ledger table must also be a system-versioned table. However, an updatable ledger table does not have to be a temporal table (it does not require the `PERIOD FOR SYSTEM_TIME` parameter). If the history table is specified with `SYSTEM_VERSIONING = ON`, it must not reference an existing table.
 
+A ledger database (a database created with the `LEDGER = ON` option) only allows the creation of ledger tables. Attempts to create a table with `LEDGER = OFF` will raise an error. Each new table by default is created as an updatable ledger table, even if you do not specify `LEDGER = ON`, and will be created with default values for all other parameters.
+
+<a id="generate-always-columns"></a>
 An updatable ledger table must contain four `GENERATED ALWAYS` columns, exactly one column defined with each of the following arguments:
 - GENERATED ALWAYS AS TRANSACTION_ID START
 - GENERATED ALWAYS AS TRANSACTION_ID END
@@ -1007,7 +1010,7 @@ Each row in the ledger view represents either the creation or deletion of a row 
 | Specified using the `OPERATION_TYPE_COLUMN_NAME` option. `ledger_operation_type` if not specified. | tinyint | Contains `0` (**INSERT**) or `1` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view containing `0` in this column. Deleting a row from the ledger table produces a new row in the ledger view containing `1` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `1` (**DELETE**) and the other row contains `1` (**INSERT**) in this column. |
 | Specified using the `OPERATION_TYPE_DESC_COLUMN_NAME` option. `ledger_operation_type_desc` if not specified. | nvarchar(128) | Contains `INSERT` or `DELETE`. See above for details. |
 
-Transactions that include creating ledger table are captured in **sys.database_ledger_transactions**.
+Transactions that include creating ledger table are captured in [**sys.database_ledger_transactions**](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md).
 
 `<ledger_option>::=` Specifies a ledger option.
 - `[ LEDGER_VIEW = schema_name.ledger_view_name [ ( <ledger_view_option> [,...n ] ) ]` Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view. 

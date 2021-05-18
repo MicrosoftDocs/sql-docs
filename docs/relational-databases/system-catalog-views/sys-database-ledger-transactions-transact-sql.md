@@ -1,6 +1,6 @@
 ---
-description: "sys.database_ledger_transaction (Transact-SQL)"
-title: "sys.database_ledger_transaction (Transact-SQL) | Microsoft Docs"
+description: "sys.database_ledger_transactions (Transact-SQL)"
+title: "sys.database_ledger_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2021"
 ms.prod: sql
@@ -13,7 +13,7 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: "=azuresqldb-current"
 ---
-# sys.database_ledger_transaction (Transact-SQL)
+# sys.database_ledger_transactions (Transact-SQL)
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 

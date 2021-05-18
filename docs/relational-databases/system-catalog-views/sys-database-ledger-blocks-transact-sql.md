@@ -33,7 +33,7 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [sys.database_ledger_transaction (Transact-SQL)](sys-database-ledger-transaction-transact-sql.md)
+- [sys.database_ledger_transactions (Transact-SQL)](sys-database-ledger-transactions-transact-sql.md)
 - [sys.ledger_table_history (Transact-SQL)](sys-ledger-table-history-transact-sql.md)
 - [sys.ledger_column_history (Transact-SQL)](sys-ledger-column-history-transact-sql.md)
 - [sys.database_ledger_digest_locations (Transact-SQL)](sys-database-ledger-digest-locations-transact-sql.md)

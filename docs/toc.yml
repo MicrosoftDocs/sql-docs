@@ -12057,8 +12057,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql.md
       - name: sys.database_ledger_digest_locations
         href: relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md
-      - name: sys.database_ledger_transaction
-        href: relational-databases/system-catalog-views/sys-database-ledger-transaction-transact-sql.md
+      - name: sys.database_ledger_transactions
+        href: relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql.md
       - name: sys.database_scoped_credentials
         href: relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md
       - name: sys.database_permissions

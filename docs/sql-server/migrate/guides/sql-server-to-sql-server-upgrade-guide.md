@@ -51,7 +51,7 @@ The following table details all available methods to migrate / upgrade your SQL 
 
 
 > [!NOTE]
-> It's now possible to lift and shift both your [failover cluster instance](https://docs.microsoft.com/azure/azure-sql/migration-guides/virtual-machines/sql-server-failover-cluster-instance-to-sql-on-azure-vm) and [availability group](https://docs.microsoft.com/azure/azure-sql/migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm) solution to SQL Server on Azure VMs using Azure Migrate.
+> It's now possible to lift and shift both your [failover cluster instance](/azure/azure-sql/migration-guides/virtual-machines/sql-server-failover-cluster-instance-to-sql-on-azure-vm) and [availability group](/azure/azure-sql/migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm) solution to SQL Server on Azure VMs using Azure Migrate.
 
 ## Considerations for upgrade
 

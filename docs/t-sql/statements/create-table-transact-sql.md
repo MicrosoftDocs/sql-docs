@@ -1896,6 +1896,8 @@ CREATE TABLE [HR].[Employees]
     Salary Money NOT NULL
 )
 GO
+```
+
 ## Next steps
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)

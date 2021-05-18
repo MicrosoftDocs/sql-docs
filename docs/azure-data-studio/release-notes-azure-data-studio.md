@@ -32,9 +32,9 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 |----------|---------|
 
 
-
-
 #### Bug fixes in 1.29.0
+
+Some of the bug fixes for the May 2021 release.
 
 | New Item | Details |
 |----------|---------|
@@ -56,7 +56,7 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 | Notebooks | Fixed an issue with selecting notebooks from the notebooks viewlet recentering the viewlet vertically. |
 | Notebooks | Fixed an issue with not connecting to SQL Server from SQL Notebook. |
 | Notebooks | Fixed an issue with the notebook icons being sized incorrectly. |
-| PowerShell | Fixed an issue with using the Cloud Shell (PowerShell).|
+| PowerShell | Fixed an issue with using the Cloud Shell (PowerShell). |
 | SQL Database Project | Fixed an issue with showing an unnecessary horizontal scrollbar in the *create project from database* dialog SQL Database Project dashboard update. |
 
 For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=3&q=is%3Aissue+is%3Aclosed+milestone%3A%22May+2021+Release%22).

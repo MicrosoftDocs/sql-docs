@@ -1880,8 +1880,8 @@ WITH (
 );
 GO
 ```
-The following example creates a ledger database in Azure SQL Database and an updatable ledger table using the default settings. Creating an updatable ledger table in a ledger database does not require using `WITH (SYSTEM_VERSIONING = ON, LEDGER = ON);`.
 
+The following example creates a ledger database in Azure SQL Database and an updatable ledger table using the default settings. Creating an updatable ledger table in a ledger database does not require using `WITH (SYSTEM_VERSIONING = ON, LEDGER = ON);`.
 
 ```sql
 CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;

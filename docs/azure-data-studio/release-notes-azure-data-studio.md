@@ -26,44 +26,42 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 - Release number: 1.29.0
 - Release date: May 19, 2021
 
-#### What's new in 1.28.0
+#### What's new in 1.29.0
 
 | New item | Details |
 |----------|---------|
-| Extension update | [Kusto (KQL)](extensions/kusto-extension.md) |
-| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
-| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
-| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
-| Notebook features | Added *Add Notebook* and *Remove Notebook commands* |
 
-#### Bug fixes in 1.28.0
+
+
+
+#### Bug fixes in 1.29.0
 
 | New Item | Details |
 |----------|---------|
-| Database | The title does not change when the database connection changes. |
-| Extensions | No longer prompting user to install 3rd party extensions. |
-| General Azure Data Studio | Account button in sidebar is stuck loading. |
-| General Azure Data Studio | "Run With Parameters" silently fails if parameters cell is empty/invalid. |
-| General Azure Data Studio | "Run with Parameters" doesn't handle multiple parameters on the same line. |
-| Notebooks | Notebook Icons are sized incorrectly. |
-| General Azure Data Studio | Unable to connect to Azure. |
-| General Azure Data Studio | Wrong line number in the output. |
-| General Azure Data Studio | Clicking connect on Azure server in Azure viewlet errors out. |
-| General Azure Data Studio | Loading Spinner isn't animated. |
-| General Azure Data Studio | Links inserted in split view/MD view are inserted as a list item. |
-| General Azure Data Studio | Issue reporter blank. |
-| Extensions | Extensions view has a lot of filter options not applicable to Azure Data Studio. |
-| General Azure Data Studio | Get azure subscriptions API is failing across Azure Data Studio. |
-| General Azure Data Studio | Wrong event prefix. |
-| General Azure Data Studio | Convert default tables from Excel, Word, and OneNote into markdown tables. |
-| Notebooks | Selecting Notebook in Notebooks Viewlet Recenters Viewlet Vertically. |
-| Notebooks | Can't connect to SQL Server from SQL Notebook. |
-| PowerShell | Cloud Shell (PowerShell) is broken.|
-| SQL Database Project | Unnecessary horizontal scrollbar in the *create project from database* dialog SQL Database Project dashboard update. |
+| Database | Fixed an issue with the title not changing when the database connection changes. |
+| Extensions | Fixed an issue with no longer prompting the user to install 3rd party extensions. |
+| General Azure Data Studio | Fixed an issue with the account button in the sidebar getting stuck loading. |
+| General Azure Data Studio | Fixed an issue with with the *Run With Parameters* silently failing if the parameters cell is empty or invalid. |
+| General Azure Data Studio | Fixed an issue with with the *Run With Parameters* not handling multiple parameters on the same line. |
+| General Azure Data Studio | Fixed an issue with being unable to connect to Azure. |
+| General Azure Data Studio | Fixed an issue with the wrong line number showing up in the output. |
+| General Azure Data Studio | Fixed an issue with erroring out when connecting to an Azure server in the Azure viewlet. |
+| General Azure Data Studio | Fixed an issue with the loading spinner not being animated. |
+| General Azure Data Studio | Fixed an issue with the links inserted in the split view/MD view not being inserted as a list item. |
+| General Azure Data Studio | Fixed an issue with the *Issue Reporter* being blank. |
+| Extensions | Fixed an issue with the extensions view having a lot of filter options that aren't applicable to Azure Data Studio. |
+| General Azure Data Studio | Fixed an issue with getting the Azure subscriptions API failing across Azure Data Studio. |
+| General Azure Data Studio | Fixed an issue with the wrong event prefix. |
+| General Azure Data Studio | Fixed an issue with converting the default tables from Excel, Word, and OneNote into markdown tables. |
+| Notebooks | Fixed an issue with selecting notebooks from the notebooks viewlet recentering the viewlet vertically. |
+| Notebooks | Fixed an issue with not connecting to SQL Server from SQL Notebook. |
+| Notebooks | Fixed an issue with with the notebook icons being sized incorrectly. |
+| PowerShell | Fixed an issue with using the Cloud Shell (PowerShell).|
+| SQL Database Project | Fixed an issue with showing an unnecessary horizontal scrollbar in the *create project from database* dialog SQL Database Project dashboard update. |
 
 For the full list of the bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=3&q=is%3Aissue+is%3Aclosed+milestone%3A%22May+2021+Release%22).
 
-#### Known issues in 1.28.0
+#### Known issues in 1.29.0
 
 For the list of known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 

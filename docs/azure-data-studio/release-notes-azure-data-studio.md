@@ -34,8 +34,6 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 
 #### Bug fixes in 1.29.0
 
-Some of the bug fixes for the May 2021 release.
-
 | New Item | Details |
 |----------|---------|
 | Database | Fixed an issue with the title not changing when the database connection changes. |

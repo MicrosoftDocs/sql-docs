@@ -32,10 +32,16 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 
 Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table. 
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 > [!NOTE]
 > MERGE is currently in preview for Azure Synapse Analytics. 
 > Change the product version selector for important content on MERGE specific to Azure Synapse Analytics. To change document version to Azure Synapse Analytics: [Azure Synapse Analytics](merge-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
-  
+::: moniker-end
+::: moniker range="=azure-sqldw-latest"
+> [!NOTE]
+> MERGE is currently in preview for Azure Synapse Analytics. 
+::: moniker-end
+
 **Performance Tip:** The conditional behavior described for the MERGE statement works best when the two tables have a complex mixture of matching characteristics. For example, inserting a row if it doesn't exist, or updating a row if it matches. When simply updating one table based on the rows of another table, improve the performance and scalability with basic INSERT, UPDATE, and DELETE statements. For example:  
   
 ```sql

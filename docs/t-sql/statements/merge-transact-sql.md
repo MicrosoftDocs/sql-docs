@@ -2,7 +2,7 @@
 description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/27/2021"
+ms.date: "05/17/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -33,7 +33,8 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table. 
 
 > [!NOTE]
-> MERGE is currently in preview for Azure Synapse Analytics.
+> MERGE is currently in preview for Azure Synapse Analytics. 
+> Change the product version selector for important content on MERGE specific to Azure Synapse Analytics. To change document version to Azure Synapse Analytics: [Azure Synapse Analytics](merge-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
   
 **Performance Tip:** The conditional behavior described for the MERGE statement works best when the two tables have a complex mixture of matching characteristics. For example, inserting a row if it doesn't exist, or updating a row if it matches. When simply updating one table based on the rows of another table, improve the performance and scalability with basic INSERT, UPDATE, and DELETE statements. For example:  
   
@@ -96,6 +97,8 @@ MERGE
     <search_condition> 
 ```
 
+::: moniker range="=azure-sqldw-latest"
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ```syntaxsql
@@ -115,6 +118,8 @@ MERGE
 ;  -- The semi-colon is required, or the query will return a syntax error. 
 ```
 
+::: moniker-end
+
 ## Arguments
 
 #### WITH \<common_table_expression>  
@@ -125,7 +130,7 @@ Specifies the number or percentage of affected rows. *expression* can be either 
   
 The TOP clause applies after the entire source table and the entire target table  join and the joined rows that don't qualify for an insert, update, or delete action are removed. The TOP clause further reduces the number of joined rows to the specified value. The insert, update, or delete actions apply to the remaining joined rows in an unordered way. That is, there's no order in which the rows are distributed among the actions defined in the WHEN clauses. For example, specifying TOP (10) affects 10 rows. Of these rows, 7 may be updated and 3 inserted, or 1 may be deleted, 5 updated, and 4 inserted, and so on.  
   
-Because the MERGE statement does a full table scan of both the source and target tables, I/O performance is sometimes affected when using the TOP clause to modify a large table by creating multiple batches. In this scenario, it's important to ensure that all successive batches target new rows.  
+Without filters on the source table, the MERGE statement may perform a table scan or clustered index scan on the source table, as well as a table scan  or clustered index scan of target table. Therefore, I/O performance is sometimes affected even when using the TOP clause to modify a large table by creating multiple batches. In this scenario, it's important to ensure that all successive batches target new rows.  
   
 #### *database_name*  
 The name of the database in which *target_table* is located.  
@@ -140,7 +145,11 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
   
 *target_table* can't be a remote table. *target_table* can't have any rules defined on it.  
 
-Hints can be specified as a <merge_hint>. In some scenarios where unique keys are expected to be both inserted and updated by the MERGE, specifying the HOLDLOCK will prevent against unique key violations. For more information on HOLDLOCK, see [Hints](../queries/hints-transact-sql-table.md). Note that merge_hints are not supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+Hints can be specified as a <merge_hint>. 
+
+::: moniker range="=azure-sqldw-latest"
+Note that merge_hints are not supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+::: moniker-end
   
 #### [ AS ] *table_alias*  
 An alternative name to reference a table for the *target_table*.  
@@ -230,6 +239,9 @@ Specifies the search conditions to specify \<merge_search_condition> or \<clause
 Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
    
 ## Remarks
+
+::: moniker range="=azure-sqldw-latest"
+
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
@@ -315,6 +327,8 @@ Specifies the graph match pattern. For more information about the arguments for 
 > go
 > ```   
 
+::: moniker-end
+
 At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable can't be updated more than once in the same MATCHED clause.  
   
 Any insert, update, or delete action specified on the target table by the MERGE statement are limited by any constraints defined on it, including any cascading referential integrity constraints. If IGNORE_DUP_KEY is ON for any unique indexes on the target table, MERGE ignores this setting.  
@@ -353,10 +367,23 @@ By using the MERGE statement, you can replace the individual DML statements with
 
 To improve the performance of the MERGE statement, we recommend the following index guidelines:
 
-- Create an index on the join columns in the source table that is unique and covering.
-- Create a unique clustered index on the join columns in the target table.
+- Create an index on the join columns in the source table that is unique and has keys covering the join logic to the target table. Create a unique clustered index on the join columns in the target table.
+  - These two sets indexes ensure that the join keys are unique and the data in the tables is sorted. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
+- Avoid tables with columnstore indexes as the target of MERGE statements. As with any UPDATEs, you may find performance better with columnstore indexes by updating a staged rowstore table, then performing a batched DELETE and INSERT, instead of an UPDATE or MERGE.
 
-These indexes ensure that the join keys are unique and the data in the tables is sorted. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
+### Concurrency considerations for MERGE
+
+In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDATE, and DELETE statements. However, MERGE still executes INSERT, UPDATE, and DELETE independently. It may be more efficient to write discrete INSERT, UPDATE, and DELETE statements for some application needs. At scale, MERGE may introduce complicated concurrency issues, contribute to blocking, and require advanced troubleshooting. Only experienced users should use MERGE for large scale applications.
+
+MERGE statements are recommended in (but not limited to) the following scenarios:
+
+1. ETL operations involving large row counts be executed during a time when other concurrent operations are *not* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
+1. Complex operations involving small row counts and transactions unlikely to execute for extended duration.
+1. Complex operations involving user tables where indexes can be designed to ensure optimal execution plans, avoiding table scans and lookups in favor of index scans or - ideally - index seeks.
+
+Other considerations for concurrency:
+
+1. In some scenarios where unique keys are expected to be both inserted and updated by the MERGE, specifying the HOLDLOCK will prevent against unique key violations. HOLDLOCK is a synonym for the SERIALIZABLE transaction isolation level, which does not allow for other concurrent transactions to modify data that this transaction has read.  SERIALIZABLE is the safest isolation level but provides for the least concurrency with other transactions that retains locks on ranges of data to prevent phantom rows from being inserted or updated while reads are in progress. For more information on HOLDLOCK, see [Hints](../queries/hints-transact-sql-table.md) and [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md).
 
 ### JOIN best practices
 
@@ -404,16 +431,6 @@ It is common to use the TOP clause to perform data manipulation language (DML) o
   - Use an additional condition in the WHEN MATCHED clause and SET logic to verify the same row cannot be updated twice. 
 
 Because the TOP clause is only applied after these clauses are applied, each execution either inserts one genuinely unmatched row or updates one existing row.
-
-### Concurrency considerations for MERGE
-
-In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDATE, and DELETE statements. However, MERGE still executes INSERT, UPDATE, and DELETE independently. However, because of logic involved in comparison for the source query and target table, MERGE statements are recommended in (but not limited to) the following scenarios:
- 
-1. ETL operations involving large row counts be executed during a time when other concurrent operations are *not* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
-1. Complex operations involving small row counts. 
-1. Complex operations involving user tables where indexes can be designed to ensure optimal execution plans, avoiding table scans and lookups in favor of index scans or - ideally - index seeks.
-1. Scenarios requiring data UPDATE where the target table does not have a columnstore index. Columnstore indexes in general do not perform well with UPDATE statements, where a DELETE followed by an INSERT is likely to perform better.
-
 
 ### Bulk Load best practices
 

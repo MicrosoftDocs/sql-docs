@@ -38,7 +38,30 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 
 #### Bug fixes in 1.28.0
 
-For the list of the bug fixes addressed for the April 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22).
+| New Item | Details |
+|----------|---------|
+| Database | The title does not change when the database connection changes. |
+| Extensions | No longer prompting user to install 3rd party extensions. |
+| General Azure Data Studio | Account button in sidebar is stuck loading. |
+| General Azure Data Studio | "Run With Parameters" silently fails if parameters cell is empty/invalid. |
+| General Azure Data Studio | "Run with Parameters" doesn't handle multiple parameters on the same line. |
+| Notebooks | Notebook Icons are sized incorrectly. |
+| General Azure Data Studio | Unable to connect to Azure. |
+| General Azure Data Studio | Wrong line number in the output. |
+| General Azure Data Studio | Clicking connect on Azure server in Azure viewlet errors out. |
+| General Azure Data Studio | Loading Spinner isn't animated. |
+| General Azure Data Studio | Links inserted in split view/MD view are inserted as a list item. |
+| General Azure Data Studio | Issue reporter blank. |
+| Extensions | Extensions view has a lot of filter options not applicable to Azure Data Studio. |
+| General Azure Data Studio | Get azure subscriptions API is failing across Azure Data Studio. |
+| General Azure Data Studio | Wrong event prefix. |
+| General Azure Data Studio | Convert default tables from Excel, Word, and OneNote into markdown tables. |
+| Notebooks | Selecting Notebook in Notebooks Viewlet Recenters Viewlet Vertically. |
+| Notebooks | Can't connect to SQL Server from SQL Notebook. |
+| PowerShell | Cloud Shell (PowerShell) is broken.|
+| SQL Database Project | Unnecessary horizontal scrollbar in the *create project from database* dialog SQL Database Project dashboard update. |
+
+For the full list of the bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=3&q=is%3Aissue+is%3Aclosed+milestone%3A%22May+2021+Release%22).
 
 #### Known issues in 1.28.0
 
@@ -163,7 +186,7 @@ November 12, 2020 &nbsp; / &nbsp; version: 1.24.0
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Azure Arc extension | [Known Issue:](https://github.com/microsoft/azuredatastudio/issues/13319) The "Script to Notebook" button for Arc MIAA & PG deployments does not do field validation before scripting the notebook. This means that if users enter the password wrong in the password confirm inputs then they may end up with a notebook that has the wrong value for the password.| The "Deploy" button works as expected though so users should use that instead. |
-| Object Explorer | Releases of ADS before 1.24.0 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in Azure Data Studio with Azure Synapse Analytics serverless SQL pool, you need to use Azure Data Studio 1.24.0 or later. |
+| Object Explorer | Releases of Azure Data Studio before 1.24.0 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in Azure Data Studio with Azure Synapse Analytics serverless SQL pool, you need to use Azure Data Studio 1.24.0 or later. |
 
 You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio) for other known issues and to provide feedback to the product team.
 
@@ -263,7 +286,7 @@ June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
 | :----- | :------ |
 | Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL Database connection, Azure Postgres, and more. |
 | New notebook features | &bull; &nbsp; New Notebook toolbar <br/> &bull; &nbsp; New Edit Cell toolbar <br/> &bull; &nbsp; Python dependencies wizard UX updates <br/> &bull; &nbsp; Improved spacing across notebooks |
-| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
+| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in Azure Data Studio. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
 | [Machine Learning Extension improvements](./extensions/machine-learning-extension.md) | Now supports Azure SQL Managed Instance. |
 | Data Virtualization extension improvements | Now supports MongoDB and Teradata |
 | Postgres extension bug fixes | Fixed Azure MFA |
@@ -579,7 +602,7 @@ April 18, 2019 &nbsp; / &nbsp; version: 1.6.0
 | :----- | :------ |
 | Renamed **Servers** tab to **Connections** | |
 | Moved Azure Resource Explorer as an Azure viewlet under Connections | Users can now view their Azure SQL instances through Azure viewlet in the Connections view and expand to view objects under each server or database.|
-| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
+| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in Azure Data Studio when Azure Data Studio is started again |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -614,11 +637,11 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 ### Known Issues
 - [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Clicking Run on Cell Before Kernel is Ready for Spark Results in Fatal Error 
 **Workaround:** Wait until kernels are loaded until running any cells
-- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ADS launched from SSMS using SQL auth - prompts user for password 
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): Azure Data Studio launched from SSMS using SQL auth - prompts user for password 
 **Workaround:** Use Windows Auth for now. 
 - [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Unable to install SQL notebook feature <br/>
 **Workaround:** Follow workaround steps [here](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
-- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio can't be Opened Directly from Downloads Folder (Mac) <br />
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio can't be Opened Directly from DownloAzure Data Studio Folder (Mac) <br />
 **Workaround:** Restart computer after unzipping the app. Will be investigated. 
 - [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Notebook Save As loses connection context <br />
 **Workaround:** Will be fixed in next release. 

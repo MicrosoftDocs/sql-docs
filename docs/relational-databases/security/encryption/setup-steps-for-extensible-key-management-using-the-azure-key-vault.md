@@ -442,6 +442,17 @@ For a note about the minimum permission levels needed for each action in this se
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
+  
+  Starting with updated version 1.0.5.0 of SQL Server connector you could refer to one specific key version in the Azure key vault
+    ```sql  
+    CREATE ASYMMETRIC KEY EKMSampleASYKey
+    FROM PROVIDER [AzureKeyVault_EKM]  
+    WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0/1a4d3b9b393c4678831ccc60def75379',  
+    CREATION_DISPOSITION = OPEN_EXISTING; 
+    ```
+  Where '1a4d3b9b393c4678831ccc60def75379' represents the specific version of the key that will be used. With this, it doesn't matter if you update the key with a new version, it will always attempt to use the 1a4d3b9b393c4678831ccc60def75379 version for DB operations, however, you need: 
+  - Create "SQL Server Cryptographic Provider" key on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\".
+  - Delegate access permissions on the "SQL Server Cryptographic Provider" key to the user account running the SQL Server database engine service.
 
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 
@@ -481,8 +492,7 @@ For a note about the minimum permission levels needed for each action in this se
     CREATE DATABASE ENCRYPTION KEY
     WITH ALGORITHM = AES_256
     ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
-    ```
-  
+    ``` 
 1. Encrypt the test database. Enable TDE by setting ENCRYPTION ON.
 
      ```sql  

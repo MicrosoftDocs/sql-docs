@@ -418,7 +418,7 @@ To improve query performance, we recommend the following parameterization guidel
 
 - Parameterize all literal values in the `ON <merge_search_condition>` clause and in the the `WHEN` clauses of the MERGE statement. For example, you can incorporate the MERGE statement into a stored procedure replacing the literal values with appropriate input parameters.
 - If you cannot parameterize the statement, create a plan guide of type `TEMPLATE` and specify the `PARAMETERIZATION FORCED` query hint in the plan guide. For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
-- If MERGE statements are executed frequently on the database, consider setting the PARAMETERIZATION option on the database to FORCED. Use caution when setting this option. The `PARAMETERIZATION` option is a database-level setting and affects how all queries against the database are processed. For more information, see [Forced Parameterization](../../relational-databases/query-processing-architecture-guide#ForcedParam).
+- If MERGE statements are executed frequently on the database, consider setting the PARAMETERIZATION option on the database to FORCED. Use caution when setting this option. The `PARAMETERIZATION` option is a database-level setting and affects how all queries against the database are processed. For more information, see [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam).
 
 ### TOP Clause best practices
 

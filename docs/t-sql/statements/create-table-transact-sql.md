@@ -501,7 +501,7 @@ In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specifi
 GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER  } { START | END } [ HIDDEN ] [ NOT NULL ] 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) vs [temporal tables](../../relational-databases/tables/temporal-tables.md).
+Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) and [temporal tables](../../relational-databases/tables/temporal-tables.md).
 
 
 | Parameter | Required data type | Required nullability | Description |
@@ -979,7 +979,7 @@ LEDGER = ON ( <ledger_option> [, …n ] ) | OFF
 > [!NOTE]
 > **Permissions**: If the statement creates a ledger table, `ENABLE LEDGER` permission is required.
 
-Indicates whether the table being created is a ledger table (ON) or not (OFF). The default is OFF. If the `APPEND_ONLY = ON` option is specified, the system creates an append-only ledger table allowing only inserting new rows. Otherwise, the system creates an updatable ledger table. An updatable ledger table also requires the `SYSTEM_VERSIONING = ON` argument. An updatable ledger table must also be a system-versioned table. However, an updatable ledger table does not have to be a temporal table (it does not require the `PERIOD FOR SYSTEM_TIME` parameter). If the history table is specified with `SYSTEM_VERSIONING = ON`, it must not reference an existing table.
+Indicates whether the table being created is a ledger table (ON) or not (OFF). The default is OFF. If the `APPEND_ONLY = ON` option is specified, the system creates an append-only ledger table allowing only inserting new rows. Otherwise, the system creates an updatable ledger table. An updatable ledger table also requires the `SYSTEM_VERSIONING = ON` argument. An updatable ledger table must also be a system-versioned table. However, an updatable ledger table does not have to be a temporal table (it does not require the `PERIOD FOR SYSTEM_TIME` parameter). If the history table is specified with `LEDGER = ON` and `SYSTEM_VERSIONING = ON`, it must not reference an existing table.
 
 An updatable ledger table must contain four `GENERATED ALWAYS` columns, exactly one column defined with each of the following arguments:
 - GENERATED ALWAYS AS TRANSACTION_ID START
@@ -1011,7 +1011,7 @@ Transactions that include creating ledger table are captured in **sys.database_l
 
 `<ledger_option>::=` Specifies a ledger option.
 - `[ LEDGER_VIEW = schema_name.ledger_view_name [ ( <ledger_view_option> [,...n ] ) ]` Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view. 
-- `[ APPEND_ONLY = ON | OFF ]` Specifies whether the ledger table being created is append-only or updatable. The default is `ON`.
+- `[ APPEND_ONLY = ON | OFF ]` Specifies whether the ledger table being created is append-only or updatable. The default is `OFF`.
 
 <a id="ledger-view-option"></a>
 `<ledger_view_option>::=` Specifies one or more ledger view options. Each of the ledger view option specifies a name of a column, the system will add to the view, in addition to the columns defined in the ledger table.
@@ -1877,7 +1877,22 @@ WITH (
 );
 GO
 ```
+The following example creates a ledger database in Azure SQL Database and an updatable ledger table using the default settings. Creating an updatable ledger table in a ledger database does not require using `WITH (SYSTEM_VERSIONING = ON, LEDGER = ON);`.
 
+
+```sql
+CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
+GO
+
+CREATE SCHEMA [HR];
+GO
+
+CREATE TABLE [HR].[Employees]
+(
+    EmployeeID INT NOT NULL,
+    Salary Money NOT NULL
+)
+GO
 ## Next steps
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)

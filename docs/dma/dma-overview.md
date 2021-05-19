@@ -79,6 +79,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 on Windows
+- SQL Server 2019
 
 **Targets**
 

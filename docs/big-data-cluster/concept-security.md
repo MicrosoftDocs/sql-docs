@@ -97,6 +97,10 @@ Cluster admin password:
 > 
 > [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
+## Manage key versions
+
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] allows for key version management for SQL Server and HDFS using encryption zones. For more information, see [Key versions in Big Data Cluster](big-data-cluster-key-versions.md).
+
 ## Next steps
 
 [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

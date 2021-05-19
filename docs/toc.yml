@@ -155,6 +155,8 @@ items:
         href: big-data-cluster/active-directory-dns-reconciliation.md
       - name: Manage user access
         href: big-data-cluster/manage-user-access.md
+      - name: Key Versions
+        href: big-data-cluster/big-data-cluster-key-versions.md 
     - name: Private cluster
       items:
       - name: Deploy

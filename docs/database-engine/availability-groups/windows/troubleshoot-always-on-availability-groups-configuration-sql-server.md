@@ -126,9 +126,9 @@ ms.author: chadam
        ORDER BY Permission,grantor, grantee;   
     ```  
 
-6.  Ensure correct server name is used in the endpoint URL
+6. Ensure correct server name is used in the endpoint URL
 
-    For server name in an endpoint URL, it is recommended to use fully qualified domain name (FQDN), although you can use any name that uniquely identifies the machine. The server address can be a Netbios name (if the systems are in the same domain), a fully qualified domain name (FQDN), or an IP address (preferably, a static IP address). Using the fully qualified domain name is the recommended option. For more information, see Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server).
+    For server name in an endpoint URL, it is recommended to use fully qualified domain name (FQDN), although you can use any name that uniquely identifies the machine. The server address can be a Netbios name (if the systems are in the same domain), a fully qualified domain name (FQDN), or an IP address (preferably, a static IP address). Using the fully qualified domain name is the recommended option. 
 
     If you have already defined an Endpoint URL, you can query it by using:
 
@@ -166,7 +166,7 @@ ms.author: chadam
 - If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections.
 - If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
 Run the following PowerShell script to examine for disabled inbound traffic rules
-- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
    ```powershell
    Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
@@ -195,20 +195,98 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 4. Ensure the endpoint is defined so it correctly matches the IP/port that AG is using.
 5. Check whether the network service account has CONNECT permission to the endpoint.
 6. Check for possible name resolution issues
-7. Ensure your SQL Server is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into fixed issues.
+7. Ensure your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into fixed issues.
 
 ## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
 
- Verify the following configuration values settings and correct them if necessary.  
+1. Ensure that you have set up read-only routing by following [Configure read-only routing](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) document.
+
+2. Ensure Client Driver Support
+
+    The client application must use a client providers that support `ApplicationIntent` parameter. See [Driver and client connectivity support for availability groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-client-connectivity-sql-server)
+
+   > [!NOTE]  
+   > If you are connecting to a DNN Listener, the provider must also support `MultiSubnetFailover` parameter
+
+3. Ensure connection string properties are set correctly
+
+    For read-only routing to work properly, your client application must use these properties in the connection string:
   
-|On...|Action|Comments|Link|  
-|---------|------------|--------------|----------|  
-|Current primary replica|Ensure that the availability group listener is online.|**To verify whether the listener is online:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **To restart an offline listener:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|Current primary replica|Ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting a readable secondary replica.|**To identify readable secondary replicas:** sys.availability_replicas  (**secondary_role_allow_connections_desc** column)<br /><br /> **To view a read-only routing list:** sys.availability_read_only_routing_lists<br /><br /> **To change a read-only routing list:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|Every replica in the read_only_routing_list|Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port.|-|[Configure a Windows Firewall for Database Engine Access](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Every replica in the read_only_routing_list|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, verify that:<br /><br /> SQL Server remote connectivity is enabled.<br /><br /> TCP/IP is enabled.<br /><br /> The IP addresses are configured correctly.|-|[View or Change Server Properties &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|Every replica in the read_only_routing_list|Ensure that the READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) contains the correct fully-qualified domain name (FQDN) and port number.|-|[Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|Client system|Verify that the client driver supports read-only routing.|-|[Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
+   - A database name that belongs to AG: `Initial Catalog=<db_in_avail_group>`
+   - An availability group listener name
+      - If you are using DNN, you must specify DNN listener name and DNN port number `<DNN name, DNN port>`
+   - ApplicationIntent set to ReadOnly `ApplicationIntent=ReadOnly`
+   - MultiSubnetFailover set to true is required for Distributed network name (DNN)
+
+    ### Example for a virtual network name (VNN) listener:
+
+   `Server=tcp:VNN_AgListener,1433;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True`
+
+   ### Example for a distributed network name (DNN) listener:
+
+   `Server=tcp:DNN_AgListener,DNN_Port;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True`
+
+   > [!NOTE]  
+   > If you are using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD the `-S` switch specifies the server name, whereas lower-case `-s` parameter specifies column separator.
+   > </br>Example: `sqlcmd -S Listerne1,port -E -d AgDb1 -K ReadOnly -M`
+
+4. Ensure that the availability group listener is online. To ensure that the availability group listener is online run the following query on the primary replica: 
+
+    ```sql
+   SELECT * FROM sys.dm_tcp_listener_states;
+    ```
+
+   If you find the listener is offline you can attempt to bring it online using a command like this:
+
+   ```sql
+   ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';
+   ```
+
+5. Ensure READ_ONLY_ROUTING_LIST is correctly populated. On Primary replica, ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting a readable secondary replica.
+
+   ```sql
+   SELECT replica_id, replica_server_name, secondary_role_allow_connections_desc, read_only_routing_url FROM sys.availability_replicas;   
+   ```
+
+   To view a read-only routing list:
+
+   ```sql
+   SELECT * FROM sys.availability_read_only_routing_lists;
+   ```
+
+   To change a read-only routing list you can use a query like this:
+
+   ```sql
+   ALTER AVAILABILITY GROUP [AG1]   
+   MODIFY REPLICA ON  
+   N'COMPUTER02' WITH   
+   (PRIMARY_ROLE (READ_ONLY_ROUTING_LIST=('COMPUTER01','COMPUTER02')));  
+   ```
+  
+   For more information see [Configure read-only routing for an availability group - SQL Server Always On](configure-read-only-routing-for-an-availability-group-sql-server.md)
+
+6. Check that READ_ONLY_ROUTING_URL port is open. Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port. Configure a Windows Firewall for database engine access on every replica in the read_only_routing_list
+
+   >[!NOTE]
+   > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you must ensure the network security group (NSG) allows the traffic to endpoint port. Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+
+7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
+   - [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)
+   - [sys.availability_replicas (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)
+   - [ALTER AVAILABILITY GROUP (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-availability-group-transact-sql)
+
+8. Ensure proper SQL Server Networking configuration in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.
+
+   Verify on every replica in the read_only_routing_list that:
+   - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remote connectivity is enabled
+   - TCP/IP is enabled
+   - The IP addresses are configured correctly
+
+    See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port) and [View or Change Server Properties (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server)
+
+    > [!NOTE]
+    > You can quickly verify all of these are properly configured if you can connect from a client machine using target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using "TCP:instance" syntax.
+
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

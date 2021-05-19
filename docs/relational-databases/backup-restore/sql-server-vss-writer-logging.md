@@ -14,13 +14,12 @@ ms.author: gfourrat
 # SQL Server VSS Writer logging
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-## Introduction
-
-As [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md) describes in depth, [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] can be involved in VSS (Volume Shadow Copy Service) backup and restore operations through its dedicated SQL Writer service. The service would report execution errors to Windows Application Event Logs with a `SQLWRITER` event source, but up until [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], it had no dedicated activity log. It could make investigations against [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] as a participant in VSS operations challenging. This article describes the new log introduced by [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] to provide better visibility on its SQLWriter operations.
+This article describes the new log introduced by [!INCLUDEsssql19-md] to provide better visibility on its SQLWriter operations.
 
 ## Overview
 
-[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduces a new Logging feature for its VSS  Writer `SQLWriter` service. Its main characteristics are:
+As [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md) describes in depth, [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] can be involved in VSS (Volume Shadow Copy Service) backup and restore operations through its dedicated SQL Writer service. The service would report execution errors to Windows Application Event Logs with a `SQLWRITER` event source, but up until [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], it had no dedicated activity log. It could make investigations against [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] as a participant in VSS operations challenging. 
+[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduces a new logging feature for its VSS  Writer `SQLWriter` service. Its main characteristics are:
 
 - It's on by default
 - It's system-wide (it will trace SQL Writer activity against all SQL Server instances running on the server)

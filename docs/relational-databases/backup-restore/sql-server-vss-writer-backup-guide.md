@@ -16,18 +16,7 @@ ms.author: chadam
 
 SQL Server provides support for Volume Shadow Copy Service (VSS) by providing a writer (the SQL writer) so that a third party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the VSS framework.
 
-
-## Introduction
-
-SQL Server provides support for creating snapshots from SQL Server data using Volume Shadow Copy Service (VSS). This is accomplished by providing a VSS compliant writer (the SQL writer) so that a third party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the context of the VSS framework.
-
-## Definition of Terms
-
-- **Virtual Device Interface**: SQL Server provides an application programming interface called Virtual Device Interface (VDI) that helps independent software vendors to integrate SQL Server into their products by providing support for backup and restore operations. These APIs are engineered to provide maximum reliability and performance, and support the full range of SQL Server backup and restore functionality, including the full range of hot and snapshot backup capabilities. For more information, see [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/download/details.aspx?id=17282). 
-
-- **Requestor**: A process (either automated or GUI) that requests that one or more snapshot sets be taken of one or more original volumes. In this paper, a requestor is also used to imply a backup application that is creating a snapshot of SQL Server databases.
-
-## About VSS
+## Infrastructure of VSS
 
 VSS provides the system infrastructure for running VSS applications on Windows systems. Though largely transparent to both user and developer, VSS does the following:
 
@@ -51,17 +40,19 @@ VSS provides coordination between these parties:
 
 This diagram shows all the components participating in a typical VSS snapshot activity. In such a scenario, SQL Server (including the SQL writer) is acting as a writer in one of the Writer boxes.  Other such writers might be Exchange Server, etc.
 
-In the rest of this document, it is assumed that the reader is familiar with the terms of the VSS framework.  See the documentation on [Volume Shadow Copy Service](/windows/win32/vss/volume-shadow-copy-service-overview) for details.
+- **Virtual Device Interface**: SQL Server provides an application programming interface called Virtual Device Interface (VDI) that helps independent software vendors to integrate SQL Server into their products by providing support for backup and restore operations. These APIs are engineered to provide maximum reliability and performance, and support the full range of SQL Server backup and restore functionality, including the full range of hot and snapshot backup capabilities. For more information, see [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/download/details.aspx?id=17282). 
 
-## About SQL Writer
+- **Requestor**: A process (either automated or GUI) that requests that one or more snapshot sets be taken of one or more original volumes. In this paper, a requestor is also used to imply a backup application that is creating a snapshot of SQL Server databases.
+
+See the documentation on [Volume Shadow Copy Service](/windows/win32/vss/volume-shadow-copy-service-overview) for details.
+
+## SQL Writer
 
 The SQL writer is a VSS writer provided by the SQL Server. It handles the VSS interaction with SQL Server. The SQL writer ships with SQL Server as a standalone service and is installed as part of the SQL Server installation.
 
 The role of the SQL writer in a VSS snapshot backup operation: 
 
 ![VSS Snapshot](media/sql-server-vss-writer-backup-guide/sql-vss-snapshot.png)
-
-
 
 ## Configuring the SQL Writer
 
@@ -82,40 +73,10 @@ SQL writer service can be enabled by marking this service as "Automatic". To ope
 
 Service should then be started by selecting the "Start" button under the "Service Status" property in the service property screen mentioned above.
 
-
   > [!NOTE]
   > In certain cases where an instance of SQL Server Express is installed and an application is using the User Instances feature, the SQL writer may be automatically started by SQL Server. This is done to facilitate the enumeration of these User Instances during a VSS backup operation. 
 
-## Backup/Restore Operations and Supported Versions
-
-### Version Support
-
-The SQL writer is shipped as part of SQL Server and supports only SQL Server instances. 
-
-The SQL writer will enumerate the SQL Server Express instances also. User instances launched by SQL Server Express will also be enumerated by the SQL writer.
-
-
-## Supported Backup/Restore Operations
-
-SQL Server (using the SQL writer) will support the following modes of VSS-based backup operations:
-
-- Noncomponent-based
-- Component-based
-
-### Noncomponent-Based Backup Operations
-
-Noncomponent-based backups implicitly select databases by using the list of volumes in the snapshot set. The SQL writer checks for torn databases, raising an error if found. A torn database is one in which a subset of files is selected by the list of volumes.
-
-In the noncomponent-based model, only databases with the Simple Recovery model are supported. Roll forward after a restore is not supported.
-
-### Component-Based Backup Operations
-
-Component-based backups are preferred and recommended with the SQL writer, since the application (VSS backup application) will explicitly select the databases from the metadata that is returned from the SQL writer. The snapshot set should include all the volumes necessary to back up those databases. The VSS infrastructure does not automatically add the volumes that are required for the selected set of databases. All backing volumes should be included in the volume snapshot set. It is the responsibility of the backup application to make sure that all backing volumes are included in the snapshot set.  The SQL writer will detect torn databases (with backing volumes outside the snapshot set) and fail the backup.
-
-The rest of this topic assumes that component-based backups are used as part of the VSS snapshot creation process for SQL Server.
-
 ## Features Supported by SQL Writer
-
 
 - **Fulltext**: The SQL writer reports fulltext catalog containers with recursive file specifications under the database components in the writer's metadata document.  They are automatically included in the backup when the database component is selected
 - **Differential Backup/Restore**: The SQL writer supports differential Backup/Restore through two VSS differential mechanisms: Partial File and Differenced File by Last Modify Time.
@@ -155,8 +116,30 @@ The following table lists the kinds of snapshot backups that are supported by th
 |Autoclose databases</br> Databases with shutdown | Yes                        | No                     |
 |Availability group databases                  | Yes                           | No on secondary        | 
 
+## Backup and Restore
 
+### Version Support
 
+The SQL writer is shipped as part of SQL Server and supports only SQL Server instances. The SQL writer will enumerate the SQL Server Express instances also. User instances launched by SQL Server Express will also be enumerated by the SQL writer.
+
+## Supported Backup/Restore Operations
+
+SQL Server (using the SQL writer) will support the following modes of VSS-based backup operations:
+
+- Noncomponent-based
+- Component-based
+
+### Noncomponent-Based Backup Operations
+
+Noncomponent-based backups implicitly select databases by using the list of volumes in the snapshot set. The SQL writer checks for torn databases, raising an error if found. A torn database is one in which a subset of files is selected by the list of volumes.
+
+In the noncomponent-based model, only databases with the Simple Recovery model are supported. Roll forward after a restore is not supported.
+
+### Component-Based Backup Operations
+
+Component-based backups are preferred and recommended with the SQL writer, since the application (VSS backup application) will explicitly select the databases from the metadata that is returned from the SQL writer. The snapshot set should include all the volumes necessary to back up those databases. The VSS infrastructure does not automatically add the volumes that are required for the selected set of databases. All backing volumes should be included in the volume snapshot set. It is the responsibility of the backup application to make sure that all backing volumes are included in the snapshot set.  The SQL writer will detect torn databases (with backing volumes outside the snapshot set) and fail the backup.
+
+The rest of this topic assumes that component-based backups are used as part of the VSS snapshot creation process for SQL Server.
 
 ## Snapshot Creation Process
 
@@ -179,8 +162,6 @@ The image shows the dataflow diagram during a component-based snapshot creation/
 - Actual backup of files
 - Backup termination
 
-
-
 ### Backup Initialization
 
 During this phase of the backup the requestor (backup application) binds to the snapshot interface **IvssBackupComponents** and initializes it in preparation for the backup. It also calls the VSS API **IVssGatherWriterMetadata** to tell the VSS framework to gather metadata from all the writers.
@@ -194,6 +175,48 @@ The Writer Metadata Document is a document that contains information that is pas
 - Which files need to be included and excluded in a backup.
 - What options should be used at restore time.
 - This is passed back to the requestor via the VSS framework.
+
+### Backup Discovery
+In this phase, a requestor examines the Writer Metadata Document and creates and fills a **Backup Component Document** with each component that needs to be backed up. It also specifies the needed backup options and parameters as part of this document. For the SQL writer, each database instance that needs to be backed up is a separate component.
+
+#### Backup Components Document
+This is an XML document created by a requestor (using the **IVssBackupComponents** interface) in the course of setting up a restore or backup operation. The Backup Components Document contains a list of those explicitly included components, from one or more writers, participating in a backup or restore operation. It does not contain implicitly included component information. In contrast, a Writer Metadata Document contains only writer components that may participate in a backup. Structural details of a backup component document are described in the VSS API documentation.
+
+#### Prebackup Tasks
+Prebackup tasks under VSS are focused on creating a shadow copy of the volumes containing data for backup. The backup application will save data from the shadow copy, not the actual volume.
+
+Requestors typically wait on writers during preparation for backup and while the shadow copy is being created. If the SQL writer is participating in the backup operation, it needs to configure its files and also itself to be ready for backup and shadow copy.
+
+#### Prepare for backup
+The requestor will need to set the type of backup operation that needs to be performed (**IVssBackupComponents::SetBackupState**) and then notify writers through VSS, to prepare for a backup operation using **IVssBackupComponents::PrepareForBackup**.
+
+The SQL writer is given access to the Backup Component Document, which details what databases need to be backed up. All backing volumes should be included in the volume snapshot set. The  SQL writer will detect torn databases (with backing volumes outside the snapshot set) and fail the backup during the PostSnapshot event.
+
+#### Actual Backup of Files
+
+In this phase, the requestor can move the data to a backup media, if needed. Interactions in this stage are between the requestor and the VSS framework. The SQL writer is not involved.
+
+1. Get writer status. Returns the status of writers. The requestor may need to handle any failures here.
+1. Do back up.
+
+The requestor can move the data to back up media if needed at this time.
+
+#### Backup complete
+
+This event will indicate that the backup was completed successfully.
+
+This is also the time at which the SQL writer can commit the backup as a differential base, if the current backup is a full backup of the database (and not a copy-only backup).
+
+  > [!NOTE]
+  > The requestor should send this event (Backup Complete event) explicitly to allow the SQL writer to commit differential base backups. If this event is not received, the backup that is created will not be an eligible "differential base" backup.
+
+#### Save writer metadata
+
+The requestor should save the Backup Component Document and each component backup metadata along with the data backed from the snapshot. These writer metadata are needed by the SQL writer/SQL Server for restore operations.
+
+#### Backup Termination
+
+The requestor terminates the shadow copy by releasing the **IVssBackupComponents** interface or by calling **IVssBackupComponents::DeleteSnapshots**.
 
 ### SQL Writer Metadata Document
 
@@ -229,22 +252,6 @@ The only extension of the component set structure in SQL Server is the introduct
 
 An example Writer Metadata Document is provided at the end of this document.
 
-### Backup Discovery
-In this phase, a requestor examines the Writer Metadata Document and creates and fills a **Backup Component Document** with each component that needs to be backed up. It also specifies the needed backup options and parameters as part of this document. For the SQL writer, each database instance that needs to be backed up is a separate component.
-
-#### Backup Components Document
-This is an XML document created by a requestor (using the **IVssBackupComponents** interface) in the course of setting up a restore or backup operation. The Backup Components Document contains a list of those explicitly included components, from one or more writers, participating in a backup or restore operation. It does not contain implicitly included component information. In contrast, a Writer Metadata Document contains only writer components that may participate in a backup. Structural details of a backup component document are described in the VSS API documentation.
-
-#### Prebackup Tasks
-Prebackup tasks under VSS are focused on creating a shadow copy of the volumes containing data for backup. The backup application will save data from the shadow copy, not the actual volume.
-
-Requestors typically wait on writers during preparation for backup and while the shadow copy is being created. If the SQL writer is participating in the backup operation, it needs to configure its files and also itself to be ready for backup and shadow copy.
-
-#### Prepare for backup
-The requestor will need to set the type of backup operation that needs to be performed (**IVssBackupComponents::SetBackupState**) and then notify writers through VSS, to prepare for a backup operation using **IVssBackupComponents::PrepareForBackup**.
-
-The SQL writer is given access to the Backup Component Document, which details what databases need to be backed up. All backing volumes should be included in the volume snapshot set. The  SQL writer will detect torn databases (with backing volumes outside the snapshot set) and fail the backup during the PostSnapshot event.
-
 **Initiate snapshot**
 Requestor will initiate the snapshot process by calling the VSS framework interface DoSnapshotSet.
 
@@ -255,38 +262,10 @@ This phase involves a series of interactions between the VSS framework and the S
 1. _Freeze_.The SQL writer will call SQL Server to freeze all the database I/O's for each of the databases being backed up in the snapshot. Once the freeze event returns to the VSS framework, VSS will create the snapshot.
 1. _Thaw_. On this event, the SQL writer will call the SQL Server instances to "thaw" or resume normal I/O operations.
 
-
 The snapshot creation phase is fast (less than 60 seconds), to prevent blocking of all writes to the database.
 
 **Post-snapshot**
 If autorecovery is needed for the snapshot, the SQL writer will do the autorecovery for each database that has been selected to be in the snapshot. For a detailed explanation, see Auto-Recovered Snapshots.
-
-#### Actual Backup of Files
-
-In this phase, the requestor can move the data to a backup media, if needed. Interactions in this stage are between the requestor and the VSS framework. The SQL writer is not involved.
-
-1. Get writer status. Returns the status of writers. The requestor may need to handle any failures here.
-1. Do back up.
-
-The requestor can move the data to back up media if needed at this time.
-
-#### Backup complete
-
-This event will indicate that the backup was completed successfully.
-
-This is also the time at which the SQL writer can commit the backup as a differential base, if the current backup is a full backup of the database (and not a copy-only backup).
-
-
-  > [!NOTE]
-  > The requestor should send this event (Backup Complete event) explicitly to allow the SQL writer to commit differential base backups. If this event is not received, the backup that is created will not be an eligible "differential base" backup.
-
-#### Save writer metadata
-
-The requestor should save the Backup Component Document and each component backup metadata along with the data backed from the snapshot. These writer metadata are needed by the SQL writer/SQL Server for restore operations.
-
-#### Backup Termination
-
-The requestor terminates the shadow copy by releasing the **IVssBackupComponents** interface or by calling **IVssBackupComponents::DeleteSnapshots**.
 
 ## Restore Process
 
@@ -592,37 +571,6 @@ Microsoft Distributed Transaction Coordinator (MS DTC) component to be released 
 
 For VSS snapshots, after the auto recovery, the files will be secured using Access Control Lists(ACLs) to allow access only to the special builtin group which SQL server account belongs to.  This implies that member of either box admin or that special group will be able to attach the database. The client requesting an attach of the database files on a snapshot either has to be a member of Builtin/Administrators or the SQL Server account.
 
-### Special Cases
-
-This section describes some of the special cases encountered during SQL writer-based backup and restore operations.
-
-#### Autoclose databases
-
-For noncomponent-based backups, autoclosing of databases is done, when checking for torn conditions, but the autoclosed databases are not explicitly frozen during backup operations.
-
-The expected scenario here is that many closed databases may exist and we want to minimize the cost of the snapshot.  Autoclosed databases are typically used in low-end configurations where resources are scarce.
-
-#### File list
-
-The list of files for each database is determined during an enumeration step prior to the Prepare for Backup event.  If the list of database files changes between enumeration and freeze, then the database could be torn, unless the application rechecks the list of files. We don't expect this to be an issue, but it is something that vendors need to be aware of.
-
-#### Stopped instances
-
-If an instance of SQL Server is not running at the time the enumeration step occurs, then none of the databases for those instances can be selected.
-
-If an instance stops in the interval between enumeration and the Prepare for Backup event, any databases in the stopped instance are ignored.
-
-#### System and User Databases
-
-System databases in SQL Server include the master, model, and msdb databases that are shipped and installed as part of SQL Server. This section describes how these databases are handled in a VSS snapshot backup process.
-
-### System databases
-
-Master database can only be restored by stopping the instance, replacing the database files (done by the backup application), then restarting the instance. No roll forward is possible.
-
-The SQL writer supports restore of both model and msdb databases online, without shutting down the instance.
-
-
 #### Simple Recovery model user databases
 
 If Master database is restored together with user databases that are using the Simple Recovery model, the user databases can be restored with the same technique as the master database: with the instance shut down, just copy or mount the volume(s).  When the SQL instance is started, everything recovers.
@@ -644,8 +592,6 @@ The procedure is as follows:
         1. Start the SQL Server instance (the files for the user databases to roll forward are not visible to SQL Server).
 
 Use VSS to restore the user databases WITH NORECOVERY, as described in "Full Restore with rollforward".
-
-## Appendix
 
 ### Writer Metadata Document:  An Example
 
@@ -722,6 +668,36 @@ Following is the database's writer metadata:
 - BackupTypeMask: VSS_FSBT_ALL_BACKUP_REQUIRED | VSS_FSBT_ALL_SNAPSHOT_REQUIRED
 
 If the server instance is the default instance on the machine, the logical path becomes one part – "Server1".
+
+### Special Cases
+
+This section describes some of the special cases encountered during SQL writer-based backup and restore operations.
+
+#### Autoclose databases
+
+For noncomponent-based backups, autoclosing of databases is done, when checking for torn conditions, but the autoclosed databases are not explicitly frozen during backup operations.
+
+The expected scenario here is that many closed databases may exist and we want to minimize the cost of the snapshot.  Autoclosed databases are typically used in low-end configurations where resources are scarce.
+
+#### File list
+
+The list of files for each database is determined during an enumeration step prior to the Prepare for Backup event.  If the list of database files changes between enumeration and freeze, then the database could be torn, unless the application rechecks the list of files. We don't expect this to be an issue, but it is something that vendors need to be aware of.
+
+#### Stopped instances
+
+If an instance of SQL Server is not running at the time the enumeration step occurs, then none of the databases for those instances can be selected.
+
+If an instance stops in the interval between enumeration and the Prepare for Backup event, any databases in the stopped instance are ignored.
+
+#### System and User Databases
+
+System databases in SQL Server include the master, model, and msdb databases that are shipped and installed as part of SQL Server. This section describes how these databases are handled in a VSS snapshot backup process.
+
+### System databases
+
+Master database can only be restored by stopping the instance, replacing the database files (done by the backup application), then restarting the instance. No roll forward is possible.
+
+The SQL writer supports restore of both model and msdb databases online, without shutting down the instance.
 
 
     

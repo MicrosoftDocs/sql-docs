@@ -199,11 +199,11 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
 ## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
 
-1. Ensure that you have set up read-only routing by following [Configure read-only routing](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) document.
+1. Ensure that you have set up read-only routing by following [Configure read-only routing](../../availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) document.
 
 2. Ensure Client Driver Support
 
-    The client application must use a client providers that support `ApplicationIntent` parameter. See [Driver and client connectivity support for availability groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-client-connectivity-sql-server)
+    The client application must use a client providers that support `ApplicationIntent` parameter. See [Driver and client connectivity support for availability groups](always-on-client-connectivity-sql-server.md)
 
    > [!NOTE]  
    > If you are connecting to a DNN Listener, the provider must also support `MultiSubnetFailover` parameter
@@ -272,8 +272,8 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
 7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
    - [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)
-   - [sys.availability_replicas (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)
-   - [ALTER AVAILABILITY GROUP (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-availability-group-transact-sql)
+   - [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)
+   - [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 
 
 8. Ensure proper SQL Server Networking configuration in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.
 
@@ -282,7 +282,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    - TCP/IP is enabled
    - The IP addresses are configured correctly
 
-    See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port) and [View or Change Server Properties (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server)
+    See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
 
     > [!NOTE]
     > You can quickly verify all of these are properly configured if you can connect from a client machine using target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using "TCP:instance" syntax.

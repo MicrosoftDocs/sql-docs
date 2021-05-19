@@ -586,6 +586,8 @@ Specifies a dynamic data mask. *mask_function* is the name of the masking functi
 - partial()
 - random()
 
+Requires ALTER ANY MASK permission.
+
 For function parameters, see [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md).
 
 FILESTREAM

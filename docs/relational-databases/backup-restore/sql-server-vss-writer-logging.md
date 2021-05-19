@@ -14,12 +14,12 @@ ms.author: gfourrat
 # SQL Server VSS Writer logging
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes the new log introduced by [!INCLUDEsssql19-md] to provide better visibility on its SQLWriter operations.
+As [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md) describes in depth, [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] can be involved in VSS (Volume Shadow Copy Service) backup and restore operations through its dedicated SQL Writer service. The service would report execution errors to Windows Application Event Logs with a `SQLWRITER` event source, but up until [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], it had no dedicated activity log. It could make investigations against [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] as a participant in VSS operations challenging.
+This article describes the new log introduced by [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] to provide better visibility on its SQLWriter operations.
 
 ## Overview
 
-As [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md) describes in depth, [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] can be involved in VSS (Volume Shadow Copy Service) backup and restore operations through its dedicated SQL Writer service. The service would report execution errors to Windows Application Event Logs with a `SQLWRITER` event source, but up until [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], it had no dedicated activity log. It could make investigations against [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] as a participant in VSS operations challenging. 
-[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduces a new logging feature for its VSS  Writer `SQLWriter` service. Its main characteristics are:
+The main characteristics of  [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] SQLWriter logging are:
 
 - It's on by default
 - It's system-wide (it will trace SQL Writer activity against all SQL Server instances running on the server)
@@ -44,8 +44,10 @@ The file will reflect all VSS events reaching SQL Writer, which would mainly be:
 - Backup events
 - Restore events
 
-That is, even if these operations take place successfully the log file will record detailed entries. It will allow the DBA to confirm VSS operations are indeed happening and successfully involving SQL Writer, while also collecting more details on the requests. It's an important improvement as previously there was no easy built-in way of establishing these details at [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] level.
-Additionally, SQLWriter service starts will also be recorded and will report active logging parameters.
+That is, even if these operations take place successfully the log file will record detailed entries. The log will allow the DBA to confirm VSS operations are occurring and successfully interacting with SQL Writer. It's an improvement that offers an easy built-in way of establishing these details at [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] level.
+
+Additionally, SQLWriter service start-up events will also be recorded and will report active logging parameters.
+
 Obviously if there's a VSS operation failure that involves [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)], the SqlWriterLogger becomes an important place to check for any information.
 
 > [!NOTE]
@@ -92,7 +94,7 @@ In order of appearance, we can see the following information is logged:
 [01/12/2021 08:23:40, TID 464c] Skip User Instances Enumeration
 ```
 
-OnIdentify is a common VSS operation. It's triggered by `vssadmin list writers` command. Most VSS requestors would start any VSS backup or restore operation by a `OnIdentify` event.
+`OnIdentify` is a common VSS operation. It's triggered by `vssadmin list writers` command. Most VSS requestors would start any VSS backup or restore operation by a `OnIdentify` event.
 
 Previously, only active profiler tracing would allow the DBA to detect such an event. With the new logging feature, each event will lead to the above entry.
 

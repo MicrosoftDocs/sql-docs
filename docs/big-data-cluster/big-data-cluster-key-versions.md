@@ -33,7 +33,7 @@ The below graphic explains how files are protected by the DEK and how the DEK is
 
 The system managed main key and the HDFS EZ keys are stored inside the controldb, which will be named controldb-<#>, for example `controldb-0`. For more information, see [Resources deployed with Big Data Cluster](concept-architecture-pods.md).
 
-SQL Server databases are encrypted by a symmetric key which is also known as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql) statement. The asymmetric key in SQL Server has metadata containing a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL Server stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
+SQL Server databases are encrypted by a symmetric key, also known as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql) statement. The asymmetric key in SQL Server has metadata containing a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL Server stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
 
 :::image type="content" source="media/big-data-cluster-key-versions/sqlkey.png" alt-text="SQL Server Keys":::
 
@@ -71,11 +71,11 @@ Consider a file called file2 placed in /securelake. The following depicts the pr
 
 :::image type="content" source="media/big-data-cluster-key-versions/protection-chain.png" alt-text="Protection chain":::
 
-The securelakekey can be rotated to a new version using "azdata bdc hdfs key roll -n securelakekey" The rotation doesn't cause re-encryption of DEKs protecting the file. Hadoop key rotation causes a new key material to be generated, and protected by the latest version of main-encryption-key. The following diagram shows the state of the system after rotation of securelakekey.
+The securelakekey can be rotated to a new version using `azdata bdc hdfs key roll -n securelakekey`. The rotation doesn't cause re-encryption of DEKs protecting the file. Hadoop key rotation causes a new key material to be generated, and protected by the latest version of main-encryption-key. The following diagram shows the state of the system after rotation of securelakekey.
 
 :::image type="content" source="media/big-data-cluster-key-versions/protection-chain-rotation.png" alt-text="Protection chain after rotation":::
 
-To make sure that he files in the encryption zones are protected by the rotated securelakekey, `azdata bdc hdfs encryption-zone -a start -p /securelake`.
+To make sure that the files in the encryption zones are protected by the rotated securelakekey, `azdata bdc hdfs encryption-zone -a start -p /securelake`.
 
 The following diagram depicts the state of system after re-encryption of encryption zone.
 
@@ -83,7 +83,7 @@ The following diagram depicts the state of system after re-encryption of encrypt
 
 ### SQL Server
 
-The key protecting the SQL Database is the DEK which can be regenerated. The process of regeneration would cause the whole database to be re-encrypted.
+The key protecting the SQL Database is the DEK, which can be regenerated. The process of regeneration would cause the whole database to be re-encrypted.
 
 ### Main key rotation
 
@@ -92,13 +92,13 @@ The key protecting the SQL Database is the DEK which can be regenerated. The pro
 
 The main key is RSA 2048-bit key. The rotation of the main key would do one of the following depending on the source of the key:
 
-1. Create new key in case the request has been made to rotate the main key to a system managed key. A system managed key is an asymmetric key, generated and stored inside the controller.
+1. Create new key in case the request has been made to rotate the main key to a system-managed key. A system-managed key is an asymmetric key, generated and stored inside the controller.
 2. Create a reference to an externally provided key, where the private key of the asymmetric will be managed by the customer application. The customer application need not have the private key, but it should know how to retrieve the private key based on the configuration of the application provided.
 
 Rotation of the main key does not re-encrypt anything. SQL Server and HDFS keys must then be rotated:
 
 - After the main key has been rotated, the SQL Server database DEK protector will need to be rotated to the new version of the main key created. 
-- Similar concepts apply to HDFS. When a HDFS key is rotated, then new material is encrypted by the latest version of the main key. Older versions of the EZ keys will remain untouched. After the HDFS EZ key is rotated then the encryption zones associated with the EZ key need to be re-encrypted so that they are re-encrypted by the latest EZ key version.
+- Similar concepts apply to HDFS. When the HDFS key is rotated, new material is encrypted by the latest version of the main key. Older versions of the EZ keys will remain untouched. After the HDFS EZ key is rotated then the encryption zones associated with the EZ key need to be re-encrypted so that they are re-encrypted by the latest EZ key version.
 
 ### Main key rotation for HDFS
 
@@ -150,11 +150,11 @@ Now, the DEK protector is changed to use the asymmetric key:
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-asymmetric.png" alt-text="After the DEK protector is changed to use the asymmetric key":::  
 
-If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This can be used to again change the DEK protector of a SQL Server database.
+If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
 
 ## Customer provided key
 
-With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the Main encryption key fetches the public key using the Application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt DEK from SQL, are sent to control plane as well, and then are re-directed to the KMS application.
+With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the Main encryption key fetches the public key using the Application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt DEK from SQL, are sent to control plane as well, and then are redirected to the KMS application.
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-customerkey.png" alt-text="After customer key is installed":::
 
@@ -162,7 +162,7 @@ The following diagram explains the interactions while configuring external keys 
 
 :::image type="content" source="media/big-data-cluster-key-versions/interactions.png" alt-text="Interactions while configuring external keys in control plane":::  
 
-After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
+After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
 
 ## See also
 

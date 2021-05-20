@@ -79,7 +79,7 @@ Service should then be started by selecting the "Start" button under the "Servic
 ## Features Supported by SQL Writer
 
 - **Fulltext**: The SQL writer reports fulltext catalog containers with recursive file specifications under the database components in the writer's metadata document.  They are automatically included in the backup when the database component is selected
-- **Differential `backup and restore**: The SQL writer supports differential `backup and restore through two VSS differential mechanisms: Partial File and Differenced File by Last Modify Time.
+- **Differential backup and restore**: The SQL writer supports differential `backup and restore through two VSS differential mechanisms: Partial File and Differenced File by Last Modify Time.
 - **Partial File**:   The SQL writer uses the VSS Partial File mechanism for reporting changed byte ranges within its database files.  
 - **Differenced File by Last Modify Time**: The SQL writer uses the VSS Differenced File by Last Modify Time mechanism for reporting changed files in fulltext catalogs.
 - **Restore with Move**: The SQL writer supports VSSs New Target specification during restore.  VSSs New Target specification allows for a database/log file or fulltext catalog container to be relocated as part of the Restore operation.
@@ -100,7 +100,7 @@ These new features and their usage are described in more detail in Backup and Re
 
 The following table lists the kinds of snapshot backups that are supported by the SQL writer/SQL Server working with the VSS framework for all editions of SQL Server.
 
-| **`backup and restore Operation**                 | **Component-Based**           | **Noncomponent-Based** |
+| **backup and restore Operation**                 | **Component-Based**           | **Noncomponent-Based** |
 |:-------------------------------------------- | :---------------------------- | :--------------------- |
 |Full Data Backup </br> (Including fulltext catalog)| Yes                     | Yes                    |
 |Full Restore                                  | Yes                           | Yes                    |
@@ -321,15 +321,15 @@ This section describes in detail all backup and restore options supported by SQL
 
 ### Requestor Creates a Volume Shadow Copy
 
-The SQL writer could be involved in the volume shadow copy creation process (outside the context of `backup and restore) because the db files' backing volume(s) have been added into the volume snapshot set.  In this case, the SQL writer only participates in the metadata enumeration, Freeze, Thaw, PrepareForSnapshot, and PostSnapshot coordination (see the data flow diagram for detail).
+The SQL writer could be involved in the volume shadow copy creation process (outside the context of backup and restore) because the db files' backing volume(s) have been added into the volume snapshot set.  In this case, the SQL writer only participates in the metadata enumeration, Freeze, Thaw, PrepareForSnapshot, and PostSnapshot coordination (see the data flow diagram for detail).
 
 ### Full Backup and Restore
 
-The SQL writer supports full `backup and restore operations in both noncomponent-based mode and component-based mode.
+The SQL writer supports full backup and restore operations in both noncomponent-based mode and component-based mode.
 
 ### Noncomponent-Based Backup and Restore
 
-In a noncomponent-based `backup and restore, the requestor specifies a volume or a folder tree to be backed up and restored. All the data in the specified volume and folder is backed up and restored.
+In a noncomponent-based backup and restore, the requestor specifies a volume or a folder tree to be backed up and restored. All the data in the specified volume and folder is backed up and restored.
 
 #### Backup
 
@@ -361,7 +361,9 @@ If no writer metadata (component-based backup metadata) is saved during the back
 
 The requestor restores database(s) that have been backed up in component-based mode but no roll forwards are requested. In this case SQL Server will perform crash recovery on the database as part of restore.
 
-**Full restore with additional roll forwards. The requestor can issue a restore specifying the SetAdditionalRestores(true) option.  This option indicates that the requestor is going to follow up with more rollforward restores (such as log restore, differential restore etc.). This instructs SQL Server not to perform the recovery step at the end of the restore operation.
+### Full restore with additional roll forwards
+
+The requestor can issue a restore specifying the SetAdditionalRestores(true) option.  This option indicates that the requestor is going to follow up with more rollforward restores (such as log restore, differential restore etc.). This instructs SQL Server not to perform the recovery step at the end of the restore operation.
 
 This is only possible if the writer metadata was saved during the backup and is available to the SQL writer at the time of the restore. The SQL Server service must be running before the requestor directs VSS to perform the restore activity.
 
@@ -377,7 +379,7 @@ Conventional SQL backups, differential or logs, can then be used to roll forward
 
 The SQL writer reports full-text catalog containers with recursive file specifications under the database components in the Writer Metadata Document.  They are automatically included in the backup when the database component is selected
 
-### Differential `backup and restore
+### Differential backup and restore
 
 A differential backup operation backs up only the data that has changed since the most recent base full backup. A differential backup contains only those parts of the database files that have changed. In order to do such a backup, the backup application, or requestor would need information about the location of the changes in the database files, so that appropriate sections of the file(s) can be backed up. During a differential backup operation, the SQL writer provides this information in the format as specified by "VSS partial file information." This information can be used to back up only the changed portion of the database files.
 

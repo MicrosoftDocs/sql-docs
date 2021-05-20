@@ -43,7 +43,7 @@ In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 1. The main keys are asymmetric RSA key.
 2. A main key is created for SQL Server master instance and for HDFS.
-3. The public key corresponding to the main key, is always stored in the Controller Database or controldb. The private key is stored in the controller database for system managed main key. For encryption keys from HSM or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the Private Key material.
+3. The public key corresponding to the main key, is always stored in the Controller Database or controldb. The private key is stored in the controller database for system managed main key. For encryption keys from Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the Private Key material.
 4. Encryption operations using the public key of the main key can be performed inside the controller itself, or, the controller can distribute the public key to Hadoop KMS so that Hadoop KMS can perform encryption locally. The decryption operations are expected to be handled by the external key provider, like HSM. This design allows us to keep the sensitive part of the asymmetric key outside the cluster and in the customer's protection. This makes sure that the root of encryption to decrypt all the data is never available in the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ecosystem for customer configured keys.
 
 ## Storage protection of different keys
@@ -87,12 +87,18 @@ The key protecting the SQL Database is the DEK which can be regenerated. The pro
 
 ### Main key rotation
 
-Until CU10 there was no way to rotate the main key. But going forward, azdata command will be exposed which will allow the rotation of the main key. The main key is RSA 2048 bit key. The rotation of the main key would do one of the following depending on the source of the key:
+> [!NOTE]
+> Until SQL Server 2019 CU10 there was no way to rotate the main key. Starting with SQL Server 2019 CU10, `azdata` command is be exposed to allow the rotation of the main key. 
+
+The main key is RSA 2048-bit key. The rotation of the main key would do one of the following depending on the source of the key:
 
 1. Create new key in case the request has been made to rotate the main key to a system managed key. A system managed key is an asymmetric key, generated and stored inside the controller.
 2. Create a reference to an externally provided key, where the private key of the asymmetric will be managed by the customer application. The customer application need not have the private key, but it should know how to retrieve the private key based on the configuration of the application provided.
 
-Rotation of the main key DOES NOT re-encrypt anything. After the main key has been rotated, the SQL Server database DEK protector will need to be rotated to the new version of the main key created. Similar concepts apply to HDFS. When a HDFS key is rotated, then new material is encrypted by the latest version of the main key. Older versions of the EZ keys will remain untouched. After the HDFS EZ key is rotated then the encryption zones associated with the EZ key need to be re-encrypted so that they are re-encrypted by the latest EZ key version.
+Rotation of the main key does not re-encrypt anything. SQL Server and HDFS keys must then be rotated:
+
+- After the main key has been rotated, the SQL Server database DEK protector will need to be rotated to the new version of the main key created. 
+- Similar concepts apply to HDFS. When a HDFS key is rotated, then new material is encrypted by the latest version of the main key. Older versions of the EZ keys will remain untouched. After the HDFS EZ key is rotated then the encryption zones associated with the EZ key need to be re-encrypted so that they are re-encrypted by the latest EZ key version.
 
 ### Main key rotation for HDFS
 
@@ -140,7 +146,7 @@ USE db1;
 ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY tde_asymmetric_key_0;
 ```
 
-Now the DEK protector is changed to use the asymmetric key:
+Now, the DEK protector is changed to use the asymmetric key:
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-asymmetric.png" alt-text="After the DEK protector is changed to use the asymmetric key":::  
 
@@ -156,7 +162,7 @@ The following diagram explains the interactions while configuring external keys 
 
 :::image type="content" source="media/big-data-cluster-key-versions/interactions.png" alt-text="Interactions while configuring external keys in control plane":::  
 
-After the key is installed, the encryption and decryption of different payloads, protected by main encryption key, looks similar to system managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app, which can route the request to appropriate location, HSM or another product.
+After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
 
 ## See also
 

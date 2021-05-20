@@ -268,7 +268,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 6. Check that READ_ONLY_ROUTING_URL port is open. Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port. Configure a Windows Firewall for database engine access on every replica in the read_only_routing_list
 
    >[!NOTE]
-   > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you must ensure the network security group (NSG) allows the traffic to endpoint port. Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default). Additionally, you must ensure the [load balancer is configured correctly](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).
+   > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, you must take additional configuration steps. Ensure that the network security group (NSG) of each replica VM allows traffic to the endpoint port and the DNN port, if you are using DNN listener. If you are using VNN listener, you must ensure the [load balancer is configured correctly](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).
 
 7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
    - [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) 

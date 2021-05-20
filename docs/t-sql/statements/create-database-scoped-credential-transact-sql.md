@@ -114,7 +114,7 @@ The following example creates a database scoped credential that can be used to c
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 
 -- Create a database scoped credential.
-CREATE DATABASE SCOPED CREDENTIAL MyCredentials
+CREATE DATABASE SCOPED CREDENTIAL [https://MyStorageAccount.blob.core.windows.net/MyStorageContainerSqlEvents]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ```

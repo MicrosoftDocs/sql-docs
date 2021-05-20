@@ -7115,6 +7115,8 @@ items:
         href: relational-databases/polybase/polybase-queries.md
       - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
+      - name: How to tell if external pushdown occurred
+        href: relational-databases/polybase/polybase-how-to-tell-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
     - name: How-to guides

@@ -79,7 +79,7 @@ Service should then be started by selecting the "Start" button under the "Servic
 ## Features Supported by SQL Writer
 
 - **Fulltext**: The SQL writer reports fulltext catalog containers with recursive file specifications under the database components in the writer's metadata document.  They are automatically included in the backup when the database component is selected
-- **Differential backup and restore**: The SQL writer supports differential `backup and restore through two VSS differential mechanisms: Partial File and Differenced File by Last Modify Time.
+- **Differential backup and restore**: The SQL writer supports differential backup and restore through two VSS differential mechanisms: Partial File and Differenced File by Last Modify Time.
 - **Partial File**:   The SQL writer uses the VSS Partial File mechanism for reporting changed byte ranges within its database files.  
 - **Differenced File by Last Modify Time**: The SQL writer uses the VSS Differenced File by Last Modify Time mechanism for reporting changed files in fulltext catalogs.
 - **Restore with Move**: The SQL writer supports VSSs New Target specification during restore.  VSSs New Target specification allows for a database/log file or fulltext catalog container to be relocated as part of the Restore operation.
@@ -482,7 +482,7 @@ During the post restore events, the SQL writer will perform the normal redo oper
 
 ## Differential Backup and Restore for Full-Text Catalogs
 
-SQL Server full-text catalogs are part of the database resources that need to be backed up or restored together with the rest of the database files.  A differential backup is timestamp-based for full-text catalog.  The SQL Server VSS differential `backup and restore has a single base backup.  In other words, there will not be different bases for different containers.  For VSS full-text catalog backup, this means for all full-text catalog containers, the differential backup will be single-timestamp based, unlike the case of native SQL differential backup, in which there is one timestamp base per full-text catalog container.
+SQL Server full-text catalogs are part of the database resources that need to be backed up or restored together with the rest of the database files.  A differential backup is timestamp-based for full-text catalog.  The SQL Server VSS differential backup and restore has a single base backup.  In other words, there will not be different bases for different containers.  For VSS full-text catalog backup, this means for all full-text catalog containers, the differential backup will be single-timestamp based, unlike the case of native SQL differential backup, in which there is one timestamp base per full-text catalog container.
 
 In VSS, this timestamp is expressed as a component-wide property that is set during the full backup, and used during a subsequent differential backup.  
 

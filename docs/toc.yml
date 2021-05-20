@@ -131,8 +131,6 @@ items:
       href: big-data-cluster/concept-security.md
     - name: Administration resources
       href: big-data-cluster/view-cluster-status.md
-    - name: Key Versions in Big Data Clusters
-      href: big-data-cluster/big-data-cluster-key-versions.md
     - name: Active Directory mode
       items:
       - name: Prerequisites

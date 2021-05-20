@@ -12,11 +12,11 @@ ms.technology: big-data-cluster
 
 # Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-This document provides details of how key versions are used in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] for key management and the document also includes details about how the versions will be used going forward for incorporating customer's keys. 
+This article provides details of how key versions are used in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] for key management and key rotation for HDFS and SQL Server keys. The article includes details about how the versions will be used going forward for [incorporating customer's keys](#customer-provided-key). 
 
-For information on securing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
+For general information on securing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
 
-## HDFS Keys
+## HDFS keys
 
 For using encryption at rest in HDFS, the following concepts are involved:
 
@@ -29,17 +29,17 @@ The below graphic explains how files are protected by the DEK and how the DEK is
    :::image type="content" source="media/big-data-cluster-key-versions/securelakekey.png" alt-text="Shows how files are protected by the DEK and how the DEK is protected by the EZ key securelakekey":::  
    
 
-## SQL Keys
+## SQL Server keys
 
 The system managed main key and the HDFS EZ keys are stored inside the controldb, which will be named controldb-<#>, for example `controldb-0`. For more information, see [Resources deployed with Big Data Cluster](concept-architecture-pods.md).
 
-SQL Server databases are encrypted by a symmetric key which is also knows as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql?view=sql-server-ver15) statement. The asymmetric key in SQL Server has metadata which contains a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
+SQL Server databases are encrypted by a symmetric key which is also knows as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql) statement. The asymmetric key in SQL Server has metadata which contains a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL Server stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
 
-:::image type="content" source="media/big-data-cluster-key-versions/sqlkey.png" alt-text="SQL Keys":::
+:::image type="content" source="media/big-data-cluster-key-versions/sqlkey.png" alt-text="SQL Server Keys":::
 
-## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]: Main encryption key
+## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] main encryption key
 
-In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL server, there is a concept of the Main Encryption Key. There exists a main encryption key for SQL Server and for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
+In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the Main Encryption Key. There exists a main encryption key for SQL Server and for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
 
 1. The main keys are asymmetric RSA key.
 2. A main key is created for SQL Server master instance and for HDFS.
@@ -50,7 +50,7 @@ In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 The DEK for HDFS files and for SQL Server are stored along with the data that DEK protects. DEK is protected by the HDFS EZ key or the asymmetric key in SQL Server respectively. 
 
-Asymmetric keys in SQL server have metadata which points to a key URL in the control plane and SQL only stores the public key of the asymmetric key, for correlation with the key in the control plane. 
+Asymmetric keys in SQL Server have metadata which points to a key URL in the control plane and SQL Server only stores the public key of the asymmetric key, for correlation with the key in the control plane. 
 
 The storage of keys in controldb, is protected by the column encryption key in controldb. The controldb stores sensitive information about the cluster and all the sensitive information is protected by a Column Encryption Key of SQL Server in controldb, which is further protected by a password stored in Kubernetes Secrets.
 
@@ -62,7 +62,7 @@ Storage protection of HDFS EZ keys
 :::image type="content" source="media/big-data-cluster-key-versions/storage-protection-main.png" alt-text="Storage protection of the main key":::  
 Storage protection of the main key
 
-## Key Rotation
+## Key rotation
 
 ### HDFS encryption zone keys
 
@@ -82,7 +82,7 @@ The following diagram depicts the state of system after reencryption of encrypti
 
 :::image type="content" source="media/big-data-cluster-key-versions/protection-chain-reencryption.png" alt-text="Protection chain after reencryption":::
 
-### SQL
+### SQL Server
 
 The key protecting the SQL Database is the DEK which can be regenerated. The process of regeneration would cause the whole database to be re-encrypted.
 
@@ -115,7 +115,7 @@ Rotating the securelakekey would cause a new version of securelakekey to be crea
 
 ### Main key rotation for SQL Server
 
-The SQL main encryption key is installed in the master database of SQL Server master instance.
+The SQL Server main encryption key is installed in the master database of SQL Server master instance.
 
 The following diagrams illustrate the process of rotating main encryption key for SQL Server. 
 
@@ -125,7 +125,7 @@ On a fresh install of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclu
 
 The main encryption key will be rotated using `azdata bdc kms set –key-provider SystemManaged`. (Note the command causes rotation [or creates if not exists] of main encryption key for SQL and HDFS both, even though they are different keys inside the control plane.) 
 
-:::image type="content" source="media/big-data-cluster-key-versions/sql-key.png" alt-text="The SQL main encryption key is installed in the master DB of SQL Server master instance":::  
+:::image type="content" source="media/big-data-cluster-key-versions/sql-key.png" alt-text="The SQL Server main encryption key is installed in the master DB of SQL Server master instance":::  
 
 The asymmetric key can be seen using the following T-SQL query, with the `sys.asymmetric_keys` system catalog view.
 
@@ -134,7 +134,7 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql). For example, use the following T-SQL command:
 
 ```tsql
 USE db1;
@@ -145,7 +145,7 @@ Now the DEK protector is changed to use the asymmetric key:
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-asymmetric.png" alt-text="After the DEK protector is changed to use the asymmetric key":::  
 
-If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This can be used to again change the DEK protector of a SQL Server database.
+If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This can be used to again change the DEK protector of a SQL Server database.
 
 ## Customer provided key
 
@@ -161,7 +161,6 @@ After the key is installed, the encryption and decryption of different payloads,
 
 ## See also
 
-* [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)
+* [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)  
 * [Configure a SQL Server Big Data Cluster](configure-bdc-overview.md)
 * [Big Data Clusters FAQ](big-data-cluster-faq.yml)
-* [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)

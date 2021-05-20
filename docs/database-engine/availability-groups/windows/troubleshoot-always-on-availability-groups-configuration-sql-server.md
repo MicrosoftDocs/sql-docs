@@ -227,7 +227,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    `Server=tcp:DNN_AgListener,DNN_Port;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True`
 
    > [!NOTE]  
-   > If you are using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD the `-S` switch specifies the server name, whereas lower-case `-s` parameter specifies column separator.
+   > If you are using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD you must use the upper case -S switch that specifies server name, not the lower case -s switch which is used for column separator.
    > </br>Example: `sqlcmd -S Listerne1,port -E -d AgDb1 -K ReadOnly -M`
 
 4. Ensure that the availability group listener is online. To ensure that the availability group listener is online run the following query on the primary replica: 
@@ -242,7 +242,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';
    ```
 
-5. Ensure READ_ONLY_ROUTING_LIST is correctly populated. On Primary replica, ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting a readable secondary replica.
+5. Ensure READ_ONLY_ROUTING_LIST is correctly populated. On Primary replica, ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting readable secondary replicas.
 
    ```sql
    SELECT replica_id, replica_server_name, secondary_role_allow_connections_desc, read_only_routing_url FROM sys.availability_replicas;   
@@ -268,7 +268,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 6. Check that READ_ONLY_ROUTING_URL port is open. Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port. Configure a Windows Firewall for database engine access on every replica in the read_only_routing_list
 
    >[!NOTE]
-   > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you must ensure the network security group (NSG) allows the traffic to endpoint port. Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+   > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you must ensure the network security group (NSG) allows the traffic to endpoint port. Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default). Additionally, you must ensure the [load balancer is configured correctly](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).
 
 7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
    - [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)

@@ -54,7 +54,7 @@ The role of the SQL writer in a VSS snapshot backup operation:
 
 ![VSS Snapshot](media/sql-server-vss-writer-backup-guide/sql-vss-snapshot.png)
 
-## Configuring the SQL Writer
+### Configuring the SQL Writer
 
 The SQL writer service is installed in the system as part of the SQL Server installation and is configured to start automatically when Windows starts. 
 
@@ -118,16 +118,14 @@ The following table lists the kinds of snapshot backups that are supported by th
 
 ## Backup and Restore
 
-### Version Support
-
-The SQL writer is shipped as part of SQL Server and supports only SQL Server instances. The SQL writer will enumerate the SQL Server Express instances also. User instances launched by SQL Server Express will also be enumerated by the SQL writer.
-
-## Supported Backup/Restore Operations
-
 SQL Server (using the SQL writer) will support the following modes of VSS-based backup operations:
 
 - Noncomponent-based
 - Component-based
+
+### Version Support
+
+The SQL writer is shipped as part of SQL Server and supports only SQL Server instances. The SQL writer will enumerate the SQL Server Express instances also. User instances launched by SQL Server Express will also be enumerated by the SQL writer.
 
 ### Noncomponent-Based Backup Operations
 
@@ -411,7 +409,7 @@ A differential backup will always be with respect to the latest base backup that
 
 Currently if the byte-range information (partial file information) is too large (exceeding 64 K bytes in buffer size), SQL Server will throw an error instructing the user to perform a full backup.
 
-### Interesting cases during backup
+### Troubleshooting 
 
 File add/drop/shrink/growth/logical-rename/physical-rename make interesting cases in backup.
 

@@ -206,7 +206,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
     The client application must use a client providers that support `ApplicationIntent` parameter. See [Driver and client connectivity support for availability groups](always-on-client-connectivity-sql-server.md)
 
    > [!NOTE]  
-   > If you are connecting to a DNN Listener, the provider must also support `MultiSubnetFailover` parameter
+   > If you are connecting to a distributed network name (DNN) Listener, the provider must also support `MultiSubnetFailover` parameter
 
 3. Ensure connection string properties are set correctly
 
@@ -281,11 +281,12 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remote connectivity is enabled
    - TCP/IP is enabled
    - The IP addresses are configured correctly
-
-    See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
-
+  
     > [!NOTE]
-    > You can quickly verify all of these are properly configured if you can connect from a client machine to a target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using `TCP:instance` syntax.
+    > You can quickly verify all of these are properly configured if you can connect from a remote machine to a target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using `TCP:SQLinstance` syntax.
+
+  See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
+
 
   
 ##  <a name="RelatedTasks"></a> Related Tasks  

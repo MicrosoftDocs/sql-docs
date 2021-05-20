@@ -254,7 +254,8 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    To view the properties of each replica you can run this query and examine the connectivity endpoint (URL) of the read only replica.
 
    ```sql
-   SELECT replica_id, replica_server_name, secondary_role_allow_connections_desc, read_only_routing_url FROM sys.availability_replicas;   
+   SELECT replica_id, replica_server_name, secondary_role_allow_connections_desc, read_only_routing_url 
+   FROM sys.availability_replicas;   
    ```
 
    To view a read-only routing list and compare to the endpoint URL:

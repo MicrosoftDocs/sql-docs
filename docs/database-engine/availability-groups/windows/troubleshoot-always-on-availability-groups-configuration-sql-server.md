@@ -285,7 +285,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
     See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
 
     > [!NOTE]
-    > You can quickly verify all of these are properly configured if you can connect from a client machine using target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using "TCP:instance" syntax.
+    > You can quickly verify all of these are properly configured if you can connect from a client machine to a target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using `TCP:instance` syntax.
 
   
 ##  <a name="RelatedTasks"></a> Related Tasks  

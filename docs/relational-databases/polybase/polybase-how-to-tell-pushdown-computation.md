@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 ## Is my query benefitting from external pushdown?
 
-Pushdown computation improves the performance of queries on external data sources. Certain computation tasks are delegated to the external data source instead of being brought to the SQL Server. Especially in the cases of filtering and join pushdown, this can greatly reduce the workload on the SQL Server instance and can significantly improve performance of the query. For more information on external pushdown, see [Pushdown computations in PolyBase](/sql/relational-databases/polybase/polybase-pushdown-computation.md).
+Pushdown computation improves the performance of queries on external data sources. Certain computation tasks are delegated to the external data source instead of being brought to the SQL Server. Especially in the cases of filtering and join pushdown, this can greatly reduce the workload on the SQL Server instance and can significantly improve performance of the query. For more information on external pushdown, see [Pushdown computations in PolyBase](./polybase-pushdown-computation.md).
 
 If a PolyBase query is performing slowly, you should determine if pushdown of your PolyBase query is occurring.
 
@@ -23,7 +23,7 @@ There are three different scenarios where pushdown can be observed in the execut
 2. Join pushdown
 3. Aggregation pushdown
 
-There are limitations on what can be pushed down to external data sources. Some T-SQL functions can prevent pushdown, for more information see [PolyBase features and limitations](/sql/relational-databases/polybase/polybase-versioned-feature-summary#syntax-that-prevents-pushdown). For a list of T-SQL functions that can otherwise be pushed down, see [Pushdown computations in PolyBase](/sql/relational-databases/polybase/polybase-pushdown-computation#pushdown-for-basic-expressions-and-operators).
+There are limitations on what can be pushed down to external data sources. Some T-SQL functions can prevent pushdown, for more information see [PolyBase features and limitations](./polybase-versioned-feature-summary.md#syntax-that-prevents-pushdown). For a list of T-SQL functions that can otherwise be pushed down, see [Pushdown computations in PolyBase](./polybase-pushdown-computation.md#pushdown-for-basic-expressions-and-operators).
 
 ## How to tell if external pushdown occurred
 
@@ -48,7 +48,7 @@ By default, the estimated execution plan will not expose the Remote Query Plan. 
 
 Starting in SQL Server 2019, you can enable a new trace flag 6408 globally using DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql.md). This trace flag only works with estimated execution plans and has no effect on actual execution plans. This trace flag exposes information about the Remote Query operator that will show what is happening during the Remote Query phase.
 
-[Execution plans](/sql/relational-databases/performance/execution-plans.md) are read from right-to-left. This is demonstrated by the direction the arrows point. If an operator is to the right of another operator, it is said to be “before” it. If an operator is to the left of another operator, it is said to be “after” it.
+[Execution plans](../performance/execution-plans.md) are read from right-to-left. This is demonstrated by the direction the arrows point. If an operator is to the right of another operator, it is said to be “before” it. If an operator is to the left of another operator, it is said to be “after” it.
 
 In SQL Server Management Studio (SSMS), highlight the query and click on Display Estimated Execution Plan (Ctrl + L). In Azure Data Studio, highlight the query and click on “Explain”. Then consider the following scenarios below to determine whether pushdown occurred.
 
@@ -161,7 +161,7 @@ If pushdown of the aggregation is not occurring the aggregation operator will be
 
 # sys.dm_exec_external_work (DMV)
 
-The [sys.dm_exec_external_work](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fsql%2Frelational-databases%2Fsystem-dynamic-management-views%2Fsys-dm-exec-external-work-transact-sql%3Fview%3Dsql-server-ver15&data=04%7C01%7Cwiassaf%40microsoft.com%7C72d639b345b1403c50d808d8f6309ca4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637530035929153975%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=eUuUZpGrDq4S8mpcPVf8AtUM1OphihzqsKbxddbwt5U%3D&reserved=0) DMV will show the query that is sent to the external data source. You can examine the **read_command** column to identify the query that was sent to the external data source. This will allow you determine if pushdown is occurring.
+The [sys.dm_exec_external_work](../system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md) DMV will show the query that is sent to the external data source. You can examine the **read_command** column to identify the query that was sent to the external data source. This will allow you determine if pushdown is occurring.
 
 #### DMV query
 
@@ -274,4 +274,4 @@ The aggregation was performed on the SQL Server side after the un-aggregated dat
 
 ## See also
 
-[Pushdown computations in PolyBase](/sql/relational-databases/polybase/polybase-pushdown-computation)
+[Pushdown computations in PolyBase](./polybase-pushdown-computation.md)

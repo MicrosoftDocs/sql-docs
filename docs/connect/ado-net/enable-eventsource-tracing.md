@@ -51,9 +51,14 @@ The following example enables event tracing for a data operation on the **Advent
 
 ## Event tracing support in Native SNI
 
-**Microsoft.Data.SqlClient** v2.1.0 extends event tracing support in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime**. By sending an EventCommand to `SqlClientEventSource`, events in native SNI.dll can be collected using [Xperf](/windows-hardware/test/wpt/) and [PerfView](https://github.com/microsoft/perfview) tools. The valid EventCommand values are listed as below:
+**Microsoft.Data.SqlClient** v2.1.0 extends event tracing support in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime**.
+
+In **Microsoft.Data.SqlClient** v3.0.0-preview2 and newer, events can be enabled and collected using [Xperf](/windows-hardware/test/wpt/) and [PerfView](https://github.com/microsoft/perfview), without any modification to the client application.
+
+In older versions starting from **Microsoft.Data.SqlClient** v2.1.0, event tracing in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime** is enabled by sending an EventCommand to `SqlClientEventSource`. Events in native SNI.dll can be collected using Xperf and PerfView. The valid EventCommand values are listed as below:
 
 ```cs
+
 // Enables trace events:
 EventSource.SendCommand(eventSource, (EventCommand)8192, null);
 
@@ -63,6 +68,7 @@ EventSource.SendCommand(eventSource, (EventCommand)16384, null);
 // Enables both trace and flow events:
 EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
 ```
+
 
 The following example enables event tracing in native SNI.dll when the application targets .NET Framework. 
 
@@ -91,6 +97,7 @@ class Program
 
     static void Main(string[] args)
     {
+        // SqlClientListener is not required in v3.0.0-preview2 and newer
         using (SqlClientListener listener = new SqlClientListener())
         using (SqlConnection connection = new SqlConnection(connectionString))
         {

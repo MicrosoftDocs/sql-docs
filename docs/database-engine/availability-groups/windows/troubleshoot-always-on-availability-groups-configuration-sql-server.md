@@ -218,13 +218,20 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    - ApplicationIntent set to ReadOnly `ApplicationIntent=ReadOnly`
    - MultiSubnetFailover set to true is required for Distributed network name (DNN)
 
-    ### Example for a virtual network name (VNN) listener:
+    ### Examples
 
-   `Server=tcp:VNN_AgListener,1433;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True`
+    This illustrate the connection string for .NET System.Data.SqlClient provider for a virtual network name (VNN) listener:
 
-   ### Example for a distributed network name (DNN) listener:
+   ```csharp
+   Server=tcp:VNN_AgListener,1433;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True
+   ```
 
-   `Server=tcp:DNN_AgListener,DNN_Port;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True`
+   This illustrate the connection string for .NET System.Data.SqlClient provider for a distributed network name (DNN) listener:
+
+   ```csharp
+   Server=tcp:DNN_AgListener,DNN_Port;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True
+   ```
+
 
    > [!NOTE]  
    > If you are using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD you must use the upper case -S switch that specifies server name, not the lower case -s switch which is used for column separator.
@@ -244,11 +251,13 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
 5. Ensure READ_ONLY_ROUTING_LIST is correctly populated. On Primary replica, ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting readable secondary replicas.
 
+   To view the properties of each replica you can run this query and examine the connectivity endpoint (URL) of the read only replica.
+
    ```sql
    SELECT replica_id, replica_server_name, secondary_role_allow_connections_desc, read_only_routing_url FROM sys.availability_replicas;   
    ```
 
-   To view a read-only routing list:
+   To view a read-only routing list and compare to the endpoint URL:
 
    ```sql
    SELECT * FROM sys.availability_read_only_routing_lists;
@@ -265,7 +274,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
   
    For more information see [Configure read-only routing for an availability group - SQL Server Always On](configure-read-only-routing-for-an-availability-group-sql-server.md)
 
-6. Check that READ_ONLY_ROUTING_URL port is open. Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port. Configure a Windows Firewall for database engine access on every replica in the read_only_routing_list
+6. Check that READ_ONLY_ROUTING_URL port is open. Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port. Configure a Windows Firewall for database engine access on every replica in the read_only_routing_list and any for clients that will be connecting to those replicas.
 
    >[!NOTE]
    > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, you must take additional configuration steps. Ensure that the network security group (NSG) of each replica VM allows traffic to the endpoint port and the DNN port, if you are using DNN listener. If you are using VNN listener, you must ensure the [load balancer is configured correctly](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).

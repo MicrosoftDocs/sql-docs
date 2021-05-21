@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
-ms.date: 09/25/2020
+ms.date: 05/20/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: jrasnick
@@ -15,8 +15,8 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: kevinvngo
-ms.author: kevin
+author: anumjs
+ms.author: anumjs
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
@@ -77,12 +77,13 @@ Is the name of the table to COPY data into. The target table can be a temporary 
 *(column_list)*  
 Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
 
-[(Column_name [Default_value] [Field_number] [,...n])]
+[(Column_name [default Default_value] [Field_number] [,...n])]
 
 - *Column_name* - the name of the column in the target table.
-- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field.
+- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field. Default value is preceded by the keyword 'default'
 - *Field_number* - the input file field number that will be mapped to the target column name.
 - The field indexing starts at 1.
+
 
 When a column list is not specified, COPY will map columns based on the source and target ordinality: Input field 1 will go to target column 1, field 2 will go to column 2, etc.
 

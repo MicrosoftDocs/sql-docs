@@ -64,7 +64,7 @@ Some aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../
 
 
 > [!NOTE]
-> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
+> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown). For a list of T-SQL functions that can otherwise be pushed down, see [Pushdown computations in PolyBase](./polybase-pushdown-computation.md#pushdown-for-basic-expressions-and-operators).
 
 ## Key beneficial scenarios of pushdown computation
 
@@ -209,4 +209,4 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 
 ## See also
 
-- [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+- [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md)  

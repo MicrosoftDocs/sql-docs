@@ -11,13 +11,13 @@ ms.technology: big-data-cluster
 ---
 # How to tell if external pushdown occurred
 
-This article will detail how determine if a PolyBase query is benefitting from pushdown to the external data source. For more information on external pushdown, see [pushdown computations in PolyBase](./polybase-pushdown-computation.md).
+This article will detail how to determine if a PolyBase query is benefitting from pushdown to the external data source. For more information on external pushdown, see [pushdown computations in PolyBase](./polybase-pushdown-computation.md).
 
 ## Is my query benefitting from external pushdown?
 
-Pushdown computation improves the performance of queries on external data sources. Certain computation tasks are delegated to the external data source instead of being brought to the SQL Server. Especially in the cases of filtering and join pushdown, this can greatly reduce the workload on the SQL Server instance and can significantly improve performance of the query.
+Pushdown computation improves the performance of queries on external data sources. Certain computation tasks are delegated to the external data source instead of being brought to the SQL Server. Especially in the cases of filtering and join pushdown, the workload on the SQL Server instance can be greatly reduced. 
 
-If a PolyBase query is performing slowly, you should determine if pushdown of your PolyBase query is occurring.
+PolyBase pushdown computation can significantly improve performance of the query. If a PolyBase query is performing slowly, you should determine if pushdown of your PolyBase query is occurring.
 
 There are three different scenarios where pushdown can be observed in the execution plan:
 
@@ -27,23 +27,19 @@ There are three different scenarios where pushdown can be observed in the execut
 
 > [!NOTE]
 > There are limitations on what can be pushed down to external data sources with [PolyBase pushdown computations](./polybase-pushdown-computation.md):
-> * Some T-SQL functions can prevent pushdown, for more information see [PolyBase features and limitations](polybase-pushdown-computation.md#syntax-that-prevents-pushdown). 
+> * Some T-SQL functions can prevent pushdown, for more information, see [PolyBase features and limitations](polybase-pushdown-computation.md#syntax-that-prevents-pushdown). 
 > * For a list of T-SQL functions that can otherwise be pushed down, see [Pushdown computations in PolyBase](./polybase-pushdown-computation.md#pushdown-for-basic-expressions-and-operators).
 
-## How to tell if external pushdown occurred
+Two new features of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] have been introduced to allow administrators to determine if a PolyBase query is being pushed down to the external data source:
 
-There are two ways to determine if a PolyBase query is being pushed down to the external data source:
-
-1. View the [Estimated Execution Plan with trace flag 6408](#tf6408), a new feature of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
+1. View the [Estimated Execution Plan with trace flag 6408](#tf6408)
 2. View the `read_command` in the [sys.dm_exec_external_work](#dmv) dynamic management view
 
-This article will provide details on how to use each of these two use cases.
+This article will provide details on how to use each of these two use cases, for each of three pushdown scenarios.
 
-## <a id="tf6408"> </a> Use TF6408 + Estimated Execution Plan
+## <a id="tf6408"> </a> Use TF6408
 
-By default, the estimated execution plan will not expose the remote query plan. You will simply see the remote query operator object in the execution plan.
-
-For example, an estimated execution plan from SQL Server Management Studio (SSMS):
+By default, the estimated execution plan will not expose the remote query plan, and you will only see the remote query operator object. For example, an estimated execution plan from SQL Server Management Studio (SSMS):
 
 ![View estimated execution plan from SSMS](./media/polybase-how-to-tell-pushdown-computation/1-exec-plan-without-t6408-ssms.png)
 
@@ -51,9 +47,15 @@ Or, in Azure Data Studio:
 
 ![View estimated execution plan from Azure Data Studio](./media/polybase-how-to-tell-pushdown-computation/2-exec-plan-without-t6408-azure-data-studio.png)
 
-Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can enable a new trace flag 6408 globally using [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql.md). This trace flag only works with estimated execution plans and has no effect on actual execution plans. This trace flag exposes information about the Remote Query operator that will show what is happening during the Remote Query phase.
+Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can enable a new trace flag 6408 globally using [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md). For example:
 
-[Execution plans](../performance/execution-plans.md) are read from right-to-left. This is demonstrated by the direction the arrows point. If an operator is to the right of another operator, it is said to be "before" it. If an operator is to the left of another operator, it is said to be "after" it.
+```tsql
+DBCC TRACEON (6408, -1);  
+```
+
+This trace flag only works with estimated execution plans and has no effect on actual execution plans. This trace flag exposes information about the Remote Query operator that will show what is happening during the Remote Query phase.
+
+[Execution plans](../performance/execution-plans.md) are read from right-to-left, as indicated by the direction of the arrows. If an operator is to the right of another operator, it is said to be "before" it. If an operator is to the left of another operator, it is said to be "after" it.
 
 * In SSMS, highlight the query and select Display Estimated Execution Plan from the toolbar or use Ctrl+L. 
 * In Azure Data Studio, highlight the query and click on "Explain". Then consider the following scenarios below to determine whether pushdown occurred.
@@ -62,7 +64,7 @@ Each of the below examples will include the output from SSMS and Azure Data Stud
 
 ### Pushdown of filter predicate (view with execution plan)
 
-Consider the following query which uses a filter predicate in the WHERE clause:
+Consider the following query, which uses a filter predicate in the WHERE clause:
 
 ```tsql
 SELECT *
@@ -133,7 +135,7 @@ The estimated execution plan from Azure Data Studio:
 
 ### Pushdown of aggregation (view with execution plan)
 
-Consider the following query which uses an aggregate function:
+Consider the following query, which uses an aggregate function:
 
 ```tsql
 SELECT SUM([Quantity]) as Quant
@@ -164,7 +166,7 @@ The estimated execution plan from Azure Data Studio:
 
 ![View execution plan without aggregate pushdown from Azure Data Studio](./media/polybase-how-to-tell-pushdown-computation/14-exec-plan-with-t6408-no-aggregate-pushdown-azure-data-studio.png)
 
-## <a id="dmv"> </a>Use sys.dm_exec_external_work (view with DMV)
+## <a id="dmv"> </a>Use DMV
 
 Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the `read_command` column of [sys.dm_exec_external_work](../system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md) DMV will show the query that is sent to the external data source. This will allow you determine if pushdown is occurring, but does not expose the execution plan. Viewing the remote query does not require TF6408.
 
@@ -205,7 +207,7 @@ FROM [AdventureWorks2017].[Person].[BusinessEntity] AS T2_1
 WHERE ([T2_1].[BusinessEntityID] = CAST ((17907) AS INT))) AS T1_1;
 ```
 
-The WHERE clause is in the command sent to the external data source which means the filter predicate is being evaluated at the external data source. Filtering on the dataset occurred at the external data source, and only the filtered dataset was retrieved by PolyBase.
+The WHERE clause is in the command sent to the external data source, which means the filter predicate is being evaluated at the external data source. Filtering on the dataset occurred at the external data source, and only the filtered dataset was retrieved by PolyBase.
 
 #### Without pushdown of filter (view with DMV)
 
@@ -256,7 +258,7 @@ The joining the two datasets occurred on the SQL Server side, after both dataset
 
 ### Pushdown of aggregation (view with DMV)
 
-Consider the following query which uses an aggregate function:
+Consider the following query, which uses an aggregate function:
 
 ```tsql
 SELECT SUM([Quantity]) as Quant
@@ -282,7 +284,7 @@ If the pushdown of the aggregation isn't occurring, you won't see the aggregatio
 SELECT "Quantity" FROM "AdventureWorks2017"."Production"."ProductInventory"
 ```
 
-The aggregation was performed in SQL Server, after the un-aggregated dataset was retrieved by PolyBase.
+The aggregation was performed in SQL Server, after the unaggregated dataset was retrieved by PolyBase.
 
 ## See also
 

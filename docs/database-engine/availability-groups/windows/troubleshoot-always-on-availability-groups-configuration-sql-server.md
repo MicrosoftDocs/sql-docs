@@ -212,10 +212,10 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
     For read-only routing to work properly, your client application must use these properties in the connection string:
   
-   - A database name that belongs to AG: `Initial Catalog=<db_in_avail_group>`
+   - A database name that belongs to the AG
    - An availability group listener name
-      - If you are using DNN, you must specify DNN listener name and DNN port number `<DNN name, DNN port>`
-   - ApplicationIntent set to ReadOnly `ApplicationIntent=ReadOnly`
+      - If you are using DNN, you must specify DNN listener name and DNN port number `<DNN name,DNN port>`
+   - ApplicationIntent set to ReadOnly 
    - MultiSubnetFailover set to true is required for Distributed network name (DNN)
 
     ### Examples
@@ -231,7 +231,6 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    ```csharp
    Server=tcp:DNN_AgListener,DNN_Port;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True
    ```
-
 
    > [!NOTE]  
    > If you are using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD you must use the upper case -S switch that specifies server name, not the lower case -s switch which is used for column separator.

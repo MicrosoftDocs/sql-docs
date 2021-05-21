@@ -15,7 +15,7 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: anumjs
+author: kevinvngo
 ms.author: kevin
 monikerRange: "=azure-sqldw-latest"
 ---

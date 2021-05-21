@@ -23,7 +23,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 4/20/2021
+ms.date: 4/20/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -38,14 +38,13 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.9.1](https://aka.ms/ssmsfullsetup)**
 
-
-SSMS 18.9.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9.1 upgrades it to 18.9.1.
+SSMS 18.9.1 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9.1 upgrades it to 18.9.1.
 
 - Release number: 18.9.1
 - Build number: 15.0.18384.0
 - Release date: April 20, 2021
 
-If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
+If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).  By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement).
 
 The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.9.1. You can see if you have the preview version by going to the **Help > About** window.
 
@@ -60,7 +59,6 @@ This release of SSMS can be installed in the following languages:
 SQL Server Management Studio 18.9.1:  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40a)
 
-
 > [!TIP]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadssmsusenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
@@ -69,7 +67,7 @@ SQL Server Management Studio 18.9.1:
 
 ## What's new
 
-For details and more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
+For details and more information about what's new in this release, see [Release notes for SQL Server Management Studio](release-notes-ssms.md).
 
 There are a few [known issues](release-notes-ssms.md#known-issues-1891) with this release.
 
@@ -105,7 +103,7 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 
 ## Installation with Azure Data Studio
 
-- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default.  If an equal or greater system version of Azure Data Studio stable or insiders is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes.
+- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default. If an equal or greater system version of Azure Data Studio stable or insiders is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes.
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.
 - The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut is not created and Azure Data Studio is not registered as a default editor for any file types.
 - Localization of Azure Data Studio is accomplished through Language Pack extensions. To localize Azure Data Studio, download the corresponding language pack from the [extension marketplace](../azure-data-studio/extensions/add-extensions.md).

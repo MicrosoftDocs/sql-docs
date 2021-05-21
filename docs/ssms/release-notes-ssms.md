@@ -9,7 +9,7 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 04/20/2021
+ms.date: 04/20/2021 
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -24,7 +24,6 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.9.1](https://aka.ms/ssmsfullsetup)**
 
-
 SSMS 18.9.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
 ### 18.9.1
@@ -34,7 +33,6 @@ SSMS 18.9.1 is the latest general availability (GA) release of SSMS. If you need
 - Release date: April 20, 2021
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40a)
-
 
 #### What's new in 18.9.1
 
@@ -48,16 +46,14 @@ SSMS 18.9.1 is the latest general availability (GA) release of SSMS. If you need
 |----------|---------|
 | IntelliSense | Fixed issue where column names were omitted from suggestions and error indicators are falsely displayed under the column names. [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/43176843) |
 
-
 #### Known issues (18.9.1)
 
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
-| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .Net Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .NET Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
-
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -82,7 +78,6 @@ Download previous SSMS versions by selecting the download link in the related se
 | [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
 | [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
-
 ### 18.9
 
 ![download](media/download-icon.png) [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
@@ -90,13 +85,11 @@ Download previous SSMS versions by selecting the download link in the related se
 > [!IMPORTANT]
 > SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. A hotfix release is available (18.9.1). If you are interested in downloading SSMS 18.9 it is available below.
 
-
 - Release number: 18.9
 - Build number: 15.0.18382.0
 - Release date: April 15, 2021
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x40a)
-
 
 #### What's new in 18.9
 
@@ -112,7 +105,6 @@ Download previous SSMS versions by selecting the download link in the related se
 | IntelliSense/Editor | Added support for [greatest](../t-sql/functions/logical-functions-greatest-transact-sql.md) and [least](../t-sql/functions/logical-functions-least-transact-sql.md) in IntelliSense |
 | IntelliSense/Editor | Added support for BACKUP_STORAGE_REDUNDANCY syntax (CREATE/ALTER DATABASE). |
 | ShowPlan | Always show Estimated Number of Rows for All Executions property |
-
 
 #### Bug fixes in 18.9
 
@@ -150,19 +142,17 @@ Download previous SSMS versions by selecting the download link in the related se
 | SMO/Scripting | Fixed script generation for DW databases where it only worked if the object explorer was connected to logical master instead of the user database. |
 | SSMS Setup | Fixed an issue where SSMS Setup was not properly executing the Post-Install Custom Action, thus not running "ssms.exe /setup". This is believe to be the cause for some sporadic issues when SSMS is started after an upgrade (see known issue session for AS). |
 | Vulnerability Assessment | Disabling menu options "Tasks -> Vulnerability Assessment" for Azure SQL databases and adding collapsible message tip for better user experience for Azure SQL VM users. |
-| XEvent UI | Fixed capability to filter Extended Events using the event name instead of id. Supports the use of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Originally added in [SSMS 18.8](#whats-new-in-187). |
-
+| XEvent UI | Fixed capability to filter Extended Events using the event name instead of ID. Supports the use of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Originally added in [SSMS 18.8](#whats-new-in-187). |
 
 #### Known issues (18.9)
 
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
-| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .Net Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .NET Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | IntelliSense | Column names are omitted from suggestions and error indicators are falsely displayed under the column names. |
-
 
 ### 18.8
 
@@ -216,7 +206,6 @@ Download previous SSMS versions by selecting the download link in the related se
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. | Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect |
 
-
 ### 18.7.1
 
 ![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
@@ -227,15 +216,11 @@ Download previous SSMS versions by selecting the download link in the related se
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
 
-
-
-
 #### Bug fixes in 18.7.1
 
 | New Item | Details |
 |----------|---------|
 | Query Store | Fixed error thrown when right-click on the object explorer node for Query Store. |
-
 
 #### Known issues (18.7.1)
 
@@ -260,7 +245,6 @@ Download previous SSMS versions by selecting the download link in the related se
 - Release date: October 20, 2020
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
-
 
 #### What's new in 18.7
 

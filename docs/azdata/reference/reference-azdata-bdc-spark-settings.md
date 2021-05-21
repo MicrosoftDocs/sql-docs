@@ -5,7 +5,7 @@ description: Reference article for azdata bdc spark settings commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/06/2021
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the **spark settings** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 
@@ -75,7 +75,7 @@ azdata bdc spark settings show
 ```
 Show the running and configured value for Spark driver cores in the Storage Pool.
 ```bash
-azdata bdc spark settings show --settings spark-defaults-conf.spark.driver.cores --resources storage-0 --include-details
+azdata bdc spark settings show --settings spark-defaults-conf.spark.driver.cores --resources storage-0
 ```
 Show any configurable memory-related setting for the Spark service.
 ```bash

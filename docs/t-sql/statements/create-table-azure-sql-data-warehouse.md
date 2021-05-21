@@ -3,12 +3,12 @@ description: "CREATE TABLE (Azure Synapse Analytics)"
 title: "CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2021"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"

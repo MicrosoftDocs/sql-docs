@@ -1,6 +1,6 @@
 ---
-description: Learn about handling complex statements when using the JDBC driver. Different methods can be used in different scenarios.
 title: Handling complex statements
+description: Learn about handling complex statements when using the JDBC driver. Different methods can be used in different scenarios.
 ms.custom: ""
 ms.date: 04/20/2021
 ms.prod: sql

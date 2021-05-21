@@ -41,7 +41,7 @@ The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 |Replication on subscribers|Transactional replication to memory-optimized tables on subscribers is supported, but with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
 |||
 
-#### Cross-database queries and transcations
+#### Cross-database queries and transactions
 
 With a few exceptions, cross-database transactions are not supported. The following table describes which cases are supported, and the corresponding restrictions. (See also, [Cross-Database Queries](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 

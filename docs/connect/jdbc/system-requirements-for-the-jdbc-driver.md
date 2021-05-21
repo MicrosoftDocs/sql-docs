@@ -1,8 +1,8 @@
 ---
-description: "System requirements for the JDBC driver"
-title: "System requirements for the JDBC driver | Microsoft Docs"
+title: System requirements
+description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 ms.custom: ""
-ms.date: "02/26/2021"
+ms.date: 02/26/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -43,7 +43,7 @@ ms.author: v-daenge
   
  Starting with the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver support for JDBC Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Java Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.
   
- When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
+ When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC driver](deploying-the-jdbc-driver.md) topic.  
 
 **Microsoft JDBC Driver 9.2 for SQL Server:**  
 
@@ -273,10 +273,10 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
   
 ## Supported languages  
 
- The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International features of the JDBC driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International features of the JDBC driver](international-features-of-the-jdbc-driver.md).  
   
  For more information about collations, see "Working with Collations" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See also  
 
- [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  

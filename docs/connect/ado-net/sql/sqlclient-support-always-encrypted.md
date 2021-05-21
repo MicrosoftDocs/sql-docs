@@ -351,7 +351,7 @@ If you want to store column master keys in a key store that is not supported by 
 The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or command instance will not be cached by the **Microsoft .NET Data Provider for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
 
 > [!NOTE]
-> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally. Any CEK caching implementation should check the value of [SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl) before caching a CEK and not cache it if the value is zero.
+> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally. Any CEK caching implementation should reference the value of [SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl) before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching.
 
 ### Registering a custom column master key store provider
 

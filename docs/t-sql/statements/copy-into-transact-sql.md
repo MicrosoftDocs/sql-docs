@@ -16,7 +16,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 author: anumjs
-ms.author: anumjs
+ms.author: kevin
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)

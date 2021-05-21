@@ -1,7 +1,8 @@
 ---
 title: "Monitor and troubleshoot PolyBase"
+titlesuffix: SQL Server
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
-ms.date: 02/17/2021
+ms.date: 05/20/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -167,7 +168,11 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## To view the PolyBase query plan (To be changed) 
+## To view the PolyBase query plan
+
+In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can view the execution plan passed to the external data source using trace flag 6408. For more information, see [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+Only in [!INCLUDE[sssql19-md](../../includes/sssql16-md.md)], this alternative strategy works:
 
 1. In SSMS, enable **Include Actual Execution Plan** (Ctrl + M) and run the query.
 
@@ -285,5 +290,5 @@ For common troubleshooting scenarios, see [PolyBase Errors and Possible Solution
 
 ## See also
 
-[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
-[PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   
+- [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
+- [PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

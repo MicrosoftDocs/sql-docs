@@ -166,7 +166,7 @@ ms.author: chadam
 - If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections.
 - If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
 Run the following PowerShell script to examine for disabled inbound traffic rules
-- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
    ```powershell
    Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
@@ -195,7 +195,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 4. Ensure the endpoint is defined so it correctly matches the IP/port that AG is using.
 5. Check whether the network service account has CONNECT permission to the endpoint.
 6. Check for possible name resolution issues
-7. Ensure your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into fixed issues.
+7. Ensure your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running a recent build (preferably the [latest build](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into fixed issues.
 
 ## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
 

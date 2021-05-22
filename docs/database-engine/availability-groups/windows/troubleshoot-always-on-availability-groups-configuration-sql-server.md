@@ -199,7 +199,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
 ## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
 
-1. Ensure that you have set up read-only routing by following [Configure read-only routing](../../availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) document.
+1. Ensure that you have set up read-only routing by following [Configure read-only routing](./configure-read-only-routing-for-an-availability-group-sql-server) document.
 
 2. Ensure Client Driver Support
 

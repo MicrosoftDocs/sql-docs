@@ -199,7 +199,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
 ## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
 
-1. Ensure that you have set up read-only routing by following [Configure read-only routing](./configure-read-only-routing-for-an-availability-group-sql-server) document.
+1. Ensure that you have set up read-only routing by following [Configure read-only routing](../../availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) document.
 
 2. Ensure Client Driver Support
 
@@ -281,7 +281,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
 7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
    - [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) 
-   - [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)
+   - [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
    - [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 
 
 8. Ensure proper SQL Server Networking configuration in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.

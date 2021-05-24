@@ -1,8 +1,8 @@
 ---
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
-title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 03/05/2021
+ms.date: 05/24/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using SQL Server, SQL Database, Azure Synapse Analytics, or Analytics Platform System (Parallel Data Warehouse or PDW).
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], or[!INCLUDE[ssaps-md](../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../includes/sspdw-md.md)]).
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -96,8 +96,10 @@ Provides the connectivity protocol and path to the external data source.
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. Only available in Azure SQL Edge.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge.                      |
+| Azure Data Lake Storage Gen 2 |   `abfs[s]` | `abfss://<container>@s<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+ |
+|||||
 
-Location path:
+#### Location path:
 
 - `<`Namenode`>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
@@ -121,8 +123,7 @@ Additional notes and guidance when setting the location:
 
 Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
 
-
-Applies to both generic `ODBC` connections, as well as built-in `ODBC` connectors for SQL Server, Oracle, Teradata, MongoDB, and CosmosDB.
+Applies to both generic `ODBC` connections, as well as built-in `ODBC` connectors for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, and CosmosDB.
 
 The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type.The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
@@ -135,7 +136,7 @@ For additional information, see:
 
 States whether computation can be pushed down to the external data source. It is on by default.
 
-`PUSHDOWN` is supported when connecting to SQL Server, Oracle, Teradata, MongoDB, or ODBC at the external data source level.
+`PUSHDOWN` is supported when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, or ODBC at the external data source level.
 
 Enabling or disabling push-down at the query level is achieved through a [hint][hint_pb].
 
@@ -159,8 +160,8 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
-- Use HADOOP when the external data source is Cloudera, Hortonworks, or an Azure Storage account.
-- Use BLOB_STORAGE when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
+- Use `HADOOP` when the external data source is Cloudera, Hortonworks, an Azure Storage account, or an Azure Data Lake Storage Gen2.
+- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
@@ -186,6 +187,7 @@ If the port isn't specified, the default value is chosen using the current setti
 | 5                   | 8050                          |
 | 6                   | 8032                          |
 | 7                   | 8050                          |
+| 8                   | 8032                          |
 
 For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
 
@@ -223,7 +225,7 @@ To create an external data source that references Oracle, ensure you have a data
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!' ;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
 CREATE DATABASE SCOPED CREDENTIAL OracleProxyAccount
@@ -268,11 +270,11 @@ WITH
 
 ### D. Create external data source to reference Kerberos-secured Hadoop
 
-To verify if the Hadoop cluster is Kerberos-secured, check the value of hadoop.security.authentication property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
+To verify if the Hadoop cluster is Kerberos-secured, check the value of `hadoop.security.authentication` property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo' ;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
 
 -- Create a database scoped credential with Kerberos user name and password.
 CREATE DATABASE SCOPED CREDENTIAL HadoopUser1
@@ -297,7 +299,7 @@ This example shows how to create the database scoped credential for authenticati
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo' ;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
@@ -341,7 +343,7 @@ WITH (
 
 ### G. Create external data source to reference Kafka
 
-In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The kafka external data source is only for data streaming and does not support predicate push down.
+In this example, the external data source is a Kafka server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The Kafka external data source is only for data streaming and does not support predicate push down.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -378,7 +380,7 @@ CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
 WITH
   IDENTITY = 'SHARED ACCESS SIGNATURE',
   -- Remove ? from the beginning of the SAS token
-  SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************' ;
+  SECRET = '<azure_storage_account_key>' ;
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 WITH
@@ -390,7 +392,32 @@ WITH
 
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
-## See Also
+
+### J. Create external data source to access data in Azure Storage using the abfs:// interface
+
+**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11+.
+In this example, the external data source is an Azure Data Lake Storage Gen2 account logs. The container is called daily. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
+
+This example shows how to create the database scoped credential for authentication to an Azure Data Lake Storage Gen2 account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
+
+```sql
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
+-- Create a database scoped credential with Azure storage account key as the secret.
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
+WITH
+  IDENTITY = '<my_account>' ,
+  SECRET = '<azure_storage_account_key>' ;
+-- Create an external data source with CREDENTIAL option.
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+  ( LOCATION = 'abfss://daily@logs.dfs.core.windows.net/' ,
+    CREDENTIAL = AzureStorageCredential ,
+    TYPE = HADOOP
+  ) ;
+```
+
+## See also
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -398,6 +425,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
 - [Using Shared Access Signatures (SAS)][sas_token]
+- [PolyBase Connectivity Configuration][connectivity_pb]
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
@@ -618,7 +646,7 @@ WITH
 
 To see this example in use, see [BULK INSERT][bulk_insert_example].
 
-## See Also
+## See also
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
@@ -775,7 +803,7 @@ This example shows how to create the database scoped credential for authenticati
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo' ;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
@@ -880,7 +908,7 @@ WITH
   ) ;
 ```
 
-## See Also
+## See also
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
@@ -1080,11 +1108,11 @@ WITH
 
 ### C. Create external data source to reference Kerberos-secured Hadoop
 
-To verify if the Hadoop cluster is Kerberos-secured, check the value of hadoop.security.authentication property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
+To verify if the Hadoop cluster is Kerberos-secured, check the value of `hadoop.security.authentication` property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo' ;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
 
 -- Create a database scoped credential with Kerberos user name and password.
 CREATE DATABASE SCOPED CREDENTIAL HadoopUser1
@@ -1110,7 +1138,7 @@ This example shows how to create the database scoped credential for authenticati
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo' ;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
@@ -1128,7 +1156,7 @@ WITH
 ```
 
 
-## See Also
+## See also
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]

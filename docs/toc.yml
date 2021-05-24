@@ -6127,17 +6127,19 @@ items:
     items:
     - name: Overview
       href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+    - name: Release notes
+      href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
       href: tools/synapse-pathway/pathway-faq.md
-    - name: Behind the Scenes
+    - name: Behind the scenes
       href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Tutorial - Run Azure Synapse Pathway
       href: tools/synapse-pathway/synapse-pathway-assessment.md
-    - name: Tutorial - Save and Load
+    - name: Tutorial - Save and load
       href: tools/synapse-pathway/tutorial-save-load-assessment.md
-    - name: Generate Reports
+    - name: Generate reports
       href: tools/synapse-pathway/report-generation.md
 - name: Manage, monitor, & tune
   items:
@@ -10939,7 +10941,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,3000 to 16,000
+      - name: Errors 12,300 to 16,000
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -11101,6 +11103,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-33128-database-engine-error.md
         - name: 33129
           href: relational-databases/errors-events/mssqlserver-33129-database-engine-error.md
+      - name: Errors 34,001 to 40,999
+        items:
+        - name: 35250
+          href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
       - name: Errors 41,000 to 41,400
         items:
         - name: 41030

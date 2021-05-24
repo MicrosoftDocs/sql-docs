@@ -2,8 +2,8 @@
 title: "Tutorial: Use AD authentication for SQL Server on Linux"
 titleSuffix: SQL Server
 description: This tutorial provides the configuration steps for Active Directory (AD) authentication for SQL Server on Linux.
-author: Dylan-MSFT
-ms.author: dygray
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.date: 12/18/2019
 ms.topic: tutorial
@@ -259,6 +259,11 @@ CONTOSO.COM = {
 > [!NOTE]
 > While it is not recommended, it is possible to use utilities, such as **realmd**, that set up SSSD while joining the Linux host to the domain, while configuring **disablesssd** to true so that SQL Server uses openldap calls instead of SSSD for Active Directory related calls.
 
+> [!NOTE]
+> SQL Server login by using an FQDN (for example, CONTOSO.COM\Username) is not supported. Use the CONTOSO\Username format.
+> 
+> SQL Server logins from Domain Local groups are not supported. Use Global Security Domain groups instead.
+ 
 ## Next steps
 
 In this tutorial, we walked through how to set up Active Directory authentication with SQL Server on Linux. You learned how to:

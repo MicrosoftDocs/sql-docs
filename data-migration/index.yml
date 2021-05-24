@@ -6,6 +6,7 @@ metadata:
    title: Azure Database Migration Guides | Microsoft Docs
    description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
    ms.topic: hub-page
+   ms.technology: migration-guide
 
 # itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -49,7 +50,7 @@ conceptualContent:
         - text: Azure Synapse Analytics
           url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
           itemType: how-to-guide
-    - title: "DB2 to"
+    - title: "Db2 to"
       links:
         - text: SQL Server
           url: /sql/sql-server/migrate/guides/db2-to-sql-server
@@ -103,17 +104,29 @@ conceptualContent:
           itemType: how-to-guide
     - title: "NoSQL"
       links:
+        - text: Relational to Azure Cosmos DB
+          url: /azure/cosmos-db/migrate-relational-to-cosmos-db-sql-api
+          itemType: how-to-guide
         - text: MongoDB to Azure Cosmos DB
           url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
-          itemType: how-to-guide
-        - text: Microsoft Azure Table Storage to Azure Cosmos DB
-          url: /azure/cosmos-db/table-import
           itemType: how-to-guide
         - text: Cassandra to Azure Cosmos DB
           url: /azure/cosmos-db/cassandra-import-data
           itemType: how-to-guide
+        - text: DynamoDB to Azure Cosmos DB
+          url: /azure/cosmos-db/dynamo-to-cosmos
+          itemType: how-to-guide
+        - text: CouchBase to Azure Cosmos DB
+          url: /azure/cosmos-db/couchbase-cosmos-migration
+          itemType: how-to-guide      
+        - text: Azure Table Storage to Azure Cosmos DB
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
     - title: "Resources"
       links:
+        - text: Getting started video overview
+          url: https://channel9.msdn.com/Shows/Data-Exposed/Get-Started-with-the-New-Database-Migration-Guides-to-Migrate-Your-Databases-to-Azure?WT.mc_id=dataexposed-c9-niner-mighub
+          itemType: video
         - text: Azure Migration Center
           url: https://azure.microsoft.com/migration/
           itemType: reference
@@ -130,7 +143,7 @@ conceptualContent:
           url: https://azure.microsoft.com/pricing/hybrid-benefit/
           itemType: reference
         - text: Browse Azure Architecture
-          url: https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration
+          url: /azure/architecture/browse/?azure_categories=migration
           itemType: reference
         - text: Microsoft cloud Adoption Framework for Azure
           url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey

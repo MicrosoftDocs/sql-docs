@@ -1,13 +1,12 @@
 ---
-title: "Dynamic Data Masking | Microsoft Docs"
+title: "Dynamic Data Masking"
 description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to non-privileged users. It can greatly simplify security in SQL Server.
-ms.date: "05/02/2019"
+ms.date: "03/24/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
-ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -19,14 +18,14 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
 Dynamic data masking (DDM) limits sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
 
-Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
+Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM the data in the database is not changed. DDM is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
 * A central data masking policy acts directly on sensitive fields in the database.
 * Designate privileged users or roles that do have access to the sensitive data.
 * DDM features full masking and partial masking functions, and a random mask for numeric data.
 * Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
 
-The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
+The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use it in conjunction with them in order to better protect the sensitive data in the database.  
   
 Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview).  
   
@@ -47,7 +46,10 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
   
  Users with **SELECT** permission on a table can view the table data. Columns that are defined as masked, will display the masked data. Grant the **UNMASK** permission to a user to enable them to retrieve unmasked data from the columns for which masking is defined.  
   
- The **CONTROL** permission on the database includes both the **ALTER ANY MASK** and **UNMASK** permission.  
+ The **CONTROL** permission on the database includes both the **ALTER ANY MASK** and **UNMASK** permission. 
+ 
+  > [!NOTE]  
+>  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others. Also see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## Best Practices and Common Use Cases  
   
@@ -80,10 +82,14 @@ WHERE is_masked = 1;
 -   A mask cannot be configured on a computed column, but if the computed column depends on a column with a MASK, then the computed column will return masked data.  
   
 -   A column with data masking cannot be a key for a FULLTEXT index.  
+
+-   A column in a PolyBase [external table](../../t-sql/statements/create-external-table-transact-sql.md).
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  
  Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
+ 
+Whenever you project an expression referencing a column for which a data masking function is defined, the expression will also be masked. Regardless of the function (default, email, random, custom string) used to mask the referenced column, the resulting expression will always be masked with the default function.
  
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
@@ -116,18 +122,18 @@ It is important to properly manage the permissions on the database, and to alway
 ```sql
 
 -- schema to contain user tables
-CREATE SCHEMA Data
+CREATE SCHEMA Data;
 GO
 
 -- table with masked columns
 CREATE TABLE Data.Membership(
-	MemberID		int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
-	FirstName		varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
-	LastName		varchar(100) NOT NULL,
-	Phone			varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
-	Email			varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
-	DiscountCode	smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
-	)
+    MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+    FirstName        varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+    LastName        varchar(100) NOT NULL,
+    Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+    Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
+    );
 
 -- inserting sample data
 INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)

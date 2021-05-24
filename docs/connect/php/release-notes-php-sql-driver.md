@@ -64,6 +64,8 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
+## Previous releases
+
 ## 5.8.1
 
 This release only applies to Linux and macOS.
@@ -113,8 +115,6 @@ This release only applies to Linux and macOS.
 | &nbsp; | &nbsp; |
 
 <sup>1</sup> Alpine Linux support is experimental for version 5.8.
-
-## Previous releases
 
 ## 5.6.1
 

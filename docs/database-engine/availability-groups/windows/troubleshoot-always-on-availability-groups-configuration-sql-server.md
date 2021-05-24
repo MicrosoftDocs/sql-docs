@@ -30,7 +30,6 @@ ms.author: chadam
 |[Always On Availability Groups Is Not Enabled](#IsHadrEnabled)|If an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the instance does not support availability group creation and cannot host any availability replicas.|  
 |[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses how to diagnose issues with the database mirroring endpoint of a server instance.|  
-|[System name](#SystemName)|Summarizes the alternatives for specifying the system name of a server instance in an endpoint URL.|  
 |[Network access](#NetworkAccess)|Documents the requirement that each server instance that is hosting an availability replica must be able to access the port of each of the other server instances over TCP.|  
 |[Endpoint Access (SQL Server Error 1418)](#Msg1418)|Contains information about this [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message.|  
 |[Join Database Fails (SQL Server Error 35250)](#JoinDbFails)|Discusses the possible causes and resolution of a failure to join secondary databases to an availability group because the connection to the primary replica is not active.|  
@@ -46,22 +45,46 @@ ms.author: chadam
   
 1.  Do the accounts have the correct permissions?  
   
-    1.  If the partners run as the same domain user account, the correct user logins exist automatically in both **master** databases. This simplifies the security configuration the database and is recommended.  
+    1.  If the partners run under the same domain account, the correct user logins exist automatically in both **master** databases. This simplifies the security configuration and is recommended.  
   
-    2.  If two server instances run as different accounts, the login each account must be created in **master** on the remote server instance, and that login must be granted CONNECT permissions to connect to the database mirroring endpoint of that server instance. For more information, see[Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
+    2.  If two server instances run under different accounts, the each account must be created in **master** on the remote server instance, and that login must be granted CONNECT permissions to connect to the database mirroring endpoint of that server instance. For more information, see[Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  You can use the following query on each instance to check if the logins have CONNECT permissions:
+
+    ```sql
+    SELECT 
+      perm.class_desc,
+      prin.name,
+      perm.permission_name,
+      perm.state_desc,
+      prin.type_desc as PrincipalType,
+      prin.is_disabled
+    FROM sys.server_permissions perm
+      LEFT JOIN sys.server_principals prin ON perm.grantee_principal_id = prin.principal_id
+      LEFT JOIN sys.tcp_endpoints tep ON perm.major_id = tep.endpoint_id
+    WHERE 
+      perm.class_desc = 'ENDPOINT'
+      AND perm.permission_name = 'CONNECT'
+      AND tep.type = 4    
+    ```
+
   
-2.  If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication. If your service accounts are using domain accounts in the same domain, you can choose to grant CONNECT access for each service account on all the replica locations or you can use certificates. For more information, see[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+2.  If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running under a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication. If your service accounts are using domain accounts in the same domain, you can choose to grant CONNECT access for each service account on all the replica locations or you can use certificates. For more information, see[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 ##  <a name="Endpoints"></a> Endpoints  
  Endpoints must be correctly configured.  
   
-1.  Make sure that each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is going to host an availability replica (each *replica location*) has a database mirroring endpoint. To determine whether a database mirroring endpoint exists on a given server instance, use the [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) catalog view. For more information, see either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
+1.  Make sure that each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is going to host an availability replica (each *replica location*) has a database mirroring endpoint. To determine whether a database mirroring endpoint exists on a given server instance, use the [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) catalog view:
+
+    ```sql
+    SELECT name, state_desc FROM sys.database_mirroring_endpoints  
+    ```
+
+    For more information on creating endpoints, see either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 2.  Check that the port numbers are correct.  
   
      To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
-    ```  
+    ```sql
     SELECT type_desc, port FROM sys.tcp_endpoints;  
     GO  
     ```  
@@ -90,7 +113,7 @@ ms.author: chadam
   
 5.  Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
-    ```  
+    ```sql  
     SELECT 'Metadata Check';  
     SELECT EP.name, SP.STATE,   
        CONVERT(nvarchar(38), suser_name(SP.grantor_principal_id))   
@@ -101,29 +124,81 @@ ms.author: chadam
        FROM sys.server_permissions SP , sys.endpoints EP  
        WHERE SP.major_id = EP.endpoint_id  
        ORDER BY Permission,grantor, grantee;   
-    GO  
-  
     ```  
-  
-##  <a name="SystemName"></a> System Name  
- For the system name of a server instance in an endpoint URL, you can use any name that unambiguously identifies the system. The server address can be a system name (if the systems are in the same domain), a fully qualified domain name, or an IP address (preferably, a static IP address). Using the fully qualified domain name is guaranteed to work. For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+
+6.  Ensure correct server name is used in the endpoint URL
+
+    For server name in an endpoint URL, it is recommended to use fully qualified domain name (FQDN), although you can use any name that uniquely identifies the machine. The server address can be a Netbios name (if the systems are in the same domain), a fully qualified domain name (FQDN), or an IP address (preferably, a static IP address). Using the fully qualified domain name is the recommended option. For more information, see Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server).
+
+    If you have already defined an Endpoint URL, you can query it by using:
+
+    ```sql
+    select endpoint_url from sys.availability_replicas
+    ```
+
+    Next, compare the endpoint_url output to the server name (Netbios or FQDN).
+    To query the Netbios and FQDN, run the following in a Command Prompt on the replica locally:
+
+    ```dos
+    hostname & echo %COMPUTERNAME%.%USERDNSDOMAIN%
+    ```
+
+    For query the server name of a remote computer, run this from a Command Prompt. Then compare the endpoint_url
+
+    ```dos
+    ping -a servername_from_endpoint_url
+    ```
+
+
+    For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ##  <a name="NetworkAccess"></a> Network Access  
- Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains).  
+ Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains).  Check if you can connect to the endpoints by following these steps:
+
+- Use Telnet to validate connectivity. Here are examples of commands you can use:
+
+   ```DOS
+   telnet ServerName Port
+   telnet IP_Address Port
+
+- If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
+- If Telnet connection to the IP address works but to the ServerName it does not, there is likely a DNS or name resolution issue
+- If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections.
+- If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
+Run the following PowerShell script to examine for disabled inbound traffic rules
+- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+
+   ```powershell
+   Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
+
+- Capture a NETSTAT -a output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
+
+   ```dos
+   netstat -a
+
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
  This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command.  
   
 ##  <a name="JoinDbFails"></a> Join Database Fails (SQL Server Error 35250)  
- This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active.  
-  
+ This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active. This is the full error message:
+
+`Msg 35250 The connection to the primary replica is not active.  The command cannot be processed.`
+
  **Resolution:**  
-  
-1.  Check the firewall setting to see if whether allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).  
-  
-2.  Check whether the network service account has connect permission to the endpoint.  
-  
-##  <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
+ 
+Summary of steps is outlined below. For detailed step-by-step instructions, please refer to Engine error [MSSQLSERVER_35250](../../../relational-databases/errors-events/mssqlserver-35250-database-engine-error.md)
+
+1. Ensure the endpoint is created and started. 
+2. Check if you can connect to the endpoint via Telnet and ensure no firewall rules are blocking connectivity
+3. Check for errors in the system. You can query the **sys.dm_hadr_availability_replica_states** for the last_connect_error_number that may help you diagnose the join issue.
+4. Ensure the endpoint is defined so it correctly matches the IP/port that AG is using.
+5. Check whether the network service account has CONNECT permission to the endpoint.
+6. Check for possible name resolution issues
+7. Ensure your SQL Server is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into fixed issues.
+
+## <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
+
  Verify the following configuration values settings and correct them if necessary.  
   
 |On...|Action|Comments|Link|  

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:simpleType declarations"
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

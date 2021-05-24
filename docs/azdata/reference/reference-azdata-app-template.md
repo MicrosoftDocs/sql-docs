@@ -5,7 +5,7 @@ description: Reference article for azdata app template commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -75,7 +75,7 @@ azdata app template pull --name ssis
 ```
 ### Optional Parameters
 #### `--name -n`
-Template name. For a full list off supported template namesrun `azdata app template list`
+Template name. For a full list off supported template names, run `azdata app template list`
 #### `--url -u`
 Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`
@@ -98,4 +98,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

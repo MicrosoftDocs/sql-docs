@@ -31,7 +31,7 @@ For details about the latest release, see the [release notes](release-notes-sqlp
 An evergreen link ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux)) is available that points to the current version of sqlpackage for [Linux .NET Core](#get-sqlpackage-net-core-for-linux), which can be used in automating environments with the latest sqlpackage.
 
 ## DacFx
-SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  The current DacFx version is 150.4897.1.
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  The current DacFx version is 150.5084.2.
 
 Installing the NuGet package via the .NET CLI is accomplished with this command:
 
@@ -127,7 +127,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
    $ sudo apt-get install libicu55      # for 16.x
    $ sudo apt-get install libicu57      # for 17.x
    $ sudo apt-get install libicu60      # for 18.x
-   $ sudo apt-get install libicu60      # for 20.x
+   $ sudo apt-get install libicu66      # for 20.x
    ```
 
 ## Uninstall sqlpackage

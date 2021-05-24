@@ -9,8 +9,8 @@ metadata:
   description: Choose the SQL Server migration path you're interested in. 
   ms.prod: sql
   ms.topic: landing-page
-  author: MashaMSFT
-  ms.author: mathoma
+  author: cawrites
+  ms.author: chadam
   ms.date: 12/09/2019  
   ms.reviewer: rajpo
 

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], ADO.NET"
   - "XML [SQL Server], SQL Server Native Client"
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use XML Data in Applications
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

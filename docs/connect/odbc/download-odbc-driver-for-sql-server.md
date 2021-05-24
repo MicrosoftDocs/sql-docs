@@ -1,6 +1,6 @@
 ---
 title: Download ODBC Driver for SQL Server
-description: "Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database."
+description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database.
 ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity

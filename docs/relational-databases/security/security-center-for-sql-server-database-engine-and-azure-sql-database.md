@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ##  <a name="Who"></a> Authentication: Who are you?  
   
-|||  
+|Feature|Link|  
 |-|-|  
 |**Who Authenticates?**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Windows Authentication<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png":::  Azure Active Directory|Who Authenticates? (Windows or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)|  
 |**Where Authenticated?**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: At master Database: Logins and DB Users<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: At User Database: Contained DB Users|Authenticate at the master database (Logins and database users)<br /><br /> [Create a SQL Server Login](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Managing Databases and Logins in Azure SQL Database](/previous-versions/azure/ee336235(v=azure.100))<br /><br /> [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Authenticate at a user database<br /><br /> [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ##  <a name="What"></a> Authorization: What can you do?  
   
-|||  
+|Feature|Link|  
 |-|-|  
 |**Granting, Revoking, and Denying Permissions**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Securable Classes<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Granular Server Permissions<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Granular Database Permissions|[Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [Permissions](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [Securables](../../relational-databases/security/securables.md)<br /><br /> [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
 |**Security by Roles**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Server Level Roles<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Database Level Roles|[Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md)|  
@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ##  <a name="Encrypt"></a> Encryption: Storing Secret Data  
   
-|||  
+|Feature|Link|  
 |-|-|  
 |**Encrypting Files**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: BitLocker Encryption (Drive Level)<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: NTFS Encryption (Folder Level)<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Transparent Data Encryption (File Level)<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Backup Encryption (File Level)|[BitLocker (Drive Level)](https://support.microsoft.com/kb/2855131)<br /><br /> [NTFS Encryption (Folder Level)](/previous-versions/tn-archive/dd163562(v=technet.10))<br /><br /> [Transparent Data Encryption (File Level)](../../relational-databases/security/encryption/transparent-data-encryption.md)<br /><br /> [Backup Encryption (File Level)](../../relational-databases/backup-restore/backup-encryption.md)|  
 |**Encrypting Sources**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Extensible Key Management Module<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Keys Stored in the Azure Key Vault<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Always Encrypted|[Extensible Key Management Module](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Keys Stored in the Azure Key Vault](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
@@ -55,14 +55,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ##  <a name="Connect"></a> Connection Security: Restricting and Securing  
   
-|||  
+|Feature|Link|  
 |-|-|  
 |**Firewall Protection**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Windows Firewall Settings<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Azure Service Firewall Settings<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Database Firewall Settings|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL Database Firewall Settings](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure Service Firewall Settings](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**Encrypting Data in Transit**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Forced SSL Connections<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Optional SSL Connections|[Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md), [Network security](/azure/sql-database/sql-database-security-best-practice#network-security) <br /><br /> [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
 ##  <a name="Audit"></a> Auditing: Recording Access  
   
-|||  
+|Feature|Link|  
 |-|-|  
 |**Automated Auditing**<br /><br /> :::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (Server and DB Level)<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (Database Level)<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Detect threats| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL Database Auditing](/azure/azure-sql/database/auditing-overview)<br /><br /> [Get started with SQL Database Advanced Threat Protection](/azure/azure-sql/database/threat-detection-configure) <br /><br /> [SQL Database Vulnerability Assessment](/azure/sql-database/sql-vulnerability-assessment) |  
 |**Custom Audit**<br /><br /> :::image type="icon" source="../../relational-databases/performance/media/security-center-both.png"::: Triggers|Custom Audit Implementation: Creating [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) and [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  

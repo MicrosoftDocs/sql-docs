@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Synchronous Replicas Data Synchronization State|  
-|**Issue**|Some synchronous replicas are not synchronized.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Synchronous Replicas Data Synchronization State
+- **Issue**: Some synchronous replicas are not synchronized.
+- **Category**: **Warning**
+- **Facet**: Availability group  
   
 ## Description  
  This policy rolls up the data synchronization state of all availability replicas and checks for any availability replicas that are not in the expected synchronization state. The policy is in an unhealthy state when any asynchronous replica is not in a SYNCHRONIZING state and any synchronous replica is not in a SYNCHRONIZED state. The policy state is otherwise healthy.  

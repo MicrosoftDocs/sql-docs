@@ -1,6 +1,6 @@
 ---
-title: Download Microsoft JDBC Driver for SQL Server
-description: "Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database."
+title: Download
+description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
 ms.date: 03/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,11 +13,11 @@ ms.author: v-daenge
 ---
 # Download Microsoft JDBC Driver for SQL Server
 
-The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs) available on the Java platform. The driver downloads are available to all users at no additional charge. They provide access to SQL Server from any Java application, application server, or Java-enabled applet.
+The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs) available on the Java platform. The driver downloads are available to all users at no extra charge. They provide access to SQL Server from any Java application, application server, or Java-enabled applet.
 
 ## Download
 
-Version 9.2 is the latest general availability (GA) version. It supports Java 8, 11, and 15. If you need to run on a Java runtime older than that, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there is a supported driver version you can use. We are continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
+Version 9.2 is the latest general availability (GA) version. It supports Java 8, 11, and 15. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. We're continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2155948)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2155949)**  
@@ -64,7 +64,7 @@ The JDBC driver can be added to a Maven project by adding it as a dependency in 
 
 ## Unsupported drivers
 
-Unsupported driver versions are not available for download here. We are continually improving the Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.  
+Unsupported driver versions aren't available for download here. We're continually improving the Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.  
   
 ## Next steps
 

@@ -17,7 +17,7 @@ manager: erikre
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features. These features are scheduled to be removed in a future release. Deprecated features should not be used in new applications.  
   
 ## Explicit Hierarchies, Collections, and Related Components  
  Explicit hierarchies, collections and related components are deprecated. Members that before were modeled as consolidated member types (explicit hierarchy parent) and collection member types will be modeled as leaf members in derived hierarchies. The following new features enable derived hierarchies to take the place of explicit hierarchies.  

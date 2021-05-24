@@ -141,6 +141,17 @@
         href: ../connect/ado-net/common-schema-collections.md
       - name: SQL Server schema collections
         href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: Configurable retry logic
+      href: ../connect/ado-net/configurable-retry-logic.md
+      items:
+      - name: Introduction
+        href: ../connect/ado-net/configurable-retry-logic-sqlclient-introduction.md
+      - name: Internal providers
+        href: ../connect/ado-net/internal-retry-logic-providers-sqlclient.md
+      - name: Core APIs
+        href: ../connect/ado-net/configurable-retry-logic-core-apis-sqlclient.md
+      - name: Configuration file
+        href: ../connect/ado-net/configurable-retry-logic-config-file-sqlclient.md
     - name: DbProviderFactories
       href: ../connect/ado-net/dbproviderfactories.md
       items:
@@ -2662,11 +2673,11 @@
   - name: Securing applications
     href: ../connect/jdbc/securing-jdbc-driver-applications.md
     items:
-    - name: Securing Connection Strings
+    - name: Securing connection strings
       href: ../connect/jdbc/securing-connection-strings.md
-    - name: Validating User Input
+    - name: Validating user input
       href: ../connect/jdbc/validating-user-input.md
-    - name: Application Security
+    - name: Application security
       href: ../connect/jdbc/application-security.md
     - name: Using encryption
       href: ../connect/jdbc/using-ssl-encryption.md
@@ -2677,7 +2688,7 @@
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: Configuring the client for encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
-    - name: FIPS Mode
+    - name: FIPS mode
       href: ../connect/jdbc/fips-mode.md
   - name: Improving performance and reliability
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
@@ -2935,9 +2946,9 @@
       items:
       - name: Connecting from Linux or macOS
         href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
-      - name: Data Access Tracing with the ODBC Driver on Linux and macOS
+      - name: Data Access Tracing on Linux and macOS
         href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
-      - name: ODBC Driver on Linux and macOS - High Availability and Disaster Recovery
+      - name: High Availability and Disaster Recovery
         href: ../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
       - name: Programming Guidelines
         href: ../connect/odbc/linux-mac/programming-guidelines.md

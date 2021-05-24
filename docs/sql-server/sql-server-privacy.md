@@ -1,7 +1,7 @@
 ---
-description: "SQL Server privacy supplement"
-title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 11/11/2020
+title: SQL Server privacy supplement
+description: SQL Server privacy supplement
+ms.date: 05/12/2021
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: "wopeter"
@@ -12,21 +12,23 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # SQL Server privacy supplement
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can install the SQL Server IaaS Agent Extension on your virtual machine and register your SQL virtual machine resource with the SQL VM resource provider, as described [here](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register).
 
-This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
+Refer to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) for more information about privacy. 
 
-- Azure SQL Database
+The data classification in this article only applies to versions of the SQL Server on-premises product.
+
+It doesn't apply to the items listed below:
+- [Azure Data Studio](../azure-data-studio/usage-data-collection.md)
 - [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
-- SQL Server Data Tools (SSDT)
-- Azure Data Studio
-- Database Migration Assistant
-- SQL Server Migration Assistant
-- MS-SQL Extension
+- [SQL Server Data Tools (SSDT)](../ssdt/anonymous-usage-data.md)
+- [Database Migration Assistant (DMA)](../dma/dma-diagnostic-data-collection.md)
+- [SQL Server Migration Assistant (SSMA)](../ssma/ssma-diagnostic-data-collection.md)
 
 Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines "Permitted Usages Scenarios" as actions or activities that are initiated by Microsoft.
 
@@ -62,7 +64,7 @@ Customer data is defined as data stored within user tables, directly or indirect
 
 |Scenario  |Access restrictions  |Retention requirements |
 |---------|---------|---------|
-|This data does not leave the user machine via Usage and Diagnostics Data. |- |- |
+|This data doesn't leave the user machine via Usage and Diagnostics Data. |- |- |
 |Crash Dumps may contain customer data and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
 |Customers with their consent can send User Feedback that contains customer data to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
@@ -70,7 +72,7 @@ Customer data is defined as data stored within user tables, directly or indirect
 
 Data received from a user, or generated from their use of the product.
 - Linkable to an individual user.
-- Does not contain customer data.
+- Doesn't contain customer data.
 
 ### Examples of personal data
 
@@ -85,7 +87,7 @@ Data received from a user, or generated from their use of the product.
 
 |Scenario  |Access restrictions  |Retention requirements|
 |---------|---------|---------|
-|This data does not leave the user machine via Usage and Diagnostics Data. |- |- |
+|This data doesn't leave the user machine via Usage and Diagnostics Data. |- |- |
 |Crash dumps may contain personal data and be emitted to Microsoft. |- |Crash dumps: Max 30 days |
 |Customer identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
 |Customers with their consent can send User Feedback that contains customer data to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User feedback: Max 1 year |
@@ -113,7 +115,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
 ## Non-personal data
 
-1. Data received from an organization, or generated from their use of the product. It is linkable to an organization and does not contain customer data.
+1. Data received from an organization, or generated from their use of the product. It's linkable to an organization and doesn't contain customer data.
 
    - Example
      - Organization name (example: Microsoft Corp.)
@@ -122,9 +124,9 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
      |Scenario  |Access restrictions  |Retention requirements|
      |---------|---------|---------|
-     | Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. </br></br>Microsoft will not use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
+     | Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. </br></br>Microsoft doesn't use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
 
-2. Data that describes or is used to configure servers, databases, tables, and other resources created or provided by customers. It includes database table and column names but not the contents of database rows or other customer data. Customers should not place any personal data in those fields or create applications designed to store personal data in these fields. For the permitted usage scenarios below, only hash form is used to determine usage patterns to improve the product.
+2. Data that describes or is used to configure servers, databases, tables, and other resources created or provided by customers. It includes database table and column names but not the contents of database rows or other customer data. Customers shouldn't place any personal data in those fields or create applications designed to store personal data in these fields. For the permitted usage scenarios below, only hash form is used to determine usage patterns to improve the product.
 
    - Example
       - SQL Server database names
@@ -141,7 +143,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
       |---------|---------|---------|
       |May be used by Microsoft to improve features and or fix bugs in current features. |Limited to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years|
 
-3. Data that is generated in the course of running the server. It does not contain customer data, non-personal data as listed in 1. or 2. (above), customer access control data, or personal data.
+3. Data that is generated in the course of running the server. It doesn't contain customer data, non-personal data as listed in 1. or 2. (above), customer access control data, or personal data.
 
    - Example
      - Database GUID
@@ -155,7 +157,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
      - Event names and error codes
      - Hardware settings and identification such as OEM Manufacturer
 
-   Microsoft does examine application name values set by other programs that use SQL Server (example: SharePoint or third-party packaged programs and includes this information in metadata fields sent to Microsoft when Usage Data is enabled). Customers should not place personal data in those metadata fields or create applications designed to store personal data in these fields.
+   Microsoft does examine application name values set by other programs that use SQL Server (example: SharePoint or third-party packaged programs and includes this information in metadata fields sent to Microsoft when Usage Data is enabled). Customers shouldn't place personal data in those metadata fields or create applications designed to store personal data in these fields.
 
    - Permitted usage scenarios
 
@@ -168,8 +170,8 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
      |Customers with their consent can send User Feedback that contains customer data to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
      |May use database name and application name to categorize databases and applications into known categories, for example, those that may be running software provided by Microsoft or other companies.|Limit to Microsoft internal with no third-party access.|Min 90 days - Max 3 years |
 
-## System generated logs controls
+## System-generated logs controls
 
-Instructions on how system generated logs can be turned on/off in product can be referenced here - [Configure usage and diagnostic data collection for SQL Server (CEIP)](usage-and-diagnostic-data-configuration-for-sql-server.md).
+Instructions on how system-generated logs can be turned on/off in product can be referenced here - [Configure usage and diagnostic data collection for SQL Server (CEIP)](usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

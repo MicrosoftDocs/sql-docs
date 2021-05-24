@@ -29,7 +29,7 @@ ms.author: maggies
   
 ## Details  
   
-|||  
+|Detail|Value|  
 |-|-|  
 |**Product Name**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**Event ID**|rsAccessedDenied|  

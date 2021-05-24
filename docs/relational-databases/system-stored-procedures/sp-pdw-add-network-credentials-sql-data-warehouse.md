@@ -3,7 +3,8 @@ description: "sp_pdw_add_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_add_network_credentials"
 titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 

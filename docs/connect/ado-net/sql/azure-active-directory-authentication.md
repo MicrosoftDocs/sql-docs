@@ -1,7 +1,7 @@
 ---
-title: "Using Azure Active Directory authentication with SqlClient"
-description: "Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient"
-ms.date: "11/20/2020"
+title: Using Azure Active Directory authentication with SqlClient
+description: Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient
+ms.date: 03/30/2021
 dev_langs: 
   - "csharp"
 ms.prod: sql
@@ -165,7 +165,7 @@ For more information about managed identities, see [About managed identities for
 
 Since **Microsoft.Data.SqlClient** 2.1.0, the driver supports authentication to Azure SQL Database, Azure Synapse Analytics, and Azure SQL Managed Instance by acquiring access tokens via managed identity. To use this authentication, specify either `Active Directory Managed Identity` or `Active Directory MSI` in the connection string, and no password is required. 
 
-You can't set the `Credential` property of `SqlConnection` in this mode either. For a user-assigned managed identity, username must be provided. 
+You can't set the `Credential` property of `SqlConnection` in this mode either. For a user-assigned managed identity, the object id of the managed identity must be provided. 
 
 The following example shows how to use `Active Directory Managed Identity` authentication with a system-assigned managed identity.
 
@@ -189,7 +189,7 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 
 ```c#
 // For user-assigned managed identity
-// Use your own server, database, and user ID.
+// Use your own values for Server, Database, and User Id.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
@@ -249,7 +249,7 @@ The following example shows how to set an application client ID through a config
 
 ## Support for a custom SQL authentication provider
 
-Given more flexibility, the client application can also use its own provider for Active Directory authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. 
+Given more flexibility, the client application can also use its own provider for Active Directory authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. It then must register the custom provider, overriding one or more of the existing `Active Directory*` authentication methods.
 
 The following example shows how to use a new authentication provider for `Active Directory Device Code Flow` authentication.
 

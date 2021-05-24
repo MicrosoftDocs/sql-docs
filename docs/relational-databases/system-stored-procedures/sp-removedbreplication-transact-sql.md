@@ -42,7 +42,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 `[ @type = ] type`
  Is the type of replication for which database objects are being removed. *type* is **nvarchar(5)** and can be one of the following values.  
   
-|||  
+|Value|Description|  
 |-|-|  
 |**tran**|Removes transactional replication publishing objects.|  
 |**merge**|Removes merge replication publishing objects.|  

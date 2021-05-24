@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], or[!INCLUDE[ssaps-md](../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../includes/sspdw-md.md)]).
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], or[!INCLUDE[ssaps-md](../../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]).
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -343,7 +343,7 @@ WITH (
 
 ### G. Create external data source to reference Kafka
 
-In this example, the external data source is a Kafka server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The Kafka external data source is only for data streaming and does not support predicate push down.
+Only available in Azure SQL Edge. In this example, the external data source is a Kafka server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The Kafka external data source is only for data streaming and does not support predicate push down.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -355,7 +355,7 @@ go
 
 ### H. Create external data source to reference EdgeHub
 
-In this example, the external data source is a EdgeHub running on the same edge device as Azure SQL Edge. The edgeHub external data source is only for data streaming and does not support predicate push down.
+Only available in Azure SQL Edge. In this example, the external data source is a EdgeHub running on the same edge device as Azure SQL Edge. The edgeHub external data source is only for data streaming and does not support predicate push down.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -372,8 +372,7 @@ go
 
 ### I. Create an external data source for bulk operations retrieving data from Azure Storage
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
-Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -395,8 +394,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ### J. Create external data source to access data in Azure Storage using the abfs:// interface
 
-**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11+.
-In this example, the external data source is an Azure Data Lake Storage Gen2 account logs. The container is called daily. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
+**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11+. In this example, the external data source is an Azure Data Lake Storage Gen2 account logs. The container is called daily. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
 
 This example shows how to create the database scoped credential for authentication to an Azure Data Lake Storage Gen2 account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
 
@@ -445,7 +443,7 @@ WITH
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]: ../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
@@ -478,7 +476,7 @@ Creates an external data source for elastic queries. External data sources are u
 
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 - Query remote SQL Database or Azure Synapse instances using SQL Database with [elastic query][remote_eq]
-- Query a sharded Azure SQL Database using [elastic query][sharded_eq]
+- Query a sharded SQL Database using [elastic query][sharded_eq]
 
 ## Syntax
 
@@ -575,7 +573,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 ### A. Create a shard map manager external data source
 
-To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in SQL Database or a SQL Server database on a virtual machine.
+To create an external data source to reference a `SHARD_MAP_MANAGER`, specify the SQL Database server name that hosts the shard map manager in SQL Database or a SQL Server database on a virtual machine.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
@@ -666,7 +664,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
@@ -705,7 +703,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
-> To create an external data source to query a SQL Analytics resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+> To create an external data source to query a [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
 ## Syntax
 
@@ -886,8 +884,7 @@ WITH
 
 ### D. Create external data source to reference Polybase connectivity to Azure Data Lake Store Gen 2 using abfs://
 
-There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview
-) mechanism.
+There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview) mechanism.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one
@@ -936,7 +933,7 @@ WITH
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
@@ -972,7 +969,7 @@ WITH
 
 ## Overview: Analytics Platform System
 
-Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support the following use case: Data virtualization and data load using [PolyBase][intro_pb]
+Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support the following use case: Data virtualization and data load using [PolyBase][intro_pb].
 
 ## Syntax
 
@@ -1182,7 +1179,7 @@ WITH
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [connection_option_keyword]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md#odbc-driver-connection-string-keywords
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown

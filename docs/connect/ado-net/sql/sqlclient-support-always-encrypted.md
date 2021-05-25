@@ -344,9 +344,11 @@ If you want to store column master keys in a key store that is not supported by 
 
 - [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)
 - [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) (Added in version 3.0)
-- [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand)
+- [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) (Added in version 3.0)
 
 #### Column Encryption Key cache precedence
+
+This section applies to version 3.0 and higher of the provider.
 
 The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or command instance will not be cached by the **Microsoft .NET Data Provider for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
 
@@ -354,6 +356,8 @@ The column encryption keys (CEK) decrypted by custom key store providers registe
 > CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally. Any CEK caching implementation should reference the value of [SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl) before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching.
 
 ### Registering a custom column master key store provider
+
+This section applies to version 3.0 and higher of the provider.
 
 Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
 

@@ -677,6 +677,8 @@ items:
           href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
         - name: VSS & SQL Writer 
           href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
+        - name: SQL Writer Logging
+          href: relational-databases/backup-restore/sql-server-vss-writer-logging.md
       - name: Configuration
         items:
         - name: Compression

@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.files.f1"
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Properties (Files Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

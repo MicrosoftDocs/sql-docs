@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspublications view"
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syspublications (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

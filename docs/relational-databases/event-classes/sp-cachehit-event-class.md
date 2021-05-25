@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SP:CacheHit event class"
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheHit Event Class

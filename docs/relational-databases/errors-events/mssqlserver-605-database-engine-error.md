@@ -50,7 +50,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
 1.  Identify the tables associated with the allocation units specified in the message by running the following query. Replace `allocation_unit_id` with the allocation units specified in the error message.  
   
     ```sql  
-    USE`database_name`;  
+    USE [database_name];  
   
     GO  
   

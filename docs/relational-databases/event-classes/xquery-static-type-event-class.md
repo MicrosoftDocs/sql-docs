@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "XQuery Static Type event class"
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XQuery Static Type Event Class

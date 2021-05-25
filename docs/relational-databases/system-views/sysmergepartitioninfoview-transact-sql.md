@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergepartitioninfoview view"
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

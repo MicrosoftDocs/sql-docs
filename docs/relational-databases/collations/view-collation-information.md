@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], view"
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Collation Information

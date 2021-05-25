@@ -2946,9 +2946,9 @@
       items:
       - name: Connecting from Linux or macOS
         href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
-      - name: Data Access Tracing with the ODBC Driver on Linux and macOS
+      - name: Data Access Tracing on Linux and macOS
         href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
-      - name: ODBC Driver on Linux and macOS - High Availability and Disaster Recovery
+      - name: High Availability and Disaster Recovery
         href: ../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
       - name: Programming Guidelines
         href: ../connect/odbc/linux-mac/programming-guidelines.md

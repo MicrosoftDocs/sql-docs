@@ -677,6 +677,8 @@ items:
           href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
         - name: VSS & SQL Writer 
           href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
+        - name: SQL Writer Logging
+          href: relational-databases/backup-restore/sql-server-vss-writer-logging.md
       - name: Configuration
         items:
         - name: Compression
@@ -6127,17 +6129,19 @@ items:
     items:
     - name: Overview
       href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+    - name: Release notes
+      href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
       href: tools/synapse-pathway/pathway-faq.md
-    - name: Behind the Scenes
+    - name: Behind the scenes
       href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Tutorial - Run Azure Synapse Pathway
       href: tools/synapse-pathway/synapse-pathway-assessment.md
-    - name: Tutorial - Save and Load
+    - name: Tutorial - Save and load
       href: tools/synapse-pathway/tutorial-save-load-assessment.md
-    - name: Generate Reports
+    - name: Generate reports
       href: tools/synapse-pathway/report-generation.md
 - name: Manage, monitor, & tune
   items:
@@ -8353,16 +8357,17 @@ items:
     - name: Issue Element
       href: tools/ssbdiagnose/issue-element-ssbdiagnose.md
   - name: SQL Server Data Tools (SSDT)
-    href: ssdt/sql-server-data-tools.md
     items:
+    - name: SQL Server Data Tools Overview
+      href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
     - name: Release notes for SSDT
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-    - name: SQL Server Data Tools
-      href: ssdt/sql-server-data-tools.md
+    - name: Anonymous Usage Data
+      href: ssdt/anonymous-usage-data.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development
@@ -9803,6 +9808,8 @@ items:
       href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage for Azure Synapse Analytics
       href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
+    - name: Troubleshooting Import/Export
+      href: tools/sqlpackage/troubleshooting-import-export-sqlpackage.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -10936,7 +10943,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,3000 to 16,000
+      - name: Errors 12,300 to 16,000
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -11098,6 +11105,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-33128-database-engine-error.md
         - name: 33129
           href: relational-databases/errors-events/mssqlserver-33129-database-engine-error.md
+      - name: Errors 34,001 to 40,999
+        items:
+        - name: 35250
+          href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
       - name: Errors 41,000 to 41,400
         items:
         - name: 41030
@@ -12046,6 +12057,12 @@ items:
         href: relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md
       - name: sys.database_credentials
         href: relational-databases/system-catalog-views/sys-database-credentials-transact-sql.md
+      - name: sys.database_ledger_blocks
+        href: relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql.md
+      - name: sys.database_ledger_digest_locations
+        href: relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md
+      - name: sys.database_ledger_transactions
+        href: relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql.md
       - name: sys.database_scoped_credentials
         href: relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md
       - name: sys.database_permissions
@@ -12056,6 +12073,10 @@ items:
         href: relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md
       - name: sys.key_encryptions
         href: relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md
+      - name: sys.ledger_column_history
+        href: relational-databases/system-catalog-views/sys-ledger-column-history-transact-sql.md
+      - name: sys.ledger_table_history
+        href: relational-databases/system-catalog-views/sys-ledger-table-history-transact-sql.md
       - name: sys.login_token
         href: relational-databases/system-catalog-views/sys-login-token-transact-sql.md
       - name: sys.master_key_passwords
@@ -14404,6 +14425,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
       - name: sp_grantlogin
         href: relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md
+      - name: sp_generate_database_ledger_digest
+        href: relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md
       - name: sp_helpdbfixedrole
         href: relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md
       - name: sp_helplinkedsrvlogin
@@ -14448,6 +14471,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
       - name: sp_validatelogins
         href: relational-databases/system-stored-procedures/sp-validatelogins-transact-sql.md
+      - name: sp_verify_database_ledger
+        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md
+      - name: sp_verify_database_ledger_from_digest_storage
+        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
       - name: sp_xp_cmdshell_proxy_account
         href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
     - name: Snapshot Backup

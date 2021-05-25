@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server event classes, OLEDB event category"
   - "event classes [SQL Server], OLEDB event category"
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Event Category

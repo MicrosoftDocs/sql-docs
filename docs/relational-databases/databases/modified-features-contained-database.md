@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, modifications to DBs"
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Modified Features (Contained Database)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

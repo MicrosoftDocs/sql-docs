@@ -571,7 +571,12 @@ Specifies a dynamic data mask. *mask_function* is the name of the masking functi
 - partial()
 - random()
 
+Requires ALTER ANY MASK permission.
+
 To drop a mask, use `DROP MASKED`. For function parameters, see [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md).
+
+Add and drop a mask require **ALTER ANY MASK** permission.
+
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

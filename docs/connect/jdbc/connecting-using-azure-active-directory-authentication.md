@@ -2,7 +2,7 @@
 title: Connecting using Azure Active Directory authentication
 description: Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 04/14/2021
+ms.date: 05/24/2021
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -33,7 +33,7 @@ Connection properties to support Azure Active Directory authentication in the Mi
   - **ActiveDirectoryInteractive**
     - Supported since driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics using an interactive authentication flow (multi-factor authentication).
   - **ActiveDirectoryServicePrincipal**
-    - Supported since driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics using the client ID and secret of a service principal identity.
+    - Supported since driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics using the application/client ID and secret of a service principal identity.
   - **SqlPassword**
     - Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
   - **NotSpecified**
@@ -326,9 +326,9 @@ public class AADInteractive {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
-    ds.setAuthentication("ActiveDirectoryInteractive");
+        ds.setAuthentication("ActiveDirectoryInteractive");
 
-    // Optional
+        // Optional login hint
         ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
 
         try (Connection connection = ds.getConnection();
@@ -370,6 +370,7 @@ The following example shows how to use `authentication=ActiveDirectoryServicePri
 Before building and running the example:
 
 1. On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, and include them in the Java build path
+
 2. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
@@ -377,10 +378,11 @@ Before building and running the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-3. Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
+3. Locate the following lines of code and replace principalId with the Application ID / Client ID of the Azure AD service principal you want to connect as.
 
     ```java
-    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
+    String principalSecret = "..."; // Replace with your AAD principal secret.
     ```
 
 The example to use ActiveDirectoryInteractive authentication mode:
@@ -394,18 +396,15 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class AADServicePrincipal {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD secure principal ID.
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
         String principalSecret = "..."; // Replace with your AAD principal secret.
 
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
-    ds.setAuthentication("ActiveDirectoryServicePrincipal");
-    ds.setAADSecurePrincipalId(principalId);
-    ds.setAADSecurePrincipalSecret(principalSecret);
-
-    // Optional
-        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setAuthentication("ActiveDirectoryServicePrincipal");
+        ds.setAADSecurePrincipalId(principalId);
+        ds.setAADSecurePrincipalSecret(principalSecret);
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
@@ -421,11 +420,11 @@ public class AADServicePrincipal {
 If a connection is established, you should see the following message as output:
 
 ```output
-You have successfully logged on as: <your user name>
+You have successfully logged on as: <your app/client ID>
 ```
 
 > [!NOTE]
-> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups the specified Azure AD user belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user representing the specified Azure AD principal or one of the groups the specified Azure AD principal belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
 
 ## Connecting using access token
 
@@ -486,19 +485,19 @@ public class AADTokenBased {
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
-    String scope = spn +  "/.default";
-    Set<String> scopes = new HashSet<>();
+        String scope = spn +  "/.default";
+        Set<String> scopes = new HashSet<>();
         scopes.add(scope);
 
-    ExecutorService executorService = Executors.newSingleThreadExecutor();
-    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
-    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+        ConfidentialClientApplication clientApplication = ConfidentialClientApplication
             .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
-    CompletableFuture<IAuthenticationResult> future = clientApplication
+        CompletableFuture<IAuthenticationResult> future = clientApplication
             .acquireToken(ClientCredentialParameters.builder(scopes).build());
 
-    IAuthenticationResult authenticationResult = future.get();
-    String accessToken = authenticationResult.accessToken();
+        IAuthenticationResult authenticationResult = future.get();
+        String accessToken = authenticationResult.accessToken();
 
         System.out.println("Access Token: " + accessToken);
 

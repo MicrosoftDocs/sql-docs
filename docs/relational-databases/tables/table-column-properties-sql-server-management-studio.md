@@ -13,8 +13,8 @@ f1_keywords:
   - "vdtsql.chm:69657"
   - "vdt.ppg.columns"
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table Column Properties (SQL Server Management Studio)

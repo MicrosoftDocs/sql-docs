@@ -25,7 +25,10 @@ In addition to an active internet connection so you can browse to the [!INCLUDE[
 
 - The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to be a member of the Azure AD tenant, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.
 
-- The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager either with the account used to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], or the account the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service is running under
+- The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager either with the account used to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], or the account the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service is running under.
+
+- The server with Reporting Services installed needs to be configured to use TLS 1.2 or newer. For more information, see [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
+
 
 - Reports that you want to pin from must use stored credentials. This is not a requirement of the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration itself but of the refresh process for the pinned items.  The action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles in [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If a report does not use stored credentials, a user can still pin report items but when the associated subscription attempts to refresh the data to [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], you will see an error message similar to the following on the **My Subscriptions** page.
 

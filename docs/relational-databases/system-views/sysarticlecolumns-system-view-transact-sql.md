@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticlecolumns view"
 ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysarticlecolumns (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

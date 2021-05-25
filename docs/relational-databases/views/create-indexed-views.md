@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexed Views

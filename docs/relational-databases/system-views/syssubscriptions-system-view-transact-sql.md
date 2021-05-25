@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syssubscriptions view"
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syssubscriptions (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

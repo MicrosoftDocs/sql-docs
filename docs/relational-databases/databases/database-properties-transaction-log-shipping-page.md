@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.logshipping.f1"
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Properties (Transaction Log Shipping Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

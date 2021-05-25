@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Performance Statistics event class"
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performance Statistics Event Class

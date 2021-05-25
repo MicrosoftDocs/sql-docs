@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Missing Column Statistics event class"
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Missing Column Statistics Event Class

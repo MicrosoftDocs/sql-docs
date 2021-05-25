@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLTP databases [SQL Server]"
   - "databases [SQL Server], about databases"
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases

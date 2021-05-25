@@ -343,7 +343,7 @@ For examples demonstrating performing encryption/decryption with Azure Key Vault
 If you want to store column master keys in a key store that is not supported by an existing provider, you can implement a custom provider by extending the [SqlColumnEncryptionKeyStoreProvider class](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider) and registering the provider using one of the following methods:
 
 - [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)
-- [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection)
+- [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) (Added in version 3.0)
 - [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand)
 
 #### Column Encryption Key cache precedence

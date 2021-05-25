@@ -2,7 +2,7 @@
 description: "sys.databases (Transact-SQL)"
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/08/2020"
+ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -118,6 +118,7 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**is_tempdb_spill_to_remote_store**|**bit**|Indicates whether tempdb spill to remote store is enabled.<br />1 = enabled<br />0 = disabled<br />**Applies to**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2. While this feature is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure Synapse release notes](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) and [Gen2 upgrade schedule](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) for feature availability.|
 |**is_stale_page_detection_on**|**bit**|Indicates whether stale page detection is enabled.<br />1 = stale page detection is enabled<br />0 = stale page detection is disabled<br />**Applies to**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2. While this feature is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure Synapse release notes](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) and [Gen2 upgrade schedule](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) for feature availability.|
 |**is_memory_optimized_enabled**|**bit**|Indicates whether certain In-Memory features, such as [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md), are enabled for the database. Does not reflect the availability or configuration state of [In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). <br />1 = memory-optimized features are enabled<br />0 = memory-optimized features are disabled<br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_ledger_on**|**bit**|Indicates a [ledger database](/azure/azure-sql/database/ledger-overview#ledger-database), which is a database in which all user tables are ledger tables (all customer database is tamper-evident).<br/><br/>**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ## Permissions
 

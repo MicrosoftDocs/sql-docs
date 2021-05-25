@@ -12055,6 +12055,12 @@ items:
         href: relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md
       - name: sys.database_credentials
         href: relational-databases/system-catalog-views/sys-database-credentials-transact-sql.md
+      - name: sys.database_ledger_blocks
+        href: relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql.md
+      - name: sys.database_ledger_digest_locations
+        href: relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md
+      - name: sys.database_ledger_transactions
+        href: relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql.md
       - name: sys.database_scoped_credentials
         href: relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md
       - name: sys.database_permissions
@@ -12065,6 +12071,10 @@ items:
         href: relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md
       - name: sys.key_encryptions
         href: relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md
+      - name: sys.ledger_column_history
+        href: relational-databases/system-catalog-views/sys-ledger-column-history-transact-sql.md
+      - name: sys.ledger_table_history
+        href: relational-databases/system-catalog-views/sys-ledger-table-history-transact-sql.md
       - name: sys.login_token
         href: relational-databases/system-catalog-views/sys-login-token-transact-sql.md
       - name: sys.master_key_passwords
@@ -14413,6 +14423,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
       - name: sp_grantlogin
         href: relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md
+      - name: sp_generate_database_ledger_digest
+        href: relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md
       - name: sp_helpdbfixedrole
         href: relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md
       - name: sp_helplinkedsrvlogin
@@ -14457,6 +14469,10 @@ items:
         href: relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md
       - name: sp_validatelogins
         href: relational-databases/system-stored-procedures/sp-validatelogins-transact-sql.md
+      - name: sp_verify_database_ledger
+        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md
+      - name: sp_verify_database_ledger_from_digest_storage
+        href: relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md
       - name: sp_xp_cmdshell_proxy_account
         href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
     - name: Snapshot Backup

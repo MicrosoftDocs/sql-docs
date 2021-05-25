@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Audit Login Failed event class"
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Login Failed Event Class

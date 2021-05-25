@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "Resource database [SQL Server]"
   - "databases [SQL Server], moving"
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Move System Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

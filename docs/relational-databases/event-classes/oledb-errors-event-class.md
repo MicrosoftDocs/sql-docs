@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "OLEDB Errors event class"
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Errors Event Class

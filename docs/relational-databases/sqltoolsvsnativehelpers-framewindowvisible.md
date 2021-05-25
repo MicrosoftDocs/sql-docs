@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: "reference"
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SqlToolsVSNativeHelpers - FrameWindowVisible

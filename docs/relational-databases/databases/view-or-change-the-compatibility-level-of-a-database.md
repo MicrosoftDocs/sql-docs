@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], changing"
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or Change the Compatibility Level of a Database

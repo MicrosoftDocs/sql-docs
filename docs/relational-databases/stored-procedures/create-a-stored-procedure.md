@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], creating"
   - "creating stored procedures"
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Stored Procedure

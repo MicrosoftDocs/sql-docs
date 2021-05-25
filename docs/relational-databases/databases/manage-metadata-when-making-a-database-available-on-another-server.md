@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 helpviewer_keywords: 
   - "cross-database queries [SQL Server]"

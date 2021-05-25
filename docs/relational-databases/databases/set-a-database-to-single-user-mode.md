@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "single-user mode [SQL Server], database option"
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Set a Database to Single-user Mode
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

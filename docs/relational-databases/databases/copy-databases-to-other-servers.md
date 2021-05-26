@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "copying databases"
   - "bulk importing [SQL Server], between servers"
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Copy Databases to Other Servers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

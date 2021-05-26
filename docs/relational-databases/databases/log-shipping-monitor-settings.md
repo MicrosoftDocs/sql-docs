@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.logshipping.settings.monitor.f1"
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Log Shipping Monitor Settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

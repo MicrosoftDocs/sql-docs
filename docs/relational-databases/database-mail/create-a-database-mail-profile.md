@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "profiles [SQL Server], Database Mail"
   - "public profiles [Database Mail]"
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Create a Database Mail Profile
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

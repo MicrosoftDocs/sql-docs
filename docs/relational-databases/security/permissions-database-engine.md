@@ -355,7 +355,18 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
+|XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|
+
+## <a name="asdbpermissions"></a> Azure SQL Database Permissions
+
+These permissions currently only apply to Azure SQL Database, but are not the only permissions for Azure SQL Database. See the [Permission](#_permissions) section above for additional Azure SQL Database permissions.
+
+| Base securable | Granular permissions on base securable | Permission type code | Securable that contains base securable | Permission on container securable that implies granular permission on base securable |Description |
+|--|--|--|--|--|--|
+|DATABASE|ENABLE LEDGER|EL|SERVER|CONTROL|Enables the grantee to create new ledger tables.|
+|DATABASE|ALTER LEDGER|ALR|SERVER|CONTROL|Enables the grantee to drop ledger tables.|
+|DATABASE|VIEW LEDGER CONTENT|VLC|SERVER|CONTROL|Enables the grantee to view database-level ledger catalog views and invoke verification.|
+|DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|Enables the grantee to generate a ledger digest.|
   
 ##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  Checking permissions can be complex. The permission check algorithm includes overlapping group memberships and ownership chaining, both explicit and implicit permission, and can be affected by the permissions on securable classes that contain the securable entity. The general process of the algorithm is to collect all the relevant permissions. If no blocking DENY is found, the algorithm searches for a GRANT that provides sufficient access. The algorithm contains three essential elements, the **security context**, the **permission space**, and the **required permission**.  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "databases [SQL Server], dropping"
   - "database removal [SQL Server]"
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete a Database

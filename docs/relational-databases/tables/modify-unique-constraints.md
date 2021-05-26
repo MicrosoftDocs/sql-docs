@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], modifying"
   - "constraints [SQL Server], unique"
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Unique Constraints

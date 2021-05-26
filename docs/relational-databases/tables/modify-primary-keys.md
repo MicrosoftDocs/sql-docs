@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "modifying primary keys"
   - "primary keys [SQL Server], modifying"
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Primary Keys

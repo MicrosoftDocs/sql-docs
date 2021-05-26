@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdatatypemappings view"
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

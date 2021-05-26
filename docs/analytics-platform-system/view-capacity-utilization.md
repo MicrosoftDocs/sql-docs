@@ -1,12 +1,12 @@
 ---
 title: View capacity utilization
 description: View capacity utilization in Analytics Platform System.
-author: mzaman1 
+author: charlesfedderson 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---

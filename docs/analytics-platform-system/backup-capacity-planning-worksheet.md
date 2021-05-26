@@ -1,12 +1,12 @@
 ---
 title: Backup server capacity planning
 description: This capacity planning worksheet helps you to determine the requirements for a backup server for performing Parallel Data Warehouse database backup and restore operations. Use this to create your plan for purchasing new or provisioning existing backup servers.
-author: mzaman1 
+author: charlesfedderson 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---

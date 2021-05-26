@@ -1,12 +1,12 @@
 ---
 title: Determine polling frequency
 description: This article explains how to determine the polling frequency for Analytics Platform System appliance alerts.
-author: mzaman1 
+author: charlesfedderson 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---

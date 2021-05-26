@@ -1,12 +1,12 @@
 ---
 title: Set Active Directory password
 description: Set Active Directory nodes admin logon password in Directory Services Restore Mode in Analytics Platform System (APS).
-author: mzaman1 
+author: charlesfedderson 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---

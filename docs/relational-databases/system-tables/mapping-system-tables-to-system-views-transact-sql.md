@@ -23,7 +23,7 @@ ms.author: chadam
 
   This topic shows the mapping between the system tables and functions and system views and functions.  
   
- The following table maps the system tables to their corresponding system views or functions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
+ The following table maps the system tables to their corresponding system views or functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |System table|System views or functions|Type of view or function|  
 |------------------|-------------------------------|------------------------------|  
@@ -46,7 +46,7 @@ ms.author: chadam
 |sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|Catalog view|  
 |sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|Catalog view|  
   
- The following table maps the system tables or functions that are in every database in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] to their corresponding system views or functions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
+ The following table maps the system tables or functions that are in every database in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] to their corresponding system views or functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |System table or function|System view or function|Type of view or function|  
 |------------------------------|-----------------------------|------------------------------|  

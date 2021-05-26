@@ -125,7 +125,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requires SELECT permission on sys.dm_sql_referencing_entities. By default, SELECT permission is granted to public.  
   
-### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]  
+### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   Requires no permissions on the referenced object. Partial results can be returned if the user has VIEW DEFINITION on only some of the referencing entities.  
   

@@ -2,7 +2,7 @@
 description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2016"
+ms.date: "05/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -95,7 +95,7 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
  <sup>1</sup> This way of setting up a linked server forces the name of the linked server to be the same as the network name of the remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use *data_source* to specify the server.  
   
  <sup>2</sup> "Any" indicates that the product name can be anything.  
-  
+ 
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider is the provider that is used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if no provider name is specified or if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is specified as the product name. Even if you specify the older provider name, SQLOLEDB, it will be changed to SQLNCLI when persisted to the catalog.  
   
  The *data_source*, *location*, *provider_string*, and *catalog* parameters identify the database or databases the linked server points to. If any one of these parameters is NULL, the corresponding OLE DB initialization property is not set.  
@@ -103,7 +103,10 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
  In a clustered environment, when you specify file names to point to OLE DB data sources, use the universal naming convention name (UNC) or a shared drive to specify the location.  
   
  **sp_addlinkedserver** cannot be executed within a user-defined transaction.  
-  
+   
+ > [!IMPORTANT]
+> Azure SQL Managed Instance currently supports only SQL Server, SQL Database, and other SQL Managed Instance as remote data sources.
+
 > [!IMPORTANT]
 > When a linked server is created by using **sp_addlinkedserver**, a default self-mapping is added for all local logins. For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
   

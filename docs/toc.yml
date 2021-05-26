@@ -16498,6 +16498,8 @@ items:
           href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
         - name: Relational operators
           items:
+          - name: Overview
+            href: t-sql/language-elements/relational-operators-transact-sql.md
           - name: PREDICT
             href: t-sql/queries/predict-transact-sql.md
           - name: OPENDATASOURCE

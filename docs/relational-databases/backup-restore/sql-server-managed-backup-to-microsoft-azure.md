@@ -107,11 +107,11 @@ ms.author: chadam
 >
   
 ##  <a name="support_limits"></a> Supportability  
- The following support limitations and considerations are specific to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]:  
+ The following support limitations and considerations are specific to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   Backup of **master**, **model**, and **msdb** system databases is supported. Backup of **tempdb** is not supported. 
   
--   For [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], all recovery models are supported (Full, Bulk-logged, and Simple).  
+-   For [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], all recovery models are supported (Full, Bulk-logged, and Simple).  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent only supports database full and log backups. File backup automation is not supported.  
   

@@ -91,8 +91,8 @@ In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( 
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)],  Single-Page allocations, Multi-Page allocations and CLR allocations are all consolidated into a **"Any size" Page Allocator**, and it's included in memory limits that are controlled by *max server memory (MB)* and *min server memory (MB)* configuration options. This change provided a more accurate sizing ability for all memory requirements that go through the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager. 
 
 > [!IMPORTANT]
-> Carefully review your current *max server memory (MB)* and *min server memory (MB)* configurations after you upgrade to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] through [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. This is because starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], such configurations now include and account for more memory allocations compared to earlier versions.
-> These changes apply to both 32-bit and 64-bit versions of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and 64-bit versions of [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] through [!INCLUDE [sssql19-md](../includes/sssql19-md.md)].
+> Carefully review your current *max server memory (MB)* and *min server memory (MB)* configurations after you upgrade to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This is because starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], such configurations now include and account for more memory allocations compared to earlier versions. 
+> These changes apply to both 32-bit and 64-bit versions of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and 64-bit versions of [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 The following table indicates whether a specific type of memory allocation is controlled by the *max server memory (MB)* and *min server memory (MB)* configuration options:
 

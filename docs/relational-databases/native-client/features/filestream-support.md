@@ -53,7 +53,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## Down-Level Compatibility  
- If your client was compiled using the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that was included with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], and the application connects to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], **varbinary(max)** behavior will be compatible with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. That is, the maximum size of returned data will be limited to 2 GB. For result values larger that 2 GB, truncation will occur and a "string data right truncation" warning will be returned.  
+ If your client was compiled using the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that was included with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], and the application connects to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary(max)** behavior will be compatible with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. That is, the maximum size of returned data will be limited to 2 GB. For result values larger that 2 GB, truncation will occur and a "string data right truncation" warning will be returned.  
   
  When data-type compatibility is set to 80, client behavior will be consistent with down-level client behavior.  
   

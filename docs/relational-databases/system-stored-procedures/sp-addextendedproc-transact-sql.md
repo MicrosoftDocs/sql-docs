@@ -58,7 +58,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  **sp_addextendedproc** adds entries to the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view, registering the name of the new extended stored procedure with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also adds an entry in the [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]  
->  Existing DLLs that were not registered with a complete path will not work after upgrading to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. To correct the problem, use **sp_dropextendedproc** to unregister the DLL, and then reregister it with **sp_addextendedproc**, specifying the complete path.  
+>  Existing DLLs that were not registered with a complete path will not work after upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. To correct the problem, use **sp_dropextendedproc** to unregister the DLL, and then reregister it with **sp_addextendedproc**, specifying the complete path.  
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_addextendedproc**.  

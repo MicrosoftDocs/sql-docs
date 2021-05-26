@@ -27,7 +27,7 @@ ms.author: chadam
         [Arithmetic operators](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Relational operator](../../t-sql/language-elements/relational-operators-transact-sql.md)
+        [Relational operators](../../t-sql/language-elements/relational-operators-transact-sql.md)
     :::column-end:::
 :::row-end:::  
 :::row:::

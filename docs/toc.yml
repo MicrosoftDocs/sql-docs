@@ -16500,8 +16500,6 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/relational-operators-transact-sql.md
-          - name: PREDICT
-            href: t-sql/queries/predict-transact-sql.md
           - name: OPENDATASOURCE
             href: t-sql/functions/opendatasource-transact-sql.md
           - name: OPENJSON
@@ -16512,6 +16510,8 @@ items:
             href: t-sql/functions/openrowset-transact-sql.md
           - name: OPENXML
             href: t-sql/functions/openxml-transact-sql.md
+          - name: PREDICT
+            href: t-sql/queries/predict-transact-sql.md
           - name: STRING_SPLIT
             href: t-sql/functions/string-split-transact-sql.md
         - name: String

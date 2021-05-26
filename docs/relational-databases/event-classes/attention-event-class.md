@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Attention event class"
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Attention Event Class

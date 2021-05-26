@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database attaching [SQL Server]"
   - "attaching databases [SQL Server]"
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Attach a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Return Data from a Stored Procedure

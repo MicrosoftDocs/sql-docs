@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

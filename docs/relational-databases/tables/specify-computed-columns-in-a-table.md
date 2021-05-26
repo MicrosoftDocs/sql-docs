@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, define"
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Computed Columns in a Table

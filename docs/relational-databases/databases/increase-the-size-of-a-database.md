@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database size [SQL Server], increasing"
   - "size [SQL Server], databases"
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Increase the Size of a Database

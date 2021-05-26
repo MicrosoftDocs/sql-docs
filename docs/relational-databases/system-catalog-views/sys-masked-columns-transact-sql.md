@@ -2,7 +2,7 @@
 description: "sys.masked_columns (Transact-SQL)"
 title: "sys.masked_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2016"
+ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -34,8 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**sys.masked_columns** returns many more columns inherited from **sys.columns**.|various|See [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) for more column definitions.|  
 |is_masked|**bit**|Indicates if the column is masked. 1 indicates masked.|  
 |masking_function|**nvarchar(4000)**|The masking function for the column.|  
-  
-## Remarks  
+|generated_always_type|**tinyint**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 7, 8, 9, 10 only applies to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Identifies when the column value is generated (will always be 0 for columns in system tables):<br /><br /> 0 = NOT_APPLICABLE<br /> 1 = AS_ROW_START<br /> 2 = AS_ROW_END<br />7 = AS_TRANSACTION_ID_START<br />8 = AS_TRANSACTION_ID_END<br />9 = AS_SEQUENCE_NUMBER_START<br />10 = AS_SEQUENCE_NUMBER_END<br /><br /> For more information, see [Temporal Tables &#40;Relational databases&#41;](../../relational-databases/tables/temporal-tables.md).|
   
 ## Permissions  
  This view returns information about tables where the user has some sort of permission on the table or if the user has the VIEW ANY DEFINITION permission.  

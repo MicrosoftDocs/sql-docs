@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "audits [SQL Server], Database Mail"
   - "Database Mail [SQL Server], logging"
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Mail Log and Audits
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

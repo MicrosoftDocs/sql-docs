@@ -33,7 +33,7 @@ SQL Server implements the following relational operators:
 
 ## Use
 
-Use a relational operator looks like a function call in a query or T-SQL statement. The difference is that the relational operator accepts named parameters whereas the function does not.
+Use a relational operator like a function in a query or T-SQL statement. The difference is that the relational operator accepts one or more named parameters whereas the function does not.
 
 ## See also
 

@@ -28,8 +28,8 @@ SQL Server implements the following relational operators:
 - [OPENROWSET (Transact-SQL)](../functions/openrowset-transact-sql.md)
 - [OPENXML (Transact-SQL)](../functions/openxml-transact-sql.md)
 - [OPENJSON (Transact-SQL)](../functions/openjson-transact-sql.md)
-- [STRING_SPLIT (Transact-SQL)](../functions/string-split-transact-sql.md)
 - [PREDICT (Transact-SQL)](../queries/predict-transact-sql.md)
+- [STRING_SPLIT (Transact-SQL)](../functions/string-split-transact-sql.md)
 
 ## Use
 

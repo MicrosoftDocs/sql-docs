@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 # Upgrade a database using detach and attach (Transact-SQL)

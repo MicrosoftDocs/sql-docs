@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "table creation [SQL Server], Visual Database Tools"
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Tables (Database Engine)

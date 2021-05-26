@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "read-only database views"
   - "database snapshots [SQL Server], about database snapshots"
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Snapshots (SQL Server)
 

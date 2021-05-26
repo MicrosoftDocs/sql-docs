@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "CursorExecute event class"
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorExecute Event Class

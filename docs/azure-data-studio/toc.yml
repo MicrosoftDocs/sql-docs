@@ -124,8 +124,14 @@
       href: notebooks/notebooks-kusto-kernel.md
     - name: Use Kqlmagic
       href: notebooks/notebooks-kqlmagic.md
-    - name: Use Parameterization
-      href: notebooks/notebooks-parameterization.md
+    - name: Parameterization
+      items: 
+      - name: Papermill Parameterization
+        href: notebooks/papermill-parameterization.md
+      - name: URI Parameterization
+        href: notebooks/uri-parameterization.md
+      - name: Run with Parameters
+        href: notebooks/run-with-parameters.md
   - name: Deployment
     items:
     - name: Deploy Azure SQL Database

@@ -1,6 +1,6 @@
 ---
-title: Parameterization of Notebooks in Azure Data Studio
-description: This tutorial shows how you can create a parameterized notebook in ADS.
+title: Parameterization of Notebooks in Azure Data Studio using run with parameters action.
+description: This tutorial shows how you can create a parameterized notebook in ADS using the run with parameters action.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,7 +8,7 @@ author: vasubhog
 ms.author: vasubhog
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
-ms.date: 01/25/2021
+ms.date: 05/21/2021
 ---
 
 # Create a Parameterized Notebook
@@ -17,12 +17,22 @@ ms.date: 01/25/2021
 
 This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
 
+> [!Note]
+   > Currently Parameterization can done on Python, PySpark, PowerShell, and .Net Interactive Kernels
+
 ## Prerequisites
 
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Python](https://www.python.org/downloads/)
 
-## Install and set up Papermill in Azure Data Studio
+## Run with Parameters Action
+
+New action that enables users to quickly set new parameters for their notebook through user input all through the UI.
+
+> [!Note]
+   > The parameter cell has to be formatted with each new parameter on a new line.
+
+## Set up a notebook for parameterization in Azure Data Studio
 
 The steps in this section all run within an Azure Data Studio notebook.
 
@@ -34,38 +44,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
-3. Install Papermill:
-
-   ```python
-   import sys
-   !{sys.executable} -m pip install papermill --no-cache-dir --upgrade
-   ```
-
-   Verify it's installed:
-
-   ```python
-   import sys
-   !{sys.executable} -m pip list
-   ```
-
-   :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="List":::
-
-5. You can test if papermill is loaded properly by checking the version of papermill.
-
-   ```python
-   import papermill
-   papermill
-   ```
-
-   :::image type="content" source="media/notebooks-parameterization/install-validation-papermill.png" alt-text="Validation":::
-
-## Set up a parameterized notebook
-
-1. Verify the **Kernel** is set to *Python3*.
-
-   ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)
-
-2. Create a New Code Cell and Tag as **Parameters Cell**.
+3. Create a New Code Cell and Tag as **Parameters Cell**.
 
    ```python
    x = 2.0
@@ -92,27 +71,12 @@ The steps in this section all run within an Azure Data Studio notebook.
 4. Save notebook as **Input.ipynb**.
    :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Save Notebook":::
 
-## How to execute Papermill notebook
+## How to Run the Notebook with Parameters
 
-Papermill can be executed two ways:
+On the notebook toolbar there is a new action - run with parameters. 
 
-- Command Line Interface (CLI)
-- Python API
+:::image type="content" source="media/notebooks-parameterization/run-with-parameters.png" alt-text="Parameter Cell Notebook":::
 
-### Parameterized CLI execution
-
-To execute a notebook using the CLI, enter the papermill command in the terminal with the input notebook, location for output notebook, and options.
-
-> [!Note]
-   > Papermill Command Line Interface Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
-
-1. Execute Input Notebook with new parameters.
-
-   ```shell
-   papermill Input.ipynb Output.ipynb -p x 10 -p y 20
-   ```
-
-   This will execute the Input Notebook with new values for parameters **x** and **y**.
 
 2. After Execution view new Output Parameterized Notebook.
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.

@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "TM: Promote Tran Completed event class"
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Promote Tran Completed Event Class

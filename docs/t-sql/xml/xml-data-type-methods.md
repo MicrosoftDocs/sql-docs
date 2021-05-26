@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], methods"
   - "methods [XML in SQL Server]"
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # xml Data Type Methods
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

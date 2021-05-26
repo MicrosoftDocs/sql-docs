@@ -4,7 +4,7 @@ title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -515,9 +515,9 @@ GO
   
 <a name="lock_compat_table"></a> The following table shows the compatibility of the most commonly encountered lock modes.  
   
-||Existing granted mode||||||  
+|Existing granted mode|**IS**|**S**|**U**|**IX**|**SIX**|**X**|
 |------|---------------------------|------|------|------|------|------|  
-|**Requested mode**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Requested mode**|
 |**Intent shared (IS)**|Yes|Yes|Yes|Yes|Yes|No|  
 |**Shared (S)**|Yes|Yes|Yes|No|No|No|  
 |**Update (U)**|Yes|Yes|No|No|No|No|  
@@ -558,9 +558,9 @@ GO
   
  Key-range lock modes have a compatibility matrix that shows which locks are compatible with other locks obtained on overlapping keys and ranges.  
   
-||Existing granted mode|||||||  
+|Existing granted mode|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|
 |------|---------------------------|------|------|------|------|------|------|  
-|**Requested mode**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Requested mode**  
 |**Shared (S)**|Yes|Yes|No|Yes|Yes|Yes|No|  
 |**Update (U)**|Yes|No|No|Yes|No|Yes|No|  
 |**Exclusive (X)**|No|No|No|No|No|Yes|No|  

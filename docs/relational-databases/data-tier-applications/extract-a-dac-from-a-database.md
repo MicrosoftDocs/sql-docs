@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], extract"
   - "wizard [DAC], extract"
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Extract a DAC From a Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -156,5 +156,5 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## See also  
- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
+ - [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md) 
+ - [SqlPackage in development pipelines](../../tools/sqlpackage/sqlpackage-pipelines.md)

@@ -49,8 +49,8 @@ This extends the catalog view [sys.column_store_row_groups &#40;Transact-SQL&#41
 |**transition_to_compressed_state_desc**|nvarchar(60)| 1 - NOT_APPLICABLE - the operation does not apply to the deltastore. Or, the rowgroup was compressed prior to upgrading to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] in which case the history is not preserved.<br /><br /> 2 - INDEX_BUILD - An index create or index rebuild compressed the rowgroup.<br /><br /> 3 - TUPLE_MOVER - The tuple mover running in the background compressed the rowgroup. Tuple mover happens after the rowgroup changes state from OPEN to CLOSED.<br /><br /> 4 - REORG_NORMAL - The reorganization operation, ALTER INDEX ... REORG, moved the CLOSED rowgroup from the deltastore to the columnstore. This occurred before the tuple-mover had time to move the rowgroup.<br /><br /> 5 - REORG_FORCED - This rowgroup was open in the deltastore and was forced into the columnstore before it had a full number of rows.<br /><br /> 6 - BULKLOAD - A bulk-load operation compressed the rowgroup directly without using the deltastore.<br /><br /> 7 - MERGE - A merge operation consolidated one or more rowgroups into this rowgroup and then performed the columnstore compression.|  
 |**has_vertipaq_optimization**|bit|VertiPaq optimization improves columnstore compression by rearranging the order of the rows in the rowgroup to achieve higher compression. This optimization occurs automatically in most cases. There are two cases where VertiPaq optimization is not used:<br/>  a. when a delta rowgroup moves into the columnstore and there are one or more nonclustered indexes on the columnstore index - in this case VertiPaq optimization is skipped to minimizes changes to the mapping index;<br/> b. for columnstore indexes on memory-optimized tables. <br /><br /> 0 = No<br /><br /> 1 = Yes|  
 |**generation**|bigint|Row group generation associated with this row group.|  
-|**created_time**|datetime2|Clock time for when this rowgroup was created.<br /><br /> NULL - for a columnstore index on an in-memory table.|  
-|**closed_time**|datetime2|Clock time for when this rowgroup was closed.<br /><br /> NULL - for a columnstore index on an in-memory table.|  
+|**created_time**|datetime2|Clock time for when this rowgroup was created.<br /><br /> NULL - for a columnstore index on an in-memory table.| 
+|**closed_time**|datetime2|Clock time for when this rowgroup was closed.<br /><br /> NULL - for a columnstore index on an in-memory table.| 
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## Results  
@@ -85,7 +85,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  

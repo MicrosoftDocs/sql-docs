@@ -1,8 +1,8 @@
 ---
-title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
+title: "Monitoring Performance By Using the Query Store"
 description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
-ms.date: 04/09/2020
+ms.date: 02/19/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -11,14 +11,13 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store"
   - "Query Store, described"
-ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # Monitoring performance by using the Query Store
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
@@ -335,44 +334,42 @@ Alternatively, you might want to clear up only ad-hoc query data, since it is le
 
 **Delete ad-hoc queries**
 
-This purges adhoc and internal queries from the query store every 3 minutes so that the query store does not run out of space and remove queries we really need to track
+This purges adhoc and internal queries from the Query Store so that the Query Store does not run out of space and remove queries we really need to track.
 
 ```sql
 SET NOCOUNT ON
--- This purges adhoc and internal queries from the query store every 3 minutes so that the
--- query store does not run out of space and remove queries we really need to track
-DECLARE @command varchar(1000)
+-- This purges adhoc and internal queries from 
+-- the Query Store in the current database 
+-- so that the Query Store does not run out of space 
+-- and remove queries we really need to track
 
-SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
-EXEC(''
-DECLARE @id int
+DECLARE @id int;
 DECLARE adhoc_queries_cursor CURSOR
 FOR
-SELECT q.query_id
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-ON q.query_text_id = qt.query_text_id
-JOIN sys.query_store_plan AS p
-ON p.query_id = q.query_id
-JOIN sys.query_store_runtime_stats AS rs
-ON rs.plan_id = p.plan_id
-WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
-
-' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
-' GROUP BY q.query_id
-HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
-' ORDER BY q.query_id ;
+	SELECT q.query_id
+	FROM sys.query_store_query_text AS qt
+	JOIN sys.query_store_query AS q
+	ON q.query_text_id = qt.query_text_id
+	JOIN sys.query_store_plan AS p
+	ON p.query_id = q.query_id
+	JOIN sys.query_store_runtime_stats AS rs
+	ON rs.plan_id = p.plan_id
+	WHERE q.is_internal_query = 1  -- is it an internal query then we dont care to keep track of it
+	   OR q.object_id = 0 -- if it does not have a valid object_id then it is an adhoc query and we don't care about keeping track of it
+	GROUP BY q.query_id
+	HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE())  -- if it has been more than 5 minutes since the adhoc query ran
+	ORDER BY q.query_id;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
 BEGIN
-EXEC sp_query_store_remove_query @id
-FETCH NEXT FROM adhoc_queries_cursor INTO @id
+	PRINT 'EXEC sp_query_store_remove_query ' + str(@id);
+	EXEC sp_query_store_remove_query @id;
+	FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 END
-CLOSE adhoc_queries_cursor ;
+CLOSE adhoc_queries_cursor;
 DEALLOCATE adhoc_queries_cursor;
-'') END' ;
-EXEC sp_MSforeachdb @command
+
 ```
 
 You can define your own procedure with different logic for clearing up data you no longer want.

@@ -20,7 +20,9 @@ ms.date: 03/14/2017
 By default, running [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requires the same user permissions as the Transact-SQL stored procedures that are used to create traces. To run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must be granted the ALTER TRACE permission. For more information, see [GRANT Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).
 
 > [!IMPORTANT]
-> Users who have the SHOWPLAN, the ALTER TRACE, or the VIEW SERVER STATE permission can view queries that are captured in Showplan output. These queries may contain sensitive information such as passwords. Therefore, we recommend that you only grant these permissions to users who are authorized to view sensitive information, such as members of the db_owner fixed database role, or members of the sysadmin fixed server role. Additionally, we recommend that you only save Showplan files or trace files that contain Showplan-related events to a location that uses the NTFS file system, and that you restrict access to users who are authorized to view sensitive information.
+> Query Plans and Query Text, captured by SQL Trace as well as by other means, for example, Dynamic Management Views and Functions (DMVs, DMFs), Extended Events, can contain sensitive information. Therefore, the permissions ALTER TRACE, SHOWPLAN, and the covering permission VIEW SERVER STATE should be granted to only those who need these to fulfill their job functions, based on the principle of least privilege.
+>
+> Additionally, we recommend that you only save Showplan files or trace files that contain Showplan-related events to a location that uses the NTFS file system and restrict access to users who are authorized to view potentially sensitive information.
 
 > [!IMPORTANT]
 > SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] are deprecated. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects are also deprecated.

@@ -4,7 +4,7 @@ title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexed Views
@@ -120,7 +120,7 @@ In addition to the SET options and deterministic function requirements, the foll
    |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
    |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|||
+   |`CHECKSUM_AGG`|`STRING_AGG`||
 
    <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
@@ -151,10 +151,11 @@ Indexes on tables and views can be disabled. When a clustered index on a table i
 
 #### <a name="Permissions"></a> Permissions
 
-Requires **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum.
+To create the view, a user needs to hold the **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum. If the User creating the Index differs from the Users who created the View, for the Index creation alone the **ALTER**-permission on the View is required (covered by ALTER on the schema).
 
-    > [!NOTE]  
-    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+> [!NOTE]  
+> Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. Therefore its possible to create a view and not be the owner of the view. On the other hand is also possible that individual objects within a schema have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 

@@ -2,9 +2,9 @@
 description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
 ms.custom: "contperf-fy21q3"
-ms.date: "02/10/2021"
+ms.date: "03/15/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 Returns information about all the waits encountered by threads that executed. You can use this aggregated view to diagnose performance issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and also with specific queries and batches. [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) provides similar information by session.  
   
 > [!NOTE] 
-> To call this from **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use the name **sys.dm_pdw_nodes_os_wait_stats**.  
+> To call this from **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_os_wait_stats`.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,7 +41,7 @@ Returns information about all the waits encountered by threads that executed. Yo
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ##  <a name="WaitTypes"></a> Types of Waits  
  **Resource waits** occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network, and disk I/O waits. Lock and latch waits are waits on synchronization objects  
@@ -50,7 +50,7 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
   
  **External waits** occur when a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker is waiting for an external event, such as an extended stored procedure call or a linked server query, to finish. When you diagnose blocking issues, remember that external waits do not always imply that the worker is idle, because the worker may actively be running some external code.  
   
- `sys.dm_os_wait_stats` shows the time for waits that have completed. This dynamic management view does not show current waits.  
+ This dynamic management view shows the time for waits that have completed. This dynamic management view does not show current waits.  
   
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker thread is not considered to be waiting if any of the following is true:  
   
@@ -66,24 +66,23 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
   
  Specific types of wait times during query execution can indicate bottlenecks or stall points within the query. Similarly, high wait times, or wait counts server wide can indicate bottlenecks or hot spots in interaction query interactions within the server instance. For example, lock waits indicate data contention by queries; page IO latch waits indicate slow IO response times; page latch update waits indicate incorrect file layout.  
   
- The contents of this dynamic management view can be reset by running the following command:  
-  
+ The contents of this dynamic management view can be reset. This T-SQL command resets all counters to 0:  
 ```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
   
-This command resets all counters to 0.  
+
   
 > [!NOTE]
-> These statistics are not persisted across [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, and all data is cumulative since the last time the statistics were reset or the server was started.  
+> These statistics are not persisted after after the database engine restarts, and all data is cumulative since the last time the statistics were reset or the database engine started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
  The following table lists the wait types encountered by tasks.  
 
-|type |Description| 
+|Wait Type |Description| 
 |-------------------------- |--------------------------| 
-|ABR |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| | 
-|AM_INDBUILD_ALLOCATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|ABR |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
+|AM_INDBUILD_ALLOCATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.|
 |AM_SCHEMAMGR_UNSHARED_CACHE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |ASSEMBLY_FILTER_HASHTABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |ASSEMBLY_LOAD |Occurs during exclusive access to assembly loading.| 
@@ -99,7 +98,7 @@ This command resets all counters to 0.
 |AUDIT_ON_DEMAND_TARGET_LOCK |Occurs when there is a wait on a lock that is used to ensure single initialization of audit related Extended Event targets.| 
 |AUDIT_XE_SESSION_MGR |Occurs when there is a wait on a lock that is used to synchronize the starting and stopping of audit related Extended Events sessions.| 
 |BACKUP |Occurs when a task is blocked as part of backup processing.| 
-|BACKUP_OPERATOR |Occurs when a task is waiting for a tape mount. To view the tape status, query sys.dm_io_backup_tapes. If a mount operation is not pending, this wait type may indicate a hardware problem with the tape drive.| 
+|BACKUP_OPERATOR |Occurs when a task is waiting for a tape mount. To view the tape status, query `sys.dm_io_backup_tapes`. If a mount operation is not pending, this wait type may indicate a hardware problem with the tape drive.| 
 |BACKUPBUFFER |Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.| 
 |BACKUPIO |Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.| 
 |BACKUPTHREAD |Occurs when a task is waiting for a backup task to finish. Wait times may be long, from several minutes to several hours. If the task that is being waited on is in an I/O process, this type does not indicate a problem.| 
@@ -129,7 +128,7 @@ This command resets all counters to 0.
 |BROKER_TRANSMISSION_OBJECT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |BROKER_TRANSMISSION_TABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |BROKER_TRANSMISSION_WORK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|BROKER_TRANSMITTER |Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has 2 dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of waiting_tasks_count for this wait type point to intermittent work for these transmitter threads and are not indications of any performance problem. If service broker is not used at all, waiting_tasks_count should be 2 (for the 2 transmitter threads) and wait_time_ms should be twice the duration since instance startup. See [Service broker wait stats](/archive/blogs/sql_service_broker/service-broker-wait-types).|
+|BROKER_TRANSMITTER |Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has 2 dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of `waiting_tasks_count` for this wait type point to intermittent work for these transmitter threads and are not indications of any performance problem. If service broker is not used at all, `waiting_tasks_count` should be 2 (for the 2 transmitter threads) and wait_time_ms should be twice the duration since instance startup. See [Service broker wait stats](/archive/blogs/sql_service_broker/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |May occur after startup of instance, while internal data structures are initializing. Will not recur once data structures have initialized.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |CHECK_PRINT_RECORD |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
@@ -174,8 +173,8 @@ This command resets all counters to 0.
 |DBMIRRORING_CMD |Occurs when a task is waiting for log records to be flushed to disk. This wait state is expected to be held for long periods of time.| 
 |DBSEEDING_FLOWCONTROL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |DBSEEDING_OPERATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|DEADLOCK_ENUM_MUTEX |Occurs when the deadlock monitor and sys.dm_os_waiting_tasks try to make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running multiple deadlock searches at the same time.| 
-|DEADLOCK_TASK_SEARCH |Large waiting time on this resource indicates that the server is executing queries on top of sys.dm_os_waiting_tasks, and these queries are blocking deadlock monitor from running deadlock search. This wait type is used by deadlock monitor only. Queries on top of sys.dm_os_waiting_tasks use DEADLOCK_ENUM_MUTEX.| 
+|DEADLOCK_ENUM_MUTEX |Occurs when the deadlock monitor and `sys.dm_os_waiting_tasks` try to make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running multiple deadlock searches at the same time.| 
+|DEADLOCK_TASK_SEARCH |Large waiting time on this resource indicates that the server is executing queries on top of `sys.dm_os_waiting_tasks`, and these queries are blocking deadlock monitor from running deadlock search. This wait type is used by deadlock monitor only. Queries on top of `sys.dm_os_waiting_tasks` use DEADLOCK_ENUM_MUTEX.| 
 |DEBUG |Occurs during Transact-SQL and CLR debugging for internal synchronization.| 
 |DIRECTLOGCONSUMER_LIST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |DIRTY_PAGE_POLL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -324,7 +323,7 @@ This command resets all counters to 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |A background task is waiting for the completion of the startup of a background task that processes Windows Server Failover Clustering notifications. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |A background task is waiting for the termination of a background task that processes Windows Server Failover Clustering notifications. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_PARTNER_SYNC |Concurrency control wait on the partner list. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_READ_ALL_NETWORKS |Waiting to get read or write access to the list of WSFC networks. Internal use only. Note: The engine keeps a list of WSFC networks that is used in dynamic management views (such as sys.dm_hadr_cluster_networks) or to validate Always On Transact-SQL statements that reference WSFC network information. This list is updated upon engine startup, WSFC related notifications, and internal Always On restart (for example, losing and regaining of WSFC quorum). Tasks will usually be blocked when an update in that list is in progress. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_READ_ALL_NETWORKS |Waiting to get read or write access to the list of WSFC networks. Internal use only. Note: The engine keeps a list of WSFC networks that is used in dynamic management views (such as `sys.dm_hadr_cluster_networks`) or to validate Always On Transact-SQL statements that reference WSFC network information. This list is updated upon engine startup, WSFC related notifications, and internal Always On restart (for example, losing and regaining of WSFC quorum). Tasks will usually be blocked when an update in that list is in progress. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Waiting for the secondary database to connect to the primary database before running recovery. This is an expected wait, which can lengthen if the connection to the primary is slow to establish. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |Database recovery is waiting for the secondary database to finish the reverting and initializing phase to bring it back to the common log point with the primary database. This is an expected wait after failovers. Undo progress can be tracked through the Windows System Monitor (perfmon.exe) and dynamic management views. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_REPLICAINFO_SYNC |Waiting for concurrency control to update the current replica state. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -374,12 +373,12 @@ This command resets all counters to 0.
 |KTM_ENLISTMENT |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |KTM_RECOVERY_MANAGER |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |KTM_RECOVERY_RESOLUTION |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
-|LATCH_DT |Occurs when waiting for a DT (destroy) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
-|LATCH_EX |Occurs when waiting for an EX (exclusive) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
-|LATCH_KP |Occurs when waiting for a KP (keep) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
+|LATCH_DT |Occurs when waiting for a DT (destroy) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
+|LATCH_EX |Occurs when waiting for an EX (exclusive) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
+|LATCH_KP |Occurs when waiting for a KP (keep) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
 |LATCH_NL |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
-|LATCH_SH |Occurs when waiting for an SH (share) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
-|LATCH_UP |Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
+|LATCH_SH |Occurs when waiting for an SH (share) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
+|LATCH_UP |Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
 |LAZYWRITER_SLEEP |Occurs when lazy writer tasks are suspended. This is a measure of the time spent by background tasks that are waiting. Do not consider this state when you are looking for user stalls.| 
 |LCK_M_BU |Occurs when a task is waiting to acquire a Bulk Update (BU) lock. See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information| 
 |LCK_M_BU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Bulk Update (BU) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -953,7 +952,7 @@ This command resets all counters to 0.
 |WAITFOR |Occurs as a result of a WAITFOR Transact-SQL statement. The duration of the wait is determined by the parameters to the statement. This is a user-initiated wait.| 
 |WAITFOR_PER_QUEUE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |WAITFOR_TASKSHUTDOWN |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
-|WAITSTAT_MUTEX |Occurs during synchronization of access to the collection of statistics used to populate sys.dm_os_wait_stats.| 
+|WAITSTAT_MUTEX |Occurs during synchronization of access to the collection of statistics used to populate `sys.dm_os_wait_stats`.| 
 |WCC |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |WINDOW_AGGREGATES_MULTIPASS |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |WINFAB_API_CALL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -1023,4 +1022,5 @@ This command resets all counters to 0.
     
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)    
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    

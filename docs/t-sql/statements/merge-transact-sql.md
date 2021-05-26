@@ -2,9 +2,9 @@
 description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2019"
+ms.date: "02/27/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -227,21 +227,92 @@ Specifies the search conditions to specify \<merge_search_condition> or \<clause
 
 \<graph search pattern>  
 Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
-  
+   
 ## Remarks
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
-
 > - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
-
 > - The support for tables with different distribution types is described in this table:
-
+>
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
->|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
+>|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types||  
+
+>[!IMPORTANT]
+> Preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
+>
+> In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen when these two conditions are met:
+>
+> - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database AND
+> - The TARGET table of the merge has secondary indices or a UNIQUE constraint.
+>
+> The problem has been fixed in Synapse SQL version ***10.0.15563.0*** and higher.    
+> - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
+> - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
+> - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
+
+> To check which hash distributed tables in a database cannot work with MERGE due to this issue, run this statement
+>```sql
+> select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
+> on a.object_id = b.object_id
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> ```
+> 
+> To check if a hash distributed TARGET table for MERGE is affected by this issue, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
+>
+>```sql
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>
+> create table [check_table_1] with(distribution = round_robin) as
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> go
+>
+> create table [check_table_2] with(distribution = hash(x)) as
+> select x from [check_table_1];
+>go
+>
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> [check_table_2]) as tmp)
+> select 'no need for repair' as result
+> else select 'needs repair' as result
+> go
+>
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>```
+>To repair affected tables, run these statements to copy all rows from the old table to a new table.
+>```sql
+> if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> if object_id('[repair_table]', 'U') is not null
+> drop table [repair_table];
+> go
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> go
+>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
+> go
+>if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> ```   
 
 At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable can't be updated more than once in the same MATCHED clause.  
   
@@ -255,8 +326,7 @@ MERGE is a fully reserved keyword when the database compatibility level is set t
   
 Don't use the **MERGE** statement when using queued updating replication. The **MERGE** and queued updating trigger aren't compatible. Replace the **MERGE** statement with an insert or an update statement.  
 
-
-## Trigger Implementation
+## Trigger implementation
 
 For every insert, update, or delete action specified in the MERGE statement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fires any corresponding AFTER triggers defined on the target table, but doesn't guarantee on which action to fire triggers first or last. Triggers defined for the same action honor the order you specify. For more information about setting trigger firing order, see [Specify First and Last Triggers](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
@@ -270,11 +340,11 @@ If any INSTEAD OF INSERT triggers are defined on *target_table*, the insert oper
 
 Requires SELECT permission on the source table and INSERT, UPDATE, or DELETE permissions on the target table. For more information, see the Permissions section in the [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md), and [DELETE](../../t-sql/statements/delete-transact-sql.md) articles.  
   
-## Optimizing MERGE Statement Performance
+## Optimizing MERGE statement performance
 
 By using the MERGE statement, you can replace the individual DML statements with a single statement. This can improve query performance because the operations are performed within a single statement, therefore, minimizing the number of times the data in the source and target tables are processed. However, performance gains depend on having correct indexes, joins, and other considerations in place.
 
-### Index Best Practices
+### Index best practices
 
 To improve the performance of the MERGE statement, we recommend the following index guidelines:
 
@@ -283,7 +353,7 @@ To improve the performance of the MERGE statement, we recommend the following in
 
 These indexes ensure that the join keys are unique and the data in the tables is sorted. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
 
-### JOIN Best Practices
+### JOIN best practices
 
 To improve the performance of the MERGE statement and ensure correct results are obtained, we recommend the following join guidelines:
 
@@ -300,7 +370,7 @@ The join operation in the MERGE statement is optimized in the same way as a join
 
 You can force the use of a specific join by specifying the `OPTION (<query_hint>)` clause in the MERGE statement. We recommend that you do not use the hash join as a query hint for MERGE statements because this join type does not use indexes.
 
-### Parameterization Best Practices
+### Parameterization best practices
 
 If a SELECT, INSERT, UPDATE, or DELETE statement is executed without parameters, the SQL Server query optimizer may choose to parameterize the statement internally. This means that any literal values that are contained in the query are substituted with parameters. For example, the statement INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10), may be implemented internally as INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). This process, called simple parameterization, increases the ability of the relational engine to match new SQL statements with existing, previously-compiled execution plans. Query performance may be improved because the frequency of query compilations and recompilations are reduced. The query optimizer does not apply the simple parameterization process to MERGE statements. Therefore, MERGE statements that contain literal values may not perform as well as individual INSERT, UPDATE, or DELETE statements because a new plan is compiled each time the MERGE statement is executed.
 
@@ -310,7 +380,7 @@ To improve query performance, we recommend the following parameterization guidel
 - If you cannot parameterize the statement, create a plan guide of type `TEMPLATE` and specify the `PARAMETERIZATION FORCED` query hint in the plan guide.
 - If MERGE statements are executed frequently on the database, consider setting the PARAMETERIZATION option on the database to FORCED. Use caution when setting this option. The `PARAMETERIZATION` option is a database-level setting and affects how all queries against the database are processed.
 
-### TOP Clause Best Practices
+### TOP Clause best practices
 
 In the MERGE statement, the TOP clause specifies the number or percentage of rows that are affected after the source table and the target table are joined, and after rows that do not qualify for an insert, update, or delete action are removed. The TOP clause further reduces the number of joined rows to the specified value and the insert, update, or delete actions are applied to the remaining joined rows in an unordered fashion. That is, there is no order in which the rows are distributed among the actions defined in the WHEN clauses. For example, specifying TOP (10) affects 10 rows; of these rows, 7 may be updated and 3 inserted, or 1 may be deleted, 5 updated, and 4 inserted and so on.
 
@@ -331,7 +401,7 @@ It is common to use the TOP clause to perform data manipulation language (DML) o
 
 Because the TOP clause is only applied after these clauses are applied, each execution either inserts one genuinely unmatched row or updates one existing row.
 
-### Bulk Load Best Practices
+### Bulk Load best practices
 
 The MERGE statement can be used to efficiently bulk load data from a source data file into a target table by specifying the `OPENROWSET(BULK…)` clause as the table source. By doing so, the entire file is processed in a single batch.
 
@@ -344,7 +414,7 @@ To improve the performance of the bulk merge process, we recommend the following
 
 These guidelines ensure that the join keys are unique and the sort order of the data in the source file matches the target table. Query performance is improved because additional sort operations are not necessary and unnecessary data copies are not required.
 
-### Measuring and Diagnosing MERGE Performance
+### Measuring and diagnosing MERGE performance
 
 The following features are available to assist you in measuring and diagnosing the performance of MERGE statements.
 

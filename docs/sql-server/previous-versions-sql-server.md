@@ -19,7 +19,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 To access the online documentation for SQL Server 2005 - 2014, see the following landing page:
 
-- [SQL Server previous versions documentation](/previous-versions/sql/).
+- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
 
 ## Offline documentation
 

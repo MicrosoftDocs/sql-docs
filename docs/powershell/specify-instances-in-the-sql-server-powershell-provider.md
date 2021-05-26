@@ -6,7 +6,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier

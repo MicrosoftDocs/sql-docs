@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Group Automatic Failover Readiness|  
-|**Issue**|Availability group is not ready for automatic failover.|  
-|**Category**|**Critical**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Availability Group Automatic Failover Readiness
+- **Issue**: Availability group is not ready for automatic failover.
+- **Category**: **Critical**
+- **Facet**: Availability group  
   
 ## Description  
  This policy checks to verify that the availability group has at least one secondary replica that is failover ready. The policy is in an unhealthy state and an alert is raised when the failover mode of the primary replica is automatic, however none of the secondary replicas in the availability group are failover ready.  

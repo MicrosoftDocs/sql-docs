@@ -95,8 +95,8 @@ sudo ufw allow from any to any port 135 proto tcp
 The following example shows how this could be done on Red Hat Enterprise Linux (RHEL):
 
 ```bash
-sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=51433/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=51000/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```

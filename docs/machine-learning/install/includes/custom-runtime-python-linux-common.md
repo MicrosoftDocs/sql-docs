@@ -27,7 +27,7 @@ First, edit the **mssql-launchpadd** service to add the **PYTHONHOME** environme
 
     ```
     [Service]
-    Environment="PYTHONHOME=/path/to/installation/of/python3.7"
+    Environment="PYTHONHOME=<path to the python3.7 lib>"
     ```
 
 1. Save the file and close the editor.
@@ -43,7 +43,7 @@ Next, make sure `libpython3.7m.so.1.0` can be loaded.
 1. In the file that opens, add the path to **libpython3.7m.so.1.0** from the custom Python installation.
 
     ```
-    /path/to/installation/of/python3.7/lib
+    <path to the python3.7 lib>
     ```
 
 1. Save the new file and close the editor.
@@ -52,7 +52,7 @@ Next, make sure `libpython3.7m.so.1.0` can be loaded.
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
+    ldd <path to the python3.7 lib>/libpython3.7m.so.1.0
     ```
 
 ### Grant access to Python folder
@@ -60,7 +60,7 @@ Next, make sure `libpython3.7m.so.1.0` can be loaded.
 Set the `datadirectories` option in the extensibility section of `/var/opt/mssql/mssql.conf` file to the custom python installation.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <path to python3.7>
 ```
 
 ### Restart mssql-launchpadd

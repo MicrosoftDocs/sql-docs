@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Showplan XML Statistics Profile event class"
 ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan XML Statistics Profile Event Class

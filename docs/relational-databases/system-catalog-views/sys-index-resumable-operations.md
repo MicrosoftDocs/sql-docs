@@ -69,4 +69,4 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 - [sys.key_constraints](sys-key-constraints-transact-sql.md)
 - [sys.filegroups](sys-filegroups-transact-sql.md)
 - [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
-- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.md)
+- [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.yml)

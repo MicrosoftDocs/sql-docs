@@ -2,13 +2,13 @@
 description: "CREATE TABLE (Azure Synapse Analytics)"
 title: "CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
-ms.service: sql-data-warehouse
+ms.date: "03/30/2021"
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
@@ -23,6 +23,8 @@ To understand tables and how to use them, see [Tables in [!INCLUDE[ssSDW](../../
 
 > [!NOTE]
 >  Discussions about [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] in this article apply to both [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
+
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
 
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -40,20 +42,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 [;]  
 
 <column_options> ::=
-    [ COLLATE Windows_collation_name ]  
-    [ NULL | NOT NULL ] -- default is NULL  
+    [ COLLATE Windows_collation_name ]
+    [ NULL | NOT NULL ] -- default is NULL
+    [ IDENTITY [ ( seed, increment ) ]
     [ <column_constraint> ]
 
 <column_constraint>::=
     {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
+       CLUSTERED COLUMNSTORE INDEX -- default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC

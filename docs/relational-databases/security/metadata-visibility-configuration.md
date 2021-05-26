@@ -4,7 +4,7 @@ description: Learn how to configure metadata visibility for securables that a us
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -179,6 +179,9 @@ GO
   
 ### Scope of Permissions  
  Permissions at one scope imply the ability to see metadata at that scope and at all enclosed scopes. For example, SELECT permission on a schema implies that the grantee has SELECT permission on all securables that are contained by that schema. The granting of SELECT permission on a schema therefore enables a user to see the metadata of the schema and also all tables, views, functions, procedures, queues, synonyms, types, and XML schema collections within it. For more information about scopes, see [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ 
+ > [!NOTE]  
+>  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others.
   
 ### Precedence of DENY  
  DENY typically takes precedence over other permissions. For example, if a database user is granted EXECUTE permission on a schema but has been denied EXECUTE permission on a stored procedure in that schema, the user cannot view the metadata for that stored procedure.  
@@ -188,7 +191,39 @@ GO
  For another example, if a user has been granted and denied EXECUTE permission on a stored procedure, which is possible through your various role memberships, DENY takes precedence and the user cannot view the metadata of the stored procedure.  
   
 ### Visibility of Subcomponent Metadata  
- The visibility of subcomponents, such as indexes, check constraints, and triggers is determined by permissions on the parent. These subcomponents do not have grantable permissions. For example, if a user has been granted some permission on a table, the user can view the metadata for the tables, columns, indexes, check constraints, triggers, and other such subcomponents.  
+ The visibility of subcomponents, such as indexes, check constraints, and triggers is determined by permissions on the parent. These subcomponents do not have grantable permissions. For example, if a user has been granted some permission on a table, the user can view the metadata for the tables, columns, indexes, check constraints, triggers, and other such subcomponents.  Another example is granting SELECT on only an individual column of a given table: this will allow the grantee to view the matadata of the whole table, including all columns. One way to think of it, is that the VIEW DEFINITION permission only works on entity-level (the table in this case) and is not available for Sub-entity lists (such as column or security expressions).
+ 
+The following code demonstrates this behavior:
+```sql
+CREATE TABLE t1
+(
+	c1 int,
+	c2 varchar
+ );
+GO
+CREATE USER testUser WITHOUT LOGIN;
+GO
+
+EXECUTE AS USER='testUser';
+SELECT OBJECT_SCHEMA_NAME(object_id), OBJECT_NAME(object_id), name FROM sys.columns;
+SELECT * FROM sys.tables
+-- this returns no data, as the user has no permissions
+REVERT;
+GO
+
+-- granting SELECT on only 1 column of the table:
+GRANT SELECT ON t1(c1) TO testUser;
+GO
+EXECUTE AS USER='testUser';
+SELECT OBJECT_SCHEMA_NAME(object_id), OBJECT_NAME(object_id), name FROM sys.columns;
+SELECT * FROM sys.tables
+-- this returns metadata for all columns of the table and thge table itself
+REVERT;
+GO
+
+DROP TABLE t1
+DROP USER testUser
+```
   
 #### Metadata That Is Accessible to All Database Users  
  Some metadata must be accessible to all users in a specific database. For example, filegroups do not have conferrable permissions; therefore, a user cannot be granted permission to view the metadata of a filegroup. However, any user that can create a table must be able to access filegroup metadata to use the ON *filegroup* or TEXTIMAGE_ON *filegroup* clauses of the CREATE TABLE statement.  

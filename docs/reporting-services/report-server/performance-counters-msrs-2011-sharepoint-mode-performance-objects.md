@@ -1,7 +1,7 @@
 ---
-title: "Performance Counters MSRS 2011 SharePoint Mode Performance Objects | Microsoft Docs"
-description: Learn about performance counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode performance objects.
-ms.date: 06/26/2019
+title: "Performance Counters MSRS 2016 SharePoint Mode, Performance Objects | Microsoft Docs"
+description: Learn about performance counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode performance objects.
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -21,28 +21,28 @@ ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 ---
-# Performance Counters MSRS 2011 SharePoint Mode Performance Objects
-  This topic describes performance counters for the **MSRS 2011 Web Service SharePoint Mode** and **MSRS 2011 Windows Service SharePoint Mode** performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  
+# Performance Counters MSRS 2016 SharePoint Mode, Performance Objects
+  This topic describes performance counters for the **MSRS 2016 Web Service SharePoint Mode** and **MSRS 2016 Windows Service SharePoint Mode** performance objects that are part of a SQL Server 2016 Reporting Services SharePoint mode deployment.  
   
 > [!NOTE]  
->  This performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
+>  These performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
   
  The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- For information regarding performance counters and Native mode report servers, see [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)[Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ For information regarding performance counters and Native mode report servers, see [Performance Counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md).
   
  In this topic:  
   
--   [MSRS 2011 Web Service SharePoint Mode Performance Counters](#bkmk_webservice)  
+-   [MSRS 2016 Web Service SharePoint Mode Performance Counters](#bkmk_webservice)  
   
--   [MSRS 2011 Windows Service SharePoint Mode Performance Counters](#bkmk_windowsservice)  
+-   [MSRS 2016 Windows Service SharePoint Mode Performance Counters](#bkmk_windowsservice)  
   
 -   [Use PowerShell Cmdlets to return lists](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode Performance Counters  
- The **MSRS 2011 Web Service SharePoint Mode** performance object monitors report server performance. This performance object includes a collection of counters used to track report server processing typically initiated through interactive report viewing operations. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or you can select specific instances. These counters are reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.  
+##  <a name="bkmk_webservice"></a> MSRS 2016 Web Service SharePoint Mode Performance Counters  
+ The **MSRS 2016 Web Service SharePoint Mode** performance object monitors report server performance. This performance object includes a collection of counters used to track report server processing typically initiated through interactive report viewing operations. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or you can select specific instances. These counters are reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.  
   
- The following table lists the counters that are included with the **MSRS 2011 Web Service SharePoint Mode** performance object.  
+ The following table lists the counters that are included with the **MSRS 2016 Web Service SharePoint Mode** performance object.  
   
 |Counter|Description|  
 |-------------|-----------------|  
@@ -69,10 +69,10 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |**Total Reports Executed**|Total number of reports that ran successfully after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.|  
 |**Total Requests**|Total number of all requests made to the report server after the service started. This counter is reset whenever [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] stops the Report Server Web service.|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint Mode Performance Counters  
- The **MSRS 2011 Windows Service SharePoint Mode** performance object is used to monitor the Report Server Windows service. This performance object includes a collection of counters used to track report processing that is initiated through scheduled operations. Scheduled operations can include subscription and delivery, report execution snapshots, and report history. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or you can select specific instances.  
+##  <a name="bkmk_windowsservice"></a> MSRS 2016 Windows Service SharePoint Mode Performance Counters  
+ The **MSRS 2016 Windows Service SharePoint Mode** performance object is used to monitor the Report Server Windows service. This performance object includes a collection of counters used to track report processing that is initiated through scheduled operations. Scheduled operations can include subscription and delivery, report execution snapshots, and report history. When you set up this counter, you can apply the counter to all instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or you can select specific instances.  
   
- The following table lists the counters that are included in the **MSRS 2011 Windows Service SharePoint mode** performance object.  
+ The following table lists the counters that are included in the **MSRS 2016 Windows Service SharePoint mode** performance object.  
   
 |Counter|Description|  
 |-------------|-----------------|  
@@ -122,18 +122,18 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ```  
 get-counter -listset msr*  
 Returns a list with the following information  
-CounterSetName     : MSRS 2011 Windows Service SharePoint Mode  
-CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
+CounterSetName     : MSRS 2016 Windows Service SharePoint Mode  
+CounterSetName     : MSRS 2016 Web Service SharePoint Mode  
 ```  
   
- The following Windows PowerShell script will return the list of performance counters for the CounterSetName "MSRS 2011 Windows Service SharePoint Mode".  
+ The following Windows PowerShell script will return the list of performance counters for the CounterSetName "MSRS 2016 Windows Service SharePoint Mode".  
   
 ```  
-(get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  
+(get-counter -listset "MSRS 2016 Windows Service SharePoint Mode").paths  
 ```  
   
 ## See Also  
  [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Performance Counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   

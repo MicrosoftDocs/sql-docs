@@ -2,8 +2,8 @@
 title: Apache Spark and Apache Hadoop
 titleSuffix: Configure Apache Spark and Apache Hadoop in Big Data Clusters
 description: SQL Server Big Data Clusters allow Spark and HDFS solutions. Learn how to configure them.
-author: rajmera3
-ms.author: raajmera
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mikeray
 ms.date: 08/04/2020
 ms.topic: conceptual
@@ -26,7 +26,7 @@ A Big Data Cluster has four configuration categories:
 
 For example, all configurations in service `hdfs` belong to category `hdfs`. Note that all Hadoop (core-site), HDFS and Zookeeper configurations belong to category `hdfs`; all Livy, Spark, Yarn, Hive, Metastore configurations belong to category `spark`. 
 
-[Supported configurations](reference-config-spark-hadoop.md#supported-configurations) lists Apache Spark & Hadoop properties that you can configure when you deploy a SQL Server Big Data Cluster.
+[Supported configurations](reference-config-spark-hadoop.md) lists Apache Spark & Hadoop properties that you can configure when you deploy a SQL Server Big Data Cluster.
 
 The following sections list properties that you **can't** modify in a cluster:
 
@@ -141,8 +141,8 @@ Configurations can only be specified at category level. To specify multiple conf
       "op": "add", 
       "path": "spec.services.hdfs.settings.core-site.hadoop", 
       "value": { 
-        “proxyuser.xyz.users”: “*”, 
-        “proxyuser.abc.users”: “*” 
+        "proxyuser.xyz.users": "*", 
+        "proxyuser.abc.users": "*" 
      } 
 } 
 ```

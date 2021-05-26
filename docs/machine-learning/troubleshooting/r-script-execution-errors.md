@@ -1,20 +1,19 @@
 ---
-title: Common R scripting errors
-description: This article documents several common scripting errors you might encounter when running R code in SQL Server.
+title: Common R script errors
+description: This article documents several common scripting errors you might encounter when running R scripts in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 05/31/2018  
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Common R scripting errors in SQL Server
+# Common R script errors in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
+This article documents several common script errors when running R script in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
 
 ## Valid script fails in T-SQL or in stored procedures
 
@@ -34,7 +33,7 @@ We also recommend that you review and slightly rewrite the script to correct any
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
 * [sqlrutils package](../r/ref-r-sqlrutils.md)
-* [Create a stored procedure by using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+* [Create a stored procedure by using sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)
 
 ## Script returns inconsistent results
 
@@ -85,13 +84,9 @@ remove('name1', 'name2', ...)
 
 If there are multiple variables to delete, we suggest that you save the names of temporary variables to a list and then perform periodic garbage collections on the list.
 
-
-
 ## Next steps
 
-[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-overview.md)
-
-[Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
+[Data collection for troubleshooting SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)
 
 [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 

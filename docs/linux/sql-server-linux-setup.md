@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -30,7 +30,7 @@ For other deployment scenarios, see:
 > - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
 > - [Docker quickstart](quickstart-install-connect-docker.md)
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.yml).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -39,12 +39,12 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Platform | Supported version(s) | Get
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
-| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started)
+| Platform | Supported version(s) | Get |
+|-----|-----|----- |
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server) |
+| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/) |
+| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started) |
 
 ::: moniker-end
 
@@ -64,7 +64,7 @@ Microsoft also supports deploying and managing SQL Server containers by using Op
 
 SQL Server has the following system requirements for Linux:
 
-|||
+||Requirement|
 |-----|-----|
 | **Memory** | 2 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
@@ -233,4 +233,4 @@ After installation, you can also install or enable optional SQL Server features.
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).

@@ -70,7 +70,7 @@ _varbinary\_literal_
 The encrypted column encryption key value BLOB.  
   
 > [!WARNING]  
->  Never pass plaintext column encryption key values in this statement. Doing so will comprise the benefit of this feature.  
+>  Never pass plaintext column encryption key values in this statement. Doing so will compromise the benefit of this feature.  
 
 ## Remarks
 The `CREATE COLUMN ENCRYPTION KEY` statement must include at least one or two values. You can use the [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) to add a second value later. You can also use the `ALTER COLUMN ENCRYPTION KEY` statement to remove a value.  

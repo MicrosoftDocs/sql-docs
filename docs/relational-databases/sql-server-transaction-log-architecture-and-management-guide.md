@@ -4,7 +4,7 @@ title: "Transaction Log Architecture and Management Guide"
 ms.custom: ""
 ms.date: "10/23/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual

@@ -27,7 +27,7 @@ Although you can [install the database engine and Language Extensions concurrent
    + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux), a free download that runs on Linux.
++ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#linux-install), a free download that runs on Linux.
 
 + Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
 

@@ -3,7 +3,7 @@ title: "OVER Clause (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the OVER clause, which defines a user-specified set of rows within a query result set."
 ms.date: "08/11/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -130,7 +130,7 @@ from sys.objects
 ### PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
 
-```sqlsyntax
+```syntaxsql
 PARTITION BY *value_expression* 
 ```
  
@@ -162,7 +162,7 @@ from sys.objects
   
 ### ORDER BY  
 
-```sqlsyntax
+```syntaxsql
 ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
 ```
 
@@ -251,7 +251,7 @@ order by object_id asc
 #### BETWEEN AND  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
-```sqlsyntax
+```syntaxsql
 BETWEEN <window frame bound > AND <window frame bound >  
 ```
  Used with either ROWS or RANGE to specify the lower (starting) and upper (ending) boundary points of the window. \<window frame bound> defines the boundary starting point and \<window frame bound> defines the boundary end point. The upper bound cannot be smaller than the lower bound.  

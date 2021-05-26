@@ -2,9 +2,9 @@
 description: "DROP TABLE (Transact-SQL)"
 title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "05/25/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -98,7 +98,10 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 >  DROP TABLE and CREATE TABLE should not be executed on the same table in the same batch. Otherwise an unexpected error may occur.  
   
 ## Permissions  
- Requires ALTER permission on the schema to which the table belongs, CONTROL permission on the table, or membership in the **db_ddladmin** fixed database role.  
+ Requires ALTER permission on the schema to which the table belongs, CONTROL permission on the table, or membership in the **db_ddladmin** fixed database role.
+
+ If the statement drops a ledger table, `ALTER LEDGER` permission is required.
+
   
 ## Examples  
   

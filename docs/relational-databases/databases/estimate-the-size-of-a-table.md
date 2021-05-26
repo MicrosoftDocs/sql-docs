@@ -4,7 +4,7 @@ description: Use this procedure to estimate the amount of space that is required
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "reserved free rows per page [SQL Server]"
   - "calculating table size"
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Table

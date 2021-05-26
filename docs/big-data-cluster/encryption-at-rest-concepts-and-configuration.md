@@ -24,9 +24,9 @@ SQL Server Big Data Clusters stores data in the following two locations:
 To be able to transparently encrypt data in SQL Server Big Data Clusters, there are two possible approaches:
 
 * __Volume encryption__. This approach is supported by the Kubernetes platform and is expected as a best practice for Big Data Clusters deployments. This guide does not cover volume encryption. Consult your Kubernetes platform or appliance documentation for guides on how to properly encrypt volumes that will be used for SQL Server Big Data Clusters.
-* __Application level encryption__. This architecture refers to the encryption of data by the application handling the data before it is written to disk. In case the volumes are exposed, an attacker wouldn’t be able to restore data artifacts elsewhere, unless the destination system also has been configured with the same encryption keys. 
+* __Application level encryption__. This architecture refers to the encryption of data by the application handling the data before it is written to disk. In case the volumes are exposed, an attacker wouldn’t be able to restore data artifacts elsewhere, unless the destination system also has been configured with the same encryption keys.
 
-The Encryption at Rest feature set of SQL Server Big Data Clusters supports the core scenario of application level encryption for the SQL Server and HDFS components.
+The __Encryption at Rest feature set of SQL Server Big Data Clusters__ supports the core scenario of __application level encryption__ for the __SQL Server__ and __HDFS__ components.
 
 The following capabilities are provided:
 
@@ -43,9 +43,6 @@ A Controller hosted service responsible for managing keys and certificates for t
 * Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
 * SQL Server TDE certificate management.
 
-The following feature is not supported at this time:
-* *Keys Versioning support*. 
-
 We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
 ### System-managed keys and certificates
@@ -60,9 +57,9 @@ User provided keys and certificates to be managed by BDC KMS, commonly known as 
 
 External key solutions compatible with BDC KMS for external delegation. This capability isn't supported at this time.
 
-## Encryption at rest on SQL Server Big Data Clusters CU8
+## Encryption at rest on SQL Server Big Data Clusters
 
-SQL Server Big Data Clusters CU8 is the initial release of the Encryption at rest feature set. Read this document carefully to completely assess your scenario.
+Read this document carefully to completely assess your scenario.
 
 The feature set introduces the __BDC KMS controller service__ to provide system-managed keys and certificates for data encryption at rest on both SQL Server and HDFS. Those keys and certificates are service-managed and this documentation provides operational guidance on how to interact with the service.
 
@@ -75,7 +72,7 @@ The feature set introduces the __BDC KMS controller service__ to provide system-
 * Master instance BDC provisioned databases and user databases won’t be encrypted automatically. DBAs may use the installed certificate to encrypt any database.
 * Compute pool and storage pool will be automatically encrypted using the system-generated certificate.
 * Data pool encryption, albeit technically possible using T-SQL `EXECUTE AT` commands, is discouraged and unsupported at this time. Using this technique to encrypt data pool databases might not be effective and encryption may not be happening at the desired state. It also creates an incompatible upgrade path towards next releases.
-* There is no certificate rotation at this time. It is supported to decrypt and then encrypt with a new certificate using T-SQL commands if not on HA deployments.
+* SQL Server key rotation is achieved using standard T-SQL administrative commands. Please read [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md) for complete instructions.
 * Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
 * It is supported to back up and restore a TDE enabled database into the cluster.
 * HA is supported. If a database on the primary instance of SQL Server is encrypted, then all secondary replica of the database will be encrypted as well.
@@ -86,12 +83,20 @@ The feature set introduces the __BDC KMS controller service__ to provide system-
 * A system-generated key will be provisioned in Hadoop KMS. The key name is `securelakekey`. On CU8 the default key is 256-bit and we support 256-bit AES encryption.
 * A default encryption zone will be provisioned using the above system-generated key on a path named `/securelake`.
 * Users can create additional keys and encryption zones using specific instructions provided in this guide. Users will be able to choose the key size of 128, 192, or 256 during key creation.
-* In place key rotation for HDFS is not possible in CU8. As an alternative, the data can be moved from one encryption zone to another using distcp.
+* HDFS Encryption Zones key rotation is achieved using azdata. Please read [SQL Server Big Data Clusters HDFS Encryption Zones usage guide](encryption-at-rest-hdfs-encryption-zones.md) for complete instructions.
 * It's not supported to perform HDFS Tiering mounting on top of an encryption zone.
 
-## Configuration guide
+## Encryption at Rest Administration
 
-SQL Server Big Data Clusters encryption at rest is a service-managed feature and, depending on your deployment path, may require additional steps.
+The following list contains the administration capabilities for Encryption at Rest
+
+* [SQL Server TDE](encryption-at-rest-sql-server-tde.md) management is performed using standard T-SQL commands.
+* [HDFS Encryption Zones](encryption-at-rest-hdfs-encryption-zones.md) and HDFS key management is performed using azdata commands.
+* The following administration features are performed using [Operational Notebooks](cluster-manage-notebooks.md):
+    - HDFS key backup and recover
+    - HDFS key deletion
+
+## Configuration guide
 
 During __new deployments of SQL Server Big Data Clusters__, CU8 onwards, __encryption at rest will be enabled and configured by default__. That means:
 
@@ -101,14 +106,11 @@ During __new deployments of SQL Server Big Data Clusters__, CU8 onwards, __encry
 
 Requirements and default behaviors described in the previous section apply.
 
-If __upgrading your cluster to CU8__, __read carefully the next section__.
+__If performing a new deployment of SQL Server BDC CU8 onwards or upgrading directly to CU9, no additional steps are required__.
 
-### Upgrading to CU8
+### Upgrade scenarios
 
-   > [!CAUTION]
-   > Before upgrading to SQL Server Big Data Clusters CU8 perform a complete backup of your data.
-
-On existing clusters, the upgrade process won't enforce encryption on user data and won't configure HDFS encryption zones. This behavior is by design and the following needs to be considered per component:
+On existing clusters, the upgrade process won't enforce new encryption or re-encryption on user data that was not already encrypted. This behavior is by design and the following needs to be considered per component:
 
 * __SQL Server__
 
@@ -119,17 +121,31 @@ On existing clusters, the upgrade process won't enforce encryption on user data 
 * __HDFS__
 
     1. __HDFS__. The upgrade process won't touch HDFS files and folders outside encryption zones.
-    1. __Encryption Zones won't be configured__. The Hadoop KMS component won't be configured to use BDC KMS. In order to configure and enable HDFS encryption zones feature after upgrade follow the next section.
 
-### Enable HDFS encryption zones after upgrade
+### Upgrading to CU9 from CU8 or earlier
 
-Execute the following actions if you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones.
+No additional steps are required.
+
+### Upgrading to CU8 from CU6 or earlier
+
+   > [!CAUTION]
+   > Before upgrading to SQL Server Big Data Clusters CU8 perform a complete backup of your data.
+
+
+__Encryption Zones won't be configured__. The Hadoop KMS component won't be configured to use BDC KMS. In order to configure and enable HDFS encryption zones feature after upgrade follow instructions of the next section.
+
+#### Enable HDFS encryption zones after upgrade to CU8
+
+If you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones there are two options available:
+
+* Execution of the Azure Data Studio [Operational Notebook](cluster-manage-notebooks.md) named __SOP0128 - Enable HDFS Encryption zones in Big Data Clusters__ to perform the configuration.
+* Script execution as described bellow.
 
 Requirements:
 
 - [Active Directory](active-directory-prerequisites.md) integrated cluster.
 
-- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] configured and logged into the cluster in AD mode.
+- [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] configured and logged into the cluster in AD mode.
 
 Follow the following procedure to reconfigure the cluster with encryption zones support.
 

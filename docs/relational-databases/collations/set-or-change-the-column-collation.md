@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], collations"
   - "collations [SQL Server], column"
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or Change the Column Collation
@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         GO
         ```
 
-        This method is much faster than in-place conversion, but handling complex schemas with many dependencies (FKs, PKs, Triggers, DFs) and synching the tail of the table (if the database is in use) requires more planning.
+        This method is much faster than in-place conversion, but handling complex schemas with many dependencies (FKs, PKs, Triggers, DFs) and syncing the tail of the table (if the database is in use) requires more planning.
         
     For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   

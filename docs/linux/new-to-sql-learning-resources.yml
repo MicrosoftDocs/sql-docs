@@ -38,7 +38,7 @@ landingContent:
       - text: Supported platforms
         url: sql-server-linux-release-notes-2019.md
       - text: Frequently asked questions 
-        url: sql-server-linux-faq.md 
+        url: sql-server-linux-faq.yml 
 
   - title: "Module 3: Install/deploy & connect"
     linkLists:

@@ -4,7 +4,7 @@ title: "BEGIN...END (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -63,12 +63,12 @@ GO
 IF @@TRANCOUNT = 0  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM Person.Person WHERE LastName = 'Adams'
-    ROLLBACK TRANSACTION
-    PRINT N'Rolling back the transaction two times would cause an error.'
-END
-ROLLBACK TRANSACTION
-PRINT N'Rolled back the transaction.'
+    FROM Person.Person WHERE LastName = 'Adams';
+    ROLLBACK TRANSACTION;
+    PRINT N'Rolling back the transaction two times would cause an error.';
+END;
+ROLLBACK TRANSACTION;
+PRINT N'Rolled back the transaction.';
 GO  
 /*  
 Rolled back the transaction.  
@@ -81,13 +81,13 @@ Rolled back the transaction.
 ```sql
 -- Uses AdventureWorks  
 
-DECLARE @Iteration Integer = 0  
+DECLARE @Iteration Integer = 0;
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM dbo.DimCustomer WHERE LastName = 'Adams'
-    SET @Iteration += 1  
-END
+    FROM dbo.DimCustomer WHERE LastName = 'Adams';
+    SET @Iteration += 1  ;
+END;
 ```  
   
 ## See Also  

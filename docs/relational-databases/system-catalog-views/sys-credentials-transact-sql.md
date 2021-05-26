@@ -4,7 +4,7 @@ title: "sys.credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/06/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"

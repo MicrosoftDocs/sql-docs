@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "DTCTransaction event class"
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DTCTransaction Event Class

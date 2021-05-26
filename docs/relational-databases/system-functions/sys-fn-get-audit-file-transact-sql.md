@@ -4,7 +4,7 @@ title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -109,7 +109,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | Current login. Is nullable. |  
 | server_principal_sid | **varbinary** | Current login SID. Is nullable. |  
 | session_id | **smallint** | ID of the session on which the event occurred. Is not nullable. |  
-| session_server_principal_name | **sysname** | Server principal for session. Is nullable. |  
+| session_server_principal_name | **sysname** | Server principal for session. Is nullable. Returns the identity of the original login which was connected to the instance of SQL Server in case there were explicit or implicit context switches.|  
 | statement | **nvarchar(4000)** | TSQL statement if it exists. Is nullable. Returns NULL if not applicable. |  
 | succeeded | **bit** | Indicates whether the action that triggered the event succeeded. Is not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.<br /> 1 = success<br /> 0 = fail |
 | target_database_principal_id | **int** | The database principal the GRANT/DENY/REVOKE operation is performed on. Is not nullable. Returns 0 if not applicable. |  

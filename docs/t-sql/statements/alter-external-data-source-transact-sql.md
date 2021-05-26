@@ -1,10 +1,10 @@
 ---
 description: "ALTER EXTERNAL DATA SOURCE (Transact-SQL)"
-title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
+title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
 ms.date: "07/26/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -16,9 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "polybase, alter external data source statement"
   - "ALTER EXTERNAL DATA SOURCE statement"
-ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]

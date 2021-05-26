@@ -81,9 +81,10 @@ On the Linux host machine, use the following commands to install adutil-preview 
 
 ### Ubuntu
 
-1. Register the Microsoft Ubuntu repository.
+1. Import the public repository GPG keys and then register the Microsoft Ubuntu repository.
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 
@@ -96,6 +97,7 @@ On the Linux host machine, use the following commands to install adutil-preview 
 1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
+    sudo apt-get update
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
     ```
 
@@ -151,7 +153,7 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
 2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.
 
    ```bash
-   adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
+   adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
     > [!NOTE]

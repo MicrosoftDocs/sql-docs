@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "EKM, TDE how to"
   - "Transparent Data Encryption, using EKM"
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-author: jaszymas
-ms.author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ---
 # Enable TDE on SQL Server Using EKM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

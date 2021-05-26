@@ -2,9 +2,9 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
-ms.date: 02/02/2019
+ms.date: 03/10/2021
 ms.prod: sql
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "llali; sstein"
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
@@ -15,6 +15,54 @@ ms.author: drskwier
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+
+## 18.7 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2157201)|March 10, 2021|18.7|15.0.5084.2|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157203)|March 10, 2021| 18.7|15.0.5084.2|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157202)|March 10, 2021| 18.7|15.0.5084.2|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157302)|March 10, 2021| 18.7|15.0.5084.2|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Extract/Publish Big Data to/from Azure Storage. For more info, see [SqlPackage for Big Data](sqlpackage-for-azure-synapse-analytics.md) |
+| Azure Synapse Analytics | Row level security support (inline table valued function, security policy, security predicate)  |
+| Azure Synapse Analytics | Workload classification support |
+| Azure SQL Edge | External streaming job support |
+| Azure SQL Edge | Added table and database options for data retention. |
+| Import | Added 2 new index option properties for import operation. *DisableIndexesForDataPhase* (Disable indexes before importing data into SQL Server, default true) and *RebuildIndexesOfflineForDataPhase* (Rebuild indexes offline after importing data into SQL Server, default false) |
+| Logging | Added property for all operations (HashObjectNamesInLogs) that will turn all object names into a hash string in log messages. |
+| Performance | Improvements to import and export performance, including additional logging to assist in determining additional bottlenecks. |
+| SQLCMD | Added property for Deployment and Schema Compare (DoNotEvaluateSqlCmdVariables) that specifies whether SQLCMD variables will be replaced with values. |
+
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ | 
+| Deployment | Default MAXDOP changed from 0 to 8 for [Azure SQL](https://techcommunity.microsoft.com/t5/azure-sql/changing-default-maxdop-in-azure-sql-database/ba-p/1538528), updating schema model default in DacFx | 
+| Schema Compare | Stored procedures using OUT and OUTPUT keywords to be ignored as a difference |
+| Deployment | Additional validation for Big Data tokens |
+| Build/Deployment | Full schema model cleanup of temp external tables for final dacpac consistency.  |
+| Build/Deployment | Adding error handling and fixing non-Edge 150 RE. |
+| Import/Deployment | Sequence value restored during deployment |
+| Deployment | Fixed an issue where changing the compression option on clustered index caused the table to be recreated instead of alter index. |
+| Deployment | Fixed an issue where a clustered columnstore index was dropped and recreated if table column changed. |
+| Deployment | Fixed external users getting dropped and recreated during deployment. |
+| Schema Compare | Fixed schema compare issue with external streaming job. |
+| Import | Null reference exception raised when enabling ambient setting ReliableDdlEnabled scripting a deployment report.|
+| Deployment | Fixed an issue where deployment steps containing system versioning would be created in the incorrect order. |
+| Deployment | Fixed an issue where schema compare update or dacpac deploy failed due to target containing temporal tables. |
+| Deployment | Reseeds identity value after deployment based on target's previous last value. |
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
+| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procs etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table which is a pre-req for dropping the table, but the order of steps generated is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
 ## 18.6 sqlpackage
 
@@ -269,7 +317,7 @@ This release includes cross-platform preview builds of sqlpackage that target .N
 | :---------- | :------ |
 | Deployment | For .NET Core, build and deployment contributors aren't supported. | 
 | Deployment | For .NET Core, older .dacpac and .bacpac files that use json data serialization aren't supported. | 
-| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. | A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
+| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## 18.0 sqlpackage

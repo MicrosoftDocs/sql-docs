@@ -2,9 +2,9 @@
 description: "ALTER TABLE (Transact-SQL)"
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2020"
+ms.date: "05/25/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -119,6 +119,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END
                    [ HIDDEN ] [ NOT NULL ][ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES] ,
+                start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
         ]
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )
     | DROP
@@ -156,7 +157,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 { partition_scheme_name | filegroup | "default" | "NULL" } ]
             | SYSTEM_VERSIONING =
                   {
-                      OFF
+                    OFF
                   | ON
                       [ ( HISTORY_TABLE = schema_name . history_table_name
                           [, DATA_CONSISTENCY_CHECK = { ON | OFF } ]
@@ -405,6 +406,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 ```
 
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -568,7 +571,12 @@ Specifies a dynamic data mask. *mask_function* is the name of the masking functi
 - partial()
 - random()
 
+Requires ALTER ANY MASK permission.
+
 To drop a mask, use `DROP MASKED`. For function parameters, see [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md).
+
+Add and drop a mask require **ALTER ANY MASK** permission.
+
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -626,7 +634,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
 
 Specifies the names of the columns that the system uses to record the period of time for which a record is valid. You can specify existing columns or create new columns as part of the ADD PERIOD FOR SYSTEM_TIME argument. Set up the columns with the datatype of datetime2 and define them as NOT NULL. If you define a period column as NULL, an error results. You can define a [column_constraint](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) and/or [Specify Default Values for Columns](../../relational-databases/tables/specify-default-values-for-columns.md) for the system_start_time and system_end_time columns. See Example A in the following [System Versioning](#system_versioning) examples that demonstrates using a default value for the system_end_time column.
 
-Use this argument with the SET SYSTEM_VERSIONING argument to enable system versioning on an existing table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](/azure/azure-sql/temporal-tables).
+Use this argument with the SET SYSTEM_VERSIONING argument to make an existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](/azure/azure-sql/temporal-tables).
 
 As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users can mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM \<table_name>** doesn't return a value for the columns. By default, period columns aren't hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.
 
@@ -708,7 +716,7 @@ For more information, see [How Online Index Operations Work](../../relational-da
 > [!NOTE]
 > Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ ,...*n* ] **)** | *filegroup* | **"**default**"** }  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies a location to move the data rows currently in the leaf level of the clustered index. The table is moved to the new location. This option applies only to constraints that create a clustered index.
@@ -788,7 +796,7 @@ If you specify *partition_scheme_name*, the rules for [CREATE TABLE](../../t-sql
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. If you don't use the HISTORY_TABLE argument, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table does not exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -809,7 +817,7 @@ SET (DATA_DELETION =
 Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
 
 - FILTER_COLUMN = { column_name }  
-Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+Specifies the column, that should be used to determine if the rows in the table are obsolete or not. The following data types are allowed for the filter column.
   - Date
   - DateTime
   - DateTime2
@@ -1122,6 +1130,8 @@ Adding or altering a column that updates the rows of the table requires **UPDATE
 |[Altering a column definition](#alter_column)|change data type * change column size * collation|
 |[Altering a table definition](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * change tracking|
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
+|[Online operations](#online)|ONLINE|
+|[System versioning](#system_versioning)|SYSTEM_VERSIONING|
 | &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding Columns and Constraints
@@ -1716,7 +1726,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>Online Operations
+### <a name="online"></a>Online operations
 
 #### A. Online index rebuild using low-priority wait options
 
@@ -1753,7 +1763,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> System Versioning
+### <a name="system_versioning"></a> System versioning
 
 The following four examples will help you become familiar with the syntax for using system versioning. For additional assistance, see [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 

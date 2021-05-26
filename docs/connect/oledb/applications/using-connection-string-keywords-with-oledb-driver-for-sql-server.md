@@ -4,7 +4,7 @@ description: "Some OLE DB Driver for SQL Server APIs use connection strings, whi
 ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: "vanto"
 ms.technology: connectivity
 ms.topic: "conceptual"

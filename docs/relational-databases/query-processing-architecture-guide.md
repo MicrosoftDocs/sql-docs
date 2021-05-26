@@ -4,7 +4,7 @@ title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -1333,13 +1333,15 @@ The following illustration shows the properties of the `Clustered Index Seek` op
 
 When an operator such as an Index Seek is executed on a partitioned table or index, the `Partitioned` attribute appears in the compile-time and run-time plan and is set to `True` (1). The attribute does not display when it is set to `False` (0).
 
-The `Partitioned` attribute can appear in the following physical and logical operators:  
-|||
-|--------|--------|
-|Table Scan|Index Scan|
-|Index Seek|Insert|
-|Update|Delete|
-|Merge||
+The `Partitioned` attribute can appear in the following physical and logical operators:
+
+- Table Scan
+- Index Scan
+- Index Seek
+- Insert
+- Update
+- Delete
+- Merge
 
 As shown in the previous illustration, this attribute is displayed in the properties of the operator in which it is defined. In the XML Showplan output, this attribute appears as `Partitioned="1"` in the `RelOp` node of the operator in which it is defined.
 

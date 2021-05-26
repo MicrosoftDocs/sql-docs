@@ -1,10 +1,10 @@
 ---
 description: "sys.dm_os_performance_counters (Transact-SQL)"
-title: "sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_performance_counters (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "03/22/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_os_performance_counters dynamic management view"
-ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -28,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns a row per performance counter maintained by the server. For information about each performance counter, see [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_performance_counters**.  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_os_performance_counters`.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,14 +48,20 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
 If the return value is 0 rows, this means that the performance counters have been disabled. You should then look at the setup log and search for error 3409, `Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions.`
 This denotes that performance counters were not enabled. The errors immediately before the 3409 error should indicate the root cause for the failure of performance counter enabling. For more information about setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
 
-Performance counters where the `cntr_type` column value is 65792, 272696320, and 537003264 display an instant snapshot counter value.
+Performance counters where the `cntr_type` column value is 65792 display a snapshot of the last observed value only, not an average. 
 
-Performance counters where the `cntr_type` column value is 272696576, 1073874176, and 1073939712 display cumulative counter values instead of an instant snapshot. As such, to get a snapshot-like reading, you must compare the delta between two collection points.
+Performance counters where the `cntr_type` column value is 272696320 or 272696576 display the average number of operations completed during each second of the sample interval. Counters of this type measure time in ticks of the system clock. For example, to get a snapshot-like reading of the last second only for the `Buffer Manager:Lazy writes/sec` and `Buffer Manager:Checkpoint pages/sec` counters, you must compare the delta between two collection points that are one second apart.    
+
+Performance counters where the `cntr_type` column value is 537003264 display the ratio of a subset to its set as a percentage. For example, the `Buffer Manager:Buffer cache hit ratio` counter compares the total number of cache hits and the total number of cache lookups. As such, to get a snapshot-like reading of the last second only, you must compare the delta between the current value and the base value (denominator) between two collection points that are one second apart. The corresponding base value is the performance counter `Buffer Manager:Buffer cache hit ratio base` where the `cntr_type` column value is 1073939712.
+
+Performance counters where the `cntr_type` column value is 1073874176 display how many items are processed on average, as a ratio of the items processed to the number of operations. For example, the `Locks:Average Wait Time (ms)` counters compares the lock waits per second with the lock requests per second, to display the average amount of wait time (in milliseconds) for each lock request that resulted in a wait. As such, to get a snapshot-like reading of the last second only, you must compare the delta between the current value and the base value (denominator) between two collection points that are one second apart. The corresponding base value is the performance counter `Locks:Average Wait Time Base` where the `cntr_type` column value is 1073939712.
+
+Data in the `sys.dm_os_performance_counters` DMV is not persisted after the database engine restarts. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
 
 ## Permission
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
  
 ## Examples  
  The following example returns all performance counters that display snapshot counter values.  
@@ -70,4 +75,4 @@ WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;
 ## See Also  
   [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
-  
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)

@@ -142,7 +142,8 @@ ms.author: maggies
   
 -   **Edit Fields** Opens the **Edit Related Fields** dialog box in which you add and modify relationships between tables. You chose the fields in the right and left tables to join. You can join multiple fields from the left table and right table to specify multiple join conditions in a relationship. The two fields that join the left and right tables do not need to have the same name. The joined fields must have compatible data types.  
   
--   **Delete Relationship**  Deletes the selected relationship**.**  
+-   **Delete Relationship**  Deletes the selected relationship. 
+
   
 -   **Move Up** and **Move Down** Moves relationships up or down the **Relationship** list. The sequence in which relationships are placed in the query can impact the query results. The relationships are added to the query in the order they appear in the **Relationship** list.  
   

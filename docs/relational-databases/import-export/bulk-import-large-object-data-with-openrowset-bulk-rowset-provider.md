@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "large data, bulk imports"
   - "SINGLE_BLOB option"
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: "seo-lt-2019"
 ---
 # Bulk import large-object data with OPENROWSET Bulk Rowset Provider (SQL Server)

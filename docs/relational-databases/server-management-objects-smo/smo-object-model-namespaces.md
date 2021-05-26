@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) has various namespaces. The different namespaces represent different areas of functionality within SMO.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies folder.  
+ In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies folder.  
   
 ## Namespaces  
  The SMO namespaces are:  

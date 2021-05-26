@@ -24,14 +24,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Track Data Changes (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides two features that track changes to data in a database: [change data capture](#Capture) and [change tracking](#Tracking). These features enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database. Change data capture and change tracking can be enabled on the same database; no special considerations are required. For the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support change data capture and change tracking, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Change tracking is supported by [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Change data capture is only supported in SQL Server and Azure SQL Managed Instance.
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]  provides two features that track changes to data in a database: [change data capture](#Capture) and [change tracking](#Tracking). These features enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database. Change data capture and change tracking can be enabled on the same database; no special considerations are required. For the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support change data capture and change tracking, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Change tracking is supported by [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Change data capture is only supported in SQL Server and Azure SQL Managed Instance.
   
 ## Benefits of Using Change Data Capture or Change Tracking  
  The ability to query for data that has changed in a database is an important requirement for some applications to be efficient. Typically, to determine data changes, application developers must implement a custom tracking method in their applications by using a combination of triggers, timestamp columns, and additional tables. Creating these applications usually involves a lot of work to implement, leads to schema updates, and often carries a high performance overhead.  
   
  Using change data capture or change tracking in applications to track changes in a database, instead of developing a custom solution, has the following benefits:  
   
--   There is reduced development time. Because functionality is available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you do not have to develop a custom solution.  
+-   There is reduced development time. Because functionality is available in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you do not have to develop a custom solution.  
   
 -   Schema changes are not required. You do not have to add columns, add triggers, or create side table in which to track deleted rows or to store change tracking information if columns cannot be added to the user tables.  
   
@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Change tracking is based on committed transactions. The order of the changes is based on transaction commit time. This allows for reliable results to be obtained when there are long-running and overlapping transactions. Custom solutions that use **timestamp** values must be specifically designed to handle these scenarios.  
   
--   Standard tools are available that you can use to configure and manage. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides standard DDL statements, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], catalog views, and security permissions.  
+-   Standard tools are available that you can use to configure and manage. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] provides standard DDL statements, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], catalog views, and security permissions.  
   
 ## Feature Differences Between Change Data Capture and Change Tracking  
  The following table lists the feature differences between change data capture and change tracking. The tracking mechanism in change data capture involves an asynchronous capture of changes from the transaction log so that changes are available after the DML operation. In change tracking, the tracking mechanism involves synchronous tracking of changes in line with DML operations so that change information is available immediately.  
@@ -140,7 +140,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  ![Conceptual illustration of change tracking](../../relational-databases/track-changes/media/cdcart2.gif "Conceptual illustration of change tracking")  
   
 ### Change Tracking and Sync Services for ADO.NET  
- [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] enables synchronization between databases, providing an intuitive and flexible API that enables you to build applications that target offline and collaboration scenarios. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] provides an API to synchronize changes, but it does not actually track changes in the server or peer database. You can create a custom change tracking system, but this typically introduces significant complexity and performance overhead. To track changes in a server or peer database, we recommend that you use change tracking in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] because it is easy to configure and provides high performance tracking.  
+ [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] enables synchronization between databases, providing an intuitive and flexible API that enables you to build applications that target offline and collaboration scenarios. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] provides an API to synchronize changes, but it does not actually track changes in the server or peer database. You can create a custom change tracking system, but this typically introduces significant complexity and performance overhead. To track changes in a server or peer database, we recommend that you use change tracking in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] because it is easy to configure and provides high performance tracking.  
   
  For more information about change tracking and [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)], use the following links:  
   

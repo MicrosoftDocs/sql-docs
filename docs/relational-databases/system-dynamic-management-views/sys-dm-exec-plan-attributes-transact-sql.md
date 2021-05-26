@@ -113,7 +113,7 @@ On Azure SQL Database Basic, S0, and S1 service objectives, and for databases in
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indicates that the database option PARAMETERIZATION was set to FORCED when the plan was compiled.|131072|  
-|ROWCOUNT|**Applies To:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Applies To:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]<br /><br /> 262144|  
   
 ## Cursors  
  Inactive cursors are cached in a compiled plan so that the memory used to store the cursor can be reused by concurrent users of cursors. For example, suppose that a batch declares and uses a cursor without deallocating it. If there are two users executing the same batch, there will be two active cursors. Once the cursors are deallocated (potentially in different batches), the memory used to store the cursor is cached and not released. This list of inactive cursors is kept in the compiled plan. The next time a user executes the batch, the cached cursor memory will be reused and initialized appropriately as an active cursor.  

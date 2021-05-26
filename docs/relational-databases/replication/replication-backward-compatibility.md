@@ -41,7 +41,7 @@ The general rules are:
 
 ## Additional Resources
  [Deprecated Features in SQL Server Replication](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- Replication features that have been retained in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for backward compatibility, but, which will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Replication features that have been retained in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] for backward compatibility, but, which will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Breaking Changes in SQL Server Replication](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  Replication feature changes that might require changes to applications. 

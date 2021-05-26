@@ -562,7 +562,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="Filtered"></a> Filtered Index Design Guidelines  
  A filtered index is an optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] through [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
   
  Filtered indexes can provide the following advantages over full-table indexes:  
   
@@ -816,7 +816,7 @@ For more information, refer to [Columnstore indexes - Design Guidance](../relati
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] through [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
 
 ### Hash Index Architecture
 A hash index consists of an array of pointers, and each element of the array is called a hash bucket.
@@ -909,7 +909,7 @@ Later when the older versions are no longer needed, a garbage collection (GC) th
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] through [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
 
 ### In-memory Nonclustered Index Architecture
 

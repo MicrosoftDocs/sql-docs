@@ -22,7 +22,7 @@ ms.author: maghan
 -   [SQL Server Express LocalDB Instance API Reference](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
   
 ## Code Sample  
- The following sample demonstrates the LocalDB API.  Make sure that LocalDB is installed on the computer before running this sample.  You can install LocalDB from setup in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Express.  
+ The following sample demonstrates the LocalDB API.  Make sure that LocalDB is installed on the computer before running this sample.  You can install LocalDB from setup in the [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] Express.  
   
 ```  
 // compile with: Advapi32.lib  

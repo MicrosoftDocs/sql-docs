@@ -13,13 +13,13 @@ ms.custom: seo-dt-2019
 ---
 
 # Create a script task that uses SSIS Parallel Data Warehouse destination adapter
-This SSIS package script code is a code example for using the SSIS PDW destination adapter.  The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow. 
+This SSIS package script code is a code example for using the SSIS PDW destination adapter.  The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .NET application within the context of an SSIS control flow. 
   
 ## Sample Code  
   
 1.  Create a blank Script Task in SSIS.  
   
-2.  Open the task in the **Script Task Editor**, and click **Edit Script**.  
+2.  Open the task in the **Script Task Editor**, and select **Edit Script**.  
   
 3.  Edit the script to use the code provided below. Customized the script to your environment by making the following changes:  
   

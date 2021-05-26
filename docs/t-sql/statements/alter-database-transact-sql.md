@@ -603,6 +603,12 @@ SERVICE_OBJECTIVE
 
   - Specifies the compute size (service objective). Available values for service objective are: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
+DATABASE_NAME
+Only for Azure SQL Database Hyperscale. The database name that will be created. Only used by Azure SQL Database Hyperscale named replicas, when `SECONDARY_TYPE` = NAMED. For more information, see [Hyperscale Secondary Replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas).
+
+SECONDARY_TYPE 
+Only for Azure SQL Database Hyperscale. **GEO** specifies a geo-replica, **NAMED** specifies a named replica. Default is **GEO**. For more information, see [Hyperscale Secondary Replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas).
+
 For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](/azure/azure-sql/database/purchasing-models), [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
 
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)   

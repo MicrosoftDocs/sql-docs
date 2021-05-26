@@ -362,6 +362,8 @@ ALTER DATABASE { database_name | CURRENT }
      | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL ( name = <elastic_pool_name>) }
+       | DATABASE_NAME = <target_database_name>
+       | SECONDARY_TYPE = { GEO | NAMED }
        }
    }
 

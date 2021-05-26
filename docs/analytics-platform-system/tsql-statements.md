@@ -1,7 +1,7 @@
 ---
 title: T-SQL statements
 description: T-SQL statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

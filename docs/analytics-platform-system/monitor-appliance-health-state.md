@@ -1,7 +1,7 @@
 ---
 title: Monitor appliance health
 description: How to monitor the state of an Analytics Platform System appliance by using the Admin Console, or by directly querying the Parallel Data Warehouse dynamic management views. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

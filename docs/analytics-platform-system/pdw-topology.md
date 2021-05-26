@@ -1,7 +1,7 @@
 ---
 title: PDW topology
 description: PDW topology for Analytics Platform System.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

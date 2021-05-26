@@ -1,7 +1,7 @@
 ---
 title: Configure time zone
 description: The Time Zone page enables you to set the time zone for all nodes on your Analytics Platform System (APS) appliance. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

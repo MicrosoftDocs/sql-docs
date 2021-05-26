@@ -1,7 +1,7 @@
 ---
 title: Error messages
 description: Parallel Data Warehouse (PDW) error messages report errors and problems encountered by the PDW components and can also include SQL Server errors surfaced through PDW. These error messages use a consistent syntax for presenting information. Understanding this syntax will allow you to identify and correct problems.  
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

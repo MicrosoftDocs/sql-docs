@@ -1,7 +1,7 @@
 ---
 title: "Use PolyBase to access external data in Azure Blob Storage"
 description: Explains how to use PolyBase on a Parallel Data Warehouse (APS) to query external data in Azure Blob Storage. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

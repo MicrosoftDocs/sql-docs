@@ -1,7 +1,7 @@
 ---
 title: Parallel Data Warehouse components
 description: This articles explains the appliance software and the non-appliance software components of Analytics Platform System.  
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

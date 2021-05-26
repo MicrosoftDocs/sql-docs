@@ -1,7 +1,7 @@
 ---
 title: Monitor with system views
 description: This article lists the system views that you can use for monitoring the Analytics Platform system appliance.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

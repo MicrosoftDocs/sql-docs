@@ -1,7 +1,7 @@
 ---
 title: Appliance install and configure
 description: Walks Analytics Platform System (APS) appliance administrators through the initial steps to set up and get started using your new appliance. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

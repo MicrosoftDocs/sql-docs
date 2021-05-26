@@ -1,7 +1,7 @@
 ---
 title: "Feature Switch"
 description: "Displays information about the two feature switches that are introduced in Analytics Platform System AU7."
-author: charlesfedderson
+author: charlesfeddersen
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"

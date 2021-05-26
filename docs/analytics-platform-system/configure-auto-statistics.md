@@ -1,7 +1,7 @@
 ---
 title: "Auto-Statistics"
 description: "Describes auto statistics feature introduced in Analytics Platform System AU7."
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"

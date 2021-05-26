@@ -1,7 +1,7 @@
 ---
 title: Obtain information from IHV
 description: Information to obtain from your IHV about the Analytics Platform System appliance. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

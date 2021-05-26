@@ -1,7 +1,7 @@
 ---
 title: "Access external data: Hadoop - PolyBase"
 description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

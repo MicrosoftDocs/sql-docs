@@ -1,7 +1,7 @@
 ---
 title: Certificate provisioning
 description: Certificate provisioning in Analytics Platform System.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

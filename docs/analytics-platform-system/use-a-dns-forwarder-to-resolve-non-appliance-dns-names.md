@@ -1,7 +1,7 @@
 ---
 title: Use a DNS forwarder
 description: Use a DNS forwarder to resolve non-appliance DNS names in Analytics Platform System.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

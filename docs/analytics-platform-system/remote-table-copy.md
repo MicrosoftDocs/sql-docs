@@ -1,7 +1,7 @@
 ---
 title: Remote table copy
 description: Using remote table copy in Analytics Platform System Parallel Data Warehouse.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

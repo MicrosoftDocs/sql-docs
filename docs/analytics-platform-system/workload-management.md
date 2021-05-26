@@ -1,7 +1,7 @@
 ---
 title: Workload management
 description: Workload management in Analytics Platform System.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

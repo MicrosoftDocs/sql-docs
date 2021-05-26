@@ -1,7 +1,7 @@
 ---
 title: Reserved database names
 description: Reserved database names in Analytics Platform System Parallel Data Warehouse.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

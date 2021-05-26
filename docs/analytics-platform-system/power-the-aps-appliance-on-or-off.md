@@ -1,7 +1,7 @@
 ---
 title: Power the appliance on or off
 description: Power the appliance on or off for Analytics Platform System 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Restore master database
 description: Restore the master database in Analytics Platform System (APS).
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Configure System Center Operations Manager to monitor APS 
 description: Follow these steps to configure the System Center Operations Manager (SCOM) management packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from SCOM. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

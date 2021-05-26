@@ -1,7 +1,7 @@
 ---
 title: Appliance topology
 description: Displays summary information on the entire Analytics Platform System.  
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

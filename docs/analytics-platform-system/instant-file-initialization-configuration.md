@@ -1,7 +1,7 @@
 ---
 title: Configure Instant File Initialization
 description: Configure Instant File Initialization on Analytics Platform System. Instant file initialization is a SQL Server feature that allows data file operations to run more quickly.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

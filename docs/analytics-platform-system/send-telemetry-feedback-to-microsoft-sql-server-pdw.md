@@ -1,7 +1,7 @@
 ---
 title: Telemetry feedback
 description: Send telemetry feedback to Microsoft for Analytics Platform System.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

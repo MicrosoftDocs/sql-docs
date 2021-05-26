@@ -1,7 +1,7 @@
 ---
 title: Acquire & configure loading server
 description: This article describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to Parallel Data Warehouse (PDW). 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

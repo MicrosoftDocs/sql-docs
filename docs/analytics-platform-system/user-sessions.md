@@ -1,7 +1,7 @@
 ---
 title: User sessions
 description: User sessions in Analytics Platform System's Parallel Data Warehouse.
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

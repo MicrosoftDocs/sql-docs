@@ -1,7 +1,7 @@
 ---
 title: Appliance monitoring
 description: This appliance monitoring guide describes the tools and tasks for monitoring the Analytics Platform System appliance. 
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

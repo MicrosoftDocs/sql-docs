@@ -1,7 +1,7 @@
 ---
 title: "Common subexpression"
 description: "Displays example query improvement that was introduced in Analytics Platform System CU7.3"
-author: charlesfedderson 
+author: charlesfeddersen 
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"

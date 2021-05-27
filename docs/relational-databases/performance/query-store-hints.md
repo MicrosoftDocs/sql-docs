@@ -95,7 +95,7 @@ When hints are applied, the following will be surfaced in the StmtSimple element
 ### A. Query Store hints demo
 The following walk-through of the Query Store hints feature in Azure SQL Database uses an imported database via a BACPAC file (.bacpac). Learn how to import a new database to an Azure SQL Database server, see [Quickstart: Import a BACPAC file to a database](/azure/azure-sql/database/database-import).
 
-:::code language="tsql" source="../../sql-server-samples/samples/features/query-store/Query%20Store%20Hints%20Demo.sql":::
+:::code language="tsql" source="../../sql-server-samples/samples/features/query-store/Query Store Hints Demo.sql":::
 
 ### B. Identify a query in Query Store
 

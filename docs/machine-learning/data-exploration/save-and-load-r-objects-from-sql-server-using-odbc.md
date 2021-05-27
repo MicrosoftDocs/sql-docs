@@ -4,7 +4,7 @@ description: The RevoScaleR package includes serialization and deserialization f
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 04/21/2020
+ms.date: 04/27/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

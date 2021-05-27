@@ -19,7 +19,7 @@ ms.author: chadam
 
 # Relational operators (Transact-SQL)
 
-A relational operator is a syntax element that can accept one or more named parameters in a DML statement.
+A relational operator is a syntax element that can accept one or more named or unnamed input parameters and returns a result set. Relational operators are used as table source in a DML statement.
 
 SQL Server implements the following relational operators:
 
@@ -33,7 +33,7 @@ SQL Server implements the following relational operators:
 
 ## Use
 
-Use a relational operator like a [table-valued function](../statements/create-function-transact-sql.md#c-creating-a-multi-statement-table-valued-function) in a query or T-SQL statement. The difference is that the relational operator accepts one or more named parameters whereas the function does not.
+Use a relational operator like a [table-valued function](../statements/create-function-transact-sql.md#c-creating-a-multi-statement-table-valued-function) in a query or T-SQL statement. 
 
 ## See also
 

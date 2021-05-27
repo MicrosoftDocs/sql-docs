@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 This article outlines the Query Store hints feature of the [Query Store](monitoring-performance-by-using-the-query-store.md). The Query Store hints feature provides an easy-to-use method for shaping query plans without changing application code. 
 
 > [!Note]
-> Query Store hints are a public preview feature available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] – including in Azure SQL single databases, elastic pools, managed instances, and Hyperscale databases.  
+> Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] – including in Azure SQL single databases, elastic pools, managed instances, and hyperscale databases.  
 
 ## Overview
 
@@ -92,7 +92,12 @@ When hints are applied, the following will be surfaced in the StmtSimple element
 
 ## Examples  
 
-### Identify a query_id in Query Store
+### A. Query Store hints demo
+The following walk-through of the Query Store hints feature in Azure SQL Database uses an imported database via a BACPAC file (.bacpac). Learn how to import a new database to an Azure SQL Database server, see [Quickstart: Import a BACPAC file to a database](/azure/azure-sql/database/database-import).
+
+:::code language="tsql" source="../../sql-server-samples/samples/features/query-store/Query%20Store%20Hints%20Demo.sql":::
+
+### B. Identify a query in Query Store
 
 The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the query_id for an executed query text fragment:
 
@@ -106,7 +111,7 @@ WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'
 GO
 ```
 
- Then, apply the hint to enforce a maximum memory grant size in percent of configured memory limit to query_id 39, identified in Query Store:
+ Then, apply the hint to enforce a maximum memory grant size in percent of configured memory limit to the query_id (in this example, query_id in the previous query's resultset was 39):
   
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(MAX_GRANT_PERCENT=10)';

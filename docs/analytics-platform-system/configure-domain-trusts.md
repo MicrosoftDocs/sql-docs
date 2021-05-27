@@ -1,12 +1,12 @@
 ---
 title: Configure domain trusts
 description: Configure domain trusts in Analytics Platform System.
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: murshedz
 ms.custom: seo-dt-2019
 ---

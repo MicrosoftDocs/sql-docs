@@ -242,4 +242,4 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 + [SQL machine learning documentation](../index.yml)
 + [Machine learning and AI with ONNX in SQL Edge](/azure/azure-sql-edge/onnx-overview)
 + [Deploy and make predictions with an ONNX model in Azure SQL Edge](/azure/azure-sql-edge/deploy-onnx)
-+ [Score machine learning models with PREDICT in Azure Synapse Analytics](/sql-data-warehouse/sql-data-warehouse-predict)
++ [Score machine learning models with PREDICT in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-predict)

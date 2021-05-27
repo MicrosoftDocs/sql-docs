@@ -19,7 +19,7 @@ ms.author: chadam
 
 # Relational operators (Transact-SQL)
 
-A relational operator is a syntax element that can accept one or more named parameters in a DML statement.
+A relational operator is a syntax element that can accept one or more named or unnamed input parameters and returns a result set. Relational operators are used as table source in a DML statement.
 
 SQL Server implements the following relational operators:
 

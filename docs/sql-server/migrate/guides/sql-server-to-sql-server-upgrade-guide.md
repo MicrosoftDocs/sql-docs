@@ -34,6 +34,8 @@ Supported source and target versions are shown in the following list.
   - SQL Server 2016
   - SQL Server 2017 on Linux
   - SQL Server 2017 on Windows
+  - SQL Server 2019 on Linux
+  - SQL Server 2019 on Windows
 
 ### Upgrade options 
 

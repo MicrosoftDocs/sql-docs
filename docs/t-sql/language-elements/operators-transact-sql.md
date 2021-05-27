@@ -20,7 +20,7 @@ ms.author: chadam
 # Operators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  An operator is a symbol specifying an action that is performed on one or more expressions. The following tables lists the operator categories that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
+  An operator is a symbol specifying an action that is performed on one or more expressions. The following table lists the operator categories that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
   
 :::row:::
     :::column:::

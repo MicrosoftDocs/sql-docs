@@ -144,9 +144,9 @@ Retain backup logs, maintenance plans, and other automated tasks, including jobs
 
 View [linked servers](../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
 
-[Troubleshoot orphaned users](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)
+[Troubleshoot orphaned users](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
-[Migrating-triggers](../../../relational-databases/linked-servers/linked-servers-database-engine.md)
+[Migrating-triggers](../../..relational-databases/linked-servers/linked-servers-database-engine.md)
 
 ## Migrate schema and data
 

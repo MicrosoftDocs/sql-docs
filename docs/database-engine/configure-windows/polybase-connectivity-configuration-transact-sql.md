@@ -76,11 +76,9 @@ RECONFIGURE
   
 -   Option 7: Azure blob storage (WASB[S])  
  
--   Option 8:<sup>**</sup> Hortonworks 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure blob storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
+-   Option 8:<sup>*</sup> Hortonworks 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure blob storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
 
-   <sup>*</sup> Hortonworks 3.1 requires SQL Server 2019 CU9 (15.0.4102) or later.
-
-   <sup>**</sup> Option 8 introduced with SQL Server 2019 CU11.
+   <sup>*</sup> Option 8 introduced with SQL Server 2019 CU11.
 
  **RECONFIGURE**  
  Updates the run value (`run_value`) to match the configuration value (`config_value`). See [Result Sets](#ResultSets) for definitions of `run_value` and `config_value`. The new configuration value that is set by `sp_configure` does not become effective until the run value is set by the `RECONFIGURE` statement.  

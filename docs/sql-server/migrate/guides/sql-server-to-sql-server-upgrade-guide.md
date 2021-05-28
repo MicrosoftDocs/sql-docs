@@ -140,13 +140,13 @@ To ensure a successful migration and upgrade any issues discovered from pre-migr
 
 Review the compatibility issues discovered with DMA tool.
 
-Retain backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](../../../relational-databases/bacbup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+Retain backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](/../../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
-View [linked servers](../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
+View [linked servers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
 
-[Troubleshoot orphaned users](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
+[Troubleshoot orphaned users](/../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
-[Migrating-triggers](../../..relational-databases/linked-servers/linked-servers-database-engine.md)
+[Migrating-triggers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md)
 
 ## Migrate schema and data
 

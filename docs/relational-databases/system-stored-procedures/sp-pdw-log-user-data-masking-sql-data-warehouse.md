@@ -34,7 +34,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### Parameters  
 `[ @masking_mode = ] masking_mode`

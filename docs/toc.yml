@@ -16084,18 +16084,6 @@ items:
         items:
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
-      - name: Rowset
-        items:
-        - name: OPENDATASOURCE
-          href: t-sql/functions/opendatasource-transact-sql.md
-        - name: OPENJSON
-          href: t-sql/functions/openjson-transact-sql.md
-        - name: OPENQUERY
-          href: t-sql/functions/openquery-transact-sql.md
-        - name: OPENROWSET
-          href: t-sql/functions/openrowset-transact-sql.md
-        - name: OPENXML
-          href: t-sql/functions/openxml-transact-sql.md
       - name: Security
         href: t-sql/functions/security-functions-transact-sql.md
         items:
@@ -16198,8 +16186,6 @@ items:
           href: t-sql/functions/string-agg-transact-sql.md
         - name: STRING_ESCAPE
           href: t-sql/functions/string-escape-transact-sql.md
-        - name: STRING_SPLIT
-          href: t-sql/functions/string-split-transact-sql.md
         - name: STUFF
           href: t-sql/functions/stuff-transact-sql.md
         - name: SUBSTRING
@@ -16414,8 +16400,9 @@ items:
         - name: NULLIF
           href: t-sql/language-elements/nullif-transact-sql.md
       - name: Operators
-        href: t-sql/language-elements/operators-transact-sql.md
         items:
+        - name: Overview
+          href: t-sql/language-elements/operators-transact-sql.md
         - name: Unary - Positive
           href: t-sql/language-elements/unary-operators-positive.md
         - name: Unary - Negative
@@ -16425,8 +16412,9 @@ items:
         - name: Set - UNION
           href: t-sql/language-elements/set-operators-union-transact-sql.md
         - name: Arithmetic
-          href: t-sql/language-elements/arithmetic-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/arithmetic-operators-transact-sql.md
           - name: "+ (Addition)"
             href: t-sql/language-elements/add-transact-sql.md
           - name: "+= (Addition Assignment)"
@@ -16450,8 +16438,9 @@ items:
         - name: "= (Assignment)"
           href: t-sql/language-elements/assignment-operator-transact-sql.md
         - name: Bitwise
-          href: t-sql/language-elements/bitwise-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/bitwise-operators-transact-sql.md
           - name: "& (Bitwise AND)"
             href: t-sql/language-elements/bitwise-and-transact-sql.md
           - name: "&= (Bitwise & Assignment)"
@@ -16467,8 +16456,9 @@ items:
           - name: "~ (Bitwise NOT)"
             href: t-sql/language-elements/bitwise-not-transact-sql.md
         - name: Comparison
-          href: t-sql/language-elements/comparison-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/comparison-operators-transact-sql.md
           - name: "= (Equals)"
             href: t-sql/language-elements/equals-transact-sql.md
           - name: "> (Greater Than)"
@@ -16490,8 +16480,9 @@ items:
         - name: Compound
           href: t-sql/language-elements/compound-operators-transact-sql.md
         - name: Logical
-          href: t-sql/language-elements/logical-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/logical-operators-transact-sql.md
           - name: ALL
             href: t-sql/language-elements/all-transact-sql.md
           - name: AND
@@ -16514,9 +16505,28 @@ items:
             href: t-sql/language-elements/some-any-transact-sql.md
         - name: ":: (Scope Resolution)"
           href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
-        - name: String
-          href: t-sql/language-elements/string-operators-transact-sql.md
+        - name: Relational operators
           items:
+          - name: Overview
+            href: t-sql/language-elements/relational-operators-transact-sql.md
+          - name: OPENDATASOURCE
+            href: t-sql/functions/opendatasource-transact-sql.md
+          - name: OPENJSON
+            href: t-sql/functions/openjson-transact-sql.md
+          - name: OPENQUERY
+            href: t-sql/functions/openquery-transact-sql.md
+          - name: OPENROWSET
+            href: t-sql/functions/openrowset-transact-sql.md
+          - name: OPENXML
+            href: t-sql/functions/openxml-transact-sql.md
+          - name: PREDICT
+            href: t-sql/queries/predict-transact-sql.md
+          - name: STRING_SPLIT
+            href: t-sql/functions/string-split-transact-sql.md
+        - name: String
+          items:
+          - name: Overview
+            href: t-sql/language-elements/string-operators-transact-sql.md
           - name: "+ (String Concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
           - name: "+= (String Concatenation Assignment)"
@@ -16561,6 +16571,7 @@ items:
           href: t-sql/language-elements/select-local-variable-transact-sql.md
         - name: DECLARE @local_variable
           href: t-sql/language-elements/declare-local-variable-transact-sql.md
+
     - name: Queries
       href: t-sql/queries/queries.md
       displayName: Query
@@ -16577,8 +16588,6 @@ items:
           href: t-sql/queries/option-clause-transact-sql.md
         - name: OUTPUT Clause
           href: t-sql/queries/output-clause-transact-sql.md
-        - name: PREDICT
-          href: t-sql/queries/predict-transact-sql.md
         - name: READTEXT
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition

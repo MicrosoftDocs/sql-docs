@@ -22,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_nodes (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Holds information about nodes used with PolyBase data management. It lists one row per node.  
   

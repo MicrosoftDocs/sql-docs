@@ -17,8 +17,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Returns information about the connections established to this instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and the details of each connection.  
-  
+  Returns information about the connections established to this instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and the details of each connection. 
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+ 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifies the session associated with this connection. Use `SESSION_ID()` to return the `session_id` of the current connection.|  

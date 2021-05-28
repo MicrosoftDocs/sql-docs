@@ -22,14 +22,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and it scales very well.
 
+Extended Events are replacing the deprecated [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and SQL Server Profiler features
+
 You can find more information about Extended Events at [Quickstart: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 ## Benefits of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
 
-Extended Events is a lightweight performance monitoring system that uses minimal performance resources. Extended Events provides two graphical user interfaces to create, modify, display, and analyze your session data. These interfaces are named:
+Extended Events is a lightweight performance monitoring system that uses minimal performance resources. SQL Server Management Studio provides a graphical user interface for Extended Events to create and modify sessions and display and analyze session data. Here you can find out more about those extensions:
+|[Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+|[Use the SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) 
 
-- New Session Wizard
-- New Session
 
 ## Extended Events Concepts  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events builds on existing concepts, such as an event or an event consumer, uses concepts from Event Tracing for Windows, and introduces new concepts.  
@@ -46,18 +48,12 @@ Extended Events is a lightweight performance monitoring system that uses minimal
   
 ## Extended Events Architecture  
 
-Extended Events is our name for a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the operating system case, Extended Events output must be directed to Event Tracing for Windows (ETW). ETW can correlate the event data with operating system or application event data.  
+Extended Events is our name for a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the operating system case, Extended Events output must be directed to [Event Tracing for Windows (ETW)](https://docs.microsoft.com/en-us/windows/win32/etw/event-tracing-portal). ETW can correlate the event data with operating system or application event data.
 
 All applications have execution points that are useful both inside and outside an application. Inside the application, asynchronous processing may be enqueued using information that is collected during the initial execution of a task. Outside the application, execution points provide monitoring utilities with information. The information is about the behavioral and performance characteristics of the monitored application.  
 
- Extended Events supports using event data outside a process. This data is typically used by:  
-  
--   Tracing tools, such as SQL Trace and System Monitor.  
-  
--   Logging tools, such as the Windows event log or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
-  
--   Users administering a product or developing applications on a product.  
-  
+ Extended Events supports using event data outside a process. This data is typically used by users either administering or supporting a product by doing performance monitoring or by user developing applications on a product for debugging purposes. Data is consumed or analyzed using tools such as XEvent Profiler and Performance Monitor, T-SQL or Windows command line tools.
+    
  Extended Events has the following key design aspects:  
   
 -   The Extended Events engine is event agnostic. The engine can bind any event to any target, because the engine is not constrained by event content. For more information about the Extended Events engine, see [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
@@ -82,7 +78,7 @@ All applications have execution points that are useful both inside and outside a
   
 ## Extended Events Tasks  
 
-Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] Data Definition Language (DDL) statements, dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment.  
+Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] Data Definition Language (DDL) statements, consume dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment.  
   
 |Task Description|Topic|  
 |----------------------|-----------|  

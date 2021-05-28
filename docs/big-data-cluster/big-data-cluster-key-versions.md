@@ -21,7 +21,7 @@ For general information on securing [!INCLUDE[big-data-clusters-2019](../include
 For using encryption at rest in HDFS, the following concepts are involved:
 
 1. Encryption zones (EZ): The encryption zone is a folder in HDFS which is associated with a key. All files in this folder are encrypted. Default provisioned EZ in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is called "securelake".
-2. Encryption Zone keys (EZ Key): A named symmetric key. Default provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS (Key Management Server) running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main key and the decryption requests are sent to the control plane.
+2. Encryption Zone keys (EZ Key): A named symmetric key. Default provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS (Key Management Server) running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main encryption key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main encryption key and the decryption requests are sent to the control plane.
 3. Encrypted Data Encryption Key: Every file in Encryption zone is encrypted by a Data Encryption Key (DEK) generated for the file. Once the DEK is created, it is persisted with the data. To persist the DEK, it is first Encrypted by the Encryption Zone Key and then persisted with data. The DEK is randomly generated per file and the strength of the symmetric DEK is the same as the strength of the EZ Key.
 
 The below graphic explains how files are protected by the DEK and how the DEK is protected by the EZ key securelakekey.
@@ -31,7 +31,7 @@ The below graphic explains how files are protected by the DEK and how the DEK is
 
 ## SQL Server keys
 
-The system managed main key and the HDFS EZ keys are stored inside the controldb, which will be named controldb-<#>, for example `controldb-0`. For more information, see [Resources deployed with Big Data Cluster](concept-architecture-pods.md).
+The system managed main encryption key and the HDFS EZ keys are stored inside the controldb, which will be named controldb-<#>, for example `controldb-0`. For more information, see [Resources deployed with Big Data Cluster](concept-architecture-pods.md).
 
 SQL Server databases are encrypted by a symmetric key, also known as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql) statement. The asymmetric key in SQL Server has metadata containing a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL Server stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
 
@@ -39,12 +39,12 @@ SQL Server databases are encrypted by a symmetric key, also known as a Database 
 
 ## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] main encryption key
 
-In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the main encryption key. There exists a main encryption key for SQL Server and for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
+In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the main encryption key. There exists two main encryption keys, one for SQL Server and one for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
 
-1. The main keys are asymmetric RSA key.
-2. A main key is created for SQL Server master instance and for HDFS.
-3. The public key corresponding to the main key, is always stored in the Controller Database or controldb. The private key is stored in the controller database for system managed main key. For encryption keys from Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the private key material.
-4. Encryption operations using the public key of the main key can be performed inside the controller itself, or, the controller can distribute the public key to Hadoop KMS so that Hadoop KMS can perform encryption locally. The decryption operations are expected to be handled by the external key provider, like HSM. This design allows us to keep the sensitive part of the asymmetric key outside the cluster and in the customer's protection. This makes sure that the root of encryption to decrypt all the data is never available in the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ecosystem for customer configured keys.
+1. The main encryption keys are asymmetric RSA keys.
+2. A main encryption key is created for SQL Server master instance and another for HDFS.
+3. The public key corresponding to the main encryption key, is always stored in the Controller Database or controldb. The private key is stored in the controller database for system managed main encryption key. For encryption keys from Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the private key material.
+4. Encryption operations using the public key of the main encryption key can be performed inside the controller itself, or, the controller can distribute the public key to Hadoop KMS so that Hadoop KMS can perform encryption locally. The decryption operations are expected to be handled by the external key provider, like HSM. This design allows us to keep the sensitive part of the asymmetric key outside the cluster and in the customer's protection. This makes sure that the root of encryption to decrypt all the data is never available in the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ecosystem for customer configured keys.
 
 ## Storage protection of different keys
 
@@ -55,10 +55,12 @@ Asymmetric keys in SQL Server have metadata include the key's URL in the control
 The storage of keys in controldb, is protected by the column encryption key in controldb. The controldb stores sensitive information about the cluster and all the sensitive information is protected by a Column Encryption Key of SQL Server in controldb, which is further protected by a password stored in Kubernetes Secrets. For more information, see [Secrets in Kubernetes Documentation](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 The protection is summarized in the diagrams below. First, storage protection of HDFS EZ keys:
+
 :::image type="content" source="media/big-data-cluster-key-versions/storage-protection-ez.png" alt-text="Storage protection of HDFS EZ keys ":::  
 
-Storage protection of the main key:
-:::image type="content" source="media/big-data-cluster-key-versions/storage-protection-main.png" alt-text="Storage protection of the main key":::  
+Storage protection of the main encryption key:
+
+:::image type="content" source="media/big-data-cluster-key-versions/storage-protection-main.png" alt-text="Storage protection of the main encryption key":::  
 
 
 ## Key rotation
@@ -85,12 +87,12 @@ The following diagram depicts the state of system after re-encryption of encrypt
 
 The key protecting the SQL Database is the DEK, which can be regenerated. The process of regeneration would cause the whole database to be re-encrypted.
 
-### Main key rotation
+### Main encryption key rotation
 
 > [!NOTE]
-> Until SQL Server 2019 CU10 there was no way to rotate the main key. Starting with SQL Server 2019 CU10, `azdata` command is be exposed to allow the rotation of the main key. 
+> Prior to SQL Server 2019 CU10 there was no way to rotate the main encryption key. Starting with SQL Server 2019 CU10, `azdata` command is be exposed to allow the rotation of the main encryption key. 
 
-The main key is RSA 2048-bit key. The rotation of the main key would do one of the following depending on the source of the key:
+The main encryption key is RSA 2048-bit key. The rotation of the main encryption key would do one of the following depending on the source of the key:
 
 1. Create new key in case the request has been made to rotate the main key to a system-managed key. A system-managed key is an asymmetric key, generated and stored inside the controller.
 2. Create a reference to an externally provided key, where the private key of the asymmetric will be managed by the customer application. The customer application need not have the private key, but it should know how to retrieve the private key based on the configuration of the application provided.

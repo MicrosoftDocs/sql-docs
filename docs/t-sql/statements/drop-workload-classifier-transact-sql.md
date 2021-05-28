@@ -35,7 +35,8 @@ Drops an existing user-defined workload management classifier.  If requests are 
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 

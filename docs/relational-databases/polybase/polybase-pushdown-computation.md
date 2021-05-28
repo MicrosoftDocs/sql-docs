@@ -44,6 +44,9 @@ This table summarizes pushdown computation support on different external data so
 
 \* PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
 
+>[!IMPORTANT]
+>To use the computation pushdown functionality with Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
+
 **Hadoop providers support the following:
 
 | **Aggregations**                  | **Filters (binary comparison)** | 

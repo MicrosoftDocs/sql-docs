@@ -42,8 +42,6 @@ This table lists the key features for PolyBase and the products in which they're
 
 PolyBase has the following limitations:
 
-- In order to use PolyBase, you must have sysadmin or CONTROL SERVER level permissions on the database.
-
 - Before [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or 1 MB in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this limitation is lifted. The limit remains 1 MB for Hadoop data sources, but is limited only by the maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limit for other data sources.
 
 - When data is exported into an ORC file format from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.

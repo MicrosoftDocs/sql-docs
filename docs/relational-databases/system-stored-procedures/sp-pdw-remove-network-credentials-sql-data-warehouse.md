@@ -29,7 +29,8 @@ ms.custom: seo-dt-2019
 sp_pdw_remove_network_credentials 'target_server_name'  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  '*target_server_name*'  

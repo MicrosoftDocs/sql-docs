@@ -9,7 +9,7 @@ author: cawrites
 ms.author: chadam
 ---
 
-# Upgrade overview: Upgrade SQL Server to SQL Server
+# Upgrade SQL Server to SQL Server
 
 In this guide, you learn how to upgrade your user databases from SQL Server to SQL Server 2019 by using the Data Migration Assistant (DMA).
 

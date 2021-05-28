@@ -21,7 +21,7 @@ For general information on securing [!INCLUDE[big-data-clusters-2019](../include
 For using encryption at rest in HDFS, the following concepts are involved:
 
 1. Encryption zones (EZ): The encryption zone is a folder in HDFS which is associated with a key. All files in this folder are encrypted. Default provisioned EZ in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is called "securelake".
-2. Encryption Zone keys (EZ Key): A named symmetric key. Default provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main key and the decryption requests are sent to the control plane.
+2. Encryption Zone keys (EZ Key): A named symmetric key. Default provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS (Key Management Server) running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main key and the decryption requests are sent to the control plane.
 3. Encrypted Data Encryption Key: Every file in Encryption zone is encrypted by a Data Encryption Key (DEK) generated for the file. Once the DEK is created, it is persisted with the data. To persist the DEK, it is first Encrypted by the Encryption Zone Key and then persisted with data. The DEK is randomly generated per file and the strength of the symmetric DEK is the same as the strength of the EZ Key.
 
 The below graphic explains how files are protected by the DEK and how the DEK is protected by the EZ key securelakekey.
@@ -39,11 +39,11 @@ SQL Server databases are encrypted by a symmetric key, also known as a Database 
 
 ## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] main encryption key
 
-In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the Main Encryption Key. There exists a main encryption key for SQL Server and for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
+In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the main encryption key. There exists a main encryption key for SQL Server and for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
 
 1. The main keys are asymmetric RSA key.
 2. A main key is created for SQL Server master instance and for HDFS.
-3. The public key corresponding to the main key, is always stored in the Controller Database or controldb. The private key is stored in the controller database for system managed main key. For encryption keys from Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the Private Key material.
+3. The public key corresponding to the main key, is always stored in the Controller Database or controldb. The private key is stored in the controller database for system managed main key. For encryption keys from Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the private key material.
 4. Encryption operations using the public key of the main key can be performed inside the controller itself, or, the controller can distribute the public key to Hadoop KMS so that Hadoop KMS can perform encryption locally. The decryption operations are expected to be handled by the external key provider, like HSM. This design allows us to keep the sensitive part of the asymmetric key outside the cluster and in the customer's protection. This makes sure that the root of encryption to decrypt all the data is never available in the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ecosystem for customer configured keys.
 
 ## Storage protection of different keys
@@ -130,7 +130,7 @@ On a fresh install of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclu
 
 The main encryption key will be rotated using `azdata bdc kms set –key-provider SystemManaged`. (Note the command causes rotation [or creates if not exists] of main encryption key for SQL and HDFS both, even though they are different keys inside the control plane.) 
 
-:::image type="content" source="media/big-data-cluster-key-versions/sql-key.png" alt-text="The SQL Server main encryption key is installed in the master DB of SQL Server master instance":::  
+:::image type="content" source="media/big-data-cluster-key-versions/install-sql-key.png" alt-text="The SQL Server main encryption key is installed in the master DB of SQL Server master instance":::  
 
 The asymmetric key can be seen using the following T-SQL query, with the `sys.asymmetric_keys` system catalog view.
 
@@ -154,13 +154,13 @@ If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL 
 
 ## Customer provided key
 
-With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the Main encryption key fetches the public key using the Application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt DEK from SQL, are sent to control plane as well, and then are redirected to the KMS application.
+With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the Application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt DEK from SQL, are sent to control plane as well, and then are redirected to the KMS application.
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-customerkey.png" alt-text="After customer key is installed":::
 
 The following diagram explains the interactions while configuring external keys in control plane:
 
-:::image type="content" source="media/big-data-cluster-key-versions/interactions.png" alt-text="Interactions while configuring external keys in control plane":::  
+:::image type="content" source="media/big-data-cluster-key-versions/external-key-control-pane-interactions.png" alt-text="Interactions while configuring external keys in control plane":::  
 
 After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
 

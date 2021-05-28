@@ -29,13 +29,13 @@ Before beginning your migration project, it's important to address the associate
 
 Confirm source environment is support  and you've addressed any prerequisites, you're ready to start the Pre-migration stage. The process involves conducting an inventory of the databases that you need to migrate. Next, assess the databases for potential migration issues or blockers, and then resolving any items you might have uncovered. 
 
-### Discover
+## Discover
 
-The discover phase identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization’s SQL instances together with the version and features in use.
+The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization’s SQL instances together with the version and features in use.
 
 To use the MAP Toolkit to create an inventory scan, complete the following steps.
 
-#### Steps for the Discover phase
+#### Discover stage
 
 1. Download the [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883), and then install it.
 1. Run the MAP Toolkit.
@@ -92,11 +92,11 @@ To use the MAP Toolkit to create an inventory scan, complete the following steps
       
       ![MAP Report Generation Status](./media/sql-server-to-sql-server-upgrade-guide/mapexcelreportdone.png)
 
-### Assess
+## Assess and Convert
 
 After identifying the data sources, the next step is to assess the on-premises SQL Server instance(s). Use the Data Migration Assistant (DMA) to assess your source database before upgrading your SQL Server instance.
 
-#### Assess and Convert
+#### Assess
 
 To use DMA to create an assessment, complete the following steps.
 
@@ -126,9 +126,9 @@ To use DMA to create an assessment, complete the following steps.
 1. Review assessment results.
    1. After all database assessments are complete, select **Export report** to export the results to either a JSON or CSV file for analyzing the data at your own convenience.
 
-### Convert
+#### Convert
 
-After assessing the source database instance(s) you're migrating, for heterogenous migrations, you need to convert the schema to work in the target environment. Since upgrading to a newer version of SQL Server would be considered a homogeneous migration, the Convert phase is unnecessary.
+After assessing the source database instance(s) you're migrating, for heterogenous migrations, you need to convert the schema to work in the target environment. Since upgrading to a newer version of SQL Server would be considered a homogeneous migration, the Convert step is unnecessary.
 
 ## Migration overview
 
@@ -140,19 +140,19 @@ To ensure a successful migration and upgrade any issues discovered from pre-migr
 
 Review the compatibility issues discovered with DMA tool.
 
-Retain backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](../sql/relational-databases/bacbup-restore/back-up-and-restore-of-system-databases-sql-server?view=sql-server-ver15)
+Retain backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](../../../relational-databases/bacbup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
-View impacted [linked servers](../relational-databases/linked-servers/linked-servers-database-engine?view=sql-server-ver15) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list. 
+View [linked servers](../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
 
-[Troubleshoot orphaned users](../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server)
+[Troubleshoot orphaned users](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
-[Migrating Triggers](../relational-databases/in-memory-oltp/migrating-triggers?view=sql-server-ver15)
+[Migrating-triggers](../../../relational-databases/linked-servers/linked-servers-database-engine.md)
 
-### Migrate schema and data
+## Migrate schema and data
 
 After assessing your databases, the next step is to begin the process of migrating the schema and database by using DMA.
 
-#### Steps for the migrate schema and data phase
+### Migrate schema and data sync
 
 To use DMA to create a migration project, complete the following steps.
 
@@ -182,22 +182,22 @@ To use DMA to create a migration project, complete the following steps.
 ### Data sync and Cutover
 
 For minimal-downtime migrations, the source you're migrating continues to change after the one-time migration occurs, data and schema may be different from the target.
-During this phase, you need to ensure every change in the source are captured and applied to the target in near real time. After you verify changes in source have been applied to the target, cutover from the source to the target environment.
+During this process, you need to ensure every change in the source are captured and applied to the target in near real time. After you verify changes in source have been applied to the target, cutover from the source to the target environment.
 
-Support for minimal-downtime migrations isn't yet available for this scenario, so the Data sync and Cutover phases aren't currently applicable.
+Support for minimal-downtime migrations isn't yet available for this scenario, so the Data sync and Cutover plans aren't currently applicable.
 
 ## Post-migration overview
 
 After you've successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
 
-### Verify applications
+#### Verify applications
 
 After the data is migrated to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this will in some cases require changes to the applications. Test against the databases to verify that the applications work as expected after the migration.
 
 > [!NOTE]
 > For assistance with developing and running post-migration validation tests, also consider the Data Quality Solution available from [QuerySurge](http://www.querysurge.com/company/partners/microsoft).
 
-#### Complete migration testing
+### Complete migration testing
 
 To use DEA for database migration testing, complete the following steps.
 
@@ -249,9 +249,9 @@ To use DEA for database migration testing, complete the following steps.
 
       ![Summary Statistics](./media/sql-server-to-sql-server-upgrade-guide/deasummarystats.png)
 
-### Optimize
+## Optimize
 
-The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
+The post-migration step is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
 
 > [!NOTE]
 > For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).

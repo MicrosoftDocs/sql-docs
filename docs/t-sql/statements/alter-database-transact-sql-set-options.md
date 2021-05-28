@@ -1257,6 +1257,7 @@ Not all database options use the WITH \<termination> clause or can be specified 
 |\<parameterization_option>|Yes|Yes|
 |\<change_tracking_option>|Yes|Yes|
 |\<db_encryption_option>|Yes|No|
+|\<accelerated_database_recovery>|Yes|Yes|
 
 The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:
 

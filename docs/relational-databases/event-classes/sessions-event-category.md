@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server event classes, Sessions event category"
   - "event classes [SQL Server], Sessions event category"
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sessions Event Category

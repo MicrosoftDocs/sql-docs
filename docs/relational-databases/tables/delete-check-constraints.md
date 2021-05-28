@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], check"
   - "deleting constraints"
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Check Constraints

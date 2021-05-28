@@ -130,7 +130,7 @@ Distributed availability groups can help you scale out a read-only farm more tha
 * You can use the primary replica of the second availability group in a distributed availability group to create another distributed availability group, even though the database is not in RECOVERY.
 * You can also use the primary replica of the first availability group to create another distributed availability group.
 
-In other words, a primary replica can participate in two different distributed availability groups. The following figure shows AG 1 and AG 2 both participating in Distributed AG 1, while AG 2 and AG 3 are participating in Distributed AG 2. The primary replica (or forwarder) of AG 2 is both a secondary replica for Distributed AG 1 and a primary replica of Distributed AG 2.
+In other words, a primary replica can participate in different distributed availability groups. The following figure shows AG 1 and AG 2 both participating in Distributed AG 1, while AG 2 and AG 3 are participating in Distributed AG 2. The primary replica (or forwarder) of AG 2 is both a secondary replica for Distributed AG 1 and a primary replica of Distributed AG 2.
 
 ![Scaling out reads with distributed availability groups](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 

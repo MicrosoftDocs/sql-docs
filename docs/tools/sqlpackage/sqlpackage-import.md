@@ -55,15 +55,14 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as"P0" or "S1".|
-|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|Disable indexes before importing data into SQL Server.|
+|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|When true (default), disables indexes before importing data into SQL Server. When false, indexes are not rebuilt. |
 |**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
 |**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. |
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
-|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|Rebuild indexes offline after importing data into SQL Server.|
+|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|When true, rebuilds indexes offline after importing data into SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage is required.|
   
-
 ## Next Steps
 
 - Learn more about [sqlpackage](sqlpackage.md)

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHsyscolumns view"
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # IHsyscolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], reverting to"
   - "reverting databases"
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Revert a Database to a Database Snapshot
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

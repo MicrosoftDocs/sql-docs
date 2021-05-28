@@ -2,7 +2,7 @@
 title: "Installing Updates from the Command Prompt | Microsoft Docs"
 description: This article describes command syntax for SQL Server update installation. You can test and modify installation scripts to meet the needs of your organization.
 ms.custom: ""
-ms.date: "09/08/2017"
+ms.date: "05/11/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -76,6 +76,7 @@ The name of the update package can vary and may include a language, edition, and
 |**/allinstances**|Applies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update to all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared, instance-unaware components.| 
 |**/instancename=InstanceName***|Applies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named InstanceName, and to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared, instance-unaware components.| 
 |**/InstanceID=Inst1**|Applies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1, and to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared, instance-unaware components.| 
+|**/hideconsole**|Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the console window is hidden or closed.| 
 |**/quiet**|Runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update Setup in unattended mode.| 
 |**/qs**|Displays only the progress UI dialog.| 
 |**/UpdateEnabled**|Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will include updates that are found.| 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "table names [SQL Server]"
   - "tables [SQL Server], Visual Database Tools"
   - "renaming tables"
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Tables (Database Engine)

@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Connecting to SQL using Node.js"
-description: "This example should be considered a proof of concept showing how to connect to SQL using node.js and is simplified for clarity."
+description: "This example should be considered a proof of concept showing how to connect to SQL using Node.js and is simplified for clarity."
 ms.custom: ""
 ms.date: "07/23/2019"
 ms.prod: sql

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Contained Database Collations
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

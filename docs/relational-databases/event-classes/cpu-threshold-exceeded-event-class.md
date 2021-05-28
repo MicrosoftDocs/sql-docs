@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "CPU Threshold Exceeded Event Class"
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CPU Threshold Exceeded Event Class

@@ -18,7 +18,7 @@ Learn how to use the **RevoScaleR** package to store serialized R objects in a t
 
 ## RevoScaleR package
 
-The **RevoScaleR** package includes serialization and deserializatio functions that can R objects compactly to SQL Server and then read the objects from the table. In general, each function call uses a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table.
+The **RevoScaleR** package includes serialization and deserialization functions that can R objects compactly to SQL Server and then read the objects from the table. In general, each function call uses a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table.
 
 To save R objects to SQL Server directly from an R environment, you must:
 

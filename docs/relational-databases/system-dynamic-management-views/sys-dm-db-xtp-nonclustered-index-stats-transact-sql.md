@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

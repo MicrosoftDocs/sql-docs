@@ -110,8 +110,8 @@ All SQL statements are executed using the **new Request()** function. If the sta
         
         // Close the connection after the final event emitted by the request, after the callback passes
         request.on("requestCompleted", function (rowCount, more) {
-        connection.close();
-  });
+            connection.close();
+        });
         connection.execSql(request);  
     }  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: Upgrade SQL Server to SQL Server
+title: Upgrade SQL Server to SQL Server 2019
 description: Step-by-step guidance for modernizing your data assets
 ms.date: 03/19/2021
 ms.prod: sql
@@ -11,31 +11,33 @@ ms.author: chadam
 
 # Upgrade SQL Server to SQL Server
 
-In this guide, you learn how to upgrade your user databases from SQL Server to SQL Server 2019 by using the Data Migration Assistant (DMA).
-
-Learn about the options and considerations for [upgrading SQL Server database.](/database-engine/install-windows/upgrade-sql-server.md)
+In this guide, you learn how to upgrade your user databases from previous versions of SQL Server to SQL Server 2019 by using the Data Migration Assistant (DMA).
 
 For other migration guides, see [Azure Database Migration](/data-migration/).
 
 ## Prerequisites
 
-Before beginning your migration project, it's important to address the associated prerequisites. To prepare for the migration, download and install the:
+Before beginning your migration project, it's important to address the associated prerequisites.
+Learn about the supported versions and considerations for [upgrading SQL Server database.](/database-engine/install-windows/
+upgrade-sql-server.md)
+
+To prepare for the migration, download and install the:
 
 - Latest version of the [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883).
 - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v5.3 or later.
 - Latest version of the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090).
 
-## Pre-migration overview
+## Pre-migration
 
-Confirm source environment is support  and you've addressed any prerequisites, you're ready to start the Pre-migration stage. The process involves conducting an inventory of the databases that you need to migrate. Next, assess the databases for potential migration issues or blockers, and then resolving any items you might have uncovered. 
+Confirm source environment is supported  and you've addressed any prerequisites, you're ready to start the Pre-migration stage. The process involves conducting an inventory of the databases that you need to migrate. Next, assess the databases for potential migration issues or blockers, and then resolving any items you might have uncovered. The following two sections cover the pre-migration steps of discover, assess.
 
-## Discover
+### Discover
 
 The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization’s SQL instances together with the version and features in use.
 
 To use the MAP Toolkit to create an inventory scan, complete the following steps.
 
-#### Discover stage
+### Discover stage
 
 1. Download the [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883), and then install it.
 1. Run the MAP Toolkit.
@@ -96,8 +98,6 @@ To use the MAP Toolkit to create an inventory scan, complete the following steps
 
 After identifying the data sources, the next step is to assess the on-premises SQL Server instance(s). Use the Data Migration Assistant (DMA) to assess your source database before upgrading your SQL Server instance.
 
-#### Assess
-
 To use DMA to create an assessment, complete the following steps.
 
 1. Download the [DMA tool](https://www.microsoft.com/download/details.aspx?id=53595), and then install it.
@@ -126,21 +126,17 @@ To use DMA to create an assessment, complete the following steps.
 1. Review assessment results.
    1. After all database assessments are complete, select **Export report** to export the results to either a JSON or CSV file for analyzing the data at your own convenience.
 
-#### Convert
+### Convert
 
 After assessing the source database instance(s) you're migrating, for heterogenous migrations, you need to convert the schema to work in the target environment. Since upgrading to a newer version of SQL Server would be considered a homogeneous migration, the Convert step is unnecessary.
 
 ## Migration overview
 
-After you have the necessary prerequisites in place and have completed the tasks associated with the **Pre-migration** stage, you're ready to complete the schema and data migration.
-
-### Other considerations 
-
-To ensure a successful migration and upgrade any issues discovered from pre-migration stage should be addressed promptly.
+After you have the necessary prerequisites in place and have completed the tasks associated with the **Pre-migration** stage, you're ready to complete the schema and data migration. A successful migration and upgrade means you've addressed all the issues discovered from the pre-migration stage.
 
 Review the compatibility issues discovered with DMA tool.
 
-Retain backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](/../../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+Preserve backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](/../../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
 View [linked servers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
 
@@ -148,7 +144,7 @@ View [linked servers](/../../../relational-databases/linked-servers/linked-serve
 
 [Migrating-triggers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md)
 
-## Migrate schema and data
+### Migrate schema and data
 
 After assessing your databases, the next step is to begin the process of migrating the schema and database by using DMA.
 
@@ -186,9 +182,9 @@ During this process, you need to ensure every change in the source are captured 
 
 Support for minimal-downtime migrations isn't yet available for this scenario, so the Data sync and Cutover plans aren't currently applicable.
 
-## Post-migration overview
+## Post Migration
 
-After you've successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
+After you've successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible. The post-migration is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
 
 #### Verify applications
 
@@ -249,9 +245,17 @@ To use DEA for database migration testing, complete the following steps.
 
       ![Summary Statistics](./media/sql-server-to-sql-server-upgrade-guide/deasummarystats.png)
 
-## Optimize
+## Next steps
 
-The post-migration step is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
+For more information about these issues and specific steps to mitigate them, see the[Post-migration Validation and Optimization Guide](../../../relational-databases/
+post-migration-validation-and-optimization-guide.md).
 
-> [!NOTE]
-> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
+After the migration, review the [Post-migration validation and optimization guide](../../../
+relational-databases/post-migration-validation-and-optimization-guide.md).
+
+For a matrix of Microsoft and third-party services and tools that are available to assist you 
+with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
+
+For other migration guides see [Azure Database Migration Guide](https://datamigration.microsoft.com).
+
+For migration videos, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

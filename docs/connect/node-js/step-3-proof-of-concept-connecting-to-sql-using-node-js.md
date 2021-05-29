@@ -168,11 +168,11 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
               }  
             });  
         });
-        
+
         // Close the connection after the final event emitted by the request, after the callback passes
         request.on("requestCompleted", function (rowCount, more) {
-        connection.close();
-        
+            connection.close();
+        });
         connection.execSql(request);  
     }  
 ```  

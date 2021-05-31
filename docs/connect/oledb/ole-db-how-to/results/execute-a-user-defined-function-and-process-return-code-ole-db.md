@@ -73,7 +73,6 @@ ICommandText* pICommandText = NULL;
 IRowset* pIRowset = NULL;  
 ICommandWithParameters* pICommandWithParams = NULL;  
 IAccessor* pIAccessor = NULL;  
-IDBProperties* pIDBProperties = NULL;  
 HRESULT hr;  
 HACCESSOR hAccessor;  
 const ULONG nParams = 3;   // No. of parameters in the command  
@@ -106,15 +105,15 @@ int main() {
    InitializeAndEstablishConnection();  
   
    // Let us create a new session from the data source object.  
-   if (FAILED(pIDBInitialize->QueryInterface( IID_IDBCreateSession,  
-                                              (void**) &pIDBCreateSession))) {  
+   if (FAILED(pIDBInitialize->QueryInterface(IID_IDBCreateSession,  
+                                             (void**) &pIDBCreateSession))) {  
       cout << "Failed to access IDBCreateSession interface\n";  
       goto EXIT;  
    }  
   
-   if ( FAILED(pIDBCreateSession->CreateSession( NULL,   
-                                                 IID_IDBCreateCommand,   
-                                                 (IUnknown**) &pIDBCreateCommand))) {  
+   if (FAILED(pIDBCreateSession->CreateSession(NULL,   
+                                               IID_IDBCreateCommand,   
+                                               (IUnknown**) &pIDBCreateCommand))) {  
       cout << "pIDBCreateSession->CreateSession failed\n";  
       goto EXIT;  
    }  
@@ -161,21 +160,21 @@ int main() {
    ParamOrdinals[2] = 3;  
   
    // Set the parameters information.  
-   if (FAILED(pICommandText->QueryInterface( IID_ICommandWithParameters,  
-                                             (void**)&pICommandWithParams))) {  
+   if (FAILED(pICommandText->QueryInterface(IID_ICommandWithParameters,  
+                                            (void**)&pICommandWithParams))) {  
       cout << "failed to obtain ICommandWithParameters\n";  
       goto EXIT;  
    }  
-   if (FAILED(pICommandWithParams->SetParameterInfo( nParams,   
-                                                     ParamOrdinals,   
-                                                     ParamBindInfo))) {  
+   if (FAILED(pICommandWithParams->SetParameterInfo(nParams,   
+                                                    ParamOrdinals,   
+                                                    ParamBindInfo))) {  
       cout << "failed in setting parameter info.(SetParameterInfo)\n";  
       goto EXIT;  
    }  
   
    // Describe the consumer buffer; initialize the array of DBBINDING structures.    
    // Each binding associates a single parameter to the consumer's buffer.  
-   for ( i = 0 ; i < nParams ; i++ ) {  
+   for (i = 0 ; i < nParams ; i++) {  
       acDBBinding[i].obLength = 0;  
       acDBBinding[i].obStatus = 0;  
       acDBBinding[i].pTypeInfo = NULL;  
@@ -213,12 +212,12 @@ int main() {
    if (FAILED(hr))  
       cout << "Failed to get IAccessor interface\n";  
   
-   hr = pIAccessor->CreateAccessor( DBACCESSOR_PARAMETERDATA,  
-                                    nParams,   
-                                    acDBBinding,   
-                                    sizeof(SPROCPARAMS),   
-                                    &hAccessor,  
-                                    acDBBindStatus);  
+   hr = pIAccessor->CreateAccessor(DBACCESSOR_PARAMETERDATA,  
+                                   nParams,   
+                                   acDBBinding,   
+                                   sizeof(SPROCPARAMS),   
+                                   &hAccessor,  
+                                   acDBBindStatus);  
    if (FAILED(hr))  
       cout << "failed to create accessor for the defined parameters\n";  
   
@@ -252,12 +251,12 @@ int main() {
    pIDBCreateCommand->Release();  
    pIDBCreateSession->Release();      
   
-  if (FAILED(pIDBInitialize->Uninitialize())) {
+   if (FAILED(pIDBInitialize->Uninitialize()))
       // Uninitialize is not required, but it fails if an interface  
       // has not been released.  This can be used for debugging.  
-      cout << "Problem uninitializing\n";  
-  }
-   pIDBInitialize->Release();  
+      cout << "Problem uninitializing\n";
+
+   pIDBInitialize->Release();
   
    CoUninitialize();  
    return 0;  
@@ -273,13 +272,12 @@ EXIT:
       pIDBCreateCommand->Release();  
    if (pIDBCreateSession != NULL)  
       pIDBCreateSession->Release();  
-   if (pIDBInitialize != NULL) {
-      if (FAILED(pIDBInitialize->Uninitialize()))  
+   if (pIDBInitialize != NULL)
+      if (FAILED(pIDBInitialize->Uninitialize()))
          // Uninitialize is not required, but it fails if an interface has   
          // not been released.  This can be used for debugging.  
-         cout << "problem in uninitializing\n";  
-      pIDBInitialize->Release();  
-   }
+         cout << "problem in uninitializing\n";
+   pIDBInitialize->Release();
    CoUninitialize();  
 }  
   
@@ -289,6 +287,7 @@ void InitializeAndEstablishConnection()
    const ULONG nInitProps = 3;  
    DBPROP InitProperties[nInitProps];      
    DBPROPSET rgInitPropSet[nPropSet];    
+   IDBProperties* pIDBProperties = NULL;
 
    // Initialize the COM library.  
    CoInitialize(NULL);  

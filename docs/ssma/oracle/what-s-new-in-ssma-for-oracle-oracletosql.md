@@ -20,7 +20,7 @@ This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in e
 
 The v8.20 release of SSMA for Oracle contains the following changes:
 
-* add support for partitioned tables
+* Add support for partitioned tables
 * Add conversion of SKIP LOCKED clause
 
 ## SSMA v8.19

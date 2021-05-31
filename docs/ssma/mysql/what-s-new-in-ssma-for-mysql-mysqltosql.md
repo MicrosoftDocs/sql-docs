@@ -16,6 +16,12 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
+## SSMA v8.20
+
+The v8.20 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
+
 ## SSMA v8.19
 
 The v8.19 release of SSMA for MySQL contains the following changes:

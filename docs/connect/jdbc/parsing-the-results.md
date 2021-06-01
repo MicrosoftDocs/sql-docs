@@ -21,7 +21,7 @@ This article describes how SQL Server expects users to fully process results ret
 
 ## Update counts and result sets
 
-This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned. Users are expected to handle both when processing results.
+This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one or more of these results to be returned. Users are expected to handle both when processing results.
 
 The following code is an example of how a user could iterate through all results from the server:
 

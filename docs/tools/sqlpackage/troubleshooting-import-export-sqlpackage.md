@@ -51,7 +51,7 @@ For imports that contain large tables or tables with many indexes, the use of `/
 ## Export action tips
 As an alternative operation to obtain the database schema and data while skipping the schema validation, perform an [Extract](sqlpackage-extract.md) with `/p:ExtractAllTableData=True` and `/p:VerifyExtraction=True`.
 
-In scenarios where disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
+In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action may be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
 
 ## Next steps
 

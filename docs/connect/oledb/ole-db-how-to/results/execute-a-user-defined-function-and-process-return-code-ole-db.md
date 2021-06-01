@@ -88,32 +88,36 @@ DBBINDING acDBBinding[nParams];
 DBBINDSTATUS acDBBindStatus[nParams];  
   
 // The following buffer is used to store parameter values.  
-typedef struct tagSPROCPARAMS {  
+typedef struct tagSPROCPARAMS 
+{
    long lReturnValue;  
    long inParam1;  
    long inParam2;  
 } SPROCPARAMS;  
   
-int main() {  
+int main() 
+{
    // The command to execute.  
    WCHAR wCmdString[] = L"{? = CALL fn_RectangleArea(?, ?) }";  
    // WCHAR wCmdString[] = L"EXEC ? = fn_RectangleVolume(?, ?)";  
   
-   SPROCPARAMS sprocparams = {0,5,10};  
+   SPROCPARAMS sprocparams = {0,5,10};
   
    // All the initialization stuff in a separate function.  
    InitializeAndEstablishConnection();  
   
    // Let us create a new session from the data source object.  
    if (FAILED(pIDBInitialize->QueryInterface(IID_IDBCreateSession,  
-                                             (void**) &pIDBCreateSession))) {  
+                                             (void**) &pIDBCreateSession)))
+   {  
       cout << "Failed to access IDBCreateSession interface\n";  
       goto EXIT;  
    }  
   
    if (FAILED(pIDBCreateSession->CreateSession(NULL,   
                                                IID_IDBCreateCommand,   
-                                               (IUnknown**) &pIDBCreateCommand))) {  
+                                               (IUnknown**) &pIDBCreateCommand))) 
+   {  
       cout << "pIDBCreateSession->CreateSession failed\n";  
       goto EXIT;  
    }  
@@ -121,13 +125,15 @@ int main() {
    // Create a Command  
    if (FAILED(pIDBCreateCommand->CreateCommand( NULL,   
                                                 IID_ICommandText,   
-                                                (IUnknown**) &pICommandText))) {  
+                                                (IUnknown**) &pICommandText)))
+   {
       cout << "Failed to access ICommand interface\n";  
       goto EXIT;  
    }  
   
    // Set the command text.  
-   if (FAILED(pICommandText->SetCommandText(DBGUID_DBSQL, wCmdString))) {  
+   if (FAILED(pICommandText->SetCommandText(DBGUID_DBSQL, wCmdString)))
+   {
       cout << "failed to set command text\n";  
       goto EXIT;  
    }  
@@ -161,20 +167,23 @@ int main() {
   
    // Set the parameters information.  
    if (FAILED(pICommandText->QueryInterface(IID_ICommandWithParameters,  
-                                            (void**)&pICommandWithParams))) {  
+                                            (void**)&pICommandWithParams)))
+   {
       cout << "failed to obtain ICommandWithParameters\n";  
       goto EXIT;  
    }  
    if (FAILED(pICommandWithParams->SetParameterInfo(nParams,   
                                                     ParamOrdinals,   
-                                                    ParamBindInfo))) {  
+                                                    ParamBindInfo)))
+   {
       cout << "failed in setting parameter info.(SetParameterInfo)\n";  
       goto EXIT;  
    }  
   
    // Describe the consumer buffer; initialize the array of DBBINDING structures.    
    // Each binding associates a single parameter to the consumer's buffer.  
-   for (i = 0 ; i < nParams ; i++) {  
+   for (i = 0 ; i < nParams ; i++)
+   {
       acDBBinding[i].obLength = 0;  
       acDBBinding[i].obStatus = 0;  
       acDBBinding[i].pTypeInfo = NULL;  
@@ -232,7 +241,8 @@ int main() {
                                           IID_IRowset,   
                                           &Params,   
                                           &cNumRows,   
-                                          (IUnknown **) &pIRowset))) {  
+                                          (IUnknown **) &pIRowset)))
+   {
       cout << "failed to execute command\n";  
       goto EXIT;  
    }  

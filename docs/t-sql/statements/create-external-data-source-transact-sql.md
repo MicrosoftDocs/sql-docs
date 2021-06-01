@@ -52,13 +52,12 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 &nbsp;
 
 ## Overview: SQL Server
+[!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 
 - Data virtualization and data load using [PolyBase][intro_pb]
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
-
-**Applies to**: Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
 
 ## Syntax
 
@@ -471,6 +470,7 @@ WITH
 &nbsp;
 
 ## Overview: Azure SQL Database
+[!INCLUDE[asdb](../../includes/applies-to-version/_asdb.md)]
 
 Creates an external data source for elastic queries. External data sources are used to establish connectivity and support these primary use cases:
 
@@ -699,6 +699,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 &nbsp;
 
 ## Overview: Azure Synapse Analytics
+[!INCLUDE[asa](../../includes/applies-to-version/_asa.md)]
 
 Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
 
@@ -968,6 +969,7 @@ WITH
 &nbsp;
 
 ## Overview: Analytics Platform System
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support the following use case: Data virtualization and data load using [PolyBase][intro_pb].
 

@@ -20,7 +20,7 @@ ms.author: v-daenge
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  
   
- This sample uses the AdventureWorks sample database as an example, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page. You can substitue it with another SQL Server database you have.
+ This sample uses the AdventureWorks sample database as an example, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page. You can substitute it with another SQL Server database you have.
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  

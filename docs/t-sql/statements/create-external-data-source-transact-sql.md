@@ -423,7 +423,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 <!-- Azure Docs -->
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
-::: moniker-end)
+::: moniker-end
 ::: moniker range="=azuresqldb-current"
 
 :::row:::

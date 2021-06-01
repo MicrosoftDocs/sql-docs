@@ -26,10 +26,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifies the session associated with this connection. Use `SESSION_ID()` to return the `session_id` of the current connection.|  
 |connect_time|**datetime**|Timestamp when connection was established. Is not nullable.|  
-|encrypt_option|**nvarchar(40)**|Indicates TRUE (connection is encrypted) or FALSE (connection is not enctypred).|  
+|encrypt_option|**nvarchar(40)**|Indicates TRUE (connection is encrypted) or FALSE (connection is not encrypted).|  
 |auth_scheme|**nvarchar(40)**|Specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows Authentication scheme used with this connection. Is not nullable.|  
 |client_id|**varchar(48)**|IP address of the client connecting to this server. Is nullable.|  
-|sql_spid|**int**|The server process ID of the connection. Use `@@SPID` to return the `sql_spid` of the current connection.For most purposed, use the `session_id` instead.|  
+|sql_spid|**int**|The server process ID of the connection. Use `@@SPID` to return the `sql_spid` of the current connection. For most purposes, use the `session_id` instead.|  
   
 ## Permissions  
  Requires **VIEW SERVER STATE** permission on the server.  

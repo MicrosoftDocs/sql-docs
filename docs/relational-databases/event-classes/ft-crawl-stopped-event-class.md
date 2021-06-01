@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Crawl Stopped event class"
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FT:Crawl Stopped Event Class

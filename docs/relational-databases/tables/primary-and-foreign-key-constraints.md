@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints

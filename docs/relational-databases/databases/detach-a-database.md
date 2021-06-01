@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database detaching [SQL Server]"
   - "detaching databases [SQL Server]"
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Detach a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

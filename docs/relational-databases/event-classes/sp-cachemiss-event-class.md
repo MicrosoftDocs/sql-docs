@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SP:CacheMiss event class"
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheMiss Event Class

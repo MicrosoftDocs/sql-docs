@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], collations"
   - "collations [SQL Server], column"
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or Change the Column Collation

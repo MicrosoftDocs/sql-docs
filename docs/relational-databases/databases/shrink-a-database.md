@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database shrinking [SQL Server]"
   - "reducing database size"
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Shrink a Database

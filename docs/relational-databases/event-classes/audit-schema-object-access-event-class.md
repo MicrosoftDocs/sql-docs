@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Audit Schema Object Access event class"
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Schema Object Access Event Class

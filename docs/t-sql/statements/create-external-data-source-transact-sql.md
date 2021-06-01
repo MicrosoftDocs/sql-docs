@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/24/2021
+ms.date: 06/01/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -86,13 +86,13 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source    | Location prefix | Location path                                         | Supported locations by product / service |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera or Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
+| Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
 | Azure Storage account(V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]         Hierarchical Namespace **not** supported |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | MongoDB or CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only        |
+| Generic ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only        |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. Only available in Azure SQL Edge.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge.                      |
@@ -116,14 +116,14 @@ Additional notes and guidance when setting the location:
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - `wasbs` is optional but recommended for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
 - `abfs` or `abfss` APIs are not supported when accessing Azure Storage Accounts.
-- The Hierarchical Namespace option for Azure Storage Accounts(V2) is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option for Azure Storage Accounts(V2) is otherwise not supported, and this option should remain **disabled**.
+- The Hierarchical Namespace option for Azure Storage Accounts(V2) is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
 
 ### CONNECTION_OPTIONS = *key_value_pair*
 
 Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
 
-Applies to both generic `ODBC` connections, as well as built-in `ODBC` connectors for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, and CosmosDB.
+Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, and CosmosDB.
 
 The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type.The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
@@ -160,7 +160,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
-- Use `HADOOP` when the external data source is Cloudera, Hortonworks, an Azure Storage account, or an Azure Data Lake Storage Gen2.
+- Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
 - Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 > [!IMPORTANT]
@@ -170,7 +170,7 @@ For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage acc
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Hortonworks or Cloudera.
+Configure this optional value when connecting to Hortonworks HDP or Cloudera CDH.
 
 When the `RESOURCE_MANAGER_LOCATION` is defined, the Query Optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
@@ -245,7 +245,7 @@ For additional examples to other data sources such as MongoDB, see [Configure Po
 
 ### B. Create external data source to reference Hadoop
 
-To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
+To create an external data source to reference your Hortonworks HDP or Cloudera CDH Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -350,7 +350,7 @@ Only available in Azure SQL Edge. In this example, the external data source is a
 CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
     LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
 )
-go
+GO
 ```
 
 ### H. Create external data source to reference EdgeHub
@@ -995,7 +995,7 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source    | Location prefix | Location path                                         |
 | ----------------------- | --------------- | ----------------------------------------------------- |
-| Cloudera or Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
+| Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   |
 | Azure Storage Account   | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Location path:
@@ -1026,13 +1026,13 @@ Additional notes and guidance when creating a credential:
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
-- Use HADOOP when the external data source is Cloudera, Hortonworks, or Azure Storage.
+- Use HADOOP when the external data source is Cloudera CDH, Hortonworks HDP, or Azure Storage.
 
 For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop).
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Hortonworks or Cloudera.
+Configure this optional value when connecting to Hortonworks HDP or Cloudera CDH.
 
 When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and SQL, which can lead to improved query performance.
 
@@ -1080,7 +1080,7 @@ Currently a SAS token with type `HADOOP` is unsupported. It's only supported wit
 
 ### A. Create external data source to reference Hadoop
 
-To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
+To create an external data source to reference your Hortonworks HDP or Cloudera CDH, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster

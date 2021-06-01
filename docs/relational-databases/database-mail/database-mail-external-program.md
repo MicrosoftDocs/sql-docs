@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "DatabaseMail90.exe"
   - "Database Mail [SQL Server], external programs"
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Mail External Program
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

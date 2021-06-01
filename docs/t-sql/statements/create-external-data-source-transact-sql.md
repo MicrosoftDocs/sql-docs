@@ -24,11 +24,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], or[!INCLUDE[ssaps-md](../../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]).
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], or [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]).
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
-
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
@@ -60,6 +58,8 @@ Creates an external data source for PolyBase queries. External data sources are 
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
 ## Syntax
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
@@ -120,7 +120,7 @@ Additional notes and guidance when setting the location:
 
 ### CONNECTION_OPTIONS = *key_value_pair*
 
-Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
+Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only. Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
 
 Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, and Azure Cosmos DB API for MongoDB.
 
@@ -133,7 +133,7 @@ For additional information, see:
 
 ### PUSHDOWN = *ON | OFF*
 
-States whether computation can be pushed down to the external data source. It is on by default.
+Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only. States whether computation can be pushed down to the external data source. It is on by default.
 
 `PUSHDOWN` is supported when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, or ODBC at the external data source level.
 
@@ -157,7 +157,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 ### TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
-Specifies the type of the external data source being configured. This parameter isn't always required.
+Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified when connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
 
 - Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
 - Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
@@ -169,7 +169,7 @@ For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage acc
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Hortonworks HDP or Cloudera CDH.
+Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. 
 
 When the `RESOURCE_MANAGER_LOCATION` is defined, the Query Optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
@@ -470,7 +470,7 @@ WITH
 &nbsp;
 
 ## Overview: Azure SQL Database
-[!INCLUDE[asdb](../../includes/applies-to-version/_asdb.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdb](../../includes/applies-to-version/_asdb.md)]
 
 Creates an external data source for elastic queries. External data sources are used to establish connectivity and support these primary use cases:
 
@@ -479,6 +479,8 @@ Creates an external data source for elastic queries. External data sources are u
 - Query a sharded SQL Database using [elastic query][sharded_eq]
 
 ## Syntax
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
@@ -699,7 +701,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 &nbsp;
 
 ## Overview: Azure Synapse Analytics
-[!INCLUDE[asa](../../includes/applies-to-version/_asa.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asa](../../includes/applies-to-version/_asa.md)]
 
 Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
 
@@ -707,6 +709,8 @@ Creates an external data source for PolyBase. External data sources are used to 
 > To create an external data source to query a [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
 ## Syntax
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
@@ -969,11 +973,13 @@ WITH
 &nbsp;
 
 ## Overview: Analytics Platform System
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)] [!INCLUDE [aps](../../includes/ssaps-md.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support the following use case: Data virtualization and data load using [PolyBase][intro_pb].
 
 ## Syntax
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>

@@ -40,8 +40,6 @@ ms.author: chugu
 - Oracle Database 10g Release 2
 - Oracle Database 11g Release 1 and Release 2
 - Oracle Database 12c in classic installation (Multitenant installation is not supported.)  
-- Oracle Database 18c in classic installation (Multitenant installation is not supported.)
-- Oracle Database 19c in classic installation (Multitenant installation is not supported.)
 
 ### Target SQL Server Database
   

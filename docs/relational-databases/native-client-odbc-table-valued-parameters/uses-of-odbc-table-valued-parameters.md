@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Metadata for table-valued parameters and table-valued parameter columns can be manipulated individually and explicitly by using SQLGetDescRec, SQLSetDescRec, SQLGetDescField, and SQLSetDescField. However, overloading SQLBindParameter is usually more convenient and does not require explicit descriptor access in most cases. This approach is consistent with the definition of SQLBindParameter for other data types, except that for a table-valued parameter the affected descriptor fields are slightly different.  
   
- Sometimes, an application uses a table-valued parameter with dynamic SQL and the type name of the table-valued parameter must be supplied. If this is the case and the table-valued parameter is not defined in the current default schema for the connection, SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME must be set by using SQLSetDescField. Because table type definitions and table-valued parameters must be in the same database, SQL_CA_SS_TYPE_CATALOG_NAME must not be set if the application uses table-valued parameters. Otherwise, SQLSetDescField will report an error.  
+ Sometimes, an application uses a table-valued parameter with dynamic SQL and the type name of the table-valued parameter must be supplied. If this is the case and the table-valued parameter is not defined in the current default schema for the connection, SQL_CA_SS_SCHEMA_NAME must be set by using SQLSetDescField. Because table type definitions and table-valued parameters must be in the same database, SQL_CA_SS_CATALOG_NAME must not be set if the application uses table-valued parameters. Otherwise, SQLSetDescField will report an error.  
   
  Sample code for this scenario is in the procedure `demo_fixed_TVP_binding` in [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
@@ -71,11 +71,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Retrieving Table-Valued Parameter Metadata for a Prepared Statement  
  In this scenario, an application uses SQLNumParameters and SQLDescribeParam to retrieve metadata for table-valued parameters.  
   
- The IPD field SQL_CA_SS_TYPE_NAME is used to retrieve the type name for the table-valued parameter. The IPD fields SQL_CA_SS_TYPE_SCHEMA_NAME and SQL_CA_SS_TYPE_CATALOG_NAME are used to retrieve its catalog and schema, respectively.  
+ The IPD field SQL_CA_SS_TYPE_NAME is used to retrieve the type name for the table-valued parameter. The IPD fields SQL_CA_SS_SCHEMA_NAME and SQL_CA_SS_CATALOG_NAME are used to retrieve its catalog and schema, respectively.  
   
- Table type definitions and table-valued parameters must be in the same database. SQLSetDescField will report an error if an application sets SQL_CA_SS_TYPE_CATALOG_NAME when using table-valued parameters.  
+ Table type definitions and table-valued parameters must be in the same database. SQLSetDescField will report an error if an application sets SQL_CA_SS_CATALOG_NAME when using table-valued parameters.  
   
- SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME can also be used to retrieve the catalog and schema associated with CLR user-defined type parameters. SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME are alternatives to the existing type specific catalog schema attributes for CLR UDT types.  
+ SQL_CA_SS_CATALOG_NAME and SQL_CA_SS_SCHEMA_NAME can also be used to retrieve the catalog and schema associated with CLR user-defined type parameters. SQL_CA_SS_CATALOG_NAME and SQL_CA_SS_SCHEMA_NAME are alternatives to the existing type specific catalog schema attributes for CLR UDT types.  
   
  An application uses SQLColumns to retrieve column metadata for a table-valued parameter in this scenario, too, because SQLDescribeParam does not return metadata for the columns of a table-valued parameter column.  
   

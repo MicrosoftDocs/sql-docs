@@ -112,10 +112,10 @@ Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
-- You can use the `sqlserver` location prefix to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or to Azure Synapse Analytics.
+- You can use the `sqlserver` location prefix to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
-- `wasbs` is optional but recommended for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
-- `abfs` or `abfss` APIs are not supported when accessing Azure Storage Accounts.
+- `wasbs` and `abfss` is optional but recommended for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
+- `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+.
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
 
@@ -394,7 +394,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ### J. Create external data source to access data in Azure Storage using the abfs:// interface
 
-**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11+. In this example, the external data source is an Azure Data Lake Storage Gen2 account logs. The container is called daily. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
+**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11+. In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`. The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
 
 This example shows how to create the database scoped credential for authentication to an Azure Data Lake Storage Gen2 account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
 
@@ -761,7 +761,7 @@ Specifies a database-scoped credential for authenticating to the external data s
 
 Additional notes and guidance when creating a credential:
 
-- To load data from Azure Storage or Azure Data Lake Store (ADLS) Gen 2 into Azure Synapse Analytics, use an Azure Storage Key.
+- To load data from Azure Storage or Azure Data Lake Store (ADLS) Gen 2 into [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], use an Azure Storage Key.
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
@@ -795,7 +795,7 @@ Currently a SAS token with type `HADOOP` is unsupported. It's only supported wit
 ## Examples:
 
 ### A. Create external data source to access data in Azure Storage using the wasb:// interface
-In this example, the external data source is an Azure V2 Storage account named `logs`. The container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
+In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
 
 This example shows how to create the database scoped credential for authentication to Azure Storage. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure storage.
 
@@ -1129,7 +1129,7 @@ WITH
 
 ### D. Create external data source to access data in Azure Storage using the wasb:// interface
 
-In this example, the external data source is an Azure V2 Storage account named `logs`. The container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
+In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
 
 This example shows how to create the database scoped credential for authentication to Azure storage. Specify the Azure storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure storage.
 

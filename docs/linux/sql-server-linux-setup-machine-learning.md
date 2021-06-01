@@ -74,9 +74,9 @@ The following commands register the repository providing MRO. Post-registration,
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
 # Set the location of the package repo at the "prod" directory
-# The following command is for version 7.x
-# For 6.x, replace 7 with 6 to get that version
-rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+# The following command is for version 8.x
+# To get the version for 6.x or 7.x, replace 8 with 6 or 7, respectively.
+rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
 
 # Update packages on your system (optional)
 yum update
@@ -85,7 +85,7 @@ yum update
 Installation Options for Python and R:
 
 *  Install language support based on your requirements (single or multiple languages).
-*  The *full installation* provides all available features the including pre-trained machine learning models.
+*  The *full installation* provides all available features including pre-trained machine learning models.
 *  The *minimal installation* excludes the models but still has all of the functionality.
 
 > [!Tip]
@@ -145,8 +145,8 @@ sudo su
 apt-get install apt-transport-https
 
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 14.04 if you want that version
-wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+# This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
@@ -375,19 +375,19 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
-### RHEL/7 paths
+### RHEL/8 paths
 
 |Package|Download location|
 |--|----|
-| mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
+| mssql/mlservices packages | [https://packages.microsoft.com/rhel/8/mssql-server-2019/](https://packages.microsoft.com/rhel/8/mssql-server-2019/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/rhel/8/prod/](https://packages.microsoft.com/rhel/8/prod/) | 
 
-### Ubuntu/16.04 paths
+### Ubuntu/20.04 paths
 
 |Package|Download location|
 |--|----|
-| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
+| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/) | 
 
 ### SLES/12 paths
 

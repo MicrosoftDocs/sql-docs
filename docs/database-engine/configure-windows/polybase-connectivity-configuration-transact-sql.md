@@ -68,15 +68,15 @@ RECONFIGURE
   
 -   Option 5: Hortonworks HDP 2.0 on Linux  
   
--   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12, and 5.13 on Linux  
+-   Option 6: Cloudera CDH and Hortonworks HDP 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12, and 5.13 on Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0, 3.1 on Linux  
+-   Option 7: Hortonworks HDP 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0, 3.1 on Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4 on Windows Server  
+-   Option 7: Hortonworks HDP 2.1, 2.2, 2.3, 2.4 on Windows Server  
   
 -   Option 7: Azure blob storage (WASB[S])  
  
--   Option 8:<sup>*</sup> Hortonworks 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure blob storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
+-   Option 8:<sup>*</sup> Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure blob storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
 
    <sup>*</sup> Option 8 introduced with SQL Server 2019 CU11.
 
@@ -129,10 +129,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### C. Set Hadoop connectivity  
- This example sets PolyBase to option 7. This option allows PolyBase to create and use external tables on Hortonworks 2.1, 2.2, and 2.3 on Linux and Windows Server, and Azure blob storage. For example, SQL could have 30 external tables with 7 of them referencing data on Hortonworks 2.1 on Linux, 4 on Hortonworks 2.2 on Linux, 7 on Hortonworks 2.3 on Linux, and the other 12 referencing Azure blob storage.  
+ This example sets PolyBase to option 7. This option allows PolyBase to create and use external tables on Hortonworks HDP 2.1, 2.2, and 2.3 on Linux and Windows Server, and Azure blob storage. For example, SQL could have 30 external tables with 7 of them referencing data on Hortonworks HDP 2.1 on Linux, 4 on Hortonworks HDP 2.2 on Linux, 7 on Hortonworks HDP 2.3 on Linux, and the other 12 referencing Azure blob storage.  
   
 ```tsql
---Configure external tables to reference data on Hortonworks 2.1, 2.2, and 2.3 on Linux, and Azure blob storage  
+--Configure external tables to reference data on Hortonworks HDP 2.1, 2.2, and 2.3 on Linux, and Azure blob storage  
   
 sp_configure @configname = 'hadoop connectivity', @configvalue = 7;  
 GO  

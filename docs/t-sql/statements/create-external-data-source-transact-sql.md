@@ -96,7 +96,7 @@ Provides the connectivity protocol and path to the external data source.
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. Only available in Azure SQL Edge.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge.                      |
-| Azure Data Lake Storage Gen 2 |   `abfs[s]` | `abfss://<container>@s<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+ |
+| Azure Data Lake Storage Gen2 |   `abfs[s]` | `abfss://<container>@s<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+ |
 |||||
 
 #### Location path:
@@ -116,7 +116,7 @@ Additional notes and guidance when setting the location:
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - `wasbs` is optional but recommended for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
 - `abfs` or `abfss` APIs are not supported when accessing Azure Storage Accounts.
-- The Hierarchical Namespace option for Azure Storage Accounts(V2) is not supported. Please ensure that this option remains **disabled**.
+- The Hierarchical Namespace option for Azure Storage Accounts(V2) is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option for Azure Storage Accounts(V2) is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
 
 ### CONNECTION_OPTIONS = *key_value_pair*
@@ -293,7 +293,7 @@ WITH
 ```
 
 ### E. Create external data source to access data in Azure Storage using the wasb:// interface
-In this example, the external data source is an Azure V2 Storage account named `logs`. The container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
+In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
 
 This example shows how to create the database scoped credential for authentication to an Azure V2 Storage account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
 
@@ -749,7 +749,7 @@ Location path:
 
 Additional notes and guidance when setting the location:
 
-- The default option is to use `enable secure SSL connections` when provisioning Azure Data Lake Storage Gen 2. When this is enabled, you must use `abfss` when a secure TLS/SSL connection is selected. Note `abfss`works for unsecure TLS connections as well.
+- The default option is to use `enable secure SSL connections` when provisioning Azure Data Lake Storage Gen2. When this is enabled, you must use `abfss` when a secure TLS/SSL connection is selected. Note `abfss`works for unsecure TLS connections as well.
 - Azure Synapse doesn't verify the existence of the external data source when the object is created. . To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
 - `wasbs` is recommended as data will be sent using a secure TLS connection

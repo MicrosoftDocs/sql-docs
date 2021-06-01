@@ -2,7 +2,7 @@
 title: Key Versions
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how key versions are used for SQL BDC key management and key rotation for HDFS and SQL Server keys.
-ms.date: 05/19/2021
+ms.date: 06/01/2021
 author: WilliamDassafMSFT
 ms.author: wiassaf
 ms.topic: conceptual
@@ -162,7 +162,7 @@ With the capability to bring in external keys in [!INCLUDE[big-data-clusters-201
 
 The following diagram explains the interactions while configuring external keys in control plane:
 
-:::image type="content" source="media/big-data-cluster-key-versions/external-key-control-pane-interactions.png" alt-text="Interactions while configuring external keys in control plane":::  
+:::image type="content" source="media/big-data-cluster-key-versions/external-key-control-pane-interactions.png" alt-text="Interactions while configuring external keys in control plane"  lightbox="media/big-data-cluster-key-versions/external-key-control-pane-interactions-LG.png":::  
 
 After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
 

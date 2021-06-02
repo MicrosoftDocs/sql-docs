@@ -71,7 +71,7 @@ GO
 |Latch class|Description|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to initialize the synchronization of the creation of an allocation ring buffer.|  
-|ALLOC_CREATE_FREESPACE_CACHE|Used to initialize the synchronization of internal freespace caches for heaps.|  
+|ALLOC_CREATE_FREESPACE_CACHE|Used to initialize the synchronization of internal free space caches for heaps.|  
 |ALLOC_CACHE_MANAGER|Used to synchronize internal coherency tests.|  
 |ALLOC_FREESPACE_CACHE|Used to synchronize the access to a cache of pages with available space for heaps and binary large objects (BLOBs). Contention on latches of this class can occur when multiple connections try to insert rows into a heap or BLOB at the same time. You can reduce this contention by partitioning the object. Each partition has its own latch. Partitioning will distribute the inserts across multiple latches.|  
 |ALLOC_EXTENT_CACHE|Used to synchronize the access to a cache of extents that contains pages that are not allocated. Contention on latches of this class can occur when multiple connections try to allocate data pages in the same allocation unit at the same time. This contention can be reduced by partitioning the object of which this allocation unit is a part.|  
@@ -160,7 +160,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Internal use only.|  
 |SERVICE_BROKER_HOST_NAME|Internal use only.|  
 |SERVICE_BROKER_READ_CACHE|Internal use only.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Used to synchronize an instance level map of waiter queues. One queue exists per database ID, Database Version, and Queue ID tuple. Contention on latches of this class can occur when many connections are: In a WAITFOR(RECEIVE) wait state; calling WAITFOR(RECEIVE); exceeding the WAITFOR timeout; receiving a message; committing or rolling back the transaction that contains the WAITFOR(RECEIVE); You can reduce the contention by reducing the number of threads in a WAITFOR(RECEIVE) wait state. |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Used to synchronize an instance level map of wait queues. One queue exists per database ID, Database Version, and Queue ID tuple. Contention on latches of this class can occur when many connections are: In a WAITFOR(RECEIVE) wait state; calling WAITFOR(RECEIVE); exceeding the WAITFOR timeout; receiving a message; committing or rolling back the transaction that contains the WAITFOR(RECEIVE); You can reduce the contention by reducing the number of threads in a WAITFOR(RECEIVE) wait state. |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Internal use only.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Internal use only.|  
 |SERVICE_BROKER_TRANSPORT|Internal use only.|  

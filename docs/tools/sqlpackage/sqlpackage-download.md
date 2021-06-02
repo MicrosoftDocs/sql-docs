@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 03/10/2021
+ms.date: 06/02/2021
 ---
 
 # Download and install sqlpackage
@@ -20,10 +20,10 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|[Windows](#get-sqlpackage-for-windows)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2157201)|March 10, 2021| 18.7 | 15.0.5084.2 |
-|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157203)|March 10, 2021| 18.7| 15.0.5084.2 |
-|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157202)|March 10, 2021| 18.7| 15.0.5084.2 |
-|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157302)|March 10, 2021| 18.7| 15.0.5084.2 |
+|[Windows](#get-sqlpackage-for-windows)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2165211)|June 2, 2021| 18.7.1 | 15.0.5164.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165132)|June 2, 2021| 18.7.1| 15.0.5164.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165213)|June 2, 2021| 18.7.1| 15.0.5164.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165212)|June 2, 2021| 18.7.1| 15.0.5164.1 |
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 

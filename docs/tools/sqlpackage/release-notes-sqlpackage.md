@@ -36,7 +36,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ | 
 | Export | Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index. |
-| Export | Fixed an issue where exporting a table with columns in a different order than the table creat script would fail without a clustered index. |
+| Export | Fixed an issue where exporting a table that has the order of columns in a statistic in a different order than the table create script would fail. |
 
 ## 18.7 sqlpackage
 

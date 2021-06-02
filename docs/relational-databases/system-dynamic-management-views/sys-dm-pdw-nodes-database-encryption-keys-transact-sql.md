@@ -35,7 +35,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |key_length|**int**|Displays the length of the key.|  
 |encryptor_thumbprint|**varbin**|Shows the thumbprint of the encryptor.|  
 |percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|  
-|node_id|**int**|Unique numeric id associated with the node.|  
+|node_id|**int**|Unique numeric ID associated with the node.|  
   
 ## Permissions  
  Requires the VIEW SERVER STATE permission on the server.  

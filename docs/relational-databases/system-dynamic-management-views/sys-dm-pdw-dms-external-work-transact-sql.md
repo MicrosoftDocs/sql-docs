@@ -36,7 +36,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |length|**bigint**|Number of bytes in the file split.<br /><br /> For Hadoop, this is the size of the HDFS block.|User-defined. The default is 64 MB.|  
 |status|**nvarchar(32)**|State of the worker.|Pending, Processing, Done, Failed, Aborted|  
 |start_time|**datetime**|Time at which execution of this worker started.|Greater than or equal to start time of the query step this worker belongs to. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|end_time|**datetime**|Time at which execution ended, failed, or was cancelled.|NULL for ongoing or queued workers. Otherwise, greater than start_time.|  
+|end_time|**datetime**|Time at which execution ended, failed, or was canceled.|NULL for ongoing or queued workers. Otherwise, greater than start_time.|  
 |total_elapsed_time|**int**|Total time spent in execution, in milliseconds.|Greater than or equal to 0.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded."<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
   
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.

@@ -29,20 +29,20 @@ Currently there are 16 different event counters available for <xref:Microsoft.Da
 
 |Name|Display Name|Description|  
 |-------------------------|-----------------|-----------------|  
-|**active-hard-connections**|Actual active connections are made to servers|The number of connections that are being made to database servers.|  
-|**hard-connects**|Actual connections are made to servers|The number of connections per second that are being made to database servers.|  
-|**hard-disconnects**|Actual disconnections are made to servers|The number of disconnects per second that are being made to database servers.|  
-|**active-soft-connects**|Active connections got from connection pool|The number of active connections being pulled from the connection pool.|  
-|**soft-connects**|Connections got from connection pool|The number of connections per second that are being pulled from the connection pool.|  
-|**soft-disconnects**|Connections returned to the connection pool|The number of connections per second that are being returned to the connection pool.|  
-|**number-of-non-pooled-connections**|Number of connections aren't using connection pooling|The number of active connections that aren't pooled.|  
-|**number-of-pooled-connections**|Number of connections are managed by connection pooler|The number of active connections that are being managed by the connection pooling infrastructure.|  
+|**active-hard-connections**|Actual active connections currently made to servers|The number of connections that are being made to database servers.|  
+|**hard-connects**|Actual connection rate to servers|The number of connections per second that are being made to database servers.|  
+|**hard-disconnects**|Actual disconnection rate from servers|The number of disconnects per second that are being made to database servers.|  
+|**active-soft-connects**|Active connections retrieved from the connection pool|The number of active connections being pulled from the connection pool.|  
+|**soft-connects**|Rate of connections retrieved from the connection pool|The number of connections per second that are being pulled from the connection pool.|  
+|**soft-disconnects**|Rate of connections returned to the connection pool|The number of connections per second that are being returned to the connection pool.|  
+|**number-of-non-pooled-connections**|Number of connections not using connection pooling|The number of active connections that aren't pooled.|  
+|**number-of-pooled-connections**|Number of connections managed by the connection pool|The number of active connections that are being managed by the connection pooling infrastructure.|  
 |**number-of-active-connection-pool-groups**|Number of active unique connection strings|The number of unique connection pool groups that are active. This counter is controlled by the number of unique connection strings that are found in the AppDomain.|  
 |**number-of-inactive-connection-pool-groups**|Number of unique connection strings waiting for pruning|The number of unique connection pool groups that are marked for pruning. This counter is controlled by the number of unique connection strings that are found in the AppDomain.|  
 |**number-of-active-connection-pools**|Number of active connection pools|The total number of connection pools.|  
 |**number-of-inactive-connection-pools**|Number of inactive connection pools|The number of inactive connection pools that haven't had any recent activity and are waiting to be disposed.|  
 |**number-of-active-connections**|Number of active connections|The number of active connections that are currently in use.|  
-|**number-of-free-connections**|Number of free-ready connections|The number of connections available for use in the connection pools.|  
+|**number-of-free-connections**|Number of ready connections in the connection pool|The number of connections available for use in the connection pools.|  
 |**number-of-stasis-connections**|Number of connections currently waiting to be ready|The number of connections currently awaiting completion of an action and which are unavailable for use by your application.|  
 |**number-of-reclaimed-connections**|Number of reclaimed connections from GC|The number of connections that have been reclaimed through garbage collection where `Close` or `Dispose` wasn't called by the application. **Note** Not explicitly closing or disposing connections hurts performance.|  
 
@@ -95,17 +95,17 @@ The following sample code captures `Microsoft.Data.SqlClient.EventSource` events
 [!code-csharp[SqlClientDiagnosticCounter#1](~/../sqlclient/doc/samples/SqlClientDiagnosticCounter.cs#1)]
 
 ``` Output
-Actual active connections are made to servers           0
-Active connections got from connection pool             26
-Number of connections are not using connection pooling          0
-Number of connections are managed by connection pooler          26
+Actual active connections currently made to servers           0
+Active connections retrieved from the connection pool         26
+Number of connections not using connection pooling            0
+Number of connections managed by the connection pool          26
 Number of active unique connection strings              1
-Number of unique connection strings waiting for pruning         0
+Number of unique connection strings waiting for pruning       0
 Number of active connection pools               1
 Number of inactive connection pools             0
 Number of active connections            26
-Number of free-ready connections                0
-Number of connections currently waiting to be ready             0
+Number of ready connections in the connection pool            0
+Number of connections currently waiting to be ready           0
 ...
 ```
 

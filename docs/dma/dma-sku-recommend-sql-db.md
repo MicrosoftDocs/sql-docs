@@ -1,6 +1,6 @@
 ---
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
-description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database or Azure SQL Managed Instance SKU for your on-premises database
+description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU for your on-premises database
 ms.custom: ""
 ms.date: "05/06/2019"
 ms.prod: sql
@@ -12,36 +12,33 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
+author: aciortea
+ms.author: aciortea
 ---
 
 # Identify the right Azure SQL Database or SQL Managed Instance SKU for your on-premises database
 
-Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure SQL Database or SQL Managed Instance target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
+Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure SQL Database, SQL Managed Instance or SQL Server on Azure VM target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output. Using performance data points DMA now recommends an appropriate target Azure SQL Database SKU, as well as an explanation for the recommendation.
 
 
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases. This functionality is currently available only via the Command Line Interface (CLI).
+The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU based on performance data points collected from your source SQL Server instances hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. This functionality is currently available only via the Command Line Interface (CLI).
 
-The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
+The following are instructions to help you determine the SKU recommendations and provision corresponding databases in Azure using DMA.
 
 [!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## Prerequisites
 
 - Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
-- Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
-  > [!NOTE]
-  > To collect machine information, the data collection script uses the Get-WmiObject cmdlet, which was deprecated in PowerShell 6. To run this script in PowerShell 6 or 7, you must replace the WMI cmdlets with the newer CIM cmdlets.
-- Ensure that your computer has the Azure PowerShell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
-- Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
-- Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
+- Install the minimum version [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) on the tools machine where the SKU recommendations console application is running.
+- Ensure the accounted used to connect to your SQL Server on-premises source has sysadmin permission.
 
-## Collect performance counters
+> [!NOTE]
+> It is recommended that the tool is utilized from a separate tools (client) machine with connectivity to the target SQL instance(s), rather than from the machine hosting SQL Server itself, in order to minimize any potential overhead.
 
-The first step in the process is to collect performance counters for your databases. You can collect performance counters by running a PowerShell command on the computer that hosts your databases. DMA provides you with a copy of this PowerShell file, but you can also use your own method to capture performance counters from your computer.
+## Collect performance data 
 
-You don't need to perform this task for each database individually. The performance counters collected from a computer can be used to recommend the SKU for all databases hosted on the computer.
+The first step in the process is to collect performance data points for your SQL Server source databases using system DMVs . 
 
 1. In the DMA folder, locate the PowerShell file SkuRecommendationDataCollectionScript.ps1. This file is required to collect the performance counters.
 
@@ -179,67 +176,6 @@ The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue
 
 The HTML file contains this information in a graphical format. It provides a user-friendly means of viewing the final recommendation and provisioning the next part of the process. More information on the HTML output is in the following section.
 
-## Provision recommended SKUs to Azure
-
-With just a few clicks, you can use the recommendations identified to provision target SKUs in Azure to which you can migrate your databases. You can use the HTML file to input Azure subscription; pick the pricing tier, compute level, and Max data size for your databases; and generate a script to provision your databases. You can execute this script using PowerShell.
-
-You can perform this process on a single computer, or you can perform it on multiple computers to determine SKU recommendations at scale. DMA currently makes it a simple and scalable experience by supporting the entire process via the Command Line Interface.
-
-To input provisioning information and make changes to the recommendations, update the HTML file as follows.
-
-**For single database recommendations**
-
-![Azure SQL Database SKU Recommendations screen](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
-
-1. Open the HTML file and enter the following information:
-    - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.
-    - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
-    - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
-    - **Server Name** - The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
-    - **Admin Username** - The server admin username. Make sure your login name meets the following requirements:
-      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
-      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
-      - Your login name must not start with numbers or symbols.
-
-    - **Admin Password** - The server admin password. 
-      - Your password must be at least 8 characters in length and no more than 128 characters in length.
-      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
-      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
-
-2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
-
-3. Select **Generate Provisioning Script**, save the script, and then execute it in PowerShell.
-
-    This process should create all the databases you selected in the HTML page.
-
-**For Azure SQL Managed Instance recommendations**
-
-![Azure SQL MI SKU Recommendations screen](../dma/media/dma-sku-recommend-mi-recommendations1.png)
-
-1. Open the HTML file and enter the following information:
-    - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.
-    - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
-    - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
-    - **Instance Name** – The instance of Azure SQL Managed Instance to which you want to migrate the databases. The instance name can contain only lowercase letters, numbers, and ‘-‘, but it can’t begin or end with ‘-‘ or have more than 63 characters.
-    - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements:
-      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
-      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
-      - Your login name must not start with numbers or symbols.
-
-    - **Instance Admin Password** - The instance admin password. 
-      - Your password must be at least 16 characters in length and no more than 128 characters in length.
-      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
-      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
-
-    - **Vnet Name** – The VNet name under which the managed instance should be provisioned. Enter an existing VNet name.
-    - **Subnet Name** – The Subnet name under which the managed instance should be provisioned. Enter an existing Subnet name.
-
-2. Review recommendations for each instance, and modify the pricing tier, compute level, and max data size as needed. While the recommendations are currently limited to 8vcore to 40vcore SKUs, there is still the option to provision 64vcore and 80vcore SKUs if desired. Be sure to deselect any instances that you do not currently want to provision.
-
-    This process should create all the databases you selected in the HTML page.
-
-    > [!NOTE]
-    > Creating managed instances on a subnet (especially for the first time) may take several hours to complete. After you run the provisioning script via PowerShell, you can check the status of your deployment on Azure Portal.
 
 ## Next step
 

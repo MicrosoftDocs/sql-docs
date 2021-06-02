@@ -20,6 +20,17 @@ ms.author: rajpo
 
 This article lists the additions in each release of Data Migration Assistant.
 
+## Data Migration Assistant v 5.4
+
+The v5.4 release of the Data Migration Assistant provides support for:
+- New console experience that provides explanations as well as recommendations for target Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VM SKUs based on performance data points.
+- SQL Server 2005 has been deprecated and will be removed as a possible source in future releases
+- 
+In addition, this release of Data Migration Assistant provides bug fixes for the following issues:
+- Fixed an RDS for SQL Server permissions error raised when assessing Azure SQL Managed Instance targets.
+- Fixed incorrectly reported blockers for Memory Optimized Data Filegroup (FX) in assessments.
+- Fixed missing rule to detect three-part or four-part cross-database references when assessing Azure SQL Database targets.
+
 ## Data Migration Assistant v 5.3
 
 The v5.3 release of the Data Migration Assistant provides support for:
@@ -30,7 +41,7 @@ The v5.3 release of the Data Migration Assistant provides support for:
 
 In addition, this release of Data Migration Assistant has been updated to .NET 4.8 and provides bug fixes for the following issues:
 - Cannot run assessment or connect to Azure SQL Database without sysadmin permission in migration phase.
-- Users cannot run assessment without sysadmin permission for RDS assesments.
+- Users cannot run assessment without sysadmin permission for RDS assessments.
 - Users encountered issues uploading JSON assessment reports to Azure Migrate.
 - Cannot migrate the objects containing Chinese characters.
 
@@ -202,4 +213,4 @@ The v1.0 release of Data Migration Assistant is the initial release, and it prov
 
 ## See also
 
-[Overview of Data Migration Assistant](../dma/dma-overview.md)
+[Overview of Data Migration Assistant](dma-overview.md)

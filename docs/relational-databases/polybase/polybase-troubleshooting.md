@@ -184,6 +184,8 @@ In [!INCLUDE[sssql19-md](../../includes/sssql16-md.md)] or [!INCLUDE[sssql19-md]
 
 4. Copy and paste the Remote Query value into a text editor to view the XML remote query plan. An example is shown below.
 
+The sql_operation tags indicate operations within SQL Server. The dsql_operations with operation_types that aren't "ON" indicate the external operators used by PolyBase Data Movement service.
+
    ```xml  
 
    <dsql_query number_nodes="1" number_distributions="8" number_distributions_per_node="8">  
@@ -229,7 +231,7 @@ In [!INCLUDE[sssql19-md](../../includes/sssql16-md.md)] or [!INCLUDE[sssql19-md]
           </dsql_operation>  
           <dsql_operation operation_type="ExternalRoundRobinMove">  
             <operation_cost cost="16.594848" accumulative_cost="17.594848" average_rowsize="24" output_rows="19207" />  
-            <external_uri>hdfs://10.193.26.177:8020/Demo/car_sensordata.tbl/</external_uri>  
+            <external_uri>hdfs://<ip address>:8020/Demo/car_sensordata.tbl/</external_uri>  
             <destination_table>[TEMP_ID_74]</destination_table>  
           </dsql_operation>  
         </dsql_operation>  
@@ -253,7 +255,7 @@ After configuring a set of machines as part of a PolyBase scale out group, you c
 
 3. Run the DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.
 
-## Hadoop Name Node High Availability
+## Hadoop name node high availability
 
 PolyBase does not interface with Name Node HA services like Zookeeper or Knox today. However, there is a proven workaround that can be used to provide the functionality.
 
@@ -288,7 +290,7 @@ In Linux, PolyBase Java log files:
 
 For common troubleshooting scenarios, see [PolyBase Errors and Possible Solutions](polybase-errors-and-possible-solutions.md).
 
-## See also
+## Next steps
 
 - [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
 - [PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

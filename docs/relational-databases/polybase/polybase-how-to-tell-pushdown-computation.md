@@ -11,7 +11,7 @@ ms.technology: big-data-cluster
 ---
 # How to tell if external pushdown occurred
 
-This article will detail how to determine if a PolyBase query is benefitting from pushdown to the external data source. For more information on external pushdown, see [pushdown computations in PolyBase](./polybase-pushdown-computation.md).
+This article will detail how to determine if a PolyBase query is benefitting from pushdown to the external data source. For more information on external pushdown, see [pushdown computations in PolyBase](./polybase-pushdown-computation.md). 
 
 ## Is my query benefitting from external pushdown?
 
@@ -284,8 +284,9 @@ If the pushdown of the aggregation isn't occurring, you won't see the aggregatio
 SELECT "Quantity" FROM "AdventureWorks2017"."Production"."ProductInventory"
 ```
 
-The aggregation was performed in SQL Server, after the unaggregated dataset was retrieved by PolyBase.
+The aggregation was performed in SQL Server, after the un-aggregated dataset was retrieved by PolyBase.
 
-## See also
+## Next steps
 
-- [Pushdown computations in PolyBase](./polybase-pushdown-computation.md)
+- [PolyBase troubleshooting](polybase-troubleshooting.md)
+- [PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

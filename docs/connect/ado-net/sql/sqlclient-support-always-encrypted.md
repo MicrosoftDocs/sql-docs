@@ -402,11 +402,11 @@ The built-in column master key store providers that are available for the Window
 
 The following example shows the precedence of custom column master key store providers registered on a connection instance:
 
-[!code-csharp [RegisterCustomKeyStoreProviderConnectionPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_ConnectionPrecedence#1)]
+[!code-csharp [RegisterCustomKeyStoreProviderConnectionPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_ConnectionPrecedence.cs#1)]
 
 The following example shows the precedence of custom column master key store providers registered on a command instance:
 
-[!code-csharp [RegisterCustomKeyStoreProviderCommandPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_CommandPrecedence#1)]
+[!code-csharp [RegisterCustomKeyStoreProviderCommandPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_CommandPrecedence.cs#1)]
 
 ### Using column master key store providers for programmatic key provisioning
 

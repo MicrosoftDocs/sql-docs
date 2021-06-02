@@ -346,29 +346,6 @@ If you want to store column master keys in a key store that is not supported by 
 - [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) (Added in version 3.0)
 - [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) (Added in version 3.0)
 
-#### Column Encryption Key cache precedence
-
-This section applies to version 3.0 and higher of the provider.
-
-The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or command instance will not be cached by the **Microsoft .NET Data Provider for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
-
-> [!NOTE]
-> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally. Any CEK caching implementation should reference the value of [SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl) before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching.
-
-### Registering a custom column master key store provider
-
-This section applies to version 3.0 and higher of the provider.
-
-Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
-
-- The per-command registration will be checked if it is not empty.
-- If the per-command registration is empty, the per-connection registration will be checked if it is not empty.
-- If the per-connection registration is empty, the global registration will be checked.
-
-Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
-
-The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are pre-registered. No providers should be registered on the connection or command instances if one of the built-in column master key store providers is needed.
-
 ```cs
 public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 {
@@ -395,6 +372,41 @@ class Program
     }
 }
 ```
+
+#### Column Encryption Key cache precedence
+
+This section applies to version 3.0 and higher of the provider.
+
+The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or command instance will not be cached by the **Microsoft .NET Data Provider for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
+
+Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or command instance, CEKs decrypted by an instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` will be cleared when that instance goes out of scope:
+
+[!code-csharp [AzureKeyVaultProviderColumnEncryptionKeyCacheScope#1](~/../sqlclient/doc/samples/AzureKeyVaultProvider_ColumnEncryptionKeyCacheScope.cs#1)]
+
+> [!NOTE]
+> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally. Any CEK caching implementation should reference the value of [SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl) before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching.
+
+### Registering a custom column master key store provider
+
+This section applies to version 3.0 and higher of the provider.
+
+Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
+
+- The per-command registration will be checked if it is not empty.
+- If the per-command registration is empty, the per-connection registration will be checked if it is not empty.
+- If the per-connection registration is empty, the global registration will be checked.
+
+Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+
+The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are pre-registered. No providers should be registered on the connection or command instances if one of the built-in column master key store providers is needed.
+
+The following example shows the precedence of custom column master key store providers registered on a connection instance:
+
+[!code-csharp [RegisterCustomKeyStoreProviderConnectionPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_ConnectionPrecedence#1)]
+
+The following example shows the precedence of custom column master key store providers registered on a command instance:
+
+[!code-csharp [RegisterCustomKeyStoreProviderCommandPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_CommandPrecedence#1)]
 
 ### Using column master key store providers for programmatic key provisioning
 

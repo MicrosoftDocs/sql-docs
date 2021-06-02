@@ -83,7 +83,7 @@ ms.author: jroth
   
  The capture process is also used to maintain history on the DDL changes to tracked tables. The DDL statements that are associated with change data capture make entries to the database transaction log whenever a change data capture-enabled database or table is dropped or columns of a change data capture-enabled table are added, modified, or dropped. These log entries are processed by the capture process, which then posts the associated DDL events to the cdc.ddl_history table. You can obtain information about DDL events that affect tracked tables by using the stored procedure [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md).  
   
-## Change Data Capture Agent Jobs  
+## Change Data Capture Agent Jobs in SQL Server and Azure SQL Managed Instance
 
 > [!NOTE]  
 >  In Azure SQL Database, the Agent Jobs are replaced by an orchestrator which runs capture and cleanup automatically.  
@@ -155,6 +155,9 @@ Change data capture cannot be enabled on tables with a clustered columnstore ind
 
 **Partition switching with variables**   
 Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
+
+**Availability of CDC in Azure SQL Databases (Preview)**
+CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 Azure SQL Databases are not supported for CDC. 
 
 **Capture and Cleanup Customization on Azure SQL Databases (Preview)**
 As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator.

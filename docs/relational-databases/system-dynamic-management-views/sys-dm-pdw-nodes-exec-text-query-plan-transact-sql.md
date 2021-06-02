@@ -20,6 +20,9 @@ monikerRange: "=azure-sqldw-latest"
 
 Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or for a specific statement within the batch.
 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Table returned  
   
 |Column name|Data type|Description|  

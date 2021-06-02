@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] system view that holds information about all Data Movement Service (DMS) steps for external operations.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] system view that holds information about all Data Movement Service (DMS) steps for external operations.
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Holds information about all workers completing DMS steps.  
+  Holds information about all workers completing DMS steps.
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

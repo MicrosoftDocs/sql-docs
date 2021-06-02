@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Holds information about all steps that compose a given request or query in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per query step.  
+  Holds information about all steps that compose a given request or query in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per query step.
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

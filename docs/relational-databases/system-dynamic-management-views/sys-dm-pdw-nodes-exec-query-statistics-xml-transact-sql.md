@@ -20,6 +20,9 @@ monikerRange: "=azure-sqldw-latest"
 
 Returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics.
 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Table returned
 
 |Column Name|Data Type|Description|  

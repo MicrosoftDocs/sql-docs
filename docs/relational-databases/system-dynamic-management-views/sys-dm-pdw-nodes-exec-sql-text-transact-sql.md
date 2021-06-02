@@ -18,7 +18,11 @@ monikerRange: "=azure-sqldw-latest"
 # sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.  
+Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.
+
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
    
 ## Table returned  
 |Column name|Data type|Description|  

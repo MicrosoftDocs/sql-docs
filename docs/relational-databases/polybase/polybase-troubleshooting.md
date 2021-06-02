@@ -172,7 +172,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
 
 In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can view the execution plan passed to the external data source using trace flag 6408. For more information, see [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
 
-Only in [!INCLUDE[sssql19-md](../../includes/sssql16-md.md)], this alternative strategy works:
+In [!INCLUDE[sssql19-md](../../includes/sssql16-md.md)] or [!INCLUDE[sssql19-md](../../includes/sssql17-md.md)], this alternative strategy works:
 
 1. In SSMS, enable **Include Actual Execution Plan** (Ctrl + M) and run the query.
 

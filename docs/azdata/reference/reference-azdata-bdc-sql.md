@@ -21,8 +21,8 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc sql settings](reference-azdata-bdc-sql-settings.md) | BDC settings commands for sql service.
 [azdata bdc sql status](reference-azdata-bdc-sql-status.md) | Sql service status commands.
+[azdata bdc sql settings](reference-azdata-bdc-sql-settings.md) | BDC settings commands for sql service.
 
 ## Next steps
 

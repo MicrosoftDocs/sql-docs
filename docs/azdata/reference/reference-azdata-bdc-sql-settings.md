@@ -79,7 +79,7 @@ azdata bdc sql settings show --settings mssql.maxServerMemory --resources data-0
 ```
 Show the pending settings changes for the SQL service-scope and resource-scope settings.
 ```bash
-azdata bdc sql settings show --filter-option=pending --recursive
+azdata bdc sql settings show --filter-options=pending --recursive
 ```
 ### Optional Parameters
 #### `--resources -r`

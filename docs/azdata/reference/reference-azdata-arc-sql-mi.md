@@ -87,7 +87,7 @@ The request for cores of the managed instance as an integer.
 #### `--memory-limit -ml`
 The limit of the capacity of the managed instance as an integer.
 #### `--memory-request -mr`
-The request for the capacity of the managed instance as an integer amount of memory in GBs.
+The request for the capcity of the managed instance as an integer amount of memory in GBs.
 #### `--storage-class-data -scd`
 The storage class to be used for data (.mdf). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
 #### `--storage-class-logs -scl`
@@ -153,7 +153,7 @@ The request for cores of the managed instance as an integer.
 #### `--memory-limit -ml`
 The limit of the capacity of the managed instance as an integer.
 #### `--memory-request -mr`
-The request for the capacity of the managed instance as an integer amount of memory in GBs.
+The request for the capcity of the managed instance as an integer amount of memory in GBs.
 #### `--no-wait`
 If given, the command will not wait for the instance to be in a ready state before returning.
 ### Global Arguments

@@ -52,7 +52,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc sql mi config add
-Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotationsappropriately.  Alternatively, you may use the patch file functionality.
+Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc sql mi config add --path -p 
                              --json-values -j
@@ -79,7 +79,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc sql mi config remove
-Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotationsappropriately.  Alternatively, you may use the patch file functionality.
+Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc sql mi config remove --path -p 
                                 --json-path -j
@@ -106,7 +106,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc sql mi config replace
-Replaces the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotationsappropriately.  Alternatively, you may use the patch file functionality.
+Replaces the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc sql mi config replace --path -p 
                                  --json-values -j

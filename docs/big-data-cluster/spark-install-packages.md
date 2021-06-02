@@ -5,7 +5,7 @@ description: Spark Library Management
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 01/25/2021
+ms.date: 02/25/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,59 +18,86 @@ ms.technology: big-data-cluster
 This article provides guidance on how to import and install packages for a Spark session through session and notebook configurations.
 
 ## Built-in tools
-Spark and Hadoop base packages
-Python 3.7 and Python 2.7
-Pandas, Sklearn, Numpy, and other data processing packages.
-R and MRO packages
-Sparklyr
+
+Scala Spark (Scala 2.11) and Hadoop base packages. 
+
+PySpark (Python 3.7). Pandas, Sklearn, Numpy, and other data processing and machine learning packages.
+
+MRO 3.5.2 packages. Sparklyr and SparkR for R Spark workloads.
 
 ## Install packages from a Maven repository onto the Spark cluster at runtime
+
 Maven packages can be installed onto your Spark cluster using notebook cell configuration at the start of your spark session. Before starting a spark session in Azure Data Studio, run the following code:
 
-```
+```python
 %%configure -f \
 {"conf": {"spark.jars.packages": "com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.1"}}
 ```
 
-## Install Python packages at PySpark job-submission time
-1. Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
-```
+## Install Python packages at PySpark at runtime
+
+Session and Job level package management guarantees library consistency and isolation. The configuration is a Spark standard library configuration that can be applied on Livy sessions. __azdata spark__ support these configurations. The examples bellow are presented as __Azure Data Studio Notebooks__ configure cells that need to be run after attaching to a cluster with the PySpark kernel.
+
+If the __"spark.pyspark.virtualenv.enabled" : "true"__ configuration is not set, the session will use the cluster default python and installed libraries.
+
+### Session/Job configuration with requirements.txt
+
+If 
+Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
+
+```python
 %%configure -f \
-{"conf": {
-    "spark.pyspark.virtualenv.enabled" : "true",
-    "spark.pyspark.virtualenv.type" : "conda",
-    "spark.pyspark.virtualenv.requirements" : "requirements.txt",
-    "spark.pyspark.virtualenv.bin.path" : "/opt/mls/python/bin/conda"
-    }, 
-"files": ["hdfs://nmnode-0/tmp/requirements.txt"]
+{
+    "conf": {
+        "spark.pyspark.virtualenv.enabled" : "true",
+        "spark.pyspark.virtualenv.python_version": "3.7",
+        "spark.pyspark.virtualenv.requirements" : "hdfs://user/project-A/requirements.txt"
+    }
 }
 ```
-2. Create a conda virtualenv without a requirements file and dynamically add packages during the Spark session.
-```
+
+### Session/Job configuration with different python versions
+
+Create a conda virtualenv without a requirements file and dynamically add packages during the Spark session.
+
+```python
 %%configure -f \
-{"conf": {
-    'spark.pyspark.virtualenv.enabled' : 'true',
-    'spark.pyspark.virtualenv.type' : 'conda',
-    'spark.pyspark.virtualenv.bin.path' : '/opt/mls/python/bin/conda',
-    'spark.pyspark.virtualenv.python_version': '3.6'
- }
- ```
+{
+    "conf": {
+        "spark.pyspark.virtualenv.enabled" : "true",
+        "spark.pyspark.virtualenv.python_version": "3.6"
+    }
+}
+```
+
+### Library installation
+
+Execute the __sc.install_packages__ to install libraries dynamically in your session. Libraries will be installed into the driver and across all executor nodes.
 
  ```python
 sc.install_packages("numpy==1.11.0")
 import numpy as np
 ```
 
+Is is also possible to install multiple libraries in the same command using an array.
+
+ ```python
+sc.install_packages(["numpy==1.11.0", "xgboost"])
+import numpy as np
+import xgboost as xgb
+```
+
 ## Import .jar from HDFS for use at runtime
 Import jar at runtime through Azure Data Studio notebook cell configuration.
 
-```
+```python
 %%configure -f
 {"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
 ```
 
 ### Import .jar at runtime through Azure Data Studio notebook cell configuration
-```
+
+```python
 %%configure -f
 {"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
 ```

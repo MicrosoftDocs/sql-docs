@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 09/04/2020
+ms.date: 03/24/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -1219,7 +1219,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there's any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.
 
 > [!NOTE]
-> Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting options](#SettingOptions) of the "Remarks" section of this article.
+> Not all database options use the WITH \<termination> clause. For more information, see the table under [Setting options](#SettingOptions) of the "Remarks" section of this article.
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE     
 Specifies whether to roll back after the specified number of seconds or immediately. *number* is type **int**.
@@ -1257,6 +1257,7 @@ Not all database options use the WITH \<termination> clause or can be specified 
 |\<parameterization_option>|Yes|Yes|
 |\<change_tracking_option>|Yes|Yes|
 |\<db_encryption_option>|Yes|No|
+|\<accelerated_database_recovery>|Yes|Yes|
 
 The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:
 
@@ -2019,6 +2020,9 @@ The current setting of this option can be determined by examining the `is_read_c
 
 > [!WARNING]
 > When a table is created with `DURABILITY = SCHEMA_ONLY`, and **READ_COMMITTED_SNAPSHOT** is subsequently changed using `ALTER DATABASE`, data in the table will be lost.
+
+> [!TIP]
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the `ALTER DATABASE` command to set READ_COMMITTED_SNAPSHOT ON or OFF for a database must be executed in the `master` database.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
 ON     

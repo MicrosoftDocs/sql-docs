@@ -2,8 +2,8 @@
 title: Encrypting Connections to SQL Server on Linux
 description: SQL Server on Linux uses TLS to encrypt data that's transmitted across a network between a client application and an instance of SQL Server.
 ms.date: 06/29/2020
-author: vin-yu 
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
@@ -53,11 +53,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+systemctl start mssql-server 
 ```
 
 - **Register the certificate on your client machine (Windows, Linux, or macOS)**
@@ -110,11 +111,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1
+systemctl start mssql-server 
 ```
 
 -	**Example connection strings** 

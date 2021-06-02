@@ -4,7 +4,7 @@ title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|yes|  
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|yes|||   
-|Tuple mover background merge support||||||yes|yes|yes|
+|Tuple mover background merge support|||||yes|yes|yes|
   
  <sup>1</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
  

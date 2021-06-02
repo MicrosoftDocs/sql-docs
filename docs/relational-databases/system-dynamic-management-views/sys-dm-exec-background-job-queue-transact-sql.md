@@ -1,10 +1,10 @@
 ---
 description: "sys.dm_exec_background_job_queue (Transact-SQL)"
-title: "sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_exec_background_job_queue (Transact-SQL)"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_exec_background_job_queue dynamic management function"
-ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -27,7 +26,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns a row for each query processor job that is scheduled for asynchronous (background) execution.  
   
-> **NOTE!!** To call this from **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** or **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use the name **sys.dm_pdw_nodes_exec_background_job_queue**.  
+> [!NOTE]
+> To call this from **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** or **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_exec_background_job_queue`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
 ## Remarks  
  This view returns information only for asynchronous update statistics jobs. For more information about asynchronous update statistics, see [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -62,7 +62,7 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 ## Examples  
  The following example returns the number of active asynchronous jobs in the background queue for each database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```tsql  
 SELECT DB_NAME(database_id) AS [Database], COUNT(*) AS [Active Async Jobs]  
 FROM sys.dm_exec_background_job_queue  
 WHERE in_progress = 1  
@@ -70,13 +70,9 @@ GROUP BY database_id;
 GO  
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Statistics](../../relational-databases/statistics/statistics.md)   
- [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
+## See also  
+ - [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ - [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ - [Statistics](../../relational-databases/statistics/statistics.md)   
+ - [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
-  
-
-
-

@@ -4,7 +4,7 @@ title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse"
+ms.prod_service: "synapse-analytics"
 ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
@@ -32,7 +32,8 @@ Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Remarks  
 

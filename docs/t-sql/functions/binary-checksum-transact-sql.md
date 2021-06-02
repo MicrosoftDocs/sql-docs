@@ -4,7 +4,7 @@ title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -34,7 +34,8 @@ Returns the binary checksum value computed over a row of a table or over a list 
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

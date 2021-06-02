@@ -2,9 +2,9 @@
 description: "sys.dm_io_virtual_file_stats (Transact-SQL)"
 title: "sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/11/2017"
+ms.date: "04/21/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_io_virtual_file_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns I/O statistics for data and log files. This dynamic management function replaces the [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) function.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use the name **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use the name **sys.dm_pdw_nodes_io_virtual_file_stats**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Syntax  
   
@@ -73,7 +73,7 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 |**database_name**|**sysname**|**Does not apply to:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Database name.</br></br>For Azure Synapse Analytics, this is the name of the database stored on the node which is identified by pdw_node_id. Each node has one tempdb database that has 13 files. Each node also has one database per distribution, and each distribution database has 5 files. For example, if each node contains 4 distributions, the results show 20 distribution database files per pdw_node_id. 
 |**database_id**|**smallint**|ID of database.|  
 |**file_id**|**smallint**|ID of file.|  
-|**sample_ms**|**bigint**|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.</br></br>The data type is **int** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.</br></br>The data type is **int** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In these versions, the value will reset to 0 after approximately 25 days of continuous database engine uptime.|  
 |**num_of_reads**|**bigint**|Number of reads issued on the file.|  
 |**num_of_bytes_read**|**bigint**|Total number of bytes read on this file.|  
 |**io_stall_read_ms**|**bigint**|Total time, in milliseconds, that the users waited for reads issued on the file.|  

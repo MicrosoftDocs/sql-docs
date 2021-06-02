@@ -9,7 +9,7 @@ ms.devlang:
 ms.topic: conceptual
 ms.date: 10/02/2019
 ms.prod: sql
-ms.prod_service: "polybase, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 monikerRange: ">= sql-server-2016"
 ---
 
@@ -72,15 +72,15 @@ Update **core-site.xml**, add the three properties below. Set the values accordi
 
 ```xml
 <property>
-	<name>polybase.kerberos.realm</name>
-	<value>CONTOSO.COM</value>
+    <name>polybase.kerberos.realm</name>
+    <value>CONTOSO.COM</value>
 </property>
 <property>
-	<name>polybase.kerberos.kdchost</name>
-	<value>kerberos.contoso.com</value>
+    <name>polybase.kerberos.kdchost</name>
+    <value>kerberos.contoso.com</value>
 </property>
 <property>
-	<name>hadoop.security.authentication</name>
+    <name>hadoop.security.authentication</name>
     <value>KERBEROS</value>
 </property>
 ```
@@ -95,6 +95,13 @@ The tool runs independently of [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
+> [!NOTE]
+> Starting with SQL Server 2019, when you install the PolyBase feature you can either reference an existing Java Runtime Environment, or install AZUL-OpenJDK-JRE. If AZUL-OpenJDK-JRE was selected, java.exe will not be part of the $PATH environment variable and you may encounter the error 
+"'java' is not recognized as an internal or external command,
+operable program or batch file." If this occurs, you will need to add the path to java.exe to the session $PATH environment variable. The default installation path of the java executable will be C:\Program Files\Microsoft SQL Server\MSSQL15.{instance name}\AZUL-OpenJDK-JRE\bin. If that is the path, then you will need to execute the following prior to executing the java command to run the Kerberos Connectivity Troubleshooting tool command.
+>```cmd
+> set PATH=%PATH%;C:\Program Files\Microsoft SQL Server\MSSQL15.{instance name}\AZUL-OpenJDK-JRE\bin
+>```
 
 ## Arguments
 
@@ -198,12 +205,12 @@ If the tool was run and the file properties of the target path were *not* printe
 | Exception and messages | Cause | 
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS".|
-|javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |	The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
+|javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |    The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
 | javax.security.auth.login.LoginException<br> Checksum failed |Admin Service Principal exists, but bad password. |
 | Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This message indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property "hadoop.security.auth_to_local" to core-site.xml with the appropriate rules per the Hadoop cluster. |
-| java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |	Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
-| java.io.FileNotFoundException<br>File does not exist: /test/data.csv |	Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
+| java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |    Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
+| java.io.FileNotFoundException<br>File does not exist: /test/data.csv |    Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
 
 ## Debugging tips
 
@@ -252,4 +259,5 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 [Integrating PolyBase with Cloudera using Active Directory Authentication](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera's Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks' Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[PolyBase troubleshooting](polybase-troubleshooting.md)
+[PolyBase troubleshooting](polybase-troubleshooting.md)   
+[PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

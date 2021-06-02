@@ -5,7 +5,7 @@ description: This article describes features supported by the various editions o
 ms.custom: 
    - seo-lt-2019
    - sqlfreshmay19
-ms.date: 07/22/2020
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -34,7 +34,6 @@ helpviewer_keywords:
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
   - "CPSA"
-ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
@@ -128,6 +127,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores| 
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|  
 |Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
+|Maximum capacity for [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]| 32 * (max server memory configuration)| 4 * (max server memory configuration)|N/A |N/A |N/A |
 |Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
 |Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
 |Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|  
@@ -178,7 +178,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Table and index partitioning|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |Data compression|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |Resource Governor|Yes|No|No|No|No|  
-|Partitioned Table Parallelism|Yes|No|No|No|No|
+|Partitioned Table Parallelism|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|

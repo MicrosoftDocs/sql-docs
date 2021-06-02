@@ -3,7 +3,7 @@ title: "Using PIVOT and UNPIVOT | Microsoft Docs"
 description: "Transact-SQL reference for PIVOT and UNPIVOT relational operators. Use these operators on SELECT statements to change a table-valued expression into another table."
 ms.date: "10/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -89,14 +89,16 @@ The following code displays the same result, pivoted so that the `DaysToManufact
 ```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
-[0], [1], [2], [3], [4]  
+  [0], [1], [2], [3], [4]  
 FROM  
-(SELECT DaysToManufacture, StandardCost   
-    FROM Production.Product) AS SourceTable  
+(
+  SELECT DaysToManufacture, StandardCost   
+  FROM Production.Product
+) AS SourceTable  
 PIVOT  
 (  
-AVG(StandardCost)  
-FOR DaysToManufacture IN ([0], [1], [2], [3], [4])  
+  AVG(StandardCost)  
+  FOR DaysToManufacture IN ([0], [1], [2], [3], [4])  
 ) AS PivotTable;  
   
 ```  

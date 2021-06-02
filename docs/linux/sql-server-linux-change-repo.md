@@ -152,7 +152,10 @@ If necessary, remove the old repository. Use one of the following commands based
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`, and use the correct [distribution code name](https://releases.ubuntu.com/).
+>
+> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
+> - Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported.
+> - If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`, and use the correct [distribution code name](https://releases.ubuntu.com/).
 
 | Repository | Command to remove |
 |---|---|
@@ -204,9 +207,10 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 Configure the new repository to use for SQL Server installations and upgrades.
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported. The following commands points to the Ubuntu 18.04 repository.
 >
-> If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
+> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported
+> - Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported.
+> - The following commands points to the Ubuntu 18.04 repository. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
 
 1. Import the public repository GPG keys.
 

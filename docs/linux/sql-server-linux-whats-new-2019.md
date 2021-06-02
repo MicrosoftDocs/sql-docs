@@ -3,7 +3,7 @@ title: What's New for SQL Server 2019 on Linux
 description: This article highlights what's new for SQL Server 2019 on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -15,9 +15,11 @@ ms.technology: linux
 
 This article describes the major features and services available for SQL Server 2019 running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md).
 
-## Ubuntu 18.04 supported
+## Ubuntu 18.04 and 20.04 supported
 
-Starting with SQL Server 2019 CU3, Ubuntu 18.04 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true).
+- Starting with SQL Server 2019 CU3, Ubuntu 18.04 is now supported. 
+- Starting with SQL Server 2019 CU10, Ubuntu 20.04 is now supported. 
+- Check out our Quickstart on [Installing SQL Server and creating a database on Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ## RHEL 8 supported
 
@@ -49,6 +51,6 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Run on Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

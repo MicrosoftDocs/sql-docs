@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "WITH XMLNAMESPACES clause"
   - "declaring XML namespaces"
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WITH XMLNAMESPACES
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

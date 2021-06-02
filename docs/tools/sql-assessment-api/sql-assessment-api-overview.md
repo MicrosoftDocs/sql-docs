@@ -8,28 +8,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 1/25/2021
+ms.date: 3/10/2021
 ---
 
 # SQL Assessment API
 
-SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by SQL Server Team. This ruleset is enhanced with the release of new versions but at the same time, the API is built with the intent to give a highly customizable and extensible solution. So, users can tune the default rules and create their own.
+[!INCLUDE [SQL Server 2012, ASMI, SQL Server on Azure VM, SQL on Linux](../../includes/applies-to-version/sql-asmi-sqlavm-sql-linux.md)]
 
-SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
+The SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by SQL Server Team. This ruleset is enhanced with the release of new versions, but at the same time, the API is built with the intent to give a highly customizable and extensible solution. So, users can tune the default rules and create their own.
+
+The SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
 The API can be used to assess:
  
-* Azure SQL Database Managed Instance and SQL Server versions 2012 and higher.
+* SQL Server on Azure Virtual Machines
 
-* SQL on Linux-based systems.
+* Azure SQL Database Managed Instance
+
+* SQL Server 2012 and higher
+
+* SQL on Linux-based systems
 
 The API is also used by SQL Server Assessment Extension for Azure Data Studio (ADS).
+
+>[!NOTE]
+>The SQL Assessment API provides assessment on a variety of areas, but it does not go deeply into security. We recommend you use [SQL Vulnerability Assessment](../../relational-databases/security/sql-vulnerability-assessment.md) to proactively improve your database security.
 
 ## Rules
 
 Rules (sometimes referred to as checks) are defined in JSON formatted files. The ruleset format requires a ruleset name and version to be specified. When you use custom rulesets, you can easily know which recommendations from what ruleset come.
 
-Microsoft's shipped ruleset is available on GitHub. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
+The Microsoft's shipped ruleset is available on GitHub. You can view the [entire ruleset](https://github.com/microsoft/sql-server-samples/blob/567d49a42d4cf10e4942b19290ab80828b451b77/samples/manage/sql-assessment-api/DefaultRuleset.csv) in the [samples repository](https://aka.ms/sql-assessment-api).
 
 ## SQL Assessment cmdlets and associated extensions
 
@@ -147,10 +156,11 @@ Specific rules have thresholds that are compared against the current value of a 
 
 You can string together rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft ruleset, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
 
-> [!IMPORTANT]  
-> We urge you not to use rulesets that come from untrusted sources until you thoroughly review them to make sure they are safe.
+>[!IMPORTANT]
+>We urge you not to use rulesets that come from untrusted sources until you thoroughly review them to make sure they are safe.
 
 ## Next steps
 
 * [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
-* [PowerShell](../../powershell/download-sql-server-ps-module.md).
+* [PowerShell](../../powershell/download-sql-server-ps-module.md)
+* [SQL Vulnerability Assessment](../../relational-databases/security/sql-vulnerability-assessment.md)

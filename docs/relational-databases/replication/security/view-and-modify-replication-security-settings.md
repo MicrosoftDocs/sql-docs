@@ -292,7 +292,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 1.  At the Publisher on the publication database, execute [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), specifying `@publication` and `@subscriber`. This returns subscription properties, including security settings for the Distribution Agent running at the Distributor.  
   
-2.  At the Publisher on the publication database, execute [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specifying `@publication`, `@subscriber`, `@subscriber_db**`, a value of `all` for `@article`, the name of the security property for `@property`, and the new value of the property for `@value`.  
+2.  At the Publisher on the publication database, execute [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specifying `@publication`, `@subscriber`, `@subscriber_db`, a value of `all` for `@article`, the name of the security property for `@property`, and the new value of the property for `@value`.  
   
 3.  Repeat step 2 for each of the following security properties being changed:  
   

@@ -4,7 +4,7 @@ description: In SQL Server, if necessary, bcp prompts for field length, default 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], field length"
   - "bcp utility [SQL Server], field length"
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Field Length by Using bcp (SQL Server)

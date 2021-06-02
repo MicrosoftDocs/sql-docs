@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "mssqlsystemresource.mdf file"
   - "Resource database [SQL Server]"
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

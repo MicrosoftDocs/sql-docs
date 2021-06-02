@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "CursorImplicitConversion event class"
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorImplicitConversion Event Class

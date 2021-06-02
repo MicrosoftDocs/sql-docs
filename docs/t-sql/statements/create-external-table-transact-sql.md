@@ -1,10 +1,10 @@
 ---
 description: "CREATE EXTERNAL TABLE (Transact-SQL)"
-title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: 01/27/2020
+ms.date: 06/01/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -18,14 +18,13 @@ helpviewer_keywords:
   - "External"
   - "External, table create"
   - "PolyBase, external table"
-ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 
-Creates an external table
+Creates an external table.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -83,7 +82,8 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 {
     | REJECT_TYPE = value | percentage
     | REJECT_VALUE = reject_value
-    | REJECT_SAMPLE_VALUE = reject_sample_value
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
 }
 
 <column_definition> ::=
@@ -101,7 +101,7 @@ The one to three-part name of the table to create. For an external table, SQL st
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.  
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -167,6 +167,12 @@ This example shows how the three REJECT options interact with each other. For ex
 - Percent of failed rows is recalculated as 50%. The percentage of failed rows has exceeded the 30% reject value.
 - The PolyBase query fails with 50% rejected rows after attempting to return the first 200 rows. Notice that matching rows have been returned before the PolyBase query detects the reject threshold has been exceeded.
 
+REJECTED_ROW_LOCATION = *Directory Location*   
+Introduced in SQL Server 2019 CU6. Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage-).
+
+The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
+
 SCHEMA_NAME
 The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
 
@@ -221,6 +227,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -241,7 +248,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -594,7 +601,7 @@ WITH
      );
 ```
 
-## See Also
+## See also
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -658,7 +665,7 @@ The one to three-part name of the table to create. For an external table, SQL st
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 > [!NOTE]
 > `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Database.
@@ -713,8 +720,9 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
-Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, i.e. when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
+Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table.
@@ -743,7 +751,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -762,7 +770,7 @@ WITH
 ( DATA_SOURCE = MyElasticDBQueryDataSrc)
 ```
 
-## See Also
+## See also
 
 - [Azure SQL Database elastic query overview](/azure/sql-database/sql-database-elastic-query-overview)
 - [Reporting across scaled-out cloud databases](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
@@ -850,7 +858,7 @@ The one to three-part name of the table to create. For an external table, only t
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 > [!NOTE]
 > `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
@@ -918,7 +926,7 @@ This example shows how the three REJECT options interact with each other. For ex
 REJECTED_ROW_LOCATION = *Directory Location*
 
 Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file.
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage-).
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
@@ -969,6 +977,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -989,7 +998,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -1043,7 +1052,7 @@ AS SELECT * FROM
 [dbo].[DimProduct_external] ;
 ```
 
-## See Also
+## See also
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -1115,7 +1124,7 @@ The one to three-part name of the table to create. For an external table, Analyt
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -1226,6 +1235,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -1248,7 +1258,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -1288,7 +1298,7 @@ FROM ClickStream
 ;
 ```
 
-## See Also
+## See also
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)

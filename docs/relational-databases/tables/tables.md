@@ -4,7 +4,7 @@ title: "Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/18/2019
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "tables [SQL Server]"
   - "table components [SQL Server]"
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tables

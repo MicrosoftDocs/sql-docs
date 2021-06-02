@@ -2,6 +2,34 @@
   "build_entry_point": "docs",
   "docsets_to_publish": [
     {
+      "docset_name": "data-migration",
+      "build_source_folder": "data-migration",
+      "build_output_subfolder": "data-migration",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "azure-data-studio",
+      "build_source_folder": "azure-data-studio",
+      "build_output_subfolder": "azure-data-studio",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "sql-content",
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",

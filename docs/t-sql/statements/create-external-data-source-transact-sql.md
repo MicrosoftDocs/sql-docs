@@ -1,10 +1,10 @@
 ---
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
-title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 02/26/2020
+ms.date: 03/05/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -66,7 +66,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
-    [ [ , ] CONNECTION_OPTIONS = '<name_value_pairs>']
+    [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
     [ [ , ] CREDENTIAL = <credential_name> ]
     [ [ , ] PUSHDOWN = { ON | OFF } ]
     [ [ , ] TYPE = { HADOOP | BLOB_STORAGE } ]
@@ -92,7 +92,7 @@ Provides the connectivity protocol and path to the external data source.
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
 | MongoDB or CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only        |
+| Generic ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only        |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. Only available in Azure SQL Edge.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge.                      |
@@ -121,16 +121,20 @@ Additional notes and guidance when setting the location:
 
 Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
 
+Applies to both generic `ODBC` connections, as well as built-in `ODBC` connectors for SQL Server, Oracle, Teradata, MongoDB, and CosmosDB.
 
-The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
+The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type.The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
-Refer to the `ODBC` product documentation for a list of permitted [CONNECTION_OPTIONS][connection_options]
+For additional information, see:
+
+- [Using connection string keywords][connection_options]
+- [ODBC Driver connection string keywords][connection_option_keyword]
 
 ### PUSHDOWN = *ON | OFF*
 
 States whether computation can be pushed down to the external data source. It is on by default.
 
-`PUSHDOWN` is supported when connecting to SQL Server, Oracle, Teradata, MongoDB, or ODBC at the external data source level.
+`PUSHDOWN` is supported when connecting to SQL Server, Oracle, Teradata, MongoDB, or generic ODBC at the external data source level.
 
 Enabling or disabling push-down at the query level is achieved through a [hint][hint_pb].
 
@@ -311,7 +315,9 @@ WITH
 
 ### F. Create external data source to reference a SQL Server named instance via PolyBase connectivity ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-To create an external data source that references a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use CONNECTION_OPTIONS to specify the instance name. In below example, `WINSQL2019` is the host name and `SQL2019` is the instance name.
+To create an external data source that references a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the instance name. 
+
+In example below, `WINSQL2019` is the host name and `SQL2019` is the instance name. `'Server=%s\SQL2019'` is the key value pair.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -334,7 +340,7 @@ WITH (
 
 ### G. Create external data source to reference Kafka
 
-In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The kafka external data source is only for data streaming and does not support predicate push down.
+In this example, the external data source is a Kafka server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The kafka external data source is only for data streaming and does not support predicate push down.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -410,7 +416,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
@@ -625,13 +631,13 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 [bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
 [openrowset]: ../functions/openrowset-transact-sql.md
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: /sql/t-sql/statements/create-external-data-source
 [alter_eds]: ./alter-external-data-source-transact-sql.md
 [cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
@@ -891,7 +897,7 @@ WITH
 
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: /sql/t-sql/statements/create-external-data-source
 [create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
 [create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 
@@ -901,7 +907,7 @@ WITH
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
@@ -1137,7 +1143,7 @@ WITH
 
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: /sql/t-sql/statements/create-external-data-source
 [create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
 [create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 
@@ -1147,8 +1153,9 @@ WITH
 <!-- PolyBase docs -->
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[connection_option_keyword]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md#odbc-driver-connection-string-keywords
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: /azure/azure-sql/database/elastic-query-overview

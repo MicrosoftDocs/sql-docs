@@ -1,10 +1,10 @@
 ---
 description: "View the Table Definition"
-title: "View the Table Definition | Microsoft Docs"
+title: "View the Table Definition"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/09/2021"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "displaying table properties"
   - "tables [SQL Server], properties"
   - "viewing table properties"
-ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Table Definition
@@ -58,14 +57,26 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example returns all columns from the `sys.tables` catalog view for the specified object.  
+3.  Copy and paste the following example into the query window and click **Execute**. The example executes the system stored procedure sp_help to return all column information for the specified object.  
   
-    ```  
-    SELECT * FROM sys.tables  
-    WHERE object_id = 1973582069;  
+```sql  
+EXEC sp_help 'dbo.mytable';
+```  
+    
+ For more information, see [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md).
+
+ You could alternatively query the system catalog views directly to query object metadata information about tables, schema, and columns. For example:  
   
-    ```  
-  
- For more information, see [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
-  
-###  <a name="TsqlExample"></a>  
+```sql
+SELECT s.name, t.name, c.* FROM sys.columns AS c
+INNER JOIN sys.tables AS t ON t.object_id = c.object_id
+INNER JOIN sys.schemas AS s ON s.schema_id = t.schema_id
+WHERE t.object_id = object_id('mytable') AND s.name = 'dbo';
+```
+    
+ For more information, see: 
+
+* [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)    
+* [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)    
+* [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)     
+

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # tempdb database
@@ -347,8 +347,8 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 ```
 
 ## Related content
-[SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
-[System databases](../../relational-databases/databases/system-databases.md)    
-[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
-[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
-[Move database files](../../relational-databases/databases/move-database-files.md)    
+- [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
+- [System databases](../../relational-databases/databases/system-databases.md)    
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
+- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
+- [Move database files](../../relational-databases/databases/move-database-files.md)    

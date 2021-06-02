@@ -4,7 +4,7 @@ description: An error from an attempt was made to install or update SQL Server N
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: "reference"

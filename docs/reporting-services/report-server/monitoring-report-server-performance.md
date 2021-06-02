@@ -64,13 +64,13 @@ SQL Server 2016 Reporting Services includes the following performance objects:
   
 -   **ReportServer:Service** and **ReportServerSharePoint:Service** to monitor HTTP-related events and memory management. These counters are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and they track HTTP-related events for the report server, such as requests, connections, and sign in attempts. This performance object also includes counters related to memory management.  
   
- If you have multiple report server instances on a single computer, you can monitor the instances together or separately. Choose which instances to include when you add a counter. For more information about using Performance Monitor (perfmon.msc) and adding counters, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)) product documentation.  
+ If you have multiple report server instances on a single computer, you can monitor the instances together or separately. Choose which instances to include when you add a counter. For more information about using Performance Monitor (perfmon.msc) and adding counters, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)) product documentation.  
   
 ## Other performance counters  
  Custom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters are provided only for the Reporting Services performance objects listed above. The following .NET Framework performance objects provide additional performance monitoring data for the report server.
  
  > [!NOTE]
- > Power BI Report Server and SQL Server Reporting Services 2017 and later do not include Reporting Services performance objects. There are [.NET Framework performance counters](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters) available to provide performance monitoring for the report server. 
+ > Power BI Report Server and SQL Server Reporting Services 2017 and later do not include Reporting Services performance objects. There are [.NET Framework performance counters](/dotnet/framework/debug-trace-profile/performance-counters) available to provide performance monitoring for the report server. 
  
 |Performance object|Notes|  
 |------------------------|-----------|  
@@ -94,4 +94,3 @@ SQL Server 2016 Reporting Services includes the following performance objects:
  [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
-  

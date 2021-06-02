@@ -2,7 +2,7 @@
 description: "sp_rename (Transact-SQL)"
 title: "sp_rename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/14/2020"
+ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -29,10 +29,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.  
   
 > [!NOTE]
-> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** and can only be used to rename a COLUMN in a user object.
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** and can only be used to rename a COLUMN in a user object in the **dbo** schema.
 
 > [!CAUTION]  
->  Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.  
+> Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,7 @@ In sp_rename (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynap
  You can change the name of an object or data type in the current database only. The names of most system data types and system objects cannot be changed.  
   
 ## Permissions  
- To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles  
+ To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles
   
 ## Examples  
   
@@ -217,7 +217,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 ### G. Renaming a column  
- The following example renames the `c1` column in the `table1` table to `col1`.  
+ The following example renames the `c1` column in the `table1` table to `col1`. 
+
+> [!NOTE]
+> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] feature is still in preview and is currently available only for objects in the **dbo** schema. 
   
 ```sql  
 CREATE TABLE table1 (c1 INT, c2 INT);

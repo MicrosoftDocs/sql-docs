@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -40,7 +40,8 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 [ ; ]  
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  *distribution_id*  

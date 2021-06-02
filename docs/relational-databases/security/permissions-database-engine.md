@@ -4,7 +4,7 @@ description: Consult this complete list of SQL Server permissions to find out wh
 ms.custom: ""
 ms.date: "10/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -29,10 +29,10 @@ Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has as
 The total number of permissions for [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] is 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] exposes 254 permissions. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and a few permissions only make sense on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 New permissions are being introduced gradually with new release. [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] exposed 238 permissions. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) topic specifies which permissions are new in recent versions.
 
-Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
+Once you understand the permissions, apply server level permissions to logins or server roles and database level permissions users or database roles with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
 ```sql
-GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
-REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
+GRANT SELECT ON SCHEMA::HumanResources TO role_HumanResourcesDept;
+REVOKE SELECT ON SCHEMA::HumanResources TO role_HumanResourcesDept;
 ```   
 For tips on planning a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
@@ -355,7 +355,18 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
+|XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|
+
+## <a name="asdbpermissions"></a> Azure SQL Database Permissions
+
+These permissions currently only apply to Azure SQL Database, but are not the only permissions for Azure SQL Database. See the [Permission](#_permissions) section above for additional Azure SQL Database permissions.
+
+| Base securable | Granular permissions on base securable | Permission type code | Securable that contains base securable | Permission on container securable that implies granular permission on base securable |Description |
+|--|--|--|--|--|--|
+|DATABASE|ENABLE LEDGER|EL|SERVER|CONTROL|Enables the grantee to create new ledger tables.|
+|DATABASE|ALTER LEDGER|ALR|SERVER|CONTROL|Enables the grantee to drop ledger tables.|
+|DATABASE|VIEW LEDGER CONTENT|VLC|SERVER|CONTROL|Enables the grantee to view database-level ledger catalog views and invoke verification.|
+|DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|Enables the grantee to generate a ledger digest.|
   
 ##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  Checking permissions can be complex. The permission check algorithm includes overlapping group memberships and ownership chaining, both explicit and implicit permission, and can be affected by the permissions on securable classes that contain the securable entity. The general process of the algorithm is to collect all the relevant permissions. If no blocking DENY is found, the algorithm searches for a GRANT that provides sufficient access. The algorithm contains three essential elements, the **security context**, the **permission space**, and the **required permission**.  
@@ -403,7 +414,8 @@ For tips on planning a permissions system, see [Getting Started with Database En
 4.  For that **security context**, collect all the permissions that are granted or denied for the **permission space**. The permission can be explicitly stated as a GRANT, GRANT WITH GRANT, or DENY; or the permissions can be an implied or covering permission GRANT or DENY. For example, CONTROL permission on a schema implies CONTROL on a table. And CONTROL on a table implies SELECT. Therefore, if CONTROL on the schema was granted, SELECT on the table is granted. If CONTROL was denied on the table, SELECT on the table is denied.  
   
     > [!NOTE]  
-    >  A GRANT of a column-level permission overrides a DENY at the object level.  
+    >  A GRANT of a column-level permission overrides a DENY at the object level.
+    >  You can read more about his here: [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md).
   
 5.  Identify the **required permission**.  
   

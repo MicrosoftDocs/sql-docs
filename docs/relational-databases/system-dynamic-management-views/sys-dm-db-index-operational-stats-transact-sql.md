@@ -4,7 +4,7 @@ title: "sys.dm_db_index_operational_stats (Transact-SQL)"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "sys.dm_db_index_operational_stats dynamic management function"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns current lower-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
     

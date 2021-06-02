@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_xtp_transaction_stats (Transact-SQL)"
-title: "sys.dm_xtp_transaction_stats (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_xtp_transaction_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "03/12/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -16,7 +16,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_xtp_transaction_stats dynamic management view"
-ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -32,7 +31,7 @@ ms.author: wiassaf
 |total_count|**bigint**|The total number of transactions that have run in the In-Memory OLTP database engine.|  
 |read_only_count|**bigint**|The number of read-only transactions.|  
 |total_aborts|**bigint**|Total number of transactions that were aborted, either through user or system abort.|  
-|user_aborts|**bigint**|Number of aborts initiated by the system. For example, because of write conflicts, validation failures, or dependency failures.|  
+|system_aborts|**bigint**|Number of aborts initiated by the system. For example, because of write conflicts, validation failures, or dependency failures.|  
 |validation_failures|**bigint**|The number of times a transaction has aborted due to a validation failure.|  
 |dependencies_taken|**bigint**|Internal use only.|  
 |dependencies_failed|**bigint**|The number of times a transaction aborts because a transaction on which it was dependent aborts.|  

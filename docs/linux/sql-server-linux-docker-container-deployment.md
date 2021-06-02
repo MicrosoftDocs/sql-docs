@@ -1,8 +1,8 @@
 ---
 title: Deploy and connect to SQL Server Docker containers
 description: Explore how SQL Server can be deployed on Docker containers and learn about various tools to connect to SQL Server from inside and outside the container
-author: vin-yu
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
@@ -204,7 +204,10 @@ Packages
 ## <a id="tags"></a> Run a specific SQL Server container image
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported. You can retrieve a list of all available tags for mssql/server at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
+>
+> - Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
+> - You can retrieve a list of all available tags for mssql/server at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 

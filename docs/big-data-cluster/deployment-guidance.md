@@ -431,4 +431,5 @@ To learn more about big data cluster deployment, see the following resources:
 
 - [Configure deployment settings for big data clusters](deployment-custom-configuration.md)
 - [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)
+- [Big Data Clusters FAQ](big-data-cluster-faq.yml)  

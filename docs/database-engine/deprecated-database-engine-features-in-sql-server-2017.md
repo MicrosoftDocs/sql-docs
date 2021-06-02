@@ -3,7 +3,7 @@ title: "Deprecated database engine features in SQL Server 2017 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 description: Find out about deprecated database engine features that are still available in SQL Server 2017 (14.x), but shouldn't be used in new applications.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "03/03/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -22,13 +22,12 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features should not be used in new applications.  
+  This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features should not be used in new applications.  
   
 When a feature is marked deprecated, it means:
-
-- The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
-- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
-- For new development work, we do not recommend using deprecated features.      
+- The feature is in maintenance mode only. No new changes will be done, including those related to addressing inter-operability with new features.
+- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently discontinue (remove) the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
+- For new development work, do not use deprecated features. For existing applications, plan to modify applications that currently use these features as soon as possible.     
 
 You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
@@ -43,8 +42,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## Features deprecated in the next version of SQL Server
-
-The following SQL Server Database Engine features are deprecated in the next version of SQL Server. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.
+The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.
 
 ### Back up and Restore
 
@@ -56,7 +54,7 @@ The following SQL Server Database Engine features are deprecated in the next ver
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL Server version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
+Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
 
 ### Database objects
 

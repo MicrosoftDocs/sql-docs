@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "deleting data"
   - "inserting data"
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Updategrams to Modify Data in SQLXML 4.0

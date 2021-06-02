@@ -4,7 +4,7 @@ description: SQL Server 2019 provides an XML schema that defines syntax for writ
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], format files"
   - "XML format files [SQL Server]"
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Format Files (SQL Server)

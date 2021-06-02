@@ -4,7 +4,7 @@ description: SQL Server supports exporting data in bulk from a SQL Server table 
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server]"
   - "importing data"
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Import and Export of Data (SQL Server)

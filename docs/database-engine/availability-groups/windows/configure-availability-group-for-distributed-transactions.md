@@ -136,6 +136,11 @@ In order to participate in distributed transactions, an instance of [!INCLUDE[SQ
 
 When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. To support distributed transactions during this movement, each database should act as a separate resource manager and must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] creates a resource manager for each database and registers with DTC using a unique RMID. In this configuration, the database is a resource manager for DTC transactions.
 
+>[!IMPORTANT]
+>Note that the DTC has a limit of 32 enlistments per distributed transaction. Because each database within an availability group enlists with the DTC separately, if your transaction involves more than 32 databases, you may get the following error when [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] attempts to enlist the 33rd database:
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
+
 For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], see [Distributed transactions](#distTran)
 
 ## Manage unresolved transactions

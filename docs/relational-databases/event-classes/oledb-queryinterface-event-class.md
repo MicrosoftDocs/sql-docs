@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "OLEDB QueryInterface event class"
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB QueryInterface Event Class

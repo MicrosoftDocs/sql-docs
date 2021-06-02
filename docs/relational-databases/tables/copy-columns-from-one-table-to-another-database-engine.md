@@ -4,7 +4,7 @@ title: "Copy Columns from One Table to Another (Database Engine) | Microsoft Doc
 ms.custom: ""
 ms.date: "09/01/2016"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "copying columns"
   - "columns [SQL Server], copying"
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Copy Columns from One Table to Another (Database Engine)

@@ -31,8 +31,10 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 - PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. The following Hadoop providers are supported:
 
   - Hortonworks HDP 1.3, 2.1-2.6, 3.0 on Linux
-  - Hortonworks HDP 1.3, 2.1-2.3 on Window Server
+  - Hortonworks HDP 1.3, 2.1-2.3, 3.1<sup>*</sup> on Window Server
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 on Linux
+
+   <sup>*</sup> Hortonworks HDB 3.1 requires SQL Server 2019 CU9 (15.0.4102) or later.
 
 > [!NOTE]
 > PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Hadoop encryption zones.
@@ -76,6 +78,9 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
 1. On the SQL Server machine, in the **yarn-site.xml file,** find the **yarn.application.classpath** property. Paste the value from the Hadoop machine into the value element.  
   
 1. For all CDH 5.X versions, you will need to add the mapreduce.application.classpath configuration parameters either to the end of your yarn-site.xml file or into the mapred-site.xml file. HortonWorks includes these configurations within the yarn.application.classpath configurations. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md) for examples.
+
+>[!IMPORTANT]
+>To use the computation pushdown functionality with Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
 
 ## Configure an external table
 

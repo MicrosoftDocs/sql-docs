@@ -3,7 +3,7 @@ title: "Prepare data for bulk export or import"
 description: This article describes how to plan bulk import and bulk export operations, including data file format requirements and when to use the bcp utility.
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "CSV files [SQL Server]"
   - "quoted fields in CSV files [SQL Server]"
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---

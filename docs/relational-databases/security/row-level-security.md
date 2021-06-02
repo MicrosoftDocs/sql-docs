@@ -4,7 +4,7 @@ description: Learn how Row-Level Security uses group membership or execution con
 ms.custom: ""
 ms.date: "09/01/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: "security"
 ms.topic: conceptual
@@ -154,7 +154,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Filestream:** RLS is incompatible with Filestream.  
   
-- **PolyBase:** RLS is supported with Polybase external tables for Azure Synapse only.
+- **PolyBase:** RLS is supported with external tables in Azure Synapse and SQL Server 2019 CU7 or higher. 
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -183,41 +183,45 @@ It is possible to cause information leakage through the use of carefully crafted
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
-CREATE USER Sales1 WITHOUT LOGIN;  
-CREATE USER Sales2 WITHOUT LOGIN;  
+CREATE USER SalesRep1 WITHOUT LOGIN;  
+CREATE USER SalesRep2 WITHOUT LOGIN;
+GO
 ```
 
 Create a table to hold data.  
 
 ```sql
-CREATE TABLE Sales  
+CREATE SCHEMA Sales
+GO
+CREATE TABLE Sales.Orders 
     (  
     OrderID int,  
-    SalesRep sysname,  
-    Product varchar(10),  
-    Qty int  
+    SalesRep nvarchar(50),  
+    Product nvarchar(50),  
+    Quantity smallint  
     );  
 ```
 
  Populate the table with six rows of data, showing three orders for each sales representative.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales.Orders  VALUES (1, 'SalesRep1', 'Valve', 5);
+INSERT INTO Sales.Orders  VALUES (2, 'SalesRep1', 'Wheel', 2);
+INSERT INTO Sales.Orders  VALUES (3, 'SalesRep1', 'Valve', 4);
+INSERT INTO Sales.Orders  VALUES (4, 'SalesRep2', 'Bracket', 2);
+INSERT INTO Sales.Orders  VALUES (5, 'SalesRep2', 'Wheel', 5);
+INSERT INTO Sales.Orders  VALUES (6, 'SalesRep2', 'Seat', 5);
 -- View the 6 rows in the table  
-SELECT * FROM Sales;
+SELECT * FROM Sales.Orders;
 ```
 
 Grant read access on the table to each of the users.  
 
 ```sql
-GRANT SELECT ON Sales TO Manager;  
-GRANT SELECT ON Sales TO Sales1;  
-GRANT SELECT ON Sales TO Sales2;  
+GRANT SELECT ON Sales.Orders TO Manager;  
+GRANT SELECT ON Sales.Orders TO SalesRep1;  
+GRANT SELECT ON Sales.Orders TO SalesRep2; 
+GO
 ```
 
 Create a new schema, and an inline table-valued function. The function returns 1 when a row in the SalesRep column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
@@ -226,44 +230,47 @@ Create a new schema, and an inline table-valued function. The function returns 1
 CREATE SCHEMA Security;  
 GO  
   
-CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+CREATE FUNCTION Security.tvf_securitypredicate(@SalesRep AS nvarchar(50))  
     RETURNS TABLE  
 WITH SCHEMABINDING  
 AS  
-    RETURN SELECT 1 AS fn_securitypredicate_result
+    RETURN SELECT 1 AS tvf_securitypredicate_result
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+GO
 ```
 
 Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter  
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesRep)
-ON dbo.Sales  
+ADD FILTER PREDICATE Security.tvf_securitypredicate(SalesRep)
+ON Sales.Orders
 WITH (STATE = ON);  
+GO
 ```
 
 Allow SELECT permissions to the fn_securitypredicate function 
 ```sql
-GRANT SELECT ON security.fn_securitypredicate TO Manager;  
-GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
-GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+GRANT SELECT ON Security.tvf_securitypredicate TO Manager;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+
 ```
 
 Now test the filtering predicate, by selected from the Sales table as each user.
 
 ```sql
-EXECUTE AS USER = 'Sales1';  
-SELECT * FROM Sales;
+EXECUTE AS USER = 'SalesRep1';  
+SELECT * FROM Sales.Orders;
 REVERT;  
   
-EXECUTE AS USER = 'Sales2';  
-SELECT * FROM Sales;
+EXECUTE AS USER = 'SalesRep2';  
+SELECT * FROM Sales.Orders;
 REVERT;  
   
 EXECUTE AS USER = 'Manager';  
-SELECT * FROM Sales;
-REVERT;  
+SELECT * FROM Sales.Orders;
+REVERT; 
 ```
 
 The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
@@ -280,14 +287,15 @@ Now Sales1 and Sales2 users can see all six rows.
 Connect to the SQL database to clean up resources
 
 ```sql
-DROP USER Sales1;
-DROP USER Sales2;
+DROP USER SalesRep1;
+DROP USER SalesRep2;
 DROP USER Manager;
 
 DROP SECURITY POLICY SalesFilter;
-DROP TABLE Sales;
-DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE Sales.Orders;
+DROP FUNCTION Security.tvf_securitypredicate;
 DROP SCHEMA Security;
+DROP SCHEMA Sales;
 ```
 
 ### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse external table
@@ -528,6 +536,152 @@ DROP SECURITY POLICY Security.SalesFilter;
 DROP TABLE Sales;
 DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
+```
+
+### <a name="Lookup"></a> D. Scenario for using a lookup table for the security predicate
+
+This example uses a lookup table for the link between the user identifier and the value being filtered, rather than having to specify the user identifier in the fact table. It creates three users and creates and populates a fact table with six rows and a lookup table with two rows. It then creates an inline table-valued function that joins the fact table to the lookup to get the user identifier, and a security policy for the table. The example then shows how select statements are filtered for the various users.  
+  
+Create three user accounts that will demonstrate different access capabilities.  
+
+```sql  
+CREATE USER Manager WITHOUT LOGIN;  
+CREATE USER Sales1 WITHOUT LOGIN;  
+CREATE USER Sales2 WITHOUT LOGIN;  
+```
+
+Create a sample schema and a fact table to hold data.  
+
+```sql
+CREATE SCHEMA Sample;
+
+CREATE TABLE Sample.Sales  
+    (  
+    OrderID int,  
+    Product varchar(10),  
+    Qty int 
+    );    
+```
+
+ Populate the fact table with six rows of data.  
+
+```sql
+INSERT INTO Sample.Sales VALUES (1, 'Valve', 5);
+INSERT INTO Sample.Sales VALUES (2, 'Wheel', 2);
+INSERT INTO Sample.Sales VALUES (3, 'Valve', 4);
+INSERT INTO Sample.Sales VALUES (4, 'Bracket', 2);
+INSERT INTO Sample.Sales VALUES (5, 'Wheel', 5);
+INSERT INTO Sample.Sales VALUES (6, 'Seat', 5);
+-- View the 6 rows in the table  
+SELECT * FROM Sample.Sales;
+```
+
+Create a table to hold the lookup data – in this case a relationship between Salesrep and Product.  
+
+```sql
+CREATE TABLE Sample.Lk_Salesman_Product
+  ( Salesrep sysname, 
+    Product varchar(10)
+  ) ;
+```
+
+ Populate the lookup table with sample data, linking one Product to each sales representative.  
+
+```sql
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
+-- View the 2 rows in the table
+SELECT * FROM Sample.Lk_Salesman_Product;
+```
+
+Grant read access on the fact table to each of the users.  
+
+```sql
+GRANT SELECT ON Sample.Sales TO Manager;  
+GRANT SELECT ON Sample.Sales TO Sales1;  
+GRANT SELECT ON Sample.Sales TO Sales2;  
+```
+
+Create a new schema, and an inline table-valued function. The function returns 1 when a user queries the fact table Sales and the SalesRep column of the table Lk_Salesman_Product is the same as the user executing the query (`@SalesRep = USER_NAME()`) when joined to the fact table on the Product column, or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security ;
+
+CREATE FUNCTION Security.fn_securitypredicate
+         (@Product AS varchar(10))
+RETURNS TABLE
+WITH SCHEMABINDING
+AS 
+           RETURN ( SELECT 1 as Result
+                     FROM Sample.Sales f
+            INNER JOIN Sample.Lk_Salesman_Product s
+                     ON s.Product = f.Product
+            WHERE ( f.product = @Product
+                    AND s.SalesRep = USER_NAME() )
+                 OR USER_NAME() = 'Manager'
+                   ) ;
+ 
+```
+
+Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.
+
+```sql
+CREATE SECURITY POLICY SalesFilter 
+ADD FILTER PREDICATE Security.fn_securitypredicate(Product)
+ON Sample.Sales
+WITH (STATE = ON) ;
+```
+
+Allow SELECT permissions to the fn_securitypredicate function 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
+Now test the filtering predicate, by selected from the Sales table as each user.
+
+```sql
+EXECUTE AS USER = 'Sales1'; 
+SELECT * FROM Sample.Sales;
+-- This will return just the rows for Product 'Valve' (as specified for ‘Sales1’ in the Lk_Salesman_Product table above)
+REVERT;
+
+EXECUTE AS USER = 'Sales2'; 
+SELECT * FROM Sample.Sales;
+-- This will return just the rows for Product 'Wheel' (as specified for ‘Sales2’ in the Lk_Salesman_Product table above)
+REVERT; 
+
+EXECUTE AS USER = 'Manager'; 
+SELECT * FROM Sample.Sales;
+-- This will return all rows with no restrictions
+REVERT;
+```
+
+The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
+
+Alter the security policy to disable the policy.
+
+```sql
+ALTER SECURITY POLICY SalesFilter  
+WITH (STATE = OFF);  
+```
+
+Now Sales1 and Sales2 users can see all six rows.
+
+Connect to the SQL database to clean up resources
+
+```sql
+DROP USER Sales1;
+DROP USER Sales2;
+DROP USER Manager;
+
+DROP SECURITY POLICY SalesFilter;
+DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE Sample.Sales;
+DROP TABLE Sample.Lk_Salesman_Product;
+DROP SCHEMA Security; 
+DROP SCHEMA Sample;
 ```
 
 ## See Also

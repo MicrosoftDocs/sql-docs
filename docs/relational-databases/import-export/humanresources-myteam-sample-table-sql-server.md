@@ -4,7 +4,7 @@ description: To run code examples for importing and exporting bulk data in SQL S
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)

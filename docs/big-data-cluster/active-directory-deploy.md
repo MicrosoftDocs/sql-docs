@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/11/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,6 +22,21 @@ For deployment of BDC with AD integration, there is some additional information 
 By using the `kubeadm-prod` profile (or `openshift-prod` starting with CU5 release), you will automatically have the placeholders for the security-related information and endpoint-related information that is required for AD integration.
 
 Furthermore, you need to provide credentials that [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] will use to create the necessary objects in AD. These credentials are provided as environment variables.
+
+### Traffic and ports
+
+Verify that any firewalls or third-party applications allow the required ports for Active Directory communication. 
+
+![Traffic diagram between Big Data Cluster and Active Directory. Controller, Security Support Service, and Other Cluster Services speak via LDAP / Kerberos to Domain Controllers. The BDC DNS Proxy Service speaks via DNS to the DNS Servers.](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
+
+Requests are made on these protocols to and from the Kubernetes cluster services to the Active Directory domain, and so should be allowed incoming and outgoing in any firewall or third-party application listening on the required ports for both TCP and UDP. The standard port numbers that Active Directory uses:
+
+| Service | Port |
+|:---|:---|
+| DNS | 53 |
+| LDAP <BR> LDAPS | 389<BR> 636 |
+| Kerberos | 88 |
+| Global Catalog port <BR>via LDAP<BR>via LDAPS |<BR> 3268 <BR> 3269 |
 
 ## Set security environment variables
 
@@ -40,21 +55,21 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: contains the list of domain’s DNS servers IP addresses. 
+- `security.activeDirectory.dnsIpAddresses`: contains the list of domain's DNS servers IP addresses. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
   > When multiple domain controllers are serving a domain, use the primary domain controller (PDC) as the first entry in the `domainControllerFullyQualifiedDns` list in the security config. To get the PDC name, type `netdom query fsmo`, at the command prompt, and then press **ENTER**.
 
-- `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`). The value of provided for this parameter should be fully-qualified.
+- `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (for example, `CONTOSO.LOCAL`). The value of provided for this parameter should be fully-qualified.
 
-- `security.activeDirectory.netbiosDomainName` **Optional parameter**: This is the NETBIOS name of the AD domain. In majority of the cases, this will be the first label of the AD domain name. For cases where it differs, use this parameter to define the NETBIOS domain name. This value should not contain any dots. Usually this name is used to qualify the user accounts in the domain. E.g. CONTOSO\user where CONTOSO is the NETBIOS domain name.
+- `security.activeDirectory.netbiosDomainName` **Optional parameter**: This is the NETBIOS name of the AD domain. In most cases, this will be the first label of the AD domain name. For cases where it differs, use this parameter to define the NETBIOS domain name. This value should not contain any dots. Usually this name is used to qualify the user accounts in the domain. For example, CONTOSO\user, where CONTOSO is the NETBIOS domain name.
 
   > [!NOTE]
   > Support for a configuration where the Active Directory domain name is different than the Active Directory domain's **NETBIOS** name using the *security.activeDirectory.netbiosDomainName* was enabled starting with SQL Server 2019 CU9.
 
-- `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`).
+- `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (for example, `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group will have the `bdcAdmin` cluster role which will give them administrator permissions in the cluster. This means that they have [`sysadmin` permissions in SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [`superuser` permissions in HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User), and admin permissions when connected to the controller endpoint.
 
@@ -65,7 +80,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 AD groups in this list are mapped to the `bdcUser` big data cluster role and they need to be granted access to SQL Server (see [SQL Server permissions](../relational-databases/security/permissions-hierarchy-database-engine.md)) or HDFS (see [HDFS permissions Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). When connected to the controller endpoint, these users can only list the endpoints available in the cluster using `azdata bdc endpoint list` command.
 
-For details on how to update the AD groups for this settings see [Manage Big Data Cluster access in Active Directory
+For details on how to update the AD groups for these settings see [Manage Big Data Cluster access in Active Directory
 mode](manage-user-access.md).
 
   >[!TIP]
@@ -219,11 +234,11 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 You should now have set all the required parameters for a deployment of BDC with Active Directory integration.
 
-You can now deploy the BDC cluster integrated with Active Directory using the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
+You can now deploy the BDC cluster integrated with Active Directory using the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], see the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
 
 ## Verify reverse DNS entry for domain controller
 
-Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the domain name on the domain controller, to see that it can be resolved to the domain controller IP address.
+Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the IP address of the domain controller, to see that it can be resolved to the domain controller’s FQDN.
 
 ## Known issues and limitations
 

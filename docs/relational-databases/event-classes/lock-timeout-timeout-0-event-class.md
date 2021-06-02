@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Timeout event class"
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Timeout (timeout &gt; 0) Event Class

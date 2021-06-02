@@ -4,7 +4,7 @@ description: When you design a database in SQL Server, estimating its size can h
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "estimating database size"
   - "designing databases [SQL Server], estimating size"
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Database

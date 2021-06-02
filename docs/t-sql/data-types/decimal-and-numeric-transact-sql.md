@@ -3,7 +3,7 @@ title: "decimal and numeric (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the decimal and numeric data types. Decimal and numeric are synonyms for numeric data types that have a fixed precision and scale."
 ms.date: "09/10/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
@@ -38,7 +38,7 @@ The maximum total number of decimal digits to be stored. This number includes bo
   
 > [!NOTE]  
 >  Informatica only supports 16 significant digits, regardless of the precision and scale specified.  
-  
+
 *s* (scale)  
 The number of decimal digits that are stored to the right of the decimal point. This number is subtracted from *p* to determine the maximum number of digits to the left of the decimal point. Scale must be a value from 0 through *p*, and can only be specified if precision is specified. The default scale is 0 and so 0 <= *s* \<= *p*. Maximum storage sizes vary, based on the precision.
   

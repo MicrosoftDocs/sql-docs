@@ -4,7 +4,7 @@ description: ODBC manages transactions at the connection level, committing or ro
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"

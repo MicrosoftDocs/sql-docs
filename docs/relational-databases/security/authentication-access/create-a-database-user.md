@@ -4,7 +4,7 @@ description: Learn how to create the most common types of database users by usin
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

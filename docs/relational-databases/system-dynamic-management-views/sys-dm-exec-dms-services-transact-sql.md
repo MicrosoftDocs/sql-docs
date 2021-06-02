@@ -4,7 +4,7 @@ title: "sys.dm_exec_dms_services (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -22,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_dms_services (Transact-SQL)
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Holds information about all of the DMS services running on the PolyBase compute nodes. It lists one row per service instance.  
   

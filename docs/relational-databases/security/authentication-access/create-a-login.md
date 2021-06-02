@@ -4,7 +4,7 @@ description: Learn how to create a login in SQL Server or Azure SQL Database by 
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

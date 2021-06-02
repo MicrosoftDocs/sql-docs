@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server]"
   - "OLE Automation [SQL Server], about OLE Automation"
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE Automation Objects in Transact-SQL

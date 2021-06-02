@@ -19,7 +19,7 @@ ms.reviewer: v-deshtehari
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 > [!IMPORTANT]
-> Event counters are applied to **.NET Core 3.1**, **.NET Standard 2.1** and above. And this feature is available since `Microsoft.Data.SqlClient` **version 3.0.0**.
+> Event counters are available when targeting **.NET Core 3.1** and higher or **.NET Standard 2.1** and higher. This feature is available starting with `Microsoft.Data.SqlClient` **version 3.0.0**.
 
 You can use <xref:Microsoft.Data.SqlClient> event counters to monitor the status of your application and the connection resources that it uses. Event counters can be monitored by `.NET CLI global tools` and `perfView` or can be accessed programmatically using the <xref:System.Diagnostics.Tracing.EventListener> class in the <xref:System.Diagnostics.Tracing> namespace.
 
@@ -57,25 +57,25 @@ You can use [dotnet-counters](/dotnet/core/diagnostics/dotnet-counters) and [dot
 
 #### Out-of-proc example
 
-The following command, runs, and collects SqlClient event counters values once every second. Replacing `EventCounterIntervalSec=1` with a higher value allows collection of a smaller trace with less granularity in the counter data.
+The following command runs and collects SqlClient event counters values once every second. Replacing `EventCounterIntervalSec=1` with a higher value allows collection of a smaller trace with less granularity in the counter data.
 
 ```Console
 PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterIntervalSec=1 run "<application-Path>"
 ```
 
-The following command, collects SqlClient event counters values once every second.
+The following command collects SqlClient event counters values once every second.
 
 ```Console
 dotnet-trace collect --process-id <pid> --providers Microsoft.Data.SqlClient.EventSource:0:1:EventCounterIntervalSec=1
 ```
 
-The following command, monitor SqlClient event counters values once every three seconds.
+The following command monitors SqlClient event counters values once every three seconds.
 
 ```Console
 dotnet-counters monitor Microsoft.Data.SqlClient.EventSource -p <process-id> --refresh-interval 3
 ```
 
-The following command, monitor selected SqlClient event counters values once every second.
+The following command monitors selected SqlClient event counters values once every second.
 
 ```Console
 dotnet-counters monitor Microsoft.Data.SqlClient.EventSource[hard-connects,hard-disconnects] -p <process-id>
@@ -83,14 +83,14 @@ dotnet-counters monitor Microsoft.Data.SqlClient.EventSource[hard-connects,hard-
 
 ### Consume in-proc
 
-You can consume the counter values via the [EventListener](/dotnet/api/system.diagnostics.tracing.eventlistener) API. An `EventListener` is an in-proc way of consuming any events written by all instances of an [EventSource](/dotnet/api/system.diagnostics.tracing.eventsource) in your application. For more information, see [EventListener](/dotnet/api/system.diagnostics.tracing.eventlistener).
+You can consume the counter values via the [EventListener](/dotnet/api/system.diagnostics.tracing.eventlistener) API. An `EventListener` is an in-proc way of consuming any event written by instances of an [EventSource](/dotnet/api/system.diagnostics.tracing.eventsource) in your application. For more information, see [EventListener](/dotnet/api/system.diagnostics.tracing.eventlistener).
 
 #### In-proc example
 
-The following sample code, enables events with `EventCounterIntervalSec=1` if event source was `Microsoft.Data.SqlClient.EventSource`. And it writes the counter name with its value that has `Mean` property on each event counter update.
+The following sample code captures `Microsoft.Data.SqlClient.EventSource` events using `EventCounterIntervalSec=1`. It writes the counter name and its `Mean` value on each event counter update.
 
 > [!NOTE]
-> It's required to specify the `EventCounterIntervalSec` property value while enabling event.
+> It's required to specify the `EventCounterIntervalSec` property value when enabling this event.
 
 [!code-csharp[SqlClientDiagnosticCounter#1](~/../sqlclient/doc/samples/SqlClientDiagnosticCounter.cs#1)]
 

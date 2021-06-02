@@ -135,13 +135,16 @@ azdata arc postgres backup restore --server-name -sn
 ### Examples
 Restore a backup by ID
 ```bash
-azdata arc postgres backup restore -sn pg -id 123e4567e89b12d3a456426655440000```
+azdata arc postgres backup restore -sn pg -id 123e4567e89b12d3a456426655440000
+```
 Restore a backup by time (point-in-time restore)
 ```bash
-azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time "2020-11-18 17:25:34Z"```
+azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time "2020-11-18 17:25:34Z"
+```
 Restore a backup by time span (point-in-time restore)
 ```bash
-azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time 1d```
+azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time 1d
+```
 ### Required Parameters
 #### `--server-name -sn`
 Name of the Azure Arc enabled PostgreSQL Hyperscale server group.
@@ -151,7 +154,7 @@ ID of the backup. If not specified, the most recent backup taken will be restore
 #### `--source-server-name -ssn`
 Name of the source Azure Arc enabled PostgreSQL Hyperscale server group. If not provided, the backup will be restored in place on the server group identified by --server-name.
 #### `--time -t`
-The point in time to restore to, given either as a timestamp or a number and suffix (m for minutes, h for hours, d for days, and w for weeks). E.g. 1.5h goes back 90 minutes. If specifed, --source-server-name must be given to restore the backup from a separate Azure Arc enabled PostgreSQL Hyperscale server group.
+The point in time to restore to, given either as a timestamp or a number and suffix (m for minutes, h for hours, d for days, and w for weeks). E.g. 1.5h goes back 90 minutes. If specified, --source-server-name must be given to restore the backup from a separate Azure Arc enabled PostgreSQL Hyperscale server group.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

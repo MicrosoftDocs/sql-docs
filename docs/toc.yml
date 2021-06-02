@@ -12553,6 +12553,40 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md
       - name: sys.dm_external_script_requests
         href: relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md
+      - name: sys.dm_pdw_dms_cores
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md
+      - name: sys.dm_pdw_dms_external_work
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md
+      - name: sys.dm_pdw_dms_workers
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md
+      - name: sys.dm_pdw_errors
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md
+      - name: sys.dm_pdw_exec_connections
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md
+      - name: sys.dm_pdw_exec_requests
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
+      - name: sys.dm_pdw_exec_sessions
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
+      - name: sys.dm_pdw_nodes_exec_query_profiles
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_statistics_xml
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_sql_text
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_text_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
+      - name: sys.dm_pdw_hadoop_operations
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
+      - name: sys.dm_pdw_query_stats_xe
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-transact-sql.md
+      - name: sys.dm_pdw_query_stats_xe_file
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md
+      - name: sys.dm_pdw_request_steps
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md
+      - name: sys.dm_pdw_sql_requests
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md
     - name: Extended Events
       href: relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md
       items:
@@ -12807,32 +12841,6 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md
       - name: sys.dm_pdw_diag_processing_stats
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-diag-processing-stats-transact-sql.md
-      - name: sys.dm_pdw_dms_cores
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md
-      - name: sys.dm_pdw_dms_external_work
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md
-      - name: sys.dm_pdw_dms_workers
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md
-      - name: sys.dm_pdw_errors
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md
-      - name: sys.dm_pdw_exec_connections
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md
-      - name: sys.dm_pdw_exec_requests
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
-      - name: sys.dm_pdw_exec_sessions
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_query_plan
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
-      - name: sys.dm_pdw_nodes_exec_query_profiles
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_query_statistics_xml
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_sql_text
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_text_query_plan
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
-      - name: sys.dm_pdw_hadoop_operations
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
       - name: sys.dm_pdw_lock_waits
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md
       - name: sys.dm_pdw_network_credentials
@@ -12849,16 +12857,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-os-performance-counters-transact-sql.md
       - name: sys.dm_pdw_os_threads
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-os-threads-transact-sql.md
-      - name: sys.dm_pdw_query_stats_xe
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-transact-sql.md
-      - name: sys.dm_pdw_query_stats_xe_file
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md
-      - name: sys.dm_pdw_request_steps
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md
       - name: sys.dm_pdw_resource_waits
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md
-      - name: sys.dm_pdw_sql_requests
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md
       - name: sys.dm_pdw_sys_info
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-sys-info-transact-sql.md
       - name: sys.dm_pdw_wait_stats

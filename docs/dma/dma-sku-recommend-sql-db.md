@@ -40,9 +40,9 @@ The following are instructions to help you determine the SKU recommendations and
 
 The first step in the process is to collect performance data points for your SQL Server source databases using system DMVs . 
 
-1. In the DMA folder, locate the PowerShell file SkuRecommendationDataCollectionScript.ps1. This file is required to collect the performance counters.
+1. In the DMA installation folder, locate the SQLAssessmentConsole folder and
 
-    ![PowerShell file shown in DMA folder](../dma/media/dma-sku-recommend-data-collection-file.png)
+    ![SKUConsoleApplication.exe shown in DMA folder](../dma/media/dma-sku-recommend-console-location.jpg)
 
 2. Run the PowerShell script with the following arguments:
     - **ComputerName**: The name of the computer that hosts your databases.

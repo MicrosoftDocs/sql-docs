@@ -20,7 +20,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
   Holds information about all sessions currently or recently open on the appliance. It lists one row per session. 
 
 > [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool use [sys.dm_exec_sessions (Transact-SQL)](sys-dm-exec-sessions-transact-sql.md).
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

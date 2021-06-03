@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_wait_stats (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Holds information related to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS state related to instances running on the different nodes. For a list of waits types and their description, see [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
+  Holds information related to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS state related to instances running on the different nodes. For a list of waits types and their description, see [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

@@ -5,7 +5,7 @@ description: Reference article for azdata bdc sql settings commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/29/2021
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -79,7 +79,7 @@ azdata bdc sql settings show --settings mssql.maxServerMemory --resources data-0
 ```
 Show the pending settings changes for the SQL service-scope and resource-scope settings.
 ```bash
-azdata bdc sql settings show --filter-option=pending --recursive
+azdata bdc sql settings show --filter-options=pending --recursive
 ```
 ### Optional Parameters
 #### `--resources -r`

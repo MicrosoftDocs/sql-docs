@@ -21,9 +21,9 @@ PolyBase pushdown computation can significantly improve performance of the query
 
 There are three different scenarios where pushdown can be observed in the execution plan:
 
-1. Filter predicate pushdown
-2. Join pushdown
-3. Aggregation pushdown
+- Filter predicate pushdown
+- Join pushdown
+- Aggregation pushdown
 
 > [!NOTE]
 > There are limitations on what can be pushed down to external data sources with [PolyBase pushdown computations](./polybase-pushdown-computation.md):
@@ -32,8 +32,8 @@ There are three different scenarios where pushdown can be observed in the execut
 
 Two new features of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] have been introduced to allow administrators to determine if a PolyBase query is being pushed down to the external data source:
 
-1. View the [Estimated Execution Plan with trace flag 6408](#tf6408)
-2. View the `read_command` in the [sys.dm_exec_external_work](#dmv) dynamic management view
+- View the [Estimated Execution Plan with trace flag 6408](#tf6408)
+- View the `read_command` in the [sys.dm_exec_external_work](#dmv) dynamic management view
 
 This article will provide details on how to use each of these two use cases, for each of three pushdown scenarios.
 

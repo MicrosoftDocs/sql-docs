@@ -27,7 +27,7 @@ You can use <xref:Microsoft.Data.SqlClient> event counters to monitor the status
 
 Currently there are 16 different event counters available for <xref:Microsoft.Data.SqlClient> as described in the following table:
 
-|Name|Display Name|Description|  
+|Name|Display name|Description|  
 |-------------------------|-----------------|-----------------|  
 |**active-hard-connections**|Actual active connections currently made to servers|The number of connections that are currently open to database servers.|
 |**hard-connects**|Actual connection rate to servers|The number of connections per second that are being opened to database servers.|

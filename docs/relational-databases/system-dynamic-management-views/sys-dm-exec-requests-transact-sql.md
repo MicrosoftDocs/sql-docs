@@ -28,8 +28,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
 
-> [!NOTE] To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests  (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool use `sys.dm_exec_requests`.
-   
+> [!NOTE]
+> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests  (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool use `sys.dm_exec_requests`.
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID of the session to which this request is related. Is not nullable.|  

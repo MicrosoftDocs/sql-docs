@@ -29,7 +29,8 @@ Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includ
   
 The sys.dm_exec_connections, sys.dm_exec_sessions, and sys.dm_exec_requests dynamic management views map to the [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) system table.  
   
-> [!NOTE] To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool use `sys.dm_exec_sessions`.
+> [!NOTE]
+> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool use `sys.dm_exec_sessions`.
   
 |Column name|Data type|Description and version-specific information|  
 |-----------------|---------------|-----------------|  

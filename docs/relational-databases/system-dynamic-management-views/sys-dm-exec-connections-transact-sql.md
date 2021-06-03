@@ -23,12 +23,14 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
 ---
 # sys.dm_exec_connections (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Returns information about the connections established to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the details of each connection. Returns server wide connection information for SQL Server. Returns current database connection information for SQL Database.
 
-> [!NOTE] To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool use **sys.dm_exec_connections**.  
- 
+> [!NOTE]  
+> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool use **sys.dm_exec_connections**.
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifies the session associated with this connection. Is nullable.|  

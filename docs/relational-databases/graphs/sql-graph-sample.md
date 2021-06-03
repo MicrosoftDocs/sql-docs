@@ -28,6 +28,7 @@ This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to 
 This sample creates a graph schema, as showed in Figure 1, for a hypothetical social network that has People, Restaurant and City nodes. These nodes are connected to each other using Friends, Likes, LivesIn and LocatedIn edges.
 
 ![Diagram showing a sample schema with restaurant, city, person nodes and LivesIn, LocatedIn, Likes edges.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph database sample")
+
 Figure 1: Sample schema with restaurant, city, person nodes and LivesIn, LocatedIn, Likes edges.
 
 ## Sample Script

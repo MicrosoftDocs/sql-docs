@@ -244,7 +244,7 @@ GO
 EXECUTE sp_rename '[dbo].[EC_BOUGHT_NEW]', '[dbo].[EC_BOUGHT]';
 ```
 
-The fact that we added the new "super-set" constraint first without dropping the earlier one, allows the that operation to be a metadata-only operation - it does not need to check all the existing data in the **bought** table, as it encompasses the existing constraint.
+The fact that we added the new "super-set" constraint first without dropping the earlier one, allows the operation to be a metadata-only operation - it does not need to check all the existing data in the **bought** table, as it encompasses the existing constraint.
 
 With this, for a given edge to be allowed in the **bought** edge, it has to satisfy either of the edge constraint clauses in *EC_BOUGHT_NEW* constraint. Hence any edge that is trying to connect valid **Customer** to **Product** or **Supplier** to **Product** nodes, will be allowed.
 

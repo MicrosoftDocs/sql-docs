@@ -2,7 +2,7 @@
 description: "SERVERPROPERTY (Transact-SQL)"
 title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2020"
+ms.date: "06/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -99,7 +99,8 @@ Is an expression that contains the property information to be returned for the s
 |SqlCharSetName|The SQL character set name from the collation.<br /><br /> Base data type: **nvarchar(128)**|  
 |SqlSortOrder|The SQL sort order ID from the collation<br /><br /> Base data type: **tinyint**|  
 |SqlSortOrderName|The SQL sort order name from the collation.<br /><br /> Base data type: **nvarchar(128)**|  
-  
+|IsExternalAuthenticationOnly|**Applies to**: Azure SQL Database and Azure SQL Managed Instance.<br /><br /> Returns whether [Azure AD-only authentication](/azure/azure-sql/database/authentication-aad-only-auth) is enabled.<br /><br /> 1 = Azure AD-only authentication is enabled.<br /><br /> 0 = Azure AD-only authentication is disabled.<br /><br /> Base data type: **int**|
+
 ## Return Types  
 
 **sql_variant**

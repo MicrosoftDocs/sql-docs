@@ -18,7 +18,7 @@ You can enable advanced data security for your SQL Server instances on premises 
 * Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
 
    > [!NOTE]
-   > Azure Defender currently limited to SQL Server running on Windows machines.
+   > Azure Defender currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
 * Your user account is assigned one of the [Security Center Roles (RBAC)](/azure/security-center/security-center-permissions)
 

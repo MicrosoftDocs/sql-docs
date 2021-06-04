@@ -24,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar(32)**|] of the current query or the last query run (if the session is TERMINATED and the query was executing at time of termination). Key for this view.|Unique across all sessions in the system.|  
+|session_id|**nvarchar(32)**| The ID of of the current query or the last query run (if the session is TERMINATED and the query was executing at time of termination). Key for this view.|Unique across all sessions in the system.|  
 |status|**nvarchar(10)**|For current sessions, identifies whether the session is currently active or idle. For past sessions, the session status may show closed or killed (if the session was forcibly closed).|'ACTIVE', 'CLOSED', 'IDLE', 'TERMINATED'|  
 |request_id|**nvarchar(32)**|The ID of the current query or last query run.|Unique across all requests in the system. Null if none has been run.|  
 |security_id|**varbinary(85)**|Security ID of the principal running the session.||  

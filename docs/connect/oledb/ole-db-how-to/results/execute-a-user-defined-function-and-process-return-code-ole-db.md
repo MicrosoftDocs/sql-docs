@@ -63,19 +63,27 @@ GO
 #include "msoledbsql.h"
 using namespace std;
 
-void InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize);
+HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize);
 HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize);
 
 int main()
 {
     CComPtr<IDBInitialize> pIDBInitialize;
+    HRESULT hr = S_OK;
 
     // All the initialization stuff in a separate function.
-    InitializeAndEstablishConnection(pIDBInitialize);
-    HRESULT hr = ExecuteFunction(pIDBInitialize);
+    hr = InitializeAndEstablishConnection(pIDBInitialize);
+    if (FAILED(hr))
+    {
+        cout << "Failed to connect\n";
+        goto EXIT;
+    }
+
+    hr = ExecuteFunction(pIDBInitialize);
     if (FAILED(hr))
     {
         cout << "Failed in executing function\n";
+        goto EXIT;
     }
 
     if (FAILED(pIDBInitialize->Uninitialize()))
@@ -85,31 +93,34 @@ int main()
         cout << "Problem uninitializing\n";
     }
 
+EXIT:
     CoUninitialize();
     return 0;
 }
 
-void InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
+HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
 {
-    const ULONG nInitProps = 3;
-    const ULONG nPropSet = 1;
-    DBPROP InitProperties[nInitProps];
-    DBPROPSET rgInitPropSet[nPropSet];
     HRESULT hr = S_OK;
-    CComPtr<IDBProperties> pIDBProperties;
 
     // Initialize the COM library.
     CoInitialize(nullptr);
 
     // Obtain access to the OLE DB Driver for SQL Server.
     hr = CoCreateInstance(CLSID_MSOLEDBSQL,
-        nullptr,
-        CLSCTX_INPROC_SERVER,
-        IID_IDBInitialize,
-        reinterpret_cast<LPVOID*>(&pIDBInitialize));
-
+                          nullptr,
+                          CLSCTX_INPROC_SERVER,
+                          IID_IDBInitialize,
+                          reinterpret_cast<LPVOID *>(&pIDBInitialize));
     if (FAILED(hr))
+    {
         cout << "Failed in CoCreateInstance()\n";
+        return hr;
+    }
+
+    const ULONG nInitProps = 3;
+    const ULONG nPropSet = 1;
+    DBPROP InitProperties[nInitProps];
+    DBPROPSET rgInitPropSet[nPropSet];
 
     // Initialize the property values needed to establish the connection.
     for (ULONG i = 0; i < nInitProps; i++)
@@ -145,17 +156,27 @@ void InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
     rgInitPropSet[0].rgProperties = InitProperties;
 
     // Set initialization properties.
-    hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void**)&pIDBProperties);
-    if (FAILED(hr))
+    CComPtr<IDBProperties> pIDBProperties;
+    hr = pIDBInitialize->QueryInterface(IID_IDBProperties,
+                                        reinterpret_cast<LPVOID *>(&pIDBProperties));
+    if (FAILED(hr)) 
+    {
         cout << "Failed to obtain IDBProperties interface.\n";
+        return hr;
+    }
 
     hr = pIDBProperties->SetProperties(nPropSet, rgInitPropSet);
-    if (FAILED(hr))
+    if (FAILED(hr)) {
         cout << "Failed to set initialization properties\n";
+        return hr;
+    }
 
     // Now we establish connection to the data source.
-    if (FAILED(pIDBInitialize->Initialize()))
+    if (FAILED(hr = pIDBInitialize->Initialize())) {
         cout << "Problem in initializing\n";
+    }
+
+    return hr;
 }
 
 HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)

@@ -82,7 +82,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCal
 
 ## Disable blocking behavior of ReadAsync
 
-[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 By default, ReadAsync runs synchronously and blocks the calling thread on .NET Framework. To disable this blocking behavior, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking** to `false` at application startup:
 
@@ -99,10 +99,19 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 By default, configurable retry logic is disabled. To enable this feature, set the AppContext switch **Switch.Microsoft.Data.SqlClient.EnableRetryLogic** to `true` at application startup. This switch is required, even if a retry provider is assigned to a connection or command.
 
 ```csharp
-AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", false);
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", true);
 ```
 
 * For information on how to enable the switch by using a configuration file see [Enable safety switch](configurable-retry-logic-config-file-sqlclient.md#enable-safety-switch).
+
+## Enabling row version null behavior
+
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
+Starting in version 3.0, `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior of returning an empty `byte[]`, enable the AppContext switch **Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior** on application startup.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior", true);
+```
 
 ## See also
 

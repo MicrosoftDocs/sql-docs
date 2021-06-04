@@ -157,6 +157,13 @@
       items:
       - name: Obtain a SqlClientFactory
         href: ../connect/ado-net/obtain-sqlclientfactory.md
+    - name: Diagnostic counters
+      href: ../connect/ado-net/diagnostic-counters.md
+      items:
+      - name: Event counters
+        href: ../connect/ado-net/event-counters.md
+      - name: Performance counters
+        href: ../connect/ado-net/performance-counters.md
     - name: Retrieve identity or autonumber values
       href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data
@@ -165,8 +172,6 @@
       href: ../connect/ado-net/modify-data-with-stored-procedures.md
     - name: Data tracing in SqlClient
       href: ../connect/ado-net/data-tracing.md
-    - name: Performance counters in SqlClient
-      href: ../connect/ado-net/performance-counters.md
     - name: Asynchronous programming
       href: ../connect/ado-net/asynchronous-programming.md
     - name: SqlClient streaming support

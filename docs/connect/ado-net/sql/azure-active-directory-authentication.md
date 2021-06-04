@@ -149,7 +149,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## Using Active Directory Managed Identity authentication
 
-*Managed Identities for Azure resources are the new name for the service formerly known as Managed Service Identity (MSI). When a client application uses an Azure resource to access an Azure service that supports Azure AD authentication, you can use managed identities to authenticate by providing an identity for the Azure resource in Azure AD. You can then use that identity to obtain access tokens. This authentication method can eliminate the need to manage credentials and secrets.
+*Managed Identities* for Azure resources is the new name for the service formerly known as Managed Service Identity (MSI). When a client application uses an Azure resource to access an Azure service that supports Azure AD authentication, you can use managed identities to authenticate by providing an identity for the Azure resource in Azure AD. You can then use that identity to obtain access tokens. This authentication method can eliminate the need to manage credentials and secrets.
 
 There are two types of managed identities:
 

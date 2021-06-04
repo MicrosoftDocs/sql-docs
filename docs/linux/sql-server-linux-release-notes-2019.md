@@ -331,7 +331,7 @@ The following sections describe known issues with the General Availability (GA) 
 
 ### Networking
 
-Features that involve outbound TCP connections from the sqlservr process, such as linked servers or Availability Groups, might not work if both the following conditions are met:
+Features that involve outbound TCP connections from the sqlservr process, such as linked servers, PolyBase, or Availability Groups, might not work if both the following conditions are met:
 
 1. The target server is specified as a hostname and not an IP address.
 

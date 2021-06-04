@@ -20,9 +20,11 @@ monikerRange: "=azure-sqldw-latest"
 
 Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
 
-> [!note] 
-> In Synapse SQL, adding white spaces in a query constitute as a query change that causes the query hash to be re-calculated and the previous cached execution plan not be reused.
+> [!NOTE] 
+> In Synapse SQL, adding white spaces in a query constitutes a query change that causes the query hash to be re-calculated and the previous cached execution plan not be reused.
 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Table returned  
   

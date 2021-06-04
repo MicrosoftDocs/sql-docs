@@ -7117,6 +7117,8 @@ items:
         href: relational-databases/polybase/polybase-queries.md
       - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
+      - name: How to tell if external pushdown occurred
+        href: relational-databases/polybase/polybase-how-to-tell-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
     - name: How-to guides
@@ -12549,6 +12551,40 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md
       - name: sys.dm_external_script_requests
         href: relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md
+      - name: sys.dm_pdw_dms_cores
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md
+      - name: sys.dm_pdw_dms_external_work
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md
+      - name: sys.dm_pdw_dms_workers
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md
+      - name: sys.dm_pdw_errors
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md
+      - name: sys.dm_pdw_exec_connections
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md
+      - name: sys.dm_pdw_exec_requests
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
+      - name: sys.dm_pdw_exec_sessions
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
+      - name: sys.dm_pdw_nodes_exec_query_profiles
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_statistics_xml
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_sql_text
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_text_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
+      - name: sys.dm_pdw_hadoop_operations
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
+      - name: sys.dm_pdw_query_stats_xe
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-transact-sql.md
+      - name: sys.dm_pdw_query_stats_xe_file
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md
+      - name: sys.dm_pdw_request_steps
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md
+      - name: sys.dm_pdw_sql_requests
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md
     - name: Extended Events
       href: relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md
       items:
@@ -12803,32 +12839,6 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md
       - name: sys.dm_pdw_diag_processing_stats
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-diag-processing-stats-transact-sql.md
-      - name: sys.dm_pdw_dms_cores
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md
-      - name: sys.dm_pdw_dms_external_work
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md
-      - name: sys.dm_pdw_dms_workers
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md
-      - name: sys.dm_pdw_errors
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md
-      - name: sys.dm_pdw_exec_connections
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md
-      - name: sys.dm_pdw_exec_requests
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
-      - name: sys.dm_pdw_exec_sessions
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_query_plan
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
-      - name: sys.dm_pdw_nodes_exec_query_profiles
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_query_statistics_xml
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_sql_text
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
-      - name: sys.dm_pdw_nodes_exec_text_query_plan
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
-      - name: sys.dm_pdw_hadoop_operations
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
       - name: sys.dm_pdw_lock_waits
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md
       - name: sys.dm_pdw_network_credentials
@@ -12845,16 +12855,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-os-performance-counters-transact-sql.md
       - name: sys.dm_pdw_os_threads
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-os-threads-transact-sql.md
-      - name: sys.dm_pdw_query_stats_xe
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-transact-sql.md
-      - name: sys.dm_pdw_query_stats_xe_file
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md
-      - name: sys.dm_pdw_request_steps
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md
       - name: sys.dm_pdw_resource_waits
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md
-      - name: sys.dm_pdw_sql_requests
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md
       - name: sys.dm_pdw_sys_info
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-sys-info-transact-sql.md
       - name: sys.dm_pdw_wait_stats
@@ -16075,18 +16077,6 @@ items:
         items:
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
-      - name: Rowset
-        items:
-        - name: OPENDATASOURCE
-          href: t-sql/functions/opendatasource-transact-sql.md
-        - name: OPENJSON
-          href: t-sql/functions/openjson-transact-sql.md
-        - name: OPENQUERY
-          href: t-sql/functions/openquery-transact-sql.md
-        - name: OPENROWSET
-          href: t-sql/functions/openrowset-transact-sql.md
-        - name: OPENXML
-          href: t-sql/functions/openxml-transact-sql.md
       - name: Security
         href: t-sql/functions/security-functions-transact-sql.md
         items:
@@ -16189,8 +16179,6 @@ items:
           href: t-sql/functions/string-agg-transact-sql.md
         - name: STRING_ESCAPE
           href: t-sql/functions/string-escape-transact-sql.md
-        - name: STRING_SPLIT
-          href: t-sql/functions/string-split-transact-sql.md
         - name: STUFF
           href: t-sql/functions/stuff-transact-sql.md
         - name: SUBSTRING
@@ -16405,8 +16393,9 @@ items:
         - name: NULLIF
           href: t-sql/language-elements/nullif-transact-sql.md
       - name: Operators
-        href: t-sql/language-elements/operators-transact-sql.md
         items:
+        - name: Overview
+          href: t-sql/language-elements/operators-transact-sql.md
         - name: Unary - Positive
           href: t-sql/language-elements/unary-operators-positive.md
         - name: Unary - Negative
@@ -16416,8 +16405,9 @@ items:
         - name: Set - UNION
           href: t-sql/language-elements/set-operators-union-transact-sql.md
         - name: Arithmetic
-          href: t-sql/language-elements/arithmetic-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/arithmetic-operators-transact-sql.md
           - name: "+ (Addition)"
             href: t-sql/language-elements/add-transact-sql.md
           - name: "+= (Addition Assignment)"
@@ -16441,8 +16431,9 @@ items:
         - name: "= (Assignment)"
           href: t-sql/language-elements/assignment-operator-transact-sql.md
         - name: Bitwise
-          href: t-sql/language-elements/bitwise-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/bitwise-operators-transact-sql.md
           - name: "& (Bitwise AND)"
             href: t-sql/language-elements/bitwise-and-transact-sql.md
           - name: "&= (Bitwise & Assignment)"
@@ -16458,8 +16449,9 @@ items:
           - name: "~ (Bitwise NOT)"
             href: t-sql/language-elements/bitwise-not-transact-sql.md
         - name: Comparison
-          href: t-sql/language-elements/comparison-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/comparison-operators-transact-sql.md
           - name: "= (Equals)"
             href: t-sql/language-elements/equals-transact-sql.md
           - name: "> (Greater Than)"
@@ -16481,8 +16473,9 @@ items:
         - name: Compound
           href: t-sql/language-elements/compound-operators-transact-sql.md
         - name: Logical
-          href: t-sql/language-elements/logical-operators-transact-sql.md
           items:
+          - name: Overview
+            href: t-sql/language-elements/logical-operators-transact-sql.md
           - name: ALL
             href: t-sql/language-elements/all-transact-sql.md
           - name: AND
@@ -16505,9 +16498,28 @@ items:
             href: t-sql/language-elements/some-any-transact-sql.md
         - name: ":: (Scope Resolution)"
           href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
-        - name: String
-          href: t-sql/language-elements/string-operators-transact-sql.md
+        - name: Relational operators
           items:
+          - name: Overview
+            href: t-sql/language-elements/relational-operators-transact-sql.md
+          - name: OPENDATASOURCE
+            href: t-sql/functions/opendatasource-transact-sql.md
+          - name: OPENJSON
+            href: t-sql/functions/openjson-transact-sql.md
+          - name: OPENQUERY
+            href: t-sql/functions/openquery-transact-sql.md
+          - name: OPENROWSET
+            href: t-sql/functions/openrowset-transact-sql.md
+          - name: OPENXML
+            href: t-sql/functions/openxml-transact-sql.md
+          - name: PREDICT
+            href: t-sql/queries/predict-transact-sql.md
+          - name: STRING_SPLIT
+            href: t-sql/functions/string-split-transact-sql.md
+        - name: String
+          items:
+          - name: Overview
+            href: t-sql/language-elements/string-operators-transact-sql.md
           - name: "+ (String Concatenation)"
             href: t-sql/language-elements/string-concatenation-transact-sql.md
           - name: "+= (String Concatenation Assignment)"
@@ -16552,6 +16564,7 @@ items:
           href: t-sql/language-elements/select-local-variable-transact-sql.md
         - name: DECLARE @local_variable
           href: t-sql/language-elements/declare-local-variable-transact-sql.md
+
     - name: Queries
       href: t-sql/queries/queries.md
       displayName: Query
@@ -16568,8 +16581,6 @@ items:
           href: t-sql/queries/option-clause-transact-sql.md
         - name: OUTPUT Clause
           href: t-sql/queries/output-clause-transact-sql.md
-        - name: PREDICT
-          href: t-sql/queries/predict-transact-sql.md
         - name: READTEXT
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition

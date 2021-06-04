@@ -35,8 +35,10 @@ sp_spaceused [[ @objname = ] 'objname' ]
 [, [ @mode = ] 'mode' ]  
 [, [ @oneresultset = ] oneresultset ]  
 [, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
-```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+```
+  
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 

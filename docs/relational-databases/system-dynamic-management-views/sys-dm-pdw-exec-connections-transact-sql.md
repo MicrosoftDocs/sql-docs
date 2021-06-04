@@ -20,7 +20,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
   Returns information about the connections established to this instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and the details of each connection. 
 
 > [!NOTE]
-> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool use [sys.dm_exec_connections (Transact-SQL)](sys-dm-exec-connections-transact-sql.md).
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

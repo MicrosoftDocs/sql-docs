@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.
+Defines a date that is combined with a time of a day based on a 24-hour clock like [datetime2](../../t-sql/data-types/datetime2-transact-sql.md), and adds time zone awareness based on UTC (Universal Time Coordinate or Greenwich Mean Time). 
 
 ## datetimeoffset description
   

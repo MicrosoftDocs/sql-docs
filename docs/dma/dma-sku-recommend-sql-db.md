@@ -62,6 +62,29 @@ The collected data includes limited information about the hardware configuration
     --outputFolder C:\Output
     ```
 
+   
+    To run the data collection process using a .json configuration file, run the executable without an action but provide a value for configFile, as follows:
+
+    ```
+    .\SqlAssessment.exe --configFile C:\path\to\config.json
+    ```
+    
+    Below is a sample config file equivalent to the performance data collection action described above:
+    
+     ```
+    {
+    	"action": "PerfDataCollection",
+    	"sqlConnectionStrings": [
+    		"Data Source=Server1;Initial Catalog=master;Integrated Security=True;",
+    		"Data Source=Server2;Initial Catalog=master;Integrated Security=True;"
+    	],
+    	"outputFolder": "C:\\Output"
+    }
+    ```
+    Sample config files for all of the actions can be found in the Example folder under DMA installation path: AssessSampleConfigFile.json, PerfDataCollectionSampleConfigFile.json, and GetSkuRecommendationSampleConfigFile.json.
+    
+
+
     After the command executes, the performance data and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server and instance name.. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM.
 
 ## Use the DMA CLI to get SKU recommendations
@@ -114,15 +137,12 @@ Lastly, there is an optional argument you can use to specify the databases for w
 
 Below are some sample invocations:
 
-**Sample 1: Getting recommendations with default prices. Use when running in offline mode or when you do not have authentication credentials.**
+**Sample 1: Getting SKU recommendations  for Azure SQL Managed Instance.**
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationPreventPriceRefresh=true
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlManagedInstance
 ```
 
 **Sample 2: Getting recommendations with latest prices for the specified region (e.g., “UKWest”).**

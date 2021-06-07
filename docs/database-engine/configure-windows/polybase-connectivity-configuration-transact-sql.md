@@ -2,7 +2,7 @@
 title: "PolyBase Connectivity Configuration (Transact-SQL)"
 description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
 ms.custom: ""
-ms.date: "06/01/2021"
+ms.date: "06/10/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -70,21 +70,25 @@ RECONFIGURE
   
 -   Option 6: Cloudera CDH 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12, and 5.13 on Linux  
   
--   Option 7: Hortonworks HDP 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0, 3.1\* on Linux  
+-   Option 7: Hortonworks HDP 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 on Linux  
   
 -   Option 7: Hortonworks HDP 2.1, 2.2, 2.3, 2.4 on Windows Server  
   
 -   Option 7: Azure Blob Storage (WASB[S])  
  
--   Option 8:\*\* Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
+-   Option 8:\* Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
 
-   \* Hortonworks HDB 3.1 requires SQL Server 2019 CU9 or later.   
-   \*\* Option 8 introduced with SQL Server 2019 CU11.
+   \* Option 8 introduced with SQL Server 2019 CU11.
+
+ ​By default, the Hadoop connectivity is set to 0 (disabled). You should configure the PolyBase hadoop connectivity value after installing then enabling PolyBase. 
 
  **RECONFIGURE**  
  Updates the run value (`run_value`) to match the configuration value (`config_value`). See [Result Sets](#ResultSets) for definitions of `run_value` and `config_value`. The new configuration value that is set by `sp_configure` does not become effective until the run value is set by the `RECONFIGURE` statement.  
   
- After running `RECONFIGURE`, you must stop and restart the SQL Server service. Note that when stopping the SQL Server service, the two additional PolyBase Engine and Data Movement Service will automatically stop. After restarting the SQL Server engine service, re-start these two services again (they won't start automatically).  
+ After running `RECONFIGURE`, you must stop and restart the SQL Server service. 
+
+> [!IMPORTANT]
+> Note that when stopping the SQL Server service, the two additional services will also automatically stop: PolyBase Engine and Data Movement Service. After restarting the SQL Server engine service, manually start these two services again, as they won't start automatically.  
   
 ## Return code values  
  0 (success) or 1 (failure)  
@@ -110,7 +114,7 @@ In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], after running `RECONFIGURE`, f
 ## Permissions  
  All users can execute `sp_configure` with no parameters or the @configname parameter.  
   
- Requires ALTER SETTINGS server-level permission or membership in the **sysadmin** fixed server role to change a configuration value or to run `RECONFIGURE`.  
+ Requires `ALTER SETTINGS` server-level permission or membership in the **sysadmin** fixed server role to change a configuration value or to run `RECONFIGURE`.  
   
 ## Examples  
   
@@ -121,7 +125,7 @@ In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], after running `RECONFIGURE`, f
 EXEC sp_configure;  
 ```  
   
- The result returns the option name followed by the minimum and maximum values for the option. The **config_value** is the value that SQL, or PolyBase, will use when reconfiguration is complete. The **run_value** is the value that is currently being used. The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.  
+ The result returns the option name followed by the minimum and maximum values for the option. The **config_value** is the value that PolyBase will use when reconfiguration is complete. The **run_value** is the value that is currently being used. The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.  
   
 ### B. List the configuration settings for one configuration name  
   

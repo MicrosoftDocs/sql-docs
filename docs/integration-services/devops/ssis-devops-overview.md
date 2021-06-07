@@ -375,8 +375,8 @@ The configuration JSON schema has three layers:
 
 Release Date: June 2, 2021
 
-- Fixed an issue that sometimes SSIS Build Task of version 1.* failed to build projects/packages with protection level EncryptSensitiveWithPassword or EncryptAllWithPassword with error "Specified initialization vector (IV) does not match the block size for this algorithm.".
-- Removed the json content in the log of SSIS Catalog Configuration task when "Configuration file source" is "File Path".
+- Fixed an issue that sometimes SSIS Build Task of version 1.\* failed to build projects/packages with protection level EncryptSensitiveWithPassword or EncryptAllWithPassword with the error "Specified initialization vector (IV) does not match the block size for this algorithm."
+- Removed the JSON content in the log of the SSIS Catalog Configuration task when "Configuration file source" is "File Path".
 
 ### Version 1.0.4
 

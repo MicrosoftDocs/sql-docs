@@ -144,12 +144,6 @@ In addition, select one of the following arguments:
       - Token based
         - **AzureAuthenticationToken**: Set to the certificate token.
 
-> [!NOTE]
-> To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
-
-Lastly, there is an optional argument you can use to specify the databases for which you want recommendations: 
-
-- **/SkuRecommendationDatabasesToRecommend**: A list of databases for which to make recommendations. The database names are case-sensitive and must (1) be found in the input .csv, (2) each be surrounded by double-quotes, and (3) each be separated by a single space between names (e.g. /SkuRecommendationDatabasesToRecommend =”Database1” “Database2” “Database3”). Omitting this parameter ensure that recommendations are provided for all user databases identified in the input .csv file.  
 
 Below are some sample invocations:
 
@@ -196,7 +190,7 @@ Below are some sample invocations:
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-For single database recommendations, the TSV output file will look as follows:
+For sAzure SQL DB recommendations, the TSV output file will look as follows:
 
 ![PowerShell single-db file shown in DMA folder](../dma/media/dma-sku-recommend-single-db-recommendations.png)
 

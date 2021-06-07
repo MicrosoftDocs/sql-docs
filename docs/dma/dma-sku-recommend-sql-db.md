@@ -87,7 +87,7 @@ The collected data includes limited information about the hardware configuration
 
     After the command executes, the performance data and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server and instance name.. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM.
 
-## Use the DMA CLI to get SKU recommendations
+## Use the SQLAssessmentConsole.exe to get SKU recommendations
 
 Use the performance data points output file you created as input for this process.
 
@@ -107,6 +107,22 @@ scalingFactor: Optional. Scaling ('comfort') factor used during SKU recommendati
 - **overwrite**: Optional. Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
 - **displayResult**: Optional. Whether or not to print the SKU recommendation results to the console. (Default: true)
 
+To run the SKU recommendations using a .json configuration file, run the executable without an action but provide a value for configFile, as follows:
+
+ ```
+{
+    "action": "GetSkuRecommendation",
+    "outputFolder": "C:\\Output",
+    "targetPlatform": "AzureSqlDatabase",
+    "targetSqlInstance": "Server1",
+    "targetPercentile": 95,
+    "scalingFactor": 100,
+    "startTime": "2020-01-01 00:00",
+    "endTime": "2022-01-01 00:00",
+    "perfQueryIntervalInSec": 30,
+    "overwrite": "true"
+}
+ ```
 
 In addition, select one of the following arguments:
 

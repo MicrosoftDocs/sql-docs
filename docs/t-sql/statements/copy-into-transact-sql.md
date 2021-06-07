@@ -15,12 +15,11 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: JulieMSFT
-ms.author: jrasnick
+author: anumjs
+ms.author: anjangsh
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
-
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:

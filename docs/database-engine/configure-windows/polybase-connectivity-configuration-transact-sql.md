@@ -76,7 +76,7 @@ RECONFIGURE
   
 -   Option 7: Azure Blob Storage (WASB[S])  
  
--   Option 8:\* Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[s])  
+-   Option 8:\* Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[S])  
 
    \* Option 8 introduced with SQL Server 2019 CU11.
 

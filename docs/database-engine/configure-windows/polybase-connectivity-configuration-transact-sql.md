@@ -80,12 +80,10 @@ RECONFIGURE
 
    \* Option 8 introduced with SQL Server 2019 CU11.
 
- ​By default, the Hadoop connectivity is set to 0 (disabled). You should configure the PolyBase hadoop connectivity value after installing then enabling PolyBase. 
+ ​By default, the Hadoop connectivity is set to 0 (disabled). You should configure the PolyBase hadoop connectivity value after installing then enabling PolyBase. For more information, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md) and [Configure PolyBase to access external data in Hadoop](../../relational-databases/polybase/polybase-configure-hadoop.md).
 
  **RECONFIGURE**  
- Updates the run value (`run_value`) to match the configuration value (`config_value`). See [Result Sets](#ResultSets) for definitions of `run_value` and `config_value`. The new configuration value that is set by `sp_configure` does not become effective until the run value is set by the `RECONFIGURE` statement.  
-  
- After running `RECONFIGURE`, you must stop and restart the SQL Server service. 
+ Updates the run value (`run_value`) to match the configuration value (`config_value`). See [Result Sets](#ResultSets) for definitions of `run_value` and `config_value`. The new configuration value that is set by `sp_configure` does not become effective until the run value is set by the `RECONFIGURE` statement. Then, after running `RECONFIGURE`, you must stop and restart the SQL Server service. 
 
 > [!IMPORTANT]
 > Note that when stopping the SQL Server service, the two additional services will also automatically stop: PolyBase Engine and Data Movement Service. After restarting the SQL Server engine service, manually start these two services again, as they won't start automatically.  
@@ -106,6 +104,7 @@ RECONFIGURE
   
 ## General remarks  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
 In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] region.  
   
 ## Limitations and restrictions  

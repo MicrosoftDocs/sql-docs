@@ -115,11 +115,11 @@ Although it is common for the database validity interval and the validity interv
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
 
 > [!NOTE]  
->  In Azure SQL Database, the Agent Jobs are replaced by a scheduler which runs capture and cleanup automatically.  
+>  In Azure SQL Database, the Agent Jobs are replaced by an orchestrator which runs capture and cleanup automatically.  
  
  ## CDC and cleanup in Azure SQL Database (Preview)
 
-In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
+In Azure SQL Database, a change data capture orchestrator takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The orchestrator runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
 
 > [!NOTE]
 > Support for change data capture in Azure SQL Database is currently in preview. 
@@ -183,7 +183,7 @@ Using variables with partition switching on databases or tables with change data
 CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 Azure SQL Databases are not supported for CDC. 
 
 **Capture and Cleanup Customization on Azure SQL Databases (Preview)**
-Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
+Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator.
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

@@ -160,7 +160,7 @@ Using variables with partition switching on databases or tables with Change Data
 CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 Azure SQL Databases are not supported for CDC. 
 
 **Capture and Cleanup Customization on Azure SQL Databases (Preview)**
-As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
+Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

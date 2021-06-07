@@ -1,5 +1,5 @@
 ---
-description: "Administer and Monitor Change Data Capture (SQL Server)"
+description: "Administer and Monitor Change Data Capture"
 title: "Administer and Monitor Change Data Capture"
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -8,18 +8,21 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "change data capture [SQL Server], monitoring"
-  - "change data capture [SQL Server], administering"
-  - "change data capture [SQL Server], jobs"
+  - "change data capture, monitoring"
+  - "change data capture, administering"
+  - "change data capture, jobs"
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ---
-# Administer and Monitor Change Data Capture (SQL Server)
+# Administer and Monitor Change Data Capture 
 
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to administer and monitor change data capture.  
+  
+> [!NOTE]  
+> For Change Data Capture in Azure SQL Databases (Preview), the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. 
   
 ## <a name="Capture"></a> Capture Job
 
@@ -45,7 +48,7 @@ The `continuous` parameter controls whether `sp_cdc_scan` relinquishes control i
 
 In one-shot mode, the capture job requests `sp_cdc_scan` to perform up to `maxtrans` scans to try to drain the log and return. Any transactions in addition to `maxtrans` that are present in the log will be processed in later scans.  
   
- One-shot mode is used in controlled tests, where the volume of transactions to be processed is known, and there are advantages to the fact that the job closes automatically on when it is finished. One-shot mode is not recommended for production use. This is because t relies on the job schedule to manage how frequently the scan cycle is run.  
+ One-shot mode is used in controlled tests, where the volume of transactions to be processed is known, and there are advantages to the fact that the job closes automatically on when it is finished. One-shot mode is not recommended for production use. This is because it relies on the job schedule to manage how frequently the scan cycle is run.  
   
  When running in one-shot mode, you can compute an upper bound on expected throughput of the capture job, expressed in transactions per second by using the following computation:  
   
@@ -72,7 +75,7 @@ This section provides information about how the change data capture cleanup job 
   
 ### Structure of the Cleanup Job
 
-Change data capture uses a retention-based cleanup strategy to manage change table size. The cleanup mechanism consists of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] job that is created when the first database table is enabled. A single cleanup job handles cleanup for all database change tables and applies the same retention value to all defined capture instances.
+Change data capture uses a retention-based cleanup strategy to manage change table size. In SQL Server and Azure SQL Managed Instance, the cleanup mechanism consists of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] job that is created when the first database table is enabled. A single cleanup job handles cleanup for all database change tables and applies the same retention value to all defined capture instances.
   
 The cleanup job is initiated by running the parameterless stored procedure `sp_MScdc_cleanup_job`. This stored procedure starts by extracting the configured retention and threshold values for the cleanup job from `msdb.dbo.cdc_jobs`. The retention value is used to compute a new low watermark for the change tables. The specified number of minutes is subtracted from the maximum `tran_end_time` value from the `cdc.lsn_time_mapping` table to obtain the new low water mark expressed as a datetime value. The CDC.lsn_time_mapping table is then used to convert this datetime value to a corresponding `lsn` value. If the same commit time is shared by multiple entries in the table, the `lsn` that corresponds to the entry that has the smallest `lsn` is chosen as the new low watermark. This `lsn` value is passed to `sp_cdc_cleanup_change_tables` to remove change table entries from the database change tables.  
   
@@ -84,6 +87,9 @@ When a cleanup is performed, the low watermark for all capture instances is init
 ### Cleanup Job Customization
 
  For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
+ 
+> [!NOTE]  
+> In Azure SQL Databases, the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator, but they can also be run on demand by the customer.
 
 ## <a name="Monitor"></a> Monitor the Change Data Capture Process
 

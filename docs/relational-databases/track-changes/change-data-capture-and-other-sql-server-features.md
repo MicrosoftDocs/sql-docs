@@ -1,6 +1,6 @@
 ---
-description: "Change Data Capture and Other SQL Server Features"
-title: "Change Data Capture and Other SQL Server Features"
+description: "Change Data Capture and Other Features"
+title: "Change Data Capture and Other Features"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -9,13 +9,13 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "change data capture [SQL Server], other SQL Server features and"
+  - "change data capture, other features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ---
-# Change Data Capture and Other SQL Server Features
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+# Change Data Capture and Other Features
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how the following features interact with change data capture:  
   
 -   [Change tracking](#ChangeTracking)  
@@ -27,6 +27,13 @@ ms.author: jroth
 -   [Restoring or Attaching a Database Enabled for Change Data Capture](#RestoreOrAttach)
 
 -   [Contained Databases](#Contained)
+
+-   [Always On](#AlwaysOn)
+
+-   [Point-in-time-restore (PITR)](#Point-in-time-restore)
+
+-   [Azure Active Directory](#AzureActiveDirectory)
+
   
 ##  <a name="ChangeTracking"></a> Change Tracking  
  Change data capture and [change tracking](../../relational-databases/track-changes/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
@@ -74,9 +81,15 @@ ms.author: jroth
 ##  <a name="Contained"></a> Contained Databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
   
-## Change Data Capture and Always On  
+## <a name="AlwaysOn"></a> Always On  
  When you use Always On, change enumeration should be done on the Secondary replication to reduce the disk load on the primary.  
-  
+
+##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database (Preview)
+Running point-in-time-restore (PITR) on a Azure SQL Database that has Change Data Capture enabled will not preserve the Change Data Capture artifacts (e.g. system tables). After PITR, those artifacts will not be available.
+
+##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database (Preview)
+If you create an Azure SQL Database as an AAD user and enable Change Data Capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to Change Data Capture artifacts. However, another AAD user will be able to enable/disable Change Data Capture on the same database. 
+
 ## See Also  
  [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   

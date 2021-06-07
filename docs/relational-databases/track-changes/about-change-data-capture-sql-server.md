@@ -138,7 +138,17 @@ CREATE TABLE T1(
 ```
 
 ## Performance impact of CDC on Azure SQL Databases (Preview)
-Overall, the overhead for Azure SQL Change Data Capture should be similar to the performance impact of Change Data Capture for SQL Server and Azure SQL Managed Instance. The impact of turning CDC on depends on the number of tables tracked and the activity in them. Change Data Capture artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database, so make sure you are not too close to your database limit, in which case you should upgrade to a higher tier. It is important to monitor your space usage closely and make sure to test your workload before turning on Change Data Capture into production.
+The performance impact for Azure SQL Change Data Capture should be similar to that of Change Data Capture for SQL Server and Azure SQL Managed Instance. The performance impact of turning CDC on depends on multiple factors, some of them being:
+
+- Number of tables tracked (CDC-enabled tables) 
+
+- Frequency of changes in the tables tracked 
+
+- Space available in your source database, since CDC artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database 
+
+- Whether you are using a Singleton database or Elastic Pool. In Elastic Pools, apart from considering the number of tables that CDC is enabled on, customers should also pay attention to the number of databases those tables belong to. The databases in a pool share resources among them such as the Elastic Pool disk space, so enabling CDC on more databases leads to the risk of reaching the max size of the Elastic Pool disk space (i.e. in an Elastic Pool you must monitor both the database space and the Elastic Pool space). Resources such as CPU, memory, log throughput should also be monitored.
+
+Once you enable CDC on your database and tables, if you want to ensure the same performance level as you had before enabling CDC, you should increase the numbers of vCores or shift to a higher database tier (i.e. Business Critical databases will have a significantly better performance than General Purpose when CDC is enabled in both Singleton and Elastic Pool databases). Overall, it is important to monitor your space usage closely and make sure to test your workload before turning on Change Data Capture into production.
 
 ## Permissions required
 In order to enable Change Data Capture on SQL Server or Azure SQL Managed Instance, a user needs the sysadmin role. On Azure SQL Databases, the db_owner role is requried. 

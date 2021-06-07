@@ -34,49 +34,56 @@ The following are instructions to help you determine the SKU recommendations and
 - Ensure the accounted used to connect to your SQL Server on-premises source has sysadmin permission.
 
 > [!NOTE]
-> It is recommended that the tool is utilized from a separate tools (client) machine with connectivity to the target SQL instance(s), rather than from the machine hosting SQL Server itself, in order to minimize any potential overhead.
+> It is recommended that the tool is utilized from a separate tools (client) machine with connectivity to the target SQL instance(s), rather than from the machine hosting SQL Server itself, in order to minimize any potential overhead. When collecting performance data for SKU recommendations, it is recommended that the tool is ran with default option values over the span of several hours, covering both off-peak and on-peak workloads and excluding maintenance tasks such as index rebuild or backup database. Maintenance tasks can impact the CPU, Memory and IO consumption and subsequently drive higher recommended SKU tiers.
 
 ## Collect performance data 
 
-The first step in the process is to collect performance data points for your SQL Server source databases using system DMVs . 
+The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance counters from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency.The collected data is stored locally on your machine. The collected data can then be aggregated and analysed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
+
 
 1. In the DMA installation folder, locate the SQLAssessmentConsole folder and
 
     ![SKUConsoleApplication.exe shown in DMA folder](../dma/media/dma-sku-recommend-console-location.jpg)
 
-2. Run the PowerShell script with the following arguments:
-    - **ComputerName**: The name of the computer that hosts your databases.
-    - **OutputFilePath**: The output file path to save the collected counters.
-    - **CollectionTimeInSeconds**: The amount of time during which you wish to collect performance counter data. Capture performance counters for at least 40 minutes to get a meaningful recommendation. The longer the duration of the capture, the more accurate the recommendation will be. Also ensure the workloads are running for the desired databases to enable more accurate recommendations.
-    - **DbConnectionString**: The Connection string pointing to the master database hosted on the computer from which you're collecting performance counter data.
+2. Run the SKU Recommendations console application with the following arguments:
+
+    -**sqlConnectionStrings**: Required. Quote-enclosed formal connection string(s) for the target SQL instance(s).
+    -**perfQueryIntervalInSec**: Optional. Interval at which to query performance data, in seconds. (Default: 30)
+    -**staticQueryIntervalInSec**: Optional. Interval at which to query and persist static configuration data, in seconds. (Default: 60)
+    -**numberOfIterations**: Optional. Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
+    -**outputFolder**: Optional. Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+
 
     Here's a sample invocation:
 
     ```
-    .\SkuRecommendationDataCollectionScript.ps1
-     -ComputerName Foobar1
-     -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 2400
-     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
+    .\SqlAssessment.exe PerfDataCollection 
+    --sqlConnectionStrings "Data Source=Server1;Initial Catalog=master;Integrated Security=True;" "Data Source=Server2;Initial Catalog=master;Integrated Security=True;" 
+    --outputFolder C:\Output
     ```
 
-    After the command executes, the process will output a file including performance counters to the location you specified. You can use this file as input for the next part of the process, which will provide SKU recommendations for both single database and managed instances options.
+    After the command executes, the performance data and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server and instance name.. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM.
 
 ## Use the DMA CLI to get SKU recommendations
 
-Use the performance counters output file you  created as input for this process.
+Use the performance data points output file you created as input for this process.
 
-For the single database option, DMA will provide recommendations for the Azure SQL Database single database pricing tier, the compute level, and the maximum data size for each database on your computer. If you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for each database.
+For the single database option, DMA will provide recommendations for the Azure SQL Database single database pricing tier, the compute level, and the maximum data size for each database on your computer. If you have multiple databases on your computer, you can also specify the databases for which you want recommendations.
 
-For managed instance, the recommendations support a lift-and-shift scenario. As a result, DMA will provide you with recommendations for the Azure SQL Managed Instance pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for managed instance.
+For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app will provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. 
 
-To use the DMA CLI to get SKU recommendations, at the command prompt, run dmacmd.exe with the following arguments:
+To use the SKU recommendations, at the command prompt, run SqlAssessment.exe with the following arguments:
+ 
+- **perfQueryIntervalInSec**: Optional. Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
+- **targetPlatform**: Optional. Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms will be evaluated, and the best fit will be returned. (Default: Any)
+- **targetSqlInstance**: Optional. Name of the SQL instance that SKU recommendation will be targeting. (Default: outputFolder will be scanned for files created by the PerfDataCollection action, and recommendations will be provided for every instance found)
+- **targetPercentile**: Optional. Percentile of data points to be used during aggregation of the performance data. (Default: 95)
+scalingFactor: Optional. Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
+- **startTime**: Optional. UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
+- **endTime**: Optional. UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
+- **overwrite**: Optional. Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
+- **displayResult**: Optional. Whether or not to print the SKU recommendation results to the console. (Default: true)
 
-- **/Action=SkuRecommendation**: Enter this argument to execute SKU assessments.
-- **/SkuRecommendationInputDataFilePath**: The path to the counter file collected in the previous section.
-- **/SkuRecommendationTsvOutputResultsFilePath**: The path to write the output results in TSV format.
-- **/SkuRecommendationJsonOutputResultsFilePath**: The path to write the output results in JSON format.
-- **/SkuRecommendationHtmlResultsFilePath**: Path to write the output results in HTML format.
 
 In addition, select one of the following arguments:
 

@@ -30,7 +30,7 @@ In addition, this release of Data Migration Assistant provides bug fixes for the
 - Fixed an RDS for SQL Server permissions error raised when assessing Azure SQL Managed Instance targets.
 - Fixed incorrectly reported blockers for Memory Optimized Data Filegroup (FX) in assessments.
 - Fixed missing rule to detect three-part or four-part cross-database references when assessing Azure SQL Database targets.
-- Fixed 'specified value for 'AssessmentDatabases' is invalid' error when using AssessTargetReadiness option in DMA command line.
+- Fixed `specified value for 'AssessmentDatabases' is invalid` error when using AssessTargetReadiness option in DMA command line.
 
 ## Data Migration Assistant v 5.3
 

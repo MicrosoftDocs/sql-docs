@@ -22,7 +22,7 @@ ms.custom: seo-dt-2019
 This topic describes how to administer and monitor change data capture.  
   
 > [!NOTE]  
-> Support for change data capture in Azure SQL Database is currently in preview. In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. 
+> Support for change data capture in Azure SQL Database is currently in preview. In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. 
 
 ## <a name="Capture"></a> Capture job
 
@@ -89,7 +89,7 @@ When a cleanup is performed, the low watermark for all capture instances is init
  For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
  
 > [!NOTE]  
-> In Azure SQL Databases, the change data capture orchestrator periodically invokes a stored procedure to capture and cleanup change tables.  As such, the customization of the capture and cleanup process in Azure SQL Database is not currently possible. Though the orchestrator runs the stored procedures automatically, it's also possible to start them manually by the user. 
+> In Azure SQL Databases, the change data capture scheduler periodically invokes a stored procedure to capture and cleanup change tables.  As such, the customization of the capture and cleanup process in Azure SQL Database is not currently possible. Though the scheduler runs the stored procedures automatically, it's also possible to start them manually by the user. 
 
 
 ## <a name="Monitor"></a> Monitor the process

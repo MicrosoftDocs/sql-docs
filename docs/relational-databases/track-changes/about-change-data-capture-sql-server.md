@@ -86,7 +86,7 @@ ms.author: jroth
 ## Change Data Capture Agent Jobs in SQL Server and Azure SQL Managed Instance
 
 > [!NOTE]  
->  In Azure SQL Database, the Agent Jobs are replaced by an orchestrator which runs capture and cleanup automatically.  
+>  In Azure SQL Database, the Agent Jobs are replaced by a scheduler which runs capture and cleanup automatically.  
 
  Two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs are typically associated with a change data capture enabled database: one that is used to populate the database change tables, and one that is responsible for change table cleanup. Both jobs consist of a single step that runs a [!INCLUDE[tsql](../../includes/tsql-md.md)] command. The [!INCLUDE[tsql](../../includes/tsql-md.md)] command that is invoked is a change data capture defined stored procedure that implements the logic of the job. The jobs are created when the first table of the database is enabled for change data capture. The Cleanup Job is always created. The capture job will only be created if there are no defined transactional publications for the database. The capture job is also created when both change data capture and transactional replication are enabled for a database, and the transactional logreader job is removed because the database no longer has defined publications.  
   
@@ -109,7 +109,7 @@ ms.author: jroth
  
 ## Change Data Capture Capture and Cleanup in Azure SQL Database (Preview)
 
-In Azure SQL, a Change Data Capture orchestrator takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the Change Data Capture tables. The orchestrator runs capture and cleanup automatically within Azure SQL, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
+In Azure SQL, a Change Data Capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the Change Data Capture tables. The scheduler runs capture and cleanup automatically within Azure SQL, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
  
 ## Working with database and table collation differences
 
@@ -160,7 +160,7 @@ Using variables with partition switching on databases or tables with Change Data
 CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 Azure SQL Databases are not supported for CDC. 
 
 **Capture and Cleanup Customization on Azure SQL Databases (Preview)**
-As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator.
+As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

@@ -26,7 +26,7 @@ Before you begin migrating your Oracle database to SQL Server, do the following:
 - Verify that your source environment is supported.
 - Download and install [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019?filetype=EXE).
 - Download and install [SSMA for Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
-- Get the [necessary permissions for SSMA for Oracle](/sql/ssma/oracle/connecting-to-oracle-database-oracletosql) and [provider](/sql/ssma/oracle/connect-to-oracle-oracletosql).
+- Get the [necessary permissions for SSMA for Oracle](../../../ssma/oracle/connecting-to-oracle-database-oracletosql.md) and [provider](../../../ssma/oracle/connect-to-oracle-oracletosql.md).
 - Get connectivity and sufficient permissions to access both source and target. 
 
 
@@ -186,13 +186,13 @@ To publish your schema and migrate the database, do the following:
 
     ![Screenshot of the Data Migration Report.](./media/oracle-to-sql-server/data-migration-report.png)
 
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and then validate the migration by reviewing the data and schema.
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and then validate the migration by reviewing the data and schema.
 
    ![Screenshot of SQL Server Management Server.](./media/oracle-to-sql-server/validate-in-ssms.png)
 
 
 In addition to using SSMA, you can use SQL Server Integration Services (SSIS) to migrate the data. To learn more, see: 
-- [Get started with SQL Server Integration Services](/sql/integration-services/sql-server-integration-services) (article)
+- [Get started with SQL Server Integration Services](../../../integration-services/sql-server-integration-services.md) (article)
 - [SQL Server Integration Services: SSIS for Azure and Hybrid Data Movement](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx) (technical white paper)
 
 ## Post-migration 

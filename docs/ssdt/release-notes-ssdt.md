@@ -50,7 +50,7 @@ _SSDT for Visual Studio 2017._
 
 | New Item | Details |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Integration Services (SSIS) | Add ExecuteOnProxy property on Execute SQL Task and Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis). |
+| Integration Services (SSIS) | Add ExecuteOnProxy property on Execute SQL Task and Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](/azure/data-factory/self-hosted-integration-runtime-proxy-ssis). |
 | Integration Services (SSIS) | Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. |
 | Integration Services (SSIS) | List available locations based on selected subscription in Integration Runtime Creation Wizard. |
 | Integration Services (SSIS) | Fixed an issue that test connection on Analysis Services connection manager may fail due to fail to load managed ADAL component. |

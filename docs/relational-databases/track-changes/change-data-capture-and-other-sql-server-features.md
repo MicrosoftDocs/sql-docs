@@ -1,6 +1,6 @@
 ---
-description: "Change Data Capture and Other Features"
-title: "Change Data Capture and Other Features"
+description: "change data capture and Other Features"
+title: "change data capture and Other Features"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -14,27 +14,11 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ---
-# Change Data Capture and Other Features
+# change data capture and Other Features
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  This topic describes how the following features interact with change data capture:  
-  
--   [Change tracking](#ChangeTracking)  
-  
--   [Database mirroring](#DatabaseMirroring)  
-  
--   [Transactional replication](#TransReplication)  
-  
--   [Restoring or Attaching a Database Enabled for Change Data Capture](#RestoreOrAttach)
 
--   [Contained Databases](#Contained)
-
--   [Always On](#AlwaysOn)
-
--   [Point-in-time-restore (PITR)](#Point-in-time-restore)
-
--   [Azure Active Directory](#AzureActiveDirectory)
-
-  
+This topic describes how the following features interact with change data capture:  
+    
 ##  <a name="ChangeTracking"></a> Change Tracking  
  Change data capture and [change tracking](../../relational-databases/track-changes/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
@@ -61,7 +45,7 @@ ms.author: jroth
   
  The **proc exec** option of transactional replication is not available when change data capture is enabled.  
   
-##  <a name="RestoreOrAttach"></a> Restoring or Attaching a Database Enabled for Change Data Capture  
+##  <a name="RestoreOrAttach"></a> Database restore or attach
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the following logic to determine if change data capture remains enabled after a database is restored or attached:  
   
 -   If a database is restored to the same server with the same database name, change data capture remains enabled.  
@@ -74,23 +58,33 @@ ms.author: jroth
   
 -   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or Managed Instance editions. Error message 934 is displayed:  
   
-     `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
+     `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports change data capture.`  
   
  You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
   
 ##  <a name="Contained"></a> Contained Databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
   
-## <a name="AlwaysOn"></a> Always On  
- When you use Always On, change enumeration should be done on the Secondary replication to reduce the disk load on the primary.  
+## <a name="AlwaysOn"></a> Availability groups 
+ 
+ When you use Always On availability groups, change enumeration should be done on the secondary replica to reduce disk load on the primary.  
 
 ##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database (Preview)
-Running point-in-time-restore (PITR) on a Azure SQL Database that has Change Data Capture enabled will not preserve the Change Data Capture artifacts (e.g. system tables). After PITR, those artifacts will not be available.
+
+Running point-in-time-restore (PITR) on a Azure SQL Database that has change data capture enabled will not preserve the change data capture artifacts (e.g. system tables). After PITR, CDC artifacts will not be available.
+
+> [!NOTE]
+> Support for change data capture in Azure SQL Database is currently in preview. 
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database (Preview)
-If you create an Azure SQL Database as an AAD user and enable Change Data Capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to Change Data Capture artifacts. However, another AAD user will be able to enable/disable Change Data Capture on the same database. 
+
+If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database. 
+
+> [!NOTE]
+> Support for change data capture in Azure SQL Database is currently in preview. 
+
 
 ## See Also  
- [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
+ [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

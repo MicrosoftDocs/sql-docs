@@ -1,7 +1,7 @@
 ---
-description: "Administer and Monitor Change Data Capture"
-title: "Administer and Monitor Change Data Capture"
-ms.date: "01/02/2019"
+description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database (preview). "
+title: "Administer and monitor change data capture"
+ms.date: "06/07/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -16,15 +16,15 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ---
-# Administer and Monitor Change Data Capture 
-
+# Administer and monitor change data capture 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  This topic describes how to administer and monitor change data capture.  
+
+This topic describes how to administer and monitor change data capture.  
   
 > [!NOTE]  
-> For Change Data Capture in Azure SQL Databases (Preview), the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. 
-  
-## <a name="Capture"></a> Capture Job
+> Support for change data capture in Azure SQL Database is currently in preview. In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. 
+
+## <a name="Capture"></a> Capture job
 
 The capture job is initiated by running the parameterless stored procedure `sp_MScdc_capture_job`. This stored procedure starts by extracting the configured values for `maxtrans`, `maxscans`, `continuous`, and `pollinginterval` for the capture job from msdb.dbo.cdc_jobs. These configured values are then passed as parameters to the stored procedure `sp_cdc_scan`. This is used to invoke `sp_replcmds` to perform the log scan.  
   
@@ -58,7 +58,7 @@ In one-shot mode, the capture job requests `sp_cdc_scan` to perform up to `maxtr
   
  If one-shot mode were to be used to regulate log scanning, the number of seconds between log processing would have to be governed by the job schedule. When this kind of behavior is desired, running the capture job in continuous mode is a better way to manage rescheduling the log scan.  
   
-##### Continuous Mode and the Polling Interval
+##### Continuous mode and polling interval
 
 In continuous mode, the capture job requests that `sp_cdc_scan` run continuously. This lets the stored procedure manage its own wait loop by providing not only for maxtrans and maxscans but also a value for the number of seconds between log processing (the polling interval). Running in this mode, the capture job remains active, executing a `WAITFOR` between log scanning.  
   
@@ -69,7 +69,7 @@ In continuous mode, the capture job requests that `sp_cdc_scan` run continuously
 
 For the capture job, you can apply additional logic to determine whether a new scan begins immediately or whether a sleep is imposed before it starts a new scan instead of rely on a fixed polling interval. The choice could be based merely on time of the day, perhaps enforcing very long sleeps during peak activity times, and even moving to a polling interval of 0 at close of day when it is important to complete the days processing and prepare for nightly runs. Capture process progress could also be monitored to determine when all transactions committed by mid-night had been scanned and deposited in change tables. This lets the capture job end, to be restarted by a scheduled daily restart. By replacing the delivered job step calling `sp_cdc_scan` with a call to a user written wrapper for `sp_cdc_scan`, highly customized behavior can be obtained with little additional effort.  
 
-## <a name="Cleanup"></a> Cleanup Job
+## <a name="Cleanup"></a> Cleanup job
 
 This section provides information about how the change data capture cleanup job works.  
   
@@ -84,14 +84,15 @@ The cleanup job is initiated by running the parameterless stored procedure `sp_M
 
 When a cleanup is performed, the low watermark for all capture instances is initially updated in a single transaction. It then tries to remove obsolete entries from the change tables and the cdc.lsn_time_mapping table. The configurable threshold value limits how many entries are deleted in any single statement. Failure to perform the delete on any individual table will not prevent the operation from being attempted on the remaining tables.  
   
-### Cleanup Job Customization
+### Cleanup job customization
 
  For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
  
 > [!NOTE]  
-> In Azure SQL Databases, the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator, but they can also be run on demand by the customer.
+> In Azure SQL Databases, the change data capture orchestrator periodically invokes a stored procedure to capture and cleanup change tables.  As such, the customization of the capture and cleanup process in Azure SQL Database is not currently possible. Though the orchestrator runs the stored procedures automatically, it's also possible to start them manually by the user. 
 
-## <a name="Monitor"></a> Monitor the Change Data Capture Process
+
+## <a name="Monitor"></a> Monitor the process
 
 Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
@@ -185,6 +186,6 @@ When you apply cumulatives updates or service packs to an instance, at restart, 
 ## See Also
 
 - [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
-- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)
-- [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)
+- [About change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)
+- [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)
 - [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  

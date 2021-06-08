@@ -150,7 +150,7 @@ Below are some sample invocations:
 --targetPlatform AzureSqlVirtualMachine
 ```
 
-For Azure SQL Database recommendations, the output will look as follows:
+The following is an example output of an Azure SQL Database recommendation:
 
 ![PowerShell single-db file shown in DMA folder](../dma/media/dma-sku-recommend-single-db-recommendations.png)
 

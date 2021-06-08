@@ -172,7 +172,6 @@ For SQL Server on Azure VM recommendations, the output will look as follows:
 -**insertphoto**
 
 
-The ou
 
 The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 

@@ -47,7 +47,7 @@ This table summarizes pushdown computation support on different external data so
 
 \* Azure Cosmos DB pushdown support is enabled via the Azure Cosmos DB API for MongoDB. 
 
-\*\* See [Pushdown computation and Hadoop](#pushdown-computation-and-hadoop).
+\*\* See [Pushdown computation and Hadoop providers](#pushdown-computation-and-hadoop-providers).
 
 > [!NOTE]
 > Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).

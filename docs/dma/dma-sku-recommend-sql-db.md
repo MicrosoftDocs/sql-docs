@@ -152,20 +152,15 @@ Below are some sample invocations:
 
 The following is an example output of an Azure SQL Database recommendation:
 
-![Azure SQL Database SKU recommendations output shown in console](../dma/media/dma-sku-recommend-single-db-recommendations.png)
-![Azure SQL Database SKU recommendations output shown in console](../dma/media/dnew-i:::image type="content" source="media/sku-recommendations-azuresqldb.png" alt-text="":::mage-text.png)
-
-:::image type="content" source="../relational-databases/security/media/sql-data-discovery-and-classification/5-accept-recommendations-button.png" alt-text="enter in alternatte text in thi box":::
-
-
+:::image type="content" source="media/sku-recommendations-azuresqldb.png" alt-text="Azure SQL Database SKU recommendations output shown in console":::
 
 The following is an example output of an Azure SQL Managed Instance recommendation:
 
-![Azure SQL Managed Instance SKU recommendations output shown in console](../dma/media/dma-sku-recommend-mi-recommendations.png)
+:::image type="content" source="media/sku-recommendations-azuresqlmanagedinstance.png" alt-text="Azure SQL Managed Instance SKU recommendations output shown in console":::
 
 The following is an example output of a SQL Server on Azure VM recommendation:
 
-![SQL Server on Azure VM SKU recommendations output shown in console](../dma/media/dma-sku-recommend-mi-recommendations.png)
+:::image type="content" source="media/sku-recommendations-azuresqlvirtualmachine.png" alt-text="SQL Server on Azure VM SKU recommendations output shown in console":::
 
 The output of the SKU recommendations covers the following sections:
 - **Instance Name**: Name of the on-premises SQL Server instance(s)

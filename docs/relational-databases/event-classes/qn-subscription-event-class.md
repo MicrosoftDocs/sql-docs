@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Subscription"
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Subscription Event Class

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], Security Audit event category"
   - "SQL Server event classes, Security Audit event category"
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---

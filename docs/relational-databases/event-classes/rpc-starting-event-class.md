@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "RPC:Starting event class"
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RPC:Starting Event Class

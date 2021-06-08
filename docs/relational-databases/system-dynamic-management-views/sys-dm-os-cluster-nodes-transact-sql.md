@@ -19,13 +19,14 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_os_cluster_nodes (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
-  Returns one row for each node in the failover cluster instance configuration. If the current instance is a failover clustered instance, it returns a list of nodes on which this failover cluster instance (formerly "virtual server") has been defined. If the current server instance is not a failover clustered instance, it returns an empty rowset.  
+Returns one row for each node in the failover cluster instance configuration. If the current instance is a failover clustered instance, it returns a list of nodes on which this failover cluster instance (formerly "virtual server") has been defined. If the current server instance is not a failover clustered instance, it returns an empty rowset.  
   
-> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_cluster_nodes**.  
+> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_cluster_nodes**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

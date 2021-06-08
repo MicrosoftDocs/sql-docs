@@ -42,8 +42,6 @@ This table lists the key features for PolyBase and the products in which they're
 
 PolyBase has the following limitations:
 
-- In order to use PolyBase, you must have sysadmin or CONTROL SERVER level permissions on the database.
-
 - Before [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or 1 MB in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this limitation is lifted. The limit remains 1 MB for Hadoop data sources, but is limited only by the maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limit for other data sources.
 
 - When data is exported into an ORC file format from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
@@ -53,6 +51,8 @@ PolyBase has the following limitations:
 - If you use Hive tables with transactional = true, PolyBase can't access the data in the Hive table's directory.
 
 - PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
+
+- PolyBase on SQL Server on Linux will not function if IPv6 is disabled in the kernel. See [Release notes for SQL Server 2019 on Linux](../../linux/sql-server-linux-release-notes-2019.md?view=sql-server-ver15#networking) for further information on this limitation.
 
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "

@@ -22,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_sql_requests (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdbmi](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
   Holds information about all SQL query distributions as part of a SQL step in the query.  This view shows the data for the last 1000 requests; active requests always have the data present in this view.  
   

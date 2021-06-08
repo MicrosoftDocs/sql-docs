@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Holds information about all SQL Server query distributions as part of a SQL step in the query.  
+  Holds information about all SQL Server query distributions as part of a SQL step in the query.
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

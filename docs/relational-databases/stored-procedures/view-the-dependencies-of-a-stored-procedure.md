@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "displaying stored procedure dependencies"
   - "viewing stored procedure dependencies"
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Dependencies of a Stored Procedure

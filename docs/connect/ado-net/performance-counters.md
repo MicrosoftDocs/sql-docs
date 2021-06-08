@@ -1,6 +1,6 @@
 ---
 title: "Performance counters in SqlClient"
-description: Use Microsoft SqlClient Data Provider for SQL Server performance counters to monitor your application status and its connection resources by using Windows Performance Monitor or programmatically.
+description: Use Microsoft SqlClient Data Provider for SQL Server performance counters to monitor your application status and its connection resources by using Windows Performance Monitor or programmatically in .NET Framework.
 ms.date: "12/04/2020"
 dev_langs: 
   - "csharp"
@@ -42,10 +42,6 @@ Currently there are 14 different performance counters available for <xref:Micros
 |`SoftConnectsPerSecond`|The number of active connections being pulled from the connection pool. **Note:**  This performance counter is not enabled by default. To enable this performance counter, see [Activate off-by-default counters](#ActivatingOffByDefault).|  
 |`SoftDisconnectsPerSecond`|The number of active connections that are being returned to the connection pool. **Note:**  This performance counter is not enabled by default. To enable this performance counter, see [Activate off-by-default counters](#ActivatingOffByDefault).|  
 
-### Connection pool groups and connection pools
-
-When using Windows Authentication (integrated security), you must monitor both the `NumberOfActiveConnectionPoolGroups` and `NumberOfActiveConnectionPools` performance counters. The reason is that connection pool groups map to unique connection strings. When integrated security is used, connection pools map to connection strings and additionally create separate pools for individual Windows identities. For example, if Fred and Julie, each within the same AppDomain, both use the connection string `"Data Source=MySqlServer;Integrated Security=true"`, a connection pool group is created for the connection string, and two additional pools are created, one for Fred and one for Julie. If John and Martha use a connection string with an identical SQL Server login, `"Data Source=MySqlServer;User Id=<myUserID>;Password=<myPassword>"`, then only a single pool is created for the **<myUserID>** identity.
-
 <a name="ActivatingOffByDefault"></a>
 
 ### Activate off-by-default counters
@@ -74,6 +70,7 @@ The following console application shows how to retrieve performance counter valu
 
 ## See also
 
+- [Event counters in SqlClient](event-counters.md)
 - [Connecting to a data source](connecting-to-data-source.md)
 - [Runtime profiling](/dotnet/framework/debug-trace-profile/runtime-profiling)
 - [Introduction to monitoring performance thresholds](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))

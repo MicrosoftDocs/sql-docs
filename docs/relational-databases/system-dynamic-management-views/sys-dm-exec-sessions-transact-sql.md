@@ -20,16 +20,19 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
-  Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more. Use sys.dm_exec_sessions to first view the current system load and to identify a session of interest, and then learn more information about that session by using other dynamic management views or dynamic management functions.  
+Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sys.dm_exec_sessions` is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more. Use `sys.dm_exec_sessions` to first view the current system load and to identify a session of interest, and then learn more information about that session by using other dynamic management views or dynamic management functions.  
+
   
- The sys.dm_exec_connections, sys.dm_exec_sessions, and sys.dm_exec_requests dynamic management views map to the [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) system table.  
+The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests` dynamic management views map to the deprecated [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) system compatibility view.  
+
   
-> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_sessions**.  
+> [!NOTE]
+> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool use `sys.dm_exec_sessions`.
   
 |Column name|Data type|Description and version-specific information|  
 |-----------------|---------------|-----------------|  
@@ -183,6 +186,5 @@ WHERE c.session_id = @@SPID;
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
-
 
 

@@ -1,12 +1,12 @@
 ---
 title: Configuration checklists
 description: Provides checklists for the tasks required to configure Analytics Platform System for your own environment. These configuration tasks are necessary before you can use the appliance.  
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---

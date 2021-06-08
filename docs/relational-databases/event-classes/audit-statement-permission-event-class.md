@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Audit Statement Permission event class"
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Statement Permission Event Class

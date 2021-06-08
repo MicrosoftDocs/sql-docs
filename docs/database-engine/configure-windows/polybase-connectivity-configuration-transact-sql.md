@@ -46,7 +46,7 @@ RECONFIGURE
  Is the new configuration setting. *value* is **int**, with a default of `NULL`. The maximum value depends on the individual option.  
   
  **'hadoop connectivity'**  
- Specifies the type of Hadoop data source for all connections from PolyBase to Hadoop clusters or Azure Blob Storage. This setting is required in order to create an external data source for an external table. Using `wasbs` or `abfss` are optional but recommended for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection. For more information, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+ Specifies the type of Hadoop data source for all connections from PolyBase to Hadoop clusters or Azure Blob Storage. For more information, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
  These are the Hadoop connectivity settings and their corresponding supported Hadoop data sources. Only one setting can be in effect at a time.  
 

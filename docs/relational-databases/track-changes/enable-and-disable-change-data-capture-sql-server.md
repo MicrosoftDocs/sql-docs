@@ -17,14 +17,14 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ---
-# Enable and Disable change data capture
+# Enable and disable change data capture
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
 
 > [!NOTE]
 > Support for change data capture in Azure SQL Database is currently in preview. 
   
-## Enable change data capture for a Database  
+## Enable for a database  
 
  Before a capture instance can be created for individual tables, a member of the **sysadmin** fixed server role (only in SQL Server / Azure SQL Managed Instance) or db_owner must first enable the database for change data capture. This is done by running the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the **is_cdc_enabled** column in the **sys.databases** catalog view.  
   
@@ -47,7 +47,7 @@ EXEC sys.sp_cdc_enable_db
 GO  
 ```  
   
-## Disable change data capture for a Database  
+## Disable for a database  
  A member of the **sysadmin** fixed server role can run the stored procedure [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) in the database context to disable change data capture for a database. It is not necessary to disable individual tables before you disable the database. Disabling the database removes all associated change data capture metadata, including the **cdc** user and schema and the change data capture jobs. However, any gating roles created by change data capture will not be removed automatically and must be explicitly deleted. To determine if a database is enabled, query the **is_cdc_enabled** column in the sys.databases catalog view.  
   
  If a change data capture enabled database is dropped, change data capture jobs are automatically removed.  
@@ -67,7 +67,7 @@ EXEC sys.sp_cdc_disable_db
 GO  
 ```  
   
-## Enable change data capture for a Table  
+## Enable for a table  
  After a database has been enabled for change data capture, members of the **db_owner** fixed database role can create a capture instance for individual source tables by using the stored procedure **sys.sp_cdc_enable_table**. To determine whether a source table has already been enabled for change data capture, examine the is_tracked_by_cdc column in the **sys.tables** catalog view.  
   
  The following options can be specified when creating a capture instance:  
@@ -144,7 +144,7 @@ GO
 > [!NOTE]
 >  If change data capture is enabled on a table with an existing primary key, and the *\@index_name* parameter is not used to identify an alternative unique index, the change data capture feature will use the primary key. Subsequent changes to the primary key will not be allowed without first disabling change data capture for the table. This is true regardless of whether support for net changes queries was requested when change data capture was configured. If there is no primary key on a table at the time it is enabled for change data capture, the subsequent addition of a primary key is ignored by change data capture. Because change data capture will not use a primary key that is created after the table was enabled, the key and key columns can be removed without restrictions.  
   
-## Disable change data capture for a Table  
+## Disable for a table  
  Members of the **db_owner** fixed database role can remove a capture instance for individual source tables by using the stored procedure **sys.sp_cdc_disable_table**. To determine whether a source table is currently enabled for change data capture, examine the **is_tracked_by_cdc** column in the **sys.tables** catalog view. If there are no tables enabled for the database after the disabling takes place, the change data capture jobs are also removed.  
   
  If a change data capture-enabled table is dropped, change data capture metadata that is associated with the table is automatically removed.  

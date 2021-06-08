@@ -95,19 +95,20 @@ For the single database option, DMA will provide recommendations for the Azure S
 
 For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app will provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. 
 
-To use the SKU recommendations, at the command prompt, run SqlAssessment.exe with the following arguments:
- 
-- **perfQueryIntervalInSec**: Optional. Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
-- **targetPlatform**: Optional. Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms will be evaluated, and the best fit will be returned. (Default: Any)
-- **targetSqlInstance**: Optional. Name of the SQL instance that SKU recommendation will be targeting. (Default: outputFolder will be scanned for files created by the PerfDataCollection action, and recommendations will be provided for every instance found)
-- **targetPercentile**: Optional. Percentile of data points to be used during aggregation of the performance data. (Default: 95)
-scalingFactor: Optional. Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
-- **startTime**: Optional. UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
-- **endTime**: Optional. UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
-- **overwrite**: Optional. Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
-- **displayResult**: Optional. Whether or not to print the SKU recommendation results to the console. (Default: true)
 
-To run the SKU recommendations using a .json configuration file, run the executable without an action but provide a value for configFile, as follows:
+To use the SKU recommendations, at the command prompt, run SqlAssessment.exe with GetSkuRecommendation  the following arguments:
+ 
+- **perfQueryIntervalInSec**: [Optional] Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
+- **targetPlatform**: [Optional] Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms will be evaluated, and the best fit will be returned. (Default: Any)
+- **targetSqlInstance**: [Optional] Name of the SQL instance that SKU recommendation will be targeting. (Default: outputFolder will be scanned for files created by the PerfDataCollection action, and recommendations will be provided for every instance found)
+- **targetPercentile**: [Optional] Percentile of data points to be used during aggregation of the performance data. (Default: 95)
+scalingFactor: [Optional] Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
+- **startTime**: [Optional] UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
+- **endTime**: [Optional] UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
+- **overwrite**: [Optional] Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
+- **displayResult**: [Optional] Whether or not to print the SKU recommendation results to the console. (Default: true)
+
+To run the SKU recommendations using a JSON configuration file, run the executable without an action but provide a value for configFile, as follows:
 
  ```
 {
@@ -124,30 +125,25 @@ To run the SKU recommendations using a .json configuration file, run the executa
 }
  ```
 
-In addition, select one of the following arguments:
+In addition, you can also use one of the following customizable parameters:
 
-- Prevent price refresh
-  - **/SkuRecommendationPreventPriceRefresh**: If set to True, prevents the price refresh from occurring and assumes default prices. Use if running in offline mode. If you do not use this parameter, you must specify the parameters below to get the latest prices based on a specified region.
-- Get the latest prices
-  - **/SkuRecommendationCurrencyCode**: The currency in which to display prices (e.g. "USD").
-  - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page.
-    - **/SkuRecommendationRegionName**: The region name (e.g., "WestUS").
-    - **/SkuRecommendationSubscriptionId**: The subscription ID.
-    - **/AzureAuthenticationTenantId**: The authentication tenant.
-    - **/AzureAuthenticationClientId**: The client ID of the AAD app used for authentication.
-    - One of the following authentication options:
-      - Interactive
-        - **AzureAuthenticationInteractiveAuthentication**: Set to true for an authentication pop-up window.
-      - Cert based
-        - **AzureAuthenticationCertificateStoreLocation**: Set to the certificate store location (e.g., "CurrentUser").
-        - **AzureAuthenticationCertificateThumbprint**: Set to the certificate thumbprint.
-      - Token based
-        - **AzureAuthenticationToken**: Set to the certificate token.
+  - **outputFolder**: [Optional] Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+**: If set to True, prevents the price refresh from occurring and assumes default prices. Use if running in offline mode. If you do not use this parameter, you must specify the parameters below to get the latest prices based on a specified region.
+  - **CommandTimeoutInSeconds**:[Optional] The time in seconds to wait for SQL query commands to execute before timing out. (Default: 120)
 
+Advanced settings for the tool can be found in the Console.Settings.json file in the root directory.
 
 Below are some sample invocations:
 
-**Sample 1: Getting SKU recommendations  for Azure SQL Managed Instance.**
+**Sample 1: Getting SKU recommendations  for Azure SQL Database.**
+
+```
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlDatabase
+```
+
+**Sample 2: Getting SKU recommendations  for Azure SQL Managed Instance.**
 
 ```
 .\SqlAssessment.exe GetSkuRecommendation 
@@ -155,63 +151,30 @@ Below are some sample invocations:
 --targetPlatform AzureSqlManagedInstance
 ```
 
-**Sample 2: Getting recommendations with latest prices for the specified region (e.g., “UKWest”).**
+**Sample 3: Getting SKU recommendations  for Azure SQL Virtual Machine.**
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlVirtualMachine
 ```
 
-**Sample 3: Getting recommendations for specific databases (e.g. “TPCDS1G,EDW_3G,TPCDS10G”).**
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation 
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" 
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" 
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" 
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" 
-/SkuRecommendationCurrencyCode=USD 
-/SkuRecommendationOfferName=MS-AZR-0044p 
-/SkuRecommendationRegionName=UKWest 
-/SkuRecommendationSubscriptionId=<Your Subscription Id> 
-/SkuRecommendationDatabasesToRecommend=“TPCDS1G” “EDW_3G” “TPCDS10G” 
-/AzureAuthenticationInteractiveAuthentication=true 
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId> 
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
-
-For sAzure SQL DB recommendations, the TSV output file will look as follows:
+For Azure SQL Database recommendations, the output will look as follows:
 
 ![PowerShell single-db file shown in DMA folder](../dma/media/dma-sku-recommend-single-db-recommendations.png)
 
-For managed instance recommendations, the TSV output file will look as follows:
+For Azure SQL Managed instance recommendations, the output will look as follows:
 
 ![PowerShell managed instance file shown in DMA folder](../dma/media/dma-sku-recommend-mi-recommendations.png)
 
-A description of each column in the output file follows.
+For SQL Server on Azure VM recommendations, the output will look as follows:
 
-- **DatabaseName** - The name of your database.
-- **MetricType** - Recommended performance tier.
-- **MetricValue** - Recommended SKU.
-- **PricePerMonth** – The estimated price per month for the corresponding SKU.
-- **RegionName** – The region name for the corresponding SKU. 
-- **IsTierRecommended** - We make a minimum SKU recommendation for each tier. We then apply heuristics to determine the right tier for your database. This reflects which tier is recommended for the database. 
-- **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that isn't recommended, we provide the reasons why it wasn't picked.
-- **AppliedRules** - A short notation of the rules that were applied.
+-**insertphoto**
 
-The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue**) - found where the **IsTierRecommended** column is TRUE - reflects the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For Azure SQL Managed Instance, DMA currently supports recommendations for the most commonly used 8vcore to 40vcore SKUs. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 
-The HTML file contains this information in a graphical format. It provides a user-friendly means of viewing the final recommendation and provisioning the next part of the process. More information on the HTML output is in the following section.
+The ou
+
+The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 
 
 ## Next step

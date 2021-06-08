@@ -474,14 +474,14 @@ AS
 BEGIN  
     SET NOCOUNT ON;  
   
-    MERGE Production.UnitMeasure AS target  
-    USING (SELECT @UnitMeasureCode, @Name) AS source (UnitMeasureCode, Name)  
-    ON (target.UnitMeasureCode = source.UnitMeasureCode)  
+    MERGE Production.UnitMeasure AS [target]  
+    USING (SELECT @UnitMeasureCode, @Name) as [source] (UnitMeasureCode, Name)  
+    ON ([target].UnitMeasureCode = [source].UnitMeasureCode)  
     WHEN MATCHED THEN
-        UPDATE SET Name = source.Name  
+        UPDATE SET Name = [source].Name  
     WHEN NOT MATCHED THEN  
         INSERT (UnitMeasureCode, Name)  
-        VALUES (source.UnitMeasureCode, source.Name)  
+        VALUES ([source].UnitMeasureCode, [source].Name)  
     OUTPUT deleted.*, $action, inserted.* INTO #MyTempTable;  
 END;  
 GO  
@@ -505,18 +505,18 @@ The following example uses MERGE to update the `ProductInventory` table in the [
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
-MERGE Production.ProductInventory AS target  
+MERGE Production.ProductInventory AS [target]  
 USING (SELECT ProductID, SUM(OrderQty) FROM Sales.SalesOrderDetail AS sod  
     JOIN Sales.SalesOrderHeader AS soh  
     ON sod.SalesOrderID = soh.SalesOrderID  
     AND soh.OrderDate = @OrderDate  
-    GROUP BY ProductID) AS source (ProductID, OrderQty)  
-ON (target.ProductID = source.ProductID)  
-WHEN MATCHED AND target.Quantity - source.OrderQty <= 0  
+    GROUP BY ProductID) as [source] (ProductID, OrderQty)  
+ON ([target].ProductID = [source].ProductID)  
+WHEN MATCHED AND [target].Quantity - [source].OrderQty <= 0  
     THEN DELETE  
 WHEN MATCHED
-    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,
-                    target.ModifiedDate = GETDATE()  
+    THEN UPDATE SET [target].Quantity = [target].Quantity - [source].OrderQty,
+                    [target].ModifiedDate = GETDATE()  
 OUTPUT $action, Inserted.ProductID, Inserted.Quantity,
     Inserted.ModifiedDate, Deleted.ProductID,  
     Deleted.Quantity, Deleted.ModifiedDate;  
@@ -533,13 +533,13 @@ The following example uses MERGE to modify the `SalesReason` table in the [!INCL
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
-MERGE INTO Sales.SalesReason AS Target  
+MERGE INTO Sales.SalesReason AS [target]  
 USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'),
               ('Internet', 'Promotion'))  
-       AS Source (NewName, NewReasonType)  
-ON Target.Name = Source.NewName  
+       as [source] (NewName, NewReasonType)  
+ON [target].Name = [source].NewName  
 WHEN MATCHED THEN  
-UPDATE SET ReasonType = Source.NewReasonType  
+UPDATE SET ReasonType = [source].NewReasonType  
 WHEN NOT MATCHED BY TARGET THEN  
 INSERT (Name, ReasonType) VALUES (NewName, NewReasonType)  
 OUTPUT $action INTO @SummaryOfChanges;  

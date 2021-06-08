@@ -70,16 +70,16 @@ Alternatively, the data collection process can be invoked by providing the appro
     
 Below is a sample config file equivalent to the performance data collection action described above:
     
-    ```
-    {
-    	"action": "PerfDataCollection",
-    	"sqlConnectionStrings": [
-    		"Data Source=Server1;Initial Catalog=master;Integrated Security=True;",
-    		"Data Source=Server2;Initial Catalog=master;Integrated Security=True;"
-    	],
-    	"outputFolder": "C:\\Output"
-    }
-    ```
+  ```
+  {
+    "action": "PerfDataCollection",
+    "sqlConnectionStrings": [
+    "Data Source=Server1;Initial Catalog=master;Integrated Security=True;",
+    "Data Source=Server2;Initial Catalog=master;Integrated Security=True;"
+    ],
+    "outputFolder": "C:\\Output"
+  }
+  ```
 Sample config files for all of the actions can be found in the Example folder under DMA installation path: AssessSampleConfigFile.json, PerfDataCollectionSampleConfigFile.json, and GetSkuRecommendationSampleConfigFile.json.
     
 

@@ -53,13 +53,13 @@ In order to start the data collection process, specify the `PerfDataCollection` 
   - **outputFolder**: [Optional] Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
 
-    Here's a sample invocation:
+Here's a sample invocation:
 
-    ```
-    .\SqlAssessment.exe PerfDataCollection 
-    --sqlConnectionStrings "Data Source=Server1;Initial Catalog=master;Integrated Security=True;" "Data Source=Server2;Initial Catalog=master;Integrated Security=True;" 
-    --outputFolder C:\Output
-    ```
+```
+.\SqlAssessment.exe PerfDataCollection 
+--sqlConnectionStrings "Data Source=Server1;Initial Catalog=master;Integrated Security=True;" "Data Source=Server2;Initial Catalog=master;Integrated Security=True;" 
+--outputFolder C:\Output
+```
 
    
 Alternatively, the data collection process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:

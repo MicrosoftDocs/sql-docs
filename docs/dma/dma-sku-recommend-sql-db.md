@@ -47,10 +47,10 @@ In the DMA installation folder, locate the SQLAssessmentConsole folder and the S
 In order to start the data collection process, specify the `PerfDataCollection` action in the console application, with the following arguments:
 
   - **sqlConnectionStrings**: [Required] Quote-enclosed formal connection string(s) for the target SQL instance(s).
-   - **perfQueryIntervalInSec**: [Optional] Interval at which to query performance data, in seconds. (Default: 30)
+   - **perfQueryIntervalInSec** (_Optional_):  Interval at which to query performance data, in seconds. (Default: 30)
   - **staticQueryIntervalInSec**: [Optional Interval at which to query and persist static configuration data, in seconds. (Default: 60)
-  - **numberOfIterations**: [Optional] Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
-  - **outputFolder**: [Optional] Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+  - **numberOfIterations** (_Optional_):  Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
+  - **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
 
 Here's a sample invocation:
@@ -96,16 +96,16 @@ For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations s
 
 In order to start the SKU recommendation process, specify the `GetSkuRecommendation` action in the console application, with the following arguments:
  
-- **perfQueryIntervalInSec**: [Optional] Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
-- **targetPlatform**: [Optional] Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
-- **targetSqlInstance**: [Optional] Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
+- **perfQueryIntervalInSec** (_Optional_):  Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
+- **targetPlatform** (_Optional_):  Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
+- **targetSqlInstance** (_Optional_):  Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
 - **targetPercentile** (Optional): Percentile of data points to be used during aggregation of the performance data. (Default: 95)
 - **scalingFactor**:  Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100, **Optional**)
-- **startTime**: [Optional] UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
-- **endTime**: [Optional] UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
-- **overwrite**: [Optional] Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
-- **displayResult**: [Optional] Whether or not to print the SKU recommendation results to the console. (Default: true)
-- **outputFolder**: [Optional] Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+- **startTime** (_Optional_):  UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
+- **endTime** (_Optional_):  UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
+- **overwrite** (_Optional_):  Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
+- **displayResult** (_Optional_):  Whether or not to print the SKU recommendation results to the console. (Default: true)
+- **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
 To run the SKU recommendations using a .JSON configuration file, run the executable without an action but provide a value for ConfigFile, as follows:
 

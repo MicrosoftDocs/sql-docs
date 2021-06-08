@@ -274,7 +274,7 @@ DmaCmd.exe
 ```
 ## Azure SQL Database / Azure SQL Managed Instance / SQL Server on Azure VM SKU recommendations using the CLI
 
-With version 5.4 and above, when you install Data Migration Assistant, it will also install SqlAssessment.exe in %ProgramFiles%\Microsoft Data Migration Assistant\SQLAssessmentConsole\. Use SqlAssessment.exe to collect performance data for your SQL instance over an extended period of time, and output the result to JSON or CSV file. This method is especially useful when assessing several databases or huge databases
+With version 5.4 and above, when you install Data Migration Assistant, it will also install SqlAssessment.exe in %ProgramFiles%\Microsoft Data Migration Assistant\SQLAssessmentConsole\. Use SqlAssessment.exe to collect performance data for your SQL instance over an extended period of time, and output the result to JSON or CSV file.
 
 These commands support recommendations for both Azure SQL Database single database, Azure SQL Managed Instance and SQL Server on Azure VM deployment options.
 
@@ -286,91 +286,62 @@ These commands support recommendations for both Azure SQL Database single databa
 
 |Argument  |Description  | Required (Y/N)
 |---------|---------|---------------|
-|`PerfDataCollection` | Starts collection of performance data | Y
-|`GetSkuRecommendation` | Performs aggregation and analysis of the collected performance data and determines SKU recommendations| Y
-|`Assess` | Performs an assessment of the target SQL instance(s) | Y
-|`--outputFolder` | Folder which performance data, reports, and logs will be written to/read from. <br> (Default: current directory)| N
-|`/SkuRecommendationHtmlResultsFilePath` | Full path to the HTML result file | Y <br> (Requires either TSV or JSON or HTML file path)
-|`/SkuRecommendationPreventPriceRefresh` | Prevents the price refresh from occurring. Use if running in offline mode (e.g., true). | Y <br> (Select either this argument for static prices or all arguments below need to be selected to get the latest prices)
-|`/SkuRecommendationCurrencyCode` | The currency in which to display prices (e.g. "USD") | Y <br> (For the latest prices)
-|`/SkuRecommendationOfferName` | The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page. | Y <br> (For the latest prices)
-|`/SkuRecommendationRegionName` | The region name (e.g. "WestUS") | Y <br> (For the latest prices)
-|`/SkuRecommendationSubscriptionId` | The subscription ID. | Y <br> (For the latest prices)
-|`/SkuRecommendationDatabasesToRecommend` | Space-separated list of databases to recommend for (e.g. “Database1” “Database2” “Database3”). Names are case-sensitive and must be surrounded by double-quotes. If omitted, recommendations are provided for all databases. | N
-|`/AzureAuthenticationTenantId` | The authentication tenant. | Y <br> (For the latest prices)
-|`/AzureAuthenticationClientId` | The client ID of the Azure AD app used for authentication. | Y <br> (For the latest prices)
-|`/AzureAuthenticationInteractiveAuthentication` | Set to true to pop up the window. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 1)
-|`/AzureAuthenticationCertificateStoreLocation` | Set to the certificate store location (e.g. "CurrentUser"). | Y <br>(For the latest prices) <br> (Pick one of the 3 authentication options - option 2)
-|`/AzureAuthenticationCertificateThumbprint` | Set to the cert thumbprint. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 2)
-|`/AzureAuthenticationToken` | Set to the certificate token. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 3)
+|`PerfDataCollection` | Starts collection of performance data. | Y
+|`GetSkuRecommendation` | Performs aggregation and analysis of the collected performance data and determines SKU recommendations. | Y
+|`Assess` | Performs an assessment of the target SQL instance(s). | Y
+|`--outputFolder` | Folder which performance data, reports, and logs will be written to/read from. | N <br> (Default: current directory)
+|`--sqlConnectionStrings` | Quote-enclosed formal connection string(s) for the target SQL instance(s). | Y
+|`--overwrite` | Whether or not to overwrite any existing assessment or SKU recommendations reports. | N <br> ( Default: `true`)
+|`--perfQueryIntervalInSec` | Interval at which to query performance data, in seconds. | N <br> (Specific for `PerfDataCollection` action. Default `30`)
+|`--staticQueryIntervalInSec` | Interval at which to query and persist static configuration data, in seconds. | N <br> (Specific for `PerfDataCollection` action. Default `30`)
+|`--numberOfIterations` | Number of iterations of performance data collection to perform before persisting to file. | N <br> (Specific for `PerfDataCollection` action. Default `20`)
+|`--perfQueryIntervalInSec` | Interval at which performance data was queried, in seconds. | N <br> (Specific for `GetSkuRecommendation`action. This must match the value that was originally used during the performance data collection. Default: `30`) 
+|`--targetPlatform` | Target platform for SKU recommendation: either `AzureSqlDatabase`, `AzureSqlManagedInstance`, `AzureSqlVirtualMachine`, or `Any`. | N <br> (Specific for `GetSkuRecommendation`action. Default: `Any`)
+|`--targetSqlInstance` | Name of the SQL instance that SKU recommendation will be targeting. | N <br> (Specific for `GetSkuRecommendation`action)
+|`--targetPercentile` | Percentile of data points to be used during aggregation of the performance data. | N <br> (Specific for `GetSkuRecommendation`action, Default `95`)
+|`--scalingFactor` | Scaling (comfort) factor used during SKU recommendation. | N <br> (Specific for `GetSkuRecommendation`action. Default `100`) 
+|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action) 
+|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action) 
+|`--displayResult` | Whether or not to print the SKU recommendation results to the console | N <br> (Specific for `GetSkuRecommendation`action.Default: `true`)
 
 ## Examples of SKU assessments using the CLI
 
-**Dmacmd.exe**
+**SqlAssessment.exe**
 
-`Dmacmd.exe /? or DmaCmd.exe /help`
+`SqlAssessment.exe --help`
 
-**Azure SQL Database / Azure SQL Managed Instance SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-/AzureAuthenticationInteractiveAuthentication=true 
-```
-
-**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation with price refresh (get latest prices) - Certificate authentication**
+**Start the data collection process for on-premises SQL Server instances** 
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-/AzureAuthenticationCertificateStoreLocation=<Your Certificate Store Location>
-/AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
+.\SqlAssessment.exe PerfDataCollection 
+--sqlConnectionStrings "Data Source=Server1;Initial Catalog=master;Integrated Security=True;" "Data Source=Server2;Initial Catalog=master;Integrated Security=True;" 
+--outputFolder C:\Output
 ```
 
-**Azure SQL Database / Azure SQL Managed Instance  recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
+**Azure SQL Database / Azure SQL Managed Instance / SQL Server on Azure VM SKU recommendations**
+
+```
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform Any
+```
+
+**Azure SQL Managed Instance SKU recommendations with specific aggregation percentage for data points and custom scaling factor**
   
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationDatabasesToRecommend=“TPCDS1G,EDW_3G,TPCDS10G”
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-/AzureAuthenticationToken=<Your Authentication Token> 
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlManagedInstance
+--targetPercentile 90
+--scalingFactor 80
 ```
 
-**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation without price refresh (use static prices)** 
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationPreventPriceRefresh=true  
+**SQL Server on Azure VM SKU recommendations with custom aggregation timeline**
+
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlVirtualMachine
+--startTime "2021-06-05 00:00"
+--endTime "2021-06-07 00:00"
 ```
 
 ## See also

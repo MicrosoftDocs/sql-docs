@@ -1,6 +1,6 @@
 ---
-description: "change data capture and Other Features"
-title: "change data capture and Other Features"
+description: "Learn how change data capture and functions with other features such as change tracking and database mirroring."
+title: "Change data capture and Other Features"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ---
-# change data capture and Other Features
+# Change data capture and other features
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This topic describes how the following features interact with change data capture:  
     
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> Change tracking  
  Change data capture and [change tracking](../../relational-databases/track-changes/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-##  <a name="DatabaseMirroring"></a> Database Mirroring  
+##  <a name="DatabaseMirroring"></a> Database mirroring  
  A database that is enabled for change data capture can be mirrored. To ensure that capture and cleanup happen automatically after a failover, follow these steps:  
   
 1.  Ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running on the new principal server instance.  
@@ -62,7 +62,7 @@ This topic describes how the following features interact with change data captur
   
  You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
   
-##  <a name="Contained"></a> Contained Databases  
+##  <a name="Contained"></a> Contained databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
   
 ## <a name="AlwaysOn"></a> Availability groups 

@@ -37,6 +37,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |**query_hint_failure_count**|bigint|Number of times that the query hint application has failed since the query hint was created or last modified.  |
 |**source**|int|Source of Query Store hint: user or system.|
 |**source_desc**|nvarchar(128)|Description of source of Query Store hint: user or system.|
+|**comment**|nvarchar(max)|Internal use only.|
 
 ## Remarks
  Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) and removed by [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).

@@ -327,7 +327,8 @@ These commands support recommendations for both Azure SQL Database single databa
 ```
 
 **Azure SQL Managed Instance SKU recommendations with specific aggregation percentage for data points and custom scaling factor**
-  
+
+```  
 .\SqlAssessment.exe GetSkuRecommendation 
 --outputFolder C:\Output 
 --targetPlatform AzureSqlManagedInstance
@@ -337,6 +338,7 @@ These commands support recommendations for both Azure SQL Database single databa
 
 **SQL Server on Azure VM SKU recommendations with custom aggregation timeline**
 
+```
 .\SqlAssessment.exe GetSkuRecommendation 
 --outputFolder C:\Output 
 --targetPlatform AzureSqlVirtualMachine

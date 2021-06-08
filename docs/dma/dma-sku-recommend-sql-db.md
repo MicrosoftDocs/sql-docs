@@ -51,7 +51,7 @@ The collected data includes limited information about the hardware configuration
     - **perfQueryIntervalInSec**: Optional. Interval at which to query performance data, in seconds. (Default: 30)
     - **staticQueryIntervalInSec**: Optional. Interval at which to query and persist static configuration data, in seconds. (Default: 60)
     - **numberOfIterations**: Optional. Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
-    -**outputFolder**: Optional. Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+    - **outputFolder**: Optional. Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
 
     Here's a sample invocation:
@@ -172,7 +172,10 @@ For SQL Server on Azure VM recommendations, the output will look as follows:
 -**insertphoto**
 
 The output of the SKU recommendations covers the following sections:
-
+- **Instance Name**: Name of the on-premises SQL Server instance(s)
+- **Database Name**: Name of the on-premises SQL Server database(s)
+- **SKU Recommendation**: The minimum cost-efficient SKU offering among all the performance eligible SKUs that could accommodate your workloads.
+- **Recommendation Reason**: For each tier that is recommended, we provide the reasons and collected data values driving the recommendations.
 
 The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 

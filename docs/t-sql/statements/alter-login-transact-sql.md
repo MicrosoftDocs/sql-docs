@@ -257,13 +257,6 @@ ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
 GO
 ```
 
-To unlock a login without changing the password, turn the check policy off and then on again.
-
-```sql
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
-GO
-```
 
 ### G. Changing the password of a login using HASHED
 

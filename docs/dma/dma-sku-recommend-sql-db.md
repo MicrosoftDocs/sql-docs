@@ -97,7 +97,7 @@ For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations s
 In order to start the SKU recommendation process, specify the `GetSkuRecommendation` action in the console application, with the following arguments:
  
 - **perfQueryIntervalInSec**: [Optional] Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
-- **targetPlatform**: [Optional] Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms will be evaluated, and the best fit will be returned. (Default: Any)
+- **targetPlatform**: [Optional] Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
 - **targetSqlInstance**: [Optional] Name of the SQL instance that SKU recommendation will be targeting. (Default: outputFolder will be scanned for files created by the PerfDataCollection action, and recommendations will be provided for every instance found)
 - **targetPercentile**: [Optional] Percentile of data points to be used during aggregation of the performance data. (Default: 95)
 - **scalingFactor**: [Optional] Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)

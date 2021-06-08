@@ -1,7 +1,7 @@
 ---
-description: "Pushdown computations in PolyBase"
 title: "Pushdown computations in PolyBase"
-dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
+titlesuffix: SQL Server
+description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 ms.date: 04/19/2021
 ms.prod: sql
 ms.technology: polybase
@@ -17,6 +17,9 @@ monikerRange: ">= sql-server-2016||>=sql-server-linux-ver15"
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Pushdown computation improves the performance of queries on external data sources. Beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], pushdown computations were available for Hadoop external data sources. [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced pushdown computations for other types of external data sources.  
+
+> [!NOTE]
+> To determine whether or not PolyBase pushdown computation is benefiting your query, see [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
 
 ## Enable pushdown computation
 
@@ -125,6 +128,7 @@ SELECT * FROM customer
 WHERE customer.account_balance <= 200000 
     AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
+
 ### Supported functions for pushdown
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the following functions for predicate pushdown.
@@ -208,4 +212,8 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 
 ## Next steps
 
-For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md)
+- For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md)
+
+## See also
+
+- [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md)  

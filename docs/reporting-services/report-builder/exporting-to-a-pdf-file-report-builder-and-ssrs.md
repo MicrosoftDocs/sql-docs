@@ -1,7 +1,7 @@
 ---
 title: "Exporting to a PDF File (Report Builder) | Microsoft Docs"
 description: In Report Builder, the PDF rendering extension renders paginated reports to files that can be opened in Adobe Acrobat and other third-party PDF viewers.
-ms.date: 10/21/2016
+ms.date: 05/24/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
@@ -15,7 +15,7 @@ ms.author: maggies
 # Exporting to a PDF File (Report Builder and SSRS)
   The PDF rendering extension renders [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports to files that can be opened in Adobe Acrobat and other third-party PDF viewers that support PDF 1.3. Although PDF 1.3 is compatible with Adobe Acrobat 4.0 and later versions, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports Adobe Acrobat 11.0 or later. The rendering extension does not require Adobe software to render the report. However, PDF viewers such as Adobe Acrobat are required to view or print a report in PDF format.  
   
- The PDF rendering extension supports ANSI characters and can translate Unicode characters from Japanese, Korean, Traditional Chinese, Simplified Chinese, Cyrillic, Hebrew, and Arabic with certain limitations. For more information about the limitations, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ The PDF rendering extension supports ANSI characters and can translate Unicode characters from Japanese, Korean, Traditional Chinese, Simplified Chinese, Cyrillic, Hebrew, and Arabic with certain limitations. For more information about the limitations, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md). The PDF rendering extension also conforms to  ISO 14289-1 (PDF/UA) standards for Accessible PDF. See [PDF Rendering Extension conformance to ISO 14289-1, Power BI Report Server & SSRS](/power-bi/report-server/rendering-extension-support) for details.
   
  The PDF renderer is a physical page renderer and, therefore, has pagination behavior that differs from other renderers such as HTML and Excel. This topic provides PDF renderer-specific information and describes exceptions to the rules.  
   

@@ -41,20 +41,20 @@ This table summarizes pushdown computation support on different external data so
 | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
 | **MongoDB\***  | **No** | Yes         | Yes          | Yes       | Yes        |
-| **Hadoop\*\***     | **No** | Yes         | Some\*\*\*      | Some\*\*\*  | Yes        |  
+| **Hadoop**     | **No** | Yes         | Some\*\*      | Some\*\*  | Yes        |  
 | **Azure Blob Storage** | No | No | No | No | Yes |
 |                  |
 
 \* Azure Cosmos DB pushdown support is enabled via the Azure Cosmos DB API for MongoDB. 
 
-\*\* PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
-
-\*\*\* See [Pushdown computation and Hadoop](#pushdown-computation-and-hadoop).
+\*\* See [Pushdown computation and Hadoop](#pushdown-computation-and-hadoop).
 
 > [!NOTE]
 > Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
 
-### Pushdown computation and Hadoop
+### Pushdown computation and Hadoop providers
+
+PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
 
 To use the computation pushdown functionality with Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
 

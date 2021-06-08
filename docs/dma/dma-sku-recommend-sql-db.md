@@ -99,8 +99,8 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **perfQueryIntervalInSec**: [Optional] Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
 - **targetPlatform**: [Optional] Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
 - **targetSqlInstance**: [Optional] Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
-- **targetPercentile**: [Optional] Percentile of data points to be used during aggregation of the performance data. (Default: 95)
-- **scalingFactor**: [Optional] Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
+- **targetPercentile** (Optional): Percentile of data points to be used during aggregation of the performance data. (Default: 95)
+- **scalingFactor**:  Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100, **Optional**)
 - **startTime**: [Optional] UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
 - **endTime**: [Optional] UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
 - **overwrite**: [Optional] Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
@@ -152,15 +152,20 @@ Below are some sample invocations:
 
 The following is an example output of an Azure SQL Database recommendation:
 
-![PowerShell single-db file shown in DMA folder](../dma/media/dma-sku-recommend-single-db-recommendations.png)
+![Azure SQL Database SKU recommendations output shown in console](../dma/media/dma-sku-recommend-single-db-recommendations.png)
+![Azure SQL Database SKU recommendations output shown in console](../dma/media/dnew-i:::image type="content" source="media/sku-recommendations-azuresqldb.png" alt-text="":::mage-text.png)
+
+:::image type="content" source="../relational-databases/security/media/sql-data-discovery-and-classification/5-accept-recommendations-button.png" alt-text="enter in alternatte text in thi box":::
+
+
 
 The following is an example output of an Azure SQL Managed Instance recommendation:
 
-![PowerShell managed instance file shown in DMA folder](../dma/media/dma-sku-recommend-mi-recommendations.png)
+![Azure SQL Managed Instance SKU recommendations output shown in console](../dma/media/dma-sku-recommend-mi-recommendations.png)
 
 The following is an example output of a SQL Server on Azure VM recommendation:
 
--**insertphoto**
+![SQL Server on Azure VM SKU recommendations output shown in console](../dma/media/dma-sku-recommend-mi-recommendations.png)
 
 The output of the SKU recommendations covers the following sections:
 - **Instance Name**: Name of the on-premises SQL Server instance(s)

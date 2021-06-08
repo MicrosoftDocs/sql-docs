@@ -272,25 +272,24 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## Azure SQL Database / Azure SQL Managed Instance SKU recommendations using the CLI
+## Azure SQL Database / Azure SQL Managed Instance / SQL Server on Azure VM SKU recommendations using the CLI
 
-These commands support recommendations for both Azure SQL Database single database and Azure SQL Managed Instance deployment options.
+With version 5.4 and above, when you install Data Migration Assistant, it will also install SqlAssessment.exe in %ProgramFiles%\Microsoft Data Migration Assistant\SQLAssessmentConsole\. Use SqlAssessment.exe to collect performance data for your SQL instance over an extended period of time, and output the result to JSON or CSV file. This method is especially useful when assessing several databases or huge databases
+
+These commands support recommendations for both Azure SQL Database single database, Azure SQL Managed Instance and SQL Server on Azure VM deployment options.
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationPreventPriceRefresh=true 
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlManagedInstance
 ```
 
 |Argument  |Description  | Required (Y/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Execute SKU assessment using DMA command line | Y
-|`/SkuRecommendationInputDataFilePath` | Full path to the performance counter file collected from the computer hosting your databases | Y
-|`/SkuRecommendationTsvOutputResultsFilePath` | Full path to the TSV result file | Y <br> (Requires either TSV or JSON or HTML file path)
-|`/SkuRecommendationJsonOutputResultsFilePath` | Full path to the JSON result file | Y <br> (Requires either TSV or JSON or HTML file path)
+|`PerfDataCollection` | Starts collection of performance data | Y
+|`GetSkuRecommendation` | Performs aggregation and analysis of the collected performance data and determines SKU recommendations| Y
+|`Assess` | Performs an assessment of the target SQL instance(s) | Y
+|`--outputFolder` | Folder which performance data, reports, and logs will be written to/read from. <br> (Default: current directory)| N
 |`/SkuRecommendationHtmlResultsFilePath` | Full path to the HTML result file | Y <br> (Requires either TSV or JSON or HTML file path)
 |`/SkuRecommendationPreventPriceRefresh` | Prevents the price refresh from occurring. Use if running in offline mode (e.g., true). | Y <br> (Select either this argument for static prices or all arguments below need to be selected to get the latest prices)
 |`/SkuRecommendationCurrencyCode` | The currency in which to display prices (e.g. "USD") | Y <br> (For the latest prices)

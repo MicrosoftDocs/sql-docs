@@ -107,7 +107,7 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **displayResult**: [Optional] Whether or not to print the SKU recommendation results to the console. (Default: true)
 - **outputFolder**: [Optional] Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
-To run the SKU recommendations using a JSON configuration file, run the executable without an action but provide a value for configFile, as follows:
+To run the SKU recommendations using a .JSON configuration file, run the executable without an action but provide a value for ConfigFile, as follows:
 
  ```
 {

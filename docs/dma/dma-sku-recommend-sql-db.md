@@ -168,7 +168,7 @@ The output of the SKU recommendations covers the following sections:
 - **SKU Recommendation**: The minimum cost-efficient SKU offering among all the performance eligible SKUs that could accommodate your workloads.
 - **Recommendation Reason**: For each tier that is recommended, we provide the reasons and collected data values driving the recommendations.
 
-The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
+The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is the S4 standard tier, then choosing S3 or below may cause queries to time out or fail to execute.
 
 
 ## Next step

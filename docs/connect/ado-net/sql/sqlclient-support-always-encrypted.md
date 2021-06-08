@@ -401,7 +401,8 @@ Once any key store provider is found at a registration level, the driver will **
 The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are pre-registered.
 
 The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure
-that a user of an application can access the plaintext data if they can provide the required column master key, by authenticating 
+that a user of an application can access the plaintext data if they can provide the required column master key, by authenticating
+against the key store containing the column master key.
 
 Applications that share a [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection) instance between multiple users may want to use [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand). Each user must register a
 key store provider on a [SqlCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand) instance before executing a query to access an encrypted column. If the key store provider is able to

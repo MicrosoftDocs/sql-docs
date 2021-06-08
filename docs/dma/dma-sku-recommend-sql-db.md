@@ -47,10 +47,10 @@ The collected data includes limited information about the hardware configuration
 
 2. Run the SKU Recommendations console application with the following arguments:
 
-    -**sqlConnectionStrings**: Required. Quote-enclosed formal connection string(s) for the target SQL instance(s).
-    -**perfQueryIntervalInSec**: Optional. Interval at which to query performance data, in seconds. (Default: 30)
-    -**staticQueryIntervalInSec**: Optional. Interval at which to query and persist static configuration data, in seconds. (Default: 60)
-    -**numberOfIterations**: Optional. Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
+    - **sqlConnectionStrings**: Required. Quote-enclosed formal connection string(s) for the target SQL instance(s).
+    - **perfQueryIntervalInSec**: Optional. Interval at which to query performance data, in seconds. (Default: 30)
+    - **staticQueryIntervalInSec**: Optional. Interval at which to query and persist static configuration data, in seconds. (Default: 60)
+    - **numberOfIterations**: Optional. Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
     -**outputFolder**: Optional. Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
 
@@ -171,6 +171,7 @@ For SQL Server on Azure VM recommendations, the output will look as follows:
 
 -**insertphoto**
 
+The output of the SKU recommendations covers the following sections:
 
 
 The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.

@@ -70,7 +70,7 @@ Alternatively, the data collection process can be invoked by providing the appro
     
 Below is a sample config file equivalent to the performance data collection action described above:
     
-     ```
+    ```
     {
     	"action": "PerfDataCollection",
     	"sqlConnectionStrings": [

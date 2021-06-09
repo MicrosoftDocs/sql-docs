@@ -31,6 +31,10 @@ Ideally the Query Optimizer selects an optimal execution plan for a query. When 
 
 As the name suggests, this feature extends and depends on the [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics. Introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and on-by-default in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store greatly simplifies the overall performance tuning customer experience.  
 
+:::image type="complex" source="media/query-store-hints.png" alt-text="The workflow for Query Store Hints.":::
+      First the query is executed, then captured by Query Store. Then the DBA creates a Query Store hint on a query. Thereafter, the query is executed using the Query Store hint.
+:::image-end:::
+
 Examples where Query Store hints can help with query-level performance issues:
 *    Recompile a query on each execution.
 *    Cap the memory grant size for a bulk insert operation.

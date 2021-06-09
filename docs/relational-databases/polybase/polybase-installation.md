@@ -40,14 +40,18 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 Before you install PolyBase on your SQL Server instances, decide whether you want a single node installation or a [PolyBase scale-out group](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
+For the PolyBase service account, choose:
+- the default virtual service account (VSA) for stand-alone installations of PolyBase.
+- a domain account, with a group managed service account (gMSA) preferred, for installations in a PolyBase scale-out group. For more information, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+
 For a PolyBase scale-out group, make sure that:
 
 - All the machines are on the same domain.
-- You use the same service account and password during PolyBase installation.
+- You use the same domain service account and password during PolyBase installation.
 - Your SQL Server instances can communicate with one another over the network.
 - The SQL Server instances are all the same version of SQL Server.
-
-After you install PolyBase either standalone or in a scale-out group, you can't change. To change this setting, you have to uninstall and reinstall the feature.
+- 
+After installation of PolyBase to either standalone or in a scale-out group, you cannot change to a scale-out group or standalone service. If you need to change an existing installation of PolyBase to a standalone instance or a scale-out group, uninstall and reinstall the PolyBase feature.
 
 ## Use the installation wizard
    

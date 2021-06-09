@@ -73,3 +73,14 @@ sections:
       - question: How can I tell whether PolyBase pushdown computation is happening?
         answer: |
           See [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+      - question: What ports are used by default for PolyBase?
+        answer: | 
+          By default, the following components use the following TCP ports:
+          | Component | TCP port(s) |
+          |--------------------------|--------------------------|
+          | Polybase data movement service connects to the Head node of PolyBase scale-out group | 16450, 16451 |
+
+          
+      
+          

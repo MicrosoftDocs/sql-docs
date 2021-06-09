@@ -90,10 +90,10 @@ Cumulative Update 11 (CU11) release for SQL Server 2019.
 |-----|-----|
 |15.0.4138.2|[2019-CU11-ubuntu-20.04]|
 
-SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabilities:
+SQL Server 2019 CU11 for SQL Server Big Data Clusters, includes important capabilities:
 
-- Encryption at Rest BYOK with external key providers. Check the latest updates on [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md).
-- Several SQL Server Polybase Hadoop fixes and SQL Server Polybase support of the following data sources: ADLS Gen2, CDH 6.0+ and HDP 3.0+.
+- Encryption at Rest with external key providers via BDC KMS, commonly known as bring your own key (BYOK). Check the latest updates on [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md).
+- Several SQL Server PolyBase Hadoop fixes and SQL Server PolyBase support of the following data sources: Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[S]). For more information, see [PolyBase Connectivity Configuration](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
 ## <a id="cu10"></a> CU10 (April 2021)
 

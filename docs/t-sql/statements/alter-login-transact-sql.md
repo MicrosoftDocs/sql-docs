@@ -1,8 +1,8 @@
 ---
 description: "ALTER LOGIN (Transact-SQL)"
-title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
+title: "ALTER LOGIN (Transact-SQL)"
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 06/08/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "passwords [SQL Server], modifying"
   - "names [SQL Server], logins"
   - "modifying login accounts"
-ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -253,7 +252,14 @@ To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, exe
 
 ```sql
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
+GO
+```
 
+To unlock a login without changing the password, turn the check policy off and then on again.
+
+```sql
+ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
+ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
 GO
 ```
 
@@ -876,17 +882,9 @@ To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, exe
 
 ```sql
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
-
 GO
 ```
 
-To unlock a login without changing the password, turn the check policy off and then on again.
-
-```sql
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
-GO
-```
 
 ### G. Changing the password of a login using HASHED
 

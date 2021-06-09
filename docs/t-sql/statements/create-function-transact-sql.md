@@ -44,9 +44,9 @@ ms.author: wiassaf
 ---
 # CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database SQL Managed_Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:
+Creates a user-defined function. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:
 
 - In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT
 
@@ -265,7 +265,7 @@ RETURNS return_data_type
 ## Arguments
 
 *OR ALTER*   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Conditionally alters the function only if it already exists.
 

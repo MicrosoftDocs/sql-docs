@@ -264,7 +264,7 @@ RETURNS return_data_type
 
 ## Arguments
 
-*OR ALTER*
+*OR ALTER*   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Conditionally alters the function only if it already exists.
@@ -272,16 +272,16 @@ Conditionally alters the function only if it already exists.
 > [!NOTE]
 > Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU1.
 
-*schema_name*
+*schema_name*   
 Is the name of the schema to which the user-defined function belongs.
 
-*function_name*
+*function_name*   
 Is the name of the user-defined function. Function names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the database and to its schema.
 
 > [!NOTE]
 > Parentheses are required after the function name even if a parameter is not specified.
 
-@*parameter_name*
+@*parameter_name*   
 Is a parameter in the user-defined function. One or more parameters can be declared.
 
 A function can have a maximum of 2,100 parameters. The value of each declared parameter must be supplied by the user when the function is executed, unless a default for the parameter is defined.
@@ -291,7 +291,7 @@ Specify a parameter name by using an at sign (@) as the first character. The par
 > [!NOTE]
 > ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the `INSERT` or `UPDATE` statement succeeds.
 
-[ *type_schema_name*. ] *parameter_data_type*
+[ *type_schema_name*. ] *parameter_data_type*   
 Is the parameter data type, and optionally the schema to which it belongs. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types and user-defined table types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, user-defined table types and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.
 
 If *type_schema_name* is not specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] looks for the *scalar_parameter_data_type* in the following order:
@@ -300,7 +300,7 @@ If *type_schema_name* is not specified, the [!INCLUDE[ssDE](../../includes/ssde-
 - The default schema of the current user in the current database.
 - The **dbo** schema in the current database.
 
-[ =*default* ]
+[ =*default* ]   
 Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.
 
 > [!NOTE]
@@ -308,36 +308,36 @@ Is a default value for the parameter. If a *default* value is defined, the funct
 
 When a parameter of the function has a default value, the keyword DEFAULT must be specified when the function is called to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value. However, the DEFAULT keyword is not required when invoking a scalar function by using the EXECUTE statement.
 
-READONLY
+READONLY   
 Indicates that the parameter cannot be updated or modified within the definition of the function. READONLY is required for user-defined table type parameters (TVPs), and cannot be used for any other parameter type.
 
-*return_data_type*
+*return_data_type*   
 Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.
 
-*function_body*
+*function_body*   
 Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multi-statement table-valued functions (MSTVFs).
 
 In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that together evaluate to a scalar value.
 
 In MSTVFs, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that populate a TABLE return variable.
 
-*scalar_expression*
+*scalar_expression*   
 Specifies the scalar value that the scalar function returns.
 
-TABLE
+TABLE   
 Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.
 
 In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.
 
 <a name="mstvf"></a> In MSTVFs, \@*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. \@*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.
 
-*select_stmt*
+*select_stmt*   
 Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).
 
-ORDER (\<order_clause>)
+ORDER (\<order_clause>)   
 Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.
 
-EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
+EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
 
 Specifies the assembly and method to which the created function name shall refer.
@@ -357,45 +357,43 @@ Specifies the assembly and method to which the created function name shall refer
 In a typical example, for MyFood.DLL, in which all types are in the MyFood namespace, the `EXTERNAL NAME` value could be: `MyFood.[MyFood.MyClass].MyStaticMethod`
 
 > [!NOTE]
->
-> - By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
-> - This option is not available in a contained database.
+> By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
+> This option is not available in a contained database.
 
-*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] )
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] )   
 Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.
 
-*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] )
+*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] )   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
 
 Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.
 
-NULL|NOT NULL
+NULL | NOT NULL   
 Supported only for natively compiled, scalar user-defined functions. For more information, see [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).
 
-NATIVE_COMPILATION
+NATIVE_COMPILATION   
 Indicates whether a user-defined function is natively compiled. This argument is required for natively compiled, scalar user-defined functions.
 
-BEGIN ATOMIC WITH
+BEGIN ATOMIC WITH   
 Supported only for natively compiled, scalar user-defined functions, and is required. For more information, see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).
 
-SCHEMABINDING
+SCHEMABINDING   
 The SCHEMABINDING argument is required for natively compiled, scalar user-defined functions.
 
-EXECUTE AS
+EXECUTE AS   
 EXECUTE AS is required for natively compiled, scalar user-defined functions.
 
-**\<function_option>::= and \<clr_function_option>::=**
-
+**\<function_option>::= and \<clr_function_option>::=**   
 Specifies that the function will have one or more of the following options.
 
-ENCRYPTION
+ENCRYPTION   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
 
 Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
 Using this option prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. This option cannot be specified for CLR functions.
 
-SCHEMABINDING
+SCHEMABINDING   
 Specifies that the function is bound to the database objects that it references. When SCHEMABINDING is specified, the base objects cannot be modified in a way that would affect the function definition. The function definition itself must first be modified or dropped to remove dependencies on the object that is to be modified.
 
 The binding of the function to the objects it references is removed only when ne of the following actions occurs:
@@ -411,12 +409,12 @@ A function can be schema bound only if the following conditions are true:
 - The function and the objects it references belong to the same database.
 - The user who executed the `CREATE FUNCTION` statement has `REFERENCES` permission on the database objects that the function references.
 
-RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**   
 Specifies the **OnNULLCall** attribute of a scalar function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.
 
-If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.
+If `RETURNS NULL ON NULL INPUT` is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.
 
-EXECUTE AS Clause
+EXECUTE AS   
 Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.
 
 > [!NOTE]
@@ -424,24 +422,24 @@ Specifies the security context under which the user-defined function is executed
 
 For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
-INLINE = { ON | OFF } **APPLIES TO**: SQL Server 2019 and later.
+INLINE = { ON | OFF }   
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If `INLINE=ON` is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to ON or OFF based on whether the UDF is inlineable. If `INLINE = ON` is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
-**\< column_definition >::=**
-
+**\< column_definition >::=**   
 Defines the table data type. The table declaration includes column definitions and constraints. For CLR functions, only *column_name* and *data_type* can be specified.
 
-*column_name*
+*column_name*   
 Is the name of a column in the table. Column names must comply with the rules for identifiers and must be unique in the table. *column_name* can consist of 1 through 128 characters.
 
-*data_type*
+*data_type*   
 Specifies the column data type. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except **timestamp**. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)**, and **timestamp**.The nonscalar type **cursor** cannot be specified as a column data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.
 
-DEFAULT *constant_expression*
+DEFAULT *constant_expression*   
 Specifies the value provided for the column when a value is not explicitly supplied during an insert. *constant_expression* is a constant, NULL, or a system function value. DEFAULT definitions can be applied to any column except those that have the IDENTITY property. DEFAULT cannot be specified for CLR table-valued functions.
 
-COLLATE *collation_name*
+COLLATE *collation_name*   
 Specifies the collation for the column. If not specified, the column is assigned the default collation of the database. Collation name can be either a Windows collation name or a SQL collation name. For a list of and more information about collations, see [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
 The COLLATE clause can be used to change the collations only of columns of the **char**, **varchar**, **nchar**, and **nvarchar** data types.
@@ -449,78 +447,75 @@ The COLLATE clause can be used to change the collations only of columns of the *
 > [!NOTE]
 > `COLLATE` cannot be specified for CLR table-valued functions.
 
-ROWGUIDCOL
+ROWGUIDCOL   
 Indicates that the new column is a row globally unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.
 
 The ROWGUIDCOL property does not enforce uniqueness of the values stored in the column. It also does not automatically generate values for new rows inserted into the table. To generate unique values for each column, use the NEWID function on INSERT statements. A default value can be specified; however, NEWID cannot be specified as the default.
 
-IDENTITY
+IDENTITY   
 Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a unique, incremental value for the column. Identity columns are typically used together with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the *seed* and *increment* or neither. If neither is specified, the default is (1,1).
 
 IDENTITY cannot be specified for CLR table-valued functions.
 
-*seed*
+*seed*   
 Is the integer value to be assigned to the first row in the table.
 
-*increment*
+*increment*   
 Is the integer value to add to the *seed* value for successive rows in the table.
 
- **\< column_constraint >::= and \< table_constraint>::=**
-
+ **\< column_constraint >::= and \< table_constraint>::=**   
 Defines the constraint for a specified column or table. For CLR functions, the only constraint type allowed is NULL. Named constraints are not allowed.
 
-NULL | NOT NULL
+NULL | NOT NULL   
 Determines whether null values are allowed in the column. NULL is not strictly a constraint but can be specified just like NOT NULL. NOT NULL cannot be specified for CLR table-valued functions.
 
-PRIMARY KEY
+PRIMARY KEY   
 Is a constraint that enforces entity integrity for a specified column through a unique index. In table-valued user-defined functions, the PRIMARY KEY constraint can be created on only one column per table. PRIMARY KEY cannot be specified for CLR table-valued functions.
 
-UNIQUE
+UNIQUE   
 Is a constraint that provides entity integrity for a specified column or columns through a unique index. A table can have multiple UNIQUE constraints. UNIQUE cannot be specified for CLR table-valued functions.
 
-CLUSTERED | NONCLUSTERED
+CLUSTERED | NONCLUSTERED   
 Indicate that a clustered or a nonclustered index is created for the PRIMARY KEY or UNIQUE constraint. PRIMARY KEY constraints use CLUSTERED, and UNIQUE constraints use NONCLUSTERED.
 
 CLUSTERED can be specified for only one constraint. If CLUSTERED is specified for a UNIQUE constraint and a PRIMARY KEY constraint is also specified, the PRIMARY KEY uses NONCLUSTERED.
 
 CLUSTERED and NONCLUSTERED cannot be specified for CLR table-valued functions.
 
-CHECK
+CHECK   
 Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns. CHECK constraints cannot be specified for CLR table-valued functions.
 
-*logical_expression*
+*logical_expression*   
 Is a logical expression that returns TRUE or FALSE.
 
-**\<computed_column_definition>::=**
-
+**\<computed_column_definition>::=**   
 Specifies a computed column. For more information about computed columns, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
-*column_name*
+*column_name*   
 Is the name of the computed column.
 
-*computed_column_expression*
+*computed_column_expression*   
 Is an expression that defines the value of a computed column.
 
-**\<index_option>::=**
-
+**\<index_option>::=**   
 Specifies the index options for the PRIMARY KEY or UNIQUE index. For more information about index options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
 
-PAD_INDEX = { ON | **OFF** }
+PAD_INDEX = { ON | **OFF** }   
 Specifies index padding. The default is OFF.
 
-FILLFACTOR = *fillfactor*
+FILLFACTOR = *fillfactor*   
 Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or change. *fillfactor* must be an integer value from 1 to 100. The default is 0.
 
-IGNORE_DUP_KEY = { ON | **OFF** }
+IGNORE_DUP_KEY = { ON | **OFF** }   
 Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The default is OFF.
 
-STATISTICS_NORECOMPUTE = { ON | **OFF** }
+STATISTICS_NORECOMPUTE = { ON | **OFF** }   
  Specifies whether distribution statistics are recomputed. The default is OFF.
 
-ALLOW_ROW_LOCKS = { **ON** | OFF }
+ALLOW_ROW_LOCKS = { **ON** | OFF }   
 Specifies whether row locks are allowed. The default is ON.
 
-ALLOW_PAGE_LOCKS = { **ON** | OFF }
+ALLOW_PAGE_LOCKS = { **ON** | OFF }   
 Specifies whether page locks are allowed. The default is ON.
 
 ## Best Practices

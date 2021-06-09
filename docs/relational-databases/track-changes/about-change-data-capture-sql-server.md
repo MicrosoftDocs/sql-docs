@@ -115,14 +115,14 @@ Although it is common for the database validity interval and the validity interv
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
 
 > [!NOTE]  
->  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically.  
+>  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically. 
  
  ## CDC and cleanup in Azure SQL Database (Preview)
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
 
 > [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in preview. 
+> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). 
  
 ## Collation differences
 

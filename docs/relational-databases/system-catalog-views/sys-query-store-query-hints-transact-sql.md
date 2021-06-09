@@ -35,8 +35,8 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |**last_query_hint_failure_reason**|int|Error code returned when if applying hints failed. Will include the message_id of the error message.|
 |**last_query_hint_failure_reason_desc**|nvarchar(128)|Will include the error description of the error message.|
 |**query_hint_failure_count**|bigint|Number of times that the query hint application has failed since the query hint was created or last modified.  |
-|**source**|int|Source of Query Store hint: user or system.|
-|**source_desc**|nvarchar(128)|Description of source of Query Store hint: user or system.|
+|**source**|int|Source of Query Store hint: user source is zero and system-generated is non-zero. |
+|**source_desc**|nvarchar(128)|Description of source of Query Store hint.|
 |**comment**|nvarchar(max)|Internal use only.|
 
 ## Remarks

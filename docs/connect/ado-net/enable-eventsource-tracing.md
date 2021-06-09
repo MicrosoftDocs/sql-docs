@@ -53,9 +53,9 @@ The following example enables event tracing for a data operation on the **Advent
 
 **Microsoft.Data.SqlClient** v2.1.0 extends event tracing support in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime**.
 
-In **Microsoft.Data.SqlClient** v3.0.0-preview2 and newer, events can be enabled and collected using [Xperf](/windows-hardware/test/wpt/) and [PerfView](https://github.com/microsoft/perfview), without any modification to the client application.
+Starting with **Microsoft.Data.SqlClient** v3.0, event tracing can be enabled without any modifications in the client application using event collection tools.
 
-In older versions starting from **Microsoft.Data.SqlClient** v2.1.0, event tracing in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime** is enabled by sending an EventCommand to `SqlClientEventSource`. Events in native SNI.dll can be collected using Xperf and PerfView. The valid EventCommand values are listed as below:
+With **Microsoft.Data.SqlClient** v2.1, event tracing needs to be enabled by configuring `EventCommand` with event source listener. The valid `EventCommand` values applicable to Native SNI are listed as below:
 
 ```cs
 

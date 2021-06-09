@@ -15,7 +15,7 @@ author: rothja
 ms.author: jroth
 ---
 # HelloData Code
-```  
+```vb
 'BeginHelloData  
 Option Explicit  
   

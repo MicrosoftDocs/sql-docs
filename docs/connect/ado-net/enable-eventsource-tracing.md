@@ -74,7 +74,6 @@ The following example enables event tracing in native SNI DLLs.
 
 ```cs
 // Native SNI tracing example
-// .NET Framework application
 using System;
 using System.Diagnostics.Tracing;
 using Microsoft.Data.SqlClient;

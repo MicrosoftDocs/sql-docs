@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "duplicating table structures"
   - "table copying [SQL Server]"
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Duplicate tables

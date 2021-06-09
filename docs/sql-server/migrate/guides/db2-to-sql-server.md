@@ -7,8 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
 ms.topic: how-to
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Migration guide: IBM Db2 to SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -118,7 +118,7 @@ To publish your schema and migrate your data, do the following:
 
    :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="Screenshot of the Data Migration Report.":::
 
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and then validate the migration by reviewing the data and schema. 
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and then validate the migration by reviewing the data and schema. 
 
    :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Screenshot of SQL Server Management Server.":::
 

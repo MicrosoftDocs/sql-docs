@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SQL:BatchStarting event class"
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:BatchStarting Event Class

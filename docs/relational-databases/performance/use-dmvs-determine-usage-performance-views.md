@@ -154,7 +154,7 @@ CROSS APPLY
     CROSS APPLY
       sys.dm_exec_query_plan(qs.plan_handle) AS qp
     WHERE
-      (CHARINDEX(vw.schemaname, st.text, 1) > 0)
+      (CHARINDEX(vw.viewname, st.text, 1) > 0)
       AND (st.dbid = DB_ID())
   ) AS t;
 GO

@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "attaching databases [SQL Server]"
   - "databases [SQL Server], moving"
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Detach and Attach (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

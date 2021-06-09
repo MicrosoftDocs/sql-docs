@@ -1,6 +1,6 @@
 ---
-title: "Deploying the JDBC driver"
-description: "Learn how you can redistribute and deploy the Microsoft JDBC Driver for SQL Server with your application and what files are required."
+title: Deploying the JDBC driver
+description: Learn how you can redistribute and deploy the Microsoft JDBC Driver for SQL Server with your application and what files are required.
 ms.custom: ""
 ms.date: 07/31/2020
 ms.prod: sql

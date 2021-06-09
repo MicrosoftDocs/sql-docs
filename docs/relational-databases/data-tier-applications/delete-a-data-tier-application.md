@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "wizard [DAC], delete"
   - "delete DAC"
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Delete a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

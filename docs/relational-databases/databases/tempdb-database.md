@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # tempdb database

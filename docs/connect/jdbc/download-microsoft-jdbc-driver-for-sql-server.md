@@ -1,5 +1,5 @@
 ---
-title: Download Microsoft JDBC Driver for SQL Server
+title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
 ms.date: 03/02/2021
 ms.prod: sql
@@ -30,7 +30,7 @@ Version 9.2 is the latest general availability (GA) version. It supports Java 8,
 When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports.
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadmssqljdbcenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 

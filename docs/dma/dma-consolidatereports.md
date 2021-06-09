@@ -42,7 +42,7 @@ Saving the PowerShell modules into the PowerShell modules directory enables you 
 
 To load the modules, perform the following steps:
 
-1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **DataMigrationAssistant**.
+1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **dmaProcessor**.
 2. Open the [PowerShell-Modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip), and then save them into the folder you created.
 
       ![PowerShell Modules](../dma/media//dma-consolidatereports/dma-powershell-modules.png)

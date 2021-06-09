@@ -110,7 +110,7 @@ The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVe
   
 2.  Click the **Processors** node.  
   
-3.  In the **Max worker threads** box, type or select a value from 128 through 32,767.  
+3.  In the **Max worker threads** box, type or select a value from 128 through 65,535.  
   
 > [!TIP]
 > Use the **max worker threads** option to configure the number of worker threads available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes. The default setting for **max worker threads** is best for most systems. 

@@ -52,7 +52,7 @@ PolyBase has the following limitations:
 
 - PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
 
-- PolyBase on SQL Server on Linux will not function if IPv6 is disabled in the kernel. See [Release notes for SQL Server 2019 on Linux](../../linux/sql-server-linux-release-notes-2019.md?view=sql-server-ver15#networking) for further information on this limitation.
+- PolyBase on SQL Server on Linux will not function if IPv6 is disabled in the kernel. See [Release notes for SQL Server 2019 on Linux](../../linux/sql-server-linux-release-notes-2019.md#networking) for further information on this limitation.
 
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "

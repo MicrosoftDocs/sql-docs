@@ -97,7 +97,7 @@ class Program
 
     static void Main(string[] args)
     {
-        // SqlClientListener is not required in v3.0.0-preview2 and newer
+        // Event source listener configuration is not required in v3.0 onwards.
         using (SqlClientListener listener = new SqlClientListener())
         using (SqlConnection connection = new SqlConnection(connectionString))
         {

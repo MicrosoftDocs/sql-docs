@@ -61,6 +61,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU11](#cu11) |  15.0.4138.2 | 20.3.3    | 2021-06-10 |
 | [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
@@ -80,6 +81,19 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu11"></a> CU11 (June 2021)
+
+Cumulative Update 11 (CU11) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4138.2|[2019-CU11-ubuntu-20.04]|
+
+SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabilities:
+
+- Encryption at Rest BYOK with external key providers. Check the latest updates on [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md).
+- Several SQL Server Polybase Hadoop fixes and SQL Server Polybase support of the following data sources: ADLS Gen2, CDH 6.0+ and HDP 3.0+.
 
 ## <a id="cu10"></a> CU10 (April 2021)
 
@@ -236,6 +250,12 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### MicrosoftML packages on SQL Server Machine Learning Services
+
+- **Affected releases**: CU10 and CU11
+
+- **Issue and customer impact**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
+
 ### Failed to connect to remote instance of SQL Server 2016 or older
 
 - **Affected releases**: CU10
@@ -247,7 +267,6 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 > `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
 
 - **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
-
 
 ### Partial loss of logs collected in ElasticSearch upon rollback
 
@@ -293,7 +312,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ### Enabling HDFS Encryption Zones support on CU8
 
-- **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9.
+- **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9. CU10 or superior releases are not affected.
 
 - **Issue and customer impact**: HDFS Encryption Zones support is not enabled by default in this scenario and need to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
 

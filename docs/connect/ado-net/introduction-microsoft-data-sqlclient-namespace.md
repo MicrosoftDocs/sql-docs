@@ -1,7 +1,7 @@
 ---
 title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
-ms.date: "11/19/2020"
+ms.date: "06/09/2020"
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,6 +14,216 @@ ms.reviewer: v-jizho2
 # Introduction to Microsoft.Data.SqlClient namespace
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## Release notes for Microsoft.Data.SqlClient 3.0
+
+Release notes are also available in the GitHub Repository: [3.0 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/3.0).
+
+### Breaking changes in 3.0
+
+- The minimum supported .NET Framework version has been increased to v4.6.1. .NET Framework v4.6.0 is no longer supported. [#899](https://github.com/dotnet/SqlClient/pull/899)
+- `User Id` connection property now requires `Client Id` instead of `Object Id` for **User-Assigned Managed Identity** [#1010](https://github.com/dotnet/SqlClient/pull/1010) [Read more](#azure-identity-dependency-introduction)
+- `SqlDataReader` now returns a `DBNull` value instead of an empty `byte[]`. Legacy behavior can be enabled by setting `AppContext` switch **Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior** [#998](https://github.com/dotnet/SqlClient/pull/998) [Read more](#enabling-row-version-null-behavior)
+
+### New features in 3.0
+
+### Configurable Retry Logic
+
+This new feature introduces configurable support for client applications to retry on "transient" or "retriable" errors. Configuration can be done through code or app config files and retry operations can be applied to opening a connection or executing a command. This feature is disabled by default and is currently in preview. To enable this support, client applications must turn on the following safety switch:
+
+`AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", true);`
+
+Once the .NET AppContext switch is enabled, a retry logic policy can be defined for `SqlConnection` and `SqlCommand` independently, or together using various customization options.
+
+New public APIs are introduced in `SqlConnection` and `SqlCommand` for registering a custom `SqlRetryLogicBaseProvider` implementation:
+
+```cs
+public SqlConnection
+{
+    public SqlRetryLogicBaseProvider RetryLogicProvider;
+}
+
+public SqlCommand
+{
+    public SqlRetryLogicBaseProvider RetryLogicProvider;
+}
+
+```
+
+API Usage examples can be found here:
+[SqlConnection retry sample](..\..\doc\samples\SqlConfigurableRetryLogic_OpenConnection.cs)
+[SqlCommand retry sample](..\..\doc\samples\SqlConfigurableRetryLogic_SqlCommand.cs)
+[Sample for retry logic options](..\..\doc\samples\SqlConfigurableRetryLogic_SqlRetryLogicOptions.cs)
+
+New configuration sections have also been introduced to do the same registration from configuration files, without having to modify existing code:
+
+```xml
+<section name="SqlConfigurableRetryLogicConnection"
+            type="Microsoft.Data.SqlClient.SqlConfigurableRetryConnectionSection, Microsoft.Data.SqlClient"/>
+
+<section name="SqlConfigurableRetryLogicCommand"
+            type="Microsoft.Data.SqlClient.SqlConfigurableRetryCommandSection, Microsoft.Data.SqlClient"/>
+```
+
+A simple example of using the new configuration sections in configuration files is below:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="SqlConfigurableRetryLogicConnection"
+             type="Microsoft.Data.SqlClient.SqlConfigurableRetryConnectionSection, Microsoft.Data.SqlClient"/>
+    <section name="SqlConfigurableRetryLogicCommand"
+             type="Microsoft.Data.SqlClient.SqlConfigurableRetryCommandSection, Microsoft.Data.SqlClient"/>
+
+    <section name="AppContextSwitchOverrides"
+             type="Microsoft.Data.SqlClient.AppContextSwitchOverridesSection, Microsoft.Data.SqlClient"/>
+  </configSections>
+
+  <!--Enable safety switch in .NET Core-->
+  <AppContextSwitchOverrides value="Switch.Microsoft.Data.SqlClient.EnableRetryLogic=true"/>
+
+  <!--Retry method for SqlConnection-->
+  <SqlConfigurableRetryLogicConnection retryMethod ="CreateFixedRetryProvider" numberOfTries ="3" deltaTime ="00:00:10" maxTime ="00:00:30"
+                                    transientErrors="40615" />
+
+  <!--Retry method for SqlCommand containing SELECT queries-->
+  <SqlConfigurableRetryLogicCommand retryMethod ="CreateIncrementalRetryProvider" numberOfTries ="5" deltaTime ="00:00:10" maxTime ="00:01:10"
+                                    authorizedSqlCondition="\b(SELECT)\b" transientErrors="102, 4060, 0"/>
+</configuration>
+```
+
+Alternatively, applications can implement their own provider of the `SqlRetryLogicBaseProvider` base class, and register it with `SqlConnection`/`SqlCommand`.
+
+### Event Counters
+
+The following counters are now available for applications targeting .NET Core 3.1+ and .NET Standard 2.1+:
+
+|Name|Display name|Description|  
+|-------------------------|-----------------|-----------------|  
+|**active-hard-connections**|Actual active connections currently made to servers|The number of connections that are currently open to database servers.|
+|**hard-connects**|Actual connection rate to servers|The number of connections per second that are being opened to database servers.|
+|**hard-disconnects**|Actual disconnection rate from servers|The number of disconnects per second that are being made to database servers.|
+|**active-soft-connects**|Active connections retrieved from the connection pool|The number of already-open connections being consumed from the connection pool.|
+|**soft-connects**|Rate of connections retrieved from the connection pool|The number of connections per second that are being consumed from the connection pool.|
+|**soft-disconnects**|Rate of connections returned to the connection pool|The number of connections per second that are being returned to the connection pool.|
+|**number-of-non-pooled-connections**|Number of connections not using connection pooling|The number of active connections that aren't pooled.|
+|**number-of-pooled-connections**|Number of connections managed by the connection pool|The number of active connections that are being managed by the connection pooling infrastructure.|
+|**number-of-active-connection-pool-groups**|Number of active unique connection strings|The number of unique connection pool groups that are active. This counter is controlled by the number of unique connection strings that are found in the AppDomain.|
+|**number-of-inactive-connection-pool-groups**|Number of unique connection strings waiting for pruning|The number of unique connection pool groups that are marked for pruning. This counter is controlled by the number of unique connection strings that are found in the AppDomain.|
+|**number-of-active-connection-pools**|Number of active connection pools|The total number of connection pools.|
+|**number-of-inactive-connection-pools**|Number of inactive connection pools|The number of inactive connection pools that haven't had any recent activity and are waiting to be disposed.|
+|**number-of-active-connections**|Number of active connections|The number of active connections that are currently in use.|
+|**number-of-free-connections**|Number of ready connections in the connection pool|The number of open connections available for use in the connection pools.|
+|**number-of-stasis-connections**|Number of connections currently waiting to be ready|The number of connections currently awaiting completion of an action and which are unavailable for use by the application.|
+|**number-of-reclaimed-connections**|Number of reclaimed connections from GC|The number of connections that have been reclaimed through garbage collection where `Close` or `Dispose` wasn't called by the application. **Note** Not explicitly closing or disposing connections hurts performance.|
+
+These counters can be used with .NET Core global CLI tools: `dotnet-counters` and `dotnet-trace` in Windows or Linux and PerfView in Windows, using `Microsoft.Data.SqlClient.EventSource` as the provider name. For more information, see [Retrieve event counter values](https://docs.microsoft.com/en-us/sql/connect/ado-net/event-counters#retrieve-event-counter-values).
+
+```cmd
+dotnet-counters monitor Microsoft.Data.SqlClient.EventSource -p
+PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterIntervalSec=1 collect
+```
+
+### Azure Identity dependency introduction
+**Microsoft.Data.SqlClient** now depends on the **Azure.Identity** library to acquire tokens for "Active Directory Managed Identity/MSI" and "Active Directory Service Principal" authentication modes. This change brings the following changes to the public surface area:
+
+- **Breaking Change**  
+  The "User Id" connection property now requires "Client Id" instead of "Object Id" for "User-Assigned Managed Identity".  
+- **Public API**  
+  New read-only public property: `SqlAuthenticationParameters.ConnectionTimeout`
+- **Dependency**  
+  Azure.Identity v1.3.0
+
+### Event tracing improvements in SNI.dll
+`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll will no longer be enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like xperf or perfview will be sufficient. For more information, see [Event tracing support in Native SNI](https://docs.microsoft.com/en-us/sql/connect/ado-net/enable-eventsource-tracing#event-tracing-support-in-native-sni).
+
+### Enabling row version null behavior
+`SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior, you must enable the following AppContext switch on application startup:
+**"Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior"**
+
+### Active Directory Default authentication support
+
+This PR introduces a new SQL Authentication method, **Active Directory Default**. This authentication mode widens the possibilities of user authentication, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
+
+With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](https://docs.microsoft.com/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use these credential types to acquire an access token in the following order:
+
+- **EnvironmentCredential**
+  - Enables authentication to Azure Active Directory using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](https://docs.microsoft.com/dotnet/api/azure.identity.environmentcredential))
+- **ManagedIdentityCredential**
+  - Attempts authentication to Azure Active Directory using a managed identity that has been assigned to the deployment environment. **"Client Id" of "User Assigned Managed Identity"** is read from the **"User Id" connection property**.
+- **SharedTokenCacheCredential**
+  - Authenticates using tokens in the local cache shared between Microsoft applications.
+- **VisualStudioCredential**
+  - Enables authentication to Azure Active Directory using data from Visual Studio
+- **VisualStudioCodeCredential**
+  - Enables authentication to Azure Active Directory using data from Visual Studio Code.
+- **AzureCliCredential**
+  - Enables authentication to Azure Active Directory using Azure CLI to obtain an access token.
+
+> InteractiveBrowserCredential is disabled in the driver implementation of "Active Directory Default", and "Active Directory Interactive" is the only option available to acquire a token using MFA/Interactive authentication.*
+
+> Further customization options are not available at the moment.
+
+### Custom master key store provider registration enhancements
+
+Microsoft.Data.SqlClient now offers more control of where master key store providers are accessible in an application in order to better support multi-tenant applications and their use of column encryption/decryption. The following APIs are introduced to allow registration of custom master key store providers on instances of `SqlConnection` and `SqlCommand`:
+
+```cs
+public class SqlConnection
+{
+        public void RegisterColumnEncryptionKeyStoreProvidersOnConnection(IDictionary<string, SqlColumnEncryptionKeyStoreProvider> customProviders)
+}
+public class SqlCommand 
+{
+        public void RegisterColumnEncryptionKeyStoreProvidersOnCommand(IDictionary<string, SqlColumnEncryptionKeyStoreProvider> customProviders)
+}
+```
+
+The static API on `SqlConnection`, i.e. `SqlConnection.RegisterColumnEncryptionKeyStoreProviders` to register custom master key store providers globally continues to be supported. The column encryption key cache maintained globally only applies to globally registered providers.
+
+#### Column master key store provider registration precedence
+
+The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are pre-registered. No providers should be registered on the connection or command instances if one of the built-in column master key store providers is needed.
+
+Custom master key store providers can be registered with the driver at three different layers. The global level is as it currently is. The new per-connection and per-command level registrations will be empty initially and can be set more than once.
+
+The precedence of the three registrations are as follows:
+
+- The per-command registration will be checked if it is not empty.
+- If the per-command registration is empty, the per-connection registration will be checked if it is not empty.
+- If the per-connection registration is empty, the global registration will be checked.
+
+Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+
+#### Column encryption key cache precedence
+
+The column encryption keys (CEKs) for custom key store providers registered using the new instance-level APIs will not be cached by the driver. The key store providers need to implement their own cache to gain performance. This local cache of column encryption keys implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver at the global level.
+
+A new API has also been introduced on the `SqlColumnEncryptionKeyStoreProvider` base class to set the cache time to live:
+
+```cs
+public abstract class SqlColumnEncryptionKeyStoreProvider
+{
+    // The default value of Column Encryption Key Cache Time to Live is 0.
+    // Provider's local cache is disabled for globally registered providers.
+    // Custom key store provider implementation must include column encryption key cache to provide caching support to locally registered providers.
+    public virtual TimeSpan? ColumnEncryptionKeyCacheTtl { get; set; } = new TimeSpan(0);
+}
+```
+
+### IP Address preference
+
+A new connection property `IPAddressPreference` is introduced to specify the IP address family preference to the driver when establishing TCP connections. If `Transparent Network IP Resolution` (in .NET Framework) or `Multi Subnet Failover` is set to `true`, this setting has no effect. Below are the three accepted values for this property:
+
+- **IPv4First**
+  - This is the default preference value. The driver will use resolved IPv4 addresses first. If none of them can be connected to successfully, it will try resolved IPv6 addresses.
+
+- **IPv6First**
+  - The driver will use resolved IPv6 addresses first. If none of them can be connected to successfully, it will try resolved IPv4 addresses.
+
+- **UsePlatformDefault**
+  - The driver will try IP addresses in the order received from the DNS resolution response.
 
 ## Release notes for Microsoft.Data.SqlClient 2.1
 

@@ -43,6 +43,8 @@ items:
       href: sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Big Data Clusters
   items:
+  - name: Big Data Clusters
+    href: big-data-cluster/index.yml
   - name: Overview
     items:
     - name: What are SQL Server Big Data Clusters?

@@ -1,0 +1,224 @@
+### YamlMime:Landing
+
+title: Big Data Clusters
+summary: SQL Server Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters (BDC) unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, BDC is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, BDC is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight and empower our users as they quench their thirst for data driven insights.
+
+metadata:
+  title: Big Data Clusters - Learn how to manage, deploy, and use
+  description: Learn how to use SQL Server Big Data Cluster. Tutorials, code examples, installation guides, and other documentation show you how.
+  ms.service: sql
+  ms.subservice: # big-data-cluster - waiting for this to be on the allowlist
+  ms.topic: landing-page
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.date: 03/16/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (Get started)
+  - title: About Big Data Clusters
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What are Big Data Clusters?
+            url: big-data-cluster-overview.md
+      - linkListType: whats-new
+        links:
+          - text: What's new
+            url: release-notes-big-data-cluster.md
+      - linkListType: video
+        links:
+          - text: Architecture & deployment
+            url: https://www.youtube.com/watch?v=q7mxWcYqBMM
+      - linkListType: quickstart
+        links:
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Load data
+            url: data-ingestion-restore-database.md
+          - text: Run a spark job
+            url: spark-submit-job.md
+
+  # Class (Developer)
+  - title: Develop
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Deploy on AKS with Notebook
+            url: notebooks-deploy.md
+          - text: Connect
+            url: connect-to-big-data-cluster.md
+          - text: Deploy applications
+            url: concept-application-deployment.md
+          - text: Run or test applications
+            url: big-data-cluster-consume-apps.md
+
+  # Card (Architect)
+  - title: Architect
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: How to deploy BDC on Kubernetes
+            url: deployment-guidance.md
+          - text: Configure HDFS tiering
+            url: hdfs-tiering.md
+      - linkListType: how-to-guide
+        links:
+          - text: Plan
+            url: deployment-guidance.md
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Install tools
+            url: deploy-big-data-tools.md
+      - linkListType: quickstart
+        links:
+          - text: Deploy on Azure Kubernetes Service (AKS)
+            url: quickstart-big-data-cluster-deploy.md
+          - text: Deploy on Azure Red Hat OpenShift (ARO)
+            url: quickstart-big-data-cluster-deploy-aro.md  
+      - linkListType: tutorial
+        links:
+          - text: Deploy with high availability
+            url: deployment-high-availability.md
+          - text: Deploy in Active Directory mode
+            url: deploy-active-directory.md
+          - text: Configure AKS for BDC
+            url: deploy-on-aks.md
+      - linkListType: sample
+        links:
+          - text: <architect sample>
+            url: deploy-on-aks.md
+          - text: <architect sample>
+            url: deploy-on-aks.md
+
+  # Card (Deploy)
+  - title: Deploy
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: How to deploy BDC on Kubernetes
+            url: deployment-guidance.md
+
+  # Card (Operate)
+  - title: Operate
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: <operate quickstart>
+            url: deployment-guidance.md
+          - text: <operate quickstart>
+            url: deploy-get-started.md
+          - text: <operate quickstart>
+            url: deploy-big-data-tools.md
+      - linkListType: tutorial
+        links:
+          - text: <operate tutorial>
+            url: deployment-high-availability.md
+          - text: <operate tutorial>
+            url: deploy-active-directory.md
+      - linkListType: sample
+        links:
+          - text: <operate sample>
+            url: deploy-on-aks.md
+          - text: <operate sample>
+            url: deploy-on-aks.md
+
+  # Class (Program)
+  - title: Program
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Install tools
+            url: deploy-big-data-tools.md
+          - text: <program quickstart>
+            url: deploy-get-started.md
+          - text: <program quickstart>
+            url: deploy-big-data-tools.md
+      - linkListType: tutorial
+        links:
+          - text: <program tutorial>
+            url: deployment-high-availability.md
+          - text: <program tutorial>
+            url: deploy-active-directory.md
+      - linkListType: sample
+        links:
+          - text: <program sample>
+            url: deploy-active-directory.md
+          - text: <program sample>
+            url: deploy-active-directory.md
+
+  # Card (Manage and monitor)
+  - title: Manage & monitor
+    linkLists:
+      - linkListType: how-to-guide 
+        links:
+          - text: Manage (Controller dashboard)
+            url: manage-with-controller-dashboard.md
+          - text: View status
+            url: view-cluster-status.md
+          - text: Manage HDFS permissions
+            url: hdfs-tiering-manage-permissions.md
+          - text: Troubleshoot
+            url: cluster-troubleshooting-commands.md
+          - text: Active Directory
+            url: troubleshoot-active-directory.md
+
+
+  # Card (Secure)
+  - title: Secure
+    linkLists:
+      - linkListType: tutorial
+        links:
+        - text: Deploy - Active Directory
+          url: ../relational-databases/polybase/data-virtualization-csv.md
+
+  # Card (Secure)
+  - title: Load data
+    linkLists:
+      - linkListType: tutorial
+        links:
+        - text: Virtualize CSV
+          url: ../relational-databases/polybase/data-virtualization-csv.md
+        - text: Configure HDFS tiering
+          url: hdfs-tiering.md
+        - text: Mount ADLS Gen2
+          url: hdfs-tiering-mount-adlsgen2.md
+
+  # Card (Integration partner)
+  - title: Integration partners
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: BDC partners
+          url: ../sql-server/partner-big-data-cluster.md
+
+  # Card (Related technologies)
+  - title: Related technologies
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Get started with Kubernetes
+          url: https://kubernetes.io/docs/setup/
+        - text: Troubleshoot Kubernetes
+          url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
+        - text: Apache Spark
+          url: /azure/hdinsight/spark/apache-spark-overview
+
+  # Card (Other resources)
+  - title: Related resources
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Big Data Clusters FAQ
+          url: big-data-cluster-faq.yml
+        - text: Troubleshoot Kubernetes
+          url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
+        - text: Apache Spark
+          url: https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview
+        - text: Samples (GitHub)
+          url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster
+        - text: Solution partners
+          url: ../sql-server/partner-big-data-cluster.md

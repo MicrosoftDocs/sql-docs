@@ -57201,11 +57201,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-cluster/index.md",
-      "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/connect/ado-net/index.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false

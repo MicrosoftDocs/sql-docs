@@ -70,7 +70,7 @@ EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
 ```
 
 
-The following example enables event tracing in native SNI.dll when the application targets .NET Framework. 
+The following example enables event tracing in native SNI DLLs.
 
 ```cs
 // Native SNI tracing example

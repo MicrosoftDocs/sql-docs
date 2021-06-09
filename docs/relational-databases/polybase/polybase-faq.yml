@@ -2,7 +2,7 @@
 metadata:
   title: "Frequently Asked Questions in PolyBase"
   description: Compare PolyBase and linked servers and compare PolyBase in Big Data Clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
-  ms.date: 6/02/2021
+  ms.date: 6/09/2021
   ms.prod: sql
   ms.technology: polybase
   ms.topic: conceptual

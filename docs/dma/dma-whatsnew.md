@@ -23,7 +23,7 @@ This article lists the additions in each release of Data Migration Assistant.
 ## Data Migration Assistant v 5.4
 
 The v5.4 release of the Data Migration Assistant provides support for:
-- New console experience that provides explanations as well as recommendations for target Azure SQL Database, Azure SQL Managed Instance and SQL Server on Azure VM SKUs based on performance data points.
+- New console experience that provides recommendations as well as explanations for target Azure SQL Database, Azure SQL Managed Instance and SQL Server on Azure VM SKUs based on performance data points.
 - SQL Server 2005 has been deprecated and will be removed as a possible source in future releases.
 
 In addition, this release of Data Migration Assistant provides bug fixes for the following issues:

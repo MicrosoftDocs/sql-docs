@@ -110,13 +110,15 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 
 Alternatively, the SKU recommendation process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 
-  ```
+```
 
  .\SqlAssessment.exe --configFile C:\path\to\config.json
 
+```
+
 Below is a sample ConfigFile equivalent to the SKU recommendations action described above:
 
- ```
+```
 {
     "action": "GetSkuRecommendation",
     "outputFolder": "C:\\Output",

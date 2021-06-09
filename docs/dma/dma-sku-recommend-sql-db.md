@@ -91,9 +91,9 @@ After the command executes, the performance and configuration data points are sa
 
 The data points collected by the previous step will be used as the input for the SKU recommendation process.
 
-For the single database option, DMA will provide recommendations for the Azure SQL Database single database tier, the compute level, and the maximum data size for each database on your SQL instance. If you have multiple databases on your SQL instance, you can also specify the databases for which you want recommendations.
+For the single database option, DMA will provide recommendations for the Azure SQL Database single database tier, the compute level, and the recommended storage configuration for each database on your SQL instance.
 
-For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app will provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM tier, the compute level, and the maximum data size for the set of databases on your SQL instance.
+For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app will provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM tier, the compute level, and the recommended storage configuration for the set of databases on your SQL instance.
 
 In order to start the SKU recommendation process, specify the `GetSkuRecommendation` action in the console application, with the following arguments:
  
@@ -108,7 +108,13 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **displayResult** (_Optional_):  Whether or not to print the SKU recommendation results to the console. (Default: true)
 - **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
 
-To run the SKU recommendations using a .JSON configuration file, run the executable without an action but provide a value for ConfigFile, as follows:
+Alternatively, the SKU recommendation process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
+
+  ```
+
+ .\SqlAssessment.exe --configFile C:\path\to\config.json
+
+Below is a sample ConfigFile equivalent to the SKU recommendations action described above:
 
  ```
 {
@@ -125,7 +131,7 @@ To run the SKU recommendations using a .JSON configuration file, run the executa
 }
  ```
 
-Below are some sample invocations:
+In order to get SKU recommendations for a specific Azure SQL platform instead of selecting one automatically, provide a value for the --targetPlatform option, as follows:
 
 **Sample 1: Getting SKU recommendations  for Azure SQL Database.**
 

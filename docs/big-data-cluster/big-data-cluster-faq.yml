@@ -1,6 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: SQL Server Big Data Clusters FAQ
+  titleSuffix: SQL Server Big Data Clusters
   description: FAQ on SQL Server Big Data Clusters concepts, capabilities, deployment, supportability, and tools
   services: sql-database
   ms.service: sql
@@ -12,7 +13,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: 
   ms.custom: 
-  ms.date: 03/23/2021
+  ms.date: 05/20/2021
 
 title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -218,6 +219,10 @@ sections:
       - question: Does the feature "Azure Storage encryption" by default also applies to AKS-based BDC clusters?
         answer: |
           This depends on the dynamic storage provisioner configurations in Azure Kubernetes Service (AKS). See here for more details: [Best practices for storage and backups in Azure Kubernetes Service (AKS)](/azure/aks/operator-best-practices-storage.md).
+
+      - question: Can I rotate the keys for SQL Server and HDFS encryption in Big Data cluster?
+        answer: |
+          Yes. For more information, see [Key versions in Big Data Cluster](big-data-cluster-key-versions.md).
   - name: Support
     questions: 
       - question: Are Spark and HDFS deployed within BDC supported by Microsoft?

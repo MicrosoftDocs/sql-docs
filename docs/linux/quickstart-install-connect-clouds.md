@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Learn how to install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 06/10/2021
 ms.topic: conceptual
 ms.prod: sql  
 ms.technology: linux
@@ -21,7 +21,7 @@ In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHE
 ## Amazon Web Services
 1.	Create a Linux AMI with at least 2 GB of memory from the marketplace 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
-    * [SLES v12 SP2+](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [SLES v12 SP3+](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.	Connect to the AMI with ssh
 1.	Follow the quickstart for the Linux distribution you chose: 
@@ -47,7 +47,7 @@ In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHE
 ## Google Cloud Platform
 1.	Create a Linux image with at least 2 GB of memory from the Cloud Launcher 
     * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
-    * [SLES v12 SP4](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
+    * [SLES v12 SP5](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.	Connect to the image with ssh
 1.	Follow the quickstart for the Linux distribution you chose: 

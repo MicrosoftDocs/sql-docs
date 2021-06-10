@@ -2,11 +2,16 @@
 
 One common task everyone deploying SQL Server has to account for is making sure that all mission critical SQL Server instances and the databases within them are available when the business and end users need them, whether that is 9 to 5 or around the clock. The goal is to keep the business up and running with minimal or no interruption. This concept is also known as business continuity.
 
-SQL Server 2017 introduces many new features or enhancements to existing ones, some of which are for availability. The biggest addition to SQL Server 2017 is the support for SQL Server on Linux distributions. For a full list of the new features in SQL Server 2017, see the topic [What's new in SQL Server](../sql-server/what-s-new-in-sql-server-2017.md).
+SQL Server 2017 introduces many new features or enhancements to existing ones, some of which are for availability. The biggest addition to SQL Server 2017 is the support for SQL Server on Linux distributions. For a full list of the new features in SQL Server, see the topics: 
 
-This article is focused on covering the availability scenarios in SQL Server 2017 as well as the new and enhanced availability features in SQL Server 2017. The scenarios include hybrid ones that will be able to span SQL Server deployments on both Windows Server and Linux, as well as ones that can increase the number of readable copies of a database. While this article does not cover availability options external to SQL Server, such as those provided by virtualization, everything discussed here applies to SQL Server installations inside a guest virtual machine whether in the public cloud or hosted by an on premises hypervisor server.
+- [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [What's new for SQL Server 2017 on Linux](../linux/sql-server-linux-whats-new.md)
+- [What's new for SQL Server 2019 on Linux](../linux/sql-server-linux-whats-new-2019.md)
 
-## SQL Server 2017 scenarios using the availability features
+This article is focused on covering the availability scenarios in SQL Server 2017 and above, as well as the new and enhanced availability features. The scenarios include hybrid ones that will be able to span SQL Server deployments on both Windows Server and Linux, as well as ones that can increase the number of readable copies of a database. While this article does not cover availability options external to SQL Server, such as those provided by virtualization, everything discussed here applies to SQL Server installations inside a guest virtual machine whether in the public cloud or hosted by an on premises hypervisor server.
+
+## SQL Server scenarios using the availability features
 
 Availability groups, FCIs, and log shipping can be used in a variety of ways, and not necessarily just for availability purposes. There are four main ways the availability features can be used:
 
@@ -15,14 +20,14 @@ Availability groups, FCIs, and log shipping can be used in a variety of ways, an
 * Migrations and upgrades
 * Scaling out readable copies of one or more databases
 
-Each section will discuss the relevant features that can be used for that particular scenario. The one feature not covered is [SQL Server replication](../relational-databases/replication/sql-server-replication.md). While not officially designated as an availability feature under the Always On umbrella, it is often used for making data redundant in certain scenarios. Replication will be added to SQL Server on Linux in a future release.
+Each section will discuss the relevant features that can be used for that particular scenario. The one feature not covered is [SQL Server replication](../relational-databases/replication/sql-server-replication.md). While not officially designated as an availability feature under the Always On umbrella, SQL Server replication is often used for making data redundant in certain scenarios. Merge replication is not supported for SQL Server on Linux. For more information, see [SQL Server Replication on Linux](../linux/sql-server-linux-replication.md).
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > The SQL Server availability features do not replace the requirement to have a robust, well tested backup and restore strategy, the most fundamental building block of any availability solution.
 
 ### High availability
 
-Ensuring that SQL Server instances or database are available in the case of a problem that is local to a data center or single region in the cloud region is important. This section will cover how the SQL Server availability features can assist in that task. All of the features described are available both on Windows Server as well as on Linux. 
+Ensuring that SQL Server instances or database are available in the case of a problem that is local to a data center or single region in the cloud region is important. This section will cover how the SQL Server availability features can assist in that task. All of the features described are available both on Windows Server as well as on Linux.
 
 #### Always on availability groups
 
@@ -39,17 +44,18 @@ An availability group also has another component called the listener, which allo
  
 Standard and Enterprise Edition have different maximums when it comes to replicas. An availability group in Standard Edition, known as a Basic Availability Group, supports two replicas (one primary and one secondary) with only a single database in the availability group. Enterprise Edition not only allows multiple databases to be configured in a single availability group, but also can have up to nine total replicas (one primary, eight secondary). Enterprise edition also provides other optional benefits such as readable secondary replicas, the ability to make backups off of a secondary replica, and more.
 
->[!NOTE]
+> [!NOTE]
 > Database mirroring, which was deprecated in SQL Server 2012, is not available on the Linux version of SQL Server nor will it be added. Customers still using database mirroring should start planning to migrate to availability groups, which is the replacement for database mirroring.
 
 When it comes to availability, availability groups can provide either automatic or manual failover. Automatic failover can occur if synchronous data movement is configured and the database on the primary and secondary replica are in a synchronized state. As long as the listener is used and the application uses a later version of .NET (3.5 with an update, or 4.0 and above), the failover should be handled with minimal to no impact to end users if a listener is utilized. Failover to make a secondary replica the new primary replica can be configured to be automatic or manual, and generally is measured in seconds.
 
 The list below highlights some differences with availability groups on Windows Server versus Linux:
+
 * Due to differences in the way the underlying cluster works on Linux and Windows Server, all failovers (manual or automatic) of availability groups are done via the cluster on Linux. On Windows Server-based availability group deployments, manual failovers must be done via SQL Server. Automatic failovers are handled by the underlying cluster on both Windows Server and Linux. 
-* In SQL Server 2017, the recommended configuration for availability groups on Linux will be a minimum of three replicas. This is due to the way that the underlying clustering works. An improved solution for a two replica configuration will come post-release.
+* In SQL Server 2017 and 2019, the recommended configuration for availability groups on Linux will be a minimum of three replicas. This is due to the way that the underlying clustering works.
 * On Linux, the common name used by each listener is defined in DNS and not in the cluster like it is on Windows Server.
 
-In SQL Server 2017, there are some new features and enhancements to availability groups:
+Starting with SQL Server 2017, there are some new features and enhancements to availability groups:
 
 * Cluster types
 * REQUIRED_SECONDARIES_TO_COMMIT
@@ -60,9 +66,9 @@ In SQL Server 2017, there are some new features and enhancements to availability
 
 The built-in availability form of clustering in Windows Server is enabled via a feature named Failover Clustering. It allows you to build a WSFC to be used with an availability group or FCI. Integration for availability groups and FCIs is provided by a cluster-aware resource DLLs shipped by SQL Server. 
 
-Each supported Linux distribution ships its own version of the Pacemaker cluster solution. SQL Server 2017 on Linux supports the use of Pacemaker. Pacemaker is an open stack solution that each distribution can then integrate with their stack. While the distributions ship Pacemaker, it is not as integrated as the Failover Clustering feature in Windows Server.
+Each supported Linux distribution ships its own version of the Pacemaker cluster solution. SQL Server 2017 and 2019 on Linux supports the use of Pacemaker. Pacemaker is an open stack solution that each distribution can then integrate with their stack. While the distributions ship Pacemaker, it is not as integrated as the Failover Clustering feature in Windows Server. SQL Server on Linux also supports [HPE Serviceguard](../linux/sql-server-availability-group-ha-hpe.md) and [DH2i DxEnterprise](/azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial) as a cluster solution.
 
-A WSFC and Pacemaker are more similar than different. Both provide a way to take individual servers and combine them in a configuration to provide availability, and have concepts of things like resources, constraints (even if implemented differently), failover, and so on. To support Pacemaker for both availability group and FCI configurations including things like automatic failover, Microsoft provides the mssql-server-ha package, which is similar to, but not exactly the same as, the resource DLLs in a WSFC, for Pacemaker. One of the differences between a WSFC and Pacemaker is that there is no network name resource in Pacemaker, which is the component that helps to abstract the name of the listener (or the name of the FCI) on a WSFC. DNS provides that name resolution on Linux.
+A WSFC and Pacemaker are more similar than different. Both provide a way to take individual servers and combine them in a configuration to provide availability, and have concepts of things like resources, constraints (even if implemented differently), failover, and so on. To support Pacemaker for both availability group and FCI configurations including things like automatic failover, Microsoft provides the mssql-server-ha package, which is similar to, but not exactly the same as the resource DLLs in a WSFC, for Pacemaker. One of the differences between a WSFC and Pacemaker is that there is no network name resource in Pacemaker, which is the component that helps to abstract the name of the listener (or the name of the FCI) on a WSFC. DNS provides that name resolution on Linux.
 
 Because of the difference in the cluster stack, some changes needed to be made for availability groups because SQL Server has to handle some of the metadata that is natively handled by a WSFC. The most [!IMPORTANT] change is the introduction of a cluster type for an availability group. This is stored in sys.availability_groups in the cluster_type and cluster_type_desc columns. There are three cluster types:
 
@@ -70,12 +76,12 @@ Because of the difference in the cluster stack, some changes needed to be made f
 * External
 * None
 
-All availability groups that require availability must use an underlying cluster, which in the case of SQL Server 2017 means a WSFC or Pacemaker. For Windows Server-based availability groups that use an underlying WSFC, the default cluster type is WSFC and does not need to be set. For Linux-based availability groups, when creating the availability group, the cluster type must be set to External. The integration with Pacemaker is configured after the availability group is created, whereas on a WSFC, it is done at creation time.
+All availability groups that require availability must use an underlying cluster, which in the case of SQL Server 2017 and 2019 means a WSFC or Pacemaker. For Windows Server-based availability groups that use an underlying WSFC, the default cluster type is WSFC and does not need to be set. For Linux-based availability groups, when creating the availability group, the cluster type must be set to External. The integration with Pacemaker or other types of cluster solutions in Linux is configured after the availability group is created, whereas on a WSFC, it is done at creation time.
 
 A cluster type of None can be used with both Windows Server and Linux availability groups. Setting the cluster type to None means that the availability group does not require an underlying cluster. This means SQL Server 2017 is the first version of SQL Server to support availability groups without a cluster, but the tradeoff is that this configuration is not supported as a high availability solution. 
 
 > [!IMPORTANT] 
-> SQL Server 2017 does not allow the ability to change a cluster type for an availability group after it is created. This means that an availability group cannot be switched from None to External or WSFC, or vice versa. 
+> SQL Server 2017 and 2019 does not allow the ability to change a cluster type for an availability group after it is created. This means that an availability group cannot be switched from None to External or WSFC, or vice versa. 
 
 For those who are only looking to just add additional read only copies of a database, or like what an availability group provides for migration/upgrades but do not want to be tied to the additional complexity of an underlying cluster or even the replication, an availability group with a cluster type of None is a perfect solution. For more information, see the sections [Migrations and Upgrades](#Migrations) and [read-scale](#ReadScaleOut). 
 
@@ -103,12 +109,10 @@ Before SQL Server 2016, the only way to get availability in SQL Server for appli
 
 SQL Server 2016 introduced partial support for DTC with availability groups that covered the latter scenario. SQL Server 2017 completes the story by supporting both scenarios with DTC.
 
-Another enhancement to DTC support for availability groups is that in SQL Server 2016, enabling support for DTC to an availability group could only be done when the availability group was created, and could not be added later. In SQL Server 2017, DTC support can also be added to an availability group after it is created.
-
->[!NOTE]
-> DTC support can only be configured for databases in Windows Server-based SQL Server instances. If DTC is an requirement for your application, you must use Windows Server as the OS for your SQL Server deployment, and cannot use Linux. 
+Another enhancement to DTC support for availability groups is that in SQL Server 2016, enabling support for DTC to an availability group could only be done when the availability group was created, and could not be added later. In SQL Server 2017 and later, DTC support can also be added to an availability group after it is created.
 
 #### Always on failover cluster instances
+
 Clustered installations have been a feature of SQL Server since version 6.5. FCIs are a proven method of providing availability for the entire installation of SQL Server, known as an instance. This means that everything inside the instance, including databases, SQL Server Agent jobs, linked servers, et al., will move to another server should the underlying server encounter a problem. All FCIs require some sort of shared storage, even if it is provided via networking. The FCI's resources can only be running and owned by one node at any given time. In the picture below, the first node of the cluster owns the FCI, which also means it owns the shared storage resources associated with it denoted by the solid line to the storage.
 
 ![Failover Cluster Instance](media/sql-server-ha-story/image3.png)
@@ -168,7 +172,7 @@ When deploying new instances or upgrading old ones, a business cannot tolerate l
 
 ### Always on availability groups
 
-An existing instance containing one or more availability groups can be upgraded in place to SQL Server 2017. While this will require some amount of downtime, with the right amount of planning, it can be minimized. 
+An existing instance containing one or more availability groups can be upgraded in place to later versions of SQL Server. While this will require some amount of downtime, with the right amount of planning, it can be minimized. 
 
 If the goal is to migrate to new servers and not change the configuration (including the operating system or SQL Server version), those servers could be added as nodes to the existing underlying cluster and added to the availability group. Once the replica or replicas are in the right state, a manual failover could occur to a new server, and then the old ones could be removed from the availability group, and ultimately, decommissioned. 
 
@@ -187,7 +191,7 @@ Availability groups can provide minimal downtime during patching of the underlyi
 ### Always on failover cluster instances
 
 FCIs on their own cannot assist with a traditional migration or upgrade; an availability group or log shipping would have to be configured for the databases in the FCI and all other objects accounted for. However, FCIs under Windows Server are still a popular option for when the underlying Windows Servers need to be patched. A manual failover can be initiated, which means a brief outage instead of having the instance completely unavailable for the entire time Windows Server is being patched.
-An FCI can be upgraded in place to SQL Server 2017. For information, see [Upgrade a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).
+An FCI can be upgraded in place to later versions of SQL Server. For information, see [Upgrade a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).
 
 ### Log shipping
 
@@ -228,7 +232,7 @@ Since log shipping is just based on backup and restore, and there are no differe
 
 ## <a name = "ReadScaleOut"></a> read-scale
 
-Since their introduction in SQL Server 2012, secondary replicas have had the ability to be used for read-only queries. There are two ways that can be achieved with an availability group: by allowing direct access to the secondary as well as [configuring read only routing](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) which requires the use of the listener.  SQL Server 2016 introduced the ability to load balance read-only connections via the listener using a round robin algorithm, allowing read-only requests to be spread across all readable replicas. 
+Since their introduction in SQL Server 2012, secondary replicas have had the ability to be used for read-only queries. There are two ways that can be achieved with an availability group: by allowing direct access to the secondary as well as [configuring read only routing](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) which requires the use of the listener. SQL Server 2016 introduced the ability to load balance read-only connections via the listener using a round robin algorithm, allowing read-only requests to be spread across all readable replicas. 
 
 > [!NOTE]
 > Readable secondary replicas is a feature only in Enterprise Edition, and each instance hosting a readable replica would need a SQL Server license.

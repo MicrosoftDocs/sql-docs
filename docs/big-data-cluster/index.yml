@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 
 title: Big Data Clusters
-summary: SQL Server Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters (BDC) unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, BDC is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, BDC is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight and empower our users as they quench their thirst for data driven insights.
+summary: SQL Server Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, Big Data Clusters is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, Big Data Clusters is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight and empower our users as they quench their thirst for data driven insights.
 
 metadata:
   title: Big Data Clusters - Learn how to manage, deploy, and use
-  description: Learn how to use SQL Server Big Data Cluster. Tutorials, code examples, installation guides, and other documentation show you how.
+  description: Learn how to use SQL Server Big Data Cluster. Tutorials, code examples, installation guides, and other documentation.
   ms.service: sql
   ms.subservice: # big-data-cluster - waiting for this to be on the allowlist
   ms.topic: landing-page
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.date: 03/16/2021
+  ms.date: 06/09/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -152,7 +152,7 @@ landingContent:
             url: deploy-openshift.md            
       - linkListType: tutorial
         links:
-          - text: Configure AKS for BDC
+          - text: Configure AKS for Big Data Clusters
             url: deploy-on-aks.md
           - text: Deploy with high availability
             url: deployment-high-availability.md
@@ -258,7 +258,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-        - text: BDC Integration partners
+        - text: Integration partners
           url: ../sql-server/partner-big-data-cluster.md
         - text: Troubleshoot Kubernetes
           url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/

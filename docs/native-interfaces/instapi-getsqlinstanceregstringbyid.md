@@ -20,19 +20,24 @@ public static bool GetSQLInstanceRegStringByID (Microsoft.SqlServer.INST_ID inst
 
 ## Parameters
 `instanceID` INST_ID
-   A pointer to the instance ID of the relevant instance.
+
+A pointer to the instance ID of the relevant instance.
 
 `registryPath` String
-   A pointer to a buffer to receive the registry path.
+
+A pointer to a buffer to receive the registry path.
 
 `valueName` String
-   A String value that contains the value name to retrieve.
+
+A String value that contains the value name to retrieve.
 
 `data` StringBuilder
-   A pointer to a buffer to receive the string that will be retrieved.
+
+A pointer to a buffer to receive the string that will be retrieved.
 
 `bufferSize` UInt32
-   A pointer to a `DWORD` value to supply the length of the buffer. Returns the required length if the supplied buffer is too small.
+
+A pointer to a `DWORD` value to supply the length of the buffer. Returns the required length if the supplied buffer is too small.
 
 ## Returns
 

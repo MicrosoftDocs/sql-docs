@@ -61,7 +61,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU11](#cu11) |  15.0.4138.2 | 20.3.3    | 2021-06-10 |
+| [CU11](#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
 | [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |

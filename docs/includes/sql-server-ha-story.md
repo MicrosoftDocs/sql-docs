@@ -13,32 +13,32 @@ This article is focused on covering the availability scenarios in SQL Server 201
 
 ## SQL Server scenarios using the availability features
 
-Availability groups, FCIs, and log shipping can be used in a variety of ways, and not necessarily just for availability purposes. There are four main ways the availability features can be used:
+Availability groups, FCIs, and log shipping can be used in various ways, and not necessarily just for availability purposes. There are four main ways the availability features can be used:
 
 * High availability
 * Disaster recovery
 * Migrations and upgrades
 * Scaling out readable copies of one or more databases
 
-Each section will discuss the relevant features that can be used for that particular scenario. The one feature not covered is [SQL Server replication](../relational-databases/replication/sql-server-replication.md). While not officially designated as an availability feature under the Always On umbrella, SQL Server replication is often used for making data redundant in certain scenarios. Merge replication is not supported for SQL Server on Linux. For more information, see [SQL Server Replication on Linux](../linux/sql-server-linux-replication.md).
+Each section will discuss the relevant features that can be used for that particular scenario. The one feature not covered is [SQL Server replication](../relational-databases/replication/sql-server-replication.md). While not officially designated as an availability feature under the Always On umbrella, SQL Server replication is often used for making data redundant in certain scenarios. Merge replication isn't supported for SQL Server on Linux. For more information, see [SQL Server Replication on Linux](../linux/sql-server-linux-replication.md).
 
 > [!IMPORTANT]
 > The SQL Server availability features do not replace the requirement to have a robust, well tested backup and restore strategy, the most fundamental building block of any availability solution.
 
 ### High availability
 
-Ensuring that SQL Server instances or database are available in the case of a problem that is local to a data center or single region in the cloud region is important. This section will cover how the SQL Server availability features can assist in that task. All of the features described are available both on Windows Server as well as on Linux.
+Ensuring that SQL Server instances or database are available in the case of a problem that is local to a data center or single region in the cloud region is important. This section will cover how the SQL Server availability features can assist in that task. All of the features described are available both on Windows Server and on Linux.
 
 #### Always on availability groups
 
-Introduced in SQL Server 2012, Always On Availability Groups (availability groups) provide database-level protection by sending each transaction of a database to another instance, known as a replica, that contains a copy of that database in a special state. An availability group can be deployed on Standard or Enterprise Editions.  The instances participating in an availability group can be either standalone or Always On Failover Cluster Instances (FCIs, described in the next section). Since the transactions are sent to a replica as they happen, availability groups are recommended where there are requirements for lower recovery point and recovery time objectives. Data movement between replicas can be synchronous or asynchronous, with Enterprise Edition allowing up to three replicas (including the primary) as synchronous. An availability group has one fully read/write copy of the database which is on the primary replica, while all secondary replicas cannot receive transactions directly from end users or applications. 
+Introduced in SQL Server 2012, Always On Availability Groups (availability groups) provide database-level protection by sending each transaction of a database to another instance, known as a replica, that contains a copy of that database in a special state. An availability group can be deployed on Standard or Enterprise Editions.  The instances participating in an availability group can be either standalone or Always On Failover Cluster Instances (FCIs, described in the next section). Since the transactions are sent to a replica as they happen, availability groups are recommended where there are requirements for lower recovery point and recovery time objectives. Data movement between replicas can be synchronous or asynchronous, with Enterprise Edition allowing up to three replicas (including the primary) as synchronous. An availability group has one fully read/write copy of the database that is on the primary replica, while all secondary replicas can't receive transactions directly from end users or applications. 
 
 > [!NOTE] 
 > Always On is an umbrella term for the availability features in SQL Server and covers both availability groups and FCIs. Always On is not the name of the availability group feature.
 
-Because availability groups only provide database-level, and not instance-level, protection, anything not captured in the transaction log or configured in the database will need to manually synchronized for each secondary replica. Some examples of objects that must be synchronized manually are logins at the instance level, linked servers, and SQL Server Agent jobs.
+Because availability groups only provide database-level, and not instance-level, protection, anything not captured in the transaction log or configured in the database will need to be manually synchronized for each secondary replica. Some examples of objects that must be synchronized manually are logins at the instance level, linked servers, and SQL Server Agent jobs.
 
-An availability group also has another component called the listener, which allows applications and end users to connect without needing to know which SQL Server instance is hosting the primary replica. Each availability group would have its own listener. While the implementations of the listener are slightly different on Windows Server versus Linux, the functionality it provides and how it is used is the same. The picture below shows a Windows Server-based availability group which is using a Windows Server Failover Cluster (WSFC). An underlying cluster at the OS layer is required for availability whether it is on Linux or Windows Server. The example shows a simple two server, or node, configuration where a WSFC is the underlying cluster. 
+An availability group also has another component called the listener, which allows applications and end users to connect without needing to know which SQL Server instance is hosting the primary replica. Each availability group would have its own listener. While the implementations of the listener are slightly different on Windows Server versus Linux, the functionality it provides and how it is used is the same. The picture below shows a Windows Server-based availability group that is using a Windows Server Failover Cluster (WSFC). An underlying cluster at the OS layer is required for availability whether it is on Linux or Windows Server. The example shows a simple two servers, or nodes, configuration where a WSFC is the underlying cluster. 
 
 ![Simple availability group](media/sql-server-ha-story/image1.png)
  
@@ -60,7 +60,7 @@ Starting with SQL Server 2017, there are some new features and enhancements to a
 * Cluster types
 * REQUIRED_SECONDARIES_TO_COMMIT
 * Enhanced Microsoft Distributor Transaction Coordinator (DTC) support for Windows Server-based configurations
-* Additional scale out scenarios for read only databases (described later in this article)
+* Additional scale out scenarios for read-only databases (described later in this article)
 
 ##### Always on availability group cluster types
 
@@ -68,7 +68,7 @@ The built-in availability form of clustering in Windows Server is enabled via a 
 
 Each supported Linux distribution ships its own version of the Pacemaker cluster solution. SQL Server 2017 and 2019 on Linux supports the use of Pacemaker. Pacemaker is an open stack solution that each distribution can then integrate with their stack. While the distributions ship Pacemaker, it is not as integrated as the Failover Clustering feature in Windows Server. SQL Server on Linux also supports [HPE Serviceguard](../linux/sql-server-availability-group-ha-hpe.md) and [DH2i DxEnterprise](/azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial) as a cluster solution.
 
-A WSFC and Pacemaker are more similar than different. Both provide a way to take individual servers and combine them in a configuration to provide availability, and have concepts of things like resources, constraints (even if implemented differently), failover, and so on. To support Pacemaker for both availability group and FCI configurations including things like automatic failover, Microsoft provides the mssql-server-ha package, which is similar to, but not exactly the same as the resource DLLs in a WSFC, for Pacemaker. One of the differences between a WSFC and Pacemaker is that there is no network name resource in Pacemaker, which is the component that helps to abstract the name of the listener (or the name of the FCI) on a WSFC. DNS provides that name resolution on Linux.
+A WSFC and Pacemaker are more similar than different. Both provide a way to take individual servers and combine them in a configuration to provide availability, and have concepts of things like resources, constraints (even if implemented differently), failover, and so on. To support Pacemaker for both availability group and FCI configurations including things like automatic failover, Microsoft provides the mssql-server-ha package, which is similar to, but not exactly the same as the resource DLLs in a WSFC, for Pacemaker. One of the differences between a WSFC and Pacemaker is that there's no network name resource in Pacemaker, which is the component that helps to abstract the name of the listener (or the name of the FCI) on a WSFC. DNS provides that name resolution on Linux.
 
 Because of the difference in the cluster stack, some changes needed to be made for availability groups because SQL Server has to handle some of the metadata that is natively handled by a WSFC. The most [!IMPORTANT] change is the introduction of a cluster type for an availability group. This is stored in sys.availability_groups in the cluster_type and cluster_type_desc columns. There are three cluster types:
 
@@ -83,7 +83,7 @@ A cluster type of None can be used with both Windows Server and Linux availabili
 > [!IMPORTANT] 
 > SQL Server 2017 and 2019 does not allow the ability to change a cluster type for an availability group after it is created. This means that an availability group cannot be switched from None to External or WSFC, or vice versa. 
 
-For those who are only looking to just add additional read only copies of a database, or like what an availability group provides for migration/upgrades but do not want to be tied to the additional complexity of an underlying cluster or even the replication, an availability group with a cluster type of None is a perfect solution. For more information, see the sections [Migrations and Upgrades](#Migrations) and [read-scale](#ReadScaleOut). 
+For those who are only looking to just add additional read-only copies of a database, or like what an availability group provides for migration/upgrades but do not want to be tied to the additional complexity of an underlying cluster or even the replication, an availability group with a cluster type of None is a perfect solution. For more information, see the sections [Migrations and Upgrades](#Migrations) and [read-scale](#ReadScaleOut). 
 
 The screenshot below shows the support for the different kinds of cluster types in SSMS. You must be running version 17.1 or later. The screenshot below is from version 17.2.
 
@@ -103,7 +103,7 @@ A value that is higher than 0 ensures higher data protection because if the requ
 
 ##### Enhanced Microsoft distributed transaction coordinator support
 
-Before SQL Server 2016, the only way to get availability in SQL Server for applications that require distributed transactions which use DTC underneath the covers was to deploy FCIs. A distributed transaction can be done in one of two ways:
+Before SQL Server 2016, the only way to get availability in SQL Server for applications that require distributed transactions, which use DTC underneath the covers was to deploy FCIs. A distributed transaction can be done in one of two ways:
 * A transaction that spans more than one database in the same SQL Server instance
 * A transaction that spans more than one SQL Server instance or possibly involves a non-SQL Server data source
 
@@ -121,7 +121,7 @@ After a failover, ownership changes as is seen in the picture below.
 
 ![Post Failover](media/sql-server-ha-story/image4.png)
  
-There is zero data loss with an FCI, but the underlying shared storage is a single point of failure since there is one copy of the data. FCIs are often combined with another availability method, such as an availability group or log shipping, to have redundant copies of databases. The additional method deployed should use physically separate storage from the FCI. When the FCI fails over to another node, it stops on one node and starts on another, not unlike powering a server off and turning it on. An FCI goes through the normal recovery process, meaning any transactions that need to be rolled forward will be, and any transactions that are incomplete will be rolled back. Therefore, the database is consistent from a data point to the time of the failure or manual failover, hence no data loss. Databases are only available after recovery is complete, so recovery time will depend on many factors, and will generally be longer than failing over an availability group. The tradeoff is that when you fail over an availability group, there may be additional tasks required to make a database usable, such as enabling a SQL Server Agent jobs job.
+There is zero data loss with an FCI, but the underlying shared storage is a single point of failure since there is one copy of the data. FCIs are often combined with another availability method, such as an availability group or log shipping, to have redundant copies of databases. The additional method deployed should use physically separate storage from the FCI. When the FCI fails over to another node, it stops on one node and starts on another, not unlike powering off a server and turning it on. An FCI goes through the normal recovery process, meaning any transactions that need to be rolled forward will be, and any transactions that are incomplete will be rolled back. Therefore, the database is consistent from a data point to the time of the failure or manual failover, hence no data loss. Databases are only available after recovery is complete, so recovery time will depend on many factors, and will generally be longer than failing over an availability group. The tradeoff is that when you fail over an availability group, there may be additional tasks required to make a database usable, such as enabling a SQL Server Agent job.
 
 Like an availability group, FCIs abstract which node of the underlying cluster is hosting it. An FCI always retains the same name. Applications and end users never connect to the nodes; the unique name assigned to the FCI is used. An FCI can participate in an availability group as one of the instances hosing either a primary or secondary replica.
 
@@ -149,23 +149,23 @@ One of the benefits of availability groups is that both high availability and di
 
 ![Availability Group](media/sql-server-ha-story/image6.png)
  
-Outside of an availability group with a cluster type of none, an availability group requires that all replicas are part of the same underlying cluster whether it is a WSFC or Pacemaker. This means that in the picture above, the WSFC is stretched to work in two different data centers which adds complexity. regardless of the platform (Windows Server or Linux). Stretching clusters across distance adds complexity. 
+Outside of an availability group with a cluster type of none, an availability group requires that all replicas are part of the same underlying cluster whether it is a WSFC or Pacemaker. This means that in the picture above, the WSFC is stretched to work in two different data centers, which adds complexity. regardless of the platform (Windows Server or Linux). Stretching clusters across distance adds complexity. 
 Introduced in SQL Server 2016, a distributed availability group allows an availability group to span availability groups configured on different clusters. This decouples the requirement to have the nodes all participate in the same cluster, which makes configuring disaster recovery much easier. For more information on distributed availability groups, see [Distributed availability groups](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 ![A diagram of a Distributed Availability Group.](media/sql-server-ha-story/image11.png)
  
 ### Always on failover cluster instances
 
-FCIs can be used for disaster recovery. As with a normal availability group, the underlying cluster mechanism must also be extended to all locations which adds complexity. There is an additional consideration for FCIs: the shared storage. The same disks need to be available in the primary and secondary sites, so an external method such as functionality provided by the storage vendor at the hardware layer or using storage Replica in Windows Server, is required to ensure that the disks used by the FCI exist elsewhere. 
+FCIs can be used for disaster recovery. As with a normal availability group, the underlying cluster mechanism must also be extended to all locations, which adds complexity. There is an additional consideration for FCIs: the shared storage. The same disks need to be available in the primary and secondary sites, so an external method such as functionality provided by the storage vendor at the hardware layer or using storage Replica in Windows Server, is required to ensure that the disks used by the FCI exist elsewhere. 
 
 ![Always On FCI](media/sql-server-ha-story/image8.png)
  
 ### Log shipping
-Log shipping is one of the oldest methods of providing disaster recovery for SQL Server databases. Log shipping is often used in conjunction with availability groups and FCIs to provide cost-effective and simpler disaster recovery where other options may be challenging due to environment, administrative skills, or budget. Similar to the high availability story for log shipping, many environments will delay the loading of a transaction log to account for human error.
+Log shipping is one of the oldest methods of providing disaster recovery for SQL Server databases. Log shipping is often used with availability groups and FCIs to provide cost-effective and simpler disaster recovery where other options may be challenging due to environment, administrative skills, or budget. Similar to the high availability story for log shipping, many environments will delay the loading of a transaction log to account for human error.
 
 ## <a name = "Migrations"></a> Migrations and upgrades
 
-When deploying new instances or upgrading old ones, a business cannot tolerate long outage. This section will discuss how the availability features of SQL Server can be used to minimize the downtime in a planned architecture change, server switch, platform change (such as Windows Server to Linux or vice versa), or during patching.
+When deploying new instances or upgrading old ones, a business can't tolerate long outage. This section will discuss how the availability features of SQL Server can be used to minimize the downtime in a planned architecture change, server switch, platform change (such as Windows Server to Linux or vice versa), or during patching.
 
 > [!NOTE]
 > Other methods, such as using backups and restoring them elsewhere, can also be used for migrations and upgrades. They are not discussed in this paper. 
@@ -211,7 +211,7 @@ Linux IaaS virtual machines can be deployed with SQL Server installed using Azur
 
 ## Cross-platform and Linux distribution interoperability
 
-With SQL Server now supported on both Windows Server and Linux, this section covers the scenarios of how they can work together for availability in addition to other purposes, as well as the story for solutions that will incorporate more than one Linux distribution.
+With SQL Server now supported on both Windows Server and Linux, this section covers the scenarios of how they can work together for availability in addition to other purposes, and the story for solutions that will incorporate more than one Linux distribution.
 
 Before covering the cross-platform and interoperability scenarios, two facts need to be stated:
 
@@ -224,11 +224,11 @@ Distributed availability groups are designed to span availability group configur
 
 ![Diagram showing a distributed availability group that spans a WSFC and Pacemaker.](media/sql-server-ha-story/image9.png)
  
-If an availability group is configured with a cluster type of None, it can span Windows Server and Linux as well as multiple Linux distributions. Since this is not a true high availability configuration, it should not be used for mission critical deployments, but for read-scale or migration/upgrade scenarios.
+If an availability group is configured with a cluster type of None, it can span Windows Server and Linux, as well as multiple Linux distributions. Since this is not a true high availability configuration, it should not be used for mission critical deployments, but for read-scale or migration/upgrade scenarios.
 
 ## Log shipping
 
-Since log shipping is just based on backup and restore, and there are no differences in the databases, file structures, etc., for SQL Server on Windows Server versus SQL Server on Linux. This means that log shipping can be configured between a Windows Server-based SQL Server installation and a Linux one as well as between distributions of Linux. Everything else remains the same. The only caveat is that log shipping, just like an availability group, cannot work when the source is at a higher SQL Server major version against a target that is at a lower version of SQL Server. 
+Since log shipping is based on backup and restore, and there are no differences in the databases, file structures, etc., for SQL Server on Windows Server versus SQL Server on Linux. This means that log shipping can be configured between a Windows Server-based SQL Server installation and a Linux one, as well as between distributions of Linux. Everything else remains the same. The only caveat is that log shipping, just like an availability group, cannot work when the source is at a higher SQL Server major version against a target that is at a lower version of SQL Server. 
 
 ## <a name = "ReadScaleOut"></a> read-scale
 
@@ -243,7 +243,7 @@ Scaling readable copies of a database via availability groups was first introduc
 
 Starting with SQL Server 2017, It is possible to create a near-real time, read-only solution with availability groups configured with a cluster type of None. If the goal is to use availability groups for readable secondary replicas and not availability, doing this removes the complexity of using a WSFC or Pacemaker, and gives the readable benefits of an availability group in a simpler deployment method. 
 
-The only major caveat is that due to no underlying cluster with a cluster type of None, configuring read only routing is a little different. From a SQL Server perspective, a listener is still required to route the requests even though there is no cluster. Instead of configuring a traditional listener, the IP address or name of the primary replica is used. The primary replica is then used to route the read only requests.
+The only major caveat is that due to no underlying cluster with a cluster type of None, configuring read-only routing is a little different. From a SQL Server perspective, a listener is still required to route the requests even though there is no cluster. Instead of configuring a traditional listener, the IP address or name of the primary replica is used. The primary replica is then used to route the read-only requests.
 
 A log shipping warm standby can technically be configured for readable usage by restoring the database WITH STANDBY. However, because the transaction logs require exclusive use of the database for restoration, it means that users cannot be accessing the database while that happens. This makes log shipping a less than ideal solution - especially if near real-time data is required. 
 

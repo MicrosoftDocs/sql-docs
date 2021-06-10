@@ -54,6 +54,10 @@ Once created, Query Store hints are persisted and survive restarts and failovers
 
 If a query hint contradicts what is possible for query optimization, the hint will not block query execution and the hint will not be applied. In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
 
+Watch this video for an overview of Query Store hints:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-Store-Hints-in-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
+
 ## Query Store hints system stored procedures
 
 To create or update hints, use [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).

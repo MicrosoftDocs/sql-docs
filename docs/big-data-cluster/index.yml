@@ -165,7 +165,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Monitor cluster with Grafana
-            url: cluster-logging-grafana.md
+            url: cluster-monitor-grafana.md
           - text: Visualize logs with Kibana
             url: cluster-logging-kibana.md
           - text: Cluster monitoring notebooks

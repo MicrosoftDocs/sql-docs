@@ -9,8 +9,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
-author: karinazhou
-ms.author: v-jizho2
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Tutorial: Develop a .NET application using Always Encrypted with secure enclaves

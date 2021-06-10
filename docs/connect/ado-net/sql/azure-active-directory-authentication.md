@@ -8,8 +8,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
-ms.author: v-jizho2
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-daenge
 ---
 

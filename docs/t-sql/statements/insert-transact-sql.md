@@ -2,7 +2,7 @@
 description: "INSERT (Transact-SQL)"
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/21/2020"
+ms.date: "06/10/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -117,7 +117,7 @@ INSERT
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
-INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
+INSERT [INTO] { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     {   
       VALUES ( { NULL | expression } )  

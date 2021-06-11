@@ -1,7 +1,7 @@
 ---
 description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
-ms.date: 03/29/2021
+ms.date: 06/10/2021
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -24,8 +24,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 9 [(KB 5000642)](https://support.microsoft.com/help/5000642)|2/11/2021|[SQL Server 2019 Installation](./install-sql-server.md)|
-|SQL Server 2017|N/A|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 23 [(KB 5000685)](https://support.microsoft.com/help/5000685)|2/24/2021|[SQL Server 2017 Installation](./install-sql-server.md)|
+|SQL Server 2019|N/A|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 11 [(KB 5003249)](https://support.microsoft.com/help/5003249)|6/10/2021|[SQL Server 2019 Installation](./install-sql-server.md)|
+|SQL Server 2017|N/A|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 24 [(KB 5001228)](https://support.microsoft.com/help/5001228)|5/10/2021|[SQL Server 2017 Installation](./install-sql-server.md)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 17 [(KB 5001092)](https://support.microsoft.com/kb/5001092)|3/29/2021|[SQL Server 2016 Installation](./install-sql-server.md)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](./install-sql-server.md)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|11/22/2017|[SQL Server 2016 Installation](./install-sql-server.md)|

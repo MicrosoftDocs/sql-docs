@@ -2,6 +2,11 @@
 title: azdata bdc hdfs key reference
 titleSuffix: SQL Server big data clusters
 description: Reference article for azdata bdc hdfs key commands.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: seanw
+ms.date: 06/02/2021
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
@@ -13,11 +18,13 @@ Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdat
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
+
 |Command|Description|
 | --- | --- |
 [azdata bdc hdfs key create](#azdata-bdc-hdfs-key-create) | Create a HDFS key.
 [azdata bdc hdfs key list](#azdata-bdc-hdfs-key-list) | Lists all Hadoop encryption zone keys.
 [azdata bdc hdfs key roll](#azdata-bdc-hdfs-key-roll) | Roll a HDFS key.
+[azdata bdc hdfs key describe](#azdata-bdc-hdfs-key-describe) | Shows details of an encryption zone key.
 ## azdata bdc hdfs key create
 Create a HDFS key with given name, and given size.
 ```bash
@@ -44,7 +51,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs key list
@@ -65,7 +72,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs key roll
@@ -90,7 +97,32 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## azdata bdc hdfs key describe
+Shows details of an encryption zone key.
+```bash
+azdata bdc hdfs key describe --name -n 
+                             
+```
+### Examples
+To show the details of a key with name key1.
+```bash
+azdata hdfs key describe --name key1
+```
+### Required Parameters
+#### `--name -n`
+Name of the encryption zone key to describe. 
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 

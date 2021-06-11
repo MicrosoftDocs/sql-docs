@@ -5,7 +5,7 @@ description: Reference article for azdata bdc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -37,7 +37,9 @@ azdata bdc debug copy-logs --namespace -ns
                            
 [--skip-compress -sc]  
                            
-[--exclude-dumps -ed]
+[--exclude-dumps -ed]  
+                           
+[--exclude-system-logs  -esl]
 ```
 ### Required Parameters
 #### `--namespace -ns`
@@ -55,6 +57,8 @@ The number of seconds to wait for the command to complete. The default value is 
 Whether or not to skip compressing the result folder. The default value is False which compresses the result folder.
 #### `--exclude-dumps -ed`
 Whether or not to exclude dumps from result folder. The default value is False which includes dumps.
+#### `--exclude-system-logs  -esl`
+Whether or not to exclude system logs from collection. The default value is False which includes system logs.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -101,4 +105,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

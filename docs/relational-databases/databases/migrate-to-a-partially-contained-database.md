@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, migrating to"
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Migrate to a Partially Contained Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

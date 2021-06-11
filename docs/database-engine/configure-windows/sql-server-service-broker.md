@@ -100,8 +100,8 @@ FROM ExpenseQueue;
 
 Cross-instance service broker message exchange is supported only between Azure SQL Managed Instances:
 
-- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
-- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See See [ALTER ROUTE](https://docs.microsoft.com/sql/t-sql/statements/alter-route-transact-sql).
+- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
+- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See See [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).
 
 Transport security is supported, dialog security is not:
 

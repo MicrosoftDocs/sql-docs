@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Showplan All for Query Compile event class"
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan All for Query Compile Event Class

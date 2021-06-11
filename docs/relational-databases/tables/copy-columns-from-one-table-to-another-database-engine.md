@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "copying columns"
   - "columns [SQL Server], copying"
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Copy Columns from One Table to Another (Database Engine)

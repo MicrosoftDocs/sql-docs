@@ -193,5 +193,4 @@ To access Context menu for the selected object in Object explorer, the keyboard 
 |Go to declaration.|F12|  
   
 ## See Also  
-[Shortcut Keys&#40;Oracle To SQL&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
-  
+[Shortcut Keys&#40;Oracle To SQL&#41;]()

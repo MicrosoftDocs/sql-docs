@@ -1,8 +1,8 @@
 ---
-title: "Connecting to an Azure SQL database"
-description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
+title: Connecting to an Azure SQL database
+description: This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
 ms.custom: ""
-ms.date: "12/18/2020"
+ms.date: 12/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

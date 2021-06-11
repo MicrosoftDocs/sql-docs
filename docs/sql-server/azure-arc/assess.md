@@ -4,7 +4,7 @@ description: Configure on-demand SQL Assessment on an Azure Arc enabled SQL Serv
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -14,7 +14,10 @@ SQL Assessment provides a mechanism to evaluate your configuration of SQL Server
 
 ## Prerequisites
 
-* Your SQL Server instance must be connected to Azure Arc. For instructions, see the [Connect your SQL Server to Azure Arc](connect.md) article.
+* Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
+   
+   > [!NOTE]
+   > On-demand SQL Assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
 * The Microsoft Monitoring Agent (MMA) extension must be installed and configured on the machine. View the [Install MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma) article for instructions. You can also get more information on the [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent) article.
 

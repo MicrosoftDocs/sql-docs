@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Monitoring performance by using the Query Store
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
@@ -46,6 +46,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
 
 ```sql
+ALTER DATABASE <database_name>
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 ```
 
@@ -71,6 +72,7 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 **Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
 
 ```sql
+ALTER DATABASE <database_name>
 SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
 ```
 

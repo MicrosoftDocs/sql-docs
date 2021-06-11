@@ -1,8 +1,8 @@
 ---
+title: "sys.dm_exec_external_work (Transact-SQL)"
 description: "sys.dm_exec_external_work (Transact-SQL)"
-title: "sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/10/2021
+ms.date: 05/20/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -19,13 +19,12 @@ helpviewer_keywords:
   - "dm_exec_external_work management view"
   - "PolyBase,views"
   - "PolyBase"
-ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_external_work (Transact-SQL)
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Returns information about the workload per worker, on each compute node.  
   
@@ -50,7 +49,11 @@ Query `sys.dm_exec_external_work` to identify the work spun up to communicate wi
 |total_elapsed_time|`int`|Total time in milliseconds||
 |compute_pool_id|`int`|Unique identifier for the pool where the worker is running. Only applies to SQL Server Big Data Cluster. See [sys.dm_exec_compute_pools (Transact-SQL)](sys-dm-exec-compute-pools.md).|Returns `0` for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows and Linux.|
 
-## See Also  
+## Remarks
+
+Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can use `sys.dm_exec_external_work` to view the remote query passed to an external data source in PolyBase pushdown computation. For more information, see [How to tell if external pushdown occurred](../polybase/polybase-how-to-tell-pushdown-computation.md).
+
+## See also  
  [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

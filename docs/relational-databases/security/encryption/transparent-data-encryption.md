@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transparent Data Encryption, about"
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: jaszymas
-ms.author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ms.reviewer: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -239,6 +239,9 @@ ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 The encryption_scan_state column has been added to the sys.dm_database_encryption_keys dynamic management view. It shows the current state of the encryption scan. There's also a new column called encryption_scan_modify_date, which contains the date and time of the last encryption-scan state change.
 
 If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance restarts while its encryption scan is suspended, a message is logged in the error log on startup. The message indicates that an existing scan has been paused.
+
+> [!IMPORTANT]
+> Suspend and Resume TDE scan feature is currently not available in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics.
 
 ## TDE and transaction logs
 

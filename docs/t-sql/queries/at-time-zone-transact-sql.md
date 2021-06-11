@@ -137,15 +137,17 @@ FROM Sales.SalesOrderHeader;
 
 ### B. Convert values between different time zones  
 
-The following example converts values between different time zones:  
+The following example converts values between different time zones. The **inputdate** values are **datetime** and are not stored with an offset, but are known to be Pacific Standard Time. The first step is to assign the known offset and then convert to the new time zone:  
 
 ```sql
 USE AdventureWorks2016;
 GO
 
 SELECT SalesOrderID, OrderDate,
+    --Assign the known offset only
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,
-    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET
+    --Assign the known offset, then convert to another time zone
+    OrderDate AT TIME ZONE 'Pacific Standard Time' AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET
 FROM Sales.SalesOrderHeader;
 ```
 

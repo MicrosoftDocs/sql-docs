@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "insert keyword [XML DML]"
   - "insert XML DML statement"
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -51,7 +51,7 @@ ms.custom: "seo-lt-2019"
 1.  Use the **sp_fulltext_service** to update the list of languages, as follows:  
   
     ```  
-    EXEC sp_fulltext_service 'update_languages'  
+    EXEC sp_fulltext_service 'update_languages';  
     ```  
   
 2.  Use the **sp_fulltext_service** to restart the filter daemon host processes (fdhost.exe), as follows:  

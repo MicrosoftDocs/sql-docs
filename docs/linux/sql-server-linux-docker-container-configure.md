@@ -1,8 +1,8 @@
 ---
 title: Configure and customize SQL Server Docker containers
 description: Understand the different ways to customize SQL Server Docker Containers and how you can configure it based on your requirement
-author: vin-yu
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
 ms.date: 03/22/2021
@@ -380,3 +380,4 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 - [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
 
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
+- [Dockerfile example with Full-Text Search](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-agent-fts-ha-tools/Dockerfile)

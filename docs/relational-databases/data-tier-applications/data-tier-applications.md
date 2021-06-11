@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], designing"
   - "wizard [DAC]"
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Data-tier Applications
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

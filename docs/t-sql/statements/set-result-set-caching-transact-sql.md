@@ -32,7 +32,8 @@ Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Remarks  
 

@@ -40,7 +40,8 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
 `[ @table_name = ] 'table_name'`

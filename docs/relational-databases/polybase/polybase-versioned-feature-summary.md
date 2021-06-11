@@ -2,7 +2,7 @@
 description: "PolyBase features and limitations"
 title: "PolyBase features and limitations"
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 03/23/2021
+ms.date: 04/19/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -37,67 +37,10 @@ This table lists the key features for PolyBase and the products in which they're
 <sup>*</sup> Introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], see [Examples of bulk access to data in Azure Blob storage](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 
-## Syntax that prevents pushdown
-
-The following T-SQL functions or syntax will prevent pushdown computation:
-
-- `AT TIME ZONE`
-- `CONCAT_WS`
-- `TRANSLATE`
-- `RAND`
-- `CHECKSUM`
-- `BINARY_CHECKSUM`
-- `ISJSON`
-- `JSON_VALUE`
-- `JSON_QUERY`
-- `JSON_MODIFY`
-- `NEWID`
-- `STRING_ESCAPE`
-- `COMPRESS`
-- `DECOMPRESS`
-- `GREATEST`
-- `LEAST`
-- `PARSE`
-- `FORMAT` 
-- `TRIM`
-
-For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md).
-
-## Pushdown computation supported by T-SQL operators
-
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators.
-
-|**Operator type** |**Pushable to Hadoop** |**Pushable to Blob storage** | 
-|---------|---------|---------|
-|Column projections|Yes|No|
-|Predicates|Yes|No|
-|Aggregates|Partial\*|No|
-|Joins between external tables|No|No|
-|Joins between external tables and local tables|No|No|
-|Sorts|No|No|
-
-\* Partial aggregation means that a final aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
-
-#### Hadoop pushdown support
-
-Hadoop providers support the following:
-
-| **Aggregations**                  | **Filters (binary comparison)** | 
-|-----------------------------------|---------------------------------| 
-| Count_Big                         | NotEqual                        | 
-| Sum                               | LessThan                        | 
-| Avg                               | LessOrEqual                     | 
-| Max                               | GreaterOrEqual                  | 
-| Min                               | GreaterThan                     | 
-| Approx_Count_Distinct             | Is                              | 
-|                                   | IsNot                           | 
-|                                   |                                 | 
 
 ## Known limitations
 
 PolyBase has the following limitations:
-
-- In order to use PolyBase, you must have sysadmin or CONTROL SERVER level permissions on the database.
 
 - Before [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or 1 MB in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this limitation is lifted. The limit remains 1 MB for Hadoop data sources, but is limited only by the maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limit for other data sources.
 
@@ -106,6 +49,10 @@ PolyBase has the following limitations:
 - PolyBase can't connect to any Hadoop instance if Knox is enabled.
 
 - If you use Hive tables with transactional = true, PolyBase can't access the data in the Hive table's directory.
+
+- PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
+
+- PolyBase on SQL Server on Linux will not function if IPv6 is disabled in the kernel. See [Release notes for SQL Server 2019 on Linux](../../linux/sql-server-linux-release-notes-2019.md#networking) for further information on this limitation.
 
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "
@@ -116,4 +63,4 @@ PolyBase has the following limitations:
 
 ## Next steps
 
-For more information about PolyBase, see [What is PolyBase?](polybase-guide.md)
+For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md).

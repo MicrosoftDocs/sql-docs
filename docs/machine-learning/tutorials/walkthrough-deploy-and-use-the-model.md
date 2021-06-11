@@ -222,7 +222,7 @@ Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes
 
 You might also want to explore these additional samples and resources:
 
-+ [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
++ [Data science scenarios and solution templates](./python-tutorials.md)
 + [In-database advanced analytics](r-taxi-classification-introduction.md)
 + [Machine Learning Server How-to guides](/machine-learning-server/r/how-to-introduction)
 + [Machine Learning Server Additional Resources](/machine-learning-server/resources-more)

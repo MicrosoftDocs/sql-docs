@@ -2,7 +2,7 @@
 description: "CREATE PROCEDURE (Transact-SQL)"
 title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "06/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
+Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
 
 - Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.
 - Contain programming statements that perform operations in the database, including calling other procedures.
@@ -132,8 +132,11 @@ sql_statement [;] [ ... n ]
 
 -- Create a stored procedure
 CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
-    [ { @parameterdata_type } [ OUT | OUTPUT ] ] [ ,...n ]
-AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
+    [ { @parameter data_type } [ OUT | OUTPUT ] ] [ ,...n ]
+AS
+{
+  [ BEGIN ] sql_statement [;][ ,...n ] [ END ]
+}
 [;]
 ```
 

@@ -2,7 +2,7 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
-ms.date: 03/10/2021
+ms.date: 06/02/2021
 ms.prod: sql
 ms.reviewer: "llali; sstein"
 ms.prod_service: sql-tools
@@ -15,6 +15,28 @@ ms.author: drskwier
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+
+## 18.7.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2165211)|June 2, 2021|18.7.1|15.0.5164.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165132)|June 2, 2021| 18.7.1|15.0.5164.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165213)|June 2, 2021| 18.7.1|15.0.5164.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165212)|June 2, 2021| 18.7.1|15.0.5164.1|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Auditing | Adds support for [EXTERNAL_MONITOR](/azure/azure-sql/managed-instance/auditing-configure). |
+| Azure Synapse Analytics | Adds support for [PREDICT](../../t-sql/queries/predict-transact-sql.md). |
+| Logging | Adds SqlPackage version and architecture information to diagnostic log file. |
+
+### Fixes
+| Feature | Details |
+| :------ | :------ | 
+| Export | Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index. |
+| Export | Fixed an issue where exporting a table that has the order of columns in a statistic in a different order than the table create script would fail without a clustered index. |
 
 ## 18.7 sqlpackage
 

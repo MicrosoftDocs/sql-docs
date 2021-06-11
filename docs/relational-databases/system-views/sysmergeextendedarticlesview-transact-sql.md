@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergeextendedarticlesview view"
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

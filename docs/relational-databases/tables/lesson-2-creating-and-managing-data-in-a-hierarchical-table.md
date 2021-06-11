@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "HierarchyID"
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Lesson 2: Create and Manage Data in a Hierarchical Table
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

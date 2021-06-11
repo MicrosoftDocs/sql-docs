@@ -139,13 +139,13 @@ sections:
           You can use EXECUTE AT to query DMVs like sys.dm_db_partition_stats to get the data in each local table.
       - question: Is curl the only option to upload files to HDFS?
         answer: |
-          No, you can use [azdata bdc hdfs cp](reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp). If you provide the root directory the command will recursively copy the whole tree.  You can copy in/out using this command just by changing what is the source/target paths.
+          No, you can use [azdata bdc hdfs cp](../azdata/reference/reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp). If you provide the root directory the command will recursively copy the whole tree.  You can copy in/out using this command just by changing what is the source/target paths.
       - question: How can I load data into the data pool?
         answer: |
           You can use MSSQL Spark connector library to help with SQL and data pool ingestion. For a guided walk-through, see [Tutorial: Ingest data into a SQL Server data pool with Spark jobs](tutorial-data-pool-ingest-spark.md#start-a-spark-streaming-job).
       - question: If I have a lot of data on a (Windows) network path, which contains lots of folders/sub-folders and text files, how do I upload them to HDFS on Big data cluster? 
         answer: |
-          Give [azdata bdc hdfs cp](reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp) a try. If you provide the root directory the command will recursively copy the whole tree.  You can copy in/out using this command just by changing what is the source/target paths.
+          Give [azdata bdc hdfs cp](../azdata/reference/reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp) a try. If you provide the root directory the command will recursively copy the whole tree.  You can copy in/out using this command just by changing what is the source/target paths.
       - question: Is it possible to increase the size of the storage pool on a deployed cluster? 
         answer: |
           There is no azdata interface to perform this operation at this time. You have the option to resize desired PVCs manually. Resizing is a complex operation, see [Persistent Volumes in Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
@@ -191,7 +191,7 @@ sections:
           You can add packages at job submission using the steps in the [sample notebook for installing packages in Spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/config-install/installpackage_Spark.ipynb).
       - question: Do I need to use SQL Server 2019 to use R and Python for SQL Server Big Data Clusters?
         answer: |
-          Machine Learning (ML) Services (R and Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning?](../advanced-analytics/what-is-sql-server-machine-learning.md).
+          Machine Learning (ML) Services (R and Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning?](../machine-learning/sql-server-machine-learning-services.md).
   - name: Licensing
     questions: 
       - question: How do SQL Server licenses work for SQL Server Big Data Clusters?
@@ -248,4 +248,4 @@ sections:
           (PDF)[Case Study: SQL Workloads running on Apache Spark in MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf)<BR>    
 additionalContent: |
  ## See Also
- - [SQL Server Big Data Clusters](big-data-cluster-overview.md) 
+ - [SQL Server Big Data Clusters](big-data-cluster-overview.md)

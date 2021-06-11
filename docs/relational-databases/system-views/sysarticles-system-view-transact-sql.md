@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticles view"
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysarticles (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

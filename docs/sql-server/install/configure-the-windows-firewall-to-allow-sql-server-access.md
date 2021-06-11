@@ -2,7 +2,7 @@
 title: "Configure Windows Firewall"
 description: Learn how to configure the Windows firewall to allow access to an instance of the SQL Server through the firewall.
 ms.custom: "contperf-fy21q3"
-ms.date: 03/26/2021
+ms.date: 04/07/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -92,6 +92,16 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
     -   [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709)    
 
+-   **PowerShell**
+
+    See the following example to open TCP port 1433 and UDP port 1434 for SQL Server default instance, and SQL Server Browser Service:
+    
+    ```powershell
+    New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
+    New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
+    ```
+    
+    For more examples, see [New-NetFirewallRule](/powershell/module/netsecurity/new-netfirewallrule).
     
 - **For Linux**: On Linux, you also need to open the ports associated with the services you need access to. Different distributions of Linux and different firewalls have their own procedures. For two examples, see [SQL Server on Red Hat](../../linux/quickstart-install-connect-red-hat.md), and [SQL Server on SUSE](../../linux/quickstart-install-connect-suse.md). 
   

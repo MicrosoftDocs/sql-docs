@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Auto Stats event class"
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Auto Stats Event Class
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

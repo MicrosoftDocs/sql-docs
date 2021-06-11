@@ -1,26 +1,26 @@
 ---
-title: "Using Always Encrypted with the ODBC Driver"
-description: "Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server."
+title: Using Always Encrypted
+description: Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 01/29/2021
+ms.date: 05/19/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.reviewer: v-daenge
-ms.author: "v-chojas"
+ms.author: v-chojas
 author: v-chojas
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-### Applicable to
+## Applicable to
 
 - ODBC Driver 13.1 for SQL Server
 - ODBC Driver 17 for SQL Server
 
-### Introduction
+## Introduction
 
 This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
@@ -30,13 +30,13 @@ For more information, see [Always Encrypted (Database Engine)](../../relational-
 
 ### Prerequisites
 
-Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
+Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
 
-If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
+If you're using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
 
-### Enabling Always Encrypted in an ODBC Application
+### Enabling Always Encrypted in an ODBC application
 
-The easiest way to enable both parameter encryption and resultset encrypted column decryption is by setting the value of the `ColumnEncryption` connection string keyword to **Enabled**. The following is an example of a connection string that enables Always Encrypted:
+The easiest way to enable both parameter encryption and resultset encrypted column decryption is by setting the value of the `ColumnEncryption` connection string keyword to **Enabled**. The following code is an example of a connection string that enables Always Encrypted:
 
 ```cpp
 SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
@@ -50,7 +50,7 @@ Always Encrypted may also be enabled in the DSN configuration, using the same ke
 
 Once enabled for the connection, the behavior of Always Encrypted may be adjusted for individual queries. For more information, see [Controlling the Performance Impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted) below.
 
-Enabling Always Encrypted is not sufficient for encryption or decryption to succeed; you also need to make sure that:
+Enabling Always Encrypted isn't sufficient for encryption or decryption to succeed; you also need to make sure that:
 
 - The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Database Permissions](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 
@@ -76,35 +76,35 @@ Examples of connection strings enabling enclave computations for a database conn
 
 - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
   
-   ```
-   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
+   ```cpp
+   "Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation"
    ```
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
   
-   ```
-   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
+   ```cpp
+   "Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave"
    ```
 
-If the server and attestation service are configured correctly along with enclave-enabled CMKs and CEKs for the desired columns, you should now be able to execute queries that use the enclave such as in-place encryption and rich computations, in addition to the existing functionality provided by Always Encrypted. For more information, see [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
+If the server and attestation service are configured correctly along with enclave-enabled CMKs and CEKs for the encrypted columns, you can execute queries that use the enclave such as in-place encryption and rich computations, in addition to the existing functionality provided by Always Encrypted. For more information, see [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
 
-### Retrieving and Modifying Data in Encrypted Columns
+### Retrieving and modifying data in encrypted columns
 
 Once you enable Always Encrypted on a connection, you can use standard ODBC APIs. The ODBC APIs can retrieve or modify data in encrypted database columns. The following documentation items might be helpful:
 
 - [ODBC sample code](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md)
 
-Your application must have the required database permissions, and must be able to access the column master key. Then, the driver encrypts any query parameters that target encrypted columns. The driver also decrypts data retrieved from encrypted columns. The driver performs all this encrypting and decrypting without any assistance from your source code. To your program, it is as if the columns are not encrypted.
+Your application must have the required database permissions, and must be able to access the column master key. Then the driver encrypts any query parameters that target encrypted columns. The driver also decrypts data retrieved from encrypted columns. The driver does all this encrypting and decrypting without any assistance from your source code. To your program, it's as if the columns aren't encrypted.
 
-If Always Encrypted is not enabled, queries with parameters that target encrypted columns will fail. Data can still be retrieved from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the driver will not attempt any decryption and the application will receive the binary encrypted data (as byte arrays).
+If Always Encrypted isn't enabled, queries with parameters that target encrypted columns will fail. Data can still be retrieved from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the driver won't attempt any decryption and the application will receive the binary encrypted data (as byte arrays).
 
 The table below summarizes the behavior of queries, depending on whether Always Encrypted is enabled or not:
 
-|Query characteristic | Always Encrypted is enabled and application can access the keys and key metadata|Always Encrypted is enabled and application cannot access the keys or key metadata | Always Encrypted is disabled|
-|:---|:---|:---|:---|
-| Parameters targeting encrypted columns. | Parameter values are transparently encrypted. | Error | Error|
-| Retrieving data from encrypted columns, without parameters targeting encrypted columns.| Results from encrypted columns are transparently decrypted. The application receives plaintext column values. | Error | Results from encrypted columns are not decrypted. The application receives encrypted values as byte arrays.
+| Query characteristic | Always Encrypted is enabled and application can access the keys and key metadata | Always Encrypted is enabled and application can't access the keys or key metadata | Always Encrypted is disabled |
+|--|--|--|--|
+| Parameters targeting encrypted columns. | Parameter values are transparently encrypted. | Error | Error |
+| Retrieving data from encrypted columns, without parameters targeting encrypted columns. | Results from encrypted columns are transparently decrypted. The application receives plaintext column values. | Error | Results from encrypted columns aren't decrypted. The application receives encrypted values as byte arrays. |
 
 The following examples illustrate retrieving and modifying data in encrypted columns. The examples assume a table with the following schema. The SSN and BirthDate columns are encrypted.
 
@@ -125,15 +125,15 @@ CREATE TABLE [dbo].[Patients](
  GO
 ```
 
-#### Data Insertion Example
+#### Data insertion example
 
 This example inserts a row into the Patients table. Note the following details:
 
-- There is nothing specific to encryption in the sample code. The driver automatically detects and encrypts the values of the SSN and date parameters, which target encrypted columns. This behavior makes encryption transparent to the application.
+- There's nothing specific to encryption in the sample code. The driver automatically detects and encrypts the values of the SSN and date parameters, which target encrypted columns. This behavior makes encryption transparent to the application.
 
-- The values inserted into database columns, including the encrypted columns, are passed as bound parameters (see [SQLBindParameter Function](../../odbc/reference/syntax/sqlbindparameter-function.md)). While using parameters is optional when sending values to non-encrypted columns (although it is highly recommended because it helps prevent SQL injection), it is required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the driver does not attempt to encrypt or otherwise process literals in queries. As a result, the server would reject them as incompatible with the encrypted columns.
+- The values inserted into database columns, including the encrypted columns, are passed as bound parameters (see [SQLBindParameter Function](../../odbc/reference/syntax/sqlbindparameter-function.md)). While using parameters is optional when sending values to non-encrypted columns (although it's highly recommended because it helps prevent SQL injection), it's required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the driver doesn't attempt to encrypt or otherwise process literals in queries. As a result, the server would reject them as incompatible with the encrypted columns.
 
-- The SQL type of the parameter inserted into the SSN column is set to SQL_CHAR, which maps to the **char** SQL Server data type (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). If the type of the parameter was set to SQL_WCHAR, which maps to **nchar**, the query would fail, as Always Encrypted does not support server-side conversions from encrypted nchar values to encrypted char values. See [ODBC Programmer's Reference -- Appendix D: Data Types](../../odbc/reference/appendixes/appendix-d-data-types.md) for information about the data type mappings.
+- The SQL type of the parameter inserted into the SSN column is set to SQL_CHAR, which maps to the **char** SQL Server data type (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). If the type of the parameter was set to SQL_WCHAR, which maps to **nchar**, the query would fail, as Always Encrypted doesn't support server-side conversions from encrypted nchar values to encrypted char values. See [ODBC Programmer's Reference -- Appendix D: Data Types](../../odbc/reference/appendixes/appendix-d-data-types.md) for information about the data type mappings.
 
 ```cpp
     SQL_DATE_STRUCT date;
@@ -172,7 +172,7 @@ This example inserts a row into the Patients table. Note the following details:
     rc = SQLExecute(hstmt);
 ```
 
-#### Plaintext Data Retrieval Example
+#### Plaintext data retrieval example
 
 The following example demonstrates filtering data based on encrypted values, and retrieving plaintext data from encrypted columns. Note the following details:
 
@@ -223,14 +223,14 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 }
 ```
 
-#### Ciphertext Data Retrieval Example
+#### Ciphertext data retrieval example
 
-If Always Encrypted is not enabled, a query can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns.
+If Always Encrypted isn't enabled, a query can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns.
 
 The following example illustrates retrieving binary encrypted data from encrypted columns. Note the following details:
 
-- As Always Encrypted is not enabled in the connection string, the query will return encrypted values of SSN and BirthDate as byte arrays (the program converts the values to strings).
-- A query retrieving data from encrypted columns with Always Encrypted disabled can have parameters, as long as none of the parameters target an encrypted column. The above query filters by LastName, which is not encrypted in the database. If the query filtered by SSN or BirthDate, the query would fail.
+- As Always Encrypted isn't enabled in the connection string, the query will return encrypted values of SSN and BirthDate as byte arrays (the program converts the values to strings).
+- A query retrieving data from encrypted columns with Always Encrypted disabled can have parameters, as long as none of the parameters target an encrypted column. The above query filters by LastName, which isn't encrypted in the database. If the query filtered by SSN or BirthDate, the query would fail.
 
 ```cpp
 SQLCHAR SSN[12];
@@ -274,7 +274,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 #### Money/SmallMoney encryption
 
-Starting with driver version 17.7 it is possible to use Always Encrypted
+Starting with driver version 17.7 it's possible to use Always Encrypted
 with MONEY and SMALLMONEY. However there are some extra steps to take.
 When inserting into encrypted MONEY or SMALLMONEY columns, use one of the following C types:
 
@@ -317,7 +317,7 @@ SQLSetDescField(hdesc, n, SQL_DESC_SCALE, (SQLPOINTER)(var.scale), 0);
 SQLSetDescField(hdesc, n, SQL_DESC_DATA_PTR, &var, 0);
 ```
 
-#### Avoiding Common Problems when Querying Encrypted Columns
+#### Avoiding common problems when querying encrypted columns
 
 This section describes common categories of errors when querying encrypted columns from ODBC applications and a few guidelines on how to avoid them.
 
@@ -329,7 +329,7 @@ Always Encrypted supports few conversions for encrypted data types. See [Always 
 
 - The precision and scale of parameters targeting columns of the `decimal` and `numeric` SQL Server data types is the same as the precision and scale configured for the target column.
 
-- The precision of parameters targeting columns of `datetime2`, `datetimeoffset`, or `time` SQL Server data types is not greater than the precision for the target column, in queries that modify the target column.  
+- The precision of parameters targeting columns of `datetime2`, `datetimeoffset`, or `time` SQL Server data types isn't greater than the precision for the target column, in queries that modify the target column.  
 
 ##### Errors due to passing plaintext instead of encrypted values
 
@@ -347,15 +347,15 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 #### SQLSetPos
 
-The `SQLSetPos` API allows an application to update rows in a resultset using buffers that were bound with SQLBindCol and into which row data was previously fetched. Due to the asymmetric padding behavior of encrypted fixed-length types, it is possible to unexpectedly alter the data of these columns while performing updates on other columns in the row. With AE, fixed-length character values will be padded if the value is smaller than the buffer size.
+The `SQLSetPos` API allows an application to update rows in a resultset using buffers that were bound with SQLBindCol and into which row data was previously fetched. Because of the asymmetric padding behavior of encrypted fixed-length types, it's possible to unexpectedly alter the data of these columns while performing updates on other columns in the row. With AE, fixed-length character values will be padded if the value is smaller than the buffer size.
 
-To mitigate this behavior, use the `SQL_COLUMN_IGNORE` flag to ignore columns that will not be updated as part of `SQLBulkOperations` and when using `SQLSetPos` for cursor-based updates.  All columns that are not being directly modified by the application should be ignored, both for performance and to avoid truncation of columns that are bound to a buffer *smaller* than their actual (DB) size. For more information, see [SQLSetPos Function reference](../../odbc/reference/syntax/sqlsetpos-function.md).
+To mitigate this behavior, use the `SQL_COLUMN_IGNORE` flag to ignore columns that won't be updated as part of `SQLBulkOperations` and when using `SQLSetPos` for cursor-based updates.  All columns that are not being directly modified by the application should be ignored, both for performance and to avoid truncation of columns that are bound to a buffer *smaller* than their actual (DB) size. For more information, see [SQLSetPos Function reference](../../odbc/reference/syntax/sqlsetpos-function.md).
 
 #### SQLMoreResults & SQLDescribeCol
 
-Application programs may call [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) to return metadata about columns in prepared statements.  When Always Encrypted is enabled, calling `SQLMoreResults` *before* calling `SQLDescribeCol` causes [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) to be called, which does not correctly return the plaintext metadata for encrypted columns. To avoid this issue, call `SQLDescribeCol` on prepared statements *before* calling `SQLMoreResults`.
+Application programs may call [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) to return metadata about columns in prepared statements.  When Always Encrypted is enabled, calling `SQLMoreResults` *before* calling `SQLDescribeCol` causes [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) to be called, which doesn't correctly return the plaintext metadata for encrypted columns. To avoid this issue, call `SQLDescribeCol` on prepared statements *before* calling `SQLMoreResults`.
 
-## Controlling the Performance Impact of Always Encrypted
+## Controlling the performance impact of Always Encrypted
 
 Because Always Encrypted is a client-side encryption technology, most of the performance overhead is observed on the client side, not in the database. Apart from the cost of encryption and decryption operations, the other sources of performance overhead on the client side are:
 
@@ -365,39 +365,39 @@ Because Always Encrypted is a client-side encryption technology, most of the per
 
 This section describes the built-in performance optimizations in the ODBC Driver for SQL Server and how you can control the impact of the above two factors on performance.
 
-### Controlling Round-trips to Retrieve Metadata for Query Parameters
+### Controlling round-trips to retrieve metadata for query parameters
 
-If Always Encrypted is enabled for a connection, the driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high level of transparency to the client application: The application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
+If Always Encrypted is enabled for a connection, the driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high level of transparency to the client application: The application (and the application developer) doesn't need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
-Beginning in version 17.6, the driver also caches the encryption metadata for prepared statements, improving performance by allowing subsequent calls to `SQLExecute` to not require an extra round trip to retrieve the encryption metadata.
+Beginning in version 17.6, the driver also caches the encryption metadata for prepared statements, improving performance by allowing future calls to `SQLExecute` to not require an extra round trip to retrieve the encryption metadata.
 
-### Per-Statement Always Encrypted Behavior
+### Per-statement Always Encrypted behavior
 
 To control the performance impact of retrieving encryption metadata for parameterized queries, you can alter the Always Encrypted behavior for individual queries if it has been enabled on the connection. This way, you can ensure that `sys.sp_describe_parameter_encryption` is invoked only for queries that you know have parameters targeting encrypted columns. Note, however, that by doing so, you reduce transparency of encryption: if you encrypt more columns in your database, you may need to change the code of your application to align it with the schema changes.
 
 To control the Always Encrypted behavior of a statement, call SQLSetStmtAttr to set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` statement attribute to one of the following values:
 
-|Value|Description|
-|-|-|
-|`SQL_CE_DISABLED` (0)|Always Encrypted is disabled for the statement|
-|`SQL_CE_RESULTSETONLY` (1)|Decryption Only. Result sets and return values are decrypted, and parameters are not encrypted|
-|`SQL_CE_ENABLED` (3) | Always Encrypted is enabled and used for both parameters and results|
+| Value | Description |
+|--|--|
+| `SQL_CE_DISABLED` (0) | Always Encrypted is disabled for the statement |
+| `SQL_CE_RESULTSETONLY` (1) | Decryption Only. Result sets and return values are decrypted, and parameters aren't encrypted |
+| `SQL_CE_ENABLED` (3) | Always Encrypted is enabled and used for both parameters and results |
 
-New statement handles created from a connection with Always Encrypted enabled default to SQL_CE_ENABLED. Handles created from a connection with it disabled default to SQL_CE_DISABLED (and it is not possible to enable Always Encrypted on them.)
+New statement handles created from a connection with Always Encrypted enabled default to SQL_CE_ENABLED. Handles created from a connection with it disabled default to SQL_CE_DISABLED (and it isn't possible to enable Always Encrypted on them.)
 
 If most of the queries of a client application access encrypted columns, the following points are recommended:
 
 - Set the `ColumnEncryption` connection string keyword to `Enabled`.
 
-- Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_DISABLED` on statements that do not access any encrypted columns. This setting will disable both calling `sys.sp_describe_parameter_encryption` and attempts to decrypt any values in the result set.
+- Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_DISABLED` on statements that don't access any encrypted columns. This setting will disable both calling `sys.sp_describe_parameter_encryption` and attempts to decrypt any values in the result set.
 
-- Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_RESULTSETONLY` on statements that do not have any parameters requiring encryption, but retrieve data from encrypted columns. This setting will disable calling `sys.sp_describe_parameter_encryption` and parameter encryption. Results containing encrypted columns will continue to be decrypted.
+- Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_RESULTSETONLY` on statements that don't have any parameters requiring encryption, but retrieve data from encrypted columns. This setting will disable calling `sys.sp_describe_parameter_encryption` and parameter encryption. Results containing encrypted columns will continue to be decrypted.
 
-- Use prepared statements for queries that will be executed more than once; prepare the query with `SQLPrepare` and save the statement handle, reusing it with `SQLExecute` each time it is executed. This method is the preferred approach for performance even when there are no encrypted columns, and allows the driver to take advantage of cached metadata.
+- Use prepared statements for queries that will be executed more than once; prepare the query with `SQLPrepare` and save the statement handle, reusing it with `SQLExecute` each time it's executed. This method is the preferred approach for performance even when there are no encrypted columns, and allows the driver to take advantage of cached metadata.
 
-## Always Encrypted Security Settings
+## Always Encrypted security settings
 
-### Force Column Encryption
+### Force column encryption
 
 To enforce the encryption of a parameter, set the `SQL_CA_SS_FORCE_ENCRYPT` implementation parameter descriptor (IPD) field through a call to the SQLSetDescField function. A non-zero value causes the driver to return an error when no encryption metadata is returned for the associated parameter.
 
@@ -407,41 +407,41 @@ SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, &ipd, 0, 0);
 SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS_SMALLINT);   
 ```
 
-If SQL Server informs the driver that the parameter does not need to be encrypted, queries using that parameter will fail. This behavior provides extra protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.
+If SQL Server informs the driver that the parameter doesn't need to be encrypted, queries using that parameter will fail. This behavior provides extra protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.
 
-### Column Encryption Key Caching
+### Column encryption key caching
 
-To reduce the number of calls to a column master key store to decrypt column encryption keys, the driver caches the plaintext CEKs in memory. The CEK cache is global to the driver and not associated with any one connection. After receiving the ECEK from database metadata, the driver first tries to find the plaintext CEK corresponding to the encrypted key value in the cache. The driver calls the key store containing the CMK only if it cannot find the corresponding plaintext CEK in the cache.
+To reduce the number of calls to a column master key store to decrypt column encryption keys, the driver caches the plaintext CEKs in memory. The CEK cache is global to the driver and not associated with any one connection. After receiving the ECEK from database metadata, the driver first tries to find the plaintext CEK corresponding to the encrypted key value in the cache. The driver calls the key store containing the CMK only if it can't find the corresponding plaintext CEK in the cache.
 
 > [!NOTE]
 > In the ODBC Driver for SQL Server, the entries in the cache are evicted after a two hour timeout. This behavior means that for a given ECEK, the driver contacts the key store only once during the lifetime of the application or every two hours, whichever is less.
 
-Starting with the ODBC Driver 17.1 for SQL Server, the CEK cache timeout can be adjusted using the `SQL_COPT_SS_CEKCACHETTL` connection attribute, which specifies the number of seconds a CEK will remain in the cache. Due to the global nature of the cache, this attribute can be adjusted from any connection handle valid for the driver. When the cache TTL is decreased, existing CEKs that would exceed the new TTL are also evicted. If it is 0, no CEKs are cached.
+Starting with the ODBC Driver 17.1 for SQL Server, the CEK cache timeout can be adjusted using the `SQL_COPT_SS_CEKCACHETTL` connection attribute, which specifies the number of seconds a CEK will remain in the cache. Because of the global nature of the cache, this attribute can be adjusted from any connection handle valid for the driver. When the cache TTL is lowered, existing CEKs that would exceed the new TTL are also evicted. If it's 0, no CEKs are cached.
 
-### Trusted Key Paths
+### Trusted key paths
 
-Starting with the ODBC Driver 17.1 for SQL Server, the `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attribute allows an application to require that Always Encrypted operations only use a specified list of CMKs, identified by their key paths. By default, this attribute is NULL, which means that the driver accepts any key path. To use this feature, set `SQL_COPT_SS_TRUSTEDCMKPATHS` to point to a null-delimited, null-terminated wide-character string that lists the allowed key path(s). The memory pointed to by this attribute must remain valid during encryption or decryption operations using the connection handle on which it is set --- upon which the driver will check if the CMK path as specified by the server metadata is case-insensitively in this list. If the CMK path is not in the list, the operation fails. The application can change the contents of memory this attribute points at, to change its list of trusted CMKs, without setting the attribute again.
+Starting with the ODBC Driver 17.1 for SQL Server, the `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attribute allows an application to require that Always Encrypted operations only use a specified list of CMKs, identified by their key paths. By default, this attribute is NULL, which means that the driver accepts any key path. To use this feature, set `SQL_COPT_SS_TRUSTEDCMKPATHS` to point to a null-delimited, null-terminated wide-character string that lists the allowed key path(s). The memory pointed to by this attribute must remain valid during encryption or decryption operations using the connection handle on which it's set --- upon which the driver will check if the CMK path as specified by the server metadata is case-insensitively in this list. If the CMK path isn't in the list, the operation fails. The application can change the contents of memory this attribute points at, to change its list of trusted CMKs, without setting the attribute again.
 
-## Working with Column Master Key Stores
+## Working with column master key stores
 
-To encrypt or decrypt data, the driver needs to obtain a CEK that is configured for the target column. CEKs are stored in encrypted form (ECEKs) in the database metadata. Each CEK has a corresponding CMK that was used to encrypt it. The [database metadata](../../t-sql/statements/create-column-master-key-transact-sql.md) does not store the CMK itself; it only contains the name of the keystore and information that the keystore can use to locate the CMK.
+To encrypt or decrypt data, the driver needs to obtain a CEK that is configured for the target column. CEKs are stored in encrypted form (ECEKs) in the database metadata. Each CEK has a corresponding CMK that was used to encrypt it. The [database metadata](../../t-sql/statements/create-column-master-key-transact-sql.md) doesn't store the CMK itself; it only contains the name of the keystore and information that the keystore can use to locate the CMK.
 
 To obtain the plaintext value of an ECEK, the driver first obtains the metadata about both the CEK and its corresponding CMK, and then it uses this information to contact the keystore containing the CMK and requests it to decrypt the ECEK. The driver communicates with a keystore using a keystore provider.
 
-### Built-in Keystore Providers
+### Built-in keystore providers
 
 The ODBC Driver for SQL Server comes with the following built-in keystore providers:
 
-| Name | Description | Provider (metadata) name |Availability|
-|:---|:---|:---|:---|
-|Azure Key Vault |Stores CMKs in an Azure Key Vault | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
-|Windows Certificate Store|Stores CMKs locally in the Windows keystore| `MSSQL_CERTIFICATE_STORE`|Windows|
+| Name | Description | Provider (metadata) name | Availability |
+|--|--|--|--|
+| Azure Key Vault | Stores CMKs in an Azure Key Vault | `AZURE_KEY_VAULT` | Windows, macOS, Linux |
+| Windows Certificate Store | Stores CMKs locally in the Windows keystore | `MSSQL_CERTIFICATE_STORE` | Windows |
 
-- You (or your DBA) need to make sure that the provider name, configured in the column master key metadata, is correct and the column master key path complies with the key path format for the given provider. It is recommended that you configure the keys using tools such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
+- You (or your DBA) need to make sure that the provider name, configured in the column master key metadata, is correct and the column master key path complies with the key path format for the given provider. It's recommended that you configure the keys using tools such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
 
-- Ensure your application can access the key in the keystore. This process may involve granting your application access to the key and/or the keystore, depending on the keystore, or performing other keystore-specific configuration steps. For example, to access an Azure Key Vault, you must provide the correct credentials to the keystore.
+- Ensure your application can access the key in the keystore. This process may involve granting your application access to the key and/or the keystore, depending on the keystore, or doing other keystore-specific configuration steps. For example, to access an Azure Key Vault, you must provide the correct credentials to the keystore.
 
-### Using the Azure Key Vault Provider
+### Using the Azure Key Vault provider
 
 Azure Key Vault (AKV) is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The ODBC Driver for SQL Server on Linux, macOS, and Windows includes a built-in column master key store provider for Azure Key Vault. For more information on configuring an Azure Key Vault for Always Encrypted, see [Azure Key Vault - Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Getting Started with Key Vault](/azure/key-vault/general/overview), and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
@@ -461,45 +461,45 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
-|Credential Type|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
-|-|-|-|-|
-|Username/password| `KeyVaultPassword`|User Principal Name|Password|
-|Client ID/secret| `KeyVaultClientSecret`|Client ID|Secret|
-|Managed Identity|`KeyVaultManagedIdentity`|Object ID (optional, for user-assigned only)|(not specified)|
-|AKV Interactive|`KeyVaultInteractive`|(not set)|(not set)|
+| Credential Type | <code>KeyStoreAuthentication</code> | <code>KeyStorePrincipalId</code> | <code>KeyStoreSecret</code> |
+|--|--|--|--|
+| Username/password | `KeyVaultPassword` | User Principal Name | Password |
+| Client ID/secret | `KeyVaultClientSecret` | Client ID | Secret |
+| Managed Identity | `KeyVaultManagedIdentity` | Object ID (optional, for user-assigned only) | (not specified) |
+| AKV Interactive | `KeyVaultInteractive` | (not set) | (not set) |
 
-#### Example Connection Strings
+#### Example connection strings
 
 The following connection strings show how to authenticate to Azure Key Vault with the two credential types:
 
-**ClientID/Secret**:
+##### ClientID/Secret
 
-```
-DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
-```
-
-**Username/Password**:
-
-```
-DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+```cpp
+"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>"
 ```
 
-**Managed Identity (system-assigned)**
+##### Username/Password
 
-```
-DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
-```
-
-**Managed Identity (user-assigned)**
-
-```
-DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```cpp
+"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>"
 ```
 
-**AKV Interactive**
+##### Managed Identity (system-assigned)
 
+```cpp
+"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity"
 ```
-DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>
+
+##### Managed Identity (user-assigned)
+
+```cpp
+"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>"
+```
+
+##### AKV Interactive
+
+```cpp
+"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>"
 ```
 
 No other ODBC application changes are required to use AKV for CMK storage.
@@ -507,13 +507,16 @@ No other ODBC application changes are required to use AKV for CMK storage.
 > [!NOTE]
 > The driver contains a list of AKV endpoints which it trusts. Starting with driver version 17.5.2, this list is configurable: set the `AKVTrustedEndpoints` property in the driver or DSN's ODBCINST.INI or ODBC.INI registry key (Windows) or `odbcinst.ini` or `odbc.ini` file section (Linux/macOS) to a semicolon-delimited list. Setting it in the DSN takes precedence over a setting in the driver. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list. The default list (as of 17.5) is `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`. Starting with 17.7, the list also includes `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de`.
 
-### Using the Windows Certificate Store Provider
+> [!NOTE]
+> The Azure Key Vault provider built in to the ODBC driver supports both [Vaults and Managed HSMs in Azure Key Vault](/azure/key-vault/keys/about-keys).
 
-The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no extra configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+### Using the Windows Certificate Store provider
 
-### Using Custom Keystore Providers
+The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider isn't available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no extra configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-The ODBC Driver for SQL Server also supports custom third-party keystore providers using the CEKeystoreProvider interface. This feature allows an application to load, query, and configure keystore providers so that they can be used by the driver to access encrypted columns. Applications may also directly interact with a keystore provider in order to encrypt CEKs for storage in SQL Server and perform tasks beyond accessing encrypted columns with ODBC; for more information, see [Custom Keystore Providers](custom-keystore-providers.md).
+### Using custom keystore providers
+
+The ODBC Driver for SQL Server also supports custom third-party keystore providers using the CEKeystoreProvider interface. This feature allows an application to load, query, and configure keystore providers so that they can be used by the driver to access encrypted columns. Applications may also directly interact with a keystore provider to encrypt CEKs for storage in SQL Server and perform tasks beyond accessing encrypted columns with ODBC; for more information, see [Custom Keystore Providers](custom-keystore-providers.md).
 
 Two connection attributes are used to interact with custom keystore providers. They are:
 
@@ -521,30 +524,30 @@ Two connection attributes are used to interact with custom keystore providers. T
 
 - `SQL_COPT_SS_CEKEYSTOREDATA`
 
-The former is used to load and enumerate loaded keystore providers, while the latter enables application-provider communications. These connection attributes may be used at any time, before or after establishing a connection, since application-provider interaction does not involve communication with SQL Server. However, because the driver has not been loaded yet, setting and getting these attributes before connecting will cause them to be processed by the Driver Manager, and may not yield the expected results.
+The former is used to load and enumerate loaded keystore providers, while the latter enables application-provider communications. These connection attributes may be used at any time, before or after establishing a connection, since application-provider interaction doesn't involve communication with SQL Server. However, because the driver hasn't been loaded yet, setting and getting these attributes before connecting will cause them to be processed by the Driver Manager, and may not yield the expected results.
 
-#### Loading a Keystore Provider
+#### Loading a keystore provider
 
-Setting the `SQL_COPT_SS_CEKEYSTOREPROVIDER` connection attribute enables a client application to load a provider library, making available for use the keystore providers contained therein.
+Setting the `SQL_COPT_SS_CEKEYSTOREPROVIDER` connection attribute enables a client application to load a provider library, making available for use the keystore providers contained there.
 
 ```cpp
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
 | Argument | Description |
-|:---|:---|
-|`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
-|`Attribute`|[Input] Attribute to set: the `SQL_COPT_SS_CEKEYSTOREPROVIDER` constant.|
-|`ValuePtr`|[Input] Pointer to a null-terminated character string specifying the filename of the provider library. For SQLSetConnectAttrA, this value is an ANSI (multibyte) string. For SQLSetConnectAttrW, this value is a Unicode (wchar_t) string.|
-|`StringLength`|[Input] The length of the ValuePtr string, or SQL_NTS.|
+|--|--|
+| `ConnectionHandle` | [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process. |
+| `Attribute` | [Input] Attribute to set: the `SQL_COPT_SS_CEKEYSTOREPROVIDER` constant. |
+| `ValuePtr` | [Input] Pointer to a null-terminated character string specifying the filename of the provider library. For SQLSetConnectAttrA, this value is an ANSI (multibyte) string. For SQLSetConnectAttrW, this value is a Unicode (wchar_t) string. |
+| `StringLength` | [Input] The length of the ValuePtr string, or SQL_NTS. |
 
-The driver attempts to load the library identified by the ValuePtr parameter using the platform-defined dynamic library loading mechanism (`dlopen()` on Linux and macOS, `LoadLibrary()` on Windows), and adds any providers defined therein to the list of providers known to the driver. The following errors may occur:
+The driver attempts to load the library identified by the ValuePtr parameter using the platform-defined dynamic library loading mechanism (`dlopen()` on Linux and macOS, `LoadLibrary()` on Windows), and adds any providers defined there to the list of providers known to the driver. The following errors may occur:
 
 | Error | Description |
-|:--|:--|
-|`CE203`|The dynamic library could not be loaded.|
-|`CE203`|The "CEKeyStoreProvider" exported symbol was not found in the library.|
-|`CE203`|One or more providers in the library are already loaded.|
+|--|--|
+| `CE203` | The dynamic library couldn't be loaded. |
+| `CE203` | The "CEKeyStoreProvider" exported symbol wasn't found in the library. |
+| `CE203` | One or more providers in the library are already loaded. |
 
 `SQLSetConnectAttr` returns the usual error or success values, and more information is available for any errors that occurred via the standard ODBC diagnostic mechanism.
 
@@ -552,13 +555,13 @@ The driver attempts to load the library identified by the ValuePtr parameter usi
 > The application programmer must ensure that any custom providers are loaded before any query requiring them is sent over any connection. Failure to do so results in the error:
 
 | Error | Description |
-|:--|:--|
-|`CE200`|Keystore provider %1 not found. Ensure that the appropriate keystore provider library has been loaded.|
+|--|--|
+| `CE200` | Keystore provider %1 not found. Ensure that the appropriate keystore provider library has been loaded. |
 
 > [!NOTE]
 > Keystore provider implementors should avoid the use of `MSSQL` in the name of their custom providers. This term is reserved exclusively for Microsoft use and may cause conflicts with future built-in providers. Using this term in the name of a custom provider may result in an ODBC warning.
 
-#### Getting the List of Loaded Providers
+#### Getting the list of loaded providers
 
 Getting this connection attribute enables a client application to determine the keystore providers currently loaded in the driver (including those providers built-in.) This process can only be performed after connecting.
 
@@ -567,18 +570,18 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 
 | Argument | Description |
-|:---|:---|
-|`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
-|`Attribute`|[Input] Attribute to retrieve: the `SQL_COPT_SS_CEKEYSTOREPROVIDER` constant.|
-|`ValuePtr`|[Output] A pointer to memory in which to return the next loaded provider name.|
-|`BufferLength`|[Input] The length of the buffer ValuePtr.|
-|`StringLengthPtr`|[Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in \*ValuePtr. If ValuePtr is a null pointer, no length is returned. If the attribute value is a character string and the number of bytes available to return is greater than BufferLength minus the length of the null-termination character, the data in \*ValuePtr is truncated to BufferLength minus the length of the null-termination character and is null-terminated by the driver.|
+|--|--|
+| `ConnectionHandle` | [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process. |
+| `Attribute` | [Input] Attribute to retrieve: the `SQL_COPT_SS_CEKEYSTOREPROVIDER` constant. |
+| `ValuePtr` | [Output] A pointer to memory in which to return the next loaded provider name. |
+| `BufferLength` | [Input] The length of the buffer ValuePtr. |
+| `StringLengthPtr` | [Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in \*ValuePtr. If ValuePtr is a null pointer, no length is returned. If the attribute value is a character string and the number of bytes available to return is greater than BufferLength minus the length of the null-termination character, the data in \*ValuePtr is truncated to BufferLength minus the length of the null-termination character and is null-terminated by the driver. |
 
-To allow retrieving the entire list, every Get operation returns the current provider's name, and increments an internal counter to the next one. Once this counter reaches the end of the list, an empty string ("") is returned, and the counter is reset; successive Get operations then proceed again from the beginning of the list.
+To allow retrieving the entire list, every Get operation returns the current provider's name, and increments an internal counter to the next one. Once this counter reaches the end of the list, an empty string ("") is returned, and the counter is reset; successive Get operations then continue again from the beginning of the list.
 
-### Communicating with Keystore Providers
+### Communicating with keystore providers
 
-The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring more parameters, keying material, etc. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
+The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring more parameters, keying material, and so on. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
 
 > [!NOTE]
 > Due to the nature of the ODBC calls CEKeyStoreProvider's respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
@@ -594,10 +597,10 @@ char data[];
 ```
 
 | Argument | Description |
-|:---|:---|
-|`name`|[Input] Upon Set, the name of the provider to which the data is sent. Ignored upon Get. Null-terminated, wide-character string.|
-|`dataSize`|[Input] The size of the data array following the structure.|
-|`data`|[InOut] Upon Set, the data to be sent to the provider. This data may be arbitrary; the driver makes no attempt to interpret it. Upon Get, the buffer to receive the data read from the provider.|
+|--|--|
+| `name` | [Input] Upon Set, the name of the provider to which the data is sent. Ignored upon Get. Null-terminated, wide-character string. |
+| `dataSize` | [Input] The size of the data array following the structure. |
+| `data` | [InOut] Upon Set, the data to be sent to the provider. This data may be arbitrary; the driver makes no attempt to interpret it. Upon Get, the buffer to receive the data read from the provider. |
 
 #### Writing data to a provider
 
@@ -608,11 +611,11 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 
 | Argument | Description |
-|:---|:---|
-|`ConnectionHandle`| [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
-|`Attribute`|[Input] Attribute to set: the `SQL_COPT_SS_CEKEYSTOREDATA` constant.|
-|`ValuePtr`|[Input] Pointer to a CEKeystoreData structure. The name field of the structure identifies the provider for which the data is intended.|
-|`StringLength`|[Input] SQL_IS_POINTER constant|
+|--|--|
+| `ConnectionHandle` | [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process. |
+| `Attribute` | [Input] Attribute to set: the `SQL_COPT_SS_CEKEYSTOREDATA` constant. |
+| `ValuePtr` | [Input] Pointer to a CEKeystoreData structure. The name field of the structure identifies the provider for which the data is intended. |
+| `StringLength` | [Input] SQL_IS_POINTER constant |
 
 More detailed error information may be obtained via [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
@@ -628,12 +631,12 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 
 | Argument | Description |
-|:---|:---|
-|`ConnectionHandle`|[Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process.|
-|`Attribute`|[Input] Attribute to retrieve: the `SQL_COPT_SS_CEKEYSTOREDATA` constant.|
-|`ValuePtr`|[Output] A pointer to a CEKeystoreData structure in which the data read from the provider is placed.|
-|`BufferLength`|[Input] SQL_IS_POINTER constant|
-|`StringLengthPtr`|[Output] A pointer to a buffer in which to return BufferLength. If *ValuePtr is a null pointer, no length is returned.|
+|--|--|
+| `ConnectionHandle` | [Input] Connection handle. Must be a valid connection handle, but providers loaded via one connection handle are accessible from any other in the same process. |
+| `Attribute` | [Input] Attribute to retrieve: the `SQL_COPT_SS_CEKEYSTOREDATA` constant. |
+| `ValuePtr` | [Output] A pointer to a CEKeystoreData structure in which the data read from the provider is placed. |
+| `BufferLength` | [Input] SQL_IS_POINTER constant |
+| `StringLengthPtr` | [Output] A pointer to a buffer in which to return BufferLength. If *ValuePtr is a null pointer, no length is returned. |
 
 The caller must ensure that a buffer of sufficient length following the CEKEYSTOREDATA structure is allocated for the provider to write into. Upon return, its dataSize field is updated with the actual length of data read from the provider. More detailed error information may be obtained via [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
@@ -643,9 +646,9 @@ For an example of implementing your own keystore provider, see [Custom Keystore 
 
 ## Limitations of the ODBC driver when using Always Encrypted
 
-### Asynchronous Operations
+### Asynchronous operations
 
-While the ODBC driver will allow the use of [asynchronous operations](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) with Always Encrypted, there is a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
+While the ODBC driver will allow the use of [asynchronous operations](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) with Always Encrypted, there's a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
 
 ### Retrieve data in parts with SQLGetData
 
@@ -657,9 +660,9 @@ Before ODBC Driver 17.3 for SQL Server, data for insertion or comparison cannot 
 
 ### Encrypted money and smallmoney
 
-Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, since there is no specific ODBC data type that maps to those types, resulting in Operand Type Clash errors.
+Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, since there's no specific ODBC data type that maps to those types, resulting in Operand Type Clash errors.
 
-## Bulk Copy of Encrypted Columns
+## Bulk copy of encrypted columns
 
 Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_&#42;) APIs and the **bcp** utility.
 
@@ -673,61 +676,61 @@ When using the **bcp** utility: To control the `ColumnEncryption` setting, use t
 
 The following table provides a summary of the actions when operating on an encrypted column:
 
-|<code>ColumnEncryption</code>|BCP Direction|Description|
-|----------------|-------------|-----------|
-|`Disabled`|OUT (to client)|Retrieves ciphertext. The observed datatype is **varbinary(max)**.|
-|`Enabled`|OUT (to client)|Retrieves plaintext. The driver will decrypt the column data.|
-|`Disabled`|IN (to server)|Inserts ciphertext. This setting is intended for opaquely moving encrypted data without requiring it to be decrypted. The operation will fail if the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option is not set on the user, or BCPMODIFYENCRYPTED is not set on the connection handle. For more information, see below.|
-|`Enabled`|IN (to server)|Inserts plaintext. The driver will encrypt the column data.|
+| <code>ColumnEncryption</code> | BCP Direction | Description |
+|--|--|--|
+| `Disabled` | OUT (to client) | Retrieves ciphertext. The observed datatype is **varbinary(max)**. |
+| `Enabled` | OUT (to client) | Retrieves plaintext. The driver will decrypt the column data. |
+| `Disabled` | IN (to server) | Inserts ciphertext. This setting is intended for opaquely moving encrypted data without requiring it to be decrypted. The operation will fail if the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option isn't set on the user, or BCPMODIFYENCRYPTED isn't set on the connection handle. For more information, see below. |
+| `Enabled` | IN (to server) | Inserts plaintext. The driver will encrypt the column data. |
 
 ### The BCPMODIFYENCRYPTED option
 
-To prevent data corruption, the server normally does not allow inserting ciphertext directly into an encrypted column, and thus attempts to do so will fail; however, for bulk loading of encrypted data using the BCP API, setting the `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) option to TRUE will allow ciphertext to be inserted directly, and reduces the risk of corrupting encrypted data over setting the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option on the user account. Nonetheless, the keys must match the data and it is a good idea to perform some read-only checks of the inserted data after the bulk insertion and before further use.
+To prevent data corruption, the server normally doesn't allow inserting ciphertext directly into an encrypted column, and thus attempts to do so will fail; however, for bulk loading of encrypted data using the BCP API, setting the `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) option to TRUE will allow ciphertext to be inserted directly, and reduces the risk of corrupting encrypted data over setting the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option on the user account. Nonetheless, the keys must match the data and it's a good idea to do some read-only checks of the inserted data after the bulk insertion and before further use.
 
 For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
-## Always Encrypted API Summary
+## Always Encrypted API summary
 
-### Connection String Keywords
+### Connection string keywords
 
-|Name|Description|  
-|----------|-----------------|  
-|`ColumnEncryption`|Accepted values are `Enabled`/`Disabled`.<br>`Enabled` -- enables Always Encrypted functionality for the connection.<br>`Disabled` -- disable Always Encrypted functionality for the connection.<br>*attestation protocol*, *attestation URL* -- (version 17.4 and later) enables Always Encrypted with secure enclave using the specified attestation protocol and the attestation URL. <br><br>The default is `Disabled`.|
-|`KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret`, `KeyVaultInteractive` |
-|`KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principal Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID |
-|`KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID |
+| Name | Description |
+|--|--|
+| `ColumnEncryption` | Accepted values are `Enabled`/`Disabled`.<br>`Enabled` - enables Always Encrypted functionality for the connection.<br>`Disabled` - disable Always Encrypted functionality for the connection.<br>*attestation protocol*, *attestation URL* - (version 17.4 and later) enables Always Encrypted with secure enclave using the specified attestation protocol and the attestation URL. <br><br>The default is `Disabled`. |
+| `KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret`, `KeyVaultInteractive`, `KeyVaultManagedIdentity` |
+| `KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principal Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID <br>When `KeyStoreAuthetication` = `KeyVaultManagedIdentity`, set this value to the Object ID of a user-assigned identity. Otherwise, the system-assigned identity is used. |
+| `KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID |
 
-### Connection Attributes
+### Connection attributes
 
-|Name|Type|Description|  
-|----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connect|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Enable Always Encrypted<br> pointer to *attestation protocol*,*attestation URL* string -- (version 17.4 and later) enable with secure enclave|
-|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] - Attempt to load CEKeystoreProvider<br>[Get] - Return a CEKeystoreProvider name|
-|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] - Write data to CEKeystoreProvider<br>[Get] - Read data from CEKeystoreProvider|
-|`SQL_COPT_SS_CEKCACHETTL`|Post-connect|[Set] - Set the CEK cache TTL<br>[Get] - Get the current CEK cache TTL|
-|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connect|[Set] - Set the trusted CMK paths pointer<br>[Get] - Get the current trusted CMK paths pointer|
+| Name | Type | Description |
+|--|--|--|
+| `SQL_COPT_SS_COLUMN_ENCRYPTION` | Pre-connect | `SQL_COLUMN_ENCRYPTION_DISABLE` (0) - Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) - Enable Always Encrypted<br> pointer to `*attestation protocol*,*attestation URL*` string - (version 17.4 and later) enable with secure enclave |
+| `SQL_COPT_SS_CEKEYSTOREPROVIDER` | Post-connect | [Set] - Attempt to load CEKeystoreProvider<br>[Get] - Return a CEKeystoreProvider name |
+| `SQL_COPT_SS_CEKEYSTOREDATA` | Post-connect | [Set] - Write data to CEKeystoreProvider<br>[Get] - Read data from CEKeystoreProvider |
+| `SQL_COPT_SS_CEKCACHETTL` | Post-connect | [Set] - Set the CEK cache TTL<br>[Get] - Get the current CEK cache TTL |
+| `SQL_COPT_SS_TRUSTEDCMKPATHS` | Post-connect | [Set] - Set the trusted CMK paths pointer<br>[Get] - Get the current trusted CMK paths pointer |
 
-### Statement Attributes
+### Statement attributes
 
-|Name|Description|  
-|----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted is disabled for the statement <br>`SQL_CE_RESULTSETONLY` (1) -- Decryption Only. Result sets and return values are decrypted, and parameters are not encrypted <br>`SQL_CE_ENABLED` (3) -- Always Encrypted is enabled and used for both parameters and results|
+| Name | Description |
+|--|--|
+| `SQL_SOPT_SS_COLUMN_ENCRYPTION` | `SQL_CE_DISABLED` (0) - Always Encrypted is disabled for the statement <br>`SQL_CE_RESULTSETONLY` (1) - Decryption Only. Result sets and return values are decrypted, and parameters aren't encrypted <br>`SQL_CE_ENABLED` (3) - Always Encrypted is enabled and used for both parameters and results |
 
-### Descriptor Fields
+### Descriptor fields
 
-|IPD Field|Size/Type|Default Value|Description|
-|-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|When 0 (default): decision to encrypt this parameter is determined by availability of encryption metadata.<br><br>When nonzero: if encryption metadata is available for this parameter, it is encrypted. Otherwise, the request fails with error [CE300] [Microsoft][ODBC Driver 17 for SQL Server]Mandatory encryption was specified for a parameter but no encryption metadata was provided by the server.|
+| IPD Field | Size/Type | Default Value | Description |
+|--|--|--|--|--|
+| `SQL_CA_SS_FORCE_ENCRYPT` (1236) | WORD (2 bytes) | 0 | When 0 (default): decision to encrypt this parameter is determined by availability of encryption metadata.<br><br>When nonzero: if encryption metadata is available for this parameter, it's encrypted. Otherwise, the request fails with error [CE300] [Microsoft][ODBC Driver 17 for SQL Server]Mandatory encryption was specified for a parameter but no encryption metadata was provided by the server. |
 
-### bcp_control Options
+### bcp_control options
 
-|Option Name|Default Value|Description|
-|-|-|-|
-|`BCPMODIFYENCRYPTED` (21)|FALSE|When TRUE, allows varbinary(max) values to be inserted into an encrypted column. When FALSE, prevents insertion unless correct type and encryption metadata is supplied.|
+| Option Name | Default Value | Description |
+|--|--|--|
+| `BCPMODIFYENCRYPTED` (21) | FALSE | When TRUE, allows varbinary(max) values to be inserted into an encrypted column. When FALSE, prevents insertion unless correct type and encryption metadata is supplied. |
 
 ## Troubleshooting
 
-When encountering difficulties in using Always Encrypted, start by checking the following points:
+When having difficulties using Always Encrypted, start by checking the following points:
 
 - The CEK that encrypts the desired column is present and accessible on the server.
 
@@ -737,14 +740,14 @@ When encountering difficulties in using Always Encrypted, start by checking the 
 
 Additionally, when using the secure enclave, attestation failures identify the step in the attestation process where the failure occurred, according to the following table:
 
-|Step|Description|
-|----|-----------|
-|0-99| Invalid attestation response, or signature verification error. |
-|100-199| Error retrieving certificates from attestation URL. Ensure `<attestation URL>/v2.0/signingCertificates` is valid and accessible. |
-|200-299| Unexpected or incorrect format of enclave's identity. |
-|300-399| Error establishing secure channel with enclave. |
+| Step | Description |
+|--|--|
+| 0-99 | Invalid attestation response, or signature verification error. |
+| 100-199 | Error retrieving certificates from attestation URL. Ensure `<attestation URL>/v2.0/signingCertificates` is valid and accessible. |
+| 200-299 | Unexpected or incorrect format of enclave's identity. |
+| 300-399 | Error establishing secure channel with enclave. |
 
-## See Also
+## See also
 
 - [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)

@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with SqlClient"
 description: "Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure."
-ms.date: 03/03/2021
+ms.date: 05/19/2021
 ms.assetid: 
 ms.prod: sql
 ms.prod_service: connectivity
@@ -335,6 +335,9 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 |||
 
 Starting with **v2.0.0**, the `Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider` supports the new Azure.Core and Azure.Identity APIs to perform authentication with Azure Key Vault. An instance of [`TokenCredential`](/dotnet/api/azure.core.tokencredential) implementation can now be passed to [`SqlColumnEncryptionAzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) constructors to initialize Azure Key Vault provider object.
+
+> [!NOTE]
+> The `Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider` supports both [Vaults and Managed HSMs in Azure Key Vault](/azure/key-vault/keys/about-keys).
 
 For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with secure enclaves](azure-key-vault-enclave-example.md).
 

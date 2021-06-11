@@ -9,11 +9,11 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 3/10/2021
+ms.date: 6/10/2021
 ---
 
 # SqlPackage Import parameters and properties
-The SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file - into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects.  
+The SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file - into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](/sql/t-sql/statements/create-database-transact-sql#permissions).
 
 ## Command-line syntax
 
@@ -36,7 +36,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
-|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target ofsqlpackage.exe Action. |
+|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of sqlpackage.exe Action. |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|Specifies if SQL encryption should be used for the target database connection. |
 |**/TargetPassword:**|**/tp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
 |**/TargetServerName:**|**/tsn**|{string}|Defines the name of the server hosting the target database. |
@@ -55,15 +55,14 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as"P0" or "S1".|
-|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|Disable indexes before importing data into SQL Server.|
+|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|When true (default), disables indexes before importing data into SQL Server. When false, indexes are not rebuilt. |
 |**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
 |**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. |
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
-|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|Rebuild indexes offline after importing data into SQL Server.|
+|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|When true, rebuilds indexes offline after importing data into SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage is required.|
   
-
 ## Next Steps
 
 - Learn more about [sqlpackage](sqlpackage.md)

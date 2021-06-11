@@ -15,7 +15,7 @@ author: DavidTrigano
 # SQL Data Discovery and Classification
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Data Discovery & Classification introduces a new tool built into [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) for **discovering**, **classifying**, **labeling** & **reporting** the sensitive data in your databases.
+Data Discovery & Classification adds capabilities for **discovering**, **classifying**, **labeling** & **reporting** the sensitive data in your databasesc. This can be done via T-SQL or using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) .
 Discovering and classifying your most sensitive data (business, financial, healthcare, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
 * Helping meet data privacy standards.
 * Monitoring access to databases/columns containing highly sensitive data.
@@ -24,7 +24,7 @@ Discovering and classifying your most sensitive data (business, financial, healt
 > Data Discovery & Classification is **supported for SQL Server 2012 and later, and can be used with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a id="Overview"></a>Overview
-Data Discovery & Classification introduces a set of services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
+Data Discovery & Classification forms a new information-protection paradigm for SQL Database, SQL Managed Instance, and Azure Synapse, aimed at protecting the data and not just the database. Currently it supports the following capabilities:
 
 * **Discovery & recommendations** - The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
 * **Labeling** - Sensitivity classification labels can be persistently tagged on columns.

@@ -118,7 +118,7 @@ The following counters are now available for applications targeting .NET Core 3.
 |**number-of-stasis-connections**|Number of connections currently waiting to be ready|The number of connections currently awaiting completion of an action and which are unavailable for use by the application.|
 |**number-of-reclaimed-connections**|Number of reclaimed connections from GC|The number of connections that have been reclaimed through garbage collection where `Close` or `Dispose` wasn't called by the application. **Note** Not explicitly closing or disposing connections hurts performance.|
 
-These counters can be used with .NET Core global CLI tools: `dotnet-counters` and `dotnet-trace` in Windows or Linux and PerfView in Windows, using `Microsoft.Data.SqlClient.EventSource` as the provider name. For more information, see [Retrieve event counter values](https://docs.microsoft.com/en-us/sql/connect/ado-net/event-counters#retrieve-event-counter-values).
+These counters can be used with .NET Core global CLI tools: `dotnet-counters` and `dotnet-trace` in Windows or Linux and PerfView in Windows, using `Microsoft.Data.SqlClient.EventSource` as the provider name. For more information, see [Retrieve event counter values](event-counters.md#retrieve-event-counter-values).
 
 ```cmd
 dotnet-counters monitor Microsoft.Data.SqlClient.EventSource -p
@@ -136,7 +136,7 @@ PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterInterv
   Azure.Identity v1.3.0
 
 ### Event tracing improvements in SNI.dll
-`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll will no longer be enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like xperf or perfview will be sufficient. For more information, see [Event tracing support in Native SNI](https://docs.microsoft.com/en-us/sql/connect/ado-net/enable-eventsource-tracing#event-tracing-support-in-native-sni).
+`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll will no longer be enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like xperf or perfview will be sufficient. For more information, see [Event tracing support in Native SNI](enable-eventsource-tracing.md#event-tracing-support-in-native-sni).
 
 ### Enabling row version null behavior
 `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior, you must enable the following AppContext switch on application startup:
@@ -146,10 +146,10 @@ PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterInterv
 
 This PR introduces a new SQL Authentication method, **Active Directory Default**. This authentication mode widens the possibilities of user authentication, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
 
-With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](https://docs.microsoft.com/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use these credential types to acquire an access token in the following order:
+With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use these credential types to acquire an access token in the following order:
 
 - **EnvironmentCredential**
-  - Enables authentication to Azure Active Directory using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](https://docs.microsoft.com/dotnet/api/azure.identity.environmentcredential))
+  - Enables authentication to Azure Active Directory using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
 - **ManagedIdentityCredential**
   - Attempts authentication to Azure Active Directory using a managed identity that has been assigned to the deployment environment. **"Client Id" of "User Assigned Managed Identity"** is read from the **"User Id" connection property**.
 - **SharedTokenCacheCredential**

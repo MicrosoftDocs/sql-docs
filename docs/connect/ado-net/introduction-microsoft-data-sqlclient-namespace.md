@@ -51,9 +51,9 @@ public SqlCommand
 ```
 
 API Usage examples can be found here:
-[SqlConnection retry sample](..\..\doc\samples\SqlConfigurableRetryLogic_OpenConnection.cs)
-[SqlCommand retry sample](..\..\doc\samples\SqlConfigurableRetryLogic_SqlCommand.cs)
-[Sample for retry logic options](..\..\doc\samples\SqlConfigurableRetryLogic_SqlRetryLogicOptions.cs)
+[!code-csharp [SqlConnection retry sample1](~/../sqlclient/doc/samples/SqlConfigurableRetryLogic_OpenConnection.cs#1)]
+[!code-csharp [SqlCommand retry sample](~/../sqlclient/doc/samples/SqlConfigurableRetryLogic_SqlCommand.cs#1)]
+[!code-csharp [Sample for retry logic options](~/../sqlclient/doc/samples/SqlConfigurableRetryLogic_SqlRetryLogicOptions.cs#1)]
 
 New configuration sections have also been introduced to do the same registration from configuration files, without having to modify existing code:
 

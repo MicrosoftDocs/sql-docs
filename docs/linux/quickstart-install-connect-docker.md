@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019, contperf-fy21q1
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 09/07/2020
+ms.date: 06/11/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -48,7 +48,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can
 
 ## <a id="requirements"></a> Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
+- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#pmosr).
 - Docker **overlay2** storage driver. This is the default for most users. If you find that you are not using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Minimum of 2 GB of disk space.
 - Minimum of 2 GB of RAM.

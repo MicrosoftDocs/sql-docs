@@ -138,7 +138,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 }
 
 <filter_predicate> ::=
-    <conjunct> [ AND <conjunct> ]
+    <conjunct> [ AND ] [ ...n ]
 
 <conjunct> ::=
     <disjunct> | <comparison>

@@ -2,7 +2,7 @@
 description: "sys.query_store_wait_stats (Transact-SQL)"
 title: "sys.query_store_wait_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/22/2021"
+ms.date: "06/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 |-----------------|---------------|-----------------|  
 |**0**|**Unknown**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
-|**2**|**Worker Thread**|THREADPOOL|
+|**2**|**Worker Thread***|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
 |**4**|**Latch**|LATCH_%|
 |**5**|**Buffer Latch**|PAGELATCH_%|

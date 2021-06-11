@@ -36,14 +36,14 @@ In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHE
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-You must have a RHEL 7.3 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.7 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-You must have a RHEL 7.3 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.7 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 

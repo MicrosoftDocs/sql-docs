@@ -8,8 +8,8 @@ ms.prod_service: connectivity
 ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-zhangw
-ms.author: v-zhangw
+author: David-Engel
+ms.author: v-daenge
 manager: kenvh
 ---
 # Release notes for the Microsoft SQL Server tools on Linux and macOS

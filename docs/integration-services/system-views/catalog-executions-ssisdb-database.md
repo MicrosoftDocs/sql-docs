@@ -35,6 +35,8 @@ ms.author: chugu
 |executed_as_sid|**varbinary(85)**|The SID of the user who started the instance of execution.|  
 |executed_as_name|**nvarchar(128)**|The name of the database principal that was used to start the instance of execution.|  
 |use32bitruntime|**bit**|Indicates if the 32-bit runtime is used to run the package on a 64-bit operating system. When the value is `1`, the execution is performed with the 32-bit runtime. When the value is `0`, the execution is performed with the 64-bit runtime.|  
+|operation_type|**smallint**|The type of operation. The operation_type of 200 means create/start execution'|  
+|created_time|**datetimeoffset**|The time when the instance was initiated.  Keep in mind that there is a lag time betwen initiation and actual start time'| 
 |object_type|**smallint**|The type of object. The object may be a project (`20`) or a package (`30`).|  
 |object_id|**bigint**|The ID of the object affected by the operation.|  
 |status|**int**|The status of the operation. The possible values are created (`1`), running (`2`), canceled (`3`), failed (`4`), pending (`5`), ended unexpectedly (`6`), succeeded (`7`), stopping (`8`), and completed (`9`).|  

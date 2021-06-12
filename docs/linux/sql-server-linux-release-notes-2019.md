@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2019 on Linux
 description: This article contains the release notes and supported features for SQL Server 2019 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/10/2021
+ms.date: 06/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

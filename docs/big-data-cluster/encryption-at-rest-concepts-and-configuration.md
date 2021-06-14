@@ -278,7 +278,7 @@ Follow the following procedure to reconfigure the cluster with encryption zones 
 
 ### Configuration of external providers
 
-As mentioned in previous sections, a SQL Server Big Data Clusters CU8+ deployment will enabled the Encryption at Rest functionality with system managed keys by default.
+As mentioned in previous sections, a SQL Server 2019 CU8+ Big Data Clusters deployment will enabled the encryption at rest functionality with system-managed keys by default.
 In order to enable an external key provider to secure the root keys of encryption of SQL Server and HDFS see the following article: [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md)
 
 ## Next steps

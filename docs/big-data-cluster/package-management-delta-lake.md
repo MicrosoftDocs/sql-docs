@@ -24,9 +24,9 @@ In this guide, you'll learn:
 
 ## Introduction
 
-Linux Foundation Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. To learn more about Delta Lake see:
+Linux Foundation Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. To learn more about Delta Lake, see:
 
-* [What is Delta Lake](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
+* [What is Delta Lake](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
 * [Introduction to Delta Lake](https://docs.delta.io/0.6.1/delta-intro.html)
 
 ## Configure Delta Lake on SQL Server Big Data Clusters
@@ -94,7 +94,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/my-delta-lake-python-j
 
 To learn how to effectively use Delta Lake, see the following articles.
 
-* [Linux Foundation Delta Lake](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-delta-lake-overviewp)
+* [Linux Foundation Delta Lake](/azure/synapse-analytics/spark/apache-spark-delta-lake-overviewp)
 * [Delta Lake quickstart](https://docs.delta.io/0.6.1/quick-start.html)
 
 To submit Spark jobs to SQL Server Big Data Clusters by using `azdata` or Livy endpoints, see [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).

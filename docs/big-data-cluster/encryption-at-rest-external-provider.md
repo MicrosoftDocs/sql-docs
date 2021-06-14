@@ -90,7 +90,7 @@ azdata bdc kms show
 
 After the configuration, SQL Server databases and HDFS encryption zones are still encrypted by the previous key hierarchy. You need to explicitly encrypt using the externally managed keys.
 
-In __SQL Server__ a new asymmetric key based on the externally managed key will be installed. Use that to encrypt your databases.
+In SQL Server a new asymmetric key based on the externally managed key will be installed. Use that to encrypt your databases.
 
 The asymmetric key can be seen using the following T-SQL query, with the `sys.asymmetric_keys` system catalog view.
 

@@ -6,7 +6,7 @@ author: dacoelho
 ms.author: dacoelho
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 10/19/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -30,8 +30,10 @@ The __Encryption at Rest feature set of SQL Server Big Data Clusters__ supports 
 
 The following capabilities are provided:
 
-* __System-managed encryption at rest__. This capability is available in CU8.
-* __User-managed encryption at rest (BYOK)__, with both service-managed and external key provider integrations. Currently only service-managed user created keys are supported.
+* __System-managed encryption at rest__. This capability is available in CU8+.
+* __User-managed encryption at rest (BYOK)__, with both service-managed (introduced in SQL Server 2019 CU8) and external key provider integrations (introduced in SQL Server 2019 CU11+).
+
+For more information, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
 
 ## Key Definitions
 
@@ -43,23 +45,33 @@ A Controller hosted service responsible for managing keys and certificates for t
 * Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
 * SQL Server TDE certificate management.
 
-We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
+We will reference the SQL Server Big Data Clusters Key Management Server (KMS) service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
-### System-managed keys and certificates
+### System-managed keys
 
 The BDC KMS service will manage all keys and certificates for SQL Server and HDFS.
 
-### User provided certificates
+### User defined keys
 
-User provided keys and certificates to be managed by BDC KMS, commonly known as bring your own key (BYOK).
+User defined keys to be managed by BDC KMS, commonly known as bring your own key (BYOK). SQL Server BDC supports the custom definition of keys to be used for encryption on both SQL Server and HDFS components. Those keys will be managed by the __BDC KMS__.
+
+> [!CAUTION]
+   > SQL Server master instance inherits the SQL Server transparent data encryption (TDE) feature. However, manually loading custom keys from files into pods, registering them on SQL Server, and using them for TDE is not a supported scenario. The __BDC KMS__ won't manage those keys and it can lead to your databases being unreadable. In order to use external provided keys correctly, use the "External providers" feature as described in this article.
 
 ### External providers
 
-External key solutions compatible with BDC KMS for external delegation. This capability isn't supported at this time.
+External key solutions compatible with __BDC KMS__ are supported for encryption operation delegation. This feature is supported on SQL Server 2019 CU11+. With this feature enabled, the root key of encryption will be hosted outside of the BDC Controller.
 
 ## Encryption at rest on SQL Server Big Data Clusters
 
 Read this document carefully to completely assess your scenario.
+
+The __BDC KMS controller service__ provides support for system-managed keys and external provider controlled keys to achieve data encryption at rest on both SQL Server and HDFS.
+
+
+
+Those keys and certificates are service-managed and this documentation provides operational guidance on how to interact with the service.
+
 
 The feature set introduces the __BDC KMS controller service__ to provide system-managed keys and certificates for data encryption at rest on both SQL Server and HDFS. Those keys and certificates are service-managed and this documentation provides operational guidance on how to interact with the service.
 
@@ -264,7 +276,14 @@ Follow the following procedure to reconfigure the cluster with encryption zones 
 
     Execute __```run-key-provider-patch.sh```__ with the appropriate parameters. 
 
+### Configuration of external providers
+
+As mentioned in previous sections, a SQL Server 2019 CU8+ Big Data Clusters deployment will enabled the encryption at rest functionality with system-managed keys by default.
+In order to enable an external key provider to secure the root keys of encryption of SQL Server and HDFS see the following article: [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md)
+
 ## Next steps
+
+To learn more about how key versions are used on SQL Server Big Data Clusters see: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
 
 To learn more about how to effectively use encryption at rest SQL Server Big Data Clusters see the following articles:
 

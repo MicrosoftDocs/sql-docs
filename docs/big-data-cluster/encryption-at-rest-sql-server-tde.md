@@ -54,9 +54,9 @@ __Unsupported features:__
 
     The certificate name will be listed as “TDECertificate{timestamp}”. When you see a prefix of TDECertificate and followed by timestamp, this is the certificate provided by the system managed feature.
 
-## Encrypt a database using the system provided certificate
+## Encrypt a database using the system-managed certificate
 
-In the following examples consider a database named __userdb__ as the target for encryption and a system provided certificate named __TDECertificate2020_09_15_22_46_27__ per output of previous section.
+In the following examples consider a database named __userdb__ as the target for encryption and a system-managed certificate named __TDECertificate2020_09_15_22_46_27__, per output of previous section.
 
 1. Use the following pattern to generate a database encryption key using the provided system certificate.
 
@@ -73,6 +73,10 @@ In the following examples consider a database named __userdb__ as the target for
     ALTER DATABASE userdb SET ENCRYPTION ON;
     GO
    ```
+
+## Manage database encryption when using external providers
+
+For more information on the way key versions are used on SQL Server Big Data Clusters encryption at rest, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md). The section "Main key rotation for SQL Server" contains an end-to-end example on how to manage database encryption when using external key providers.
 
 ## Next steps
 

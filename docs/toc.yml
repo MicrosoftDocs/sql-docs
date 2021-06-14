@@ -434,6 +434,8 @@ items:
         items:
           - name: Concepts and configuration
             href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+          - name: External Key Providers
+            href: big-data-cluster/encryption-at-rest-external-provider.md
           - name: SQL Server TDE
             href: big-data-cluster/encryption-at-rest-sql-server-tde.md
           - name: HDFS encryption zones

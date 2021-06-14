@@ -334,7 +334,7 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 | 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 |||
 
-Starting with **v2.0.0**, the `Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider` supports the new Azure.Core and Azure.Identity APIs to perform authentication with Azure Key Vault. An instance of [`TokenCredential`](/dotnet/api/azure.core.tokencredential) implementation can now be passed to [`SqlColumnEncryptionAzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) constructors to initialize Azure Key Vault provider object.
+Starting with **v2.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` supports the new Azure.Core and Azure.Identity APIs to perform authentication with Azure Key Vault. An instance of [`TokenCredential`](/dotnet/api/azure.core.tokencredential) implementation can now be passed to [`SqlColumnEncryptionAzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) constructors to initialize Azure Key Vault provider object.
 
 > [!NOTE]
 > The `Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider` supports both [Vaults and Managed HSMs in Azure Key Vault](/azure/key-vault/keys/about-keys).
@@ -343,7 +343,11 @@ For examples demonstrating performing encryption/decryption with Azure Key Vault
 
 ### Implementing a custom column master key store provider
 
-If you want to store column master keys in a key store that is not supported by an existing provider, you can implement a custom provider by extending the [SqlColumnEncryptionKeyStoreProvider class](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider) and registering the provider using the [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) method.
+If you want to store column master keys in a key store that is not supported by an existing provider, you can implement a custom provider by extending the [SqlColumnEncryptionKeyStoreProvider](/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptionkeystoreprovider) class and registering the provider using one of the following methods:
+
+- [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)
+- [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) (Added in version 3.0.0)
+- [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) (Added in version 3.0.0)
 
 ```cs
 public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
@@ -371,6 +375,54 @@ class Program
     }
 }
 ```
+
+#### Column encryption key cache precedence
+
+This section applies to version 3.0 and higher of the provider.
+
+The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or command instance will not be cached by the **Microsoft .NET Data Provider for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
+
+Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or command instance, CEKs decrypted by an instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` will be cleared when that instance goes out of scope:
+
+[!code-csharp [AzureKeyVaultProviderColumnEncryptionKeyCacheScope#1](~/../sqlclient/doc/samples/AzureKeyVaultProvider_ColumnEncryptionKeyCacheScope.cs#1)]
+
+> [!NOTE]
+> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally using the [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) method. Any CEK caching implementation should reference the value of [SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.SqlColumnEncryptionKeyStoreProvider.ColumnEncryptionKeyCacheTtl) before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching.
+
+### Registering a custom column master key store provider
+
+This section applies to version 3.0 and higher of the provider.
+
+Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
+
+- The per-command registration will be checked if it is not empty.
+- If the per-command registration is empty, the per-connection registration will be checked if it is not empty.
+- If the per-connection registration is empty, the global registration will be checked.
+
+Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+
+The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are pre-registered.
+
+The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure
+that a user of an application can access the plaintext data if they can provide the required column master key, by authenticating
+against the key store containing the column master key.
+
+Applications that share a [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection) instance between multiple users may want to use [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand). Each user must register a
+key store provider on a [SqlCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand) instance before executing a query to access an encrypted column. If the key store provider is able to
+access the required column master key in the key store using the user's given credentials, the query will succeed.
+
+Applications that create a [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection) instance for each user may want to use [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection). Key store providers registered with this method can be used by the connection for any query accessing encrypted data.
+
+Key store providers registered using [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)
+will use the identity given by the application when authenticating against the key store.
+
+The following example shows the precedence of custom column master key store providers registered on a connection instance:
+
+[!code-csharp [RegisterCustomKeyStoreProviderConnectionPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_ConnectionPrecedence.cs#1)]
+
+The following example shows the precedence of custom column master key store providers registered on a command instance:
+
+[!code-csharp [RegisterCustomKeyStoreProviderCommandPrecedence#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_CommandPrecedence.cs#1)]
 
 ### Using column master key store providers for programmatic key provisioning
 

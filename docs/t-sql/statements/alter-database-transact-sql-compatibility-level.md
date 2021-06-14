@@ -1,8 +1,8 @@
 ---
 description: "ALTER DATABASE Compatibility Level (Transact-SQL)"
-title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
+title: "ALTER DATABASE Compatibility Level (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/22/2020
+ms.date: 06/09/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "100 compatibility level"
   - "db compatibility level"
   - "db compat level"
-ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -147,7 +146,7 @@ For more details, including the recommended workflow for upgrading Database Comp
 >
 > Examples of breaking changes **not protected** by compatibility level are:
 >
-> - Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column *single_pages_kb* in sys.dm_os_sys_info was renamed to *pages_kb*. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
+> - Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column *single_pages_kb* in `sys.dm_os_sys_info` was renamed to *pages_kb*. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
 > - Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` will produce error 2812 (Could not find stored procedure 'sp_dboption').
 >
 > For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2019](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md), [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), and [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
@@ -172,7 +171,8 @@ The fundamental plan-affecting changes added only to the default compatibility l
     >
     > - At the server level, with [trace flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
     > - At the database level, with the `QUERY_OPTIMIZER_HOTFIXES` option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
-    > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint).
+    > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) by modifying the query.
+    > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` without code changes, using the [Query Store hint (Preview)](../../relational-databases/performance/query-store-hints.md) feature. 
     
     Later, when [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] was released, all the Query Optimizer fixes released after [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM became automatically enabled for databases using the [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] default compatibility level (140). This is a cumulative behavior that includes all previous versions fixes as well. Again, only post-RTM Query Optimizer fixes need to be explicitly enabled.  
     
@@ -214,7 +214,7 @@ This section describes new behaviors introduced with compatibility level 150.
 |Relational data warehouse and analytic workloads may not be able to leverage columnstore indexes due to OLTP-overhead, lack of vendor support or other limitations.  Without columnstore indexes, these workloads cannot benefit from batch execution mode.|Batch execution mode is now available for analytic workloads without requiring columnstore indexes. For more information, see [batch mode on rowstore.](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)|
 |Row-mode queries that request insufficient memory grant sizes that result in spills to disk may continue to have issues on consecutive executions.|Row-mode queries that request insufficient memory grant sizes that result in spills to disk may have improved performance on consecutive executions. For more information, see [row mode memory grant feedback.](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)|
 |Row-mode queries that request an excessive memory grant size that results in concurrency issues may continue to have issues on consecutive executions.|Row-mode queries that request an excessive memory grant size that results in concurrency issues may have improved concurrency on consecutive executions. For more information, see [row mode memory grant feedback.](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)|
-|Queries referencing T-SQL scalar UDFs will use iterative invocation, lack costing and force serial execution. |T-SQL scalar UDFs are transformed into equivalent relational expressions that are “inlined” into the calling query, often resulting in significant performance gains. For more information, see [T-SQL scalar UDF inlining.](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)|
+|Queries referencing T-SQL scalar UDFs will use iterative invocation, lack costing and force serial execution. |T-SQL scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains. For more information, see [T-SQL scalar UDF inlining.](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)|
 |Table variables use a fixed guess for the cardinality estimate.  If the actual number of rows is much higher than the guessed value, performance of downstream operations can suffer. |New plans will use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess. For more information, see [table variable deferred compilation.](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)|
 
 For more information on query processing features enabled in Database Compatibility Level 150, refer to [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) and [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing.md).
@@ -439,14 +439,16 @@ SELECT @v = BusinessEntityID FROM
 SELECT @v;
 ```
 
-## See Also 
-[Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)       
-[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)       
-[Reserved Keywords](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
-[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
-[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
-[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
-[View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
-[Change the Database Compatibility Mode and use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
-[Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
+## See also 
+
+ - [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)       
+ - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)       
+ - [Reserved Keywords](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
+ - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
+ - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
+ - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
+ - [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
+ - [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
+ - [Change the Database Compatibility Mode and use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
+ - [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
+ - [Query Store hints](../../relational-databases/performance/query-store-hints.md)   

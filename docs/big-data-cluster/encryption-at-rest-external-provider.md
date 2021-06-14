@@ -61,7 +61,7 @@ e.g.: The key file may be added to the KV store in Hashicorp Vault at path bdc-e
 1. Unzip kms_plugin_app.zip that contains the BDC AppDeploy to communicate to external providers.
 1. Customize the application. File ```custom.py``` contains the reference SoftHSM code and file ```custom2.py``` has a HashiCorp Vault example. Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed. ```app.py``` is the entry point that will load the application, understand it completely before deploying.
 1. From the folder which has the spec.yaml deploy the application to BDC using: ```azdata app create -s```
-1. . Wait for the application deployment to complete and the “Ready” status can be checked using ```azdata app list```
+1. Wait for the application deployment to complete and the “Ready” status can be checked using ```azdata app list```
 
 ### 3 - Configure BDC to use the external key provider
 

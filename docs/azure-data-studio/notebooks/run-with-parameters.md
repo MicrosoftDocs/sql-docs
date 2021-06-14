@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: vasubhog
-ms.author: vasubhog
+ms.author: vabhog
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
 ms.date: 05/21/2021

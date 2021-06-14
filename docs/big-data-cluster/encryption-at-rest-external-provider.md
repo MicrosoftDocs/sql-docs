@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 This article provides details of how to configure external key providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] for key management.
 
-To learn more about how Key Versions are used on SQL Server Big Data Clusters see the following article: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
+To learn more about how key versions are used on SQL Server Big Data Clusters, see: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
 
 For information on configuring and using the Encryption at Rest feature see the following guides:
 * [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md)

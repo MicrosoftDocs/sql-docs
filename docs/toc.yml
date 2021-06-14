@@ -440,7 +440,7 @@ items:
             href: big-data-cluster/encryption-at-rest-sql-server-tde.md
           - name: HDFS encryption zones
             href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
-    - name: Spark jobs
+    - name: Spark
       items:
       - name: Submit Spark jobs in Azure Data Studio
         href: big-data-cluster/spark-submit-job.md
@@ -450,12 +450,14 @@ items:
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Submit Spark jobs in IntelliJ
         href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Manage libraries
+        href: big-data-cluster/spark-install-packages.md
+      - name: Delta Lake
+        href: big-data-cluster/package-management-delta-lake.md
       - name: Spark streaming guide
         href: big-data-cluster/spark-streaming-guide.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
-      - name: Manage libraries
-        href: big-data-cluster/spark-install-packages.md
     - name: Troubleshoot
       items:
       - name: Troubleshoot Kubernetes

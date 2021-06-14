@@ -27,7 +27,7 @@ __Unsupported features:__
 - [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md)
 - [Big data tools](deploy-big-data-tools.md)
    - **Azure Data Studio**
-- SQL Server user with administrative privileges.
+- SQL Server user with administrative privileges (sysadmin role).
 
 ## Query the installed certificates
 

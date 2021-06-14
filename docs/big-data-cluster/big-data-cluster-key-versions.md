@@ -2,9 +2,10 @@
 title: Key Versions
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how key versions are used for SQL BDC key management and key rotation for HDFS and SQL Server keys.
-ms.date: 06/01/2021
-author: WilliamDassafMSFT
-ms.author: wiassaf
+ms.date: 06/14/2021
+author: Danibunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,9 +26,9 @@ For information on configuring and using the encryption at rest feature see the 
 
 For using encryption at rest in HDFS, the following concepts are involved:
 
-1. Encryption zones (EZ): The encryption zone is a folder in HDFS which is associated with a key. All files in this folder are encrypted. Default provisioned EZ in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is called "securelake".
-2. Encryption Zone keys (EZ Key): A named symmetric key. The default system-managed provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS (Key Management Server) running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main encryption key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main encryption key and the decryption requests are sent to the control plane.
-3. Encrypted Data Encryption Key: Every file in Encryption zone is encrypted by a Data Encryption Key (DEK) generated for the file. Once the DEK is created, it is persisted with the data. To persist the DEK, it is first Encrypted by the Encryption Zone Key and then persisted with data. The DEK is randomly generated per file and the strength of the symmetric DEK is the same as the strength of the EZ Key.
+* Encryption zones (EZ): The encryption zone is a folder in HDFS which is associated with a key. All files in this folder are encrypted. Default provisioned EZ in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is called "securelake".
+* Encryption Zone keys (EZ Key): A named symmetric key. The default system-managed provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS (Key Management Server) running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main encryption key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main encryption key and the decryption requests are sent to the control plane.
+* Encrypted Data Encryption Key: Every file in Encryption zone is encrypted by a Data Encryption Key (DEK) generated for the file. Once the DEK is created, it is persisted with the data. To persist the DEK, it is first Encrypted by the Encryption Zone Key and then persisted with data. The DEK is randomly generated per file and the strength of the symmetric DEK is the same as the strength of the EZ Key.
 
 The below graphic explains how files are protected by the DEK and how the DEK is protected by the EZ key securelakekey.
 
@@ -48,7 +49,7 @@ In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 1. The main encryption keys are asymmetric RSA keys.
 2. A main encryption key is created for SQL Server master instance and another for HDFS.
-3. The public key corresponding to the main encryption key, is always stored in the Controller Database or controldb. __The private key is stored in the controller database for system managed main encryption key__. __For encryption keys from Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database__ (unless the application for external keys, brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the private key material.
+3. The public key corresponding to the main encryption key is always stored in the controller database or controldb. The private key is stored in the controller database for system managed main encryption key. For encryption keys from a Hardware Security Module (HSM) or any other external provider, the private keys are not stored inside the controller database (unless the application for external keys brings the private key with it). However, the private key is not needed inside the controldb and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] will not require the private key material.
 4. Encryption operations using the public key of the main encryption key can be performed inside the controller itself, or, the controller can distribute the public key to Hadoop KMS so that Hadoop KMS can perform encryption locally. The decryption operations are expected to be handled by the external key provider, like HSM. This design allows us to keep the sensitive part of the asymmetric key outside the cluster and in the customer's protection. This makes sure that the root of encryption to decrypt all the data is never available in the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ecosystem for customer configured keys.
 
 ## Storage protection of different keys

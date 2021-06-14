@@ -25,9 +25,8 @@ For information on configuring and using encryption at rest see the following gu
 ## <a id="prereqs"></a> Prerequisites
 
 * [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md). CU11+ required.
-* [Big data tools](deploy-big-data-tools.md)
-  * **azdata 20.3.5+**
-* SQL Server Big Data Clusters user with administrative privileges.
+* [Big data tools](deploy-big-data-tools.md) including azdata 20.3.5+.
+* SQL Server Big Data Clusters user with Kubernetes administrative privileges (a member of the clusterAdmins role). For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
 * External provider template application. Download it from [here](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider).
 
 ## Root key encryption using external providers
@@ -61,14 +60,14 @@ e.g.: The key file may be added to the KV store in Hashicorp Vault at path bdc-e
 1. Unzip kms_plugin_app.zip that contains the BDC AppDeploy to communicate to external providers.
 1. Customize the application. File ```custom.py``` contains the reference SoftHSM code and file ```custom2.py``` has a HashiCorp Vault example. Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed. ```app.py``` is the entry point that will load the application, understand it completely before deploying.
 1. From the folder which has the spec.yaml deploy the application to BDC using: ```azdata app create -s```
-1. Wait for the application deployment to complete and the “Ready” status can be checked using ```azdata app list```
+1. Wait for the application deployment to complete and the "Ready" status can be checked using ```azdata app list```
 
 ### 3 - Configure BDC to use the external key provider
 
 Set the AZDATA_EXTERNAL_KEY_PIN environment variable to provide the token that allows access to the external key provider. `export AZDATA_EXTERNAL_KEY_PIN=<your PIN/token here>`
 
 > [!NOTE]
-> Note that the integration application deployment process uses the token to access your external key provider, however the AZDATA_EXTERNAL_KEY_PIN variable is saved encrypted in BDC control plane so that it can be interpreted by the application. Hence a different authentication mechanism can be used too, but the application will need to be changed. Check the ```custom*.py``` python application for the complete integration logic that’s being used.
+> Note that the integration application deployment process uses the token to access your external key provider, however the AZDATA_EXTERNAL_KEY_PIN variable is saved encrypted in BDC control plane so that it can be interpreted by the application. Hence a different authentication mechanism can be used too, but the application will need to be changed. Check the ```custom*.py``` python application for the complete integration logic that's being used.
 
 Configure the key in BDC using the following azdata command structure, while changing the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by ```custom2.py```.
 

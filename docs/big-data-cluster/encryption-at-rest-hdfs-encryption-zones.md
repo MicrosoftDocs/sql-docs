@@ -5,7 +5,7 @@ description: This article show how to use SQL Server HDFS encryption zones featu
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: mihaelab
-ms.date: 10/19/2020
+ms.date: 06/14/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,7 +22,7 @@ Note that there is a default encryption zone mounted at __```/securelake```__ re
 ## <a id="prereqs"></a> Prerequisites
 
 - [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md) with [Active Directory](active-directory-prerequisites.md) Integration.
-- User with administrative privileges.
+- SQL Server Big Data Clusters user with Kubernetes administrative privileges (a member of the clusterAdmins role). For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
 - [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] configured and logged into the cluster in AD mode.
 
 ## Create an encryption zone using the provided system managed key
@@ -108,3 +108,11 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
 Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)
+
+To use an external key provider for encryption at rest, see [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md).
+
+## See also
+
+* [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
+* [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
+

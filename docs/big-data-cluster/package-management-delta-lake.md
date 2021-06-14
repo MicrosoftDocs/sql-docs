@@ -1,12 +1,12 @@
 ---
 title: SQL Server Big Data Clusters Delta Lake
 titleSuffix: SQL Server Big Data Clusters
-description: This guide covers how to configure Delta Lake using  the Package Management feature set.
+description: This guide covers how to configure Delta Lake using the Package Management feature set.
 author: DaniBunny 
 ms.author: dacoelho
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 06/11/2021
+ms.date: 06/14/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -24,14 +24,14 @@ In this guide, you'll learn:
 
 ## Introduction
 
-Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. To learn more about Delta Lake see:
+Linux Foundation Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. To learn more about Delta Lake see:
 
 * [What is Delta Lake](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
 * [Introduction to Delta Lake](https://docs.delta.io/0.6.1/delta-intro.html)
 
 ## Configure Delta Lake on SQL Server Big Data Clusters
 
-On SQL Server Big Data Clusters 2019 it is possible to load Delta Lake libraries using the [Spark library management](spark-install-packages.md) feature.
+On SQL Server 2019 Big Data Clusters, it is possible to load Delta Lake libraries using the [Spark library management](spark-install-packages.md) feature.
 
 > [!NOTE]
    > As a general rule, use the most recent compatible library. The code in this guide was tested by using Delta Lake 0.6.1 on SQL Server Big Data Clusters CU11. Delta Lake 0.6.1 is compatible with Apache Spark 2.4.x, later versions are not. The examples are provided as-is, not a supportability statement.
@@ -42,9 +42,9 @@ Set up your Delta Lake libraries with your application before you submit the job
 
 * [delta-core](https://mvnrepository.com/artifact/io.delta/delta-core) - This core library enables Delta Lake support.
 
-The library must target Scala 2.11 and Spark 2.4.7. This SQL Server Big Data Cluster requirement is for Cumulative Update package 9 (CU9) or later.
+The library must target Scala 2.11 and Spark 2.4.7. This SQL Server Big Data Cluster requirement is for SQL 2019 Cumulative Update 9 (CU9) or later.
 
-Its also required to configure Spark to enable Delta Lake specific Spark SQL commands and the metastore integration. The example bellow is how a Azure Data Studio notebook would configure Delta Lake support:
+It's also required to configure Spark to enable Delta Lake-specific Spark SQL commands and the metastore integration. The example bellow is how an Azure Data Studio notebook would configure Delta Lake support:
 
 ```python
 %%configure -f \
@@ -59,7 +59,7 @@ Its also required to configure Spark to enable Delta Lake specific Spark SQL com
 
 #### Share library locations for jobs on HDFS
 
-If multiple applications will use the Delta Lake library copy the appropriate library JAR files to a shared location on HDFS. Then all jobs should reference the same library files.
+If multiple applications will use the Delta Lake library, copy the appropriate library JAR files to a shared location on HDFS. Then all jobs should reference the same library files.
 
 Copy the libraries to the common location:
 
@@ -69,7 +69,7 @@ azdata bdc hdfs cp --from-path delta-core_2.11-0.6.1.jar --to-path "hdfs:/apps/j
 
 #### Dynamically install the libraries
 
-You can dynamically install packages when you submit a job by using the [package management features](spark-install-packages.md) of SQL Server Big Data Clusters. There's a job startup time penalty because of the recurrent downloads of the library files on each job submission.
+You can dynamically install packages when you submit a job by using the [package management features](spark-install-packages.md) of Big Data Clusters. There's a job startup time penalty because of the recurrent downloads of the library files on each job submission.
 
 ### Submit the Spark job by using azdata
 

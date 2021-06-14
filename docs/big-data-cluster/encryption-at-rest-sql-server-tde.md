@@ -54,7 +54,7 @@ __Unsupported features:__
 
     The certificate name will be listed as “TDECertificate{timestamp}”. When you see a prefix of TDECertificate and followed by timestamp, this is the certificate provided by the system managed feature.
 
-## Encrypt a database using the system managed certificate
+## Encrypt a database using the system-managed certificate
 
 In the following examples consider a database named __userdb__ as the target for encryption and a system managed certificate named __TDECertificate2020_09_15_22_46_27__ per output of previous section.
 

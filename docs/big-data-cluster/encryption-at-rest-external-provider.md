@@ -17,7 +17,7 @@ This article provides details of how to configure external key providers in [!IN
 
 To learn more about how key versions are used on SQL Server Big Data Clusters, see: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
 
-For information on configuring and using the Encryption at Rest feature see the following guides:
+For information on configuring and using encryption at rest see the following guides:
 * [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md)
 * [SQL Server Big Data Clusters HDFS Encryption Zones usage guide](encryption-at-rest-hdfs-encryption-zones.md)
 * [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)

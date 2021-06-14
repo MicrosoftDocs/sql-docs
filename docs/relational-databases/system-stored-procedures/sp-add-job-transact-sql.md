@@ -108,7 +108,7 @@ sp_add_job [ @job_name = ] 'job_name'
 >  When *delete_level* is **3**, the job is executed only once, regardless of any schedules defined for the job. Furthermore, if a job deletes itself, all history for the job is also deleted.  
   
 `[ @job_id = ] _job_idOUTPUT`
- The job identification number assigned to the job if created successfully. *job_id*is an output variable of type **uniqueidentifier**, with a default of NULL.  
+ The job identification number assigned to the job if created successfully. *job_id* is an output variable of type **uniqueidentifier**, with a default of NULL.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

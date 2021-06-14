@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 05/21/2021
 ---
 
-# Create a Parameterized Notebook
+# Create a Parameterized Notebook using Run with Parameters
 
 **Parameterization** is the ability to execute the same notebook with different parameters.
 

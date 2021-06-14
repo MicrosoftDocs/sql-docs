@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 01/25/2021
 ---
 
-# Create a Parameterized Notebook
+# Create a Parameterized Notebook using Papermill
 
 **Parameterization** is the ability to execute the same notebook with different parameters.
 

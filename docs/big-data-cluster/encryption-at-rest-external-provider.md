@@ -32,7 +32,7 @@ For information on configuring and using encryption at rest see the following gu
 
 ## Root key encryption using external providers
 
-With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane, and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt the Data Encryption Key (DEK) from SQL are sent to control plane as well, and then are redirected to the Key Management Server (KMS) application.
+With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane, and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt the Data Encryption Key (DEK) from SQL are sent to control plane as well, and then are redirected to the application that interfaces with the external provider, such as a Hardware Security Module (HSM).
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-customerkey.png" alt-text="After customer key is installed":::
 
@@ -40,13 +40,13 @@ The following diagram explains the interactions while configuring external keys 
 
 :::image type="content" source="media/big-data-cluster-key-versions/external-key-control-pane-interactions.png" alt-text="Interactions while configuring external keys in control plane"  lightbox="media/big-data-cluster-key-versions/external-key-control-pane-interactions-LG.png":::  
 
-After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
+After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as a HSM, Hashicorp Vault or another product.
 
 ## Configuration
 
 The provided template application is the plugin used to interface with the external key provider. This application needs to be customized and deployed into BDC to serve as an integration point with the chosen external key provider.
 
-In the template application there are examples on how to integrate with HSM implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There is also an example using Hashicorp Vault. The template application is provided as-is as a reference implementation.
+In the template application there are examples on how to integrate with external provider implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There is also an example using Hashicorp Vault. The template application is provided as-is as a reference implementation.
 
 The following sections provide the steps required to configure an external key provider to serve as the root key of encryption for SQL Server databases and HDFS encryption zones.
 

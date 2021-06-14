@@ -29,7 +29,8 @@ Use **sp_pdw_database_encryption_regenerate_system_keys** to rotate the certific
 sp_pdw_database_encryption_regenerate_system_keys  ;  
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Return Code Values  
  **0** (success) or **1** (failure)  

@@ -23,7 +23,7 @@ You can connect your SQL Server instance on premises to Azure Arc by following t
         - Under **Settings**, select **Resource providers**
         - Search for `Microsoft.AzureArcData` and select **Register**
     * Using PowerShell, run `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData`
-    * Using CLI, run `az provider register --namespace 'Microsoft.AzureArcData`
+    * Using CLI, run `az provider register --namespace 'Microsoft.AzureArcData'`
 
 ## Generate a registration script for SQL Server
 

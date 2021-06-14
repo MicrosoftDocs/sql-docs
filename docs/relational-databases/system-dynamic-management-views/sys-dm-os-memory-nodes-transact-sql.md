@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  No allocations done directly through Windows memory allocations routines are tracked. The following table provides information about memory allocations done only by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory manager interfaces.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_nodes**.  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_nodes**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

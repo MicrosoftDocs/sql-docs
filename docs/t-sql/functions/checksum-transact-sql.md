@@ -37,7 +37,8 @@ CHECKSUM ( * | expression [ ,...n ] )
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 \*  
@@ -60,9 +61,52 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
 ## Remarks  
 `CHECKSUM` computes a hash value, called the checksum, over its argument list. Use this hash value to build hash indexes. A hash index will result if the `CHECKSUM` function has column arguments, and an index is built over the computed `CHECKSUM` value. This can be used for equality searches over the columns.
   
-The `CHECKSUM` function satisfies hash function properties: `CHECKSUM` applied over any two lists of expressions will return the same value, if the corresponding elements of the two lists have the same data type, and if those corresponding elements have equality when compared using the equals (=) operator. Null values of a specified type are defined to compare as equal for `CHECKSUM` function purposes. If at least one of the values in the expression list changes, the list checksum will probably change. However, this is not guaranteed. 
+The `CHECKSUM` function satisfies hash function properties: `CHECKSUM` applied over any two lists of expressions will return the same value, if the corresponding elements of the two lists have the same data type, and if those corresponding elements have equality when compared using the equals (=) operator. Null values of a specified type are defined to compare as equal for `CHECKSUM` function purposes. If at least one of the values in the expression list changes, the list checksum will probably change. However, this is not guaranteed.
 Therefore, to detect whether values have changed, we recommend use of `CHECKSUM` only if your application can tolerate an occasional missed change. Otherwise, consider using `HASHBYTES` instead. With a specified MD5 hash algorithm, the probability that `HASHBYTES` will return the same result, for two different inputs, is much lower compared to `CHECKSUM`.
-  
+
+`CHECKSUM` ignores the nchar and nvarchar dash character (`N'-'` or `nchar(45)`).  Therefore, a hash collision is **guaranteed** for any two strings where the only differences are dashes.  Put another way, `Select checksum(nchar(45));` and `Select checksum(N'-');` both return a value of `0`, so they have no effect on the hash of any additional characters in the string or any additional data in the checksum list.
+Practical problems:
+1. Checksum ignores negative signature in numeric string
+```
+SELECT `CHECKSUM(N'1'), CHECKSUM(N'-1');
+```
+2. A checksum comparison cannot detect that code was commented-out in stored proc definition
+```
+CREATE PROCEDURE Checksum_Test AS
+BEGIN
+  RAISERROR('Error Raised',18,1);
+  RETURN 1;
+END
+GO
+
+-- get checksum for original proc definition.
+SELECT
+  checksum(definition),
+  definition
+FROM sys.sql_modules
+WHERE object_id = object_id('Checksum_Test');
+GO
+
+-- comment out a line of code in the proc.
+ALTER PROCEDURE Checksum_Test AS
+BEGIN
+  --RAISERROR('Error Raised',18,1);
+  RETURN 1;
+END
+GO
+
+-- get checksum for altered proc definition. Note the definition text now includes the -- comment dashes.
+SELECT
+  checksum(definition),
+  definition
+FROM sys.sql_modules
+WHERE object_id = object_id('Checksum_Test');
+
+DROP PROCEDURE Checksum_Test
+```
+
+`CHECKSUM` trims trailing spaces from nchar and nvarchar strings.  The effect is the same as the problem of ignored dashes.
+ 
 The expression order affects the computed `CHECKSUM` value. The order of columns used for `CHECKSUM(*)` is the order of columns specified in the table or view definition. This includes computed columns.
   
 The `CHECKSUM` value depends on the collation. The same value stored with a different collation will return a different `CHECKSUM` value.

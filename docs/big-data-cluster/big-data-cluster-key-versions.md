@@ -26,7 +26,7 @@ For information on configuring and using the encryption at rest feature see the 
 
 For using encryption at rest in HDFS, the following concepts are involved:
 
-* Encryption zones (EZ): The encryption zone is a folder in HDFS which is associated with a key. All files in this folder are encrypted. Default provisioned EZ in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is called "securelake".
+* Encryption zones (EZ): The encryption zone is a folder in HDFS that is associated with a key. All files in this folder are encrypted. Default provisioned EZ in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is called "securelake".
 * Encryption Zone keys (EZ Key): A named symmetric key. The default system-managed provisioned in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is "securelakekey". The encryption zone keys are managed using Hadoop KMS (Key Management Server) running inside the name node pods of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. The EZ keys are further protected by a main encryption key stored in controldb (discussed in sections below). The EZ keys are encrypted in Hadoop KMS by fetching the public part of main encryption key and the decryption requests are sent to the control plane.
 * Encrypted Data Encryption Key: Every file in Encryption zone is encrypted by a Data Encryption Key (DEK) generated for the file. Once the DEK is created, it is persisted with the data. To persist the DEK, it is first Encrypted by the Encryption Zone Key and then persisted with data. The DEK is randomly generated per file and the strength of the symmetric DEK is the same as the strength of the EZ Key.
 
@@ -45,7 +45,7 @@ SQL Server databases are encrypted by a symmetric key, also known as a Database 
 
 ## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] main encryption key
 
-In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the main encryption key. There exists two main encryption keys, one for SQL Server and one for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
+In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane, to protect the Encryption zone keys and to provision asymmetric keys in SQL Server, there is a concept of the main encryption key. There are two main encryption keys, one for SQL Server and one for HDFS. This concept allows [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] control plane to allow the main encryption key to reside outside the cluster as well. The properties of main encryption key are:
 
 1. The main encryption keys are asymmetric RSA keys.
 2. A main encryption key is created for SQL Server master instance and another for HDFS.
@@ -73,7 +73,7 @@ Storage protection of the main encryption key:
 
 ### HDFS encryption zone keys
 
-When [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is deployed with Active Directory, HDFS is provisioned with a default encryption zone called securelake, protected by *securelakekey*. We will be using the defaults in examples, however new zones and keys can be provisioned using `azdata`. The *securelakekey* is protected by a main encryption key for HDFS, which is stored in the control plane. Starting with SQL 2019 CU9, azdata can be used to rotate the EZ keys for HDFS. The rotation of EZ keys causes new key material to be generated, with the same name as "*securelakekey*", but with a new version of the key pointing to the key material. Any new encryption operation in HDFS (for example, file writes), EZ always uses the latest version of the key associated with EZ. For files in an EZ, protected by older version of keys, `azdata bdc hdfs encryption-zone reencrypt` command can be used, so that all the files can be protected by the latest version of the EZ key.
+When [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is deployed with Active Directory, HDFS is provisioned with a default encryption zone called securelake, protected by *securelakekey*. We will be using the defaults in examples, however new zones and keys can be provisioned using `azdata`. The *securelakekey* is protected by a main encryption key for HDFS, which is stored in the control plane. Starting with SQL 2019 CU9, `azdata` can be used to rotate the EZ keys for HDFS. The rotation of EZ keys causes new key material to be generated, with the same name as "*securelakekey*", but with a new version of the key pointing to the key material. Any new encryption operation in HDFS (for example, file writes), EZ always uses the latest version of the key associated with EZ. For files in an EZ, protected by older version of keys, `azdata bdc hdfs encryption-zone reencrypt` command can be used, so that all the files can be protected by the latest version of the EZ key.
 
 Consider a file called file2 placed in /securelake. The following depicts the protection chain.
 
@@ -98,7 +98,7 @@ The key protecting the SQL Database is the DEK, which can be regenerated. The pr
 > [!NOTE]
 > Prior to SQL Server 2019 CU10 there was no way to rotate the main encryption key. Starting with SQL Server 2019 CU10, `azdata` command is be exposed to allow the rotation of the main encryption key.
 
-The main encryption key is a RSA 2048-bit key. The rotation of the main encryption key would do one of the following depending on the source of the key:
+The main encryption key is an RSA 2048-bit key. The rotation of the main encryption key would do one of the following depending on the source of the key:
 
 1. Create new key in case the request has been made to rotate the main key to a system-managed key. A system-managed key is an asymmetric key, generated and stored inside the controller.
 2. Create a reference to an externally provided key, where the private key of the asymmetric will be managed by the customer application. The customer application need not have the private key, but it should know how to retrieve the private key based on the configuration of the application provided.
@@ -114,11 +114,11 @@ The following diagrams illustrate the process of rotating the main encryption ke
 
 :::image type="content" source="media/big-data-cluster-key-versions/hdfs-initial.png" alt-text="Initial state of HDFS":::  
 
-The main encryption key will be rotated using `azdata bdc kms set –key-provider SystemManaged`. (Note the command causes rotation of main encryption key for both SQL and HDFS, even though they are different keys inside the control plane.) After using the azdata bdc kms command:
+The main encryption key will be rotated using `azdata bdc kms set –key-provider SystemManaged`. (Note the command causes rotation of main encryption key for both SQL and HDFS, even though they are different keys inside the control plane.) After using the `azdata bdc kms` command:
 
 :::image type="content" source="media/big-data-cluster-key-versions/hdfs-rotated.png" alt-text="After using the azdata bdc kms command":::  
 
-To use the new version of the HDFS main encryption key, the azdata bdc hdfs key roll command can be used, which then takes the system to the following state. After rotating the securelakekey:
+To use the new version of the HDFS main encryption key, the `azdata bdc hdfs key roll` command can be used, which then takes the system to the following state. After rotating the securelakekey:
 
 :::image type="content" source="media/big-data-cluster-key-versions/hdfs-securelakekey.png" alt-text="After rotating the securelakekey":::  
 

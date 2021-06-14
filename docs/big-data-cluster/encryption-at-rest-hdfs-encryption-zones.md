@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This article show how to use SQL Server HDFS encryption zones feature of BDC
 author: DaniBunny
 ms.author: dacoelho
-ms.reviewer: mihaelab
+ms.reviewer: mihaelab, wiassaf
 ms.date: 06/14/2021
 ms.topic: tutorial
 ms.prod: sql

@@ -1,10 +1,10 @@
 ---
 title: SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide
 titleSuffix: SQL Server Big Data Clusters
-description: This article show how to use SQL Server TDE Encryption at Rest feature of BDC
+description: This article shows how to use SQL Server TDE Encryption at Rest feature of BDC
 author: DaniBunny
 ms.author: dacoelho
-ms.reviewer: mihaelab
+ms.reviewer: mihaelab, wiassaf
 ms.date: 06/14/2021
 ms.topic: tutorial
 ms.prod: sql
@@ -43,7 +43,7 @@ __Unsupported features:__
    GO
    ```
 
-1. Query the installed system managed certificates. 
+1. Query the installed system-managed certificates. 
 
    ```sql
     SELECT TOP 1 name FROM sys.certificates WHERE name LIKE 'TDECertificate%' ORDER BY name DESC;
@@ -51,7 +51,7 @@ __Unsupported features:__
 
     Use different query criteria as needed.
 
-    The certificate name will be listed as "TDECertificate{timestamp}". When you see a prefix of TDECertificate and followed by timestamp, this is the certificate provided by the system managed feature.
+    The certificate name will be listed as "TDECertificate{timestamp}". When you see a prefix of TDECertificate and followed by timestamp, this is the certificate provided by the system-managed feature.
 
 ## Encrypt a database using the system-managed certificate
 
@@ -75,7 +75,7 @@ In the following examples consider a database named __userdb__ as the target for
 
 ## Manage database encryption when using external providers
 
-For more information on the way key versions are used on SQL Server Big Data Clusters encryption at rest, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md). The section "Main key rotation for SQL Server" contains an end-to-end example on how to manage database encryption when using external key providers.
+For more information on the way key versions are used on [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] encryption at rest, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md). The section "Main key rotation for SQL Server" contains an end-to-end example on how to manage database encryption when using external key providers.
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
-title: Parameterization of Notebooks in Azure Data Studio using run with parameters action.
-description: This tutorial shows how you can create a parameterized notebook in ADS using the run with parameters action.
+title: Parameterization of Notebooks in Azure Data Studio with run with parameters action.
+description: This tutorial shows how you can create a parameterized notebook in ADS with the run with parameters action.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,14 +8,14 @@ author: vasubhog
 ms.author: vabhog
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
-ms.date: 05/21/2021
+ms.date: 06/14/2021
 ---
 
-# Create a Parameterized Notebook using Run with Parameters
+# Create a Parameterized Notebook using Run with Parameters action
 
 **Parameterization** is the ability to execute the same notebook with different parameters.
 
-This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
+This article shows you how to create and run a parameterized notebook in Azure Data Studio with the python kernel.
 
 > [!Note]
    > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
@@ -36,7 +36,7 @@ The `Run with Parameters` notebook action enables users to quickly set new param
 
 The steps in this section all run within an Azure Data Studio notebook.
 
-1. Create a new notebook and change the **Kernel** to *Python 3*.
+1. Create a new notebook and change the **Kernel** to **Python 3**.
 
    ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
@@ -86,7 +86,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
     :::image type="content" source="media/notebooks-parameterization/second-parameter.png" alt-text="Input New Parameters":::  
 
-3. After, entering the new parameters view the new Output Parameterization Notebook and run all cells to see the new values.
+3. After, entering the new parameters view the new parameterized notebook and run all cells to see the new output.
 
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
 

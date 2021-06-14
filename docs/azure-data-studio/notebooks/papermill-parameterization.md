@@ -117,7 +117,7 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 
    This will execute the Input Notebook with new values for parameters **x** and **y**.
 
-2. After Execution view the new Output Parameterized Notebook.
+2. After execution view the new output parameterized notebook.
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
@@ -144,7 +144,7 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 
    ![Papermill Python API Execution](media/notebooks-parameterization/python-api-execute.png)
 
-3. After Execution view new Output Parameterization Notebook.
+3. After execution view the new output parameterized notebook.
 
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 

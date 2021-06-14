@@ -33,7 +33,7 @@ The following capabilities are provided:
 * __System-managed encryption at rest__. This capability is available in CU8+.
 * __User-managed encryption at rest (BYOK)__, with both service-managed (introduced in SQL Server 2019 CU8) and external key provider integrations (introduced in SQL Server 2019 CU11+).
 
-The way Key Versions are used on SQL Server Big Data Clusters Encryption at Rest is thoroughly documented in the following article: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
+For more information, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
 
 ## Key Definitions
 

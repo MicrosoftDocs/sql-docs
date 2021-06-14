@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 06/14/2021
 ---
 
-# Create a Parameterized Notebook using Run with Parameters action
+# Create a Parameterized Notebook using Run with Parameters Action
 
 **Parameterization** is the ability to execute the same notebook with different parameters.
 
@@ -44,7 +44,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
-3. Verify the **Kernel** is set to *Python3*.
+3. Verify the **Kernel** is set to **Python3**.
 
    ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)
 

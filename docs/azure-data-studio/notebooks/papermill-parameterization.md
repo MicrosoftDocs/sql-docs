@@ -1,6 +1,6 @@
 ---
-title: Parameterization of Notebooks in Azure Data Studio
-description: This tutorial shows how you can create a parameterized notebook in ADS.
+title: Parameterization of Notebooks in Azure Data Studio with Papermill.
+description: This tutorial shows how you can create a parameterized notebook in ADS with Papermill.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 01/25/2021
 ---
 
-# Create a Parameterized Notebook using Papermill
+# Create a Parameterized Notebook with Papermill
 
 **Parameterization** is the ability to execute the same notebook with different parameters.
 

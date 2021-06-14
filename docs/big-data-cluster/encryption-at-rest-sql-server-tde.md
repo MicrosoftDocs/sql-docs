@@ -24,9 +24,16 @@ __Unsupported features:__
 
 ## <a id="prereqs"></a> Prerequisites
 
+<<<<<<< HEAD
 - [SQL Server 2019 CU8+ Big Data Cluster](release-notes-big-data-cluster.md)
 - [Big data tools](deploy-big-data-tools.md), specifically **Azure Data Studio**
 - SQL Server login with administrative privileges (a member of the SQL Server sysadmin role on the master instance)
+=======
+- [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md)
+- [Big data tools](deploy-big-data-tools.md)
+   - **Azure Data Studio**
+- SQL Server user with administrative privileges (sysadmin role).
+>>>>>>> 70bd453030a4cd375317418570e27df1ddb5f65b
 
 ## Query the installed certificates
 

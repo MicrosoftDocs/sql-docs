@@ -56,7 +56,7 @@ The BDC KMS service will manage all keys and certificates for SQL Server and HDF
 User defined keys to be managed by BDC KMS, commonly known as bring your own key (BYOK). SQL Server BDC supports the custom definition of keys to be used for encryption on both SQL Server and HDFS components. Those keys will be managed by the __BDC KMS__.
 
 > [!CAUTION]
-   > SQL Server master instance inherits the Transparent Data Encryption feature set, yet manually loading custom keys from files into pods, registering them on SQL Server and using them for encryption is not a  supported scenario. The __BDC KMS__ won't manage those keys and it can lead to your databases being unreadable. In order to use external provided keys correctly, use the "External providers" feature as described in this document.
+   > SQL Server master instance inherits the SQL Server transparent data encryption (TDE) feature. However, manually loading custom keys from files into pods, registering them on SQL Server, and using them for TDE is not a supported scenario. The __BDC KMS__ won't manage those keys and it can lead to your databases being unreadable. In order to use external provided keys correctly, use the "External providers" feature as described in this article.
 
 ### External providers
 

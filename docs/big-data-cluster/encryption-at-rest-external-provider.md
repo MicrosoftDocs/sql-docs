@@ -25,14 +25,13 @@ For information on configuring and using encryption at rest see the following gu
 ## <a id="prereqs"></a> Prerequisites
 
 * [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md). CU11+ required.
-* [Big data tools](deploy-big-data-tools.md)
-  * **azdata 20.3.5+**
-* SQL Server Big Data Clusters user with administrative privileges.
+* [Big data tools](deploy-big-data-tools.md) including azdata 20.3.5+.
+* SQL Server Big Data Clusters user with Kubernetes administrative privileges (a member of the clusterAdmins role). For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
 * External provider template application. Download it from [here](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider).
 
 ## Root key encryption using external providers
 
-With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane, and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt the Data Encryption Key (DEK) from SQL are sent to control plane as well, and then are redirected to the Key Management Server (KMS) application.
+With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys will be sent to the control plane, and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt the Data Encryption Key (DEK) from SQL are sent to control plane as well, and then are redirected to the application that interfaces with the external provider, such as a Hardware Security Module (HSM).
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-customerkey.png" alt-text="After customer key is installed":::
 
@@ -40,37 +39,37 @@ The following diagram explains the interactions while configuring external keys 
 
 :::image type="content" source="media/big-data-cluster-key-versions/external-key-control-pane-interactions.png" alt-text="Interactions while configuring external keys in control plane"  lightbox="media/big-data-cluster-key-versions/external-key-control-pane-interactions-LG.png":::  
 
-After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as the HSM or another product.
+After the key is installed, the encryption and decryption of different payloads are protected by main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane, are then routed to the KMS plugin app. The KMS plugin app routes the request to appropriate location, such as a HSM, Hashicorp Vault or another product.
 
 ## Configuration
 
 The provided template application is the plugin used to interface with the external key provider. This application needs to be customized and deployed into BDC to serve as an integration point with the chosen external key provider.
 
-In the template application there are examples on how to integrate with HSM implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There is also an example using Hashicorp Vault. The template application is provided as-is as a reference implementation.
+In the template application, there are examples on how to integrate with external provider implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There is also an example using Hashicorp Vault. The template application is provided as-is as a reference implementation.
 
 The following sections provide the steps required to configure an external key provider to serve as the root key of encryption for SQL Server databases and HDFS encryption zones.
 
-### 1 - Create a RSA 2048 key in your external key provider
+### 1 - Create an RSA 2048 key in your external key provider
 
-Create a PEM file with 2048 bit RSA key and upload it to the key value store in your external key provider.
+Create a PEM file with 2048-bit RSA key and upload it to the key value store in your external key provider.
 
-e.g.: The key file may be added to the KV store in Hashicorp Vault at path bdc-encryption-secret and the name of the secret can be rsa2048.
+For example: The key file may be added to the KV store in Hashicorp Vault at path bdc-encryption-secret and the name of the secret can be rsa2048.
 
 ### 2 - Customize and deploy the integration application on BDC
 
 1. Unzip kms_plugin_app.zip that contains the BDC AppDeploy to communicate to external providers.
 1. Customize the application. File ```custom.py``` contains the reference SoftHSM code and file ```custom2.py``` has a HashiCorp Vault example. Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed. ```app.py``` is the entry point that will load the application, understand it completely before deploying.
-1. From the folder which has the spec.yaml deploy the application to BDC using: ```azdata app create -s```
-1. Wait for the application deployment to complete and the “Ready” status can be checked using ```azdata app list```
+1. From the folder that has the spec.yaml deploy the application to BDC using: ```azdata app create -s```
+1. Wait for the application deployment to complete and the "Ready" status can be checked using ```azdata app list```
 
 ### 3 - Configure BDC to use the external key provider
 
 Set the AZDATA_EXTERNAL_KEY_PIN environment variable to provide the token that allows access to the external key provider. `export AZDATA_EXTERNAL_KEY_PIN=<your PIN/token here>`
 
 > [!NOTE]
-> Note that the integration application deployment process uses the token to access your external key provider, however the AZDATA_EXTERNAL_KEY_PIN variable is saved encrypted in BDC control plane so that it can be interpreted by the application. Hence a different authentication mechanism can be used too, but the application will need to be changed. Check the ```custom*.py``` python application for the complete integration logic that’s being used.
+> Note that the integration application deployment process uses the token to access your external key provider, however the AZDATA_EXTERNAL_KEY_PIN variable is saved encrypted in BDC control plane so that it can be interpreted by the application. Hence a different authentication mechanism can be used too, but the application will need to be changed. Check the ```custom*.py``` python application for the complete integration logic that's being used.
 
-Configure the key in BDC using the following azdata command structure, while changing the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by ```custom2.py```.
+Configure the key in BDC using the following `azdata` command structure, while changing the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by ```custom2.py```.
 
 ```bash
 azdata bdc kms update --app-name <YOUR-APP-NAME> --app-version <YOUR-APP-VERSION> \

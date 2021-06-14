@@ -128,8 +128,6 @@
       items: 
       - name: Papermill Parameterization
         href: notebooks/papermill-parameterization.md
-      - name: URI Parameterization
-        href: notebooks/uri-parameterization.md
       - name: Run with Parameters
         href: notebooks/run-with-parameters.md
   - name: Deployment

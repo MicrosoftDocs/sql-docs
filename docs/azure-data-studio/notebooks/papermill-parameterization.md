@@ -17,7 +17,8 @@ ms.date: 01/25/2021
 
 This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
 
-Note: Currently Parameterization can used for the following kernels - Python, PySpark, PowerShell, and .Net Interactive Kernels
+> [!Note]
+   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 
@@ -52,7 +53,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="List":::
 
-5. You can test if papermill is loaded properly by checking the version of papermill.
+4. You can test if papermill is loaded properly by checking the version of papermill.
 
    ```python
    import papermill
@@ -116,7 +117,7 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 
    This will execute the Input Notebook with new values for parameters **x** and **y**.
 
-2. After Execution view new Output Parameterized Notebook.
+2. After Execution view the new Output Parameterized Notebook.
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
@@ -155,5 +156,5 @@ Learn more about notebooks and Parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
 - [Papermill Parameterization Docs](https://papermill.readthedocs.io/en/latest/index.html)
-- [URI Parameterization](docs/azure-data-studio/notebooks/uri-parameterization.md)
-- [Run with Parameters](docs/azure-data-studio/notebooks/run-with-parameters.md)
+- [URI Parameterization](./uri-parameterization.md)
+- [Run with Parameters](./run-with-parameters.md)

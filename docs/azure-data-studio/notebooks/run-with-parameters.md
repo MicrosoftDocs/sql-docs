@@ -18,7 +18,7 @@ ms.date: 05/21/2021
 This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
 
 > [!Note]
-   > Currently Parameterization can done on Python, PySpark, PowerShell, and .Net Interactive Kernels
+   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 ## Run with Parameters Action
 
-New action that enables users to quickly set new parameters for their notebook through user input all through the UI.
+The `Run with Parameters` notebook action enables users to quickly set new parameters for their notebook by allowing the user to input new parameters from the UI.
 
 > [!Note]
    > The parameter cell has to be formatted with each new parameter on a new line.
@@ -44,7 +44,11 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
-3. Create a New Code Cell and Tag as **Parameters Cell**.
+3. Verify the **Kernel** is set to *Python3*.
+
+   ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)
+
+4. Create a New Code Cell and Tag as **Parameters Cell**.
 
    ```python
    x = 2.0
@@ -53,7 +57,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::
 
-3. Add other cells to test different parameters.
+5. Add other cells to test different parameters.
 
    ```python
    addition = x + y
@@ -68,52 +72,30 @@ The steps in this section all run within an Azure Data Studio notebook.
    Cells in Example Input Notebook:
    :::image type="content" source="media/notebooks-parameterization/test-cells.png" alt-text="Additional Input Notebook Cells":::
 
-4. Save notebook as **Input.ipynb**.
+6. Save notebook as **Input.ipynb**.
    :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Save Notebook":::
 
 ## How to Run the Notebook with Parameters
 
-On the notebook toolbar there is a new action - run with parameters. 
+1. On the notebook toolbar, select the `Run with Parameters` action.
 
-:::image type="content" source="media/notebooks-parameterization/run-with-parameters.png" alt-text="Parameter Cell Notebook":::
+    :::image type="content" source="media/notebooks-parameterization/run-with-parameters.png" alt-text="Run with Parameters Action":::
 
+2. Upon clicking the action, a new prompt will ask you to input new parameters for x and y.
+   :::image type="content" source="media/notebooks-parameterization/first-parameter.png" alt-text="Input First Parameter":::
 
-2. After Execution view new Output Parameterized Notebook.
-   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
+    :::image type="content" source="media/notebooks-parameterization/second-parameter.png" alt-text="Input New Parameters":::  
 
-   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
+3. After, entering the new parameters view the new Output Parameterization Notebook and run all cells to see the new values.
 
-### Parameterized Python API execution
-
-> [!Note]
-   > Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
-
-1. Create a new notebook and change the **Kernel** to *Python 3*.
-   ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
-
-2. Add a new code cell and use papermill to use the execute method.
-
-   ```python
-   import papermill as pm
-
-   pm.execute_notebook(
-   '/Users/vasubhog/GitProjects/AzureDataStudio-Notebooks/Demo_Parameterization/Input.ipynb',
-   '/Users/vasubhog/GitProjects/AzureDataStudio-Notebooks/Demo_Parameterization/Output.ipynb',
-   parameters = dict(x = 10, y = 20)
-   )
-   ```
-
-   ![Papermill Python API Execution](media/notebooks-parameterization/python-api-execute.png)
-
-3. After Execution view new Output Parameterization Notebook.
-
-   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
+   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
 
 ## Next steps
 
-Learn more about notebooks and Parameterization:
+Learn more about notebooks and parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
-- [Papermill Parameterization Docs](https://papermill.readthedocs.io/en/latest/index.html)
+- [Papermill Parameterization](./papermill-parameterization.md)
+- [URI Parameterization](./uri-parameterization.md)

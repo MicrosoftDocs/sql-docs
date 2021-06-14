@@ -3,7 +3,7 @@ title: External Key Providers
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how to configure external key providers for SQL Big Data Clusters encryption at rest.
 ms.date: 06/11/2021
-author: dacoelho
+author: Danibunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.topic: conceptual

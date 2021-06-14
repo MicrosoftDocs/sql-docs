@@ -326,13 +326,16 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 
 #### .NET Supportability
 
-| Version | Microsoft.Data.SqlClient version | .NET platforms | 
+| Version | Microsoft.Data.SqlClient version | .NET platforms |
 | ------- | ----------- | ------- |
+| 3.0.0 | 3.0.0+ | .NET Framework 4.6.1+, .NET Core 2.1+, .NET Standard 2.0+ |
 | 2.0.0 | 1.1.3+ <br/> 2.1.0+ | .NET Framework 4.6.1+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
 | 1.2.0 | 1.0.19269.1+ <br/> 2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
 | 1.1.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 | 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 |||
+
+Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` supports column encryption key caching capabilities when registering provider using [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) or [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) APIs.
 
 Starting with **v2.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` supports the new Azure.Core and Azure.Identity APIs to perform authentication with Azure Key Vault. An instance of [`TokenCredential`](/dotnet/api/azure.core.tokencredential) implementation can now be passed to [`SqlColumnEncryptionAzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) constructors to initialize Azure Key Vault provider object.
 

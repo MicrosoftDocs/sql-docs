@@ -41,7 +41,7 @@ Note that there is a default encryption zone mounted at __```/securelake```__ re
 
 ## Manage encryption zones when using external providers
 
-The way Key Versions are used on SQL Server Big Data Clusters Encryption at Rest is thoroughly documented in the following article: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md). The section "Main key rotation for HDFS" contains an end-to-end example on how to manage encryption zones when using external key providers.
+For more information on the way key versions are used on SQL Server Big Data Clusters encryption at rest, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md). The section "Main key rotation for HDFS" contains an end-to-end example on how to manage encryption zones when using external key providers.
 
 ## Create a custom new key and encryption zone
 

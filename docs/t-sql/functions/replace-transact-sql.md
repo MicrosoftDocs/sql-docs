@@ -61,7 +61,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in REPLACE.  
   
 ## Examples  
- The following example replaces the string `cde` in `abcdefghi` with `xxx`.  
+ The following example replaces the string `cde` in `abcdefghicde` with `xxx`.  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  

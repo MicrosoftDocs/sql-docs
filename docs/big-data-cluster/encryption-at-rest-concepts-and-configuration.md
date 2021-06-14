@@ -60,7 +60,7 @@ User defined keys to be managed by BDC KMS, commonly known as bring your own key
 
 ### External providers
 
-External key solutions compatible with __BDC KMS__ for encryption operation delegation. This feature is supported on BDC CU11 onwards. With this feature enabled, the root key of encryption will be hosted outside of the BDC Controller.
+External key solutions compatible with __BDC KMS__ are supported for encryption operation delegation. This feature is supported on SQL Server 2019 CU11+. With this feature enabled, the root key of encryption will be hosted outside of the BDC Controller.
 
 ## Encryption at rest on SQL Server Big Data Clusters
 

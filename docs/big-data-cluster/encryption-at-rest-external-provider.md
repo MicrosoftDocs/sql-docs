@@ -106,7 +106,7 @@ USE db1;
 ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY tde_asymmetric_key_0;
 ```
 
-Use the following procedure to encrypt __each HDFS Encryption Zones__:
+Use the following procedure to encrypt __each HDFS Encryption Zone__:
 
 Execute the following command to check the current encryption key:
 

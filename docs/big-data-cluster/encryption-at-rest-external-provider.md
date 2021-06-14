@@ -24,7 +24,7 @@ For information on configuring and using encryption at rest see the following gu
 
 ## <a id="prereqs"></a> Prerequisites
 
-* [SQL Server Big Data Cluster CU11+](release-notes-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md). CU11+ required.
 * [Big data tools](deploy-big-data-tools.md)
   * **azdata 20.3.5+**
 * SQL Server Big Data Clusters user with administrative privileges.

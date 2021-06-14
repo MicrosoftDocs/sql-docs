@@ -52,7 +52,7 @@ In the current release, the following options are available:
 Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page.
 (available since 17.5.1.1)
 
-- -G This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the sqlcmd scripting variable SQLCMDUSEAAD = true. The -G switch requires at least sqlcmd version 17.6. To determine your version, execute sqlcmd -?.
+- -G This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. Can be combined with just the -P option to use access token authentication (v17.8+) This option sets the sqlcmd scripting variable SQLCMDUSEAAD = true. The -G switch requires at least sqlcmd version 17.6. To determine your version, execute sqlcmd -?.
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.

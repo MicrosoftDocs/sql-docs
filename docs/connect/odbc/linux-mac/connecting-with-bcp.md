@@ -71,7 +71,7 @@ Specifies the full path of a format file.
 Specifies the number of the first row to export from a table or import from a data file.  
 
 - -G  
-This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. Can be combined with just the -P option to use access token authentication (v17.8+). The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.

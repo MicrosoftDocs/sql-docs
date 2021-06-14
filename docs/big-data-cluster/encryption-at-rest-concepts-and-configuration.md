@@ -283,7 +283,7 @@ In order to enable an external key provider to secure the root keys of encryptio
 
 ## Next steps
 
-To learn more about how Key Versions are used on SQL Server Big Data Clusters see the following article: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
+To learn more about how key versions are used on SQL Server Big Data Clusters see: [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
 
 To learn more about how to effectively use encryption at rest SQL Server Big Data Clusters see the following articles:
 

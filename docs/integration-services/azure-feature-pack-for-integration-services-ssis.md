@@ -65,7 +65,7 @@ The download pages also include information about prerequisites. Make sure you i
 
     -   [Azure HDInsight Pig Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
 
-    -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Azure Synapse Analytics Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
     -   [Flexible File Task](../integration-services/control-flow/flexible-file-task.md)
 
@@ -188,6 +188,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![Screenshot showing the control flow Foreach Loop container.](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## Release Notes
+
+### Version 1.20.0
+
+#### Improvements
+
+1. Updated target .NET Framework version from 4.6 to 4.7.2.
+1. Renamed "Azure SQL DW Upload Task" to "Azure Synapse Analytics Task".
+
+#### Bugfixes
+
+1. When accessing Azure blob storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
+1. For Azure Storage Connection Manager, secret is required (and unused) even when Data Factory managed identity is used to authenticate.
 
 ### Version 1.19.0
 

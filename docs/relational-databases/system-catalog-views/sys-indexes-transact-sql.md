@@ -47,20 +47,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**allow_page_locks**|**bit**|1 = Index allows page locks.<br /><br /> 0 = Index does not allow page locks.<br /><br /> Always 0 for clustered columnstore indexes.|  
 |**has_filter**|**bit**|1 = Index has a filter and only contains rows that satisfy the filter definition.<br /><br /> 0 = Index does not have a filter.|  
 |**filter_definition**|**nvarchar(max)**|Expression for the subset of rows included in the filtered index.<br /><br /> NULL for heap, non-filtered index, or insufficient permissions on the table.|  
-|**auto_created**|**bit**|1 = Index was created by the automatic tuning.<br /><br />0 = Index was created by the user.
-|**optimize_for_sequential_key**|**bit**|1 = Index has last-page insert optimization enabled.<br><br>0 = Default value. Index has last-page insert optimization disabled.|
+|**compression_delay**|**int**|> 0 = Columnstore index compression delay specified in minutes.<br /><br /> NULL = Columnstore index rowgroup compression delay is managed automatically.|
+|**suppress_dup_key_messages**|**bit**|1 = Index is configured to suppress duplicate key messages during an index rebuild operation.<br /><br /> **0** = Index is not configured to suppress duplicate key messages during an index rebuild operation.<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
+|**auto_created**|**bit**|1 = Index was created by the automatic tuning.<br /><br />0 = Index was created by the user.<br /><br />**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**optimize_for_sequential_key**|**bit**|1 = Index has last-page insert optimization enabled.<br><br>0 = Default value. Index has last-page insert optimization disabled.<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
 
-> [!NOTE]
-> The **optimize_for_sequential_key** bit is only supported in versions SQL Server 2019 CTP 3.1 and higher.
-  
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
  The following example returns all indexes for the table `Production.Product` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
-  
+```sql  
 SELECT i.name AS index_name  
     ,i.type_desc  
     ,is_unique  
@@ -79,7 +77,6 @@ INNER JOIN sys.data_spaces AS ds ON i.data_space_id = ds.data_space_id
 WHERE is_hypothetical = 0 AND i.index_id <> 0   
 AND i.object_id = OBJECT_ID('Production.Product');  
 GO  
-  
 ```  
   
 ## See Also  

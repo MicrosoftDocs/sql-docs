@@ -45,7 +45,7 @@ A Controller hosted service responsible for managing keys and certificates for t
 * Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
 * SQL Server TDE certificate management.
 
-We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
+We will reference the SQL Server Big Data Clusters Key Management Server (KMS) service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
 ### System-managed keys
 

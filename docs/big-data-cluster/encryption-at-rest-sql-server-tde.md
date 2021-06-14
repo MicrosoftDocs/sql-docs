@@ -56,7 +56,7 @@ __Unsupported features:__
 
 ## Encrypt a database using the system-managed certificate
 
-In the following examples consider a database named __userdb__ as the target for encryption and a system managed certificate named __TDECertificate2020_09_15_22_46_27__ per output of previous section.
+In the following examples consider a database named __userdb__ as the target for encryption and a system-managed certificate named __TDECertificate2020_09_15_22_46_27__, per output of previous section.
 
 1. Use the following pattern to generate a database encryption key using the provided system certificate.
 

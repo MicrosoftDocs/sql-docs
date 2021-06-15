@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "staging process [Master Data Services], error messages"
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Staging Process Errors (Master Data Services)

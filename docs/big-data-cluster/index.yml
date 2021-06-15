@@ -45,7 +45,7 @@ landingContent:
             url: spark-submit-job.md
   
   # Card (Manage)
-  - title: Administration
+  - title: Administration and Logging
     linkLists:        
       - linkListType: overview
         links:
@@ -113,22 +113,10 @@ landingContent:
             url: concept-architecture-pods.md
           - text: Security
             url: concept-security.md
-      - linkListType: concept
-        links:
-        - text: Controller
-          url: concept-controller.md
-        - text: Data pool
-          url: concept-data-pool.md
-        - text: Compute pool
-          url: concept-compute-pool.md
-        - text: SQL pool
-          url: concept-storage-pool.md    
-        - text: Configure HDFS tiering
-          url: hdfs-tiering.md          
+          - text: Configure HDFS tiering
+            url: hdfs-tiering.md          
       - linkListType: how-to-guide
         links:
-          - text: Plan
-            url: deployment-guidance.md
           - text: Deploy
             url: deploy-get-started.md
           - text: Deploy on AKS with Notebook

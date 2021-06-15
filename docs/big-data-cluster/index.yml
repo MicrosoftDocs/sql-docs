@@ -43,66 +43,65 @@ landingContent:
             url: data-ingestion-restore-database.md
           - text: Run a spark job
             url: spark-submit-job.md
-
-  # Class (Developer)
-  - title: Develop
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: Deploy applications
-            url: concept-application-deployment.md
-          - text: Run or test applications
-            url: big-data-cluster-consume-apps.md
-          - text: Spark Streaming guide
-            url: spark-streaming-guide.md
-          - text: App Development extension
-            url: app-deployment-extension.md
-      - linkListType: how-to-guide
-        links:
-          - text: Connect
-            url: connect-to-big-data-cluster.md
-          - text: Connect in AD mode
-            url: active-directory-connect.md
-          - text: Spark library management
-            url: spark-install-packages.md
-          - text: Run a Spark job
-            url: spark-submit-job.md       
-          - text: Run a Spark job from IntelliJ
-            url: spark-submit-job-intellij-tool-plugin.md
-          - text: Run a Spark job from Command Line
-            url: spark-submit-job-command-line.md
-      - linkListType: tutorial
-        links:
-          - text: Query HDFS 
-            url: tutorial-query-hdfs-storage-pool.md
-          - text: Query Oracle
-            url: tutorial-query-Oracle.md
   
-  # Card (ML)
-  - title: Machine Learning
-    linkLists:
+  # Card (Manage)
+  - title: Administration
+    linkLists:        
+      - linkListType: overview
+        links:
+          - text: Administration resources
+            url: view-cluster-status.md          
       - linkListType: concept
         links:
-        - text: ML Services
-          url: machine-learning-services.md
-        - text: Application deployment
-          url: concept-application-deployment.md
-      - linkListType: how-to-guide
-        links:
-        - text: Create, export, and score Spark ML models
-          url: spark-create-machine-learning-model.md
-        - text: Spark library management
-          url: spark-install-packages.md
-        - text: Sparklyr from RStudio
-          url: sparklyr-from-RStudio.md      
-        - text: Install big data tools
-          url: deploy-big-data-tools.md
+          - text: Monitor cluster with Grafana
+            url: cluster-monitor-grafana.md
+          - text: Visualize logs with Kibana
+            url: cluster-logging-kibana.md
+          - text: Cluster monitoring notebooks
+            url: cluster-common-notebooks.md
       - linkListType: tutorial
         links:
-        - text: Run a sample notebook using Spark
-          url: notebooks-tutorial-spark.md
-
-
+          - text: Monitor cluster status 
+            url: cluster-monitor-ads.md        
+          - text: Monitor with azdata and kubectl
+            url: cluster-monitor-cmdlet.md
+      - linkListType: how-to-guide 
+        links:
+          - text: Manage (Controller dashboard)
+            url: manage-with-controller-dashboard.md
+          - text: Troubleshoot cluster
+            url: cluster-troubleshooting-commands.md
+          - text: Troubleshoot Active Directory
+            url: troubleshoot-active-directory.md
+    
+  # Card (Secure)
+  - title: Secure
+    linkLists:
+      - linkListType: architecture
+        links:
+        - text: Security
+          url: concept-security.md
+        - text: Kubernetes RBAC
+          url: kubernetes-rbac.md
+        - text: Encryption at rest
+          url: encryption-at-rest-concepts-and-configuration.md
+      - linkListType: how-to-guide
+        links:
+        - text: Connect
+          url: connect-to-big-data-cluster.md
+        - text: Connect in AD mode
+          url: active-directory-connect.md
+        - text: Deploy - Active Directory
+          url: active-directory-deploy.md
+        - text: Manage HDFS permissions
+          url: hdfs-tiering-manage-permissions.md
+      - linkListType: tutorial
+        links:
+        - text: HDFS Encryption Zones usage guide
+          url: encryption-at-rest-hdfs-encryption-zones.md
+        - text: TDE usage guide
+          url: encryption-at-rest-sql-server-tde.md     
+          
   # Card (Architect)
   - title: Architect
     linkLists:
@@ -140,6 +139,8 @@ landingContent:
             url: configure-bdc-postdeployment.md
           - text: Deploy offline
             url: deploy-offline.md
+          - text: Private cluster deploy
+            url: private-deploy.md
           - text: Upgrade
             url: deployment-upgrade.md
       - linkListType: quickstart
@@ -154,64 +155,42 @@ landingContent:
         links:
           - text: Configure AKS for Big Data Clusters
             url: deploy-on-aks.md
+          - text: Kubeadm 
+            url: deploy-with-kubeadm.md
           - text: Deploy with high availability
             url: deployment-high-availability.md
           - text: Deploy in Active Directory mode
             url: deploy-active-directory.md
 
-  # Card (Manage)
-  - title: Monitor
-    linkLists:        
+  # Card (ML)
+  - title: Big Data and ML
+    linkLists:
       - linkListType: concept
         links:
-          - text: Monitor cluster with Grafana
-            url: cluster-monitor-grafana.md
-          - text: Visualize logs with Kibana
-            url: cluster-logging-kibana.md
-          - text: Cluster monitoring notebooks
-            url: cluster-common-notebooks.md
-      - linkListType: tutorial
-        links:
-          - text: Monitor cluster status 
-            url: cluster-monitor-ads.md        
-          - text: Monitor applications
-            url: app-monitor.md
-          - text: Monitor with azdata and kubectl
-            url: cluster-monitor-cmdlet.md
-      - linkListType: how-to-guide 
-        links:
-          - text: View status
-            url: view-cluster-status.md
-          - text: Manage (Controller dashboard)
-            url: manage-with-controller-dashboard.md
-          - text: Troubleshoot cluster
-            url: cluster-troubleshooting-commands.md
-          - text: Troubleshoot Active Directory
-            url: troubleshoot-active-directory.md
-    
-  # Card (Secure)
-  - title: Secure
-    linkLists:
-      - linkListType: architecture
-        links:
-        - text: Security
-          url: concept-security.md
-        - text: Kubernetes RBAC
-          url: kubernetes-rbac.md
-        - text: Encryption at rest
-          url: encryption-at-rest-concepts-and-configuration.md
+        - text: ML Services
+          url: machine-learning-services.md
+        - text: Install big data tools
+          url: deploy-big-data-tools.md          
       - linkListType: how-to-guide
         links:
-        - text: Deploy - Active Directory
-          url: active-directory-deploy.md
-        - text: Manage HDFS permissions
-          url: hdfs-tiering-manage-permissions.md
+        - text: Create, export, and score Spark ML models
+          url: spark-create-machine-learning-model.md
+        - text: Spark library management
+          url: spark-install-packages.md
+        - text: Sparklyr from RStudio
+          url: sparklyr-from-RStudio.md      
+        - text: Spark Streaming guide
+          url: spark-streaming-guide.md
+        - text: Delta Lake
+          url: package-management-delta-lake.md
       - linkListType: tutorial
         links:
-        - text: HDFS Encryption Zones usage guide
-          url: encryption-at-rest-hdfs-encryption-zones.md
-        - text: TDE usage guide
-          url: encryption-at-rest-sql-server-tde.md     
+        - text: Run a sample notebook using Spark
+          url: notebooks-tutorial-spark.md
+        - text: Query HDFS 
+          url: tutorial-query-hdfs-storage-pool.md
+        - text: Query Oracle
+          url: tutorial-query-Oracle.md
 
   # Card (Load data)
   - title: Load data
@@ -260,8 +239,6 @@ landingContent:
         links:
         - text: Integration partners
           url: ../sql-server/partner-big-data-cluster.md
-        - text: Troubleshoot Kubernetes
-          url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
         - text: Apache Spark
           url: /azure/hdinsight/spark/apache-spark-overview
         - text: Samples (GitHub)

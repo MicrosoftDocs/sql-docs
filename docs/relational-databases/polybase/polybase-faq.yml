@@ -9,7 +9,8 @@ metadata:
   author: MikeRayMSFT
   ms.author: mikeray
   ms.reviewer: mikeray
-    
+  monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
+
 title: Frequently asked questions
 summary: |
    [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,13 +77,14 @@ sections:
 
       - question: What ports are used by default for PolyBase scale-out group? 
         answer: | 
-          By default, the Polybase data movement service connects to the head node of a scale-out group over a range of ports from TCP 16450-16460, typically using 16450 and 16451. These ports are only used when a PolyBase scale-out group is configured.
+          By default, the PolyBase data movement service connects to the head node of a scale-out group over a range of ports from TCP 16450-16460, typically using 16450-16453, plus port 17001. These ports are only used when a PolyBase scale-out group is configured and should be allowed through server firewalls. SQL Server Setup should automatically create a local firewall rule allowing these ports upon feature installation.
+          
       - question: Which ports should I allow through my firewall for PolyBase?
         answer: | 
-          No ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. You must allow other ports based on the external data source(s) in use. Refer to external data source documentation, for example:
+          No ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. However, you must allow other ports based on the external data source(s) in use. Refer to specific external data source documentation. For example:
           | Source platform | Reference | 
           | ---- | ---- |
-          | Microsoft SQL Server | [Ports Used By SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
+          | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
           | Hadoop HDFS | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
           | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
 

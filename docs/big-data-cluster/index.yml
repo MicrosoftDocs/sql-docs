@@ -78,7 +78,7 @@ landingContent:
   # Card (Secure)
   - title: Secure
     linkLists:
-      - linkListType: architecture
+      - linkListType: overview
         links:
         - text: Security
           url: concept-security.md
@@ -106,7 +106,7 @@ landingContent:
   # Card (Architect)
   - title: Architect
     linkLists:
-      - linkListType: deploy
+      - linkListType: architecture
         links:
           - text: Deploy on Kubernetes
             url: deployment-guidance.md

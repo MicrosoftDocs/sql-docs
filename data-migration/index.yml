@@ -75,7 +75,7 @@ conceptualContent:
     - title: "MySQL to"
       links:
         - text: Azure Database for MySQL
-          url: /azure/mysql/migrate/mysql-on-premises-azure-db/01-mysql-migration-guide-intro
+          url: azure/mysql/migrate/mysql-on-premises-azure-db/01-mysql-migration-guide-intro
           itemType: how-to-guide
         - text: SQL Server
           url: /sql/sql-server/migrate/guides/mysql-to-sql-server

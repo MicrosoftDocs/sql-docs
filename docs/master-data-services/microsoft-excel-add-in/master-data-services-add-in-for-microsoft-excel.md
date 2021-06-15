@@ -28,7 +28,7 @@ ms.author: lle
 >*  Download the Master Data Services Add-in for Excel for SQL Server 2019 CTP from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=2086948). 
 
 > [!NOTE]
-> The Master Data Services Add-in for Excel requires the Office Automation Security level to be set to 1 (Macros enabled), the default, or 2 (Use application macro security level). 
+> The Master Data Services Add-in for Excel requires the Office Automation Security level to be set to 1 (Macros enabled) which is the default setting.
   
 ## Terms  
  When working with the Add-in, you may encounter the following terms. For more information about these concepts, see [Master Data Services Overview &#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md).  

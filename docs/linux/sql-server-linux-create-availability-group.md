@@ -590,7 +590,7 @@ The AG resource that is created is a special kind of resource called a clone. Th
     ```
 
     >[!NOTE]
-    >On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use
+    >On RHEL 7.7, you may encounter a warning with the use of --master. To avoid this, use
     >`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**

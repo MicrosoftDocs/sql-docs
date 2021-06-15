@@ -49,7 +49,7 @@ To complete the following end-to-end scenario, you need three machines to deploy
 
 ## Setup and configure the operating system on each cluster node 
 
-The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP2 with a valid subscription for the HA add-on.
+The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP3 with a valid subscription for the HA add-on.
 
 ### Install and configure SQL Server service on each cluster node
 

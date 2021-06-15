@@ -7,8 +7,8 @@ ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "David-Engel"
-ms.author: "v-daenge"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

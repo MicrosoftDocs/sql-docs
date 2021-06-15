@@ -123,6 +123,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 ## Release notes
 
+### Version 0.1.3.1 Preview
+
+Release Date: June 10, 2021
+
+- Fixed an issue that SSISDeploy.exe failed to deploy SSIS projects with error "Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly 'Microsoft.SqlServer.IntegrationServices.ProjectDeployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Strong name validation failed. (Exception from HRESULT: 0x8013141A) ---> System.Security.SecurityException: Strong name validation failed. (Exception from HRESULT: 0x8013141A)".
+    
 ### Version 0.1.3 Preview
 
 Release Date: June 2, 2021

@@ -9,8 +9,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "azure active directory, authentication, access token"
-author: "David-Engel"
-ms.author: "v-daenge"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

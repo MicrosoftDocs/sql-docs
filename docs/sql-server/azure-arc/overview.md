@@ -23,7 +23,7 @@ The public preview of Azure Arc enabled SQL Server supports a set of solutions t
 
 The following diagram illustrates the architecture of Azure Arc enable SQL Server.
 
-![Public preview architecture](media/overview/pubic-preview-architecture.png)
+![Public preview architecture](media/overview/architecture.png)
 
 ## Prerequisites
 

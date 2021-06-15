@@ -74,12 +74,17 @@ sections:
         answer: |
           See [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
 
-      - question: What ports are used by default for PolyBase?
+      - question: What ports are used by default for PolyBase scale-out group? 
         answer: | 
-          By default, the following components use the following TCP ports:
-          | Component | TCP port(s) |
-          |--------------------------|--------------------------|
-          | Polybase data movement service connects to the Head node of PolyBase scale-out group | 16450, 16451 |
+          By default, the Polybase data movement service connects to the head node of a scale-out group over a range of ports from TCP 16450-16460, typically using 16450 and 16451. These ports are only used when a PolyBase scale-out group is configured.
+      - question: Which ports should I allow through my firewall for PolyBase?
+        answer: | 
+          No ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. You must allow other ports based on the external data source(s) in use. Refer to external data source documentation, for example:
+          | Source platform | Reference | 
+          | ---- | ---- |
+          | Microsoft SQL Server | [Ports Used By SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
+          | Hadoop HDFS | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
+          | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
 
           
       

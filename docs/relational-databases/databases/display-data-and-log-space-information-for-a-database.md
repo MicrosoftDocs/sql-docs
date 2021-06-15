@@ -61,7 +61,7 @@ ms.custom: "seo-lt-2019"
    GO  
    ```  
 
-#### To display data space used by object and allocation unit for a database
+#### To display data space used, by object and allocation unit, for a database
   
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

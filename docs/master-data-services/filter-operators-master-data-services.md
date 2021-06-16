@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Filter Operators (Master Data Services)

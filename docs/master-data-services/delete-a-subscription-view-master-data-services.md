@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "deleting subscription views [Master Data Services]"
   - "subscription views [Master Data Services], deleting"
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Delete a Subscription View (Master Data Services)

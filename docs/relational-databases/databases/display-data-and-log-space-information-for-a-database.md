@@ -29,10 +29,7 @@ ms.custom: "seo-lt-2019"
   
 ##  <a name="BeforeYouBegin"></a> Before you begin  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Permission to run **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
+Permission to run **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
   
 ## <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

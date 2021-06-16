@@ -29,11 +29,11 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 URI parameterization programmatically adds parameters to the query of the ADS URI to open the notebook in ADS with new parameters.
 
-Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the below format:
-<pre>azuredatastudio://microsoft.notebook/open?url=</pre>
+Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the format:
+_azuredatastudio:\/\/microsoft.notebook\/open?url=_
 
 The format to pass in parameters with the ADS Notebook URI is as follows:
-<pre>azuredatastudio://microsoft.notebook/open?url=LinkToNotebook<b>?x=1&y=2</b></pre>
+_azuredatastudio:\/\/microsoft.notebook\/open?url=LinkToNotebook_***?x=1&y=2***
 
 In the URI query, use **&** to indicate a new parameter to be injected.
 
@@ -63,24 +63,24 @@ Below is the contents and structure of the notebook, you must use a notebook tha
    print("Multiplication: " + str(multiply))
    ```
 
-3. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
+1. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
 
-   Notebook URI for parameterizing the notebook with new x and y values:
-    <pre>azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/VasuBhog/PyCon/main/Input.ipynb?x=10&y=20</pre>
-
+    Notebook URI for parameterizing the notebook with new x and y values:
+    _azuredatastudio:\/\/microsoft.notebook\/open?url=https:\/\/raw.githubusercontent.com\/VasuBhog\/PyCon\/main\/Input.ipynb?x=10&y=20_
+    
     :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="URI link in Search bar":::
-
+    
     When opening the link from the web browser, you will be prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
-
+    
     :::image type="content" source="media/notebooks-parameterization/donwload-prompt.png" alt-text="Download Prompt":::
 
-    You will then be prompted to download and open the notebook with new parameters.
+2. You will then be prompted to download and open the notebook with new parameters.
 
-4. Once you select **Yes**, view the new parameterized notebook and run all cells to see the new output.
-
-   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
-
-   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
+    Once you select **Yes**, view the new parameterized notebook and run all cells to see the new output.
+    
+    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
+    
+    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
 
 ## Next steps
 

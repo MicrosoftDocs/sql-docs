@@ -87,5 +87,5 @@ Below is the contents and structure of the notebook, you must use a notebook tha
 Learn more about notebooks and Parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
-- [Papermill Parameterization](./papermill-parameterization.md)
+- [Papermill Parameterization](./parameterize-papermill.md)
 - [Run with Parameters](./run-with-parameters.md)

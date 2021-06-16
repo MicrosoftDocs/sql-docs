@@ -97,5 +97,5 @@ The steps in this section all run within an Azure Data Studio notebook.
 Learn more about notebooks and parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
-- [Papermill Parameterization](./papermill-parameterization.md)
-- [URI Parameterization](./uri-parameterization.md)
+- [Papermill Parameterization](./parameterize-papermill.md)
+- [URI Parameterization](./parameterize-uri.md)

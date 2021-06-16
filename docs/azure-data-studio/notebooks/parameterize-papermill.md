@@ -156,5 +156,5 @@ Learn more about notebooks and Parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
 - [Papermill Parameterization Docs](https://papermill.readthedocs.io/en/latest/index.html)
-- [URI Parameterization](./uri-parameterization.md)
+- [URI Parameterization](./parameterize-uri.md)
 - [Run with Parameters](./run-with-parameters.md)

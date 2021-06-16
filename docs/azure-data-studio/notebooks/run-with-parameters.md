@@ -1,5 +1,5 @@
 ---
-title: Parameterization of Notebooks in Azure Data Studio with run with parameters action.
+title: Parameterization of notebooks in Azure Data Studio with run with parameters action.
 description: This tutorial shows how you can create a parameterized notebook in ADS with the run with parameters action.
 ms.topic: how-to
 ms.prod: azure-data-studio

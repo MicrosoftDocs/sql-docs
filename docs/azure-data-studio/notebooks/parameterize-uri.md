@@ -1,5 +1,5 @@
 ---
-title: Parameterization of Notebooks in Azure Data Studio with URI parameterization
+title: Parameterization of notebooks in Azure Data Studio with URI parameterization
 description: This tutorial shows how you can create a parameterized notebook in ADS with URI parameterization.
 ms.topic: how-to
 ms.prod: azure-data-studio
@@ -39,9 +39,9 @@ In the URI query, use **&** to indicate a new parameter to be injected.
 
 ## URI Parameterization Example
 
-1. In this example, we'll parameterize a notebook that is stored in a GitHub repository [here](https://github.com/VasuBhog/PyCon/blob/main/Input.ipynb).
+In this example, we'll parameterize a notebook that is stored in a GitHub repository [here](https://github.com/VasuBhog/PyCon/blob/main/Input.ipynb).
 
-2. Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.  
+Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.  
 
    Tag a code cell in Azure Data Studio as **Parameters Cell**.
    :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::

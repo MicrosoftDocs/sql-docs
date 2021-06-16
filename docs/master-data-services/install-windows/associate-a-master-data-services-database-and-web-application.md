@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Associate a Master Data Services Database and Web Application

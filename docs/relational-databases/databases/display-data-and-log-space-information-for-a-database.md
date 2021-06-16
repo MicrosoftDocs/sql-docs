@@ -79,15 +79,18 @@ ms.custom: "seo-lt-2019"
      max(p.rows) RowsCount
    FROM
      sys.allocation_units u
-     join sys.partitions p on u.container_id = p.hobt_id
-     join sys.tables t on p.object_id = t.object_id
+     JOIN sys.partitions p on u.container_id = p.hobt_id
+
+     JOIN sys.tables t on p.object_id = t.object_id
+
    GROUP BY
      t.object_id,
      OBJECT_NAME(t.object_id),
      u.type_desc
    ORDER BY
      Used_Space_kb desc,
-     ObjectName
+     ObjectName;
+
    ```  
 
 #### To display data and log space information for a database by querying sys.database_files  
@@ -102,7 +105,8 @@ ms.custom: "seo-lt-2019"
    USE AdventureWorks2012;  
    GO  
    SELECT file_id, name, type_desc, physical_name, size, max_size  
-   FROM sys.database_files ;  
+   FROM sys.database_files;  
+
    GO  
   
    ```  

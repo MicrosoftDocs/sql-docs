@@ -187,7 +187,6 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
 
 5. Force a different plan with Query Store.
 
-
 ### Database compatibility level
  You can ensure your database is at a particular level by using the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
@@ -277,6 +276,32 @@ The Query Store gives you different ways that you can force the system to use a 
 - In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then click **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.  
   
 For more information about the Query Store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+
+## Constant folding and expression evaluation during Cardinality Estimation
+
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`. For more information, see [Constant Folding](../../relational-databases/query-processing-architecture-guide.md#ConstantFolding).
+
+In addition, some expressions that are not constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the Query Optimizer during optimization. For more information, see [Expression Evaluation](../../relational-databases/query-processing-architecture-guide.md#ExpressionEval).
+
+### Best Practices: Using constant folding and compile-time expression evaluation for generating optimal query plans
+
+To make sure you generate optimal query plans, it is best to design queries, stored procedures, and batches so that the Query Optimizer can accurately estimate the selectivity of the conditions in your query, based on statistics about your data distribution. Otherwise, the Query Optimizer must use a default estimate when estimating selectivity.
+
+To make sure that the Cardinality Estimator of the Query Optimizer provides good estimates, you should first make sure that the AUTO_CREATE_STATISTICS and AUTO_UPDATE_STATISTICS database SET options are ON (the default setting), or that you have manually created statistics on all columns referenced in a query condition. Then, when you are designing the conditions in your queries, do the following when it is possible:
+
+- Avoid the use of local variables in queries. Instead, use parameters, literals, or expressions in the query.
+
+- Limit the use of operators and functions embedded in a query that contains a parameter to those listed under Compile-Time Expression Evaluation for Cardinality Estimation.
+
+- Make sure that constant-only expressions in the condition of your query are either constant-foldable, or can be evaluated at compilation time.
+
+- If you have to use a local variable to evaluate an expression to be used in a query, consider evaluating it in a different scope than the query. For example, it may be helpful to perform one of the following:
+
+  - Pass the value of the variable to a stored procedure that contains the query you want to evaluate, and have the query use the procedure parameter instead of a local variable.
+
+  - Construct a string that contains a query based in part on the value of the local variable, and then execute the string by using dynamic SQL (`EXEC` or preferably `sp_executesql`).
+
+  - Parameterize the query and execute it by using `sp_executesql`, and pass the value of the variable as a parameter to the query.
   
 ## Examples of CE improvements  
   

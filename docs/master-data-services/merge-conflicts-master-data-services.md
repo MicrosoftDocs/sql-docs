@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Merge Conflicts (Master Data Services)

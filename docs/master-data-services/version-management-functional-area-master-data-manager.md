@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Version Management Functional Area (Master Data Manager)

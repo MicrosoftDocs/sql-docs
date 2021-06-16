@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create an Entity Administrator (Master Data Services)

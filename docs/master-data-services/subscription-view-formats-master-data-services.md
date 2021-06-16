@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Subscription View Formats (Master Data Services)

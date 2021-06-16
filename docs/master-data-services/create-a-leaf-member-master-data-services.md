@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "creating leaf members [Master Data Services]"
   - "members [Master Data Services], creating leaf members"
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create a Leaf Member (Master Data Services)

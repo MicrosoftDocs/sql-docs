@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # What&#39;s New in Master Data Services (MDS)

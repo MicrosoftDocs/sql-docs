@@ -59192,7 +59192,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/notebooks/parameterize-papermill.md",
-      "redirect_url": "docs/azure-data-studio/notebooks/notebooks-paramerization.md",
+      "redirect_url": "sql/azure-data-studio/notebooks/notebooks-paramerization.md",
       "redirect_document_id": false
     }
   ]

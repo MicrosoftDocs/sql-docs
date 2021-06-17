@@ -40,7 +40,7 @@ ms.author: chadam
   
  
 ### Permissions  
- Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
+ Requires CONNECT SQL, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  To start the Always On dashboard  
   

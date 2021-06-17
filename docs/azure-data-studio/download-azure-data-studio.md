@@ -116,22 +116,22 @@ If you want to install Azure Data Studio in the background with no GUI prompts, 
 
 2. To extract the file, open a new Terminal window and follow the below commands.
 
-   ```bash
-   cd ~
-   sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
-   ```
+    ```bash
+    cd ~
+    sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
+    ```
 
 3. To launch Azure Data Studio
 
-   ```bash
-   azuredatastudio
-   ```
+    ```bash
+    azuredatastudio
+    ```
 
 You may have missing dependencies. Use the following commands to install these dependencies.
 
-   ```bash
-   sudo apt-get install libunwind8
-   ```
+    ```bash
+    sudo apt-get install libunwind8
+    ```
 
 #### .rpm Installation
 
@@ -139,22 +139,22 @@ You may have missing dependencies. Use the following commands to install these d
 
 2. To extract the file, open a new Terminal window and follow the below commands.
 
-   ```bash
-   cd ~
-   yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
-   ```
+    ```bash
+    cd ~
+    yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
+    ```
 
 3. To launch Azure Data Studio
 
-   ```bash
-   azuredatastudio
-   ```
+    ```bash
+    azuredatastudio
+    ```
 
 You may have missing dependencies. Use the following commands to install these dependencies.
 
-   ```bash
-   yum install libXScrnSaver
-   ```
+    ```bash
+    yum install libXScrnSaver
+    ```
 
 #### tar.gz Installation
 
@@ -162,25 +162,25 @@ You may have missing dependencies. Use the following commands to install these d
 
 2. To extract the file, open a new Terminal window and follow the below commands.
 
-   ```bash
-   cd ~
-   cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
-   tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
+    ```bash
+    cd ~
+    cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
+    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
+    echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
 
 3. To launch Azure Data Studio
 
-  ```bash
-   azuredatastudio
-  ```
-
+    ```bash
+    azuredatastudio
+    ```
+    
 You may have missing dependencies. Use the following commands to install these dependencies.
 
-   ```bash
-   sudo apt-get install libxss1 libgconf-2-4 libunwind8
-   ```
+    ```bash
+    sudo apt-get install libxss1 libgconf-2-4 libunwind8
+    ```
 
 #### Windows Subsystem for Linux (WSL)
 
@@ -188,9 +188,9 @@ You may have missing dependencies. Use the following commands to install these d
 
 2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
 
-```bash
-'/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
-```
+    ```bash
+    '/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
+    ```
 
 ## What's new
 

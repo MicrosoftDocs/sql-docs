@@ -53,8 +53,8 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
     2.  Select **Use results of an SQL query**, and then enter or paste the following SQL statement:  
   
         ```sql
-        SELECT * FROM [Sales].[Currency]
-        WHERE [CurrencyCode]
+        SELECT * FROM [dbo].[DimCurrency]
+        WHERE [CurrencyAlternateKey]
         IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
 	        'MXN', 'SAR', 'USD', 'VEB')

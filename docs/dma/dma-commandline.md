@@ -288,7 +288,7 @@ These commands support recommendations for both Azure SQL Database single databa
 |---------|---------|---------------|
 |`PerfDataCollection` | Starts collection of performance data. | Y
 |`GetSkuRecommendation` | Performs aggregation and analysis of the collected performance data and determines SKU recommendations. | Y
-|`Assess` | Performs an assessment of the target SQL instance(s). | Y
+|`GetMetadata` | Performs a metadata collection of the target SQL instance(s), including the number and properties of server instances, its databases and database files, user-defined objects, etc. A full report is exported to `MetadataReport.json`. | Y
 |`--outputFolder` | Folder which performance data, reports, and logs will be written to/read from. | N <br> (Default: current directory)
 |`--sqlConnectionStrings` | Quote-enclosed formal connection string(s) for the target SQL instance(s). | Y
 |`--overwrite` | Whether or not to overwrite any existing assessment or SKU recommendations reports. | N <br> ( Default: `true`)

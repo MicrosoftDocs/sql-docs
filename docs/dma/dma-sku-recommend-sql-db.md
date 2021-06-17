@@ -49,7 +49,7 @@ In order to start the data collection process, specify the `PerfDataCollection` 
   - **perfQueryIntervalInSec** (_Optional_):  Interval at which to query performance data, in seconds. (Default: 30)
   - **staticQueryIntervalInSec** (_Optional_): Interval at which to query and persist static configuration data, in seconds. (Default: 60)
   - **numberOfIterations** (_Optional_):  Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
-  - **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+  - **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: %LocalAppData%/Microsoft/SqlAssessmentConsole)
 
 
 The following is a sample invocation: 
@@ -106,7 +106,7 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **endTime** (_Optional_):  UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
 - **overwrite** (_Optional_):  Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
 - **displayResult** (_Optional_):  Whether or not to print the SKU recommendation results to the console. (Default: true)
-- **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: current directory)
+- **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%/Microsoft/SqlAssessmentConsole)
 
 Alternatively, the SKU recommendation process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 

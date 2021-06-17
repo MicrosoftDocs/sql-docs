@@ -6092,7 +6092,7 @@ items:
     - name: Usage and Diagnostic Data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
-      href: dma/dma-whatsnew.md
+      href: dma/dma-whats-new.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments

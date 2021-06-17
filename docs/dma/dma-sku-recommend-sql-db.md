@@ -37,11 +37,11 @@ The following are instructions to help you determine the SKU recommendations and
 
 ## Collect performance data 
 
-The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance counters from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency. The collected data is stored locally on your machine. The collected data can then be aggregated and analysed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
+The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance counters from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency. The collected data is stored locally on your machine. The collected data can then be aggregated and analyzed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
 
 In the DMA installation path, locate the SQLAssessmentConsole folder and the SqlAssessment.exe application
 
-  ![SKUConsoleApplication.exe shown in DMA folder](../dma/media/dma-sku-recommend-console-location.jpg)
+  ![SKUConsoleApplication.exe shown in DMA folder](../dma/media/dma-sku-recommend-console-location.png)
 
 In order to start the data collection process, specify the `PerfDataCollection` action in the console application, with the following arguments:
 
@@ -161,15 +161,15 @@ In order to get SKU recommendations for a specific Azure SQL platform instead of
 
 The following is an example output of an Azure SQL Database recommendation:
 
-:::image type="content" source="media/sku-recommendations-azuresqldb.png" alt-text="Azure SQL Database SKU recommendations output shown in console":::
+:::image type="content" source="media/sku-recommendations-azure-sql-db.png" alt-text="Azure SQL Database SKU recommendations output shown in console":::
 
 The following is an example output of an Azure SQL Managed Instance recommendation:
 
-:::image type="content" source="media/sku-recommendations-azuresqlmanagedinstance.png" alt-text="Azure SQL Managed Instance SKU recommendations output shown in console":::
+:::image type="content" source="media/sku-recommendations-azure-sql-managed-instance.png" alt-text="Azure SQL Managed Instance SKU recommendations output shown in console":::
 
 The following is an example output of a SQL Server on Azure VM recommendation:
 
-:::image type="content" source="media/sku-recommendations-azuresqlvirtualmachine.png" alt-text="SQL Server on Azure VM SKU recommendations output shown in console":::
+:::image type="content" source="media/sku-recommendations-azure-sql-virtual-machine.png" alt-text="SQL Server on Azure VM SKU recommendations output shown in console":::
 
 The output of the SKU recommendations covers the following sections:
 - **Instance Name**: Name of the on-premises SQL Server instance(s)

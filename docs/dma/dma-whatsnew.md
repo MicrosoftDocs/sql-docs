@@ -61,7 +61,7 @@ The v5.0 release of the Data Migration Assistant provides support for:
 - Assessing SQL Server Integration Services (SSIS) projects hosted in SSISDB and SSIS packages hosted in package store. Database Migration Assistant detects unsupported, partially supported or deprecated features and compatibility issues that are used in source packages and provides recommendations to help you address those issues.
 - Assessing SQL queries from external application, e.g. SQL queries in C# source code. Users can use the Data Access Migration Toolkit to generate a full JSON report for the SQL queries used in C# source code and then upload the report to Data Migration Assistant.
 
-In addition, this release of Data Migration Assistant provides additional enhancements and bug fixes, and the tool has been updated to .Net 4.7.2.
+In addition, this release of Data Migration Assistant provides additional enhancements and bug fixes, and the tool has been updated to .NET 4.7.2.
 
 ## Data Migration Assistant v4.5
 

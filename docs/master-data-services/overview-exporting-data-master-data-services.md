@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "subscription views [Master Data Services]"
   - "subscription views [Master Data Services], about subscription views"
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Overview: Exporting Data (Master Data Services)

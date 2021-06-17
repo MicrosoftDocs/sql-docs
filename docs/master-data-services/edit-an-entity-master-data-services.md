@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "entities [Master Data Services], changing name"
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Edit an Entity (Master Data Services)

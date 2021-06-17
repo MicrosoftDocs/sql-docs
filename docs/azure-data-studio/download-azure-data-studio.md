@@ -127,11 +127,12 @@ If you want to install Azure Data Studio in the background with no GUI prompts, 
     azuredatastudio
     ```
 
-You may have missing dependencies. Use the following commands to install these dependencies.
-
-    ```bash
-    sudo apt-get install libunwind8
-    ```
+> [!Note]
+> You may have missing dependencies. Use the following commands to install these dependencies.
+>
+> ```bash
+> sudo apt-get install libunwind8
+> ```
 
 #### .rpm Installation
 
@@ -150,11 +151,12 @@ You may have missing dependencies. Use the following commands to install these d
     azuredatastudio
     ```
 
-You may have missing dependencies. Use the following commands to install these dependencies.
-
-    ```bash
-    yum install libXScrnSaver
-    ```
+> [!Note]
+> You may have missing dependencies. Use the following commands to install these dependencies.
+>
+> ```bash
+> yum install libXScrnSaver
+> ```
 
 #### tar.gz Installation
 
@@ -176,11 +178,14 @@ You may have missing dependencies. Use the following commands to install these d
     azuredatastudio
     ```
     
-You may have missing dependencies. Use the following commands to install these dependencies.
+> [!Note] 
+> You may have missing dependencies. Use the following commands to install these dependencies.
+>
+> ```bash
+> sudo apt-get install libxss1 libgconf-2-4 libunwind8
+> ```
 
-    ```bash
-    sudo apt-get install libxss1 libgconf-2-4 libunwind8
-    ```
+
 
 #### Windows Subsystem for Linux (WSL)
 

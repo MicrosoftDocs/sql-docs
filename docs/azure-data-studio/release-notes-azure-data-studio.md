@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 06/17/2021
+ms.date: 06/17/2021 
 ---
 
 # Release notes for Azure Data Studio

@@ -2,7 +2,7 @@
 description: "GetSvcInstanceIDFromName"
 title: "GetSvcInstanceIDFromName | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/30/2021"
+ms.date: "06/18/2021"
 ms.prod: sql
 ms.reviewer: ""
 apiname: 

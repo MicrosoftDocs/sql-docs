@@ -336,7 +336,7 @@ azdata bdc hdfs cp --from-path -f
 ### Examples
 Copy file or directory between the local machine and HDFS.
 ```bash
-azdata bdc hdfs cp --from_path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
+azdata bdc hdfs cp --from-path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
 ```
 ### Required Parameters
 #### `--from-path -f`

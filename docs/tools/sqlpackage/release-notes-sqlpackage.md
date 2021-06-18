@@ -29,7 +29,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Auditing | Adds support for [EXTERNAL_MONITOR](/azure/azure-sql/managed-instance/auditing-configure). |
-| Azure Synapse Analytics | Adds support for [PREDICT](/sql/t-sql/queries/predict-transact-sql). |
+| Azure Synapse Analytics | Adds support for [PREDICT](../../t-sql/queries/predict-transact-sql.md). |
 | Logging | Adds SqlPackage version and architecture information to diagnostic log file. |
 
 ### Fixes

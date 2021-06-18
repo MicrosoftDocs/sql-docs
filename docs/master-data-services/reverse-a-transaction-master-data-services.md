@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], reversing"
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Reverse a Transaction (Master Data Services)

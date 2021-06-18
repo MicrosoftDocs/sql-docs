@@ -9,11 +9,11 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 3/10/2021
+ms.date: 6/10/2021
 ---
 
 # SqlPackage Import parameters and properties
-The SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file - into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects.  
+The SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file - into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](/sql/t-sql/statements/create-database-transact-sql#permissions).
 
 ## Command-line syntax
 
@@ -36,7 +36,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
-|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target ofsqlpackage.exe Action. |
+|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of sqlpackage.exe Action. |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|Specifies if SQL encryption should be used for the target database connection. |
 |**/TargetPassword:**|**/tp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
 |**/TargetServerName:**|**/tsn**|{string}|Defines the name of the server hosting the target database. |

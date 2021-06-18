@@ -29,7 +29,7 @@ Microsoft OLE DB Driver 18.5 for SQL Server is the latest general availability (
 - Released: December 1, 2020
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadmsoledbsqlusenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 

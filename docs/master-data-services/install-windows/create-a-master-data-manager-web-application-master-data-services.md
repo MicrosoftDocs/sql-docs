@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create a master data manager web application (Master Data Services)

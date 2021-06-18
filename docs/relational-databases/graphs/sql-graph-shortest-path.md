@@ -22,13 +22,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current"
 ---
 # SHORTEST_PATH (Transact-SQL)
 
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2019-asdb-asdbmi](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Specifies a search condition for a graph, which is searched recursively or repetitively. SHORTEST_PATH can be used inside MATCH with graph node and edge tables, in the SELECT statement.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Shortest Path
+
 The SHORTEST_PATH function lets you find:
 * A shortest path between two given nodes/entities
 * Single source shortest path(s).

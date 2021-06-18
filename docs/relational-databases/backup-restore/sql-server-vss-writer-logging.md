@@ -101,7 +101,7 @@ Previously, only active profiler tracing would allow the DBA to detect such an e
 In order of appearance, we can see the following information is logged:
 - An explicit mention of the `OnIdentify` VSS event.
 - A list of all active (running) [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] instances, along with their instance name, major version, and Edition.
-- The indication we didn’t attempt to list “User Instances” – a specific [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] feature also known as [LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb) and typically not involved on enterprise database servers.
+- The indication we didn’t attempt to list “User Instances” – a specific [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] feature also known as [LocalDB](../../database-engine/configure-windows/sql-server-express-localdb.md) and typically not involved on enterprise database servers.
 
 ### Successful Component-mode VSS backup
 
@@ -289,4 +289,3 @@ The INI file lists the following level: DEFAULT | MINIMAL | VERBOSE.
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
-  

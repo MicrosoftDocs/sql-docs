@@ -93,7 +93,7 @@ Specifies the maximum number of syntax errors that can occur before the `bcp` op
 Uses the native (database) data types of the data to perform the bulk-copy operation.  
   
 - -P *password*  
-Specifies the password for the login ID.  
+Specifies the password for the login ID. When used with the -G option without -U specifies a file that contains an access token (v17.8+).  
   
 - -q  
 Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

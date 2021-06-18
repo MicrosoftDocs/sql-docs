@@ -30,7 +30,7 @@ Azure Data Studio 1.30.0 is the latest general availability (GA) version. If you
 
 | Platform | Download |
 |----------|----------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2165736)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2163437)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2165838) |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2165736)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2165737)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2165838) |
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2165942) |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2165738)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2165842)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2165841) |
 

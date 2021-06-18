@@ -23,7 +23,7 @@ When facing SSMS installation problems, common error messages include:
 ## Suggested Resolution
 Following these steps to uninstall the "Microsoft ODBC Driver 17 for SQL Server" before beginning the SSMS installation commonly allows the setup to succeed if it has previously failed with one of the above or similar error messages.
 
-1. Close any related applications, including SSMS, Vidual Studio, or SQL Profiler.
+1. Close any related applications, including SSMS, Visual Studio, or SQL Profiler.
 2. Go to Control Panel > Add/Remove Programs.
 3. Locate the entry for "Microsoft ODBC Driver 17 for SQL Server" and uninstall.  This step may require a reboot.
 4. Begin the SSMS installation.  The latest version is available [here](../download-sql-server-management-studio-ssms.md).

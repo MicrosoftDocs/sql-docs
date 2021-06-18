@@ -1,6 +1,6 @@
 ---
-description: "GetSQLInstanceRegStringByID(INST_ID, String, String, StringBuilder, UInt32) "
-title: "GetSQLInstanceRegStringByID(INST_ID, String, String, StringBuilder, UInt32)  | Microsoft Docs"
+description: "GetSQLInstanceRegStringByID() "
+title: "GetSQLInstanceRegStringByID()  | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/18/2021"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
-description: "Troubleshooting SSMS Installation Problems"
-title: SSMS Setup Failed or Requires Restart
+description: "Troubleshooting SSMS installation problems"
+title: SSMS setup failed or requires restart
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -14,13 +14,13 @@ ms.date: 06/18/2021
 ---
 
 
-# SQL Server Management Studio (SSMS) Setup Failed or Requires Restart
+# SQL Server Management Studio (SSMS) setup failed or requires restart
 When facing SSMS installation problems, common error messages include:
 - "Failed to install MSI package"
 - "Microsoft ODBC Driver 17 for SQL Server: A previous installation required a reboot of the machine for changes to take effect."
 - "Fatal error during installation (0x80070643)"
 
-## Suggested Resolution
+## Suggested resolution
 Following these steps to uninstall the "Microsoft ODBC Driver 17 for SQL Server" before beginning the SSMS installation commonly allows the setup to succeed if it has previously failed with one of the above or similar error messages.
 
 1. Close any related applications, including SSMS, Visual Studio, or SQL Profiler.

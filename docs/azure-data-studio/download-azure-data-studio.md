@@ -57,7 +57,7 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 **System Installer**
 
-1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2163437).
+1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2165737).
 
 2. Start the Azure Data Studio app.
 

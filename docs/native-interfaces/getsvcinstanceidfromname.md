@@ -19,6 +19,8 @@ ms.author: mikeray
 
 Retrieves the instance ID of an instance when given the friendly name, conditioned to search only the instance maps for the given service.
 
+This article describes a native code API that is used by SQL Server and may also be called by other Microsoft products. For a managed code method, see [InstAPI.GetSvcInstanceIDFromName Method](/dotnet/api/microsoft.sqlserver.instapi.getsvcinstanceidfromname).
+
 ```c
 GetSvcInstanceIDFromName(
     LPCWSTR     sInstanceName,

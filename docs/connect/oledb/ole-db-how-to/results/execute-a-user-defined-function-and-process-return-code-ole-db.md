@@ -1,8 +1,8 @@
 ---
 title: "Execute a User-Defined Function and Process Return Code (OLE DB) | Microsoft Docs"
-description: See how to run user-defined function and print a return code using OLE DB Driver for SQL Server. This example uses the AdventureWorks sample database.
+description: See how to run user-defined function and print a return code using OLE DB Driver for SQL Server. This example can use any existing database.
 ms.custom: ""
-ms.date: "06/03/2021"
+ms.date: "06/23/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ ms.author: v-daenge
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  
   
- This sample uses the AdventureWorks sample database as an example, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page. You can substitute it with another SQL Server database you have.
+ This sample uses the `oledbtest` database as an example. Please substitute it with any SQL Server database you have.
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
@@ -33,7 +33,6 @@ ms.author: v-daenge
  Execute the third ( [!INCLUDE[tsql](../../../../includes/tsql-md.md)]) code listing to delete the stored procedure used by the application.  
   
 ```sql
-USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[fn_RectangleArea]'))  
    drop function fn_RectangleArea  
 go  
@@ -58,52 +57,58 @@ GO
 
 #include <windows.h>
 #include <iostream>
-#include <cguid.h>
-#include <atlbase.h>
+#include <cguid.h>      // GUID_NULL
+#include <atlbase.h>    // CComPtr
 #include "msoledbsql.h"
-using namespace std;
 
 HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize);
-HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize);
+HRESULT ExecuteFunction(const CComPtr<IDBInitialize>& pIDBInitialize);
 
 int main()
-{
-    CComPtr<IDBInitialize> pIDBInitialize;
-    HRESULT hr = S_OK;
-
-    // All the initialization stuff in a separate function.
-    hr = InitializeAndEstablishConnection(pIDBInitialize);
-    if (FAILED(hr))
-    {
-        cout << "Failed to connect\n";
-        goto EXIT;
-    }
-
-    hr = ExecuteFunction(pIDBInitialize);
-    if (FAILED(hr))
-    {
-        cout << "Failed in executing function\n";
-        goto EXIT;
-    }
-
-    if (FAILED(pIDBInitialize->Uninitialize()))
-    {
-        // Uninitialize is not required, but it fails if an interface
-        // has not been released.  This can be used for debugging.
-        cout << "Problem uninitializing\n";
-    }
-
-EXIT:
-    CoUninitialize();
-    return 0;
-}
-
-HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
 {
     HRESULT hr = S_OK;
 
     // Initialize the COM library.
     CoInitialize(nullptr);
+
+    // All interfaces must be freed before CoUninitialize is called,
+    // thus limiting the scope of pIDBInitialize
+    {
+        CComPtr<IDBInitialize> pIDBInitialize;
+
+        // All the initialization stuff in a separate function.
+        hr = InitializeAndEstablishConnection(pIDBInitialize);
+        if (FAILED(hr))
+        {
+            std::cout << "Failed to connect\n";
+            goto EXIT;
+        }
+
+        hr = ExecuteFunction(pIDBInitialize);
+        if (FAILED(hr))
+        {
+            std::cout << "Failed in executing function\n";
+            goto EXIT;
+        }
+
+        if (FAILED(pIDBInitialize->Uninitialize()))
+        {
+            // Uninitialize is not required, but it fails if an interface
+            // has not been released.  This can be used for debugging.
+            std::cout << "Problem uninitializing\n";
+        }
+    }
+EXIT:
+    CoUninitialize();
+    if (FAILED(hr))
+        return 1;
+    else
+        return 0;
+}
+
+HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
+{
+    HRESULT hr = S_OK;
 
     // Obtain access to the OLE DB Driver for SQL Server.
     hr = CoCreateInstance(CLSID_MSOLEDBSQL,
@@ -113,14 +118,17 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
                           reinterpret_cast<LPVOID *>(&pIDBInitialize));
     if (FAILED(hr))
     {
-        cout << "Failed in CoCreateInstance()\n";
+        std::cout << "Failed in CoCreateInstance()\n";
         return hr;
     }
 
-    const ULONG nInitProps = 3;
+    const ULONG nInitProps = 4;
     const ULONG nPropSet = 1;
-    DBPROP InitProperties[nInitProps];
-    DBPROPSET rgInitPropSet[nPropSet];
+    CComBSTR server(L"(local)");
+    CComBSTR database(L"oledbtest");
+    CComBSTR auth(L"SSPI");
+    DBPROP InitProperties[nInitProps] = {};
+    DBPROPSET rgInitPropSet[nPropSet] = {};
 
     // Initialize the property values needed to establish the connection.
     for (ULONG i = 0; i < nInitProps; i++)
@@ -131,22 +139,28 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
     InitProperties[0].vValue.vt = VT_BSTR;
 
     // Replace "MySqlServer" with proper value.
-    InitProperties[0].vValue.bstrVal = SysAllocString(L"(local)");
+    InitProperties[0].vValue.bstrVal = server;
     InitProperties[0].dwOptions = DBPROPOPTIONS_REQUIRED;
     InitProperties[0].colid = DB_NULLID;
 
     // Specify database name.
     InitProperties[1].dwPropertyID = DBPROP_INIT_CATALOG;
     InitProperties[1].vValue.vt = VT_BSTR;
-    InitProperties[1].vValue.bstrVal = SysAllocString(L"oledbtest");
+    InitProperties[1].vValue.bstrVal = database;
     InitProperties[1].dwOptions = DBPROPOPTIONS_REQUIRED;
     InitProperties[1].colid = DB_NULLID;
 
     InitProperties[2].dwPropertyID = DBPROP_AUTH_INTEGRATED;
     InitProperties[2].vValue.vt = VT_BSTR;
-    InitProperties[2].vValue.bstrVal = SysAllocString(L"SSPI");
+    InitProperties[2].vValue.bstrVal = auth;
     InitProperties[2].dwOptions = DBPROPOPTIONS_REQUIRED;
     InitProperties[2].colid = DB_NULLID;
+
+    InitProperties[3].dwPropertyID = SSPROP_INIT_ENCRYPT;
+    InitProperties[3].vValue.vt = VT_BOOL;
+    InitProperties[3].vValue.boolVal = VARIANT_TRUE;
+    InitProperties[3].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties[3].colid = DB_NULLID;
 
     // Now that properties are set, construct the DBPROPSET structure
     // (rgInitPropSet).  The DBPROPSET structure is used to pass an array
@@ -159,27 +173,27 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
     CComPtr<IDBProperties> pIDBProperties;
     hr = pIDBInitialize->QueryInterface(IID_IDBProperties,
                                         reinterpret_cast<LPVOID *>(&pIDBProperties));
-    if (FAILED(hr)) 
+    if (FAILED(hr))
     {
-        cout << "Failed to obtain IDBProperties interface.\n";
+        std::cout << "Failed to obtain IDBProperties interface.\n";
         return hr;
     }
 
     hr = pIDBProperties->SetProperties(nPropSet, rgInitPropSet);
     if (FAILED(hr)) {
-        cout << "Failed to set initialization properties\n";
+        std::cout << "Failed to set initialization properties\n";
         return hr;
     }
 
     // Now we establish connection to the data source.
     if (FAILED(hr = pIDBInitialize->Initialize())) {
-        cout << "Problem in initializing\n";
+        std::cout << "Problem in initializing\n";
     }
 
     return hr;
 }
 
-HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
+HRESULT ExecuteFunction(const CComPtr<IDBInitialize>& pIDBInitialize)
 {
     HRESULT hr = S_OK;
 
@@ -188,7 +202,7 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
     if (FAILED(hr = pIDBInitialize->QueryInterface(IID_IDBCreateSession,
                                                    reinterpret_cast<LPVOID *>(&pIDBCreateSession))))
     {
-        cout << "Failed to access IDBCreateSession interface\n";
+        std::cout << "Failed to access IDBCreateSession interface\n";
         return hr;
     }
 
@@ -197,7 +211,7 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
                                                      IID_IDBCreateCommand,
                                                      reinterpret_cast<IUnknown **>(&pIDBCreateCommand))))
     {
-        cout << "pIDBCreateSession->CreateSession failed\n";
+        std::cout << "Failed to obtain IDBCreateCommand interface\n";
         return hr;
     }
 
@@ -207,7 +221,7 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
                                                      IID_ICommandText,
                                                      reinterpret_cast<IUnknown **>(&pICommandText))))
     {
-        cout << "Failed to access ICommand interface\n";
+        std::cout << "Failed to access ICommand interface\n";
         return hr;
     }
 
@@ -219,14 +233,10 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
         long inParam2;
     } SPROCPARAMS;
 
-    // The command to execute.
-    WCHAR wCmdString[] = L"{? = CALL fn_RectangleArea(?, ?) }";
-    SPROCPARAMS sprocparams = { 0,5,10 };
-
     // Set the command text.
-    if (FAILED(hr = pICommandText->SetCommandText(DBGUID_DBSQL, wCmdString)))
+    if (FAILED(hr = pICommandText->SetCommandText(DBGUID_DBSQL, L"{? = CALL fn_RectangleArea(?, ?) }")))
     {
-        cout << "failed to set command text\n";
+        std::cout << "Failed to set command text\n";
         return hr;
     }
 
@@ -235,7 +245,7 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
     if (FAILED(hr = pICommandText->QueryInterface(IID_ICommandWithParameters,
                                                   reinterpret_cast<LPVOID *>(&pICommandWithParams))))
     {
-        cout << "failed to obtain ICommandWithParameters\n";
+        std::cout << "Failed to obtain ICommandWithParameters\n";
         return hr;
     }
 
@@ -243,8 +253,7 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
     DBPARAMBINDINFO ParamBindInfo[nParams];
     DB_UPARAMS ParamOrdinals[nParams];
     DBROWCOUNT cNumRows = 0;
-    DBPARAMS Params;
-
+    
     // Describe the command parameters (parameter name, provider specific name
     // of the parameter's data type etc.) in an array of DBPARAMBINDINFO
     // structures.  This information is then used by SetParameterInfo().
@@ -276,107 +285,104 @@ HRESULT ExecuteFunction(CComPtr<IDBInitialize>& pIDBInitialize)
                                                           ParamOrdinals,
                                                           ParamBindInfo)))
     {
-        cout << "failed in setting parameter info.(SetParameterInfo)\n";
+        std::cout << "Failed in setting parameter info.(SetParameterInfo)\n";
         return hr;
     }
 
-    CComPtr<IAccessor> pIAccessor;
+    HACCESSOR hAccessor = 0;
+    SPROCPARAMS sprocparams = {0,5,10};
+
+    // Declare array of DBBINDING structures, one for each parameter in the command
+    DBBINDING acDBBinding[nParams];
+    memset(acDBBinding, 0, nParams * sizeof(DBBINDING));
+
+    // Describe the consumer buffer; initialize the array of DBBINDING structures.
+    // Each binding associates a single parameter to the consumer's buffer.
+    for (ULONG i = 0; i < nParams; i++)
     {
-        HACCESSOR hAccessor = 0;
+        acDBBinding[i].obLength = 0;
+        acDBBinding[i].obStatus = 0;
+        acDBBinding[i].pTypeInfo = NULL;
+        acDBBinding[i].pObject = NULL;
+        acDBBinding[i].pBindExt = NULL;
+        acDBBinding[i].dwPart = DBPART_VALUE;
+        acDBBinding[i].dwMemOwner = DBMEMOWNER_CLIENTOWNED;
+        acDBBinding[i].dwFlags = 0;
+        acDBBinding[i].bScale = 0;
+    }   // for
 
-        // Declare array of DBBINDING structures, one for each parameter in the command
-        DBBINDING acDBBinding[nParams];
-        DBBINDSTATUS acDBBindStatus[nParams];
+    acDBBinding[0].iOrdinal = 1;
+    acDBBinding[0].obValue = offsetof(SPROCPARAMS, lReturnValue);
+    acDBBinding[0].eParamIO = DBPARAMIO_OUTPUT;
+    acDBBinding[0].cbMaxLen = sizeof(long);
+    acDBBinding[0].wType = DBTYPE_I4;
+    acDBBinding[0].bPrecision = 11;
 
-        // Describe the consumer buffer; initialize the array of DBBINDING structures.
-        // Each binding associates a single parameter to the consumer's buffer.
-        for (ULONG i = 0; i < nParams; i++)
-        {
-            acDBBinding[i].obLength = 0;
-            acDBBinding[i].obStatus = 0;
-            acDBBinding[i].pTypeInfo = NULL;
-            acDBBinding[i].pObject = NULL;
-            acDBBinding[i].pBindExt = NULL;
-            acDBBinding[i].dwPart = DBPART_VALUE;
-            acDBBinding[i].dwMemOwner = DBMEMOWNER_CLIENTOWNED;
-            acDBBinding[i].dwFlags = 0;
-            acDBBinding[i].bScale = 0;
-        }   // for
+    acDBBinding[1].iOrdinal = 2;
+    acDBBinding[1].obValue = offsetof(SPROCPARAMS, inParam1);
+    acDBBinding[1].eParamIO = DBPARAMIO_INPUT;
+    acDBBinding[1].cbMaxLen = sizeof(long);
+    acDBBinding[1].wType = DBTYPE_I4;
+    acDBBinding[1].bPrecision = 11;
 
-        acDBBinding[0].iOrdinal = 1;
-        acDBBinding[0].obValue = offsetof(SPROCPARAMS, lReturnValue);
-        acDBBinding[0].eParamIO = DBPARAMIO_OUTPUT;
-        acDBBinding[0].cbMaxLen = sizeof(long);
-        acDBBinding[0].wType = DBTYPE_I4;
-        acDBBinding[0].bPrecision = 11;
+    acDBBinding[2].iOrdinal = 3;
+    acDBBinding[2].obValue = offsetof(SPROCPARAMS, inParam2);
+    acDBBinding[2].eParamIO = DBPARAMIO_INPUT;
+    acDBBinding[2].cbMaxLen = sizeof(long);
+    acDBBinding[2].wType = DBTYPE_I4;
+    acDBBinding[2].bPrecision = 11;
 
-        acDBBinding[1].iOrdinal = 2;
-        acDBBinding[1].obValue = offsetof(SPROCPARAMS, inParam1);
-        acDBBinding[1].eParamIO = DBPARAMIO_INPUT;
-        acDBBinding[1].cbMaxLen = sizeof(long);
-        acDBBinding[1].wType = DBTYPE_I4;
-        acDBBinding[1].bPrecision = 11;
-
-        acDBBinding[2].iOrdinal = 3;
-        acDBBinding[2].obValue = offsetof(SPROCPARAMS, inParam2);
-        acDBBinding[2].eParamIO = DBPARAMIO_INPUT;
-        acDBBinding[2].cbMaxLen = sizeof(long);
-        acDBBinding[2].wType = DBTYPE_I4;
-        acDBBinding[2].bPrecision = 11;
-
-        // Let us create an accessor from the above set of bindings.
-        HRESULT hr = pICommandWithParams->QueryInterface(IID_IAccessor,
-                                                         reinterpret_cast<LPVOID *>(&pIAccessor));
-        if (FAILED(hr))
-        {
-            cout << "Failed to get IAccessor interface\n";
-            return hr;
-        }
-
-        hr = pIAccessor->CreateAccessor(DBACCESSOR_PARAMETERDATA,
-                                        nParams,
-                                        acDBBinding,
-                                        sizeof(SPROCPARAMS),
-                                        &hAccessor,
-                                        acDBBindStatus);
-        if (FAILED(hr))
-        {
-            cout << "failed to create accessor for the defined parameters\n";
-            return hr;
-        }
-
-        // Initialize DBPARAMS structure for command execution. DBPARAMS specifies the
-        // parameter values in the command.  DBPARAMS is then passed to Execute.
-        Params.pData = &sprocparams;
-        Params.cParamSets = 1;
-        Params.hAccessor = hAccessor;
-
-        // Execute the command.
-        CComPtr<IRowset> pIRowset;
-        {
-            if (FAILED(hr = pICommandText->Execute(NULL,
-                                                IID_IRowset,
-                                                &Params,
-                                                &cNumRows,
-                                                reinterpret_cast<IUnknown **>(&pIRowset))))
-            {
-                cout << "failed to execute command\n";
-                return hr;
-            }
-        }
-
-        printf("  Return value = %d\n", sprocparams.lReturnValue);
-
-        // Release memory.
-        pIAccessor->ReleaseAccessor(hAccessor, nullptr); 
+    // Let us create an accessor from the above set of bindings.
+    CComPtr<IAccessor> pIAccessor;
+    hr = pICommandWithParams->QueryInterface(IID_IAccessor,
+                                             reinterpret_cast<LPVOID *>(&pIAccessor));
+    if (FAILED(hr))
+    {
+        std::cout << "Failed to get IAccessor interface\n";
+        return hr;
     }
 
+    DBBINDSTATUS acDBBindStatus[nParams];
+    hr = pIAccessor->CreateAccessor(DBACCESSOR_PARAMETERDATA,
+                                    nParams,
+                                    acDBBinding,
+                                    sizeof(SPROCPARAMS),
+                                    &hAccessor,
+                                    acDBBindStatus);
+    if (FAILED(hr))
+    {
+        std::cout << "Failed to create accessor for the defined parameters\n";
+        return hr;
+    }
+
+    // Initialize DBPARAMS structure for command execution. DBPARAMS specifies the
+    // parameter values in the command.  DBPARAMS is then passed to Execute.
+    DBPARAMS Params = {nullptr, 0, 0};
+    Params.pData = &sprocparams;
+    Params.cParamSets = 1;
+    Params.hAccessor = hAccessor;
+
+    // Execute the command.
+    if (SUCCEEDED(hr = pICommandText->Execute(nullptr,
+                                        IID_NULL,
+                                        &Params,
+                                        &cNumRows,
+                                        nullptr)))
+    {
+        printf("Return value = %d\n", sprocparams.lReturnValue);
+    }
+    else 
+    {
+        std::cout << "Failed to execute command\n";
+    }
+
+    // Release memory.
+    pIAccessor->ReleaseAccessor(hAccessor, nullptr); 
     return hr;
 }
 ```  
   
 ```sql
-USE AdventureWorks  
 drop function fn_RectangleArea  
 go  
 ```  

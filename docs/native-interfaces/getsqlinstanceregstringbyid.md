@@ -19,6 +19,8 @@ ms.author: mikeray
 
 Retrieves a registry string from an instance specific registry tree by the given instance ID, the subtree, and the name of the value.
 
+This article describes a native code API that is used by SQL Server and may also be called by other Microsoft products. For a managed code method, see [InstAPI.GetSvcInstanceRegStringByName Method](/dotnet/api/microsoft.sqlserver.instapi.getsvcinstanceregstringbyname).
+
 ```c
 GetSQLInstanceRegStringByID(
     PINST_ID  pInstanceID,

@@ -468,7 +468,7 @@ To allow the driver to use CMKs stored in AKV for column encryption, use the fol
 | Managed Identity | `KeyVaultManagedIdentity` | Object ID (optional, for user-assigned only) | (not specified) |
 | AKV Interactive | `KeyVaultInteractive` | (not set) | (not set) |
 
-The AKV key words can also be configured within the DSN UI (v17.8+).
+Starting in v17.8, the KeystoreAuthentication and KeystorePrincipalId can be edited from the DSN configuration UI.
 
 #### Example connection strings
 

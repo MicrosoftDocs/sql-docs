@@ -88,7 +88,27 @@ LeastVal
 (1 rows affected)  
 ```  
 
-### B. Simple example with character types
+### B. Simple example with NULL values
+
+Any NULL values are ignored. 
+
+ 
+```sql 
+SELECT LEAST ( 7.0000, NULL, 3, NULL, 9 ) AS LeastVal; 
+GO 
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+LeastVal 
+-------- 
+  3.0000 
+
+(1 rows affected)  
+```  
+
+### C. Simple example with character types
 
  The following example returns the minimum value from the list of character constants that is provided.  
   
@@ -107,12 +127,12 @@ Glacier
 (1 rows affected)  
 ```  
 
-### C. Simple example with table
+### D. Simple example with table
   
  This example returns the minimum value from a list of column arguments and ignores `NULL` values during comparison. 
   
 ```sql  
-USE AdventureWorks2019; 
+USE AdventureWorksLT; 
 GO 
 
 SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
@@ -144,21 +164,22 @@ SalesQuota            SalesYTD              SalesLastYear         Sales
 (12 rows affected) 
   
 ```  
-### D. Using `LEAST` with local variables
+### E. Using `LEAST` with local variables
 
  This example uses `LEAST` to determine the minimum value of a list of local variables within the predicate of a `WHERE` clause. 
   
 ```sql  
-CREATE TABLE dbo.studies (    
+CREATE TABLE dbo.studies 
+(    
     VarX varchar(10) NOT NULL,    
     Correlation decimal(4, 3) NULL 
 ); 
 
-INSERT INTO dbo.studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
+INSERT INTO dbo.studies (VarX, Correlation) VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
 GO 
 
-DECLARE @PredictionA DECIMAL(2,1) = 0.7;  
-DECLARE @PredictionB DECIMAL(3,1) = 0.65;  
+DECLARE @PredictionA decimal(2,1) = 0.7;  
+DECLARE @PredictionB decimal(3,1) = 0.65;  
 
 SELECT VarX, Correlation  
 FROM dbo.studies 
@@ -177,20 +198,21 @@ Var3              .610
 (2 rows affected)
 ```  
 
-### E. Using `LEAST` with columns, constants, and variables
+### F. Using `LEAST` with columns, constants, and variables
 
  This example uses `LEAST` to determine the minimum value of a list that includes columns, constants, and variables. 
   
 ```sql  
-CREATE TABLE dbo.products (    
-    prod_id INT IDENTITY(1,1),    
-    listprice smallmoney NULL 
+CREATE TABLE dbo.products 
+(    
+    product_id INT IDENTITY(1,1),    
+    list_price money NULL 
 ); 
 
-INSERT INTO dbo.products VALUES (14.99), (49.99), (24.99); 
+INSERT INTO dbo.products (product_id, list_price) VALUES (14.99), (49.99), (24.99); 
 GO 
 
-DECLARE @PriceX smallmoney = 19.99;  
+DECLARE @PriceX money = 19.99;  
 
 SELECT LEAST(listprice, 40, @PriceX) as LeastPrice  
 FROM dbo.products;

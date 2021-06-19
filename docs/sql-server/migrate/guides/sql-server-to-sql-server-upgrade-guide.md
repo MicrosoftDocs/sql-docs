@@ -1,10 +1,10 @@
 ---
 title: Upgrade SQL Server to SQL Server 2019
 description: Step-by-step guidance for modernizing your data assets
-ms.date: 03/19/2021
+ms.date: 06/21/2021
 ms.prod: sql
 ms.technology: migration-guide
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 ---

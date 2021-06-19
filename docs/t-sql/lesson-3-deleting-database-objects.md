@@ -91,6 +91,17 @@ You cannot remove the `TestData` database while you are in the database; therefo
   DROP DATABASE TestData;  
   GO   
   ```  
+  If you get the error "**Cannot drop database TestData because it is currently in use.**", active connections are closed with the code below.
+  
+  ```sql
+USE master;
+GO
+DECLARE @kill varchar(8000); SET @kill = '';  
+SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), spid) + ';'  
+FROM master..sysprocesses  
+WHERE dbid = db_id('TestData')
+EXEC(@kill); 
+```  
   
 This concludes the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. Remember, this tutorial is a brief overview and it does not describe all the options to the statements that are used. Designing and creating an efficient database structure and configuring secure access to the data requires a more complex database than that shown in this tutorial.  
 

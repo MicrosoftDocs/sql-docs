@@ -83,6 +83,7 @@ The following query hints are currently unsupported:
 *    USE PLAN (instead, consider Query Store's original plan forcing capability, [sp_query_store_force_plan](sp-query-store-force-plan-transact-sql.md)).
 *    DISABLE_DEFERRED_COMPILATION_TV
 *    DISABLE_TSQL_SCALAR_UDF_INLINING
+*    Table hints (e.g. FORCESEEK, READUNCOMMITTED, INDEX)
   
 ## Permissions  
  Requires the **ALTER** permission on the database.

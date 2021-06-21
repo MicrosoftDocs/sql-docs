@@ -6098,7 +6098,7 @@ items:
     - name: Usage and Diagnostic Data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
-      href: dma/dma-whatsnew.md
+      href: dma/dma-whats-new.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
@@ -8879,6 +8879,8 @@ items:
           href: ssms/troubleshoot/get-full-memory-dump.md
         - name: Get diagnostic data
           href: ssms/troubleshoot/ssms-troubleshoot.md
+        - name: Install failed or requires restart
+          href: ssms/troubleshoot/install-failed-requires-restart.md
       - name: SQL Server Agent
         items:
         - name: Configure
@@ -11556,6 +11558,12 @@ items:
         href: relational-databases/event-classes/user-configurable-event-class.md
     - name: ObjectType Trace Event Column
       href: relational-databases/event-classes/objecttype-trace-event-column.md
+  - name: Native interfaces
+    items: 
+    - name: GetSvcInstanceIDFromName
+      href: native-interfaces/getsvcinstanceidfromname.md
+    - name: GetSQLInstanceRegStringByID
+      href: native-interfaces/getsqlinstanceregstringbyid.md
   - name: SQL PowerShell
     items:
     - name: Install SQL PowerShell module

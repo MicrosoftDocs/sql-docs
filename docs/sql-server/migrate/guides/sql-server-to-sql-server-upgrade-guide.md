@@ -150,9 +150,9 @@ View [linked servers](/../../../relational-databases/linked-servers/linked-serve
 
 [Mirrored backup media sets](/../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
 
-[Backup overview of SQL Server](/../../../relational-databases/backup-restore/backup-overview-sql-server?view=sql-server-ver15)
+[Backup overview of SQL Server](/../../../relational-databases/backup-restore/backup-overview-sql-server.md)
 
-[Editions and supported features of SQL Server](/../../sql-server/editions-and-components-of-sql-server-version-15?view=sql-server-ver15)
+[Editions and supported features of SQL Server](/../../sql-server/editions-and-components-of-sql-server-version-15.md)
 
 
 ### Migrate schema and data

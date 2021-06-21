@@ -148,7 +148,12 @@ View [linked servers](/../../../relational-databases/linked-servers/linked-serve
 
 [Migrate system objects using scripts wizard](/../../ssms/scripting/generate-and-publish-scripts-wizard.md)
 
-[Mirrored backup media sets](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
+[Mirrored backup media sets](/../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
+
+[Backup overview of SQL Server](/../../../relational-databases/backup-restore/backup-overview-sql-server?view=sql-server-ver15)
+
+[Editions and supported features of SQL Server](/../../sql-server/editions-and-components-of-sql-server-version-15?view=sql-server-ver15)
+
 
 ### Migrate schema and data
 

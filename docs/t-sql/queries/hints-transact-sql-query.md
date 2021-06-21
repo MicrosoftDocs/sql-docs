@@ -77,6 +77,9 @@ Query hints specify that the indicated hints are used in the scope of a query. T
   
 [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
+To learn more about these capabilities, you can also refer to this Data Exposed episode.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-Store-Hints-in-Azure-SQL-Database/player?format=ny]
+
 ## Syntax  
   
 ```syntaxsql

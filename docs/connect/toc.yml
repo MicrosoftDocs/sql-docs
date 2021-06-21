@@ -5283,6 +5283,8 @@
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
       href: ../connect/oledb/features/using-encryption-without-validation.md
+    - name: Idle Connection Resiliency
+      href: ../connect/oledb/features/idle-connection-resiliency.md
     - name: Using Large Value Types
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)

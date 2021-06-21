@@ -8,7 +8,7 @@ author: vasubhog
 ms.author: vabhog
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
-ms.date: 01/25/2021
+ms.date: 06/18/2021
 ---
 
 # Create a Parameterized Notebook with Papermill

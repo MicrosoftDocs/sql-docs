@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], event notifications"
   - "Database Mirroring State Change event class"
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Mirroring State Change Event Class

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "planned database relocations [SQL Server]"
   - "databases [SQL Server], moving"
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Move User Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

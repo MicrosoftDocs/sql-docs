@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "displaying table properties"
   - "tables [SQL Server], properties"
   - "viewing table properties"
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Table Definition

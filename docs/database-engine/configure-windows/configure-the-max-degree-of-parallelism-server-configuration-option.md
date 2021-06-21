@@ -24,7 +24,7 @@ ms.custom: contperf-fy20q4
 
 > [!NOTE]
 > [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process based on the number of processors available. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md#maxdop).<BR>
-However, in Azure SQL, the default MAXDOP setting for each new single database and elastic pool database is 8. For more on MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
+However, in Azure SQL, the default MAXDOP setting for each **new** single database, elastic pool database and managed instance is 8. For more on MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

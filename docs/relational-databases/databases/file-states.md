@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "displaying filegroup states"
   - "defunct file state"
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # File States

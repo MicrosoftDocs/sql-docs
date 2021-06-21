@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   Returns information about all the data pages that are currently in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buffer pool. The output of this view can be used to determine the distribution of database pages in the buffer pool according to database, object, or type. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], this dynamic management view also returns information about the data pages in the buffer pool extension file. For more information, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  When a data page is read from disk, the page is copied into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buffer pool and cached for reuse. Each cached data page has one buffer descriptor. Buffer descriptors uniquely identify each data page that is currently cached in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors returns cached pages for all user and system databases. This includes pages that are associated with the Resource database.  
   
-> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_buffer_descriptors**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

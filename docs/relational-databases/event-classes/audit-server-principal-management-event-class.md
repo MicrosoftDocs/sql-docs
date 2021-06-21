@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Audit Server Principal Management event class"
 ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Principal Management Event Class

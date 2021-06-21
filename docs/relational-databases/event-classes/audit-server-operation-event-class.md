@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Audit Server Operation event class"
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Operation Event Class

@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Showplan All event class"
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan All Event Class

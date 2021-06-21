@@ -208,7 +208,7 @@ sudo apt-get remove mssql-server-polybase-hadoop
 sudo apt-get remove mssql-server-polybase
 sudo apt-get update 
 sudo apt-get install mssql-server-polybase
-sudo apt-get remove mssql-server-polybase-hadoop
+sudo apt-get install mssql-server-polybase-hadoop
 ```
 
 You will be prompted to restart the SQL Server instance. Use the following command to do so.

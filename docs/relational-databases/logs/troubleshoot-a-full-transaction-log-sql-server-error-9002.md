@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "backing up transaction logs [SQL Server], full logs"
   - "transaction logs [SQL Server], full log"
   - "full transaction logs [SQL Server]"
-ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
@@ -25,11 +24,14 @@ ms.custom: "seo-lt-2019"
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
   
   When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
+
+> [!NOTE]
+> **This article is focused on SQL Server.** For more specific information on this error in Azure SQL Database and Azure SQL Managed Instance, see [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-transaction-log-errors-issues). Azure SQL Database and Azure SQL Managed Instance are based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar though troubleshooting options and tools may differ.
   
 ## Responding to a full transaction log  
  The appropriate response to a full transaction log depends partly on what condition or conditions caused the log to fill. 
  
- To discover what is preventing log truncation in a given case, use the **log_reuse_wait** and **log_reuse_wait_desc** columns of the **sys.database** catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
 >  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  

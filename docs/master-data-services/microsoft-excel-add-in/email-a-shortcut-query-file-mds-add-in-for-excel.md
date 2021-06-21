@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Email a Shortcut Query File (MDS Add-in for Excel)

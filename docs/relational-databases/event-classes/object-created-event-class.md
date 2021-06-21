@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Object:Created event class"
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Object:Created Event Class

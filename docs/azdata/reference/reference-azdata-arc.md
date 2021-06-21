@@ -5,7 +5,7 @@ description: Reference article for azdata arc commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/29/2021
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,11 +21,11 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata arc sql](reference-azdata-arc-sql.md) | Create, delete, and manage SQL resources.
+[azdata arc postgres](reference-azdata-arc-postgres.md) | Create, delete, and managed Azure Arc enabled PostgreSQL Hyperscale server groups.
 [azdata arc dc](reference-azdata-arc-dc.md) | Create, delete, and manage data controllers.
 [azdata arc resource-kind](reference-azdata-arc-resource-kind.md) | Resource-kind commands to define and template custom resources on your cluster.
 [azdata arc resource](reference-azdata-arc-resource.md) | Resource commands to create and manage custom resources on your cluster.
-[azdata arc postgres](reference-azdata-arc-postgres.md) | Create, delete, and managed Azure Arc enabled PostgreSQL Hyperscale server groups.
+[azdata arc sql](reference-azdata-arc-sql.md) | Create, delete, and manage SQL resources.
 
 ## Next steps
 

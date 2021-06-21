@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "storing programs as stored procedures"
   - "stored procedures [SQL Server], about stored procedures"
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures (Database Engine)

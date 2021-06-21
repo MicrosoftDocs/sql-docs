@@ -31,7 +31,7 @@ helpviewer_keywords:
   - "server-level collations [SQL Server]"
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "pmasl"
-ms.author: "sstein"
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

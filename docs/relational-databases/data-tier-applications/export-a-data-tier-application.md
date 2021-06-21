@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "export DAC"
   - "data-tier application [SQL Server], export"
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application

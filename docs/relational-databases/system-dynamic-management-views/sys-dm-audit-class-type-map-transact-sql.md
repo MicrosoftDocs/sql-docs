@@ -19,9 +19,10 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a table that maps the class_type field in the audit log to the class_desc field in sys.dm_audit_actions. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 

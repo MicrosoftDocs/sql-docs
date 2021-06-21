@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "sparse columns, column sets"
   - "column sets"
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Column Sets

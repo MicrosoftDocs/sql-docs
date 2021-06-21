@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Validation Stored Procedure (Master Data Services)

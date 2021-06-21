@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Deprecation event category"
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deprecation Event Category

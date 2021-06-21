@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Returns information about the encryption state of a database and its associated database encryption keys. **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. For more information about database encryption, see [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
+  Returns information about the encryption state of a database and its associated database encryption keys. **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. For more information about database encryption, see [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
@@ -32,7 +35,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |key_length|**int**|Displays the length of the key.|  
 |encryptor_thumbprint|**varbin**|Shows the thumbprint of the encryptor.|  
 |percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|  
-|node_id|**int**|Unique numeric id associated with the node.|  
+|node_id|**int**|Unique numeric ID associated with the node.|  
   
 ## Permissions  
  Requires the VIEW SERVER STATE permission on the server.  

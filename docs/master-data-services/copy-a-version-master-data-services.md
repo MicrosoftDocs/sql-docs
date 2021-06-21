@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "versions [Master Data Services], copying"
   - "copying versions [Master Data Services]"
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Copy a Version (Master Data Services)

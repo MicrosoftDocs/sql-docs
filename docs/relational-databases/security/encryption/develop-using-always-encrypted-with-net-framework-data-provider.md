@@ -14,7 +14,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides information on how to develop .NET applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/).
 

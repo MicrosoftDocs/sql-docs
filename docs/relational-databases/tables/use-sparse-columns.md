@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "null columns"
   - "sparse columns"
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Sparse Columns

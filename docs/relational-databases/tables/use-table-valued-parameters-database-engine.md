@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "parameters [SQL Server], table-valued"
   - "TVP See table-valued parameters"
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Table-Valued Parameters (Database Engine)

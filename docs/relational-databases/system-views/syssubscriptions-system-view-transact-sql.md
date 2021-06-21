@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syssubscriptions view"
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syssubscriptions (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.author: "sstein"
 |**login_name**|**sysname**|The login name used when connecting to the Publisher to add the subscription.|  
 |**subscription_type**|**int**|The type of subscription:<br /><br /> **0** = Push - the distribution agent runs at the Distributor.<br /><br /> **1** = Pull - the distribution agent runs at the Subscriber.|  
 |**distribution_jobid**|**binary(16)**|Identifies the Distribution Agent job used to synchronize the subscription.|  
-|**timestmap**|**timestamp**|The date and time that the subscription was created.|  
+|**timestamp**|**timestamp**|The date and time that the subscription was created.|  
 |**update_mode**|**tinyint**|The update mode:<br /><br /> **0** = Read-only.<br /><br /> **1** = Immediate-updating.|  
 |**loopback_detection**|**bit**|Applies to subscriptions that are part of a bidirectional transactional replication topology. Loopback detection determines whether the Distribution Agent sends transactions originated at the Subscriber back to the Subscriber:<br /><br /> **0** = Sends back.<br /><br /> **1** = Does not send back.|  
 |**queued_reinit**|**bit**|Specifies whether the article is marked for initialization or reinitialization. A value of **1** specifies that the subscribed article is marked for initialization or reinitialization.|  

@@ -138,11 +138,17 @@ Review the compatibility issues discovered with DMA tool.
 
 Preserve backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](/../../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
+Additional considerations maybe needed based on the complexity of your data and environment.
+
 View [linked servers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
 
 [Troubleshoot orphaned users](/../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
 [Migrating-triggers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md)
+
+[Migrate system objects using scripts wizard](/../../ssms/scripting/generate-and-publish-scripts-wizard.md)
+
+[Mirrored backup media sets](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
 
 ### Migrate schema and data
 
@@ -247,11 +253,7 @@ To use DEA for database migration testing, complete the following steps.
 
 ## Next steps
 
-For more information about these issues and specific steps to mitigate them, see the[Post-migration Validation and Optimization Guide](../../../relational-databases/
-post-migration-validation-and-optimization-guide.md).
-
-After the migration, review the [Post-migration validation and optimization guide](../../../
-relational-databases/post-migration-validation-and-optimization-guide.md).
+For more information about these issues, specific steps to mitigate them, and after the migration see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 For a matrix of Microsoft and third-party services and tools that are available to assist you 
 with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).

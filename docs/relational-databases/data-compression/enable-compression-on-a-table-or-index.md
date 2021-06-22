@@ -201,7 +201,7 @@ This article describes how to enable [data compression](../../relational-databas
 
 ### SQL Server
 
-In SQL Server, run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections. 
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections. 
 
 #### To enable compression on a table  
   
@@ -249,7 +249,7 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
     
 ### On Azure SQL Database
 
-Azure SQL Database does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
 
 #### To enable compression on a table  
   

@@ -381,7 +381,7 @@ To improve the performance of the MERGE statement, we recommend the following in
 
 ### Concurrency considerations for MERGE
 
-In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDATE, and DELETE statements. However, MERGE still executes INSERT, UPDATE, and DELETE independently. It may be more efficient to write discrete INSERT, UPDATE, and DELETE statements for some application needs. At scale, MERGE may introduce complicated concurrency issues, contribute to blocking, and require advanced troubleshooting. Only experienced users should use MERGE for large scale applications.
+In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDATE, and DELETE statements. MERGE still executes INSERT, UPDATE, and DELETE operations, however using different locking mechanisms. It may be more efficient to write discrete INSERT, UPDATE, and DELETE statements for some application needs. At scale, MERGE may introduce complicated concurrency issues or require advanced troubleshooting. As such, plan to thoroughly test any MERGE statement before deploying to production.
 
 MERGE statements are recommended in (but not limited to) the following scenarios:
 

@@ -367,7 +367,7 @@ If any INSTEAD OF INSERT triggers are defined on *target_table*, the insert oper
 
 Requires SELECT permission on the source table and INSERT, UPDATE, or DELETE permissions on the target table. For more information, see the Permissions section in the [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md), and [DELETE](../../t-sql/statements/delete-transact-sql.md) articles.  
   
-## Index best practices
+## <a id="optimizing-merge-statement-performance"></a>Index best practices 
 
 By using the MERGE statement, you can replace the individual DML statements with a single statement. This can improve query performance because the operations are performed within a single statement, therefore, minimizing the number of times the data in the source and target tables are processed. However, performance gains depend on having correct indexes, joins, and other considerations in place.
 

@@ -46,7 +46,7 @@ For columnstore tables and indexes, all columnstore tables and indexes always us
 > [!NOTE]  
 > Data can also be compressed using the GZIP algorithm format. This is an additional step and is most suitable for compressing portions of the data when archiving old data for long-term storage. Data compressed using the `COMPRESS` function cannot be indexed. For more information, see [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
-## Row and page compression
+## Row and page compression considerations
 
 When you use row and page compression, be aware the following considerations:  
 -   The details of data compression are subject to change without notice in service packs or subsequent releases.

@@ -2,7 +2,7 @@
 description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/17/2021"
+ms.date: "06/22/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -367,19 +367,19 @@ If any INSTEAD OF INSERT triggers are defined on *target_table*, the insert oper
 
 Requires SELECT permission on the source table and INSERT, UPDATE, or DELETE permissions on the target table. For more information, see the Permissions section in the [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md), and [DELETE](../../t-sql/statements/delete-transact-sql.md) articles.  
   
-## Optimizing MERGE statement performance
+## Index best practices
 
 By using the MERGE statement, you can replace the individual DML statements with a single statement. This can improve query performance because the operations are performed within a single statement, therefore, minimizing the number of times the data in the source and target tables are processed. However, performance gains depend on having correct indexes, joins, and other considerations in place.
 
-### Index best practices
-
 To improve the performance of the MERGE statement, we recommend the following index guidelines:
 
-- Create an index on the join columns in the source table that is unique and has keys covering the join logic to the target table. Create a unique clustered index on the join columns in the target table.
-  - These two sets of indexes ensure that the join keys are unique and the data in the tables is sorted. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
-- Avoid tables with columnstore indexes as the target of MERGE statements. As with any UPDATEs, you may find performance better with columnstore indexes by updating a staged rowstore table, then performing a batched DELETE and INSERT, instead of an UPDATE or MERGE.
+- Create indexes to facilitate the join between the source and target of the merge:
+  - Create an index on the join columns in the source table that has keys covering the join logic to the target table. If possible, it should be unique. 
+  - Also, create an index on the join columns in the target table. If possible, it should be a unique clustered index.
+  - These two indexes ensure that the data in the tables is sorted, and uniqueness aids performance of the comparison. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
+- Avoid tables with any form of columnstore index as the target of MERGE statements. As with any UPDATEs, you may find performance better with columnstore indexes by updating a staged rowstore table, then performing a batched DELETE and INSERT, instead of an UPDATE or MERGE.
 
-### Concurrency considerations for MERGE
+## Concurrency considerations for MERGE
 
 In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDATE, and DELETE statements. MERGE still executes INSERT, UPDATE, and DELETE operations, however using different locking mechanisms. It may be more efficient to write discrete INSERT, UPDATE, and DELETE statements for some application needs. At scale, MERGE may introduce complicated concurrency issues or require advanced troubleshooting. As such, plan to thoroughly test any MERGE statement before deploying to production.
 
@@ -412,7 +412,7 @@ You can force the use of a specific join by specifying the `OPTION (<query_hint>
 
 ### Parameterization best practices
 
-If a SELECT, INSERT, UPDATE, or DELETE statement is executed without parameters, the SQL Server query optimizer may choose to parameterize the statement internally. This means that any literal values that are contained in the query are substituted with parameters. For example, the statement INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10), may be implemented internally as INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). This process, called simple parameterization, increases the ability of the relational engine to match new SQL statements with existing, previously-compiled execution plans. Query performance may be improved because the frequency of query compilations and recompilations are reduced. The query optimizer does not apply the simple parameterization process to MERGE statements. Therefore, MERGE statements that contain literal values may not perform as well as individual INSERT, UPDATE, or DELETE statements because a new plan is compiled each time the MERGE statement is executed.
+If a SELECT, INSERT, UPDATE, or DELETE statement is executed without parameters, the SQL Server query optimizer may choose to parameterize the statement internally. This means that any literal values that are contained in the query are substituted with parameters. For example, the statement `INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10)`, may be implemented internally as `INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)`. This process, called simple parameterization, increases the ability of the relational engine to match new SQL statements with existing, previously-compiled execution plans. Query performance may be improved because the frequency of query compilations and recompilations are reduced. The query optimizer does not apply the simple parameterization process to MERGE statements. Therefore, MERGE statements that contain literal values may not perform as well as individual INSERT, UPDATE, or DELETE statements because a new plan is compiled each time the MERGE statement is executed.
 
 To improve query performance, we recommend the following parameterization guidelines:
 

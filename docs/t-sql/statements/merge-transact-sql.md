@@ -376,7 +376,7 @@ By using the MERGE statement, you can replace the individual DML statements with
 To improve the performance of the MERGE statement, we recommend the following index guidelines:
 
 - Create an index on the join columns in the source table that is unique and has keys covering the join logic to the target table. Create a unique clustered index on the join columns in the target table.
-  - These two sets indexes ensure that the join keys are unique and the data in the tables is sorted. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
+  - These two sets of indexes ensure that the join keys are unique and the data in the tables is sorted. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.
 - Avoid tables with columnstore indexes as the target of MERGE statements. As with any UPDATEs, you may find performance better with columnstore indexes by updating a staged rowstore table, then performing a batched DELETE and INSERT, instead of an UPDATE or MERGE.
 
 ### Concurrency considerations for MERGE

@@ -57,6 +57,7 @@ When you use row and page compression, be aware the following considerations:
 -   A table cannot be enabled for compression when the maximum row size plus the compression overhead exceeds the maximum row size of 8060 bytes. For example, a table that has the columns `c1 CHAR(8000)` and `c2 CHAR(53)` cannot be compressed because of the additional compression overhead. When the vardecimal storage format is used, the row-size check is performed when the format is enabled. For row and page compression, the row-size check is performed when the object is initially compressed, and then checked as each row is inserted or modified. Compression enforces the following two rules:  
     -   An update to a fixed-length type must always succeed.  
     -   Disabling data compression must always succeed. Even if the compressed row fits on the page, which means that it is less than 8060 bytes; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevents updates that would not fit on the row when it is uncompressed.  
+-   Off-row data is not compressed when enabling data compression. For example, an XML record that's larger than 8060 bytes will use out-of-row pages, whickh are not compressed.
 -   When a list of partitions is specified, the compression type can be set to ROW, PAGE, or NONE on individual partitions. If the list of partitions is not specified, all partitions are set with the data compression property that is specified in the statement. When a table or index is created, data compression is set to NONE unless otherwise specified. When a table is modified, the existing compression is preserved unless otherwise specified.  
 -   If you specify a list of partitions or a partition that is out of range, an error is generated.  
 -   Nonclustered indexes do not inherit the compression property of the table. To compress indexes, you must explicitly set the compression property of the indexes. By default, the compression setting for indexes is set to NONE when the index is created.  
@@ -186,15 +187,15 @@ The following table shows replication settings that control compression during r
 |To not replicate the partition scheme and not compress the data on the Subscriber.|False|False|Does not script partition or compression settings.|  
 |To compress the table on the Subscriber if all the partitions are compressed on the Publisher, but not replicate the partition scheme.|False|True|Checks if all the partitions are enabled for compression.<br /><br /> Scripts out compression at the table level.|  
   
-## Impact on other SQL server components
+## Impact on other SQL Server components
 
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
    
  Compression occurs in the storage engine and the data is presented to most of the other components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in an uncompressed state. This limits the effects of compression on the other components to the following:  
 -   Bulk import and export operations  
-     When data is exported, even in native format, the data is output in the uncompressed row format. This can cause the size of exported data file to be significantly larger than the source data.  
-     When data is imported, if the target table has been enabled for compression, the data is converted by the storage engine into compressed row format. This can cause increased CPU usage compared to when data is imported into an uncompressed table.  
-     When data is bulk imported into a heap with page compression, the bulk import operation tries to compress the data with page compression when the data is inserted.  
+    -  When data is exported, even in native format, the data is output in the uncompressed row format. This can cause the size of exported data file to be significantly larger than the source data.  
+    -  When data is imported, if the target table has been enabled for compression, the data is converted by the storage engine into compressed row format. This can cause increased CPU usage compared to when data is imported into an uncompressed table.  
+    -  When data is bulk imported into a heap with page compression, the bulk import operation tries to compress the data with page compression when the data is inserted.  
 -   Compression does not affect backup and restore.  
 -   Compression does not affect log shipping.  
 -   Data compression is incompatible with sparse columns. Therefore, tables containing sparse columns cannot be compressed nor can sparse columns be added to a compressed table.  
@@ -211,5 +212,4 @@ The following table shows replication settings that control compression during r
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
-  
-
+ 

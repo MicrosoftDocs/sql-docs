@@ -268,7 +268,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 > In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen when these two conditions are met:
 >
 > - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database AND
-> - The TARGET table of the merge has secondary indices or a UNIQUE constraint.
+> - The TARGET table of the MERGE has secondary indices or a UNIQUE constraint.
 >
 > The problem has been fixed in Synapse SQL version ***10.0.15563.0*** and higher.    
 > - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
@@ -373,7 +373,7 @@ By using the MERGE statement, you can replace the individual DML statements with
 
 To improve the performance of the MERGE statement, we recommend the following index guidelines:
 
-- Create indexes to facilitate the join between the source and target of the merge:
+- Create indexes to facilitate the join between the source and target of the MERGE:
   - Create an index on the join columns in the source table that has keys covering the join logic to the target table. If possible, it should be unique. 
   - Also, create an index on the join columns in the target table. If possible, it should be a unique clustered index.
   - These two indexes ensure that the data in the tables is sorted, and uniqueness aids performance of the comparison. Query performance is improved because the query optimizer does not need to perform extra validation processing to locate and update duplicate rows and additional sort operations are not necessary.

@@ -138,9 +138,11 @@ Review the compatibility issues discovered with DMA tool.
 
 Preserve backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](/../../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
-Additional considerations maybe needed based on the complexity of your data and environment.
+View [linked servers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list.
 
-View [linked servers](/../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list
+Additional considerations may be needed 
+based on the complexity of your data and 
+environment.
 
 [Troubleshoot orphaned users](/../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 

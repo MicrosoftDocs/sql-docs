@@ -383,7 +383,7 @@ To improve the performance of the MERGE statement, we recommend the following in
 
 In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDATE, and DELETE statements. MERGE still executes INSERT, UPDATE, and DELETE operations, however using different locking mechanisms. It may be more efficient to write discrete INSERT, UPDATE, and DELETE statements for some application needs. At scale, MERGE may introduce complicated concurrency issues or require advanced troubleshooting. As such, plan to thoroughly test any MERGE statement before deploying to production.
 
-MERGE statements are recommended in (but not limited to) the following scenarios:
+MERGE statements are a suitable replacement for discrete INSERT, UPDATE, and DELETE operations in (but not limited to) the following scenarios:
 
 1. ETL operations involving large row counts be executed during a time when other concurrent operations are *not* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
 1. Complex operations involving small row counts and transactions unlikely to execute for extended duration.

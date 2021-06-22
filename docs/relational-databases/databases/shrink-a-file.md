@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "size [SQL Server], files"
   - "file size [SQL Server]"
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Shrink a File
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

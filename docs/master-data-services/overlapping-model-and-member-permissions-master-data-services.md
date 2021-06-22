@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "permissions [Master Data Services], model and member overlaps"
   - "members [Master Data Services], effective permissions"
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Overlapping Model and Member Permissions (Master Data Services)

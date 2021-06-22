@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "CursorRecompile event class"
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorRecompile Event Class

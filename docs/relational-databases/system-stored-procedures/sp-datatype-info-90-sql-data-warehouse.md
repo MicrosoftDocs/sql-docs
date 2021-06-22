@@ -30,7 +30,8 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 `[ @data_type = ] data_type`

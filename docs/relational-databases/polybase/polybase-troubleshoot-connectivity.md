@@ -95,6 +95,13 @@ The tool runs independently of [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
+> [!NOTE]
+> Starting with SQL Server 2019, when you install the PolyBase feature you can either reference an existing Java Runtime Environment, or install AZUL-OpenJDK-JRE. If AZUL-OpenJDK-JRE was selected, java.exe will not be part of the $PATH environment variable and you may encounter the error 
+"'java' is not recognized as an internal or external command,
+operable program or batch file." If this occurs, you will need to add the path to java.exe to the session $PATH environment variable. The default installation path of the java executable will be C:\Program Files\Microsoft SQL Server\MSSQL15.{instance name}\AZUL-OpenJDK-JRE\bin. If that is the path, then you will need to execute the following prior to executing the java command to run the Kerberos Connectivity Troubleshooting tool command.
+>```cmd
+> set PATH=%PATH%;C:\Program Files\Microsoft SQL Server\MSSQL15.{instance name}\AZUL-OpenJDK-JRE\bin
+>```
 
 ## Arguments
 

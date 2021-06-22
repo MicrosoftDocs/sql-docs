@@ -38,8 +38,8 @@ f1_keywords:
   - "sql13.swb.dbmail.manageexistingprofile.f1"
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Configure Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

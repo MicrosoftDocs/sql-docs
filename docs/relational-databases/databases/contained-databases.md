@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "partially contained database"
   - "contained database, understanding"
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Databases

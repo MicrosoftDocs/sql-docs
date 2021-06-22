@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "model database [SQL Server], about model databases"
   - "model database [SQL Server]"
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # model Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

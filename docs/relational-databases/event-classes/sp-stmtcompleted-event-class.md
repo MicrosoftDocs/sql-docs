@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SP:StmtCompleted event class"
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:StmtCompleted Event Class

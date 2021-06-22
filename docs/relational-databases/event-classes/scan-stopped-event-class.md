@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Scan:Stopped event class"
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scan:Stopped Event Class

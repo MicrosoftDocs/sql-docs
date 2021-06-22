@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Plan Guide Successful event class"
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan Guide Successful Event Class

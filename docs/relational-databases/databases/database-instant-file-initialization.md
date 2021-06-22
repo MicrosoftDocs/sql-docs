@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "IFI [SQL Server]"
   - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Instant File Initialization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

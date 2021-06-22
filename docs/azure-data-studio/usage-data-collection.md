@@ -4,11 +4,11 @@ description: This article explains how to control if usage and crash reporting d
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: how-to
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: "wopeter"
+author: yualan
+ms.author: alayu
+ms.reviewer: wopeter
 ms.custom: seo-lt-2019
-ms.date: 05/06/2021
+ms.date: 05/17/2021
 ---
 
 # Enable or disable usage data collection for Azure Data Studio
@@ -17,11 +17,15 @@ Azure Data Studio contains Internet-enabled features that can collect and send a
 
 Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of Azure Data Studio.
 
-Azure Data Studio doesn't collect your name, address, or other data related to an identified or identifiable individual.
+Azure Data Studio doesn't collect your name or address, but Azure Data Studio gathers data that helps approximate a single user for diagnostic purposes (based on a hash of the network adapter NIC).
+
+Several updates made to Azure Data Studio to help ensure data privacy.
+
+- Making it more accessible to opt-out of telemetry collection by placing a notification in the product for all existing and new users.
+- Reviewing and classifying the telemetry that we send.
+- Ensuring that we have valid data retention policies in place for any data we collect, for example, crash dumps.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
-
-[!INCLUDE [gdpr-related-guidance](../includes/gdpr-intro-sentence.md)]
 
 ## Audit feature usage and diagnostic data
 
@@ -70,16 +74,6 @@ If you don't want to send, crash data to Microsoft, you can change the `enable-c
 ## Extensions and telemetry
 
 Azure Data Studio lets you add features to the product by installing Microsoft and third-party extensions. These extensions may be collecting their own usage data and are not controlled by the `telemetry.enableTelemetry` setting. Consult the specific extension's documentation to learn about its telemetry reporting and whether it can be disabled.
-
-## Data privacy
-
-Several updates made to Azure Data Studio to help ensure data privacy.
-
-- Making it more accessible to opt-out of telemetry collection by placing a notification in the product for all existing and new users.
-- Reviewing and classifying the telemetry that we send.
-- Ensuring that we have valid data retention policies in place for any data we collect, for example, crash dumps.
-
-We expect people to ask to see the data we collect. However, Azure Data Studio doesn't have a way to collect personal data as Azure Data Studio doesn't have a *sign-in* experience that uniquely identifies a user. We send information that helps us approximate a single user for diagnostic purposes (this is based on a hash of the network adapter NIC), but this isn't guaranteed to be unique.  For example, virtual machines (VMs) often rotate NIC IDs or allocate from a pool. This technique is sufficient to help us when working through problems, but it's not reliable enough for us to *provide your data*.
 
 ## More resources
 

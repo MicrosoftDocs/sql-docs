@@ -16,6 +16,13 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v8.20
+
+The v8.20 release of SSMA for DB2 contains the following changes:
+
+* Improve `VARCHAR_FORMAT` emulation function
+* Fix tables discovery for DB2 for i
+
 ## SSMA v8.19
 
 The v8.19 release of SSMA for DB2 contains the following changes:

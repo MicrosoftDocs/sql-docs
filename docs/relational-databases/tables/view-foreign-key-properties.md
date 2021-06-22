@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "displaying foreign keys attributes"
   - "viewing foreign keys attributes"
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Foreign Key Properties

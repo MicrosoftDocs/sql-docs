@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "columns [SQL Server], defaults"
   - "default values"
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Default Values for Columns

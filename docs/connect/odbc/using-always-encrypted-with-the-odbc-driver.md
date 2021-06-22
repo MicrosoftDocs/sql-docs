@@ -2,7 +2,7 @@
 title: Using Always Encrypted
 description: Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 05/14/2021
+ms.date: 05/19/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -506,6 +506,9 @@ No other ODBC application changes are required to use AKV for CMK storage.
 
 > [!NOTE]
 > The driver contains a list of AKV endpoints which it trusts. Starting with driver version 17.5.2, this list is configurable: set the `AKVTrustedEndpoints` property in the driver or DSN's ODBCINST.INI or ODBC.INI registry key (Windows) or `odbcinst.ini` or `odbc.ini` file section (Linux/macOS) to a semicolon-delimited list. Setting it in the DSN takes precedence over a setting in the driver. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list. The default list (as of 17.5) is `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`. Starting with 17.7, the list also includes `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de`.
+
+> [!NOTE]
+> The Azure Key Vault provider built in to the ODBC driver supports both [Vaults and Managed HSMs in Azure Key Vault](/azure/key-vault/keys/about-keys).
 
 ### Using the Windows Certificate Store provider
 

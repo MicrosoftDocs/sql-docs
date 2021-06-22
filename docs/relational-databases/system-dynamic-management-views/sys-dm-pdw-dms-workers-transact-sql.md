@@ -17,7 +17,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Holds information about all workers completing DMS steps.  
+  Holds information about all workers completing DMS steps.
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -28,16 +31,16 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |distribution_id|**Int**|Distribution that the worker is running on, if any.|See distribution_id in [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
 |type|**nvarchar(32)**|Type of DMS worker thread this entry represents.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|**nvarchar(32)**|Status of the DMS worker.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|bytes_per_sec|**bigint**|Read or write throughput in the last second.|Greater than or equal to 0. NULL if the query was cancelled or failed before the worker could execute.|  
-|bytes_processed|**bigint**|Total bytes processed by this worker.|Greater than or equal to 0. NULL if the query was cancelled or failed before the worker could execute.|  
-|rows_processed|**bigint**|Number of rows read or written for this worker.|Greater than or equal to 0. NULL if the query was cancelled or failed before the worker could execute.|  
+|bytes_per_sec|**bigint**|Read or write throughput in the last second.|Greater than or equal to 0. NULL if the query was canceled or failed before the worker could execute.|  
+|bytes_processed|**bigint**|Total bytes processed by this worker.|Greater than or equal to 0. NULL if the query was canceled or failed before the worker could execute.|  
+|rows_processed|**bigint**|Number of rows read or written for this worker.|Greater than or equal to 0. NULL if the query was canceled or failed before the worker could execute.|  
 |start_time|**datetime**|Time at which execution of this worker started.|Greater than or equal to start time of the query step this worker belongs to. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|end_time|**datetime**|Time at which execution ended, failed, or was cancelled.|NULL for ongoing or queued workers. Otherwise, greater than start_time.|  
+|end_time|**datetime**|Time at which execution ended, failed, or was canceled.|NULL for ongoing or queued workers. Otherwise, greater than start_time.|  
 |total_elapsed_time|**int**|Total time spent in execution, in milliseconds.|Greater than or equal to 0.<br /><br /> Total time elapsed since system start or restart. If total_elapsed_time exceeds the maximum value for an integer (24.8 days in milliseconds), it will cause materialization failure due to overflow.<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
 |cpu_time|**bigint**|CPU time consumed by this worker, in milliseconds.|Greater than or equal to 0.|  
 |query_time|**int**|Period of time before SQL starts returning rows to the thread, in milliseconds.|Greater than or equal to 0.|  
-|buffers_available|**int**|Number of unused buffers.| NULL if the query was cancelled or failed before the worker could execute.|  
-|sql_spid|**int**|Session id on the SQL Server instance performing the work for this DMS worker.||  
+|buffers_available|**int**|Number of unused buffers.| NULL if the query was canceled or failed before the worker could execute.|  
+|sql_spid|**int**|Session ID on the SQL Server instance performing the work for this DMS worker.||  
 |dms_cpid|**int**|Process ID of the actual thread running.||  
 |error_id|**nvarchar(36)**|Unique identifier of the error that occurred during execution of this worker, if any.|See error_id in [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |source_info|**nvarchar(4000)**|For a reader, specification of the source tables and columns.||  

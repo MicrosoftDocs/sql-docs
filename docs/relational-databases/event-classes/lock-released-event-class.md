@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Released event class"
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Released Event Class

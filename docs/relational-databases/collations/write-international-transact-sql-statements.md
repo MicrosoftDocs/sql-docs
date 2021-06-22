@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database international considerations [SQL Server], Transact-SQL"
   - "dates [SQL Server], international considerations"
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Write International Transact-SQL Statements

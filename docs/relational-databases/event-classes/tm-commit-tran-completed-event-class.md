@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "TM: Commit Tran Completed event class"
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Commit Tran Completed Event Class

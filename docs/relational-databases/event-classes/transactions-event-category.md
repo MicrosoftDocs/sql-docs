@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], Transactions event category"
   - "Transactions event category [SQL Server]"
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transactions Event Category

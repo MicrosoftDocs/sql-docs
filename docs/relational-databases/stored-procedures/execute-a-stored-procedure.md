@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], executing"
   - "user-defined stored procedures [SQL Server]"
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute a Stored Procedure

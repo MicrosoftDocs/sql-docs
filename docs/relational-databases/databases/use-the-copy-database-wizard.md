@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "Copy Database Wizard"
   - "starting Copy Database Wizard"
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Use the Copy Database Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

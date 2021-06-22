@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "TransactionLog event class"
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TransactionLog Event Class

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], Cursors event category"
   - "SQL Server event classes, Cursors event category"
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursors Event Category

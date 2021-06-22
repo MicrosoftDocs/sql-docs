@@ -35,13 +35,7 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 >[!NOTE] 
 > PolyBase can be installed on only one SQL Server instance per machine.
 
-
->[!NOTE]
->In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
-
->[!IMPORTANT]
->To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
-  
+ 
 ## Single node or PolyBase scale-out group
 
 Before you install PolyBase on your SQL Server instances, decide whether you want a single node installation or a [PolyBase scale-out group](../../relational-databases/polybase/polybase-scale-out-groups.md).

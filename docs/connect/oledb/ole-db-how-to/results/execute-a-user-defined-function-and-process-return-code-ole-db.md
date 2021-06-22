@@ -50,14 +50,7 @@ GO
   
 ```cpp
 // compile with: ole32.lib oleaut32.lib
-#define UNICODE
-#define DBINITCONSTANTS
-#define INITGUID
-#define OLEDBVER 0x0250   // to include correct interfaces
-
-#include <windows.h>
 #include <iostream>
-#include <cguid.h>      // GUID_NULL
 #include <atlbase.h>    // CComPtr
 #include "msoledbsql.h"
 
@@ -100,10 +93,7 @@ int main()
     }
 EXIT:
     CoUninitialize();
-    if (FAILED(hr))
-        return 1;
-    else
-        return 0;
+    return (FAILED(hr));
 }
 
 HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
@@ -122,52 +112,60 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
         return hr;
     }
 
-    const ULONG nInitProps = 4;
-    const ULONG nPropSet = 1;
+    const ULONG nInitProps1 = 3;
+    const ULONG nInitProps2 = 1;
+    const ULONG nPropSets = 2;
     CComBSTR server(L"(local)");
     CComBSTR database(L"oledbtest");
     CComBSTR auth(L"SSPI");
-    DBPROP InitProperties[nInitProps] = {};
-    DBPROPSET rgInitPropSet[nPropSet] = {};
+    DBPROP InitProperties1[nInitProps1] = {};
+    DBPROP InitProperties2[nInitProps2] = {};
+    DBPROPSET rgInitPropSet[nPropSets] = {};
 
     // Initialize the property values needed to establish the connection.
-    for (ULONG i = 0; i < nInitProps; i++)
-        VariantInit(&InitProperties[i].vValue);
+    for (ULONG i = 0; i < nInitProps1; i++)
+        VariantInit(&InitProperties1[i].vValue);
 
     // Specify server name.
-    InitProperties[0].dwPropertyID = DBPROP_INIT_DATASOURCE;
-    InitProperties[0].vValue.vt = VT_BSTR;
+    InitProperties1[0].dwPropertyID = DBPROP_INIT_DATASOURCE;
+    InitProperties1[0].vValue.vt = VT_BSTR;
 
     // Replace "MySqlServer" with proper value.
-    InitProperties[0].vValue.bstrVal = server;
-    InitProperties[0].dwOptions = DBPROPOPTIONS_REQUIRED;
-    InitProperties[0].colid = DB_NULLID;
+    InitProperties1[0].vValue.bstrVal = server;
+    InitProperties1[0].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties1[0].colid = DB_NULLID;
 
     // Specify database name.
-    InitProperties[1].dwPropertyID = DBPROP_INIT_CATALOG;
-    InitProperties[1].vValue.vt = VT_BSTR;
-    InitProperties[1].vValue.bstrVal = database;
-    InitProperties[1].dwOptions = DBPROPOPTIONS_REQUIRED;
-    InitProperties[1].colid = DB_NULLID;
+    InitProperties1[1].dwPropertyID = DBPROP_INIT_CATALOG;
+    InitProperties1[1].vValue.vt = VT_BSTR;
+    InitProperties1[1].vValue.bstrVal = database;
+    InitProperties1[1].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties1[1].colid = DB_NULLID;
 
-    InitProperties[2].dwPropertyID = DBPROP_AUTH_INTEGRATED;
-    InitProperties[2].vValue.vt = VT_BSTR;
-    InitProperties[2].vValue.bstrVal = auth;
-    InitProperties[2].dwOptions = DBPROPOPTIONS_REQUIRED;
-    InitProperties[2].colid = DB_NULLID;
+    InitProperties1[2].dwPropertyID = DBPROP_AUTH_INTEGRATED;
+    InitProperties1[2].vValue.vt = VT_BSTR;
+    InitProperties1[2].vValue.bstrVal = auth;
+    InitProperties1[2].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties1[2].colid = DB_NULLID;
 
-    InitProperties[3].dwPropertyID = SSPROP_INIT_ENCRYPT;
-    InitProperties[3].vValue.vt = VT_BOOL;
-    InitProperties[3].vValue.boolVal = VARIANT_TRUE;
-    InitProperties[3].dwOptions = DBPROPOPTIONS_REQUIRED;
-    InitProperties[3].colid = DB_NULLID;
+    // Data should be encrypted before sending it over the network
+    VariantInit(&InitProperties2[0].vValue);
+    InitProperties2[0].dwPropertyID = SSPROP_INIT_ENCRYPT;
+    InitProperties2[0].vValue.vt = VT_BOOL;
+    InitProperties2[0].vValue.boolVal = VARIANT_TRUE;
+    InitProperties2[0].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties2[0].colid = DB_NULLID;
 
     // Now that properties are set, construct the DBPROPSET structure
     // (rgInitPropSet).  The DBPROPSET structure is used to pass an array
     // of DBPROP structures (InitProperties) to SetProperties method.
     rgInitPropSet[0].guidPropertySet = DBPROPSET_DBINIT;
-    rgInitPropSet[0].cProperties = nInitProps;
-    rgInitPropSet[0].rgProperties = InitProperties;
+    rgInitPropSet[0].cProperties = nInitProps1;
+    rgInitPropSet[0].rgProperties = InitProperties1;
+
+    rgInitPropSet[1].guidPropertySet = DBPROPSET_SQLSERVERDBINIT;
+    rgInitPropSet[1].cProperties = nInitProps2;
+    rgInitPropSet[1].rgProperties = InitProperties2;
 
     // Set initialization properties.
     CComPtr<IDBProperties> pIDBProperties;
@@ -179,7 +177,7 @@ HRESULT InitializeAndEstablishConnection(CComPtr<IDBInitialize>& pIDBInitialize)
         return hr;
     }
 
-    hr = pIDBProperties->SetProperties(nPropSet, rgInitPropSet);
+    hr = pIDBProperties->SetProperties(nPropSets, rgInitPropSet);
     if (FAILED(hr)) {
         std::cout << "Failed to set initialization properties\n";
         return hr;
@@ -250,8 +248,8 @@ HRESULT ExecuteFunction(const CComPtr<IDBInitialize>& pIDBInitialize)
     }
 
     const ULONG nParams = 3;   // No. of parameters in the command
-    DBPARAMBINDINFO ParamBindInfo[nParams];
-    DB_UPARAMS ParamOrdinals[nParams];
+    DBPARAMBINDINFO ParamBindInfo[nParams] = {};
+    DB_UPARAMS ParamOrdinals[nParams] = {};
     DBROWCOUNT cNumRows = 0;
     
     // Describe the command parameters (parameter name, provider specific name
@@ -293,9 +291,8 @@ HRESULT ExecuteFunction(const CComPtr<IDBInitialize>& pIDBInitialize)
     SPROCPARAMS sprocparams = {0,5,10};
 
     // Declare array of DBBINDING structures, one for each parameter in the command
-    DBBINDING acDBBinding[nParams];
-    memset(acDBBinding, 0, nParams * sizeof(DBBINDING));
-
+    DBBINDING acDBBinding[nParams] = {};
+    
     // Describe the consumer buffer; initialize the array of DBBINDING structures.
     // Each binding associates a single parameter to the consumer's buffer.
     for (ULONG i = 0; i < nParams; i++)
@@ -342,7 +339,7 @@ HRESULT ExecuteFunction(const CComPtr<IDBInitialize>& pIDBInitialize)
         return hr;
     }
 
-    DBBINDSTATUS acDBBindStatus[nParams];
+    DBBINDSTATUS acDBBindStatus[nParams] = {};
     hr = pIAccessor->CreateAccessor(DBACCESSOR_PARAMETERDATA,
                                     nParams,
                                     acDBBinding,

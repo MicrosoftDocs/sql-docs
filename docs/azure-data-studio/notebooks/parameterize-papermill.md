@@ -64,6 +64,8 @@ The steps in this section all run within an Azure Data Studio notebook.
 
 ## Set up a parameterized notebook
 
+**To open the below notebook example in Azure Data Studio, click [here](azuredatastudio://microsoft.notebook/open?url=https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
+
 1. Verify the **Kernel** is set to *Python3*.
 
    ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)

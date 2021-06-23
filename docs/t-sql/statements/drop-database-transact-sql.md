@@ -94,10 +94,7 @@ If the database is involved in log shipping, remove log shipping before dropping
 
 The DROP DATABASE statement must run in autocommit mode and is not allowed in an explicit or implicit transaction. Autocommit mode is the default transaction management mode.
 
-You cannot drop a database currently being used. This means open for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER.
-
-> [!WARNING]
-> This is not a fail-proof approach, since first consecutive connection made by any thread will receive the SINGLE_USER thread, causing your connection to fail. Sql server does not provide a built-in way to drop databases under load.
+You cannot drop a database currently being used. This means open for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER but you must retain the session lock, to avoid another connection becoming the single user. See the example below.
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -161,6 +158,24 @@ The following example removes a database snapshot, named `sales_snapshot0600`, w
 DROP DATABASE sales_snapshot0600;
 ```
 
+### D. Dropping a database if it exists
+
+The following example removes a database named `Sales` if it exists, by first changing to single user mode.
+
+```sql
+USE tempdb;
+GO
+DECLARE @SQL nvarchar(1000);
+IF EXISTS (SELECT 1 FROM sys.databases WHERE [name] = N'Sales')
+BEGIN
+    SET @SQL = N'USE tempdb;
+                 ALTER DATABASE Sales SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+                 USE master;
+                 DROP DATABASE Sales;';
+    EXEC (@SQL);
+    USE tempdb;
+END;
+```
 ## See Also
 
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)

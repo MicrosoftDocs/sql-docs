@@ -536,7 +536,7 @@ Custom key store providers registered using [SqlConnection.RegisterColumnEncrypt
 
 To support scenarios where different users of the same application may execute multiple queries, custom key store providers can be linked to a user and registered on a connection or command instance specific to that user. The following example shows how an instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` can be reused across different `SqlCommand` objects for the same user. Its column encryption key cache will persist across multiple queries, reducing the number of round trips to the key store:
 
-[!code-csharp [RegisterCustomKeyStoreProviderExample#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_Example#1)]
+[!code-csharp [RegisterCustomKeyStoreProviderExample#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_Example.cs#1)]
 
 ## Enabling extra protection for a compromised SQL Server
 

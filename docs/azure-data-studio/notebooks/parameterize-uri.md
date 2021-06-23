@@ -39,7 +39,7 @@ In the URI query, use **&** to indicate a new parameter to be injected.
 
 ## URI Parameterization Example
 
-In this example, we'll parameterize a notebook that is stored in a GitHub repository [here](https://github.com/VasuBhog/PyCon/blob/main/Input.ipynb).
+**To open the below notebook example in Azure Data Studio, click [here](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
 
 Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.  
 
@@ -65,8 +65,8 @@ Below is the contents and structure of the notebook, you must use a notebook tha
 
 1. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
 
-    Notebook URI for parameterizing the notebook with new x and y values:
-    _azuredatastudio:\/\/microsoft.notebook\/open?url=https:\/\/raw.githubusercontent.com\/VasuBhog\/PyCon\/main\/Input.ipynb_**?x=10&y=20**
+    Below is the notebook URI for parameterizing the notebook with new x and y values:
+    [_azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb_**?x=10&y=20**](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20)
 
     :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="URI link in Search bar":::
     
@@ -76,7 +76,7 @@ Below is the contents and structure of the notebook, you must use a notebook tha
 
 2. You will then be prompted to download and open the notebook with new parameters.
 
-    Once you select **Yes**, view the new parameterized notebook and run all cells to see the new output.
+    Once you select **Yes**, view the new parameterized notebook and **run all cells** to see the new output.
    
     You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
     

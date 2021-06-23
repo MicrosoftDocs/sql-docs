@@ -244,6 +244,10 @@ Use the **Add SSIS Connection Manager** dialog box to select the type of connect
   
 2.  Configure the parameter settings in the **Parameterize** dialog box. For more information, see [Parameterize Dialog Box](../integration-services-ssis-package-and-project-parameters.md).  
 
+> [!NOTE]
+> Property **ConnectionString** is not sensitive and designed not to contain sensitive password information.
+> it is recommended to use property **Password** to parameterize sensitive password.
+
 ## Delete a connection manager 
 ###  <a name="DeletePackageLevel"></a> Delete a connection manager from a package  
   

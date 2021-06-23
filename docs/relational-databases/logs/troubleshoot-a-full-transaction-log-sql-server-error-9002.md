@@ -28,13 +28,13 @@ ms.custom: "seo-lt-2019"
 > [!NOTE]
 > **This article is focused on SQL Server.** For more specific information on this error in Azure SQL Database and Azure SQL Managed Instance, see [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-transaction-log-errors-issues). Azure SQL Database and Azure SQL Managed Instance are based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar though troubleshooting options and tools may differ.
   
-# Common reasons for a full transaction log  
- The appropriate response to a full transaction log depends on what conditions caused the log to fill.  Common causes include 
+## Common reasons for a full transaction log
+ The appropriate response to a full transaction log depends on what conditions caused the log to fill.  Common causes include: 
  - Log not being truncated
  - Disk volume is full
- - Log size was set to a fixed maximum value (autogrow is disabled)
+ - Log size is set to a fixed maximum value (autogrow is disabled)
 
-# Resolving a full transaction log
+## Resolving a full transaction log
 
 The following specific steps will help you find the reason for a full transaction log and resolve the issue.
 
@@ -172,7 +172,7 @@ DEALLOCATE no_truncate_db
 - Backing up the log 
 - Completing or killing a long-running transaction
 
-### Back up the log  
+### Backing up the log  
 
 Under the full recovery model or bulk-logged recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently.  
   
@@ -205,7 +205,7 @@ Sometimes you just have to end the process; you may have to use the [KILL](../..
 
 In some situations the disk volume that hosts the transaction log file may fill up. You can take one of the following actions to resolve the log-full scenario that results from a full disk:
 
-### Freeing disk space  
+### Free disk space  
 
  You might be able to free disk space on the disk drive that contains the transaction log file for the database by deleting or moving other files. The freed disk space allows the recovery system to enlarge the log file automatically.  
   
@@ -216,19 +216,15 @@ If you cannot free enough disk space on the drive that currently contains the lo
 > [!IMPORTANT]
 > Log files should never be placed on compressed file systems.  
   
-**Move a log file**
-  
-- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
+See [Move Database Files](../../relational-databases/databases/move-database-files.md) for information on how to change the location of a log file.
   
 ### Add a log file on a different disk  
 
 Add a new log file to the database on a different disk that has sufficient space by using ALTER DATABASE <database_name> ADD LOG FILE.  
   
- **Add a log file**  
-  
-- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+For more information see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
 
-**Use T-SQL to automate**
+### Use T-SQL to automate
 
 These steps can be partly-automated by running this T-SQL script which will indentify logs files that using a large percentage of disk space and suggest actions:
 
@@ -294,7 +290,7 @@ END
 
 ```
 
-## Log size was set to a fixed maximum value (autogrow is disabled)
+## Log size is set to a fixed maximum value
 
 Error 9002 can be generated if the transaction log size has been set to an upper limit and autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
@@ -354,9 +350,7 @@ ELSE
 
 If space is available on the log disk, you can increase the size of the log file. The maximum size for log files is two terabytes (TB) per log file.  
   
- **Increase the file size**  
-  
- If autogrow is disabled, the database is online, and sufficient space is available on the disk, do either of these:  
+If autogrow is disabled, the database is online, and sufficient space is available on the disk, do either of these:  
   
 - Manually increase the file size to produce a single growth increment.  
 - Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option.  
@@ -370,5 +364,3 @@ If space is available on the log disk, you can increase the size of the log file
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
-  
-  

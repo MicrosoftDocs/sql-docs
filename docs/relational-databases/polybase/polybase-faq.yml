@@ -82,11 +82,14 @@ sections:
       - question: Which ports should I allow through my firewall for PolyBase?
         answer: | 
           No ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. However, you must allow other ports based on the external data source(s) in use. Refer to specific external data source documentation. For example:
+
           | Source platform | Reference | 
           | ---- | ---- |
           | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
           | Hadoop HDFS | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
           | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
+          | | | 
+
 
           
       

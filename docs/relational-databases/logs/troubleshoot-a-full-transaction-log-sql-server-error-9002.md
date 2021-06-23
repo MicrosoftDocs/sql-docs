@@ -300,29 +300,32 @@ Error 9002 can be generated if the transaction log size has been set to an upper
 
 ```tsql
 --are any files set to a fixed size and what percentage of max size are they 
-select 
-    db_name(database_id) DbName, name LogName, physical_name, type_desc
-    ,convert(bigint, size)*8/1024 LogFile_Size_MB
-    ,convert(bigint,max_size)*8/1024 LogFile_MaxSize_MB
-    ,(size*8.0/1024)/(max_size*8.0/1024)*100 percent_full_of_max_size
-from sys.master_files
-where file_id = 2 
-and max_size not in (-1, 268435456)
-and (size*8.0/1024)/(max_size*8.0/1024)*100 > 90
+SELECT db_name(database_id) DbName,
+       name LogName,
+       physical_name,
+       type_desc ,
+       convert(bigint, SIZE)*8/1024 LogFile_Size_MB ,
+       convert(bigint,max_size)*8/1024 LogFile_MaxSize_MB ,
+       (SIZE*8.0/1024)/(max_size*8.0/1024)*100 percent_full_of_max_size
+FROM sys.master_files
+WHERE file_id = 2
+  AND max_size not in (-1,
+                       268435456)
+  AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
 
 if @@ROWCOUNT > 0
 BEGIN
     DECLARE @db_name_max_size sysname, @log_name_max_size sysname, @configured_max_log_boundary bigint 
     
     DECLARE reached_max_size CURSOR FOR
-        select 
-            db_name(database_id), 
-            name, 
-            convert(bigint, size)*8/1024 
-        from sys.master_files
-        where file_id = 2 
-        and max_size not in (-1, 268435456)
-        and (size*8.0/1024)/(max_size*8.0/1024)*100 > 90
+        SELECT db_name(database_id),
+               name,
+               convert(bigint, SIZE)*8/1024
+        FROM sys.master_files
+        WHERE file_id = 2
+          AND max_size not in (-1,
+                               268435456)
+          AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
 
     OPEN reached_max_size
 
@@ -346,7 +349,6 @@ END
 ELSE
     SELECT 'Found no files that have reached max log file size' as Findings
 ```
-
 
 ### Increase log file size  
 

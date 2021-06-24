@@ -1,6 +1,6 @@
 ---
 title: Driver feature support matrix
-description: Learn which SQL Server features are supported in the drivers .Net, ODBC, OLEDB, JDBC, Node.js, JavaScript and Python.
+description: Learn which SQL Server features are supported in the drivers for .NET, ODBC, OLE DB, JDBC, Node.js, JavaScript, and Python.
 ms.custom: ""
 ms.date: 05/06/2021
 ms.prod: sql

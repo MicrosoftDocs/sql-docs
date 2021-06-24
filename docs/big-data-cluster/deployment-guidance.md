@@ -76,7 +76,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 - `kubectl`
 - Azure Data Studio
 - [Data Virtualization extension](../azure-data-studio/extensions/data-virtualization-extension.md) for Azure Data Studio
-- [Azure CLI<sup>2</sup>](/cli/azure/install-azure-cli), if deploying to AKS
+- [Azure CLI](/cli/azure/install-azure-cli), if deploying to AKS
 
 
 ## <a id="deploy"></a> Deployment overview

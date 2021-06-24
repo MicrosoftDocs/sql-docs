@@ -20,7 +20,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-For a complete list of features supported and unsupported by different OLEDB versions see the [Driver feature matrix](../../driver-feature-matrix.md#table2)
+For a complete list of features that are supported and not supported in different OLE DB versions, see the [Driver feature matrix](../../driver-feature-matrix.md#table2).
 
   In addition to exposing features of the Windows (formerly Microsoft) Data Access Components (WDAC), OLE DB Driver for SQL Server also implements many other features to expose [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality.  
   

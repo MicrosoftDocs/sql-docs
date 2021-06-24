@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions, this topology is also supported by peer-to-peer transactional replication, but bidirectional replication can provide improved performance.  
 
-If you want to add a subscription to a bi-directional publication by using the  the fully-qualified domain name (FQDN), verify that the server name (`@@SERVERNAME`) of the subscriber returns the FQDN. If the subscriber server name does not return the FQDN, changes that originate from the that subscriber may cause primary key violations. 
+If you want to add a subscription to a bi-directional publication by using the  the fully-qualified domain name (FQDN), verify that the server name (`@@SERVERNAME`) of the subscriber returns the FQDN. If the subscriber server name does not return the FQDN, changes that originate from that subscriber may cause primary key violations. 
 
   
 ## See Also  

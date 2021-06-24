@@ -202,8 +202,8 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 For details about the latest release of Azure Data Studio, see [Release notes for Azure Data Studio](./release-notes-azure-data-studio.md).
 
-## Download Insiders build of Azure Data Studio
-
+## Download the GA release or the insiders build
+    
 We recommend that you [download the general availability (GA) release of Azure Data Studio](#download-azure-data-studio). However, if you want to try out the beta features and send feedback, you can download the [insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
 
 ## Supported operating systems

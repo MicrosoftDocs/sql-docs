@@ -97,7 +97,7 @@ The DROP DATABASE statement must run in autocommit mode and is not allowed in an
 You cannot drop a database currently being used. This means open for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER.
 
 > [!WARNING]
-> This is not a fail-proof approach, since first consecutive connection made by any thread will receive the SINGLE_USER thread, causing your connection to fail. Sql server does not provide a built-in way to drop databases under load.
+> This is not a fail-proof approach, since first consecutive connection made by any thread will receive the SINGLE_USER thread, causing your connection to fail. SQL Server does not provide a built-in way to drop databases under load.
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

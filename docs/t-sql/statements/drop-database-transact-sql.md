@@ -161,7 +161,8 @@ DROP DATABASE sales_snapshot0600;
 ### D. Dropping a database after checking if it exists
 
 
-The following example removes a database named `Sales` if it exists, by first changing to single user mode.
+The following example first checks to see if a database named `Sales` exists. If so, the example changes the database named `Sales` to single-user mode to force disconnect of all other sessions, then drops the database. For more information on SINGLE_USER, see [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md).
+
 
 ```sql
 USE tempdb;

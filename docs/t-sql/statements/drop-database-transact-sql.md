@@ -2,7 +2,7 @@
 description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "06/25/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""

@@ -173,7 +173,6 @@ BEGIN
                  USE master;
                  DROP DATABASE Sales;';
     EXEC (@SQL);
-    USE tempdb;
 END;
 ```
 ## See Also

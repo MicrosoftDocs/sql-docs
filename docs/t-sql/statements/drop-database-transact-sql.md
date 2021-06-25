@@ -174,7 +174,8 @@ BEGIN
     SET @SQL = N'USE [Sales];
 
                  ALTER DATABASE Sales SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-                 USE master;
+                 USE [tempdb];
+
                  DROP DATABASE Sales;';
     EXEC (@SQL);
 END;

@@ -1767,6 +1767,8 @@ items:
       href: relational-databases/graphs/sql-graph-sample.md
     - name: SHORTEST_PATH
       href: relational-databases/graphs/sql-graph-shortest-path.md
+    - name: Edge constraints
+      href: relational-databases/tables/graph-edge-constraints.md
   - name: Sequence numbers
     href: relational-databases/sequence-numbers/sequence-numbers.md
     items:
@@ -1888,8 +1890,6 @@ items:
         href: relational-databases/tables/use-column-sets.md
       - name: Table-Valued Parameters
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-    - name: Edge constraints
-      href: relational-databases/tables/graph-edge-constraints.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:

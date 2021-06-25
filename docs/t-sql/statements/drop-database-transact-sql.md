@@ -158,7 +158,8 @@ The following example removes a database snapshot, named `sales_snapshot0600`, w
 DROP DATABASE sales_snapshot0600;
 ```
 
-### D. Dropping a database if it exists
+### D. Dropping a database after checking if it exists
+
 
 The following example removes a database named `Sales` if it exists, by first changing to single user mode.
 

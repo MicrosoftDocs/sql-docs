@@ -73,7 +73,7 @@ Query expressions are strings that use syntax similar to XPath to specify a set 
 There's no change to the module used by SQL Server Agent. As such, SQL Server Agent jobs, which have PowerShell type job steps use the SQLPS module. For more information, see [How to run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md). However, starting with SQL Server 2019, you can disable SQLPS. To do so, on the first line of a job step of the type PowerShell you can add `#NOSQLPS`, which stops the SQL Agent from auto-loading the SQLPS module. When you do this, your SQL Agent Job runs the version of PowerShell installed on the machine, and then you can use any other PowerShell module you like.
 
 ### Troubleshooting SQLPS
-If you see agent job steps (PowerShell subsystem) failing with the following error, this section could be relevant/good troubleshooting. 
+If you see agent job steps (PowerShell subsystem) failing with the following error, this section may be helpful in troubleshooting the issue. 
 
 > A job step received an error at line 1 in a PowerShell script. The corresponding line is 'import-module SQLPS'. Correct the script and reschedule the job. The error information returned by PowerShell is: 'The specified module 'SQLPS' was not loaded because no valid module file was found in any module directory.  
 

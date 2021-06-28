@@ -353,7 +353,7 @@ For more information, see [Reorganize and Rebuild Indexes](../../relational-data
  For more information, see [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
 #### IGNORE_DUP_KEY **=** { ON | OFF }  
- Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The default is OFF.  
+ Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The `IGNORE_DUP_KEY` option applies only to insert operations after the index is created or rebuilt. The default is OFF.  
   
  ON  
  A warning message will occur when duplicate key values are inserted into a unique index. Only the rows violating the uniqueness constraint will fail.  
@@ -361,7 +361,7 @@ For more information, see [Reorganize and Rebuild Indexes](../../relational-data
  OFF  
  An error message will occur when duplicate key values are inserted into a unique index. The entire INSERT operation will be rolled back.  
   
- IGNORE_DUP_KEY cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
+ `IGNORE_DUP_KEY` cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
  To view `IGNORE_DUP_KEY`, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
@@ -713,11 +713,11 @@ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY`
 
  `WAIT_AT_LOW_PRIORITY` used with `ONLINE=ON` only.  
    
- An online index rebuild must aquire certain locks to begin, and will wait for other blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ An online index rebuild must acquire certain locks to begin, and will wait for other blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
  MAX_DURATION = *time* [**MINUTES**]  
     
- The wait time (an integer value specified in minutes) that the online index rebuild locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specfied `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.  
+ The wait time (an integer value specified in minutes) that the online index rebuild locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specified `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.  
  
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
      
@@ -945,7 +945,7 @@ ON fact3
 REBUILD PARTITION = 12;  
 ```  
   
-### G. Change a clustered columstore index to use archival compression  
+### G. Change a clustered columnstore index to use archival compression  
  Does not apply to: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
  You can choose to reduce the size of a clustered columnstore index even further by using the COLUMNSTORE_ARCHIVE data compression option. This is practical for older data that you want to keep on cheaper storage. We recommend only using this on data that is not accessed often since decompress is slower than with the normal COLUMNSTORE compression.  

@@ -167,7 +167,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 > [!IMPORTANT]
 > The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 > Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature.
-> Use the syntax structure specified in <relational_index_option> instead.
+> Use the syntax structure specified in `relational_index_option` instead.
 
 ```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
@@ -231,7 +231,7 @@ Create the clustered index before creating any nonclustered indexes. Existing no
 If `CLUSTERED` is not specified, a nonclustered index is created.
 
 > [!NOTE]
-> Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the ON *partition_scheme_name* or ON *filegroup_name* clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.
+> Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the `ON *partition_scheme_name*` or `ON *filegroup_name*` clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.
 
 In some cases creating a clustered index can enable previously disabled indexes. For more information, see [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md) and [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 
@@ -242,7 +242,7 @@ Each table can have up to 999 nonclustered indexes, regardless of how the indexe
 
 For indexed views, nonclustered indexes can be created only on a view that has a unique clustered index already defined.
 
-If not otherwise specified, the default index type is NONCLUSTERED.
+If not otherwise specified, the default index type is nonclustered.
 
 #### *index_name*      
  Is the name of the index. Index names must be unique within a table or view, but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).
@@ -407,7 +407,7 @@ In backward compatible syntax, `WITH SORT_IN_TEMPDB` is equivalent to `WITH SORT
 
 #### IGNORE_DUP_KEY = { ON | **OFF** }      
 
-Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The option has no effect when executing [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), or [UPDATE](../../t-sql/queries/update-transact-sql.md). The default is OFF.
+Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The `IGNORE_DUP_KEY` option applies only to insert operations after the index is created or rebuilt. The option has no effect when executing [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), or [UPDATE](../../t-sql/queries/update-transact-sql.md). The default is OFF.
 
 ON      
 A warning message will occur when duplicate key values are inserted into a unique index. Only the rows violating the uniqueness constraint will fail.
@@ -641,7 +641,7 @@ Limitations and Restrictions:
 - The `FILESTREAM_ON` option is not valid when you create a nonclustered index on a table stored as a clustered columnstore index.
 
 ## Unique Indexes
-When a unique index exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for duplicate values each time data is added by a insert operations. Insert operations that would generate duplicate key values are rolled back, and the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. This is true even if the insert operation changes many rows but causes only one duplicate. If an attempt is made to enter data for which there is a unique index and the IGNORE_DUP_KEY clause is set to ON, only the rows violating the UNIQUE index fail.
+When a unique index exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for duplicate values each time data is added by a insert operations. Insert operations that would generate duplicate key values are rolled back, and the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. This is true even if the insert operation changes many rows but causes only one duplicate. If an attempt is made to enter data for which there is a unique index and the `IGNORE_DUP_KEY` clause is set to ON, only the rows violating the UNIQUE index fail.
 
 ## Partitioned Indexes
 Partitioned indexes are created and maintained in a similar manner to partitioned tables, but like ordinary indexes, they are handled as separate database objects. You can have a partitioned index on a table that is not partitioned, and you can have a nonpartitioned index on a table that is partitioned.

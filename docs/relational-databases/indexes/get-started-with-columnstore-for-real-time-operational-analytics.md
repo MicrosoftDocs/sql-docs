@@ -101,6 +101,12 @@ There is no time delay when analytics and OLTP workloads run on the same underly
   
 -   [Columnstore index and the merge policy for rowgroups](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
+## Videos
+ A mini-series on Data Exposed goes into more details on some of the capabilities and considerations. The first video is below, but you can also find [Part 2: Optimize existing databases and applications with operational analytics](https://channel9.msdn.com/Shows/Data-Exposed/Optimize-Existing-Databases-and-Applications-with-Operational-Analytics-in-Azure-SQL-Part-2) and [Part 3: How to create operational analytics with Window Functions](https://channel9.msdn.com/Shows/Data-Exposed/How-to-Create-Operational-Analytics-with-Window-Functions-in-Azure-SQL-Part-3) for more. 
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-Azure-SQL-Enables-Real-time-Operational-Analytics-HTAP-Part-1/player?format=ny]
+ 
+
 ## Performance tip #1: Use filtered indexes to improve query performance  
  Running real-time operational analytics can impact the performance of the OLTP workload. This impact should be minimal. The example below shows how to use filtered indexes to minimize impact of nonclustered columnstore index on transactional workload while still delivering analytics in real time.  
   

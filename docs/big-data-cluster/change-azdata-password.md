@@ -1,10 +1,10 @@
 ---
 title: Update AZDATA_PASSWORD
 description: Update the `AZDATA_PASSWORD` manually
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
-ms.date: 03/05/2021
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 06/28/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -88,6 +88,9 @@ After following the steps to update AZDATA_PASSWORD, you will see that [Grafana]
 ## Update Grafana password
 
 Follow these options for manually updating the password for [Grafana](app-monitor.md).
+
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana, you must use a chromium-based browser including Microsoft Edge. In Grafana, you will see a black page with errors when using an unsupported browser. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers).
 
 1. The htpasswd utility is required. You can install this on any client machine.
   
@@ -187,7 +190,7 @@ sudo yum install httpd-tools
 Follow these options for manually updating the password for [Kibana](cluster-logging-kibana.md).
 
 > [!NOTE]
-> The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana, you must use a chromium-based browser including Microsoft Edge. You will see a blank page when loading the dashboards using an unsupported browser. See [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 1. Open the Kibana URL.
     

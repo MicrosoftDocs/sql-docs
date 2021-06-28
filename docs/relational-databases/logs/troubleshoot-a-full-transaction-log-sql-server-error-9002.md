@@ -101,7 +101,7 @@ BEGIN
     BEGIN
         select 'Is '+ @recovery_model_desc +' recovery model the intended choice for your database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/recovery-models-sql-server?view=sql-server-ver15'
         select 'To truncate the log consider performing a transaction log backup on database ''' + @dbname+ ''' which is in ' + @recovery_model_desc +' recovery model. Be mindful of any existing log backup chains that could be broken' as Recommendation
-        select 'BACKUP LOG ' + @dbname + ' TO DISK = ''some_volume:\some_folder' + @dbname + '_LOG.bak''' as BackupLogCommand
+        select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder' + @dbname + '_LOG.trn''' as BackupLogCommand
     END
     else if (@log_reuse_wait = 3)
     BEGIN
@@ -146,7 +146,7 @@ BEGIN
     BEGIN
         select 'The oldest page on the database might be older than the checkpoint log sequence number (LSN). In this case, the oldest page can delay log truncation.' as Finding
         select 'This state should be short-lived, but if you find it is taking a long time, you can consider disabling Indirect Checkpoint temporarily' as Recommendation
-        select 'ALTER DATABASE ' +@dbname+ ' SET TARGET_RECOVERY_TIME = 0' as DisableIndirectCheckpointTemporarily
+        select 'ALTER DATABASE [' +@dbname+ '] SET TARGET_RECOVERY_TIME = 0' as DisableIndirectCheckpointTemporarily
     END    
     else if (@log_reuse_wait = 16)
     BEGIN

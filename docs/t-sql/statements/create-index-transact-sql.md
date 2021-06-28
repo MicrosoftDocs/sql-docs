@@ -124,9 +124,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_NORECOMPUTE = { ON | OFF }
   | STATISTICS_INCREMENTAL = { ON | OFF }
   | DROP_EXISTING = { ON | OFF }
-    | ONLINE = {   
-          ON [ ( <low_priority_lock_wait> ) ]   
-        | OFF } 
+  | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
   | RESUMABLE = { ON | OFF }
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
@@ -484,7 +482,7 @@ ON
 Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created; or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
 
 > [!NOTE]
->  Online index creation can set the *low_priority_lock_wait* options, see [WAIT_AT_LOW_PRIORITY with online index operations](alter-index-transact-sql.md#wait-at-low-priority). 
+>  Online index creation can set the `low_priority_lock_wait` options, see [WAIT_AT_LOW_PRIORITY with online index operations](alter-index-transact-sql.md#wait-at-low-priority). 
 
 OFF      
 Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered index, or rebuilds or drops a nonclustered index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index acquires a Shared (S) lock on the table. This prevents updates to the underlying table but allows read operations, such as SELECT statements.
@@ -499,7 +497,7 @@ Indexes, including indexes on global temp tables, can be created online except f
 - Disabled clustered indexes
 - Columnstore indexes
 - Clustered index, if the underlying table contains LOB data types (**image**, **ntext**, **text**) and spatial data types
-- **varchar(max)** and **varbinary(max)** columns cannot be part of an index key. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the **ONLINE** option. 
+- **varchar(max)** and **varbinary(max)** columns cannot be part of an index key. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the `ONLINE` option. 
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -515,7 +513,7 @@ Index operation is resumable.
  OFF      
 Index operation is not resumable.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**)   
+MAX_DURATION **=** *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`)   
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -757,9 +755,27 @@ The following guidelines apply for performing index operations online:
 - The underlying table cannot be altered, truncated, or dropped while an online index operation is in process.
 - Additional temporary disk space is required during the index operation.
 - Online operations can be performed on partitioned indexes and indexes that contain persisted computed columns, or included columns.
-- The \<low_priority_lock_wait> argument option allows you to decide how the index operation can proceed when blocked on the SCH-M lock. This is currently supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only.
+- The `low_priority_lock_wait` argument option allows you to decide how the index operation can proceed when blocked on the SCH-M lock. This is currently supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only.
 
 For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
+
+#### Resources
+The following resources are required for resumable online index create operation:
+
+- Additional space required to keep the index being built, including the time when index is being paused
+- Additional log throughput during the sorting phase. The overall log space usage for resumable index is less compared to regular online index create and allows log truncation during this operation.
+- A DDL state preventing any DDL modification
+- Ghost cleanup is blocked on the in-build index for the duration of the operation both while paused and while the operation is running.
+
+#### Current functional limitations
+The following functionality is disabled for resumable index create operations:
+
+- After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
+- Create an index that contains:
+
+  - Computed or TIMESTAMP column(s) as key columns
+  - LOB column as included column for resumable index create
+  - Filtered index
 
 ### <a name="resumable-indexes"></a>Resumable index operations
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -785,13 +801,13 @@ To indicate that an index create is executed as resumable operation and to check
   
 **Applies to**: This syntax for `CREATE INDEX` currently applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only. For `ALTER INDEX`, this syntax applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, see [ALTER INDEX](alter-index-transact-sql.md).
 
- The \<low_priority_lock_wait> syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. 
+ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. 
 
- The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the S-lock and Sch-M locks required for online index creation and allows them to select one of 3 options. In all 3 cases, if during the wait time `( (MAX_DURATION = n [minutes]) )`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
+ The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the S-lock and Sch-M locks required for online index creation and allows them to select one of 3 options. In all 3 cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
 
  Online index creation must aquire certain locks to begin, and will wait for other blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index create operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. 
 
-`WAIT_AT_LOW_PRIORITY` used with **ONLINE=ON** only.  
+`WAIT_AT_LOW_PRIORITY` used with `ONLINE=ON` only.  
   
  MAX_DURATION = *time* [**MINUTES**]  
 
@@ -807,24 +823,6 @@ To indicate that an index create is executed as resumable operation and to check
   
  BLOCKERS  
  Kill all user transactions that block the online index rebuild DDL operation so that the operation can continue. The **BLOCKERS** option requires the login to have `ALTER ANY CONNECTION` permission.  
-
-#### Resources
-The following resources are required for resumable online index create operation:
-
-- Additional space required to keep the index being built, including the time when index is being paused
-- Additional log throughput during the sorting phase. The overall log space usage for resumable index is less compared to regular online index create and allows log truncation during this operation.
-- A DDL state preventing any DDL modification
-- Ghost cleanup is blocked on the in-build index for the duration of the operation both while paused and while the operation is running.
-
-#### Current functional limitations
-The following functionality is disabled for resumable index create operations:
-
-- After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
-- Create an index that contains:
-
-  - Computed or TIMESTAMP column(s) as key columns
-  - LOB column as included column for resumable index create
-  - Filtered index
 
 ## Row and Page Locks Options
 When `ALLOW_ROW_LOCKS = ON` and `ALLOW_PAGE_LOCK = ON`, row-, page-, and table-level locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.

@@ -89,9 +89,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | STATISTICS_INCREMENTAL = { ON | OFF }  
-    | ONLINE = {   
-          ON [ ( <low_priority_lock_wait> ) ]   
-        | OFF } 
+    | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
     | RESUMABLE = { ON | OFF } 
     | MAX_DURATION = <time> [MINUTES}     
     | ALLOW_ROW_LOCKS = { ON | OFF }  
@@ -420,7 +418,7 @@ Indexes, including indexes on global temp tables, can be rebuilt online except f
 - Initial unique clustered index on a view
 - Columnstore indexes
 - Clustered index, if the underlying table contains LOB data types (**image**, **ntext**, **text**) and spatial data types
-- **varchar(max)** and **varbinary(max)** columns cannot be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the **ONLINE** option. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not permit the **ONLINE** option when the base table contains **varchar(max)** or **varbinary(max)** columns
+- **varchar(max)** and **varbinary(max)** columns cannot be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the `ONLINE` option. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not permit the `ONLINE` option when the base table contains **varchar(max)** or **varbinary(max)** columns
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -436,7 +434,7 @@ Index operation is resumable.
  OFF
 Index operation is not resumable.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+MAX_DURATION **=** *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`).
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -706,11 +704,11 @@ The following functionality is disabled for resumable index rebuild operations
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-The \<low_priority_lock_wait> syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. 
+The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. 
 
  In order to execute the DDL statement for an online index rebuild, all active blocking transactions running on a particular table must be completed. When the online index rebuild executes, it blocks all new transactions that are ready to start execution on this table. Although the duration of the lock for online index rebuild is very short, waiting for all open transactions on a given table to complete and blocking the new transactions to start, might significantly affect the throughput, causing a workload slow down or timeout, and significantly limit access to the underlying table. 
 
- The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the S-lock and Sch-M locks required for online index rebuilds and allows them to select one of 3 options. In all 3 cases, if during the wait time `( (MAX_DURATION = n [minutes]) )`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
+ The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the S-lock and Sch-M locks required for online index rebuilds and allows them to select one of 3 options. In all 3 cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
 
  `WAIT_AT_LOW_PRIORITY` used with `ONLINE=ON` only.  
    

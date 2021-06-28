@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 06/17/2021 
+ms.date: 06/28/2021
 ---
 
 # Release notes for Azure Data Studio
@@ -54,7 +54,7 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/new/choose) for other known issues and to provide feedback to the product team.
 
-## Previous Azure Data Studio releases
+## Previous Azure Data Studio release and updates
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------
@@ -86,6 +86,11 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
 | [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |
 
+You can [download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases). 
+
+> [!Note]
+> All previous versions of Azure Data Studio are not supported.
+
 ### May 2021
 
 Azure Data Studio 1.29.0 is the latest general availability (GA) release.
@@ -98,6 +103,7 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 | New item | Details |
 |----------|---------|
 | Notebooks | Added run with parameters action. Learn more [here](./notebooks/run-with-parameters.md) |
+
 #### Bug fixes in 1.29.0
 
 | New Item | Details |
@@ -730,6 +736,7 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 
 See one of the following quickstarts to get started:
 
+- [Download Azure Data Studio](download-azure-data-studio.md)
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Synapse Analytics](quickstart-sql-dw.md)

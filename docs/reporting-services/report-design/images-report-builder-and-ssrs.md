@@ -12,7 +12,7 @@ ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Images (Report Builder and SSRS)
+# Images (Report Builder)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrb-applies-to-report-builder-yes](../../includes/ssrb-applies-to-report-builder-yes.md)] [!INCLUDE [ssrb-applies-to-power-bi-rb-yes](../../includes/ssrb-applies-to-power-bi-rb-yes.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

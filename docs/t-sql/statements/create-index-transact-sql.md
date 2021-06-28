@@ -216,12 +216,12 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 ## Arguments
 
-UNIQUE      
+#### UNIQUE      
 Creates a unique index on a table or view. A unique index is one in which no two rows are permitted to have the same index key value. A clustered index on a view must be unique.
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not allow creating a unique index on columns that already include duplicate values, whether or not IGNORE_DUP_KEY is set to ON. If this is tried, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. Duplicate values must be removed before a unique index can be created on the column or columns. Columns that are used in a unique index should be set to NOT NULL, because multiple null values are considered duplicates when a unique index is created.
 
-CLUSTERED      
+#### CLUSTERED      
 Creates an index in which the logical order of the key values determines the physical order of the corresponding rows in a table. The bottom, or leaf, level of the clustered index contains the actual data rows of the table. A table or view is allowed one clustered index at a time.
 
 A view with a unique clustered index is called an indexed view. Creating a unique clustered index on a view physically materializes the view. A unique clustered index must be created on a view before any other indexes can be defined on the same view. For more information, see [Create Indexed Views](../../relational-databases/views/create-indexed-views.md).
@@ -235,7 +235,7 @@ If `CLUSTERED` is not specified, a nonclustered index is created.
 
 In some cases creating a clustered index can enable previously disabled indexes. For more information, see [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md) and [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 
-NONCLUSTERED      
+#### NONCLUSTERED      
 Creates an index that specifies the logical ordering of a table. With a nonclustered index, the physical order of the data rows is independent of their indexed order.
 
 Each table can have up to 999 nonclustered indexes, regardless of how the indexes are created: either implicitly with PRIMARY KEY and UNIQUE constraints, or explicitly with `CREATE INDEX`.
@@ -244,10 +244,10 @@ For indexed views, nonclustered indexes can be created only on a view that has a
 
 If not otherwise specified, the default index type is NONCLUSTERED.
 
-*index_name*      
+#### *index_name*      
  Is the name of the index. Index names must be unique within a table or view, but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).
 
-*column*      
+#### *column*      
  Is the column or columns on which the index is based. Specify two or more column names to create a composite index on the combined values in the specified columns. List the columns to be included in the composite index, in sort-priority order, inside the parentheses after *table_or_view_name*.
 
 Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].
@@ -256,10 +256,10 @@ Columns that are of the large object (LOB) data types **ntext**, **text**, **var
 
 You can create indexes on CLR user-defined type columns if the type supports binary ordering. You can also create indexes on computed columns that are defined as method invocations off a user-defined type column, as long as the methods are marked deterministic and do not perform data access operations. For more information about indexing CLR user-defined type columns, see [CLR User-defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
-[ **ASC** | DESC ]      
+#### [ **ASC** | DESC ]      
 Determines the ascending or descending sort direction for the particular index column. The default is ASC.
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)**      
+#### INCLUDE **(**_column_ [ **,**... *n* ] **)**      
 Specifies the non-key columns to be added to the leaf level of the nonclustered index. The nonclustered index can be unique or non-unique.
 
 Column names cannot be repeated in the INCLUDE list and cannot be used simultaneously as both key and non-key columns. Nonclustered indexes always contain the clustered index columns if a clustered index is defined on the table. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
@@ -270,10 +270,10 @@ Computed columns that are deterministic and either precise or imprecise can be i
 
 For information on creating an XML index, see [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
-WHERE \<filter_predicate>      
+#### WHERE \<filter_predicate>      
 Creates a filtered index by specifying which rows to include in the index. The filtered index must be a nonclustered index on a table. Creates filtered statistics for the data rows in the filtered index.
 
-The filter predicate uses simple comparison logic and cannot reference a computed column, a UDT column, a spatial data type column, or a hierarchyID data type column. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.
+The filter predicate uses simple comparison logic and cannot reference a computed column, a UDT column, a spatial data type column, or a hierarchyID data type column. Comparisons using `NULL` literals are not allowed with the comparison operators. Use the `IS NULL` and `IS NOT NULL` operators instead.
 
 Here are some examples of filter predicates for the `Production.BillOfMaterials` table:
 
@@ -285,9 +285,9 @@ WHERE ComponentID IN (533, 324, 753)
 WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 ```
 
-Filtered indexes do not apply to XML indexes and full-text indexes. For UNIQUE indexes, only the selected rows must have unique index values. Filtered indexes do not allow the IGNORE_DUP_KEY option.
+Filtered indexes do not apply to XML indexes and full-text indexes. For UNIQUE indexes, only the selected rows must have unique index values. Filtered indexes do not allow the `IGNORE_DUP_KEY` option.
 
-ON *partition_scheme_name* **( _column_name_ )**      
+#### ON *partition_scheme_name* **( _column_name_ )**      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -303,13 +303,13 @@ If _partition_scheme_name_ or _filegroup_ is not specified and the table is part
 
 For more information about partitioning indexes, [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
-ON _filegroup_name_      
+#### ON _filegroup_name_      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later)
 
 Creates the specified index on the specified filegroup. If no location is specified and the table or view is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.
 
-ON **"**default**"**      
+#### ON **"**default**"**      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -320,7 +320,7 @@ The term default, in this context, is not a keyword. It is an identifier for the
 > [!NOTE]
 > "default" does not indicate the database default filegroup in the context of `CREATE INDEX`. This differs from `CREATE TABLE`, where "default" locates the table on the database default filegroup.
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+#### [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later)
 
@@ -336,17 +336,17 @@ If the table is not partitioned, the FILESTREAM column cannot be partitioned. FI
 
 For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).
 
-**\<object>::=**      
+#### **\<object>::=**      
 
 Is the fully qualified or nonfully qualified object to be indexed.
 
-_database_name_      
+#### _database_name_      
 Is the name of the database.
 
-*schema_name*      
+#### *schema_name*      
 Is the name of the schema to which the table or view belongs.
 
-*table_or_view_name*      
+#### *table_or_view_name*      
 Is the name of the table or view to be indexed.
 
 The view must be defined with SCHEMABINDING to create an index on it. A unique clustered index must be created on a view before any nonclustered index is created. For more information about indexed views, see the Remarks section.
@@ -355,10 +355,10 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the object c
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format _database_name_.[_schema_name_]._object_name_ when the *database_name* is the current database or the _database_name_ is `tempdb` and the _object_name_ starts with #.
 
-**\<relational_index_option\>::=**      
+#### **\<relational_index_option\>::=**      
 Specifies the options to use when you create the index.
 
-PAD_INDEX = { ON | **OFF** }      
+#### PAD_INDEX = { ON | **OFF** }      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -374,7 +374,7 @@ The `PAD_INDEX` option is useful only when FILLFACTOR is specified, because `PAD
 
 In backward compatible syntax, `WITH PAD_INDEX` is equivalent to `WITH PAD_INDEX = ON`.
 
-FILLFACTOR = *fillfactor*   
+#### FILLFACTOR = *fillfactor*   
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -389,11 +389,11 @@ To view the fill factor setting, use `fill_factor` in `sys.indexes`.
 
 For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
 
-SORT_IN_TEMPDB = { ON | **OFF** }      
+#### SORT_IN_TEMPDB = { ON | **OFF** }      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Specifies whether to store temporary sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale.For all index build operations in Hyperscale, SORT_IN_TEMPDB is always ON, regardless of the option specified unless resumable index rebuild is used.
+Specifies whether to store temporary sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale.For all index build operations in Hyperscale, `SORT_IN_TEMPDB` is always ON, regardless of the option specified unless resumable index rebuild is used.
 
 ON      
 The intermediate sort results that are used to build the index are stored in **tempdb**. This may reduce the time required to create an index if **tempdb** is on a different set of disks than the user database. However, this increases the amount of disk space that is used during the index build.
@@ -405,7 +405,8 @@ In addition to the space required in the user database to create the index, **te
 
 In backward compatible syntax, `WITH SORT_IN_TEMPDB` is equivalent to `WITH SORT_IN_TEMPDB = ON`.
 
-IGNORE_DUP_KEY = { ON | **OFF** }      
+#### IGNORE_DUP_KEY = { ON | **OFF** }      
+
 Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The option has no effect when executing [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), or [UPDATE](../../t-sql/queries/update-transact-sql.md). The default is OFF.
 
 ON      
@@ -414,13 +415,13 @@ A warning message will occur when duplicate key values are inserted into a uniqu
 OFF      
 An error message will occur when duplicate key values are inserted into a unique index. The entire INSERT operation will be rolled back.
 
-IGNORE_DUP_KEY cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.
+`IGNORE_DUP_KEY` cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.
 
 To view `IGNORE_DUP_KEY`, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).
 
 In backward compatible syntax, `WITH IGNORE_DUP_KEY` is equivalent to `WITH IGNORE_DUP_KEY = ON`.
 
-STATISTICS_NORECOMPUTE = { ON | **OFF**}      
+#### STATISTICS_NORECOMPUTE = { ON | **OFF**}      
 Specifies whether distribution statistics are recomputed. The default is OFF.
 
 ON      
@@ -436,7 +437,7 @@ To restore automatic statistics updating, set the `STATISTICS_NORECOMPUTE` to OF
 
 In backward compatible syntax, `WITH STATISTICS_NORECOMPUTE` is equivalent to `WITH STATISTICS_NORECOMPUTE = ON`.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** }     
+#### STATISTICS_INCREMENTAL = { ON | **OFF** }     
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -452,7 +453,8 @@ If per partition statistics are not supported the option is ignored and a warnin
 - Statistics created on internal tables.
 - Statistics created with spatial indexes or XML indexes.
 
-DROP_EXISTING = { ON | **OFF** }      
+#### DROP_EXISTING = { ON | **OFF** }      
+
 Is an option to drop and rebuild the existing clustered or nonclustered index with modified column specifications, and keep the same name for the index. The default is OFF.
 
 ON      
@@ -472,7 +474,8 @@ With `DROP_EXISTING`, you cannot change:
 
 In backward compatible syntax, `WITH DROP_EXISTING` is equivalent to `WITH DROP_EXISTING = ON`.
 
-ONLINE = { ON | **OFF** }      
+#### ONLINE = { ON | **OFF** }      
+
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.
 
 > [!IMPORTANT]
@@ -501,7 +504,7 @@ Indexes, including indexes on global temp tables, can be created online except f
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
-RESUMABLE **=** { ON | **OFF**}      
+#### RESUMABLE **=** { ON | **OFF**}      
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -513,7 +516,7 @@ Index operation is resumable.
  OFF      
 Index operation is not resumable.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`)   
+#### MAX_DURATION **=** *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`)   
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -525,7 +528,8 @@ Indicates time (an integer value specified in minutes) that a resumable online i
 > [!NOTE] 
 > Resumable online index rebuilds are not supported on columnstore indexes.
 
-ALLOW_ROW_LOCKS = { **ON** | OFF }      
+#### ALLOW_ROW_LOCKS = { **ON** | OFF }      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether row locks are allowed. The default is ON.
@@ -536,7 +540,8 @@ Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includ
 OFF      
 Row locks are not used.
 
-ALLOW_PAGE_LOCKS = { **ON** | OFF }      
+#### ALLOW_PAGE_LOCKS = { **ON** | OFF }      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether page locks are allowed. The default is ON.
@@ -547,12 +552,14 @@ Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../inclu
 OFF      
 Page locks are not used.
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
+#### OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](#sequential-keys) section for more information.
 
-MAXDOP = *max_degree_of_parallelism*      
+#### MAXDOP = *max_degree_of_parallelism*      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
@@ -573,7 +580,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 > [!NOTE]
 > Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-DATA_COMPRESSION      
+#### DATA_COMPRESSION      
 Specifies the data compression option for the specified index, partition number, or range of partitions. The options are as follows:
 
 NONE      
@@ -587,20 +594,21 @@ Index or specified partitions are compressed by using page compression.
 
 For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**      
+#### ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Specifies the partitions to which the DATA_COMPRESSION setting applies. If the index is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option applies to all partitions of a partitioned index.
+Specifies the partitions to which the `DATA_COMPRESSION` setting applies. If the index is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option applies to all partitions of a partitioned index.
 
 \<partition_number_expression> can be specified in the following ways:
 
-- Provide the number for a partition, for example: ON PARTITIONS (2).
-- Provide the partition numbers for several individual partitions separated by commas, for example: ON PARTITIONS (1, 5).
-- Provide both ranges and individual partitions, for example: ON PARTITIONS (2, 4, 6 TO 8).
+- Provide the number for a partition, for example: `ON PARTITIONS (2)`.
+- Provide the partition numbers for several individual partitions separated by commas, for example: `ON PARTITIONS (1, 5)`.
+- Provide both ranges and individual partitions, for example: `ON PARTITIONS (2, 4, 6 TO 8)`.
 
 \<range> can be specified as partition numbers separated by the word TO, for example: `ON PARTITIONS (6 TO 8)`.
 
- To set different types of data compression for different partitions, specify the DATA_COMPRESSION option more than once, for example:
+ To set different types of data compression for different partitions, specify the `DATA_COMPRESSION` option more than once, for example:
 
 ```sql
 REBUILD WITH

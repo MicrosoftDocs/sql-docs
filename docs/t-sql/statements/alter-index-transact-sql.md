@@ -220,7 +220,7 @@ Specifies the index will be rebuilt using the same columns, index type, uniquene
 For columnstore indexes, the `REBUILD` operation:  
   
 -  Does not use the sort order.  
--  Acquires an exclusive lock on the table or partition while the `REBUILD` occurs.  The data is "offline" and unavailable during the `REBUILD`, even when using NOLOCK, Read Committed Snapshot Isolation (RCSI), or Snapshot Isolation (SI).  
+-  Acquires an exclusive lock on the table or partition while the `REBUILD` occurs.  The data is "offline" and unavailable during the `REBUILD`, even when using NOLOCK, Read Committed Snapshot isolation (RCSI), or Snapshot isolation (SI).  
 -  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the `REBUILD` is taking place. When the `REBUILD` is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original columnstore index.  
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
@@ -273,7 +273,7 @@ LOB_COMPACTION = ON
 -   Specifies to compact all pages that contain data of these large object (LOB) data types: image, text, ntext, varchar(max), nvarchar(max), varbinary(max), and xml. Compacting this data can reduce the data size on disk.  
 -   For a clustered index, this compacts all LOB columns that are contained in the table.  
 -   For a nonclustered index, this compacts all LOB columns that are nonkey (included) columns in the index.  
--   REORGANIZE ALL performs LOB_COMPACTION on all indexes. For each index, this compacts all LOB columns in the clustered index, underlying table, or included columns in a nonclustered index.  
+-   `REORGANIZE ALL` performs LOB_COMPACTION on all indexes. For each index, this compacts all LOB columns in the clustered index, underlying table, or included columns in a nonclustered index.  
   
 LOB_COMPACTION = OFF  
   
@@ -694,7 +694,7 @@ The following functionality is disabled for resumable index rebuild operations
    -    Rebuilding an index that is disabled is not supported with RESUMABLE=ON
    -    `ALTER INDEX REBUILD ALL` command
    -    `ALTER TABLE` using index `REBUILD`
-   -    DDL command with `RESUMEABLE = ON` cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit  block)
+   -    DDL command with `RESUMEABLE = ON` cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit block)
    -    Rebuild an index that has computed or TIMESTAMP column(s) as key columns.
 -    In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation 
 

@@ -43,7 +43,7 @@ ms.author: wiassaf
 ## Syntax  
   
 ```syntaxsql
--- User-defined Data Type Syntax    
+-- User-defined Data Type syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
     [
@@ -117,7 +117,7 @@ column_name AS computed_column_expression
 ```  
   
 ```syntaxsql
--- User-defined Memory Optimized Table Types Syntax  
+-- User-defined Memory Optimized Table Types syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  
     | [ <table_constraint> ] [ ,... n ]    
@@ -130,33 +130,38 @@ column_name <data_type>
     [ COLLATE collation_name ] [ NULL | NOT NULL ]    [  
       [ IDENTITY [ (1 , 1) ]  
     ]  
-    [ <column_constraint> [ ... n ] ]    [ <column_index> ]  
+    [ <column_constraint> [, ... n ] ]    [ <column_index> ]  
   
 <data type> ::=  
  [type_schema_name . ] type_name [ ( precision [ , scale ]) ]  
   
 <column_constraint> ::=  
-{ PRIMARY KEY {   NONCLUSTERED HASH WITH ( BUCKET_COUNT = bucket_count ) 
-                | NONCLUSTERED } }  
+{ PRIMARY KEY { NONCLUSTERED HASH WITH ( BUCKET_COUNT = bucket_count ) 
+                | NONCLUSTERED } 
+}  
   
 < table_constraint > ::=  
 { PRIMARY KEY { NONCLUSTERED HASH (column [ ,... n ] ) 
                    WITH ( BUCKET_COUNT = bucket_count ) 
-               | NONCLUSTERED  ( column [ ASC | DESC ] [ ,... n ] )  } }  
+               | NONCLUSTERED ( column [ ASC | DESC ] [ ,... n ] ) 
+	       } 
+}  
   
 <column_index> ::=  
   INDEX index_name  
-{ { [ NONCLUSTERED ] HASH WITH ( BUCKET_COUNT = bucket_count ) 
-     | NONCLUSTERED } }  
+{ [ NONCLUSTERED ] HASH WITH ( BUCKET_COUNT = bucket_count ) 
+     | NONCLUSTERED 
+}  
   
 < table_index > ::=  
   INDEX constraint_name  
-{ { [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) 
- |  [NONCLUSTERED]  (column [ ASC | DESC ] [ ,... n ] )} }  
+{ [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) 
+	|  [ NONCLUSTERED ]  ( column [ ASC | DESC ] [ ,... n ] ) 
+}  
   
 <table_option> ::=  
 {  
-    [MEMORY_OPTIMIZED = { ON | OFF}]  
+    [ MEMORY_OPTIMIZED = { ON | OFF } ]  
 }  
 ```  
   

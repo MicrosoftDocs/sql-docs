@@ -2,7 +2,7 @@
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
@@ -30,6 +30,16 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.8, July 2021
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 21.04, Alpine 3.13 |
+| Replication option added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| KeepAlive and KeepAliveInterval options added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.7.2, March 2021
 

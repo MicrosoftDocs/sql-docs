@@ -101,7 +101,7 @@ column_name <data_type>
     [ FILESTREAM ]
     [ COLLATE collation_name ]
     [ SPARSE ]
-    [ MASKED WITH ( FUNCTION = ' mask_function ') ]
+    [ MASKED WITH ( FUNCTION = 'mask_function') ]
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
     [ IDENTITY [ ( seed , increment ) ]
     [ NOT FOR REPLICATION ]
@@ -117,13 +117,14 @@ column_name <data_type>
     [ <column_index> ]
   
 <data_type> ::=
-[ type_schema_name . ] type_name
+[ type_schema_name. ] type_name
     [ ( precision [ , scale ] | max |
         [ { CONTENT | DOCUMENT } ] xml_schema_collection ) ]
   
 <column_constraint> ::=
 [ CONSTRAINT constraint_name ]
-{     { PRIMARY KEY | UNIQUE }
+{ 
+   { PRIMARY KEY | UNIQUE }
         [ CLUSTERED | NONCLUSTERED ]
         [
             WITH FILLFACTOR = fillfactor
@@ -217,7 +218,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 
 <table_option> ::=
 {  
-    [DATA_COMPRESSION = { NONE | ROW | PAGE }
+    [ DATA_COMPRESSION = { NONE | ROW | PAGE }
       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
       [ , ...n ] ) ] ]
     [ FILETABLE_DIRECTORY = <directory_name> ]
@@ -225,11 +226,14 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = <constraint_name> ]
     [ FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = <constraint_name> ]
     [ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = <constraint_name> ]
-    [ SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name.history_table_name
-        [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] ]
+    [ SYSTEM_VERSIONING = ON 
+        [ ( HISTORY_TABLE = schema_name.history_table_name
+          [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
+	) ] 
+    ]
     [ REMOTE_DATA_ARCHIVE =
       {
-          ON [ ( <table_stretch_options> [,...n] ) ]
+        ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
@@ -239,8 +243,10 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
              RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS 
                               | MONTH | MONTHS | YEAR | YEARS }
         ) }  
-     ]
-    [ LEDGER = ON [ ( <ledger_option> [,...n ] ) ] | OFF ]
+    ]
+    [ LEDGER = ON [ ( <ledger_option> [,...n ] ) ] 
+    | OFF 
+    ]
 }
 
 <ledger_option>::= 
@@ -342,11 +348,11 @@ column_name <data_type>
 
 <column_index> ::=
   INDEX index_name
-{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH ( BUCKET_COUNT = <bucket_count> )}
+{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH ( BUCKET_COUNT = bucket_count ) }
 
 <table_index> ::=
   INDEX index_name
-{   [ NONCLUSTERED ] HASH ( column [ ,... n ] ) WITH ( BUCKET_COUNT = <bucket_count> )
+{   [ NONCLUSTERED ] HASH ( column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
   | [ NONCLUSTERED ] ( column [ ASC | DESC ] [ ,... n ] )
       [ ON filegroup_name | default ]
   | CLUSTERED COLUMNSTORE [ WITH ( COMPRESSION_DELAY = { 0 | delay [ Minutes ] } ) ]
@@ -358,7 +364,7 @@ column_name <data_type>
 {  
     MEMORY_OPTIMIZED = ON
   | DURABILITY = { SCHEMA_ONLY | SCHEMA_AND_DATA }
-  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = <schema_name>.<history_table_name>
+  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name.history_table_name
         [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]
   
 }

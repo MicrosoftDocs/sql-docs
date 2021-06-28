@@ -54,7 +54,7 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/new/choose) for other known issues and to provide feedback to the product team.
 
-## Previous Azure Data Studio release and updates
+## Previous Azure Data Studio releases and updates
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------
@@ -86,7 +86,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
 | [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |
 
-You can [download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases). 
+[Download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases).
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.

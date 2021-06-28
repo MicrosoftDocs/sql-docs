@@ -1,6 +1,6 @@
 ---
-title: "Images (Report Builder) | Microsoft Docs"
-description: Find out about images as items in Report Builder. These items contain a reference to an image embedded in a report or stored in a database.
+title: "Images in paginated reports (Report Builder) | Microsoft Docs"
+description: Find out about images as items in paginated reports in Report Builder. These items contain a reference to an image embedded in a report or stored in a database.
 ms.date: 06/24/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,13 +12,13 @@ ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Images (Report Builder)
+# Images in paginated reports (Report Builder)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrb-applies-to-report-builder-yes](../../includes/ssrb-applies-to-report-builder-yes.md)] [!INCLUDE [ssrb-applies-to-power-bi-rb-yes](../../includes/ssrb-applies-to-power-bi-rb-yes.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  An image is a paginated report item that contains a reference to an image that is embedded in the report, stored in a database, stored on the report server, or stored elsewhere on the Web. An image can be a picture that is repeated with rows of data. You can also use an image as a background for certain report items.  
+An image is a paginated report item that contains a reference to an image that is embedded in the report, stored in a database, stored on the report server, or stored elsewhere on the Web. An image can be a picture that is repeated with rows of data. You can also use an image as a background for certain report items.  
   
- Storing logos on a server is a good idea because you can use the same logo in many reports.  
+Storing logos on a server is a good idea because you can use the same logo in many reports.  
   
   
 ##  <a name="ComparingImages"></a> Comparing External, Embedded, and Data-Bound Images  

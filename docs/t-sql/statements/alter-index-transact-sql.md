@@ -172,10 +172,10 @@ ALTER INDEX { index_name | ALL }
 
 ## Arguments
 
- *index_name*  
+#### *index_name*  
  Is the name of the index. Index names must be unique within a table or view but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- ALL  
+#### ALL  
  Specifies all indexes associated with the table or view regardless of the index type. Specifying ALL causes the statement to fail if one or more indexes are in an offline or read-only filegroup or the specified operation is not allowed on one or more index types. The following table lists the index operations and disallowed index types.  
   
 |Using the keyword ALL with this operation|Fails if the table has one or more|  
@@ -193,18 +193,18 @@ ALTER INDEX { index_name | ALL }
 
  If ALL is specified with PARTITION = *partition_number*, all indexes must be aligned. This means that they are partitioned based on equivalent partition functions. Using ALL with PARTITION causes all index partitions with the same *partition_number* to be rebuilt or reorganized. For more information about partitioned indexes, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- *database_name*  
+ #### *database_name*  
  Is the name of the database.  
   
- *schema_name*  
+ #### *schema_name*  
  Is the name of the schema to which the table or view belongs.  
   
- *table_or_view_name*  
+ #### *table_or_view_name*  
  Is the name of the table or view associated with the index. To display a report of the indexes on an object, use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supports the three-part name format database_name.[schema_name].table_or_view_name when the database_name is the current database or the database_name is tempdb and the table_or_view_name starts with #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ #### REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -225,7 +225,7 @@ For columnstore indexes, the `REBUILD` operation:
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
-PARTITION  
+#### PARTITION  
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -236,22 +236,23 @@ PARTITION
 > [!WARNING]
 > Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not supported. Doing so may cause degraded performance or excessive memory consumption during these operations. Microsoft recommends using only aligned indexes when the number of partitions exceed 1,000.  
   
- *partition_number*  
+####  *partition_number*  
    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Is the partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. *partition_number* must exist or the statement fails.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+####  WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  `SORT_IN_TEMPDB`, `MAXDOP`, and `DATA_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = *partition_number*)`. XML indexes cannot be specified in a single partition `REBUILD` operation.  
   
- DISABLE  
+ #### DISABLE  
+
  Marks the index as disabled and unavailable for use by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Any index can be disabled. The index definition of a disabled index remains in the system catalog with no underlying index data. Disabling a clustered index prevents user access to the underlying table data. To enable an index, use `ALTER INDEX REBUILD` or `CREATE INDEX WITH DROP_EXISTING`. For more information, see [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md) and [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
   
- REORGANIZE a **rowstore** index  
+ #### REORGANIZE a **rowstore** index  
  For rowstore indexes, REORGANIZE specifies to reorganize the index leaf level. The REORGANIZE operation is:  
   
 -   Always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the `ALTER INDEX REORGANIZE` transaction.
@@ -264,7 +265,7 @@ PARTITION
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-REORGANIZE WITH **(** LOB_COMPACTION = { **ON** | OFF } **)**  
+#### REORGANIZE WITH **(** LOB_COMPACTION = { **ON** | OFF } **)**  
  Applies to rowstore indexes.  
   
 LOB_COMPACTION = ON  
@@ -279,7 +280,7 @@ LOB_COMPACTION = OFF
 -   Pages that contain large object data are not compacted.  
 -   OFF has no effect on a heap.  
   
- REORGANIZE a **columnstore** index  
+#### REORGANIZE a **columnstore** index  
  For columnstore indexes, `REORGANIZE` compresses each CLOSED delta rowgroup into the columnstore as a compressed rowgroup. The `REORGANIZE` operation is always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the `ALTER INDEX REORGANIZE` transaction. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
 -   REORGANIZE is not required in order to move CLOSED delta rowgroups into compressed rowgroups. The background tuple-mover (TM) process wakes up periodically  to compress CLOSED delta rowgroups. We recommend using REORGANIZE when tuple-mover is falling behind. REORGANIZE can compress rowgroups more aggressively.  
@@ -293,7 +294,7 @@ For columnstore indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 -   For rowgroups in which 10% or more of the rows  have been logically deleted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will try to combine this rowgroup with one or more rowgroups. For example, rowgroup 1 is compressed with 500,000 rows and rowgroup 21 is compressed with the maximum of 1,048,576 rows. Rowgroup 21 has 60% of the rows deleted which leaves 409,830 rows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] favors combining these two rowgroups to compress a new rowgroup that has 909,830 rows.  
   
-REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
+#### REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Applies to columnstore indexes. 
 
  **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -305,10 +306,10 @@ COMPRESS_ALL_ROW_GROUPS provides a way to force OPEN or CLOSED delta rowgroups i
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+#### SET **(** \<set_index option> [ **,**... *n*] **)**  
  Specifies index options without rebuilding or reorganizing the index. SET cannot be specified for a disabled index.  
   
-PAD_INDEX = { ON | OFF }  
+#### PAD_INDEX = { ON | OFF }  
    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
@@ -322,7 +323,7 @@ PAD_INDEX = { ON | OFF }
   
  For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-FILLFACTOR = *fillfactor*  
+#### FILLFACTOR = *fillfactor*  
  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -335,7 +336,7 @@ FILLFACTOR = *fillfactor*
 > [!IMPORTANT]
 > Creating or altering a clustered index with a `FILLFACTOR` value affects the amount of storage space the data occupies, because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
   
- SORT_IN_TEMPDB = { ON | **OFF** }  
+#### SORT_IN_TEMPDB = { ON | **OFF** }  
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -351,7 +352,7 @@ FILLFACTOR = *fillfactor*
   
  For more information, see [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY **=** { ON | OFF }  
+#### IGNORE_DUP_KEY **=** { ON | OFF }  
  Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The default is OFF.  
   
  ON  
@@ -360,13 +361,13 @@ FILLFACTOR = *fillfactor*
  OFF  
  An error message will occur when duplicate key values are inserted into a unique index. The entire INSERT operation will be rolled back.  
   
- IGNORE_DUP_KEY cannot be set to ON   for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
+ IGNORE_DUP_KEY cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
  To view `IGNORE_DUP_KEY`, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  In backward compatible syntax, `WITH IGNORE_DUP_KEY` is equivalent to `WITH IGNORE_DUP_KEY = ON`.  
   
- STATISTICS_NORECOMPUTE **=** { ON | OFF }  
+#### STATISTICS_NORECOMPUTE **=** { ON | OFF }  
  Specifies whether distribution statistics are recomputed. The default is OFF.  
   
  ON  
@@ -380,7 +381,7 @@ FILLFACTOR = *fillfactor*
 > [!IMPORTANT]
 > Disabling automatic recomputation of distribution statistics may prevent the Query Optimizer from picking optimal execution plans for queries that involve the table.  
   
-STATISTICS_INCREMENTAL = { ON | **OFF** }  
+#### STATISTICS_INCREMENTAL = { ON | **OFF** }  
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -389,14 +390,14 @@ When **ON**, the statistics created are per partition statistics. When **OFF**, 
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
 -   Statistics created with indexes that are not partition-aligned with the base table  
--   Statistics created on Always On readable secondary databases  
+-   Statistics created on availability group readable secondary databases  
 -   Statistics created on read-only databases  
 -   Statistics created on filtered indexes  
 -   Statistics created on views  
 -   Statistics created on internal tables  
 -   Statistics created with spatial indexes or XML indexes  
   
- ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
+#### ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
  For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLINE is set to ON an error is raised.  
@@ -422,7 +423,7 @@ Indexes, including indexes on global temp tables, can be rebuilt online except f
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
-RESUMABLE **=** { ON | **OFF**}
+#### RESUMABLE **=** { ON | **OFF**}
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
@@ -434,7 +435,7 @@ Index operation is resumable.
  OFF
 Index operation is not resumable.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`).
+#### MAX_DURATION **=** *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`).
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -446,7 +447,7 @@ Indicates time (an integer value specified in minutes) that a resumable online i
 > [!NOTE] 
 > Resumable online index rebuilds are not supported on columnstore indexes.
 
-ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
+#### ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -458,7 +459,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
  OFF  
  Row locks are not used.  
   
-ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
+#### ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -473,13 +474,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 > [!NOTE]
 > An index cannot be reorganized when ALLOW_PAGE_LOCKS is set to OFF.  
 
- OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+#### OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. For more information, see [Sequential Keys](./create-index-transact-sql.md#sequential-keys).
 
- MAXDOP **=** max_degree_of_parallelism  
+#### MAXDOP **=** max_degree_of_parallelism  
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -504,7 +505,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
 > [!NOTE]
 > Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
+#### COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])  
   
@@ -514,7 +515,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
- DATA_COMPRESSION  
+ #### DATA_COMPRESSION  
  Specifies the data compression option for the specified index, partition number, or range of partitions. The options are as follows:  
   
  NONE  
@@ -540,7 +541,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+#### ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
@@ -565,19 +566,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
+#### ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Specifies whether an index or an index partition of an underlying table can be rebuilt online or offline. If `REBUILD ... ONLINE = ON ` is performed, the data in this table is available for queries and data modification during the index operation.  The default is **OFF**.  
   
  ON  
  Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source  table. An S-lock on the table is required in the Starting of the index rebuild and a Sch-M lock on the table at the end of the online index rebuild. Although both locks are short metadata locks, especially the Sch-M lock must wait for all blocking transactions to be completed. During the wait time the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.  
   
 > [!NOTE]
->  Online index rebuild can set the `low_priority_lock_wait` options, see [WAIT_AT_LOW_PRIORITY with online index operations](alter-index-transact-sql.md#wait-at-low-priority).
+>  Online index rebuild can set the `low_priority_lock_wait` options, see [WAIT_AT_LOW_PRIORITY with online index operations](#wait-at-low-priority).
   
  OFF  
  Table locks are applied for the duration of the index operation. This prevents all user access to the underlying table for the duration of the operation.  
  
- RESUME 
+#### RESUME 
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
@@ -591,13 +592,13 @@ WAIT_AT_LOW_PRIORITY used with `RESUMABLE=ON` and `ONLINE = ON`.
   
  Resuming an online index rebuild after a pause has to wait for blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT_AT_LOW_PRIORITY` option is equivalent to WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE). For more information, see [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md#wait-at-low-priority). 
 
-PAUSE
+#### PAUSE
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
 Pause a resumable online index rebuild operation.
 
-ABORT
+#### ABORT
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 

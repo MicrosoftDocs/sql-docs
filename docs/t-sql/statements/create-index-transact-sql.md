@@ -809,13 +809,11 @@ To indicate that an index create is executed as resumable operation and to check
   
 **Applies to**: This syntax for `CREATE INDEX` currently applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only. For `ALTER INDEX`, this syntax applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, see [ALTER INDEX](alter-index-transact-sql.md).
 
- The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. 
+ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. `WAIT_AT_LOW_PRIORITY` can be used with `ONLINE=ON` only.  
 
  The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Sch-S and Sch-M locks required for online index creation and allows them to select one of 3 options. In all 3 cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
 
  Online index creation must acquire certain locks to begin, and will wait for other blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index create operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. 
-
-`WAIT_AT_LOW_PRIORITY` used with `ONLINE=ON` only.  
   
  MAX_DURATION = *time* [**MINUTES**]  
 
@@ -827,7 +825,7 @@ To indicate that an index create is executed as resumable operation and to check
  Continue waiting for the lock with normal (regular) priority.  
   
  SELF  
- Exit the online index create DDL operation currently being executed, without taking any action. The option **SELF** cannot be used without specifying a `MAX_DURATION` time greater than 0. 
+ Exit the online index create DDL operation currently being executed, without taking any action. The option **SELF** cannot be used with a `MAX_DURATION` of 0. 
   
  BLOCKERS  
  Kill all user transactions that block the online index rebuild DDL operation so that the operation can continue. The **BLOCKERS** option requires the login to have `ALTER ANY CONNECTION` permission.  
@@ -1171,7 +1169,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 
 ### N. CREATE INDEX with different low priority lock options
 
-The following examples use the `ABORT_AFTER_WAIT` clause to specify different strategies for dealing with blocking.
+The following examples use the `WAIT_AT_LOW_PRIORITY` option to specify different strategies for dealing with blocking.
 
 ```sql
 --Kill this session after waiting 5 minutes

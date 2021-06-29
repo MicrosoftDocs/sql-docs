@@ -15,72 +15,72 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to administer a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] from outside in.
+This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 
 ## Know your architecture
 
-Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. For an overview of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are SQL Server Big Data Clusters](big-data-cluster-overview.md).
+Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md).
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide coherent and consistent authorization and authentication. For an overview of big data cluster security, see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
 
 ## Manage and operate with tools
 
-The following articles describe how to manage and operate Big Data Cluster in the following ways: 
+The following articles describe how to manage and operate Big Data Clusters: 
 
 - [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
 - [Manage big data clusters for SQL Server controller dashboard](manage-with-controller-dashboard.md)
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md)
-- [Manage Big Data Clusters (BDC) the cluster with notebooks](cluster-manage-notebooks.md)
+- [Manage Big Data Clusters with notebooks](cluster-manage-notebooks.md)
 - [Run a sample notebook using Spark](notebooks-tutorial-spark.md)
 
 ## Monitor with tools
 
-The following articles describe how to monitor Big Data Cluster in the following ways: 
+The following articles describe how to monitor Big Data Clusters: 
 
-- [Monitor BDC Cluster with Azure Data Studio](cluster-monitor-ads.md)
-- [Monitor BDC Cluster with Azdata utility](cluster-monitor-cmdlet.md)
-- [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor cluster status with Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor a cluster with azdata and kubectl](cluster-monitor-cmdlet.md)
+- [Monitor a cluster with azdata and Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor a cluster with Juypter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 
 ## Monitor and inspect logs with notebooks
 
-The following articles list many of the Jupyter notebooks that are available in Azure Data Studio.
+The following articles list many of the Jupyter Notebooks that are available in Azure Data Studio:
 
-- [Monitoring cluster with notebooks](cluster-monitor-notebooks.md)
-- [Gathering and analyzing logs in the cluster with notebooks](cluster-logging-notebooks.md)
+- [Monitoring clusters with notebooks](cluster-monitor-notebooks.md)
+- [Gathering and analyzing logs in a cluster with notebooks](cluster-logging-notebooks.md)
 
 ## Big Data Clusters troubleshooting resources
 
-The following articles describe how to troubleshoot Big Data Cluster:
+The following articles describe how to troubleshoot Big Data Clusters:
 
-- [Troubleshoot BDC Cluster with kubectl utility](cluster-troubleshooting-commands.md) 
-- [Troubleshoot pyspark notebook](troubleshoot-pyspark-notebook.md)
-- [Troubleshoot BDC Cluster with Juypter notebooks and Azure Data Studio (ADS)](cluster-troubleshooter-notebooks.md)
+- [Troubleshoot Big Data Clusters with the kubectl utility](cluster-troubleshooting-commands.md) 
+- [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
+- [Troubleshoot Big Data Clusters with Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 - [Restore HDFS permissions](troubleshoot-hdfs-restore-admin.md)
 
-The following articles describe how to troubleshoot Big Data Cluster deployed in Active Directory mode:
-- [Troubleshoot BDC Cluster in Active Directory Mode](troubleshoot-active-directory.md) 
-- [Troubleshoot AD mode login fails](troubleshoot-ad-login-failed-untrusted-domain.md)
-- [Troubleshoot BDC AD mode deployment stopped](troubleshoot-ad-reverse-lookup-zone.md)
+The following articles describe how to troubleshoot Big Data Clusters deployed in Active Directory mode:
+- [Troubleshoot Big Data Clusters in Active Directory mode](troubleshoot-active-directory.md) 
+- [Troubleshoot Active Directory mode login fails](troubleshoot-ad-login-failed-untrusted-domain.md)
+- [Troubleshoot Big Data Clusters Active Directory mode deployment stopped](troubleshoot-ad-reverse-lookup-zone.md)
 
 
 ## Where to find [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] administration notebooks 
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provides comprehensive administration experience working with Jupyter notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting. 
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provides  a comprehensive administration experience via Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting. 
 
 
 ### Access to local notebooks 
 
-After you managed to connect to a BDC cluster with Azure Data Studio (ADS), you can go to '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]' tab and find the direct link to all the local notebooks, as shown below: 
+After you connect to a big data cluster by using Azure Data Studio, on the **[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]** tab, you can find a link to all the local notebooks: 
 
-![BDC local guides](media/view-cluster-status/bdc-local-guides.png)
+![Screenshot that shows where to find links to local notebooks.](media/view-cluster-status/bdc-local-guides.png)
 
-You can also gain access to the notebooks directly from Azure Data Studio (ADS). Use keyboard shortcut 'Ctrl + Shift + P', or 'View' and select on 'Command Palette', to find the option 'Jupyter Books: Get localized SQL Server 2019 guide'. 
+You can also access the notebooks directly from Azure Data Studio. Use keyboard shortcut Ctrl+Shift+P (or 'View' and select on 'Command Palette') to find the option 'Jupyter Books: Get localized SQL Server 2019 guide'. 
 
 
 ### Add remote notebooks
 
-You can get your notebooks version of choice, since the notebooks are sourced remotely. To add a remote notebook from Azure Data Studio (ADS), you can use keyboard shortcut 'Ctrl + Shift + P' or from 'View' and select 'Command Palette', as shown below:
+You can get your notebooks version of choice, since the notebooks are sourced remotely. To add a remote notebook from Azure Data Studio (ADS), you can use keyboard shortcut 'Ctrl+Shift+P' or from 'View' and select 'Command Palette', as shown below:
 
 ![ADS Palette](media/view-cluster-status/bdc-ads-palette.png)
 

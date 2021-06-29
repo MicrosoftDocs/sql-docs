@@ -57,12 +57,13 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 ### Monitoring Tools
 
+- [Monitor BDC Cluster with Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor BDC Cluster with Azdata utility](cluster-monitor-cmdlet.md)
 - [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
 - [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
-- [Monitor BDC Cluster logs in Elasticsearch with Kibana](cluster-logging-kibana.md)
 
 > [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana, you must use a Chromium-based browser including Microsoft Edge. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review the [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## Release history
 

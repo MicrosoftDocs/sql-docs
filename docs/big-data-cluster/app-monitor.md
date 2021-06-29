@@ -19,7 +19,7 @@ Grafana is one of the best cloud-native virtualization tools, which can be used 
 This article describes how to monitor an application inside a SQL Server Big Data Cluster.
 
 > [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana, you must use a Chromium-based browser including Microsoft Edge. In Grafana, you will see a black page with errors when using an unsupported browser. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana. In Grafana, you will see a black page with errors when using an unsupported browser. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review the [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers).
 
 ## Prerequisites
 

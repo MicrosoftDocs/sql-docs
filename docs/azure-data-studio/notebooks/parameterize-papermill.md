@@ -18,7 +18,7 @@ ms.date: 06/18/2021
 This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
 
 > [!Note]
-   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 
@@ -109,7 +109,7 @@ Papermill can be executed two ways:
 To execute a notebook using the CLI, enter the papermill command in the terminal with the input notebook, location for output notebook, and options.
 
 > [!Note]
-   > Papermill Command Line Interface Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
+> Papermill Command Line Interface Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
 
 1. Execute Input Notebook with new parameters.
 
@@ -127,7 +127,7 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 ### Parameterized Python API execution
 
 > [!Note]
-   > Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
+> Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
    ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)

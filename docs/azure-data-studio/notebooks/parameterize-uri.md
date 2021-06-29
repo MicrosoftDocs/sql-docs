@@ -18,7 +18,7 @@ ms.date: 06/14/2021
 This article shows you how to create and run a parameterized notebook in Azure Data Studio with the python kernel.
 
 > [!Note]
-   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 

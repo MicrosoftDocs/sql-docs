@@ -55,7 +55,7 @@ The link to a Kibana dashboard:
 ![Kibana dashboard](./media/view-cluster-status/kibana-dashboard.png)
 
 > [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana, you must use the Chromium-based browser including Microsoft Edge for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana. You will see a blank page when loading the dashboards using an unsupported browser. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## Next steps
 

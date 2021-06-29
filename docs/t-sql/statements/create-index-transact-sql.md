@@ -219,7 +219,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 #### UNIQUE      
 Creates a unique index on a table or view. A unique index is one in which no two rows are permitted to have the same index key value. A clustered index on a view must be unique.
 
-The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not allow creating a unique index on columns that already include duplicate values, whether or not IGNORE_DUP_KEY is set to ON. If this is tried, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. Duplicate values must be removed before a unique index can be created on the column or columns. Columns that are used in a unique index should be set to NOT NULL, because multiple null values are considered duplicates when a unique index is created.
+The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not allow creating a unique index on columns that already include duplicate values, whether or not `IGNORE_DUP_KEY` is set to ON. If this is tried, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. Duplicate values must be removed before a unique index can be created on the column or columns. Columns that are used in a unique index should be set to NOT NULL, because multiple null values are considered duplicates when a unique index is created.
 
 #### CLUSTERED      
 Creates an index in which the logical order of the key values determines the physical order of the corresponding rows in a table. The bottom, or leaf, level of the clustered index contains the actual data rows of the table. A table or view is allowed one clustered index at a time.
@@ -231,7 +231,7 @@ Create the clustered index before creating any nonclustered indexes. Existing no
 If `CLUSTERED` is not specified, a nonclustered index is created.
 
 > [!NOTE]
-> Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the `ON *partition_scheme_name*` or `ON *filegroup_name*` clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.
+> Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the `ON partition_scheme_name` or `ON filegroup_name` clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.
 
 In some cases creating a clustered index can enable previously disabled indexes. For more information, see [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md) and [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 
@@ -737,18 +737,18 @@ For more information, see [Indexes on Computed Columns](../../relational-databas
 Non-key columns, called included columns, can be added to the leaf level of a nonclustered index to improve query performance by covering the query. That is, all columns referenced in the query are included in the index as either key or non-key columns. This allows the query optimizer to locate all the required information from an index scan; the table or clustered index data is not accessed. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
 ## Specifying Index Options
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced new index options and also modifies the way in which options are specified. In backward compatible syntax, `WITH *option_name*` is equivalent to `WITH **(** \<option_name> **= ON )**`. When you set index options, the following rules apply:
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced new index options and also modifies the way in which options are specified. In backward compatible syntax, `WITH option_name` is equivalent to `WITH (option_name = ON)`. When you set index options, the following rules apply:
 
-- New index options can only be specified by using `WITH (**_option\_name_ = ON | OFF**)`.
-- Options cannot be specified by using both the backward compatible and new syntax in the same statement. For example, specifying `WITH (**DROP_EXISTING, ONLINE = ON**)` causes the statement to fail.
-- When you create an XML index, the options must be specified by using `WITH (**_option_name_= ON | OFF**)`.
+- New index options can only be specified by using `WITH (<option_name> = <ON | OFF>)`.
+- Options cannot be specified by using both the backward compatible and new syntax in the same statement. For example, specifying `WITH (DROP_EXISTING, ONLINE = ON)` causes the statement to fail.
+- When you create an XML index, the options must be specified by using `WITH (<option_name> = <ON | OFF>)`.
 
 ## DROP_EXISTING Clause
 You can use the `DROP_EXISTING` clause to rebuild the index, add or drop columns, modify options, modify column sort order, or change the partition scheme or filegroup.
 
 If the index enforces a PRIMARY KEY or UNIQUE constraint and the index definition is not altered in any way, the index is dropped and re-created preserving the existing constraint. However, if the index definition is altered the statement fails. To change the definition of a PRIMARY KEY or UNIQUE constraint, drop the constraint and add a constraint with the new definition.
 
-`DROP_EXISTING` enhances performance when you re-create a clustered index, with either the same or different set of keys, on a table that also has nonclustered indexes. `DROP_EXISTING` replaces the execution of a `DROP INDEX` statement on the old clustered index followed by the execution of a `CREATE INDEX` statement for the new clustered index. The nonclustered indexes are rebuilt once, and then only if the index definition has changed. The DROP_EXISTING clause does not rebuild the nonclustered indexes when the index definition has the same index name, key and partition columns, uniqueness attribute, and sort order as the original index.
+`DROP_EXISTING` enhances performance when you re-create a clustered index, with either the same or different set of keys, on a table that also has nonclustered indexes. `DROP_EXISTING` replaces the execution of a `DROP INDEX` statement on the old clustered index followed by the execution of a `CREATE INDEX` statement for the new clustered index. The nonclustered indexes are rebuilt once, and then only if the index definition has changed. The `DROP_EXISTING` clause does not rebuild the nonclustered indexes when the index definition has the same index name, key and partition columns, uniqueness attribute, and sort order as the original index.
 
 Whether the nonclustered indexes are rebuilt or not, they always remain in their original filegroups or partition schemes and use the original partition functions. If a clustered index is rebuilt to a different filegroup or partition scheme, the nonclustered indexes are not moved to coincide with the new location of the clustered index. Therefore, even the nonclustered indexes previously aligned with the clustered index, they may no longer be aligned with it. For more information about partitioned index alignment, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
@@ -856,8 +856,8 @@ Data compression is described in the topic [Data Compression](../../relational-d
 The following restrictions apply to partitioned indexes:
 
 - You cannot change the compression setting of a single partition if the table has nonaligned indexes.
-- The `ALTER INDEX \<index> ... REBUILD PARTITION ...` syntax rebuilds the specified partition of the index.
-- The `ALTER INDEX \<index> ... REBUILD WITH ...` syntax rebuilds all partitions of the index.
+- The `ALTER INDEX <index> ... REBUILD PARTITION ...` syntax rebuilds the specified partition of the index.
+- The `ALTER INDEX <index> ... REBUILD WITH ...` syntax rebuilds all partitions of the index.
 
 To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.
 
@@ -936,7 +936,7 @@ INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
 
 The resulting error message is:
 
-```
+```console
 Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
@@ -965,7 +965,7 @@ GO
 
 Here are the results of the second `INSERT` statement.
 
-```cmd
+```console
 Server: Msg 3604, Level 16, State 1, Line 5 Duplicate key was ignored.
 
 Number of rows
@@ -998,7 +998,7 @@ GO
 
 Here are the results of the second `INSERT` statement.
 
-```
+```console
 Server: Msg 2601, Level 14, State 1, Line 5
 Cannot insert duplicate key row in object '#Test' with unique index
 'AK_Index'. The statement has been terminated.
@@ -1254,20 +1254,20 @@ WITH (DROP_EXISTING = ON);
 ## See also
 
 - [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
-- [Perform Index Operations Online](../../relational-databases/indexes/- perform-index-operations-online.md)  
-- [Indexes and ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.- md#indexes-and-alter-table)     
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [Indexes and ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
-- [CREATE PARTITION FUNCTION](../../t-sql/statements/- create-partition-function-transact-sql.md)     
-- [CREATE PARTITION SCHEME](../../t-sql/statements/- create-partition-scheme-transact-sql.md)     
-- [CREATE SPATIAL INDEX](../../t-sql/statements/- create-spatial-index-transact-sql.md)      
-- [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.- md)     
+- [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     
+- [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)     
+- [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)      
+- [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)     
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
-- [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.- md)     
+- [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)     
 - [Data Types](../../t-sql/data-types/data-types-transact-sql.md)    
-- [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/- dbcc-show-statistics-transact-sql.md)    
+- [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)    
 - [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
-- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/- xml-indexes-sql-server.md)     
-- [sys.indexes](../../relational-databases/system-catalog-views/- sys-indexes-transact-sql.md)     
-- [sys.index_columns](../../relational-databases/system-catalog-views/- sys-index-columns-transact-sql.md)    
-- [sys.xml_indexes](../../relational-databases/system-catalog-views/- sys-xml-indexes-transact-sql.md)     
+- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)     
+- [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)     
+- [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)    
+- [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)     
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)

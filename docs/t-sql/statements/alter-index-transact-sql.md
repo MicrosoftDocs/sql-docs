@@ -348,7 +348,7 @@ For more information, see [Reorganize and Rebuild Indexes](../../relational-data
  OFF  
  The intermediate sort results are stored in the same database as the index.  
   
- If a sort operation is not required, or if the sort can be performed in memory, the SORT_IN_TEMPDB option is ignored.  
+ If a sort operation is not required, or if the sort can be performed in memory, the `SORT_IN_TEMPDB` option is ignored.  
   
  For more information, see [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
@@ -590,7 +590,7 @@ MAX_DURATION used with `RESUMABLE=ON`
 
 WAIT_AT_LOW_PRIORITY used with `RESUMABLE=ON` and `ONLINE = ON`.  
   
- Resuming an online index rebuild after a pause has to wait for blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT_AT_LOW_PRIORITY` option is equivalent to WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE). For more information, see [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md#wait-at-low-priority). 
+ Resuming an online index rebuild after a pause has to wait for blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT_AT_LOW_PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md#wait-at-low-priority). 
 
 #### PAUSE
  
@@ -684,16 +684,16 @@ Online index rebuild is specified as resumable using the `RESUMABLE = ON` option
 -  The DDL command with `RESUMABLE = ON` cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit block).
 -  Only index operations that are paused are resumable.
 -  When resuming an index operation that is paused, you can change the MAXDOP value to a new value. If MAXDOP is not specified when resuming an  index operation that is paused, the last MAXDOP value is taken. IF the MAXDOP option is not specified at all for index rebuild operation, the default value is taken.
-- To pause immediately the index operation, you can stop the ongoing command (Ctrl-C) or you can execute the `ALTER INDEX PAUSE` command or the `KILL *session_id*` command. Once the command is paused it can be resumed using `RESUME` option.
+- To pause immediately the index operation, you can stop the ongoing command (Ctrl-C) or you can execute the `ALTER INDEX PAUSE` command or the `KILL <session_id>` command. Once the command is paused it can be resumed using `RESUME` option.
 -  The `ABORT` command kills the session that hosted the original index rebuild and aborts the index operation  
 -  No extra resources are required for resumable index rebuild except for
    -    Additional space required to keep the index being built, including the time when index is being paused
    -    A DDL state preventing any DDL modification
--  The ghost cleanup will be running during the index pause phase, but it will be paused during index run   
+-  The ghost cleanup will be running during the index pause phase, but it will be paused during index run.   
 The following functionality is disabled for resumable index rebuild operations
    -    Rebuilding an index that is disabled is not supported with RESUMABLE=ON
    -    `ALTER INDEX REBUILD ALL` command
-   -    `ALTER TABLE` using index `REBUILD`
+   -    `ALTER TABLE` using `INDEX REBUILD`
    -    DDL command with `RESUMEABLE = ON` cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit block)
    -    Rebuild an index that has computed or TIMESTAMP column(s) as key columns.
 -    In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation 
@@ -745,8 +745,8 @@ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY`
 The following restrictions apply to partitioned indexes:  
   
 -   When you use `ALTER INDEX ALL ...`, you cannot change the compression setting of a single partition if the table has nonaligned indexes.  
--   The `ALTER INDEX \<index> ... REBUILD PARTITION ...` syntax rebuilds the specified partition of the index.  
--   The `ALTER INDEX \<index> ... REBUILD WITH ...` syntax rebuilds all partitions of the index.  
+-   The `ALTER INDEX <index> ... REBUILD PARTITION ...` syntax rebuilds the specified partition of the index.  
+-   The `ALTER INDEX <index> ... REBUILD WITH ...` syntax rebuilds all partitions of the index.  
   
 ## Statistics  
  When you execute `ALTER INDEX ALL ...` on a table, only the statistics associates with indexes are updated. Automatic or manual statistics created on the table (instead of an index) are not updated.  
@@ -824,7 +824,7 @@ CREATE TABLE cci_target (
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- Use the TABLOCK option to insert rows in parallel. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the INSERT INTO operation can run in parallel when TABLOCK is used.  
+ Use the TABLOCK option to insert rows in parallel. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the `INSERT INTO` operation can run in parallel when TABLOCK is used.  
   
 ```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
@@ -852,7 +852,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ```  
   
 ### B. Compress CLOSED delta rowgroups into the columnstore  
- This example uses the REORGANIZE option to compresses each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup.   This is not necessary, but is useful when the tuple-mover is not compressing CLOSED rowgroups fast enough.  
+ This example uses the `REORGANIZE` option to compresses each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup.   This is not necessary, but is useful when the tuple-mover is not compressing CLOSED rowgroups fast enough.  
   
 ```sql  
 -- Uses AdventureWorksDW  
@@ -1150,13 +1150,13 @@ For additional data compression examples, see [Data Compression](../../relationa
 ## See also  
 
 - [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
-- [Perform Index Operations Online](../../relational-databases/indexes/- perform-index-operations-online.md)    
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/- create-index-transact-sql.md)     
-- [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/- create-spatial-index-transact-sql.md)   
-- [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/- create-xml-index-transact-sql.md)   
-- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/- drop-index-transact-sql.md)   
-- [Disable Indexes and Constraints](../../relational-databases/indexes/- disable-indexes-and-constraints.md)   
-- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/- xml-indexes-sql-server.md)   
-- [Reorganize and Rebuild Indexes](../../relational-databases/indexes/- reorganize-and-rebuild-indexes.md)   
-- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../- relational-databases/system-dynamic-management-views/- sys-dm-db-index-physical-stats-transact-sql.md)   
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/- eventdata-transact-sql.md)    
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
+- [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+- [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+- [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
+- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
+- [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
+- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
+- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    

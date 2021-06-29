@@ -482,7 +482,7 @@ Specifies whether underlying tables and associated indexes are available for que
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 ON      
-Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created. An Sch-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
+Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created. A Sch-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
 
 > [!NOTE]
 >  Online index creation can set the `low_priority_lock_wait` options, see [WAIT_AT_LOW_PRIORITY with online index operations](#wait-at-low-priority). 
@@ -641,7 +641,7 @@ Limitations and Restrictions:
 - The `FILESTREAM_ON` option is not valid when you create a nonclustered index on a table stored as a clustered columnstore index.
 
 ## Unique Indexes
-When a unique index exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for duplicate values each time data is added by a insert operations. Insert operations that would generate duplicate key values are rolled back, and the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. This is true even if the insert operation changes many rows but causes only one duplicate. If an attempt is made to enter data for which there is a unique index and the `IGNORE_DUP_KEY` clause is set to ON, only the rows violating the UNIQUE index fail.
+When a unique index exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for duplicate values each time data is added by insert operations. Insert operations that would generate duplicate key values are rolled back, and the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. This is true even if the insert operation changes many rows but causes only one duplicate. If an attempt is made to enter data for which there is a unique index and the `IGNORE_DUP_KEY` clause is set to ON, only the rows violating the UNIQUE index fail.
 
 ## Partitioned Indexes
 Partitioned indexes are created and maintained in a similar manner to partitioned tables, but like ordinary indexes, they are handled as separate database objects. You can have a partitioned index on a table that is not partitioned, and you can have a nonpartitioned index on a table that is partitioned.
@@ -705,7 +705,7 @@ Nonclustered indexes can include non-key columns in the leaf level of the index.
 ## Computed Columns
 Indexes can be created on computed columns. In addition, computed columns can have the property PERSISTED. This means that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] stores the computed values in the table, and updates them when any other columns on which the computed column depends are updated. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses these persisted values when it creates an index on the column, and when the index is referenced in a query.
 
-To index a computed column, the computed column must deterministic and precise. However, using the PERSISTED property expands the type of indexable computed columns to include:
+To index a computed column, the computed column must be deterministic and precise. However, using the PERSISTED property expands the type of indexable computed columns to include:
 
 - Computed columns based on [!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR functions and CLR user-defined type methods that are marked deterministic by the user.
 - Computed columns based on expressions that are deterministic as defined by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] but imprecise.
@@ -813,13 +813,13 @@ To indicate that an index create is executed as resumable operation and to check
 
  The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Sch-S and Sch-M locks required for online index creation and allows them to select one of 3 options. In all 3 cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
 
- Online index creation must aquire certain locks to begin, and will wait for other blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index create operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. 
+ Online index creation must acquire certain locks to begin, and will wait for other blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the online index create operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. 
 
 `WAIT_AT_LOW_PRIORITY` used with `ONLINE=ON` only.  
   
  MAX_DURATION = *time* [**MINUTES**]  
 
- The wait time (an integer value specified in minutes) that the online index create locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specfied `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.  
+ The wait time (an integer value specified in minutes) that the online index create locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specified `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.  
  
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
   

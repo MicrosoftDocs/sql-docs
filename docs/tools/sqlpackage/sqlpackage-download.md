@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 06/02/2021
+ms.date: 06/24/2021
 ---
 
 # Download and install sqlpackage
@@ -46,7 +46,7 @@ dotnet add package Microsoft.SqlServer.DACFx
 
 This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
 
-1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=2157201).
+1. Download and run the [DacFramework.msi installer for Windows](https://aka.ms/dacfx-msi).
 2. Open a new Command Prompt window, and run sqlpackage.exe
     - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` folder
 

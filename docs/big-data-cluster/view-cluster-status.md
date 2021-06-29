@@ -4,8 +4,8 @@ titleSuffix: SQL Server
 description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
-ms.date: 04/15/2020
+ms.reviewer: wiassaf
+ms.date: 06/28/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -41,6 +41,9 @@ The following articles describe how to monitor Big Data Cluster in the following
 - [Monitor BDC Cluster with Azdata utility](cluster-monitor-cmdlet.md)
 - [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
 - [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana, you must use a Chromium-based browser including Microsoft Edge. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## Monitor and inspect logs with notebooks
 

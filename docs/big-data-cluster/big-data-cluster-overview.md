@@ -2,10 +2,10 @@
 title: What are Big Data Clusters?
 titleSuffix: SQL Server Big Data Clusters
 description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 01/07/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: melqin
+ms.date: 06/28/2021
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -58,7 +58,7 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 ### Integrated AI and Machine Learning
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] enable AI and machine learning tasks on the data stored in HDFS storage pools and the data pools. You can use Spark as well as built-in AI tools in SQL Server, using R, Python, Scala, or Java.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] enable AI and machine learning tasks on the data stored in HDFS storage pools and the data pools. You can use Spark as well as built-in AI tools in SQL Server using R, Python, Scala, or Java.
 
 ![AI and ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -67,6 +67,7 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
 
 You can use [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) to perform a variety of tasks on the big data cluster:
+
 - Built-in snippets for common management tasks.
 - Ability to browse HDFS, upload files, preview files, and create directories.
 - Ability to create, open, and run Jupyter-compatible notebooks.

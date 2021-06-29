@@ -4,9 +4,9 @@ titleSuffix: SQL Server Big Data Clusters
 description: Monitoring cluster with Kibana Dashboard on SQL Server 2019 big data cluster.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 04/16/2021
+ms.date: 06/29/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -54,10 +54,8 @@ The link to a Kibana dashboard:
 
 ![Kibana dashboard](./media/view-cluster-status/kibana-dashboard.png)
 
-> [!NOTE]
-> The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
-
-
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana, you must use the Chromium-based browser including Microsoft Edge for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## Next steps
 

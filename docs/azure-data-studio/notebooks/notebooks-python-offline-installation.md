@@ -21,7 +21,7 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 
 ## Download Python and Dependencies
 
-1. On a machine that has internet access, download the latest Azure Data Studio Python package from here: [https://go.microsoft.com/fwlink/?linkid=2163338](https://go.microsoft.com/fwlink/?linkid=2163338). Unzip the file into a local directory (eg. C:\\azuredatastudio-python). Note: The latest Azure Data Studio Python version is 3.8.10.
+1. On a machine that has internet access, download the latest Azure Data Studio Python package from here: [https://go.microsoft.com/fwlink/?linkid=2163338](https://go.microsoft.com/fwlink/?linkid=2163338). Unzip the file into a local directory (for example: C:\\azuredatastudio-python). Note: The latest Azure Data Studio Python version is 3.8.10.
 
 2. In a terminal, navigate to the Python directory.
 
@@ -38,7 +38,7 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
     powershell-kernel>=0.1.3
     ```
 
-4. Create a sub directory named **wheelhouse**.
+4. Create a sub directory named **`wheelhouse`**.
 
     ```bash
     mkdir wheelhouse
@@ -50,9 +50,9 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
     ./python.exe -m pip download -r requirements.txt -d wheelhouse
     ```
 
-## Install Python on a machine that does not have internet access
+## Install Python on a machine that doesn't have internet access
 
-1. On a machine that does not have internet access, copy the Python folder from above to a local directory (eg. C:\\azuredatastudio-python).
+1. On a machine that doesn't have internet access, copy the Python folder from above to a local directory (for example: C:\\azuredatastudio-python).
 
 2. In a terminal, navigate to the Python folder.
 
@@ -70,6 +70,6 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 
 1. Open Azure Data Studio
 2. From the Command Palette, search for Configure Python for Notebooks.
-3. In the Configure Python for Notebooks wizard, select 'Use existing Python installation' and browse to the installed Python location (eg. C:\\azuredatastudio-python).
+3. In the Configure Python for Notebooks wizard, select *Use existing Python installation*, and browse to the installed Python location (for example: C:\\azuredatastudio-python).
 
 Once the wizard is completed, open a new notebook and change the kernel to Python.

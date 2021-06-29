@@ -95,7 +95,7 @@ If the database is involved in log shipping, remove log shipping before dropping
 The DROP DATABASE statement must run in autocommit mode and is not allowed in an explicit or implicit transaction. Autocommit mode is the default transaction management mode.
 
 > [!WARNING]
-> You cannot drop a database currently being used. This means locks being held for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER. In this strategy, you should execute the ALTER DATABASE and DROP DATABASE in the same batch, to avoid another connection claiming single user session allowed. See [Example D below](#dropping-a-database-after-checking-if-it-exists).
+> You cannot drop a database currently being used. This means locks being held for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER. In this strategy, you should execute the ALTER DATABASE and DROP DATABASE in the same batch, to avoid another connection claiming single user session allowed. See [Example D below](#d-dropping-a-database-after-checking-if-it-exists).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

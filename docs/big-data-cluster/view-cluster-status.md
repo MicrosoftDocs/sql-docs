@@ -78,33 +78,33 @@ After you connect to a big data cluster by using Azure Data Studio, on the **[!I
 
 ![Screenshot that shows where to find links to local notebooks.](media/view-cluster-status/bdc-local-guides.png)
 
-You can also access the notebooks directly from Azure Data Studio. Use keyboard shortcut Ctrl+Shift+P (or 'View' and select on 'Command Palette') to find the option 'Jupyter Books: Get localized SQL Server 2019 guide'. 
+You can also access the notebooks directly from Azure Data Studio. Use keyboard shortcut Ctrl+Shift+P (or select **View** and then **Command Palette**) to find the option **Jupyter Books: Get localized SQL Server 2019 guide**. 
 
 
 ### Add remote notebooks
 
-You can get your notebooks version of choice, since the notebooks are sourced remotely. To add a remote notebook from Azure Data Studio (ADS), you can use keyboard shortcut 'Ctrl+Shift+P' or from 'View' and select 'Command Palette', as shown below:
+Because notebooks are sourced remotely, you can select a notebook for the correct version. To add a remote notebook from Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P. (Or select **View** and then **Command Palette**.)
 
-![ADS Palette](media/view-cluster-status/bdc-ads-palette.png)
+![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
 
-You'll find an option 'Jupyter Books: Add Remote Book' and you'll see a panel that allows you to select notebooks for the version of your choice.
+Select **Jupyter Books: Add Remote Book**. A window that allows you to select notebooks opens. You can select the version you want:
 
-![BDC remote guides](media/view-cluster-status/bdc-remote-guides.png)
+![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
 
-After clicking on 'Add', you'll gain access of all the notebooks of the version of your choice under the 'Notebooks' tab of Azure Data Studio, as shown below: 
+When you select **Add**, you'll gain access to all the notebooks for your chosen version on the **Notebooks** tab of Azure Data Studio: 
 
-![BDC ADS guides](media/view-cluster-status/bdc-ads-guides.png)
+![Screenshot that shows the notebooks for a specific version.](media/view-cluster-status/bdc-ads-guides.png)
 
 
 ### How to use these notebooks 
 
-You can find the guide about how to use those notebooks from the following articles:
+To learn how to use the notebooks, see these articles:
 
-- [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
-- [Gathering and analyzing logs in the cluster with notebooks](cluster-logging-notebooks.md)
-- [Troubleshoot pyspark notebook](troubleshoot-pyspark-notebook.md)
-- [Troubleshoot BDC Cluster with Juypter notebooks and Azure Data Studio (ADS)](cluster-troubleshooter-notebooks.md)
+- [Monitoring clusters with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Gathering and analyzing logs in a cluster with notebooks](cluster-logging-notebooks.md)
+- [Troubleshoot the pyspark notebook](troubleshoot-pyspark-notebook.md)
+- [Troubleshoot Big Data Clusters with Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).

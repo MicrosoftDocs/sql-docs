@@ -55,6 +55,15 @@ This section explains platforms that are supported with [!INCLUDE[ssbigdataclust
 
 For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
 
+### Monitoring Tools
+
+- [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor BDC Cluster logs in Elasticsearch with Kibana](cluster-logging-kibana.md)
+
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana, you must use a chromium-based browser including Microsoft Edge. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+
 ## Release history
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

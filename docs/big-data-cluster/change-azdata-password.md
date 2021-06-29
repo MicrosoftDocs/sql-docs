@@ -1,10 +1,10 @@
 ---
 title: Update AZDATA_PASSWORD
 description: Update the `AZDATA_PASSWORD` manually
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
-ms.date: 03/05/2021
+author: cloudmelon
+ms.author: melqin
+ms.reviewer: wiassaf
+ms.date: 06/29/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -186,8 +186,8 @@ sudo yum install httpd-tools
 
 Follow these options for manually updating the password for [Kibana](cluster-logging-kibana.md).
 
-> [!NOTE]
-> The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana, you must use the Chromium-based browser including Microsoft Edge for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 1. Open the Kibana URL.
     

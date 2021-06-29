@@ -2,10 +2,10 @@
 title: SQL Server Big Data Clusters release notes
 titleSuffix: SQL Server big data clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/09/2021
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mikeray, melqin
+ms.date: 06/29/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -62,7 +62,7 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 - [Monitor BDC Cluster logs in Elasticsearch with Kibana](cluster-logging-kibana.md)
 
 > [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana, you must use a chromium-based browser including Microsoft Edge. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana, you must use a Chromium-based browser including Microsoft Edge. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## Release history
 

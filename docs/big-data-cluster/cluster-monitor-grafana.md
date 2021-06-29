@@ -19,7 +19,7 @@ This article describes how to monitor an application inside [!INCLUDE[ssbigdatac
 - Workload-related metrics: those metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics and [SQL server extended events (XEvents)](../relational-databases/extended-events/extended-events.md). 
 
 > [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana, you must use a chromium-based browser including Microsoft Edge. In Grafana, you will see a black page with errors when using an unsupported browser. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana, you must use a Chromium-based browser including Microsoft Edge. In Grafana, you will see a black page with errors when using an unsupported browser. See [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers).
 
 ## Available metrics 
 

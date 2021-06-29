@@ -30,7 +30,7 @@ By default, data and log files are initialized to overwrite any existing data le
 - Increase the size of an existing file (including autogrow operations).  
 - Restore a database or filegroup.  
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for data files only, instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.
 
 
 ## Enable instant file initialization

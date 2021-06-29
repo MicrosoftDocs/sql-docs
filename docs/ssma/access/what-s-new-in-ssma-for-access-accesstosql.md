@@ -16,6 +16,12 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
 
+## SSMA v8.21
+
+The v8.21 release of SSMA for Access contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
 ## SSMA v8.20
 
 The v8.20 release of SSMA for Access contains the following changes:

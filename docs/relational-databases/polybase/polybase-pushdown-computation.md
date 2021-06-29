@@ -2,7 +2,7 @@
 title: "Pushdown computations in PolyBase"
 titlesuffix: SQL Server
 description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 04/19/2021
+ms.date: 06/29/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -40,7 +40,7 @@ This table summarizes pushdown computation support on different external data so
 | **Oracle**       | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
-| **MongoDB\***  | **No** | Yes         | Yes          | Yes       | Yes        |
+| **MongoDB\***  | **No** | Yes         | No          | No       | Yes        |
 | **Hadoop**     | **No** | Yes         | Some\*\*      | Some\*\*  | Yes        |  
 | **Azure Blob Storage** | No | No | No | No | Yes |
 |                  |

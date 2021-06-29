@@ -1169,9 +1169,32 @@ ALTER INDEX test_idx1 ON test_table ABORT;
 ALTER INDEX test_idx2 ON test_table ABORT;
 ```
 
+### N. CREATE INDEX with different low priority lock options
+
+The following examples use the `ABORT_AFTER_WAIT` clause to specify different strategies for dealing with blocking.
+
+```sql
+--Kill this session after waiting 5 minutes
+CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = SELF)));
+GO
+```
+
+```sql
+--Kill blocker sessions
+CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = BLOCKERS)));
+GO
+```
+
+The following example uses both the `RESUMABLE` option and specifies two `MAX_DURATION` values, the first applies to the `ABORT_AFTER_WAIT` option, the second applies to the `RESUMABLE` option.
+
+```sql
+--With resumable option; default locking behavior 
+CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = NONE)), RESUMABLE = ON, MAX_DURATION = 240 MINUTES);
+```
+
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### N. Basic syntax
+### O. Basic syntax
 Create, resume, pause, and abort resumable index operations       
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -1195,7 +1218,7 @@ ALTER INDEX test_idx ON test_table RESUME;
 ALTER INDEX test_idx ON test_table ABORT;
 ```
 
-### O. Create a nonclustered index on a table in the current database
+### P. Create a nonclustered index on a table in the current database
 The following example creates a nonclustered index on the `VendorID` column of the `ProductVendor` table.
 
 ```sql
@@ -1203,55 +1226,32 @@ CREATE INDEX IX_ProductVendor_VendorID
   ON ProductVendor (VendorID);
 ```
 
-### P. Create a clustered index on a table in another database
+### Q. Create a clustered index on a table in another database
 The following example creates a nonclustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
 ```
-### Q. Create an ordered clustered index on a table  
+
+### R. Create an ordered clustered index on a table  
 The following example creates an ordered clustered index on the `c1` and `c2` columns of the `T1` table in the `MyDB` database.
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T1 
 ORDER (c1, c2);
-
 ```
 
-### R. Convert a CCI to an ordered clustered index on a table  
+### S. Convert a CCI to an ordered clustered index on a table  
 The following example converts the existing clustered columnstore index to an ordered clustered columnstore index called `MyOrderedCCI` on the `c1` and `c2` columns of the `T2` table in the `MyDB` database.
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T2
 ORDER (c1, c2)
 WITH (DROP_EXISTING = ON);
-
 ```
 
 
-### S. CREATE INDEX with different low priority lock options
-
-The following examples use the `ABORT_AFTER_WAIT` clause to specify different strategies for dealing with blocking.
-
-```sql
---Kill this session after waiting 5 minutes
-CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = SELF)));
-GO
-```
-
-```sql
---Kill blocker sessions
-CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = BLOCKERS)));
-GO
-```
-
-The following example uses both the `RESUMABLE` option and specifies two `MAX_DURATION` values, the first applies to the `ABORT_AFTER_WAIT` option, the second applies to the `RESUMABLE` option.
-
-```sql
---With resumable option; default locking behavior 
-CREATE CLUSTERED INDEX idx_1 ON dbo.T2 (a) WITH (ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = NONE)), RESUMABLE = ON, MAX_DURATION = 240 MINUTES);
-```
 
 ## See also
 

@@ -21,7 +21,7 @@ Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no 
 
 Real-time scoring is supported on specific model types based on functions in [RevoScaleR](../r/ref-r-revoscaler.md) or [MicrosoftML](../r/ref-r-microsoftml.md) in R, or [revoscalepy](../python/ref-py-revoscalepy.md) or [microsoftml](../python/ref-py-microsoftml.md) in Python. It uses native C++ libraries to generate scores based on user input provided to a machine learning model stored in a special binary format.
 
-Because a trained model can be used for scoring without having to call an external language runtime in [Machine Learning Services](../sql-server-machine-learning-services.md) or [Machine Learning Server](../r/r-server-standalone.md), the overhead of multiple processes is reduced.
+Because a trained model can be used for scoring without having to call an external language runtime in [Machine Learning Services](../sql-server-machine-learning-services.md), the overhead of multiple processes is reduced.
 
 Real-time scoring is a multi-step process:
 
@@ -36,7 +36,7 @@ Real-time scoring is a multi-step process:
 
 + [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md?view=sql-server-ver15#supported-algorithms) for `sp_rxPredict`.
++ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md#supported-algorithms) for `sp_rxPredict`.
 
 + Serialize the model using [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R or [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 

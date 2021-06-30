@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 ## Full reference documentation
 
-The **MicrosoftML** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **MicrosoftML** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
@@ -24,7 +24,6 @@ The **MicrosoftML** package is based on R 3.4.3 and available only when you inst
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 or later](/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
 > [!NOTE]
@@ -148,4 +147,4 @@ logisticRegression(args);
 + [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [R reference (Microsoft Machine Learning Server)](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)
++ [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

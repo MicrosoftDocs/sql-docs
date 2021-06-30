@@ -91,18 +91,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
 5. Repeat this process for the **ReportServerWebApp** URL section.
 5. Save the rsreportserver.config file.  
   
-6. Start a command prompt using **Run as Administrator**, and run the Netsh.exe tool.  
-  
-    ```  
-    C:\windows\system32\netsh  
-    ```  
-  
-7. Switch to the http context by typing the following.  
-  
-    ```  
-    Netsh>http  
-    ```  
-  
+6. Start a command prompt using **Run as Administrator**.
 8. Show the existing urlacls by typing the following:
   
     ```  

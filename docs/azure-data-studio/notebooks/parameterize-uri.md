@@ -29,11 +29,11 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 URI parameterization programmatically adds parameters to the query of the ADS URI to open the notebook in ADS with new parameters.
 
-Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the format:
+Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the format:  
 
 `_azuredatastudio:\/\/microsoft.notebook\/open?url=_`
 
-The format to pass in parameters with the ADS Notebook URI is as follows:
+The format to pass in parameters with the ADS Notebook URI is as follows:  
 
 `_azuredatastudio:\/\/microsoft.notebook\/open?url=LinkToNotebook_***?x=1&y=2***`
 

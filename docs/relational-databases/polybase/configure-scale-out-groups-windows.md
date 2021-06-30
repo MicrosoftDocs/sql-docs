@@ -56,7 +56,7 @@ This walks through the steps of configuring a PolyBase Group using:
   
 3. On the Server Configuration page, use the **domain account** PQTH4A\PolyBaseUser for SQL Server PolyBase Engine and SQL Server PolyBase Data Movement Service.
   
-4. On the PolyBase Configuration page, select the option **Use the SQL Server instance as part of a PolyBase scale-out group**. This opens the firewall to allow incoming connections to the PolyBase services. SQL Server installation wizard automatically exposes the following TCP ports in the Windows Server Firewall: 1433,16450,16451,16452,16453 and 17001. If the head node is a SQL Server named instance, you must also manually add the SQL Server port to the Windows firewall on the head node and also start the SQL Browser on the head node. These ports should only be opened to other servers when scale-out is in use. Ports should be allowed only on the firewalls of servers in the PolyBase scale-out group.
+4. On the PolyBase Configuration page, select the option **Use the SQL Server instance as part of a PolyBase scale-out group**. This opens the firewall to allow incoming connections to the PolyBase services. SQL Server installation wizard automatically exposes the following TCP ports in the Windows Server Firewall: 1433,16450-16453, and 17001. If the head node is a SQL Server named instance, you must also manually add the SQL Server port to the Windows firewall on the head node and also start the SQL Browser on the head node. Ports should be allowed only on the firewalls of servers in the PolyBase scale-out group.
   
 5. After setup is complete, run **services.msc**. Verify that SQL Server, PolyBase Engine and PolyBase Data Movement Service are running.
   

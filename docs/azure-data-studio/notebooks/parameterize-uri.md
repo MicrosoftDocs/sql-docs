@@ -39,7 +39,7 @@ In the URI query, use **&** to indicate a new parameter to be injected.
 
 ## URI Parameterization Example
 
-**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
+**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb and follow along.**
 
 Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.  
 
@@ -66,7 +66,7 @@ Below is the contents and structure of the notebook, you must use a notebook tha
 1. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
 
     Below is the notebook URI for parameterizing the notebook with new x and y values:
-    [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb)
+    [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb
 
     :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="URI link in Search bar":::
     

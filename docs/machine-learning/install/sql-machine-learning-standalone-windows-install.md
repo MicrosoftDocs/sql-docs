@@ -13,6 +13,8 @@ monikerRange: ">=sql-server-2016"
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
+
 ::: moniker range=">=sql-server-2017"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
 ::: moniker-end
@@ -20,7 +22,7 @@ SQL Server Setup includes a **shared feature** option for installing a standalon
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**.  
 ::: moniker-end
 
-A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including:
+A standalone server as installed by SQL Server Setup supports use cases and scenarios such as the following:
 
 + Remote execution, switching between local and remote sessions in the same console
 + Operationalization with web nodes and compute nodes

@@ -18,7 +18,7 @@ ms.date: 06/14/2021
 This article shows you how to create and run a parameterized notebook in Azure Data Studio with the python kernel.
 
 > [!Note]
-   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 
@@ -29,21 +29,24 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 URI parameterization programmatically adds parameters to the query of the ADS URI to open the notebook in ADS with new parameters.
 
-Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the format:
-_azuredatastudio:\/\/microsoft.notebook\/open?url=_
+Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the format:  
 
-The format to pass in parameters with the ADS Notebook URI is as follows:
-_azuredatastudio:\/\/microsoft.notebook\/open?url=LinkToNotebook_***?x=1&y=2***
+`_azuredatastudio:\/\/microsoft.notebook\/open?url=_`
+
+The format to pass in parameters with the ADS Notebook URI is as follows:  
+
+`_azuredatastudio:\/\/microsoft.notebook\/open?url=LinkToNotebook_***?x=1&y=2***`
 
 In the URI query, use **&** to indicate a new parameter to be injected.
 
 ## URI Parameterization Example
 
-**To open the below notebook example in Azure Data Studio, click [here](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
+**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
 
-Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.  
+Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.
 
    Tag a code cell in Azure Data Studio as **Parameters Cell**.
+
    :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::
 
    Below is the contents of the notebook:
@@ -66,15 +69,16 @@ Below is the contents and structure of the notebook, you must use a notebook tha
 1. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
 
     Below is the notebook URI for parameterizing the notebook with new x and y values:
-    [_azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb_**?x=10&y=20**](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20)
+
+    `_azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb_**?x=10&y=20**`
 
     :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="URI link in Search bar":::
     
-    When opening the link from the web browser, you will be prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
+    When opening the link from the web browser, you're prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
     
     :::image type="content" source="media/notebooks-parameterization/donwload-prompt.png" alt-text="Download Prompt":::
 
-2. You will then be prompted to download and open the notebook with new parameters.
+2. Then you're prompted to download and open the notebook with new parameters.
 
     Once you select **Yes**, view the new parameterized notebook and **run all cells** to see the new output.
    

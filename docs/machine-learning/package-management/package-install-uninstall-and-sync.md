@@ -36,7 +36,7 @@ For example, you might use package synchronization in these scenarios:
 
 ## Requirements
 
-Before you can use package synchronization, you must have the appropriate version of Microsoft R or Machine Learning Server. This feature is provided in Microsoft R version 9.1.0 or later. 
+Before you can use package synchronization, you must have the appropriate version of Microsoft R. This feature is provided in Microsoft R version 9.1.0 or later. 
 
 You must also enable the [package management feature](r-package-how-to-enable-or-disable.md) on the server.
 

@@ -22,11 +22,8 @@ ms.author: maggies
 A paginated report can include an embedded image. Embedding an image ensures that the image is always available to a report, but can affect the size of the report definition, the file that defines the report. The images embedded in a report are listed in the Report Data pane.  
   
 You might want to embed an image in the report definition before adding the image to the design surface. For more information, see [Add a Background Image &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-### To embed an image in a report  
+    
+## To embed an image in a report  
   
 1.  In report design view, on the **Insert** tab, click **Image**.  
   
@@ -49,7 +46,7 @@ You might want to embed an image in the report definition before adding the imag
     > [!NOTE]  
     >  The MIME type (for example, bmp) is derived automatically when the image is imported. To change the MIME type, see the next procedure.  
   
-### (optional) To change the MIME type of an imported image  
+## (optional) To change the MIME type of an imported image  
   
 1.  Open the report in Design view.  
   

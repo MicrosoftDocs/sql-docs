@@ -17,11 +17,8 @@ ms.author: maggies
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrb-applies-to-report-builder-yes](../../includes/ssrb-applies-to-report-builder-yes.md)] [!INCLUDE [ssrb-applies-to-power-bi-rb-yes](../../includes/ssrb-applies-to-power-bi-rb-yes.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
 External images can be on a report server in native mode or any other Web site, including a report server in SharePoint integrated mode (SQL Server 2016 or before). When you include external images in your paginated report, you must verify that the image exists and that the report reader has permissions to access the image. For more information, see [Images &#40;Report Builder&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-### To add an external image  
+ 
+## To add an external image  
   
 1.  In report design view, on the **Insert** tab, click **Image**.  
   

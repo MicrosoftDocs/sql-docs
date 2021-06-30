@@ -20,7 +20,6 @@ An image is a paginated report item that contains a reference to an image that i
   
 Storing logos on a server is a good idea because you can use the same logo in many reports.  
   
-  
 ##  <a name="ComparingImages"></a> Comparing External, Embedded, and Data-Bound Images  
  When you use a server-based or other external image in a report, the image item contains a path that points to an image on the report server or wherever it exists on the Web. When you use an embedded image, however, the image data is stored within the report definition and does not exist as a separate file.  
   

@@ -66,7 +66,7 @@ Below is the contents and structure of the notebook, you must use a notebook tha
 1. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
 
     Below is the notebook URI for parameterizing the notebook with new x and y values:
-    [_azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb_**?x=10&y=20**](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20)
+    [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb)
 
     :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="URI link in Search bar":::
     

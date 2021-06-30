@@ -90,7 +90,8 @@ For more information about TLS settings for Reporting Services, see [Configure T
 >  * For SSRS 2017 and later, the `AccountSid` value is `S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301` and the `AccountName` value is `NT SERVICE\SQLServerReportingServices`.
 >  * For Power BI Report Server, the `AccountSid` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663` and the `AccountName` value is `NT SERVICE\PowerBIReportServer`.
   
-5.  Save the rsreportserver.config file.  
+5.  Repeat this process for the **ReportServerWebApp** URL section.
+6.  Save the rsreportserver.config file.  
   
 6.  Start a command prompt using **Run as Administrator**, and run the Netsh.exe tool.  
   
@@ -129,6 +130,8 @@ For more information about TLS settings for Reporting Services, see [Configure T
     user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
   
     ```  
+> [!TIP] 
+> You should not type the netsh http> . Also, if you copy the code to notepad to edit, rather than typing manually, you must remove the CRLF before pasting the code into the command prompt.
   
 10. For the **Web Portal URL**, create a new entry for the Subject Alternative Name by typing the following:
 

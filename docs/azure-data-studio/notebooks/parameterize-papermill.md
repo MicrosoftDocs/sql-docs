@@ -117,9 +117,10 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
    papermill Input.ipynb Output.ipynb -p x 10 -p y 20
    ```
 
-   This will execute the Input Notebook with new values for parameters **x** and **y**.
+   This executes the Input Notebook with new values for parameters **x** and **y**.
 
 2. After execution view the new output parameterized notebook.
+
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::

@@ -2,10 +2,10 @@
 description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL)"
 ms.custom: ""
-ms.date: 06/28/2021
+ms.date: 06/30/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -691,10 +691,10 @@ Online index rebuild is specified as resumable using the `RESUMABLE = ON` option
    -    A DDL state preventing any DDL modification
 -  The ghost cleanup will be running during the index pause phase, but it will be paused during index run.   
 The following functionality is disabled for resumable index rebuild operations
-   -    Rebuilding an index that is disabled is not supported with RESUMABLE=ON
+   -    Rebuilding an index that is disabled is not supported with `RESUMABLE=ON`
    -    `ALTER INDEX REBUILD ALL` command
-   -    `ALTER TABLE` using `INDEX REBUILD`
-   -    DDL command with `RESUMEABLE = ON` cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit block)
+   -    `ALTER TABLE` using index rebuild
+   -    DDL command with `RESUMABLE=ON` cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit block)
    -    Rebuild an index that has computed or TIMESTAMP column(s) as key columns.
 -    In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation 
 
@@ -758,7 +758,8 @@ The following restrictions apply to partitioned indexes:
   
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] does not use filegroup and filestream options.  
 -  Columnstore indexes are not available prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
--  Resumable index operations are available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+-  Resumable index operations are available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
   
 ## Basic syntax example:   
   

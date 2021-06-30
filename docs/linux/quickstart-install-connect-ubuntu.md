@@ -218,7 +218,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 
 Use the following steps to install the **mssql-tools** on Ubuntu. 
 
-> [!NOTE 
+> [!NOTE] 
 > By default, curl isn't installed on Ubuntu. To install curl, run this code:
 >
 > ```bash

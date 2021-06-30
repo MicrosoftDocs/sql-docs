@@ -53,7 +53,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="List":::
 
-4. You can test if papermill is loaded properly by checking the version of papermill.
+4. You can test if Papermill is loaded properly by checking the version of Papermill.
 
    ```python
    import papermill

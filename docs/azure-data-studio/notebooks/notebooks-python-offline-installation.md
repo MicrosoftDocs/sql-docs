@@ -73,3 +73,7 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 3. In the Configure Python for Notebooks wizard, select *Use existing Python installation*, and browse to the installed Python location (for example: C:\\azuredatastudio-python).
 
 Once the wizard is completed, open a new notebook and change the kernel to Python.
+
+## Note
+
+The steps above can be repeated for any additional packages needed.

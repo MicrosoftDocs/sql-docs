@@ -4,7 +4,7 @@ description: Step by step on how to configure Active Directory authentication wi
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 12/10/2020
+ms.date: 07/01/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -13,15 +13,12 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux using adutil
 
-> [!NOTE]
-> **adutil** is currently in **public preview**
-
-This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using adutil. For another method of configuring AD authentication using ktpass, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using [adutil](sql-server-linux-ad-auth-adutil-introduction.md). For another method of configuring AD authentication using ktpass, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> - Install adutil-preview
+> - Install adutil
 > - Join Linux machine to your AD domain
 > - Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 > - Create the SQL Server service keytab file
@@ -34,14 +31,14 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a Linux host machine. Follow the section below based on the Linux distribution that you're running to install adutil-preview.
+- Install the [adutil](sql-server-linux-ad-auth-adutil-introduction.md) tool on a Linux host machine. Follow the section below based on the Linux distribution that you're running to install adutil.
 
-## Install adutil-preview
+## Install adutil
 
-On the Linux host machine, use the following commands to install adutil-preview.
+On the Linux host machine, use the following commands to install adutil.
 
 > [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
+> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
 
 ### RHEL
 
@@ -57,10 +54,10 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo yum remove adutil
     ```
 
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
+1. Run the following commands to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
-    sudo ACCEPT_EULA=Y yum install -y adutil-preview
+    sudo ACCEPT_EULA=Y yum install -y adutil
     ```
 
 ### Ubuntu
@@ -78,11 +75,11 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo apt-get remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
+1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
     sudo apt-get update
-    sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
+    sudo ACCEPT_EULA=Y apt-get install -y adutil
     ```
 
 ### SLES
@@ -99,10 +96,10 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo zypper remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
+1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
-    sudo ACCEPT_EULA=Y zypper install -y adutil-preview
+    sudo ACCEPT_EULA=Y zypper install -y adutil
     ```
 
 ## Domain machine preparation
@@ -257,3 +254,4 @@ sqlcmd -E -S 'myubuntu.contoso.com'
 
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
 - If you're interested on how to configure AD authentication with SQL Server on Linux containers, see [Configure Active Directory authentication with SQL Server on Linux  containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- [Rotate SQL Server on Linux keytabs](sql-server-linux-ad-auth-rotate-keytabs.md)

@@ -4,7 +4,7 @@ description: Step by step on how to configure Active Directory authentication wi
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 12/10/2020
+ms.date: 07/01/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -13,15 +13,12 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux  containers
 
-> [!NOTE]
-> **adutil** is currently in **public preview**
-
 This tutorial explains how to configure SQL Server on Linux containers to support Active Directory (AD) authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> - Install adutil-preview
+> - Install adutil
 > - Join Linux host to AD domain
 > - Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 > - Create the SQL Server service keytab file
@@ -35,7 +32,7 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a Linux host machine, which is joined to a domain. Follow the [Install adutil-preview](#install-adutil-preview) section below based on the Linux distribution that you're running to install the adutil-preview tool.
+- Install the adutil tool on a Linux host machine, which is joined to a domain. Follow the [Install adutil](#install-adutil) section below based on the Linux distribution that you're running to install the adutil tool.
 
 ## Container deployment and preparation
 
@@ -52,12 +49,12 @@ For this tutorial, we're using an environment in Azure with three VMs. One VM ac
 > [!NOTE]
 > Joining the host container machine to the domain is not mandatory, as you can see later in this article.
 
-## Install adutil-preview
+## Install adutil
 
-On the Linux host machine, use the following commands to install adutil-preview based on the linux distribution.
+On the Linux host machine, use the following commands to install [adutil](sql-server-linux-ad-auth-adutil-introduction.md) based on the linux distribution.
 
 > [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
+> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
 
 ### RHEL
 
@@ -73,10 +70,10 @@ On the Linux host machine, use the following commands to install adutil-preview 
     sudo yum remove adutil
     ```
 
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following commands to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
-    sudo ACCEPT_EULA=Y yum install -y adutil-preview
+    sudo ACCEPT_EULA=Y yum install -y adutil
     ```
 
 ### Ubuntu
@@ -94,11 +91,11 @@ On the Linux host machine, use the following commands to install adutil-preview 
     sudo apt-get remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo apt-get update
-    sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
+    sudo ACCEPT_EULA=Y apt-get install -y adutil
     ```
 
 ### SLES
@@ -115,10 +112,10 @@ On the Linux host machine, use the following commands to install adutil-preview 
     sudo zypper remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
-    sudo ACCEPT_EULA=Y zypper install -y adutil-preview
+    sudo ACCEPT_EULA=Y zypper install -y adutil
     ```
 
 ## Creating the AD user, SPNs, and SQL Server service keytab
@@ -336,3 +333,4 @@ sqlcmd -E -S 'sql1.contoso.com, 5433'
 
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
+- [Rotate SQL Server on Linux keytabs](sql-server-linux-ad-auth-rotate-keytabs.md)

@@ -38,13 +38,7 @@ CREATE XML INDEX index_name
   
 <path_name> ::=   
 character string literal  
-  
-<xmlnamespace_list> ::=   
-<xmlnamespace_item> [, <xmlnamespace_list>]  
-  
-<xmlnamespace_item> ::=   
-xmlnamespace_uri AS xmlnamespace_prefix  
-  
+   
 <index_options> ::=   
 (    
   | PAD_INDEX  = { ON | OFF }  

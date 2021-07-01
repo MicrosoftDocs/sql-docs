@@ -70,7 +70,7 @@ On the Linux host machine, use the following commands to install [adutil](sql-se
     sudo yum remove adutil
     ```
 
-1. Run the following commands to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following commands to install adutil. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y yum install -y adutil
@@ -91,7 +91,7 @@ On the Linux host machine, use the following commands to install [adutil](sql-se
     sudo apt-get remove adutil
     ```
 
-1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo apt-get update
@@ -112,7 +112,7 @@ On the Linux host machine, use the following commands to install [adutil](sql-se
     sudo zypper remove adutil
     ```
 
-1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y zypper install -y adutil

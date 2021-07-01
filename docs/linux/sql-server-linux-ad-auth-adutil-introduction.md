@@ -38,7 +38,7 @@ Adutil is designed as a series of commands and subcommands, with additional flag
     sudo yum remove adutil-preview
     ```
 
-1. Run the following commands to install **adutil**. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following commands to install **adutil**. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y yum install -y adutil
@@ -68,7 +68,7 @@ Adutil is designed as a series of commands and subcommands, with additional flag
     sudo apt-get remove adutil-preview
     ```
 
-1. Run the following command to install **adutil**. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following command to install **adutil**. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo apt-get update
@@ -99,7 +99,7 @@ Adutil is designed as a series of commands and subcommands, with additional flag
     sudo zypper remove adutil-preview
     ```
 
-1. Run the following command to install **adutil**. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
+1. Run the following command to install **adutil**. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y zypper install -y adutil

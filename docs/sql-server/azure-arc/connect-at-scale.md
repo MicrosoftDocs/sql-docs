@@ -1,7 +1,7 @@
 ---
 title: Connect SQL Server instances to Azure Arc at scale
 titleSuffix:
-description: In this article, you learn how to connect SQL Server instances as Azure Arc enabled SQL Servers (preview) using a service principal.
+description: In this article, you learn how to connect SQL Server instances as SQL Server on Azure-arc enabled serverss (preview) using a service principal.
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -12,7 +12,7 @@ ms.prod: sql
 
 # Connect SQL Server instances to Azure Arc at scale
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect and register each machine and the installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc enabled server and Azure Arc enabled SQL Server. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect and register each machine and the installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc enabled server and SQL Server on Azure-arc enabled servers. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
 
 The installation methods to install and configure the Connected Machine agent requires that the automated method you use has  administrator permissions on the machines. On Linux, by using the root account and on Windows, as a member of the Local Administrators group.
 
@@ -111,7 +111,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 ## Validate successful onboarding
 
-After you register SQL Server instances with Azure Arc enabled SQL Server (preview), go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each registered SQL Server instance. 
+After you register SQL Server instances with SQL Server on Azure-arc enabled servers (preview), go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each registered SQL Server instance. 
 
 ![A successful onboard](./media/join-at-scale/successful-onboard.png)
 

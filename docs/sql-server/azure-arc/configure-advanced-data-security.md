@@ -1,7 +1,7 @@
 ---
 title: Configure advanced data security
-titleSuffix: Azure Arc
-description: Configure advanced data security for Azure Arc enabled SQL Server instance
+titleSuffix: SQL Server on Azure-arc enabled servers
+description: Configure advanced data security for SQL Server on Azure-arc enabled servers instance
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -9,7 +9,7 @@ ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Configure advanced data security for Azure Arc enabled SQL Server instance
+# Configure advanced data security for SQL Server on Azure-arc enabled servers instance
 
 You can enable advanced data security for your SQL Server instances on premises by following these steps.
 

@@ -11,11 +11,11 @@ ms.technology: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
-# Rotate SQL Server on Linux keytabs
+# Rotating Keytabs for SQL Server on Linux
 
-Based on your organization's security best practices, you may be required to rotate the password regularly for the Active Directory (AD) account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for SQL Server service. The supported method for changing the password for the account is documented in this article. The password change takes effect without the need to restart the SQL Server service on Linux.
+Based on your organization's security best practices, you may be required to rotate the password regularly for the Active Directory (AD) account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for SQL Server service. The supported method for changing the password for the account is documented here, it ensures that the password change takes effect without the need to restart the SQL Server service on Linux.
 
-The [adutil tool](sql-server-linux-ad-auth-adutil-introduction.md) is used to update the keytab. The adutil command must be run from a domain-joined machine. For more information about adutil and how to download the tool, see [Introduction to adutil - Active Directory Utility](sql-server-linux-ad-auth-adutil-introduction.md).  
+The adutil tool is used to update the keytab. The adutil command must be run from a domain-joined machine. For more information about adutil and how to download the tool, see [Introduction to adutil - Active Directory Utility](sql-server-linux-ad-auth-adutil-introduction.md).  
 
 > [!NOTE]
 > It's critical to update the new password in the keytab with the next **kvno** number before updating it in Windows Active Directory (AD). Using the next **kvno** number prevents the SQL Server service from the need to be restarted after the password change. If you update the password in AD first, and then change the keytab, you'll need to restart the SQL Server service to ensure that AD authentication works properly.
@@ -26,12 +26,12 @@ Let's consider an example. AD authentication is already enabled for the SQL Serv
 
 1. [Install adutil](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil) on the domain joined machine.
 
-1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain and should be able to create accounts and SPNs in the domain.
+1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain and should be able to create accounts and SPNs in the domain. In this case, I am using the account amvin@CONTOSO.COM that has privilages to create accounts and SPNs in the domain. 
 
     ```bash
-    kinit sqluser@CONTOSO.COM 
+    kinit amvin@CONTOSO.COM 
     ```
-
+   
 1. Once you've ran `kinit` to obtain/renew the TGT, query the current **kvno** number of the **network.privilegedadaccount**. In this case, it's `sqluser@CONTOSO.COM`.
 
     ```bash
@@ -71,7 +71,7 @@ klist -kte /var/opt/mssql/secrets/mssql.keytab
 
 ## Change the account password in AD
 
-The last step is to update the password of the **network.privilegedadaccount** account in Windows Active Directory. Change the password to the `<newpassword>` that you provided in the step 3 in the section above. AD authentication should continue to work, and without the need for SQL Server service to restart.
+The last step is to update the password of the **network.privilegedadaccount** or the account that owns the SQL Server SPNs in Windows Active Directory. In the above sceanrio we will have to update the password for the sqluser@CONTOSO.COM in the Active Directory. Change the password to the `<newpassword>` that you provided in the step 3 in the section above. AD authentication should continue to work, and without the need for SQL Server service to restart.
 
 ## Next Steps
 

@@ -32,6 +32,10 @@ This message occurs when attempting to join secondary databases to an Always On 
   
 ## User Action  
 
+> [!div class="MSSQLSERVER_35250_Notebook"]
+> [Download Troubleshooting Notebook for this topic](https://github.com/microsoft/tigertoolbox/blob/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)
+
+
 > [!NOTE]  
 > All the following steps must be run on both the Primary replica and the problematic Secondary replica(s).
 

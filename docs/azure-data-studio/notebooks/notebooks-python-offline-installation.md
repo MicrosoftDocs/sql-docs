@@ -4,7 +4,7 @@ description: This tutorial shows how you can install Python in an offline enviro
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: lucyzhang
+author: lucyzhang929
 ms.author: luczhan
 ms.reviewer: alayu, maghan
 ms.custom: ""

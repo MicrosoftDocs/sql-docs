@@ -31,76 +31,7 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the [adutil](sql-server-linux-ad-auth-adutil-introduction.md) tool on a Linux host machine. Follow the section below based on the Linux distribution that you're running to install adutil.
-
-## Install adutil
-
-On the Linux host machine, use the following commands to install adutil.
-
-> [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
-
-### RHEL
-
-1. Download the Microsoft Red Hat repository configuration file.
-
-    ```bash
-    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages.
-
-    ```bash
-    sudo yum remove adutil
-    ```
-
-1. Run the following commands to install adutil. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
-
-    ```bash
-    sudo ACCEPT_EULA=Y yum install -y adutil
-    ```
-
-### Ubuntu
-
-1. Import the public repository GPG keys and then register the Microsoft Ubuntu repository.
-
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages using the below commands
-
-    ```bash
-    sudo apt-get remove adutil
-    ```
-
-1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
-
-    ```bash
-    sudo apt-get update
-    sudo ACCEPT_EULA=Y apt-get install -y adutil
-    ```
-
-### SLES
-
-1. Add the Microsoft SQL Server repository to Zypper.
-
-    ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages.
-
-    ```bash
-    sudo zypper remove adutil
-    ```
-
-1. Run the following command to install adutil. `ACCEPT_EULA=Y` accepts the EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
-
-    ```bash
-    sudo ACCEPT_EULA=Y zypper install -y adutil
-    ```
+- Install the adutil tool on the domain joined host machine. 
 
 ## Domain machine preparation
 
@@ -113,6 +44,10 @@ For this tutorial, we're using an environment in Azure with three VMs. One VM ac
 ## Join the Linux host machine to your AD domain
 
 Join your SQL Server Linux host with an Active Directory domain controller. For information on how to join an active directory domain, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
+
+## Install adutil
+
+To install adutil tool, follow the steps explained in: [Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md) on the host machine that you added to the domain in the previous step.
 
 ## Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 

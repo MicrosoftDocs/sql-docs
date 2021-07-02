@@ -26,7 +26,7 @@ Let's consider an example. AD authentication is already enabled for the SQL Serv
 
 1. [Install adutil](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil) on the domain joined machine.
 
-1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain and should be able to create accounts and SPNs in the domain. In this case, I am using the account amvin@CONTOSO.COM that has privilages to create accounts and SPNs in the domain. 
+1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain and should be able to create accounts and SPNs in the domain. In this case, we are using the account "amvin@CONTOSO.COM" that has privilages to create accounts and SPNs in our domain called "CONTOSO.COM". 
 
     ```bash
     kinit amvin@CONTOSO.COM 

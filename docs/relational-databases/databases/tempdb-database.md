@@ -306,7 +306,7 @@ Running out of disk space in `tempdb` can cause significant disruptions in the [
  -- Determining the amount of free space in tempdb
 SELECT SUM(unallocated_extent_page_count) AS [free pages],
   (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by the version store
 SELECT SUM(version_store_reserved_page_count) AS [version store pages used],

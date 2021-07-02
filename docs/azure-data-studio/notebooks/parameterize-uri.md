@@ -41,7 +41,7 @@ In the URI query, use **&** to indicate a new parameter to be injected.
 
 ## URI Parameterization Example
 
-**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to then download and open in ADS.**
+**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to then download and open in Azure Data Studio.**
 
 Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.
 

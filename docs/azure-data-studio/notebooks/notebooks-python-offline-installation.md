@@ -74,6 +74,5 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 
 Once the wizard is completed, open a new notebook and change the kernel to Python.
 
-## Note
-
-The steps above can be repeated for any additional packages needed.
+> [!Note]
+> The steps above can be repeated for any additional packages needed.

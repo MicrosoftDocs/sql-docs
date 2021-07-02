@@ -5,7 +5,7 @@ description: This article explains how to view the status of a big data cluster 
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 06/28/2021
+ms.date: 07/02/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -27,9 +27,9 @@ Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../inclu
 
 The following articles describe how to manage and operate Big Data Clusters: 
 
-- [Connect to a SQL Server big data cluster from Azure Data Studio](connect-to-big-data-cluster.md)
+- [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
 - [Manage big data clusters for SQL Server controller dashboard](manage-with-controller-dashboard.md)
-- [Manage SQL Server Big Data Clusters by using Azure Data Studio notebooks](notebooks-manage-bdc.md)
+- [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md)
 - [Manage Big Data Clusters by using notebooks](cluster-manage-notebooks.md)
 - [Run a sample notebook by using Spark](notebooks-tutorial-spark.md)
 
@@ -37,10 +37,10 @@ The following articles describe how to manage and operate Big Data Clusters:
 
 The following articles describe how to monitor Big Data Clusters: 
 
-- [Monitor cluster status by using Azure Data Studio](cluster-monitor-ads.md)
-- [Monitor a cluster by using azdata and kubectl](cluster-monitor-cmdlet.md)
-- [Monitor a cluster by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor a cluster by using Juypter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor Big Data Cluster status by using Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor a Big Data Cluster by using azdata and kubectl](cluster-monitor-cmdlet.md)
+- [Monitor a Big Data Cluster by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor a Big Data Cluster by using Juypter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 
 > [!IMPORTANT]
 > The Internet Explorer browser and older Microsoft Edge browsers aren't compatible with Grafana or Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or see [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) or [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
@@ -74,7 +74,7 @@ The following articles describe how to troubleshoot Big Data Clusters deployed i
 
 ### Access to local notebooks 
 
-After you connect to a big data cluster by using Azure Data Studio, on the **[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]** tab, you can find a link to all the local notebooks: 
+After you connect to a big data cluster with Azure Data Studio, on the **[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]** tab, you can find a link to all the local notebooks: 
 
 ![Screenshot that shows where to find links to local notebooks.](media/view-cluster-status/bdc-local-guides.png)
 
@@ -100,9 +100,9 @@ When you select **Add**, you'll gain access to all the notebooks for your chosen
 
 To learn how to use the notebooks, see these articles:
 
-- [Monitoring clusters by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
-- [Gathering and analyzing logs in a cluster by using notebooks](cluster-logging-notebooks.md)
-- [Troubleshoot the pyspark notebook](troubleshoot-pyspark-notebook.md)
+- [Monitor a Big Data Cluster by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Gathering and analyzing logs in a Big Data Cluster by using notebooks](cluster-logging-notebooks.md)
+- [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
 - [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 
 ## Next steps

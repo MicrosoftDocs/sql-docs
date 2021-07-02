@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor cluster with azdata and Grafana Dashboard
+# Monitor a Big Data Cluster by using azdata and Grafana Dashboard
 
 This article describes how to monitor an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Cluster exposes Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorized as either: 
 - Kubernetes host-related metrics collected by Telegraf, an agent for collecting, processing, aggregating, and writing metrics.

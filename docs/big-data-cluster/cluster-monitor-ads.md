@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor cluster status with Azure Data Studio
+# Monitor Big Data Cluster status by using Azure Data Studio
 
 This article explains how to view the status of a big data cluster using Azure Data Studio.
 

@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor cluster with azdata and kubectl
+# Monitor a Big Data Cluster by using azdata and kubectl
 
 ## Use azdata
 

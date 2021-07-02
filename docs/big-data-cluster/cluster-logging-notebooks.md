@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Gathering and analyzing logs in the cluster with notebooks
+# Gathering and analyzing logs in a Big Data Cluster by using notebooks
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging Big Data Clusters.
 

@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Manage Big Data Clusters (BDC) the cluster with notebooks
+# Manage Big Data Clusters by using notebooks
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in managing Big Data Clusters.
 

@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitoring cluster with notebooks
+# Monitor a Big Data Cluster by using Jupyter Notebooks and Azure Data Studio
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in monitoring Big Data Clusters.
 

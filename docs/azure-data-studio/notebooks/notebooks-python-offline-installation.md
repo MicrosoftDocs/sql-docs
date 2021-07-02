@@ -1,6 +1,6 @@
 ---
-title: Python Installation in an Offline Environment description
-description: This tutorial shows how you can install Python in an offline environment
+title: Python Installation in an Offline Windows Environment
+description: This tutorial shows how you can install Python in an offline Windows environment
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,12 +8,12 @@ author: lucyzhang929
 ms.author: luczhan
 ms.reviewer: alayu, maghan
 ms.custom: ""
-ms.date: 06/28/2021
+ms.date: 07/02/2021
 ---
 
-# Install Python in an Offline Environment
+# Install Python in an Offline Windows Environment
 
-This tutorial demonstrates how to install and use the Python kernel in an offline environment with notebooks.
+This tutorial demonstrates how to install and use the Python kernel in an offline Windows environment with notebooks.
 
 ## Prerequisites
 
@@ -40,14 +40,14 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 
 4. Create a sub directory named **`wheelhouse`**.
 
-    ```bash
+    ```cmd
     mkdir wheelhouse
     ```
 
 5. Run the following command to download the required dependencies to the sub directory.
 
-    ```python
-    ./python.exe -m pip download -r requirements.txt -d wheelhouse
+    ```cmd
+    python.exe -m pip download -r requirements.txt -d wheelhouse
     ```
 
 ## Install Python on a machine that doesn't have internet access
@@ -62,8 +62,8 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 
 3. Run the following to install the dependencies.
 
-    ```python
-    ./python.exe -m pip install -r ./requirements.txt --no-index --find-links ./wheelhouse
+    ```cmd
+    python.exe -m pip install -r requirements.txt --no-index --find-links wheelhouse
     ```
 
 ## Use the Python Installation in Azure Data Studio

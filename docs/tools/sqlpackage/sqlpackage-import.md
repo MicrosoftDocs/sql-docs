@@ -32,7 +32,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property]((#properties-specific-to-the-import-action)); {PropertyName}={Value}. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-import-action); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |

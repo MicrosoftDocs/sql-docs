@@ -32,7 +32,7 @@ ms.date: 7/2/2021
   
 - [Script](sqlpackage-script.md): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
   
-The **SqlPackage.exe** command line allows you to specify these actions along with action-specific parameters and properties.  
+The **SqlPackage.exe** command line tool allows you to specify these actions along with action-specific parameters and properties.  
 
 **[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   

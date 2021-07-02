@@ -217,7 +217,7 @@ The following commands register the repository providing MRO. Post-registration,
 sudo su
 
 # Set the location of the package repo at the "prod" directory containing the distribution
-# This example is for SLES12, the only supported version of SLES in Machine Learning Server
+# This example is for SLES12
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 # Update packages on your system (optional)

@@ -2,7 +2,7 @@
 title: "tempdb database | Microsoft Docs"
 description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 09/16/2020
+ms.date: 07/02/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -306,22 +306,22 @@ Running out of disk space in `tempdb` can cause significant disruptions in the [
  -- Determining the amount of free space in tempdb
 SELECT SUM(unallocated_extent_page_count) AS [free pages],
   (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by the version store
 SELECT SUM(version_store_reserved_page_count) AS [version store pages used],
   (SUM(version_store_reserved_page_count)*1.0/128) AS [version store space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by internal objects
 SELECT SUM(internal_object_reserved_page_count) AS [internal object pages used],
   (SUM(internal_object_reserved_page_count)*1.0/128) AS [internal object space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by user objects
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
   (SUM(user_object_reserved_page_count)*1.0/128) AS [user object space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
  ```
 
 To monitor the page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify large queries, temporary tables, or table variables that are using lots of `tempdb` disk space. You can also use several counters to monitor the free space that's available in `tempdb` and the resources that are using `tempdb`.

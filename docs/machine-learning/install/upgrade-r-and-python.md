@@ -12,6 +12,8 @@ monikerRange: "=sql-server-2016||=sql-server-2017"
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
+[!INCLUDE [retirement banner](~/includes/machine-learning-server-retirement.md)]
+
 This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). You can get [newer versions of Python and R](#version-map) by *binding* to [Microsoft Machine Learning Server](/machine-learning-server).
 
 > [!IMPORTANT]

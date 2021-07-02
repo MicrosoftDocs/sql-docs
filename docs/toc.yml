@@ -10269,7 +10269,7 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: Azure Arc enabled SQL Server (preview)
+- name: SQL Server on Azure Arc-enabled servers (preview)
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -10413,7 +10413,7 @@ items:
         href: azdata/reference/reference-azdata-bdc-sql-settings.md
       - name: bdc status
         href: azdata/reference/reference-azdata-bdc-status.md
-    - name: Azure Arc enabled data services
+    - name: Azure Arc-enabled data services
       items:
       - name: arc
         href: azdata/reference/reference-azdata-arc.md

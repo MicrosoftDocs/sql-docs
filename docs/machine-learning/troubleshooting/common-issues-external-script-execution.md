@@ -162,7 +162,7 @@ This error can happen in many ways:
 
 - You installed a new package on the server, but access was denied, so R installed the package to a user library.
 
-- You installed R Services and then installed another R tool or set of libraries, including Microsoft R Server (Standalone), Microsoft R Client, RStudio, and so forth.
+- You installed R Services and then installed another R tool or set of libraries, such as RStudio.
 
 To determine the location of the R package library that's used by the instance, open SQL Server Management Studio (or any other database query tool), connect to the instance, and then run the following stored procedure:
 

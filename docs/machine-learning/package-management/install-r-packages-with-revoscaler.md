@@ -52,6 +52,8 @@ The following table describes the functions used for R package installation and 
 
 ## Client connections
 
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
+
 A client workstation can be [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) or a [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) (data scientists often use the free developer edition) on the same network.
 
 When calling package management functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.

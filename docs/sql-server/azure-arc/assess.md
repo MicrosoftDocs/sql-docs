@@ -1,6 +1,6 @@
 ---
-title: Configure on-demand SQL Assessment on an Azure Arc enabled SQL Server instance
-description: Configure on-demand SQL Assessment on an Azure Arc enabled SQL Server instance
+title: Configure on-demand SQL Assessment on an SQL Server on Azure Arc-enabled servers  instance
+description: Configure on-demand SQL Assessment on an SQL Server on Azure Arc-enabled servers instance
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -8,9 +8,9 @@ ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Configure SQL Assessment on an Azure Arc enabled SQL Server instance
+# Configure SQL Assessment | SQL Server on Azure Arc-enabled servers
 
-SQL Assessment provides a mechanism to evaluate your configuration of SQL Server. This article provides instructions for using SQL Assessment on an Azure Arc enabled SQL Server instance.
+SQL Assessment provides a mechanism to evaluate your configuration of SQL Server. This article provides instructions for using SQL Assessment on an instance of SQL Server on Azure Arc-enabled servers.
 
 ## Prerequisites
 

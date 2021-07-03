@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Troubleshoot the `pyspark` notebook
+# Troubleshoot a `pyspark` notebook
 
 This article demonstrates how to troubleshoot a `pyspark` notebook that fails.
 

@@ -26,6 +26,8 @@ ms.author: wiassaf
     :::column:::
         [sys.column_xml_schema_collection_usage](../../relational-databases/system-catalog-views/sys-column-xml-schema-collection-usages-transact-sql.md)
         
+        [sys.selective_xml_index_namespaces](../../relational-databases/system-catalog-views/sys-selective-xml-index-namespaces-transact-sql.md)
+        
         [sys.selective_xml_index_paths](../../relational-databases/system-catalog-views/sys-selective-xml-index-paths-transact-sql.md)
         
         [sys.xml_schema_model_groups](../../relational-databases/system-catalog-views/sys-xml-schema-model-groups-transact-sql.md)

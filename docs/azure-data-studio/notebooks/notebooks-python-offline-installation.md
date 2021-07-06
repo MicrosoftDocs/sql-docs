@@ -1,5 +1,5 @@
 ---
-title: Python Installation in an Offline Windows Environment
+title: Python installation in an offline Windows environment
 description: This tutorial shows how you can install Python in an offline Windows environment
 ms.topic: how-to
 ms.prod: azure-data-studio
@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 07/02/2021
 ---
 
-# Install Python in an Offline Windows Environment
+# Install Python in an offline Windows environment
 
 This tutorial demonstrates how to install and use the Python kernel in an offline Windows environment with notebooks.
 
@@ -21,7 +21,9 @@ This tutorial demonstrates how to install and use the Python kernel in an offlin
 
 ## Download Python and Dependencies
 
-1. On a machine that has internet access, download the latest Azure Data Studio Python package from here: [https://go.microsoft.com/fwlink/?linkid=2163338](https://go.microsoft.com/fwlink/?linkid=2163338). Unzip the file into a local directory (for example: C:\\azuredatastudio-python). Note: The latest Azure Data Studio Python version is 3.8.10.
+1. On a machine that has internet access, download the latest Azure Data Studio Python package from here: [https://go.microsoft.com/fwlink/?linkid=2163338](https://go.microsoft.com/fwlink/?linkid=2163338). Unzip the file into a local directory (for example: C:\\azuredatastudio-python). 
+   >[!Note]
+   >The latest Azure Data Studio Python version is 3.8.10.
 
 2. In a terminal, navigate to the Python directory.
 

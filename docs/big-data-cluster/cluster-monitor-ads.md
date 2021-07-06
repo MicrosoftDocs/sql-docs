@@ -18,7 +18,7 @@ This article explains how to view the status of a big data cluster using Azure D
 
 ## <a id="datastudio"></a> Use Azure Data Studio
 
-After downloading the latest **insiders build** of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), you can view service endpoints and the status of a big data cluster with the SQL Server Big Data Clusters dashboard. Some of the features below are only first available in the insiders build of Azure Data Studio.
+After downloading the latest **insiders build** of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), you can view service endpoints and the status of a big data cluster with the SQL Server big data cluster dashboard. Some of the features below are only first available in the insiders build of Azure Data Studio.
 
 1. First, create a connection to your big data cluster in Azure Data Studio. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -26,13 +26,13 @@ After downloading the latest **insiders build** of [Azure Data Studio](../azure-
 
    ![right click manage](media/view-cluster-status/right-click-manage.png)
 
-1. Select the **SQL Server Big Data Cluster** tab to access the Big Data Clusters dashboard.
+1. Select the **SQL Server Big Data Cluster** tab to access the big data clusters dashboard.
 
    ![Big data cluster dashboard](media/view-cluster-status/bdc-dashboard.png)
 
 ### Service endpoints
 
-It is important to be able to easily access the various services within a big data cluster. The Big Data Clusters dashboard provides a service endpoints table that allows you to see and copy the service endpoints.
+It is important to be able to easily access the various services within a big data cluster. The big data cluster dashboard provides a service endpoints table that allows you to see and copy the service endpoints.
 
 ![service endpoints](media/view-cluster-status/service-endpoints.png)
 
@@ -64,7 +64,7 @@ You can directly click on these links. You will be required to authenticate when
     - Controller password
     - Controller endpoints
 
-    The default big data cluster name is **mssql-cluster** unless you customized it during your deployment. You can find the controller endpoint from the Big Data Clusters dashboard in the Service Endpoints table. The endpoint is listed as **Cluster Management Service**. If you do not know the credentials, ask the admin who deployed your cluster.
+    The default big data cluster name is **mssql-cluster** unless you customized it during your deployment. You can find the controller endpoint from the big data cluster dashboard in the Service Endpoints table. The endpoint is listed as **Cluster Management Service**. If you do not know the credentials, ask the admin who deployed your cluster.
 
 3. Click **Run Cells** on the top toolbar.
 

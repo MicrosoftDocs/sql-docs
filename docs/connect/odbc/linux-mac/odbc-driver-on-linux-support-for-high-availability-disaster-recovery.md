@@ -26,7 +26,7 @@ The ODBC drivers for Linux and macOS support [!INCLUDE[ssHADR](../../../includes
 
 - [Active secondaries: Readable secondary replicas (Always On availability groups)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 
-You can specify the availability group listener of a given availability group in the connection string. If an ODBC application on Linux or macOS is connected to a database in an availability group that fails over, the original connection is broken. The application must open a new connection to continue work after the failover.
+You can specify the availability group listener of a particular availability group in the connection string. If an ODBC application on Linux or macOS is connected to a database in an availability group that fails over, the original connection is broken. The application must open a new connection to continue work after the failover.
 
 The ODBC drivers on Linux and macOS iterate sequentially through all IP addresses associated with a DNS hostname, if you aren't connecting to an availability group listener. If the DNS server's first returned IP address isn't connectable, these iterations can be time consuming. 
 

@@ -48,14 +48,14 @@ To review the complete backup history of a database, use the following sample sc
 ```tsql
 SELECT bs.database_name
 , backuptype = CASE 
-	WHEN bs.type = 'D' and bs.is_copy_only = 0 then 'Full Database'
-	WHEN bs.type = 'D' and bs.is_copy_only = 1 then 'Full Copy-Only Database'
-	WHEN bs.type = 'I' then 'Differential database backup'
-	WHEN bs.type = 'L' then 'Transaction Log'
-	WHEN bs.type = 'F' then 'File or filegroup'
-	WHEN bs.type = 'G' then 'Differential file'
-	WHEN bs.type = 'P' then 'Partial'
-	WHEN bs.type = 'Q' then 'Differential partial' END + ' Backup'
+	WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
+	WHEN bs.type = 'D' and bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
+	WHEN bs.type = 'I' THEN 'Differential database backup'
+	WHEN bs.type = 'L' THEN 'Transaction Log'
+	WHEN bs.type = 'F' THEN 'File or filegroup'
+	WHEN bs.type = 'G' THEN 'Differential file'
+	WHEN bs.type = 'P' THEN 'Partial'
+	WHEN bs.type = 'Q' THEN 'Differential partial' END + ' Backup'
 , bs.recovery_model
 , BackupStartDate = bs.Backup_Start_Date
 , BackupFinishDate = bs.Backup_Finish_Date
@@ -70,6 +70,8 @@ LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_s
 WHERE database_name = '<database_name>'
 AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last two months
 ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
+```
+
 ## Resolving a full transaction log
 
 
@@ -99,18 +101,18 @@ SELECT
     sdb.log_reuse_wait, sdb.log_reuse_wait_desc, 
     log_reuse_wait_explanation = CASE
 
-        when log_reuse_wait = 1 then 'No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond'
-        when log_reuse_wait = 2 then 'A log backup is required before the transaction log can be truncated.'
-        when log_reuse_wait = 3 then 'A data backup or a restore is in progress (all recovery models). Please wait or cancel backup'
-        when log_reuse_wait = 4 then 'A long-running active transaction or a defferred transaction is keeping log from being truncated. You can attempt a log backup to free space or complete/rollback long transaction'
-        when log_reuse_wait = 5 then 'Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)'        
-        WHEN log_reuse_wait = 6 then 'During transactional replication, transactions relevant to the publications are still undelivered to the distribution database. Investigate the status of agents involved in replication or Changed Data Capture (CDC). (Full recovery model only.)'        
+        WHEN log_reuse_wait = 1 THEN 'No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond'
+        WHEN log_reuse_wait = 2 THEN 'A log backup is required before the transaction log can be truncated.'
+        WHEN log_reuse_wait = 3 THEN 'A data backup or a restore is in progress (all recovery models). Please wait or cancel backup'
+        WHEN log_reuse_wait = 4 THEN 'A long-running active transaction or a defferred transaction is keeping log from being truncated. You can attempt a log backup to free space or complete/rollback long transaction'
+        WHEN log_reuse_wait = 5 THEN 'Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)'        
+        WHEN log_reuse_wait = 6 THEN 'During transactional replication, transactions relevant to the publications are still undelivered to the distribution database. Investigate the status of agents involved in replication or Changed Data Capture (CDC). (Full recovery model only.)'        
 
-        WHEN log_reuse_wait = 7 then 'A database snapshot is being created. This is a routine, and typically brief, cause of delayed log truncation.'
-        WHEN log_reuse_wait = 8 then 'A transaction log scan is occurring. This is a routine, and typically a brief cause of delayed log truncation.'
-        WHEN log_reuse_wait = 9 then 'A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model only.)'
-        WHEN log_reuse_wait = 13 then 'If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint log sequence number (LSN).'
-        WHEN log_reuse_wait = 16 then 'An In-Memory OLTP checkpoint has not occurred since the last log truncation, or the head of the log has not yet moved beyond a VLF.'
+        WHEN log_reuse_wait = 7 THEN 'A database snapshot is being created. This is a routine, and typically brief, cause of delayed log truncation.'
+        WHEN log_reuse_wait = 8 THEN 'A transaction log scan is occurring. This is a routine, and typically a brief cause of delayed log truncation.'
+        WHEN log_reuse_wait = 9 THEN 'A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model only.)'
+        WHEN log_reuse_wait = 13 THEN 'If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint log sequence number (LSN).'
+        WHEN log_reuse_wait = 16 THEN 'An In-Memory OLTP checkpoint has not occurred since the last log truncation, or the head of the log has not yet moved beyond a VLF.'
     ELSE 'None' END,
 
     sdb.database_id,
@@ -291,10 +293,10 @@ SELECT
     available_bytes/1024/1024 Available_Disk_space_MB,
     (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 file_size_as_percentage_of_disk_space,
     db_name(mf.database_id) DbName
-from sys.master_files mf cross apply sys.dm_os_volume_stats (mf.database_id, file_id)
-where mf.[type_desc] = 'LOG'
+FROM sys.master_files mf CROSS APPLY sys.dm_os_volume_stats (mf.database_id, file_id)
+WHERE mf.[type_desc] = 'LOG'
     and (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 > 90 --log is 90% of disk drive
-order by size desc
+ORDER BY size DESC
 
 if @@ROWCOUNT > 0
 BEGIN
@@ -308,13 +310,13 @@ BEGIN
     DECLARE @db_name_filled_disk sysname, @log_name_filled_disk sysname, @go_beyond_size bigint 
     
     DECLARE log_filled_disk CURSOR FOR
-        select 
+        SELECT 
             db_name(mf.database_id),
             name
-        from sys.master_files mf cross apply sys.dm_os_volume_stats (mf.database_id, file_id)
-        where mf.[type_desc] = 'LOG'
+        FROM sys.master_files mf CROSS APPLY sys.dm_os_volume_stats (mf.database_id, file_id)
+        WHERE mf.[type_desc] = 'LOG'
             and (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 > 90 --log is 90% of disk drive
-        order by size desc
+        ORDER BY size desc
 
     OPEN log_filled_disk
 

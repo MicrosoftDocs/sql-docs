@@ -39,39 +39,6 @@ ms.custom: "seo-lt-2019"
 If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. 
 
 
-### Review log backup history
-
-If a database is in FULL or BULK_LOGGED recovery model, transaction log backups must be scheduled regularly. If log backups aren't occurring on a regular basis (for example, every 15 minutes), or are failing, take immediate action to resolve. Without regular transaction log backups, the log files for databases in FULL or BULK_LOGGED recovery model will retain log data and grow unchecked. See [Back up a transaction log](../backup-restore/back-up-a-transaction-log-sql-server.md). For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
-
-To review the complete backup history of a database, use the following sample script:
-
-```tsql
-SELECT bs.database_name
-, backuptype = CASE 
-	WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
-	WHEN bs.type = 'D' and bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
-	WHEN bs.type = 'I' THEN 'Differential database backup'
-	WHEN bs.type = 'L' THEN 'Transaction Log'
-	WHEN bs.type = 'F' THEN 'File or filegroup'
-	WHEN bs.type = 'G' THEN 'Differential file'
-	WHEN bs.type = 'P' THEN 'Partial'
-	WHEN bs.type = 'Q' THEN 'Differential partial' END + ' Backup'
-, bs.recovery_model
-, BackupStartDate = bs.Backup_Start_Date
-, BackupFinishDate = bs.Backup_Finish_Date
-, LatestBackupLocation = bf.physical_device_name
-, backup_size_mb = bs.backup_size/1024./1024.
-, compressed_backup_size_mb = bs.compressed_backup_size/1024./1024.
-, database_backup_lsn -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on. 
-, checkpoint_lsn
-, begins_log_chain
-FROM msdb.dbo.backupset bs	
-LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_set_id]
-WHERE database_name = '<database_name>'
-AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last two months
-ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
-```
-
 ## Resolving a full transaction log
 
 
@@ -82,7 +49,7 @@ The following specific steps will help you find the reason for a full transactio
 There is a difference between truncating a transaction log and shrinking a transaction log. [Log Truncation](the-transaction-log-sql-server.md#Truncation) occurs normally during a transaction log backup, and is a logical operation which removes committed records inside the log, whereas [log shrinking](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md#shrinking-a-log-file) reclaims physical space on the file system by reducing the file size. Log truncation occurs on a [virtual-log-file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) boundary, and a log file may contain many VLFs. A log file can be shrunk only if there is empty space inside the log file to reclaim. Shrinking a log file alone cannot solve the problem of a full log file, instead, you must discover why the log file is full and cannot be truncated.
 
 > [!WARNING]
-> Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  For more information, see [Shrink a database](../databases/shrink-a-database.md).
+> Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and might slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  For more information, see [Shrink a database](../databases/shrink-a-database.md).
 
 
 To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). 
@@ -220,13 +187,42 @@ DEALLOCATE no_truncate_db
   
  More information about the following two actions is provided below:  
 
-- Backing up the log 
+- Backing up the log
 - Completing or killing a long-running transaction
 
 ### Backing up the log  
 
-Under the full recovery model or bulk-logged recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently.  
-  
+Under the FULL or BULK_LOGGED recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
+
+To review the complete backup history of a database, use the following sample script:
+
+```tsql
+SELECT bs.database_name
+, backuptype = CASE 
+	WHEN bs.type = 'D' and bs.is_copy_only = 0 THEN 'Full Database'
+	WHEN bs.type = 'D' and bs.is_copy_only = 1 THEN 'Full Copy-Only Database'
+	WHEN bs.type = 'I' THEN 'Differential database backup'
+	WHEN bs.type = 'L' THEN 'Transaction Log'
+	WHEN bs.type = 'F' THEN 'File or filegroup'
+	WHEN bs.type = 'G' THEN 'Differential file'
+	WHEN bs.type = 'P' THEN 'Partial'
+	WHEN bs.type = 'Q' THEN 'Differential partial' END + ' Backup'
+, bs.recovery_model
+, BackupStartDate = bs.Backup_Start_Date
+, BackupFinishDate = bs.Backup_Finish_Date
+, LatestBackupLocation = bf.physical_device_name
+, backup_size_mb = bs.backup_size/1024./1024.
+, compressed_backup_size_mb = bs.compressed_backup_size/1024./1024.
+, database_backup_lsn -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on. 
+, checkpoint_lsn
+, begins_log_chain
+FROM msdb.dbo.backupset bs	
+LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_set_id]
+WHERE recovery_model in ('FULL', 'BULK-LOGGED')
+AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last two months
+ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
+```
+
  **To create a transaction log backup**  
   
 > [!IMPORTANT]  

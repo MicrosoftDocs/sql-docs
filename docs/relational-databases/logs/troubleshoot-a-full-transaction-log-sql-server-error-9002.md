@@ -241,7 +241,8 @@ Add a new log file to the database on a different disk that has sufficient space
   
 For more information see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
 
-### Use T-SQL to automate
+### Utility script for recommended actions
+
 
 These steps can be partly-automated by running this T-SQL script which will indentify logs files that using a large percentage of disk space and suggest actions:
 

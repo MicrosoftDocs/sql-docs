@@ -73,7 +73,8 @@ SELECT
         when log_reuse_wait = 3 then 'A data backup or a restore is in progress (all recovery models). Please wait or cancel backup'
         when log_reuse_wait = 4 then 'A long-running active transaction or a defferred transaction is keeping log from being truncated. You can attempt a log backup to free space or complete/rollback long transaction'
         when log_reuse_wait = 5 then 'Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)'        
-        when log_reuse_wait = 6 then 'During transactional replications, transactions relevant to the publications are still undelivered to the distribution database. (Full recovery model only)'        
+        WHEN log_reuse_wait = 6 then 'During transactional replication, transactions relevant to the publications are still undelivered to the distribution database. Investigate the status of agents involved in replication or Changed Data Capture (CDC). (Full recovery model only.)'        
+
         when log_reuse_wait = 7 then 'A database snapshot is being created. This is a routine, and typically brief, cause of delayed log truncation.'
         when log_reuse_wait = 8 then 'A transaction log scan is occurring. This is a routine, and typically a brief cause of delayed log truncation.'
         when log_reuse_wait = 9 then 'A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model)'

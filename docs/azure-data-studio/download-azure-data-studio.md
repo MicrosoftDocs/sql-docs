@@ -188,9 +188,9 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 
 
-#### Windows Subsystem for Linux (WSL)
+#### Windows Subsystem for Linux
 
-1. Install Azure Data Studio for Windows. Then, use the `azuredatastudio` command in a WSL terminal just as you would in a standard command prompt. By default, the application is stored in your *AppData* folder.
+1. Install Azure Data Studio for Windows. Then, use the `azuredatastudio` command in a Windows Subsystem for Linux (WSL) terminal just as you would in a standard command prompt. By default, the application is stored in your *AppData* folder.
 
 2. Start Azure Data Studio from the WSL command prompt. When you're using the default Windows installation, start the application by running the following command:
 
@@ -299,13 +299,13 @@ If you installed Azure Data Studio with a .zip file or other archive, delete tha
 
 You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the internet or disc on Mac by doing the following:
 
-1. Select the **Finder icon** in the Dock, then select Applications in the Finder sidebar.
+1. Select the **Finder icon** in the Dock, and then select **Applications** in the **Finder** sidebar.
 
 2. Do one of the following:
 
-    - If an app is in a folder, open the app's folder to check for an uninstaller. Double-click *Uninstall [App]* or *[App] Uninstaller*, and then follow the onscreen instructions.
+    - If an app is in a folder, open the app's folder to check for an uninstaller. Double-click **Uninstall [App]** or **[App] Uninstaller**, and then follow the onscreen instructions.
 
-    - If an app isn't in a folder or doesn't have an uninstaller, drag the app from the Applications folder to the Trash (at the end of the Dock).
+    - If an app isn't in a folder or doesn't have an uninstaller, drag the app from the *Applications* folder to the Trash (at the end of the Dock).
 
 To uninstall apps you've downloaded from the App Store, use Launchpad.
 

@@ -326,8 +326,7 @@ SELECT db_name(database_id) DbName,
        (SIZE*8.0/1024)/(max_size*8.0/1024)*100 percent_full_of_max_size
 FROM sys.master_files
 WHERE file_id = 2
-  AND max_size not in (-1,
-                       268435456)
+  AND max_size not in (-1, 268435456)
   AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
 
 if @@ROWCOUNT > 0

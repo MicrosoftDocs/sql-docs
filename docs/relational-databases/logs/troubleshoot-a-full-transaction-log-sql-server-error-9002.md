@@ -96,7 +96,8 @@ WHERE sdb.log_reuse_wait != 0;
 select * from #CannotTruncateLog_Db
 
 DECLARE no_truncate_db CURSOR FOR
-    select log_reuse_wait, log_reuse_wait_desc, dbname, database_id, recovery_model_desc from #CannotTruncateLog_Db
+    SELECT log_reuse_wait, log_reuse_wait_desc, dbname, database_id, recovery_model_desc FROM #CannotTruncateLog_Db;
+
 
 OPEN no_truncate_db
 

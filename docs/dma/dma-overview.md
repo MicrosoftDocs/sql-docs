@@ -64,7 +64,7 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
 
 ## Prerequisites
 
-To run an assessment, you have to be a member of the SQL Server **sysadmin** role.
+To run an assessment, you have to be a member of the SQL Server **sysadmin** role. The recommended display resolution is 1024x756.
 
 ## Supported source and target versions
 

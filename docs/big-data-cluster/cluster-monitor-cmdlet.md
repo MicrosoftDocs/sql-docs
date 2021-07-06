@@ -1,7 +1,7 @@
 ---
-title: Monitor cluster with azdata and kubectl
+title: Monitor a cluster with azdata and kubectl
 titleSuffix: SQL Server Big Data Clusters
-description: Monitoring applications with azdata and kubectl on SQL Server 2019 big data cluster.
+description: Monitoring applications with azdata and kubectl on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor a Big Data Cluster by using azdata and kubectl
+# Monitor a big data cluster by using azdata and kubectl
 
 ## Use azdata
 
@@ -145,7 +145,7 @@ The following shows sample output from this command:
 
 ### View specific resource status
 
-You can view the status of a specific resource within the cluster with the [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) command. When you use this command you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
+You can view the status of a specific resource within the cluster with the [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) command. When you use this command, you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
 
 - master
 - control
@@ -159,13 +159,13 @@ For example, the following command displays the status of the storage pool:
 azdata bdc status show --all --resource storage-0
 ```
 
-To see the status of all components that are running a specific service you must use the corresponding command group `azdata bdc <serviceName> status show`. For example:
+To see the status of all components that are running a specific service, you must use the corresponding command group `azdata bdc <serviceName> status show`. For example:
 
 - azdata bdc sql status show --all
 - azdata bdc hdfs status show --all
 - azdata bdc spark status show --all
 
-Here is a sample output:
+Here's a sample output:
 
 ```output
   Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy

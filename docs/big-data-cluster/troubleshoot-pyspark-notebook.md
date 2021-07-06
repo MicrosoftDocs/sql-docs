@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot `pyspark` notebook
-titleSuffix: SQL Server Big Data Cluster
+titleSuffix: SQL Server Big Data Clusters
 description: Troubleshoot `pyspark` notebook
 author: DaniBunny
 ms.author: dacoelho
@@ -166,4 +166,4 @@ This troubleshooting steps require that you have:
 
 ## Next steps
 
-[Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md)
+[Troubleshoot SQL Server Big Data Clusters Active Directory integration](troubleshoot-active-directory.md)

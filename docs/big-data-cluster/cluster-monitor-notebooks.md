@@ -1,7 +1,7 @@
 ---
-title: Monitor cluster with Jupyter notebooks and Azure Data Studio
+title: Monitor a cluster with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Monitoring cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
+description: Monitoring cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor a Big Data Cluster by using Jupyter Notebooks and Azure Data Studio
+# Monitor a big data cluster by using Jupyter Notebooks and Azure Data Studio
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in monitoring Big Data Clusters.
 
@@ -37,10 +37,10 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG020- Describe nodes (Kubernetes)|Get the node information for BDC cluster  use the kubectl command line interface. |
 |TSG021 - Get cluster info (Kubernetes)|Get the Kubernetes cluster-info. |
 |TSG022 - Get external IP address for kubeadm host|Get the external IP address of the host of kubeadm. |
-|TSG023 - Get all BDC objects (Kubernetes)|Get a summary of all Kubernetes resources for the system namespace and the Big Data Cluster namespace. |
+|TSG023 - Get all BDC objects (Kubernetes)|Get a summary of all Kubernetes resources for the system namespace and the big data cluster namespace. |
 |TSG042 - Get node name and external mounts for Data and Logs PVCs|Get node name hosting pod along with the Data and Logs external mounts. |
 |TSG063 - Get storage classes (Kubernetes)|Use this notebook to get Kubernetes storage classes. |
-|TSG064 - Get BDC Persistent Volume Claims|Show the persistent volume claims (PVCs) for the Big Data Cluster. |
+|TSG064 - Get BDC Persistent Volume Claims|Show the persistent volume claims (PVCs) for the big data cluster. |
 |TSG065 - Get BDC secrets (Kubernetes)|View the big data cluster secrets. |
 |TSG066 - Get BDC event (Kubernetes)|View the big data cluster events.|
 |TSG072 - Get Persistent Volumes (Kubernetes)|Show the persistent volume (PVs) for the Kubernetes cluster. Persistent Volumes are non-namespaces objects. |
@@ -51,9 +51,9 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG099 - Get BDC daemonsets (Kubernetes)|Show BDC daemonsets for the Kubernetes cluster. |
 
 
-## Monitor Big Data Cluster (BDC)
+## Monitor Big Data Clusters 
 
-This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server Big Data Cluster (BDC).
+This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server big data cluster.
 
 |Name |Description |
 |---|---|---|---|
@@ -66,9 +66,9 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG033 - Show BDC SQL status|Get the SQL Server status of BDC deployed in Kubernetes cluster. |
 |TSG049 - Show BDC Controller status|et the controller status of BDC deployed in Kubernetes cluster. |
 |TSG068 - Show BDC HDFS status|Get the HDFS status of BDC deployed in Kubernetes cluster. |
-|TSG069 - Show Big Data Cluster Gateway status|Get the BDC Gateway status of BDC deployed in Kubernetes cluster. |
+|TSG069 - Show big data cluster Gateway status|Get the BDC Gateway status of BDC deployed in Kubernetes cluster. |
 |TSG070 - Query SQL master pool| Execute SQL query on master instance. |
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are SQL Server big data clusters?](../includes/ssbigdataclusters-ver15.md)](big-data-cluster-overview.md).

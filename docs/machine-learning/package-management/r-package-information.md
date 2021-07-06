@@ -109,7 +109,7 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 
 ### Component upgrades
 
-By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades or by binding R support to Microsoft Machine Learning Server.
+By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades.
 
 ::: moniker range="=sql-server-2016"
 In addition, you can add MicrosoftML and olapR packages to a SQL Server instance through a component upgrade.

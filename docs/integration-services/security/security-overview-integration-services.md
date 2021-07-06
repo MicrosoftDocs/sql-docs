@@ -58,7 +58,7 @@ ms.author: chugu
   
 -   Control access to packages and package configurations that are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Control accesss to packages and to related files such as configurations, logs, and checkpoint files that are stored in the file system.  
+-   Control access to packages and to related files such as configurations, logs, and checkpoint files that are stored in the file system.  
   
 -   Control access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service and to the information about packages that the service displays in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

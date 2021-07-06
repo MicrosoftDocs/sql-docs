@@ -18,7 +18,7 @@ ms.date: 06/18/2021
 This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
 
 > [!Note]
-   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="List":::
 
-4. You can test if papermill is loaded properly by checking the version of papermill.
+4. You can test if Papermill is loaded properly by checking the version of Papermill.
 
    ```python
    import papermill
@@ -64,7 +64,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
 ## Set up a parameterized notebook
 
-**To open the below notebook example in Azure Data Studio, click [here](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
+**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to then download and open in Azure Data Studio.**
 
 1. Verify the **Kernel** is set to *Python3*.
 
@@ -109,7 +109,7 @@ Papermill can be executed two ways:
 To execute a notebook using the CLI, enter the papermill command in the terminal with the input notebook, location for output notebook, and options.
 
 > [!Note]
-   > Papermill Command Line Interface Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
+> Papermill Command Line Interface Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
 
 1. Execute Input Notebook with new parameters.
 
@@ -117,9 +117,10 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
    papermill Input.ipynb Output.ipynb -p x 10 -p y 20
    ```
 
-   This will execute the Input Notebook with new values for parameters **x** and **y**.
+   This executes the Input Notebook with new values for parameters **x** and **y**.
 
 2. After execution view the new output parameterized notebook.
+
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
@@ -127,7 +128,7 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 ### Parameterized Python API execution
 
 > [!Note]
-   > Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
+> Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
    ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)

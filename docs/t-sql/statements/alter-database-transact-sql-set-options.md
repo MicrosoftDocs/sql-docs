@@ -72,7 +72,7 @@ Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compati
 Database scoped configurations are used to set several database configurations at the individual database level. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
-> Many database set options can be configured for the current session by using [SET statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described in the following sections are values that you can set for sessions that don't explicitly provide other set option values.
+> Many database set options can be configured for the current session by using [SET statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the `ALTER DATABASE SET` values. The database options described in the following sections are values that you can set for sessions that don't explicitly provide other set option values.
 
 ## Syntax
 
@@ -979,7 +979,7 @@ Controls the following [!INCLUDE[ssSB](../../includes/sssb-md.md)] options: enab
 Specifies that [!INCLUDE[ssSB](../../includes/sssb-md.md)] is enabled for the specified database. Message delivery is started, and the is_broker_enabled flag is set to true in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. The database keeps the existing [!INCLUDE[ssSB](../../includes/sssb-md.md)] identifier. Service broker can't be enabled while the database is the principal in a database mirroring configuration.
 
 > [!NOTE]
-> ENABLE_BROKER requires an exclusive database lock. If other sessions have locked resources in the database, ENABLE_BROKER will wait until the other sessions release their locks. To enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] in a user database, ensure that no other sessions are using the database before you run the ALTER DATABASE SET ENABLE_BROKER statement, such as by putting the database in single user mode. To enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] in the msdb database, first stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent so that [!INCLUDE[ssSB](../../includes/sssb-md.md)] can obtain the necessary lock.
+> ENABLE_BROKER requires an exclusive database lock. If other sessions have locked resources in the database, ENABLE_BROKER will wait until the other sessions release their locks. To enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] in a user database, ensure that no other sessions are using the database before you run the `ALTER DATABASE SET ENABLE_BROKER` statement, such as by putting the database in single user mode. To enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] in the msdb database, first stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent so that [!INCLUDE[ssSB](../../includes/sssb-md.md)] can obtain the necessary lock.
 
 #### DISABLE_BROKER     
 Specifies that [!INCLUDE[ssSB](../../includes/sssb-md.md)] is disabled for the specified database. Message delivery is stopped, and the is_broker_enabled flag is set to false in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. The database keeps the existing [!INCLUDE[ssSB](../../includes/sssb-md.md)] identifier.
@@ -1503,7 +1503,7 @@ SET QUERY_STORE = ON
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
-> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described in the following sections are values that can be set for sessions that don't explicitly provide other set option values.
+> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the `ALTER DATABASE SET` values. The database options described in the following sections are values that can be set for sessions that don't explicitly provide other set option values.
 
 ## Syntax
 
@@ -2399,7 +2399,7 @@ SET QUERY_STORE = ON
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
-> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described in the following sections are values that can be set for sessions that don't explicitly provide other set option values.
+> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the `ALTER DATABASE SET` values. The database options described in the following sections are values that can be set for sessions that don't explicitly provide other set option values.
 
 ## Syntax
 
@@ -3160,7 +3160,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## See slso
+## See also
 
 - [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)

@@ -289,12 +289,14 @@ BEGIN
     WHILE @@FETCH_STATUS = 0
     BEGIN
         
-        SELECT 'Transaction log for database "' + @db_name_filled_disk + '" has nearly or comletely filled disk volume it resides on!' as Finding
-        SELECT 'Consider using one of the below commands to shrink the "' + @log_name_filled_disk +'" transaction log file size or add a new file to a NEW volume' as Recommendation
-        SELECT 'DBCC SHRINKFILE(''' + @log_name_filled_disk + ''')' as Shrinfile_Command
-        SELECT 'ALTER DATABASE ' + @db_name_filled_disk + ' ADD LOG FILE ( NAME = N''' + @log_name_filled_disk + '_new'', FILENAME = N''NEW_VOLUME_AND_FOLDER_LOCATION\' + @log_name_filled_disk + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' as AddNewFile
-        SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=sql-server-ver15' TruncateFirst
-        SELECT 'Can you free some disk space on this volume? If so, do this to allow for the log to continue growing when needed.' FreeDiskSpace
+        SELECT 'Transaction log for database "' + @db_name_filled_disk + '" has nearly or comletely filled disk volume it resides on!' AS Finding
+        SELECT 'Consider using one of the below commands to shrink the "' + @log_name_filled_disk +'" transaction log file size or add a new file to a NEW volume' AS Recommendation
+        SELECT 'DBCC SHRINKFILE(''' + @log_name_filled_disk + ''')' AS Shrinkfile_Command
+        SELECT 'ALTER DATABASE ' + @db_name_filled_disk + ' ADD LOG FILE ( NAME = N''' + @log_name_filled_disk + '_new'', FILENAME = N''NEW_VOLUME_AND_FOLDER_LOCATION\' + @log_name_filled_disk + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' AS AddNewFile
+        SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=sql-server-ver15' AS TruncateFirst
+        SELECT 'Can you free some disk space on this volume? If so, do this to allow for the log to continue growing when needed.' AS FreeDiskSpace
+
+
 
 
          FETCH NEXT FROM log_filled_disk into @db_name_filled_disk , @log_name_filled_disk

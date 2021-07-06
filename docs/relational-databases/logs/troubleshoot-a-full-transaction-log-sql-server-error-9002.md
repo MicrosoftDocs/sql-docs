@@ -39,6 +39,37 @@ ms.custom: "seo-lt-2019"
 If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. 
 
 
+### Review log backup history
+
+If a database is in FULL or BULK_LOGGED recovery model, transaction log backups must be scheduled regularly. If log backups aren't occurring on a regular basis (for example, every 15 minutes), or are failing, take immediate action to resolve. Without regular transaction log backups, the log files for databases in FULL or BULK_LOGGED recovery model will retain log data and grow unchecked. See [Back up a transaction log](../backup-restore/back-up-a-transaction-log-sql-server.md). For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
+
+To review the complete backup history of a database, use the following sample script:
+
+```tsql
+SELECT bs.database_name
+, backuptype = CASE 
+	WHEN bs.type = 'D' and bs.is_copy_only = 0 then 'Full Database'
+	WHEN bs.type = 'D' and bs.is_copy_only = 1 then 'Full Copy-Only Database'
+	WHEN bs.type = 'I' then 'Differential database backup'
+	WHEN bs.type = 'L' then 'Transaction Log'
+	WHEN bs.type = 'F' then 'File or filegroup'
+	WHEN bs.type = 'G' then 'Differential file'
+	WHEN bs.type = 'P' then 'Partial'
+	WHEN bs.type = 'Q' then 'Differential partial' END + ' Backup'
+, bs.recovery_model
+, BackupStartDate = bs.Backup_Start_Date
+, BackupFinishDate = bs.Backup_Finish_Date
+, LatestBackupLocation = bf.physical_device_name
+, backup_size_mb = bs.backup_size/1024./1024.
+, compressed_backup_size_mb = bs.compressed_backup_size/1024./1024.
+, database_backup_lsn -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on. 
+, checkpoint_lsn
+, begins_log_chain
+FROM msdb.dbo.backupset bs	
+LEFT OUTER JOIN msdb.dbo.backupmediafamily bf ON bs.[media_set_id] = bf.[media_set_id]
+WHERE database_name = '<database_name>'
+AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last two months
+ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
 ## Resolving a full transaction log
 
 

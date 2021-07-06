@@ -90,7 +90,8 @@ SELECT
 INTO #CannotTruncateLog_Db
 FROM sys.databases AS sdb CROSS APPLY sys.dm_db_log_stats(database_id) AS ls
 
-WHERE sdb.log_reuse_wait != 0
+WHERE sdb.log_reuse_wait != 0;
+
 
 select * from #CannotTruncateLog_Db
 

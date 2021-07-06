@@ -1734,7 +1734,6 @@ You can determine this option's status by examining the `is_auto_update_stats_as
 For more information that describes when to use synchronous or asynchronous statistics updates, see the "Statistics options" section in [Statistics](../../relational-databases/statistics/statistics.md#statistics-options).
 
 #### <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**     
-**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Controls automatic options for [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md). You can view the options for the following settings in the Azure portal or via T-SQL in the view `sys.database_automatic_tuning_options`.
 
@@ -2610,7 +2609,8 @@ You can determine this option's status by examining the `is_auto_update_stats_as
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the database-wide statistics options" in [Statistics](../../relational-databases/statistics/statistics.md).
 
 #### <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**     
-**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+
+Controls automatic options for [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md). 
 
 #### FORCE_LAST_GOOD_PLAN = { ON | **OFF** }     
 Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option. 

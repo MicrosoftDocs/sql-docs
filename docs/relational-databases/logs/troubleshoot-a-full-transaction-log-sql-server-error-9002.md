@@ -44,7 +44,8 @@ There is a difference between truncating a transaction log and shrinking a trans
 
 To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). 
 
-The following set of T-SQL commands will help you indentify if a database log is not truncated and the reason for it. It will also recommend steps to resolve the issue:
+The following set of T-SQL commands will help you identify if a database transaction log is not truncated and the reason for it. The following script will also recommend steps to resolve the issue:
+
 
 ```tsql
 SET NOCOUNT ON

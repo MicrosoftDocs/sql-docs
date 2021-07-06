@@ -75,12 +75,13 @@ SELECT
         when log_reuse_wait = 5 then 'Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)'        
         WHEN log_reuse_wait = 6 then 'During transactional replication, transactions relevant to the publications are still undelivered to the distribution database. Investigate the status of agents involved in replication or Changed Data Capture (CDC). (Full recovery model only.)'        
 
-        when log_reuse_wait = 7 then 'A database snapshot is being created. This is a routine, and typically brief, cause of delayed log truncation.'
-        when log_reuse_wait = 8 then 'A transaction log scan is occurring. This is a routine, and typically a brief cause of delayed log truncation.'
-        when log_reuse_wait = 9 then 'A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model)'
-        when log_reuse_wait = 13 then 'If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint log sequence number (LSN)'
-        when log_reuse_wait = 16 then 'An In-Memory OLTP checkpoint has not occurred since the last log truncation, or the head of the log has not yet moved beyond a VLF)'
-    else 'None' end,
+        WHEN log_reuse_wait = 7 then 'A database snapshot is being created. This is a routine, and typically brief, cause of delayed log truncation.'
+        WHEN log_reuse_wait = 8 then 'A transaction log scan is occurring. This is a routine, and typically a brief cause of delayed log truncation.'
+        WHEN log_reuse_wait = 9 then 'A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model only.)'
+        WHEN log_reuse_wait = 13 then 'If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint log sequence number (LSN).'
+        WHEN log_reuse_wait = 16 then 'An In-Memory OLTP checkpoint has not occurred since the last log truncation, or the head of the log has not yet moved beyond a VLF.'
+    ELSE 'None' END,
+
     sdb.database_id,
     sdb.recovery_model_desc,
     ls.total_log_size_mb,

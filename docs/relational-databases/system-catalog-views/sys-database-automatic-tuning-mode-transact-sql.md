@@ -1,6 +1,6 @@
 ---
 title: "sys.database_automatic_tuning_mode (Transact-SQL)"
-description: Learn how to view automatic tuning options on SQL Server or Azure SQL Database. See required permissions and view additional available resources.
+description: Learn how to view automatic tuning mode on SQL Server or Azure SQL Database.
 ms.custom: ""
 ms.date: "07/06/2021"
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.author: "danil"
 ms.reviewer: "wiassaf"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# sys.database\_automatic\_tuning_options (Transact-SQL)
+# sys.database\_automatic\_tuning_mode (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Returns the Automatic Tuning mode for this database. Refer to [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_tuning) for available options.

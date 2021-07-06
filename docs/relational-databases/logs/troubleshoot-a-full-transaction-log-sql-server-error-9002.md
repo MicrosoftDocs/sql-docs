@@ -57,7 +57,8 @@ DROP TABLE IF EXISTS #CannotTruncateLog_Db
 SELECT 
     sdb.name as DbName, 
     sdb.log_reuse_wait, sdb.log_reuse_wait_desc, 
-    log_reuse_wait_explanation = case 
+    log_reuse_wait_explanation = CASE
+
         when log_reuse_wait = 1 then 'No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond'
         when log_reuse_wait = 2 then 'A log backup is required before the transaction log can be truncated.'
         when log_reuse_wait = 3 then 'A data backup or a restore is in progress (all recovery models). Please wait or cancel backup'

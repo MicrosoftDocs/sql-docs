@@ -316,7 +316,6 @@ END
 Error 9002 can be generated if the transaction log size has been set to an upper limit and autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
 ```tsql
---are any files set to a fixed size and what percentage of max size are they 
 SELECT db_name(database_id) DbName,
        name LogName,
        physical_name,

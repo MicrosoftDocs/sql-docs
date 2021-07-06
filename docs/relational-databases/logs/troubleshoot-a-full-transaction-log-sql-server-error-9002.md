@@ -88,7 +88,8 @@ SELECT
     ls.active_log_size_mb,
     ls.total_log_size_mb - ls.active_log_size_mb as Free_Space_mb
 INTO #CannotTruncateLog_Db
-FROM sys.databases sdb cross apply sys.dm_db_log_stats(database_id) ls
+FROM sys.databases AS sdb CROSS APPLY sys.dm_db_log_stats(database_id) AS ls
+
 WHERE sdb.log_reuse_wait != 0
 
 select * from #CannotTruncateLog_Db

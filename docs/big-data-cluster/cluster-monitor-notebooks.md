@@ -71,4 +71,4 @@ This section contains a set of notebooks useful for getting information and stat
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are SQL Server big data clusters?](../includes/ssbigdataclusters-ver15.md)](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are SQL Server big data clusters?](big-data-cluster-overview.md).

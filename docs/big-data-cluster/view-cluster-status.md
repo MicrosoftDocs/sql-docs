@@ -19,13 +19,13 @@ This article explains how to view the status of a big data cluster by using Azur
 
 ## Know your architecture
 
-Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md).
+Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What are SQL Server big data clusters?](big-data-cluster-overview.md).
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide coherent and consistent authorization and authentication. For an overview of big data cluster security, see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide coherent and consistent authorization and authentication. For an overview of Big Data Cluster security, see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
 
 ## Manage and operate with tools
 
-The following articles describe how to manage and operate Big Data Clusters: 
+The following articles describe how to manage and operate big data clusters: 
 
 - [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
 - [Manage big data clusters for SQL Server controller dashboard](manage-with-controller-dashboard.md)
@@ -38,9 +38,9 @@ The following articles describe how to manage and operate Big Data Clusters:
 The following articles describe how to monitor Big Data Clusters: 
 
 - [Monitor Big Data Cluster status by using Azure Data Studio](cluster-monitor-ads.md)
-- [Monitor a Big Data Cluster by using azdata and kubectl](cluster-monitor-cmdlet.md)
-- [Monitor a Big Data Cluster by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor a Big Data Cluster by using Juypter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor a big data cluster by using azdata and kubectl](cluster-monitor-cmdlet.md)
+- [Monitor a big data cluster by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor a big data cluster by using Juypter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 
 > [!IMPORTANT]
 > The Internet Explorer browser and older Microsoft Edge browsers aren't compatible with Grafana or Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or see [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) or [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
@@ -61,7 +61,7 @@ The following articles describe how to troubleshoot Big Data Clusters:
 - [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 - [Restore HDFS permissions](troubleshoot-hdfs-restore-admin.md)
 
-The following articles describe how to troubleshoot Big Data Clusters deployed in Active Directory mode:
+The following articles describe how to troubleshoot big data clusters deployed in Active Directory mode:
 - [Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md) 
 - [Troubleshoot Active Directory mode login failures](troubleshoot-ad-login-failed-untrusted-domain.md)
 - [Troubleshoot Big Data Clusters Active Directory mode deployment stopped](troubleshoot-ad-reverse-lookup-zone.md)
@@ -100,8 +100,8 @@ When you select **Add**, you'll gain access to all the notebooks for your chosen
 
 To learn how to use the notebooks, see these articles:
 
-- [Monitor a Big Data Cluster by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
-- [Gathering and analyzing logs in a Big Data Cluster by using notebooks](cluster-logging-notebooks.md)
+- [Monitor a big data cluster by using Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Gathering and analyzing logs in a big data cluster by using notebooks](cluster-logging-notebooks.md)
 - [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
 - [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 

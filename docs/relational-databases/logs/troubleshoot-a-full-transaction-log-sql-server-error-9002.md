@@ -35,7 +35,12 @@ ms.custom: "seo-lt-2019"
  - Log size is set to a fixed maximum value (autogrow is disabled)
  - Replication or availability group synchronization that is unable to complete
 
+
+If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. 
+
+
 ## Resolving a full transaction log
+
 
 The following specific steps will help you find the reason for a full transaction log and resolve the issue.
 

@@ -33,6 +33,7 @@ ms.custom: "seo-lt-2019"
  - Log not being truncated
  - Disk volume is full
  - Log size is set to a fixed maximum value (autogrow is disabled)
+ - Replication or availability group synchronization that is unable to complete
 
 ## Resolving a full transaction log
 

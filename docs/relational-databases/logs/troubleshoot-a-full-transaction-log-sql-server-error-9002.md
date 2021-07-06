@@ -235,7 +235,8 @@ See [Move Database Files](../../relational-databases/databases/move-database-fil
   
 ### Add a log file on a different disk  
 
-Add a new log file to the database on a different disk that has sufficient space by using ALTER DATABASE <database_name> ADD LOG FILE.  
+Add a new log file to the database on a different disk that has sufficient space by using `ALTER DATABASE <database_name> ADD LOG FILE`. Multiple log files for a single database should be considered a temporary condition to resolve a space issue, not a long-term condition. Most databases should only have one transaction log file. Continue to investigate the reason why the transaction log is full and cannot be truncated. Consider adding temporary additional transaction log files as an advanced troubleshooting step. 
+
   
 For more information see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
 

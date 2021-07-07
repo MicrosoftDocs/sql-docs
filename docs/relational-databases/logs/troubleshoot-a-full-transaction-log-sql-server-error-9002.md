@@ -277,7 +277,8 @@ For more information see [Add Data or Log Files to a Database](../../relational-
 ### Utility script for recommended actions
 
 
-These steps can be partly-automated by running this T-SQL script which will indentify logs files that using a large percentage of disk space and suggest actions:
+These steps can be partly-automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
+
 
 ```tsql
 DECLARE @log_reached_disk_size BIT = 0

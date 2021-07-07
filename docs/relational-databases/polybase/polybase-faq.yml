@@ -77,7 +77,9 @@ sections:
 
       - question: Which ports should I allow through my firewall for PolyBase?
         answer: | 
-          No additional ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. Without a scale-out group, the PolyBase service alone should not require any firewall rule. PolyBase will leverage the ports used by SQL Server in the **IPAll** section of the TCP/IP settings in SQL Server Configuration Manager. For more information, see [TCP/IP Properties](/sql/tools/configuration-manager/tcp-ip-properties-ip-addresses-tab).
+          No additional ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. Without a scale-out group, the PolyBase service alone should not require any firewall rule. 
+          
+          On Windows servers, PolyBase will leverage the ports used by SQL Server in the **IPAll** section of the TCP/IP settings in SQL Server Configuration Manager. For more information, see [TCP/IP Properties](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab). On Linux servers, PolyBase will leverage the **network.tcpport** setting. For more information, see [TCP port](../../linux/sql-server-linux-configure-mssql-conf.md#tcpport).
           
           For PolyBase scale-out groups over multiple Windows servers, see port information in the next question.
 

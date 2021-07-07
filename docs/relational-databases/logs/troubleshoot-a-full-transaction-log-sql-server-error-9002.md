@@ -118,7 +118,7 @@ BEGIN
     END
     else if (@log_reuse_wait = 2)
     BEGIN
-        select 'Is '+ @recovery_model_desc +' recovery model the intended choice for your database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/recovery-models-sql-server?view=sql-server-ver15'
+        select 'Is '+ @recovery_model_desc +' recovery model the intended choice for your database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server'
         select 'To truncate the log consider performing a transaction log backup on database ''' + @dbname+ ''' which is in ' + @recovery_model_desc +' recovery model. Be mindful of any existing log backup chains that could be broken' as Recommendation
         select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder' + @dbname + '_LOG.trn''' as BackupLogCommand
     END
@@ -327,7 +327,7 @@ BEGIN
         SELECT 'Consider using one of the below commands to shrink the "' + @log_name_filled_disk +'" transaction log file size or add a new file to a NEW volume' AS Recommendation
         SELECT 'DBCC SHRINKFILE(''' + @log_name_filled_disk + ''')' AS Shrinkfile_Command
         SELECT 'ALTER DATABASE ' + @db_name_filled_disk + ' ADD LOG FILE ( NAME = N''' + @log_name_filled_disk + '_new'', FILENAME = N''NEW_VOLUME_AND_FOLDER_LOCATION\' + @log_name_filled_disk + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' AS AddNewFile
-        SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=sql-server-ver15' AS TruncateFirst
+        SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql' AS TruncateFirst
         SELECT 'Can you free some disk space on this volume? If so, do this to allow for the log to continue growing when needed.' AS FreeDiskSpace
 
 

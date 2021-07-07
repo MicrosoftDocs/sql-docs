@@ -120,6 +120,8 @@
       href: notebooks/notebooks-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks/notebooks-python-kernel.md
+    - name: Use Python Kernel Offline
+      href: notebooks/notebooks-python-offline-installation.md
     - name: Use Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
     - name: Use Kqlmagic

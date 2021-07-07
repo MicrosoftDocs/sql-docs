@@ -36,7 +36,8 @@ ms.custom: "seo-lt-2019"
  - Replication or availability group synchronization that is unable to complete
 
 
-If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. 
+If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. For more information and a script to review backup history, see the section [Backing up the log](#backing-up-the-log) in this article.
+
 
 
 ## Resolving a full transaction log

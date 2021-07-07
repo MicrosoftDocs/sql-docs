@@ -50,7 +50,7 @@ For a PolyBase scale-out group, make sure that:
 - You use the same domain service account and password during PolyBase installation.
 - Your SQL Server instances can communicate with one another over the network.
 - The SQL Server instances are all the same version of SQL Server.
-- 
+
 After installation of PolyBase to either standalone or in a scale-out group, you cannot change to a scale-out group or standalone service. If you need to change an existing installation of PolyBase to a standalone instance or a scale-out group, uninstall and reinstall the PolyBase feature.
 
 ## Use the installation wizard

@@ -8,7 +8,7 @@ metadata:
   ms.topic: conceptual
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: mikeray
+  ms.reviewer: 
   monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 
 title: Frequently asked questions
@@ -65,7 +65,7 @@ sections:
           |Scale-out query execution | X| X (Windows only) |
           
           > [!NOTE]
-          > The table does not describe the functionality available in the latest [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP. For the available features, please reference the release notes. For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
+          > For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
 
       - question: How can I view the remote query execution plan of PolyBase pushdown computation?
         answer: |
@@ -79,7 +79,7 @@ sections:
         answer: | 
           No additional ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. Without a scale-out group, the PolyBase service alone should not require any firewall rule. 
           
-          On Windows servers, PolyBase will leverage the ports used by SQL Server in the **IPAll** section of the TCP/IP settings in SQL Server Configuration Manager. For more information, see [TCP/IP Properties](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab). On Linux servers, PolyBase will leverage the **network.tcpport** setting. For more information, see [TCP port](../../linux/sql-server-linux-configure-mssql-conf.md#tcpport).
+          On Windows servers, PolyBase will leverage the ports used by SQL Server in the **IPAll** section of the TCP/IP settings in SQL Server Configuration Manager. For more information, see [TCP/IP Properties](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). On Linux servers, PolyBase will leverage the **network.tcpport** setting. For more information, see [TCP port](../../linux/sql-server-linux-configure-mssql-conf.md#tcpport).
           
           For PolyBase scale-out groups over multiple Windows servers, see port information in the next question.
 

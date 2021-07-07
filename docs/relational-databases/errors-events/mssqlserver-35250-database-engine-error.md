@@ -32,7 +32,7 @@ This message occurs when attempting to join secondary databases to an Always On 
   
 ## User Action  
 
-> [!div class="MSSQLSERVER_35250_Notebook"]
+> [!div class="nextstepaction"]
 > [Download Troubleshooting Notebook for this topic](https://github.com/microsoft/tigertoolbox/blob/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)
 
 

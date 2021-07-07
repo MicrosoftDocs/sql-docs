@@ -16,7 +16,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The ODBC drivers for Linux and macOS support [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see:
+The ODBC drivers for Linux and macOS support Always On availability groups. For more information about Always On availability groups, see:
 
 - [Availability group listeners, client connectivity, and application failover (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)
 
@@ -75,7 +75,7 @@ A connection fails if a primary replica is configured to reject read-only worklo
 
 ## ODBC syntax
 
-Two ODBC connection string keywords support [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:
+Two ODBC connection string keywords support Always On availability groups:
 
 - `ApplicationIntent`
 
@@ -91,7 +91,7 @@ The equivalent connection attributes are:
 
 For more information about ODBC connection attributes, see [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).
 
-An ODBC application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] can use one of two functions to make the connection:
+An ODBC application that uses Always On availability groups can use one of two functions to make the connection:
 
 | Function | Description |
 |--|--|

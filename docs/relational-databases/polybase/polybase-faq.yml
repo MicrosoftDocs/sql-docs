@@ -81,7 +81,7 @@ sections:
           
           For PolyBase scale-out groups over multiple Windows servers, see port information in the next question.
 
-          However, you must allow other ports for communication to the various external data source(s) used by PolyBase. Refer to specific external data source documentation, which may be an external vendor. For example:
+          However, you must allow other ports for communication to the various external data source(s) used by PolyBase. Refer to ODBC configuration, Azure resource configuration, or specific data source documentation. For example:
 
           | Source platform | Reference | 
           | ---- | ---- |

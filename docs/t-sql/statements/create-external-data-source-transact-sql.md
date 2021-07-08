@@ -47,15 +47,6 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
     :::column-end:::
 :::row-end:::
 
-::: moniker range="=sql-server-linux-2017"
-> [!NOTE]
-> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true&tabs=sql2019#overview-sql-server) for SQL Server 2019.
-::: moniker-end
-::: moniker range="<=sql-server-2017"
-> [!NOTE]
-> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true&tabs=sql2019#overview-sql-server) for SQL Server 2019.
-::: moniker-end
-
 &nbsp;
 
 ## Overview: SQL Server
@@ -66,11 +57,15 @@ Creates an external data source for PolyBase queries. External data sources are 
 - Data virtualization and data load using [PolyBase][intro_pb]
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
-## Syntax
-
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-### [SQL Server 2016](#tab/sql2016)
+::: moniker range="=sql-server-2016"
+
+## Syntax for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
+
+> [!NOTE]
+> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax) for SQL Server 2019.
+
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -80,7 +75,18 @@ WITH
     [ [ , ] RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]' )
 [ ; ]
 ```
-### [SQL Server 2017](#tab/sql2017)
+
+::: moniker-end
+
+::: moniker range="=sql-server-linux-2017"
+
+## Syntax for [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+
+> [!NOTE]
+> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax) for SQL Server 2019.
+
+::: moniker-end
+
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -90,7 +96,33 @@ WITH
     [ [ , ] RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]' )
 [ ; ]
 ```
-### [SQL Server 2019](#tab/sql2019)
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017"
+
+## Syntax for [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+
+> [!NOTE]
+> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax) for SQL Server 2019.
+
+
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+  ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
+    [ [ , ] CREDENTIAL = <credential_name> ]
+    [ [ , ] TYPE = { HADOOP | BLOB_STORAGE } ]
+    [ [ , ] RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]' )
+[ ; ]
+```
+
+::: moniker-end
+
+::: moniker range="=sql-server-ver15"
+
+## Syntax for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
+
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -102,12 +134,12 @@ WITH
     [ [ , ] RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]' )
 [ ; ]
 ```
----
+
+::: moniker-end
 
 ## Arguments
 
-
-### [SQL Server 2016](#tab/sql2016)
+::: moniker range="=sql-server-2016"
 
 #### data_source_name
 
@@ -195,8 +227,9 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 
 [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
+::: moniker-end
 
-### [SQL Server 2017](#tab/sql2017)
+::: moniker range="=sql-server-2017"
 
 #### data_source_name
 
@@ -286,8 +319,9 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 
 [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
+::: moniker-end
 
-### [SQL Server 2019](#tab/sql2019)
+::: moniker range="=sql-server-ver15"
 
 #### data_source_name
 
@@ -407,7 +441,7 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 
 [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
----
+::: moniker-end
 
 ## Permissions
 

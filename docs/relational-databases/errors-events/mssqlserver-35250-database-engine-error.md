@@ -33,7 +33,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 ## User Action  
 
 > [!div class="nextstepaction"]
-> [Open in Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/tigertoolbox/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)
+> [Download Troubleshooting Notebook for this topic](https://github.com/microsoft/tigertoolbox/blob/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)
 
 
 > [!NOTE]  

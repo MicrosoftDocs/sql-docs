@@ -41,7 +41,7 @@ To rename a table in Azure Synapse Analytics or Parallel Data Warehouse, use the
 
     [SQL Server Management Studio](#SSMSProcedure)
 
-    [Transact-SQL](#TsqlProcedure)
+    [Transact-SQL](#https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188351(v=sql.105)?redirectedfrom=MSDN)
 
 ## <a name="BeforeYouBegin"></a> Before You Begin
 

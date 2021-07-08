@@ -49,6 +49,8 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 &nbsp;
 
+::: moniker-end
+
 ::: moniker range="=sql-server-2016"
 
 ## Overview: SQL Server
@@ -965,8 +967,6 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
 
 [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
-
-::: moniker-end
 
 ## Permissions
 

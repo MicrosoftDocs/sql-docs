@@ -85,8 +85,6 @@ WITH
 > [!NOTE]
 > SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax) for SQL Server 2019.
 
-::: moniker-end
-
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH

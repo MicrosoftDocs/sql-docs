@@ -28,15 +28,6 @@ Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
-::: moniker range="=sql-server-linux-2017"
-> [!NOTE]
-> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true) for SQL Server 2019.
-::: moniker-end
-::: moniker range="<=sql-server-2017"
-> [!NOTE]
-> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true) for SQL Server 2019.
-::: moniker-end
-
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
@@ -55,6 +46,15 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
         [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
+
+::: moniker range="=sql-server-linux-2017"
+> [!NOTE]
+> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true&tabs=sql2019#overview-sql-server) for SQL Server 2019.
+::: moniker-end
+::: moniker range="<=sql-server-2017"
+> [!NOTE]
+> SQL Server 2019 is available! This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true&tabs=sql2019#overview-sql-server) for SQL Server 2019.
+::: moniker-end
 
 &nbsp;
 
@@ -427,7 +427,7 @@ Currently a SAS token with type `HADOOP` is unsupported. It's only supported wit
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## Examples (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
+## Examples
 
 > [!IMPORTANT]
 > For information on how to install and enable PolyBase, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md)
@@ -454,7 +454,7 @@ WITH
   ) ;
 ```
 
-For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb]
+For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
 
 ### B. Create external data source to reference Hadoop
 
@@ -588,8 +588,9 @@ go
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
 ### I. Create an external data source for bulk operations retrieving data from Azure Storage
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
+Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices

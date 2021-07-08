@@ -46,10 +46,7 @@ To rename a table in Azure Synapse Analytics or Parallel Data Warehouse, use the
 ## <a name="BeforeYouBegin"></a> Before You Begin
 
 ### <a name="Restrictions"></a> Limitations and Restrictions  
-For best practices, back up your databases first. Renaming a table doesn't automatically rename references to that table. You must manually modify any objects that reference the renamed table. For example, if you rename a table and that table is referenced in a trigger, you must modify the trigger to reflect the new table name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the table before renaming it.
-
-> [!Note]
-> If you experience losing a database, reference [sp_RENAME table disappeared](https://stackoverflow.com/questions/3768368/sql-server-2008-sp-rename-table-disappeared) for possible workarounds.
+Renaming a table doesn't automatically rename references to that table. You must manually modify any objects that reference the renamed table. For example, if you rename a table and that table is referenced in a trigger, you must modify the trigger to reflect the new table name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the table before renaming it.
 
 ### <a name="Security"></a> Security
 
@@ -57,18 +54,18 @@ For best practices, back up your databases first. Renaming a table doesn't autom
 
 Requires ALTER permission on the table.
 
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio
+## <a name="SSMSProcedure"></a> Using SQL Server Management Studio
 
 #### To rename a table
 
 1. In Object Explorer, right-click the table you want to rename and choose **Design** from the shortcut menu.
-  
+
 2. From the **View** menu, choose **Properties**.
-  
+
 3. In the field for the **Name** value in the **Properties** window, type a new name for the table.
-  
+
 4. To cancel this action, press the ESC key before leaving this field.
-  
+
 5. From the File menu, choose **Save** _table name_.
 
 
@@ -79,6 +76,9 @@ Requires ALTER permission on the table.
 2. On the Standard bar, select **New Query**.  
 
 3. The following example renames the `SalesTerritory` table to `SalesTerr` in the `Sales` schema. Copy and paste the following example into the query window and select **Execute**.
+
+> [!IMPORTANT]
+> Note that the `sp_rename` syntax for @objname should include the schema of the old table name, but @newname does not include the schema name when setting the new table name.
   
     ```sql
     USE AdventureWorks2012;

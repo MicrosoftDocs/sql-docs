@@ -22,6 +22,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 5. Configure Read_Write_Routing_URL for listener functionality - Optional. 
 
 ## Prerequisites
+
 1. You would need an Azure account to deploy Azure Kubernetes Service. For this tutorial a two node cluster is sufficient. 
 2. Create Azure Container Registry this will be used in our deployment scripts to pull the custom image and deploy the containers to Azure Kubernetes service. You could use your choice of container registry instead of ACR to push the custom container images.
 

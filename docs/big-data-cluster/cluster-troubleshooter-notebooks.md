@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting big data clusters with Jupyter notebooks and Azure Data Studio
+title: Troubleshooting Big Data Clusters with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Troubleshooting big data clusters with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
+description: Troubleshooting Big Data Clusters with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -98,4 +98,4 @@ A set of notebooks for repairing known situations and states of a SQL Server big
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server big data clusters?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What is SQL Server Big Data Clusters?](big-data-cluster-overview.md).

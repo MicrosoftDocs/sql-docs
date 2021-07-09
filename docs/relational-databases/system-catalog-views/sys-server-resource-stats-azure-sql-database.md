@@ -48,7 +48,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
 
  
 > [!TIP]  
->  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
+>  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore).  
     
 ## Permissions  
  This view is available to all user roles with permissions to connect to the **master** database.  
@@ -72,4 +72,5 @@ GO;
     
 ## See Also  
  [Managed Instance Compute Hardware in the vCore Service Tier](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore)
+ 
  [Managed Instance Resource Limits](/azure/azure-sql/managed-instance/resource-limits)

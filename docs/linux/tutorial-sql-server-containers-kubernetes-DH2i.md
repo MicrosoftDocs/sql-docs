@@ -24,11 +24,11 @@ This tutorial explains how to configure SQL Server Always On availability group 
 ## Prerequisites
 
 1. To deploy Azure Kubernetes Service, you must have an Azure account. A two-node cluster is a good starting point for this tutorial. 
-2. Create Azure Container Registry. This will be used in our deployment scripts to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of ACR, you could use your preferred container registry to push the custom container images.
+2. Create Azure Container Registry. This will be used in our deployment scripts to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of Azure Container Registry (ACR), you could use your preferred container registry to push the custom container images.
 
 ## Deploy Azure Kubernetes Service
 
-Please follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the article's ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
+ Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the article's ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
 
 You should now have a two-node kubernetes cluster, and running **kubectl get nodes** from your client machine should yield results similar to this:
 
@@ -41,7 +41,7 @@ aks-nodepool1-75119571-vmss000001   Ready    agent   61d   v1.19.9
 
 ## Prepare the SQL Server & DH2i DxEnterprise custom container image
 
-Next, we'll create the custom container image that will be used in our deployment manifests. This custom container image will deploy SQL Server, .Net and DxEnterprise in a container. The deployment sample dockerfile is provided below; you can modify it to meet your needs, such as changing the SQL Server version.
+Next, we'll create the custom container image that will be used in our deployment manifests. This custom container image will deploy SQL Server, .Net, and DxEnterprise in a container. The deployment sample dockerfile is provided below; you can modify it to meet your needs, such as changing the SQL Server version.
 
 ```bash
 FROM mcr.microsoft.com/mssql/server:2019-latest
@@ -86,7 +86,7 @@ $docker build -t <tagname> .
 # you should now be able to see the new image sqlimage when you run the docker images command 
 ```
 
-Now, tag the image and push it to ACR using the commands below. Make sure you've already logged in to ACR using the docker login command; for more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
+Now, tag the image and push it to Azure Container Registry (ACR) using the commands below. Make sure you've already logged in to Azure Container Registry (ACR) using the docker login command; for more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
 
 ```bash
 $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest 
@@ -94,7 +94,7 @@ $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest
 $docker push amvinacr.azurecr.io/sqlimage:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
-This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service with Azure Container Registry by running the following command; for more information, refer to this (article)[/azure/aks/cluster-container-registry-integration].
+This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service with Azure Container Registry by running the following command; for more information, see this (article)[/azure/aks/cluster-container-registry-integration].
 
 ```bash
 az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr
@@ -102,7 +102,7 @@ az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr
 
 ## Deploy containers on Azure Kubernetes Service
 
-We will deploy SQL Server containers as statefulset deployments; a sample deployment file that deploys the containers on the Azure Kubernetes Service is provided below for reference. Please take note of the following points:
+We will deploy SQL Server containers as statefulset deployments; a sample deployment file that deploys the containers on the Azure Kubernetes Service is provided below for reference. Take note of the following points:
 
 1. We will set up three SQL Server instances, one as a primary replica and two as secondary replicas. You can optionally add labels to the node to ensure that the primary replica always runs on one node and the secondary replicas run on another. The following are the steps for labelling the nodes:
 
@@ -117,7 +117,7 @@ We will deploy SQL Server containers as statefulset deployments; a sample deploy
         kubectl label node aks-nodepool1-75119571-vmss000001 <role=ags-secondary> 
         ```
 
-2. Please create the SA password secret on kubernetes before deploying the SQL Server containers using the command:
+2. Create the SA password secret on kubernetes before deploying the SQL Server containers using the command:
 
 ```bash
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
@@ -309,7 +309,7 @@ spec:
     targetPort: 7979           
 ```
 
-Copy the preceding code into a new file called sqldeployment.yaml, update the values like port, image and storage details to suit your needs. Create the deployment using the command below:
+Copy the preceding code into a new file called sqldeployment.yaml, update the values like port, image, and storage details to suit your needs. Create the deployment using the command below:
 
 ```bash
 kubectl apply -f <Path to sqldeployment.yaml file>

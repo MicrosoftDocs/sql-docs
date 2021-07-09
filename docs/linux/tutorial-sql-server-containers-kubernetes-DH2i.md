@@ -28,7 +28,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 
 ## Deploy Azure Kubernetes Service
 
- Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the article's ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
+Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the article's ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
 
 You should now have a two-node kubernetes cluster, and running **kubectl get nodes** from your client machine should yield results similar to this:
 
@@ -94,7 +94,7 @@ $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest
 $docker push amvinacr.azurecr.io/sqlimage:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
-This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service with Azure Container Registry by running the following command; for more information, see this (article)[/azure/aks/cluster-container-registry-integration].
+This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service with Azure Container Registry by running the following command; for more information, see this [article](/azure/aks/cluster-container-registry-integration).
 
 ```bash
 az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr

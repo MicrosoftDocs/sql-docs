@@ -53,7 +53,7 @@ A set of notebooks for diagnosing situations and states with a big data cluster.
 |TSG044 - Run sqlcmd in master pool container|Use this notebook to connect to a master pool node directly via T-SQL.|
 |TSG055 - Time Curl to Sparkhead|Use this notebook to diagnose step to understand what the Curl response time is from the controller pod to the sparkhead pod.|
 |TSG060 - Persistent Volume disk space for all big data cluster PVCs|Use this notebook to connect to each container and get the disk space used/available for each Persisted Volume (PV) mapped to each Persisted Volume Claim (PVC) of a big data cluster.|
-|TSG078 - Is cluster healthy|Use this notebook to check if your big bata cluster is healthy.|
+|TSG078 - Is cluster healthy|Use this notebook to check if your big data cluster is healthy.|
 |TSG079 - Generate controller core dump|Use this notebook to generate controller core dump.|
 |TSG086 - Run top in all containers|Use this notebook to Run top in all containers.|
 |TSG087 - Use hadoop fs CLI on namenode pod|Use this notebook to use hadoop fs CLI on namenode pod.|

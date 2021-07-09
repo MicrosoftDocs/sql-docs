@@ -18,7 +18,7 @@ ms.date: 01/19/2017
 
 # Add Text Annotations to Diagrams (Visual Database Tools)
 
-[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 To make notes or comments on a diagram you can add text annotations.  
   

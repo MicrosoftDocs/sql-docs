@@ -34,7 +34,7 @@ The `Run with Parameters` notebook action enables users to quickly set new param
 
 ## Set up a notebook for parameterization in Azure Data Studio
 
-**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb and follow along.**
+**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to then download and open in Azure Data Studio.**
 
 The steps in this section all run within an Azure Data Studio notebook.
 

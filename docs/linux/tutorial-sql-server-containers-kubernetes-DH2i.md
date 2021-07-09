@@ -16,21 +16,21 @@ ms.technology: linux
 This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in Kubernetes cluster. In this case, Azure Kubernetes Service (AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
 
 1. Deploy Azure Kubernetes Service. 
-2. Prepare the SQL Server & DhH2i container image. 
-3. Deploy Containers on Azure Kubernetes Service. 
+2. Prepare the SQL Server & DH2i custom container image. 
+3. Deploy containers on Azure Kubernetes Service. 
 4. Configure the DxEnterprise cluster. 
 5. Configure Read_Write_Routing_URL for listener functionality - Optional. 
 
 ## Prerequisites
 
-1. You would need an Azure account to deploy Azure Kubernetes Service. For this tutorial a two node cluster is sufficient. 
-2. Create Azure Container Registry this will be used in our deployment scripts to pull the custom image and deploy the containers to Azure Kubernetes service. You could use your choice of container registry instead of ACR to push the custom container images.
+1. To deploy Azure Kubernetes Service, you must have an Azure account. A two-node cluster is a good starting point for this tutorial. 
+2. Create Azure Container Registry. This will be used in our deployment scripts to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of ACR, you could use your preferred container registry to push the custom container images.
 
 ## Deploy Azure Kubernetes Service
 
-To setup a two-node Kubernetes cluster using the Azure Kubernetes Service, please follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Once you create the cluster you can connect to the cluster by following the steps documented in the ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section of the article. 
+Please follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the article's ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
 
-You should now a two-node kubernetes cluster, and running a command like : kubectl get nodes from your client machine should show results similar to this:
+You should now have a two-node kubernetes cluster, and running **kubectl get nodes** from your client machine should yield results similar to this:
 
 ```bash
 C:\>kubectl get nodes
@@ -41,7 +41,7 @@ aks-nodepool1-75119571-vmss000001   Ready    agent   61d   v1.19.9
 
 ## Prepare the SQL Server & DH2i DxEnterprise custom container image
 
-Next, we are going to prepare the custom container image which will be used in our deployment scripts to deploy SQL Server, .Net and DxEnterprise inside a container deployed using this custom image. The sample dockerfile for the deployment is shared below, you can change the SQL Server version in the below sample dockerfile. 
+Next, we'll create the custom container image that will be used in our deployment manifests. This custom container image will deploy SQL Server, .Net and DxEnterprise in a container. The deployment sample dockerfile is provided below; you can modify it to meet your needs, such as changing the SQL Server version.
 
 ```bash
 FROM mcr.microsoft.com/mssql/server:2019-latest
@@ -74,7 +74,7 @@ USER mssql
 ENTRYPOINT ["/opt/dh2i/sbin/dxstart.sh"]
 ```
 
-On a Linux machine, you can build the image using the commands shown below:
+On a Linux machine, run the following commands to build the image:
 
 ```bash
 $mkdir dockefiles 
@@ -86,7 +86,7 @@ $docker build -t <tagname> .
 # you should now be able to see the new image sqlimage when you run the docker images command 
 ```
 
-Now tag the image and push it to ACR using the following commands, you need to ensure that you have already logged in to the ACR using the docker login command, for more details see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry). 
+Now, tag the image and push it to ACR using the commands below. Make sure you've already logged in to ACR using the docker login command; for more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
 
 ```bash
 $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest 
@@ -94,7 +94,7 @@ $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest
 $docker push amvinacr.azurecr.io/sqlimage:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
-This ensures that you now have the custom image pushed to Azure Container Registry (ACR) and now to integrate your Azure Kubernetes Service with Azure Container Registry, please run the below command, for more details refer this (article)[/azure/aks/cluster-container-registry-integration]
+This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service with Azure Container Registry by running the following command; for more information, refer to this (article)[/azure/aks/cluster-container-registry-integration].
 
 ```bash
 az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr
@@ -102,26 +102,29 @@ az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr
 
 ## Deploy containers on Azure Kubernetes Service
 
-We will be deploying SQL Server containers as statefulset deployments, a sample deployment file is shared below for reference which deploys the containers on the Azure Kubernetes Service. Please note the below points: 
+We will deploy SQL Server containers as statefulset deployments; a sample deployment file that deploys the containers on the Azure Kubernetes Service is provided below for reference. Please take note of the following points:
 
-1. We are going to deploy three SQL Server instances, 1-Primary replica and 2-Secondary replicas. You can also optinally added labels to the node, to ensure that primary always runs on a specific node and the secondary replicas run on another node. Here are the steps to label the nodes: 
+1. We will set up three SQL Server instances, one as a primary replica and two as secondary replicas. You can optionally add labels to the node to ensure that the primary replica always runs on one node and the secondary replicas run on another. The following are the steps for labelling the nodes:
+
     1. Get the node names of the cluster using the command: 
         ```bash
         kubectl get nodes
         ```
+
     2. Now label the nodes using the commands:
         ```bash
         kubectl label node aks-nodepool1-75119571-vmss000000 <role=ags-primary> 
         kubectl label node aks-nodepool1-75119571-vmss000001 <role=ags-secondary> 
         ```
-2. Before you deploy the SQL Server containers, please create the SA password secret on kubernetes using the command:
+
+2. Please create the SA password secret on kubernetes before deploying the SQL Server containers using the command:
 
 ```bash
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
 ```
-Replace MyC0m9l&xP@ssw0rd with a complex password
+Replace MyC0m9l&xP@ssw0rd with your own complex password
 
-3. Create a manifest (a YAML file) to describe the deployment. The following example describes our current deployment which uses the custom container image created in the preceding steps
+3. Create a manifest (a YAML file) to describe the deployment. The example below depicts our current deployment, which makes use of the custom container image created in the preceding steps.
 
 ```bash
 kind: StorageClass 
@@ -306,12 +309,12 @@ spec:
     targetPort: 7979           
 ```
 
-Copy the preceding code into a new file, named sqldeployment.yaml, update the values like port, image and storage details as per your configuration. Create the deployment using the command below:
+Copy the preceding code into a new file called sqldeployment.yaml, update the values like port, image and storage details to suit your needs. Create the deployment using the command below:
 
 ```bash
 kubectl apply -f <Path to sqldeployment.yaml file>
 ```
-Once the deployment completes when you run the kubectl get all command you should see result as shown below:
+Once the deployment completes when you run the **kubectl get all** command you should see result as shown below:
 
 ```bash
 C:\>kubectl get all
@@ -330,7 +333,7 @@ NAME                         READY   AGE
 statefulset.apps/mssql-pri   1/1     33h
 statefulset.apps/mssql-sec   2/2     33h
 ```
-As you can see, we have three SQL Server instances each using its own storage with three loadbalancer services exposing port 1433(SQL) and 7979 (DxEnterprise Cluster) so you can connect to each of the SQL Server instance using the External-IP address and the SA_PASSWORD is the same password that you provided when creating the mssql secret in the preceding steps.
+As you can see, we have three SQL Server instances, each with its own storage and services exposing ports 1433 (SQL) and 7979 (DxEnterprise Cluster). You can connect to each SQL Server instance using the External-IP address, and the SA PASSWORD is the same password you provided when creating the mssql secret in the preceding steps.
 
 ## Configure the DxEnterprise Cluster on the Containers deployed 
 
@@ -340,7 +343,7 @@ With this, you should have an Always On availability group created and database(
 
 ## Steps to configure Read/write connection redirection: (Optional) 
 
-Once, the availability group is created you can enable the Read/write connection redirection from secondary to primary using the below steps. Refer, Read_write_routing_URL to know more. This fulfils the listener requirements  
+After you've created the availability group, you can enable read/write connection redirection from secondary to primary by following the steps below. For more information, see [Read write routing URL](/sql/database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups).
 
 ```bash
 USE [master] 

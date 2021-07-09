@@ -38,7 +38,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
 |resource_name|nvarchar(128)|Name of the resource.|
 |sku|nvarchar(128)|Managed Instance Service Tier of the Instance. The following are the possible values: <br><ul><li>General Purpose</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|Hardware generation identifier: such as Gen 4 or Gen 5|
-|virtual_core_count|int|Represents number of virtual cores per instance (8, 16 or 24 in Public Preview)|
+|virtual_core_count|int|Represents number of virtual cores per instance|
 |avg_cpu_percent|decimal(5,2)|Average compute utilization in percentage of the limit of the Managed Instance service tier utilized by the instance. It is calculated as sum of CPU time of all resource pools for all databases in the instance and divided by available CPU time for that tier in the given interval.|
 |reserved_storage_mb|bigint|Reserved storage per instance (amount of storage space that customer purchased for the managed instance)|
 |storage_space_used_mb|decimal(18,2)|Storage used by all database files in a managed instance (including both user and system databases)|
@@ -71,4 +71,5 @@ GO;
 ```  
     
 ## See Also  
- [Managed Instance service tiers](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Managed Instance Compute Hardware in the vCore Service Tier](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore)
+ [Managed Instance Resource Limits](/azure/azure-sql/managed-instance/resource-limits)

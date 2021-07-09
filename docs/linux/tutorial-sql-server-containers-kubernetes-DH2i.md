@@ -1,19 +1,19 @@
 ---
-title: Deploy Always on availability group using DH2i cluster solution for SQL Server Containers deployed on Azure Kubernetes Services (AKS)
-description: This tutorial shows how to deploy a SQL Server Always On availability group with DH2i Clustering solution for SQL Server containers on Azure Kubernetes Service.
-ms.custom: seo-lt-2019
+title: Deploy availability group with DH2i cluster on Azure Kubernetes Services (AKS)
+description: This tutorial shows how to deploy a SQL Server Always On availability group with DH2i Clustering solution for SQL Server containers on Azure Kubernetes Service (AKS).
+ms.custom:
 author: amvin87
-ms.author: amvin87
-ms.reviewer: amvin87
-ms.date: 09/07/2021
+ms.author: amitkh
+ms.reviewer: amitkh, vanto
+ms.date: 07/09/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 ---
 
-# Deploy Always on availability group using DH2i cluster solution for SQL Server containers deployed on Azure Kubernetes Services (AKS)
+# Deploy availability group with DH2i for SQL Server containers on AKS
 
-This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in Kubernetes cluster. In this case, Azure Kubernetes Service(AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
+This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in Kubernetes cluster. In this case, Azure Kubernetes Service (AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
 
 1. Deploy Azure Kubernetes Service. 
 2. Prepare the SQL Server & DhH2i container image. 
@@ -28,7 +28,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 
 ## Deploy Azure Kubernetes Service
 
-To setup a two-node Kubernetes cluster using the Azure Kubernetes Service, please follow this [quickstart tutorial](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Once you create the cluster you can connect to the cluster by following the steps documented in the ["connect to the cluster"](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section of the article. 
+To setup a two-node Kubernetes cluster using the Azure Kubernetes Service, please follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Once you create the cluster you can connect to the cluster by following the steps documented in the ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section of the article. 
 
 You should now a two-node kubernetes cluster, and running a command like : kubectl get nodes from your client machine should show results similar to this:
 
@@ -86,7 +86,7 @@ $docker build -t <tagname> .
 # you should now be able to see the new image sqlimage when you run the docker images command 
 ```
 
-Now tag the image and push it to ACR using the following commands, you need to ensure that you have already logged in to the ACR using the docker login command, for more details see [login to ACR](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal#log-in-to-registry). 
+Now tag the image and push it to ACR using the following commands, you need to ensure that you have already logged in to the ACR using the docker login command, for more details see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry). 
 
 ```bash
 $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest 
@@ -94,7 +94,7 @@ $docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest
 $docker push amvinacr.azurecr.io/sqlimage:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
-This ensures that you now have the custom image pushed to Azure Container Registry (ACR) and now to integrate your Azure Kubernetes Service with Azure Container Registry, please run the below command, for more details refer this (article)[https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration]
+This ensures that you now have the custom image pushed to Azure Container Registry (ACR) and now to integrate your Azure Kubernetes Service with Azure Container Registry, please run the below command, for more details refer this (article)[/azure/aks/cluster-container-registry-integration]
 
 ```bash
 az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr
@@ -377,5 +377,5 @@ GO
 
 ## Next Steps
 
-1. [Deploy SQL Server containers on Azure Kubernetes Service](https://docs.microsoft.com/en-us/sql/linux/tutorial-sql-server-containers-kubernetes?view=sql-server-ver15)
+1. [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
 2. [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)

@@ -10063,7 +10063,7 @@ items:
       href: linux/sql-server-availability-group-ha-hpe.md
     - name: Deploy on Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
-    - name: Deploy availability group with DH2i cluster on AKS
+    - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-DH2i.md
     - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md

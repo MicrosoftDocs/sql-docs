@@ -290,84 +290,6 @@ WITH
   ) ;
 ```
 
-### F. Create external data source to reference a SQL Server named instance via PolyBase connectivity
-**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
-
-To create an external data source that references a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the instance name. 
-
-In example below, `WINSQL2019` is the host name and `SQL2019` is the instance name. `'Server=%s\SQL2019'` is the key value pair.
-
-```sql
-CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH (
-  LOCATION = 'sqlserver://WINSQL2019' ,
-  CONNECTION_OPTIONS = 'Server=%s\SQL2019' ,
-  CREDENTIAL = SQLServerCredentials
-) ;
-```
-
-Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
-
-```sql
-CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH (
-  LOCATION = 'sqlserver://WINSQL2019:58137' ,
-  CREDENTIAL = SQLServerCredentials
-) ;
-```
-
-## Examples: Bulk Operations
-
-> [!IMPORTANT]
-> Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
-
-### I. Create an external data source for bulk operations retrieving data from Azure Storage
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
-
-Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
-
-```sql
-CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
-WITH
-  IDENTITY = 'SHARED ACCESS SIGNATURE',
-  -- Remove ? from the beginning of the SAS token
-  SECRET = '<azure_storage_account_key>' ;
-
-CREATE EXTERNAL DATA SOURCE MyAzureInvoices
-WITH
-  ( LOCATION = 'https://newinvoices.blob.core.windows.net/week3' ,
-    CREDENTIAL = AccessAzureInvoices ,
-    TYPE = BLOB_STORAGE
-  ) ;
-```
-
-To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
-
-
-### J. Create external data source to access data in Azure Storage using the abfs:// interface
-**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later 
-
-In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`, using [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver). The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
-
-This example shows how to create the database scoped credential for authentication to an Azure Data Lake Storage Gen2 account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
-
-```sql
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
-WITH
-  IDENTITY = '<my_account>' ,
-  SECRET = '<azure_storage_account_key>' ;
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage
-WITH
-  ( LOCATION = 'abfss://daily@logs.dfs.core.windows.net/' ,
-    CREDENTIAL = AzureStorageCredential ,
-    TYPE = HADOOP
-  ) ;
-```
-
 ## See also
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
@@ -658,31 +580,6 @@ WITH
   ) ;
 ```
 
-### F. Create external data source to reference a SQL Server named instance via PolyBase connectivity
-**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
-
-To create an external data source that references a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the instance name. 
-
-In example below, `WINSQL2019` is the host name and `SQL2019` is the instance name. `'Server=%s\SQL2019'` is the key value pair.
-
-```sql
-CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH (
-  LOCATION = 'sqlserver://WINSQL2019' ,
-  CONNECTION_OPTIONS = 'Server=%s\SQL2019' ,
-  CREDENTIAL = SQLServerCredentials
-) ;
-```
-
-Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
-
-```sql
-CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH (
-  LOCATION = 'sqlserver://WINSQL2019:58137' ,
-  CREDENTIAL = SQLServerCredentials
-) ;
-```
 
 ## Examples: Bulk Operations
 
@@ -710,31 +607,6 @@ WITH
 ```
 
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
-
-
-### J. Create external data source to access data in Azure Storage using the abfs:// interface
-**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later 
-
-In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`, using [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver). The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
-
-This example shows how to create the database scoped credential for authentication to an Azure Data Lake Storage Gen2 account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
-
-```sql
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
-WITH
-  IDENTITY = '<my_account>' ,
-  SECRET = '<azure_storage_account_key>' ;
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage
-WITH
-  ( LOCATION = 'abfss://daily@logs.dfs.core.windows.net/' ,
-    CREDENTIAL = AzureStorageCredential ,
-    TYPE = HADOOP
-  ) ;
-```
 
 ## See also
 

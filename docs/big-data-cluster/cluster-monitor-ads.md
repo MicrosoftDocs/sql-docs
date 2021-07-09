@@ -1,5 +1,5 @@
 ---
-title: Monitor cluster with Azure Data Studio
+title: Monitor Big Data Clusters with Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
 description: Monitoring cluster with Azure Data Studio on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor big data cluster status by using Azure Data Studio
+# Monitor Big Data Clusters status by using Azure Data Studio
 
 This article explains how to view the status of a big data cluster using Azure Data Studio.
 

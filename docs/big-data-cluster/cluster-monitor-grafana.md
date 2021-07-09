@@ -1,5 +1,5 @@
 ---
-title: Monitor a cluster with Grafana Dashboard
+title: Monitor Big Data Clusters with Grafana Dashboard
 titleSuffix: SQL Server Big Data Clusters
 description: Monitoring cluster with Grafana Dashboard on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor a big data cluster by using azdata and Grafana Dashboard
+# Monitor Big Data Clusters by using azdata and Grafana Dashboard
 
 This article describes how to monitor an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Clusters exposes Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorized as either: 
 - Kubernetes host-related metrics collected by Telegraf, an agent for collecting, processing, aggregating, and writing metrics.

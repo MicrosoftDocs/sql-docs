@@ -1,5 +1,5 @@
 ---
-title: Monitor a cluster with azdata and kubectl
+title: Monitor Big Data Clusters with azdata and kubectl
 titleSuffix: SQL Server Big Data Clusters
 description: Monitoring applications with azdata and kubectl on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor a big data cluster by using azdata and kubectl
+# Monitor Big Data Clusters by using azdata and kubectl
 
 ## Use azdata
 

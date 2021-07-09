@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSsnapshotdeliveryprogress_TSQL"
   - "MSsnapshotdeliveryprogress"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshotdeliveryprogress system table"
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

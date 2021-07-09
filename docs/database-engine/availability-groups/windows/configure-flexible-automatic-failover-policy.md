@@ -4,16 +4,16 @@ description: "Describes how to configure a flexible failover policy for an Alway
 ms.date: "11/05/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ms.custom: "seo-lt-2019"
 ---
 # Configure a flexible automatic failover policy for an Always On availability group
@@ -98,7 +98,7 @@ ms.custom: "seo-lt-2019"
         |4|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |5|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
   
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;]().  
   
     -   To configure the health check timeout threshold, use the HEALTH_CHECK_TIMEOUT = *n* option, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds)  
   
@@ -126,7 +126,7 @@ ms.custom: "seo-lt-2019"
         |**OnModerateServerError**|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |**OnAnyQualifiedFailureConditions**|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
   
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;]().  
   
          For example, the following command changes the failure-condition level of an existing availability group, `AG1`, to level one.  
   
@@ -147,13 +147,13 @@ ms.custom: "seo-lt-2019"
         ```  
   
 > [!NOTE]  
->  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
 
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To configure automatic failover**  
@@ -175,5 +175,4 @@ ms.custom: "seo-lt-2019"
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
-  
   

@@ -4,10 +4,10 @@ title: "datetime2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "datetime2"
   - "datetime2_TSQL"
@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime2 (Transact-SQL)
 
@@ -196,11 +196,11 @@ SELECT
   
 |Data type|Output|  
 |---|---|
-|**time**|12:35:29. 1234567|  
+|**time**|12:35:29.1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29. 1234567|  
+|**datetime2**|2007-05-08 12:35:29.1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## See also

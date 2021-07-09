@@ -5,17 +5,17 @@ ms.custom: "seodec18"
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
-author: "MashaMSFT"
-ms.author: mathoma
+author: "cawrites"
+ms.author: chadam
 ---
 # Distributed availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/sql/sql-server/).
+Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](../../../sql-server/index.yml).
 
 > [!NOTE]
 > "DAG" is not the official abbreviation for *distributed availability group*, because the abbreviation is already used for the Exchange Database Availability Group feature. This Exchange feature has no relation to SQL Server availability groups or distributed availability groups.
@@ -83,7 +83,7 @@ The individual WSFC clusters and their corresponding availability groups follow 
 
 When both WSFC clusters are joined to the same domain (not trusted domains), you don't need to do anything special when you create the distributed availability group. For availability groups and WSFC clusters that are not joined to the same domain, use certificates to make the distributed availability group work, much in the way that you might create an availability group for a domain-independent availability group. To see how to configure certificates for a distributed availability group, follow steps 3-13 under [Create a domain-independent availability group](domain-independent-availability-groups.md).
 
-With a distributed availability group, the primary replicas in each underlying availability group must have each other's certificates. If you already have endpoints that are not using certificates, reconfigure those endpoints by using [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) to reflect the use of certificates.
+With a distributed availability group, the primary replicas in each underlying availability group must have each other's certificates. If you already have endpoints that are not using certificates, reconfigure those endpoints by using [ALTER ENDPOINT](../../../t-sql/statements/alter-endpoint-transact-sql.md) to reflect the use of certificates.
 
 ## Distributed availability group usage scenarios
 
@@ -99,7 +99,7 @@ A traditional availability group requires that all servers be part of the same W
 
 ![Traditional multi-site availability group](./media/distributed-availability-group/dag-04-traditional-multi-site-ag.png)
 
-Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) were used in the past for scenarios such as disaster recovery. However, unlike log shipping, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
+Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping](../../../database-engine/log-shipping/about-log-shipping-sql-server.md) were used in the past for scenarios such as disaster recovery. However, unlike log shipping, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
 
 Distributed availability groups are loosely coupled, which in this case means that they don't require a single WSFC cluster and they're maintained by SQL Server. Because the WSFC clusters are maintained individually and the synchronization is primarily asynchronous between the two availability groups, it's easier to configure disaster recovery at another site. The primary replicas in each availability group synchronize their own secondary replicas.
 
@@ -130,7 +130,7 @@ Distributed availability groups can help you scale out a read-only farm more tha
 * You can use the primary replica of the second availability group in a distributed availability group to create another distributed availability group, even though the database is not in RECOVERY.
 * You can also use the primary replica of the first availability group to create another distributed availability group.
 
-In other words, a primary replica can participate in two different distributed availability groups. The following figure shows AG 1 and AG 2 both participating in Distributed AG 1, while AG 2 and AG 3 are participating in Distributed AG 2. The primary replica (or forwarder) of AG 2 is both a secondary replica for Distributed AG 1 and a primary replica of Distributed AG 2.
+In other words, a primary replica can participate in different distributed availability groups. The following figure shows AG 1 and AG 2 both participating in Distributed AG 1, while AG 2 and AG 3 are participating in Distributed AG 2. The primary replica (or forwarder) of AG 2 is both a secondary replica for Distributed AG 1 and a primary replica of Distributed AG 2.
 
 ![Scaling out reads with distributed availability groups](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
@@ -142,7 +142,7 @@ The following figure shows AG 1 as the primary replica for two different distrib
 
 In both preceding examples, there can be up to 27 total replicas across the three availability groups, all of which can be used for read-only queries. 
 
-[Read-only routing]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) does not completely work with Distributed Availability Groups. More specifically,
+[Read-only routing](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) does not completely work with Distributed Availability Groups. More specifically,
 
 1. Read-Only Routing can be configured and will work for the primary availability group of the distributed availability group. 
 2. Read-Only Routing can be configured, but will not work for the secondary availability group of the distributed availability group. All queries, if they use the listener to connect to the secondary availability group, go to the primary replica of the secondary availability group. Otherwise, you need to configure each replica to allow all connections as a secondary replica and access them directly. However, read-only routing will work if the secondary availability group becomes primary after a failover. This behavior might be changed in an update to SQL Server 2016 or in a future version of SQL Server.
@@ -150,7 +150,7 @@ In both preceding examples, there can be up to 27 total replicas across the thre
 
 ## Initialize secondary availability groups in a distributed availability group
 
-Distributed availability groups were designed with [automatic seeding](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) to be the main method used to initialize the primary replica on the second availability group. A full database restore on the primary replica of the second availability group is possible if you do the following:
+Distributed availability groups were designed with [automatic seeding](./automatically-initialize-always-on-availability-group.md) to be the main method used to initialize the primary replica on the second availability group. A full database restore on the primary replica of the second availability group is possible if you do the following:
 
 1. Restore the database backup WITH NORECOVERY.
 2. If necessary, restore the proper transaction log backups WITH NORECOVERY.
@@ -161,7 +161,7 @@ When you add the second availability group's primary replica to the distributed 
 
 * The output shown in `sys.dm_hadr_automatic_seeding` on the primary replica of the second availability group will display a `current_state` of FAILED with the reason "Seeding Check Message Timeout."
 
-* The current SQL Server log on the primary replica of the second availability group will show that seeding worked and that the [LSNs](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) were synchronized.
+* The current SQL Server log on the primary replica of the second availability group will show that seeding worked and that the [LSNs](../../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) were synchronized.
 
 * The output shown in `sys.dm_hadr_automatic_seeding` on the primary replica of the first availability group will show a current_state of COMPLETED. 
 

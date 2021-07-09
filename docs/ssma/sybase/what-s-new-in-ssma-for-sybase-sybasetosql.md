@@ -2,9 +2,10 @@
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
 author: nahk-ivanov
+
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/31/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,6 +15,63 @@ ms.author: alexiva
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for SAP ASE contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for SAP ASE contains the following changes:
+
+* Store and run test cases on the client-side
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for SAP ASE contains the following changes:
+
+* Add support for computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for SAP ASE contains the following changes:
+
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for SAP ASE contains the following changes:
+
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for SAP ASE requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for SAP ASE contains the following changes:
+
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
 
 ## SSMA v8.12
 

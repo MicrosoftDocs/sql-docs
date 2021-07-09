@@ -6,7 +6,7 @@ ms.date: "08/02/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_exec_query_plan_TSQL"
   - "sys.dm_exec_query_plan"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_plan dynamic management function"
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

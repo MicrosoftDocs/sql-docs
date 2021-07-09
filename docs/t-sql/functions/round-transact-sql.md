@@ -4,10 +4,10 @@ title: "ROUND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ROUND_TSQL"
   - "ROUND"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,8 +30,7 @@ Returns a numeric value, rounded to the specified length or precision.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ROUND ( numeric_expression , length [ ,function ] )  
 ```  
   
@@ -81,7 +80,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 ### A. Using ROUND and estimates  
  The following example shows two expressions that demonstrate by using `ROUND` the last digit is always an estimate.  
   
-```  
+```sql  
 SELECT ROUND(123.9994, 3), ROUND(123.9995, 3);  
 GO  
 ```  
@@ -110,7 +109,7 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ### C. Using ROUND to truncate  
  The following example uses two `SELECT` statements to demonstrate the difference between rounding and truncation. The first statement rounds the result. The second statement truncates the result.  
   
-```  
+```sql  
 SELECT ROUND(150.75, 0);  
 GO  
 SELECT ROUND(150.75, 0, 1);  

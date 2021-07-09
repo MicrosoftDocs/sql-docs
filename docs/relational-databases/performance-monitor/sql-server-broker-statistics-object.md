@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLServer:Broker Statistics"
   - "Broker Statistics object"
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Broker Statistics Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

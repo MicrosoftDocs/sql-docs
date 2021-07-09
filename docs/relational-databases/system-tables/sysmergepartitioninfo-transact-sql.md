@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmergepartitioninfo_TSQL"
   - "sysmergepartitioninfo"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergepartitioninfo system table"
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

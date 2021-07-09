@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], status"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "status information [SQL Server], log shipping"
   - "monitoring log shipping [SQL Server]"
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Monitor Log Shipping (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_syscollector_get_execution_details_TSQL"
   - "fn_syscollector_get_execution_details"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_syscollector_get_execution_details function"
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

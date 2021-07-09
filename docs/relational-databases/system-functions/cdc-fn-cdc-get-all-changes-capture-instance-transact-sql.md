@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_all_changes_<capture_instance>"
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  The LSN value that represents the high endpoint of the LSN range to include in the result set. *to_lsn* is **binary(10)**.  
   
- Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in **__$start_lsn** less than or equal to *from_lsn* or equal to *to_lsn* are included in the result set.  
+ Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in **__$start_lsn** greater than or equal to *from_lsn* and less than or equal to *to_lsn* are included in the result set.  
   
  <row_filter_option> ::= { all | all update old }  
  An option that governs the content of the metadata columns as well as the rows returned in the result set.  

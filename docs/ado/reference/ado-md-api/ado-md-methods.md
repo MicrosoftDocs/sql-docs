@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO MD, methods"
   - "methods [ADO MD]"
@@ -24,7 +24,7 @@ ms.author: jroth
 |[Open](./open-method-ado-md.md)|Retrieves the results of a multidimensional query and returns the results to a cellset.|  
   
 ## See Also  
- [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API Reference](./ado-md-object-model.md)   
  [ADO MD Code Examples](./ado-md-code-examples.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Enumerated Constants](./ado-md-enumerated-constants.md)   

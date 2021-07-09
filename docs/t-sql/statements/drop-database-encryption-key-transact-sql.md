@@ -4,10 +4,10 @@ title: "DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP DATABASE ENCRYPTION KEY"
   - "DROP_DATABASE_ENCRYPTION_KEY_TSQL"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -33,10 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DROP DATABASE ENCRYPTION KEY  
 ```  
-  
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
@@ -48,7 +51,7 @@ DROP DATABASE ENCRYPTION KEY
 ## Examples  
  The following example removes the database encryption and drops the database encryption key.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET ENCRYPTION OFF;  
 GO  
@@ -66,7 +69,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example removes the TDE encryption and then drops the database encryption key.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorksPDW2012  
     SET ENCRYPTION OFF;  
 GO  

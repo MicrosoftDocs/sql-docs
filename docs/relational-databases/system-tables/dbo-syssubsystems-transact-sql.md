@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.syssubsystems"
   - "syssubsystems"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syssubsystems system table"
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

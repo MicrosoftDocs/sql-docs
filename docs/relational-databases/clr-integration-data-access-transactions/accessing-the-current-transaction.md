@@ -42,7 +42,7 @@ ms.author: "jroth"
   
 -   The managed procedure or function can cancel the current transaction by calling the **Transaction.Rollback** method if a certain condition is met.  
   
- When it is called within a managed procedure or function, the **Transaction.Rollback** method throws an exception with an ambiguous error message and can be wrapped in a try/catch block. The error message thresembles similar to the following:  
+ When it is called within a managed procedure or function, the **Transaction.Rollback** method throws an exception with an ambiguous error message and can be wrapped in a try/catch block. The error message is similar to the following:  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  

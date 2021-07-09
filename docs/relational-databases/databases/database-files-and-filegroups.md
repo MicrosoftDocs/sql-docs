@@ -1,7 +1,7 @@
 ---
 title: "Database Files and Filegroups | Microsoft Docs"
 description: "Learn about database files and how to create filegroups in SQL Server for allocation and administrative purposes. View examples, rules, and recommendations."
-ms.custom: "contperfq4"
+ms.custom: "contperf-fy20q4"
 ms.date: "05/29/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "primary files [SQL Server]"
   - "file types [SQL Server]"
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Files and Filegroups
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -206,13 +206,14 @@ Recommendations when working with files and filegroups:
 - Put different tables used in the same join queries in different filegroups. This step will improve performance, because of parallel disk I/O searching for joined data.
 - Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. Using different filegroups will improve performance, because of parallel I/O if the files are located on different physical disks.
 - Don't put the transaction log file(s) on the same physical disk that has the other files and filegroups.
+- If you need to extend a volume or partition on which database files reside using tools like [Diskpart](/windows-server/administration/windows-commands/diskpart), you should back up all system and user databases and stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services first. Also, once disk volumes are extended successfully, you should consider running [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command to ensure the physical integrity of all databases residing on the volume.
 
 For more information on transaction log file management recommendations, see [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
 ## Related Content  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)    
  [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
  [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
  [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md)    
- [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     
+ [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)

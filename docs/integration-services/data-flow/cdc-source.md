@@ -22,7 +22,7 @@ ms.author: chugu
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
+  The CDC source reads a range of change data from [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] change tables and delivers the changes downstream to other SSIS components.  
   
  The range of change data read by the CDC source is called the CDC Processing Range and is determine by the CDC Control task that is executed before the current data flow starts. The CDC Processing Range is derived from the value of a package variable that maintains the state of the CDC processing for a group of tables.  
   
@@ -30,7 +30,7 @@ ms.author: chugu
   
  The CDC source uses the following configurations:  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET connection manager to access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC database. For more information about configuring the CDC source connection, see [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+-   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET connection manager to access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC database. For more information about configuring the CDC source connection, see [CDC Source Editor &#40;Connection Manager Page&#41;]().  
   
 -   A table enabled for CDC.  
   
@@ -99,11 +99,11 @@ use <cdc-enabled-database-name>
   
  For more information, see one of the following topics:  
   
--   [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [CDC Source Editor &#40;Connection Manager Page&#41;]()  
   
--   [CDC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC Source Editor &#40;Columns Page&#41;]()  
   
--   [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC Source Editor &#40;Error Output Page&#41;]()  
   
  The **Advanced Editor** dialog box contains the properties that can be set programmatically.  
   
@@ -120,7 +120,7 @@ use <cdc-enabled-database-name>
 -   [Extract Change Data Using the CDC Source](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## CDC Source Editor (Connection Manager Page)
-  Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
+  Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
   
  For more information about the CDC source, see [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
@@ -245,5 +245,4 @@ use <cdc-enabled-database-name>
 ## Related Content  
   
 -   Blog entry, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), on mattmasson.com.  
-  
   

@@ -11,4 +11,4 @@
 ---
 
 
- ![Yes](media/yes-icon.png)SQL Server Reporting Services (2019 and later)
+✔ SQL Server Reporting Services (2019 and later)

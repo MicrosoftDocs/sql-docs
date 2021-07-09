@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "IHconstrainttypes_TSQL"
   - "IHconstrainttypes"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHconstrainttypes system table"
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # IHconstrainttypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

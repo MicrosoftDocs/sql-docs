@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ENDPOINT"
   - "CREATE ENDPOINT"
@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 
 # CREATE ENDPOINT (Transact-SQL)
@@ -197,7 +197,7 @@ FOR DATABASE_MIRRORING (
  Optionally, you can use the ALGORITHM argument to specify the form of encryption used by the endpoint, as follows:  
   
  **AES**  
- Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+ Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  RC4  
  Specifies that the endpoint must use the RC4 algorithm. This is the default through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

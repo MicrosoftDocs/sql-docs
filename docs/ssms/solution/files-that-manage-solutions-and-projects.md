@@ -51,5 +51,4 @@ If you have a directory structure similar to the logical structure shown in Solu
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Projects &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Solution Explorer Source Control](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
-  
+[Solution Explorer Source Control](./solution-explorer.md)  

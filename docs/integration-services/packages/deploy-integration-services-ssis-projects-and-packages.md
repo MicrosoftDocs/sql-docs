@@ -89,7 +89,7 @@ This error is typically the result of missing DCOM permissions. To fix the error
 
 For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post:
  
-- [System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## Deploy Projects to Integration Services Server
   In the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server enables you to manage packages, run packages, and configure runtime values for packages by using environments.  
@@ -108,7 +108,7 @@ For more info about the error described in this section and about the permission
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convert the project to the project deployment model.  
   
         > [!NOTE]  
-        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
          Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks.  
   
@@ -524,7 +524,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   The **Integration Services Project Conversion Wizard** converts a project to the project deployment model.  
   
 > [!NOTE]  
->  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
  **What do you want to do?**  
   
@@ -649,7 +649,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Type an optional project description.  
   
 ###  <a name="executePackage"></a> Set Options on the Update Execute Package Task Page  
- Update Execute Package Tasks contain in the packages, to use a project-based reference. For more information, see [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+ Update Execute Package Tasks contain in the packages, to use a project-based reference. For more information, see [Execute Package Task Editor](../control-flow/execute-package-task.md).  
   
  **Parent Package**  
  Lists the name of the package that executes the child package using the Execute Package task.  
@@ -740,4 +740,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  The project conversion is not saved until the project is saved in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Save report**  
- Click to save a summary of the project conversion in an .xml file.  
+ Click to save a summary of the project conversion in an .xml file.

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "04/29/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary databases [SQL Server], in availability group"
@@ -14,13 +14,13 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], data movement"
   - "Availability Groups [SQL Server]"
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # What is an Always On availability group?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
- This topic introduces the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts that are central for configuring and managing one or more availability groups in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For a summary of the benefits offered by availability groups and an overview of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] terminology, see [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ This topic introduces the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts that are central for configuring and managing one or more availability groups in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. For a summary of the benefits offered by availability groups and an overview of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] terminology, see [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  An *availability group* supports a replicated environment for a discrete set of user databases, known as *availability databases*. You can create an availability group for high availability (HA) or for read-scale. An HA availability group is a group of databases that fail over together. A read-scale availability group is a group of databases that are copied to other instances of SQL Server for read-only workload. An availability group supports one set of primary databases and one to eight sets of corresponding secondary databases. Secondary databases are *not* backups. Continue to back up your databases and their transaction logs on a regular basis.  
   
@@ -94,7 +94,7 @@ The availability mode is a property of each availability replica. The availabili
   
     -   **Automatic failover** (without data loss)  
   
-         An automatic failover occurs in response to a failure that causes a synchronized secondary replica to transition to the primary role (with guaranteed data protection). When the former primary replica becomes available, it transitions to the secondary role. Automatic failover requires that both the primary replica and the target secondary replica are running under synchronous-commit mode with the failover mode set to "Automatic". In addition, the secondary replica must already be synchronized, have WSFC quorum, and meet the conditions specified by the [flexible failover policy](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)of the availability group.  
+         An automatic failover occurs in response to a failure that causes a synchronized secondary replica to transition to the primary role (with guaranteed data protection). When the former primary replica becomes available, it transitions to the secondary role. Automatic failover requires that both the primary replica and the target secondary replica are running under synchronous-commit mode with the failover mode set to "Automatic". In addition, the secondary replica must already be synchronized, have WSFC quorum, and meet the conditions specified by the [flexible failover policy](./configure-flexible-automatic-failover-policy.md)of the availability group.  
   
         > [!IMPORTANT]  
         >  SQL Server Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  
@@ -150,11 +150,11 @@ The availability mode is a property of each availability replica. The availabili
   
 -   **Blogs:**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
   
 -   **Videos:**  
   
@@ -164,9 +164,9 @@ The availability mode is a property of each availability replica. The availabili
   
 -   **Whitepapers:**  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -182,4 +182,3 @@ The availability mode is a property of each availability replica. The availabili
  [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

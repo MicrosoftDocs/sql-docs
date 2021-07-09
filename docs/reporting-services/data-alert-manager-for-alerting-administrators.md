@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Data Alert Manager for Alerting Administrators
 

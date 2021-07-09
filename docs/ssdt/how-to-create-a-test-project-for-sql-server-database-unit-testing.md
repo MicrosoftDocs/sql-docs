@@ -23,7 +23,7 @@ You can place all of your SQL Server unit tests for a given database project wit
 |Do different SQL Server unit tests need to access different database connections for test execution or test validation?|If yes, you need more than one test project. You cannot specify more than one database connection for test execution. However, you can specify a different database connection for test validation.|  
 |Do you want to deploy different database projects for different unit tests?|If yes, you need more than one test project. A test project can only deploy a single database project.|  
   
-For more information about each of these questions, see [How to: Configure SQL Server Unit Test Execution](../ssdt/how-to-configure-sql-server-unit-test-execution.md). As an alternative to creating multiple test projects, you can also provide your own [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService implementation.  
+For more information about each of these questions, see [How to: Configure SQL Server Unit Test Execution](../ssdt/how-to-configure-sql-server-unit-test-execution.md). As an alternative to creating multiple test projects, you can also provide your own [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)) Microsoft.Data.Schema.UnitTesting.DatabaseTestService implementation.  
   
 You have three options for adding a test project to a solution that contains a database project:  
   
@@ -51,4 +51,3 @@ Each approach is outlined in the following procedures.
   
 ## See Also  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

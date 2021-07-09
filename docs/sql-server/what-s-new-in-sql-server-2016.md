@@ -53,10 +53,10 @@ SQL Server 2016 Analysis Services provides improved performance, authoring, data
 - New **Database Consistency Checker (DBCC)** runs internally to detect potential data corruption issues.
 - **Direct Query**, which queries live external data rather than importing it first, now supports more data sources, including Azure SQL, Oracle and Teradata. 
 - There are numerous new **DAX (Data Access Expressions) functions**.
-- New **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** namespace manages tabular mode instances and models. 
-- [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
+- New **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** namespace manages tabular mode instances and models. 
+- [Analysis Services Management Objects (AMO)](/dotnet/api/) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-See [Analysis Services Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
+See [Analysis Services Engine (SSAS)](/analysis-services/what-s-new-in-analysis-services). 
 
 ## SQL Server 2016 Integration Services (SSIS)
 - Support for **Always On Availability Groups**
@@ -91,13 +91,13 @@ Microsoft has thoroughly revamped Reporting Services in this release.
 See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## Next steps   
-- [SQL Server setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [SQL Server setup](../database-engine/install-windows/install-sql-server.md)   
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 datasheet](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Features supported by Editions of SQL Server](./editions-and-components-of-sql-server-2016.md)
 - [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Install SQL Server 2016 from the Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Setup and Servicing Installation](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Setup and Servicing Installation](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

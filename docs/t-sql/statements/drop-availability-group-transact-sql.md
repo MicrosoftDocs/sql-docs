@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_AVAILABILITY_GROUP_TSQL"
   - "DROP AVAILABILITY GROUP"
@@ -37,7 +37,6 @@ ms.author: "mikeray"
 ## Syntax  
   
 ```syntaxsql
-  
 DROP AVAILABILITY GROUP group_name   
 [ ; ]  
 ```  
@@ -59,7 +58,7 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  Avoid dropping an availability group when the Windows Server Failover Clustering (WSFC) cluster has no quorum. If you must drop an availability group while the cluster lacks quorum, the metadata availability group that is stored in the cluster is not removed. After the cluster regains quorum, you will need to drop the availability group again to remove it from the WSFC cluster.  
   
--   On a secondary replica, **DROP AVAILABILITY GROUP** should only be used only for emergency purposes. This is because dropping an availability group takes the availability group offline. If you drop the availability group from a secondary replica, the primary replica cannot determine whether the **OFFLINE** state occurred because of quorum loss, a forced failover, or a **DROP AVAILABILITY GROUP** command. The primary replica transitions to the **RESTORING** state to prevent a possible split-brain situation. For more information, see [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog).  
+-   On a secondary replica, **DROP AVAILABILITY GROUP** should only be used only for emergency purposes. This is because dropping an availability group takes the availability group offline. If you drop the availability group from a secondary replica, the primary replica cannot determine whether the **OFFLINE** state occurred because of quorum loss, a forced failover, or a **DROP AVAILABILITY GROUP** command. The primary replica transitions to the **RESTORING** state to prevent a possible split-brain situation. For more information, see [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog).  
   
 ## Security  
   
@@ -69,17 +68,16 @@ DROP AVAILABILITY GROUP group_name
 ## Examples  
  The following example drops the `AccountsAG` availability group.  
   
-```  
+```sql  
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog)  
+-   [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog)  
   
 ## See Also  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Remove an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
   

@@ -4,10 +4,10 @@ title: "ATN2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ATN2"
   - "ATN2_TSQL"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "tangent"
   - "ATN2 function"
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ATN2 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,14 +48,14 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of da
 The following example calculates the `ATN2` for the specified `x` and `y` components.
   
 ```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar, ATN2(@y, @x));  
+DECLARE @x FLOAT = 35.175643, @y FLOAT = 129.44;  
+SELECT 'The ATN2 of the angle is: ' + CONVERT(VARCHAR, ATN2(@y, @x));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The ATN2 of the angle is: 1.30545                         
 (1 row(s) affected)  
 ```  

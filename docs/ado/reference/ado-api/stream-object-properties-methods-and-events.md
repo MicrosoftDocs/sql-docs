@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Stream object [ADO], members"
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER SERVER AUDIT SPECIFICATION"
   - "ALTER_SERVER_AUDIT_SPECIFICATION_TSQL"
@@ -68,7 +68,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ## Examples  
  The following example creates a server audit specification called `HIPAA_Audit_Specification`. It drops the audit action group for failed logins, and adds an audit action group for Database Object Access for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP),  

@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 manager: erikre
 ---
@@ -17,7 +17,7 @@ manager: erikre
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
+  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
 <sources>  
@@ -45,7 +45,7 @@ manager: erikre
   
 -   Tracing is enabled for Warning and ActivityTracing messages.  
   
-     For more information, see [SourceLevels Enumeration](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     For more information, see [SourceLevels Enumeration](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   The logs are saved in the Logs folder under the WebApplication folder. The default location is C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -65,5 +65,4 @@ manager: erikre
   
 ## External Resources  
  Blog post, [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), on msdn.com.  
-  
   

@@ -13,7 +13,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Specify a Breakpoint Filter
@@ -47,6 +47,6 @@ Breakpoint filters are not typically used with the [!INCLUDE[tsql](../../include
 3.  Click **OK** to implement the changes, or **Cancel** to exit without applying the changes.  
   
 ## See Also  
- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)   
- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)   
+ [Specify a Hit Count](./specify-a-hit-count.md)   
+ [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)

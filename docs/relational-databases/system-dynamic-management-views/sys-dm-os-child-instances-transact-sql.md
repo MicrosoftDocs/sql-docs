@@ -6,7 +6,7 @@ ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_child_instances"
   - "sys.dm_os_child_instances_TSQL"
@@ -19,11 +19,12 @@ helpviewer_keywords:
   - "sys.dm_os_child_instances dynamic management view"
   - "monitoring server health"
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_os_child_instances (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
   Returns a row for each user instance that has been created from the parent server instance.  
   
@@ -32,8 +33,8 @@ ms.author: maghan
  The information returned from **sys.dm_os_child_instances** can be used to determine the state of each User Instance (heart_beat) and to obtain the pipe name (instance_pipe_name) that can be used to create a connection to the User Instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or SQLCmd. You can only connect to a User Instance after it has been started by an external process, such as a client application. SQL management tools cannot start a User Instance.  
   
 > **NOTE:** User Instances are a feature of [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] only.  
-> 
-> **NOTE** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_child_instances**.  
+
+> **NOTE** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_child_instances**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column|Data type|Description|  
 |------------|---------------|-----------------|  
@@ -54,9 +55,5 @@ ms.author: maghan
  For more information about dynamic management view, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [User Instances for Non-Administrators](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [User Instances for Non-Administrators](/previous-versions/sql/)  
   
-  
-
-
-

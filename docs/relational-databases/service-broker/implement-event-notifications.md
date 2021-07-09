@@ -37,7 +37,7 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Create a queue to receive messages.  
   
     > [!NOTE]  
-    >  The queue receives the following message type: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  The queue receives the following message type: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Create a service on the queue that references the event notifications contract.  
   
@@ -54,7 +54,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

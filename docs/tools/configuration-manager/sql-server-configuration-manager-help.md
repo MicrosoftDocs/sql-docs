@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Configuration Manager Help
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

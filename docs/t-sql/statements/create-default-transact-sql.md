@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_DEFAULT_TSQL"
   - "CREATE DEFAULT"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "objects [SQL Server], creating"
   - "DEFAULT definition"
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

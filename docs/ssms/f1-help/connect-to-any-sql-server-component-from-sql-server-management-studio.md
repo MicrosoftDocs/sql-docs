@@ -46,6 +46,5 @@ When you register a server, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md
 Solution Explorer allows you to store related queries, scripts, connections, and other associated information in a project. Each script project contains a node called **Connections**, where you can save one or more connections. To add a connection, right-select **Connections**, and then select **New Connection**. To access a saved connection, expand **Connections** and double-select the connection. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a query window associated with that connection. When saved, scripts retain their association to a specific connection.  
   
 ## See Also  
-[Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Use SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Object Explorer](../../ssms/object/object-explorer.md)  
-  

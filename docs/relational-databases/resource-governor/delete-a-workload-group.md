@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "workload groups [SQL Server], delete"
   - "Resource Governor, workload group delete"
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Delete a Workload Group
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

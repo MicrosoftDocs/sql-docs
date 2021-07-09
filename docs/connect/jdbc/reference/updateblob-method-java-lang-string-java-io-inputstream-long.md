@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 40f75549-5d5a-4de3-a271-4b8f0dd7b124
 author: David-Engel
 ms.author: v-daenge

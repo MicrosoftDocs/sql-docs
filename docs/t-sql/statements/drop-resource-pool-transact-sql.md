@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP RESOURCE POOL"
   - "DROP_RESOURCE_POOL_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP RESOURCE POOL"
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP RESOURCE POOL pool_name  
 [ ; ]  
 ```  
@@ -53,7 +52,7 @@ DROP RESOURCE POOL pool_name
 ## Examples  
  The following example drops the resource pool named `big_pool`.  
   
-```  
+```sql  
 DROP RESOURCE POOL big_pool;  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  

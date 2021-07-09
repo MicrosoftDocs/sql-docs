@@ -29,10 +29,10 @@ helpviewer_keywords:
   - "xml data type [SQL Server], SQLXML"
   - "bulk load [SQLXML], examples"
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Bulk Load Examples (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

@@ -2,7 +2,7 @@
 title: "Create a Shared Dataset or Embedded Dataset (Report Builder) | Microsoft Docs"
 description: Learn how to create embedded datasets and shared datasets for use in various reports. To create a dataset, you need an embedded or shared data source.
 
-ms.date: 10/17/2016
+ms.date: 05/10/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -14,7 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
-Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report. Shared datasets on a report server can be used by multiple reports, both mobile and paginated. To create a dataset, you need an embedded or shared data source.  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-not-pbi-rb](../../includes/ssrs-appliesto-not-pbi-rb.md)]
+
+Embedded datasets are for use in a single paginated report. Shared datasets on a report server can be used by multiple [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] reports, both mobile and paginated. To create a dataset, you need an embedded or shared data source.  
   
 ## Report Builder tasks
 

@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade or patch replicated databases
 
@@ -125,8 +125,8 @@ If you are planning to upgrade your SQL Server instance to SQL Server 2016 (or g
   
 ## See Also  
  [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)  
- [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)   
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)
+ [Upgrading a Replication Topology to SQL Server 2016](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016)

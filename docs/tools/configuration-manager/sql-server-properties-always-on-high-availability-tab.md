@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Properties (Always On High Availability Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  Use the **Always On High Availability** tab of the **SQL Server Properties** dialog box in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to enable or disable the Always On Availability Groups feature in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Enabling Always On Availability Groups is a prerequisite for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use availability groups as a high availability and disaster recovery solution.  
+  Use the **Always On High Availability** tab of the **SQL Server Properties** dialog box in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to enable or disable the Always On Availability Groups feature in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Enabling Always On Availability Groups is a prerequisite for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use availability groups as a high availability and disaster recovery solution.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
  To be enabled for Always On Availability Groups, a server instance must meet the following prerequisites:  
@@ -29,7 +29,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 -   Enable Always On Availability Groups for only one server instance at a time. After enabling Always On Availability Groups, wait until the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service has restarted before you enable the next server instance.  
   
 > [!NOTE]  
->  For information about feature support and for information about additional prerequisites, restrictions, and recommendations for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  
+>  For information about feature support and for information about additional prerequisites, restrictions, and recommendations for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Dialog Options  
  **Windows failover cluster name**  
@@ -48,6 +48,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ## UI element list  
   
 > [!NOTE]  
->  For more information about follow up after you disable Always On Availability Groups and for information about how to create and configure availability groups, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  
+>  For more information about follow up after you disable Always On Availability Groups and for information about how to create and configure availability groups, see [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Books Online.  
   
   

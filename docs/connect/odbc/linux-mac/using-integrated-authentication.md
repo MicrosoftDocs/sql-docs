@@ -53,7 +53,7 @@ Ensure that you use `kinit` or PAM (Pluggable Authentication Module) to obtain a
 
 When an application runs as a service, because Kerberos credentials expire by design, renew the credentials to ensure continued service availability. The ODBC driver does not renew credentials itself; ensure that there is a `cron` job or script that periodically runs to renew the credentials before their expiration. To avoid requiring the password for each renewal, you can use a keytab file.  
   
-[Kerberos Configuration and Use](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) provides details on ways to Kerberize services on Linux.
+[Kerberos Configuration and Use](https://www.oreilly.com/library/view/linux-in-a/0596007582/ch09.html) provides details on ways to Kerberize services on Linux.
   
 ## Tracking Access to a Database
 
@@ -101,7 +101,7 @@ The syntax that SPNs use in the connection string or connection attributes is as
   
 ## Authenticating a Linux or macOS Computer with Active Directory
 
-To configure Kerberos, enter data into the `krb5.conf` file. `krb5.conf` is in `/etc/` but you can refer to another file using the syntax e.g. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. The following is an example `krb5.conf` file:  
+<a name="configure-kerberos"></a>To configure Kerberos, enter data into the `krb5.conf` file. `krb5.conf` is in `/etc/` but you can refer to another file using the syntax e.g. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. The following is an example `krb5.conf` file:  
   
 ```  
 [libdefaults]  
@@ -122,7 +122,7 @@ The time on the Linux or macOS computer and the time on the Kerberos Key Distrib
 
 If Kerberos authentication fails, the ODBC driver on Linux or macOS does not use NTLM authentication.  
 
-For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## See Also  
 [Programming Guidelines](programming-guidelines.md)

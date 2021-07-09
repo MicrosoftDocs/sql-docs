@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -29,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
@@ -61,7 +60,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  The following query returns information about permissions of system objects:  
   
-```  
+```sql
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -75,7 +74,7 @@ GO
 ## Examples  
  The following example denies `EXECUTE` permission on `xp_cmdshell` to `public`.  
   
-```  
+```sql
 DENY EXECUTE ON sys.xp_cmdshell TO public;  
 GO  
 ```  

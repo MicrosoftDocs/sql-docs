@@ -6,13 +6,13 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
-author: markingmyname
-ms.author: maghan
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -34,6 +34,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |pdw_node_id|**int**|Node on which this Xevent instance is running.|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

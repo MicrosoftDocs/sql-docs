@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSpub_identity_range_TSQL"
   - "MSpub_identity_range"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpub_identity_range system table"
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSpub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

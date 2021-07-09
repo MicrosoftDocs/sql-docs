@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Snapshot Folder
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

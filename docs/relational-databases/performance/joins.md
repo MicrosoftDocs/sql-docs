@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "joins [SQL Server], about joins"
   - "join hints [SQL Server]"
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -257,7 +257,7 @@ A few conditions make a logical join eligible for a batch mode Adaptive Join:
 - The database compatibility level is 140 or higher.
 - The query is a `SELECT` statement (data modification statements are currently ineligible).
 - The join is eligible to be executed both by an indexed Nested Loops join or a Hash join physical algorithm.
-- The Hash join uses Batch mode, enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch Mode on Rowstore feature](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
+- The Hash join uses Batch mode, enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch mode on rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - The generated alternative solutions of the Nested Loops join and Hash join should have the same first child (outer reference).
 
 ### Adaptive threshold rows

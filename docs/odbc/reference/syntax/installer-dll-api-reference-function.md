@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "installer DLL [ODBC]"
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a

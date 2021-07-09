@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "AVAILABILITY GROUP"
   - "CREATE_AVAILABILITY_TSQL"
@@ -56,8 +56,7 @@ CREATE AVAILABILITY GROUP group_name
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
   | DTC_SUPPORT  = { PER_DB | NONE }  
-  | BASIC  
-  | DISTRIBUTED
+  | [ BASIC | DISTRIBUTED ]
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
   
@@ -150,7 +149,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
 |Level|Failure Condition|  
 |-----------|-----------------------|  
-|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> -The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> -The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout).|  
+|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> -The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> -The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout).|  
 |2|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> -The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified HEALTH_CHECK_TIMEOUT threshold of the availability group is exceeded.<br /><br /> -The availability replica is in failed state.|  
 |3|Specifies that an automatic failover should be initiated on critical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default behavior.|  
 |4|Specifies that an automatic failover should be initiated on moderate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal resource pool.|  
@@ -159,7 +158,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 > [!NOTE]  
 >  Lack of response by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to client requests is not relevant to availability groups.  
   
- The FAILURE_CONDITION_LEVEL and HEALTH_CHECK_TIMEOUT values, define a *flexible failover policy* for a given group. This flexible failover policy provides you with granular control over what conditions must cause an automatic failover. For more information, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+ The FAILURE_CONDITION_LEVEL and HEALTH_CHECK_TIMEOUT values, define a *flexible failover policy* for a given group. This flexible failover policy provides you with granular control over what conditions must cause an automatic failover. For more information, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
  Specifies the wait time (in milliseconds) for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information before the WSFC cluster assumes that the server instance is slow or not responding. HEALTH_CHECK_TIMEOUT is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode with automatic failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Furthermore, a health-check timeout can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
@@ -175,13 +174,13 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   For more information regarding this setting, see [Database Level Health Detection Option](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- Specifies whether cross-database transactions are supported through the distributed transaction coordinator (DTC). Cross-database transactions are only supported beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. PER_DB creates the availability group with support for these transactions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
+ Specifies whether cross-database transactions are supported through the distributed transaction coordinator (DTC). Cross-database transactions are only supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. PER_DB creates the availability group with support for these transactions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
  BASIC  
- Used to create a basic availability group. Basic availability groups are limited to one database and two replicas: a primary replica and one secondary replica. This option is a replacement for the deprecated database mirroring feature on SQL Server Standard Edition. For more information, see [Basic Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Basic availability groups are supported beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Used to create a basic availability group. Basic availability groups are limited to one database and two replicas: a primary replica and one secondary replica. This option is a replacement for the deprecated database mirroring feature on SQL Server Standard Edition. For more information, see [Basic Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Basic availability groups are supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
 
  DISTRIBUTED  
- Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
+ Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transaction waits until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it is in a "not synced" state and the replica marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica waits until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
@@ -257,7 +256,8 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 - Can be hosted on any edition of SQL Server, including Express Edition.
 - Requires the data mirroring endpoint of the CONFIGURATION_ONLY replica to be type `WITNESS`.
 - Can not be altered.
-- Is not valid when `CLUSTER_TYPE = WSFC`. 
+- Is not valid when `CLUSTER_TYPE = WSFC`.
+- The options `failover_mode` and `seeding_mode` are not supported when `availability_mode` is set to `configuration_only` for a replica. A sample is shown [here](../../linux/sql-server-linux-availability-group-configure-ha.md).
 
    For more information, see [Configuration only replica](../../linux/sql-server-linux-availability-group-ha.md).
   
@@ -322,7 +322,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
- For more information about calculating the read-only routing URL for a replica, see [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
+ For more information about calculating the read-only routing URL for a replica, see [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 > [!NOTE]  
 >  For a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Transact-SQL listener should be configured to use a specific port. For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -355,7 +355,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  Use a comma-separated list to specify all the server instances that might host a readable secondary replica. Read-only routing follows the order in which server instances are specified in the list. If you include a replica's host server instance on the replica's read-only routing list, placing this server instance at the end of the list is typically a good practice, so that read-intent connections go to a secondary replica, if one is available.  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can load-balance read-intent requests across readable secondary replicas. You specify this by placing the replicas in a nested set of parentheses within the read-only routing list. For more information and examples, see [Configure load-balancing across read-only replicas](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can load-balance read-intent requests across readable secondary replicas. You specify this by placing the replicas in a nested set of parentheses within the read-only routing list. For more information and examples, see [Configure load-balancing across read-only replicas](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  NONE  
  Specifies that when this availability replica is the primary replica, read-only routing is not supported. This is the default behavior.  
@@ -383,12 +383,12 @@ For more information, see [Secondary to primary replica read/write connection re
  You need to join the secondary availability group to the distributed availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
  \<ag_name> 
- Specifies the name  of the availability group that makes up one half of the distributed availability group.  
+ Specifies the name of the availability group that makes up one half of the distributed availability group.  
   
- LISTENER **='**TCP**://**_system-address_**:**_port_**'**  
+ LISTENER_URL **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL path for the listener associated with the availability group.  
   
- The LISTENER clause is required.  
+ The LISTENER_URL clause is required.  
   
  **'**TCP**://**_system-address_**:**_port_**'**  
  Specifies a URL for the listener associated with the availability group. The URL parameters are as follows:  
@@ -590,4 +590,4 @@ GO
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Troubleshoot Always On Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

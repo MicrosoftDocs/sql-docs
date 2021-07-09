@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "scalar types catalog views"
   - "catalog views [SQL Server], scalar types"
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Scalar Types Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -33,6 +33,5 @@ ms.author: maghan
 
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
   

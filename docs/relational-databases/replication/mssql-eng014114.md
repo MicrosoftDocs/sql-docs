@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG014114 error"
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014114
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

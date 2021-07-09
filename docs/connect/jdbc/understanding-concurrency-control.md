@@ -2,7 +2,7 @@
 title: "Understanding concurrency control"
 description: "Learn about concurrency control and how to preserve database integrity when developing a multi-user application with the JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "12/08/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.author: v-daenge
   Concurrency control refers to the various techniques that are used to preserve the integrity of the database when multiple users are updating rows at the same time. Incorrect concurrency can lead to problems such as dirty reads, phantom reads, and non-repeatable reads. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides interfaces to all the concurrency techniques used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to resolve these issues.  
   
 > [!NOTE]  
->  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concurrency, see "Managing Concurrent Data Access" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+>  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concurrency, see ["Managing Concurrent Data Access"](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access).  
   
 ## Remarks  
  The JDBC driver supports the following concurrency types:  

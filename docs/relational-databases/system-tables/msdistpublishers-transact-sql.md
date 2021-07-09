@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdistpublishers"
   - "MSdistpublishers_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistpublishers system table"
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSdistpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

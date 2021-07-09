@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

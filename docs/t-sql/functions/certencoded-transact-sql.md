@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CERTENCODED"
   - "CERTENCODED_TSQL"
@@ -26,7 +26,7 @@ This function returns the public portion of a certificate in binary format. This
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CERTENCODED ( cert_id )  
 ```  
   

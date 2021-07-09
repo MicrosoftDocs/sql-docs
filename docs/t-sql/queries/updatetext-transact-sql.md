@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "UPDATETEXT"
   - "UPDATETEXT_TSQL"
@@ -28,14 +28,13 @@ ms.author: vanto
   Updates an existing **text**, **ntext**, or **image** field. Use UPDATETEXT to change only a part of a **text**, **ntext**, or **image** column in place. Use WRITETEXT to update and replace a whole **text**, **ntext**, or **image** field.  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the large-value data types and the **.**WRITE clause of the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the large-value data types and the **.WRITE** clause of the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement instead.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```syntaxsql
-  
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  
      { NULL | delete_length }  
@@ -104,12 +103,12 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  To run this example, you must install the pubs database.  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr, publishers p  
       WHERE p.pub_id = pr.pub_id   

@@ -32,7 +32,7 @@ Returns the SET options active (set) for the current connection.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -46,8 +46,7 @@ Suppresses all informational messages that have severity levels from 0 through 1
 ## Result Sets  
 DBCC USEROPTIONS returns a column for the name of the SET option and a column for the value of the option (values and entries may vary):
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 

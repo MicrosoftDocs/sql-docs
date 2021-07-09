@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "systaskids_TSQL"
   - "dbo.systaskids"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systaskids system table"
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -11,9 +11,9 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, about SQLXML"
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

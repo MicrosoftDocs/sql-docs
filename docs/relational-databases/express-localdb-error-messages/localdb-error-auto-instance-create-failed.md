@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

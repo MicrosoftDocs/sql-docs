@@ -16,7 +16,7 @@ ms.author: vanto
 ---
 # Evaluate a Policy-Based Management Policy from an Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to evaluate a policy from a server instance, database, or database object in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  This topic describes how to evaluate a policy from a server instance, database, or database object in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
   

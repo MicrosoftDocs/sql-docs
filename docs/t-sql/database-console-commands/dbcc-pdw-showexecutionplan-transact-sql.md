@@ -5,14 +5,14 @@ ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -39,6 +39,9 @@ Syntax for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [ ; ]  
 ```  
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  *distribution_id*  
@@ -84,7 +87,7 @@ SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start
 FROM sys.dm_pdw_dms_workers   
 WHERE [status] <> 'StepComplete' and [status] <> 'StepError'  
 AND pdw_node_id = 201001   
-order by request_id, [dms_step_index], [distribution_id];  
+ORDER BY request_id, [dms_step_index], [distribution_id];  
 ```  
   
 Based on the results of the preceding query, use the sql_spid and pdw_node_id as parameters to DBCC PDW_SHOWEXECUTIONPLAN. For example, the following command shows the execution plan for pdw_node_id 201001 and sql_spid 375.

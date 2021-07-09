@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 
 # Install or Uninstall the Reporting Services Add-in for SharePoint (SSRS)
@@ -49,7 +49,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ##  <a name="bkmk_3ways_to_install"></a> Overview of the Installation Methods  
  The SQL Server 2016 Reporting Services Add-in for SharePoint products can be installed using one of the following two methods:  
   
--   **The installation wizard:** ![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") In SQL Server 2016, the add-in can be installed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
+-   **The installation wizard:** ![note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") In SQL Server 2016, the add-in can be installed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard. Choose **Reporting Services Add-in for SharePoint Products** on the **Feature Selection** page of the wizard.  
   
 -   **rsSharepoint.msi:** The add-in can be installed directly from the installation media or downloaded and installed. The rsSharepoint.msi supports both a graphical user interface and a command line installation. You must run the .msi with administrator privileges by first opening a command prompt with elevated permissions, and then running the rsSharepoint.msi from the command line. For more information on downloading the add-in, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   

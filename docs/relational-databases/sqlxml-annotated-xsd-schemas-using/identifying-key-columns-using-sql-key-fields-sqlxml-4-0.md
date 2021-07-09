@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "key-fields annotation"
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

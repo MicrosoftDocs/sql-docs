@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.services"
   - "services"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.services catalog view"
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

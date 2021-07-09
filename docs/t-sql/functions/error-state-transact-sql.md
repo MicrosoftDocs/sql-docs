@@ -4,10 +4,10 @@ title: ERROR_STATE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ERROR_STATE_TSQL"
   - "ERROR_STATE"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "CATCH block"
   - "states [SQL Server], error numbers"
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # ERROR_STATE (Transact-SQL)

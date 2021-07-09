@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "promoting properties [XML in SQL Server]"
   - "property promotion [XML in SQL Server]"
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 ---
 # Promote Frequently Used XML Values with Computed Columns
@@ -171,7 +171,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  To do this, you first create the streaming CLR function. The **xml** data type is exposed as a managed class SqlXml in ADO.NET and supports the **CreateReader()** method that returns an XmlReader.  
   
 > [!NOTE]  
->  The example code in this section uses XPathDocument and XPathNavigator. These force you to load all the XML documents into memory. If you are using similar code in your application to process several large XML documents, this code is not scalable. Instead, keep memory allocations small and use streaming interfaces whenever possible. For more information about performance, see [Architecture of CLR Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  The example code in this section uses XPathDocument and XPathNavigator. These force you to load all the XML documents into memory. If you are using similar code in your application to process several large XML documents, this code is not scalable. Instead, keep memory allocations small and use streaming interfaces whenever possible. For more information about performance, see [Architecture of CLR Integration](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -251,5 +251,4 @@ as
   
 ## See Also  
  [Use XML in Computed Columns](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

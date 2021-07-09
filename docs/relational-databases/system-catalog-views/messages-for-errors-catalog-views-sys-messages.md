@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "messages_TSQL"
   - "sys.messages_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.messages catalog view"
   - "error numbers [SQL Server]"
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Messages (for errors) Catalog Views - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,8 @@ ms.author: maghan
 ## See Also  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Messages &#40;for Errors&#41; Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
- [Exception Message Box Programming](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
+ [Messages &#40;for Errors&#41; Catalog Views &#40;Transact-SQL&#41;]()   
+ [Exception Message Box Programming](/previous-versions/sql/sql-server-2016/ms166343(v=sql.130))   
  [Error Messages](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [Database Engine Events and Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
-  
   

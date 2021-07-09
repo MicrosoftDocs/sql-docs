@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP COLUMN ENCRYPTION"
   - "DROP COLUMN ENCRYPTION KEY"
@@ -33,7 +33,6 @@ ms.author: jaszymas
 ## Syntax  
   
 ```syntaxsql
-  
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
 
@@ -52,7 +51,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ### A. Dropping a column encryption key  
  The following example drops a column encryption key called `MyCEK`.  
   
-```  
+```sql  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  

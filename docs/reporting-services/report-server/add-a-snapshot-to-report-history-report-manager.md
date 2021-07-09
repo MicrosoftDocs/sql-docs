@@ -19,7 +19,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
   
 ## To manually add snapshots to report history
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the drop-down arrow.
   
@@ -66,14 +66,12 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 - [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Schedules](../../reporting-services/subscriptions/schedules.md)   
-- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
-## To manually add snapshots to report history
-  
 1. In the web portal, navigate to the item that you want to view history for and right-click it.  
   
 2. In the drop-down menu, select **Manage**.  
@@ -155,6 +153,6 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 - [Configure Execution Properties for a Report (web portal)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limit Report History (web portal)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Schedules](../../reporting-services/subscriptions/schedules.md)   
-- [the web portal  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [the web portal  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

@@ -1,12 +1,12 @@
 ---
 title: Master database
 description: Learn about the master database in Parallel Data Warehouse.
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -39,7 +39,7 @@ You *cannot:*
   
 |Task|Description|  
 |--------|---------------|  
-|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
+|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true).|  
 |Restore the master database|To restore the master database, use the [Restore the Master Database](restore-the-master-database.md) page in the Configuration Manager tool.|  
 |View database catalog information.|`SELECT * FROM master.sys.databases;`|  
 |View system-wide login and permission information.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

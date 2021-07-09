@@ -4,10 +4,10 @@ title: "STDEV (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STDEV_TSQL"
   - "STDEV"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STDEV (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 STDEV ( [ ALL | DISTINCT ] expression )  
   
@@ -67,7 +67,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### A: Using STDEV  
  The following example returns the standard deviation for all bonus values in the `SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT STDEV(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -78,7 +78,7 @@ GO
 ### B: Using STDEV  
  The following example returns the standard deviation of the sales quota values in the table `dbo.FactSalesQuota`. The first column contains the standard deviation of all distinct values and the second column contains the standard deviation of all values including any duplicates values.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEV(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEV(SalesAmountQuota) AS All_Values  
@@ -96,7 +96,7 @@ Distinct_Values   All_Values
 ### C. Using STDEV with OVER  
  The following example returns the standard deviation of the sales quota values for each quarter in a calendar year. Notice that the ORDER BY in the OVER clause orders the STDEV and the ORDER BY of the SELECT statement orders the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "Key_ID"
   - "Key_ID_TSQL"
@@ -31,8 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 Key_ID ( 'Key_Name' )  
 ```  
   
@@ -56,14 +55,14 @@ Key_ID ( 'Key_Name' )
 ### A. Returning the ID of a symmetric key  
  The following example returns the ID of a key called `ABerglundKey1`.  
   
-```  
+```sql  
 SELECT KEY_ID('ABerglundKey1');  
 ```  
   
 ### B. Returning the ID of a temporary symmetric key  
  The following example returns the ID of a temporary symmetric key. Note that `#` is prepended to the key name.  
   
-```  
+```sql  
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   

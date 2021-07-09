@@ -4,10 +4,10 @@ title: "Constants (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -32,7 +32,7 @@ helpviewer_keywords:
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Constants (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ If a character string enclosed in single quotation marks contains an embedded qu
   
 The following are examples of character strings:
   
-```sql
+```
 'Cincinnati'  
 'O''Brien'  
 'Process X is 50% complete.'  
@@ -84,7 +84,7 @@ Binary constants have the prefix `0x` and are a string of hexadecimal numbers. T
   
 The following are examples of binary strings are:
   
-```sql
+```
 0xAE  
 0x12Ef  
 0x69048AEFDD010E  
@@ -102,7 +102,7 @@ The following are examples of binary strings are:
   
 The following are examples of **datetime** constants:
   
-```sql
+```
 'December 5, 1985'  
 '5 December, 1985'  
 '851205'  
@@ -111,7 +111,7 @@ The following are examples of **datetime** constants:
   
 Examples of datetime constants are:
   
-```sql
+```
 '14:30:24'  
 '04:24 PM'  
 ```  
@@ -121,7 +121,7 @@ Examples of datetime constants are:
   
 The following are examples of **integer** constants:
   
-```sql
+```
 1894  
 2  
 ```  
@@ -131,7 +131,7 @@ The following are examples of **integer** constants:
   
 The following are examples of **decimal** constants:
   
-```sql
+```
 1894.1204  
 2.0  
 ```  
@@ -141,7 +141,7 @@ The following are examples of **decimal** constants:
   
 The following are examples of **float** or **real** values:
   
-```sql
+```
 101.5E5  
 0.5E-2  
 ```  
@@ -156,7 +156,7 @@ The following are examples of **float** or **real** values:
   
 The following are examples of **money** constants:
   
-```sql
+```
 $12  
 $542023.14  
 ```  
@@ -166,7 +166,7 @@ $542023.14
   
 The following examples both specify the same GUID:
   
-```sql
+```
 '6F9619FF-8B86-D011-B42D-00C04FC964FF'  
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
@@ -176,27 +176,27 @@ To indicate whether a number is positive or negative, apply the **+** or **-** u
   
 Signed **integer** expressions:  
   
-```sql
+```
 +145345234
 -2147483648
 ```
 Signed **decimal** expressions:  
   
-```sql
+```
 +145345234.2234
 -2147483648.10
 ```
   
 Signed **float** expressions:  
   
-```sql
+```
 +123E-3
 -12E5
 ```
   
 Signed **money** expressions:  
   
-```sql
+```
 -$45.56
 +$423456.99
 ```

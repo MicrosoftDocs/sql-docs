@@ -20,9 +20,9 @@ ms.author: mikeray
 
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-  This topic describes breaking changes in the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
+  This topic describes breaking changes in the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
   
-##  <a name="SQL15"></a> Breaking Changes in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+##  <a name="SQL15"></a> Breaking Changes in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]  
   
 -   The *sample_ms* column of `sys.dm_io_virtual_file_stats` has expanded from an **int** to a **bigint** data type.  
   
@@ -42,7 +42,7 @@ For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14
 
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server Database Engine Backward Compatibility](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)   
+ [SQL Server Database Engine Backward Compatibility](./discontinued-database-engine-functionality-in-sql-server.md)   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261)   
+ [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261)

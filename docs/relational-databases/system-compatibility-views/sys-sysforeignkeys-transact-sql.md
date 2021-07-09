@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysforeignkeys"
   - "sys.sysforeignkeys"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysforeignkeys system table"
   - "sys.sysforeignkeys compatibility view"
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

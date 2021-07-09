@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

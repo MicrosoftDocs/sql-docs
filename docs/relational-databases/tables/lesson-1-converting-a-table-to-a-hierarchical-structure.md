@@ -24,11 +24,11 @@ This lesson, examines an existing table, creates a new table containing a **hier
 ## Prerequisites  
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Download [AdventureWorks2017 sample databases](../../samples/adventureworks-install-configure.md).
 
-Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Instructions for restoring databases in SSMS are here: [Restore a database](../backup-restore/restore-a-database-backup-using-ssms.md).  
 
 ## Examine the current structure of the employee table
 The sample Adventureworks2017 (or later) database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the **hierarchyid** data type.  
@@ -218,7 +218,7 @@ This task creates a new table and populates it with the data in the **EmployeeDe
     ```  
   
 ## Optimizing the NewOrg Table
-The **NewOrd** table that you created in the [Populating a Table with Existing Hierarchical Data](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) task contains all the employee information, and represents the hierarchical structure by using a **hierarchyid** data type. This task adds new indexes to support searches on the **hierarchyid** column.  
+The **NewOrd** table that you created in the [Populating a Table with Existing Hierarchical Data]() task contains all the employee information, and represents the hierarchical structure by using a **hierarchyid** data type. This task adds new indexes to support searches on the **hierarchyid** column.  
   
 
 The **hierarchyid** column (**OrgNode**) is the primary key for the **NewOrg** table. When the table was created, it contained a clustered index named **PK_NewOrg_OrgNode** to enforce the uniqueness of the **OrgNode** column. This clustered index also supports a depth-first search of the table.  

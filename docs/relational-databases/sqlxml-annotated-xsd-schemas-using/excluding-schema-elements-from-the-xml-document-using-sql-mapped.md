@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "attribute mapping [SQLXML], excluding schema elements"
   - "table/view mapping [SQLXML], excluding schema elements"
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Excluding Schema Elements from the XML Document Using sql:mapped
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

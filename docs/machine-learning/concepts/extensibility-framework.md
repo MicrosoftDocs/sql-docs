@@ -7,9 +7,9 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 
 # Extensibility architecture in SQL Server Machine Learning Services 
@@ -76,9 +76,9 @@ In Linux, only one database engine instance is supported and there is one launch
 
 ## BxlServer and SQL Satellite
 
-**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and the language runtime. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a job is running, you might see one or multiple instances of BxlServer.
+**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and the language runtime. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](/sysinternals/downloads/process-explorer) while a job is running, you might see one or multiple instances of BxlServer.
 
-In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
+In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes.
 
 **SQL Satellite** is an extensibility API, included in the database engine, that supports external code or external runtimes implemented using C or C++.
 
@@ -134,7 +134,7 @@ Communication protocols among components and data platforms are described in thi
 
 + **Other protocols**
 
-  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
+  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
 
 ## See Also
 

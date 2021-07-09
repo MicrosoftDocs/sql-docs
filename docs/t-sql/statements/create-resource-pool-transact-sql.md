@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE RESOURCE POOL"
   - "RESOURCE POOL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE RESOURCE POOL"
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

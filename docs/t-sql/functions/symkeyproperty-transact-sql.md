@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SYMKEYPROPERTY_TSQL"
   - "SYMKEYPROPERTY"
@@ -28,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )  
 ```  
   
@@ -51,7 +50,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## Examples  
  The following example returns the algorithm of the symmetric key with Key_ID 256.  
   
-```  
+```sql  
 SELECT SYMKEYPROPERTY(256, 'algorithm_desc') AS Algorithm ;  
 GO  
 ```  

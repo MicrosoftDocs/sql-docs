@@ -4,10 +4,10 @@ title: "REPLICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "REPLICATE_TSQL"
   - "REPLICATE"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ REPLICATE ( string_expression , integer_expression )
 ### A. Using REPLICATE  
  The following example replicates a `0` character four times in front of a production line code in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT [Name]  
 , REPLICATE('0', 4) + [ProductLine] AS 'Line Code'  
 FROM [Production].[Product]  
@@ -84,7 +84,7 @@ HL Touring Frame - Yellow, 50                      0000T
 ### B. Using REPLICATE and DATALENGTH  
  The following example left pads numbers to a specified length as they are converted from a numeric data type to character or Unicode.  
   
-```  
+```sql
 IF EXISTS(SELECT name FROM sys.tables  
       WHERE name = 't1')  
    DROP TABLE t1;  
@@ -122,7 +122,7 @@ Varchar Column        Char Column
 ### C: Using REPLICATE  
  The following example replicates a `0` character four times in front of an `ItemCode` value.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName AS Name,  

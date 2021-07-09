@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Notification Services (SQL Server Configuration Manager)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

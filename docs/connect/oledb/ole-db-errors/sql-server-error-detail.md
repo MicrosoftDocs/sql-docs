@@ -4,7 +4,7 @@ description: Learn about the provider-specific error interface ISQLServerErrorIn
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -23,7 +23,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  The OLE DB Driver for SQL Server defines the provider-specific error interface [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
+  The OLE DB Driver for SQL Server defines the provider-specific error interface [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  
   
  There are two ways to obtain access to **ISQLServerErrorInfo** interface.  
   
@@ -55,5 +55,4 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 ## See Also  
  [Errors](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

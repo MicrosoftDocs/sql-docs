@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.filegroups.f1"
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Properties (Filegroups Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

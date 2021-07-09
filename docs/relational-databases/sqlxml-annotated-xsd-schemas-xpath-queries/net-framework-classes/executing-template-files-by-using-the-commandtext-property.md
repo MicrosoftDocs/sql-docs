@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "executing template files [SQLXML]"
   - "CommandText property"
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandText Property
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

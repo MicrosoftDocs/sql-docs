@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ROWCOUNT_BIG"
   - "ROWCOUNT_BIG_TSQL"
@@ -32,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ROWCOUNT_BIG ( )  
 ```  
   

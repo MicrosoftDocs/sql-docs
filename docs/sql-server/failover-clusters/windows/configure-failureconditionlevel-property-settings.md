@@ -5,11 +5,11 @@ ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: failover-cluster-instance
+ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure FailureConditionLevel property settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Cluster resource commands and equivalent Windows PowerShell cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Cluster resource commands and equivalent Windows PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Using the Failover Cluster Manager Snap-in  
  **To configure FailureConditionLevel property settings:**  
@@ -87,5 +87,4 @@ ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel =
 ## See Also  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)   
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
-  
   

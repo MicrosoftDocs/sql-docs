@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Errors and Events Reference (Replication)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_fts_parser_TSQL"
   - "dm_fts_parser"

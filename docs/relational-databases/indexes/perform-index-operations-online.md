@@ -15,7 +15,7 @@ ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: "table-view-index, sql-database"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Perform Index Operations Online
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

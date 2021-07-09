@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_help_spatial_geography_histogram_TSQL"
   - "sp_help_spatial_geography_histogram"
@@ -77,6 +77,5 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## See Also  
- [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

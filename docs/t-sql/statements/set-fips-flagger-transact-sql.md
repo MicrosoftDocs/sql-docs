@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FIPS_FLAGGER"
   - "SET_FIPS_FLAGGER_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "FIPS 127-2 standard"
   - "FIPS_FLAGGER option"
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

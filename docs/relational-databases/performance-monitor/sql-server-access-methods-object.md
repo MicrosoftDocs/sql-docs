@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Access Methods object"
   - "SQLServer:Access Methods"
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Access Methods Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

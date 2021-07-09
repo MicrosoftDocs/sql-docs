@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "DENY statement, XML schema collections"
   - "schema collections [SQL Server], permissions"
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DENY XML Schema Collection Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -111,7 +111,7 @@ DENY permission  [ ,...n ] ON
 ## Examples  
  The following example denies `EXECUTE` permission on the XML schema collection `Invoices4` to the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
 GO  

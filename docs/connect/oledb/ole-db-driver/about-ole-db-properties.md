@@ -67,6 +67,5 @@ PR 15068:  This HTML comment is being added by PR...
   
 ## See Also  
  [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
-  
+ [Properties (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))  
   

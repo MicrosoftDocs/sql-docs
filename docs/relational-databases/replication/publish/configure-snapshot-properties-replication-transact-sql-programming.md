@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Snapshot Properties (Replication Transact-SQL Programming)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

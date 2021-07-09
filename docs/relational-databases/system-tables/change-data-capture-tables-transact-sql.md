@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Change Data Capture Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

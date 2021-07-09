@@ -1,12 +1,12 @@
 ---
 title: Transparent data encryption
 description: Transparent data encryption (TDE)  for Parallel Data Warehouse (PDW) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files."
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -202,7 +202,7 @@ The database encryption key (DEK) is protected by the certificates stored in the
   
 The system can access the keys without requiring human intervention (such as providing a password). If the certificate is not available, the system will output an error explaining that the DEK cannot be decrypted until the proper certificate is available.  
   
-When moving a database from one appliance to another, the certificate used to protect its' DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
+When moving a database from one appliance to another, the certificate used to protect its' DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
 Certificates used to encrypt DEKs should be retained as long as there are database backups that use them. Certificate backups must include the certificate private key, because without the private key a certificate cannot be used for database restore. Those certificate private key backups are stored in a separate file, protected by a password that must be provided for certificate restore.  
   

@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # SQL Server Management Studio Replication Dialog Boxes
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

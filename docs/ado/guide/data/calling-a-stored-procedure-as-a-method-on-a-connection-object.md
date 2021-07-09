@@ -56,7 +56,9 @@ Set objComm.ActiveConnection = objConn
 ' the active connection object...  
 '    "ALFKI" is the required input parameter,  
 '    objRs is the resultant output variable.  
-  
+objComm(1) = "ALFKI"
+Set objRs = objComm.Execute
+
 ' Display the result.  
 Debug.Print "Results returned from sp_CustOrdersOrders for ALFKI: "  
 Do While Not objRs.EOF  

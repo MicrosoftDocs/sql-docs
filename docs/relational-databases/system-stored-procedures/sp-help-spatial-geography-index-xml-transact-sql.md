@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_help_spatial_geography_index_xml_TSQL"
   - "sp_help_spatial_geography_index_xml"
@@ -71,11 +71,10 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## Requirements  
   
 ## See Also  
- [Spatial Index Stored Procedures](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Spatial Index Stored Procedures](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [XQuery Basics](../../xquery/xquery-basics.md)   
  [XQuery Language Reference](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

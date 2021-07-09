@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_trace_getfilterinfo"
   - "fn_trace_getfilterinfo_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "filters [SQL Server], traces"
   - "fn_trace_getfilterinfo function"
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

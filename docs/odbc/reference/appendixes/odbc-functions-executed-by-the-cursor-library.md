@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "cursor library [ODBC], functions"
   - "functions [ODBC], cursor library"
@@ -23,20 +23,11 @@ ms.author: v-daenge
   
  The cursor library executes the following functions. When an application calls a function in this list, the Driver Manager invokes the cursor library, not the driver. Note that the cursor library may call the driver when executing the function.  
   
-|||  
-|-|-|  
-|**SQLBindCol**|**SQLGetStmtOption**|  
-|**SQLBindParam**|**SQLNativeSql**|  
-|**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**SQLParamOptions**|  
-|**SQLEndTran**|**SQLRowCount**|  
-|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**SQLSetConnectOption**|  
-|**SQLFreeHandle**|**SQLSetDescField**|  
-|**SQLFreeStmt**|**SQLSetDescRec**|  
-|**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**SQLSetScrollOptions**|  
-|**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**SQLSetStmtOption**|  
-|**SQLGetInfo**|**SQLTransact**|  
-|**SQLGetStmtAttr**||
+:::row:::
+   :::column span="":::
+      **SQLBindCol**<br>      **SQLBindParam**<br>      **SQLBindParameter**<br>      **SQLCloseCursor**<br>      **SQLEndTran**<br>      **SQLExtendedFetch**<br>      **SQLFetchScroll**<br>      **SQLFreeHandle**<br>      **SQLFreeStmt**<br>      **SQLGetData**<br>      **SQLGetDescField**<br>      **SQLGetDescRec**<br>      **SQLGetFunctions**<br>      **SQLGetInfo**<br>      **SQLGetStmtAttr**
+   :::column-end:::
+   :::column span="":::
+      **SQLGetStmtOption**<br>      **SQLNativeSql**<br>      **SQLNumParams**<br>      **SQLParamOptions**<br>      **SQLRowCount**<br>      **SQLSetConnectAttr**<br>      **SQLSetConnectOption**<br>      **SQLSetDescField**<br>      **SQLSetDescRec**<br>      **SQLSetPos**<br>      **SQLSetScrollOptions**<br>      **SQLSetStmtAttr**<br>      **SQLSetStmtOption**<br>      **SQLTransact**
+   :::column-end:::
+:::row-end:::

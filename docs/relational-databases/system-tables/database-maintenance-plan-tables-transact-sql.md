@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], system tables"
   - "system tables [SQL Server], database maintenance plans"
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Database Maintenance Plan Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

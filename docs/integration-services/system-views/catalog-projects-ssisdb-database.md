@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the details for all projects that appear in the **SSISDB** catalog.  
   
 |Column name|Data type|Description|  

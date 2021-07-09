@@ -1,8 +1,8 @@
 ---
 title: Manage big data cluster access in Active Directory mode
 description: Manage access to the big data cluster
-author: NelGson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 08/04/2020
 ms.topic: conceptual

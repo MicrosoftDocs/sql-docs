@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_removedbreplication"
   - "sp_removedbreplication_TSQL"
@@ -42,7 +42,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 `[ @type = ] type`
  Is the type of replication for which database objects are being removed. *type* is **nvarchar(5)** and can be one of the following values.  
   
-|||  
+|Value|Description|  
 |-|-|  
 |**tran**|Removes transactional replication publishing objects.|  
 |**merge**|Removes merge replication publishing objects.|  
@@ -58,15 +58,17 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
  **sp_removedbreplication** cannot be used against a database that is marked as read-only.  
   
-## Example  
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
-  
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_removedbreplication**.  
   
-## Example  
+## Examples
+
+### A. Remove replication objects, AdventureWorks2012Replica subscription database
+ [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-```  
+### B. Remove replication objects, AdventureWorksReplica subscription database
+  
+```sql
 -- Remove replication objects from the subscription database on MYSUB.  
 DECLARE @subscriptionDB AS sysname  
 SET @subscriptionDB = N'AdventureWorksReplica'  

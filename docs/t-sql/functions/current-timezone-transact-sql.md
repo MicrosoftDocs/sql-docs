@@ -4,10 +4,10 @@ title: "CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/28/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CURRENT_TIMEZONE"
   - "CURRENT_TIMEZONE_TSQL"
@@ -38,7 +38,7 @@ This function returns the name of the time zone observed by a server or an insta
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE ( )  
 ```
   
@@ -67,6 +67,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## See also
 
-[SQL Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
 
-[CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)
+[CURRENT_TIMEZONE_ID()](./current-timezone-id-transact-sql.md)

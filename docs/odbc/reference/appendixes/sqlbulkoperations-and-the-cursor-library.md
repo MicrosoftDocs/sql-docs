@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLBulkOperations function [ODBC], Cursor Library"
 ms.assetid: f6c55be1-f020-4ae2-a423-ef8a0d877e20

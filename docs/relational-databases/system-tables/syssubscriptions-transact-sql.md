@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syssubscriptions_TSQL"
   - "syssubscriptions"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syssubscriptions system table"
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # syssubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

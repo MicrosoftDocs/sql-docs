@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdynamicsnapshotjobs_TSQL"
   - "MSdynamicsnapshotjobs"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdynamicsnapshotjobs system table"
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

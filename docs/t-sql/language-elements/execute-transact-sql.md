@@ -4,10 +4,10 @@ title: "EXECUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EXEC"
   - "EXECUTE_TSQL"
@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "switching execution context"
   - "EXECUTE statement"
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # EXECUTE (Transact-SQL)
@@ -46,8 +46,8 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
   
 ## Syntax  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-The following code block shows the syntax in SQL Server 2019. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017) instead. 
+::: moniker range=">=sql-server-ver15"
+The following code block shows the syntax in SQL Server 2019. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017&preserve-view=true) instead. 
 
 ```syntaxsql
 -- Syntax for SQL Server 2019
@@ -109,9 +109,9 @@ Execute a pass-through command against a linked server
 ```  
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
-The following code block shows the syntax in SQL Server 2017 and earlier. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15) instead.
+The following code block shows the syntax in SQL Server 2017 and earlier. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15&preserve-view=true) instead.
 
 
 ```syntaxsql
@@ -249,7 +249,7 @@ Execute a character string
 
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
 [ { EXEC | EXECUTE } ]  
@@ -370,7 +370,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
  
 AT DATA_SOURCE data_source_name 
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
  Specifies that *command_string* is executed against *data_source_name* and results, if any, are returned to the client. *data_source_name* must refer to an existing EXTERNAL DATA SOURCE definition in the database. Only data sources that point to SQL Server are supported. Additionally, for SQL Server big data cluster data sources that point to compute pool, data pool or storage pool are supported. Data sources are defined by using [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).  
   
@@ -500,7 +500,7 @@ GO
  The following example executes the `spGetWhereUsedProductID` stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It passes two parameters: the first parameter is a product ID (`819`) and the second parameter, `@CheckDate,` is a `datetime` value.  
   
 ```sql    
-DECLARE @CheckDate datetime;  
+DECLARE @CheckDate DATETIME;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
 GO  
@@ -538,7 +538,7 @@ GO
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```sql    
-DECLARE @retstat int;  
+DECLARE @retstat INT;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
@@ -546,7 +546,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
  The following example creates a variable that represents a stored procedure name.  
   
 ```sql  
-DECLARE @proc_name varchar(30);  
+DECLARE @proc_name VARCHAR(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
   
@@ -561,15 +561,14 @@ IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL
 GO  
 -- Create the stored procedure.  
 CREATE PROCEDURE dbo.ProcTestDefaults (  
-@p1 smallint = 42,   
-@p2 char(1),   
-@p3 varchar(8) = 'CAR')  
+@p1 SMALLINT = 42,   
+@p2 CHAR(1),   
+@p3 VARCHAR(8) = 'CAR')  
 AS   
    SET NOCOUNT ON;  
    SELECT @p1, @p2, @p3  
 ;  
 GO  
-  
 ```  
   
  The `Proc_Test_Defaults` stored procedure can be executed in many combinations.  
@@ -616,7 +615,7 @@ GO
  The following example executes the `ufnGetSalesOrderStatusText` scalar user-defined function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It uses the variable `@returnstatus` to store the value returned by the function. The function expects one input parameter, `@Status`. This is defined as a **tinyint** data type.  
   
 ```sql    
-DECLARE @returnstatus nvarchar(15);  
+DECLARE @returnstatus NVARCHAR(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
 PRINT @returnstatus;  
@@ -661,7 +660,7 @@ GO
  The following example executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] string that creates a table and specifies the `AS USER` clause to switch the execution context of the statement from the caller to `User1`. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will check the permissions of `User1` when the statement is run. `User1` must exist as a user in the database and must have permission to create tables in the `Sales` schema, or the statement fails.  
   
 ```sql    
-EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
+EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID INT, SalesName VARCHAR(10));')  
 AS USER = 'User1';  
 GO  
 ```  
@@ -691,13 +690,13 @@ GO
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
-   ([Reporting Level] int NOT NULL,  
-    [ID of Employee] int NOT NULL,  
-    [Employee First Name] nvarchar(50) NOT NULL,  
-    [Employee Last Name] nvarchar(50) NOT NULL,  
-    [Employee ID of Manager] nvarchar(max) NOT NULL,  
-    [Manager First Name] nvarchar(50) NOT NULL,  
-    [Manager Last Name] nvarchar(50) NOT NULL )  
+   ([Reporting Level] INT NOT NULL,  
+    [ID of Employee] INT NOT NULL,  
+    [Employee First Name] NVARCHAR(50) NOT NULL,  
+    [Employee Last Name] NVARCHAR(50) NOT NULL,  
+    [Employee ID of Manager] NVARCHAR(max) NOT NULL,  
+    [Manager First Name] NVARCHAR(50) NOT NULL,  
+    [Manager Last Name] NVARCHAR(50) NOT NULL )  
 );  
   
 ```  
@@ -709,7 +708,7 @@ WITH RESULT SETS
   
 ```sql    
 --Create the procedure  
-CREATE PROC Production.ProductList @ProdName nvarchar(50)  
+CREATE PROC Production.ProductList @ProdName NVARCHAR(50)  
 AS  
 -- First result set  
 SELECT ProductID, Name, ListPrice  
@@ -728,12 +727,12 @@ GO
 EXEC Production.ProductList '%tire%'  
 WITH RESULT SETS   
 (  
-    (ProductID int,   -- first result set definition starts here  
-    Name Name,  
-    ListPrice money)  
+    (ProductID INT,   -- first result set definition starts here  
+    Name NAME,  
+    ListPrice MONEY)  
     ,                 -- comma separates result set definitions  
-    (Name Name,       -- second result set definition starts here  
-    NumberOfOrders int)  
+    (Name NAME,       -- second result set definition starts here  
+    NumberOfOrders INT)  
 );  
   
 ```  
@@ -741,7 +740,7 @@ WITH RESULT SETS
   
  The following example passes a command string to an external data source pointing to a SQL Server instance. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -752,7 +751,7 @@ GO
 
  The following example passes a command string to an external data source pointing to a compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -764,7 +763,7 @@ GO
 ### Q. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server Big Data Cluster 
  The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlDataPool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -777,7 +776,7 @@ GO
 
  The following example passes a command string to an external data source pointing to compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool
@@ -824,7 +823,7 @@ EXEC ('EXEC (''SELECT * FROM sys.types'')');
  Executing a string variable:  
   
 ```sql  
-DECLARE @stringVar nvarchar(100);  
+DECLARE @stringVar NVARCHAR(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
@@ -837,8 +836,8 @@ EXEC (@stringVar);
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  
-    @name nvarchar(50),  
-@color nvarchar (15)  
+    @name NVARCHAR(50),  
+@color NVARCHAR(15)  
 AS   
 SELECT ProductKey, EnglishProductName, Color FROM [dbo].[DimProduct]  
 WHERE EnglishProductName LIKE @name  

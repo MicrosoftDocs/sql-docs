@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Browser (SQL Server Configuration Manager)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

@@ -4,10 +4,10 @@ title: "LIKE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ESCAPE"
   - "LIKE"
@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "matching patterns [SQL Server]"
   - "NOT LIKE keyword"
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-author: juliemsft
+author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,12 +49,12 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
 ```  
 >[!NOTE]
-> Currently ESCAPE and STRING_ESCAPE are not supported in Azure SQL Data Warehouse or Parallel Data Warehouse.
+> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -89,7 +89,7 @@ match_expression [ NOT ] LIKE pattern
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName char(20)  
+CREATE PROCEDURE FindEmployee @EmpLName CHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -107,7 +107,7 @@ GO
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
+CREATE PROCEDURE FindEmployee @EmpLName VARCHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -134,21 +134,21 @@ David          Barber               Snohomish
   
 ```sql  
 -- ASCII pattern matching with char column  
-CREATE TABLE t (col1 char(30));  
+CREATE TABLE t (col1 CHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- returns 1 row  
   
 -- Unicode pattern matching with nchar column  
-CREATE TABLE t (col1 nchar(30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- no rows returned  
   
 -- Unicode pattern matching with nchar column and RTRIM  
-CREATE TABLE t (col1 nchar (30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   

@@ -4,27 +4,19 @@ titleSuffix: SQL machine learning
 description: In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your database, and then use the model to predict values from new data with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020  
+ms.date: 09/28/2020  
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
+
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Quickstart: Create and score a predictive model in Python with SQL machine learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your database, and then use the model to predict values from new data using [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview), or [SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing Python code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
@@ -39,17 +31,12 @@ By completing this quickstart, you'll learn:
 
 You need the following prerequisites to run this quickstart.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+- A SQL database on one of these platforms:
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). To install, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - SQL Server Big Data Clusters. See how to [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+  - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
+- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 - The sample data used in this exercise is the Iris sample data. Follow the instructions in [Iris demo data](demo-data-iris-in-sql.md) to create the sample database **irissql**.
 
@@ -103,7 +90,7 @@ In this step, you'll create a stored procedure that generates a model for predic
 
 In this step, you execute the procedure to run the embedded code, creating a trained and serialized model as an output. 
 
-Models that are stored for reuse in your database are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) function in scoring workloads.
+Models that are stored for reuse in your database are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) function in scoring workloads.
 
 1. Run the following script to execute the procedure. The specific statement for executing a stored procedure is `EXECUTE` on the fourth line.
 

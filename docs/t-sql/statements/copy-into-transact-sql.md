@@ -1,10 +1,10 @@
 ---
-title: COPY INTO (Transact-SQL) (preview) 
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 08/05/2020
+title: COPY INTO (Transact-SQL)
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
+ms.date: 05/20/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +15,14 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: kevinvngo
-ms.author: kevin
-monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
+author: anumjs
+ms.author: anjangsh
+monikerRange: "=azure-sqldw-latest"
 ---
-# COPY (Transact-SQL) (preview)
-
+# COPY (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -35,14 +34,11 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
 
-> [!NOTE]  
-> The COPY statement is currently in public preview.
-
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
-- [Quickstart: Bulk load data using the COPY statement](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [Quickstart: Examples using the COPY statement and its supported authentication methods](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Quickstart: Bulk load data using the COPY statement](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## Syntax  
 
@@ -80,12 +76,13 @@ Is the name of the table to COPY data into. The target table can be a temporary 
 *(column_list)*  
 Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
 
-[(Column_name [Default_value] [Field_number] [,...n])]
+[(Column_name [default Default_value] [Field_number] [,...n])]
 
 - *Column_name* - the name of the column in the target table.
-- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field.
+- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field. Default value is preceded by the keyword 'default'
 - *Field_number* - the input file field number that will be mapped to the target column name.
 - The field indexing starts at 1.
+
 
 When a column list is not specified, COPY will map columns based on the source and target ordinality: Input field 1 will go to target column 1, field 2 will go to column 2, etc.
 
@@ -96,7 +93,7 @@ Is where the files containing the data is staged. Currently Azure Data Lake Stor
 - *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> The blob endpoint is available for ADLS Gen2 for backward compatibility. Use the **blob** endpoint for best performance.
+> The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
 
 - *Account* - The storage account name
 
@@ -128,18 +125,25 @@ Multiple file locations can only be specified from the same storage account and 
 >The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
 
 *FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
+*FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods are:
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
+
+1: The .blob endpoint (**.blob**.core.windows.net) in your external location path is required for this authentication method.
+
+2: The .dfs endpoint (**.dfs**.core.windows.net) in your external location path is required for this authentication method.
 
 
-When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+> [!NOTE]  
+>
+> - When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+> - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
   
@@ -246,13 +250,13 @@ Extended ASCII and multi-byte characters and are not supported with UTF-8 for RO
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
 
 *DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
-DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md?view=sql-server-ver15).
+DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md).
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
 *ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. SQL DW will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
+IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. Azure Synapse Analytics will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
 
 - If IDENTITY_INSERT is OFF, and table has an identity column
   - A column list must be specified which does not map an input field to the identity column.
@@ -265,10 +269,10 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 
 The user executing the Copy Command must have the following permissions: 
 
-- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
+- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Warehouse, INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -392,7 +396,7 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Share your performance results with our team during preview! sqldwcopypreview@service.microsoft.com
+The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance apples to gzip compressed files as well.
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
@@ -420,24 +424,22 @@ Guidance on the number of files is outlined in the table below. Once the recomme
 ### What is the file splitting guidance for the COPY command loading Parquet or ORC files?
 There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
 
-### When will the COPY command be generally available?
-The COPY command will be generally available by the end of this calendar year (2020). 
-
 ### Are there any limitations on the number or size of files?
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
 
-### Are there any limitations with COPY using Synapse workspaces (preview)?
-
-Authenticating using Managed Identity (MSI) is not supported with the COPY statement or PolyBase (including when used in pipelines). You may run into a similiar error message:
+### Are there any known issues with the COPY statement?
+If you have a Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity:
 
 *com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*
 
-MSI authentication is required when the storage account is associated with a VNet. You must use BCP/Bulk insert to load data instead of COPY or PolyBase if your storage account is attached to a VNet.
+Follow these steps to work around this issue by re-registering the workspace's managed identity:
 
-This limitation is only applicable to SQL pools belonging to a Synapse workspace (preview). We will enable MSI support in Synapse workspaces in an upcoming release. 
+1. Go to your Synapse workspace in the Azure portal
+2. Go to the Managed identities blade 
+3. If the “Allow Pipelines” option is already checked, you must uncheck this setting and save
+4. Check the "Allow Pipelines" option and save
 
-Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 
 ## See also  
 
- [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

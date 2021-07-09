@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Complete Transact-SQL Snippets
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Select an item from the list, or type a replacement of your choice.  
   
 ## See Also  
- [Insert Transact-SQL Snippets](../../relational-databases/scripting/insert-transact-sql-snippets.md)   
- [Insert Surround-with Transact-SQL snippets](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Insert Transact-SQL Snippets](./insert-transact-sql-snippets.md)   
+ [Insert Surround-with Transact-SQL snippets](./insert-surround-with-transact-sql-snippets.md)  
   

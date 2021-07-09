@@ -1,10 +1,10 @@
 ---
 title: Migrate SQL Server database from Windows to Linux
 description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
-ms.date: 08/16/2017
+ms.date: 04/08/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -31,7 +31,7 @@ The following prerequisites are required to complete this tutorial:
 
 * Windows machine with the following:
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installed.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) installed.
   * Target database to migrate.
 
 * Linux machine with the following installed:
@@ -72,7 +72,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 1. Install a Bash shell on your Windows machine that supports the **scp** (secure copy) and **ssh** (remote login) commands. Two examples include:
 
-   * The [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * The [Windows Subsystem for Linux](/windows/wsl/about) (Windows 10)
    * The Git Bash Shell ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Open a Bash session on Windows.
@@ -97,7 +97,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 ## Move the backup file before restoring
 
-At this point, the backup file is on your Linux server in your user's home directory. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**.
+At this point, the backup file is on your Linux server in your user's home directory. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**, as this is owned by the user `mssql` and group `mssql`. If you are looking to change the default backup location, see the [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md#backupdir) article.
 
 1. In the same Windows Bash session, connect remotely to your target Linux machine with **ssh**. The following example connects to the Linux machine **192.0.2.9** as user **user1**.
 

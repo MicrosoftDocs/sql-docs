@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysoperators"
   - "dbo.sysoperators"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysoperators system table"
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysoperators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

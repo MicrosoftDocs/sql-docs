@@ -198,8 +198,8 @@ If a client on a Windows operating system needs to enlist into distributed trans
 
 | Operating system | Minimum version | OS Build |
 |---|---|---|
-| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
-| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
+| [Windows Server](/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](/windows/release-information/) | 1903 | 18362.267 |
 
 ## Next steps
 

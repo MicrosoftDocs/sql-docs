@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DISABLE_TSQL"
   - "DISABLE"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], disabling"
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +107,7 @@ GO
 ### C. Disabling all triggers that were defined with the same scope  
  The following example disables all DDL triggers that were created at the server scope.  
   
-```  
+```sql  
 DISABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

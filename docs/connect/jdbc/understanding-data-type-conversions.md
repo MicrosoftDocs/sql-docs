@@ -23,7 +23,7 @@ To facilitate the conversion of Java programming language data types to [!INCLUD
 
 Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver's conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![JDBC to SQL Server type conversion matrix](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 There are three categories of conversions that are supported by the JDBC driver's getter methods:
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "PATH FOR XML mode, namespace support"
   - "namespaces [XML in SQL Server]"
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Namespace Support in PATH Mode
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

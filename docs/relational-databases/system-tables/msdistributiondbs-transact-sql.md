@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdistributiondbs_TSQL"
   - "MSdistributiondbs"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistributiondbs system table"
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSdistributiondbs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

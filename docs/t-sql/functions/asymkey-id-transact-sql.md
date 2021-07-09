@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "AsymKey_ID"
   - "ASYMKEY_ID_TSQL"
@@ -33,7 +33,7 @@ Returns the ID of an asymmetric key.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   

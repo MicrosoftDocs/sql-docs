@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSreplication_monitordata_TSQL"
   - "MSreplication_monitordata"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_monitordata system table"
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

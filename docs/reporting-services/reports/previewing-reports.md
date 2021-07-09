@@ -47,5 +47,5 @@ ms.date: 12/14/2018
 
  - [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
  - [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
- - [Publish Reports](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)
+ - [Publish Reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
  - [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

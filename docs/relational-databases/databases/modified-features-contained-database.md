@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, modifications to DBs"
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Modified Features (Contained Database)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.author: "sstein"
  The syntax for the ALTER DATABASE when used outside of a contained database differs from that used for non-contained databases. These changes prevent crossing the database boundary. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## CREATE DATABASE  
- The CREATE DATABASE syntax for a contained database differs from that for a non-contained database. See [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)for information about new syntax requirements and allowances.  
+ The CREATE DATABASE syntax for a contained database differs from that for a non-contained database. See [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)for information about new syntax requirements and allowances.  
   
 ## Temporary Tables  
  Local temporary tables are permitted within a contained database, but their behavior differs from those in non-contained databases. In non-contained databases, temporary table data is collated in the collation of **tempdb**. In a contained database temporary table data is collated in the collation of the contained database.  
@@ -49,5 +49,4 @@ ms.author: "sstein"
 ## See Also  
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
-  
   

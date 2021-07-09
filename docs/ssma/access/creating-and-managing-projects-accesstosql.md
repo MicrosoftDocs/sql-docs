@@ -33,19 +33,19 @@ SSMA contains several options for converting and synchronizing database objects 
   
 3.  In the left pane, click **Conversion**.  
   
-4.  In the right pane, review the options. For more information about these options, see [Project Settings (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
+4.  In the right pane, review the options. For more information about these options, see [Project Settings (Conversion)](./project-settings-conversion-accesstosql.md).  
   
 5.  Change options as necessary.  
   
 6.  Repeat the previous steps for the **Migration**, **GUI**, and **Type Mapping** pages.  
   
-    -   For information about migration options, see [Project Settings (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+    -   For information about migration options, see [Project Settings (Migration)](./project-settings-migration-accesstosql.md).  
   
-    -   For information about user interface options, see [Project Settings (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+    -   For information about user interface options, see [Project Settings (GUI)](../sybase/project-settings-gui-sybasetosql.md).  
   
-    -   For more information about data type mapping settings, see [Project Settings (Type Mapping)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+    -   For more information about data type mapping settings, see [Project Settings (Type Mapping)](./project-settings-type-mapping-accesstosql.md).  
   
-    -   For information about SQL Azure settings, see [Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
+    -   For information about SQL Azure settings, see [Project Settings (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md).  
   
 **Note** SQL Azure settings will be available only when you select Migration to SQL Azure while creating a project.  
   
@@ -109,4 +109,3 @@ The next step in the migration process is to [add one or more Access databases](
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
-  

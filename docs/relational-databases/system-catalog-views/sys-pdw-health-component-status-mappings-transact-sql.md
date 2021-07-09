@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.pdw_health_component_status_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -25,6 +25,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |logical_name|**nvarchar(255)**|Property name as defined by [!INCLUDE[ssDW](../../includes/ssdw-md.md)].|NOT NULL<br /><br /> 0 - Device instance is unique.<br /><br /> 1 - Device instance is not unique.|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

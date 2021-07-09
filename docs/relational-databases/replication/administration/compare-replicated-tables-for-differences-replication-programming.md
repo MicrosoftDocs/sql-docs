@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Compare differences between replicated tables (Replication Programming)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

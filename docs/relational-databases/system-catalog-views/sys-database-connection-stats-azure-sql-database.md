@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_connection_stats"
   - "database_connection_stats"
@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.database_connection_stats (Azure SQL Database)
 

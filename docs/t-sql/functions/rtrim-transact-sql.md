@@ -4,10 +4,10 @@ title: "RTRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RTRIM_TSQL"
   - "RTRIM"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RTRIM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
  The following example demonstrates how to use `RTRIM` to remove trailing spaces from a character variable.  
   
 ```sql  
-DECLARE @string_to_trim varchar(60);  
+DECLARE @string_to_trim VARCHAR(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
 SELECT RTRIM(@string_to_trim) + ' Next string.';  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -27,7 +27,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
@@ -63,7 +62,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## Examples  
  The following example revokes `EXECUTE` permission on `sp_addlinkedserver` from `public`.  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  

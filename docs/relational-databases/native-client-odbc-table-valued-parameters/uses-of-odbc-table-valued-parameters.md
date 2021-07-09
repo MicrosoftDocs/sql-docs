@@ -4,7 +4,7 @@ title: "Uses of ODBC Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Uses of ODBC Table-Valued Parameters
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,17 +32,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Table-Valued Parameter with Fully Bound Multirow Buffers (Send Data as a TVP with All Values in Memory)  
  When used with fully bound multirow buffers, all parameter values are available in memory. This is typical, for example, of an OLTP transaction, in which table-valued parameters can be packaged into a single stored procedure. Without table-valued parameters, this would involve either generating a complex multi-statement batch dynamically, or making multiple calls to the server.  
   
- The table-valued parameter itself is bound by using [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
+ The table-valued parameter itself is bound by using [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
   
  The server type for a table-valued parameter is a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type, SQL_SS_TABLE. The binding C type for SQL_SS_TABLE must always be SQL_C_DEFAULT. No data is transferred for the table-valued parameter bound parameter; it is used to pass table metadata and to control how to pass data in the constituent columns of the table-valued parameter.  
   
- The length of the table-valued parameter is set to the number of rows being sent to the server. The *ColumnSize* parameter of SQLBindParameter for a table-valued parameter specifies the maximum number of rows that can be sent; this is the array size of the column buffers. *ParameterValuePtr* is the parameter buffer,for a table-valued parameter in SQLBindParameter. *ParameterValuePtr* and its associated *BufferLength* are used to pass the type name of the table-valued parameter when required. The type name is not required for stored procedure calls, but it is required for SQL statements.  
+ The length of the table-valued parameter is set to the number of rows being sent to the server. The *ColumnSize* parameter of SQLBindParameter for a table-valued parameter specifies the maximum number of rows that can be sent; this is the array size of the column buffers. *ParameterValuePtr* is the parameter buffer; for a table-valued parameter in SQLBindParameter, *ParameterValuePtr* and its associated *BufferLength* are used to pass the type name of the table-valued parameter when required. The type name is not required for stored procedure calls, but it is required for SQL statements.  
   
  When a table-valued parameter type name is specified on a call to SQLBindParameter, it must always be specified as a Unicode value, even in applications that are built as ANSI applications. When you specify a table-valued parameter type name by using SQLSetDescField, you can use a literal that conforms to the way the application is built. The ODBC Driver Manager will perform any required Unicode conversion.  
   
  Metadata for table-valued parameters and table-valued parameter columns can be manipulated individually and explicitly by using SQLGetDescRec, SQLSetDescRec, SQLGetDescField, and SQLSetDescField. However, overloading SQLBindParameter is usually more convenient and does not require explicit descriptor access in most cases. This approach is consistent with the definition of SQLBindParameter for other data types, except that for a table-valued parameter the affected descriptor fields are slightly different.  
   
- Sometimes, an application uses a table-valued parameter with dynamic SQL and the type name of the table-valued parameter must be supplied. If this is the case and the table-valued parameter is not defined in the current default schema for the connection, SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME must be set by using SQLSetDescField. Because table type definitions and table-valued parameters must be in the same database, SQL_CA_SS_TYPE_CATALOG_NAME must not be set if the application uses table-valued parameters. Otherwise, SQLSetDescField will report an error.  
+ Sometimes, an application uses a table-valued parameter with dynamic SQL and the type name of the table-valued parameter must be supplied. If this is the case and the table-valued parameter is not defined in the current default schema for the connection, SQL_CA_SS_SCHEMA_NAME must be set by using SQLSetDescField. Because table type definitions and table-valued parameters must be in the same database, SQL_CA_SS_CATALOG_NAME must not be set if the application uses table-valued parameters. Otherwise, SQLSetDescField will report an error.  
   
  Sample code for this scenario is in the procedure `demo_fixed_TVP_binding` in [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
@@ -71,11 +71,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Retrieving Table-Valued Parameter Metadata for a Prepared Statement  
  In this scenario, an application uses SQLNumParameters and SQLDescribeParam to retrieve metadata for table-valued parameters.  
   
- The IPD field SQL_CA_SS_TYPE_NAME is used to retrieve the type name for the table-valued parameter. The IPD fields SQL_CA_SS_TYPE_SCHEMA_NAME and SQL_CA_SS_TYPE_CATALOG_NAME are used to retrieve its catalog and schema, respectively.  
+ The IPD field SQL_CA_SS_TYPE_NAME is used to retrieve the type name for the table-valued parameter. The IPD fields SQL_CA_SS_SCHEMA_NAME and SQL_CA_SS_CATALOG_NAME are used to retrieve its catalog and schema, respectively.  
   
- Table type definitions and table-valued parameters must be in the same database. SQLSetDescField will report an error if an application sets SQL_CA_SS_TYPE_CATALOG_NAME when using table-valued parameters.  
+ Table type definitions and table-valued parameters must be in the same database. SQLSetDescField will report an error if an application sets SQL_CA_SS_CATALOG_NAME when using table-valued parameters.  
   
- SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME can also be used to retrieve the catalog and schema associated with CLR user-defined type parameters. SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME are alternatives to the existing type specific catalog schema attributes for CLR UDT types.  
+ SQL_CA_SS_CATALOG_NAME and SQL_CA_SS_SCHEMA_NAME can also be used to retrieve the catalog and schema associated with CLR user-defined type parameters. SQL_CA_SS_CATALOG_NAME and SQL_CA_SS_SCHEMA_NAME are alternatives to the existing type specific catalog schema attributes for CLR UDT types.  
   
  An application uses SQLColumns to retrieve column metadata for a table-valued parameter in this scenario, too, because SQLDescribeParam does not return metadata for the columns of a table-valued parameter column.  
   
@@ -83,5 +83,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
-  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_FULLEXT_CATALOG_TSQL"
   - "ALTER FULLEXT CATALOG"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], modifying"
   - "full-text catalogs [SQL Server], reorganizing"
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  
 | REORGANIZE  
@@ -77,7 +76,7 @@ ALTER FULLTEXT CATALOG catalog_name
 ## Examples  
  The following example changes the `accentsensitivity` property of the default full-text catalog `ftCatalog`, which is accent sensitive.  
   
-```  
+```sql  
 --Change to accent insensitive  
 USE AdventureWorks2012;  
 GO  

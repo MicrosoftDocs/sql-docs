@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSagent_profiles"
   - "MSagent_profiles_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSagent_profiles system table"
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

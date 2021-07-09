@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server Express LocalDB Reference - Error Messages
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

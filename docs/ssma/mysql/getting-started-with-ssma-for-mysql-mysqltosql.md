@@ -67,7 +67,7 @@ SQL Server or Azure SQL Database Metadata Explorer shows information about an in
   
 You can use this Metadata Explorer to select converted MySQL database objects, and then synchronize those objects with the instance of SQL Server or Azure SQL Database.  
   
-For more information, see [Synchronization (MySQL to SQL Server / Azure SQL Database)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+For more information, see [Synchronization (MySQL to SQL Server / Azure SQL Database)](./loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ### Metadata  
 To the right of each metadata explorer are tabs that describe the selected object. For example, if you select a table in MySQL Metadata Explorer, nine tabs will appear: **Table**, **SQL**, **Type Mapping**, **Data**, **Settings**, **Charset Mapping**, **SQL Modes**, **Properties**, and **Report**. The **Report** tab contains information only after you create a report that contains the selected object. If you select a table in SQL Server Metadata Explorer, three tabs will appear: **Table**, **SQL** and **Data**.  
@@ -89,9 +89,8 @@ The project toolbar contains buttons for working with projects, connecting to My
 ### Migration Toolbar  
 The following table shows the migration toolbar commands:  
   
-|||  
-|-|-|  
 |**Button**|**Function**|  
+|-|-|  
 |**Create Report**|Converts the selected MySQL objects to SQL Server or Azure SQL Database objects, and then creates a report that shows how successful the conversion was.<br /><br />This command is disabled unless objects are selected in MySQL Metadata Explorer.|  
 |**Convert Schema**|Converts the selected MySQL objects to SQL Server or Azure SQL Database objects.<br /><br />This command is disabled unless objects are selected in MySQL Metadata Explorer.|  
 |**Migrate Data**|Migrates data from the MySQL database to SQL Server or Azure SQL Database. Before you run this command, you must convert the MySQL schemas to SQL Server or Azure SQL Database schemas, and then load the objects into SQL Server or Azure SQL Database.<br /><br />This command is disabled unless objects are selected in MySQL Metadata Explorer.|  
@@ -100,9 +99,8 @@ The following table shows the migration toolbar commands:
 ### Menus  
 The following table shows the SSMA menus.  
   
-|||  
-|-|-|  
 |**Menu**|**Description**|  
+|-|-|  
 |**File**|Contains commands for working with projects, connecting to MySQL, and connecting to SQL Server or Azure SQL Database.|  
 |**Edit**|Contains commands for finding and working with text in the details pages. To open **Manage Bookmarks** dialog, on the Edit menu click Manage Bookmarks. In the dialog you will see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
 |**View**|Contains the **Synchronize Metadata Explorers** command. That synchronizes the objects between MySQL Metadata Explorer and SQL Server or Azure SQL Database Metadata Explorer. Also contains commands to show and hide the **Output** and **Error List** panes and an option **Layouts** to manage with the Layouts.|  
@@ -119,4 +117,3 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
 ## See Also  
 [User Interface Reference &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [Migrating MySQL Data into SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  

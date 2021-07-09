@@ -11,9 +11,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.extendedproperties.f1"
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Object (Extended Properties Page)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,6 +36,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Removes the selected extended property.  
   
 ## See Also  
- [Extended Properties Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
-  
+ [Extended Properties Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/catalog-views-transact-sql.md)  
   

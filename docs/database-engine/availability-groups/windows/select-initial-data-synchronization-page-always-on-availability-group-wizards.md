@@ -5,15 +5,15 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.adddatabasewizard.selectinitialdatasync.f1"
   - "sql13.swb.newagwizard.selectinitialdatasync.f1"
   - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Select Initial Data Synchronization Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.author: mathoma
   
 ## <a name="Auto"></a> Automatic seeding
  
- SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
+ SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
 
 ##  <a name="Full"></a> Full database and log backup 
  For each primary database, the **Full database and log backup** option performs several operations in one workflow: create a full and log backup of the primary database, create the corresponding secondary databases by restoring these backups on every server instance that is hosting a secondary replica, and join each secondary database to availability group.  

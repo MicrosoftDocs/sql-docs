@@ -24,11 +24,11 @@ ms.author: maggies
   
  The following image shows a table.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Table")  
+ ![Screenshot of a table.](../../reporting-services/report-design/media/table.png "Table")  
   
  The following image shows a matrix.  
   
- ![Matrix](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![Screenshot of a matrix.](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

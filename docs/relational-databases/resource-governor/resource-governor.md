@@ -2,7 +2,7 @@
 title: "Resource Governor | Microsoft Docs"
 description: Learn about the SQL Server Resource Governor feature that limits the amount of CPU, physical I/O, and memory that incoming application requests can use.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/21/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -11,13 +11,16 @@ helpviewer_keywords:
   - "Resource Governor, overview"
   - "Resource Governor"
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature that you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical I/O, and memory that incoming application requests can use.  
   
+> [!NOTE]
+> While [Azure SQL Database leverages Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (among other techniques) to manage resources, user configuration of custom resource pools and workload groups in Azure SQL Database is not supported. Azure Synapse Analytics has a different implementation of similar Resource Governor behavior via the [Workload Classification feature](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
+
 ## Benefits of Resource Governor  
  Resource Governor enables you to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workloads and resources by specifying limits on resource consumption by incoming requests. In the Resource Governor context, workload is a set of similarly sized queries or requests that can, and should be, treated as a single entity. This is not a requirement, but the more uniform the resource usage pattern of a workload is, the more benefit you are likely to derive from Resource Governor. Resource limits can be reconfigured in real time with minimal impact on workloads that are executing.  
   
@@ -55,8 +58,8 @@ ms.author: jrasnick
   
 -   **Classification.** The Classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function. Resource Governor also supports a classifier user-defined function for implementing classification rules. For more information, see [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md).  
   
-> [!NOTE]  
->  Resource Governor does not impose any controls on a dedicated administrator connection (DAC). There is no need to classify DAC queries, which run in the internal workload group and resource pool.  
+> [!NOTE]
+> Resource Governor does not impose any controls on a dedicated administrator connection (DAC). There is no need to classify DAC queries, which run in the internal workload group and resource pool.  
   
  In the context of Resource Governor, you can treat the preceding concepts as components. The following illustration shows these components and their relationship with each other as they exist in the database engine environment. From a processing perspective, the simplified flow is as follows:  
   
@@ -86,5 +89,4 @@ ms.author: jrasnick
   
 ## See Also  
  [Database Engine Instances &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
-  
   

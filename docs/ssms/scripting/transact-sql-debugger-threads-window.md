@@ -13,7 +13,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Transact-SQL Debugger - Threads Window
@@ -58,7 +58,7 @@ The **Threads** window displays information about the [!INCLUDE[ssDE](../../incl
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger does not support this feature.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)  
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)

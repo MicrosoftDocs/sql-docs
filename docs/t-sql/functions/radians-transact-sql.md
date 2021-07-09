@@ -4,10 +4,10 @@ title: "RADIANS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RADIANS"
   - "RADIANS_TSQL"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RADIANS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ RADIANS ( numeric_expression )
 ### A. Using RADIANS to show 0.0  
  The following example returns a result of `0.0` because the numeric expression to convert to radians is too small for the `RADIANS` function.  
   
-```  
+```sql  
 SELECT RADIANS(1e-307)  
 GO  
 ```  
@@ -63,7 +63,7 @@ GO
 ### B. Using RADIANS to return the equivalent angle of a float expression.  
  The following example takes a `float` expression and returns the `RADIANS` of the specified angle.  
   
-```  
+```sql  
 -- First value is -45.01.  
 DECLARE @angle FLOAT  
 SET @angle = -45.01  

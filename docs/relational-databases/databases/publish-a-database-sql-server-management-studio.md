@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Publish a Database (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.author: "sstein"
 5.  On the **Save or Publish Scripts** page, monitor the progress of the publication.  
 
 ## See Also  
- [Generate Scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
+ [Generate Scripts &#40;SQL Server Management Studio&#41;](../../ssms/scripting/generate-scripts-sql-server-management-studio.md)   
  [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)  
-  
   

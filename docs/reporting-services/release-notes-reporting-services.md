@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 08/31/2020
+ms.date: 06/30/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
 
@@ -48,7 +48,24 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
 
+## 15.0.1102.911, 2021/06/24 
+*(Product Version: 15.0.1102.911)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue for registering Report Server instance to enable Pin to Power BI feature  | &nbsp; |
+
+## 15.0.7765.17516, 2021/04/7 
+*(Product Version: 15.0.1102.896)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue screen readers reading extra rows and columns for a tablix when exported to MHTML  | &nbsp; |
+| Fixed an issue with Teradata based datasources have NULL value  | &nbsp; |
+| Fixed an issue with SSRS MHTML renderer using an older HTML DOCTYPE | &nbsp; |
+
 ## 15.0.7545.4810, 2020/08/31 
+*(Product Version: 15.0.1102.861)*
 
 | Fixed issue | Details |
 | :---------- | :------ |
@@ -67,6 +84,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Command line upgrade no longer requires EULA flag  | &nbsp; |
 
 ## 15.0.7243.37714, 2019/11/01
+*(Product Version: 15.0.1102.675)*
 
 Initial release.
 

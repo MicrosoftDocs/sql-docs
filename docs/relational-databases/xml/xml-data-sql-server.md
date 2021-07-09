@@ -1,10 +1,8 @@
 ---
-title: "XML Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: 04/03/2020
+title: XML Data (SQL Server)
+description: XML Data (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,7 +11,10 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: RothJa
 ms.author: jroth
-# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 04/03/2020
+# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # XML Data (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

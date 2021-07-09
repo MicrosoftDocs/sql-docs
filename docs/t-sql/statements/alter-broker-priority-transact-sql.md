@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_BROKER_TSQL"
   - "ALTER BROKER PRIORITY"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ALTER BROKER PRIORITY statement"
   - "ssbdiagnose"
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -118,7 +118,7 @@ FOR CONVERSATION
 ### A. Changing only the priority level of an existing conversation priority.  
  Changes the priority level, but does not change the contract, local service, or remote service properties.  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (PRIORITY_LEVEL = 3);  
@@ -127,7 +127,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
 ### B. Changing all of the properties of an existing conversation priority.  
  Changes the priority level, contract, local service, and remote service properties.  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContractB,  

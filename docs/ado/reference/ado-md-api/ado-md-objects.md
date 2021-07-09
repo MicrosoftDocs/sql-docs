@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO MD, objects"
   - "objects [ADO MD]"
@@ -41,7 +41,7 @@ ms.author: jroth
  Many ADO MD objects can be contained in a corresponding collection. For example, a [CubeDef](./cubedef-object-ado-md.md) object can be contained in a [CubeDefs](./cubedefs-collection-ado-md.md) collection of a **Catalog**. For more information, see [ADO MD Collections](./ado-md-collections.md).  
   
 ## See Also  
- [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API Reference](./ado-md-object-model.md)   
  [ADO MD Code Examples](./ado-md-code-examples.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Enumerated Constants](./ado-md-enumerated-constants.md)   

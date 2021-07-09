@@ -28,7 +28,7 @@ After you review the choices that you made in the wizard and click **Finish** on
 ## Screen shot - Operation completed 
  The following screen shot shows the **Performing Operation** page of the wizard after the operation is complete. Click on an item in the **Message** column to get more info about the corresponding step.  
   
- ![Performing operation page of the Import and Export Wizard](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
+ ![Screenshot of the Success page of the Import and Export Wizard.](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
   
 ## Watch the progress of the operation
  **Action**  

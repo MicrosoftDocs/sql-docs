@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@REMSERVER"
   - "@@REMSERVER_TSQL"
@@ -26,7 +26,7 @@ ms.author: jrasnick
 
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Use linked servers and linked server stored procedures instead.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] This function exists for backward compatibility and always returns NULL. Use linked servers and linked server stored procedures instead.  
   
  Returns the name of the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server as it appears in the login record.  
   
@@ -34,7 +34,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@REMSERVER  
 ```  
 
@@ -49,7 +49,7 @@ ms.author: jrasnick
 ## Examples  
  The following example creates the procedure `usp_CheckServer` that returns the name of the remote server.  
   
-```  
+```sql  
 CREATE PROCEDURE usp_CheckServer  
 AS  
 SELECT @@REMSERVER;  
@@ -57,7 +57,7 @@ SELECT @@REMSERVER;
   
  The following stored procedure is created on the local server `SEATTLE1`. The user logs on to a remote server, `LONDON2`, and runs `usp_CheckServer`.  
   
-```  
+```sql  
 EXEC SEATTLE1...usp_CheckServer;  
 ```  
   

@@ -13,7 +13,7 @@ ms.author: maggies
 ---
 # Integrate Reporting Services Using the Report Viewer Controls - Get Started
 
-The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates see the [changelog](changelog.md).
+The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates see the [changelog](./release-notes-ssrs-application-integration.md).
 
 ## Add the Report Viewer control to a new web project
 
@@ -266,9 +266,8 @@ Here are links to articles on the NuGet.org site about the WebForm and WinForm v
 
 ## Forum feedback
 
-Let the team know about issues on the [Reporting Services forums](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
+Let the team know about issues on the [Reporting Services forums](/answers/topics/sql-server-reporting-services.html).
 
 ## See also
 
-[Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

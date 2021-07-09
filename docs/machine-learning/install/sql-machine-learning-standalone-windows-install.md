@@ -8,19 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
+
+::: moniker range=">=sql-server-2017"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**.  
 ::: moniker-end
 
-A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including:
+A standalone server as installed by SQL Server Setup supports use cases and scenarios such as the following:
 
 + Remote execution, switching between local and remote sessions in the same console
 + Operationalization with web nodes and compute nodes
@@ -53,7 +55,7 @@ For SQL Server 2016 only: Microsoft has identified a problem with the specific v
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## Run Setup
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
@@ -63,13 +65,13 @@ For local installations, you must run Setup as an administrator. If you install 
 2. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
     
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Install Machine Learning Server Standalone](media/2017setup-installation-page-mlsvr.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Install Machine Learning Server Standalone](media/2019setup-installation-page-mlsvr.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
 
 3. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
 
@@ -80,13 +82,13 @@ For local installations, you must run Setup as an administrator. If you install 
     - **R** and **Python** are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
 
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Choose R or Python features](media/2019setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
     
    All other options should be ignored. 
     
@@ -186,7 +188,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file as a precaution. Applying SQL Server 2017 CU13 or later revises this file, so you might want a backup copy to preserve the original version.
 
-4. On an internet connected machine, download the latest cumulative update for your version from the [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
+4. On an internet connected machine, download the latest cumulative update for your version from the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 5. Download the latest cumulative update. It is an executable file.
 
@@ -209,7 +211,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
     }
     ```
 
-9. [Run the admin CLI utility](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) to restart the web and compute nodes. For steps and syntax, see [Monitor, start, and stop web and compute nodes](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Run the admin CLI utility](/machine-learning-server/operationalize/configure-admin-cli-launch) to restart the web and compute nodes. For steps and syntax, see [Monitor, start, and stop web and compute nodes](/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## Development tools
 
@@ -222,7 +224,7 @@ R developers can get started with some simple examples, and learn the basics of 
 + [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
 + [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)

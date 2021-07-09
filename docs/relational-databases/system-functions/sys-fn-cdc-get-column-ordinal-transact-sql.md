@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_get_column_ordinal"
   - "fn_cdc_get_column_ordinal_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal"
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

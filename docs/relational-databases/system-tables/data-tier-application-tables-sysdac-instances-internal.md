@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysdac_instances_internal_TSQL"
   - "sysdac_instances_internal"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdac_instances_internal"
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Data-tier Application Tables - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

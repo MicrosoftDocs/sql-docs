@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TEXTVALID_TSQL"
   - "TEXTVALID"
@@ -36,8 +36,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
@@ -73,7 +72,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 > [!NOTE]  
 >  To run this example, you must install the **pubs** database.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, 'Valid (if 1) Text data'   
@@ -104,7 +103,6 @@ pub_id Valid (if 1) Text data
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](./text-and-image-functions-textptr-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
-  
   

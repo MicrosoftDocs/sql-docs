@@ -1,13 +1,13 @@
 ---
 description: "CREATE LOGIN (Transact-SQL)"
-title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
+title: "CREATE LOGIN (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/29/2020
+ms.date: 07/07/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_LOGIN_TSQL"
   - "CREATE LOGIN"
@@ -24,10 +24,9 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "re-hashing passwords"
   - "certificates [SQL Server], logins"
-ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE LOGIN (Transact-SQL)
 
@@ -39,23 +38,23 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -93,39 +92,39 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
 
-PASSWORD **=**'*password*'
+#### PASSWORD **=**'*password*'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-PASSWORD **=** *hashed\_password*
+#### PASSWORD **=** *hashed\_password*
 Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.
 
-HASHED
+#### HASHED
 Applies to SQL Server logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the string entered as password is hashed before it is stored in the database. This option should only be used for migrating databases from one server to another. Do not use the HASHED option to create new logins. The HASHED option cannot be used with hashes created by SQL 7 or earlier.
 
-MUST_CHANGE
+#### MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
 
-CREDENTIAL **=**_credential\_name_
+#### CREDENTIAL **=**_credential\_name_
 The name of a credential to be mapped to the new SQL Server login. The credential must already exist in the server. Currently this option only links the credential to a login. A credential cannot be mapped to the System Administrator (sa) login.
 
-SID = *sid*
+#### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. SQL Server login SID: a 16 byte (**binary(16)**) literal value based on a GUID. For example, `SID = 0x14585E90117152449347750164BA00A7`.
 
-DEFAULT_DATABASE **=**_database_
+#### DEFAULT_DATABASE **=**_database_
 Specifies the default database to be assigned to the login. If this option is not included, the default database is set to master.
 
-DEFAULT_LANGUAGE **=**_language_
+#### DEFAULT_LANGUAGE **=**_language_
 Specifies the default language to be assigned to the login. If this option is not included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged.
 
-CHECK_EXPIRATION **=** { ON | **OFF** }
+#### CHECK_EXPIRATION **=** { ON | **OFF** }
 Applies to SQL Server logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.
 
-CHECK_POLICY **=** { **ON** | OFF }
+#### CHECK_POLICY **=** { **ON** | OFF }
 Applies to SQL Server logins only. Specifies that the Windows password policies of the computer on which SQL Server is running should be enforced on this login. The default value is ON.
 
 If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:
@@ -135,13 +134,13 @@ If the Windows policy requires strong passwords, passwords must contain at least
 - A digit (0-9).
 - One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
 
-WINDOWS
+#### WINDOWS
 Specifies that the login be mapped to a Windows login.
 
-CERTIFICATE *certname*
+#### CERTIFICATE *certname*
 Specifies the name of a certificate to be associated with this login. This certificate must already occur in the master database.
 
-ASYMMETRIC KEY *asym_key_name*
+#### ASYMMETRIC KEY *asym_key_name*
 Specifies the name of an asymmetric key to be associated with this login. This key must already occur in the master database.
 
 ## Remarks
@@ -163,7 +162,7 @@ Specifies the name of an asymmetric key to be associated with this login. This k
 
 ## Permissions
 
-- Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+- Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - If the **CREDENTIAL** option is used, also requires **ALTER ANY CREDENTIAL** permission on the server.
 
 ## After creating a login
@@ -275,6 +274,27 @@ CHECK_POLICY = OFF,
 CHECK_EXPIRATION = OFF ;
 ```
 
+
+### H. Creating a SQL login with hashed password
+
+The following example shows how to create SQL Logins with the same password as existing Logins as done in a migration scenario. The first step is to retrieve the password hash from existing Logins on the source database server. Then the same hash will be used to create the Login on a new database server. By doing this the new Login will have the same password as on the old server.
+
+```sql
+-- run this to retrieve the password hash for an individual Login:
+SELECT LOGINPROPERTY('Andreas','PASSWORDHASH') AS password_hash;
+-- as an alternative, the catalog view sys.sql_logins can be used to retrieve the password hashes for multiple accounts at once. (This could be used to create a dynamic sql statemnt from the result set)
+SELECT name, password_hash
+FROM sys.sql_logins
+  WHERE
+    principal_id > 1    -- excluding sa
+    AND
+    name NOT LIKE '##MS_%##' -- excluding special MS system accounts
+-- create the new SQL Login on the new database server using the hash of the source server
+CREATE LOGIN Andreas
+  WITH PASSWORD = 0x02000A1A89CD6C6E4C8B30A282354C8EA0860719D5D3AD05E0CAE1952A1C6107A4ED26BEBA2A13B12FAB5093B3CC2A1055910CC0F4B9686A358604E99BB9933C75B4EA48FDEA HASHED;
+```
+
+
 ## See Also
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
@@ -286,23 +306,23 @@ CHECK_EXPIRATION = OFF ;
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -324,15 +344,15 @@ CREATE LOGIN login_name
 
 ## Arguments
 
-*login_name*
-Specifies the name of the login that is created. Single and pooled databases in Azure SQL Database and databases in Azure Synapse Analytics (formerly Azure SQL Data Warehouse) supports only SQL logins. To create accounts for Azure Active Directory users or to create user accounts not associated with a login, use the [CREATE USER](create-user-transact-sql.md) statement. For more information, see [Manage Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+#### *login_name*
+Specifies the name of the login that is created. Single and pooled databases in Azure SQL Database and databases in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] supports only SQL logins. To create accounts for Azure Active Directory users or to create user accounts not associated with a login, use the [CREATE USER](create-user-transact-sql.md) statement. For more information, see [Manage Logins in Azure SQL Database](/azure/sql-database/sql-database-manage-logins).
 
-PASSWORD **='**password**'*
+#### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-SID = *sid*
+#### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
@@ -341,7 +361,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only, not 
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.
 
 > [!IMPORTANT]
-> See [Manage Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) for information about working with logins and users in Azure SQL Database.
+> See [Manage Logins in Azure SQL Database](/azure/sql-database/sql-database-manage-logins) for information about working with logins and users in Azure SQL Database.
 
 ## Login
 
@@ -351,7 +371,7 @@ The **CREATE LOGIN** statement must be the only statement in a batch.
 
 In some methods of connecting to SQL Database, such as **sqlcmd**, you must append the SQL Database server name to the login name in the connection string by using the *\<login>*@*\<server>* notation. For example, if your login is `login1` and the fully qualified name of the SQL Database server is `servername.database.windows.net`, the *username* parameter of the connection string should be `login1@servername`. Because the total length of the *username* parameter is 128 characters, *login_name* is limited to 127 characters minus the length of the server name. In the example, `login_name` can only be 117 characters long because `servername` is 10 characters.
 
-In SQL Database, you must be connected to the master database with the appropriate permissions to create a login. For more information, see [Create additional logins and users having administrative permissions](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
+In SQL Database, you must be connected to the master database with the appropriate permissions to create a login. For more information, see [Create additional logins and users having administrative permissions](/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 SQL Server rules allow you create a SQL Server authentication login in the format \<loginname>@\<servername>. If your [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is **myazureserver** and your login is **myemail@live.com**, then you must supply your login as **myemail@live.com@myazureserver**.
 
@@ -359,7 +379,7 @@ In SQL Database, login data required to authenticate a connection and server-lev
 
 ## Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `loginmanager` database role in the master database can create new logins. For more information, see [Create additional logins and users having administrative permissions](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
+Only the server-level principal login (created by the provisioning process) or members of the `loginmanager` database role in the master database can create new logins. For more information, see [Create additional logins and users having administrative permissions](/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 ## Examples
 
@@ -407,23 +427,23 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure SQL<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -446,18 +466,20 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) Principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-FROM EXTERNAL PROVIDER </br>
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database via Security Groups in SQL Database, Managed Instance, or Azure Synapse.
+
+#### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
 
-PASSWORD **=** '*password*'
+#### PASSWORD **=** '*password*'
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least ten characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-SID **=** *sid*
+#### SID **=** *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
@@ -476,11 +498,11 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.
 
 > [!IMPORTANT]
-> See [Manage Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) for information about working with logins and users in Azure SQL Database.
+> See [Manage Logins in Azure SQL Database](/azure/sql-database/sql-database-manage-logins) for information about working with logins and users in Azure SQL Database.
 
 ## Logins and Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `securityadmin` or `sysadmin` database role in the master database can create new logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Only the server-level principal login (created by the provisioning process) or members of the `securityadmin` or `sysadmin` database role in the master database can create new logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 By default, the standard permission granted to a newly created Azure AD login in master is:
 **CONNECT SQL** and **VIEW ANY DATABASE**.
@@ -499,8 +521,8 @@ By default, the standard permission granted to a newly created Azure AD login in
 After creating a login, the login can connect to a managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
 - To create an Azure AD user from an Azure AD login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
-- To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the administrative server roles. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [Server roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
+- To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the administrative server roles. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [Server roles](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Use the following command to add the `sysadmin` role to an Azure AD login:
   `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -611,23 +633,23 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -649,16 +671,16 @@ CREATE LOGIN login_name
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. SQL Analytics in Azure Synapse supports only SQL logins. To create accounts for Azure Active Directory users, use the [CREATE USER](create-user-transact-sql.md) statement.
 
-PASSWORD **='**password**'*
+#### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
- SID = *sid*
- Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+#### SID = *sid*
+Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
 
@@ -680,19 +702,19 @@ SQL Server rules allow you create a SQL Server authentication login in the forma
 
 Login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-For more information about logins, see [Managing Databases and Logins](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+For more information about logins, see [Managing Databases and Logins](/azure/sql-database/sql-database-manage-logins).
 
 ## Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `loginmanager` database role in the master database can create new logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Only the server-level principal login (created by the provisioning process) or members of the `loginmanager` database role in the master database can create new logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## After creating a login
 
 After creating a login, the login can connect to Azure Synapse but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
 - To connect to a database, create a database user for the login. For more information, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
-- To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the administrative server roles. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [Server roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
+- To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the administrative server roles. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [Server roles](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -742,20 +764,20 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**
@@ -783,21 +805,21 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
 
-PASSWORD **='**_password_'
+#### PASSWORD **='**_password_'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-MUST_CHANGE
+#### MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
 
-CHECK_EXPIRATION **=** { ON | **OFF** }
+#### CHECK_EXPIRATION **=** { ON | **OFF** }
 Applies to SQL Server logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.
 
-CHECK_POLICY **=** { **ON** | OFF }
+#### CHECK_POLICY **=** { **ON** | OFF }
 Applies to SQL Server logins only. Specifies that the Windows password policies of the computer on which SQL Server is running should be enforced on this login. The default value is ON.
 
 If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:
@@ -807,7 +829,7 @@ If the Windows policy requires strong passwords, passwords must contain at least
 - A digit (0-9).
 - One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
 
-WINDOWS
+#### WINDOWS
 Specifies that the login be mapped to a Windows login.
 
 ## Remarks
@@ -826,7 +848,7 @@ Specifies that the login be mapped to a Windows login.
 
 ## Permissions
 
-Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## After creating a login
 

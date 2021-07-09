@@ -60,13 +60,13 @@ For each visualization in the mobile report that you want the selection list to 
 
 1. Select the visualization, select the **Data** tab, and in the **Data properties** pane, select **Options** next to the field name.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Screenshot of the Category Column's Options expanded with the Filter by State / Regions option selected.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. Under **Filtered by**, select the selection list.
 
 When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal and select a value in the selection list, it filters the other visualizations in the mobile report.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![Screenshot showing the mobile report with Washington selected from the States / Regions list and cities in Washington represented in the returned results.](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## Scorecard grid  
   
@@ -91,13 +91,13 @@ The scorecard grid filter functions much like the selection list filter, but it 
 
 7. Name the value indicator as desired, choose its source column from the table, and select how it will be formatted.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![Screenshot showing the options that are available for a new score.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
 8. After you've set the data properties, under **Tables FIltered by Selection List**, select the tables to be filtered and the column to filter by. This column needs to match values in the selection list's key column. 
 
 When you view the mobile report in Preview or in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal and select a value in the scorecard grid, it filters the other visualizations in the mobile report.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![Screenshot of a mobile report scorecard grid.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## Set which visualizations are filtered  
   
@@ -107,7 +107,7 @@ You can decide which visualizations in the mobile report that a navigator will f
 
 1. Select the visualization, select the **Data** tab, and in the **Data properties** pane, select **Options** next to the field name.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Another screenshot of the Category Column's Options expanded with the Filter by State / Regions option selected.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. Under **Filtered by**, select the navigator. Each visualization can be filtered by multiple navigators.
   

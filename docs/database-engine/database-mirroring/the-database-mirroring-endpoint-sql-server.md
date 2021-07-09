@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # The Database Mirroring Endpoint (SQL Server)
 

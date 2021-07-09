@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 7dc5d029-a1ed-4c13-a5c2-2aafb0f7866f
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Aliases (SQL Server Configuration Manager)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

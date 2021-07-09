@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "GROUPING"
   - "GROUPING_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # GROUPING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -33,8 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GROUPING ( <column_expression> )  
 ```  
   
@@ -53,7 +52,7 @@ GROUPING ( <column_expression> )
 ## Examples  
  The following example groups `SalesQuota` and aggregates `SaleYTD` amounts in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The `GROUPING` function is applied to the `SalesQuota` column.  
   
-```  
+```sql 
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
 FROM Sales.SalesPerson  
 GROUP BY SalesQuota WITH ROLLUP;  

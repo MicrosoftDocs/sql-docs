@@ -30,7 +30,7 @@ ms.author: "jroth"
  The compilation process yields a function pointer that can be called at run time from native code. In the case of scalar-valued user-defined functions, this function invocation happens on a per-row basis. To minimize the cost of transitioning between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the CLR, statements that contain any managed invocation have a startup step to identify the target application domain. This identification step reduces the cost of transitioning for each row.  
   
 ## Performance Considerations  
- The following summarizes performance considerations specific to CLR integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. More detailed information can be found in "[Using CLR Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" on the MSDN Web site. General information regarding managed code performance can be found in "[Improving .NET Application Performance and Scalability](https://go.microsoft.com/fwlink/?LinkId=50333)" on the MSDN Web site.  
+ The following summarizes performance considerations specific to CLR integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. More detailed information can be found in "[Using CLR Integration in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))" on the MSDN Web site. General information regarding managed code performance can be found in "[Improving .NET Application Performance and Scalability](/previous-versions/msp-n-p/ff649152(v=pandp.10))" on the MSDN Web site.  
   
 ### User-Defined Functions  
  CLR functions benefit from a quicker invocation path than that of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions. Additionally, managed code has a decisive performance advantage over [!INCLUDE[tsql](../../includes/tsql-md.md)] in terms of procedural code, computation, and string manipulation. CLR functions that are computing-intensive and that do not perform data access are better written in managed code. [!INCLUDE[tsql](../../includes/tsql-md.md)] functions do, however, perform data access more efficiently than CLR integration.  
@@ -74,5 +74,4 @@ ms.author: "jroth"
   
 ## See Also  
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
   

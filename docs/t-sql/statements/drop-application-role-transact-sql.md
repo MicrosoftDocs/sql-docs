@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_APPLICATION_ROLE_TSQL"
   - "DROP APPLICATION ROLE"
@@ -32,8 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP APPLICATION ROLE rolename  
 ```  
   
@@ -55,7 +54,7 @@ DROP APPLICATION ROLE rolename
 ## Examples  
  Drop application role "weekly_ledger" from the database.  
   
-```  
+```sql  
 DROP APPLICATION ROLE weekly_ledger;  
 GO  
 ```  

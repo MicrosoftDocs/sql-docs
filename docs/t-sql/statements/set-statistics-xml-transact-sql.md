@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_STATISTICS_XML_TSQL"
   - "SET STATISTICS XML"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "statements [SQL Server], statistical information"
   - "XML [SQL Server], statement execution information"
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET STATISTICS XML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

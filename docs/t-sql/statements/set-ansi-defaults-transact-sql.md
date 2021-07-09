@@ -4,10 +4,10 @@ title: "SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET ANSI_DEFAULTS"
   - "ANSI_DEFAULTS"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ANSI_DEFAULTS option"
   - "SET ANSI_DEFAULTS statement"
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -32,15 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 
 ## Syntax
 
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse and Parallel Data Warehouse
-
 SET ANSI_DEFAULTS ON
 ```
 

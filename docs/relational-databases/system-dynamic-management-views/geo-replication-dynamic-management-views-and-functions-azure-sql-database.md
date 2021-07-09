@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "dynamic management objects [Azure SQL Database]"
   - "geo-replication"
   - "dynamic management views"
   - "geo-replication [Azure SQL Database]"
 ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)
 

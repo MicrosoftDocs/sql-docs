@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication tutorials
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,8 +45,7 @@ Learn how to configure merge replication to exchange data between a server and o
 ## See also  
 [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[Transactional replication overview](./transactional/transactional-replication.md) 
 
-[Merge replication overview](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[Merge replication overview](./merge/merge-replication.md)
 
-  

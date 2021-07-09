@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_firewall_rules_TSQL"
   - "database_firewall_rules_TSQL"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

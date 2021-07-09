@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja

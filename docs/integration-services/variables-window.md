@@ -44,7 +44,7 @@ ms.author: chugu
  Select a variable from the list, and then click **Delete Variable**.  
   
  **Grid Options**  
- Click to open the **Variable Grid Options** dialog box where you can change the column selection and apply filters to the **Variables** window. For more information, see [Variable Grid Options](../integration-services/variable-grid-options.md).  
+ Click to open the **Variable Grid Options** dialog box where you can change the column selection and apply filters to the **Variables** window. For more information, see [Variable Grid Options]().  
   
  **Name**  
  View the variable name. You can update the name for user-defined variables.  
@@ -110,8 +110,7 @@ ms.author: chugu
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Use Variables in Packages](./integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

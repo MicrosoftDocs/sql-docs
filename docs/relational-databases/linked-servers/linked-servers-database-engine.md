@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 # Linked Servers (Database Engine)
@@ -28,7 +28,7 @@ ms.custom: seo-dt-2019
   Linked servers enable the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] to read data from the remote data sources and execute commands against the remote database servers (for example, OLE DB data sources) outside of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Typically linked servers are configured to enable the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that includes tables in another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or another database product such as Oracle. Many types OLE DB data sources can be configured as linked servers, including [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel, and Azure CosmosDB.
 
 > [!NOTE]
-> Linked servers are available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. they are not enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton and Elastic pools. There are some [constraints in Managed Instance that can be found here](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Linked servers are available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. they are not enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton and Elastic pools. There are some [constraints in Managed Instance that can be found here](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## When to use Linked Servers?
 
@@ -51,7 +51,7 @@ You can configure a linked server by using [!INCLUDE[ssManStudioFull](../../incl
   
 An *OLE DB provider* is a DLL that manages and interacts with a specific data source. An *OLE DB data source* identifies the specific database that can be accessed through OLE DB. Although data sources queried through linked server definitions are ordinarily databases, OLE DB providers exist for a variety of files and file formats. These include text files, spreadsheet data, and the results of full-text content searches.  
   
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. 
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. 
 In earlier versions, the [SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) was the default OLE DB provider.
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ Typically, linked servers are used to handle distributed queries. When a client 
 > When an OLE DB provider is used, the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have read and execute permissions for the directory, and all subdirectories, in which the provider is installed. This includes Microsoft-released providers, and any third-party providers.
 
 > [!NOTE]
-> Linked servers support Active Directory pass-through authentication when using full delegation. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, pass-through authentication with constrained delegation is also supported; however, [resource-based constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is not supported.
+> Linked servers support Active Directory pass-through authentication when using full delegation. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, pass-through authentication with constrained delegation is also supported; however, [resource-based constrained delegation](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is not supported.
 
 ## Managing Providers  
 There is a set of options that control how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] loads and uses OLE DB providers that are specified in the registry.  
@@ -102,5 +102,4 @@ You can also define linked servers by using [!INCLUDE[ssManStudioFull](../../inc
   
 ## Related Content  
  [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

@@ -6,7 +6,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "dynamic properties [ADO], index"
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d

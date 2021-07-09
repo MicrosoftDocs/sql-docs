@@ -38,7 +38,7 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database-Level Roles
 
@@ -73,9 +73,9 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
 |**db_ddladmin**|Members of the **db_ddladmin** fixed database role can run any Data Definition Language (DDL) command in a database.|  
 |**db_datawriter**|Members of the **db_datawriter** fixed database role can add, delete, or change data in all user tables.|  
-|**db_datareader**|Members of the **db_datareader** fixed database role can read all data from all user tables.|  
+|**db_datareader**|Members of the **db_datareader** fixed database role can read all data from all user tables and views. User objects can exist in any schema except *sys* and *INFORMATION_SCHEMA*. |  
 |**db_denydatawriter**|Members of the **db_denydatawriter** fixed database role cannot add, modify, or delete any data in the user tables within a database.|  
-|**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data in the user tables within a database.|  
+|**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data from the user tables and views within a database.|  
 
 The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
 
@@ -91,7 +91,11 @@ These database roles exist only in the virtual master database. Their permission
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]
-> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](/azure/azure-sql/database/logins-create-manage). 
+
+Some database roles are not applicable to Azure SQL or Synapse SQL:
+- **db_backupoperator** is not applicable in Azure SQL database (not managed instance) and Synapse SQL serverless pool because backup and restore T-SQL comands are not available.
+- **db_datawriter** and **db_denydatawriter** are not applicable to Synapse SQL serverless because it just reads external data.
   
 ## msdb Roles  
  The msdb database contains the special-purpose roles that are shown in the following table.  
@@ -143,5 +147,4 @@ These database roles exist only in the virtual master database. Their permission
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

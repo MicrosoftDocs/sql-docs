@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RESTORE SERVICE MASTER KEY"
   - "RESTORE_SERVICE_MASTER_KEY_TSQL"
@@ -34,8 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
@@ -68,7 +67,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## Examples  
  The following example restores the service master key from a backup file.  
   
-```  
+```sql  
 RESTORE SERVICE MASTER KEY   
     FROM FILE = 'c:\temp_backups\keys\service_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
@@ -76,7 +75,7 @@ GO
 ```  
   
 ## See Also  
- [Service Master Key](../../relational-databases/security/encryption/service-master-key.md)   
+ [Service Master Key](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

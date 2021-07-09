@@ -5,11 +5,11 @@ ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: failover-cluster-instance
+ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server Failover Cluster Installation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,6 @@ ms.author: mathoma
 ## See Also  
  [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Upgrade a SQL Server Failover Cluster Instance](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

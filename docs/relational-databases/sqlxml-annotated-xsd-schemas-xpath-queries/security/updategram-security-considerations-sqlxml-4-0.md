@@ -12,10 +12,10 @@ helpviewer_keywords:
   - "security [SQLXML], updategrams"
   - "updategrams [SQLXML], security"
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updategram Security Considerations (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

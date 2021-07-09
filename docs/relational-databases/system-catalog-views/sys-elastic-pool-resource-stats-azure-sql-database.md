@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats_TSQL"
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,7 +42,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the pool.|  
 |**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management)|  
   
 ## Remarks
 
@@ -74,9 +74,8 @@ ORDER BY end_time DESC;
 
 ## See Also
 
- [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview)   
+ [Create and manage a SQL Database elastic database pool](/azure/azure-sql/database/elastic-pool-overview)   
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
   

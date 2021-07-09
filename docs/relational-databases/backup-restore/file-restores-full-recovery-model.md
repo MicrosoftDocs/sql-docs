@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Transact-SQL restore sequence"
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # File Restores (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +38,13 @@ ms.author: mathoma
   
      In an *offline file restore*, the database is offline while damaged files or filegroups are restored. At the end of the restore sequence, the database comes online.  
   
-     All editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support offline file restore.  
+     All editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support offline file restore.  
   
 -   Online file restore  
   
      In an *online file restore*, if database is online at restore time, it remains online during the file restore. However, each filegroup in which a file is being restored is offline during the restore operation. After all the files in an offline filegroup are recovered, the filegroup is automatically brought online.  
   
-     For information about support for online page and file restore, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). For more information about online restores, see [Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
+     For information about support for online page and file restore, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). For more information about online restores, see [Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
     >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
@@ -135,5 +135,4 @@ RESTORE LOG database_name FROM <tail_log_backup>
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

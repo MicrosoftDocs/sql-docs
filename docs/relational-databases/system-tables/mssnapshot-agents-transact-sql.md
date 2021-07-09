@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSsnapshot_agents"
   - "MSsnapshot_agents_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshot_agents system table"
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

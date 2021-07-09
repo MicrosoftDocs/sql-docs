@@ -19,7 +19,7 @@ ms.author: "mathoma"
 ---
 # Define and Modify a Join Filter Between Merge Articles
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to define and modify a join filter between merge articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication supports join filters, which are typically used in conjunction with parameterized filters to extend table partitioning to other related table articles.  
+  This topic describes how to define and modify a join filter between merge articles in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication supports join filters, which are typically used in conjunction with parameterized filters to extend table partitioning to other related table articles.  
   
  **In This Topic**  
   

@@ -2,9 +2,9 @@
 description: "ISDATE (Transact-SQL)"
 title: ISDATE (Transact-SQL)
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ISDATETIME"
   - "ISDATE_TSQL"
@@ -26,12 +26,12 @@ helpviewer_keywords:
   - "time [SQL Server], validate"
   - "ISDATE function [SQL Server]"
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 03/14/2017
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # ISDATE (Transact-SQL)
@@ -84,7 +84,7 @@ ISDATE ( expression )
 ### A. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     PRINT 'VALID'  
 ELSE  
@@ -94,7 +94,7 @@ ELSE
 ### B. Showing the effects of the SET DATEFORMAT and SET LANGUAGE settings on return values  
  The following statements show the values that are returned as a result of the settings of `SET DATEFORMAT` and `SET LANGUAGE`.  
   
-```  
+```sql  
 /* Use these sessions settings. */  
 SET LANGUAGE us_english;  
 SET DATEFORMAT mdy;  
@@ -144,7 +144,7 @@ SET DATEFORMAT mdy;
 ### C. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     SELECT 'VALID';  
 ELSE  

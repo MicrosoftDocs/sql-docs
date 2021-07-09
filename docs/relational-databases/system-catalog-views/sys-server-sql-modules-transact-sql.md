@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.server_sql_modules"
   - "sys.server_sql_modules_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_sql_modules catalog view"
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.server_sql_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

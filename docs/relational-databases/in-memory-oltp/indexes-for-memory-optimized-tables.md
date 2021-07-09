@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Memory-Optimized Tables
 
@@ -56,7 +56,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
     ```
 
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.
   
 ### Code sample for syntax  
@@ -138,7 +138,7 @@ Consider a `Customers` table that has a primary key on `CustomerId`, and has an 
 
 In this scenario, the best practice is to use a nonclustered index on `(CustomerCategoryID, CustomerId)`. This index can be used for queries that use a predicate involving `CustomerCategoryID`, yet the index key does not contain duplication. Therefore, no inefficiencies in index maintenance are cause by either the duplicate CustomerCategoryID values, or by the extra column in the index.
 
-The following query shows the average number of duplicate index key values for the index on `CustomerCategoryID` in table `Sales.Customers`, in the sample database [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+The following query shows the average number of duplicate index key values for the index on `CustomerCategoryID` in table `Sales.Customers`, in the sample database [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -230,4 +230,4 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
  [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   
  [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Nonclustered Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

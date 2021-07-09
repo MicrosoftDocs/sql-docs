@@ -1,25 +1,19 @@
 ---
 title: Install from a command prompt
-description: Run SQL Server command line setup to add R language and Python integration to a SQL Server database engine instance.
+description: Run SQL Server command line setup to add Machine Learning Services with Python and R to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/04/2019  
+ms.date: 01/07/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Install SQL Server machine learning R and Python components from the command line
+# Install SQL Server Machine Learning Services with R and Python from the command line
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article provides instructions for installing SQL Server machine learning components from a command line:
-
-+ [New In-Database instance](#indb)
-+ [Add to an existing database engine instance](#add-existing)
-+ [Silent install](#silent)
-+ [New standalone server](#shared-feature)
+This article provides instructions for installing [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with Python and R from a command line.
 
 You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters unique to R and Python machine learning components.
 
@@ -35,14 +29,13 @@ You can specify silent, basic, or full interaction with the Setup user interface
 
 + Avoid installing standalone and in-database instances on the same computer. A standalone server will compete for the same resources, undermining the performance of both installations.
 
-
 ## Command line arguments
 
-The FEATURES argument is required, as are licensing term agreements. 
+The **/FEATURES** argument is required, as are licensing term agreements. 
 
-When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. The /QS switch only shows progress, does not accept any input, and displays no error messages if encountered. The /QS parameter is only supported when /Action=install is specified.
+When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the **/Q** parameter, or Quiet Simple mode by using the **/QS** parameter. The **/QS** switch only shows progress, does not accept any input, and displays no error messages if encountered. The **/QS** parameter is only supported when **/Action=install** is specified.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server R Services (In-Database).  |
@@ -53,7 +46,7 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
@@ -68,13 +61,13 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
 | /FEATURES = SQL_INST_MR | Pair this with AdvancedAnalytics. Installs the (In-Database) R feature, including Microsoft R Open and the proprietary R packages. |
 | /FEATURES = SQL_INST_MPY | Pair this with AdvancedAnalytics. Installs the (In-Database) Python feature, including Anaconda and the proprietary Python packages. |
-| /FEATURES = SQL_INST_MJAVA | Pair this with AdvancedAnalytics. Installs the (In-Database) Java feature, including Open JRE. |
+| /FEATURES = SQL_INST_MJAVA | Pair this with AdvancedAnalytics. Installs the (In-Database) Java feature, including Open JRE. Applies to [SQL Server Java Language Extension](../../language-extensions/install/windows-java.md).|
 | /FEATURES = SQL_SHARED_MR | Installs the R feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
 | /FEATURES = SQL_SHARED_MPY | Installs the Python feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
 | /IACCEPTROPENLICENSETERMS  | Indicates you have accepted the license terms for using the open source R components. |
@@ -93,7 +86,7 @@ To view progress information without the interactive on-screen prompts, use the 
 > [!IMPORTANT]
 > After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ### SQL Server Machine Learning Services: database engine, advanced analytics with Python and R
 
 For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
@@ -121,7 +114,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ### SQL Server R Services: database engine and advanced analytics with R
 
 For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
@@ -142,13 +135,13 @@ When setup is finished, you have a database engine instance with R and Python, t
 Two more tasks are required to complete the installation:
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 1. Restart the database engine service.
 
 1. SQL Server Machine Learning Services: Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Restart the database engine service.
 
 1. SQL Server R Services: Enable external scripts before you can use the feature. Follow the instructions in  [Install SQL Server R Services (In-Database)](sql-r-services-windows-install.md) as your next step. 
@@ -178,7 +171,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 A standalone server is a "shared feature" not bound to a database engine instance. The following examples show valid syntax for installation of the standalone server.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server Machine Learning Server supports Python and R on a standalone server:
 
 ```cmd
@@ -186,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server R Server is R-only:
 
 ```cmd
@@ -197,7 +190,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 When setup is finished, you have a server, Microsoft packages, open-source distributions of R and Python, tools, samples, and scripts that are part of the distribution. 
 
-To open an R console window, go to `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+To open an R console window, go to `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 To open a Python command, go to `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` and double-click **python.exe**.
 

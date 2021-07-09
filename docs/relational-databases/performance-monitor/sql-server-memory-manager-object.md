@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLServer:Memory Manager"
   - "Memory Manager object"
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Memory Manager Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

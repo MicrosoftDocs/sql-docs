@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statistics for Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,6 +94,5 @@ WHERE o.is_memory_optimized=1
  Creating natively compiled stored procedures after you load the data ensures that the optimizer has statistics available for the memory-optimized tables. This will ensure efficient query plans when the procedure is compiled.  
 
 ## See Also  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
   

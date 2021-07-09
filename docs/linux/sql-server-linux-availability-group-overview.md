@@ -2,8 +2,8 @@
 title: Availability groups for SQL Server on Linux
 description: Learn about the characteristics of Always On availability groups for SQL Server on Linux. 
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/17/2019
 ms.topic: conceptual
@@ -146,7 +146,7 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

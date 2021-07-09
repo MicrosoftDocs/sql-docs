@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], parameterization"
   - "parameterized queries [SQL Server]"
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Specify Query Parameterization Behavior by Using Plan Guides
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

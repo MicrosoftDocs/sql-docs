@@ -1,8 +1,8 @@
 ---
-title: "SQLXML data type sample"
-description: "This JDBC Driver for SQL Server sample application demonstrates how to store, retrieve, and parse XML data from a database with the **SQLXML** Java data type."
+title: SQLXML data type sample
+description: This JDBC Driver for SQL Server sample application demonstrates how to store, retrieve, and parse XML data from a database with the **SQLXML** Java data type.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,7 +19,7 @@ ms.author: v-daenge
 
 This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to store XML data in a relational database, how to retrieve XML data from a database, and how to parse XML data with the **SQLXML** Java data type.
 
-The code examples in this section use a Simple API for XML (SAX) parser. The SAX is a publicly developed standard for the events-based parsing of XML documents. It also provides an application programming interface for working with XML data. Note that the applications can use any other XML parser as well, such as the Document Object Model (DOM) or the Streaming API for XML (StAX), or so on.
+The code examples in this section use a Simple API for XML (SAX) parser. The SAX is a publicly developed standard for the events-based parsing of XML documents. It also provides an application programming interface for working with XML data. Applications can use any other XML parser as well, such as the Document Object Model (DOM) or the Streaming API for XML (StAX), or so on.
 
 The Document Object Model (DOM) provides a programmatic representation of XML documents, fragments, nodes, or node-sets. It also provides an application programming interface for working with XML data. Similarly, the Streaming API for XML (StAX) is a Java-based API for pull-parsing XML.
 
@@ -36,7 +36,7 @@ The code file for this sample is named SqlXmlDataType.java, and it can be found 
 
 To run this sample application, you must set the classpath to include the sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc4.jar, the sample application throws the "Class not found" exception. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
-In addition, you need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database to run this sample application.
+You also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database to run this sample application.
 
 ## Example
 
@@ -44,7 +44,7 @@ In the following example, the sample code makes a connection to the [!INCLUDE[ss
 
 The createSampleTables method drops the test tables, TestTable1, and TestTable2, if they exist. Then, it inserts two rows into TestTable1.
 
-In addition, the code sample includes the following three methods and one additional class, which is named ExampleContentHandler.
+Also, the code sample includes the following three methods and one other class, which is named ExampleContentHandler.
 
 The ExampleContentHandler class implements a custom content handler, which defines methods for parser events.
 
@@ -52,9 +52,9 @@ The showGetters method demonstrates how to parse the data in the SQLXML object b
 
 The showSetters method demonstrates how to set the **xml** column by using the SAX, ContentHandler, and ResultSet. First, it creates an empty SQLXML object by using the [createSQLXML](reference/createsqlxml-method-sqlserverconnection.md) method of the Connection class. Then, it gets an instance of a content handler to write the data into the SQLXML object. Next, the code example writes the data to TestTable1. Finally, the sample code iterates through the rows of data that are in the result set, and uses the [getSQLXML](reference/getsqlxml-method-sqlserverresultset.md) method to read the XML data.
 
-The showTransformer method demonstrates how to get an XML data from one table and insert that XML data into another table by using the SAX and the Transformer. First, it retrieves the source SQLXML object from the TestTable1. Then, it creates an empty destination SQLXML object by using the [createSQLXML](reference/createsqlxml-method-sqlserverconnection.md) method of the Connection class. Next, it updates the destination SQLXML object and writes the XML data to TestTable2. Finally, the sample code iterates through the rows of data that are in the result set, and uses the [getSQLXML](reference/getsqlxml-method-sqlserverresultset.md) method to read the XML data in TestTable2.
+The showTransformer method demonstrates how to get XML data from one table and insert that XML data into another table by using the SAX and the Transformer. First, it retrieves the source SQLXML object from the TestTable1. Then, it creates an empty destination SQLXML object by using the [createSQLXML](reference/createsqlxml-method-sqlserverconnection.md) method of the Connection class. Next, it updates the destination SQLXML object and writes the XML data to TestTable2. Finally, the sample code iterates through the rows of data that are in the result set, and uses the [getSQLXML](reference/getsqlxml-method-sqlserverresultset.md) method to read the XML data in TestTable2.
 
-[!code[JDBC#UsingSQLXML1](codesnippet/Java/sqlxml-data-type-sample_1.java)]
+:::code language="java" source="codesnippet/Java/sqlxml-data-type-sample_1.java":::
 
 ## See also
 

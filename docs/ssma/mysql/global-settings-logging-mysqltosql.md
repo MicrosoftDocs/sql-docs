@@ -36,7 +36,7 @@ The following options are available under **Messages Level**:
   
 For each option under **Messages Level**, configure one of the following logging levels for SSMA:  
   
-|||  
+|Level|Description|  
 |-|-|  
 |**Fatal Error**|Write only fatal error messages to the log.|  
 |**Error**|Write error and fatal error messages to the log.|  

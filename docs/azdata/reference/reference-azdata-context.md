@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: Reference article for azdata context commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata context
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata context list](#azdata-context-list) | Lists the available contexts in the user profile.
 [azdata context delete](#azdata-context-delete) | Deletes the context with the given namespace from the user profile.
@@ -53,19 +54,30 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata context delete
-If the deleted context is active, the user will need to set a new active context. To see contexts available to set or delete `azdata context list`
+If the deleted context is active, the user will need to set a new active context. To see contexts available to set or delete `azdata context list`. When a namespace is provided that matches multiple context namespaces, you must provide all [--namespace --username --endpoint] for uniqueness in order to delete that context.
 ```bash
-azdata context delete --namespace -n 
+azdata context delete --namespace -ns 
+                      [--endpoint -e]  
                       
+[--username -u]
 ```
 ### Examples
-Deletes contextNamespace from the user profile.
+Deletes the context in the user profile based on a unique namespace.
 ```bash
-azdata context delete -n contextNamespace
+azdata context delete --namespace contextNamespace
+```
+Deletes the context in the user profile based on the namespace, username, and controller endpoint.
+```bash
+azdata context set --namespace contextNamespace --username johndoe --endpoint https://<ip or domain name>:30080
 ```
 ### Required Parameters
-#### `--namespace -n`
+#### `--namespace -ns`
 Namespace of the context which you'd like to delete.
+### Optional Parameters
+#### `--endpoint -e`
+Cluster controller endpoint "https://host:port".
+#### `--username -u`
+Account user.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -78,19 +90,30 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata context set
-To see contexts available to set `azdata context list`. If no contexts are listed, you need to login in order to create a context in your user profile `azdata login`. What you login to will become your active context. If you login to multiple entities, you can then switch between active contexts with this command. To see your currently active context `azdata context list --active`
+To see contexts available to set `azdata context list`. If no contexts are listed, you need to login in order to create a context in your user profile `azdata login`. What you login to will become your active context. If you login to multiple entities, you can then switch between active contexts with this command. To see your currently active context `azdata context list --active`. When a namespace is provided that matches multiple context namespaces, you must provide all [--namespace --username --endpoint] for uniqueness in order to set the active context.
 ```bash
-azdata context set --namespace -n 
+azdata context set --namespace -ns 
+                   [--endpoint -e]  
                    
+[--username -u]
 ```
 ### Examples
-Sets contextNamespace as the active context in the user profile.
+Sets the active context in the user profile based on a unique namespace.
 ```bash
-azdata context set -n contextNamespace
+azdata context set --namespace contextNamespace
+```
+Sets the active context in the user profile based on the namespace, username, and controller endpoint.
+```bash
+azdata context set --namespace contextNamespace --username johndoe --endpoint https://<ip or domain name>:30080     
 ```
 ### Required Parameters
-#### `--namespace -n`
+#### `--namespace -ns`
 Namespace of the context which you'd like to set.
+### Optional Parameters
+#### `--endpoint -e`
+Cluster controller endpoint "https://host:port".
+#### `--username -u`
+Account user.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -105,4 +128,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

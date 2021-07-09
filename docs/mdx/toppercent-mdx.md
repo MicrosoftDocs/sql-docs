@@ -46,7 +46,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Like the [BottomPercent](../mdx/bottompercent-mdx.md) function, the **TopPercent** function always breaks the hierarchy.  
   
-## Example  
+## Examples  
+
+### A. Return TopPercent
+
  The following example returns the best cities that help make the top 10% of the resellers' sales, for the Bike category. The result is sorted in descending order, beginning with the city that has the highest value of sales.  
   
 ```  
@@ -83,7 +86,8 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## Example  
+### B. Understand the effect of negative values
+
  The following walkthrough will help understand the effect of negative values in the *Numeric_Expression*. First let's build some context where we can present the behavior.  
   
  The following query returns a table of Resellers 'Sales Amount', 'Total Product Cost' and 'Gross Profit', sorted in descending order of profit. Please note there are only negative values for profit; so, the smallest loss appears at the top.  

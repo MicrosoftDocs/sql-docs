@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER REMOTE SERVICE BINDING"
   - "ALTER_REMOTE_SERVICE_BINDING_TSQL"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ALTER REMOTE SERVICE BINDING statement"
   - "modifying remote service bindings"
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   
 [ ; ]  
@@ -63,7 +62,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## Examples  
  The following example changes the remote service binding `APBinding` to encrypt messages by using the certificates from the account `SecurityAccount`.  
   
-```  
+```sql  
 ALTER REMOTE SERVICE BINDING APBinding  
     WITH USER = SecurityAccount ;  
 ```  

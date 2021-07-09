@@ -4,10 +4,10 @@ title: "ABS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ABS_TSQL"
   - "ABS"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ABS function"
   - "absolute positive value"
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---- ---- ----  
 1.0  .0   1.0  
 ```  
@@ -62,7 +62,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 The `ABS` function can produce an overflow error when the absolute value of a number exceeds the largest number that the specified data type can represent. For example, the `int` data type has a value range from `-2,147,483,648` to `2,147,483,647`. Computing the absolute value for the signed integer `-2,147,483,648` will cause an overflow error because its absolute value exceeds the positive range limit for the `int` data type.
   
 ```sql
-DECLARE @i int;  
+DECLARE @i INT;  
 SET @i = -2147483648;  
 SELECT ABS(@i);  
 GO  

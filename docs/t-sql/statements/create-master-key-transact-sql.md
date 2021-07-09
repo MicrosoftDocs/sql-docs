@@ -4,10 +4,10 @@ title: "CREATE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_MASTER_KEY_TSQL"
   - "MASTER_KEY_TSQL"
@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE MASTER KEY (Transact-SQL)
 

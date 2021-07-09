@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # &lt;AgentName&gt; Agent Location
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

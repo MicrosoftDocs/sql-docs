@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@TEXTSIZE"
   - "@@TEXTSIZE_TSQL"
@@ -32,7 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@TEXTSIZE  
 ```  
   
@@ -44,7 +44,7 @@ ms.author: jrasnick
 ## Examples  
  The following example uses `SELECT` to display the `@@TEXTSIZE` value before and after it is changed with the `SET``TEXTSIZE` statement.  
   
-```  
+```sql
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
 SET TEXTSIZE 0  
 SELECT @@TEXTSIZE AS 'Text Size'  

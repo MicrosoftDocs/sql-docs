@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-author: Jodebrui
-ms.author: jodebrui
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: kevin-farlee
+ms.author: kfarlee
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Faster temp table and table variable by using memory optimization
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -423,11 +423,10 @@ If the memory-optimized table variable is accessed only with one exact key value
   
 ## H. See also  
   
-- [Memory-Optimized Tables.](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables.](./sample-database-for-in-memory-oltp.md)
 
 - [Defining Durability for Memory-Optimized Objects.](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
 
 - [Cumulative Update to eliminate chance of improper Out Of Memory errors, announced in blog September 2017.](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
     - [SQL Server 2016 build versions](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) provides full details of releases, service packs, and cumulative updates.
     - These occasional improper errors did not occur in the Enterprise edition of SQL Server.
-

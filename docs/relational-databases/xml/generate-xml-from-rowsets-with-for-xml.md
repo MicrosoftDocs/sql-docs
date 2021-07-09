@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, generating XML from rowsets"
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Generate XML from Rowsets with FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

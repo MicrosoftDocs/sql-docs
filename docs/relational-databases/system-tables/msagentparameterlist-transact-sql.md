@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSagentparameterlist_TSQL"
   - "MSagentparameterlist"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Msagentparameterlist system table"
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

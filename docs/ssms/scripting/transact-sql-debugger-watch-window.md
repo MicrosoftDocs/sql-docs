@@ -13,7 +13,7 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ""
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Transact-SQL Debugger - Watch Window
@@ -59,9 +59,9 @@ The **Watch** window displays information about the expressions that you have se
  Displays the data type of the expression.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Locals Window](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [QuickWatch Dialog Box](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
+ [Locals Window](./transact-sql-debugger-locals-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
+ [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

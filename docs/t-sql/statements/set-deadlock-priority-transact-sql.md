@@ -4,10 +4,10 @@ title: "SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET DEADLOCK_PRIORITY"
   - "DEADLOCK_PRIORITY_TSQL"
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "priority deadlock settings [SQL Server]"
   - "SET DEADLOCK_PRIORITY statement"
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

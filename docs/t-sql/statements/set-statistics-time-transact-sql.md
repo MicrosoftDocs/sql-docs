@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_STATISTICS_TIME_TSQL"
   - "SET STATISTICS TIME"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "compile times [SQL Server]"
   - "execution processing time [SQL Server]"
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

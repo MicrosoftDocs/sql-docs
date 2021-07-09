@@ -22,10 +22,10 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], hiding attributes and elements"
   - "attribute hiding [SQLXML]"
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hiding Elements and Attributes by Using sql:hide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

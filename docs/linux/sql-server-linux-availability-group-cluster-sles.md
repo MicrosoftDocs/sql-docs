@@ -2,8 +2,8 @@
 title: "SUSE: Configure availability group for SQL Server on Linux" 
 titleSuffix: SQL Server
 description: Learn how to create availability group clusters for SQL Server on SUSE Linux Enterprise Server (SLES).
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
@@ -49,7 +49,7 @@ To complete the following end-to-end scenario, you need three machines to deploy
 
 ## Setup and configure the operating system on each cluster node 
 
-The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP2 with a valid subscription for the HA add-on.
+The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP3 with a valid subscription for the HA add-on.
 
 ### Install and configure SQL Server service on each cluster node
 
@@ -316,7 +316,7 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 To add an ordering constraint, run the following command on one node: 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

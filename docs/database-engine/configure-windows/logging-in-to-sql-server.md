@@ -80,13 +80,12 @@ WHERE session_id = @@SPID;
   
 -   [How to Troubleshoot Connecting to the SQL Server Database Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Steps to troubleshoot SQL connectivity issues](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+-   [Steps to troubleshoot SQL connectivity issues](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## Related Content  
  [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md)  
   
  [Creating a Login](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   

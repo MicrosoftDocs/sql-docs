@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "errors [SQL Server], Setup"
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # View and Read SQL Server Setup Log Files
 
@@ -38,7 +38,7 @@ SQL Server Setup creates log files in a dated and time-stamped folder within **\
    | **For unattended installations** | %temp%\sqlsetup*.log |
 
 
- ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+ ![Screenshot showing where to find the ConfigurationFiles.ini file in the Setup Bootstrap folder.](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
  > The numbers in the path *nnn* correspond to the version of SQL being installed. In the above picture, SQL 2017 was installed, so the folder is 140. For SQL 2016, the folder would be 130, and for SQL 2014 the folder would be 120.
@@ -122,7 +122,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 ## ConfigurationFile.ini file
   
 ### Overview  
- The configuration file contains the input settings that are provided during installation. It can be used to restart the installation without having to enter the settings manually. However, passwords for the accounts, PID, and some parameters are not saved in the configuration file. The settings can be either added to the file or provided by using the command line or the Setup user interface. For more information, see [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+ The configuration file contains the input settings that are provided during installation. It can be used to restart the installation without having to enter the settings manually. However, passwords for the accounts, PID, and some parameters are not saved in the configuration file. The settings can be either added to the file or provided by using the command line or the Setup user interface. For more information, see [Install SQL Server 2016 Using a Configuration File](./install-sql-server-using-a-configuration-file.md).  
   
 ### Location  
  The ConfigurationFile.ini is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
@@ -138,4 +138,4 @@ The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## See also  
- [Install SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)
+ [Install SQL Server 2019](../../database-engine/install-windows/install-sql-server.md)

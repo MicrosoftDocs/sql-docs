@@ -4,10 +4,10 @@ title: "&lt; (Less Than) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "< (Less Than)"
   - "<_TSQL"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "less than (<)"
   - "< (less than operator)"
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &lt; (Less Than) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression < expression  
 ```  
   
@@ -52,7 +52,7 @@ expression < expression
 ### A. Using < in a simple query  
  The following example returns all rows in the `HumanResources.Department` table that have a value in `DepartmentID` that is less than the value 3.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
@@ -76,10 +76,9 @@ DepartmentID Name
   
 ### B. Using < to compare two variables  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a < @b, 'TRUE', 'FALSE' ) AS Result;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

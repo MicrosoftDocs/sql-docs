@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Transactional Articles - Specify How Changes Are Propagated
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

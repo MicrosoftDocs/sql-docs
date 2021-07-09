@@ -4,10 +4,10 @@ description: Learn how the IBCPSession::BCPInit method performs the necessary in
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "IBCPSession::BCPInit (OLE DB)"
 apitype: "COM"
@@ -76,7 +76,7 @@ HRESULT BCPInit(
  The method succeeded.  
   
  E_FAIL  
- A provider specific error occurred' for detailed information, use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
+ A provider specific error occurred' for detailed information, use the [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) interface.  
   
  E_OUTOFMEMORY  
  Out-of-memory error.  
@@ -87,5 +87,4 @@ HRESULT BCPInit(
 ## See Also  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

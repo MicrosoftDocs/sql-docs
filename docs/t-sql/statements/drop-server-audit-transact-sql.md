@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP SERVER AUDIT"
   - "DROP_SERVER_AUDIT_TSQL"
@@ -29,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DROP SERVER AUDIT audit_name  
     [ ; ]  
 ```  
@@ -49,7 +48,7 @@ DROP SERVER AUDIT audit_name
 ## Examples  
  The following example drops an audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
 STATE = OFF;  
 GO  

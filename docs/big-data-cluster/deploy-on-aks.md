@@ -2,11 +2,11 @@
 title: Configure Azure Kubernetes Service
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster deployments.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/02/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -98,7 +98,7 @@ Before you run the command, update the script. Replace `<Azure data center>` wit
    az aks get-versions `
    --location <Azure data center> `
    --query orchestrators `
-   --o table
+   -o table
    ```
 
 Choose the latest available version for your cluster. Record the version number. You will use it in the next step.
@@ -144,7 +144,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Connect to the cluster
 
-1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
+1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks#az_aks_get_credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -160,7 +160,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 If you have any problems creating an Azure Kubernetes Service with the previous commands, try the following resolutions:
 
-- Make sure that you have installed the [latest Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Make sure that you have installed the [latest Azure CLI](/cli/azure/install-azure-cli).
 - Try the same steps using a different resource group and cluster name.
 - Refer to the detailed [troubleshooting documentation for AKS](/azure/aks/troubleshooting).
 

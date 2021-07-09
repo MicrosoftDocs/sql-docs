@@ -46,6 +46,5 @@ ms.author: maggies
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515)  
-  
+ [Reporting Services Device Information Settings](/previous-versions/sql/sql-server-2008/ms155397(v=sql.100))  
   

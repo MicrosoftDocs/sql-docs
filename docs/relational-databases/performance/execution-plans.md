@@ -4,7 +4,7 @@ description: Learn about execution plans or query plans, which the Query Optimiz
 ms.custom: ""
 ms.date: "03/01/2020"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 

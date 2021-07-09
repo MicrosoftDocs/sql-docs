@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syslockinfo_TSQL"
   - "sys.syslockinfo_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "syslockinfo system table"
   - "sys.syslockinfo compatibility view"
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syslockinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

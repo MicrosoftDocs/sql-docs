@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSsubscriber_info_TSQL"
   - "MSsubscriber_info"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscriber_info system table"
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSsubscriber_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

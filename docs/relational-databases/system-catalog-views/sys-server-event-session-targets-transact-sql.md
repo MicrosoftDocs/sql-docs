@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "server_event_session_targets_TSQL"
   - "sys.server_event_session_targets_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.server_event_session_targets catalog view"
   - "xe"
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

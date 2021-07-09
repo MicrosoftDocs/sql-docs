@@ -4,10 +4,10 @@ title: "- (Subtraction) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "subtract"
   - "-"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "minus operator (-)"
   - "subtracting numbers"
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # - (Subtraction) (Transact-SQL)
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression - expression  
 ```  
   
@@ -54,7 +54,7 @@ expression - expression
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(TaxRate) - MIN(TaxRate) AS 'Tax Rate Difference'  
@@ -70,10 +70,10 @@ GO
   
  Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @altstartdate datetime;  
+DECLARE @altstartdate DATETIME;  
 SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
@@ -93,7 +93,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
 ### C: Using subtraction in a SELECT statement  
  The following example calculates the difference in a base rate between the employee with the highest base rate and the employee with the lowest tax rate, from the `dimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference  

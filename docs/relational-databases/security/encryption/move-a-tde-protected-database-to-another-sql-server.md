@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Transparent Data Encryption, moving"
   - "TDE, moving a database"
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: jaszymas
-ms.author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ---
 # Move a TDE Protected Database to Another SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.author: jaszymas
   
 ##  <a name="SSMSProcedure"></a> To create a database protected by transparent data encryption  
 
-The following procedures show you have to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
+The following procedures show you how to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Using SQL Server Management Studio  
   
@@ -124,7 +124,7 @@ The following procedures show you have to create a database protected by TDE usi
   
 -   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-certificate-transact-sql.md)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)  
   
@@ -132,7 +132,7 @@ The following procedures show you have to create a database protected by TDE usi
   
 ##  <a name="TsqlProcedure"></a> To move a database protected by transparent data encryption 
 
-The following procedures show you have to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
+The following procedures show you how to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Using SQL Server Management Studio  
   
@@ -294,10 +294,9 @@ The following procedures show you have to move a database protected by TDE using
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-transact-sql.md)  
   
 ## See Also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-  
+ [Transparent Data Encryption with Azure SQL Database](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
   

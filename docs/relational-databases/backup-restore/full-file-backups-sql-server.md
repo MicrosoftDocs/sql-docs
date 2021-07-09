@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], backing up"
   - "file backups [SQL Server]"
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Full File Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

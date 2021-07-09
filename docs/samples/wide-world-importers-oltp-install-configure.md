@@ -51,7 +51,7 @@ To restore a backup to a SQL Server instance, you can use Management Studio.
 To import a bacpac into a new SQL Database, you can use Management Studio.
 
 1. (optional) If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server.
-   - See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
+   - See [this tutorial](/azure/azure-sql/database/single-database-create-quickstart) to create a database in minutes
 2. Open SQL Server Management Studio and connect to your server in Azure.
 3. Right-click on the **Databases** node, and select **Import Data-Tier Application**.
 4. In the **Import Settings** select **Import from local disk** and select the bacpac of the sample database from your file system.
@@ -90,4 +90,3 @@ Row-Level Security is not enabled by default in the bacpac download of WideWorld
 ```sql
 EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 ```
-

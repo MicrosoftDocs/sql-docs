@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Memory-Optimized System-Versioned Temporal Table
 

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 

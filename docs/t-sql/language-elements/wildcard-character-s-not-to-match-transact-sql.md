@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "wildcard"
   - "[^]_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[^] (wildcard - character(s) not to match)"
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)

@@ -70,9 +70,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Tool, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626), on codeplex.com.  
   
--   Video, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=150497), on msdn.microsoft.com.  
+-   Video, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)), on msdn.microsoft.com.  
   
--   Support article, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), on support.microsoft.com.  
+-   Support article, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://web.archive.org/web/20111112202346/http://support.microsoft.com:80/kb/955632), on support.microsoft.com.  
 
 ## Add a Log for Data Flow Performance Counters
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  
@@ -117,4 +117,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 
 ## See Also  
  [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md)
- [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

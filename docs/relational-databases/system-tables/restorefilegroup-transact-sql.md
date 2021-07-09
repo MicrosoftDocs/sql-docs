@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "restorefilegroup_TSQL"
   - "restorefilegroup"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], restorefilegroup system table"
   - "restorefilegroup system table"
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # restorefilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

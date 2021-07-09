@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@PACKET_ERRORS"
   - "@@PACKET_ERRORS_TSQL"
@@ -32,8 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@PACKET_ERRORS  
 ```  
   
@@ -48,7 +47,7 @@ ms.author: vanto
 ## Examples  
  The following example shows using `@@PACKET_ERRORS`.  
   
-```  
+```sql  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  
 ```  
   

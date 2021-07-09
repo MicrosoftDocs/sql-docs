@@ -198,4 +198,4 @@ After resoling the fix with one of the options above, confirm the fix by connect
 
 ## Next steps
 
-[Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Verify reverse DNS entry (PTR record) for domain controller](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysproxylogin_TSQL"
   - "sysproxylogin_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxylogin system table"
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "Setup [SQL Server]"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mikeray
+ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2019 on Linux
 
@@ -79,6 +79,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores| 
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|
 |Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|
+|Maximum capacity for [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]| 32 * (max server memory configuration)| 4 * (max server memory configuration)|N/A |N/A |
 |Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|  
 |Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|
 |Maximum relational database size|524 PB|524 PB|524 PB|10 GB|  
@@ -91,7 +92,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Backup compression|Yes|Yes|No|No| 
-|Database snapshot|Yes|No|No|No|
+|Database snapshot|Yes|Yes|No|No|
 |Always On failover cluster instance<sup>1</sup>|Yes|Yes|No|No| 
 |Always On availability groups<sup>2</sup>|Yes|No|No|No|
 |Basic availability groups <sup>3</sup>|No|Yes|No|No|
@@ -219,13 +220,14 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup to URL - page blob<sup>2</sup> |
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers | 
-| &nbsp; | AD Authentication for Availability Groups (AGs) | 
+| &nbsp; | AD Authentication for Linked Servers |
+| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |
@@ -235,13 +237,13 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package is not supported.
-  
+
+<sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## Next steps
  [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)  
+ [Product Specifications for SQL Server](../sql-server/index.yml)

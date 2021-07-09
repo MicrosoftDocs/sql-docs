@@ -30,6 +30,9 @@ The topics in this section briefly describe the security features in SQL Server 
 ## In this section  
 [Authentication in SQL Server](authentication-sql-server.md)  
 Describes logins and authentication in SQL Server and provides links to additional resources. 
+
+[Azure Active Directory authentication](azure-active-directory-authentication.md)  
+Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient.
   
 [Application security scenarios in SQL Server](application-security-scenarios-sql-server.md)  
 Contains topics discussing various application security scenarios for ADO.NET and SQL Server applications.  

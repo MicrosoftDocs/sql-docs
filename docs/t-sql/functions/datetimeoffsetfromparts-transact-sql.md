@@ -4,10 +4,10 @@ title: "DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATETIMEOFFSETFROMPARTS_TSQL"
   - "DATETIMEOFFSETFROMPARTS"
@@ -16,9 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "DATETIMEOFFSETFROMPARTS function"
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ Returns a **datetimeoffset** value for the specified date and time arguments. Th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision )  
 ```  
   
@@ -76,7 +76,7 @@ An integer literal value that specifies the precision of the **datetimeoffset** 
   
 The *fractions* argument depends on the precision argument. For example, for a precision value of 7, each fraction represents 100 nanoseconds; for a precision of 3, each fraction represents a millisecond. For a precision value of zero, the value of fractions must also be zero; otherwise, `DATETIMEOFFSETFROMPARTS` will raise an error.  
   
-This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function is capable of being remoted to [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] servers and above. It is not remoted to servers that have a version below [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## Examples  
   
@@ -88,7 +88,7 @@ SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Resu
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ----------------------------------
 2010-12-31 14:23:23.0000000 +12:00  
@@ -115,7 +115,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------------------------------  
 2011-08-15 14:30:00.5 +12:30  
   

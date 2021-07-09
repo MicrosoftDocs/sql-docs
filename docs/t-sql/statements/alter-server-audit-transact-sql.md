@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_SERVER_AUDIT_TSQL"
   - "ALTER SERVER AUDIT"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -151,7 +151,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ### A. Changing a server audit name  
  The following example changes the name of the server audit `HIPAA_Audit` to `HIPAA_Audit_Old`.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  
@@ -168,7 +168,7 @@ GO
 ### B. Changing a server audit target  
  The following example changes the server audit called `HIPAA_Audit` to a file target.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  

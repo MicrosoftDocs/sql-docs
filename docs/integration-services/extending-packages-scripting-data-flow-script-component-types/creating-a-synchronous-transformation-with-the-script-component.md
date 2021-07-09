@@ -47,7 +47,7 @@ ms.author: chugu
   
  On the **Input Columns** page of the **Script Transformation Editor,** the column list shows the available columns from the output of the upstream component in the data flow. Select the columns that you want to transform or pass through. Mark any columns that you want to transform in place as Read/Write.  
   
- For more information about the **Input Columns** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Input Columns Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md).  
+ For more information about the **Input Columns** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Input Columns Page&#41;](../data-flow/transformations/script-component.md).  
   
 ### Configuring Inputs, Outputs, and Output Columns  
  A transformation component supports one or more outputs.  
@@ -65,7 +65,7 @@ ms.author: chugu
   
 -   Add new columns to simulated error outputs for row-level errors. Ordinarily multiple outputs in the same **ExclusionGroup** have the same set of output columns. However, if you are creating a simulated error output, you may want to add more columns to contain error information. For information about how the data flow engine processes error rows, see [Using Error Outputs in a Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). Note that in the Script component you must write your own code to fill the additional columns with appropriate error information. For more information, see [Simulating an Error Output for the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- For more information about the **Inputs and Outputs** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ For more information about the **Inputs and Outputs** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../data-flow/transformations/script-component.md).  
   
 ### Adding Variables  
  If you want to use existing variables in your script, you can add them in the **ReadOnlyVariables** and **ReadWriteVariables** property fields on the **Script** page of the **Script Transformation Editor**.  
@@ -74,7 +74,7 @@ ms.author: chugu
   
  For general information about how to use variables with the Script component, see [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- For more information about the **Script** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Script Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ For more information about the **Script** page of the **Script Transformation Editor**, see [Script Transformation Editor &#40;Script Page&#41;](../data-flow/transformations/script-component.md).  
   
 ## Scripting a Synchronous Transformation Component in Code-Design Mode  
  After you have configured the metadata for your component, you can write your custom script. In the **Script Transformation Editor**, on the **Script** page, click **Edit Script** to open the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE where you can add your custom script. The scripting language that you use depends on whether you selected [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# as the script language for the **ScriptLanguage** property on the **Script** page.  
@@ -261,4 +261,3 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
  [Understanding Synchronous and Asynchronous Transformations](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
  [Creating an Asynchronous Transformation with the Script Component](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
  [Developing a Custom Transformation Component with Synchronous Outputs](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
- 

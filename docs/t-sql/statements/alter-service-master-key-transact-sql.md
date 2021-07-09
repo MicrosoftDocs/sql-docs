@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_SERVICE_MASTER_KEY_TSQL"
   - "ALTER SERVICE MASTER KEY"
@@ -36,7 +36,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER SERVICE MASTER KEY   
     [ { <regenerate_option> | <recover_option> } ] [;]  
   
@@ -106,7 +105,7 @@ ALTER SERVICE MASTER KEY
 ## Examples  
  The following example regenerates the service master key.  
   
-```  
+```sql  
 ALTER SERVICE MASTER KEY REGENERATE;  
 GO  
 ```  

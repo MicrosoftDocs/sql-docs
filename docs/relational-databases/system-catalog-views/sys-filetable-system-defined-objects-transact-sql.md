@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.filetable_system_defined_objects_TSQL"
   - "filetable_system_defined_objects"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.filetable_system_defined_objects catalog view"
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

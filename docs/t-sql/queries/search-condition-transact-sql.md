@@ -4,10 +4,10 @@ title: "Search Condition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "search"
   - "Search Condition"
@@ -37,7 +37,7 @@ helpviewer_keywords:
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Condition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 < search_condition > ::=   
     { [ NOT ] <predicate> | ( <search_condition> ) }   
@@ -205,7 +205,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Using WHERE with LIKE and ESCAPE syntax  
  The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because _ is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the _ character.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -216,7 +216,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### B. Using WHERE and LIKE syntax with Unicode data  
  The following example uses the `WHERE` clause to retrieve the mailing address for any company that is outside the United States (`US`) and in a city whose name starts with `Pa`.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -231,7 +231,7 @@ AND City LIKE N'Pa%' ;
 ### C. Using WHERE with LIKE  
  The following example searches for the rows in which the `LastName` column has the characters `and`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -242,7 +242,7 @@ WHERE LastName LIKE '%and%';
 ### D. Using WHERE and LIKE syntax with Unicode data  
  The following example uses the `WHERE` clause to perform a Unicode search on the `LastName` column.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

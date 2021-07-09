@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP XML SCHEMA COLLECTION"
   - "DROP_XML_SCHEMA_COLLECTION_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "dropping XML schema collections"
   - "DROP XML SCHEMA COLLECTION statement"
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +33,7 @@ Deletes the whole XML schema collection and all of its components.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -58,7 +57,7 @@ You can't drop an XML schema collection when it's in use. So, the collection bei
   
 -   Referenced in a schema-bound function or stored procedure. For example, the following function locks the XML schema collection `MyCollection` because the function specifies `WITH SCHEMABINDING`. If you remove it, there's no lock on the XML SCHEMA COLLECTION.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -76,7 +75,7 @@ To drop an XML SCHEMA COLLECTION requires DROP permission on the collection.
 ## Examples  
 The following example shows removing an XML schema collection.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

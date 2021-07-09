@@ -1,8 +1,8 @@
 ---
-description: "Using encryption"
-title: "Using encryption"
-ms.custom: "Learn how to establish secure communication channels using TLS encryption with your SQL database connections."
-ms.date: "09/12/2019"
+description: Learn how to establish secure communication channels using TLS encryption with your SQL database connections.
+title: Using encryption
+ms.custom: ""
+ms.date: 03/31/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: vanto
@@ -24,19 +24,19 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides an in
   
 Enabling TLS encryption increases the security of data transmitted across networks between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and applications. However, enabling encryption does slow performance.  
   
-The topics in this section describe how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] version supports TLS encryption, including new connection properties, and how you can configure the trust store at the client-side.  
+The articles in this section describe how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] version supports TLS encryption, including new connection properties, and how you can configure the trust store at the client-side.  
   
 > [!NOTE]  
 > The **hostNameInCertificate** connection property is recommended to validate an TLS certificate.  
 
 ## In this section  
 
-| Topic                                                                                                        | Description                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Understanding encryption support](../../connect/jdbc/understanding-ssl-support.md)                                 | Describes how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports TLS encryption.                                              |
-| [Connecting with encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Describes how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the new TLS specific connection properties. |
-| [Configuring the client for encryption](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Describes how to configure the default trust store at the client-side and how to import a private certificate to the client computer's trust store.   |
-  
+| Article | Description |
+| ----- | ----------- |
+| [Understanding encryption support](understanding-ssl-support.md) | Describes how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports TLS encryption. |
+| [Connecting with encryption](connecting-with-ssl-encryption.md) | Describes how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the new TLS-specific connection properties. |
+| [Configuring the client for encryption](configuring-the-client-for-ssl-encryption.md) | Describes how to configure the default trust store at the client-side and how to import a private certificate to the client computer's trust store. |
+
 ## See also
 
-[Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Securing JDBC driver applications](securing-jdbc-driver-applications.md)

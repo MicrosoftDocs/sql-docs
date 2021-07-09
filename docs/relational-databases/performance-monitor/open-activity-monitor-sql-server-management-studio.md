@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Activity Monitor [SQL Server], opening"
   - "opening Activity Monitor"
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Open Activity Monitor in SQL Server Management Studio (SSMS)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

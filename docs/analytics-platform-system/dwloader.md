@@ -1,12 +1,12 @@
 ---
 title: dwloader Command-Line Loader
 description: dwloader is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table.
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -523,7 +523,7 @@ Loaded data might require more or less space on the appliance than in the source
 Although **dwloader** is a transaction process and will roll back gracefully on failure, it cannot be rolled back once the bulk load has been completed successfully. To cancel an active **dwloader** process, type CTRL+C.  
   
 ## Limitations and Restrictions  
-The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
+The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   

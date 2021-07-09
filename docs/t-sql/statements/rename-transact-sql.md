@@ -3,13 +3,13 @@ description: "RENAME (Transact-SQL)"
 title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.topic: "language-reference"
-ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
+ms.topic: reference
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -17,12 +17,12 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## Syntax
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -45,6 +45,9 @@ RENAME DATABASE [::] database_name TO new_database_name
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments
 
 RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*
@@ -55,7 +58,7 @@ Change the name of a user-defined table. Specify the table to be renamed with a 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of these [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
+Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
 
 - master
 - model
@@ -87,7 +90,7 @@ You can't rename an external table, indexes, or views. Instead of renaming, you 
 
 ### Cannot rename a table in use
 
-You can't rename a table or database while it is in use. Renaming a table requires an exclusive lock on the table. If the table is in use, you may need to terminate sessions that are using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in SQL Data Warehouse are prefixed by 'SID'. Include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table or database while it is in use. Renaming a table requires an exclusive lock on the table. If the table is in use, you may need to terminate sessions that are using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. Include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ### Rename column restrictions
 
@@ -150,7 +153,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-It is important to remember that you can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in SQL Data Warehouse are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ```sql
 -- View a list of the current sessions

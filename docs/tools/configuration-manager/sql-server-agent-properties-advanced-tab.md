@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Agent Properties (Advanced Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

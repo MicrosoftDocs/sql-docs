@@ -6,7 +6,7 @@ ms.date: "06/26/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "MATCH"
   - "MATCH_TSQL"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "Shortest Path, shortest_path"
 author: shkale-msft
 ms.author: shkale
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MATCH (Transact-SQL)
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
   Specifies a search condition for a graph. MATCH can be used only with graph node and edge tables, in the SELECT statement as part of  WHERE clause. 
   
@@ -120,8 +120,8 @@ Name or alias of a node table provided in the FROM clause.
 *edge_alias*  
 Name or alias of an edge table provided in the FROM clause.
 
-*SHORTEST_PATH*   
-Shortest path function is used to find shortest path between two given nodes in a graph or between a given node and all the other nodes in a graph. It takes an arbitrary length pattern as input, that is searched repeatedly in a graph. 
+*SHORTEST_PATH*
+Shortest path function is used to find shortest path between two given nodes in a graph or between a given node and all the other nodes in a graph. It takes an arbitrary length pattern as input, that is searched repeatedly in a graph. Introduced in SQL Server 2019. Requires SQL Server 2019 or later.
 
 *arbitrary_length_match_pattern*  
 Specifies the nodes and edges that must be traversed repeatedly until the desired node is reached or until the maximum number of iterations as specified in the pattern is met. 
@@ -142,9 +142,9 @@ MATCH can be combined with other expressions using AND in the WHERE clause. Howe
 ### A.  Find a friend 
  The following example creates a Person node table and friends Edge table, inserts some data and then uses MATCH to find friends of Alice, a person in the graph.
 
- ```
+ ```sql
  -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+ CREATE TABLE dbo.Person (ID INTEGER PRIMARY KEY, name VARCHAR(50)) AS NODE;
  CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
  -- Insert into node table
@@ -167,24 +167,22 @@ SELECT Person2.name AS FriendName
 FROM Person Person1, friend, Person Person2
 WHERE MATCH(Person1-(friend)->Person2)
 AND Person1.name = 'Alice';
-
  ```
 
  ### B.  Find friend of a friend
  The following example tries to find friend of a friend of Alice. 
 
- ```
+ ```sql
 SELECT Person3.name AS FriendName 
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
-
  ```
 
 ### C.  More `MATCH` patterns
  Following are some more ways in which a pattern can be specified inside MATCH.
 
- ```
+ ```sql
  -- Find a friend
     SELECT Person2.name AS FriendName
     FROM Person Person1, friend, Person Person2

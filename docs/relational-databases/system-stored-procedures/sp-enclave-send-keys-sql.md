@@ -9,7 +9,7 @@ ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_enclave_send_keys"
   - "sp_enclave_send_keys_TSQL"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "sp_enclave_send_keys"
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
 # sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]

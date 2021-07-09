@@ -1,14 +1,14 @@
 ---
-title: "Configure PolyBase scale-out groups on Windows | Microsoft Docs"
+title: "Configure PolyBase scale-out groups on Windows"
 description: Set up a PolyBase scale-out group to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
-ms.date: 04/23/2019
+ms.date: 07/07/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "tutorial"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+monikerRange: ">= sql-server-2016"
 ---
 # Configure PolyBase scale-out groups on Windows
 
@@ -18,9 +18,9 @@ This article describes how to set up a [PolyBase scale-out group](polybase-scale
 
 ## Prerequisites
   
-- More than one machine in the same domain  
+- More than one machine in the same domain.  
   
-- A domain user account to run PolyBase services  
+- A domain user account to run PolyBase services. A group managed service account (gMSA) is recommended. For more information, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
   
 ## Process overview
 
@@ -56,7 +56,7 @@ This walks through the steps of configuring a PolyBase Group using:
   
 3. On the Server Configuration page, use the **domain account** PQTH4A\PolyBaseUser for SQL Server PolyBase Engine and SQL Server PolyBase Data Movement Service.
   
-4. On the PolyBase Configuration page, select the option **Use the SQL Server instance as part of a PolyBase scale-out group**. This opens  the firewall  to allow incoming connections to the PolyBase services. If the head node is a named instance, you must manually add the SQL Server port to the Windows firewall on the head node and also start the SQL Browser on the head node.
+4. On the PolyBase Configuration page, select the option **Use the SQL Server instance as part of a PolyBase scale-out group**. This opens the firewall to allow incoming connections to the PolyBase services. SQL Server installation wizard automatically exposes the following TCP ports in the Windows Server Firewall: 1433,16450-16453, and 17001. If the head node is a SQL Server named instance, you must also manually add the SQL Server port to the Windows firewall on the head node and also start the SQL Browser on the head node. Ports should be allowed only on the firewalls of servers in the PolyBase scale-out group.
   
 5. After setup is complete, run **services.msc**. Verify that SQL Server, PolyBase Engine and PolyBase Data Movement Service are running.
   
@@ -83,7 +83,7 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 4. Shutdown the PolyBase engine and restart the PolyBase data movement service.
 
 > [!NOTE] 
-> When the Polybase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and Polybase Engine Service (DW). If the DW engine gets restarted more than 2 times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
+> When the Polybase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and Polybase Engine Service (DW). If the DW engine gets restarted more than two times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
 
 ## Optional: Remove a compute node  
   
@@ -103,6 +103,6 @@ After setup is complete, both machines can function as PolyBase Group head nodes
   
 ## Next steps  
 
-For troubleshooting, see [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+For troubleshooting, see [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130)).
   
 For more information about PolyBase, see the [PolyBase overview](../../relational-databases/polybase/polybase-guide.md).

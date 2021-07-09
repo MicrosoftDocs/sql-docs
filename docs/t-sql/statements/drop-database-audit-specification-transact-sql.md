@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_DATABASE_AUDIT_SPECIFICATION_TSQL"
   - "DROP DATABASE AUDIT SPECIFICATION"
@@ -30,7 +30,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DROP DATABASE AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -52,7 +51,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ### A. Dropping a Database Audit Specification  
  The following example drops an audit called `HIPAA_Audit_DB_Specification`.  
   
-```  
+```sql  
 DROP DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification;  
 GO  
 ```  

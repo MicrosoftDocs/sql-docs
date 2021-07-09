@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View Publication and Subscription Status in Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

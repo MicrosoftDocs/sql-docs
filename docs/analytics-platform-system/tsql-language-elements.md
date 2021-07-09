@@ -1,12 +1,12 @@
 ---
 title: T-SQL language elements
 description: T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -18,7 +18,7 @@ T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel D
 * [syntax conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [object naming rules](../relational-databases/databases/database-identifiers.md)
 * [reserved keywords](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [collations](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [collations](../t-sql/statements/collations.md)
 * [comments](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [data types](../t-sql/data-types/data-types-transact-sql.md)

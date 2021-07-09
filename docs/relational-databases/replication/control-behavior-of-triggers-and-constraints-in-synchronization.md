@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Control Behavior of Triggers and Constraints in Synchronization
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

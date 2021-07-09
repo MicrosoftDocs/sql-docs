@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "KILL QUERY NOTIFICATION SUBSCRIPTION"
   - "KILL_QUERY_NOTIFICATION_SUBSCRIPTION_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server query notifications], stopping"
   - "query notifications [SQL Server], subscriptions"
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,6 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  
 ```  
@@ -62,14 +61,14 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ### A. Removing all query notification subscriptions in the instance  
  The following example removes all query notification subscriptions in the instance.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;  
 ```  
   
 ### B. Removing a single query notification subscription  
  The following example removes the query notification subscription with the id `73`.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   

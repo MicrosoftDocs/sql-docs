@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSrepl_originators_TSQL"
   - "MSrepl_originators"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_originators system table"
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSrepl_originators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "column_xml_schema_collection_usages_TSQL"
   - "sys.column_xml_schema_collection_usages"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_xml_schema_collection_usages catalog view"
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.column_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SIGNBYCERT"
   - "SIGNBYCERT_TSQL"
@@ -34,8 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
@@ -60,8 +59,8 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## Examples  
  The following example signs the text in `@SensitiveData` with certificate `ABerglundCert07`, having first decrypted the certificate with password "pGFD4bb925DGvbd2439587y". It then inserts the cleartext and the signature in table `SignedData04`.  
   
-```  
-DECLARE @SensitiveData nvarchar(max);  
+```sql  
+DECLARE @SensitiveData NVARCHAR(max);  
 SET @SensitiveData = N'Saddle Price Points are   
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29';  
 INSERT INTO [SignedData04]  

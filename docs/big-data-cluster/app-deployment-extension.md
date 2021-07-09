@@ -148,7 +148,7 @@ You may view all apps you have deployed in the side bar with the following infor
 
 If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that you can write your own clients that call your app:
 
-![Swagger](media/vs-extension/swagger.png)
+![Screenshot of the VS Code UI showing the swagger.json file.](media/vs-extension/swagger.png)
 
 See [Consume applications on big data clusters](app-consume.md) for more information.
 

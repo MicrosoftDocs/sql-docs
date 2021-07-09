@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Release Notes
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
-For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](https://go.microsoft.com/fwlink/?LinkId=190948) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
+For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="Install"></a>1.0 Before You Install  
-Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider the following information.  
+Before installing [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], consider the following information.  
   
 ### 1.1 Rules Documentation for SQL Server 2012 Setup  
 **Issue:** SQL Server Setup validates your computer configuration before the Setup operation completes. The various rules that are run during the SQL Server Setup operation are captured using the System Configuration Checker (SCC) report. The documentation about these setup rules is no longer available on the MSDN library.  
@@ -86,7 +86,7 @@ You can install SQL Server on Windows Server 2008 R2 Server Core SP1, with the f
   
 -   Microsoft SQL Server 2012 cannot be installed side-by-side with earlier versions of SQL Server on a computer that is running Windows Server 2008 R2 Server Core SP1.  
   
--   Not all features of SQL Server 2012 are supported on the Server Core operating system. For more information on features supported, and on installing SQL Server 2012 on Server Core, see [Install SQL Server 2012 on Server Core](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
+-   Not all features of SQL Server 2012 are supported on the Server Core operating system. For more information on features supported, and on installing SQL Server 2012 on Server Core, see [Install SQL Server 2012 on Server Core](/previous-versions/sql/sql-server-2012/hh231669(v=sql.110)).  
   
 ### 1.6 Semantic Search Requires You to Install an Additional Dependency  
 **Issue:** Statistical Semantic Search has an additional prerequisite, the semantic language statistics database, which is not installed by the SQL Server Setup program.  
@@ -156,7 +156,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
         **Use Deployment Image Servicing and Management (DISM.exe) to enable .NET Framework 3.5 SP1:**  
   
-        You can also enable .NET Framework 3.5 SP1 using Deployment Image Servicing and Management (DISM.exe). For more information about enabling windows features online, see [Enable or Disable Windows Features Online](https://technet.microsoft.com/library/dd744582(WS.10).aspx). The following are the instructions to enable .NET Framework 3.5 SP1:  
+        You can also enable .NET Framework 3.5 SP1 using Deployment Image Servicing and Management (DISM.exe). For more information about enabling windows features online, see [Enable or Disable Windows Features Online](/previous-versions/windows/it-pro/windows-7/dd744582(v=ws.10)). The following are the instructions to enable .NET Framework 3.5 SP1:  
   
         1.  At the command prompt, type the following command to list all of the features available in the operating system.  
   
@@ -186,7 +186,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
     -   If you install SQL Server 2012 on a computer with the Windows 7 SP1 or Windows Server 2008 R2 SP1 operating system, this update is already installed on the computer.  
   
--   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://support.microsoft.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
+-   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://mskb.pkisolutions.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
   
     -   Windows Server 2008 - Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
   
@@ -328,7 +328,7 @@ There are problems with the AS Processing Task when you work with tabular models
 ### 4.2 To Reinstall Data Quality Server, Delete the DQS Objects After Uninstalling Data Quality Server  
 **Issue:** If you uninstall the Data Quality Server, the DQS objects (DQS databases, DQS logins, and a DQS stored procedure) are not deleted from the SQL Server instance.  
   
-**Workaround:** To reinstall Data Quality Server on the same computer and in the same SQL Server instance, you must manually delete the DQS objects from the SQL Server instance. Additionally, you must also delete the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA) files from the C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA folder on your computer before you reinstall Data Quality Server. Otherwise, the Data Quality Server installation fails. Move the database files instead of deleting them if you want to preserve data, such as knowledge bases or data quality projects. For more information about removing DQS objects after the uninstall process is complete, see [Remove Data Quality Server Objects](https://msdn.microsoft.com/library/hh231667.aspx).  
+**Workaround:** To reinstall Data Quality Server on the same computer and in the same SQL Server instance, you must manually delete the DQS objects from the SQL Server instance. Additionally, you must also delete the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA) files from the C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA folder on your computer before you reinstall Data Quality Server. Otherwise, the Data Quality Server installation fails. Move the database files instead of deleting them if you want to preserve data, such as knowledge bases or data quality projects. For more information about removing DQS objects after the uninstall process is complete, see [Remove Data Quality Server Objects](./install/remove-data-quality-server-objects.md).  
   
 ### 4.3 Indication of a Terminated Knowledge Discovery or Interactive Cleansing Activity is Delayed  
 **Issue:** If an administrator terminates an activity in the Activity Monitoring screen, an interactive user who is running the knowledge discovery, domain management, or interactive cleansing activity will not receive any indication that his or her activity was terminated until he or she performs the next operation.  
@@ -572,10 +572,10 @@ This is due to a limitation in the CTP3 build. Future builds will not have this 
 **Workaround:** Use 'multisubnetfailover = true' in the connection string.  
   
 #### 5.7.6 Failure to Create New Availability Group Listeners Because of Active Directory Quotas  
-**Issue:** The creation of a new availability group listener may fail upon creation because you have reached an Active Directory quota for the participating cluster node machine account. For more information, see [How to troubleshoot the Cluster service account when it modifies computer objects](https://support.microsoft.com/kb/307532) and [Active Directory Quotas](https://technet.microsoft.com/library/cc904295(WS.10).aspx).,  
+**Issue:** The creation of a new availability group listener may fail upon creation because you have reached an Active Directory quota for the participating cluster node machine account. For more information, see [How to troubleshoot the Cluster service account when it modifies computer objects](https://support.microsoft.com/kb/307532) and [Active Directory Quotas](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc904295(v=ws.10)).,  
   
 #### 5.7.7 NetBIOS Conflicts Because Availability Group Listener Names Use an Identical 15-Character Prefix  
-If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265(WS.10).aspx)  
+If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731265(v=ws.10))  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -624,7 +624,7 @@ Connectivity from SQL Server 2012 Reporting Services to Microsoft SQL Server PDW
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 includes StreamInsight 2.0. StreamInsight 2.0 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information see the [Microsoft StreamInsight 2.0 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.0 separately, please visit the [Microsoft StreamInsight 2.0 download page](https://go.microsoft.com/fwlink/?LinkId=241593) on the Microsoft Download Center.  
+SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -635,4 +635,4 @@ Issue: When you try to install Upgrade Advisor on any supported Windows version 
   
 **Workaround**: Locate the **SQLUA.msi** file on your SQL Server 2012 media at `\1028_CHT_LP\x64\redist\Upgrade Advisor` or at `\1028_CHT_LP\x86\redist\Upgrade Advisor`, depending on your operating system architecture.  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")

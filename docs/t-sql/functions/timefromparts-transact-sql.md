@@ -4,10 +4,10 @@ title: "TIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TIMEFROMPARTS_TSQL"
   - "TIMEFROMPARTS"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -65,7 +65,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ### A. Simple example without fractions of a second  
   
-```  
+```sql
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
 ```  
   

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], reverting to"
   - "reverting databases"
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Revert a Database to a Database Snapshot
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -136,7 +136,7 @@ GO
   
  For the code for creating the sample database and snapshots on which this example depends, see:  
   
--   For the **Sales** database and the **sales_snapshot0600** snapshot, see "Creating a database with filegroups" and "Creating a database snapshot" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+-   For the **Sales** database and the **sales_snapshot0600** snapshot, see "Creating a database with filegroups" and "Creating a database snapshot" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 -   For the **sales_snapshot1200** snapshot, see "Creating a snapshot on the Sales database" in [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
@@ -166,5 +166,4 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
-  
   

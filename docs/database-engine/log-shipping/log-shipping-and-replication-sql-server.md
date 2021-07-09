@@ -5,14 +5,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], log shipping and"
   - "log shipping [SQL Server], replication and"
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Log Shipping and Replication (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

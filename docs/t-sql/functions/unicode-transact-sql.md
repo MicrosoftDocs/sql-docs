@@ -4,10 +4,10 @@ title: "UNICODE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "UNICODE"
   - "UNICODE_TSQL"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UNICODE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier
  The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  
   
 ```sql  
-DECLARE @nstring nchar(12);  
+DECLARE @nstring NCHAR(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
 ```  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(12);  
+DECLARE @position INT, @nstring NCHAR(12);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  
@@ -86,12 +86,13 @@ SET @nstring = N'Åkergatan 24';
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
 WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
-   BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
-   SELECT @position = @position + 1;  
-   END;  
+
+BEGIN;  
+   SELECT @position AS [position],   
+      SUBSTRING(@nstring, @position, 1) AS [character],  
+      UNICODE(SUBSTRING(@nstring, @position, 1)) AS [code_point];  
+   SET @position = @position + 1;  
+END; 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

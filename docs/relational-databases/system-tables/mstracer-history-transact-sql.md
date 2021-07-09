@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MStracer_history"
   - "MStracer_history_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MStracer_history system table"
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

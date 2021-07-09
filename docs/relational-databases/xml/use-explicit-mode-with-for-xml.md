@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FOR XML clause, EXPLICIT mode"
   - "FOR XML EXPLICIT mode"
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use EXPLICIT Mode with FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -25,40 +25,25 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
   
  The following is a list of the ODBC API functions that support both Unicode (W) and ANSI (A) versions:  
   
-|||  
-|-|-|  
-|**SQLBrowseConnect**|**SQLGetDiagRec**|  
-|**SQLColAttribute**|**SQLGetInfo**|  
-|**SQLColAttributes**|**SQLGetStmtAttr**|  
-|**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQLNativeSql**|  
-|**SQLConnect**|**SQLPrepare**|  
-|**SQLDataSources**|**SQLPrimaryKeys**|  
-|**SQLDescribeCol**|**SQLProcedureColumns**|  
-|**SQLDriverConnect**|**SQLProcedures**|  
-|**SQLDrivers**|**SQLSetConnectAttr**|  
-|**SQLError**|**SQLSetConnectOption**|  
-|**SQLExecDirect**|**SQLSetCursorName**|  
-|**SQLForeignKeys**|**SQLSetDescField**|  
-|**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
-|**SQLGetConnectOption**|**SQLSpecialColumns**|  
-|**SQLGetCursorName**|**SQLStatistics**|  
-|**SQLGetDescField**|**SQLTablePrivileges**|  
-|**SQLGetDescRec**|**SQLTables**|  
-|**SQLGetDiagField**||  
+:::row:::
+   :::column span="":::
+      **SQLBrowseConnect**<br>      **SQLColAttribute**<br>      **SQLColAttributes**<br>      **SQLColumnPrivileges**<br>      **SQLColumns** <br>      **SQLConnect** <br>      **SQLDataSources**<br>      **SQLDescribeCol**  <br>      **SQLDriverConnect** <br>      **SQLDrivers** <br>      **SQLError**  <br>      **SQLExecDirect**<br>      **SQLForeignKeys**<br>      **SQLGetConnectAttr** <br>      **SQLGetConnectOption** <br>      **SQLGetCursorName**<br>      **SQLGetDescField** <br>      **SQLGetDescRec** <br>      **SQLGetDiagField**
+   :::column-end:::
+   :::column span="":::
+      **SQLGetDiagRec**        <br>      **SQLGetInfo**        <br>      **SQLGetStmtAttr**<br>      **SQLGetTypeInfo**<br>      **SQLNativeSql**<br>      **SQLPrepare**<br>      **SQLPrimaryKeys**<br>      **SQLProcedureColumns**<br>      **SQLProcedures**<br>      **SQLSetConnectAttr**<br>      **SQLSetConnectOption**<br>      **SQLSetCursorName**<br>      **SQLSetDescField**<br>      **SQLSetStmtAttr**<br>      **SQLSpecialColumns**<br>      **SQLStatistics**<br>      **SQLTablePrivileges**<br>      **SQLTables**
+   :::column-end:::
+:::row-end:::
   
  The following is a list of the ODBC Installer and ODBC Translator functions that support both Unicode (W) and ANSI (A) versions:  
   
-|||  
-|-|-|  
-|**SQLConfigDataSource**|**SQLInstallDriverManager**|  
-|**SQLCreateDataSource**|**SQLInstallerError**|  
-|**SQLDataSourceToDriver**|**SQLInstallODBC**|  
-|**SQLDriverToDataSource**|**SQLReadFileDSN**|  
-|**SQLGetAvailableDrivers**|**SQLRemoveDSNFromINI**|  
-|**SQLGetInstalledDrivers**|**SQLValidDSN**|  
-|**SQLGetTranslator**|**SQLWriteDSNToINI**|  
-|**SQLInstallDriver**||  
+:::row:::
+   :::column span="":::
+      **SQLConfigDataSource**<br>      **SQLCreateDataSource**<br>      **SQLDataSourceToDriver**<br>      **SQLDriverToDataSource**<br>      **SQLGetAvailableDrivers**<br>      **SQLGetInstalledDrivers**<br>      **SQLGetTranslator**<br>      **SQLInstallDriver**
+   :::column-end:::
+   :::column span="":::
+      **SQLInstallDriverManager**  <br>      **SQLInstallerError**  <br>      **SQLInstallODBC**  <br>      **SQLReadFileDSN**  <br>      **SQLRemoveDSNFromINI**  <br>      **SQLValidDSN**  <br>      **SQLWriteDSNToINI**
+   :::column-end:::
+:::row-end:::
   
 > [!NOTE]
 >  Deprecated functions have Unicode-to-ANSI mapping support because the ODBC *3.x* Driver Manager supports recompiling ODBC *2.x* applications with the UNICODE **#define**.  

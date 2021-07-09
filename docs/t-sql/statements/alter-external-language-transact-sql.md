@@ -2,15 +2,15 @@
 description: "ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 11/04/2019
+ms.date: 03/15/2021
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # ALTER EXTERNAL LANGUAGE (Transact-SQL)
@@ -20,13 +20,13 @@ Modifies the content in an existing external language extension in the database.
 
 ## Syntax
 
-```text
+```syntaxsql
 ALTER EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]
 {
     SET <file_spec>
     | ADD <file_spec>
-    | REMOVE <file_spec>
+    | REMOVE PLATFORM <platform> 
 }
 [ ; ]  
 
@@ -110,7 +110,7 @@ Currently, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 
-Requires the `ALTER ANY EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to alter an external language. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying ALTER ANY EXTERNAL LANGUAGE as the privilege.
+Requires the `ALTER ANY EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to alter an external language. For all other users, you must explicitly give them permission using a [GRANT](./grant-database-permissions-transact-sql.md) statement, specifying ALTER ANY EXTERNAL LANGUAGE as the privilege.
 
 ## Examples
 
@@ -129,4 +129,4 @@ GO
 [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

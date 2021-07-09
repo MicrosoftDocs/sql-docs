@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "full-text stoplist [SQL Server], permissions"
   - "GRANT statement, full-text permissions"
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GRANT Full-Text Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,7 +132,7 @@ AS *granting_principal*
 ### A. Granting permissions to a full-text catalog  
  The following example grants `Ted` the `CONTROL` permission on the full-text catalog `ProductCatalog`.  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -141,7 +141,7 @@ GRANT CONTROL
 ### B. Granting permissions to a stoplist  
  The following example grants `Mary` the `VIEW DEFINITION` permission on the full-text stoplist `ProductStoplist`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

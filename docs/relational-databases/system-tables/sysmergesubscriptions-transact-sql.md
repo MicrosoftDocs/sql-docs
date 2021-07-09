@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmergesubscriptions_TSQL"
   - "sysmergesubscriptions"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergesubscriptions system table"
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

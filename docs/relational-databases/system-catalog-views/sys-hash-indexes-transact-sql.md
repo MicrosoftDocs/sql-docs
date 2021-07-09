@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.hash_indexes_TSQL"
   - "hash_indexes"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.hash_indexes catalog view"
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.hash_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

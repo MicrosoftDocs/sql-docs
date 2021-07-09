@@ -41,7 +41,6 @@ Shrinks the current database's specified data or log file size. You can use it t
 ## Syntax  
   
 ```syntaxsql
-  
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -62,7 +61,7 @@ The file to be shrunk's logical name.
 The file to be shrunk's identification (ID) number. To get a file ID, use the [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) system function or query the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view in the current database.
   
 *target_size*  
-An integer - the file's new megabyte size. If not specified, DBCC SHRINKFILE reduces to the file creation size.
+An integer - the file's new megabyte size. If not specified or 0, DBCC SHRINKFILE reduces to the file creation size.
   
 > [!NOTE]  
 >  You can reduce an empty file's default size using DBCC SHRINKFILE *target_size*. For example, if you create a 5-MB file and then shrink the file to 3 MB while the file is still empty, the default file size is set to 3 MB. This applies only to empty files that have never contained data.  
@@ -152,7 +151,7 @@ Typically it's the log file that appears not to shrink. This non-shrinking is us
 
 A transaction running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) can block shrink operations. For example, if a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation executes, the shrink operation waits for the delete to complete before continuing. When this blocking happens, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE) to the SQL Server error log. This message is logged every five minutes in the first hour and then every hour. For example, if the error log contains the following error message then the following error will occur:
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

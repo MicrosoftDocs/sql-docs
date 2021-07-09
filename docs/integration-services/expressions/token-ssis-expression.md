@@ -89,7 +89,7 @@ TOKEN("        a little white dog", " ", 1)
  In the following example, the TOKEN function returns the year from a date string.  
   
 ```  
-TOKEN("2009/01/01", "/"), 1  
+TOKEN("2009/01/01", "/", 1)
 ```  
   
  In the following example, the TOKEN function returns the file name from the specified path. For example, if the value of User::Path is "c:\program files\data\myfile.txt", the TOKEN function returns "myfile.txt". The TOKENCOUNT function returns 4 and the TOKEN function return the 4th token, "myfile.txt".  

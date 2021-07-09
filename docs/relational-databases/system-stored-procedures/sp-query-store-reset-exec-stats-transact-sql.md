@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_query_store_reset_exec_stats_TSQL"
   - "sys.sp_query_store_reset_exec_stats_TSQL"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_reset_exec_stats (Transact-SQL)
 

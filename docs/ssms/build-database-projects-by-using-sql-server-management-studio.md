@@ -63,6 +63,5 @@ Solution Explorer is a tool for developers who are creating and reusing scripts 
 A solution consists of one or more script projects. A project consists of one or more scripts or connections. A project may also include nonscript files.  
   
 ## See Also  
-[Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
-  

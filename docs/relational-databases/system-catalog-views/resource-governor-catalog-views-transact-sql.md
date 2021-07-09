@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "Resource Governor, catalog views"
   - "catalog views [SQL Server]"
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

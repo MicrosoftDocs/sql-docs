@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restore.connectstorage.f1"
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Connect to Microsoft Azure Storage (Restore)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

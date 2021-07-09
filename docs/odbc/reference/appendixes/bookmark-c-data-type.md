@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "C data types [ODBC], bookmark C data type"
   - "pseudo-type identifiers [ODBC], bookmark C data type"

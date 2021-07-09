@@ -13,10 +13,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 The following examples demonstrate some of the ways to use the **FOR JSON** clause and its JSON output in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or in client apps.  
   
@@ -87,20 +87,24 @@ SET Details =
   
 ```csharp  
 var queryWithForJson = "SELECT ... FOR JSON";
-var conn = new SqlConnection("<connection string>");
-var cmd = new SqlCommand(queryWithForJson, conn);
-conn.Open();
-var jsonResult = new StringBuilder();
-var reader = cmd.ExecuteReader();
-if (!reader.HasRows)
+using(var conn = new SqlConnection("<connection string>"))
 {
-    jsonResult.Append("[]");
-}
-else
-{
-    while (reader.Read())
+    using(var cmd = new SqlCommand(queryWithForJson, conn))
     {
-        jsonResult.Append(reader.GetValue(0).ToString());
+        conn.Open();
+        var jsonResult = new StringBuilder();
+        var reader = cmd.ExecuteReader();
+        if (!reader.HasRows)
+        {
+            jsonResult.Append("[]");
+        }
+        else
+        {
+            while (reader.Read())
+            {
+                jsonResult.Append(reader.GetValue(0).ToString());
+            }
+        }
     }
 }
 ```  

@@ -4,16 +4,16 @@ title: "Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], about views"
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Views
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
   
  System Views  
- System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the sys.databases catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the sys.databases catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
   
 ## Common View Tasks  
  The following table provides links to common tasks associated with creating or modifying a view.  
@@ -51,5 +51,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Create Views over XML Columns](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
-  
   

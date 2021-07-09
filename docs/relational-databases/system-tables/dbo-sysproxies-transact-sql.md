@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysproxies_TSQL"
   - "sysproxies_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxies system table"
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

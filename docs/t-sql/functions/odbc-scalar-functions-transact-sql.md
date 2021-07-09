@@ -4,10 +4,10 @@ title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -52,15 +52,17 @@ helpviewer_keywords:
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Scalar Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  You can use [ODBC Scalar Functions](https://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
+  You can use [ODBC Scalar Functions](../../odbc/reference/appendixes/appendix-e-scalar-functions.md) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
 ## Usage  
- `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
+ ```syntaxsql
+ SELECT {fn <function_name> [ (<argument>,....n) ] }
+ ```
   
 ## Functions  
  The following tables list ODBC scalar functions that aren't duplicated in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -102,7 +104,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  
   
-```  
+
+```sql 
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -114,7 +117,7 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
 ### B. Using an ODBC Function in a user-defined function  
  The following example uses an ODBC function in a user-defined function:  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -129,14 +132,13 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
-  
 ```  
   
 ### C. Using an ODBC functions in SELECT statements  
  The following SELECT statements use ODBC functions:  
   
-```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+```sql 
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
@@ -177,7 +179,7 @@ SELECT {fn WEEK( @date_exp )};
 ### D. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -189,7 +191,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 ### E. Using an ODBC Function in a user-defined function  
  The following example uses an ODBC function in a user-defined function:  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -204,13 +206,12 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
-  
 ```  
   
 ### F. Using an ODBC functions in SELECT statements  
  The following SELECT statements use ODBC functions:  
   
-```  
+```sql  
 DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
@@ -244,4 +245,4 @@ SELECT {fn WEEK( @date_exp )};
 ```  
   
 ## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
+ [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)

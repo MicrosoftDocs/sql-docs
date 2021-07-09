@@ -6,15 +6,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL Server event classes, TSQL event category"
   - "TSQL event category [SQL Server]"
   - "event classes [SQL Server], TSQL event category"
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TSQL Event Category
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,6 +35,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |[XQuery Static Type Event Class](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an XQuery expression.|  
   
 ## See Also  
- [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
-  
+ [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/language-reference.md)  
   

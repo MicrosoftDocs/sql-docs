@@ -50,7 +50,7 @@ Read more about [adding navigators to filter a mobile report](../../reporting-se
   
 The time chart is the most basic chart in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. The time (and date) axis of the chart is automatically set to the first valid date/time field in the data table.  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![Screenshot of a mobile report time chart.](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. Drag a **Time chart** from the **Layout** tab to the design surface and resize it.
 
@@ -70,7 +70,7 @@ Read more about [grouping data by columns or rows](../../reporting-services/mobi
   
 Unlike in a time chart, in a category chart you group on a field other than a date/time field on the x-axis. This grouping, called the *category coordinate*, has to be on a string, not a numeric, field.
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![Screenshot of mobile report category chart.](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. Drag a **Category chart** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
 
@@ -80,7 +80,7 @@ Unlike in a time chart, in a category chart you group on a field other than a da
   
 ## Totals charts  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![Screenshot of mobile report totals chart.](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 The totals chart accomplishes two separate things: 
 * It doesn't present multiple series -- only the sum, or total, of the defined main series. 
@@ -92,7 +92,7 @@ Read more about [grouping data by columns or rows](../../reporting-services/mobi
   
 Time, category, and totals charts are also available as *comparison charts*. In a comparison chart, you can specify not only a main series, but also a second comparison series. The main and comparison series can be displayed in three different ways.
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![Screenshot of a mobile report comparison time chart.](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. Drag one of the **Comparison charts** (time, category, or totals) from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
 
@@ -115,7 +115,7 @@ Pie and funnel charts are among the simplest of visualizations. You can structur
 * **Pie charts** in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total in the center. Pie charts are good for showing the relative size of different parts of a whole. Too many slices make them hard to read.
 * **Funnel charts** are often used to show stages in a process, such as sales.
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![Screenshot of a mobile report funnel chart.](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### Structure pie and funnel chart data by rows or by columns
 1. Drag a **Pie chart** or **Funnel chart** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
@@ -132,7 +132,7 @@ Read more about [grouping data by columns or rows](../../reporting-services/mobi
   
 Treemaps display metrics by applying their values to the size and color of tiles in a rectangular grid. 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![Screenshot of a mobile report group treemap.](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. Drag a **Treemap** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
 2.  Select the **Data** tab, and in the **Data properties** pane: 
@@ -171,15 +171,15 @@ to audit the major changes contributing to the total value.
 
 1. Drag a **Waterfall chart** from the **Layout** tab to the design surface, resize it, and [get data for it](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), if necessary.
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![Screenshot of a mobile report waterfall chart icon.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
 2.  Select the **Data** tab, and in the **Data properties** pane, select a category field in your data for **Category Coordinate**, and a numeric field for **Main Series**: 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![Screenshot of a mobile report waterfall data.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. Select the **Layout** tab to see the waterfall chart in preview.
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![Screenshot of a mobile report waterfall chart.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    Months with a loss, like February, June, and July, are in red. 
    Months with a gain, like September, October, and November, are in green. 

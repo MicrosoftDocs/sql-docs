@@ -9,15 +9,15 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server managed backup to Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to Microsoft Azure Blob storage. You can choose to allow SQL Server to determine the backup schedule based on the transaction workload of your database. Or you can use advanced options to define a schedule. The retention settings determine how long the backups are stored in Azure Blob storage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 managed backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 managed backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is recommended for SQL Server instances running on Microsoft Azure virtual machines.  
@@ -35,9 +35,9 @@ ms.author: mikeray
 |Prerequisite|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure Account**|You can get started with Azure with a [free trial](https://azure.microsoft.com/pricing/free-trial/) before exploring [purchase options](https://azure.microsoft.com/pricing/purchase-options/).|  
-|**Azure Storage Account**|The backups are stored in Azure blob storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
-|**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://manage.windowsazure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) command.|  
-|**Shared Access Signature (SAS)**|Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). You can create a SAS token in code or with the **New-AzureStorageContainerSASToken** PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Azure Storage Account**|The backups are stored in Azure blob storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create).|  
+|**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://manage.windowsazure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](/powershell/azure/) command.|  
+|**Shared Access Signature (SAS)**|Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview). You can create a SAS token in code or with the **New-AzureStorageContainerSASToken** PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|SQL Server Agent must be running for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to work. Consider setting the startup option to automatic.|  
   
 ## Components  
@@ -115,7 +115,7 @@ ms.author: mikeray
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent only supports database full and log backups. File backup automation is not supported.  
   
--   Microsoft Azure Blob Storage service is the only supported backup storage option. Backups to disk or tape are not supported.  
+-   The Microsoft Azure Blob Storage service is the only supported backup storage option. Backups to disk or tape are not supported.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses the Backup to Block Blob feature. The maximum size of a block blob is 200 GB. But by utilizing striping, the maximum size of an individual backup can be up to 12 TB. If your backup requirements exceed this, consider using compression, and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Microsoft Azure storage using **BACKUP TO URL** Transact-SQL statement. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
@@ -127,5 +127,4 @@ ms.author: mikeray
 - [Disable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [Backup and Restore of System Databases](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [Backup and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
-  
   

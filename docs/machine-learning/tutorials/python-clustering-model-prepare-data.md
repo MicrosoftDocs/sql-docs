@@ -9,20 +9,20 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorial: Prepare data to categorize customers with SQL machine learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 In part two of this four-part tutorial series, you'll restore and prepare the data from a database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 In part two of this four-part tutorial series, you'll restore and prepare the data from a database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 In part two of this four-part tutorial series, you'll restore and prepare the data from a database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 

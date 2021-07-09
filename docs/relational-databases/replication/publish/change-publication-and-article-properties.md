@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Change Publication and Article Properties
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)   
  [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

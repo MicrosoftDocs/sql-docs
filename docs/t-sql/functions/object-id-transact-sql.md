@@ -4,10 +4,10 @@ title: "OBJECT_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OBJECT_ID"
   - "OBJECT_ID_TSQL"
@@ -26,7 +26,7 @@ helpviewer_keywords:
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ### A. Returning the object ID for a specified object  
  The following example returns the object ID for the `Production.WorkOrder` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';  
@@ -86,7 +86,7 @@ GO
 ### B. Verifying that an object exists  
  The following example checks for the existence of a specified table by verifying that the table has an object ID. If the table exists, it is deleted. If the table does not exist, the `DROP TABLE` statement is not executed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'dbo.AWBuildVersion', N'U') IS NOT NULL  
@@ -96,13 +96,16 @@ GO
   
 ### C. Using OBJECT_ID to specify the value of a system function parameter  
  The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by using the [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) function.  
+ 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 > [!IMPORTANT]  
->  When you are using the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always make sure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.  
+>  When you are using the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always make sure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.
   
-```  
-DECLARE @db_id int;  
-DECLARE @object_id int;  
+```sql  
+DECLARE @db_id INT;  
+DECLARE @object_id INT;  
 SET @db_id = DB_ID(N'AdventureWorks2012');  
 SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
 IF @db_id IS NULL   
@@ -125,7 +128,7 @@ GO
 ### D: Returning the object ID for a specified object  
  The following example returns the object ID for the `FactFinance` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
   
-```  
+```sql  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   

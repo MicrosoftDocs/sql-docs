@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.availability_databases_cluster_TSQL"
   - "sys.availability_databases_cluster"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.availability_databases_cluster catalog view"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

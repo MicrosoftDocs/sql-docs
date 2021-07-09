@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WAITFOR"
   - "WAITFOR_TSQL"
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "WAITFOR statement"
   - "timing executions"
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +106,7 @@ WAITFOR
 ### A. Using WAITFOR TIME  
  The following example executes the stored procedure `sp_update_job` in the msdb database at 10:20 P.M. (`22:20`).  
   
-```  
+```sql  
 EXECUTE sp_add_job @job_name = 'TestJob';  
 BEGIN  
     WAITFOR TIME '22:20';  
@@ -119,7 +119,7 @@ GO
 ### B. Using WAITFOR DELAY  
  The following example executes the stored procedure after a two-hour delay.  
   
-```  
+```sql  
 BEGIN  
     WAITFOR DELAY '02:00';  
     EXECUTE sp_helpdb;  
@@ -130,7 +130,7 @@ GO
 ### C. Using WAITFOR DELAY with a local variable  
  The following example shows how a local variable can be used with the `WAITFOR DELAY` option. This stored procedure waits for a variable period of time and then returns information to the user as the elapsed numbers of hours, minutes, and seconds.  
   
-```  
+```sql  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
     DROP PROCEDURE dbo.TimeDelay_hh_mm_ss;  
 GO  
@@ -139,7 +139,7 @@ CREATE PROCEDURE dbo.TimeDelay_hh_mm_ss
     @DelayLength char(8)= '00:00:00'  
     )  
 AS  
-DECLARE @ReturnInfo varchar(255)  
+DECLARE @ReturnInfo VARCHAR(255)  
 IF ISDATE('2000-01-01 ' + @DelayLength + '.000') = 0  
     BEGIN  
         SELECT @ReturnInfo = 'Invalid time ' + @DelayLength   

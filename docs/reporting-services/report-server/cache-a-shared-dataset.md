@@ -21,7 +21,7 @@ ms.author: maggies
   
 ### To schedule the expiration of a cached report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the shared dataset for which you want to set caching properties, hover over the item, and click the drop-down arrow.  
   
@@ -40,5 +40,4 @@ ms.author: maggies
   
 ## See Also  
  [Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
-  
   

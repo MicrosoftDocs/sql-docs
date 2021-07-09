@@ -25,7 +25,7 @@ These settings control how your test connects to the database that you will test
 -   **Schema deployment**. A database project is an offline representation of your database. The database project represents the structure of your database objects but contains no data. After you make schema changes in a database project, you can test them in an actual database. In the schema deployment step, database objects that you want to test are copied from your database project into the database on which you run tests. For more information about schema deployment, see [Deploy a Database Schema](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Tests do not run in the solution folder but in a separate folder on the local hard disk. Although you can configure aspects of test deployment, you typically do not need to configure them for unit tests. For more information about test deployment, see [Running Tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Tests do not run in the solution folder but in a separate folder on the local hard disk. Although you can configure aspects of test deployment, you typically do not need to configure them for unit tests. For more information about test deployment, see [Running Tests](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100)).  
   
 ## <a name="SpecifyConnectionStrings"></a>Specify Connection Strings  
   
@@ -80,4 +80,3 @@ These settings control how your test connects to the database that you will test
 ## See Also  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

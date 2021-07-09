@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysfilegroups_TSQL"
   - "sys.sysfilegroups"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysfilegroups system table"
   - "sys.sysfilegroups compatibility view"
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysfilegroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

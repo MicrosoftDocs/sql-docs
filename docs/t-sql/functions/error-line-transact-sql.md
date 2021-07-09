@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ERROR_LINE"
   - "ERROR_LINE_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ERROR_LINE function"
   - "CATCH block"
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # ERROR_LINE (Transact-SQL)
@@ -63,7 +63,7 @@ In nested CATCH blocks, `ERROR_LINE` returns the error line number specific to t
 ### A. Using ERROR_LINE in a CATCH block  
 This code example shows a `SELECT` statement that generates a divide-by-zero error. `ERROR_LINE` returns the line number where the error occurred.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -77,7 +77,7 @@ GO
 ### B. Using ERROR_LINE in a CATCH block with a stored procedure  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_LINE` returns the line number where the error occurred.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -104,7 +104,7 @@ GO
 ### C. Using ERROR_LINE in a CATCH block with other error-handling tools  
 This code example shows a `SELECT` statement that generates a divide-by-zero error. `ERROR_LINE` returns the line number where the error occurred, and information relating to the error itself.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

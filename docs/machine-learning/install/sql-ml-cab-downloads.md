@@ -1,24 +1,24 @@
 ---
-title: Download updates for offline install
+title: CAB download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
-# CAB downloads for cumulative updates of SQL Server Machine Learning Services
+# CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Download Python and R CAB files for SQL Server 2016 R Services. These CAB files contain updates to the the R Services feature and are used when installing SQL Server on a server without internet access.
 ::: moniker-end
 
@@ -26,17 +26,17 @@ Below you will find download links to CAB files for each cumulative update. For 
 
 ## Prerequisites
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Start with a baseline installation. On SQL Server Machine Learning Services, the initial release is the baseline installation. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
 ::: moniker-end
 
 You can also apply cumulative updates.
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 ## SQL Server 2019 CABs
 
@@ -44,6 +44,11 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release | Component | Download link | Issues addressed |
 |------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136731)  |  |
 |**[SQL Server 2019 CU5](https://support.microsoft.com/help/4552255)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
 | | R Server              | [SRS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2122004)  |  |
@@ -66,13 +71,13 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 | | Python Server         | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085685)   |  |
 |**Initial Release** | | | |
 | | Microsoft R Open       | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686)  |  |
-| | R Server               | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792)|   |  |
+| | R Server               | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792)|   |
 | | Microsoft Python Open  | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |  |
 | | Python Server          | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685)   |  |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 ## SQL Server 2017 CABs
 
@@ -80,7 +85,12 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/en-us/help/4541283/)** |  |  |  |
+|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)-[CU23](https://support.microsoft.com/help/5000685/)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136731)  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/help/4541283/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | Fixes the bug where `sp_execute_external_script` executing an R script shows warning message |
 | | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | No change from previous versions. |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | No change from previous versions. |
@@ -92,9 +102,9 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 | | Python Server    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| Binaries within the package are now signed.  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
-| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contains a fix for upgrading an [operationalized standalone R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) to apply the update. |
+| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contains a fix for upgrading an [operationalized standalone R Server](/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) to apply the update. |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |
-| | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contains a fix for upgrading an [operationalized standalone Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) to apply the update. |
+| | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contains a fix for upgrading an [operationalized standalone Python Server](/machine-learning-server/what-is-operationalization), as installed through SQL Server Setup. Use the CU13 CABs and follow [these instructions](sql-machine-learning-standalone-windows-install.md#apply-cu) to apply the update. |
 |**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Minor fixes.|
@@ -124,12 +134,12 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |
-| | Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Python model serialization in revoscalepy, using the [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>[Native scoring](../predictions/native-scoring-predict-transact-sql.md) support, plus enhancements to [real-time scoring](../predictions/real-time-scoring.md). 
+| | Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Python model serialization in revoscalepy, using the [rx_serialize_model function](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>[Native scoring](../predictions/native-scoring-predict-transact-sql.md) support, plus enhancements to [real-time scoring](../predictions/real-time-scoring.md). 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| No change from previous versions. |
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. | 
-| | Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Adds rx_create_col_info for returning schema information. <br/>Enhancements to [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) to support parallel scenarios using the `RxLocalParallel` compute context.|
+| | Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Adds rx_create_col_info for returning schema information. <br/>Enhancements to [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec) to support parallel scenarios using the `RxLocalParallel` compute context.|
 |**Initial release** |  |  |
 | | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 | | R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -138,7 +148,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -148,7 +158,7 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 
 |Release  |Download link  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU14**     |
+|**SQL Server 2016 SP2 CU14-CU15**     |
 |Microsoft R Open      |[SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)|
 |Microsoft R Server    |[SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)|
 |**SQL Server 2016 SP2 CU6-CU13**     |
@@ -185,8 +195,6 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 > [!NOTE]
 > 
 > When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
-
-If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 

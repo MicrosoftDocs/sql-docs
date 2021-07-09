@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "timestamp data type"
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FOR XML Support for the timestamp Data Type
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

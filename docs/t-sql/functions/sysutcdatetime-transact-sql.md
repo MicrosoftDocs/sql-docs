@@ -4,10 +4,10 @@ title: "SYSUTCDATETIME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SYSUTCDATETIME"
   - "SYSUTCDATETIME_TSQL"
@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSUTCDATETIME ( )  
 ```  
 
@@ -63,7 +63,7 @@ SYSUTCDATETIME ( )
 ### A. Showing the formats that are returned by the date and time functions  
  The following example shows the different formats that are returned by the date and time functions.  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -86,7 +86,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Converting date and time to date  
  The following example shows you how to convert date and time values to `date`.  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -109,7 +109,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### C. Converting date and time values to time  
  The following example shows you how to convert date and time values to `time`.  
   
- ```
+ ```sql
 DECLARE @DATETIME DATETIME = GetDate();
 DECLARE @TIME TIME
 SELECT @TIME = CONVERT(time, @DATETIME)

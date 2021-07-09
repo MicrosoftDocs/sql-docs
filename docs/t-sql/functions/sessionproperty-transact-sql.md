@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SESSIONPROPERTY"
   - "SESSIONPROPERTY_TSQL"
@@ -30,8 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SESSIONPROPERTY (option)  
 ```  
   
@@ -61,7 +60,7 @@ SESSIONPROPERTY (option)
 ## Examples  
  The following example returns the setting for the `CONCAT_NULL_YIELDS_NULL` option.  
   
-```  
+```sql  
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   

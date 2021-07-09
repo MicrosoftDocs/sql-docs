@@ -1,9 +1,11 @@
 ---
-description: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views"
+description: "Azure Synapse Analytics and Parallel Data Warehouse Catalog Views"
 title: Catalog Views
-titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
+titleSuffix: Azure Synapse Analytics and Parallel Data Warehouse
 ms.date: 10/29/2019
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
+ms.technology: system-objects
 ms.reviewer: jrasnick
 ms.topic: language-reference
 dev_langs: 
@@ -11,10 +13,10 @@ dev_langs:
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
 ---
-# SQL Data Warehouse and Parallel Data Warehouse Catalog Views
+# Azure Synapse Analytics and Parallel Data Warehouse Catalog Views
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
@@ -59,11 +61,11 @@ ms.custom: seo-dt-2019
 
  The following catalog views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
 
- [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) 
 
- [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) 
 
- [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (Preview)
+ [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) (Preview)
 
  [sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)
 
@@ -71,7 +73,7 @@ ms.custom: seo-dt-2019
   
  [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
   
- [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest)
+ [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](./sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views
 
@@ -99,5 +101,4 @@ ms.custom: seo-dt-2019
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
   

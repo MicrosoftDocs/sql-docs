@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_CALLER_IS_NOT_OWNER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

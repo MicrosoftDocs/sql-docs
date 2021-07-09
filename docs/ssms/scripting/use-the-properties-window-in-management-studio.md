@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Properties Window in Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,6 +47,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  On the **Execution plan** tab of the SQL Query Editor click the icons of the operators to view information about the operators in the Properties window.  
   
 ## See Also  
- [Properties Window &#40;Management Studio&#41;](https://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
-  
+ [Properties Window &#40;Management Studio&#41;](../properties-window-management-studio.md)  
   

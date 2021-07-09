@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
@@ -43,7 +43,7 @@ A quoted string that can be passed to an SQL statement, or false if failure.
 ## Remarks  
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## Example  
+## String escape example  
   
 ```  
 <?php  
@@ -64,7 +64,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## Example  
+## PDO quote example  
 
 The following script shows a few examples of how extended string types affect PDO::quote() with PHP 7.2+.
 

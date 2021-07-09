@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLServer:CLR"
   - "CLR object [SQL Server]"
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, CLR Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

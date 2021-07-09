@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "servers [SQL Server], databases listed on"
   - "listing databases"
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # View list of databases on SQL Server     

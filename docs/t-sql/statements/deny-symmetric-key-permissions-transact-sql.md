@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -108,7 +108,7 @@ DENY permission [ ,...n ]
 ## Examples  
  The following example denies `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

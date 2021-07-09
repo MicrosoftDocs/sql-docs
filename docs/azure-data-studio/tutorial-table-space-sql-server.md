@@ -39,7 +39,7 @@ Azure Data Studio has a built-in sample widget to monitor the space used by tabl
 
 4. To customize the **dashboard.database.widgets** settings, you need to edit the **dashboard.database.widgets** entry in the **USER SETTINGS** section.
 
-   ![Search settings](media/tutorial-table-space-sql-server/search-settings.png)
+   ![Screenshot showing the USER SETTINGS section with the Dashboard > Database Widgets section called out.](media/tutorial-table-space-sql-server/search-settings.png)
 
    If there is no **dashboard.database.widgets** in the **USER SETTINGS** section, hover over the **dashboard.database.widgets** text in the DEFAULT SETTINGS column and click the *gear* icon that appears to the left of the text and click **Copy as Setting JSON**. If the pop-up says **Replace in Settings**, don't click it! Go to the **USER SETTINGS** column to the right and locate the **dashboard.database.widgets** section and advance to the next step.
 
@@ -60,7 +60,7 @@ Azure Data Studio has a built-in sample widget to monitor the space used by tabl
 
    The **dashboard.database.widgets** section should look similar to the following image:
 
-    ![Search settings](./media/tutorial-table-space-sql-server/insight-table-space.png)
+    ![Screenshot of the settings.json file with the first object of the dashboard.database.widgets array.](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 6. Press **Ctrl+S** to save the settings.
 

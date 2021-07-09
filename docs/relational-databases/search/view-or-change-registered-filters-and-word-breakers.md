@@ -15,7 +15,7 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # View or Change Registered Filters and Word Breakers
@@ -43,7 +43,7 @@ ms.custom: "seo-lt-2019"
 1.  Use the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) system stored procedure to update the list of languages, as follows:  
   
     ```  
-    exec sp_fulltext_service 'update_languages';   
+    EXEC sp_fulltext_service 'update_languages';   
     ```  
   
 ### To unregister uninstalled word breakers and filters  
@@ -51,13 +51,13 @@ ms.custom: "seo-lt-2019"
 1.  Use the **sp_fulltext_service** to update the list of languages, as follows:  
   
     ```  
-    exec sp_fulltext_service 'update_languages'  
+    EXEC sp_fulltext_service 'update_languages';  
     ```  
   
 2.  Use the **sp_fulltext_service** to restart the filter daemon host processes (fdhost.exe), as follows:  
   
     ```  
-    exec sp_fulltext_service 'restart_all_fdhosts';  
+    EXEC sp_fulltext_service 'restart_all_fdhosts';  
     ```  
   
 ### To replace existing word breakers or filters when installing new ones  
@@ -75,7 +75,7 @@ ms.custom: "seo-lt-2019"
   
      **To install and load Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server]()  
   
 4.  Use **sp_fulltext_service** to load newly installed word breakers and filters in the server instance, as follows:  
   
@@ -99,5 +99,4 @@ ms.custom: "seo-lt-2019"
  [Set the Service Account for the Full-text Filter Daemon Launcher](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

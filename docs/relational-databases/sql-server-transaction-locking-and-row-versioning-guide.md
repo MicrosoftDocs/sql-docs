@@ -4,7 +4,7 @@ title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction Locking and Row Versioning Guide
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -515,9 +515,9 @@ GO
   
 <a name="lock_compat_table"></a> The following table shows the compatibility of the most commonly encountered lock modes.  
   
-||Existing granted mode||||||  
+|Existing granted mode|**IS**|**S**|**U**|**IX**|**SIX**|**X**|
 |------|---------------------------|------|------|------|------|------|  
-|**Requested mode**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Requested mode**|
 |**Intent shared (IS)**|Yes|Yes|Yes|Yes|Yes|No|  
 |**Shared (S)**|Yes|Yes|Yes|No|No|No|  
 |**Update (U)**|Yes|Yes|No|No|No|No|  
@@ -558,9 +558,9 @@ GO
   
  Key-range lock modes have a compatibility matrix that shows which locks are compatible with other locks obtained on overlapping keys and ranges.  
   
-||Existing granted mode|||||||  
+|Existing granted mode|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|
 |------|---------------------------|------|------|------|------|------|------|  
-|**Requested mode**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Requested mode**  
 |**Shared (S)**|Yes|Yes|No|Yes|Yes|Yes|No|  
 |**Update (U)**|Yes|No|No|Yes|No|Yes|No|  
 |**Exclusive (X)**|No|No|No|No|No|Yes|No|  
@@ -804,7 +804,7 @@ GO
 ## <a name="dynamic_locks"></a> Dynamic Locking
  Using low-level locks, such as row locks, increases concurrency by decreasing the probability that two transactions will request locks on the same piece of data at the same time. Using low-level locks also increases the number of locks and the resources needed to manage them. Using high-level table or page locks lowers overhead, but at the expense of lowering concurrency.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![Locking Cost vs. Concurrency Cost](../relational-databases/media/lockcht.png) 
   
  The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy to determine the most cost-effective locks. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically determines what locks are most appropriate when the query is executed, based on the characteristics of the schema and query. For example, to reduce the overhead of locking, the optimizer may choose page-level locks in an index when performing an index scan.  
   
@@ -934,7 +934,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 The following example shows the output, after clicking on the first link of the result above:
 
@@ -1944,7 +1944,7 @@ GO
   
  The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can but used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Customize"></a> Customizing Locking for an Index  
  The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
@@ -2074,8 +2074,17 @@ GO
   
 -   Access the least amount of data possible while in a transaction.  
     This lessens the number of locked rows, thereby reducing contention between transactions.  
+    
+-   Avoid pessimistic locking hints such as holdlock whenever possible. 
+    Hints like HOLDLOCK or SERIALIZABLE isolation level can cause processes to wait even on shared locks and reduce concurrency
+
+-   Avoid using Implicit transactions when possible
+    Implicit transactions can introduce unpredictable behavior due to their nature. See [Implicit Transactions and concurrency problems](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
+
+-   Design indexes with a reduced [fill factor](indexes/specify-fill-factor-for-an-index.md)
+    Decreasing the fill factor may help you prevent or decrease fragmentation of index pages and thus reduce index seek times especially when retrieved from disk. To view fragmentation information for the data and indexes of a table or view, you can usesys.dm_db_index_physical_stats. 
   
-#### Avoiding concurrency and resource problems  
+#### Implicit transactions and avoiding concurrency and resource problems  
  To prevent concurrency and resource problems, manage implicit transactions carefully. When using implicit transactions, the next [!INCLUDE[tsql](../includes/tsql-md.md)] statement after `COMMIT` or `ROLLBACK` automatically starts a new transaction. This can cause a new transaction to be opened while the application browses through data, or even when it requires input from the user. After completing the last transaction required to protect data modifications, turn off implicit transactions until a transaction is once again required to protect data modifications. This process lets the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] use autocommit mode while the application is browsing data and getting input from the user.  
   
  In addition, when the snapshot isolation level is enabled, although a new transaction will not hold locks, a long-running transaction will prevent the old versions from being removed from `tempdb`.  
@@ -2106,8 +2115,8 @@ GO
  You may have to use the KILL statement. Use this statement very carefully, however, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="Additional_Reading"></a> Additional Reading   
-[Overhead of Row Versioning](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[Overhead of Row Versioning](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Extended Events](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

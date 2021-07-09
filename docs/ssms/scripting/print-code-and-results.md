@@ -15,7 +15,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Print Code and Results
@@ -29,6 +29,5 @@ When you print a query or file, colorized elements print in color if your printe
  If you have line numbers enabled in the Editor, the line numbers will not print unless you select **Include line numbers** in the **Print** dialog box on the **File** menu.  
   
 ## See Also  
- [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)  
-  
+ [Change Font Color, Size, and Style](./change-font-color-size-and-style.md)  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@PACK_RECEIVED_TSQL"
   - "@@PACK_RECEIVED"
@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -45,7 +45,7 @@ ms.author: vanto
 ## Examples  
  The following example shows the usage of `@@PACK_RECEIVED`.  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

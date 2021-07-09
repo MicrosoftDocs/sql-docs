@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.mirroring.f1"
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Properties (Mirroring Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

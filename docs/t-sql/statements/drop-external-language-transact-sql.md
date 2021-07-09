@@ -6,11 +6,11 @@ ms.date: 08/08/2019
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # DROP EXTERNAL LANGUAGE (Transact-SQL)  
@@ -20,7 +20,7 @@ Deletes an existing external language.
 
 ## Syntax
 
-```text
+```syntaxsql
 DROP EXTERNAL LANGUAGE <language_name>
 ```
 

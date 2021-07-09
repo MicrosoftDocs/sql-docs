@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
@@ -48,7 +48,7 @@ If PDO::__construct fails for any reason, an exception is thrown, even if PDO::A
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## Example  
+## Example with database  
 This example shows how to connect to a server using Windows Authentication, and specify a database.  
   
 ```  
@@ -64,7 +64,7 @@ This example shows how to connect to a server using Windows Authentication, and 
 ?>  
 ```  
   
-## Example  
+## Example without database  
 This example shows how to connect to a server, specifying the database later.  
   
 ```  

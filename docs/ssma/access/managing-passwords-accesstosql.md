@@ -126,5 +126,4 @@ The SSMA Console application allows you to export encrypted database passwords p
 7. Please confirm password: xxxxxxxx  
 
 ## See Also  
-[Executing the SSMA Console (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Executing the SSMA Console (Access)](./executing-the-ssma-console-accesstosql.md)  

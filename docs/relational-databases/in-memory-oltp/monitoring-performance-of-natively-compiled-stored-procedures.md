@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
 
@@ -127,6 +127,5 @@ GO
  The estimated execution plan for natively compiled stored procedures shows the query operators and expressions for the queries in the procedure. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support all SHOWPLAN_XML attributes for natively compiled stored procedures. For example, attributes related to query optimizer costing are not part of the SHOWPLAN_XML for the procedure.  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

@@ -15,7 +15,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Specify a Hit Count
@@ -42,7 +42,7 @@ A breakpoint hit count is a counter that is incremented by the [!INCLUDE[tsql](.
   
  If you want to track how many times a breakpoint is hit without having the breakpoint break execution, specify a hit count with a very high value so the breakpoint never breaks.  
   
- The default action for a breakpoint is to break execution when both the hit count and breakpoint condition have been satisfied. For information about specifying other actions, see [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
+ The default action for a breakpoint is to break execution when both the hit count and breakpoint condition have been satisfied. For information about specifying other actions, see [Specify a Breakpoint Action](./specify-a-breakpoint-action.md).  
   
 #### To Specify a Hit Count  
   
@@ -73,6 +73,5 @@ A breakpoint hit count is a counter that is incremented by the [!INCLUDE[tsql](.
 4.  Click **OK** or **Cancel** to exit the dialog.  
   
 ## See Also  
- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)  
   

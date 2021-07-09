@@ -1,13 +1,13 @@
 ---
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
-title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/08/2020
+ms.date: 04/13/2021
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EXTERNAL FILE FORMAT"
   - "CREATE_EXTERNAL_FILE_FORMAT"
@@ -17,31 +17,28 @@ helpviewer_keywords:
   - "External"
   - "External, file format"
   - "PolyBase, external file format"
-ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
 Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with External Streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
+To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
 The following file formats are supported:
   
 - Delimited Text  
   
-- Hive RCFile  
+- Hive RCFile  - Does not apply to Azure Synapse Analytics.
   
-- Hive ORC
+- Hive ORC - Does not apply to Azure Synapse Analytics.
   
 - Parquet
 
-- JSON - Applies to Azure SQL Edge only.
+- JSON - Applies to Azure SQL Edge only. For information on using OPENROWSET to import JSON data in other platforms, see [Import JSON documents into SQL Server](../../relational-databases/json/import-json-documents-into-sql-server.md) or [Query JSON files using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-json-files).
 
-
-To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
@@ -63,7 +60,7 @@ WITH (
 {  
     FIELD_TERMINATOR = field_terminator  
     | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -81,6 +78,10 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### [ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -92,6 +93,10 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### [Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -115,6 +120,10 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## Arguments  
@@ -319,8 +328,7 @@ Notes about the table:
 #### ENCODING
    `Encoding = {'UTF8' | 'UTF16'}`
    
- In Azure SQL Data Warehouse and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
-
+ In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Permissions  
  Requires ALTER ANY EXTERNAL FILE FORMAT permission.
@@ -350,7 +358,7 @@ Notes about the table:
 ## Performance
  Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
   
- Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except Azure SQL Data Warehouse Gen2 which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
+ Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2 which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
   
 ## Examples  
   
@@ -403,7 +411,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
+### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics Only)
  This example creates an external file format for CSV file with a single header row. 
   
 ```sql  
@@ -431,5 +439,5 @@ WITH (
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

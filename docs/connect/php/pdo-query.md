@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
@@ -56,7 +56,7 @@ If all the data in a result set is not fetched, the next PDO::query call will no
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## Example  
+## Query example  
 This example shows several queries.  
   
 ```  
@@ -112,8 +112,8 @@ $stmt = null;
 ?>  
 ```
 
-## Example
-This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+## Sql_variant example
+This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
 ```
 <?php
@@ -164,4 +164,3 @@ Array
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

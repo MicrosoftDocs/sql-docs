@@ -4,10 +4,10 @@ title: "SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/15/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET ANSI_WARNINGS"
   - "ANSI_WARNINGS_TSQL"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SET ANSI_WARNINGS statement"
   - "ANSI_WARNINGS option"
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,16 +33,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
-  
+
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -70,7 +68,7 @@ ANSI_WARNINGS must be ON when you are creating or manipulating indexes on comput
 > [!IMPORTANT]
 > ANSI_WARNINGS should be set to ON for executing distributed queries.  
   
-Clients, such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON with a connection flag. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications. For additional information, see [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) in the  Tabular Data Stream (TDS) protocol specifications. 
+Clients, such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON with a connection flag. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications. For additional information, see [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) in the  Tabular Data Stream (TDS) protocol specifications. 
 
 When ANSI_DEFAULTS is ON, ANSI_WARNINGS is enabled.  
   
@@ -182,5 +180,4 @@ DROP TABLE T1;
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONCAT"
   - "CONCAT_TSQL"
@@ -16,9 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT function"
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 -------------------------  
 Happy Birthday 11/25  
@@ -83,9 +83,9 @@ Happy Birthday 11/25
   
 ```sql
 CREATE TABLE #temp (  
-    emp_name nvarchar(200) NOT NULL,  
-    emp_middlename nvarchar(200) NULL,  
-    emp_lastname nvarchar(200) NOT NULL  
+    emp_name NVARCHAR(200) NOT NULL,  
+    emp_middlename NVARCHAR(200) NULL,  
+    emp_lastname NVARCHAR(200) NOT NULL  
 );  
 INSERT INTO #temp VALUES( 'Name', NULL, 'Lastname' );  
 SELECT CONCAT( emp_name, emp_middlename, emp_lastname ) AS Result  
@@ -94,7 +94,7 @@ FROM #temp;
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ------------------  
 NameLastname  

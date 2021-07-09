@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmergeschemachange_TSQL"
   - "sysmergeschemachange"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergeschemachange system table"
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

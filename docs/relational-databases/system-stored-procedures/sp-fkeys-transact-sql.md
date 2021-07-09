@@ -4,10 +4,10 @@ title: "sp_fkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_fkeys"
   - "sp_fkeys_TSQL"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -112,7 +112,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
  The following example retrieves a list of foreign keys for the `DimDate` table in the `AdventureWorksPDW2012` database. No rows are returned because [!INCLUDE[ssDW](../../includes/ssdw-md.md)] does not support foreign keys.  
   
 ```sql  
-EXEC sp_fkeys @pktable_name = N'DimDate;  
+EXEC sp_fkeys @pktable_name = N'DimDate';  
 ```  
   
 ## See Also  

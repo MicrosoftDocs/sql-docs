@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables
 
@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports an application design pattern that lavishes performance resources on relatively current data. This pattern can apply when current data is read or updated far more frequently than older data is. In this case, we say the current data is *active* or *hot*, and the older data is *cold*.
 
-The main idea is to store *hot* data in a memory-optimized table. On a perhaps weekly or monthly basis, older data that has become *cold* is moved to a partitioned table. The partitioned table has its data stored on a disk or other hard drive, not in memory.
+The main idea is to store *hot* data in a memory-optimized table. On a weekly or monthly basis, older data that has become *cold* is moved to a partitioned table. The partitioned table has its data stored on a disk or other hard drive, not in memory.
 
 Typically, this design uses a **datetime** key to enable the move process to efficiently distinguish between hot versus cold data.
 
@@ -292,4 +292,4 @@ GO
 
 ## See Also
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)

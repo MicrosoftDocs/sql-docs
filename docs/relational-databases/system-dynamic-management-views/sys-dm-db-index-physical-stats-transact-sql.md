@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_index_physical_stats"
   - "sys.dm_db_index_physical_stats_TSQL"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sys.dm_db_index_physical_stats dynamic management function"
   - "fragmentation [SQL Server]"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ sys.dm_db_index_physical_stats (
  *object_id* \| NULL \| 0 \| DEFAULT  
  Is the object ID of the table or view the index is on. *object_id* is **int**.  
   
- Valid inputs are the ID number of a table and view, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context. As of [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], valid inputs also include the service broker queue name or the queue internal table name. When default parameters are applied (i.e. all objects, all indexes, etc), fragmentation information for all queues are included in the result set.  
+ Valid inputs are the ID number of a table and view, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context. As of [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], valid inputs also include the service broker queue name or the queue internal table name. When default parameters are applied (i.e. all objects, all indexes, etc), fragmentation information for all queues are included in the result set.  
   
  Specify NULL to return information for all tables and views in the specified database. If you specify NULL for *object_id*, you must also specify NULL for *index_id* and *partition_number*.  
   
@@ -411,7 +411,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  The following examples shows how to query server broker queues for fragmentation.  
   
@@ -431,7 +431,5 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
   
-  
-

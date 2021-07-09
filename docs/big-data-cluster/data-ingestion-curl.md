@@ -42,12 +42,24 @@ For example:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
+## Authentication with Active Directory
+
+For deployments with Active Directory, use the authentication parameter with `curl` with Negotiate authentication. 
+
+To use `curl` with Active Directory authentication, run this command:
+
+```
+kinit <username>
+```
+
+The command generates a Kerberos token for `curl` to use. The commands demonstrated in the next sections specify the `--anyauth` parameter for `curl`. For URLs that require Negotiate authentication, `curl` automatically detects and uses the generated Kerberos token instead of username and password to authenticate to the URLs.
+
 ## List a file
 
 To list file under **hdfs:///product_review_data**, use the following curl command:
 
 ```terminal
-curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -55,7 +67,7 @@ curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP ex
 For endpoints that do not use root, use the following curl command:
 
 ```terminal
-curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## Put a local file into HDFS
@@ -63,7 +75,7 @@ curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-e
 To put a new file **test.csv** from local directory to product_review_data directory, use the following curl command (the **Content-Type** parameter is required):
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -71,7 +83,7 @@ curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP
 For endpoints that do not use root, use the following curl command:
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## Create a directory
@@ -79,14 +91,14 @@ curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-sv
 To create a directory **test** under `hdfs:///`, use the following command:
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 For endpoints that do not use root, use the following curl command:
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## Next steps

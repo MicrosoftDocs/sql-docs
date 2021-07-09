@@ -6,12 +6,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Backup/Restore event class"
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Audit Backup and Restore Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

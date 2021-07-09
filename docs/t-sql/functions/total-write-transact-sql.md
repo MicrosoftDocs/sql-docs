@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@TOTAL_WRITE"
   - "@@TOTAL_WRITE_TSQL"
@@ -32,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@TOTAL_WRITE  
 ```  
   
@@ -48,7 +47,7 @@ ms.author: jrasnick
 ## Examples  
  The following example shows returning the total number of disk reads and writes as of the current date and time.  
   
-```  
+```sql
 SELECT @@TOTAL_READ AS 'Reads', @@TOTAL_WRITE AS 'Writes', GETDATE() AS 'As of'  
 ```  
   

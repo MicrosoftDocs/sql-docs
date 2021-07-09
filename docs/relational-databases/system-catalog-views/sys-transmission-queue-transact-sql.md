@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "transmission_queue"
   - "sys.transmission_queue_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.transmission_queue catalog view"
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

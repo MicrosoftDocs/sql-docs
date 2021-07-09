@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "ExecuteToStream method"
   - "SQL queries [SQLXML]"
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries (SQLXML Managed Classes)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

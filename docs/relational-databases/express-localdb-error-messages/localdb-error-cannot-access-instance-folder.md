@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

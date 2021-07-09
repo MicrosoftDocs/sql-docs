@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER SERVICE"
   - "ALTER_SERVICE_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ALTER SERVICE statement"
   - "services [Service Broker], modifying"
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,8 +31,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
    [ ( < opt_arg > [ , ...n ] ) ]  
@@ -71,7 +70,7 @@ ALTER SERVICE service_name
 ### A. Changing the queue for a service  
  The following example changes the `//Adventure-Works.com/Expenses` service to use the queue `NewQueue`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE NewQueue ;  
 ```  
@@ -79,7 +78,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### B. Adding a new contract to the service  
  The following example changes the `//Adventure-Works.com/Expenses` service to allow dialogs on the contract `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
@@ -87,7 +86,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### C. Adding a new contract to the service, dropping existing contract  
  The following example changes the `//Adventure-Works.com/Expenses` service to allow dialogs on the contract `//Adventure-Works.com/Expenses/ExpenseProcessing` and to disallow dialogs on the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing],   
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  

@@ -4,7 +4,7 @@ description: Use Unicode native format for bulk transfer of data between instanc
 ms.custom: ""
 ms.date: "09/30/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "Unicode [SQL Server], bulk importing and exporting"
   - "data formats [SQL Server], Unicode native"
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Unicode Native Format to Import or Export Data (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -121,7 +121,7 @@ REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidenative;"
 
 REM Import data
-bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenative.fmt -T
+bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenative.fmt -T -N
 
 REM Review results is SSMS
 ```

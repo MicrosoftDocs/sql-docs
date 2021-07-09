@@ -4,10 +4,10 @@ title: "STUFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STUFF"
   - "STUFF_TSQL"
@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STUFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ An error is raised if the resulting value is larger than the maximum supported b
 ## Examples  
  The following example returns a character string created by deleting three characters from the first string, `abcdef`, starting at position `2`, at `b`, and inserting the second string at the deletion point.  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

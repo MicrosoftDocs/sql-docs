@@ -2,7 +2,7 @@
 description: "Installing SSMA components on SQL Server (SybaseToSQL)"
 title: "Installing SSMA components on SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2020"
+ms.date: "04/29/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma
@@ -18,7 +18,7 @@ In addition to installing SSMA, for using Server side data migration, you must a
 
 ## SSMA for Sybase extension pack
 
-The SSMA extension pack adds the databases, **sysdb** and **ssmatesterdb_syb**, to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The **sysdb** database contains the tables and stored procedures that are required to migrate data. The **ssmatester_syb** database contains the schema **ssma_sybase_utilities**, in which the objects (Tables, Triggers, Views) used by the SSMA tester component are created.
+The SSMA extension pack adds the **sysdb** database to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The database contains the tables and stored procedures that are required to migrate data.
 
 Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA creates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs when server side data migration engine is used for migrating the data.
 
@@ -67,8 +67,6 @@ To install the extension pack:
 11. On the next page, select **Install Utilities Database *n* and Install Extension Pack libraries**, where *n* is the version number. If you plan on using the Tester feature, select **Install Tester Database** check box, and then select **Next**.
 
     The **sysdb** database is created with the tables and stored procedures required for data migration (using server-side data migration engine) are created in this database.
-
-    If **Install Tester Database** option is checked, the **ssmatesterdb_syb** database will be created.
 
 12. Once installation is complete, a prompt will appear asking if you want to install Utilities Database on another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Yes**, and then select **Next**, or to exit the wizard, select **No** and then select **Exit**.
 

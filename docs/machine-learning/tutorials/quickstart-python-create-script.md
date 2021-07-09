@@ -1,46 +1,33 @@
 ---
 title: "Quickstart: Run Python scripts"
 titleSuffix: SQL machine learning
-description: Run a set of simple Python scripts using SQL machine learning. Learn how to use the stored procedure sp_execute_external_script to execute the script.
+description: Run a set of simple Python scripts using Machine Learning Services on SQL Server, Big Data Clusters, or Azure SQL Managed Instances. Learn how to use the stored procedure sp_execute_external_script to execute the script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020  
+ms.date: 09/28/2020  
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
-ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+author: dphansen
+ms.author: davidph
+
+ms.custom: contperf-fy21q1
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Quickstart: Run simple Python scripts with SQL machine learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple Python scripts using [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a database.
-::: moniker-end
+In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview), or [SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
 
 ## Prerequisites
 
 You need the following prerequisites to run this quickstart.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+- A SQL database on one of these platforms:
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). To install, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - SQL Server Big Data Clusters. See how to [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+  - Azure SQL Managed Instance Machine Learning Services. For information, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
+- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 ## Run a simple script
 

@@ -10,7 +10,7 @@ ms.custom: seo-lt-2019​, seo-mmd-2019
 ms.date: 06/09/2020 
 ---
 
-# Configure the Report Server Service Account (SSRS Configuration Manager)
+# Configure the Report Server Service Account (Report Server Configuration Manager)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  
   
@@ -94,7 +94,7 @@ The following guidelines and links in this section can help you decide on an app
   
 ## Updating an Expired Password
 
- If the Report Server service runs under a domain account and the password expires before you can update it in the Reporting Services Configuration Manager, the service doesn't start until you specify a new password.  
+ If the Report Server service runs under a domain account and the password expires before you can update it in the Report Server Configuration Manager, the service doesn't start until you specify a new password.  
   
  If the service account password for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] expires, the **rsReportServerDatabaseUnavailable** error occurs when you try to connect to the report server. Resetting the password resolves this error.  
   
@@ -110,5 +110,5 @@ The following guidelines and links in this section can help you decide on an app
   
 ## Next Steps
 
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

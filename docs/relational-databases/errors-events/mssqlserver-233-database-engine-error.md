@@ -1,12 +1,12 @@
 ---
 title: "MSSQLSERVER_233 | Microsoft Docs"
-description: The SQL Server client cannot connect to the server. See an explanation of the error and possible resolutions.
+description: The SQL Server client cannot connect to the server. See an explanation of error 233 and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "233"
 helpviewer_keywords: 

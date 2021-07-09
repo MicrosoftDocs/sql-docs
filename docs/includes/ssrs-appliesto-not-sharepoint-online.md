@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
- ![No](media/no-icon.png)SharePoint Online
+❌ SharePoint Online

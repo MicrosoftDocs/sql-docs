@@ -4,10 +4,10 @@ title: "HAS_DBACCESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "HAS_DBACCESS_TSQL"
   - "HAS_DBACCESS"
@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HAS_DBACCESS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 HAS_DBACCESS ( 'database_name' )  
 ```  
   
@@ -62,7 +62,7 @@ HAS_DBACCESS ( 'database_name' )
 ## Examples  
  The following example tests whether current user has access to the `AdventureWorks2012` database.  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorks2012');  
 GO  
 ```  
@@ -70,7 +70,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example tests whether current user has access to the `AdventureWorksPDW2012` database.  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorksPDW2012');  
 GO  
 ```  

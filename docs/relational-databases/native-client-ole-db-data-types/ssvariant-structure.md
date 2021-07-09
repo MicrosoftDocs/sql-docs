@@ -4,7 +4,7 @@ title: SSVARIANT structure (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SSVARIANT Structure in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The **SSVARIANT** structure, which is defined in sqlncli.h, corresponds to a DBTYPE_SQLVARIANT value in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB provider.  
   
- **SSVARIANT** is a discriminating union. Depending on the value of the vt member, the consumer can determine which member to read. vt values correspond to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. Therefore, the **SSVARIANT** structure can hold any SQL Server type. For more information about the data structure for standard OLE DB types, see [Type Indicators](https://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** is a discriminating union. Depending on the value of the vt member, the consumer can determine which member to read. vt values correspond to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. Therefore, the **SSVARIANT** structure can hold any SQL Server type. For more information about the data structure for standard OLE DB types, see [Type Indicators](/previous-versions/windows/desktop/ms711251(v=vs.85)).  
   
 ## Remarks  
  When DataTypeCompat==80, several **SSVARIANT** subtypes become strings. For example, the following vt values will appear in **SSVARIANT** as VT_SS_WVARSTRING:  
@@ -76,5 +76,4 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
 ## See Also  
  [Data Types &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
-  
   

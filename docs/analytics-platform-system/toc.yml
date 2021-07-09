@@ -6,6 +6,8 @@
 - name: What's new in APS
   href: ./whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.7
+    href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.7
   - name: APS CU7.6
     href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.6
   - name: APS CU7.5
@@ -122,6 +124,8 @@
     href: ./transparent-data-encryption.md
   - name: Provision a certificate
     href: ./provision-certificate.md
+  - name: Configure domain trusts
+    href: ./configure-domain-trusts.md
 - name: Appliance management tasks
   href: ./appliance-management-tasks.md
   items:

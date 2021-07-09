@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ASSEMBLYPROPERTY_TSQL"
   - "ASSEMBLYPROPERTY"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ASSEMBLYPROPERTY statement"
   - "assemblies [CLR integration], properties"
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ This function returns information about a property of an assembly.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASSEMBLYPROPERTY('assembly_name', 'property_name')  
 ```  
   
@@ -59,7 +59,7 @@ The name of a property about which to retrieve information. *property_name* can 
 **sql_variant**
   
 ## Examples  
-This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130)).
   
 ```sql
 USE AdventureWorks2012;  
@@ -70,5 +70,4 @@ SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');
 ## See also
 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
-  
   

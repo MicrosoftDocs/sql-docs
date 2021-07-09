@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@IDENTITY_TSQL"
   - "@@IDENTITY"
@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@IDENTITY  
 ```  
   
@@ -60,7 +60,7 @@ ms.author: vanto
 ## Examples  
  The following example inserts a row into a table with an identity column (`LocationID`) and uses `@@IDENTITY` to display the identity value used in the new row.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the value of LocationID in the last row in the table.  

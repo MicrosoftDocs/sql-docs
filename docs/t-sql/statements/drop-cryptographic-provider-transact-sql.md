@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP CRYPTOGRAPHIC PROVIDER"
   - "DROP_CRYPTOGRAPHIC_PROVIDER_TSQL"
@@ -28,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP CRYPTOGRAPHIC PROVIDER provider_name   
 ```  
   
@@ -52,7 +51,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ## Examples  
  The following example drops a cryptographic provider called `SecurityProvider`.  
   
-```  
+```sql  
 /* First, disable provider to perform the upgrade.  
 This will terminate all open cryptographic sessions. */  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   

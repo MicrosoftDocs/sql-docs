@@ -18,7 +18,7 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Configure and Manage Encryption Keys (SSRS Configuration Manager)
+# Configure and Manage Encryption Keys (Report Server Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses encryption keys to secure credentials and connection information that is stored in a report server database. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], encryption is supported through a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during report server initialization when you install or configure the report server, and it is used by the report server to encrypt sensitive data that is stored in the report server. Public and private keys are created by the operating system, and they are used to protect the symmetric key. A public and private key pair is created for each report server instance that stores sensitive data in a report server database.  
   
  Managing the encryption keys consists of creating a backup copy of the symmetric key, and knowing when and how to restore, delete, or change the keys. If you migrate a report server installation or configure a scale-out deployment, you must have a backup copy of the symmetric key so that you can apply it to the new installation.  
@@ -39,20 +39,20 @@ ms.author: maggies
 -   Add or remove a report server instance from a report server scale-out deployment where multiple report servers share both a single report server database and the symmetric key that provides reversible encryption for that database.  
   
 ## In This Section  
- [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Initialize a Report Server &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
  Explains how encryption keys are created.  
   
  [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Explains how to back up encryption keys and restore them to recover or migrate a report server installation.  
   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Store Encrypted Report Server Data &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Describes encryption on a report server.  
   
- [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [Delete and Re-create Encryption Keys  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  Explains how you can replace a symmetric key with a new version, and how to start over if symmetric keys cannot be validated.  
   
- [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [Add and Remove Encryption Keys for Scale-Out Deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Explains how to add and remove encryption keys to control which report servers are part of a scale-out deployment.  
   
 ## See Also  
-[Reporting Services Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+[Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

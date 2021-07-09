@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_audit_class_type_map"
   - "sys.dm_audit_class_type_map_TSQL"
@@ -17,11 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_audit_class_type_map dynamic management view"
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a table that maps the class_type field in the audit log to the class_desc field in sys.dm_audit_actions. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
@@ -32,7 +33,7 @@ ms.author: maghan
 |**securable_class_desc**|**nvarchar(120)**|The securable object that maps to the class_type being audited. Is NULL if the class_type does not map to a securable object. Can be related to class_desc in sys.dm_audit_actions.|  
   
 ## Permissions  
- Principal must have **SELECT** permission. By default, this is granted to Public.  
+This view is visible to the public.  
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

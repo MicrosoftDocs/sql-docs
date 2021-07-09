@@ -1,7 +1,7 @@
 ---
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
-ms.date: 11/29/2018
+ms.date: 05/17/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
@@ -21,7 +21,8 @@ ms.author: maggies
 
 Reporting Services native mode supports a scale-out deployment model that allows you to run multiple report server instances that share a single report server database. Scale-out deployments are used to increase scalability of report servers to handle more concurrent users and larger report execution loads. It can also be used to dedicate specific servers to process interactive or scheduled reports.
 
-For Power BI Report Server, you need to configure client affinity (sometimes called sticky sessions) on the load balancer for any scale-out environment, to ensure proper performance.  
+> [!IMPORTANT]
+> For Power BI Report Server, you need to configure client affinity (sometimes called sticky sessions or persistence) on the load balancer for any scale-out environment to ensure proper performance and consistent Power BI (PBIX) report functionality.
   
 For SQL Server 2016 Reporting Services and earlier, SharePoint mode report servers utilize the SharePoint products infrastructure for scale-out. SharePoint mode scale-out is performed by adding more SharePoint mode report servers to the SharePoint farm. For information on scale-out in SharePoint mode, see [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
 
@@ -58,7 +59,7 @@ For SQL Server 2016 Reporting Services and earlier, SharePoint mode report serve
   
          To avoid database compatibility errors when connecting the server instances to the shared database, be sure that all instances are the same version. For example, if you create the report server database using a SQL Server 2016 report server instance, all other instances in the same deployment must also be SQL Server 2016.  
   
-    -   Use the Reporting Services Configuration manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
+    -   Use the Report Server Configuration Manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
   
     -   Use the Reporting Services Configuration tool to complete the scale-out by joining new report server instances to the first report server instance already connected to the report server database.  
   

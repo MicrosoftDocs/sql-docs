@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Documents Interactively
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,10 +58,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The **Replace All** command replaces all search matches, including those you have skipped with the **Find Next** button. To cancel **Replace All**, click **Undo** from the **Edit** menu before closing any of the files.  
   
 ## See Also  
- [Search an Active Document Incrementally](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Documents Using Results Lists](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
+ [Search and Replace](./search-and-replace.md)   
+ [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

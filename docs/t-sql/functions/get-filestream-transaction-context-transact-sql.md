@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL"
   - "GET_FILESTREAM_TRANSACTION_CONTEXT"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]"
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

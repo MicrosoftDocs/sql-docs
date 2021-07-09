@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "output parameters [SQL Server]"
   - "input parameters [SQL Server]"
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Parameters
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ GO
 >  If the default value is a character string that contains embedded blanks or punctuation, or if it starts with a number (for example, 6xxx), it must be enclosed in single, straight quotation marks.  
 
 > [!NOTE] 
-> Default parameters are not supported in Azure SQL Data Warehouse or Parallel Data Warehouse. 
+> Default parameters are not supported in Azure Synapse Analytics or Parallel Data Warehouse. 
   
  If no value can be specified appropriately as a default for the parameter, specify NULL as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
   

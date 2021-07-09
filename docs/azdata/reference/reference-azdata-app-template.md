@@ -1,11 +1,11 @@
 ---
 title: azdata app template reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the app template commands. 
+description: Reference article for azdata app template commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata app template
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata app template list](#azdata-app-template-list) | Fetch supported templates.
 [azdata app template pull](#azdata-app-template-pull) | Download supported templates.
@@ -74,7 +75,7 @@ azdata app template pull --name ssis
 ```
 ### Optional Parameters
 #### `--name -n`
-Template name. For a full list off supported template namesrun `azdata app template list`
+Template name. For a full list off supported template names, run `azdata app template list`
 #### `--url -u`
 Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`
@@ -94,4 +95,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

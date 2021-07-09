@@ -4,10 +4,10 @@ title: "ELSE (IF...ELSE) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ELSE"
   - "ELSE_TSQL"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "ELSE keyword"
   - "IF keyword"
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +87,7 @@ GO
 ```sql
 USE AdventureWorks2012;  
 GO  
-DECLARE @AvgWeight decimal(8,2), @BikeCount int  
+DECLARE @AvgWeight DECIMAL(8,2), @BikeCount INT  
 IF   
 (SELECT COUNT(*) FROM Production.Product WHERE Name LIKE 'Touring-3000%' ) > 5  
 BEGIN  
@@ -99,8 +99,8 @@ BEGIN
         (SELECT AVG(Weight)   
          FROM Production.Product   
          WHERE Name LIKE 'Touring-3000%');  
-   PRINT 'There are ' + CAST(@BikeCount AS varchar(3)) + ' Touring-3000 bikes.'  
-   PRINT 'The average weight of the top 5 Touring-3000 bikes is ' + CAST(@AvgWeight AS varchar(8)) + '.';  
+   PRINT 'There are ' + CAST(@BikeCount AS VARCHAR(3)) + ' Touring-3000 bikes.'  
+   PRINT 'The average weight of the top 5 Touring-3000 bikes is ' + CAST(@AvgWeight AS VARCHAR(8)) + '.';  
 END  
 ELSE   
 BEGIN  
@@ -108,7 +108,7 @@ SET @AvgWeight =
         (SELECT AVG(Weight)  
          FROM Production.Product   
          WHERE Name LIKE 'Touring-3000%' );  
-   PRINT 'Average weight of the Touring-3000 bikes is ' + CAST(@AvgWeight AS varchar(8)) + '.' ;  
+   PRINT 'Average weight of the Touring-3000 bikes is ' + CAST(@AvgWeight AS VARCHAR(8)) + '.' ;  
 END ;  
 GO  
 ```  
@@ -117,7 +117,7 @@ GO
  The following example shows how an IF ... ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
   
 ```sql
-DECLARE @Number int;  
+DECLARE @Number INT;  
 SET @Number = 50;  
 IF @Number > 100  
    PRINT 'The number is large.';  
@@ -139,10 +139,10 @@ GO
 ```sql
 -- Uses AdventureWorks  
   
-DECLARE @maxWeight float, @productKey integer  
+DECLARE @maxWeight FLOAT, @productKey INTEGER  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey=@productKey)   
+IF @maxWeight <= (SELECT Weight FROM DimProduct WHERE ProductKey=@productKey)   
     (SELECT @productKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ELSE  
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  

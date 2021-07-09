@@ -44,7 +44,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- The argument in the `FROM` clause of the WQL query (`DDL_DATABASE_LEVEL_EVENTS`) can be any valid event upon which an event notification can be created. The arguments in the `SELECT` and `WHERE` clauses can specify any event property associated with an event or its parent event. For a list of valid events and event properties, see [Event Notifications (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx).  
+ The argument in the `FROM` clause of the WQL query (`DDL_DATABASE_LEVEL_EVENTS`) can be any valid event upon which an event notification can be created. The arguments in the `SELECT` and `WHERE` clauses can specify any event property associated with an event or its parent event. For a list of valid events and event properties, see [Event Notifications (Database Engine)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105)).  
   
  The following WQL syntax is supported explicitly by the WMI Provider for Server Events. Additional WQL syntax may be specified, but it is not specific to this provider and is parsed instead by the WMI host service. For more information about the WMI Query Language, see the WQL documentation on the Microsoft Developer Network (MSDN).  
   
@@ -68,7 +68,7 @@ WHERE where_condition
  Specifies that all properties associated with an event are queried.  
   
  *event_type*  
- Is any event against which an event notification can be created. For a list of available events, see [WMI Provider for Server Events Classes and Properties](https://technet.microsoft.com/library/ms186449.aspx). Note that *event type* names correspond to the same *event_type* | *event_group* that can be specified when you manually create an event notification by using CREATE EVENT NOTIFICATION. Examples of *event type* include CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS, and TRC_DATABASE.  
+ Is any event against which an event notification can be created. For a list of available events, see [WMI Provider for Server Events Classes and Properties](./wmi-provider-for-server-events-classes-and-properties.md). Note that *event type* names correspond to the same *event_type* | *event_group* that can be specified when you manually create an event notification by using CREATE EVENT NOTIFICATION. Examples of *event type* include CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS, and TRC_DATABASE.  
   
 > [!NOTE]  
 >  Certain system stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire an event notification that is created on a CREATE_TYPE event. However, the **sp_rename** stored procedure does not fire any event notifications. For more information, see[DDL Events](../../relational-databases/triggers/ddl-events.md).  
@@ -136,7 +136,6 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## See Also  
- [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx)   
- [Event Notifications (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
-  
+ [WMI Provider for Server Events Concepts](./wmi-provider-for-server-events-concepts.md)   
+ [Event Notifications (Database Engine)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))  
   

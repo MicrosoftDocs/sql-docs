@@ -2,12 +2,12 @@
 description: "CREATE USER (Transact-SQL)"
 title: CREATE USER (Transact-SQL)
 ms.custom: ""
-ms.date: "11/06/2019"
+ms.date: "07/07/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WITHOUT_LOGIN_TSQL"
   - "CREATE_USER_TSQL"
@@ -26,10 +26,9 @@ helpviewer_keywords:
   - "USER WITHOUT LOGIN [SQL Server]"
   - "users [SQL Server], adding"
   - "users [SQL Server]"
-ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # CREATE USER (Transact-SQL)
@@ -140,7 +139,7 @@ CREATE USER user_name
 > The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -171,21 +170,22 @@ CREATE USER user_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *user_name*  
+
+#### *user_name*  
  Specifies the name by which the user is identified inside this database. *user_name* is a **sysname**. It can be up to 128 characters long. When creating a user based on a Windows principal, the Windows principal name becomes the user name unless another user name is specified.  
   
- LOGIN *login_name*  
+#### LOGIN *login_name*  
  Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), or a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. When this SQL Server login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary).  
   
  If the CREATE USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
   
- WITH DEFAULT_SCHEMA = *schema_name*  
+ #### WITH DEFAULT_SCHEMA = *schema_name*  
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.  
   
- '*windows_principal*'  
+ #### '*windows_principal*'  
  Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* does not have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* does not have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary). Users based on Active Directory users, are limited to names of fewer than 21 characters.
   
- '*Azure_Active_Directory_principal*'  
+ #### '*Azure_Active_Directory_principal*'  
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
  Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
@@ -197,31 +197,32 @@ CREATE USER user_name
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
 
+- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database via Security Groups in SQL Database, Managed Instance, or Azure Synapse.
 - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications. If you had the *Nurses* security group, you would use:  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
+ For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview).  
   
-WITH PASSWORD = '*password*'  
+#### WITH PASSWORD = '*password*'  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Can only be used in a contained database. Specifies the password for the user that is being created. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
   
-WITHOUT LOGIN  
+#### WITHOUT LOGIN  
  Specifies that the user should not be mapped to an existing login.  
   
-CERTIFICATE *cert_name*  
+#### CERTIFICATE *cert_name*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the certificate for which the database user is being created.  
   
-ASYMMETRIC KEY *asym_key_name*  
+#### ASYMMETRIC KEY *asym_key_name*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the asymmetric key for which the database user is being created.  
   
-DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
+#### DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later,   [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user is not specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
@@ -229,13 +230,13 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 > [!IMPORTANT]  
 >  *DEFAULT_LANGUAGE* is used only for a contained database user.  
   
-SID = *sid*  
+#### SID = *sid*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Applies only to users with passwords ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication) in a contained database. Specifies the SID of the new database user. If this option is not selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns a SID. Use the SID parameter to create users in multiple databases that have the same identity (SID). This is useful when creating users in multiple databases to prepare for Always On failover. To determine the SID of a user, query sys.database_principals.  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+#### ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This  enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
   
@@ -339,7 +340,7 @@ When creating the user in the SQL Managed Instance database, the login_name must
   
  When using contained database users on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### Permissions  
  Requires ALTER ANY USER permission on the database.  
@@ -349,13 +350,13 @@ For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../
 ### A. Creating a database user based on a SQL Server login  
  The following example first creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `AbolrousHazem`, and then creates a corresponding database user `AbolrousHazem` in `AdventureWorks2012`.  
   
-```  
+```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
 Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2012` statement. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
 
-```   
+```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
 GO   
 ```  
@@ -363,7 +364,7 @@ GO
 ### B. Creating a database user with a default schema  
  The following example first creates a server login named `WanidaBenshoof` with a password, and then creates a corresponding database user `Wanida`, with the default schema `Marketing`.  
   
-```  
+```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
 USE AdventureWorks2012;  
@@ -377,7 +378,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
@@ -390,7 +391,7 @@ GO
 ###  <a name="withoutLogin"></a> D. Creating and using a user without a login  
  The following example creates a database user `CustomApp` that does not map to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The example then grants a user `adventure-works\tengiz0` permission to impersonate the `CustomApp` user.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
@@ -399,14 +400,14 @@ GO
   
  To use the `CustomApp` credentials, the user `adventure-works\tengiz0` executes the following statement.  
   
-```  
+```sql  
 EXECUTE AS USER = 'CustomApp' ;  
 GO  
 ```  
   
  To revert back to the `adventure-works\tengiz0` credentials, the user executes the following statement.  
   
-```  
+```sql  
 REVERT ;  
 GO  
 ```  
@@ -416,7 +417,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. This example works in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] if DEFAULT_LANGUAGE is removed.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER Carlo  
@@ -431,7 +432,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
@@ -443,20 +444,19 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
-, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;  
-  
+, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;
 ```  
   
 ### H. Creating a user to copy encrypted data  
  The following example creates a user that can copy data that is protected by the Always Encrypted feature from  one set of tables, containing encrypted columns, to another set of tables with encrypted columns (in the same or a different database).  For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 CREATE USER [Chin]   
 WITH   
       DEFAULT_SCHEMA = dbo  
@@ -467,7 +467,7 @@ WITH
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql#examples) example.
+ Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -512,5 +512,5 @@ You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-o
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
- [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
- [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
+ [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)   
+ [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)

@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cross-Database Queries
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,6 +116,5 @@ This example illustrates a method to transfer data from one database into a memo
     ```
    
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

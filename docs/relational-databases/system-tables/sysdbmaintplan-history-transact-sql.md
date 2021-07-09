@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysdbmaintplan_history_TSQL"
   - "sysdbmaintplan_history"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdbmaintplan_history system table"
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

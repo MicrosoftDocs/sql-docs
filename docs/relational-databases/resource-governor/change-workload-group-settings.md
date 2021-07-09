@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "workload groups [SQL Server], alter"
   - "Resource Governor, workload group alter"
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Change Workload Group Settings
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

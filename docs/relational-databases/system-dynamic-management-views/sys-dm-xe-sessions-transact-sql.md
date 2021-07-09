@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_xe_sessions_TSQL"
   - "dm_xe_sessions"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_sessions dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

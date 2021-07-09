@@ -11,10 +11,10 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], XPath variables"
   - "XPath variables [SQLXML]"
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

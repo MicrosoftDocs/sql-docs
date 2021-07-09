@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "log_shipping_monitor_history_detail_TSQL"
   - "log_shipping_monitor_history_detail"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_history_detail system table"
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

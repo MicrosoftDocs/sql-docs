@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoredb.options.f1"
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore Database (Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -5,7 +5,6 @@ description: The SQL Server Distributed Replay feature helps you assess the impa
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
@@ -63,10 +62,11 @@ The following figure shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 ## Distributed Replay Tasks
 
 |Task Description|Topic|  
-|----------------------|-----------|  
+|----------------------|-----------|
 | Describes how to configure Distributed Replay. | [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md) |
 | Describes how to prepare the input trace data. | [Prepare the Input Trace Data](../../tools/distributed-replay/prepare-the-input-trace-data.md) |
-| Describes how to replay trace data. |[Replay Trace Data](../../tools/distributed-replay/replay-trace-data.md) | | Describes how to review the Distributed Replay trace data results. |[Review the Replay Results](../../tools/distributed-replay/review-the-replay-results.md)|
+| Describes how to replay trace data. |[Replay Trace Data](../../tools/distributed-replay/replay-trace-data.md) | 
+| Describes how to review the Distributed Replay trace data results. |[Review the Replay Results](../../tools/distributed-replay/review-the-replay-results.md)|
 | Describes how to use the administration tool to initiate, monitor, and cancel operations on the controller. | [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md) |
 
 ## See Also

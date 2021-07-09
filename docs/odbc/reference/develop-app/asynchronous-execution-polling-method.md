@@ -238,12 +238,11 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  When connection pooling is enabled, **SQLEndTran** and **SQLSetConnectAttr** are supported for asynchronous operations.  
   
-## Example  
+## Examples  
   
-### Description  
+### A. Enable asynchronous execution of connection functions
+
  The following example shows how to use **SQLSetConnectAttr** to enable asynchronous execution for connection-related functions.  
-  
-### Code  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -292,12 +291,9 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ```  
   
-## Example  
-  
-### Description  
+### B. Asynchronous commit operations 
+
  This example shows asynchronous commit operations. Rollback operations can also be done this way.  
-  
-### Code  
   
 ```  
 BOOL AsyncCommit ()   

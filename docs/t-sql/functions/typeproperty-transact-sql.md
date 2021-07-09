@@ -4,10 +4,10 @@ title: "TYPEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TYPEPROPERTY"
   - "TYPEPROPERTY_TSQL"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TYPEPROPERTY (type , property)  
 ```  
   
@@ -65,7 +65,7 @@ TYPEPROPERTY (type , property)
 ### A. Identifying the owner of a data type  
  The following example returns the owner of a data type.  
   
-```  
+```sql
 SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + '.' + name, 'OwnerId') AS owner_id, name, system_type_id, user_type_id, schema_id  
 FROM sys.types;  
 ```  
@@ -73,7 +73,7 @@ FROM sys.types;
 ### B. Returning the precision of the tinyint data type  
  The following example returns the precision or number of digits for the `tinyint` data type.  
   
-```  
+```sql
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   

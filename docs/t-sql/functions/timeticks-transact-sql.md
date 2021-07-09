@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@TIMETICKS_TSQL"
   - "@@TIMETICKS"
@@ -32,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@TIMETICKS  
 ```  
   
@@ -47,7 +46,7 @@ ms.author: jrasnick
   
 ## Examples  
   
-```  
+```sql
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   

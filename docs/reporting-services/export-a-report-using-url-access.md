@@ -24,7 +24,7 @@ ms.author: maggies
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  And, from a SharePoint integrated mode report server:  
   

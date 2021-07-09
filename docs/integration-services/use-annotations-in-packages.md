@@ -25,7 +25,7 @@ ms.author: chugu
   
  When you press ENTER, the text wraps to the next line. The annotation box automatically increases in size as you add additional lines of text. Package annotations are persisted as clear text in the CDATA section of the package file.  
   
- For more information about changes to the format of the package file, see [SSIS Package Format](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ For more information about changes to the format of the package file, see [SSIS Package Format](./integration-services-ssis-packages.md).  
   
  When you save the package, [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer saves the annotations in the package.  
   
@@ -50,4 +50,4 @@ ms.author: chugu
   
 7.  To add an annotation to a group, right-click the annotation and then click **Group**.  
   
-8.  To save the updated package, on the **File** menu, click **Save All**.  
+8.  To save the updated package, on the **File** menu, click **Save All**.

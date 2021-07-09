@@ -7,7 +7,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
   
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_external_script_requests"
   - "sys.dm_external_script_requests_TSQL"
@@ -21,7 +21,7 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

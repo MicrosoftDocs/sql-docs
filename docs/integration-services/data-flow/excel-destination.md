@@ -48,7 +48,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects all the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -73,7 +73,7 @@ ms.author: chugu
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Loads data into a worksheet or named range in the Excel data source.|  
-|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../integration-services-ssis-variables.md)|  
 |SQL command|Load data into the Excel destination by using an SQL query.|  
   
  **Name of the Excel sheet**  

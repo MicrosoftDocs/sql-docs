@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_get_max_lsn"
   - "fn_cdc_get_max_lsn"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_cdc_get_max_lsn"
   - "sys.fn_cdc_get_max_lsn"
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

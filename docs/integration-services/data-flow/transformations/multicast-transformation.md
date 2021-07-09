@@ -36,7 +36,7 @@ ms.author: chugu
 ## Configuration of the Multicast Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set programmatically, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ For information about the properties that you can set programmatically, see [Common Properties](../set-the-properties-of-a-data-flow-component.md).  
   
 ## Related Tasks  
  For information about how to set properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
@@ -54,5 +54,4 @@ ms.author: chugu
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

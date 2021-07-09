@@ -262,7 +262,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  The hash used in this example is not a real hash.  
   
- For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
+ For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85)).  
   
 ### Encrypt Examples  
  The following sample encrypts the file-based PackageToEncrypt.dtsx to the file-based EncryptedPackage.dts using full package encryption, with a password. The password that is used for the encryption is *EncPswd*.  
@@ -273,5 +273,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## See Also  
 [Run Integration Services (SSIS) Packages](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

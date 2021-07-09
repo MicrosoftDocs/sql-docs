@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "cdc.captured_columns"
   - "cdc.captured_columns_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.captured_columns"
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.author: maghan
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID of the source table to which the captured column belongs.|  
+|**object_id**|**int**|ID of the change table to which the captured column belongs.|  
 |**column_name**|**sysname**|Name of the captured column.|  
 |**column_id**|**int**|ID of the captured column within the source table.|  
 |**column_type**|**sysname**|Type of the captured column.|  

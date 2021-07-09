@@ -279,7 +279,7 @@ ms.author: maggies
   
 -   [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Set a Snapping Interval on a Gauge (Report Builder and SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
+-   [Set a Snapping Interval on a Gauge (Report Builder and SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 ##  <a name="InThisSection"></a> In This Section  
  The following topics provide additional information about working with gauges.  
@@ -296,5 +296,4 @@ ms.author: maggies
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
   

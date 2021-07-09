@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "sql:limit-value"
   - "filtering [SQLXML]"
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

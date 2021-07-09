@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syscollector_execution_log_full"
   - "syscollector_execution_log_full_TSQL"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log_full view"
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

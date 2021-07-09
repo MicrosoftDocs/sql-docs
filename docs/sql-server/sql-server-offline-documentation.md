@@ -8,7 +8,7 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # Install SQL Server documentation to view offline in SSMS
@@ -17,7 +17,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Offline content enables you to access the documentation without an internet connection (although an internet connection is initially required to download it).
 
-Offline documentation is available for versions of SQL Server 2012 and later. Although you can view content for [previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
+Offline documentation is available for versions of SQL Server 2012 and later. Although you can view content for [previous versions online](/previous-versions/sql/), an offline option provides a convenient way to access the older content.
 
 - [SQL Server 2016 and later](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -166,6 +166,6 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 To learn more about archived content and Help viewer, reference the links below.
 
 - [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
-- [SQL Server 2014 online documentation](https://docs.microsoft.com/previous-versions/sql/2014)
+- [SQL Server 2014 online documentation](/previous-versions/sql/2014)
 - [Previous versions of SQL Server online documentation](previous-versions-sql-server.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

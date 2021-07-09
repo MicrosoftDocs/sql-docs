@@ -31,7 +31,7 @@ This section shows you deploy a BDC cluster in Azure Kubernetes Service (AKS) pr
 
 ## Create a private AKS cluster with advanced networking
 
-```console
+```bash
 
 export REGION_NAME=<your Azure region >
 export RESOURCE_GROUP=< your resource group name >
@@ -65,7 +65,7 @@ echo $SUBNET_ID
 
 To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled. Your command will look like as follows: 
 
-```console
+```bash
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --name $AKS_NAME \
@@ -85,7 +85,7 @@ After a successful deployment, you can go to `<MC_yourakscluster>` resource grou
 
 ## Connect to an AKS cluster
 
-```console
+```azurecli
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 ```
 
@@ -93,13 +93,13 @@ az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 
 After connecting to an AKS cluster, you can start to deploy BDC, and you can prepare the environment variable and initiate a deployment: 
 
-```console
+```azurecli
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```
 
 Generate and config BDC custom deployment profile:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.logs.className=default"
@@ -118,13 +118,13 @@ In case you are [deploying a SQL Server Big Data Cluster (SQL-BDC) with high ava
 
 The following example sets the `ServiceType` as `NodePort`:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
 ```
 
 ## Deploy BDC in AKS private cluster
 
-```console
+```azurecli
 export AZDATA_USERNAME=<your bdcadmin username>
 export AZDATA_PASSWORD=< your bdcadmin password>
 

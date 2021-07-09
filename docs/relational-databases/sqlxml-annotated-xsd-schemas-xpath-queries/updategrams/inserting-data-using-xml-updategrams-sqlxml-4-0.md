@@ -31,10 +31,10 @@ helpviewer_keywords:
   - "at-identity attribute"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

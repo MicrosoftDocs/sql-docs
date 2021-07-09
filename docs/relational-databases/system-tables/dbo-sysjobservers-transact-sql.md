@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysjobservers"
   - "sysjobservers_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobservers system table"
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Initialize a Transactional Subscription Without a Snapshot
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

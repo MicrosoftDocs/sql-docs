@@ -21,7 +21,7 @@ For other SQL Server deployment scenarios, see:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
-- [Docker containers](../linux/sql-server-linux-configure-docker.md)
+- [Docker containers](../linux/sql-server-linux-docker-container-deployment.md)
 
 ## Quick Introduction 
 

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the inserted and deleted Tables
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Find the difference between the state of a table before and after a data modification and take actions based on that difference.  
   
- The deleted table stores copies of the affected rows during DELETE and UPDATE statements. During the execution of a DELETE or UPDATE statement, rows are deleted from the trigger table and transferred to the deleted table. The deleted table and the trigger table ordinarily have no rows in common.  
+ The deleted table stores copies of the affected rows during DELETE and UPDATE statements. During the execution of a DELETE or UPDATE statement, rows are deleted from the trigger table and transferred to the deleted table. The trigger table is the table on which the DML trigger runs. The deleted table and the trigger table ordinarily have no rows in common.
   
  The inserted table stores copies of the affected rows during INSERT and UPDATE statements. During an insert or update transaction, new rows are added to both the inserted table and the trigger table. The rows in the inserted table are copies of the new rows in the trigger table.  
   
@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 > [!NOTE]  
 >  If trigger actions depend on the number of rows a data modification effects, use tests (such as an examination of @@ROWCOUNT) for multirow data modifications (an INSERT, DELETE, or UPDATE based on a SELECT statement), and take appropriate actions. For more information, see [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not allow for **text**, **ntext**, or **image** column references in the inserted and deleted tables for AFTER triggers. However, these data types are included for backward compatibility purposes only. The preferred storage for large data is to use the **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. Both AFTER and INSTEAD OF triggers support **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data in the inserted and deleted tables. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] does not allow for **text**, **ntext**, or **image** column references in the inserted and deleted tables for AFTER triggers. However, these data types are included for backward compatibility purposes only. The preferred storage for large data is to use the **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. Both AFTER and INSTEAD OF triggers support **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data in the inserted and deleted tables. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **An Example of Using the inserted Table in a Trigger to Enforce Business Rules**  
   

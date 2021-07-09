@@ -32,7 +32,7 @@ ms.author: sawinark
   
  The seamless integration between Marketplace and DQS simplifies the steps associated with discovering, exploring, and acquiring information for data quality projects from within DQS. The data is consumed from DQS, and helps DQS users achieve high data quality by bringing together DQS, Marketplace, and reference data service providers in an innovative way.  
   
- To use reference data from Marketplace in DQS for the cleansing activity, you must have a Marketplace account key. Creating a Marketplace account key is free, and you pay only if you subscribe to paid datasets. There is no charge for subscribing to, and using free datasets. For detailed information about creating a Marketplace account key, see [Create Your Account](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936).  
+ To use reference data from Marketplace in DQS for the cleansing activity, you must have a Marketplace account key. Creating a Marketplace account key is free, and you pay only if you subscribe to paid datasets. There is no charge for subscribing to, and using free datasets. For detailed information about creating a Marketplace account key, see [Create Your Account](/previous-versions/azure/ff717655(v=azure.100)) (https://go.microsoft.com/fwlink/?LinkId=212936).  
   
  Additionally, you can perform the following Marketplace activities from within DQS:  
   
@@ -69,5 +69,4 @@ ms.author: sawinark
 |Describes how to configure DQS to use reference data services from Marketplace or direct third-party online data providers.|[Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Describes how to map a domain/composite domain in a knowledge base to a reference data service.|[Attach Domain or Composite Domain to Reference Data](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Describes how to cleanse data using reference data service.|[Cleanse Data Using Reference Data &#40;External&#41; Knowledge](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-  
   

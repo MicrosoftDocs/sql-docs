@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "CHANGE_TRACKING_CURRENT_VERSION_TSQL"
   - "CHANGE_TRACKING_CURRENT_VERSION"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION"
   - "CHANGE_TRACKING_CURRENT_VERSION"
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

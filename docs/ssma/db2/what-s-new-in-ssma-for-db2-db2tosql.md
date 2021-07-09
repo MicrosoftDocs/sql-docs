@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/31/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,80 @@ ms.author: alexiva
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for DB2 contains the following changes:
+
+* Load aliases for old/new row/table within the triggers definition for DB2 for i
+* Add conversion for the `LCASE`, `UCASE`, `LOWER`, `UPPER` functions with two and three arguments
+* Add conversion for the `LTRIM` and `RTRIM` functions with two arguments
+* Improve conversion for `LOCATE` and `POSITION` functions
+* Fix return type of the `ssma_db2.CHAR` emulation function
+* Fix arguments of the `ssma_db2.DECIMAL` emulation function
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for DB2 contains the following changes:
+
+* Improve `VARCHAR_FORMAT` emulation function
+* Fix tables discovery for DB2 for i
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for DB2 contains the following changes:
+
+* Improve `TIMESTAMP_FORMAT` emulation function
+* Improve foreign keys discovery for z/OS platform
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for DB2 contains the following changes:
+
+* Add support for identity columns
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for DB2 contains the following changes:
+
+* Improve conversion of TRANSLATE function
+* Fix data migration for tables with computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for DB2 contains the following changes:
+
+* Fix conversion of column aliases with special characters
+* Fix conversion for `SELECTIVITY` clause
+* Improve conversion for `WITH ROW MOVEMENT` clause
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for DB2 contains the following changes:
+
+* Fix conversion of `MIN`/`MAX` aggregate functions with date/time arguments
+* Fix bug in `VARCHAR_FORMAT` emulation function when `DD` placeholder is used
+* Improve type mappings for `TIME` data type
+* Improve conversion of `ROUND` and `TRUNC` functions with numeric arguments
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for DB2 requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for DB2 contains the following changes:
+
+* Support for filtered unique indexes
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
 
 ## SSMA v8.12
 

@@ -6,15 +6,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "event classes [SQL Server], Progress Report event category"
   - "Progress Report event category [SQL Server]"
   - "SQL Server event classes, Progress Report event category"
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Progress Report Event Category
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

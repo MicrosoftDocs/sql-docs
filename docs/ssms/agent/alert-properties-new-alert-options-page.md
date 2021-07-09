@@ -13,13 +13,13 @@ ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Alert Properties - New Alert (Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 Use this page to view and modify options for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts.  
 
@@ -47,4 +47,3 @@ Specify a delay in seconds. To respond every time the event occurs, specify 0 mi
   
 ## See Also  
 [Alerts](../../ssms/agent/alerts.md)  
-  

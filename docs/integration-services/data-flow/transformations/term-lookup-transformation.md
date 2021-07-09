@@ -96,7 +96,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,7 +119,7 @@ ms.author: chugu
  Type an alias for each output column. The default is the name of the column; however, you can choose any unique, descriptive name.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## Term Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Term Lookup Transformation Editor** dialog box to specify the connection to the reference (lookup) table.  
@@ -135,7 +135,7 @@ ms.author: chugu
  Select a lookup table or view from the database by selecting an item from the list. The table or view should contain a column with an existing list of terms that the text in the source column can be compared to.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## Term Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Lookup Transformation Editor** dialog box to specify whether lookup should be case-sensitive.  
@@ -145,9 +145,8 @@ ms.author: chugu
  Indicate whether the lookup is case-sensitive. The default is **False**.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
-  

@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "id-prefix annotation [SQLXML]"
   - "is-mapping-schema annotation"
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - Other Annotations
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

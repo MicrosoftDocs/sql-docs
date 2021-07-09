@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@ROWCOUNT_TSQL"
   - "@@ROWCOUNT"
@@ -32,7 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@ROWCOUNT  
 ```  
   
@@ -62,12 +62,12 @@ ms.author: jrasnick
   
  Statements such as USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION, or COMMIT TRANSACTION reset the ROWCOUNT value to 0.  
   
- Natively compiled stored procedures preserve the previous @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements inside natively compiled stored procedures do not set @@ROWCOUNT. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Natively compiled stored procedures preserve the previous @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements inside natively compiled stored procedures do not set @@ROWCOUNT. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
 ## Examples  
  The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee   
@@ -81,5 +81,4 @@ GO
 ## See Also  
  [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
-  
   

@@ -4,9 +4,9 @@ description: Learn how the IBCPSession::BCPColumns method sets the number of fie
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "IBCPSession::BCPColumns (OLE DB)"
 apitype: "COM"
@@ -49,7 +49,7 @@ HRESULT BCPColumns(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the **BCPInit** method was not called before calling this method. Also occurs when this method is called more than once for a bulk copy operation.  
@@ -60,5 +60,4 @@ HRESULT BCPColumns(
 ## See Also  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

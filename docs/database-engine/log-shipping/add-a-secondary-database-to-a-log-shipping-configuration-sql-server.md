@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding secondary databases"
@@ -13,12 +13,12 @@ helpviewer_keywords:
   - "secondary data files [SQL Server], adding"
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to add a secondary database to an existing log shipping configuration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to add a secondary database to an existing log shipping configuration in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

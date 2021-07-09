@@ -8,8 +8,8 @@ ms.date: 01/21/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
-monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
+
+monikerRange: "=sql-server-2017"
 ---
 # Install packages with Python tools on SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -47,7 +47,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 To install a new Python package that can be used in a script on SQL Server, you install the package in the instance of Machine Learning Services. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-The package installed in the following examples is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
+The package installed in the following examples is [CNTK](/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 
 ### For offline install, download the Python package
 
@@ -58,7 +58,7 @@ For example, on an Internet-connected computer you can download the file `cntk-2
 > [!IMPORTANT]
 > Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
 
-For more information about downloads of the CNTK framework for multiple platforms and for multiple versions of Python, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
+For more information about downloads of the CNTK framework for multiple platforms and for multiple versions of Python, see [Setup CNTK on your machine](/cognitive-toolkit/Setup-CNTK-on-your-machine).
 
 ### Locate the Python library
 
@@ -118,5 +118,5 @@ import cntk
 ## See also
 
 + [Get Python package information](python-package-information.md)
-+ [Python tutorials for SQL Server Machine Learning Services](../tutorials/sql-server-python-tutorials.md)
++ [Python tutorials for SQL Server Machine Learning Services](../tutorials/python-tutorials.md)
 + [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html).

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Replication Distribution Agent
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -203,7 +203,9 @@ distrib [-?]
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
 
 **-MultiSubnetFailover**
- Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.   
+  **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
+
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **-UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  

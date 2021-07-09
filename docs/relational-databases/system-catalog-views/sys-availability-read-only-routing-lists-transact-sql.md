@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "availability_read_only_routing_lists_TSQL"
   - "availability_read_only_routing_lists"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "sys.availability_read_only_routing_lists dynamic management view"
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

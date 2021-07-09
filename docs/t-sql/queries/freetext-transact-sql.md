@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FREETEXT"
   - "FREETEXT_TSQL"
@@ -37,14 +37,13 @@ ms.author: vanto
 > [!NOTE]  
 >  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```syntaxsql
-  
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  
 ```  
@@ -70,11 +69,10 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
   
-```sql  
-  
+```sql
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -85,10 +83,9 @@ WHERE FREETEXT(Description, @SearchWord);
  Because "parameter sniffing" does not work across conversion, use **nvarchar** for better performance. In the example, declare `@SearchWord` as `nvarchar(30)`.  
   
 ```sql  
-  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -145,7 +142,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30);  
+DECLARE @SearchWord NVARCHAR(30);  
 SET @SearchWord = N'high-performance';  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -160,11 +157,10 @@ GO
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
-  
   

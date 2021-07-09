@@ -55,7 +55,7 @@ DATEPART(datepart, date)
 |Day|dd, d|  
 |Week|wk, ww|  
 |Weekday|dw|  
-|Hour|Hh|  
+|Hour|Hh, hh, HH|  
 |Minute|mi, n|  
 |Second|ss, s|  
 |Millisecond|Ms|  
@@ -77,6 +77,14 @@ DATEPART("dd", ModifiedDate)
   
 ```  
 DATEPART("yy",GETDATE())  
+```  
+  
+ These examples all return 19. 
+  
+```  
+DATEPART("HH", (DT_DATE) "2020-09-02 19:24" )
+DATEPART("hh", (DT_DATE) "2020-09-02 19:24" )
+DATEPART("Hh", (DT_DATE) "2020-09-02 19:24" )
 ```  
   
 ## See Also  

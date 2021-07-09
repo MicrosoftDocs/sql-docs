@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@FETCH_STATUS"
   - "@@FETCH_STATUS_TSQL"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "status information [SQL Server], FETCH"
   - "@@FETCH_STATUS function"
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
@@ -59,7 +59,7 @@ To retrieve the last fetch status of a specific cursor, query the **fetch_status
 ## Examples  
 This example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT BusinessEntityID, JobTitle  
 FROM AdventureWorks2012.HumanResources.Employee;  

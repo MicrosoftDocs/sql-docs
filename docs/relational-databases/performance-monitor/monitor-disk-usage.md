@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "database performance [SQL Server], disk usage"
   - "monitoring server performance [SQL Server], disk usage"
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Monitor Disk Usage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor, columnstore index"
   - "Database Engine Tuning Advisor, columnstore and rowstore indexes"
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Columnstore index recommendations in Database Engine Tuning Advisor (DTA)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

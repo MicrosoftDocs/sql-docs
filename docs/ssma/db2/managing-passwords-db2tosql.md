@@ -133,5 +133,4 @@ _Import functionality_ reads the server id and password information from the sec
 8. Confirm password: xxxxxxxx
 
 ## See Also  
-[Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executing the SSMA Console](./executing-the-ssma-console-db2tosql.md)  

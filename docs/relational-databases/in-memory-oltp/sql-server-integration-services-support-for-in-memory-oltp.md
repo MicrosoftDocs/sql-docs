@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Integration Services Support for In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,6 +25,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  You can also use ADO .NET Source and OLE DB Source to invoke a natively compiled stored procedure, but we recommend that you use ODBC Source. If you configure the ADO .NET Source to execute a natively compiled stored procedure, you will see an error message because the data provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), which the ADO .NET Source uses by default, does not support execution of natively compiled stored procedures. You can configure the ADO .NET Source to use the ODBC Data Provider, OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. However, note that the ODBC Source performs better than ADO .NET Source with ODBC Data Provider.  
   
 ## See Also  
- [SQL Server Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [SQL Server Support for In-Memory OLTP](./transact-sql-support-for-in-memory-oltp.md)  
   

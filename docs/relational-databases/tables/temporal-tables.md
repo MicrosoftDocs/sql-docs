@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal tables
 
@@ -29,7 +29,7 @@ SQL Server 2016 introduced support for temporal tables (also known as system-ver
   - [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [Temporal Table Usage Scenarios](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [Getting Started with Temporal Tables in Azure SQL Database](/azure/azure-sql/temporal-tables)
 
 - **Examples:**
 
@@ -73,9 +73,9 @@ Real data sources are dynamic and more often than not business decisions rely on
 
 The current table contains the current value for each row. The history table contains each previous value for each row, if any, and the start time and end time for the period for which it was valid.
 
-![Temporal-HowWorks](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
+![Diagram showing how a Temporal table works.](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
 
-The following simple example illustrates a scenario with Employee information in hypothetical HR database:
+The following simple example illustrates a scenario with Employee information in a hypothetical HR database:
 
 ```sql
 CREATE TABLE dbo.Employee
@@ -93,7 +93,7 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERTS:** On an **INSERT**, the system sets the value for the **SysStartTime** column to the begin time of the current transaction (in the UTC time zone) based on the system clock and assigns the value for the **SysEndTime** column to the maximum value of 9999-12-31. This marks the row as open.
+- **INSERTS:** On an **INSERT**, the system sets the value for the **SysStartTime** column (in the example, it's named **ValidFrom**) to the begin time of the current transaction (in the UTC time zone) based on the system clock and assigns the value for the **SysEndTime** column (in the example, it's named **ValidTo**) to the maximum value of 9999-12-31. This marks the row as open.
 - **UPDATES:** On an **UPDATE**, the system stores the previous value of the row in the history table and sets the value for the **SysEndTime** column to the begin time of the current transaction (in the UTC time zone) based on the system clock. This marks the row as closed, with a period recorded for which the row was valid. In the current table, the row is updated with its new value and the system sets the value for the **SysStartTime** column to the begin time for the transaction (in the UTC time zone) based on the system clock. The value for the updated row in the current table for the **SysEndTime** column remains the maximum value of 9999-12-31.
 - **DELETES:** On a **DELETE**, the system stores the previous value of the row in the history table and sets the value for the **SysEndTime** column to the begin time of the current transaction (in the UTC time zone) based on the system clock. This marks the row as closed, with a period recorded for which the previous row was valid. In the current table, the row is removed. Queries of the current table will not return this row. Only queries that deal with history data return data for which a row is closed.
 - **MERGE:** On a **MERGE**, the operation behaves exactly as if up to three statements (an **INSERT**, an **UPDATE**, and/or a **DELETE**) executed, depending on what is specified as actions in the **MERGE** statement.
@@ -105,7 +105,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 The **SELECT** statement **FROM**_\<table\>_ clause has a new clause **FOR SYSTEM_TIME** with five temporal-specific sub-clauses to query data across the current and history tables. This new **SELECT** statement syntax is supported directly on a single table, propagated through multiple joins, and through views on top of multiple temporal tables.
 
-![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
+![Diagram showing how Temporal Querying works.](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
 
 The following query searches for row versions for Employee row with EmployeeID = 1000 that were active at least for a portion of period between 1st January of 2014 and 1st January 2015 (including the upper boundary):
 

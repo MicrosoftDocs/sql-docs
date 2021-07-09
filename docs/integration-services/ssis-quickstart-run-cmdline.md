@@ -20,7 +20,7 @@ This quickstart demonstrates how to run an SSIS package from the command prompt 
 > [!NOTE]
 > The method described in this article has not been tested with packages deployed to an Azure SQL Database server.
 
-For more info about `DTExec.exe`, see [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
+For more info about `DTExec.exe`, see [dtexec Utility](./packages/dtexec-utility.md).
 
 ## Supported platforms
 
@@ -52,4 +52,4 @@ With the parameter values used in the following example, the program runs the pa
     - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)

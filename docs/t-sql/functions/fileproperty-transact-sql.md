@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILEPROPERTY_TSQL"
   - "FILEPROPERTY"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "FILEPROPERTY function"
   - "file names [SQL Server], FILEPROPERTY"
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FILEPROPERTY ( file_name , property )  
 ```  
   
@@ -63,8 +62,7 @@ FILEPROPERTY ( file_name , property )
 ## Examples  
  The following example returns the setting for the `IsPrimaryFile` property for the `AdventureWorks_Data` file name in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] the database.  
   
-```  
-  
+```sql
 SELECT FILEPROPERTY('AdventureWorks2012_Data', 'IsPrimaryFile')AS [Primary File];  
 GO  
 ```  

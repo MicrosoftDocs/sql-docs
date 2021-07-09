@@ -4,10 +4,10 @@ title: "EXISTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EXISTS_TSQL"
   - "EXISTS"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "NOT EXISTS keyword"
   - "row existence testing [SQL Server]"
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -57,7 +57,7 @@ EXISTS ( subquery )
 ### A. Using NULL in a subquery to still return a result set  
  The following example returns a result set with `NULL` specified in the subquery and still evaluates to TRUE by using `EXISTS`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -69,7 +69,7 @@ ORDER BY Name ASC ;
 ### B. Comparing queries by using EXISTS and IN  
  The following example compares two queries that are semantically equivalent. The first query uses `EXISTS` and the second query uses `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -84,7 +84,7 @@ GO
   
  The following query uses `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -112,7 +112,7 @@ Willis                                             Johnson
 ### C. Comparing queries by using EXISTS and = ANY  
  The following example shows two queries to find stores whose name is the same name as a vendor. The first query uses `EXISTS` and the second uses `=``ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -126,7 +126,7 @@ GO
   
  The following query uses `= ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -140,7 +140,7 @@ GO
 ### D. Comparing queries by using EXISTS and IN  
  The following example shows queries to find employees of departments that start with `P`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -159,7 +159,7 @@ GO
   
  The following query uses `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -177,7 +177,7 @@ GO
 ### E. Using NOT EXISTS  
  NOT EXISTS works the opposite of EXISTS. The WHERE clause in NOT EXISTS is satisfied if no rows are returned by the subquery. The following example finds employees who are not in departments which have names that start with `P`.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -298,7 +298,7 @@ Peng                           Wu                             Quality Assurance 
 ### F. Using EXISTS  
  The following example identifies whether any rows in the `ProspectiveBuyer` table could be matches to rows in the `DimCustomer` table. The query will return rows only when both the `LastName` and `BirthDate` values in the two tables match.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -312,7 +312,7 @@ WHERE EXISTS
 ### G. Using NOT EXISTS  
  NOT EXISTS works as the opposite as EXISTS. The WHERE clause in NOT EXISTS is satisfied if no rows are returned by the subquery. The following example finds rows in the `DimCustomer` table where the `LastName` and `BirthDate` do not match any entries in the `ProspectiveBuyers` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server XTP Garbage Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

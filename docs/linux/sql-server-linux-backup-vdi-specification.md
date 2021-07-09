@@ -1,8 +1,8 @@
 ---
 title: VDI Backup Specification - SQL Server on Linux
 description: Learn about the interfaces provided by the SQL Server on Linux virtual device interface (VDI) client SDK.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual

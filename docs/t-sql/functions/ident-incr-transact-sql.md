@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IDENT_INCR"
   - "IDENT_INCR_TSQL"
@@ -30,7 +30,7 @@ Returns the increment value specified when creating a table or view's identity c
   
 ## Syntax  
   
-```  
+```syntaxsql 
 IDENT_INCR ( 'table_or_view' )  
 ```  
   

@@ -4,10 +4,10 @@ title: "SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SYSDATETIMEOFFSET_TSQL"
   - "SYSDATETIMEOFFSET"
@@ -30,7 +30,7 @@ helpviewer_keywords:
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSDATETIMEOFFSET ( )  
 ```  
 
@@ -66,7 +66,7 @@ SYSDATETIMEOFFSET ( )
 ### A. Showing the formats that are returned by the date and time functions  
  The following example shows the different formats that are returned by the date and time functions.  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -89,7 +89,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Converting date and time to date  
  The following example shows you how to convert date and time values to `date`.  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -112,7 +112,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### C. Converting date and time to times  
  The following example shows you how to convert date and time values to `time`.  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
     ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
     ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  

@@ -36,6 +36,5 @@ ms.author: maghan
 -   Set flags for the current property.  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

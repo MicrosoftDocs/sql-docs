@@ -49,7 +49,7 @@ For more information about the settings and how the settings are applied in each
   
 -   [Project Settings &#40;Migration&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [Project Settings (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Project Settings (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)  
   
 -   [Project Settings &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
@@ -97,4 +97,3 @@ The next step in the migration depends on your project needs:
   
 ## See Also  
 [Mapping MySQL and SQL Server Data Types &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  

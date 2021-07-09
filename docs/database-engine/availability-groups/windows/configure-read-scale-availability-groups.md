@@ -2,13 +2,13 @@
 title: "Configure read-scale for an availability group"
 description: "Learn how to configure your SQL Server Always On availability group for read-scale workloads on Windows."
 ms.custom: "seodec18"
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.reviewer: ""
 ms.date: 05/24/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: availability-groups
 ---
 # Configure read-scale for an Always On availability group
 
@@ -81,6 +81,6 @@ You can connect to read-only secondary replicas in either of two ways:
 
 ## Next steps
 
-* [Configure a distributed availability group](distributed-availability-groups-always-on-availability-groups.md)
+* [Configure a distributed availability group](./distributed-availability-groups.md)
 * [Learn more about availability groups](overview-of-always-on-availability-groups-sql-server.md)
 * [Perform a forced manual failover](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

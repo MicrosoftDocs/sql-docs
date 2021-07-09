@@ -14,11 +14,11 @@ ms.author: maggies
 # Create, Delete, or Modify a Folder - Reporting Services
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that should not be widely distributed.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## To create a folder  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, select the Home folder and click **New Folder**. Or, to create a folder under an existing folder, navigate to that folder in the **Contents** page and click the folder to open it. Then click **New Folder**.  
   
@@ -64,7 +64,7 @@ ms.author: maggies
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## To create a folder  
   

@@ -22,7 +22,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.date: "10/20/2016"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Configure firewall rules before running the TSQL Debugger
@@ -165,8 +165,8 @@ All attempts to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger m
 
 ## See Also
 
-- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Run the Transact-SQL Debugger](../../relational-databases/scripting/run-the-transact-sql-debugger.md)
-- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL Debugger](./transact-sql-debugger.md)
+- [Run the Transact-SQL Debugger](./run-the-transact-sql-debugger.md)
+- [Step Through Transact-SQL Code](./step-through-transact-sql-code.md)
+- [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)
+- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

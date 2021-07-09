@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_SEARCH_PROPERTY_LIST_TSQL"
   - "DROP SEARCH PROPERTY LIST"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], dropping"
   - "search property lists [SQL Server], deleting"
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,8 +29,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP SEARCH PROPERTY LIST property_list_name  
 ;  
 ```  
@@ -43,7 +42,7 @@ DROP SEARCH PROPERTY LIST property_list_name
   
  To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -71,7 +70,7 @@ SELECT name FROM sys.registered_search_property_lists;
 ## Examples  
  The following example drops the `JobCandidateProperties` property list from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  
 GO  
 ```  

@@ -4,10 +4,10 @@ title: "AND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "AND_TSQL"
   - "AND"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AND"
   - "combining expressions"
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # AND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ boolean_expression AND boolean_expression
 ### A. Using the AND operator  
  The following example selects information about employees who have both the title of `Marketing Assistant` and more than `41` vacation hours available.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT  BusinessEntityID, LoginID, JobTitle, VacationHours   
@@ -75,7 +75,7 @@ AND VacationHours > 41 ;
 ### B. Using the AND operator in an IF statement  
  The following examples show how to use AND in an IF statement. In the first statement, both `1 = 1` and `2 = 2` are true; therefore, the result is true. In the second example, the argument `2 = 17` is false; therefore, the result is false.  
   
-```  
+```sql  
 IF 1 = 1 AND 2 = 2  
 BEGIN  
    PRINT 'First Example is TRUE'  

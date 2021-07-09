@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Generate SQL Script (Replication Objects)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

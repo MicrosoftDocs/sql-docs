@@ -3,24 +3,24 @@ title: Install on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/29/2020
+ms.date: 04/15/2021
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Windows
 
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+Learn how to install [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 + A database engine instance is required. You can't install just Python or R features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
 
 + Installing Machine Learning Services *isn't supported* on an [Always On Failover Cluster Instance (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. It's supported with SQL Server 2019 and later.
  
@@ -33,7 +33,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
   + Using a different library and executable files will create inconsistent results, than what you are running in SQL Server.
   + R and Python scripts running in external libraries can't be managed by SQL Server, leading to resource contention.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > Machine Learning Services is installed by default on **SQL Server Big Data Clusters**. You don't need to follow the steps in this article if you use a **Big Data Cluster**. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
@@ -45,12 +45,12 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017).
+::: moniker range="=sql-server-2017"
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
+::: moniker range="=sql-server-ver15"
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
 ## Run setup
@@ -61,17 +61,17 @@ For local installations, you must run the setup as an administrator. If you inst
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![New SQL Server stand-alone installation](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![New SQL Server stand-alone installation](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. On the **Feature Selection** page, select these options:
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **Database Engine Services**
      
@@ -83,7 +83,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **Database Engine Services**
      
@@ -103,15 +103,15 @@ For local installations, you must run the setup as an administrator. If you inst
      
      Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
+   ::: moniker range="=sql-server-ver15"
+   For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Feature options for R and Python](media/2019setup-features-page-mls-rpy.png "Setup options for R and Python")
    ::: moniker-end
    
@@ -119,7 +119,7 @@ For local installations, you must run the setup as an administrator. If you inst
    > 
    > Don't select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. 
 
@@ -141,11 +141,11 @@ The license agreement covers:
 
    Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-1. After setup is complete, if you are instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you have finished with setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. After setup is complete, if you are instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you have finished with setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
 
@@ -159,7 +159,7 @@ The license agreement covers:
 
    Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-4. After setup is complete, if you're instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you've finished with setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+4. After setup is complete, if you're instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you've finished with setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -183,9 +183,9 @@ This step requires a server restart. If you are about to enable script execution
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
-    > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
+    > You can also use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), which supports administrative tasks and queries against SQL Server.
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 
@@ -266,22 +266,45 @@ Use the following steps to verify that all components used to launch external sc
 >
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-<!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
+::: moniker range=">=sql-server-2017"
 
 <a name="apply-cu"></a>
 
 ## Apply updates
 
-We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
+### Existing installation
+
+If you have added Machine Learning Services to an existing SQL Server instance and have previously applied a Cumulative Update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This may result in unexpected behavior or errors. 
+
+Follow these steps to bring the Machine Learning Services to the same version as your database engine.
+
+1. Determine the Cumulative Update (CU) you have for the database engine. Run this T-SQL statement:
+
+   ```sql
+   SELECT @@VERSION
+   ```
+ 
+   Here is an example output from SQL Server 2019 Cumulative Update (CU) 8:
+ 
+   *Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459) - 15.0.4083.2 (X64)   Nov  2 2020 18:35:09   Copyright (C) 2019 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 19042: ) (Hypervisor)*
+
+   For more information, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
+
+1. Download the [Cumulative Update (CU)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) that you have installed for the database engine.
+
+1. Run the installation of the Cumulative Update (CU) and follow the instructions to install the CU for Machine Learning Services.
+
+### New installation
+
+If you install Machine Learning Services with a new installation of SQL Server database engine, we recommend that you apply the latest cumulative update to both the database engine and machine learning components.
 
 On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, setup pulls cumulative updates for any Python or R features you installed on the same instance. 
 
 Disconnected servers require extra steps. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Start with a baseline instance already installed: SQL Server 2017 initial release
+1. Start with a baseline instance already installed: SQL Server initial release.
 
-2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
@@ -305,9 +328,9 @@ At the instance level, additional configuration might include:
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Create a login for SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [Manage disk quotas](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
+* [Manage disk quotas](/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 In SQL Server 2019 on Windows, the isolation mechanism has changed. This mechanism affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
 ::: moniker-end
 
@@ -325,7 +348,8 @@ On the database, you might need the following configuration updates:
 
 Now that you have everything working, you might also want to optimize the server to support machine learning or install a pre-trained machine learning model.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
+
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).

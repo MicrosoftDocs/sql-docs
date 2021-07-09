@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sysservers"
   - "sysservers_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysservers system table"
   - "sys.sysservers compatibility view"
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

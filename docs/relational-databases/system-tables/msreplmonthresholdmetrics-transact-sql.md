@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "msreplmonthresholdmetrics_TSQL"
   - "msreplmonthresholdmetrics"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplmonthresholdmetrics system table"
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

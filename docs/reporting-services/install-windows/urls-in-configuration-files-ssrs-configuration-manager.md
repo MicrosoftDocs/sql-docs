@@ -1,5 +1,5 @@
 ---
-description: "URLs in Configuration Files  (SSRS Configuration Manager)"
+description: "URLs in Configuration Files  (Report Server Configuration Manager)"
 title: "URLs in Configuration Files  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
 ---
-# URLs in Configuration Files  (SSRS Configuration Manager)
+# URLs in Configuration Files  (Report Server Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores application settings in a RSReportServer.config file. Within this file, there are configuration settings for both URLs and URL reservations. These configuration settings have very different purposes and rules for modification. If you are accustomed to modifying configuration files to tune a deployment, this topic can help you understand how each URL setting is used.  
   
 ## URL Settings in RSReportServer.config File  
@@ -23,9 +23,9 @@ ms.author: maggies
   
 -   To view descriptions of each element in the **URLReservations** section, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
--   For more information about the syntax of just the **UrlString** element, see [URL Reservation Syntax  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+-   For more information about the syntax of just the **UrlString** element, see [URL Reservation Syntax  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
--   For instructions on how to configure URLs for application access, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+-   For instructions on how to configure URLs for application access, see [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 #### URLs for Report Access  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a report server e-mail delivery extension that you can use to send report links or attachments. A report link is constructed when the report is delivered. The report server e-mail delivery extension uses the **UrlRoot** setting in the configuration file to create the link. **UrlRoot** is also used to resolve links in a rendered report that is generated through unattended report processing.  
@@ -52,5 +52,5 @@ ms.author: maggies
 |**ReportServerExternalUrl**|Optional. This element is not included in the RSReportServer.config file unless you add it yourself.<br /><br /> Set this element only if you are using the SharePoint 2.0 Web Parts and you want users to be able to retrieve a report and open it in a new browser window.<br /><br /> Add \<**ReportServerExternalUrl**> underneath the \<**ReportServerUrl**> element, and then set it to a fully qualified report server name that resolves to a report server instance when accessed in a separate browser window. Do not delete \<**ReportServerUrl**>.<br /><br /> The following example illustrates the syntax:<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|This value is used by the SharePoint 2.0 Web Parts.<br /><br /> In previous releases, it was recommended that you set this value to deploy Report Builder on an Internet-facing report server. This is an untested deployment scenario. If you used this setting in the past to support Internet access to Report Builder, you should consider an alternative strategy.|  
   
 ## See Also  
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

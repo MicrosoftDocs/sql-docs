@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "XML [SQL Server], OPENXML statement"
   - "element-centric mapping [SQL Server]"
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # OPENXML (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

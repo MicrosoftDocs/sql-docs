@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLRowCount function [ODBC], Cursor Library"
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c

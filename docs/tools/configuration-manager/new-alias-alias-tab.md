@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # New Alias (Alias Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

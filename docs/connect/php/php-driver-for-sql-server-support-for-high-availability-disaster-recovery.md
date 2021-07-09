@@ -21,7 +21,7 @@ Starting with version 3.0 of the Microsoft Drivers for PHP for SQL Server, you c
 
 The **MultiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the driver will try to connect to the database on the primary SQL Server instance by trying to connect to all the IP addresses. Always specify **MultiSubnetFailover=True** when connecting to a SQL Server availability group listener or SQL Server Failover Cluster Instance. If the application is connected to an AlwaysOn database that fails over, the original connection is broken and the application must open a new connection to continue working after the failover.
 
-Full details on Always On availability groups can be found at the [High Availability, Disaster Recovery](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery) Docs page.
+Full details on Always On availability groups can be found at the [High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md) Docs page.
 
 ## Transparent Network IP Resolution (TNIR)
 
@@ -66,4 +66,3 @@ The driver will return an error if database mirroring is used on the primary dat
 
 ## See Also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
-  

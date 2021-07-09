@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -114,7 +114,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## Examples  
  The following example denies `VIEW DEFINITION` permission with `CASCADE` on the user-defined type `PhoneNumber` to the `KhalidR`. `PhoneNumber` is located in schema `Telemarketing`.  
   
-```  
+```sql 
 DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR CASCADE;  
 GO  

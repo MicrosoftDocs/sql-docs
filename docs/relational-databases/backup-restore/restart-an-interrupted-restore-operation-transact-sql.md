@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "restarting interrupted restore operation"
   - "restoring interrupted operation [SQL Server]"
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

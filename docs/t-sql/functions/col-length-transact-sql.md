@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COL_LENGTH"
   - "COL_LENGTH_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ This function returns the defined length of a column, in bytes.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COL_LENGTH ( 'table' , 'column' )   
 ```  
   
@@ -61,7 +61,7 @@ This example shows the return values for a column of type `varchar(40)` and a co
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE t1(c1 varchar(40), c2 nvarchar(40) );  
+CREATE TABLE t1(c1 VARCHAR(40), c2 NVARCHAR(40) );  
 GO  
 SELECT COL_LENGTH('t1','c1')AS 'VarChar',  
       COL_LENGTH('t1','c2')AS 'NVarChar';  
@@ -71,7 +71,7 @@ DROP TABLE t1;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 VarChar     NVarChar  
 40          80  
 ```  

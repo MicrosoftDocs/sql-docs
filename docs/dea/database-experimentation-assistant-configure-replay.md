@@ -48,7 +48,7 @@ To set up the controller service:
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+For more configuration options, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## Configure DCOM
 
@@ -88,13 +88,13 @@ Before you set up the client service, use networking tools like ping to verify t
 
     If the configuration is successful, the log displays the message **Registered with controller <controller name\>**.
 
-For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+For more configuration options, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## Set up Distributed Replay administration tools
 
 You can use Distributed Replay administration tools to quickly test whether Distributed Replay is functioning properly in the environment. Testing the configuration can be especially helpful in an environment in which multiple client machines are registered with a controller. You might need to install SQL Server Management Studio (SSMS) to get the administration tools.
 
-1. Go to the SSMS install location and look for the Distributed Replay administration tool dreplay.exe and its dependent components.
+1. Go to the SSMS install location and look for the Distributed Replay administration tool dreplay.exe and its dependent components. Currently, [SSMS 17](../ssms/release-notes-ssms.md#1791) is the latest release of SSMS to include dreplay.exe.
 2. At a Command Prompt, run `dreplay.exe status -f 1`.
 
 If the preceding steps were successful, the console output indicates that the controller can see its clients in a `READY` state.

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@CPU_BUSY_TSQL"
   - "@@CPU_BUSY"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "statistical information [SQL Server], CPU"
   - "CPU [SQL Server], activity"
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # &#x40;&#x40;CPU_BUSY (Transact-SQL)
@@ -56,7 +56,7 @@ To see a report containing several [!INCLUDE[ssNoVersion](../../includes/ssnover
 This example returns [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU activity, as of the current date and time. The example converts one of the values to the `float` data type. This avoids arithmetic overflow issues when calculating a value in microseconds.
   
 ```sql
-SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   
+SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS FLOAT) AS 'CPU microseconds',   
    GETDATE() AS 'As of' ;  
 ```  
   

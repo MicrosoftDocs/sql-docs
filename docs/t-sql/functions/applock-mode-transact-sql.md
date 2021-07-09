@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "APPLOCK_MODE_TSQL"
   - "APPLOCK_MODE"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "APPLOCK_MODE function"
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ This function returns the lock mode held by the lock owner on a particular appli
   
 ## Syntax  
   
-```sql
+```syntaxsql
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
@@ -52,12 +52,19 @@ The owner of the lock, which is the *lock_owner* value when the lock was request
   
 ## Return value
 Returns the lock mode held by the lock owner on a particular application resource. Lock mode can have any one of these values:
-  
-||||  
-|-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
-|**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**Exclusive**||  
+
+:::row:::
+   :::column span="":::
+      **NoLock**<br>      **Update**<br>      **\*SharedIntentExclusive**
+   :::column-end:::
+   :::column span="":::
+      **IntentShared**<br>      **IntentExclusive**<br>      **\*UpdateIntentExclusive**
+
+   :::column-end:::
+   :::column span="":::
+      **Shared**<br>      **Exclusive**
+   :::column-end:::
+:::row-end:::
   
 *This lock mode is a combination of other lock modes and sp_getapplock cannot explicitly acquire it.
   
@@ -77,7 +84,7 @@ User A runs:
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
-DECLARE @result int;  
+DECLARE @result INT;  
 EXEC @result=sp_getapplock  
     @DbPrincipal='public',  
     @Resource='Form1',  

@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE XML INDEX (Selective XML Indexes)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -24,7 +24,6 @@ ms.author: genemi
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  
     USING XML INDEX sxi_index_name  
@@ -101,7 +100,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## Examples  
  The following example creates a secondary selective XML index on the path `pathabc`. The path to index is the assigned name from the [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
-```  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  

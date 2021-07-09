@@ -4,10 +4,10 @@ description: Learn how the ISQLServerErrorInfo::GetErrorInfo method returns a po
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
 apitype: "COM"
@@ -84,7 +84,5 @@ SSERRORINFO;
  Pointers in the structure reference addresses in the string returned in the *ppErrorStrings* argument.  
   
 ## See Also  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

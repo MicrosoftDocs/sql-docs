@@ -5,10 +5,10 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
 ms.date: "03/12/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -26,7 +26,7 @@ helpviewer_keywords:
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -168,7 +168,7 @@ GRANT permission [ ,...n ]
 ### A. Granting CONTROL permission on a user to another user  
  The following example grants `CONTROL` permission on `AdventureWorks2012` user `Wanida` to user `RolandX`.  
   
-```  
+```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -176,7 +176,7 @@ GO
 ### B. Granting VIEW DEFINITION permission on a role to a user with GRANT OPTION  
  The following example grants `VIEW DEFINITION` permission on `AdventureWorks2012` role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu WITH GRANT OPTION;  
 GO  
@@ -187,7 +187,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

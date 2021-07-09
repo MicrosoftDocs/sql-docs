@@ -62,9 +62,6 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## Result Sets  
  None  
   
-## Remarks  
- None  
-  
 ## Permissions  
  This stored procedure requires one of the following permissions:  
   

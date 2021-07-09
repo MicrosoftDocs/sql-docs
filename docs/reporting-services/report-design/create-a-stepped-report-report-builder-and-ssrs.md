@@ -63,7 +63,7 @@ A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
          Size designators are:  
   
-        |||  
+        |Designator|Description|  
         |-|-|  
         |**in**|Inches (1 inch = 2.54 centimeters)|  
         |**cm**|Centimeters|  

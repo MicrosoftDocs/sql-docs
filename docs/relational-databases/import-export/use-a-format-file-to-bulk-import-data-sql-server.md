@@ -3,7 +3,7 @@ title: "Use a format file to bulk import data"
 description: In SQL Server, you can use a format file in bulk-import operations. A format file maps the fields of the data file to the columns of the table.
 ms.date: "09/20/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], format files"
   - "format files [SQL Server], importing data using"
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Use a format file to bulk import data (SQL Server)
@@ -24,13 +24,13 @@ This topic illustrates the use of a format file in bulk-import operations.  A fo
 ## Before you begin
 * For a format file to work with a Unicode character data file, all input fields must be Unicode text strings (that is, either fixed-size or character-terminated Unicode strings).
 * To bulk export or import [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) data, use one of the following data types in your format file:
-  * SQLCHAR or SQLVARYCHAR (the data is sent in the client code page or in the code page implied by the collation)
+  * SQLCHAR or SQLVARCHAR (the data is sent in the client code page or in the code page implied by the collation)
   * SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode)
-  * SQLBINARY or SQLVARYBIN (the data is sent without any conversion).
-* Azure SQL Database and Azure SQL Data Warehouse only support [bcp](../../tools/bcp-utility.md).  For additional information, see:
-  * [Load data into Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Load data from SQL Server into Azure SQL Data Warehouse (flat files)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [Migrate Your Data](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * SQLBINARY or SQLVARBIN (the data is sent without any conversion).
+* Azure SQL Database and Azure Synapse Analytics only support [bcp](../../tools/bcp-utility.md).  For additional information, see:
+  * [Load data into Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Load data from SQL Server into Azure Synapse Analytics (flat files)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Migrate Your Data](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## Example test conditions
 The examples of format files in this topic are based on the table and data file defined below.
@@ -136,8 +136,8 @@ Your XML format file, `D:\BCP\myFirstImport.xml` should look as follows:
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>
@@ -257,4 +257,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Non-XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [Format Files for Importing or Exporting Data (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

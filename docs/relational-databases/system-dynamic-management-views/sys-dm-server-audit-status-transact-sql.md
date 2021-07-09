@@ -6,7 +6,7 @@ ms.date: "04/19/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_server_audit_status_TSQL"
   - "sys.dm_server_audit_status"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_audit_status dynamic management view"
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.author: maghan
 |**audit_file_size**|**bigint**|Approximate size of the audit file, in bytes. Only populated for file audits.|  
   
 ## Permissions  
- Principals must have **VIEW SERVER STATE** and **SELECT** permissions.  
+ Principals must have the **VIEW SERVER STATE** permission.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

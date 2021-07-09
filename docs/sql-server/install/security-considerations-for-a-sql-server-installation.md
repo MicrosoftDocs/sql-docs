@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "file system security [SQL Server]"
   - "installing SQL Server, security"
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-author: VanMSFT
-ms.author: vanto
+author: cawrites
+ms.author: chadam
 ---
 # Security Considerations for a SQL Server Installation
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

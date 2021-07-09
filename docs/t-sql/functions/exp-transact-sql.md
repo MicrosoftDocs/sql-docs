@@ -4,10 +4,10 @@ title: "EXP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EXP_TSQL"
   - "EXP"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "exponential functions"
   - "EXP function"
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ EXP ( float_expression )
 ### A. Finding the exponent of a number  
  The following example declares a variable and returns the exponential value of the specified variable (`10`) with a text description.  
   
-```  
+```sql  
 DECLARE @var FLOAT  
 SET @var = 10  
 SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
@@ -73,7 +73,7 @@ The EXP of the variable is: 22026.5
 ### B. Finding exponentials and natural logarithms  
  The following example returns the exponential value of the natural logarithm of `20` and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, the return value in both cases is `20`.  
   
-```  
+```sql  
 SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
@@ -92,7 +92,7 @@ GO
 ### C. Finding the exponent of a number  
  The following example returns the exponential value of the specified value (`10`).  
   
-```  
+```sql  
 SELECT EXP(10);  
 ```  
   
@@ -106,7 +106,7 @@ SELECT EXP(10);
 ### D. Finding exponential values and natural logarithms  
  The following example returns the exponential value of the natural logarithm of `20` and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, the return value in both cases is `20`.  
   
-```  
+```sql  
 SELECT EXP( LOG(20)), LOG( EXP(20));  
 ```  
   

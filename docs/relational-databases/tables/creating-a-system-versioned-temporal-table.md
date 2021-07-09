@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a system-versioned temporal table
 
@@ -78,7 +78,7 @@ The history table is created using the same rules as apply to creating an "anony
 
 - The schema name is mandatory for the **HISTORY_TABLE** parameter.
 - If the specified schema does not exist, the **CREATE TABLE** statement will fail.
-- If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](https://msdn.microsoft.com/library/dn935015.aspx). If you specify an invalid history table, the **CREATE TABLE** statement will fail.
+- If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](./temporal-tables.md). If you specify an invalid history table, the **CREATE TABLE** statement will fail.
 
 ## Creating a temporal table with a user-defined history table
 
@@ -168,7 +168,7 @@ ALTER TABLE InsurancePolicy
 
 ### Migrate existing tables to built-in support
 
-This example shows how to migrate an existing solution based on triggers to build-in temporal support. For this example, we assume that the current custom solution splits the current and historical data in two separate user tables (**ProjectTaskCurrent** and **ProjectTaskHistory**). If your existing solution uses single table to store actual and historical rows, then you should split the data into two tables prior to the migration steps shown in this example:
+This example shows how to migrate an existing solution based on triggers to built-in temporal support. For this example, we assume that the current custom solution splits the current and historical data in two separate user tables (**ProjectTaskCurrent** and **ProjectTaskHistory**). If your existing solution uses single table to store actual and historical rows, then you should split the data into two tables prior to the migration steps shown in this example:
 
 ```sql
 /*Drop trigger on future temporal table*/
@@ -201,4 +201,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Modifying Data in a System-Versioned Temporal Table](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Changing the Schema of a System-Versioned Temporal Table](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Stopping System-Versioning on a System-Versioned Temporal Table](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Stopping System-Versioning on a System-Versioned Temporal Table](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

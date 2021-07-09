@@ -4,10 +4,10 @@ title: "COL_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COL_NAME"
   - "COL_NAME_TSQL"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "column names [SQL Server]"
   - "names [SQL Server], columns"
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COL_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ This function returns the name of a table column, based on the table identificat
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COL_NAME ( table_id , column_id )  
 ```  
   
@@ -70,7 +70,7 @@ COL_NAME(OBJECT_ID('dbo.FactResellerSales'), 2) AS SecondColumnName;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ColumnName          
 ------------   
 BusinessEntityID  

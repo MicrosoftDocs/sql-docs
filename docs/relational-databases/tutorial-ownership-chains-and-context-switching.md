@@ -40,11 +40,11 @@ Each code block in this example is explained in line. To copy the complete examp
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Download [AdventureWorks2017 sample databases](../samples/adventureworks-install-configure.md).
 
-For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## 1. Configure the Environment  
 Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2017` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
@@ -328,6 +328,5 @@ GO
   
 ## See Also  
 [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

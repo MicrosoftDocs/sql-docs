@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "41365 (Database Engine error)"
 ms.assetid: 4fc7ec15-b722-4e3d-b7f9-3d39d171e96e

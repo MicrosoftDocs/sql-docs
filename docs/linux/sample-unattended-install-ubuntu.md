@@ -212,7 +212,6 @@ export MSSQL_PID='evaluation'
 export SQL_INSTALL_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
-export SQL_INSTALL_AGENT='y'
 ```
 
 Then run the Bash script as follows:

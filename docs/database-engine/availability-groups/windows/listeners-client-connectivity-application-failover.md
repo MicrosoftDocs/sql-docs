@@ -1,12 +1,12 @@
 ---
 title: "Connect to an availability group listener"
 description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use TLS/SSL, and Kerberos." 
-ms.custom: "seodec18"
+ms.custom: contperf-fy21q1
 ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Connect to an Always On availability group listener 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Connections are automatically routed to the read-only replica if the following a
  
 -   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are [configured to support read-only routing](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+-   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
 
 -   The connection string references an availability group listener, and the application intent of the incoming connection is set to read-only (for example, by using the **Application Intent=ReadOnly** keyword in the ODBC or OLEDB connection strings or connection attributes or properties). 
 
@@ -115,7 +115,7 @@ Alternatively, while migrating from database mirroring to [!INCLUDE[ssHADR](../.
 > [!NOTE]  
 >  We recommend this setting for both single and multi-subnet connections to availability groups listeners and to SQL Server Failover Cluster Instance names.  Enabling this option adds additional optimizations, even for single-subnet scenarios.  
   
- The **MultiSubnetFailover** connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ The **MultiSubnetFailover** connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  An example of the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
   
@@ -192,4 +192,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 Once you've successfully connected to the listener, consider offloading [read-only workloads](overview-of-always-on-availability-groups-sql-server.md) and [backups](configure-backup-on-availability-replicas-sql-server.md) to the secondary replica to improve performance. You can also review various [availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md) to ensure the health of your availability group. 
 
-For more information about availability groups, see the  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+For more information about availability groups, see the  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

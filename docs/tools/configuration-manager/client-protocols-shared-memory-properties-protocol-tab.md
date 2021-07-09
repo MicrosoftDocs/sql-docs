@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols - Shared Memory Properties (Protocol Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

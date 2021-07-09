@@ -12,10 +12,10 @@ helpviewer_keywords:
   - "SQLXMLOLEDB Provider, samples"
   - "ClientSideXML property"
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

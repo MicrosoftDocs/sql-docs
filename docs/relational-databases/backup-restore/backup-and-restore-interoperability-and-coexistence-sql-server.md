@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "backups [SQL Server], files or filegroups"
   - "file backups [SQL Server], related features"
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
+  This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
   
  **In this Topic:**  
   

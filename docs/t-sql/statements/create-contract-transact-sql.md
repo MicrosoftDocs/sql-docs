@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONTRACT_TSQL"
   - "CREATE_CONTRACT_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], creating"
   - "message types [Service Broker], contracts"
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

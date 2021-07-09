@@ -13,7 +13,7 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # JSON data in SQL Server
@@ -189,7 +189,7 @@ The result of this query is shown in the following table:
 ### Convert SQL Server data to JSON or export JSON
 
 >[!NOTE]
->Converting Azure SQL Data Warehouse data to JSON or exporting JSON is not supported.
+>Converting Azure Synapse Analytics data to JSON or exporting JSON is not supported.
 
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   

@@ -5,14 +5,14 @@ ms.custom: ""
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 helpviewer_keywords: 
   - "JSON functions"
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: jroth
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
+ms.reviewer: chadam
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # JSON Functions (Transact-SQL)
 

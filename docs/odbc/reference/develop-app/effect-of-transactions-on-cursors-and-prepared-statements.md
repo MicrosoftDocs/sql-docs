@@ -20,11 +20,11 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Effect of Transactions on Cursors and Prepared Statements
-Committing or rolling back a transaction has the following effect on cursors and access plans:  
+Committing or rolling back a transaction has one of the following effects on cursors and access plans:  
   
--   All cursors are closed, and access plans for prepared statements on that connection are deleted.  
+-   All cursors are closed, and access plans for prepared statements on that connection are deleted, or  
   
--   All cursors are closed, and access plans for prepared statements on that connection remain intact.  
+-   All cursors are closed, and access plans for prepared statements on that connection remain intact, or 
   
 -   All cursors remain open, and access plans for prepared statements on that connection remain intact.  
   

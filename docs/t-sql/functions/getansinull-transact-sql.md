@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "GETANSINULL"
   - "GETANSINULL_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "default nullability"
   - "database nullability [SQL Server]"
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +31,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GETANSINULL ( [ 'database' ] )  
 ```  
   
@@ -59,7 +58,7 @@ GETANSINULL returns 1 if the database's nullability allows for null values. This
 ## Examples  
  The following example returns the default nullability for the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT GETANSINULL('AdventureWorks2012')  

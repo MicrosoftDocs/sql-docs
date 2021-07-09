@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Starting with SQL Server 2016, and in Azure SQL Database, there are no limitatio
   
 ## Accessing Data in Memory-Optimized Tables  
 
-Memory-optimized tables can be accessed most efficiently from natively compiled stored procedures ([Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). Memory-optimized tables can also be accessed with (traditional) interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] refers to accessing memory-optimized tables without a natively compiled stored procedure. Some examples of interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access include accessing a memory-optimized table from a DML trigger, ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, view, and table-valued function.  
+Memory-optimized tables can be accessed most efficiently from natively compiled stored procedures ([Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)). Memory-optimized tables can also be accessed with (traditional) interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] refers to accessing memory-optimized tables without a natively compiled stored procedure. Some examples of interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access include accessing a memory-optimized table from a DML trigger, ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, view, and table-valued function.  
   
  The following table summarizes native and interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access for various objects.  
   
@@ -102,5 +102,4 @@ For a brief discussion of typical scenarios where [!INCLUDE[hek_1](../../include
 ## See Also
 
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

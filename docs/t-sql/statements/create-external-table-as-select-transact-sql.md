@@ -3,10 +3,9 @@ description: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.service: sql-data-warehouse
-ms.subservice: design
+ms.prod: sql
 ms.topic: conceptual
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"
@@ -20,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,8 +30,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
 ## Syntax
 
-```syntaxsql
-  
+```syntaxsql 
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   
         LOCATION = 'hdfs_folder',  
@@ -167,6 +165,8 @@ As a prerequisite for creating an external table, the appliance administrator ne
 
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and DROP VIEW are the only data definition language (DDL) operations allowed on external tables.
 
+ External tables for serverless SQL pool cannot be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS.
+
  PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs.
 
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on this CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).
@@ -181,7 +181,7 @@ CREATE EXTERNAL TABLE AS SELECT to Parquet or ORC files will cause errors, which
 - /r
 - /n
 
-To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first CREATE EXTERNAL TABLE AS SELECT the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
+To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
 
 ## Locking
  Takes a shared lock on the SCHEMARESOLUTION object.
@@ -203,9 +203,8 @@ To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must fir
 
  The resulting Hadoop location and file name will be `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`.
 
-```  
-  
-      -- Example is based on AdventureWorks   
+```sql  
+-- Example is based on AdventureWorks   
 CREATE EXTERNAL TABLE hdfsCustomer  
 WITH (  
         LOCATION='/pdwdata/customer.tbl',  
@@ -221,9 +220,8 @@ WITH (
 > [!NOTE]
 >  This example specifies for 5000. If the port isn't specified, the database uses 8020 as the default port.
 
-```  
-  
-      -- Example is based on AdventureWorks  
+```sql  
+-- Example is based on AdventureWorks  
 CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
 WITH   
     (   
@@ -240,8 +238,8 @@ OPTION ( HASH JOIN );
  - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)
  - [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)
  - [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)
- - [CREATE TABLE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)
- - [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+ - [CREATE TABLE &#40;Azure Synapse Analytics, Parallel Data Warehouse&#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)
+ - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
  - [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)
  - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.spatial_indexes_TSQL"
   - "spatial_indexes"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.spatial_indexes catalog view"
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.spatial_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
 description: "CREATE WORKLOAD GROUP (Transact-SQL)"
-title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
+title: "CREATE WORKLOAD GROUP (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/27/2020
+ms.date: 05/04/2021
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WORKLOAD GROUP"
   - "WORKLOAD_GROUP_TSQL"
@@ -19,23 +19,23 @@ helpviewer_keywords:
   - "CREATE WORKLOAD GROUP statement"
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -46,17 +46,17 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
   
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -67,14 +67,14 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -87,7 +87,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 Creates a workload group. Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system. Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules. Once the statement completes, the settings are in effect.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name

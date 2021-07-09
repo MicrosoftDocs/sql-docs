@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/31/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,65 @@ ms.author: alexiva
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for Access contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for Access contains the following changes:
+
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for Access contains the following changes:
+
+* Show SQL text for queries in the HTML conversion report
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for Access contains the following changes:
+
+* Ignore indexes auto-created for foreign keys
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for Access requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for Access contains the following changes:
+
+* Fix `ORDER BY` conversion with `UNION` clause
+* Support for filtered unique indexes
+* Consider implicit type casts when converting procedure and function calls
 
 ## SSMA v8.12
 

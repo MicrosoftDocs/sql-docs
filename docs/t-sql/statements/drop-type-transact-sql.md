@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP TYPE"
   - "DROP_TYPE_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "alias data types [SQL Server], removing"
   - "DROP TYPE statement"
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Conditionally drops the type only if it already exists.  
   
@@ -64,12 +64,10 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## Examples  
  The following example assumes a type named `ssn` is already created in the current database.  
   
-```  
+```sql  
 DROP TYPE ssn ;  
 ```  
   
 ## See Also  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  

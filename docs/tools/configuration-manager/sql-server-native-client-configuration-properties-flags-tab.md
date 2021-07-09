@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 59af121d-c8b9-4faa-91a1-b664f2c9b441
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Native Client Configuration Properties (Flags Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

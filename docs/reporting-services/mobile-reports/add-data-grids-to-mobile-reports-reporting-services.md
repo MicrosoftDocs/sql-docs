@@ -20,7 +20,7 @@ Sometimes the best visualization is the data itself. Learn about the three *data
 ## Simple data grid
 The most basic, the simple data grid, can display multiple columns of data with custom formatting and headers. 
 
-![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
+![Screenshot of a mobile report simple data grid.](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
 
 After you add a data grid to the design surface, you can connect it to real data.
 
@@ -36,7 +36,7 @@ After you add a data grid to the design surface, you can connect it to real data
 ##  Indicator data grid
 You can add columns with gauges to an indicator data grid.
 
-![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
+![Screenshot of a mobile report indicator data grid.](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
 
 1. Drag an indicator data grid from the **Layout** tab to the design grid and make it the size you want.
 
@@ -51,7 +51,7 @@ The data grid automatically feeds the gauge only the data specific to that row o
 ## Chart data grid
 You can add you can add columns with either gauges or charts to a chart data grid. 
 
-![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
+![Screenshot of a mobile report chart data grid.](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
 
 When you add a chart column to a data grid, you need to add a separate data table to provide data for the chart in each row. This second data table needs to share a field with the main data table, to link each row to its associated chart data. 
 

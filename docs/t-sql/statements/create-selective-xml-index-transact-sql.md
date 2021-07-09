@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -134,7 +134,7 @@ identifier
 ## Examples  
  The following example shows the syntax for creating a selective XML index. It also shows several variations of the syntax for describing the paths to be indexed, with optional optimization hints.  
   
-```  
+```sql  
 CREATE TABLE Tbl ( id INT PRIMARY KEY, xmlcol XML );  
 GO  
 CREATE SELECTIVE XML INDEX sxi_index  
@@ -149,7 +149,7 @@ FOR(
   
  The following example includes a WITH XMLNAMESPACES clause.  
   
-```  
+```sql  
 CREATE SELECTIVE XML INDEX on T1(C1)  
 WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  

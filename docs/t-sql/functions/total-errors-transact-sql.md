@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@TOTAL_ERRORS"
   - "@@TOTAL_ERRORS_TSQL"
@@ -34,7 +34,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@TOTAL_ERRORS  
 ```  
   
@@ -49,7 +49,7 @@ ms.author: jrasnick
 ## Examples  
  This example shows the number of errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as of the current date and time.  
   
-```  
+```sql
 SELECT @@TOTAL_ERRORS AS 'Errors', GETDATE() AS 'As of';  
 ```  
   

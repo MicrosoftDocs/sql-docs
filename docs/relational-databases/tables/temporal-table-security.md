@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Security
 

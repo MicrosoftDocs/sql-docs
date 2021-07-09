@@ -1,8 +1,8 @@
 ---
-title: "Basic data types sample"
-description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use result set methods to retrieve and update values in the database."
+title: Basic data types sample
+description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use result set methods to retrieve and update values in the database.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -57,7 +57,8 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 import microsoft.sql.DateTimeOffset;
 
-public class BasicDataTypes {
+
+public class DatatypesTest {
     private static final String tableName = "DataTypesTable";
 
     public static void main(String[] args) {
@@ -88,6 +89,8 @@ public class BasicDataTypes {
             rs.updateDate(8, new Date(timeInMillis));
             rs.updateTime(9, new Time(timeInMillis));
             rs.updateTimestamp(10, ts);
+            rs.updateTimestamp(11, ts);
+            rs.updateObject(12, 987654321L, microsoft.sql.Types.SQL_VARIANT);
 
             // -480 indicates GMT - 8:00 hrs
             ((SQLServerResultSet) rs).updateDateTimeOffset(11, DateTimeOffset.valueOf(ts, -480));
@@ -105,20 +108,20 @@ public class BasicDataTypes {
         }
     }
 
-    private static void displayRow(String title,
-            ResultSet rs) throws SQLException {
+    private static void displayRow(String title, ResultSet rs) throws SQLException {
         System.out.println(title);
-        System.out.println(rs.getInt(1) + " , " +                 // SQL integer type.
-                rs.getString(2) + " , " +                         // SQL char type.
-                rs.getString(3) + " , " +                         // SQL varchar type.
-                rs.getBoolean(4) + " , " +                        // SQL bit type.
-                rs.getDouble(5) + " , " +                         // SQL decimal type.
-                rs.getDouble(6) + " , " +                         // SQL money type.
-                rs.getTimestamp(7) + " , " +                      // SQL datetime type.
-                rs.getDate(8) + " , " +                           // SQL date type.
-                rs.getTime(9) + " , " +                           // SQL time type.
-                rs.getTimestamp(10) + " , " +                     // SQL datetime2 type.
-                ((SQLServerResultSet) rs).getDateTimeOffset(11)); // SQL datetimeoffset type.
+        System.out.println(rs.getInt(1) + " , " + // SQL integer type
+                rs.getString(2) + " , " + // SQL char type
+                rs.getString(3) + " , " + // SQL varchar type
+                rs.getBoolean(4) + " , " + // SQL bit type
+                rs.getDouble(5) + " , " + // SQL decimal type
+                rs.getDouble(6) + " , " + // SQL money type
+                rs.getTimestamp(7) + " , " + // SQL datetime type
+                rs.getDate(8) + " , " + // SQL date type
+                rs.getTime(9) + " , " + // SQL time type
+                rs.getTimestamp(10) + " , " + // SQL datetime2 type
+                ((SQLServerResultSet) rs).getDateTimeOffset(11) + " , " + // SQL datetimeoffset type
+                rs.getObject(12)); // SQL sqlvariant type
         System.out.println();
     }
 
@@ -127,13 +130,13 @@ public class BasicDataTypes {
 
         String sql = "create table " + tableName + " (" + "c1 int, " + "c2 char(20), " + "c3 varchar(20), " + "c4 bit, "
                 + "c5 decimal(10,5), " + "c6 money, " + "c7 datetime, " + "c8 date, " + "c9 time(7), "
-                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + ");";
+                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + "c12 sql_variant" + ");";
 
         stmt.execute(sql);
     }
 
     private static void insertOriginalData(Connection con) throws SQLException {
-        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?" + ")";
+        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?,?" + ")";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setObject(1, 100);
             pstmt.setObject(2, "original text");
@@ -146,6 +149,7 @@ public class BasicDataTypes {
             pstmt.setObject(9, new java.util.Date(1453500034839L));
             pstmt.setObject(10, new java.util.Date(1453500034839L));
             pstmt.setObject(11, new java.util.Date(1453500034839L));
+            pstmt.setObject(12, 123456789L, microsoft.sql.Types.SQL_VARIANT);
             pstmt.execute();
         }
     }

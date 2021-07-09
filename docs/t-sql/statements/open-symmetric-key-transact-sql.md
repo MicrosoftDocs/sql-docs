@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OPEN SYMMETRIC KEY"
   - "OPEN_SYMMETRIC_KEY_TSQL"
@@ -19,18 +19,21 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Decrypts a symmetric key and makes it available for use.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Syntax  
   
 ```syntaxsql
-  
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   
 <decryption_mechanism> ::=  
@@ -89,7 +92,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ### A. Opening a symmetric key by using a certificate  
  The following example opens the symmetric key `SymKeyMarketing3` and decrypts it by using the private key of certificate `MarketingCert9`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
@@ -99,7 +102,7 @@ GO
 ### B. Opening a symmetric key by using another symmetric key  
  The following example opens the symmetric key `MarketingKey11` and decrypts it by using symmetric key `HarnpadoungsatayaSE3`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   

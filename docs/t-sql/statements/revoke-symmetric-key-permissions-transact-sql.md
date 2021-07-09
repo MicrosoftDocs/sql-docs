@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -28,7 +28,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         { TO | FROM } <database_principal> [ ,...n ]   
@@ -118,7 +117,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## Examples  
  The following example revokes `ALTER` permission on the symmetric key `SamInventory42` from the user `HamidS` and from other principals to which `HamidS` has granted `ALTER` permission.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;  
 GO  

@@ -4,10 +4,10 @@ title: "sp_statistics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_statistics_TSQL"
   - "sp_statistics"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
      [ , [ @table_owner = ] 'owner' ]   
@@ -39,7 +39,10 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
 `[ @table_name = ] 'table_name'`
  Specifies the table used to return catalog information. *table_name* is **sysname**, with no default. Wildcard pattern matching is not supported.  
@@ -93,7 +96,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  The index type Hashed accepts exact match or range searches, but pattern matching searches do not use the index.  
   
- **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](https://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## Permissions  
  Requires SELECT permission on the schema.  
@@ -111,5 +114,3 @@ EXEC sp_statistics DimEmployee;
  [Catalog Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

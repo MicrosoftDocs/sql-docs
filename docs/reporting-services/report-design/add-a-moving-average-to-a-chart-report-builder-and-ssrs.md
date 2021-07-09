@@ -15,7 +15,7 @@ ms.author: maggies
 # Add a Moving Average to a Chart (Report Builder and SSRS)
 A moving average is an average of the data in your series, calculated over a defined period of time. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, the moving average can be shown on the chart to identify significant trends.  
 
-![report-builder-column-chart-tutorial](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![Screenshot of a Sales Chart.](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  The Moving Average formula is the most popular price indicator used in technical analyses. Many other formulas, including mean, median and standard deviation, can also be derived from a series on the chart. When specifying a moving average, each formula may have one or more parameters that must be specified.  
  

@@ -4,12 +4,12 @@ titleSuffix: SQL machine learning
 description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/29/2020
+ms.date: 05/27/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
 # Native scoring using the PREDICT T-SQL function with SQL machine learning
@@ -55,18 +55,18 @@ The model formats supported by the `PREDICT` function depends on the SQL platfor
 | Azure SQL Edge | Yes | No |
 | Azure Synapse Analytics | Yes | No |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### ONNX models
 
 The model must be in an [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) model format.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### RevoScale models
 
 The model must be trained in advance using one of the supported **rx** algorithms listed below using the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) package.
 
-Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
+Serialize the model using [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -76,19 +76,19 @@ The following algorithms are supported in revoscalepy and RevoScaleR.
 
 + revoscalepy algorithms
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR algorithms
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](/r-server/r-reference/revoscaler/rxdtree)
+  + [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
 If you need to use an algorithms from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](../predictions/real-time-scoring.md).
 
@@ -101,7 +101,7 @@ Unsupported model types include the following types:
 ::: moniker-end
 
 ## Examples
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### PREDICT with an ONNX model
 
 This example shows how to use an ONNX model stored in the `dbo.models` table for native scoring.
@@ -140,7 +140,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### PREDICT with RevoScale model
 
 In this example, you create a model using **RevoScaleR** in R, and then call the real-time prediction function from T-SQL.
@@ -205,7 +205,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> Be sure to use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
+> Be sure to use the [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
 
 You can run a statement such as the following to view the stored model in binary format:
 
@@ -242,3 +242,4 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 + [SQL machine learning documentation](../index.yml)
 + [Machine learning and AI with ONNX in SQL Edge](/azure/azure-sql-edge/onnx-overview)
 + [Deploy and make predictions with an ONNX model in Azure SQL Edge](/azure/azure-sql-edge/deploy-onnx)
++ [Score machine learning models with PREDICT in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-predict)

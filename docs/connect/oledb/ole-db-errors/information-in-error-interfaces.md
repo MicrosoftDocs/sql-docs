@@ -4,7 +4,7 @@ description: "The OLE DB Driver for SQL Server reports some error and status inf
 ms.custom: ""
 ms.date: "05/06/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -40,7 +40,7 @@ ms.author: v-daenge
 |Member function|Description|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Fills an ERRORINFO structure with basic information about an error. An ERRORINFO structure contains members that identify the HRESULT return value for the error, and the provider and interface to which the error applies.|  
-|**GetCustomErrorObject**|Returns a reference on interfaces **ISQLErrorInfo,** and [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).|  
+|**GetCustomErrorObject**|Returns a reference on interfaces **ISQLErrorInfo,** and [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md).|  
 |**GetErrorInfo**|Returns a reference on an **IErrorInfo** interface.|  
 |**GetErrorParameters**|The OLE DB Driver for SQL Server does not return parameters to the consumer through **GetErrorParameters**.|  
 |**GetRecordCount**|Count of error records available.|  
@@ -54,5 +54,4 @@ ms.author: v-daenge
   
 ## See Also  
  [Errors](../../oledb/ole-db-errors/errors.md)  
-  
   

@@ -2,12 +2,12 @@
 description: "CHANGETABLE (Transact-SQL)"
 title: "CHANGETABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2016"
+ms.date: "02/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "CHANGETABLE_TSQL"
   - "CHANGETABLE"
@@ -17,61 +17,61 @@ helpviewer_keywords:
   - "CHANGETABLE"
   - "change tracking [SQL Server], CHANGETABLE"
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Returns change tracking information for a table.You can use this statement to return all changes for a table or change tracking information for a specific row.  
+  Returns change tracking information for a table. You can use this statement to return all changes for a table or change tracking information for a specific row.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CHANGETABLE (  
-    { CHANGES table , last_sync_version  
-    | VERSION table , <primary_key_values> } )  
-[AS] table_alias [ ( column_alias [ ,...n ] )  
+    { CHANGES <table_name> , <last_sync_version> 
+    | VERSION <table_name> , <primary_key_values> } 
+    , [ FORCESEEK ] 
+    )  
+[AS] <table_alias> [ ( <column_alias> [ ,...n ] )  
   
 <primary_key_values> ::=  
-( column_name [ , ...n ] ) , ( value [ , ...n ] )  
+( <column_name> [ , ...n ] ) , ( <value> [ , ...n ] )  
 ```  
   
 ## Arguments  
- CHANGES *table* , *last_sync_version*  
+ CHANGES *table_name* , *last_sync_version*  
  Returns tracking information for all changes to a table that have occurred since the version that is specified by *last_sync_version*.  
   
- *table*  
+ *table_name*  
  Is the user-defined table on which to obtain tracked changes. Change tracking must be enabled on the table. A one-, two-, three-, or four-part table name can be used. The table name can be a synonym to the table.  
   
  *last_sync_version*  
- When it obtains changes, the calling application must specify the point from which changes are required. The last_sync_version specifies that point. The function returns information for all rows that have been changed since that version. The application is querying to receive changes with a version greater than last_sync_version.  
-  
- Typically, before it obtains changes, the application will call **CHANGE_TRACKING_CURRENT_VERSION()** to obtain the version that will be used the next time changes are required. Therefore, the application does not have to interpret or understand the actual value.  
-  
- Because last_sync_version is obtained by the calling application, the application has to persist the value. If the application loses this value then it will need to re-initialize data.  
-  
- *last_sync_version* is **bigint**. The value must be scalar. An expression will cause a syntax error.  
-  
- If the value is NULL, all tracked changes are returned.  
-  
+ A nullable **bigint** scalar value. An [expression](../../t-sql/language-elements/expressions-transact-sql.md) will cause a syntax error. If the value is NULL, all tracked changes are returned.
+ When it obtains changes, the calling application must specify the point from which changes are required. The *last_sync_version* specifies that point. The function returns information for all rows that have been changed since that version. The application is querying to receive changes with a version greater than *last_sync_version*. 
+ Typically, before it obtains changes, the application will call `CHANGE_TRACKING_CURRENT_VERSION()` to obtain the version that will be used the next time changes are required. Therefore, the application does not have to interpret or understand the actual value. Because *last_sync_version* is obtained by the calling application, the application has to persist the value. If the application loses this value then it will need to re-initialize data. 
  *last_sync_version* should be validated to ensure that it is not too old, because some or all the change information might have been cleaned up according to the retention period configured for the database. For more information, see [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- VERSION *table*, { <primary_key_values> }  
- Returns the latest change tracking information for a specified row. Primary key values must identify the row. <primary_key_values> identifies the primary key columns and specifies the values. The primary key column names can be specified in any order.  
+ VERSION *table_name*, { *primary_key_values* }  
+ Returns the latest change tracking information for a specified row. Primary key values must identify the row. *primary_key_values* identifies the primary key columns and specifies the values. The primary key column names can be specified in any order.  
   
- *Table*  
+ *table_name*  
  Is the user-defined table on which to obtain change tracking information. Change tracking must be enabled on the table. A one-, two-, three-, or four-part table name can be used. The table name can be a synonym to the table.  
   
  *column_name*  
  Specifies the name of primary key column or columns. Multiple column names can be specified in any order.  
   
- *Value*  
+ *value*  
  Is the value of the primary key. If there are multiple primary key columns, the values must be specified in the same order as the columns appear in the *column_name* list.  
-  
+
+ [ FORCESEEK ]   
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU9), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]    
+ 
+ Optional parameter that forces a seek operation to be used to access the *table_name*. In some cases where very few rows have changed, a scan operation may still be used to access the *table_name*. If a scan operation this introduces a performance issue, use the `FORCESEEK` parameter.
+
  [AS] *table_alias* [ (*column_alias* [ ,...*n* ] ) ]  
  Provides names for the results that are returned by CHANGETABLE.  
   
@@ -80,7 +80,7 @@ CHANGETABLE (
   
  *column_alias*  
  Is an optional column alias or list of column aliases for the columns that are returned by CHANGETABLE. This enables column names to be customized in case there are duplicate names in the results.  
-  
+
 ## Return Types  
  **table**  
   
@@ -117,31 +117,23 @@ CHANGETABLE (
   
  If you delete a row and then insert a row that has the old primary key, the change is seen as an update to all columns in the row.  
   
- The values that are returned for the SYS_CHANGE_OPERATION and SYS_CHANGE_COLUMNS columns are relative to the baseline (last_sync_version) that is specified. For example, if an insert operation was made at version 10 and an update operation at version 15, and if the baseline *last_sync_version* is 12, an update will be reported. If the *last_sync_version* value is 8, an insert will be reported. SYS_CHANGE_COLUMNS will never report computed columns as having been updated.  
+ The values that are returned for the `SYS_CHANGE_OPERATION` and `SYS_CHANGE_COLUMNS` columns are relative to the baseline (last_sync_version) that is specified. For example, if an insert operation was made at version `10` and an update operation at version `15`, and if the baseline *last_sync_version* is `12`, an update will be reported. If the *last_sync_version* value is `8`, an insert will be reported. `SYS_CHANGE_COLUMNS` will never report computed columns as having been updated.  
   
  Generally, all operations that insert, update, or delete of data in user tables are tracked, including the MERGE statement.  
   
  The following operations that affect user table data are not tracked:  
   
--   Executing the UPDATETEXT statement  
+-   Executing the `UPDATETEXT` statement. This statement is deprecated and will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, changes that are made by using the `.WRITE` clause of the UPDATE statement are tracked.  
   
-     This statement is deprecated and will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, changes that are made by using the .WRITE clause of the UPDATE statement are tracked.  
-  
--   Deleting rows by using TRUNCATE TABLE  
-  
-     When a table is truncated, the change tracking version information that is associated with the table is reset as if change tracking has just been enabled on the table. A client application should always validate its last synchronized version. The validation fails if the table has been truncated.  
+-   Deleting rows by using `TRUNCATE TABLE`. When a table is truncated, the change tracking version information that is associated with the table is reset as if change tracking has just been enabled on the table. A client application should always validate its last synchronized version. The validation fails if the table has been truncated.  
   
 ## CHANGETABLE(VERSION...)  
  An empty result set is returned if a nonexistent primary key is specified.  
   
- The value of SYS_CHANGE_VERSION might be NULL if a change has not been made for longer than the retention period (for example, the cleanup has removed the change information) or the row has never been changed since change tracking was enabled for the table.  
+ The value of `SYS_CHANGE_VERSION` might be NULL if a change has not been made for longer than the retention period (for example, the cleanup has removed the change information) or the row has never been changed since change tracking was enabled for the table.  
   
 ## Permissions  
- Requires the following permissions on the table that is specified by the *table* value to obtain change tracking information:  
-  
--   SELECT permission on the primary key columns  
-  
--   VIEW CHANGE TRACKING  
+ Requires the `SELECT` permission on the primary key columns and `VIEW CHANGE TRACKING` permission on the table that is specified by the *<table_name>* value to obtain change tracking information.
   
 ## Examples  
   
@@ -210,5 +202,4 @@ WHERE
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
-  
   

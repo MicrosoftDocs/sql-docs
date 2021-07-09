@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysextendedarticlesview_TSQL"
   - "sysextendedarticlesview"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysextendedarticlesview view"
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

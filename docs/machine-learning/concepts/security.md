@@ -1,25 +1,28 @@
 ---
-title: Security overview for extensibility
-description: Security overview for the extensibility framework in SQL Server Machine Learning Services. Security for login and user accounts, SQL Server launchpad service, worker accounts, running multiple scripts, and file permissions.
+title: Security architecture for extensibility
+description: This article describes the security architecture for the extensibility framework in SQL Server Machine Learning Services. This includes security for login and user accounts, SQL Server launchpad service, worker accounts, running multiple scripts, and file permissions.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
-ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+ms.custom: contperf-fy21q1, seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Security overview for the extensibility framework in SQL Server Machine Learning Services
+# Security architecture for the extensibility framework in SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
+This article describes the security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). It examines the securables, services, process identity, and permissions. 
+Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of external scripts, and how user identities are mapped to worker accounts.
+
+For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ## Securables for external script
 
-An external script - written in R, Python, or external languages such as Java or .NET - is submitted as an input parameter to a [system stored procedure](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) created for this purpose, or is wrapped in a stored procedure that you define. Alternatively, you might have models that are pretrained and stored in a binary format in a database table, callable in a T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) function.
+An external script is submitted as an input parameter to a [system stored procedure](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) created for this purpose, or is wrapped in a stored procedure that you define. The script may be written in R, Python, or external languages such as Java or .NET. Alternatively, you might have models that are pretrained and stored in a binary format in a database table, callable in a T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) function.
 
 As the script is provided through existing database schema objects, stored procedures and tables, there are no new [securables](../../relational-databases/security/securables.md) for SQL Server Machine Learning Services.
 
@@ -29,7 +32,7 @@ Regardless of how you are using script or, what they consist of, database object
 
 ## Permissions
 
-SQL Server's data security model of database logins and roles extend to external script. A SQL Server login or Windows user account is required to run external scripts that use SQL Server data or that run with SQL Server as the compute context. Database users having permissions to execute an ad hoc query can access the same data from external script.
+SQL Server's data security model of database logins and roles extends to external script. A SQL Server login or Windows user account is required to run external scripts that use SQL Server data or that run with SQL Server as the compute context. Database users having permissions to execute a query can access the same data from external script.
 
 The login or user account identifies the *security principal*, who might need multiple levels of access, depending on the external script requirements:
 
@@ -65,14 +68,14 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## Services used in external processing (launchpad)
 
 The extensibility framework adds one new NT service to the [list of services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 The database engine uses the SQL Server **launchpad** service to instantiate an external script session as a separate process. 
-The process runs under a low-privilege account; distinct from SQL Server, launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for external scripts in SQL Server.
+The process runs under a low-privilege account. This account is distinct from SQL Server, launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under a low-privilege account, is the basis of the security and isolation model for external scripts in SQL Server.
 
 SQL Server also maintains a mapping of the identity of the calling user to the low-privilege worker account used to start the satellite process. In some scenarios, where script or code calls back to SQL Server for data and operations, SQL Server is able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
 
@@ -81,7 +84,7 @@ SQL Server also maintains a mapping of the identity of the calling user to the l
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## Services used in external processing (launchpad)
 
@@ -97,7 +100,7 @@ SQL Server also maintains a mapping of the identity of the calling user to the l
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## Services used in external processing
 
@@ -105,13 +108,13 @@ The extensibility framework adds one new daemon in a SQL Server installation: [m
 
 Only one database engine instance is supported and there is one launchpadd service bound to the instance. When a script is executed, the launchpadd service starts a separate launchpad process with the low-privileged user account mssql_satellite in its own new PID, IPC, mount, and network namespace. Each satellite process inherits the mssql_satellite user account of launchpad and uses that for the duration of script execution.
 
-For more details, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
+For more information, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ::: moniker-end
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## Identities used in processing (SQLRUserGroup)
 
@@ -121,13 +124,13 @@ For more details, see [Extensibility architecture in SQL Server Machine Learning
 
 + The size of the user account pool is static and the default value is 20, which supports 20 concurrent sessions. The number of external runtime sessions that can be launched simultaneously is limited by the size of this user account pool. 
 
-+ Worker account names in the pool are of the format SQLInstanceName*nn*. For example, on a default instance, **SQLRUserGroup** contains accounts named MSSQLSERVER01, MSSQLSERVER02, and so forth on up to MSSQLSERVER20.
++ Worker account names in the pool are of the format SQLInstanceName*nn*. For example, on a default instance, **SQLRUserGroup** contains accounts named MSSQLSERVER01, MSSQLSERVER02, and so forth, on up to MSSQLSERVER20.
 
 Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 
 ### Permissions granted to SQLRUserGroup
 
-By default, members of **SQLRUserGroup** have read and execute permissions on files in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, with access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
+By default, members of **SQLRUserGroup** have read and execute permissions on files in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. This includes access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
 
 To protect sensitive resources on SQL Server, you can optionally define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
 
@@ -141,11 +144,11 @@ During execution, launchpad creates temporary folders to store session data, del
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## AppContainer isolation
 
-Isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
+Isolation is achieved through [AppContainers](/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls. For more information, see [Firewall configuration for SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md).
 
@@ -158,7 +161,7 @@ When a session is started, launchpad maps the identity of the calling user to an
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## Identity mapping
 
@@ -182,7 +185,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## Implied authentication (loopback requests)
 
@@ -192,7 +195,7 @@ Trusted connections are workable from external script, but only with additional 
 
 To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../machine-learning/security/create-a-login-for-sqlrusergroup.md).
 
-Trusted connections are not the most widely used formulation of a connection request. When external script specifies a connection, it can be more common to use a SQL login, or a fully-specified user name and password if the connection is to an ODBC data source.
+Trusted connections are not the most widely used formulation of a connection request. When external script specifies a connection, it can be more common to use a SQL login, or a fully specified user name and password if the connection is to an ODBC data source.
 
 ### How implied authentication works for external script sessions
 
@@ -202,13 +205,13 @@ The following diagram shows the interaction of SQL Server components with the la
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## Implied authentication (loopback requests)
 
 *Implied authentication* describes connection request behavior under which external processes running under AppContainers are presented as a trusted user identity to SQL Server on loopback requests for data or operations. As a concept, implied authentication is no longer unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loopback*.
 
-By managing identity and credentials, the AppContainer prevents the use of user credentials to gain access to resources or login to other environments. The AppContainer environment creates an identifier that uses the combined identities of the user and the application, so credentials are unique to each user/application pairing and the application cannot impersonate the user. For more information, see [AppContainer Isolation](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation).
+By managing identity and credentials, the AppContainer prevents the use of user credentials to gain access to resources or login to other environments. The AppContainer environment creates an identifier that uses the combined identities of the user and the application, so credentials are unique to each user/application pairing and the application cannot impersonate the user. For more information, see [AppContainer Isolation](/windows/win32/secauthz/appcontainer-isolation).
 
 For more details regarding loopback connections, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
 
@@ -220,7 +223,7 @@ The following diagram shows the interaction of SQL Server components with the la
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## Implied authentication (loopback requests)
 
@@ -228,7 +231,7 @@ The following diagram shows the interaction of SQL Server components with the la
 
 A loopback connection is achieved by using the satellite certificate from the launchpad GUID folder to authenticate back to SQL Server by the satellite process. The identity of the calling user is mapped to this certificate and hence the satellite process connecting back to SQL Server using the certificate can be mapped back to the calling user.
 
-For more details, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+For more information, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
 
 ### How implied authentication works for external script sessions
 

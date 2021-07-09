@@ -37,7 +37,7 @@ ms.author: maghan
   
  Only members of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin role can connect using the DAC.  
   
- The DAC is available and supported through the `sqlcmd` command-prompt utility using a special administrator switch (`-A`). For more information about using `sqlcmd`, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). You can also connect prefixing `admin:` to the instance name in the format `sqlcmd -S admin:<*instance_name*>`. You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to `admin:\<*instance_name*>`.
+ The DAC is available and supported through the `sqlcmd` command-prompt utility using a special administrator switch (`-A`). For more information about using `sqlcmd`, see [Use sqlcmd with Scripting Variables](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md). You can also connect prefixing `admin:` to the instance name in the format `sqlcmd -S admin:<*instance_name*>`. You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to `admin:\<*instance_name*>`.
 
 > [!Note]  
 > To establish a DAC from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
@@ -116,7 +116,7 @@ ms.author: maghan
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## Related Content  
- [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Use sqlcmd with Scripting Variables](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -130,5 +130,3 @@ ms.author: maghan
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

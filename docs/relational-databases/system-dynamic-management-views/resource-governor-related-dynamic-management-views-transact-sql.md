@@ -6,15 +6,15 @@ ms.date: "10/28/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "Resource Governor, dynamic management views"
   - "dynamic management views [SQL Server], Resource Governor"
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

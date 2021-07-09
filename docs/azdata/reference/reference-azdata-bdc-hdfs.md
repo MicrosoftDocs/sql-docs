@@ -1,11 +1,11 @@
 ---
 title: azdata bdc hdfs reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc hdfs commands. 
+description: Reference article for azdata bdc hdfs commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,13 +13,15 @@ ms.technology: big-data-cluster
 
 # azdata bdc hdfs
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
+[azdata bdc hdfs key](reference-azdata-bdc-hdfs-key.md) | Manage Hadoop encryption zone keys.
 [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs service status commands.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | The HDFS shell is a simple interactive command shell for HDFS file system.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | List the status of the given file or directory.
@@ -34,6 +36,8 @@ The following article provides reference for the `sql` commands in the `azdata` 
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Change the owner or group of the specified file.
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Copy a file or directory between the local machine and HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Manage mounting of remote stores in HDFS.
+[azdata bdc hdfs settings](reference-azdata-bdc-hdfs-settings.md) | BDC settings commands for hdfs service.
+[azdata bdc hdfs encryption-zone](reference-azdata-bdc-hdfs-encryption-zone.md) | Manage encryption zones in HDFS.
 ## azdata bdc hdfs shell
 The HDFS shell is a simple interactive command shell for HDFS file system.
 ```bash
@@ -64,7 +68,7 @@ azdata bdc hdfs ls --path -p
 ### Examples
 List Status
 ```bash
-azdata bdc hdfs ls --path tmp/
+azdata bdc hdfs ls --path "tmp/"
 ```
 ### Required Parameters
 #### `--path -p`
@@ -87,9 +91,9 @@ azdata bdc hdfs exists --path -p
                        
 ```
 ### Examples
-Check for file or directory existence.
+Check for file or directory existance.
 ```bash
-azdata bdc hdfs exists --path tmp/
+azdata bdc hdfs exists --path "tmp/"
 ```
 ### Required Parameters
 #### `--path -p`
@@ -114,7 +118,7 @@ azdata bdc hdfs mkdir --path -p
 ### Examples
 Make directory.
 ```bash
-azdata bdc hdfs mkdir --path tmp/
+azdata bdc hdfs mkdir --path "tmp/"
 ```
 ### Required Parameters
 #### `--path -p`
@@ -139,7 +143,7 @@ azdata bdc hdfs mv --source-path -s
 ### Examples
 Move file or directory.
 ```bash
-azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
+azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
 ```
 ### Required Parameters
 #### `--source-path -s`
@@ -224,7 +228,7 @@ azdata bdc hdfs rm --path -p
 ### Examples
 Remove a file or directory.
 ```bash
-azdata bdc hdfs rm --path tmp/
+azdata bdc hdfs rm --path "tmp/"
 ```
 ### Required Parameters
 #### `--path -p`
@@ -249,7 +253,7 @@ azdata bdc hdfs rmr --path -p
 ### Examples
 Recursive remove directory.
 ```bash
-azdata bdc hdfs rmr --path tmp/
+azdata bdc hdfs rmr --path "tmp/"
 ```
 ### Required Parameters
 #### `--path -p`
@@ -332,7 +336,7 @@ azdata bdc hdfs cp --from-path -f
 ### Examples
 Copy file or directory between the local machine and HDFS.
 ```bash
-azdata bdc hdfs cp --from_path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
+azdata bdc hdfs cp --from-path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
 ```
 ### Required Parameters
 #### `--from-path -f`
@@ -353,4 +357,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

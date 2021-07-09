@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_net_changes_TSQL"
   - "fn_net_changes_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_net_changes_<capture_instance>"
   - "sys.fn_net_changes_<capture_instance>"
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

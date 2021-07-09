@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "profiles [SQL Server], Database Mail"
   - "accounts [Database Mail]"
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Mail Configuration Objects
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

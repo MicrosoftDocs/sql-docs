@@ -18,9 +18,11 @@ ms.custom: "seo-lt-2019"
 ---
 # Assess the readiness of a SQL Server data estate migrating to Azure SQL Database using the Data Migration Assistant
 
-Migrating hundreds of SQL Server instances and thousands of databases to Azure SQL Database, our Platform as a Service (PaaS) offering, is a considerable task. To streamline the process as much as possible, you need to feel confident about your relative readiness for migration. Identifying low-hanging fruit, including the servers and databases that are fully ready or that require minimal effort to prepare for migration, eases and accelerates your efforts.
+Migrating hundreds of SQL Server instances and thousands of databases to Azure SQL Database or Azure SQL Managed Instance, our Platform as a Service (PaaS) offerings, is a considerable task. To streamline the process as much as possible, you need to feel confident about your relative readiness for migration. Identifying low-hanging fruit, including the servers and databases that are fully ready or that require minimal effort to prepare for migration, eases and accelerates your efforts.
 
-This article provides step-by-step instructions for leveraging the [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) to summarize readiness results and surface them on the [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) hub.
+This article provides step-by-step instructions for leveraging the [Data Migration Assistant](./dma-overview.md) to summarize readiness results and surface them on the [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) hub.
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -126,11 +128,11 @@ After you successfully create a migration project, under **Assessment tools**, i
 
 5. After the assessment completes, select **Upload to Azure Migrate**.
 
-   ![Azure Migrate - Data Migration Assistant - review results screen](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Screenshot showing the Data Migration Assistant with the Upload to Azure Migrate option called out.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Sign in to the Azure portal.
 
-   ![Azure Migrate - Data Migration Assistant - review results screen](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Screenshot of the Data Migration Assistant showing the Azure portal sign in window.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Select the subscription and Azure Migrate project into which you want to upload the assessment results, and then select **Upload**.
 

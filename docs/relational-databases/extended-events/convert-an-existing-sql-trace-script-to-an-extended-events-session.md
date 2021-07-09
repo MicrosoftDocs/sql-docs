@@ -11,10 +11,10 @@ helpviewer_keywords:
   - "SQL Trace, convert script to extended events"
   - "extended events [SQL Server], convert SQL Trace script"
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session
 

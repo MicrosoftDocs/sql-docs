@@ -6,11 +6,11 @@ ms.date: "06/10/2016"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ms.custom: seo-lt-2019
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database)

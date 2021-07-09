@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["master" "release-.*" "sandbox-.*"]
- :allowed-filename-matches ["docs" "docs-msdn"]}
+ :allowed-filename-matches ["(?i)docs/(?:(?!toc.yml))" "docs-msdn"]}

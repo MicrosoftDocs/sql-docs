@@ -50,7 +50,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 1. On a SharePoint server, open a SharePoint Management Shell using the **Run as Administrator** option.
 
-2. Run [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) to add the farm solution.
+2. Run [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) to add the farm solution.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -58,7 +58,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
     The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.
 
-3. Run the [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) cmdlet to deploy the farm solution.
+3. Run the [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) cmdlet to deploy the farm solution.
 
     **SharePoint 2013**
 
@@ -90,7 +90,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 6. Repeat for additional site collections by opening each site and clicking Site Actions.
 
-Optionally, you can also use PowerShell to enable this feature on all sites using the [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx) cmdlet.
+Optionally, you can also use PowerShell to enable this feature on all sites using the [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature) cmdlet.
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

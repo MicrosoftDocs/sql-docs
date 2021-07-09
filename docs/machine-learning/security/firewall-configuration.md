@@ -8,12 +8,12 @@ ms.date: 10/17/2018
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Firewall configuration for SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article lists firewall configuration considerations that the administrator or architect should bear in mind when using machine learning services.
+This article lists firewall configuration considerations that the administrator or architect should bear in mind when using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) .
 
 ## Default firewall rules
 

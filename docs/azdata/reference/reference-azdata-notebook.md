@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: Reference article for azdata notebook commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata notebook
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the `notebook` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | View a notebook.  Option to stop at first cell execution error.
 [azdata notebook run](#azdata-notebook-run) | Run a notebook.  Execution stops at the first error.
@@ -42,7 +43,7 @@ azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-e
 The path to the notebook to view.
 ### Optional Parameters
 #### `--continue-on-error -c`
-Continue displaying additional cells ignoring any cell errors found in the notebook output.  The default behavior is to stop on error.  Stopping makes seeing the first cell that encountered an error easier.
+Continue displaying additional cells ignoring any cell errors found in the notebook output. The default behavior is to stop on error.  Stopping makes seeing the first cell that encountered an error easier.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -68,7 +69,9 @@ azdata notebook run --path -p
                     
 [--clear -c]  
                     
-[--timeout -t]
+[--timeout -t]  
+                    
+[--env -e]
 ```
 ### Examples
 Run notebook.
@@ -92,6 +95,9 @@ In interactive mode clear the console before rendering a cell.
 #### `--timeout -t`
 Seconds to wait for the execution to complete. The value -1 indicates wait forever.
 `600`
+#### `--env -e`
+Name of environment.
+`base`
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -106,4 +112,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

@@ -27,7 +27,7 @@ Temporal system-versioned tables allow you to plan for data audit scenarios in t
 The following diagram shows an Employee table scenario with the data sample including current (marked with blue color) and historical row versions (marked with grey color).
 The right-hand portion of the diagram visualizes row versions on time axis and what are the rows you select with different types of querying on temporal table with or without SYSTEM_TIME clause.
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![Diagram showing the first Temporal Usage scenario.](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### Enabling system-versioning on a new table for data audit
 
@@ -53,7 +53,7 @@ Various options to create temporal system-versioned table are described in [Crea
 
 ### Enabling system-versioning on an existing table for data audit
 
-If you need to perform data audit in existing databases, use ALTER TABLE to extend non-temporal tables to become system-versioned. In order to avoid breaking changes in your application, add period columns as HIDDEN, as explained in [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). The following example illustrates enabling system-versioning on an existing Employee table in a hypothetical HR database:
+If you need to perform data audit in existing databases, use ALTER TABLE to extend non-temporal tables to become system-versioned. In order to avoid breaking changes in your application, add period columns as HIDDEN, as explained in [Alter Non-Temporal Table to be System-Versioned Temporal Table](./creating-a-system-versioned-temporal-table.md). The following example illustrates enabling system-versioning on an existing Employee table in a hypothetical HR database:
 
 ```sql
 /*
@@ -89,7 +89,7 @@ SELECT * FROM Employee
         WHERE EmployeeID = 1000 ORDER BY ValidFrom;
 ```
 
-Replace FOR SYSTEM_TIME BETWEEN...AND with FOR SYSTEM_TIME ALL to analyze the entire history of data changes for that particular employee:
+Replace `FOR SYSTEM_TIME BETWEEN...AND` with `FOR SYSTEM_TIME ALL` to analyze the entire history of data changes for that particular employee:
 
 ```sql
 SELECT * FROM Employee
@@ -97,7 +97,7 @@ SELECT * FROM Employee
         EmployeeID = 1000 ORDER BY ValidFrom;
 ```
 
-To search for row versions that were active only within a period (and not outside of it), use CONTAINED IN. This query is very efficient because it only queries the history table:
+To search for row versions that were active only within a period (and not outside of it), use `CONTAINED IN`. This query is very efficient because it only queries the history table:
 
 ```sql
 SELECT * FROM Employee FOR SYSTEM_TIME
@@ -111,7 +111,7 @@ Finally, in some audit scenarios, you may want to see how entire table looked li
 SELECT * FROM Employee FOR SYSTEM_TIME AS OF '2014-01-01 00:00:00.0000000' ;
 ```
 
-System-versioned temporal tables store values for period columns in UTC time zone, while it is always more convenient to work with local time zone both for filtering data and displaying results. The following code example shows how to apply filtering condition that is originally specified in the local time zone and then converted to UTC using AT TIME ZONE introduced in SQL Server 2016:
+System-versioned temporal tables store values for period columns in UTC time zone, while it is always more convenient to work with local time zone both for filtering data and displaying results. The following code example shows how to apply filtering condition that is originally specified in the local time zone and then converted to UTC using `AT TIME ZONE` introduced in SQL Server 2016:
 
 ```sql
 /*Add offset of the local time zone to current time*/
@@ -129,16 +129,16 @@ SELECT
     , ValidFrom AT TIME ZONE 'Pacific Standard Time' AS ValidFromPT
     , ValidTo AT TIME ZONE 'Pacific Standard Time' AS ValidToPT
 FROM Employee
-    FOR SYSTEM_TIME AS OF @asOf where EmployeeId = 1000
+    FOR SYSTEM_TIME AS OF @asOf where EmployeeId = 1000;
 ```
 
-Using AT TIME ZONE is helpful in all other scenarios where system-versioned tables are used.
+Using `AT TIME ZONE` is helpful in all other scenarios where system-versioned tables are used.
 
 > [!TIP]
-> Filtering conditions specified in temporal clauses with FOR SYSTEM_TIME are SARG-able (i.e SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation.
-> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
-> If you apply AT TIME ZONE to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:
-> \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition.
+> Filtering conditions specified in temporal clauses with `FOR SYSTEM_TIME` are SARGable. (SARGable means that SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation. For more information, see [SQL Server Index Architecture and Design Guide](../sql-server-index-design-guide.md#query-considerations).)
+> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of `\<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'`.
+> If you apply `AT TIME ZONE` to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:
+> `\<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition`.
 
 See also: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 
@@ -170,7 +170,7 @@ Examples of the real-world scenarios that fit well into this category are invent
 
 The following diagram shows simplified data model used for inventory management:
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![Diagram showing simplified data model used for inventory management.](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 The following code example creates ProductInventory as an in-memory system-versioned temporal table with a clustered columnstore index on the history table (which actually replaces the row-store index created by default):
 
@@ -187,8 +187,8 @@ BEGIN
     BEGIN
         ALTER TABLE [dbo].[ProductInventory] SET (SYSTEM_VERSIONING = OFF)
     END
-    DROP TABLE IF EXISTS [dbo].[ProductInventory]
-       DROP TABLE IF EXISTS [dbo].[ProductInventoryHistory]
+    DROP TABLE IF EXISTS [dbo].[ProductInventory];
+       DROP TABLE IF EXISTS [dbo].[ProductInventoryHistory];
 END
 GO
 
@@ -250,13 +250,14 @@ BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL=SNAPSHOT, LANGUAGE=N'English')
                         @productId
                        ,@locationId
                        ,@quantityIncrement
+                   )
         END
 END;
 ```
 
 The spUpdateInventory stored procedure either inserts a new product in the inventory or updates the product quantity for the particular location. The business logic is very simple and focused on maintaining the latest state accurate all the time by incrementing / decrementing the Quantity field through table update, while system-versioned tables transparently add history dimension to the data, as depicted on the diagram below.
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![Diagram showing Temporal Usage with current usage In-Memory and historic usage in a clustered columnstore.](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 Now, querying of the latest state can be performed efficiently from the natively compiled module:
 
@@ -290,7 +291,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 The diagram below shows the data history for one product which can be easily rendered importing the view above in the Power Query, Power BI or similar business intelligence tool:
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![Diagram showing the data history for one product.](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 Temporal tables can be used in this scenario to perform other types of time travel analysis, such as reconstructing the state of the inventory AS OF any point in time in the past or comparing snapshots that belong to different moments in time.
 
@@ -320,7 +321,7 @@ ALTER TABLE [Location]
     SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.LocationHistory));
 ```
 
-Since the data model now involves multiple temporal tables, the best practice for AS OF analysis is to create a view that extracts necessary data from the related tables and apply FOR SYSTEM_TIME AS OF to the view as this will greatly simplify reconstructing the state of entire data model:
+Since the data model now involves multiple temporal tables, the best practice for `AS OF` analysis is to create a view that extracts necessary data from the related tables and apply `FOR SYSTEM_TIME AS OF` to the view as this will greatly simplify reconstructing the state of entire data model:
 
 ```sql
 DROP VIEW IF EXISTS vw_ProductInventoryDetails;
@@ -341,9 +342,9 @@ SELECT * FROM vw_ProductInventoryDetails
     FOR SYSTEM_TIME AS OF '2015.01.01';
 ```
 
-The following picture shows the execution plan generated for the SELECT query. This illustrates that all complexity of dealing with temporal relations is fully handled by the SQL Server engine:
+The following picture shows the execution plan generated for the `SELECT` query. This illustrates that all complexity of dealing with temporal relations is fully handled by the SQL Server engine:
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![Diagram showing the execution plan generated for the SELECT query illustrating that all complexity of dealing with temporal relations is fully handled by the SQL Server engine.](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 Use the following code to compare state of product inventory between two points in time (a day ago and a month ago):
 
@@ -385,7 +386,7 @@ CREATE TABLE [dbo].[Product]
 
 The following diagram shows the purchases over time:
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![Diagram showing the purchases over time.](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 Assuming that during the regular days number of purchased products has small variance, the following query identifies singleton outliers - samples which difference compared to their immediate neighbors is significant (2x), while surrounding samples do not differ significantly (less than 20%):
 
@@ -461,7 +462,7 @@ No additional code is required to maintain SCD during the data warehouse loading
 
 The following illustration shows how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![Diagram showing how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 In order to use above SCDs in reports, you need to effectively adjust querying. For example, you might want to calculate the total sales amount and the average number of sold products per capita for the last six months. Note that both metrics requires the correlation of data from the fact table and dimensions that might have changed their attributes important for the analysis (DimLocation.NumOfCustomers, DimProduct.UnitPrice). The following query properly calculates the required metrics:
 
@@ -518,7 +519,7 @@ AS
 ;WITH History
 AS
 (
-        /* Order historical rows by tehir age in DESC order*/
+        /* Order historical rows by their age in DESC order*/
         SELECT ROW_NUMBER () OVER (PARTITION BY EmployeeID ORDER BY [ValidTo] DESC) AS RN, *
         FROM Employee FOR SYSTEM_TIME ALL WHERE YEAR (ValidTo) < 9999 AND Employee.EmployeeID = @EmployeeID
 )
@@ -534,13 +535,13 @@ This stored procedure takes @EmployeeID and @versionNumber as input parameters. 
 
 The following picture shows state of the row before and after the procedure invocation. Red rectangle marks current row version that is incorrect, while green rectangle marks correct version from the history.
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![Screenshot showing the state of the row before and after the procedure invocation](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![Screenshot showing the corrected row.](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 This repair stored procedure can be defined to accept an exact timestamp instead of row version. It will restore row to any version that was active for the point in time provided (i.e. AS OF point in time).
 
@@ -562,16 +563,16 @@ UPDATE Employee
 
 For the same data sample the following picture illustrates repair scenario with time condition. Highlighted are @asOf parameter, selected row in the history that was actual at the provided point in time and new row version in the current table after repair operation:
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![Screenshot showing the repair scenario with time condition.](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 Data correction can become part of automated data loading in data warehousing and reporting systems. If a newly updated value is not correct then, in many scenarios, restoring the previous version from history is good enough mitigation. The following diagram shows how this process can be automated:
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![Diagram showing how the process can be automated.](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
+- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
 - [Temporal Table System Consistency Checks](../../relational-databases/tables/temporal-table-system-consistency-checks.md)
 - [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)
 - [Temporal Table Considerations and Limitations](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)

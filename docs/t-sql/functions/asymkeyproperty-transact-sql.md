@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ASYMKEYPROPERTY_TSQL"
   - "ASYMKEYPROPERTY"
@@ -28,7 +28,7 @@ This function returns the properties of an asymmetric key.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')  
 ```  
   

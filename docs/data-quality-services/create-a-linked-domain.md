@@ -57,7 +57,7 @@ ms.author: sawinark
   
 6.  If necessary, you can change the name or description of the linked domain in the Domain Properties tab.  
   
-7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   
@@ -94,5 +94,4 @@ ms.author: sawinark
 -   You cannot create a linked domain or a linked composite domain to a composite domain.  
   
 -   When you double-click a linked domain in any of the Domain Management tabs, the domain will be opened to editing with an indication in the name string that it is a linked domain.  
-  
   

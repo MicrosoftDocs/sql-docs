@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysdevices"
   - "sysdevices_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysdevices compatibility view"
   - "sysdevices system table"
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysdevices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -28,7 +28,7 @@ ms.author: jaszymas
 
 The Service Master Key can only be opened by the Windows service account under which it was created or by a principal with access to both the service account name and its password.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] uses the AES encryption algorithm to protect the service master key (SMK) and the database master key (DMK). AES is a newer encryption algorithm than 3DES used in earlier versions. After upgrading an instance of the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] the SMK and DMK should be regenerated in order to upgrade the master keys to AES. For more information about regenerating the SMK, see [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] uses the AES encryption algorithm to protect the service master key (SMK) and the database master key (DMK). AES is a newer encryption algorithm than 3DES used in earlier versions. After upgrading an instance of the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] the SMK and DMK should be regenerated in order to upgrade the master keys to AES. For more information about regenerating the SMK, see [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
 
 ### Database master key
   
@@ -52,7 +52,7 @@ The Service Master Key can only be opened by the Windows service account under w
 -   Add or remove a server instance from a server scale-out deployment where multiple servers share both a single database and the key that provides reversible encryption for that database.  
   
 ## Important Security Information  
- Accessing objects secured by the service master key requires either the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service account that was used to create the key or the computer (machine) account. That is, the computer is tied to the system where the key was created. You can change the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service account *or* the computer account without losing access to the key. However, if you change both, you will lose access to the service master key. If you lose access to the service master key without one of these two elements, you be unable to decrypt data and objects encrypted by using the original key.  
+ Accessing objects secured by the service master key requires either the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service account that was used to create the key or the computer (machine) account. That is, the computer account that is tied to the system where the key was created. You can change the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service account *or* the computer account without losing access to the key. However, if you change both, you will lose access to the service master key. If you lose access to the service master key without one of these two elements, you be unable to decrypt data and objects encrypted by using the original key.  
   
  Connections secured with the service master key cannot be restored without the service master key.  
   
@@ -62,7 +62,7 @@ The Service Master Key can only be opened by the Windows service account under w
 >  If you lose all access to the keys described earlier, you will lose access to the objects, connections, and data secured by those keys. You can restore the service master key, as described in the links that are shown here, or you can go back to the original encrypting system to recover the access. There is no "back-door" to recover the access.  
   
 ## In This Section  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Service Master Key]()  
  Provides a brief explanation for the service master key and its best practices.  
   
  [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -99,5 +99,4 @@ The Service Master Key can only be opened by the Windows service account under w
  [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

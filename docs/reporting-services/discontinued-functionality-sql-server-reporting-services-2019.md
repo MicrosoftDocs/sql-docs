@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
 ms.date: 11/19/2019
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
 
 # Discontinued functionality in SQL Server 2019 Reporting Services (SSRS)

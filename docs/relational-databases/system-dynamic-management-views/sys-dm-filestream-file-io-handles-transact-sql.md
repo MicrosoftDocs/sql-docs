@@ -6,7 +6,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_filestream_file_io_handles"
   - "sys.dm_filestream_file_io_handles"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_filestream_file_io_handle catalog view"
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

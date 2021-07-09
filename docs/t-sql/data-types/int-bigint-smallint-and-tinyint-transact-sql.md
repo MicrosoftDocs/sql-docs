@@ -3,10 +3,10 @@ title: "int, bigint, smallint, and tinyint (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for int, bigint, smallint, and tinyint data types. These data types are used to represent integer data."
 ms.date: 09/08/2017
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "bigint_TSQL"
   - "smallint"
@@ -27,7 +27,7 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,10 +77,10 @@ The following example creates a table using the **bigint**, **int**, **smallint*
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyBigIntColumn bigint  
-,MyIntColumn  int
-,MySmallIntColumn smallint
-,MyTinyIntColumn tinyint
+  MyBigIntColumn BIGINT  
+,MyIntColumn  INT
+,MySmallIntColumn SMALLINT
+,MyTinyIntColumn TINYINT
 );  
   
 GO  
@@ -93,7 +93,7 @@ FROM dbo.MyTable;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn  
 -------------------- ----------- ---------------- ---------------  
 9223372036854775807  2147483647  32767            255  

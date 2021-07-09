@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replicate Identity Columns
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

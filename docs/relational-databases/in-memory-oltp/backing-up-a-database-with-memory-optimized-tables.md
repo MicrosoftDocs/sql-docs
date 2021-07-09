@@ -64,6 +64,5 @@ ms.author: maghan
  If memory-optimized tables are a significant portion of your database size, the differential backup can significantly reduce the size of your database backup. For typical OLTP workloads, the differential backups will be considerably smaller than the full database backups.  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

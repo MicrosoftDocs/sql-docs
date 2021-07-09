@@ -28,7 +28,7 @@ ms.author: maggies
   
  You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For information, see [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
@@ -38,7 +38,7 @@ ms.author: maggies
  
 ## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] with Microsoft Endpoint Configuration Manager 
   
- An administrator can also use software such as Microsoft Endpoint Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see [Microsoft Endpoint Configuration Manager documentation](https://docs.microsoft.com/configmgr/).  
+ An administrator can also use software such as Microsoft Endpoint Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).  
   
 > [!IMPORTANT]  
 >  Windows Vista and Windows 7 security features require elevated permissions to run command line operations and will prompt for permission to run the command line. The installation is not silent. To make the installation silent, you need to run the command line as an administrator.  
@@ -76,7 +76,7 @@ ms.author: maggies
   
 ## To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the command line 
 
- You can also perform a command line installation of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] provides: RBINSTALLDIR and REPORTSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifies the default report server that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] uses to save reports on the server.  
+ You can also perform a command line installation of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] provides: RBINSTALLDIR and RBSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. RBSERVERURL specifies the default report server that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] uses to save reports on the server.  
   
  If you want a completely silent installation, with no user interface interaction at all, specify the **/quiet** option. By design, the quiet option flag suppresses installation errors. It is therefore recommended that you include the **/l** option, which specifies logging, when you use the quiet option.   
   
@@ -92,9 +92,9 @@ ms.author: maggies
   
 6.  Type a command with the following format:  
   
-     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     The two options specific to installing [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] are: RBINSTALLDIR and REPORTSERVERURL. You don't have to include these arguments in the command line. The following is the baseline command:  
+     The two options specific to installing [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] are: RBINSTALLDIR and RBSERVERURL. You don't have to include these arguments in the command line. The following is the baseline command:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -113,5 +113,4 @@ ms.author: maggies
 ## See Also  
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)   
  [Uninstall Report Builder](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP PARTITION SCHEME"
   - "DROP_PARTITION_SCHEME_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "removing partition schemes"
   - "partition schemes [SQL Server], removing"
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
@@ -58,7 +57,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## Examples  
  The following example drops the partition scheme `myRangePS1` from the current database:  
   
-```  
+```sql  
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   

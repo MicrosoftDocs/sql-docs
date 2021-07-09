@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "automatic page repair"
   - "Availability Groups [SQL Server], automatic page repair"
   - "database mirroring [SQL Server], automatic page repair"
   - "suspect pages [SQL Server]"
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

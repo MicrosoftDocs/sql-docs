@@ -15,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data Types Overview
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 There are two types of spatial data. The **geometry** data type supports planar, or Euclidean (flat-earth), data. The **geometry** data type both conforms to the *Open Geospatial Consortium (OGC) Simple Features for SQL Specification* version 1.1.0 and is compliant with SQL MM (ISO standard).
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
@@ -68,7 +68,7 @@ Circular arc segments for geometry types are defined on the XY Cartesian coordin
 
 In the planar (flat-earth) system, measurements of distances and areas are given in the same unit of measurement as coordinates. Using the **geometry** data type, the distance between (2, 2) and (5, 6) is five units, regardless of the units used.  
 
-In an ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are typically measured in meters and square meters, though the measurement may depend on the [spatial reference identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
+In an ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are typically measured in meters and square meters, though the measurement may depend on the [spatial reference identifier](./spatial-reference-identifiers-srids.md) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
 
 ### Orientation of spatial data
 
@@ -78,7 +78,7 @@ In an ellipsoidal system, a polygon without an orientation has no meaning, or is
 
 The interior of the polygon in an ellipsoidal system is defined by the "left-hand rule": if you imagine yourself walking along the ring of a geography Polygon, following the points in the order in which they are listed, the area on the left is being treated as the interior of the Polygon, and the area on the right as the exterior of the Polygon.
 
-When the compatibility level is 100 or below in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] then the **geography** data type has the following restrictions:
+When the compatibility level is 100 or below in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] then the **geography** data type has the following restrictions:
 
 - Each **geography** instance must fit inside a single hemisphere. No spatial objects larger than a hemisphere can be stored.
 
@@ -86,7 +86,7 @@ When the compatibility level is 100 or below in [!INCLUDE[ssCurrent](../../inclu
 
 - The **geography** data type methods that require the input of two **geography** instances, such as STIntersection(), STUnion(), STDifference(), and STSymDifference(), will return null if the results from the methods do not fit inside a single hemisphere. STBuffer() will also return null if the output exceeds a single hemisphere.  
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** is a special type of Polygon that covers the entire globe. It has an area, but no borders or vertices.  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], **FullGlobe** is a special type of Polygon that covers the entire globe. It has an area, but no borders or vertices.  
 
 ### Outer and inner rings in `geography` data type
 
@@ -195,10 +195,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## See also
 
-- [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography Data Type Method Reference](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [Spatial Data (SQL Server)](./spatial-data-sql-server.md)
+- [geometry Data Type Method Reference](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography Data Type Method Reference](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

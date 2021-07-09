@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_repl_schemas_TSQL"
   - "dm_repl_schemas"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_schemas dynamic management function"
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP CREDENTIAL"
   - "DROP_CREDENTIAL_TSQL"
@@ -33,8 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP CREDENTIAL credential_name  
 ```  
   
@@ -58,7 +57,7 @@ DROP CREDENTIAL credential_name
 ## Examples  
  The following example removes the credential called `Saddles`.  
   
-```  
+```sql  
 DROP CREDENTIAL Saddles;  
 GO  
 ```  

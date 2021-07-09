@@ -28,14 +28,14 @@ ms.author: chugu
  
 In this example, the **Source** list contains all the tables in the AdventureWorks sample database. The selected row shows that the user wants to copy the **Sales.Customer** table from the source to the new **Sales.CustomerNew** table at the destination. 
    
- ![Select tables page of the Import and Export Wizard](../../integration-services/import-export-data/media/select-tables1.png "Select tables page of the Import and Export Wizard")
+ ![Screenshot showing the Select tables page of the Import and Export Wizard if you're going to copy tables.](../../integration-services/import-export-data/media/select-tables1.png "Select tables page of the Import and Export Wizard")
   
 ## Screen shot - If you provided a query  
  The following screen shot shows an example of the **Select Source Tables and Views** page of the wizard when you previously selected the **Write a query to specify the data to transfer** option on the **Specify Table Copy or Query** page. The **Source** list contains only a single row, where the item named `[Query]` represents the query that you provided on the **Provide a Source Query** page.
  
 In this example, the user wants to copy the query results from the source to the **Sales.CustomerNew** table at the destination.  
     
- ![Select tables page of the Import and Export Wizard](../../integration-services/import-export-data/media/select-tables2.png "Select tables page of the Import and Export Wizard")  
+ ![Screenshot showing the Select tables page of the Import and Export Wizard if you provided a query.](../../integration-services/import-export-data/media/select-tables2.png "Select tables page of the Import and Export Wizard")  
 
 ## Select source and destination tables 
 **Source**  

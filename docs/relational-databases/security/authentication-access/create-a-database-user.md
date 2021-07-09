@@ -4,7 +4,7 @@ description: Learn how to create the most common types of database users by usin
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---   
 # Create a Database User
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,14 +36,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="Understanding"></a> Understanding the Types of Users  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] presents 6 options when creating a database user. The following graphic shows the 6 options in the green box, and indicates what they represent.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![Diagram that explains the different types of users.](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### Selecting the Type of User  
  **Login or user that is not mapped to a login**  
   
  If you are new to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it can be difficult to determine what type of user you want to create. First ask yourself, does the person or group that needs to access the database have a login? Logins in the master database are common for the people who manage the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and for people who need to access many or all of the database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For this situation, you will create a **SQL user with login**. The database user is the identity of the login when it is connected to a database. The database user can use the same name as the login, but that is not required. This topic assumes that a login already exists in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For information about how to create a login, see [Create a Login](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
- If the person or group that needs to access the database does not have a login and if they only need access to one or few databases, create a **Windows user** or a **SQL user with password**. Also called a contained database user, it is not associated with a login in the master database. This is an excellent choice when you want to be able to easily move your database between instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To use this option on [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], an administrator must first enable contained databases for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the database be enabled for containment. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ If the person or group that needs to access the database does not have a login and if they only need access to one or few databases, create a **Windows user** or a **SQL user with password**. Also called a contained database user, it is not associated with a login in the master database. This is an excellent choice when you want to be able to easily move your database between instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To use this option on [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], an administrator must first enable contained databases for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the database be enabled for containment. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 > **IMPORTANT!** When connecting as a contained database user you must provide the name of the database as part of the connection string. To specify the database in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], in the **Connect to** dialog box, click **Options**, and then click the **Connection Properties** tab.  
   

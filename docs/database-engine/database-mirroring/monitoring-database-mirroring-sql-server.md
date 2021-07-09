@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring [SQL Server], database mirroring"
@@ -244,7 +244,7 @@ ms.author: mikeray
     -   High safety with automatic failover (synchronous)  
   
 ##  <a name="AdditionalSources"></a> Additional Sources of Information About a Mirrored Database  
- In addition to using the Database Mirroring Monitor and dbmmonitor stored procedures to monitor a mirrored database and set up alerts on monitored performance variables, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides catalog views, performance counters, and event notifications for database mirroring.  
+ In addition to using the Database Mirroring Monitor and dbmmonitor stored procedures to monitor a mirrored database and set up alerts on monitored performance variables, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] provides catalog views, performance counters, and event notifications for database mirroring.  
   
  **In This Section:**  
   

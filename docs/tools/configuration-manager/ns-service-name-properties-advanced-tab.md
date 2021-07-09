@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

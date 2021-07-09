@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "deleting database snapshots"
   - "database snapshots [SQL Server], deleting"
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Drop a Database Snapshot (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

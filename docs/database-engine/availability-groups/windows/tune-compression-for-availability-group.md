@@ -4,11 +4,11 @@ description: Learn how SQL Server compresses data streams for availability group
 ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Tune compression for availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,6 +39,6 @@ Trace flag | Description
 
 [Database Engine Startup Options](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
 
-[Automatic Seeding](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
+[Automatic Seeding](./automatically-initialize-always-on-availability-group.md)
 
-[Always On Prerequisites](prereqs-restrictions-recommendations-always-on-availability.md) 
+[Always On Prerequisites](prereqs-restrictions-recommendations-always-on-availability.md)

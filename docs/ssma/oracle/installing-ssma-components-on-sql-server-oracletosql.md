@@ -3,7 +3,7 @@ title: "Installing SSMA components on SQL Server (OracleToSQL) | Microsoft Docs"
 description: Learn how to install the SSMA extension pack and Oracle providers on the computer that runs SQL Server to support Oracle database conversion.
 ms.prod: sql
 ms.custom: ""
-ms.date: "07/14/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -21,7 +21,7 @@ In addition to installing SSMA, you must also install components on the computer
 
 ## SSMA for Oracle extension pack
 
-The SSMA extension pack adds the **sysdb** and **ssmatesterdb** databases to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The database **sysdb** contains the tables and stored procedures required to migrate data and the user-defined functions that emulate Oracle system functions. The **ssmatesterdb** database contains the tables and procedures required by the Tester component.
+The SSMA extension pack deploys extended stored procedures, and adds the **sysdb** database to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Extended stored procedures provide functionality required to emulate features and behavior of Oracle, while the **sysdb** database contains the tables and stored procedures required to migrate the data.
 
 Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA creates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs when the server-side data migration engine is used for migrating the data.
 
@@ -49,7 +49,7 @@ To install the extension pack:
 
 1. Copy **SSMAforOracleExtensionPack_*n*.msi** (where *n* is the build number) to the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 2. Double-click **SSMAforOracleExtensionPack_*n*.msi**.
-3. On the **Welcome** page, select **Next**.
+3. On the **Welcome** page, click **Next**.
 4. On the **End-User License Agreement** page, read the license agreement. If you agree, select **I accept the agreement** option, and then click **Next**.
 5. On the **Choose Setup Type** page, select **Typical**.
 6. On the **Ready to Install** page, select **Install**.
@@ -60,7 +60,7 @@ To install the extension pack:
 8. Select the desired installation type and, click **Next**.
 
    > [!IMPORTANT]
-   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure SQL Data Warehouse do not support extension pack.
+   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure Synapse Analytics do not support extension pack.
 
    If you are installing the extension pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
 
@@ -72,11 +72,9 @@ To install the extension pack:
 
 10. Next step requires you to set the password for a master key that will be used to encrypt any sensitive data stored in the extension pack database during server-side data migration. Provide a strong password and click **Next**.
 
-11. On the next page, select **Install Utilities Database *n* and Install Extension Pack libraries**, where *n* is the version number. If you plan on using the Tester feature, select **Install Tester Database** check box, and then select **Next**.
+11. On the next page, select **Install Utilities Database *n* and Install Extension Pack libraries**, where *n* is the version number and click **Next**.
 
     The **sysdb** database is created with the tables and stored procedures required for data migration (using server-side data migration engine) are created in this database.
-
-    If **Install Tester Database** option is checked, the **ssmatesterdb** database will be created.
 
 12. Once installation is complete, a prompt will appear asking if you want to install Utilities Database on another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Yes**, and then select **Next**, or to exit the wizard, select **No** and then select **Exit**.
 
@@ -98,6 +96,12 @@ To install the extension pack:
 After you install the extension pack, an **ssma_oracle.bcp_migration_packages** table appears in the **sysdb** database.
 
 Every time you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. These jobs are named **ssma_oracle data migration package {GUID}**, and are visible in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in the Jobs folder.
+
+Also following extended stored procedures will be added to the **master** database:
+
+- `xp_ora2ms_exec2`
+- `xp_ora2ms_exec2_ex`
+- `xp_ora2ms_versioninfo2`
 
 ## See also
 

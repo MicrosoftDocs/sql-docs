@@ -9,21 +9,21 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Get R package information
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 This article describes how to get information about installed R packages on [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 This article describes how to get information about installed R packages on [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 This article describes how to get information about installed R packages on [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Example R scripts show you how to list package information such as installation path and version.
 ::: moniker-end
 
@@ -34,7 +34,7 @@ When you install machine learning with SQL Server, a single package library is c
 All script that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any R script running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 The default path of the binaries for R is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -42,7 +42,7 @@ The default path of the binaries for R is:
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 The default path of the binaries for R is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -50,7 +50,7 @@ The default path of the binaries for R is:
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 The default path of the binaries for R is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -70,48 +70,48 @@ GO
 
 ## Default Microsoft R packages
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 The following Microsoft R packages are installed with SQL Server R Services.
 
 |Packages | Version | Description |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 The following Microsoft R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
 |Packages | Version | Description |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Adds machine learning algorithms in R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Adds machine learning algorithms in R. | 
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 The following Microsoft R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
 |Packages | Version | Description |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Adds machine learning algorithms in R. |
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Adds machine learning algorithms in R. |
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end
 
 ### Component upgrades
 
-By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades or by binding R support to Microsoft Machine Learning Server.
+By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 In addition, you can add MicrosoftML and olapR packages to a SQL Server instance through a component upgrade.
 ::: moniker-end
 
@@ -176,9 +176,9 @@ print(packageDescription("MicrosoftML"))
 
 ## Next steps
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

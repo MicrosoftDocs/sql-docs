@@ -29,8 +29,8 @@ Column values in table-valued parameters can be accessed using standard Transact
   
 | Resource                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Table-Valued Parameters (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
-| [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
+| [Table-Valued Parameters (Database Engine)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
+| [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
 | The [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
   
 ## Passing multiple rows in previous versions of SQL Server  
@@ -47,7 +47,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 ## Creating table-valued parameter types  
 
-Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
+Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -309,4 +309,4 @@ The following methods have been added to this class to support passing of table-
 
 ## See also
 
-[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)

@@ -58,11 +58,10 @@ ms.author: "jroth"
  [Monitoring and Troubleshooting Managed Database Objects](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  Provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
  Describes usage scenarios and code samples using CLR objects.  
   
 ## See Also  
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Installing the .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
-  
   

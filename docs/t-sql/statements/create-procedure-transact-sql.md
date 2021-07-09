@@ -2,12 +2,12 @@
 description: "CREATE PROCEDURE (Transact-SQL)"
 title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "06/01/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PROC"
   - "PROCEDURE"
@@ -44,16 +44,16 @@ helpviewer_keywords:
   - "automatic stored procedure execution"
   - "creating stored procedures"
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # CREATE PROCEDURE (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:
+Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
 
 - Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.
 - Contain programming statements that perform operations in the database, including calling other procedures.
@@ -127,13 +127,16 @@ sql_statement [;] [ ... n ]
 ```
 
 ```syntaxsql
--- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
+-- Transact-SQL Syntax for Stored Procedures in Azure Synapse Analytics
 -- and Parallel Data Warehouse
 
 -- Create a stored procedure
 CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
-    [ { @parameterdata_type } [ OUT | OUTPUT ] ] [ ,...n ]
-AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
+    [ { @parameter data_type } [ OUT | OUTPUT ] ] [ ,...n ]
+AS
+{
+  [ BEGIN ] sql_statement [;][ ,...n ] [ END ]
+}
 [;]
 ```
 
@@ -143,7 +146,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
+**Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).
 
 Alters the procedure if it already exists.
 
@@ -225,7 +228,7 @@ Procedures created with this option cannot be published as part of [!INCLUDE[ssN
 EXECUTE AS *clause*
 Specifies the security context under which to execute the procedure.
 
-For natively compiled stored procedures, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.
+For natively compiled stored procedures, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.
 
 For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
@@ -273,7 +276,7 @@ SET options cannot be changed inside ATOMIC blocks. The SET options in the user 
 
 BEGIN, ROLLBACK, and COMMIT operations cannot be used inside an atomic block.
 
-There is one ATOMIC block per natively compiled stored procedure, at the outer scope of the procedure. The blocks cannot be nested. For more information about atomic blocks, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+There is one ATOMIC block per natively compiled stored procedure, at the outer scope of the procedure. The blocks cannot be nested. For more information about atomic blocks, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 **NULL** | NOT NULL
 Determines whether null values are allowed in a parameter. NULL is the default.
@@ -282,13 +285,13 @@ NATIVE_COMPILATION
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Indicates that the procedure is natively compiled. NATIVE_COMPILATION, SCHEMABINDING, and EXECUTE AS can be specified in any order. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+Indicates that the procedure is natively compiled. NATIVE_COMPILATION, SCHEMABINDING, and EXECUTE AS can be specified in any order. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 SCHEMABINDING
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Ensures that tables that are referenced by a procedure cannot be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
+Ensures that tables that are referenced by a procedure cannot be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
 
 LANGUAGE = [N] 'language'
 
@@ -476,7 +479,7 @@ For CLR stored procedures, requires ownership of the assembly referenced in the 
 
 ## <a name="mot"></a> CREATE PROCEDURE and Memory-Optimized Tables
 
-Memory-optimized tables can be accessed through both traditional and natively compiled stored procedures. Native procedures are in most cases the more efficient way. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+Memory-optimized tables can be accessed through both traditional and natively compiled stored procedures. Native procedures are in most cases the more efficient way. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 The following sample shows how to create a natively compiled stored procedure that accesses a memory-optimized table `dbo.Departments`:
 
@@ -1046,4 +1049,3 @@ EXEC Get10TopResellers;
 - [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)
 - [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
 - [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
-  

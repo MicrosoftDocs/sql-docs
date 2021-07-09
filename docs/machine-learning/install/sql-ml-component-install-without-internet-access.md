@@ -1,18 +1,19 @@
 ---
-title: Install without internet access
-description: Install SQL Server machine learning R and Python on computers isolated behind a network firewall.
+title: Offline install without internet access
+description: Offline install SQL Server Machine Learning Services with Python and R on computers isolated behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning-services
-  
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Install SQL Server machine learning R and Python on computers with no internet access
+# Offline install SQL Server Machine Learning Services Python and R on computers with no internet access
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+This article describes how to install SQL Server Machine Learning Services offline on computers with no internet access isolated behind a network firewall.
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
@@ -24,7 +25,7 @@ In-database analytics consist of database engine instance, plus additional compo
 
 On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## SQL Server 2019 offline install
 
 To install SQL Server Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
@@ -56,7 +57,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## SQL Server 2017 offline install
 
 To install SQL Server Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
@@ -85,7 +86,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## SQL Server 2016 offline install
 
@@ -135,7 +136,7 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
@@ -143,7 +144,7 @@ We recommend that you apply the latest cumulative update to both the database en
    + SQL Server 2019 updates *(updates are not yet available for 2019)*
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
@@ -151,7 +152,7 @@ We recommend that you apply the latest cumulative update to both the database en
    + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
@@ -186,7 +187,7 @@ This step requires a server restart. If you are about to enable script execution
 
 ## Post-install configuration
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 After installation is finished, restart the service and then configure the server to enable script execution:
 
 + [Enable external script execution](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -197,7 +198,7 @@ An initial offline installation of SQL Server Machine Learning Services requires
 + [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 After installation is finished, restart the service and then configure the server to enable script execution:
 
 + [Enable external script execution](sql-r-services-windows-install.md#bkmk_enableFeature)

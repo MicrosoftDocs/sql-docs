@@ -6,6 +6,7 @@ ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.errortask.generichelp"
+  - "sql.data.tools.sqlserverobjectexplorer"
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan

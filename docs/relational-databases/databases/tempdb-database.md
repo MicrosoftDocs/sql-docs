@@ -2,7 +2,7 @@
 title: "tempdb database | Microsoft Docs"
 description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 04/17/2020
+ms.date: 07/02/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # tempdb database
 
@@ -34,9 +34,9 @@ The `tempdb` system database is a global resource that's available to all users 
   > [!IMPORTANT]
   > Azure SQL Database single databases and elastic pools support global temporary tables and global temporary stored procedures that are stored in `tempdb` and are scoped to the database level. 
   >
-  > Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same SQL database. User sessions from other SQL databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) supports the same temporary objects as does SQL Server.
+  > Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same SQL database. User sessions from other SQL databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) supports the same temporary objects as does SQL Server.
   >
-  > For Azure SQL Database single databases and elastic pools, only the master database and `tempdb` database apply. For more information, see [What is an Azure SQL Database server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). For a discussion of `tempdb` in the context of Azure SQL Database single databases and elastic pools, see [tempdb database in Azure SQL Database single databases and elastic pools](#tempdb-database-in-sql-database). 
+  > For Azure SQL Database single databases and elastic pools, only the master database and `tempdb` database apply. For more information, see [What is an Azure SQL Database server?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). For a discussion of `tempdb` in the context of Azure SQL Database single databases and elastic pools, see [tempdb database in Azure SQL Database single databases and elastic pools](#tempdb-database-in-sql-database). 
   >
   > For Azure SQL Managed Instance, all system databases apply.
 
@@ -62,6 +62,9 @@ The number of secondary data files depends on the number of (logical) processors
 
 > [!NOTE]
 > The default value for the number of data files is based on the general guidelines in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
+
+> [!NOTE]
+> To check current size and growth parameters for `tempdb`, query view `tempdb.sys.database_files`.
   
 ### Moving the tempdb data and log files in SQL Server
 
@@ -109,6 +112,8 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ### tempdb sizes for DTU-based service tiers
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|
 |Basic|13.9|1|13.9|
@@ -127,15 +132,21 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|Premium elastic database pools (all DTU configurations)|13.9|12|166.7|
-|Standard elastic database pools (S0-S2)|13.9|12|166.7|
-|Standard elastic database pools (S3 and above) |32|12|384|
-|Basic elastic database pools (all DTU configurations)|13.9|12|166.7|
+|Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
+|Standard Elastic Pools (50 eDTU)|13.9|12|166.7|
+|Standard Elastic Pools (100 eDTU)|32|1|32|
+|Standard Elastic Pools (200 eDTU)|32|2|64|
+|Standard Elastic Pools (300 eDTU)|32|3|96|
+|Standard Elastic Pools (400 eDTU)|32|3|96|
+|Standard Elastic Pools (800 eDTU)|32|6|192|
+|Standard Elastic Pools (1200 eDTU)|32|10|320|
+|Standard Elastic Pools (1600-3000 eDTU)|32|12|384|
+|Premium Elastic Pools (all DTU configurations)|13.9|12|166.7|
 ||||
 
 ### tempdb sizes for vCore-based service tiers
 
-See [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+See [vCore-based resource limits](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## Restrictions
 
@@ -199,7 +210,7 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
 ## Performance improvements in tempdb for SQL Server
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` performance is further optimized in the following ways:  
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:  
   
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.  
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.  
@@ -209,12 +220,12 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` perfor
 - All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.  
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
 
-For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## Memory-optimized tempdb metadata
-Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
+Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
 
-This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
+This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
 Watch this seven-minute video for an overview of how and when to use memory-optimized tempdb metadata:
 
@@ -295,22 +306,22 @@ Running out of disk space in `tempdb` can cause significant disruptions in the [
  -- Determining the amount of free space in tempdb
 SELECT SUM(unallocated_extent_page_count) AS [free pages],
   (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by the version store
 SELECT SUM(version_store_reserved_page_count) AS [version store pages used],
   (SUM(version_store_reserved_page_count)*1.0/128) AS [version store space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by internal objects
 SELECT SUM(internal_object_reserved_page_count) AS [internal object pages used],
   (SUM(internal_object_reserved_page_count)*1.0/128) AS [internal object space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by user objects
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
   (SUM(user_object_reserved_page_count)*1.0/128) AS [user object space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
  ```
 
 To monitor the page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify large queries, temporary tables, or table variables that are using lots of `tempdb` disk space. You can also use several counters to monitor the free space that's available in `tempdb` and the resources that are using `tempdb`.
@@ -336,9 +347,8 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 ```
 
 ## Related content
-[SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
-[System databases](../../relational-databases/databases/system-databases.md)    
-[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
-[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
-[Move database files](../../relational-databases/databases/move-database-files.md)    
-  
+- [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
+- [System databases](../../relational-databases/databases/system-databases.md)    
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
+- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
+- [Move database files](../../relational-databases/databases/move-database-files.md)    

@@ -61,11 +61,11 @@ Azure Data Studio provides many built-in T-SQL snippets for quickly creating sta
 
 2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key (or *Enter*) to load the create stored procedure snippet.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![Screenshot showing the Query Editor with sql typed in the editor and the sqlCreateStoredProcedure option called out.](./media/tutorial-sql-editor/snippet-list.png)
 
 3. The create stored procedure snippet has two fields set up for quick edit, *StoredProcedureName* and *SchemaName*. Select *StoredProcedureName*, right-click, and select **Change All Occurrences**. Now type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*.
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![Screenshot showing the Query Editor with the Change All Occurrences option called out.](./media/tutorial-sql-editor/snippet.png)
 
 5. Change all occurrences of *SchemaName* to *dbo*. 
 6. The snippet contains placeholder parameters and body text that needs updating. The *EXECUTE* statement also contains placeholder text because it doesn't know how many parameters the procedure will have. For this tutorial update the snippet so it looks like the following code:

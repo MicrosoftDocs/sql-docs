@@ -24,7 +24,6 @@ ms.author: vanto
  Recommendations to configure MAXDOP depend on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being used. For version specific guidelines, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines), and configure the policy to verify the value of max degree of parallelism accordingly.     
   
 ## For more information  
- [Recommendations and guidelines for the max degree of parallelism configuration option in SQL Server](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [Recommendations and guidelines for the max degree of parallelism configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)    
  [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
-  

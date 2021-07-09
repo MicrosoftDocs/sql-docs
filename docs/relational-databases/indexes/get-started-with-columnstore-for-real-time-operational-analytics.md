@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get started with Columnstore for real-time operational analytics
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real time, you can also eliminate the need for ETL and a data warehouse.  
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real time, you can also eliminate the need for ETL and a data warehouse.  
   
 ## Real-Time Operational Analytics Explained  
  Traditionally, businesses have had separate systems for operational (that is, OLTP) and analytics workloads. For such systems, Extract, Transform, and Load (ETL) jobs regularly move the data from the operational store to an analytics store. The analytics data is usually stored in a data warehouse or data mart dedicated to running analytics queries. While this solution has been the standard, it has these three key challenges:  
@@ -85,22 +85,28 @@ There is no time delay when analytics and OLTP workloads run on the same underly
   
 -   [Business case for real-time operational analytics](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [Using a nonclustered columnstore index for real-time operational analytics](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [Using a nonclustered columnstore index for real-time operational analytics](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)  
   
--   [A simple example using a nonclustered columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
+-   [A simple example using a nonclustered columnstore index](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)  
   
--   [How SQL Server maintains a nonclustered columnstore index  on a transactional workload](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)  
+-   [How SQL Server maintains a nonclustered columnstore index  on a transactional workload](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)  
   
--   [Minimizing the impact of nonclustered columnstore index maintenance by using a filtered index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+-   [Minimizing the impact of nonclustered columnstore index maintenance by using a filtered index](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
--   [Minimizing the impact of nonclustered columnstore index maintenance by using compression delay](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)  
+-   [Minimizing the impact of nonclustered columnstore index maintenance by using compression delay](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)  
   
--   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
+-   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)  
   
--   [Real-time operational analytics with memory-optimized tables](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   [Real-time operational analytics with memory-optimized tables](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)  
   
--   [Columnstore index and the merge policy for rowgroups](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
+-   [Columnstore index and the merge policy for rowgroups](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
+## Videos
+ A mini-series on Data Exposed goes into more details on some of the capabilities and considerations. The first video is below, but you can also find [Part 2: Optimize existing databases and applications with operational analytics](https://channel9.msdn.com/Shows/Data-Exposed/Optimize-Existing-Databases-and-Applications-with-Operational-Analytics-in-Azure-SQL-Part-2) and [Part 3: How to create operational analytics with Window Functions](https://channel9.msdn.com/Shows/Data-Exposed/How-to-Create-Operational-Analytics-with-Window-Functions-in-Azure-SQL-Part-3) for more. 
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-Azure-SQL-Enables-Real-time-Operational-Analytics-HTAP-Part-1/player?format=ny]
+ 
+
 ## Performance tip #1: Use filtered indexes to improve query performance  
  Running real-time operational analytics can impact the performance of the OLTP workload. This impact should be minimal. The example below shows how to use filtered indexes to minimize impact of nonclustered columnstore index on transactional workload while still delivering analytics in real time.  
   
@@ -159,7 +165,7 @@ Group By customername
   
  ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
   
- Please refer to the blog for details on [filtered nonclustered columnstore index.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+ Please refer to the blog for details on [filtered nonclustered columnstore index.](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
 ## Performance tip #2: Offload analytics to Always On readable secondary  
  Even though you can minimize the columnstore index maintenance by using a filtered columnstore index, the analytics queries can still require significant computing resources (CPU, I/O, memory) which impact the operational workload performance. For most mission critical workloads, our recommendation is to use the Always On configuration. In this configuration, you can eliminate the impact of running analytics by offloading it to a readable secondary.  
@@ -186,7 +192,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- Please refer to the blog for details on [compression delay](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/).  
+ Please refer to the blog for details on [compression delay](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci).  
   
  Here are the recommended best practices:  
   
@@ -216,4 +222,3 @@ ORDER BY created_time DESC;
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-  

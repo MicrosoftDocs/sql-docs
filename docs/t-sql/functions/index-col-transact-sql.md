@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "INDEX_COL_TSQL"
   - "INDEX_COL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "column names [SQL Server]"
   - "names [SQL Server], columns"
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # INDEX_COL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]  
     table_or_view_name', index_id , key_id )   
 ```  
@@ -69,7 +68,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
 ### A. Using INDEX_COL to return an index column name  
  The following example returns the column names of the two key columns in the index `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

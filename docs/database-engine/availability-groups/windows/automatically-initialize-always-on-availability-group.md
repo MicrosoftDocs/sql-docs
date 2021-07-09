@@ -5,11 +5,11 @@ ms.custom: seo-lt-2019
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-author: MashaMSFT
-ms.author: "mathoma"
+author: cawrites
+ms.author: "chadam"
 ---
 # Use automatic seeding to initialize an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -280,5 +280,4 @@ Before adding a database to an availability group with automatic seeding, evalua
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](https://technet.microsoft.com/library/dn135328.aspx)
-
+[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))

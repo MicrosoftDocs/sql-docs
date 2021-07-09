@@ -1,13 +1,13 @@
 ---
 description: "sys.fn_validate_plan_guide (Transact-SQL)"
-title: "sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs"
+title: "sys.fn_validate_plan_guide (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "06/22/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_validate_plan_guide"
   - "sys.fn_validate_plan_guide_TSQL"
@@ -18,14 +18,13 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
-ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Verifies the validity of the specified plan guide. The sys.fn_validate_plan_guide function returns the first error message that is encountered when the plan guide is applied to its query. An empty rowset is returned when the plan guide is valid. Plan guides can become invalid after changes are made to the physical design of the database. For example, if a plan guide specifies a particular index and that index is subsequently dropped, the query will no longer be able to use the plan guide.  
+  Verifies the validity of the specified plan guide. The `sys.fn_validate_plan_guide` function returns the first error message that is encountered when the plan guide is applied to its query. An empty rowset is returned when the plan guide is valid. Plan guides can become invalid after changes are made to the physical design of the database. For example, if a plan guide specifies a particular index and that index is subsequently dropped, the query will no longer be able to use the plan guide.  
   
  By validating a plan guide, you can determine whether the guide can be used by the optimizer without modification. Based on the results of the function, you can decide to drop the plan guide and retune the query or modify the database design, for example, by re-creating the index specified in the plan guide.  
   
@@ -33,7 +32,7 @@ ms.author: "jroth"
   
 ## Syntax  
   
-```  
+```tsql  
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   
@@ -54,7 +53,11 @@ sys.fn_validate_plan_guide ( plan_guide_id )
  OBJECT-scoped plan guides require VIEW DEFINITION or ALTER permission on the referenced object and permissions to compile the query or batch that is provided in the plan guide. For example, if a batch contains SELECT statements, SELECT permissions on the referenced objects are required.  
   
  SQL- or TEMPLATE-scoped plan guides require ALTER permission on the database and permissions to compile the query or batch that is provided in the plan guide. For example, if a batch contains SELECT statements, SELECT permissions on the referenced objects are required.  
-  
+
+## Remarks
+
+The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
 ## Examples  
   
 ### A. Validating all plan guides in a database  

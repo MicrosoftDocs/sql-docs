@@ -5,10 +5,10 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
 ms.date: "12/07/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "string concatenation"
   - "+= (concatenate operator)"
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # += (String Concatenation Assignment) (Transact-SQL)
@@ -30,8 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 expression += expression  
 ```  
   
@@ -49,7 +48,7 @@ expression += expression
   
  The += operator cannot be used without a variable. For example, the following code will cause an error:  
   
-```  
+```sql  
 SELECT 'Adventure' += 'Works'  
 ```  
   
@@ -57,8 +56,8 @@ SELECT 'Adventure' += 'Works'
 ### A. Concatenation using += operator
  The following example concatenates using the `+=` operator.  
   
-```  
-DECLARE @v1 varchar(40);  
+```sql  
+DECLARE @v1 VARCHAR(40);  
 SET @v1 = 'This is the original.';  
 SET @v1 += ' More text.';  
 PRINT @v1;  
@@ -71,10 +70,10 @@ PRINT @v1;
 ### B. Order of evaluation while concatenating using += operator
 The following example concatenates multiple strings to form one long string and then tries to compute the length of the final string. This example demonstrates the evaluation order and truncation rules, while using the concatenation operator. 
 
-```
-DECLARE @x varchar(4000) = replicate('x', 4000)
-DECLARE @z varchar(8000) = replicate('z',8000)
-DECLARE @y varchar(max);
+```sql
+DECLARE @x VARCHAR(4000) = REPLICATE('x', 4000)
+DECLARE @z VARCHAR(8000) = REPLICATE('z',8000)
+DECLARE @y VARCHAR(max);
  
 SET @y = '';
 SET @y += @x + @z;

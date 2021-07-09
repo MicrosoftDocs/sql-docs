@@ -6,7 +6,7 @@ ms.date: "08/06/2020"
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_resource_governor_external_resource_pools_TSQL"
   - "sys.dm_resource_governor_external_resource_pools"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

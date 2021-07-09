@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
@@ -32,9 +32,9 @@ ms.custom: seo-dt-2019
 |link_guid|**uniqueidentifier**|Unique ID of the replication link.|  
 |partner_server|**sysname**|Name of the SQL Database server containing the linked database.|  
 |partner_database|**sysname**|Name of the linked database on the linked SQL Database server.|  
-|last_replication|**datetimeoffset**|The timestamp of the last transaction's acknowledgement by the secondary based on the primary database clock. This value is available on the primary database only.|  
+|last_replication|**datetimeoffset**|The time when the primary received the acknowledgment that the last log block has been hardened by the secondary, based on the primary database clock. Log blocks are sent to the geo-secondary continuously, without waiting for transactions to commit on the primary.  This value is available on the primary database only.|  
 |replication_lag_sec|**int**|Time difference in seconds between the last_replication value and the timestamp of that transaction's commit on the primary based on the primary database clock.  This value is available on the primary database only.|  
-|replication_state|**tinyint**|The state of geo-replication for this database, one of:.<br /><br /> 1 = Seeding. The geo-replication target is being seeded but the two databases are not yet synchronized. Until seeding completes, you cannot connect to the secondary database. Removing secondary database from the primary will cancel the seeding operation.<br /><br /> 2 = Catch-up. The secondary database is  in a transactionally consistent state and is being constantly  synchronized with the primary database.<br /><br /> 4 = Suspended. This is not an active continuous-copy relationship. This state usually indicates that the bandwidth available for the interlink is insufficient for the level of transaction activity on the primary database. However, the continuous-copy relationship is still intact.|  
+|replication_state|**tinyint**|The state of geo-replication for this database, one of:<br /><br /> 1 = Seeding. The geo-replication target is being seeded but the two databases are not yet synchronized. Until seeding completes, you cannot connect to the secondary database. Removing secondary database from the primary will cancel the seeding operation.<br /><br /> 2 = Catch-up. The secondary database is  in a transactionally consistent state and is being constantly  synchronized with the primary database.<br /><br /> 4 = Suspended. This is not an active continuous-copy relationship. This state usually indicates that the bandwidth available for the interlink is insufficient for the level of transaction activity on the primary database. However, the continuous-copy relationship is still intact.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Geo-replication role, one of:<br /><br /> 0 = Primary. The database_id  refers to the primary database in the geo-replication partnership.<br /><br /> 1 = Secondary.  The database_id  refers to the primary database in the geo-replication partnership.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
@@ -61,8 +61,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## See Also  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

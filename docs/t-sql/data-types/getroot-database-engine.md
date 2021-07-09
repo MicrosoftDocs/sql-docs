@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "GetRoot"
   - "GetRoot_TSQL"
@@ -28,12 +28,12 @@ Returns the root of the hierarchy tree. GetRoot() is a static method.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::GetRoot ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  
@@ -67,8 +67,7 @@ SqlHierarchyId.GetRoot()
 ```  
   
 ## See also
-[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

@@ -5,7 +5,7 @@ ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 ms.custom: ""
 ms.author: giladm
 author: giladmit
@@ -24,10 +24,10 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "data classification"
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: " >= sql-server-ver15 || = azuresqldb-current"
 ---
 # DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Drops sensitivity classification metadata from one or more database columns.
 
@@ -88,4 +88,4 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[Getting started with SQL Information Protection](https://aka.ms/sqlip)
+[Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

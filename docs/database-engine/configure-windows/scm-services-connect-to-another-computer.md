@@ -18,7 +18,7 @@ ms.author: maghan
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes how to connect to another computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on a remote computer.
+This article describes how to connect to another computer in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on a remote computer.
 
 > [!NOTE]
 > Some actions cannot be performed by Configuration Manager when connecting remotely.

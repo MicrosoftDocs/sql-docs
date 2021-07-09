@@ -2,12 +2,12 @@
 description: "ALTER TABLE (Transact-SQL)"
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/04/2020"
+ms.date: "05/25/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WAIT_AT_LOW_PRIORITY"
   - "ABORT_AFTER_WAIT"
@@ -58,9 +58,9 @@ helpviewer_keywords:
   - "data retention policy"
   - "table changes [SQL Server]"
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
 
@@ -119,6 +119,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END
                    [ HIDDEN ] [ NOT NULL ][ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES] ,
+                start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
         ]
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )
     | DROP
@@ -156,7 +157,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 { partition_scheme_name | filegroup | "default" | "NULL" } ]
             | SYSTEM_VERSIONING =
                   {
-                      OFF
+                    OFF
                   | ON
                       [ ( HISTORY_TABLE = schema_name . history_table_name
                           [, DATA_CONSISTENCY_CHECK = { ON | OFF } ]
@@ -169,14 +170,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =  OFF | ON  
-                      [(    
-                         [ FILTER_COLUMN = column_name ],   
-                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                              | MONTH | MONTHS | YEAR | YEARS }}]    
-                      )]
-          )
-
+            | DATA_DELETION =  
+                {
+                      OFF 
+                    | ON  
+                        [(  [ FILTER_COLUMN = column_name ]   
+                            [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                                    | MONTH | MONTHS | YEAR | YEARS }}]   
+                        )]
+     	           }
     | REBUILD
       [ [PARTITION = ALL]
         [ WITH ( <rebuild_option> [ ,...n ] ) ]
@@ -388,9 +390,9 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 <column_constraint>::=
     [ CONSTRAINT constraint_name ] 
     {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
 {
@@ -403,6 +405,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
 }
 ```
+
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -558,7 +562,7 @@ SPARSE
 Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. You can't set sparse columns as NOT NULL. Converting a column from sparse to nonsparse or from nonsparse to sparse, locks the table for the duration of the command execution. You may need to use the REBUILD clause to reclaim any space savings. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. Three functions are available:
 
@@ -567,10 +571,15 @@ Specifies a dynamic data mask. *mask_function* is the name of the masking functi
 - partial()
 - random()
 
+Requires ALTER ANY MASK permission.
+
 To drop a mask, use `DROP MASKED`. For function parameters, see [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md).
 
+Add and drop a mask require **ALTER ANY MASK** permission.
+
+
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Allows many alter column actions to be carried out while the table remains available. Default is OFF. You can run alter column online for column changes related to data type, column length or precision, nullability, sparseness, and collation.
 
@@ -625,7 +634,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
 
 Specifies the names of the columns that the system uses to record the period of time for which a record is valid. You can specify existing columns or create new columns as part of the ADD PERIOD FOR SYSTEM_TIME argument. Set up the columns with the datatype of datetime2 and define them as NOT NULL. If you define a period column as NULL, an error results. You can define a [column_constraint](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) and/or [Specify Default Values for Columns](../../relational-databases/tables/specify-default-values-for-columns.md) for the system_start_time and system_end_time columns. See Example A in the following [System Versioning](#system_versioning) examples that demonstrates using a default value for the system_end_time column.
 
-Use this argument with the SET SYSTEM_VERSIONING argument to enable system versioning on an existing table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).
+Use this argument with the SET SYSTEM_VERSIONING argument to make an existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](/azure/azure-sql/temporal-tables).
 
 As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users can mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM \<table_name>** doesn't return a value for the columns. By default, period columns aren't hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.
 
@@ -658,10 +667,10 @@ Specifies that *constraint_name* or *column_name* is removed from the table. Mul
 - Bound to a rule.
 
 > [!NOTE]
-> Dropping a column doesn't reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
+> Dropping a column doesn't reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
 
 PERIOD FOR SYSTEM_TIME  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Drops the specification for the columns that the system will use for system versioning.
 
@@ -689,7 +698,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallel index operations aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallel index operations aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF. You can run REBUILD as an ONLINE operation.
@@ -705,9 +714,9 @@ Table locks apply for the duration of the index operation. An offline index oper
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
 > [!NOTE]
-> Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ ,...*n* ] **)** | *filegroup* | **"**default**"** }  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies a location to move the data rows currently in the leaf level of the clustered index. The table is moved to the new location. This option applies only to constraints that create a clustered index.
@@ -778,42 +787,44 @@ ALTER TABLE with the SET FILESTREAM_ON clause succeeds only if the table has no 
 
 If you specify *partition_scheme_name*, the rules for [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) apply. Be sure the table is already partitioned for row data, and its partition scheme uses the same partition function and columns as the FILESTREAM partition scheme.
 
-*filestream_filegroup_name* specifies the name of a FILESTREAM filegroup. The filegroup must have one file that's defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, or an error results.
+*filestream_filegroup_name* specifies the name of a FILESTREAM filegroup. The filegroup must have one file that's defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, or an error results.
 
 **"**default**"** specifies the FILESTREAM filegroup with the DEFAULT property set. If there's no FILESTREAM filegroup, an error results.
 
 **"**NULL**"** specifies that all references to FILESTREAM filegroups for the table are removed. All FILESTREAM columns must be dropped first. Use SET FILESTREAM_ON = "**NULL**" to delete all FILESTREAM data that's associated with a table.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. If you don't use the HISTORY_TABLE argument, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table does not exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies finite or infinite retention for historical data in a temporal table. If omitted, infinite retention is assumed.
 
-SET (DATA_DELETION =  OFF | ON  
-            [(
-                [ FILTER_COLUMN = column_name ],    
-                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                    | MONTH | MONTHS | YEAR | YEARS }}]    
-            )]    
-          )   
+SET (DATA_DELETION =  
+      {
+            OFF 
+        | ON  
+                [(  [ FILTER_COLUMN = column_name ]   
+                    [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                            | MONTH | MONTHS | YEAR | YEARS }}]   
+                )]
+       }   
 **Applies to:** Azure SQL Edge *only*
 
-Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
+Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
 
 - FILTER_COLUMN = { column_name }  
-Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+Specifies the column, that should be used to determine if the rows in the table are obsolete or not. The following data types are allowed for the filter column.
   - Date
   - DateTime
   - DateTime2
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
 Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit. 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
@@ -998,7 +1009,7 @@ Kill all user transactions that currently block the **SWITCH** or online index r
 Requires **ALTER ANY CONNECTION** permission.
 
 IF EXISTS  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Conditionally drops the column or constraint only if it already exists.
 
@@ -1090,7 +1101,7 @@ To run the DDL statement for an online index rebuild, all active blocking transa
 
 ## Compatibility Support
 
-The ALTER TABLE statement supports only two-part (schema.object) table names. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], specifying a table name using the following formats fails at compile time with error 117.
+The ALTER TABLE statement supports only two-part (schema.object) table names. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], specifying a table name using the following formats fails at compile time with error 117.
 
 - server.database.schema.table
 - .database.schema.table
@@ -1108,7 +1119,7 @@ ALTER TABLE permissions apply to both tables involved in an ALTER TABLE SWITCH s
 
 If you've defined any columns in the ALTER TABLE statement to be of a common language runtime (CLR) user-defined type or alias data type, REFERENCES permission on the type is required.
 
-Adding a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
+Adding or altering a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
 
 ## <a name="Example_Top"></a> Examples
 
@@ -1119,6 +1130,8 @@ Adding a column that updates the rows of the table requires **UPDATE** permissio
 |[Altering a column definition](#alter_column)|change data type * change column size * collation|
 |[Altering a table definition](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * change tracking|
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
+|[Online operations](#online)|ONLINE|
+|[System versioning](#system_versioning)|SYSTEM_VERSIONING|
 | &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding Columns and Constraints
@@ -1433,7 +1446,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
+![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
 
 ### <a name="alter_column"></a> Altering a Column Definition
 
@@ -1713,7 +1726,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>Online Operations
+### <a name="online"></a>Online operations
 
 #### A. Online index rebuild using low-priority wait options
 
@@ -1735,7 +1748,7 @@ REBUILD WITH
 
 The following example shows how to run an alter column operation with the ONLINE option.
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 CREATE TABLE dbo.doc_exy (column_a INT) ;
@@ -1750,11 +1763,11 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> System Versioning
+### <a name="system_versioning"></a> System versioning
 
 The following four examples will help you become familiar with the syntax for using system versioning. For additional assistance, see [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 #### A. Add System Versioning to Existing Tables
 

@@ -16,13 +16,13 @@ ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Automated Administration Tasks (SQL Server Agent)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows you to automate administrative tasks. To automate administration, you define predictable administrative tasks and then specify the conditions under which each task occurs. Using automated administration to handle routine tasks and events frees your time to perform other administrative functions.  
   
@@ -34,4 +34,3 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows you t
 [Monitor and Respond to Events](../../ssms/agent/monitor-and-respond-to-events.md)  
   
 [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

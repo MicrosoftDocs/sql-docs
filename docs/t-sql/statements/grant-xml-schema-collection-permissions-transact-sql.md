@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], XML schema collections"
   - "schema collections [SQL Server], permissions"
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

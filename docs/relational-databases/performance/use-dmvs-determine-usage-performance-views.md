@@ -2,8 +2,8 @@
 title: DMVs - usage statistics and performance of views
 description: Learn how to use the Dynamic Management Views (DMVs) sys.dm_exec_query_optimizer_info, sys.views, and sys.dmv_exec_cached_plans to get SQL query performance statistics.
 ms.custom: seo-dt-2019
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ""
@@ -154,7 +154,7 @@ CROSS APPLY
     CROSS APPLY
       sys.dm_exec_query_plan(qs.plan_handle) AS qp
     WHERE
-      (CHARINDEX(vw.schemaname, st.text, 1) > 0)
+      (CHARINDEX(vw.viewname, st.text, 1) > 0)
       AND (st.dbid = DB_ID())
   ) AS t;
 GO

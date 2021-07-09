@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.server_event_session_actions"
   - "server_event_session_actions_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.server_event_session_actions catalog view"
   - "xe"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

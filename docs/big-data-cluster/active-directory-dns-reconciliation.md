@@ -1,10 +1,10 @@
 ---
 title: Active Directory and Kubernetes DNS Reconciliation in Big Data Clusters deployments
-description: Manage access to the big data cluster
-author: mihaelablendea
-ms.author: mihaelab
+description: Configure DNS reconciliation for SQL Server Big Data Cluster in Active Directory mode
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -48,7 +48,7 @@ As result of this design principle, BDC will not have to create and manage A and
 
 ### No duplication of records
 
-Internal DNS records in multiple places. The only storage for these records is Kubernetes CoreDNS. THe BDC internal CoreDNS will do a computational rewriting and forwarding of DNS queries to Kubernetes CoreDNS.
+Internal DNS records in multiple places. The only storage for these records is Kubernetes CoreDNS. The BDC internal CoreDNS will do a computational rewriting and forwarding of DNS queries to Kubernetes CoreDNS.
 
 ### Computational rewriting
 
@@ -84,6 +84,6 @@ Once BDC is deleted, there is no additional dynamic work to delete DNS entries w
 
 ## Next steps
 
-- [Deploy SQL Server Big Data Clusters in Active Directory mode](deploy-active-directory.md)
+- [Deploy SQL Server Big Data Clusters in Active Directory mode](active-directory-deploy.md)
 - [Manage big data cluster access in Active Directory mode](active-directory-objects.md)
 - [Deploy multiple SQL Server Big Data Clusters in the same Active Directory domain](active-directory-deployment-background.md)

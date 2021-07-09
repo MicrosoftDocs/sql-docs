@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADOX, object model"
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
@@ -22,7 +22,7 @@ The following diagram illustrates how objects are represented and related in ADO
  Each of the [Table](./table-object-adox.md), [Index](./index-object-adox.md), and [Column](./column-object-adox.md) objects also has a standard ADO [Properties](../ado-api/properties-collection-ado.md) collection.  
   
 ## See Also  
- [ADOX API Reference](?view=sql-server-ver15)   
+ [ADOX API Reference]()   
  [ADOX Code Examples](./adox-code-examples.md)   
  [ADOX Collections](./adox-collections.md)   
  [ADOX Enumerated Constants](./adox-enumerated-constants.md)   

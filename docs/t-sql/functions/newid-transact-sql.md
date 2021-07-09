@@ -4,10 +4,10 @@ title: "NEWID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, sql-database"
+ms.prod_service: "synapse-analytics, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "NEWID"
   - "NEWID_TSQL"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # NEWID (Transact-SQL)
@@ -77,15 +77,15 @@ CREATE TABLE cust
 (  
  CustomerID uniqueidentifier NOT NULL  
    DEFAULT newid(),  
- Company varchar(30) NOT NULL,  
- ContactName varchar(60) NOT NULL,   
- Address varchar(30) NOT NULL,   
- City varchar(30) NOT NULL,  
- StateProvince varchar(10) NULL,  
- PostalCode varchar(10) NOT NULL,   
- CountryRegion varchar(20) NOT NULL,   
- Telephone varchar(15) NOT NULL,  
- Fax varchar(15) NULL  
+ Company VARCHAR(30) NOT NULL,  
+ ContactName VARCHAR(60) NOT NULL,   
+ Address VARCHAR(30) NOT NULL,   
+ City VARCHAR(30) NOT NULL,  
+ StateProvince VARCHAR(10) NULL,  
+ PostalCode VARCHAR(10) NOT NULL,   
+ CountryRegion VARCHAR(20) NOT NULL,   
+ Telephone VARCHAR(15) NOT NULL,  
+ Fax VARCHAR(15) NULL  
 );  
 GO  
 -- Inserting 5 rows into cust table.  
@@ -109,7 +109,7 @@ GO
 ### C. Using uniqueidentifier and variable assignment  
  The following example declares a local variable called `@myid` as a variable of **uniqueidentifier** data type. Then, the variable is assigned a value by using the `SET` statement.  
   
-```  
+```sql  
 DECLARE @myid uniqueidentifier ;  
 SET @myid = 'A972C577-DFB0-064E-1189-0154C99310DAAC12';  
 SELECT @myid;  

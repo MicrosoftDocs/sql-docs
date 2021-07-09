@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "production servers [SQL Server]"
   - "offload tuning overhead [SQL Server]"
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Considerations for Using Test Servers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

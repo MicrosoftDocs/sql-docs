@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

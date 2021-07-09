@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Report Server &lt;server&gt; (SQL Server Configuration Manager)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

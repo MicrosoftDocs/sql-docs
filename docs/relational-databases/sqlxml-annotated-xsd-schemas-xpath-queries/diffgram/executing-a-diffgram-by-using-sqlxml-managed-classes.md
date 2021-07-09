@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], DiffGrams"
   - "SQLXML, Managed Classes"
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using SQLXML Managed Classes
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

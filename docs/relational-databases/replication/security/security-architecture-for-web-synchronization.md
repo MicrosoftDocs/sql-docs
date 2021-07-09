@@ -125,7 +125,7 @@ ms.author: "mathoma"
   
 -   Xmlsub  
   
- The account should also be part of IIS_WPG group. For more information, see the section "Setting Permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener" in [Configure IIS for Web Synchronization](../../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+ The account should also be part of IIS_WPG group. For more information, see the section "Setting Permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener" in [Configure IIS for Web Synchronization](../configure-iis-7-for-web-synchronization.md).  
   
 |Type of account|Where the account is specified|  
 |---------------------|------------------------------------|  
@@ -134,5 +134,4 @@ ms.author: "mathoma"
 ## See Also  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

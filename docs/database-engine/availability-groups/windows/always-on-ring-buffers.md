@@ -5,8 +5,8 @@ ms.custom: "seo-lt-2019"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth

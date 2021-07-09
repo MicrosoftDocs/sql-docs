@@ -4,10 +4,10 @@ title: "sp_fulltext_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_fulltext_table_TSQL"
   - "sp_fulltext_table"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

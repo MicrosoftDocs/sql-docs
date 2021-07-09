@@ -32,5 +32,4 @@ Topics covered in this section include:
 |[Troubleshooting &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See Also  
-[Getting Started with SSMA for DB2 Console](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
-  
+[Getting Started with SSMA for DB2 Console](./getting-started-with-ssma-for-db2-console-db2tosql.md)  

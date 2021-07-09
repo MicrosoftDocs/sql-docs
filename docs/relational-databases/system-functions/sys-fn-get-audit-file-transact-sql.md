@@ -4,10 +4,10 @@ title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_get_audit_file_TSQL"
   - "sys.fn_get_audit_file_TSQL"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -89,7 +89,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | The type of auditable entity that the audit occurs on. Is not nullable. |  
 | client_ip | **nvarchar(128)** | **Applies to**: Azure SQL Database + SQL Server (starting with 2017)<br /><br /> 	Source IP of the client application |  
 | connection_id | GUID | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br /> ID of the connection in the server |
-| data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL Database only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL Database only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level. |  
 | database_principal_id | **int** |ID of the database user context that the action is performed in. Is not nullable. Returns 0 if this does not apply. For example, a server operation.|
 | database_principal_name | **sysname** | Current user. Is nullable. Returns NULL if not available. |  
@@ -109,7 +109,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | Current login. Is nullable. |  
 | server_principal_sid | **varbinary** | Current login SID. Is nullable. |  
 | session_id | **smallint** | ID of the session on which the event occurred. Is not nullable. |  
-| session_server_principal_name | **sysname** | Server principal for session. Is nullable. |  
+| session_server_principal_name | **sysname** | Server principal for session. Is nullable. Returns the identity of the original login which was connected to the instance of SQL Server in case there were explicit or implicit context switches.|  
 | statement | **nvarchar(4000)** | TSQL statement if it exists. Is nullable. Returns NULL if not applicable. |  
 | succeeded | **bit** | Indicates whether the action that triggered the event succeeded. Is not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.<br /> 1 = success<br /> 0 = fail |
 | target_database_principal_id | **int** | The database principal the GRANT/DENY/REVOKE operation is performed on. Is not nullable. Returns 0 if not applicable. |  
@@ -123,8 +123,9 @@ fn_get_audit_file ( file_pattern,
 
   
 ## Remarks  
- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
-  
+- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
+- **fn_get_audit_file** cannot be used when the audit is created with the **APPLICATION_LOG**, **SECURITY_LOG**, or **EXTERNAL_MONITOR** options.
+
 ## Permissions
 
 - **SQL Server**: Requires the **CONTROL SERVER** permission.  
@@ -171,7 +172,7 @@ fn_get_audit_file ( file_pattern,
 
 For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
@@ -194,5 +195,4 @@ For information on setting up Azure SQL Database auditing, see [Get Started with
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Create a Server Audit and Server Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

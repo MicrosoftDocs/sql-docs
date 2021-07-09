@@ -4,8 +4,8 @@ titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain.
 author: rl-msft
 ms.author: rafidl
-ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.reviewer: wiassaf
+ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -122,7 +122,7 @@ In the example above, the deployment fails to create a login for the domain user
 
 ## Verify
 
-Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
+Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/activedirectory/get-adgroup/).
 
 If the `<domain-group>` group scope is domain local (`DomainLocal`) deployment fails. 
 

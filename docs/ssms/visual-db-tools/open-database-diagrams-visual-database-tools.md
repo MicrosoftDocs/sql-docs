@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Open Database Diagrams (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can open database diagrams to view or edit the diagram's structure.  
   
 ### To open a database diagram  

@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Object Already Exists
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The object you are trying to save has the same name as an object already in the database. Choose another name and proceed.  
   
 Can also indicate the column name already exists.  

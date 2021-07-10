@@ -11,8 +11,8 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
+author: cawrites
+ms.author: chadam
 ms.custom: "seo-lt-2019"
 ---
 

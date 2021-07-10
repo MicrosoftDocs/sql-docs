@@ -10711,6 +10711,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3452-database-engine-error.md
         - name: 3456
           href: relational-databases/errors-events/mssqlserver-3456-database-engine-error.md
+        - name: 3617
+          href: relational-databases/errors-events/mssqlserver-3617-database-engine-error.md
         - name: 3619
           href: relational-databases/errors-events/mssqlserver-3619-database-engine-error.md
         - name: 3937

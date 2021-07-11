@@ -41296,8 +41296,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/dma/dma-assess-sql-data-estate-to-sqldb.md",
-      "redirect_url": "/sql/dma/dma-consolidatereports",
+      "source_path": "docs/dma/dma-consolidatereports.md",
+      "redirect_url": "/sql/dma/dma-assess-sql-data-estate-to-sqldb",
       "redirect_document_id": true
     },
     {

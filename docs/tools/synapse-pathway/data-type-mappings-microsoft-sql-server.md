@@ -1,6 +1,6 @@
 ---
-title: Azure Synapse Pathway Data Type Mappings Snowfalke
-description: Data Type Mappings for Snowflake within Azure Synapse Pathway
+title: Azure Synapse Pathway Data Type Mappings Microsoft SQL Server
+description: Data Type Mappings for Microsoft SQL Server within Azure Synapse Pathway
 author: twounder
 ms.author: mausher
 ms.topic: overview 

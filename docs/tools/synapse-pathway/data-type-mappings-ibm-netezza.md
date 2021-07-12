@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway Data Type Mappings Teradata Vantage
+title: Azure Synapse Pathway Data Type Mappings IBM Netezza
 description: Data Type Mappings for IBM Netezza within Azure Synapse Pathway
 author: twounder
 ms.author: mausher

@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2017 on Linux
 description: This article contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 07/08/2021
+ms.date: 07/12/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -40,7 +40,7 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CU25](#CU25)         | 14.0.3401.7   | 2020-07-08   |
+| [CU25](#CU25)         | 14.0.3401.7   | 2020-07-12   |
 | [CU24](#CU24)         | 14.0.3391.2   | 2020-05-10   |
 | [CU23](#CU23)         | 14.0.3381.3   | 2020-02-24   |
 | [CU22-GDR](#CU22)         | 14.0.3370.1  | 2021-01-12 |

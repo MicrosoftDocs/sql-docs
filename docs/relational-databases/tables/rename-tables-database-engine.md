@@ -77,14 +77,16 @@ Requires ALTER permission on the table.
 
 3. The following example renames the `SalesTerritory` table to `SalesTerr` in the `Sales` schema. Copy and paste the following example into the query window and select **Execute**.
 
-> [!IMPORTANT]
-> Note that the `sp_rename` syntax for @objname should include the schema of the old table name, but @newname does not include the schema name when setting the new table name.
-  
     ```sql
     USE AdventureWorks2012;
     GO
     EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
     ```
+
+> [!IMPORTANT]
+> Note that the `sp_rename` syntax for @objname should include the schema of the old table name, but @newname does not include the schema name when setting the new table name.
+
+
 
 For more examples, see [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
 

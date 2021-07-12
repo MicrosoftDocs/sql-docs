@@ -51,7 +51,7 @@ The following set of links show the source and target data type mappings for eac
 | time [ ( *p* ) ] | time [ ( *p* ) ] |
 | tinyint | tinyint |
 | uniqueidentifier | uniqueidentifier |
-| varbinary [ ( *p* | max ) ] | varbinary [ ( *p* | max ) ] |
+| varbinary [ ( *p* \| max ) ] | varbinary [ ( *p* \| max ) ] |
 | varchar [ ( *p* ) ] | varchar [ ( *p* ) ] |
 | xml | nvarchar(max) |
 

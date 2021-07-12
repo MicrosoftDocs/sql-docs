@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -202,19 +202,19 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 2. On the left side pane, select the **Security** option.
     
-    ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
+    ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](.\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
 
 3. On the security page, under the heading Authentication Backends, select **Internal User Database**.
 
-    ![A screenshot of the security page, with the Internal User Database box chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
+    ![A screenshot of the security page, with the Internal User Database box chosen.](.\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
 
 4. Now you will see the list of users under the heading Internal Users Database. Use this page to add, modify, and remove any users for Kibana endpoint access. For the user that needs the updated password, select **Edit** button on the row for the user.
 
-    ![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
+    ![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](.\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
 
 5. Enter the new password twice and select **Submit**:
 
-    ![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
+    ![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](.\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
 
 6. Close the browser and reconnect to the Kibana URL using updated password.
 

@@ -5,7 +5,7 @@ description: Learn about SQL Server Big Data Clusters that run on Kubernetes and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin
-ms.date: 06/28/2021
+ms.date: 07/12/2021
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster

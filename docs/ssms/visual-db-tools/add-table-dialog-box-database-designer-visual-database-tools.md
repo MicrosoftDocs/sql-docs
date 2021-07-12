@@ -19,6 +19,7 @@ ms.date: 01/19/2017
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)
 
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 Lets you add tables in Database Designer.  
   
 > [!NOTE]  

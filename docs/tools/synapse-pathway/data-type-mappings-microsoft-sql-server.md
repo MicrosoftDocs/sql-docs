@@ -1,0 +1,67 @@
+---
+title: Azure Synapse Pathway Data Type Mappings Snowfalke
+description: Data Type Mappings for Snowflake within Azure Synapse Pathway
+author: twounder
+ms.author: mausher
+ms.topic: overview 
+ms.date: 07/14/2021
+ms.prod: sql
+ms.technology: tools-other
+monikerRange: "=azure-sqldw-latest"
+ms.custom: template-overview 
+---
+# IBM Netezza Data Type Mappings in Azure Synapse Pathway
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
+
+Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezza, Microsoft SQL Server, Snowflake, and Teradata Vantage to T-SQL compliant with Azure Synapse SQL. Synapse Pathway utilizes an Abstract Syntax Tree (AST) model for mapping source data types into supported types.
+
+The following set of links show the source and target data type mappings for each of the supported source systems.
+
+| Microsoft SQL Server Data Type | Azure Synapse SQL Data Type |
+|----- | ----- |
+| bigint | bigint |
+| binary [ ( *p* ) ] | binary [ ( *p* ) ] |
+| bit | bit |
+| char [ ( *p* ) ] | char [ ( *p* ) ] |
+| cursor | *Not Supported* |
+| date | date |
+| datetime | datetime |
+| datetime2 [ ( *p* ) ] | datetime2 [ ( *p* ) ] |
+| datetimeoffset [ ( *p* ) ] | datetimeoffset [ ( *p* ) ] |
+| decimal [ ( *p* [ , *s* ] ) ] | decimal [ ( *p* [ , *s* ] ) ] |
+| float [ ( *p* ) ] | float [ ( *p* ) ] |
+| geometry | *Not Supported* |
+| geography | *Not Supported* |
+| hierarchyid | *Not Supported* |
+| image | varbinary(max) |
+| int | int |
+| money | money |
+| nchar [ ( *p* ) ] | nchar [ ( *p* ) ] |
+| ntext | nvarchar(max) |
+| numeric [ ( *p* [ , *s* ] ) ] | numeric [ ( *p* [ , *s* ] ) ] |
+| nvarchar [ ( *p* ) ] | nvarchar [ ( *p* ) ] |
+| real | real |
+| rowversion | *Not Supported* |
+| smalldatetime | smalldatetime |
+| smallint | smallint |
+| smallmoney | smallmoney |
+| sql_variant | *Not Supported* |
+| table | *Not Supported* |
+| text | varchar(max) |
+| time [ ( *p* ) ] | time [ ( *p* ) ] |
+| tinyint | tinyint |
+| uniqueidentifier | uniqueidentifier |
+| varbinary [ ( *p* | max ) ] | varbinary [ ( *p* | max ) ] |
+| varchar [ ( *p* ) ] | varchar [ ( *p* ) ] |
+| xml | nvarchar(max) |
+
+## See Also
+- [Azure Synapse Pathway Data Type Mappings](data-type-mappings.md)
+- [IBM Netezza Data Type Mappings](data-type-mappings-ibm-netezza.md)
+- [Microsoft SQL Server Data Type Mappings](data-type-mappings-microsoft-sql-server.md)
+- [Snowflake Data Type Mappings](data-type-mappings-snowflake.md)
+- [Teradata Vantage Data Type Mappings](data-type-mappings-teradata-vantage.md)
+
+## Next steps
+
+[Download Azure Synapse Pathway](synapse-pathway-download.md)

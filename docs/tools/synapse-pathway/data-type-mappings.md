@@ -18,16 +18,16 @@ Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezz
 The following set of links show the source and target data type mappings for each of the supported source systems.
 
 ## Source System Mappings
-[IBM Netezza Data Type Mappings](data-type-mappings-ibm-netezza.md)<br/>
+[IBM Netezza Data Type Mapping](data-type-mappings-ibm-netezza.md)<br/>
 Describes the data type mappings between IBM Netezza and Azure Synapse SQL.
 
-[Microsoft SQL Server Data Type Mappings](data-type-mappings-microsoft-sql-server.md)<br/>
+[Microsoft SQL Server Data Type Mapping](data-type-mappings-microsoft-sql-server.md)<br/>
 Describes the data type mappings between Microsoft SQL Server and Azure Synapse SQL.
 
-[Snowflake Data Type Mappings](data-type-mappings-snowflake.md)<br/>
+[Snowflake Data Type Mapping](data-type-mappings-snowflake.md)<br/>
 Describes the data type mappings between Snowflake and Azure Synapse SQL.
 
-[Teradata Vantage Data Type Mappings](data-type-mappings-teradata-vantage.md)<br/>
+[Teradata Vantage Data Type Mapping](data-type-mappings-teradata-vantage.md)<br/>
 Describes the data type mappings between Teradata Vantage and Azure Synapse SQL.
 
 ## Next steps

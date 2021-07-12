@@ -16,7 +16,7 @@ ms.reviewer:
 
 ---
 # Print Dialog Box
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can specify how you want to print a document by selecting options in the **Print** dialog box.  
   
 ## Printer  

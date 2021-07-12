@@ -42,7 +42,6 @@ If the __"spark.pyspark.virtualenv.enabled" : "true"__ configuration is not set,
 
 ### Session/Job configuration with requirements.txt
 
-If 
 Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
 
 ```python

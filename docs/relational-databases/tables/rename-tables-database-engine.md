@@ -86,7 +86,4 @@ Requires ALTER permission on the table.
 > [!IMPORTANT]
 > Note that the `sp_rename` syntax for @objname should include the schema of the old table name, but @newname does not include the schema name when setting the new table name.
 
-
-
-For more examples, see [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
-
+For more examples, see [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).

@@ -36,7 +36,7 @@ Azure Data Studio 1.30.0 is the latest general availability (GA) version. If you
 | | |
 
 > [!Note]
-> Azure Data Studio currently does not support the Azure Resource Manager architecture.
+> Azure Data Studio currently does not support the ARM architecture.
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 

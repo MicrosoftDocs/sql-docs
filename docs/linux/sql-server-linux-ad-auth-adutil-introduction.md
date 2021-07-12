@@ -19,6 +19,9 @@ Having adutil isn't a prerequisite for enabling AD authentication for SQL Server
 
 Adutil is designed as a series of commands and subcommands, with additional flags that can be specified as further input. A category of administrative functions is represented by each top-level command. Within that category, each subcommand is an operation. We'll show you how you can download and get started with adutil.
 
+> [!NOTE]
+> adutil is a tool developed with SQL Server as the application. Hence, support for adutil will be limited for SQL Server use cases only.
+
 ## Installing adutil
 
 > [!NOTE]
@@ -187,7 +190,7 @@ Each command is documented so that you can get started right away. Here are some
     adutil spn addauto -n sqluser -s MSSQLSvc -H mymachine.contoso.com -p 1433 
     ```
 
-- Creating keytabs:
+- Creating keytabs using adutil:
 
     ```bash 
     adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H mymachine.contoso.com --password 'P@ssw0rd' -s MSSQLSvc 

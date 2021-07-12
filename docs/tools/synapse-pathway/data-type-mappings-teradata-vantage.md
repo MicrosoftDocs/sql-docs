@@ -59,8 +59,6 @@ The following set of links show the source and target data type mappings for eac
 | timetz | datetimeoffset |
 | varchar [ ( *p* ) ] | varchar [ ( *p* ) ]|
 
-
-
 ## See Also
 - [Azure Synapse Pathway Data Type Mappings](data-type-mappings.md)
 - [IBM Netezza Data Type Mappings](data-type-mappings-ibm-netezza.md)

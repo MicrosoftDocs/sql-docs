@@ -10,7 +10,7 @@ ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# IBM Netezza Data Type Mappings in Azure Synapse Pathway
+# Microsoft SQL Server Data Type Mappings in Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezza, Microsoft SQL Server, Snowflake, and Teradata Vantage to T-SQL compliant with Azure Synapse SQL. Synapse Pathway utilizes an Abstract Syntax Tree (AST) model for mapping source data types into supported types.

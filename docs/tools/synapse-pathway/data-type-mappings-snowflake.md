@@ -10,7 +10,7 @@ ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# IBM Netezza Data Type Mappings in Azure Synapse Pathway
+# Snowflake Data Type Mappings in Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezza, Microsoft SQL Server, Snowflake, and Teradata Vantage to T-SQL compliant with Azure Synapse SQL. Synapse Pathway utilizes an Abstract Syntax Tree (AST) model for mapping source data types into supported types.
@@ -19,7 +19,7 @@ The following set of links show the source and target data type mappings for eac
 
 | Snowflake Data Type | Azure Synapse SQL Data Type |
 |----- | ----- |
-| array |  |
+| array | *Not Supported* |
 | bigint | bigint |
 | binary [ ( *p* ) ] | binary [ ( *p* ) ] |
 | boolean | bit |
@@ -36,21 +36,20 @@ The following set of links show the source and target data type mappings for eac
 | geography | *Not Supported* |
 | int | int |
 | integer | integer |
-| number | numeric |
+| number [ ( *p* [ , *s* ] ) ] | numeric [ ( *p* [ , *s* ] ) ] |
 | object | *Not Supported* |
 | real | real |
 | smallint | smallint |
 | string | varchar |
 | text | varchar |
 | time | time |
-| timestamp |  |
-| timestamp_ltz |  |
-| timestamp_ntz |  |
-| timestamp_tz |  |
+| timestamp | datetime2 |
+| timestamp_ltz | datetimeoffset |
+| timestamp_ntz | datetime2 |
+| timestamp_tz | datetimeoffset |
 | varbinary [ ( *p* ) ] | varbinary [ ( *p* ) ] |
 | varchar [ ( *p* ) ] | varchar [ ( *p* ) ] |
-| variant |  |
-
+| variant | *Not Supported* |
 
 ## See Also
 - [Azure Synapse Pathway Data Type Mappings](data-type-mappings.md)

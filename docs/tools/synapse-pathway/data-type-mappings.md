@@ -17,7 +17,7 @@ Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezz
 
 The following set of links show the source and target data type mappings for each of the supported source systems.
 
-# Source System Mappings
+## Source System Mappings
 [IBM Netezza Data Type Mappings](data-type-mappings-ibm-netezza.md)<br/>
 Describes the data type mappings between IBM Netezza and Azure Synapse SQL.
 

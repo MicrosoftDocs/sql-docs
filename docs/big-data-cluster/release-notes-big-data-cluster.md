@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mikeray, melqin
-ms.date: 06/29/2021
+ms.reviewer: melqin
+ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -279,7 +279,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 > `Additional error <2>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection, SqlState: 08001, NativeError: 10054 Additional error <3>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]`
 > `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
 
-- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
+- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 ### Partial loss of logs collected in ElasticSearch upon rollback
 

@@ -1,6 +1,6 @@
 ---
 description: "MSSQLSERVER_3617"
-title: "MSSQLSERVER_3619 | Microsoft Docs"
+title: "MSSQLSERVER_3617 | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
 ms.prod: sql
@@ -31,7 +31,7 @@ ms.author: mathoma
 
 Error 3617 is raised when a query that is in the middle of execution gets cancelled by the application or by a user, or the connection is broken. This query cancellation from the application causes an Attention event to occur in the Database engine. Attention is a SQL Server event that registers the fact that the client application requested that query execution be terminated. You can trace a attention event on the SQL Server side by using SQL Trace ([Attention Event Class](../event-classes/attention-event-class.md) ) or Xevents (attention).  Attentions show up internally as error 3617.
 
-Attention (query cancellation) is among the top most common [TDS events](https://docs.microsoft.com/en-us/openspecs/sql_server_protocols/ms-sstds/84ed72a9-a1df-48ec-a4d2-32fae12dbdbf) handled by SQL Server.  When a query cancellation request arrives, the attention bit is set for the session/request.  As the session processes yield points, the attention is picked up and honored. For a some more information on attentions and how they interplay with other components see [Tasks, Workers, Threads, Scheduler, Sessions, Connections, Requests ; what does it all mean?](https://techcommunity.microsoft.com/t5/sql-server-support/tasks-workers-threads-scheduler-sessions-connections-requests/ba-p/333990)
+Attention (query cancellation) is among the top most common [TDS event](/openspecs/sql_server_protocols/ms-sstds/84ed72a9-a1df-48ec-a4d2-32fae12dbdbf) handled by SQL Server.  When a query cancellation request arrives, the attention bit is set for the session/request.  As the session processes yield points, the attention is picked up and honored. For a some more information on attentions and how they interplay with other components see [Tasks, Workers, Threads, Scheduler, Sessions, Connections, Requests ; what does it all mean?](https://techcommunity.microsoft.com/t5/sql-server-support/tasks-workers-threads-scheduler-sessions-connections-requests/ba-p/333990)
   
 ## User Action  
 

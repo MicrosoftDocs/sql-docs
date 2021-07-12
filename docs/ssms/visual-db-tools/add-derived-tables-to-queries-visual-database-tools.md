@@ -20,7 +20,7 @@ ms.date: 01/19/2017
 
 # Add Derived Tables to Queries (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Derived tables are result sets used as table sources in a query. You can add a derived table to a query in the **Diagram Pane**.  
   
 ### To add a derived table to a query  

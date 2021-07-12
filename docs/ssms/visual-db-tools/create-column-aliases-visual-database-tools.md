@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Create Column Aliases (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can create aliases for column names to make it easier to work with column names, calculations, and summary values. For example, you can create a column alias to:  
   
 -   Create a column name, such as "Total Amount," for an expression such as `(quantity * unit_price)` or for an aggregate function.  

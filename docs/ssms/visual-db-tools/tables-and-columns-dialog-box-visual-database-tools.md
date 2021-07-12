@@ -16,7 +16,7 @@ ms.reviewer:
 
 ---
 # Tables and Columns Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Use this dialog box to map a primary key in one table to a foreign key in another. To access this dialog box, from the **Table Designer** menu, click **Relationships**. In the **Foreign Key Relationships** dialog box, click the **Tables and Columns Specification** field, and then click the ellipses **(...)** to the right of the property.  
   
 > [!NOTE]  

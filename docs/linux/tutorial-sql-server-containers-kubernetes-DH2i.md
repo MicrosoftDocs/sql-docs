@@ -337,7 +337,7 @@ As you can see, we have three SQL Server instances, each with its own storage a
 
 ## Configure the DxEnterprise Cluster on the Containers deployed 
 
-DxEnterprise is high availability clustering software from DH2i that supports SQL Server availability groups, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in the sections "Configure the Primary and Create the Availability Group", "Join the Remaining Containers to the DxEnterprise Cluster" and "Configure the Availability Group Database(s)" respectively from this [DH2i guide](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-SQL-Server-for-Kubernetes-StatefulSet-on-Azure-Quick-Start-Guide.pdf)
+DxEnterprise is high availability clustering software from DH2i that supports SQL Server availability groups, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf). 
 
 With this, you should have an Always On availability group created and database(s) added to the group supporting high availability.
 

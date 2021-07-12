@@ -2,10 +2,10 @@
 title: Spark Library Management
 titleSuffix: SQL Server big data clusters
 description: Spark Library Management
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: rahul.ajmera
-ms.date: 02/25/2021
+ms.date: 07/12/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -24,10 +24,6 @@ This article provides step-by-step instructions for leveraging the [Data Migrati
 
 [!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
-> !NOTE
-> If your SQL Servers are running on VmWare, use [Tutorial to assess SQL instances for migration to Azure SQL Managed Instance and Azure SQL Database ](/azure/migrate/tutorial-assess-sql)
->
-
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Create a project and add a tool

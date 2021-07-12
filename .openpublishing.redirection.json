@@ -41297,7 +41297,7 @@
     },
     {
       "source_path": "docs/dma/dma-consolidatereports.md",
-      "redirect_url": "/sql/dma/dma-assess-sql-data-estate-to-sqldb",
+      "redirect_url": "/azure/migrate/tutorial-assess-sql",
       "redirect_document_id": true
     },
     {

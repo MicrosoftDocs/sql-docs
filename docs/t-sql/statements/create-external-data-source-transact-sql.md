@@ -1257,7 +1257,7 @@ go
 ```
 ## See also
 
-- [What is Azure SQL Edge?](azure/azure-sql-edge/overview)
+- [What is Azure SQL Edge?](/azure/azure-sql-edge/overview)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]

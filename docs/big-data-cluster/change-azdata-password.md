@@ -91,17 +91,17 @@ Follow these options for manually updating the password for [Grafana](app-monito
 
 1. The htpasswd utility is required. You can install this on any client machine.
   
-### [For Ubuntu](#tab/for-ubuntu)
-On Ubuntu Linux you can use the following:
-```bash
-sudo apt install apache2-utils
-```
-### [For RHEL](#tab/for-rhel)
-On Red Hat Enterprise Linux you can use the following:
-```bash
-sudo yum install httpd-tools
-```
----
+    ### [For Ubuntu](#tab/for-ubuntu)
+    On Ubuntu Linux you can use the following:
+    ```bash
+    sudo apt install apache2-utils
+    ```
+    ### [For RHEL](#tab/for-rhel)
+    On Red Hat Enterprise Linux you can use the following:
+    ```bash
+    sudo yum install httpd-tools
+    ```
+    ---
 
 2. Generate the new password. 
     

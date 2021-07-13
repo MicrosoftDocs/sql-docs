@@ -4,7 +4,7 @@ description: Data type mappings for Microsoft SQL Server within Azure Synapse Pa
 author: twounder
 ms.author: mausher
 ms.topic: overview 
-ms.date: 07/14/2021
+ms.date: 07/15/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"

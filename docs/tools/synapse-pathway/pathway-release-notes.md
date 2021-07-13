@@ -4,7 +4,7 @@ description: Azure Synapse Pathway release notes
 author: twounder
 ms.author: mausher
 ms.topic: overview 
-ms.date: 07/14/2021
+ms.date: 07/15/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
@@ -19,7 +19,7 @@ This article lists the additions in each release of Azure Synapse Pathway.
 ## Azure Synapse Pathway (preview) v0.3
 
 The v0.3 release of Azure Synapse Pathway provides support for:
-- ALTER/CREATE/DROP Database, User, and Table objects for Teradata Vantage
+- CREATE/DROP/MODIFY/HELP Database, User, and Table objects for Teradata Vantage
 
 In addition, this release of Synapse Pathway includes:
 - Updated error/warning framework with detailed links/documentation for error resolution

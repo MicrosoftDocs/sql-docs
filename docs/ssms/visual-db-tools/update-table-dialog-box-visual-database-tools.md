@@ -18,7 +18,7 @@ ms.date: 01/19/2017
 
 # Update Table Dialog Box (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This dialog box allows you to specify the table to be updated.
 

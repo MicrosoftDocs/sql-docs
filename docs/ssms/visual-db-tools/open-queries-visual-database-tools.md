@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Open Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can open an existing query in Query and View Designer by using the **Open** command.  
   
 ### To open a query in all panes  

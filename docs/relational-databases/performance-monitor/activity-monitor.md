@@ -14,7 +14,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Activity Monitor
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Activity Monitor in SQL Server Management Studio (SSMS) displays information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes and how these processes affect the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. We recommend that you [download and install the latest version of SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
   
@@ -23,11 +23,11 @@ Activity Monitor is a tabbed document window with the following expandable and c
 ## Customize columns 
 For columns included in the **Processes**, **Resource Waits**, **Data File I/O**, **Recent Expensive Queries**, and **Active Expensive Queries** panes, customize the display as follows:  
   
-1.  To rearrange column order, click the column heading and drag it to another location in the heading ribbon.  
+1.  To rearrange column order, select the column heading and drag it to another location in the heading ribbon.  
   
-2.  To sort a column, click the column name.  
+2.  To sort a column, select the column name.  
   
-3.  To filter on one or more columns, click the drop-down arrow in the column heading, and then select a value.  
+3.  To filter on one or more columns, select the drop-down arrow in the column heading, and then select a value.  
 
 ## See also
    

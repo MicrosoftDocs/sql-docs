@@ -24,7 +24,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Monitor CPU Usage
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Monitor an instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to determine whether CPU usage rates are within normal ranges. A continually high rate of CPU usage may indicate the need to upgrade the CPU or add multiple processors. Alternatively, a high CPU usage rate may indicate a poorly tuned or designed application. Optimizing the application can lower CPU utilization.  
   

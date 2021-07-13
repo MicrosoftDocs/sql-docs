@@ -16,6 +16,7 @@ ms.author: wiassaf
 ---
 # SQL Server, Workload Group Stats object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The SQLServer:Workload Group Stats object contains performance counters that report information about Resource Governor workload group statistics.  
   
  Each active workload group creates an instance of the SQLServer:Workload Group Stats performance object that has the same instance name as the Resource Governor workload group name. The following table describes counters supported on this instance.  
@@ -46,7 +47,7 @@ You begin to explore the query performance counters in this object using this T-
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
-WHERE object_name LIKE '%Workload Group Stats%'
+WHERE object_name LIKE '%Workload Group Stats%';
 ```  
 
 ## See also  

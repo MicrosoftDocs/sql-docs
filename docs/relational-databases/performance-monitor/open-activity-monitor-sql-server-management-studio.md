@@ -1,8 +1,8 @@
 ---
 title: "Open Activity Monitor (SSMS)"
-description: Learn how to open Activity Monitor in SQL Server Management Studio. Activity Monitor queries the monitored instance to obtain information to display.
+description: Learn how to open Activity Monitor in SQL Server Management Studio (SSMS). Activity Monitor queries the monitored instance to obtain information to display.
 ms.custom: seo-dt-2019
-ms.date: "08/05/2016"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,28 +13,27 @@ helpviewer_keywords:
   - "refresh interval for Activity Monitor"
   - "Activity Monitor [SQL Server], opening"
   - "opening Activity Monitor"
-ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Open Activity Monitor in SQL Server Management Studio (SSMS)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   
- Activity Monitor runs queries on the monitored instance to obtain information for the Activity Monitor display panes. When the refresh interval is set to less than 10 seconds, the time that is used to run these queries can affect server performance  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
+
+ Activity Monitor runs queries on the monitored instance to obtain information for the Activity Monitor display panes. When the refresh interval is set to less than 10 seconds, the time that is used to run these queries can affect server performance. We recommend that you [download and install the latest version of SSMS](../../ssms/download-sql-server-management-studio-ssms.md).  
   
   
-##  <a name="Permissions"></a> Check your permissions!  
+##  <a name="Permissions"></a> Permissions  
  To view actual activity, you must have VIEW SERVER STATE permission. To view the Data File I/O section of Activity Monitor, you must have CREATE DATABASE, ALTER ANY DATABASE, or VIEW ANY DEFINITION permission in addition to VIEW SERVER STATE.  
   
- To KILL a process, a user must be a member of the sysadmin or processadmin fixed server roles.  
-  
-  
+ To KILL a process, a user must be a member of the `sysadmin` or `processadmin` fixed server roles.  
+    
 ## Open Activity Monitor  
 
 ### Keyboard shortcut  
  - Type **CTRL+ALT+A** to open Activity Monitor at any time.
 
- >**Hint!** Hover over any icon in SSMS to learn what it is and what keyboard shortcut activates it!
+ > [!Note] 
+> Hover over any icon in SSMS to learn what it is and what keyboard shortcut activates it.
 
 ### Toolbar
 

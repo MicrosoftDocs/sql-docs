@@ -25,7 +25,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Monitor memory usage
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
+
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges. 
 
 ## Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] max memory

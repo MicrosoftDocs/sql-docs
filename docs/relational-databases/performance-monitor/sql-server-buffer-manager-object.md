@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Buffer Manager Object | Microsoft Docs"
+title: "SQL Server, Buffer Manager Object"
 description: Learn about the Buffer Manager object, which provides counters to monitor memory for pages, counters to monitor physical I/O, and buffer pool extensions.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Buffer Manager object"
   - "SQLServer:Buffer Manager"
-ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -63,6 +62,16 @@ ms.author: wiassaf
 |**Target pages**|Ideal number of pages in the buffer pool.|
 
   
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Buffer Manager%';
+```    
+
+
 ## See Also  
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   

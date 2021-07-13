@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Batch Resp Statistics Object | Microsoft Docs"
+title: "SQL Server, Batch Resp Statistics Object"
 description: Learn about the SQLServer:Batch Resp Statistics performance object, which provides counters to track SQL Server batch response times.
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,12 +10,12 @@ ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Batch Resp Statistics"
-ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # SQL Server, Batch Resp Statistics Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 The **SQLServer:Batch Resp Statistics** performance object provides counters to track SQL Server batch response times.
 
 This following table describes the SQL Server **Batch Resp Statistics** performance objects.
@@ -50,6 +50,17 @@ Each counter in the object contains the following instances:
 |**Elapsed Time:Requests**|The number of requests based on elapsed time.|  
 |**Elapsed Time:Total(ms)**|The elapsed time of the batch.|  
 
-## See Also
+  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Batch Resp Statistics%';
+```  
+
+
+## See also
 [SQL Server, Plan Cache Object](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

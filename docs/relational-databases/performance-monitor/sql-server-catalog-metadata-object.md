@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Catalog Metadata Object | Microsoft Docs"
+title: "SQL Server, Catalog Metadata Object"
 description: Learn about the SQLServer:Catalog Metadata performance object, which provides counters for catalog metadata for SQL Server.
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Catalog Metadata"
-ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -29,6 +28,15 @@ This following table describes the SQL Server **Catalog Metadata** performance o
 |**Cache Hit Ratio Base**|For internal use only.|
 
 There is one instance of the counter for each database.
+
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Catalog Metadata%';
+```  
 
 ## See Also  
 [Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

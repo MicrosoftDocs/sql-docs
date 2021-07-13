@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Cursor Manager by Type Object | Microsoft Docs"
+title: "SQL Server, Cursor Manager by Type Object"
 description: Learn about the SQLServer:Cursor Manager by Type object, which provides counters to monitor cursors, grouped by type.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Cursor Manager by Type object"
   - "SQLServer:Cursor Manager by Type"
-ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -41,8 +40,17 @@ ms.author: wiassaf
 |**API Cursor**|Only the API cursor information.|  
 |**TSQL Global Cursor**|Only the [!INCLUDE[tsql](../../includes/tsql-md.md)] global cursor information.|  
 |**TSQL Local Cursor**|Only the [!INCLUDE[tsql](../../includes/tsql-md.md)] local cursor information.|  
+
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Cursor Manager by Type%';
+```  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

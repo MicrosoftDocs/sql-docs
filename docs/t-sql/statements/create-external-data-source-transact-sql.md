@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/08/2021
+ms.date: 07/13/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -44,9 +44,6 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL Edge](create-external-data-source-transact-sql.md?view=azuresqledge-current&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1028,7 +1025,7 @@ WITH
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current"
+::: moniker range="=azuresqldb-current||=azuresqledge-current"
 
 :::row:::
     :::column:::
@@ -1042,9 +1039,6 @@ WITH
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL Edge](create-external-data-source-transact-sql.md?view=azuresqledge-current&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1084,11 +1078,13 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source   | Location prefix | Location path                                         |
-| ---------------------- | --------------- | ----------------------------------------------------- |
-| Bulk Operations        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| Elastic Query (shard)  | Not required    | `<shard_map_server_name>.database.windows.net`        |
-| Elastic Query (remote) | Not required    | `<remote_server_name>.database.windows.net`           |
+| External Data Source   | Location prefix | Location path                                         | Availability | 
+| ---------------------- | --------------- | ----------------------------------------------------- | ------------ |
+| Bulk Operations        | `https`         | `<storage_account>.blob.core.windows.net/<container>` | |
+| Elastic Query (shard)  | Not required    | `<shard_map_server_name>.database.windows.net`        | | 
+| Elastic Query (remote) | Not required    | `<remote_server_name>.database.windows.net`           | |
+| EdgeHub         | `edgehub`         | 'edgehub://' | Available in [Azure SQL Edge](/azure/azure-sql-edge/overview/) *only*. EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. |
+| Kafka        | `kafka`         | `kafka://<kafka_bootstrap_server_name_ip>:<port_number>` | Available in [Azure SQL Edge](/azure/azure-sql-edge/overview/) *only*.  | 
 ||||
 
 Location path:
@@ -1228,8 +1224,40 @@ WITH
 
 To see this example in use, see [BULK INSERT][bulk_insert_example].
 
+
+## Examples: Azure SQL Edge 
+
+> [!IMPORTANT]
+> For information on configuring external data for Azure SQL Edge, see [Data streaming in Azure SQL Edge](/azure/azure-sql-edge/stream-data).
+
+### A. Create external data source to reference Kafka
+**Applies to:** [Azure SQL Edge](/azure/azure-sql-edge/overview) *only*
+
+In this example, the external data source is a Kafka server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The Kafka external data source is only for data streaming and does not support predicate push down.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
+    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
+)
+GO
+```
+
+### B. Create external data source to reference EdgeHub
+**Applies to:** [Azure SQL Edge](/azure/azure-sql-edge/overview) *only*
+
+In this example, the external data source is a EdgeHub running on the same edge device as Azure SQL Edge. The edgeHub external data source is only for data streaming and does not support predicate push down.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
+    LOCATION = 'edgehub://'
+)
+go
+```
 ## See also
 
+- [What is Azure SQL Edge?](azure/azure-sql-edge/overview)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
@@ -1277,9 +1305,6 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL Edge](create-external-data-source-transact-sql.md?view=azuresqledge-current&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1553,9 +1578,6 @@ WITH
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
     :::column-end:::
-    :::column:::
-        [Azure SQL Edge](create-external-data-source-transact-sql.md?view=azuresqledge-current&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 &nbsp;
@@ -1792,165 +1814,6 @@ WITH
 
 ::: moniker-end
 
-::: moniker range="=azuresqledge-current"
-
-:::row:::
-    :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL Edge](create-external-data-source-transact-sql.md?view=azuresqledge-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        **_\* Azure SQL Edge \*_** &nbsp;
-    :::column-end:::
-:::row-end:::
-
-&nbsp;
-
-## Overview: Azure SQL Edge
-**Applies to:** Azure SQL Edge
-
-Creates an external data source for data streaming in Azure SQL Edge. For more information, see [Create a data streaming job in Azure SQL Edge](/azure/azure-sql-edge/create-stream-analytics-job).
-
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-## <a id="syntax"></a> Syntax for Azure SQL Edge
-
-
-```syntaxsql
-CREATE EXTERNAL DATA SOURCE <data_source_name>
-WITH
-  ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
-    [ [ , ] CREDENTIAL = <credential_name> ]
-[ ; ]
-```
-
-## Arguments
-
-#### data_source_name
-
-Specifies the user-defined name for the data source. The name must be unique within the database.
-
-#### LOCATION 
-
-Provides the connectivity protocol and path to the external data source.
-
-| External Data Source    | Location prefix | Location path                                         | Supported locations by product / service |
-| ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              |   |
-| EdgeHub         | `edgehub`         | 'edgehub://' | Available in [Azure SQL Edge](/azure/azure-sql-edge/overview/) *only*. EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. |
-| Kafka        | `kafka`         | `kafka://<kafka_bootstrap_server_name_ip>:<port_number>` | Available in [Azure SQL Edge](/azure/azure-sql-edge/overview/) *only*.  | 
-|||||
-
-#### Location path:
-
-The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external file format or external stream using the external data source.
-
-#### CREDENTIAL = *credential_name*
-
-Specifies a database-scoped credential for authenticating to the external data source.
-
-Additional notes and guidance when creating a credential:
-
-- `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
-- When `TYPE` = `BLOB_STORAGE` the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
-  - Exclude the leading `?` when configured as the secret
-  - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
-  - Use a valid expiration period (all dates are in UTC time).
-
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
-
-To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
-
-## Permissions
-
-Requires `CONTROL` permission on database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-
-## Locking
-
-Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
-
-## Security
-
-PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
-
-## Examples
-
-> [!IMPORTANT]
-> For information on configuring external data for Azure SQL Edge, see [Data streaming in Azure SQL Edge](/azure/azure-sql-edge/stream-data).
-
-### A. Create external data source to reference Kafka
-**Applies to:** [Azure SQL Edge](/azure/azure-sql-edge/overview) *only*
-
-In this example, the external data source is a Kafka server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The Kafka external data source is only for data streaming and does not support predicate push down.
-
-```sql
--- Create an External Data Source for Kafka
-CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
-    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
-)
-GO
-```
-
-### B. Create external data source to reference EdgeHub
-**Applies to:** [Azure SQL Edge](/azure/azure-sql-edge/overview) *only*
-
-In this example, the external data source is a EdgeHub running on the same edge device as Azure SQL Edge. The edgeHub external data source is only for data streaming and does not support predicate push down.
-
-```sql
--- Create an External Data Source for Kafka
-CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
-    LOCATION = 'edgehub://'
-)
-go
-```
-## See also
-
-- [What is Azure SQL Edge?](azure/azure-sql-edge/overview)
-- [CREATE EXTERNAL STREAM](/azure/azure-sql-edge/create-external-stream-transact-sql)
-- [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
-- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
-- [sys.external_data_sources (Transact-SQL)][cat_eds]
-- [Using Shared Access Signatures (SAS)][sas_token]
-
-<!-- links to external pages -->
-<!-- SQL Docs -->
-[bulk_insert]: ./bulk-insert-transact-sql.md
-[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
-[openrowset]: ../functions/openrowset-transact-sql.md
-
-[create_dsc]: ./create-database-scoped-credential-transact-sql.md
-[create_eff]: ./create-external-file-format-transact-sql.md
-[create_etb]: ./create-external-table-transact-sql.md
-[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
-[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
-
-[alter_eds]: ./alter-external-data-source-transact-sql.md
-
-[cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
-<!-- PolyBase docs -->
-[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
-[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]: ../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
-[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
-
-<!-- Azure Docs -->
-[sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
-
-::: moniker-end
-
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -1965,9 +1828,6 @@ go
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL Edge](create-external-data-source-transact-sql.md?view=azuresqledge-current&preserve-view=true)
     :::column-end:::
 :::row-end:::
 

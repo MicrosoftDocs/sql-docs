@@ -2,7 +2,7 @@
 title: "Always Encrypted with secure enclaves"
 description: Learn about the Always Encrypted with secure enclaves feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: 01/15/2021
+ms.date: 07/14/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-ver15"
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-Always Encrypted with secure enclaves expands confidential computing capabilities of  [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (in preview).
+Always Encrypted with secure enclaves expands confidential computing capabilities of  [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 Introduced in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] in 2015 and in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)], Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users: DBAs, computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but should not have access to some or all of the actual data.  
 

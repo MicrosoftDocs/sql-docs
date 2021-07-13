@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Sort Rows (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can order the rows in a query result. That is, you can name a particular column or set of columns whose values determine the order of rows in the result set.  
   
 > [!NOTE]  

@@ -1,6 +1,6 @@
 ---
-title: Parameterization of notebooks in Azure Data Studio with Papermill.
-description: This tutorial shows how you can create a parameterized notebook in ADS with Papermill.
+title: Parameterize notebooks in Azure Data Studio with Papermill
+description: This tutorial shows how you can create a parameterized notebook in Azure Data Studio with Papermill.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -13,12 +13,17 @@ ms.date: 06/18/2021
 
 # Create a Parameterized Notebook with Papermill
 
-**Parameterization** is the ability to execute the same notebook with different parameters.
+*Parameterization* is the ability to execute the same notebook by using different parameters.
 
-This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
+This article shows you how to create and run a parameterized notebook in Azure Data Studio with the Python kernel.
 
-> [!Note]
-> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> [!NOTE]
+> Currently, you can use parameterization with Python, PySpark, PowerShell, and .NET Interactive kernels.
+
+## Prerequisites
+
+- [Azure Data Studio](../download-azure-data-studio.md)
+- [Python](https://www.python.org/downloads/)
 
 ## Prerequisites
 

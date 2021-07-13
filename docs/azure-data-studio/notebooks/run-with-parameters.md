@@ -1,6 +1,6 @@
 ---
-title: Parameterization of notebooks in Azure Data Studio with run with parameters action.
-description: This tutorial shows how you can create a parameterized notebook in ADS with the run with parameters action.
+title: Parameterize notebooks in Azure Data Studio with Run with parameters action.
+description: Learn how to create a parameterized notebook in Azure Data Studio by using the Run with parameters action.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -11,46 +11,46 @@ ms.custom: ""
 ms.date: 06/14/2021
 ---
 
-# Create a Parameterized Notebook using Run with Parameters Action
+# Create a parameterized notebook by using Run with parameters action
 
-**Parameterization** is the ability to execute the same notebook with different parameters.
+*Parameterization* is the ability to execute the same notebook by using different parameters.
 
-This article shows you how to create and run a parameterized notebook in Azure Data Studio with the python kernel.
+This article shows you how to create and run a parameterized notebook in Azure Data Studio with the Python kernel.
 
-> [!Note]
-> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> [!NOTE]
+> Currently, you can use parameterization with Python, PySpark, PowerShell, and .NET Interactive kernels.
 
 ## Prerequisites
 
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Python](https://www.python.org/downloads/)
 
-## Run with Parameters Action
+## Run with parameters action
 
-The `Run with Parameters` notebook action enables users to quickly set new parameters for their notebook by allowing the user to input new parameters from the UI.
+When you use the `run with parameters` notebook action, the user can input new parameters from the UI to quickly set new parameters for your notebook.
 
-> [!Note]
-> The parameter cell has to be formatted with each new parameter on a new line.
+> [!NOTE]
+> Format the parameter cell with each new parameter on a new line.
 
 ## Set up a notebook for parameterization in Azure Data Studio
 
-**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to then download and open in Azure Data Studio.**
+To open the following notebook example in Azure Data Studio, [download the notebook from GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), and then open it in Azure Data Studio.
 
 The steps in this section all run within an Azure Data Studio notebook.
 
-1. Create a new notebook and change the **Kernel** to **Python 3**.
+1. Create a new notebook. Change **Kernel** to **Python 3**:
 
    ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. You may be prompted to upgrade your Python packages when your packages need updating.
+1. If you're prompted to upgrade your Python packages when your packages need updating, select **Yes**:
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
-3. Verify the **Kernel** is set to **Python3**.
+1. Verify that **Kernel** is set to **Python3**:
 
    ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)
 
-4. Create a New Code Cell and Tag as **Parameters Cell**.
+1. Make a new code cell. Sselect **Parameters** to tag the cell as a parameters cell.
 
    ```python
    x = 2.0
@@ -59,7 +59,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::
 
-5. Add other cells to test different parameters.
+1. Add other cells to test different parameters:
 
    ```python
    addition = x + y
@@ -71,26 +71,27 @@ The steps in this section all run within an Azure Data Studio notebook.
    print("Multiplication: " + str(multiply))
    ```
 
-   Cells in Example Input Notebook:
+   In the example input notebook, the output will look similar to this example:
+
    :::image type="content" source="media/notebooks-parameterization/test-cells.png" alt-text="Additional Input Notebook Cells":::
 
-6. Save notebook as **Input.ipynb**.
+1. Save the notebook as *Input.ipynb*:
+
    :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Save Notebook":::
 
-## How to Run the Notebook with Parameters
+## Run the notebook with parameters
 
-1. On the notebook toolbar, select the `Run with Parameters` action.
+1. On the notebook toolbar, select the `run with parameters` icon:
 
     :::image type="content" source="media/notebooks-parameterization/run-with-parameters.png" alt-text="Run with Parameters Action":::
 
-2. Upon clicking the action, a new prompt will ask you to input new parameters for x and y.
+1. A new dialog prompts you to input new parameters for *x* and *y*:
+
    :::image type="content" source="media/notebooks-parameterization/first-parameter.png" alt-text="Input First Parameter":::
 
-    :::image type="content" source="media/notebooks-parameterization/second-parameter.png" alt-text="Input New Parameters":::  
+   :::image type="content" source="media/notebooks-parameterization/second-parameter.png" alt-text="Input New Parameters":::  
 
-3. After, entering the new parameters view the new parameterized notebook and run all cells to see the new output.
-
-   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
+1. After you enter the new parameters, view the new parameterized notebook. Run all cells to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
 
@@ -99,5 +100,5 @@ The steps in this section all run within an Azure Data Studio notebook.
 Learn more about notebooks and parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
-- [Papermill Parameterization](./parameterize-papermill.md)
-- [URI Parameterization](./parameterize-uri.md)
+- [Papermill parameterization](./parameterize-papermill.md)
+- [URI parameterization](./parameterize-uri.md)

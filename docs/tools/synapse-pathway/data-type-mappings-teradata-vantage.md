@@ -42,7 +42,7 @@ The following set of links show the source and target data type mappings for eac
 | int4 | int |
 | int8 | bigint |
 | integer | integer |
-| interval | *Not Supported* |
+| interval | *Not supported* |
 | national char varying [ ( *p* ) ] | nvarchar [ ( *p* ) ] |
 | national character [ ( *p* ) ] | nchar [ ( *p* ) ] |
 | national character varying [ ( *p* ) ] | nvarchar [ ( *p* ) ] |
@@ -54,7 +54,7 @@ The following set of links show the source and target data type mappings for eac
 | time | time |
 | time with time zone | datetimeoffset |
 | time without time zone | time |
-| timespan | *Not Supported* |
+| timespan | *Not supported* |
 | timestamp | datetime2 |
 | timetz | datetimeoffset |
 | varchar [ ( *p* ) ] | varchar [ ( *p* ) ]|

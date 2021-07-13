@@ -19,7 +19,7 @@ The following set of links show the source and target data type mappings for eac
 
 | Snowflake Data Type | Azure Synapse SQL Data Type |
 |----- | ----- |
-| array | *Not Supported* |
+| array | *Not supported* |
 | bigint | bigint |
 | binary [ ( *p* ) ] | binary [ ( *p* ) ] |
 | boolean | bit |
@@ -33,11 +33,11 @@ The following set of links show the source and target data type mappings for eac
 | float [ ( *p* ) ] | float [ ( *p* ) ] |
 | float4 | float(53) |
 | float8 | float(53) |
-| geography | *Not Supported* |
+| geography | *Not supported* |
 | int | int |
 | integer | integer |
 | number [ ( *p* [ , *s* ] ) ] | numeric [ ( *p* [ , *s* ] ) ] |
-| object | *Not Supported* |
+| object | *Not supported* |
 | real | real |
 | smallint | smallint |
 | string | varchar |
@@ -49,7 +49,7 @@ The following set of links show the source and target data type mappings for eac
 | timestamp_tz | datetimeoffset |
 | varbinary [ ( *p* ) ] | varbinary [ ( *p* ) ] |
 | varchar [ ( *p* ) ] | varchar [ ( *p* ) ] |
-| variant | *Not Supported* |
+| variant | *Not supported* |
 
 ## See Also
 - [Azure Synapse Pathway data type mapping](data-type-mappings.md)

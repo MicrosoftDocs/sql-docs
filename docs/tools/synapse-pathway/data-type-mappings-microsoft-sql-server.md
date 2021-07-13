@@ -23,16 +23,16 @@ The following set of links show the source and target data type mappings for eac
 | binary [ ( *p* ) ] | binary [ ( *p* ) ] |
 | bit | bit |
 | char [ ( *p* ) ] | char [ ( *p* ) ] |
-| cursor | *Not Supported* |
+| cursor | *Not supported* |
 | date | date |
 | datetime | datetime |
 | datetime2 [ ( *p* ) ] | datetime2 [ ( *p* ) ] |
 | datetimeoffset [ ( *p* ) ] | datetimeoffset [ ( *p* ) ] |
 | decimal [ ( *p* [ , *s* ] ) ] | decimal [ ( *p* [ , *s* ] ) ] |
 | float [ ( *p* ) ] | float [ ( *p* ) ] |
-| geometry | *Not Supported* |
-| geography | *Not Supported* |
-| hierarchyid | *Not Supported* |
+| geometry | *Not supported* |
+| geography | *Not supported* |
+| hierarchyid | *Not supported* |
 | image | varbinary(max) |
 | int | int |
 | money | money |
@@ -41,12 +41,12 @@ The following set of links show the source and target data type mappings for eac
 | numeric [ ( *p* [ , *s* ] ) ] | numeric [ ( *p* [ , *s* ] ) ] |
 | nvarchar [ ( *p* ) ] | nvarchar [ ( *p* ) ] |
 | real | real |
-| rowversion | *Not Supported* |
+| rowversion | *Not supported* |
 | smalldatetime | smalldatetime |
 | smallint | smallint |
 | smallmoney | smallmoney |
-| sql_variant | *Not Supported* |
-| table | *Not Supported* |
+| sql_variant | *Not supported* |
+| table | *Not supported* |
 | text | varchar(max) |
 | time [ ( *p* ) ] | time [ ( *p* ) ] |
 | tinyint | tinyint |

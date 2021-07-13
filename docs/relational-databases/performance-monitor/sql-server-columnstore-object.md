@@ -24,7 +24,7 @@ ms.author: wiassaf
 |**Delta Rowgroups Closed**|Number of delta rowgroups closed.|  
 |**Delta Rowgroups Compressed**|Number of delta rowgroups compressed.|  
 |**Delta Rowgroups Created**|Number of delta rowgroups created.|  
-|**Segment Cache Hit Raio**|Percentage of column segments that were found in the columnstore pool without having to incur a read from disk.|  
+|**Segment Cache Hit Ratio**|Percentage of column segments that were found in the columnstore pool without having to incur a read from disk.|  
 |**Segment Cache Hit Ratio Base**|For internal use only.|
 |**Segment Reads/Sec**|Number of physical segment reads issued.|  
 |**Total Delete Buffers Migrated**|Number of times tuple mover has cleaned up the delete buffer.|  

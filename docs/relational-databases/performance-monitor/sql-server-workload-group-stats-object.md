@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Workload Group Stats Object"
+title: "SQL Server, Workload Group Stats object"
 description: Learn about the SQLServer:Workload Group Stats object, which contains performance counters that report about Resource Governor workload group statistics.
 ms.custom: ""
-ms.date: "07/09/2021"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,9 +17,9 @@ ms.author: wiassaf
 # SQL Server, Workload Group Stats object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The SQLServer:Workload Group Stats object contains performance counters that report information about Resource Governor workload group statistics.  
+  The **SQLServer:Workload Group Stats** object contains performance counters that report information about Resource Governor workload group statistics.  
   
- Each active workload group creates an instance of the SQLServer:Workload Group Stats performance object that has the same instance name as the Resource Governor workload group name. The following table describes counters supported on this instance.  
+ Each active workload group creates an instance of the **SQLServer:Workload Group Stats** performance object that has the same instance name as the Resource Governor workload group name. The following table describes counters supported on this instance.  
 
 |Counter name|Description|  
 |------------------|-----------------|  

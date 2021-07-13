@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Cursor Manager by Type Object"
+title: "SQL Server, Cursor Manager by Type object"
 description: Learn about the SQLServer:Cursor Manager by Type object, which provides counters to monitor cursors, grouped by type.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,13 +14,14 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Cursor Manager by Type Object
+# SQL Server, Cursor Manager by Type object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The **SQLServer:Cursor Manager by Type** object provides counters to monitor cursors, grouped by type.  
   
  This table describes the SQL Server **Cursor Manager by Type** counters.  
   
-|Cursor Manager by Type counters|Description|  
+|**Cursor Manager by Type** counters|Description|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|Number of active cursors.|  
 |**Cache Hit Ratio**|Ratio between cache hits and lookups.|  
@@ -34,7 +35,7 @@ ms.author: wiassaf
   
  Each counter in the object contains the following instances:  
   
-|Cursor Manager instance|Description|  
+|**Cursor Manager** instance|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|Information for all cursors.|  
 |**API Cursor**|Only the API cursor information.|  

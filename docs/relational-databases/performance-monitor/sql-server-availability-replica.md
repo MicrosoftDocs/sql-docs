@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Availability Replica"
+title: "SQL Server, Availability Replica object"
 description: Learn about SQLServer:Availability Replica performance object, which contains performance counters about availability replicas in Always On availability groups.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Availability Replica
+# SQL Server, Availability Replica object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **SQLServer:Availability Replica** performance object contains performance counters that report information about the availability replicas in Always On availability groups in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. All availability replica performance counters apply to both the primary replica and the secondary replicas, with send/receive counters reflecting the local replica. For the most part, the primary replica sends most of the data, and the secondary replicas receive the data. However, secondary replicas send ACKs and some other background traffic to the primary replicas. Note that on a given availability replica, some counters will show a zero value, depending on the current role, primary or secondary, of the local replica.  
@@ -43,11 +43,10 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Availability Replica%';
 ```  
 
-  
 ## See also 
  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ - [SQL Server, Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
+ - [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

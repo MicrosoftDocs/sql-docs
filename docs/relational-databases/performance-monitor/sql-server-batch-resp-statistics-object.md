@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Batch Resp Statistics Object"
+title: "SQL Server, Batch Resp Statistics object"
 description: Learn about the SQLServer:Batch Resp Statistics performance object, which provides counters to track SQL Server batch response times.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -13,7 +13,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Batch Resp Statistics Object
+# SQL Server, Batch Resp Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **SQLServer:Batch Resp Statistics** performance object provides counters to track SQL Server batch response times.
@@ -21,7 +21,7 @@ The **SQLServer:Batch Resp Statistics** performance object provides counters to 
 This following table describes the SQL Server **Batch Resp Statistics** performance objects.
 
 
-|**SQL Server Batch Resp Statistics counters**|Description|  
+|**SQL Server Batch Resp Statistics** counter|Description|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|Number of SQL Batches having response time greater than or equal to 0ms but less than 1ms|
 |**Batches >=000001ms & \<000002ms**|Number of SQL Batches having response time greater than or equal to 1ms but less than 2ms|

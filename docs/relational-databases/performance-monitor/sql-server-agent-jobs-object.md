@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent, Jobs Object"
+title: "SQL Server Agent, Jobs object"
 description: Learn about the SQL Server Agent Jobs performance object, which contains performance counters that report information about SQL Server Agent jobs.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server Agent, Jobs Object
+# SQL Server Agent, Jobs object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQL Server Agent **Jobs** performance object contains performance counters that report information about SQL Server Agent jobs. The table below lists the counters that this object contains.  

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Broker Statistics Object"
+title: "SQL Server, Broker Statistics object"
 description: Learn about the SQLServer:Broker Statistics performance object, which contains performance counters that report Service Broker information for Database Engine.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Broker Statistics Object
+# SQL Server, Broker Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The SQLServer:Broker Statistics performance object contains performance counters that report general [!INCLUDE[ssSB](../../includes/sssb-md.md)] information for an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The following table lists the counters that this object contains:  
+  The **SQLServer:Broker Statistics** performance object contains performance counters that report general [!INCLUDE[ssSB](../../includes/sssb-md.md)] information for an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The following table lists the counters that this object contains:  
   
-|SQL Server Broker Statistics counters|Description|  
+|S**QL Server Broker Statistics** counters|Description|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|The number of times a [!INCLUDE[ssSB](../../includes/sssb-md.md)] activation stored procedure exited with an error.|  
 |**Broker Transaction Rollbacks**|The number of rolled-back transactions that contained DML statements related to [!INCLUDE[ssSB](../../includes/sssb-md.md)], such as SEND and RECEIVE.|  

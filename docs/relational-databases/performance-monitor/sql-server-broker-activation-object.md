@@ -1,6 +1,6 @@
 ---
-title: "SQL Server, Broker Activation Object"
-description: Learn about the SQLServer:BrokerActivation performance object, which contains performance counters that report information on stored procedure activation. 
+title: "SQL Server, Broker Activation object"
+description: Learn about the SQLServer:Broker Activation performance object, which contains performance counters that report information on stored procedure activation. 
 ms.custom: ""
 ms.date: "07/12/2021"
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Broker Activation Object
+# SQL Server, Broker Activation object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **SQLServer:BrokerActivation** performance object contains performance counters that report information on stored procedure activation. The table below lists the counters that this object contains.  
+  The **SQLServer:Broker Activation** performance object contains performance counters that report information on stored procedure activation. The table below lists the counters that this object contains.  
   
-|SQL Server Broker Activation counters|Description|  
+|**SQL Server Broker Activation** counters|Description|  
 |-------------------------------------------|-----------------|  
 |**Stored Procedures Invoked/sec**|This counter reports the total number of activation stored procedures invoked by all queue monitors in the instance per second.|  
 |**Task Limit Reached**|This counter reports the total number of times that a queue monitor would have started a new task, but did not because the maximum number of tasks for the queue is already running.|  
@@ -38,9 +38,9 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Broker Activation%';
 ```  
 
-## See Also  
- [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)   
- [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## See also  
+ - [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)   
+ - [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)   
+ - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

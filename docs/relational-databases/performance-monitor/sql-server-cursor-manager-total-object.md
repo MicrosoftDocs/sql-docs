@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Cursor Manager Total Object"
+title: "SQL Server, Cursor Manager Total object"
 description: Learn about the SQLServer:Cursor Manager Total object, which provides counters to monitor cursors in SQL Server.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Cursor Manager Total Object
+# SQL Server, Cursor Manager Total object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **SQLServer:Cursor Manager Total** object provides counters to monitor cursors.  

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent, JobSteps Object"
+title: "SQL Server Agent, JobSteps object"
 description: Learn about the SQL Server Agent JobSteps performance object, which contains performance counters that report information about SQL Server Agent job steps.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server Agent, JobSteps Object
+# SQL Server Agent, JobSteps object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **JobSteps** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps. The table below lists the counters that this object contains.  

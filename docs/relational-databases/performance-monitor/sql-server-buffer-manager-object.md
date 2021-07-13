@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Buffer Manager Object"
+title: "SQL Server, Buffer Manager object"
 description: Learn about the Buffer Manager object, which provides counters to monitor memory for pages, counters to monitor physical I/O, and buffer pool extensions.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Buffer Manager Object
+# SQL Server, Buffer Manager object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Buffer Manager** object provides counters to monitor how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses:  
   
@@ -35,7 +35,7 @@ ms.author: wiassaf
 ## Buffer Manager Performance Objects  
  This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** performance objects.  
   
-|SQL Server Buffer Manager counters|Description|  
+|**SQL Server Buffer Manager** counters|Description|  
 |----------------------------------------|-----------------|  
 |**Background writer pages/sec**|Number of pages flushed to enforce the recovery interval settings.| 
 |**Buffer cache hit ratio**|Indicates the percentage of pages found in the buffer cache without having to read from disk. The ratio is the total number of cache hits divided by the total number of cache lookups over the last few thousand page accesses. After a long period of time, the ratio moves very little. Because reading from the cache is much less expensive than reading from disk, you want this ratio to be high. Generally, you can increase the buffer cache hit ratio by increasing the amount of memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or by using the buffer pool extension feature.|  
@@ -72,12 +72,12 @@ WHERE object_name LIKE '%Buffer Manager%';
 ```    
 
 
-## See Also  
- [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
- [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [SQL Server, Plan Cache Object](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)  
+## See also  
+ - [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
+ - [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ - [SQL Server, Plan Cache Object](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
+ - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ - [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
+ - [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

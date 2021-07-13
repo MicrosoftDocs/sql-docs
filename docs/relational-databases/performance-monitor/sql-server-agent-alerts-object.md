@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent, Alerts Object"
+title: "SQL Server Agent, Alerts object"
 description: Learn about the SQL Server Agent Alerts performance object, which contains performance counters that report information about SQL Server Agent alerts.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -14,7 +14,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server Agent, Alerts Object
+# SQL Server Agent, Alerts object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQL Server Agent **Alerts** performance object contains performance counters that report information about SQL Server Agent alerts. The table below lists the counters that this object contains.  

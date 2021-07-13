@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Columnstore Object"
+title: "SQL Server, Columnstore object"
 description: Learn about the SQLServer:Columnstore object, which provides counters to monitor columnstore index execution in SQL Server.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Columnstore Object
+# SQL Server, Columnstore object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
@@ -19,7 +19,7 @@ ms.author: wiassaf
   
  The following table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
-|Columnstore counters|Description|  
+|**Columnstore** counters|Description|  
 |--------------------------|-----------------|  
 |**Delta Rowgroups Closed**|Number of delta rowgroups closed.|  
 |**Delta Rowgroups Compressed**|Number of delta rowgroups compressed.|  

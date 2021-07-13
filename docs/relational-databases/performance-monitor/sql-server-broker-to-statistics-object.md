@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, Broker TO Statistics Object"
+title: "SQL Server, Broker TO Statistics object"
 description: Learn about the SQLServer:Broker TO Statistics performance object, which reports information about Service Broker request transmission objects.
 ms.custom: ""
 ms.date: "07/12/2021"
@@ -11,10 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker Transmission Object object"
   - "SQL Server: Broker Transmission Object"
+  - "SQL Server:Broker TO Statistics"
+  - "Broker TO Statistics"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Broker TO Statistics Object
+# SQL Server, Broker TO Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQLServer:Broker TO Statistics performance object reports information about how many times [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialogs request transmission objects, and how often transmission objects are written to `tempdb`.  
@@ -23,7 +25,7 @@ ms.author: wiassaf
   
  The following table lists the counters that this object contains.  
   
-|SQL Server Broker TO Statistics counters|Description|  
+|**SQL Server Broker TO Statistics** counters|Description|  
 |----------------------------------------------|-----------------|  
 |**Avg. Length of Batched Writes**|The average number of transmission objects saved in a batch.|  
 |**Avg. Time To Write Batch (ms)**|The average number of milliseconds required to save a batch of transmission objects.|  

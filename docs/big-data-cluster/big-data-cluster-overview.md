@@ -43,7 +43,6 @@ Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 The following sections provide more information about these scenarios.
 
-=======
 ## Data virtualization
 
 

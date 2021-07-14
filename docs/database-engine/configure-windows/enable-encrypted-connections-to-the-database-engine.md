@@ -184,4 +184,4 @@ To encrypt a connection from [!INCLUDE[ssManStudioFull](../../includes/ssmanstud
 
 + [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate)

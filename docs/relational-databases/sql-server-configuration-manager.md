@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "services [SQL Server], managing"
   - "tools [SQL Server], SQL Server Configuration Manager"
   - "configuration manager [SQL Server]"
-author: "maghan"
-ms.author: "markingmyname"
+author: "markingmyname"
+ms.author: "maghan"
 ms.reviewer: 
 ms.custom: ""
 ms.date: "12/31/2019"

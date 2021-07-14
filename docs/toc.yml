@@ -6709,6 +6709,10 @@ items:
             items:
             - name: Access Methods
               href: relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: Advanced Analytics
+              href: relational-databases/performance-monitor/sql-server-advanced-analytics.md
+            - name: Availability Group
+              href: relational-databases/performance-monitor/sql-server-availability-group.md
             - name: Availability Replica
               href: relational-databases/performance-monitor/sql-server-availability-replica.md
             - name: Backup Device

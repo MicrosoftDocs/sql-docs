@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, General Statistics Object | Microsoft Docs"
+title: "SQL Server, General Statistics object"
 description: Learn about the SQLServer:General Statistics object, which provides counters to monitor general server-wide activity, such as the number of current connections.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:General Statistics"
   - "General Statistics object"
-ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, General Statistics Object
+# SQL Server, General Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The **SQLServer:General Statistics** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor general server-wide activity, such as the number of current connections and the number of users connecting and disconnecting per second from computers running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This can be useful when you are working on large online transaction processing (OLTP) type systems where there are many clients connecting and disconnecting from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** counters.  
@@ -47,8 +47,18 @@ ms.author: wiassaf
 |**Trace Event Notifications Queue**|Number of trace event notification instances waiting in the internal queue to be sent through Service Broker.|  
 |**Transactions**|Number of transaction enlistments (local, DTC, bound all combined).|  
 |**User Connections**|Counts the number of users currently connected to SQL Server.|  
+
+
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%General Statistics%';
+```  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Broker - DBM Transport Object | Microsoft Docs"
+title: "SQL Server, Broker/DBM Transport object"
 description: Learn about Broker / DBM Transport performance object, which contains performance counters for networking information for Service Broker and database mirroring.
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker / DBM Transport object"
   - "SQLServer:Broker/DBM Transport"
-ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Broker - DBM Transport Object
+# SQL Server, Broker/DBM Transport object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The **Broker / DBM Transport** performance object contains performance counters that report networking information for Service Broker and database mirroring. The table below lists the counters that this object contains.  
   
-|SQL Server Broker / DBM Transport counter|Description|  
+|**SQL Server Broker/DBM Transport** counter|Description|  
 |------------------------------------------------|-----------------|  
 |**Current Bytes for Recv I/O**|This counter reports the number of bytes to be read by the currently running transport receive operations.|  
 |**Current Bytes for Send I/O**|This counter reports the number of bytes in message fragments that are currently in the process of being sent over the network.|  
@@ -58,9 +58,19 @@ ms.author: wiassaf
 |**Send I/O Len Avg Base**|For internal use only.|
 |**Send I/Os/sec**|This counter reports the number of transport send I/O operations per second that have completed. Notice that a transport send operation may contain more than one message fragment.|  
   
-## See Also  
- [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Broker/DBM Transport%';
+```  
+
+## See also  
+ - [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
+ - [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
+ - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

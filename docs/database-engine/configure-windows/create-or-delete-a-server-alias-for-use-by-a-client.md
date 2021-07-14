@@ -1,5 +1,5 @@
 ---
-title: Create or Delete a Server Alias for Use by a Client
+title: Create or delete a server alias for use by a client
 description: Find out how to create and delete an alias, an alternate name you can use when you connect to an instance of SQL Server. Learn about the benefits of aliases.
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,7 +17,7 @@ ms.custom: ""
 ms.date: "07/14/2021"
 ---
 
-# Create or Delete a Server Alias for Use by a Client
+# Create or delete a server alias for use by a client
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -46,6 +46,6 @@ The connection strings described in SQL Server Configuration Manager Help can be
 
 2. In the details pane, right-click the alias that you want to delete, and then select **Delete**.
 
-## Next Steps
+## Next steps
 
 - [SQL Server Config Manager](../../relational-databases/sql-server-configuration-manager.md)

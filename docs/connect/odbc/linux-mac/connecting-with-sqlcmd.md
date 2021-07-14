@@ -90,7 +90,7 @@ Always specify **-M** when connecting to the availability group listener of a [!
   
 - -p  Print performance statistics for every result set.  
   
-- -P  Specify a user password. When used with the -G option without -U specifies a file that contains an access token (v17.8+).
+- -P  Specify a user password. When used with the -G option without -U specifies a file that contains an access token (v17.8+). The token file should be in UTF-16 format when used with AAD access tokens.
   
 - -q *commandline_query*  Execute a query when `sqlcmd` starts, but does not exit when the query has finished running.  
 

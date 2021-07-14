@@ -50,7 +50,7 @@ sp_dropserver [ @server = ] 'server'
   
  **sp_dropserver** cannot be executed inside a user-defined transaction.  
   
- **sp_dropserver** to change the local server name may cause undesired effects or unsupported configurations.
+ **sp_dropserver** to change the local server name may cause unintended effects or unsupported configurations.
   
 ## Permissions  
  Requires ALTER ANY LINKED SERVER permission on the server.  

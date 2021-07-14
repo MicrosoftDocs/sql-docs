@@ -1,8 +1,8 @@
 ---
-title: "Monitor Disk Usage | Microsoft Docs"
+title: "Monitor Disk Usage"
 description: Monitoring disk activity for SQL Server involves monitoring disk I/O and detecting excess paging, and isolating disk activity that SQL Server creates.
 ms.custom: ""
-ms.date: 03/14/2017
+ms.date: 07/12/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "isolating disk activity [SQL Server]"
   - "database performance [SQL Server], disk usage"
   - "monitoring server performance [SQL Server], disk usage"
-ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Monitor Disk Usage
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Microsoft Windows operating system input/output (I/O) calls to perform read and write operations on your disk. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manages when and how disk I/O is performed, but the Windows operating system performs the underlying I/O operations. The I/O subsystem includes the system bus, disk controller cards, disks, tape drives, CD-ROM drive, and many other I/O devices. Disk I/O is frequently the cause of bottlenecks in a system.  
   
  Monitoring disk activity involves two areas of focus:  

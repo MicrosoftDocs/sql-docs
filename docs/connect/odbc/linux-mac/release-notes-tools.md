@@ -22,8 +22,8 @@ This article lists and describes what's new in the versioned releases of the [!I
 
 | Feature added | Details |
 | :------------ | :------ |
-| Sqlcmd Token Authentication | Now supported |
-| BCP Token Authentication | Now supported |
+| Sqlcmd Token Authentication | Now supported. See [Connecting with sqlcmd](connecting-with-sqlcmd.md) |
+| BCP Token Authentication | Now supported. See [Connecting with bcp](connecting-with-bcp) |
 | &nbsp; | &nbsp; |
 
 ## 17.7.1.1, January 2021

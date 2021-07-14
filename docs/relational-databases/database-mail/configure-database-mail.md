@@ -1,8 +1,8 @@
 ---
 description: "Configure Database Mail"
-title: "Configure Database Mail | Microsoft Docs"
+title: "Configure Database Mail"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -37,9 +37,8 @@ f1_keywords:
   - "sql13.swb.dbmail.newsqlimailaccount.f1"
   - "sql13.swb.dbmail.manageexistingprofile.f1"
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
-ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Configure Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

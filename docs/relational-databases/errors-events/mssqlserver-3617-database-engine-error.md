@@ -51,7 +51,11 @@ Summary of Causes:
 
 ### Attention and Transactions
 
-Commonly attentions are raised when the application reaches a query timeout and cancel the query. When an attention event occurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't automatically roll back open transactions.  It's the application's responsibility to roll back the transaction.  One way to do control transaction rollback is to enable [SET XACT_ABORT ON](../../t-sql/statements/set-xact-abort-transact-sql.md) when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  If an application does not do this, an orphaned transaction results. Another way, and more common is to handle any errors in the application by using try… catch… finally (optionally). In the try block, you open the transaction and if an error occurs, in the catch or the finally block, you roll back that transaction.  Either method is acceptable - using [XACT_ABORT ON](../../t-sql/statements/set-xact-abort-transact-sql.md) or handling the exception and rolling back the transaction.
+Commonly, Attention events are raised when the application reaches a query timeout and cancels the query. When an Attention event occurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't automatically roll back open transactions.  It's the application's responsibility to roll back the transaction, and there are a couple common ways to handle:
+
+- Control transaction rollback by enabling [SET XACT_ABORT ON](../../t-sql/statements/set-xact-abort-transact-sql.md) when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  If an application does not do this, an orphaned transaction results. 
+
+- More commonly, applications handle any errors by using try.. catch... finally. In the try block, you open the transaction and if an error occurs, roll back the transaction in the catch or finally block.
 
 Here is an example:
 

@@ -47,7 +47,7 @@ sp_databases
 ## Remarks  
  Database names that are returned can be used as parameters in the USE statement to change the current database context.
  
- DATABASE_SIZE will return NULL for databases larger than 2.15TB.
+ DATABASE_SIZE returns a NULL value for databases larger than 2.15TB.
   
  **sp_databases** has no equivalent in Open Database Connectivity (ODBC).  
   

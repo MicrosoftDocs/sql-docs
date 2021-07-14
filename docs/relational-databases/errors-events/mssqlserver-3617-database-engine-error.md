@@ -9,9 +9,8 @@ ms.technology: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "3617 (Database Engine error)"
-ms.assetid: 
 author: PijoCoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_3617
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

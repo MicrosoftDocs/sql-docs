@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 06/30/2021
+ms.date: 07/06/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -90,6 +90,13 @@ Initial release.
 
 
 ## SQL Server 2017 Reporting Services
+
+## 14.0.600.1763, 2021/06/28 
+*(Product Version: 14.0.600.1763)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue for registering Report Server instance to enable Pin to Power BI feature  | &nbsp; |
 
 ## 14.0.600.1669, 2020/08/31 
 

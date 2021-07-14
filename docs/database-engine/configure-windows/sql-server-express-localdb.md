@@ -2,7 +2,7 @@
 title: "SQL Server Express LocalDB | Microsoft Docs"
 description: Become familiar with SQL Server Express LocalDB. Developers can use this lightweight Database Engine for writing and testing Transact-SQL code.
 ms.custom: ""
-ms.date: "04/17/2019"
+ms.date: "04/09/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -29,18 +29,20 @@ LocalDB installation copies a minimal set of files necessary to start the [!INCL
 
 ## Installation media 
 
-LocalDB is a feature you select during SQL Server Express installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the LocalDB package. 
+LocalDB is a feature you select during SQL Server Express installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package. 
 
 - [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
 - [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
 - [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
+
+The LocalDB installer &mdash; `SqlLocalDB.msi` &mdash; is available in the installation media for all editions except for Express Core. It is located in the `<installation_media_root>\<LCID>_ENU_LP\x64\Setup\x64` folder. LCID is a locale identifier or language code. For example, an LCID value of 1033 refers to the **en-US** locale.
 
 Alternatively, you can install LocalDB through the [Visual Studio Installer](https://visualstudio.microsoft.com/downloads/), as part of the **Data Storage and Processing** workload, the **ASP.NET and web development** workload,  or as an individual component.
 
 
 ## Install LocalDB
 
-Install LocalDB through the installation wizard or by using the SqlLocalDB.msi program. LocalDB is an option when installing SQL Server Express LocalDB. 
+Install LocalDB through the installation wizard or by using the `SqlLocalDB.msi` program. LocalDB is an option when installing SQL Server Express LocalDB. 
  
 Select LocalDB on the **Feature Selection/Shared Features** page during installation. There can be only one installation of the LocalDB binary files for each major [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] version. Multiple [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes can be started and will all use the same binaries. An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] started as the LocalDB has the same limitations as [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
 
@@ -54,7 +56,7 @@ For more information about including LocalDB in an application, see [!INCLUDE[vs
 
 For more information about the LocalDB API, see [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).
 
-The `SqlLocalDb` utility can create new instances of LocalDB, start and stop an instance of LocalDB, and includes options to help you manage LocalDB.For more information about the `SqlLocalDb` utility, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).
+The `SqlLocalDB` utility can create new instances of LocalDB, start and stop an instance of LocalDB, and includes options to help you manage LocalDB. For more information about the `SqlLocalDB` utility, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).
 
 The instance collation for LocalDB is set to `SQL_Latin1_General_CP1_CI_AS` and cannot be changed. Database-level, column-level, and expression-level collations are supported normally. Contained databases follow the metadata and `tempdb` collations rules defined by [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).
 
@@ -86,7 +88,7 @@ Different users of a computer can have instances with the same name. Each instan
 
 To support scenarios where multiple users of the computer need to connect to a single instance of LocalDB, LocalDB supports instance sharing. An instance owner can choose to allow the other users on the computer to connect the instance. Both automatic and named instances of LocalDB can be shared. To share an instance of LocalDB, a user selects a shared name (alias) for it. Because the shared name is visible to all users of the computer, this shared name must be unique on the computer. The shared name for an instance of LocalDB has the same format as the named instance of LocalDB.
 
-Only an administrator on the computer can create a shared instance of LocalDB. A shared instance of LocalDB can be unshared by an administrator or by the owner of the shared instance of LocalDB. To share and unshared an instance of LocalDB, use the `LocalDBShareInstance` and `LocalDBUnShareInstance` methods of the LocalDB API, or the share and unshared options of the `SqlLocalDb` utility.
+Only an administrator on the computer can create a shared instance of LocalDB. A shared instance of LocalDB can be unshared by an administrator or by the owner of the shared instance of LocalDB. To share and unshared an instance of LocalDB, use the `LocalDBShareInstance` and `LocalDBUnShareInstance` methods of the LocalDB API, or the share and unshared options of the `SqlLocalDB` utility.
 
 ## Start LocalDB and connect to LocalDB
 

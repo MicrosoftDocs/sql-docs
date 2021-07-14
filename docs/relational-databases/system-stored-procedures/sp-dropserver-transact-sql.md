@@ -1,8 +1,6 @@
 ---
+title: sp_dropserver (Transact-SQL)
 description: "sp_dropserver (Transact-SQL)"
-title: "sp_dropserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -15,17 +13,20 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_dropserver"
-ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: "09/07/2018"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
+
 # sp_dropserver (Transact-SQL)
+
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -49,7 +50,7 @@ sp_dropserver [ @server = ] 'server'
   
  **sp_dropserver** cannot be executed inside a user-defined transaction.  
   
- Using **sp_dropserver** to change the local server name may cause undesired effects or unsupported configurations such as when using Availbility Groups or Replication.
+ **sp_dropserver** to change the local server name may cause undesired effects or unsupported configurations.
   
 ## Permissions  
  Requires ALTER ANY LINKED SERVER permission on the server.  

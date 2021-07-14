@@ -29,6 +29,8 @@ ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 Use this syntax to control whether the feature is on or off, and designate a specific filegroup for the *persistent version store* (PVS) data. If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup.
 
+Note that SQL will take an exclusive lock on the database to change this state.  That means that the ALTER DATABASE command will stall until all active sessions are gone, and that any new sessions will wait behind the ALTER DATABASE command.  If it is important to complete the operation and remove the lock, you can use the termination clause, WITH ROLLBACK [IMMEDIATE | AFTER {number} SECONDS | NO_WAIT] to abort any active sessions in the database.
+
 ## Managing the persistent version store Filegroup
 The ADR feature is based on having changes versioned, with different versions of a data element kept in the PVS.
 There are considerations to locating where the PVS is located and in how to manage the size of the data in the PVS.

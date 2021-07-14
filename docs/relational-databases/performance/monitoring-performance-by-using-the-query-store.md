@@ -46,6 +46,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
 
 ```sql
+ALTER DATABASE <database_name>
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 ```
 
@@ -71,6 +72,7 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 **Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
 
 ```sql
+ALTER DATABASE <database_name>
 SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
 ```
 

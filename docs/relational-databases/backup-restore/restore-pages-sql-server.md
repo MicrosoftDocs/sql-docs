@@ -203,7 +203,7 @@ ms.author: chadam
   
 ```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
-   FROM <file_backup_of_file_B>   
+   FROM DISK <file_backup_of_file_B>   
    WITH NORECOVERY;  
 RESTORE LOG <database> FROM <log_backup>   
    WITH NORECOVERY;  

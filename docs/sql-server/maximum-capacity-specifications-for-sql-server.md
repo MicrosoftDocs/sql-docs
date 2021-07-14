@@ -26,7 +26,9 @@ author: MikeRayMSFT
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article shows maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components.
+This article shows maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 and later.
+
+For SQL Server 2014, see [Maximum capacity specifications for SQL Server 2014](/previous-versions/sql/2014/sql-server/maximum-capacity-specifications-for-sql-server).
 
 >[!NOTE]
 >In addition to the information in this article, you might also find the following links helpful:
@@ -42,10 +44,11 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] object|Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|Additional Information|
 |---------------------------------------------------------|------------------------------------------------------------------|----------------------------|
-|Batch size|65,536 <sup>*</sup> (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
+|Batch size|65,536 * (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
+|Byte length of a string containing [!INCLUDE[tsql](../includes/tsql-md.md)] statements (batch size)|65,536 * (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
 |Bytes per short string column|8,000||
 |Bytes per `GROUP BY`, `ORDER BY`|8,060||
-|Bytes per index key|900 bytes for a clustered index. 1,700 for a nonclustered index.|The maximum number of bytes in a clustered index key cannot exceed 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a nonclustered index key, the maximum is 1700 bytes.<br /><br /> You can define a key using variable-length columns whose maximum sizes add up to more than the limit. However, the combined sizes of the data in those columns can never exceed the limit.<br /><br /> In a nonclustered index, you can include extra non-key columns, and they do not count against the size limit of the key. The non-key columns might help some queries perform better.|
+|Bytes per index key|900 bytes for a clustered index. 1,700 for a nonclustered index. Before SQL Server 2016, all versions supported 900 bytes for all index types.|The maximum number of bytes in a clustered index key cannot exceed 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a nonclustered index key, the maximum is 1700 bytes.<br /><br /> You can define a key using variable-length columns whose maximum sizes add up to more than the limit. However, the combined sizes of the data in those columns can never exceed the limit.<br /><br /> In a nonclustered index, you can include extra non-key columns, and they do not count against the size limit of the key. The non-key columns might help some queries perform better.|
 |Bytes per index key for memory-optimized tables|2500 bytes for a nonclustered index. No limit for a hash index, as long as all index keys fit in-row.|On a memory-optimized table, a nonclustered index cannot have key columns whose maximum declared sizes exceed 2500 bytes. It is irrelevant whether the actual data in the key columns would be shorter than the maximum declared sizes.<br /><br /> For a hash index key, there is no hard limit on size.<br /><br /> For indexes on memory-optimized tables, there is no concept of included columns, since all indexes inherently cover of all columns.<br /><br /> For a memory-optimized table, even though the row size is 8060 bytes, some variable-length columns can be physically stored outside those 8060 bytes. However, the maximum declared sizes of all key columns for all indexes on a table, plus any additional fixed-length columns in the table, must fit in the 8060 bytes.|
 |Bytes per foreign key|900||
 |Bytes per primary key|900||
@@ -77,8 +80,7 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 |Foreign key table references per table|Outgoing = 253. Incoming = 10,000.|For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
 |Identifier length (in characters)|128||
 |Instances per computer|50 instances on a stand-alone server.<br /><br />25 failover cluster instances when using a shared cluster disks as storage.<br/><br/>50 failover cluster instances with SMB file shares as the storage option.||
-|Indexes per memory-optimized table|999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] and [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]||
-|Length of a string containing SQL statements (batch size)|65,536 (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
+|Indexes per memory-optimized table|999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/><br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] and [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]||
 |Locks per connection|Maximum locks per server||
 |Locks per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Limited only by memory|This value is for static lock allocation. Dynamic locks are limited only by memory.|
 |Nested stored procedure levels|32|If a stored procedure accesses more than 64 databases, or more than two databases in interleaving, you will receive an error.|

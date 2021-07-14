@@ -45,8 +45,6 @@ You can also build the connector from source or download the jar from the Releas
 | Microsoft SQL Server                 | SQL Server 2008 or later        |
 | Azure SQL Databases                  | Supported                       |
 
-> [!NOTE]
-> Azure Synapse Analytics use is not tested with this connector. While it may work, there may be unintended consequences.
 
 ### Supported Options
 The Apache Spark Connector for SQL Server and Azure SQL supports the options defined here: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)

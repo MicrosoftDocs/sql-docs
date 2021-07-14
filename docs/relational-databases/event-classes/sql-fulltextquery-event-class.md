@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SQL:FullTextQuery event class"
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:FullTextQuery Event Class

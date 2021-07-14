@@ -2,7 +2,7 @@
 description: "Security Stored Procedures (Transact-SQL)"
 title: "Security Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/19/2019
+ms.date: 05/25/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -164,114 +164,125 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         [sp_dropuser](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md) (Deprecated) 
     :::column-end:::
     :::column:::
-        [sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md) (Deprecated) 
+        [sp_generate_database_ledger_digest](../../relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) 
     :::column-end:::
 :::row-end:::
 :::row:::
+    :::column:::
+        [sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md) (Deprecated) 
+    :::column-end:::
     :::column:::
         [sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_helpdbfixedrole](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_helplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-helplinkedsrvlogin-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_helplogins](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_helpntgroup](../../relational-databases/system-stored-procedures/sp-helpntgroup-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_helpremotelogin](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md) (Deprecated) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_helprotect](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_helpsrvrole](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_helpsrvrolemember](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_helpuser](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md) (Deprecated) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_migrate_user_to_contained](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_MShasdbaccess](../../relational-databases/system-stored-procedures/sp-mshasdbaccess-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md) (Deprecated)
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_refresh_parameter_encryption](../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_remoteoption](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md) (Deprecated)
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_revokedbaccess](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md) (Deprecated) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_revokelogin](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md) (Deprecated)
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_setapprole](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_srvrolepermission](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md) (Deprecated)
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_testlinkedserver](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_unsetapprole](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_validatelogins](../../relational-databases/system-stored-procedures/sp-validatelogins-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+        [sp_verify_database_ledger](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_xp_cmdshell_proxy_account](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md) 
+        [sp_verify_database_ledger_from_digest_storage](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md) 
     :::column-end:::
     :::column:::
+        [sp_xp_cmdshell_proxy_account](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md) 
     :::column-end:::
 :::row-end:::
-  
-## See Also  
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
+
+&nbsp;
+
+## See Also
+
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

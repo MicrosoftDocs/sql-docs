@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Mount Tape event class"
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Mount Tape Event Class

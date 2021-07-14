@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], Visual Database Tools"
   - "Visual Database Tools [SQL Server], constraints"
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unique Constraints and Check Constraints

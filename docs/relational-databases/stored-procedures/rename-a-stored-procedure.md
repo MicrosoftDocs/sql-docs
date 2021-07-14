@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], renaming"
   - "renaming stored procedures"
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Stored Procedure

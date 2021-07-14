@@ -3,18 +3,19 @@ title: Create multiple models with rxExecBy
 description: Use the rxExecBy function from RevoScaleR library to build multiple mini models over machine data stored in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 04/15/2018  
+ms.date: 05/28/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Creating multiple models using rxExecBy
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-The **rxExecBy** function in RevoScaleR supports parallel processing of multiple related models. Rather than train one large model based on data from multiple similar entities, a data scientist can quickly create many related models, each using data specific to a single entity. 
+Learn how to use the **rxExecBy** function in RevoScaleR to parallel process multiple related models with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Rather than train one large model based on data from multiple similar entities, you can quickly create many related models, each using data specific to a single entity.
+
+## What rxExecBy can do
 
 For example, suppose you are monitoring device failures, capturing data for many different types of equipment. By using rxExecBy, you can provide a single large dataset as input, specify a column on which to stratify the dataset, such as device type, and then create multiple models for individual devices.
 
@@ -22,7 +23,7 @@ This use case has been termed ["pleasingly parallel"](https://en.wikipedia.org/w
 
 Typical applications of this approach include forecasting for individual household smart meters, creating revenue projections for separate product lines, or creating models for loan approvals that are tailored to individual bank branches.
 
-## How rxExec Works
+## How rxExecBy works
 
 The rxExecBy function in RevoScaleR is designed for high-volume parallel processing over a large number of small data sets.
 
@@ -32,7 +33,7 @@ The rxExecBy function in RevoScaleR is designed for high-volume parallel process
 4. When the function executes, the data queries are processed in parallel if your environment supports it. Moreover, the modeling or transformation tasks are distributed among individual cores and executed in parallel. Supported compute context for thee operations include RxSpark and RxInSQLServer.
 5. Multiple results are returned.
 
-## rxExecBy Syntax and Examples
+## rxExecBy syntax and examples
 
 **rxExecBy** takes four inputs, one of the inputs being a dataset or data source object that can be partitioned on a specified **key** column. The function returns an output for each partition. The form of the output depends on the function that is passed as an argument. For example, if you pass a modeling function such as rxLinMod, you could return a separate trained model for each partition of the dataset.
 
@@ -89,4 +90,6 @@ rxSetComputeContext(sqlServerCC)
 sqlServerCCResults <- rxExecBy(inData = sqlServerDataDS, keys = c("DayOfWeek"), func = .Count)
 ```
 
+## Next steps
 
++ [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md)

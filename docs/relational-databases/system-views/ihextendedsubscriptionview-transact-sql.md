@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHextendedSubscriptionView view"
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

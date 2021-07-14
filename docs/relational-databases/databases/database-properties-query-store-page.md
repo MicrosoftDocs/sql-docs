@@ -9,8 +9,8 @@ ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.querystore.f1"
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "01/25/2021"
 ---
 # Database Properties (Query Store Page)

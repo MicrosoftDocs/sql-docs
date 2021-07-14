@@ -22,12 +22,11 @@ To use integrated authentication (Windows Authentication) on macOS or Linux, you
 To get started, you need:
 
 - Access to a Windows domain-joined machine to query your Kerberos domain controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is supported only by using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be service principal names (SPNs) registered for each instance of SQL Server you're trying to connect to. For more information, see [Registering a service principal name](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats).
-
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is supported only by using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be [service principal names (SPNs)](/windows/win32/ad/service-principal-names) registered for each instance of SQL Server you're trying to connect to. For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## Check if SQL Server has a Kerberos setup
 
-Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com, which means that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
+Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. Verify there are entries that begin with MSSQLSvc/HostName.Domain.com. These entries mean that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
 
 If you don't have access to the host of the SQL Server instance, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>`, where *<SQLSERVER_NETBIOS>* is the computer name of the host of the SQL Server instance.
 

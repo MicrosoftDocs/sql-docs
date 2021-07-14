@@ -2,7 +2,7 @@
 description: "CollectionAggregate (geography Data Type)"
 title: "CollectionAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2017"
+ms.date: "05/18/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -25,7 +25,7 @@ Creates a **GeometryCollection** instance from a set of **geography** objects.
   
 ```  
   
-ConvexHullAggregate ( geography_operand )  
+CollectionAggregate ( geography_operand )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

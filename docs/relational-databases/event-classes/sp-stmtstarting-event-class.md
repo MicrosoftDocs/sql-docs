@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SP:StmtStarting event class"
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:StmtStarting Event Class

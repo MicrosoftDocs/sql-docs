@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Crawl Started event class"
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FT:Crawl Started Event Class

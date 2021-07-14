@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database creation [SQL Server], SQL Server Management Studio"
   - "creating databases"
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Create a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.swb.tableproperties.general.f1"
   - "sql13.swb.tableproperties.filetable.f1"
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "explicit hierarchies, changing name"
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Change an Explicit Hierarchy Name (Master Data Services)

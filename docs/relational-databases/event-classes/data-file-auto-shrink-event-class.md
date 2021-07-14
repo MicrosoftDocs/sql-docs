@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Data File Auto Shrink event class"
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data File Auto Shrink Event Class

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "renaming columns"
   - "column names [SQL Server]"
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Columns (Database Engine)

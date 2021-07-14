@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "OLEDB Call event class"
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Call Event Class

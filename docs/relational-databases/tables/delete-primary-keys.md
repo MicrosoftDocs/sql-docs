@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "deleting primary keys"
   - "primary keys [SQL Server], deleting"
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Primary Keys

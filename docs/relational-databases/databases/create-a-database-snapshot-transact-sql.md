@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], creating"
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Create a Database Snapshot (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

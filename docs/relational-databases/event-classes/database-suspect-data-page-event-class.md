@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], event notifications"
   - "Database Suspect Data Page event class"
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Suspect Data Page Event Class

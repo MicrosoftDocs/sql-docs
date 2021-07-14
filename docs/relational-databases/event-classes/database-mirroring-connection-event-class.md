@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: supportability
 ms.topic: reference
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Mirroring Connection Event Class

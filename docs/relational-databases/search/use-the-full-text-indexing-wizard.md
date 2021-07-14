@@ -92,12 +92,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
      d. **Select index filegroup**  
      Specify the filegroup on which to create the full-text index.  
   
-     e. Select a value:  
+     e. Select a value:
+       
       |Value|Description|  
       |-----------|-----------------|
       |**<default>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the       table or view is partitioned, the primary filegroup is used|
       |**PRIMARY**|Select to use the primary filegroup for the new full-text index.|
-      *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup       for the new full-text index.|   
+      *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup       for the new full-text index.|
   
      
  11. **Select full-text stoplist**  

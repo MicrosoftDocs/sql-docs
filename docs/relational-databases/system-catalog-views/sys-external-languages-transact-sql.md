@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_languages catalog view"
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: ">=sql-server-ver15"

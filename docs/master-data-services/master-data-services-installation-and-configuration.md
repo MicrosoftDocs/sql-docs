@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "mds"
 ms.technology: master-data-services
 ms.topic: quickstart
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Master Data Services Installation and Configuration

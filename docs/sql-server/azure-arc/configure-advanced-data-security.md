@@ -1,7 +1,7 @@
 ---
 title: Configure advanced data security
-titleSuffix: Azure Arc
-description: Configure advanced data security for Azure Arc enabled SQL Server instance
+titleSuffix: SQL Server on Azure Arc-enabled servers
+description: Configure advanced data security for an instance of SQL Server on Azure Arc-enabled servers.
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -9,7 +9,7 @@ ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Configure advanced data security for Azure Arc enabled SQL Server instance
+# Configure advanced data security | SQL Server on Azure Arc-enabled servers
 
 You can enable advanced data security for your SQL Server instances on premises by following these steps.
 
@@ -18,7 +18,7 @@ You can enable advanced data security for your SQL Server instances on premises 
 * Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
 
    > [!NOTE]
-   > Azure Defender currently limited to SQL Server running on Windows machines.
+   > Azure Defender currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
 * Your user account is assigned one of the [Security Center Roles (RBAC)](/azure/security-center/security-center-permissions)
 

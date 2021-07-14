@@ -26,7 +26,7 @@ Before you begin migrating your Oracle database to SQL Server, do the following:
 - Verify that your source environment is supported.
 - Download and install [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019?filetype=EXE).
 - Download and install [SSMA for Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
-- Get the [necessary permissions for SSMA for Oracle](/sql/ssma/oracle/connecting-to-oracle-database-oracletosql) and [provider](/sql/ssma/oracle/connect-to-oracle-oracletosql).
+- Get the [necessary permissions for SSMA for Oracle](../../../ssma/oracle/connecting-to-oracle-database-oracletosql.md) and [provider](../../../ssma/oracle/connect-to-oracle-oracletosql.md).
 - Get connectivity and sufficient permissions to access both source and target. 
 
 
@@ -186,13 +186,13 @@ To publish your schema and migrate the database, do the following:
 
     ![Screenshot of the Data Migration Report.](./media/oracle-to-sql-server/data-migration-report.png)
 
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and then validate the migration by reviewing the data and schema.
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and then validate the migration by reviewing the data and schema.
 
    ![Screenshot of SQL Server Management Server.](./media/oracle-to-sql-server/validate-in-ssms.png)
 
 
 In addition to using SSMA, you can use SQL Server Integration Services (SSIS) to migrate the data. To learn more, see: 
-- [Get started with SQL Server Integration Services](/sql/integration-services/sql-server-integration-services) (article)
+- [Get started with SQL Server Integration Services](../../../integration-services/sql-server-integration-services.md) (article)
 - [SQL Server Integration Services: SSIS for Azure and Hybrid Data Movement](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx) (technical white paper)
 
 ## Post-migration 
@@ -237,6 +237,7 @@ For more assistance with completing this migration scenario, see the following r
 | [Automate SSMA Oracle assessment collection & consolidation](https://github.com/microsoft/DataMigrationTeam/tree/master/IP%20and%20Scripts/Automate%20SSMA%20Oracle%20Assessment%20Collection%20%26%20Consolidation) | A set of resources that uses a .csv file as entry (sources.csv in the project folders) to produce the xml files that are needed to run SSMA assessment in console mode. The source.csv file is provided by the customer based on an inventory of existing Oracle instances. The output files are AssessmentReportGeneration_source_1.xml, ServersConnectionFile.xml, and VariableValueFile.xml. |
 | [SSMA issues and possible remedies when migrating Oracle databases](https://aka.ms/dmj-wp-ssma-oracle-errors) | Discusses how Oracle enables you to assign a non-scalar condition in the WHERE clause. However, SQL Server doesn’t support this type of condition. As a result, SSMA for Oracle doesn’t convert queries with a non-scalar condition in the WHERE clause, instead generating an error O2SS0001. This white paper provides more details on the issue and ways to resolve it. |
 | [Oracle to SQL Server migration handbook](https://github.com/microsoft/DataMigrationTeam/blob/master/Whitepapers/Oracle%20to%20SQL%20Server%20Migration%20Handbook.pdf) | Focuses on the tasks associated with migrating an Oracle schema to the latest version of SQL Server base. If the migration requires changes to features and functionality, the possible impact of each change on the applications that use the database must be considered carefully. |
+|[Oracle to SQL Server - Database Compare utility](https://www.microsoft.com/download/details.aspx?id=103016)|SSMA for Oracle Tester is the recommended tool to automatically validate the database object conversion and data migration, and it's a superset of Database Compare functionality.<br /><br />If you're looking for an alternative data validation option, you can use the Database Compare utility to compare data down to the row or column level in all or selected tables, rows, and columns.|
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 

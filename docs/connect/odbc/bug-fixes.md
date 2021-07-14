@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: "v-chojas"
-ms.author: v-jizho2
+author: v-chojas
+ms.author: v-chojas
 manager: kenvh
 ---
 # List of bugs fixed

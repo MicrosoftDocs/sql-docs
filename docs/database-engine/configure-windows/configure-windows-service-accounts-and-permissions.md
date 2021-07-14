@@ -25,8 +25,8 @@ Most services and their properties can be configured by using SQL Server Configu
 | SQL Server 2019 | C:\Windows\SysWOW64\SQLServerManager15.msc |
 | SQL Server 2017 | C:\Windows\SysWOW64\SQLServerManager14.msc |
 | SQL Server 2016 | C:\Windows\SysWOW64\SQLServerManager13.msc |
-| [SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014/) | C:\Windows\SysWOW64\SQLServerManager12.msc |
-| [SQL Server 2012](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh231622(v=sql.110)) | C:\Windows\SysWOW64\SQLServerManager11.msc |
+| [SQL Server 2014](/previous-versions/sql/2014/) | C:\Windows\SysWOW64\SQLServerManager12.msc |
+| [SQL Server 2012](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110)) | C:\Windows\SysWOW64\SQLServerManager11.msc |
 
 ## <a name="Service_Details"></a> Services Installed by SQL Server
 

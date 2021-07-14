@@ -16,6 +16,18 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+## SSMA v8.21
+
+The v8.21 release of SSMA for SAP ASE contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
 ## SSMA v8.19
 
 The v8.19 release of SSMA for SAP ASE contains the following changes:

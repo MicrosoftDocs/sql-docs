@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "database [Master Data Services], about the database"
   - "database [Master Data Services]"
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Master Data Services Database

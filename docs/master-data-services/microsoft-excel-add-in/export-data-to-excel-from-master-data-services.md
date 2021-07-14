@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Export Data to Excel from Master Data Services

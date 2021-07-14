@@ -2,7 +2,7 @@
 description: "CREATE PROCEDURE (Transact-SQL)"
 title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "06/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -132,8 +132,11 @@ sql_statement [;] [ ... n ]
 
 -- Create a stored procedure
 CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
-    [ { @parameterdata_type } [ OUT | OUTPUT ] ] [ ,...n ]
-AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
+    [ { @parameter data_type } [ OUT | OUTPUT ] ] [ ,...n ]
+AS
+{
+  [ BEGIN ] sql_statement [;][ ,...n ] [ END ]
+}
 [;]
 ```
 

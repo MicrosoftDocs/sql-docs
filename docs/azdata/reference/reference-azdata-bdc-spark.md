@@ -5,7 +5,7 @@ description: Reference article for azdata bdc spark commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/29/2021
+ms.date: 06/02/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,8 +21,8 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc spark settings](reference-azdata-bdc-spark-settings.md) | BDC settings commands for spark service.
 [azdata bdc spark status](reference-azdata-bdc-spark-status.md) | Spark service status commands.
+[azdata bdc spark settings](reference-azdata-bdc-spark-settings.md) | BDC settings commands for spark service.
 [azdata bdc spark batch](reference-azdata-bdc-spark-batch.md) | Manages batch operations within the Spark system.
 [azdata bdc spark session](reference-azdata-bdc-spark-session.md) | Manages activate session operations within the Spark system.
 [azdata bdc spark statement](reference-azdata-bdc-spark-statement.md) | Manages Spark statements.

@@ -143,7 +143,7 @@ select count(*) from foo WITH (FORCE EXTERNALPUSHDOWN);
 An error message similar to the following is returned: 
 
 > Msg 105019, Level 16, State 1, Line 1<BR>
-> EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to JobSubmitter_PollJobStatus: Error [java.net.ConnectException: Call From big1506sql2016/172.16.1.4 to 0.0.0.0:10020 failed on connection exception: java.net ConnectException: Connection refused: no further information; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused] occurred while accessing external file.'<BR>
+> EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to JobSubmitter_PollJobStatus: Error [java.net.ConnectException: Call From big1506sql2016/172.16.1.4 to 0.0.0.0:10020 failed on connection exception: java.net ConnectException: Connection refused: no further information; For more information, see:  http://wiki.apache.org/hadoop/ConnectionRefused] occurred while accessing external file.'<BR>
 > OLE DB provider "SQLNCLI11" for linked server "(null)" returned message "Unspecified error".<BR>
 > Msg 7421, Level 16, State 2, Line 1<BR>
 > Cannot fetch the rowset from OLE DB provider "SQLNCLI11" for linked server "(null)". .<BR>
@@ -171,7 +171,7 @@ For more information on troubleshooting PolyBase and Kerberos, see [Troubleshoot
 ### Java memory error due to UTF-8
 
 **Scenario:**  
-SQL Server PolyBase is setup with Hadoop Cluster or Azure Blob Storage. Any Select query fails with the following error:
+SQL Server PolyBase is set up with Hadoop Cluster or Azure Blob Storage. Any Select query fails with the following error:
 
 > Msg 106000, Level 16, State 1, Line 1<BR>
 > Java heap space<BR>
@@ -216,7 +216,7 @@ Create the external table first and then use INSERT INTO SELECT to export to the
 ### Create External Table from Azure blob storage fails
 
 **Scenario:**  
-SQL DW is setup to import data from Azure blob storage. Create external table fails with the following message.
+Dedicated SQL pool (formerly SQL DW) is set up to import data from Azure blob storage. Create external table fails with the following message.
 
 > Msg 105019, Level 16, State 1, Line 34<BR>
 > External TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_IsDirExist. Java exception message:com.microsoft.azure.storage.StorageException: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.: Error [com.microsoft.azure.storage.StorageException: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.] occurred while accessing external file.'<BR>
@@ -231,7 +231,7 @@ Drop all related objects (i.e: data source, file format) and then drop and recre
 ### Kerberos configuration capitalization
 
 **Scenario:**  
-SQL Server is setup with Kerberos enabled Cloudera Cluster. SQL Server has been restarted after all the configuration changes. PolyBase Engine and PolyBase Data Movement services are running after restart. The following error messages are returned:
+SQL Server is set up with Kerberos enabled Cloudera Cluster. SQL Server has been restarted after all the configuration changes. PolyBase Engine and PolyBase Data Movement services are running after restart. The following error messages are returned:
 
 Data Source configured without job tracker location:  
 > org.apache.hadoop.fs.FileSystem: Provider org.apache.hadoop.fs.viewfs.ViewFileSystem could not be instantiated
@@ -250,7 +250,7 @@ For more information on troubleshooting PolyBase and Kerberos, see [Troubleshoot
 ### Mapred-site.xml missing needed values
 
 **Scenario:**  
-SQL Server or APS is setup with supported HDP Cluster. Queries that do not require pushdown work, but fails with the following message when 'FORCE PUSHDOWN' hint is used with the following error messages:
+SQL Server or APS is set up with supported HDP Cluster. Queries that do not require pushdown work, but fails with the following message when 'FORCE PUSHDOWN' hint is used with the following error messages:
 
 > Msg 7320, Level 16, State 110, Line 35<BR>
 > Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to JobSubmitter_PollJobStatus: Error [org.apache.hadoop.ipc.RemoteException(java.lang.NullPointerException): java.lang.NullPointerException<BR>
@@ -291,7 +291,7 @@ Add the following properties and associate the correct values as it shows on Amb
 ### Configuring access by hostname 
 
 **Scenario:**  
-SQL Server is setup to access a supported Hadoop Cluster. Creating an external table returns one of the following errors:
+SQL Server is set up to access a supported Hadoop Cluster. Creating an external table returns one of the following errors:
 
 > Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110802;An internal DMS error occurred that caused this operation to fail. Details: Exception: Microsoft.SqlServer.DataWarehouse.DataMovement.Workers.DmsSqlNativeException, Message: SqlNativeBufferReader.Run, error in OdbcExecuteQuery: SqlState: 42000, NativeError: 8680, 'Error calling: SQLExecDirect(this->GetHstmt(), (SQLWCHAR *)statementText, SQL_NTS), SQL return code: -1 | SQL Error Info: SrvrMsgState: 26, SrvrSeverity: 17,  Error <1>: ErrorMsg: [Microsoft][ODBC Driver 13 for SQL Server][SQL Server]Internal Query Processor Error: The query processor encountered an unexpected error during the processing of a remote query phase. | Error calling: pReadConn->ExecuteQuery(statementText, bufferFormat) | state: FFFF, number: 24, active connections: 8', Connection String: Driver={pdwodbc};APP=RCSmall-DmsNativeReader:WAD1D16HD2001\mpdwsvc (3600)-ODBC-PoolId1433;Trusted_Connection=yes;AutoTranslate=no;Server=\\.\pipe\sql\query<BR>
 
@@ -304,7 +304,7 @@ SQL Server is setup to access a supported Hadoop Cluster. Creating an external t
 > at Microsoft.SqlServer.DataWarehouse.DataMovement.Workers.ExternalMoveReaderWorker.Execute(Object status)<BR>
 
 **Possible Reason:**  
-This error message can show up when the Hadoop Cluster is setup in a configuration where data nodes are only accessible outside the cluster using the Hostname and not the IP address.
+This error message can show up when the Hadoop Cluster is set up in a configuration where data nodes are only accessible outside the cluster using the Hostname and not the IP address.
 
 **Possible Solution:**  
 Add the following to hdfs-site.xml file on the client (SQL Server) side. This configuration will force the name node to return a URI for the data nodes with the Hostname instead of the internal IP address.
@@ -346,7 +346,7 @@ Even if you had the right directory structure to begin with, follow step #2 to b
 ### Unexpected characters in configuration files
 
 **Scenario:**  
-Setting up SQL Server or APS with a Hadoop cluster which involves modifying yarn-site.xml, hdfs-site.xml and other configuration files. The following SQL Server error message is observed:
+Setting up SQL Server or APS with a Hadoop cluster, which involves modifying yarn-site.xml, hdfs-site.xml, and other configuration files. The following SQL Server error message is observed:
 
 > Msg 105019, Level 16, State 1, Line 1<BR>
 > Microsoft.SqlServer.DataWarehouse.Common.ErrorHandling.MppSqlException: EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message:com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException: Invalid byte 1 of 1-byte UTF-8 sequence.: Error [com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException: Invalid byte 1 of 1-byte UTF-8 sequence.] occurred while accessing external file.' ---><BR>
@@ -360,6 +360,7 @@ Open the files in a different text editor (other than notepad) and look for thes
 
 ## See also
 
-[Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)  
-[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)  
+ - [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)  
+ - [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)  
+ - [PolyBase Frequently Asked Questions](polybase-faq.yml)
 

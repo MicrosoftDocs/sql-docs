@@ -1,8 +1,8 @@
 ---
 description: "Execution Related Dynamic Management Views and Functions (Transact-SQL)"
-title: "Execution Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
+title: "Execution Related Dynamic Management Views and Functions (Transact-SQL)"
 ms.custom: ""
-ms.date: 03/27/2019
+ms.date: 05/28/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -12,12 +12,14 @@ dev_langs:
 helpviewer_keywords: 
   - "dynamic management objects [SQL Server], execution"
   - "execution-related dynamic management objects [SQL Server]"
-ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2016"
 
   This section contains the following dynamic management objects:  
   
@@ -112,8 +114,51 @@ ms.author: wiassaf
 
 > [!NOTE]  
 >  The **sys.dm_exec_query_transformation_stats** dynamic management view is identified for informational purposes only. Not supported. Future compatibility is not guaranteed.  
+
+::: moniker-end
+::: moniker range=">= aps-pdw-2016 || = azure-sqldw-latest"
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
-  
+This section contains Azure Synapse Analytics or Parallel Data Warehouse dynamic management views (DMVs):
+
+:::row:::
+    :::column:::
+      [sys.dm_pdw_dms_cores](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)   
+
+      [sys.dm_pdw_dms_external_work](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md)   
+
+      [sys.dm_pdw_dms_workers](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)   
+
+      [sys.dm_pdw_errors](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)
+
+      [sys.dm_pdw_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)
+
+      [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+
+      [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)
+
+      [sys.dm_pdw_nodes_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)
+
+      [sys.dm_pdw_nodes_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md)
+
+      [sys.dm_pdw_nodes_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md)
+
+      [sys.dm_pdw_nodes_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md)
+
+      [sys.dm_pdw_nodes_exec_text_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md)
+
+      [sys.dm_pdw_hadoop_operations](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md)
+
+      [sys.dm_pdw_query_stats_xe](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-transact-sql.md)
+
+      [sys.dm_pdw_query_stats_xe_file](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md)
+
+      [sys.dm_pdw_request_steps](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)
+
+      [sys.dm_pdw_sql_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md)
+
+
+    :::column-end:::
+:::row-end:::
+
+::: moniker-end
+

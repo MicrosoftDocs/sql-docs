@@ -220,13 +220,13 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
     ### Examples
 
-    This illustrate the connection string for .NET System.Data.SqlClient provider for a virtual network name (VNN) listener:
+    This illustrates the connection string for .NET System.Data.SqlClient provider for a virtual network name (VNN) listener:
 
    ```csharp
    Server=tcp:VNN_AgListener,1433;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True
    ```
 
-   This illustrate the connection string for .NET System.Data.SqlClient provider for a distributed network name (DNN) listener:
+   This illustrates the connection string for .NET System.Data.SqlClient provider for a distributed network name (DNN) listener:
 
    ```csharp
    Server=tcp:DNN_AgListener,DNN_Port;Database=AgDb1;ApplicationIntent=ReadOnly;MultiSubnetFailover=True
@@ -234,7 +234,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
 
    > [!NOTE]  
    > If you are using command line programs like SQLCMD, ensure that you specify the correct switches for server name. For instance, in SQLCMD you must use the upper case -S switch that specifies server name, not the lower case -s switch which is used for column separator.
-   > </br>Example: `sqlcmd -S Listerne1,port -E -d AgDb1 -K ReadOnly -M`
+   > </br>Example: `sqlcmd -S AG_Listener,port -E -d AgDb1 -K ReadOnly -M`
 
 4. Ensure that the availability group listener is online. To ensure that the availability group listener is online run the following query on the primary replica: 
 
@@ -245,7 +245,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    If you find the listener is offline you can attempt to bring it online using a command like this:
 
    ```sql
-   ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';
+   ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'AG_Listener';
    ```
 
 5. Ensure READ_ONLY_ROUTING_LIST is correctly populated. On Primary replica, ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting readable secondary replicas.
@@ -292,7 +292,7 @@ Summary of steps is outlined below. For detailed step-by-step instructions, plea
    - The IP addresses are configured correctly
   
     > [!NOTE]
-    > You can quickly verify all of these are properly configured if you can connect from a remote machine to a target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using `TCP:SQLinstance` syntax.
+    > You can quickly verify all of these are properly configured if you can connect from a remote machine to a target secondary replica's [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name using `TCP:SQL_Instance` syntax.
 
   See: [Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) and [View or Change Server Properties (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)
 

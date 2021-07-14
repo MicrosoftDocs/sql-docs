@@ -129,7 +129,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="TableOptions"></a> Table structure options
 
-For guidance on choosing the type of table, see [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
+For guidance on choosing the type of table, see [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
   
  `CLUSTERED COLUMNSTORE INDEX` 
  

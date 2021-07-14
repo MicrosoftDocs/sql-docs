@@ -36,7 +36,8 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 [ ; ]  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  [ @table_name=] '*table_name*'  

@@ -16,7 +16,10 @@ monikerRange: "= azure-sqldw-latest"
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Returns workload group statistics and the effective values of the workload group in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+Returns workload group statistics and the effective values of the workload group in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

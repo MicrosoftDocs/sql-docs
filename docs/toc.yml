@@ -6113,8 +6113,6 @@ items:
       href: dma/dma-migrateserverlogins.md
     - name: Best practices
       href: dma/dma-bestpractices.md
-    - name: Consolidate assessment reports
-      href: dma/dma-consolidatereports.md
     - name: Assess an app's data access layer
       href: dma/dma-assess-app-data-layer.md
     - name: Run from the command-line
@@ -6709,6 +6707,10 @@ items:
             items:
             - name: Access Methods
               href: relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: Advanced Analytics
+              href: relational-databases/performance-monitor/sql-server-advanced-analytics.md
+            - name: Availability Group
+              href: relational-databases/performance-monitor/sql-server-availability-group.md
             - name: Availability Replica
               href: relational-databases/performance-monitor/sql-server-availability-replica.md
             - name: Backup Device
@@ -10711,6 +10713,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3452-database-engine-error.md
         - name: 3456
           href: relational-databases/errors-events/mssqlserver-3456-database-engine-error.md
+        - name: 3617
+          href: relational-databases/errors-events/mssqlserver-3617-database-engine-error.md
         - name: 3619
           href: relational-databases/errors-events/mssqlserver-3619-database-engine-error.md
         - name: 3937

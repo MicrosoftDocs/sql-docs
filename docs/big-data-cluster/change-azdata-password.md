@@ -4,19 +4,19 @@ description: Update the `AZDATA_PASSWORD` manually
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Manually update `AZDATA_PASSWORD`
+# Manually update AZDATA_PASSWORD
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Whether or not the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] is operating with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
 
-## Change `AZDATA_PASSWORD` for controller
+## Change AZDATA_PASSWORD for controller
 
 If the cluster is operating in non-Active Directory mode, update the Apache Knox Gateway password by doing the following steps:
 
@@ -46,7 +46,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
    To simplify the example, the next steps use "newPassword" because the generated password is "newPassword". 
 
-1. Get `hexsalt` from the users table:
+1. Get `hexsalt` from the `auth.users` table:
 
    ```sql
    SELECT hexsalt FROM [auth].[users] WHERE username = '<username>'
@@ -65,7 +65,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    J2y4E4dhlgwHOaRr3HKiiVAKBfjuGDyYmzn88VXmrzM=
    ```
 
-1. Update the password in the users table:
+1. Update the password in the `auth.users` table:
 
    ```sql
    UPDATE [auth].[users] SET password = 'J2y4E4dhlgwHOaRr3HKiiVAKBfjuGDyYmzn88VXmrzM=' WHERE username = '<username>'
@@ -91,17 +91,17 @@ Follow these options for manually updating the password for [Grafana](app-monito
 
 1. The htpasswd utility is required. You can install this on any client machine.
   
-### [For Ubuntu](#tab/for-ubuntu)
-On Ubuntu Linux you can use the following:
-```bash
-sudo apt install apache2-utils
-```
-### [For RHEL](#tab/for-rhel)
-On Red Hat Enterprise Linux you can use the following:
-```bash
-sudo yum install httpd-tools
-```
----
+    ### [For Ubuntu](#tab/for-ubuntu)
+    On Ubuntu Linux you can use the following:
+    ```bash
+    sudo apt install apache2-utils
+    ```
+    ### [For RHEL](#tab/for-rhel)
+    On Red Hat Enterprise Linux you can use the following:
+    ```bash
+    sudo yum install httpd-tools
+    ```
+    ---
 
 2. Generate the new password. 
     
@@ -125,13 +125,13 @@ sudo yum install httpd-tools
     
     Retain the output base64 string for later.
     
-4. Next, edit the mgmtproxy-secret:
+4. Next, edit the `mgmtproxy-secret`:
     
     ```bash
     kubectl edit secret -n mssql-cluster mgmtproxy-secret
     ```
          
-5. Update the controller-login-htpasswd with the new encoded password base64 string generated above:
+5. Update the `controller-login-htpasswd` with the new encoded password base64 string generated above:
     
     ```console
     # Please edit the object below. Lines beginning with a '#' will be ignored,
@@ -179,7 +179,7 @@ sudo yum install httpd-tools
     For troubleshooting and further log collection, use the Azure Data CLI [azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md) command.   
 
     
-8. Now login to Grafana using new password. 
+8. Now, sign in to Grafana using new password. 
 
 
 ## Update the Kibana password
@@ -191,7 +191,7 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 1. Open the Kibana URL.
     
-    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard.md#controller-dashboard), or use the following **azdata** command:
+    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard.md#controller-dashboard), or use the following `azdata` command:
     
     ```azurecli
     azdata login
@@ -202,24 +202,24 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 2. On the left side pane, select the **Security** option.
     
-    ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
+    ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
 
-3. On the security page, under the heading Authentication Backends, select **Internal User Database**.
+3. On the security page, under the heading **Authentication Backends**, select **Internal User Database**.
 
-    ![A screenshot of the security page, with the Internal User Database box chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
+    ![A screenshot of the security page, with the Internal User Database box chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
 
-4. Now you will see the list of users under the heading Internal Users Database. Use this page to add, modify, and remove any users for Kibana endpoint access. For the user that needs the updated password, select **Edit** button on the row for the user.
+4. Now you will see the list of users under the heading **Internal Users Database**. Use this page to add, modify, and remove any users for Kibana endpoint access. For the user that needs the updated password, select **Edit** button on the row for the user.
 
-    ![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
+    ![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
 
 5. Enter the new password twice and select **Submit**:
 
-    ![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
+    ![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
 
 6. Close the browser and reconnect to the Kibana URL using updated password.
 
 > [!Note]
-> After logging in with new password, if you see blank pages in Kibana, manually logout using the logout option at top right corner and login again.
+> After logging in with new password, if you see blank pages in Kibana, manually logout using the logout option at top right corner and sign in again.
 
 ## See also
 

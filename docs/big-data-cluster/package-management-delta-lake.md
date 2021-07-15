@@ -6,7 +6,7 @@ author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 06/14/2021
+ms.date: 07/09/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -94,7 +94,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/my-delta-lake-python-j
 
 To learn how to effectively use Delta Lake, see the following articles.
 
-* [Linux Foundation Delta Lake](/azure/synapse-analytics/spark/apache-spark-delta-lake-overviewp)
+* [Linux Foundation Delta Lake](/azure/synapse-analytics/spark/apache-spark-delta-lake-overview)
 * [Delta Lake quickstart](https://docs.delta.io/0.6.1/quick-start.html)
 
 To submit Spark jobs to SQL Server Big Data Clusters by using `azdata` or Livy endpoints, see [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).

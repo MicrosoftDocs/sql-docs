@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Database Mirroring Object | Microsoft Docs"
+title: "SQL Server, Database Mirroring object"
 description: Learn about the SQLServer:Database Mirroring performance object, which contains performance counters to report information about SQL Server database mirroring.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,13 +13,15 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], performance counters"
   - "performance counters [SQL Server], database mirroring"
   - "Database Mirroring object"
-ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Database Mirroring Object
+# SQL Server, Database Mirroring object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
+
+> [!NOTE]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -51,7 +53,7 @@ ms.author: wiassaf
 ## Remarks  
  The performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is impacting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -31,7 +31,7 @@ ms.author: maggies
 ```  
   
 rs {-?}  
-{-i input_file=}  
+{-i input_file}  
 {-s serverURL}  
 {-u username}  
 {-p password}  

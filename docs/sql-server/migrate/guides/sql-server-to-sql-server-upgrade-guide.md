@@ -18,8 +18,7 @@ For other migration guides, see [Azure Database Migration](/data-migration/).
 ## Prerequisites
 
 Before beginning your migration project, it's important to address the associated prerequisites.
-Learn about the supported versions and considerations for [upgrading SQL Server database.](/database-engine/install-windows/
-upgrade-sql-server.md)
+Learn about the supported versions and considerations for [upgrading SQL Server database.](/database-engine/install-windows/upgrade-sql-server.md)
 
 To prepare for the migration, download and install the:
 
@@ -206,9 +205,9 @@ After the data is migrated to the target environment, all the applications that 
 > [!NOTE]
 > For assistance with developing and running post-migration validation tests, also consider the Data Quality Solution available from [QuerySurge](http://www.querysurge.com/company/partners/microsoft).
 
-### Complete migration testing
+### Optional migration testing
 
-To use DEA for database migration testing, complete the following steps.
+This step is considered optional and not necessary to complete migration. To use DEA for database migration testing, complete the following steps.
 
 1. **Download the [DEA tool](https://www.microsoft.com/download/details.aspx?id=54090)**, and then install it.
 1. **Run a trace capture**

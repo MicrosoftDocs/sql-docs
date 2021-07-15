@@ -1,7 +1,7 @@
 ---
 title: What are Big Data Clusters?
 titleSuffix: SQL Server Big Data Clusters
-description: Learn about SQL Server big data clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
+description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin
@@ -44,6 +44,10 @@ Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 The following sections provide more information about these scenarios.
 
 ## Data virtualization
+<<<<<<< HEAD
+=======
+
+>>>>>>> fdaae94b065d6e2647bf4144029e72f71611da74
 
 By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces new connectors to data sources.
 
@@ -93,6 +97,10 @@ Kubernetes is an open source container orchestrator, which can scale container d
 
 In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes is responsible for the state of the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fdaae94b065d6e2647bf4144029e72f71611da74
 ## Big data clusters architecture
 
 The following diagram shows the components of a SQL Server big data cluster:
@@ -121,3 +129,7 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 ## Next steps
 
 * For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+
+* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  
+
+

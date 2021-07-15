@@ -193,6 +193,8 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Configure and use Always Encrypted with secure enclaves](configure-always-encrypted-enclaves.md)
+- Run [Always Encrypted with secure enclaves demos/samples](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/security/always-encrypted-with-secure-enclaves) in the [SQL Server samples](https://github.com/Microsoft/sql-server-samples) GitHub repository
+- Learn more about [Azure confidential computing](https://aka.ms/accdocs)
 
 ## See also
 

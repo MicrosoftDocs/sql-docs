@@ -41296,6 +41296,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/dma/dma-consolidatereports.md",
+      "redirect_url": "/azure/migrate/tutorial-assess-sql",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/dma/dma-powerbiassesreport.md",
       "redirect_url": "/sql/dma/dma-consolidatereports",
       "redirect_document_id": false

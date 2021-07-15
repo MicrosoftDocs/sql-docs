@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Access Methods Object | Microsoft Docs"
+title: "SQL Server, Access Methods object"
 description: Learn about the Access Method counters that can also be used to monitor the amount of data, indexes, and free space within a database in SQL Server.
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Access Methods object"
   - "SQLServer:Access Methods"
-ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Access Methods Object
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+# SQL Server, Access Methods object
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The **Access Methods** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor how the logical data within the database is accessed. Physical access to the database pages on disk is monitored using the **Buffer Manager** counters. Monitoring the methods used to access data stored in the database can help you to determine whether query performance can be improved by adding or modifying indexes, adding or moving partitions, adding files or file groups, defragmenting indexes, or by rewriting queries. The **Access Methods** counters can also be used to monitor the amount of data, indexes, and free space within the database, thereby indicating data volume and fragmentation for each server instance. Excessive index fragmentation can impair performance.  
   
  For more detailed information about data volume, fragmentation and usage, use the following dynamic management views:  
@@ -29,7 +29,7 @@ ms.author: wiassaf
   
 -   [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)  
   
- For space consumption in **tempdb** at the file, task and session level, use these dynamic management views:  
+ For space consumption in `tempdb` at the file, task and session level, use these dynamic management views:  
   
 -   [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
@@ -39,7 +39,7 @@ ms.author: wiassaf
   
  This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** counters.  
   
-|SQL Server Access Methods counters|Description|  
+|**SQL Server Access Methods** counters|Description|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|The number of batches per second that were completed successfully by the background task that cleans up deferred dropped allocation units.|  
 |**AU cleanups/sec**|The number of allocation units per second that were successfully dropped the background task that cleans up deferred dropped allocation units. Each allocation unit drop requires multiple batches.|  
@@ -86,7 +86,16 @@ ms.author: wiassaf
 |**Worktables From Cache Base**|For internal use only.|  
 |**Worktables From Cache Ratio**|Percentage of work tables created where the initial two pages of the work table were not allocated but were immediately available from the work table cache. (When a work table is dropped, two pages may remain allocated and they are returned to the work table cache. This increases performance.)|  
   
-## See Also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Access Methods%';
+```  
+
+## See also  
+ - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

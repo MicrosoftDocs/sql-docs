@@ -183,7 +183,7 @@ To resolve the issue, you must reinstall the package to the SQL Server instance 
 
 ::: moniker range=">=sql-server-2016"
 >[!NOTE]
->If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](../install/upgrade-r-and-python.md).
+>If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Default R library location](../package-management/r-package-information.md#default-r-library-location).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2016"

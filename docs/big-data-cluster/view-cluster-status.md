@@ -19,7 +19,7 @@ This article explains how to view the status of a big data cluster by using Azur
 
 ## Know your architecture
 
-Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allows you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What is SQL Server Big Data Clusters?](big-data-cluster-overview.md).
+Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allows you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md).
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provides coherent and consistent authorization and authentication. For an overview of Big Data Cluster security, see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
 

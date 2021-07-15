@@ -98,4 +98,4 @@ A set of notebooks for repairing known situations and states of a SQL Server big
 
 ## Next steps
 
-For more information about big data clusters, see [What is SQL Server Big Data Clusters?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md).

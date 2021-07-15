@@ -1,5 +1,5 @@
 ---
-title: What is Big Data Clusters?
+title: What are Big Data Clusters?
 titleSuffix: SQL Server Big Data Clusters
 description: Learn about SQL Server big data clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: WilliamDAssafMSFT
@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 ms.custom: "contperf-fy22q1"
 ---
 
-# What is SQL Server Big Data Clusters?
+# What are SQL Server Big Data Clusters?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 

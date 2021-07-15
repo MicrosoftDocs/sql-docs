@@ -11,20 +11,14 @@ ms.custom: ""
 ms.date: 06/14/2021
 ---
 
-# Create a parameterized notebook by using the notebook URI
+# Create a Parameterized Notebook with the Notebook URI
 
-*Parameterization* is the ability to execute the same notebook by using different parameters.
+**Parameterization** is the ability to execute the same notebook with different parameters.
 
-This article shows you how to create and run a parameterized notebook in Azure Data Studio with the Python kernel.
+This article shows you how to create and run a parameterized notebook in Azure Data Studio with the python kernel.
 
-> [!NOTE]
-> Currently, you can use parameterization with Python, PySpark, PowerShell, and .NET Interactive kernels.
-
-## Prerequisites
-
-- [Azure Data Studio](../download-azure-data-studio.md)
-- [Python](https://www.python.org/downloads/)
-
+> [!Note]
+> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
 
 ## Prerequisites
 

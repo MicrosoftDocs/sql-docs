@@ -32,7 +32,7 @@ SSMS 18.9.2 is the latest general availability (GA) release of SSMS. If you need
 - Build number: 15.0.18386.0
 - Release date: July 15, 2021
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x40a)
 
 #### What's new in 18.9.2
 
@@ -64,7 +64,6 @@ General SSMS
 | Object Explorer | Fixes issue where "Storage" menu item was not appearing for Azure SQL Managed Instance. |
 | Replication Tools | Fixes an issue where the script generated is incorrect while configuring ReadOnly Routing. |
 | XEvents | Fixes issue where line endings were not properly displayed in a XEvent popup dialog. |
-
 
 #### Known issues (18.9.2)
 

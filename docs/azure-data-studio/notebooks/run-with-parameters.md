@@ -1,5 +1,5 @@
 ---
-title: Parameterize notebooks in Azure Data Studio with the Run with Parameters action.
+title: Parameterize notebooks in Azure Data Studio with the Run with Parameters action
 description: Learn how to create a parameterized notebook in Azure Data Studio by using the Run with Parameters action.
 ms.topic: how-to
 ms.prod: azure-data-studio
@@ -32,7 +32,7 @@ When you use the Run with Parameters notebook action, the user can input new par
 > [!NOTE]
 > It's important to format the parameter cell with each new parameter on a new line.
 
-### Example notebook
+## Parameterization example
 
 For an example of the notebook you'll create in the next section, save an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), and then open the file in Azure Data Studio:
 
@@ -40,7 +40,7 @@ For an example of the notebook you'll create in the next section, save an [examp
 1. Select Ctrl+S or right-click and save the file with the .ipynb extension.  
 1. Open the file in Azure Data Studio.
 
-## Set up a notebook for parameterization in Azure Data Studio
+## Set up a notebook for parameterization
 
 Complete the following steps to create a notebook and try using different parameters. All the steps in this section run inside an Azure Data Studio notebook.
 

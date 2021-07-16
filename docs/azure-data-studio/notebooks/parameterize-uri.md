@@ -39,9 +39,7 @@ To pass in parameters with an Azure Data Studio notebook URI, use this format:
 
 In the URI query, use `&` to indicate a new parameter to be injected.
 
-## URI parameterization example
-
-### Get example notebook
+## Parameterization example
 
 For an example notebook to work with in this article, save an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), and then open the file in Azure Data Studio:
 
@@ -66,7 +64,7 @@ print("Addition: " + str(addition))
 print("Multiplication: " + str(multiply))
 ```
 
-## Set up a notebook for parameterization in Azure Data Studio
+## Set up a notebook for parameterization
 
 Start with the example notebook open in Azure Data Studio.
 

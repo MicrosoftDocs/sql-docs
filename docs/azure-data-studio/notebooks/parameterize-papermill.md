@@ -1,6 +1,6 @@
 ---
-title: Parameterization of notebooks in Azure Data Studio with Papermill.
-description: This tutorial shows how you can create a parameterized notebook in ADS with Papermill.
+title: Parameterize notebooks in Azure Data Studio with Papermill
+description: Learn how to create a parameterized notebook in Azure Data Studio by using Papermill.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -11,14 +11,14 @@ ms.custom: ""
 ms.date: 06/18/2021
 ---
 
-# Create a Parameterized Notebook with Papermill
+# Create a parameterized notebook by using Papermill
 
-**Parameterization** is the ability to execute the same notebook with different parameters.
+*Parameterization* is the ability to execute the same notebook by using different parameters.
 
-This article shows you how to create and run a parameterized notebook in Azure Data Studio using the python kernel.
+This article shows you how to create and run a parameterized notebook in Azure Data Studio by using the Python kernel.
 
-> [!Note]
-> Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> [!NOTE]
+> Currently, you can use parameterization with Python, PySpark, PowerShell, and .NET Interactive kernels.
 
 ## Prerequisites
 
@@ -27,137 +27,144 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 ## Install and set up Papermill in Azure Data Studio
 
-The steps in this section all run within an Azure Data Studio notebook.
+The steps in this section all run inside an Azure Data Studio notebook.
 
-1. Create a new notebook and change the **Kernel** to *Python 3*.
+1. Create a new notebook. Change **Kernel** to **Python 3**:
 
-   ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
+    :::image type="content" source="media/notebooks-parameterization/install-new-notebook.png" alt-text="Screenshot that shows the New notebook menu option and setting the Kernel value to Python 3.":::
 
-2. You may be prompted to upgrade your Python packages when your packages need updating.
+1. If you're prompted to upgrade your Python packages when your packages need updating, select **Yes**:
 
-   ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
+     :::image type="content" source="media/notebooks-parameterization/update-python-yes.png" alt-text="Screenshot that shows the dialog prompt to update Python packages.":::
 
-3. Install Papermill:
+1. Install Papermill:
 
-   ```python
-   import sys
-   !{sys.executable} -m pip install papermill --no-cache-dir --upgrade
-   ```
+    ```python
+    import sys
+    !{sys.executable} -m pip install papermill --no-cache-dir --upgrade
+    ```
 
-   Verify it's installed:
+    Verify that it's installed:
 
-   ```python
-   import sys
-   !{sys.executable} -m pip list
-   ```
+    ```python
+    import sys
+    !{sys.executable} -m pip list
+    ```
 
-   :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="List":::
+    :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="Screenshot that shows selecting Papermill in a list of application names.":::
 
-4. You can test if Papermill is loaded properly by checking the version of Papermill.
+1. You can test to see whether Papermill installed correctly by checking the version of Papermill:
 
-   ```python
-   import papermill
-   papermill
-   ```
+    ```python
+    import papermill
+    papermill
+    ```
 
-   :::image type="content" source="media/notebooks-parameterization/install-validation-papermill.png" alt-text="Validation":::
+    :::image type="content" source="media/notebooks-parameterization/install-validation-papermill.png" alt-text="Screenshot that shows installation validation for Papermill.":::
+
+## Parameterization example
+
+For an example notebook that you can work with in this article, save an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), and then open the file in Azure Data Studio:
+
+1. In [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), select **Raw**.
+1. Select Ctrl+S or right-click and save the file with the .ipynb extension.  
+1. Open the file in Azure Data Studio.
 
 ## Set up a parameterized notebook
 
-**To open the below notebook example in Azure Data Studio, visit [GitHub](https://github.com/VasuBhog/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to then download and open in Azure Data Studio.**
+Complete the following steps to create a notebook and try using different parameters. All the steps in this section run inside an Azure Data Studio notebook.
 
-1. Verify the **Kernel** is set to *Python3*.
+1. Verify that **Kernel** is set to **Python 3**:
 
-   ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)
+    :::image type="content" source="media/notebooks-parameterization/change-kernel.png" alt-text="Screenshot that shows the Kernel value to Python 3.":::
 
-2. Create a New Code Cell and Tag as **Parameters Cell**.
+1. Make a new code cell. Select **Parameters** to tag the cell as a parameters cell.
 
-   ```python
-   x = 2.0
-   y = 5.0
-   ```
+    ```python
+    x = 2.0
+    y = 5.0
+    ```
 
-   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::
+   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
 
-3. Add other cells to test different parameters.
+1. Add other cells to test different parameters:
 
-   ```python
-   addition = x + y
-   multiply = x * y
-   ```
+    ```python
+    addition = x + y
+    multiply = x * y
+    ```
 
-   ```python
-   print("Addition: " + str(addition))
-   print("Multiplication: " + str(multiply))
-   ```
+    ```python
+    print("Addition: " + str(addition))
+    print("Multiplication: " + str(multiply))
+    ```
 
-   Cells in Example Input Notebook:
-   :::image type="content" source="media/notebooks-parameterization/test-cells.png" alt-text="Additional Input Notebook Cells":::
+    The output will look similar to this example:
 
-4. Save notebook as **Input.ipynb**.
-   :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Save Notebook":::
+    :::image type="content" source="media/notebooks-parameterization/test-cells.png" alt-text="Screenshot that shows the output of cells added to test new parameters.":::
 
-## How to execute Papermill notebook
+1. Save the notebook as *Input.ipynb*:
 
-Papermill can be executed two ways:
+    :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Screenshot that shows saving the notebook file.":::
 
-- Command Line Interface (CLI)
+## How to execute a Papermill notebook
+
+You can execute Papermill in two ways:
+
+- Command-line interface (CLI)
 - Python API
 
 ### Parameterized CLI execution
 
-To execute a notebook using the CLI, enter the papermill command in the terminal with the input notebook, location for output notebook, and options.
+To execute a notebook by using the CLI, in the terminal, enter the `papermill` command with the input notebook, location for the output notebook, and options.
 
-> [!Note]
-> Papermill Command Line Interface Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
+> [!NOTE]
+> To learn more, see the [Papermill CLI documentation](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).
 
-1. Execute Input Notebook with new parameters.
+1. Execute the input notebook with new parameters:
 
-   ```shell
-   papermill Input.ipynb Output.ipynb -p x 10 -p y 20
-   ```
+    ```shell
+    papermill Input.ipynb Output.ipynb -p x 10 -p y 20
+    ```
 
-   This executes the Input Notebook with new values for parameters **x** and **y**.
+    This command executes the input notebook with new values for parameters *x* and *y*.
 
-2. After execution view the new output parameterized notebook.
+1. After you enter the new parameters, view the new parameterized notebook. Run all cells to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in via the CLI:
 
-   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
-
-   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
+    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 
 ### Parameterized Python API execution
 
-> [!Note]
-> Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
+> [!NOTE]
+> To learn more, see the [Papermill Python documentation](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
 
-1. Create a new notebook and change the **Kernel** to *Python 3*.
-   ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
+1. Create a new notebook. Change **Kernel** to **Python 3**:
 
-2. Add a new code cell and use papermill to use the execute method.
+    :::image type="content" source="media/notebooks-parameterization/install-new-notebook.png" alt-text="Screenshot that shows the New notebook menu option and setting the Kernel value to Python 3.":::
 
-   ```python
-   import papermill as pm
+1. Add a new code cell. Use `papermill` to use the execute method:
 
-   pm.execute_notebook(
-   '/Users/vasubhog/GitProjects/AzureDataStudio-Notebooks/Demo_Parameterization/Input.ipynb',
-   '/Users/vasubhog/GitProjects/AzureDataStudio-Notebooks/Demo_Parameterization/Output.ipynb',
-   parameters = dict(x = 10, y = 20)
-   )
-   ```
+    ```python
+    import papermill as pm
 
-   ![Papermill Python API Execution](media/notebooks-parameterization/python-api-execute.png)
+    pm.execute_notebook(
+    '/Users/vasubhog/GitProjects/AzureDataStudio-Notebooks/Demo_Parameterization/Input.ipynb',
+    '/Users/vasubhog/GitProjects/AzureDataStudio-Notebooks/Demo_Parameterization/Output.ipynb',
+    parameters = dict(x = 10, y = 20)
+    )
+    ```
 
-3. After execution view the new output parameterized notebook.
+   :::image type="content" source="media/notebooks-parameterization/python-api-execute.png" alt-text="Screenshot that shows the Python API execution.":::
 
-   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
+3. After you enter the new parameters, view the new parameterized notebook. Run all cells to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
 
-   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
+    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 
 ## Next steps
 
 Learn more about notebooks and Parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
-- [Papermill Parameterization Docs](https://papermill.readthedocs.io/en/latest/index.html)
-- [URI Parameterization](./parameterize-uri.md)
+- [Papermill parameterization docs](https://papermill.readthedocs.io/en/latest/index.html)
+- [URI parameterization](./parameterize-uri.md)
 - [Run with Parameters](./run-with-parameters.md)

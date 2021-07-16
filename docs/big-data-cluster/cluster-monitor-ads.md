@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Monitoring cluster with Azure Data Studio on SQL Server 2019 big data cluster.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 09/22/2020
 ms.topic: conceptual
@@ -78,4 +78,4 @@ You can directly click on these links. You will be required to authenticate when
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

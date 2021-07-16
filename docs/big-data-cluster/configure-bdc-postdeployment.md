@@ -51,8 +51,8 @@ Update the default number of executor cores to 4 for the Storage Pool.
 azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
-### View the pending settings changes staged in the BDC
-View the pending settings changes for the Spark service only and across the entire BDC cluster.
+### View the pending settings changes staged in the big data cluster
+View the pending settings changes for the Spark service only and across the entire big data cluster.
 
 #### Pending Spark Service Settings
 ```bash

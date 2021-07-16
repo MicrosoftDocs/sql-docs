@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Monitoring cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 10/01/2020
 ms.topic: conceptual
@@ -32,9 +32,9 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG008 - Get version information (Kubernetes)|Get the Kubernetes cluster-info.|
 |TSG009 - Get nodes (Kubernetes)|Get the kubernetes contexts. |
 |TSG010 - Get configuration contexts|Using DMV query to get more information on the internal query processor error|
-|TSG015 - View BDC services (Kubernetes)|Get the services status of BDC cluster deployed in Kubernetes cluster. |
+|TSG015 - View BDC services (Kubernetes)|Get the services status of big data cluster deployed in Kubernetes cluster. |
 |TSG016- Describe BDC pods|Get the pods status of BDC deployed in Kubernetes cluster. |
-|TSG020- Describe nodes (Kubernetes)|Get the node information for BDC cluster  use the kubectl command line interface. |
+|TSG020- Describe nodes (Kubernetes)|Get the node information for big data cluster  use the kubectl command line interface. |
 |TSG021 - Get cluster info (Kubernetes)|Get the Kubernetes cluster-info. |
 |TSG022 - Get external IP address for kubeadm host|Get the external IP address of the host of kubeadm. |
 |TSG023 - Get all BDC objects (Kubernetes)|Get a summary of all Kubernetes resources for the system namespace and the Big Data Cluster namespace. |
@@ -51,15 +51,15 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG099 - Get BDC daemonsets (Kubernetes)|Show BDC daemonsets for the Kubernetes cluster. |
 
 
-## Monitor Big Data Cluster (BDC)
+## Monitor Big Data Cluster
 
-This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server Big Data Cluster (BDC).
+This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server Big Data Cluster.
 
 |Name |Description |
 |---|---|---|---|
 |TSG003 - Show BDC Spark sessions|View BDC Spark sessions. |
-|TSG004 - Show BDC Apps|View the apps up and running in BDC cluster.|
-|TSG012 - Show BDC Status|Get the current status of different components of BDC cluster.|
+|TSG004 - Show BDC Apps|View the apps up and running in big data cluster.|
+|TSG012 - Show BDC Status|Get the current status of different components of big data cluster.|
 |TSG013 - Show file list in Storage Pool (HDFS)|Get file list in Storage Pool (HDFS). |
 |TSG014 - Show BDC endpoints|Get all available endpoints for BDC Cluster.|
 |TSG017 - Show BDC Configuration|Get BDC Configuration. |
@@ -71,4 +71,4 @@ This section contains a set of notebooks useful for getting information and stat
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

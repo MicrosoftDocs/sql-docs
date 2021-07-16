@@ -204,7 +204,7 @@ executeCmd (command)
 # Create BDC
 command = "azdata bdc create --config-profile custom --accept-eula yes"
 executeCmd(command)
-#login into BDC cluster and list endpoints
+#login into big data cluster and list endpoints
 command="azdata login -n " + CLUSTER_NAME
 executeCmd (command)
 print("")

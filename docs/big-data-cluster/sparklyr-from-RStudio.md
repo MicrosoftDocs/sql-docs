@@ -1,6 +1,6 @@
 ---
 title: Use sparklyr from RStudio
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use sparklyr in a SQL Server Big Data Cluster to connect to Spark through the R interface.
 author: jejiang
 ms.author: jejiang

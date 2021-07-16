@@ -1,17 +1,17 @@
 ---
-title: Administration resources for Big Data Clusters (BDC) 
+title: Administration resources for Big Data Clusters 
 titleSuffix: SQL Server
 description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
-ms.date: 04/15/2020
+ms.reviewer: wiassaf
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Administration resources for Big Data Clusters (BDC)
+# Administration resources for Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -30,7 +30,7 @@ The following articles describe how to manage and operate Big Data Cluster in th
 - [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
 - [Manage big data clusters for SQL Server controller dashboard](manage-with-controller-dashboard.md)
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md)
-- [Manage Big Data Clusters (BDC) the cluster with notebooks](cluster-manage-notebooks.md)
+- [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md)
 - [Run a sample notebook using Spark](notebooks-tutorial-spark.md)
 
 ## Monitor with tools
@@ -71,7 +71,7 @@ The following articles describe how to troubleshoot Big Data Cluster deployed in
 
 ### Access to local notebooks 
 
-After you managed to connect to a BDC cluster with Azure Data Studio (ADS), you can go to '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]' tab and find the direct link to all the local notebooks, as shown below: 
+After you managed to connect to a big data cluster with Azure Data Studio (ADS), you can go to '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]' tab and find the direct link to all the local notebooks, as shown below: 
 
 ![BDC local guides](media/view-cluster-status/bdc-local-guides.png)
 

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain.
 author: rl-msft
 ms.author: rafidl
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -19,7 +19,7 @@ This article explains how to troubleshoot deployment of a SQL Server Big Data Cl
 
 ## Symptom
 
-You started deploying BDC with AD mode however the deployment is stuck and not moving forward.
+You started deploying SQL Server Big Data Clusters with AD mode however the deployment is stuck and not moving forward.
 
 The following example shows the deployment results in a bash shell.
 

@@ -47,7 +47,7 @@ items:
     href: big-data-cluster/index.yml
   - name: Overview
     items:
-    - name: What are SQL Server Big Data Clusters?
+    - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
       href: big-data-cluster/release-notes-big-data-cluster.md
@@ -117,8 +117,6 @@ items:
           href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
-    - name: App Pool
-      href: big-data-cluster/concept-application-deployment.md
     - name: Controller
       href: big-data-cluster/concept-controller.md
     - name: Master instance
@@ -129,6 +127,8 @@ items:
       href: big-data-cluster/concept-storage-pool.md
     - name: Compute pool
       href: big-data-cluster/concept-compute-pool.md
+    - name: App Pool
+      href: big-data-cluster/concept-application-deployment.md
     - name: Security
       href: big-data-cluster/concept-security.md
     - name: Administration resources
@@ -402,7 +402,7 @@ items:
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: List operations notebooks
+      - name: Operational notebooks
         href: big-data-cluster/cluster-manage-notebooks.md
     - name: Monitor
       items:

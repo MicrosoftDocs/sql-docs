@@ -191,6 +191,9 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
     > [!NOTE] 
     >  If your domain implement [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). You will see issue "The credentials could not be verified in Active Directory." when you using domain account to create Application Pool. For workaround, instead of domain user, use a **local machine user**. This can bypass the credential checking with Active Directory. After creating the web application, you can change the identity to domain user in **Internet Information Services (IIS) Manager**.
   
+  > [!NOTE] 
+    >  Your MDS Application Pool Identity must be a part of Windows Authorization Access Group.
+  
 12. On the **Web Configuration** page in the **Web application** box, click the application you've created, and then click **Select** in the  **Associate Application with Database** section.  
   
 13. Click **Connect**, select the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database that you want to associate with the Web application, and then click **OK**.  

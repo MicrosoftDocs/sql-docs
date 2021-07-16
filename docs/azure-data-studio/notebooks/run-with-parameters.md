@@ -37,7 +37,7 @@ When you use the Run with Parameters notebook action, the user can input new par
 For an example of the notebook you'll create in the next section, save an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), and then open the file in Azure Data Studio:
 
 1. In [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), select **Raw**.
-1. Select Ctrl + S or right-click and save the file with the .ipynb extension.  
+1. Select Ctrl+S or right-click and save the file with the .ipynb extension.  
 1. Open the file in Azure Data Studio.
 
 ## Set up a notebook for parameterization in Azure Data Studio

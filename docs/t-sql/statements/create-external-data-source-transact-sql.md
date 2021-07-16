@@ -73,7 +73,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
     [ [ , ] CREDENTIAL = <credential_name> ]
-    [ [ , ] TYPE = { HADOOP | BLOB_STORAGE } ]
+    [ [ , ] TYPE = { HADOOP } ]
     [ [ , ] RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]' )
 [ ; ]
 ```
@@ -114,27 +114,15 @@ Additional notes and guidance when setting the location:
 
 Specifies a database-scoped credential for authenticating to the external data source.
 
-Additional notes and guidance when creating a credential:
-
-- `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
-- When `TYPE` = `BLOB_STORAGE` the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
-  - Exclude the leading `?` when configured as the secret
-  - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
-  - Use a valid expiration period (all dates are in UTC time).
-
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
+`CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-#### TYPE = *[ HADOOP | BLOB_STORAGE ]*
+#### TYPE = *[ HADOOP ]*
 
-Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified when connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
+Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account.
 
-- Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
-- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
-
-> [!IMPORTANT]
-> Do not set `TYPE` if using any other external data source.
+Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account.
 
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
@@ -142,7 +130,7 @@ For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage acc
 
 Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. 
 
-When the `RESOURCE_MANAGER_LOCATION` is defined, the Query Optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
+When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
 If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries.
 
@@ -180,40 +168,12 @@ PolyBase supports proxy based authentication for most external data sources. Cre
 
 When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
-Currently a SAS token with type `HADOOP` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
-
-`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
-
 ## Examples
 
 > [!IMPORTANT]
 > For information on how to install and enable PolyBase, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md)
 
-### A. Create external data source in SQL Server 2019 to reference Oracle
-
-To create an external data source that references Oracle, ensure you have a database scoped credential. You may optionally also enable or disable push-down of computation against this data source.
-
-```sql
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL OracleProxyAccount
-WITH
-     IDENTITY = 'oracle_username',
-     SECRET = 'oracle_password' ;
-
-CREATE EXTERNAL DATA SOURCE MyOracleServer
-WITH
-  ( LOCATION = 'oracle://145.145.145.145:1521',
-    CREDENTIAL = OracleProxyAccount,
-    PUSHDOWN = ON
-  ) ;
-```
-
-For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
-
-### B. Create external data source to reference Hadoop
+### A. Create external data source to reference Hadoop
 
 To create an external data source to reference your Hortonworks HDP or Cloudera CDH Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
@@ -225,7 +185,7 @@ WITH
   ) ;
 ```
 
-### C. Create external data source to reference Hadoop with push-down enabled
+### B. Create external data source to reference Hadoop with push-down enabled
 
 Specify the `RESOURCE_MANAGER_LOCATION` option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase makes a cost-based decision to determine whether the query computation should be pushed to Hadoop.
 
@@ -238,7 +198,7 @@ WITH
   ) ;
 ```
 
-### D. Create external data source to reference Kerberos-secured Hadoop
+### C. Create external data source to reference Kerberos-secured Hadoop
 
 To verify if the Hadoop cluster is Kerberos-secured, check the value of `hadoop.security.authentication` property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
 
@@ -262,7 +222,7 @@ WITH
   );
 ```
 
-### E. Create external data source to access data in Azure Storage using the wasb:// interface
+### D. Create external data source to access data in Azure Storage using the wasb:// interface
 
 In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the `wasb://` interface.
 
@@ -286,6 +246,9 @@ WITH
     TYPE = HADOOP
   ) ;
 ```
+
+> [!NOTE]
+> In SQL Server 2016, `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
 
 ## See also
 
@@ -423,9 +386,6 @@ Specifies the type of the external data source being configured. This parameter 
 - Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
 - Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
-> [!IMPORTANT]
-> Do not set `TYPE` if using any other external data source.
-
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
@@ -470,7 +430,7 @@ PolyBase supports proxy based authentication for most external data sources. Cre
 
 When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
-Currently a SAS token with type `HADOOP` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
+An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
@@ -479,31 +439,7 @@ Currently a SAS token with type `HADOOP` is unsupported. It's only supported wit
 > [!IMPORTANT]
 > For information on how to install and enable PolyBase, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md)
 
-### A. Create external data source in SQL Server 2019 to reference Oracle
-
-To create an external data source that references Oracle, ensure you have a database scoped credential. You may optionally also enable or disable push-down of computation against this data source.
-
-```sql
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL OracleProxyAccount
-WITH
-     IDENTITY = 'oracle_username',
-     SECRET = 'oracle_password' ;
-
-CREATE EXTERNAL DATA SOURCE MyOracleServer
-WITH
-  ( LOCATION = 'oracle://145.145.145.145:1521',
-    CREDENTIAL = OracleProxyAccount,
-    PUSHDOWN = ON
-  ) ;
-```
-
-For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
-
-### B. Create external data source to reference Hadoop
+### A. Create external data source to reference Hadoop
 
 To create an external data source to reference your Hortonworks HDP or Cloudera CDH Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
@@ -515,7 +451,7 @@ WITH
   ) ;
 ```
 
-### C. Create external data source to reference Hadoop with push-down enabled
+### B. Create external data source to reference Hadoop with push-down enabled
 
 Specify the `RESOURCE_MANAGER_LOCATION` option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase makes a cost-based decision to determine whether the query computation should be pushed to Hadoop.
 
@@ -528,7 +464,7 @@ WITH
   ) ;
 ```
 
-### D. Create external data source to reference Kerberos-secured Hadoop
+### C. Create external data source to reference Kerberos-secured Hadoop
 
 To verify if the Hadoop cluster is Kerberos-secured, check the value of `hadoop.security.authentication` property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
 
@@ -552,7 +488,7 @@ WITH
   );
 ```
 
-### E. Create external data source to access data in Azure Storage using the wasb:// interface
+### D. Create external data source to access data in Azure Storage using the wasb:// interface
 
 In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the `wasb://` interface.
 
@@ -577,13 +513,12 @@ WITH
   ) ;
 ```
 
-
 ## Examples: Bulk Operations
 
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### I. Create an external data source for bulk operations retrieving data from Azure Storage
+### E. Create an external data source for bulk operations retrieving data from Azure Storage
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
@@ -727,7 +662,7 @@ For more information, see:
 - [Using connection string keywords][connection_options]
 - [ODBC Driver connection string keywords][connection_option_keyword]
 
-#### PUSHDOWN = *ON | OFF*
+#### PUSHDOWN = **ON** | OFF
 
 Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only. States whether computation can be pushed down to the external data source. It is on by default.
 
@@ -803,7 +738,7 @@ PolyBase supports proxy based authentication for most external data sources. Cre
 
 When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
-Currently a SAS token with type `HADOOP` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
+An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
@@ -1403,7 +1338,7 @@ PolyBase supports proxy based authentication for most external data sources. Cre
 
 When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
-Currently a SAS token with type `HADOOP` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
+An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
@@ -1690,7 +1625,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-Currently a SAS token with type `HADOOP` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
+An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 

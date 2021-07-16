@@ -1,7 +1,7 @@
 ---
 title: Upgrade SQL Server to SQL Server 2019
 description: Step-by-step guidance for modernizing your data assets
-ms.date: 06/21/2021
+ms.date: 07/16/2021
 ms.prod: sql
 ms.technology: migration-guide
 ms.topic: how-to
@@ -124,6 +124,73 @@ To use DMA to create an assessment, complete the following steps.
       Feature recommendations cover various features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted (AE), Dynamic Data Masking (DDM), and Transparent Data Encryption (TDE).
 1. Review assessment results.
    1. After all database assessments are complete, select **Export report** to export the results to either a JSON or CSV file for analyzing the data at your own convenience.
+ 
+### Optional A/B Testing
+
+This step is considered optional and not necessary to complete migration. To use DEA for database 
+migration testing, complete the following steps.
+
+1. **Download the [DEA tool](https://www.microsoft.com/download/details.aspx?id=54090)**, and then 
+install it.
+1. **Run a trace capture**
+   1. On the left navigation tree, select the camera icon the go to **All Captures**.
+
+      ![New trace capture](./media/sql-server-to-sql-server-upgrade-guide/deanewcapture.png)
+   1. To start a new capture, select **New Capture**.
+   1. To configure the capture, specify the trace name, duration, SQL Server instance name, database 
+name, and the share location for storing the trace file on the computer running SQL Server.
+
+      ![Provide trace capture inputs](./media/sql-server-to-sql-server-upgrade-guide/
+deacaptureinputs.png)
+   1. Select **Start** to begin trace capture.
+1. **Run a trace replay**
+   1. On the left navigation tree, select the play icon the go to **All Replays**.
+
+      ![New trace replay](./media/sql-server-to-sql-server-upgrade-guide/deanewreplay.png)
+   1. To start a new replay, select **New Replay**.
+   1. To configure the replay, specify the replay name, controller machine name, path to source 
+trace file on controller, SQL Server instance name, and the path for storing the target trace 
+file on the computer running SQL Server.
+   1. Select **Start** to begin replay of your capture.
+1. **Create a new Analysis Report**
+   1. On the left navigation tree, select the checklist icon to go to **Analysis Reports**.
+
+      ![New Analysis Report](./media/sql-server-to-sql-server-upgrade-guide/deanewanalysis.png)
+   1. Connect to the SQL Server on which you'll store your report databases.
+
+      You'll see the list of all reports in the server.
+   1. Select **New Report**.
+   1. To configure the report, specify the report name, and specify paths to the traces for the 
+source and target SQL Server instances.
+
+      ![Provide report analysis inputs](./media/sql-server-to-sql-server-upgrade-guide/
+deaanalysisinput.png)
+
+1. **Review an analysis report**
+   1. On the first page of the report, the version and build information for the target servers on 
+which the experiment was run displays.
+
+      Threshold allows you to adjust the sensitivity or tolerance of your A/B Test analysis.
+
+      > [!NOTE]
+      > By default, threshold is set to 5%; any performance improvement that is \>= 5% is 
+categorized as ‘Improved’. The drop-down selector allows you to evaluate the report using 
+different performance thresholds.
+
+      ![Analysis Threshold](./media/sql-server-to-sql-server-upgrade-guide/deathreshold.png)
+   1. Select the individual slices of the pie chart to view detailed metrics on performance.
+
+      ![Drill down report](./media/sql-server-to-sql-server-upgrade-guide/deachart.png)
+
+      On the detail page for a performance change category, you'll see a list of queries in that 
+category.
+
+      ![Drill down report queries](./media/sql-server-to-sql-server-upgrade-guide/deaerrorqueries.
+png)
+   1. Select an individual query to get performance summary statistics, error information, and query 
+plan information.
+
+      ![Summary Statistics](./media/sql-server-to-sql-server-upgrade-guide/deasummarystats.png)
 
 ### Convert
 
@@ -154,7 +221,6 @@ environment.
 [Backup overview of SQL Server](/../../../relational-databases/backup-restore/backup-overview-sql-server.md)
 
 [Editions and supported features of SQL Server](/../../sql-server/editions-and-components-of-sql-server-version-15.md)
-
 
 ### Migrate schema and data
 
@@ -198,68 +264,15 @@ Support for minimal-downtime migrations isn't yet available for this scenario, s
 
 After you've successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible. The post-migration is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
 
+For more information about these issues, specific steps to mitigate them, and after the migration 
+see the [Post-migration Validation and Optimization Guide](../../../relational-databases/
+post-migration-validation-and-optimization-guide.md).
+
 #### Verify applications
 
 After the data is migrated to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this will in some cases require changes to the applications. Test against the databases to verify that the applications work as expected after the migration.
 
-> [!NOTE]
-> For assistance with developing and running post-migration validation tests, also consider the Data Quality Solution available from [QuerySurge](http://www.querysurge.com/company/partners/microsoft).
-
-### Optional migration testing
-
-This step is considered optional and not necessary to complete migration. To use DEA for database migration testing, complete the following steps.
-
-1. **Download the [DEA tool](https://www.microsoft.com/download/details.aspx?id=54090)**, and then install it.
-1. **Run a trace capture**
-   1. On the left navigation tree, select the camera icon the go to **All Captures**.
-
-      ![New trace capture](./media/sql-server-to-sql-server-upgrade-guide/deanewcapture.png)
-   1. To start a new capture, select **New Capture**.
-   1. To configure the capture, specify the trace name, duration, SQL Server instance name, database name, and the share location for storing the trace file on the computer running SQL Server.
-
-      ![Provide trace capture inputs](./media/sql-server-to-sql-server-upgrade-guide/deacaptureinputs.png)
-   1. Select **Start** to begin trace capture.
-1. **Run a trace replay**
-   1. On the left navigation tree, select the play icon the go to **All Replays**.
-
-      ![New trace replay](./media/sql-server-to-sql-server-upgrade-guide/deanewreplay.png)
-   1. To start a new replay, select **New Replay**.
-   1. To configure the replay, specify the replay name, controller machine name, path to source trace file on controller, SQL Server instance name, and the path for storing the target trace file on the computer running SQL Server.
-   1. Select **Start** to begin replay of your capture.
-1. **Create a new Analysis Report**
-   1. On the left navigation tree, select the checklist icon to go to **Analysis Reports**.
-
-      ![New Analysis Report](./media/sql-server-to-sql-server-upgrade-guide/deanewanalysis.png)
-   1. Connect to the SQL Server on which you'll store your report databases.
-
-      You'll see the list of all reports in the server.
-   1. Select **New Report**.
-   1. To configure the report, specify the report name, and specify paths to the traces for the source and target SQL Server instances.
-
-      ![Provide report analysis inputs](./media/sql-server-to-sql-server-upgrade-guide/deaanalysisinput.png)
-1. **Review an analysis report**
-   1. On the first page of the report, the version and build information for the target servers on which the experiment was run displays.
-
-      Threshold allows you to adjust the sensitivity or tolerance of your A/B Test analysis.
-
-      > [!NOTE]
-      > By default, threshold is set to 5%; any performance improvement that is \>= 5% is categorized as ‘Improved’. The drop-down selector allows you to evaluate the report using different performance thresholds.
-
-      ![Analysis Threshold](./media/sql-server-to-sql-server-upgrade-guide/deathreshold.png)
-   1. Select the individual slices of the pie chart to view detailed metrics on performance.
-
-      ![Drill down report](./media/sql-server-to-sql-server-upgrade-guide/deachart.png)
-
-      On the detail page for a performance change category, you'll see a list of queries in that category.
-
-      ![Drill down report queries](./media/sql-server-to-sql-server-upgrade-guide/deaerrorqueries.png)
-   1. Select an individual query to get performance summary statistics, error information, and query plan information.
-
-      ![Summary Statistics](./media/sql-server-to-sql-server-upgrade-guide/deasummarystats.png)
-
 ## Next steps
-
-For more information about these issues, specific steps to mitigate them, and after the migration see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 For a matrix of Microsoft and third-party services and tools that are available to assist you 
 with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).

@@ -123,7 +123,7 @@ SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabi
    > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
-- Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#bdc-cluster-scope-settings).
+- Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
 
 ## <a id="cu9"></a> CU9 (February 2021)
 

@@ -85,11 +85,17 @@ az group delete -n <resource group name>
 
 The script in this section deploys the SQL Server Big Data Cluster to Azure Red Hat OpenShift. Copy the script to your workstation and save it as `deploy-sql-big-data-aro.py` before you begin the deployment.
 
+**Prerequisites: **
+ 
+1. Azure CLI (/cli/azure/install-azure-cli)
+1. Azure Data CLI (`azdata`) (deploy-install-azdata.md)
+1. OpenShift CLI (oc) (https://www.openshift.com/blog/installing-oc-tools-windows)
+
 ```python
 #
 # Prerequisites: 
 # 
-# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), Azure Data CLI (`azdata`) (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
+# Azure CLI, Azure Data CLI (`azdata`), OpenShift CLI (oc)  
 #
 # Run `az login` at least once BEFORE running this script
 #

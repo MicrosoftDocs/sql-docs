@@ -57207,7 +57207,7 @@
     },
     {
       "source_path": "docs/big-data-cluster/index.md",
-      "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
+      "redirect_url": "/sql/big-data-cluster/index.yml",
       "redirect_document_id": false
     },
     {

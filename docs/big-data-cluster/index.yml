@@ -24,7 +24,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What are Big Data Clusters?
+          - text: Introducing Big Data Clusters
             url: big-data-cluster-overview.md
           - text: Big Data Clusters FAQ
             url: big-data-cluster-faq.yml

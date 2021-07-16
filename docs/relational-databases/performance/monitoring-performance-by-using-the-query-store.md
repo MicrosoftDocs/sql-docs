@@ -55,6 +55,9 @@ For more syntax options related to the Query Store, see [ALTER DATABASE SET Opti
 > [!NOTE]
 > Query Store cannot be enabled for the **master** or **tempdb** databases.
 
+> [!NOTE]
+> Query Store cannot be disabled in Azure SQL Database single database and Elastic Pool. Executing ALTER DATABASE [database] SET QUERY_STORE = OFF will return the warning 'QUERY_STORE=OFF' is not supported in this version of SQL Server.
+
 > [!IMPORTANT]
 > For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 

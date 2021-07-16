@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services], adding members"
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Add Members to a Collection (Master Data Services)

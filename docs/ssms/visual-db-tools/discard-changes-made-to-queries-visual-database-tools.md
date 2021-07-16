@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Discard Changes Made to Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can discard changes made to a query definition prior to saving them. Once they have been saved, they cannot be returned to a previous state.  
   
 > [!NOTE]  

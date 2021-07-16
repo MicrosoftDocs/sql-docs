@@ -1756,7 +1756,7 @@ items:
         href: relational-databases/indexes/columnstore-indexes-query-performance.md
       - name: Real-time operational analytics
         href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Azure Synapse Analytics
+      - name: Data warehouse
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -1769,6 +1769,8 @@ items:
       href: relational-databases/graphs/sql-graph-sample.md
     - name: SHORTEST_PATH
       href: relational-databases/graphs/sql-graph-shortest-path.md
+    - name: Edge constraints
+      href: relational-databases/tables/graph-edge-constraints.md
   - name: Sequence numbers
     href: relational-databases/sequence-numbers/sequence-numbers.md
     items:
@@ -1890,8 +1892,6 @@ items:
         href: relational-databases/tables/use-column-sets.md
       - name: Table-Valued Parameters
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-    - name: Edge constraints
-      href: relational-databases/tables/graph-edge-constraints.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -6100,7 +6100,7 @@ items:
     - name: Usage and Diagnostic Data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
-      href: dma/dma-whatsnew.md
+      href: dma/dma-whats-new.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
@@ -6115,8 +6115,6 @@ items:
       href: dma/dma-migrateserverlogins.md
     - name: Best practices
       href: dma/dma-bestpractices.md
-    - name: Consolidate assessment reports
-      href: dma/dma-consolidatereports.md
     - name: Assess an app's data access layer
       href: dma/dma-assess-app-data-layer.md
     - name: Run from the command-line
@@ -6711,6 +6709,10 @@ items:
             items:
             - name: Access Methods
               href: relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: Advanced Analytics
+              href: relational-databases/performance-monitor/sql-server-advanced-analytics.md
+            - name: Availability Group
+              href: relational-databases/performance-monitor/sql-server-availability-group.md
             - name: Availability Replica
               href: relational-databases/performance-monitor/sql-server-availability-replica.md
             - name: Backup Device
@@ -8881,6 +8883,8 @@ items:
           href: ssms/troubleshoot/get-full-memory-dump.md
         - name: Get diagnostic data
           href: ssms/troubleshoot/ssms-troubleshoot.md
+        - name: Install failed or requires restart
+          href: ssms/troubleshoot/install-failed-requires-restart.md
       - name: SQL Server Agent
         items:
         - name: Configure
@@ -10269,7 +10273,7 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: Azure Arc enabled SQL Server (preview)
+- name: SQL Server on Azure Arc-enabled servers (preview)
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -10413,7 +10417,7 @@ items:
         href: azdata/reference/reference-azdata-bdc-sql-settings.md
       - name: bdc status
         href: azdata/reference/reference-azdata-bdc-status.md
-    - name: Azure Arc enabled data services
+    - name: Azure Arc-enabled data services
       items:
       - name: arc
         href: azdata/reference/reference-azdata-arc.md
@@ -10711,6 +10715,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3452-database-engine-error.md
         - name: 3456
           href: relational-databases/errors-events/mssqlserver-3456-database-engine-error.md
+        - name: 3617
+          href: relational-databases/errors-events/mssqlserver-3617-database-engine-error.md
         - name: 3619
           href: relational-databases/errors-events/mssqlserver-3619-database-engine-error.md
         - name: 3937
@@ -11558,6 +11564,12 @@ items:
         href: relational-databases/event-classes/user-configurable-event-class.md
     - name: ObjectType Trace Event Column
       href: relational-databases/event-classes/objecttype-trace-event-column.md
+  - name: Native interfaces
+    items: 
+    - name: GetSvcInstanceIDFromName
+      href: native-interfaces/getsvcinstanceidfromname.md
+    - name: GetSQLInstanceRegStringByID
+      href: native-interfaces/getsqlinstanceregstringbyid.md
   - name: SQL PowerShell
     items:
     - name: Install SQL PowerShell module
@@ -11734,8 +11746,10 @@ items:
         href: relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_options (T-SQL)
+      - name: sys.database_automatic_tuning_options
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
+      - name: sys.database_automatic_tuning_mode
+        href: relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md
       - name: sys.master_files
         href: relational-databases/system-catalog-views/sys-master-files-transact-sql.md
     - name: Endpoints

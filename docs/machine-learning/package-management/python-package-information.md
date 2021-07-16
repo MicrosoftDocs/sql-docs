@@ -90,9 +90,7 @@ For information on which version of Python is included, see [Python and R versio
 
 ### Component upgrades
 
-By default, Python packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core Python components are possible only through product upgrades or by binding Python support to Microsoft Machine Learning Server.
-
-For more information, see [Upgrade R and Python components in SQL Server](../install/upgrade-r-and-python.md).
+By default, Python packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core Python components are possible only through product upgrades.
 
 ## Default open-source Python packages
 

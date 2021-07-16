@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Restrict egress traffic of Big Data Clusters clusters in Azure Kubernetes Service (AKS) private cluster
+# Restrict egress traffic of big data clusters in Azure Kubernetes Service (AKS) private cluster
 
 AKS provisions a standard SKU Load Balancer to be set up and used for egress by default. However, the default setup may not meet the requirements of all scenarios if public IPs are disallowed or additional hops are required for egress. Define a user user-defined route table if the cluster disallows public IPs and sits behind a network virtual appliance (NVA).
 

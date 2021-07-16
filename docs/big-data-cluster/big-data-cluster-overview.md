@@ -2,13 +2,14 @@
 title: Introducing Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
 description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: melqin
 ms.date: 07/16/2021
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom: "contperf-fy22q1"
 ---
 
 # Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -16,6 +17,16 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
+
+## Getting started
+
+ - First, see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)
+ - For new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md)
+ - For frequently asked questions, see [Big Data Clusters FAQ](big-data-cluster-faq.yml)
+
+## <a id="scenarios"></a> Scenarios and Features
+
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide flexibility in how you interact with your big data. You can query external data sources, store big data in HDFS managed by SQL Server, or query data from multiple external data sources through the cluster. You can then use the data for AI, machine learning, and other analysis tasks. 
 
 Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to:
 
@@ -27,24 +38,18 @@ Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 - Query data from multiple external data sources through the cluster.
 - Use the data for AI, machine learning, and other analysis tasks.
 - [Deploy and run applications](./concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
-- Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables.
+- Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and generic ODBC data sources with external tables.
 - Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
-For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).   
+The following sections provide more information about these scenarios.
 
-For more information Big Data Clusters, see [Big Data Clusters FAQ](big-data-cluster-faq.yml).
-
-## Scenarios
-
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide flexibility in how you interact with your big data. You can query external data sources, store big data in HDFS managed by SQL Server, or query data from multiple external data sources through the cluster. You can then use the data for AI, machine learning, and other analysis tasks. The following sections provide more information about these scenarios.
-
-### Data virtualization
+## Data virtualization
 
 By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces new connectors to data sources.
 
 ![Data virtualization](media/big-data-cluster-overview/data-virtualization.png)
 
-### Data lake
+## Data lake
 
 A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can be used to store big data, potentially ingested from multiple external sources. Once the big data is stored in HDFS in the big data cluster, you can analyze and query the data and combine it with your relational data.
 
@@ -52,25 +57,24 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 ### Integrated AI and Machine Learning
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] enable AI and machine learning tasks on the data stored in HDFS storage pools and the data pools. You can use Spark as well as built-in AI tools in SQL Server, using R, Python, Scala, or Java.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] enable AI and machine learning tasks on the data stored in HDFS storage pools and the data pools. You can use Spark as well as built-in AI tools in SQL Server using R, Python, Scala, or Java.
 
 ![AI and ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
-### Management and Monitoring
+## Management and Monitoring
 
-Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
+Management and monitoring are provided through a combination of command-line tools, APIs, portals, and dynamic management views.
 
 You can use [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) to perform a variety of tasks on the big data cluster:
+
 - Built-in snippets for common management tasks.
 - Ability to browse HDFS, upload files, preview files, and create directories.
 - Ability to create, open, and run Jupyter-compatible notebooks.
 - Data virtualization wizard to simplify the creation of external data sources (enabled by the **Data Virtualization Extension**).
 
-## <a id="architecture"></a> Architecture
+## <a id="architecture"></a> Kubernetes concepts
 
 A SQL Server big data cluster is a cluster of Linux containers orchestrated by [Kubernetes](https://kubernetes.io/docs/concepts/).
-
-### Kubernetes concepts
 
 Kubernetes is an open source container orchestrator, which can scale container deployments according to need. The following table defines some important Kubernetes terminology:
 
@@ -83,7 +87,7 @@ Kubernetes is an open source container orchestrator, which can scale container d
 
 In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes is responsible for the state of the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
-### Big data clusters architecture
+## Big data clusters architecture
 
 The following diagram shows the components of a SQL Server big data cluster:
 
@@ -91,7 +95,7 @@ The following diagram shows the components of a SQL Server big data cluster:
 
 ### <a id="controlplane"></a> Controller
 
-The controller provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search.
+The controller provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search. 
 
 ### <a id="computeplane"></a> Compute pool
 
@@ -115,4 +119,3 @@ Application deployment enables the deployment of applications on a SQL Server Bi
 ## Next steps
 
 * For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
-* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  

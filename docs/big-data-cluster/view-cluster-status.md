@@ -42,6 +42,9 @@ The following articles describe how to monitor Big Data Cluster in the following
 - [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
 - [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review the [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+
 ## Monitor and inspect logs with notebooks
 
 The following articles list many of the Jupyter notebooks that are available in Azure Data Studio.

@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "version flags [Master Data Services], changing name"
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Change a Version Flag Name (Master Data Services)

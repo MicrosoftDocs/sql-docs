@@ -2,10 +2,10 @@
 title: Data persistence on Kubernetes
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how persistent volumes provide a plug-in model for storage in Kubernetes. Also learn how data persistence works in a SQL Server 2019 Big Data Cluster.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
-ms.date: 11/04/2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

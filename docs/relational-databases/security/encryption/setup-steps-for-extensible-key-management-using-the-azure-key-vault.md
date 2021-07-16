@@ -457,6 +457,11 @@ For a note about the minimum permission levels needed for each action in this se
    1. Create a **SQL Server Cryptographic Provider** key on **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\**.
    1. Delegate access permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
 
+ > [!NOTE]
+ > When using TDE with EKM/AKV on FCI, there is one additional step to add **_HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider_** to Cluster Registry Checkpoint routine for the registry to sync across the nodes to facilitate database recovery post failover and also for Key Rotation. 
+ > Run below command using PowerShell to add the above registry key to Cluster Registry Checkpoint routine:
+ > **_Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"_**
+
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 
      ```sql  

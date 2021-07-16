@@ -1,6 +1,6 @@
 ---
-description: "Autostart SQL Server Agent"
-title: Autostart SQL Server Agent
+description: "Auto Restart SQL Server Agent"
+title: Auto Restart SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -17,7 +17,7 @@ ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
-# Autostart SQL Server Agent
+# Auto Restart SQL Server Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -44,6 +44,9 @@ To perform its functions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 -   Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
   
+ > [!NOTE]
+ > For Auto Restart to function properly, the account running the SQL Server Agent service must be a local administrator on the server.
+
 For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) and [Setting Up Windows Service Accounts](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "importing data [Master Data Services]"
   - "staging process [Master Data Services]"
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Overview: Importing Data from Tables (Master Data Services)

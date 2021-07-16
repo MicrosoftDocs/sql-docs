@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "models [Master Data Services], creating a deployment package"
   - "creating packages [Master Data Services]"
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create a Model Deployment Package by Using the Wizard

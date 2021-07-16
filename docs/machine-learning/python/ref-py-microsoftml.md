@@ -16,14 +16,13 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 
 ## Full reference documentation
 
-The **microsoftml** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual microsoftml functions](/machine-learning-server/python-reference/microsoftml/microsoftml-package) is published to just one location under the [Python reference](/machine-learning-server/python-reference/introducing-python-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **microsoftml** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual microsoftml functions](/machine-learning-server/python-reference/microsoftml/microsoftml-package) is published to just one location under the [Python reference](/machine-learning-server/python-reference/introducing-python-package-reference). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
 The **microsoftml** module is based on Python 3.5 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 or later](/machine-learning-server/)
 + [Python client libraries for a data science client](setup-python-client-tools-sql.md)
 
 > [!NOTE]
@@ -130,4 +129,4 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## See also
 
 + [Python tutorials](../tutorials/python-tutorials.md)
-+ [Python Reference (Microsoft Machine Learning Server)](/machine-learning-server/python-reference/introducing-python-package-reference)
++ [Python Reference](/machine-learning-server/python-reference/introducing-python-package-reference)

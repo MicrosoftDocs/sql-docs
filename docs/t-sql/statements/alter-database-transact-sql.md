@@ -1,8 +1,8 @@
 ---
 description: "ALTER DATABASE (Transact-SQL)"
-title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
+title: "ALTER DATABASE (Transact-SQL)"
 ms.custom: "references_regions"
-ms.date: 10/30/2020
+ms.date: 6/9/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "modifying databases"
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
-ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
@@ -273,7 +272,7 @@ COLLATE French_CI_AI ;
 GO
 ```
 
-## See Also
+## See also
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -363,6 +362,8 @@ ALTER DATABASE { database_name | CURRENT }
      | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL ( name = <elastic_pool_name>) }
+       | DATABASE_NAME = <target_database_name>
+       | SECONDARY_TYPE = { GEO | NAMED }
        }
    }
 
@@ -602,6 +603,12 @@ SERVICE_OBJECTIVE
 
   - Specifies the compute size (service objective). Available values for service objective are: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
+DATABASE_NAME
+Only for Azure SQL Database Hyperscale. The database name that will be created. Only used by Azure SQL Database Hyperscale named replicas, when `SECONDARY_TYPE` = NAMED. For more information, see [Hyperscale Secondary Replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas).
+
+SECONDARY_TYPE 
+Only for Azure SQL Database Hyperscale. **GEO** specifies a geo-replica, **NAMED** specifies a named replica. Default is **GEO**. For more information, see [Hyperscale Secondary Replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas).
+
 For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](/azure/azure-sql/database/purchasing-models), [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
 
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)   
@@ -612,9 +619,6 @@ To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the
 
 ADD SECONDARY ON SERVER \<partner_server_name>   
 Creates a geo-replication secondary database with the same name on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command fails. The command is executed on the master database on the server hosting the local database that becomes the primary.
-
-> [!IMPORTANT]
-> The Hyperscale service tier does not currently support geo-replication.
 
 > [!IMPORTANT]
 > By default, the secondary database is created with the same backup storage redundancy as that of the primary or source database. Changing the backup storage redundancy while creating the secondary is not supported via T-SQL. 
@@ -636,7 +640,7 @@ REMOVE SECONDARY ON SERVER \<partner_server_name>
 Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.
 
 > [!IMPORTANT]
-> The user executing the REMOVE SECONDARY command must be DBManager on the primary server.
+> The user executing the `REMOVE SECONDARY` command must be DBManager on the primary server.
 
 FAILOVER
 Promotes the secondary database in geo-replication partnership on which the command is executed to become the primary and demotes the current primary to become the new secondary. As part of this process, the geo-replication mode is temporarily switched from asynchronous mode to synchronous mode. During the failover process:
@@ -883,7 +887,7 @@ Designates that the current database in use should be altered.
     Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
 The plan cache is also flushed when several queries are executed against a database that has default options. Then, the database is dropped.
 
-- Some `ALTER DATABASE` statements require exclusive lock on a database to be executed. This is why they might fail when another active process is holding a lock on the database. Error that is reported in a case like this is `Msg 5061, Level 16, State 1, Line 38` with message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. This is typically a transient failure and to resolve it, once all locks on the database are released, retry the ALTER DATABASE statement that failed. System view `sys.dm_tran_locks` holds information on active locks. To check if there are shared or exclusive locks on a database use following query.
+- Some `ALTER DATABASE` statements require exclusive lock on a database to be executed. This is why they might fail when another active process is holding a lock on the database. Error that is reported in a case like this is `Msg 5061, Level 16, State 1, Line 38` with message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. This is typically a transient failure and to resolve it, once all locks on the database are released, retry the `ALTER DATABASE` statement that failed. System view `sys.dm_tran_locks` holds information on active locks. To check if there are shared or exclusive locks on a database use following query.
   
     ```sql
     SELECT
@@ -894,7 +898,7 @@ The plan cache is also flushed when several queries are executed against a datab
         resource_database_id = DB_ID('testdb')
     ```
   
-## Viewing Database Information
+## Viewing database information
 
 You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
 
@@ -911,10 +915,10 @@ The following examples show you how to set automatic tuning and how to add a fil
 
 ```sql
 ALTER DATABASE WideWorldImporters
-  SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+  SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON);
 
 ALTER DATABASE WideWorldImporters
-  ADD FILE (NAME = 'data_17')
+  ADD FILE (NAME = 'data_17');
 ```
 
 ## See also
@@ -928,7 +932,8 @@ ALTER DATABASE WideWorldImporters
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)[sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+- [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [System Databases](../../relational-databases/databases/system-databases.md)
@@ -963,7 +968,7 @@ In Azure Synapse, `ALTER DATABASE` modifies the name, maximum size, or service o
 Because of its length, the `ALTER DATABASE` syntax is separated into the multiple articles.
 
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.
+Provides the syntax and related information for changing the attributes of a database by using the SET options of `ALTER DATABASE`.
 
 ## Syntax
 
@@ -1107,7 +1112,7 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ```
 
-## See Also
+## See also
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [Azure Synapse Analytics list of reference articles](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
@@ -1197,7 +1202,7 @@ Default is ON for new databases created after upgrading to AU7. The default is O
 For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }   
-The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
+The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the `CREATE STATISTICS` statement.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade.
 
@@ -1219,7 +1224,7 @@ The values for `REPLICATED_SIZE`, `DISTRIBUTED_SIZE`, and `LOG_SIZE` can be grea
 
 Grow and shrink operations are approximate. The resulting actual sizes can vary from the size parameters.
 
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the `ALTER DATABASE` statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.
 
 The statistics settings only work if the administrator has enable auto-stats. If you are an administrator, use the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) to enable or disable auto-stats.
 
@@ -1342,7 +1347,7 @@ ALTER DATABASE
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
 
-## See Also
+## See also
 
 - [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

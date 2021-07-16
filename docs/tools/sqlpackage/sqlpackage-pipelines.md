@@ -1,6 +1,6 @@
 ---
 title: SqlPackage in development pipelines
-description: Learn how to troubleshoot database development pipelines with SqlPackage.exe by checking the installed build number.
+description: Learn how to troubleshoot database development pipelines with SqlPackage.exe.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 11/4/2020
+ms.date: 06/25/2021
 ---
 
 # SqlPackage in development pipelines
@@ -26,7 +26,7 @@ During troubleshooting efforts, it is important to know the SqlPackage version i
 
 ### Azure Pipelines
 
-By leveraging the [script](/azure/devops/pipelines/yaml-schema#script) keyword in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
+By using the [script](/azure/devops/pipelines/yaml-schema#script) keyword in an Azure Pipeline, a step can be added to an Azure Pipeline that outputs the SqlPackage version number.
 
 ```yaml
 - script: sqlpackage.exe /version
@@ -36,7 +36,7 @@ By leveraging the [script](/azure/devops/pipelines/yaml-schema#script) keyword i
 
 ### GitHub Actions
 
-By leveraging the [run](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
+By using the [run](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
 
 ```yaml
 - name: get sqlpackage version
@@ -45,6 +45,25 @@ By leveraging the [run](https://docs.github.com/en/free-pro-team@latest/actions/
 ```
 
 :::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
+
+## Update SqlPackage on the pipeline agent
+
+In some scenarios, the current version of SqlPackage installed in the pipeline environment may be insufficient. An additional step can be used to install a newer version of SqlPackage. It is important to run the install step before running any DacPac or BacPac operations in the pipeline. This task can be combined with a step to [check the version](#checking-the-sqlpackage-version) to ensure that the upgrade completed as expected.
+
+### Azure Pipelines
+By using the [PowerShell](/azure/devops/pipelines/tasks/utility/powershell) task in an Azure Pipeline, a step can be added to an Azure Pipeline that downloads the desired MSI and installs it silently. 
+
+```yaml
+- task: PowerShell@2
+  displayName: 'upgrade sqlpackage'
+  inputs:
+    targetType: 'inline'
+    script: |
+      # use evergreen or specific dacfx msi link below
+      wget -O DacFramework.msi "https://aka.ms/dacfx-msi"
+      msiexec.exe /i "DacFramework.msi" /qn
+```
+
 
 ## Next steps
 

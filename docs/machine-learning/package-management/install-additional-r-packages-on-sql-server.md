@@ -64,13 +64,13 @@ The **sqlmlutils** package depends on the **odbc** package, and **odbc** depends
 
 If the client computer has Internet access, you can download and install **sqlmlutils** and its dependent packages online.
 
-1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist to the client computer. Don't expand the file.
+1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from https://github.com/microsoft/sqlmlutils/releases to the client computer. Don't expand the file.
 
 1. Open a **Command Prompt** and run the following commands to install the packages **odbc** and **sqlmlutils**. Substitute the path to the **sqlmlutils** file you downloaded. The **odbc** package is found online and installed.
 
    ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```console
-   R.exe -e "install.packages('odbc')"
+   R.exe -e "install.packages('odbc', type='binary')"
    R.exe CMD INSTALL sqlmlutils_1.0.0.zip
    ```
    ::: moniker-end
@@ -128,7 +128,7 @@ On a computer with Internet access:
     , @script = N'print(R.version)'
    ```
 
-1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist). Don't expand the file.
+1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from [https://github.com/microsoft/sqlmlutils/releases](https://github.com/microsoft/sqlmlutils/releases). Don't expand the file.
 
 1. Copy the entire **odbc** repository folder and the **sqlmlutils** file to the client computer.
 

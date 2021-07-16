@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Import Statuses (Master Data Services)

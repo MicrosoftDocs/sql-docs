@@ -6,7 +6,7 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 10/01/2020
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -16,10 +16,12 @@ ms.technology: big-data-cluster
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in monitoring Big Data Clusters.
 
-Each notebook is designed to check for its own dependencies. A **Run all cells** will either complete successfully or will raise an exception with a hyperlinked hint to another notebook to resolve the missing dependency. Follow the hint hyperlink to the subsequent notebook, press **Run all cells**, and upon success return back to the original notebook, and **Run all cells**.
+Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon success return back to the original notebook, then click **Run all cells**.
 
 Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
+* For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
+* For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
 
 ## Monitoring Kubernetes
 
@@ -33,8 +35,8 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG009 - Get nodes (Kubernetes)|Get the kubernetes contexts. |
 |TSG010 - Get configuration contexts|Using DMV query to get more information on the internal query processor error|
 |TSG015 - View BDC services (Kubernetes)|Get the services status of big data cluster deployed in Kubernetes cluster. |
-|TSG016- Describe BDC pods|Get the pods status of BDC deployed in Kubernetes cluster. |
-|TSG020- Describe nodes (Kubernetes)|Get the node information for big data cluster  use the kubectl command line interface. |
+|TSG016 - Describe BDC pods|Get the pods status of BDC deployed in Kubernetes cluster. |
+|TSG020 - Describe nodes (Kubernetes)|Get the node information for big data cluster  use the kubectl command line interface. |
 |TSG021 - Get cluster info (Kubernetes)|Get the Kubernetes cluster-info. |
 |TSG022 - Get external IP address for kubeadm host|Get the external IP address of the host of kubeadm. |
 |TSG023 - Get all BDC objects (Kubernetes)|Get a summary of all Kubernetes resources for the system namespace and the Big Data Cluster namespace. |
@@ -53,7 +55,7 @@ This section contains a set of notebooks useful for getting information and stat
 
 ## Monitor Big Data Cluster
 
-This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server Big Data Cluster.
+This section contains a set of notebooks useful for status information about the Kubernetes cluster hosting a big data cluster.
 
 |Name |Description |
 |---|---|---|---|

@@ -1,7 +1,7 @@
 ---
-title: Azure Arc enabled SQL Server
+title: SQL Server on Azure Arc-enabled servers
 titleSuffix:
-description: Manage instances of SQL Server with Azure Arc enabled SQL Server
+description: Manage instances of SQL Server on Azure Arc-enabled servers
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -11,25 +11,28 @@ ms.prod: sql
 ms.custom: references_regions
 ---
 
-# Azure Arc enabled SQL Server (preview)
+# SQL Server on Azure Arc-enabled servers (preview)
 
-Azure Arc enabled SQL Server is part of the Azure Arc for servers. It extends Azure services to SQL Server instances hosted outside of Azure in the customer’s datacenter, on the edge or in a multi-cloud environment.
+SQL Server on Azure Arc-enabled servers is part of the Azure Arc for servers. It extends Azure services to SQL Server instances hosted outside of Azure in the customer’s datacenter, on the edge or in a multi-cloud environment.
 
 To enable Azure services, a running SQL Server instance must be registered with Azure Arc using the Azure portal and a registration script. After registration the instance will be represented on Azure as a __SQL Server – Azure Arc__ resource   . The properties of this resource reflect a subset of the SQL Server configuration settings.
 
 The SQL Server can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the Connected Machine agent. The agent is installed and the machine is registered automatically as part of the SQL Server instance registration. The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or a HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
 
-The public preview of Azure Arc enabled SQL Server supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to a Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
+The public preview of SQL Server on Azure Arc-enabled servers supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to a Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
 
 The following diagram illustrates the architecture of Azure Arc enable SQL Server.
 
 ![Public preview architecture](media/overview/architecture.png)
 
+To learn more about these capabilities, you can also refer to this Data Exposed episode.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Understanding-Azure-Arc-Enabled-SQL-Server/player?format=ny]
+
 ## Prerequisites
 
 ### Supported SQL versions and operating systems
 
-Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
+SQL Server on Azure Arc-enabled servers supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
 
 - Windows Server 2012 R2 and higher
 - Ubuntu 16.04 and 18.04 (x64)

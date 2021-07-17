@@ -2,8 +2,8 @@
 title: Configure deployments
 titleSuffix: SQL Server big data clusters
 description: Learn how to customize a big data cluster deployment with configuration files that are built into the azdata management tool.
-author: MikeRayMSFT 
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: rajmera3
 ms.date: 02/11/2021
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 ---
 
 
-# Configure deployment settings for cluster resources and services
+# Configure deployment settings for Big Data Cluster resources and services
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 > [!Note]
@@ -334,7 +334,7 @@ First create a patch.json file as below that adjust the *storage* settings
                                 }
                         }
                 },
-		{
+        {
                         "op": "add",
                         "path": "spec.resources.master.spec.storage",
                         "value": {

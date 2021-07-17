@@ -4,8 +4,8 @@ titleSuffix: SQL Server Big Data Cluster
 description: Learn how to upgrade SQL Server Big Data Clusters in an Active Directory domain.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
-ms.date: 02/19/2021
+ms.reviewer: wiassaf
+ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -156,7 +156,7 @@ Below table show the authorization model for application management:
   >[!NOTE]
   >Active Directory requires the account names to be limited to 20 characters. BDC cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves us 12 characters as a limit for the account prefix
 
-[Check AD group scope](/powershell/module/addsadministration/get-adgroup), to determine if it is DomainLocal.
+[Check AD group scope](/powershell/module/activedirectory/get-adgroup), to determine if it is DomainLocal.
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration. Examples below use the `kubeadm-prod` profile, same applies to `openshift-prod`.
 
@@ -238,7 +238,7 @@ You can now deploy the BDC cluster integrated with Active Directory using the [!
 
 ## Verify reverse DNS entry for domain controller
 
-Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the IP address of the domain controller, to see that it can be resolved to the domain controller’s FQDN.
+Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the IP address of the domain controller, to see that it can be resolved to the domain controller's FQDN.
 
 ## Known issues and limitations
 
@@ -250,7 +250,7 @@ Make sure that there is a reverse DNS entry (PTR record) for the domain controll
 
 - Before SQL Server 2019 CU5 release, only one BDC per domain (Active Directory) is allowed. Enabling multiple BDCs per domain is available starting with CU5 release.
 
-- None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](/powershell/module/addsadministration/get-adgroup).
+- None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](/powershell/module/activedirectory/get-adgroup).
 
 - AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC. Enabling logins from other trusted domain is not supported.
 

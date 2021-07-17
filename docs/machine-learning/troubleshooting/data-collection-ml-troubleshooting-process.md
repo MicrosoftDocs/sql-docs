@@ -14,6 +14,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
+
 This article describes how to collect the data you need when you're attempting to resolve problems in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 
 ## SQL Server version and edition

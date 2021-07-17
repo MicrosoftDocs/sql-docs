@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/13/2021
+ms.date: 07/16/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -29,6 +29,12 @@ Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
+
+<!-- In addition to moniker ranges for SQL Server, SQL DB, APS, Synapse, and SQL MI, 
+     this article has version moniker rangers for SQL Server 2016, 2017, and 2019 due to the syntax differences between each. 
+     Use of the version selector above the TOC is important for this document.-->
+<!-- At this time the Azure SQL Edge moniker azuresqledge-current is not functional in sql-docs. 
+     Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. >
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -63,10 +69,10 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a id="syntax"></a> Syntax for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
+## <a id="syntax"></a> Syntax for SQL Server 2016
 
 > [!NOTE]
-> This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax) for SQL Server 2019.
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
@@ -124,7 +130,11 @@ Specifies the type of the external data source being configured. This parameter 
 
 Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account.
 
+> [!NOTE]
+> In SQL Server 2016, `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
+
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
+
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -226,7 +236,9 @@ WITH
 
 In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the `wasb://` interface.
 
-This example shows how to create the database scoped credential for authentication to an Azure V2 Storage account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage.
+This example shows how to create the database scoped credential for authentication to an Azure V2 Storage account. Specify the Azure Storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure Storage. 
+
+In SQL Server 2016, `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -247,8 +259,6 @@ WITH
   ) ;
 ```
 
-> [!NOTE]
-> In SQL Server 2016, `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
 
 ## See also
 
@@ -257,7 +267,6 @@ WITH
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
-- [Using Shared Access Signatures (SAS)][sas_token]
 - [PolyBase Connectivity Configuration][connectivity_pb]
 
 <!-- links to external pages -->
@@ -299,21 +308,22 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a id="syntax"></a> Syntax for [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+## <a id="syntax"></a> Syntax for SQL Server 2017
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-linux-2017"
 
 > [!NOTE]
-> This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax) for SQL Server 2019.
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax).
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
 
 > [!NOTE]
-> This syntax varies between versions of SQL Server. To view the latest features, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax) for SQL Server 2019.
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax).
+
 
 ::: moniker-end
 
@@ -384,7 +394,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified when connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
 
 - Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
-- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
+- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Introduced with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. 
 
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
@@ -589,10 +599,10 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a id="syntax"></a> Syntax for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
+## <a id="syntax"></a> Syntax for SQL Server 2019
 
 > [!NOTE]
-> This syntax varies between versions of SQL Server.
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. 
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
@@ -876,7 +886,7 @@ WITH (
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### I. Create an external data source for bulk operations retrieving data from Azure Storage
+### G. Create an external data source for bulk operations retrieving data from Azure Storage
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
@@ -899,7 +909,7 @@ WITH
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 
-### J. Create external data source to access data in Azure Storage using the abfs:// interface
+### H. Create external data source to access data in Azure Storage using the abfs:// interface
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later 
 
 In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`, using [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver). The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 
@@ -1005,11 +1015,11 @@ WITH
 
 ## Arguments
 
-### data_source_name
+#### data_source_name
 
 Specifies the user-defined name for the data source. The name must be unique within the database in SQL Database.
 
-### LOCATION = *`'<prefix>://<path[:port]>'`*
+#### LOCATION = *`'<prefix>://<path[:port]>'`*
 
 Provides the connectivity protocol and path to the external data source.
 
@@ -1031,7 +1041,7 @@ Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 
-### CREDENTIAL = *credential_name*
+#### CREDENTIAL = *credential_name*
 
 Specifies a database-scoped credential for authenticating to the external data source.
 
@@ -1048,7 +1058,7 @@ For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE`
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+#### TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
@@ -1059,7 +1069,7 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-### DATABASE_NAME = *database_name*
+#### DATABASE_NAME = *database_name*
 
 Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`.
 
@@ -1070,7 +1080,7 @@ Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`
 
 For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to [Create an RDBMS external data source](#b-create-an-rdbms-external-data-source)
 
-### SHARD_MAP_NAME = *shard_map_name*
+#### SHARD_MAP_NAME = *shard_map_name*
 
 Used when the `TYPE` argument is set to `SHARD_MAP_MANAGER` only to set the name of the shard map.
 
@@ -1278,11 +1288,11 @@ WITH
 
 ## Arguments
 
-### data_source_name
+#### data_source_name
 
 Specifies the user-defined name for the data source. The name must be unique within the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
-### LOCATION = *`'<prefix>://<path[:port]>'`*
+#### LOCATION = *`'<prefix>://<path[:port]>'`*
 
 Provides the connectivity protocol and path to the external data source.
 
@@ -1305,7 +1315,7 @@ Additional notes and guidance when setting the location:
 - `wasbs` is recommended as data will be sent using a secure TLS connection
 - Hierarchical Namespaces aren't supported with Azure V2 Storage Accounts when accessing data via PolyBase using the wasb:// interface.
 
-### CREDENTIAL = *credential_name*
+#### CREDENTIAL = *credential_name*
 
 Specifies a database-scoped credential for authenticating to the external data source.
 
@@ -1316,11 +1326,11 @@ Additional notes and guidance when creating a credential:
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### TYPE = *HADOOP*
+#### TYPE = *HADOOP*
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
-- Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
+Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
 
 For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
@@ -1538,11 +1548,11 @@ WITH
 
 ## Arguments
 
-### data_source_name
+#### data_source_name
 
 Specifies the user-defined name for the data source. The name must be unique within the server in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-### LOCATION = *`'<prefix>://<path[:port]>'`*
+#### LOCATION = *`'<prefix>://<path[:port]>'`*
 
 Provides the connectivity protocol and path to the external data source.
 
@@ -1566,7 +1576,7 @@ Additional notes and guidance when setting the location:
 - Hierarchical Namespaces are not supported when used with Azure Storage accounts over wasb://.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
 
-### CREDENTIAL = *credential_name*
+#### CREDENTIAL = *credential_name*
 
 Specifies a database-scoped credential for authenticating to the external data source.
 
@@ -1575,7 +1585,7 @@ Additional notes and guidance when creating a credential:
 - To load data from Azure Storage into Azure Synapse or PDW, use an Azure Storage Key.
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 
-### TYPE = *[ HADOOP ]*
+#### TYPE = *[ HADOOP ]*
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
@@ -1583,7 +1593,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop).
 
-### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+#### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. 
 

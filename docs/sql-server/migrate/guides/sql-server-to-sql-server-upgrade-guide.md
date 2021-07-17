@@ -265,8 +265,7 @@ Support for minimal-downtime migrations isn't yet available for this scenario, s
 After you've successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible. The post-migration is crucial for reconciling any data accuracy issues and verifying completeness, and addressing performance issues with the workload.
 
 For more information about these issues, specific steps to mitigate them, and after the migration 
-see the [Post-migration Validation and Optimization Guide](../../../relational-databases/
-post-migration-validation-and-optimization-guide.md).
+see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 #### Verify applications
 

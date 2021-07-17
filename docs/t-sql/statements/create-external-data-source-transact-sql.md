@@ -34,7 +34,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
      this article has version moniker rangers for SQL Server 2016, 2017, and 2019 due to the syntax differences between each. 
      Use of the version selector above the TOC is important for this document.-->
 <!-- At this time the Azure SQL Edge moniker azuresqledge-current is not functional in sql-docs. 
-     Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. >
+     Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. -->
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 

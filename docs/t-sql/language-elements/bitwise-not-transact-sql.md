@@ -90,17 +90,17 @@ FROM bitwise;
 (1 row(s) affected)  
 ```  
   
- The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 1010 1010`. Performing the bitwise NOT operation on this value produces the binary result `1111 1111 0101 0101`, which is decimal -171. The binary representation for 75 is `0000 0000 0100 1011`. Performing the bitwise NOT operation produces `1111 1111 1011 0100`, which is decimal -76.  
+ The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 0000 0000 0000 0000 1010 1010`. Performing the bitwise NOT operation on this value produces the binary result `1111 1111 1111 1111 1111 1111 0101 0101`, which is decimal -171. The binary representation for 75 is `0000 0000 0000 0000 0000 0000 0100 1011`. Performing the bitwise NOT operation produces `1111 1111 1111 1111 1111 1111 1011 0100`, which is decimal -76.  
   
 ```  
  (~A)     
-         0000 0000 1010 1010  
-         -------------------  
-         1111 1111 0101 0101  
+         0000 0000 0000 0000 0000 0000 1010 1010  
+         ---------------------------------------  
+         1111 1111 1111 1111 1111 1111 0101 0101  
 (~B)     
-         0000 0000 0100 1011  
-         -------------------  
-         1111 1111 1011 0100  
+         0000 0000 0000 0000 0000 0000 0100 1011  
+         ---------------------------------------  
+         1111 1111 1111 1111 1111 1111 1011 0100  
 ```  
   
  

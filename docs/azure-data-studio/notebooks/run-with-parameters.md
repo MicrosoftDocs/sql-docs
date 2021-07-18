@@ -42,7 +42,7 @@ For an example of the notebook you'll create in the next section, save an [examp
 
 ## Set up a notebook for parameterization
 
-Complete the following steps to create a notebook and try using different parameters. All the steps in this section run inside an Azure Data Studio notebook.
+You can begin with the example notebook open in Azure Data Studio or complete the following steps to create a notebook (described next). Then, try using different parameters. All the steps run inside an Azure Data Studio notebook.
 
 1. Create a new notebook. Change **Kernel** to **Python 3**:
 

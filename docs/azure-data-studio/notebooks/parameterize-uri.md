@@ -74,7 +74,7 @@ Start with the example notebook open in Azure Data Studio.
 
 1. You can use either the search bar of any browser or a Markdown cell to open the notebook URI link.
 
-     Use the following the notebook URI to parameterize the notebook with new *x* and *y* values:
+     Use the following the notebook URI to parameterize the notebook with new values for *x* and *y*:
 
      `azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20`
 

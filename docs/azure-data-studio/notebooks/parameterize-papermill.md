@@ -72,7 +72,7 @@ For an example notebook that you can work with in this article, save an [example
 
 ## Set up a parameterized notebook
 
-Complete the following steps to create a notebook and try using different parameters. All the steps in this section run inside an Azure Data Studio notebook.
+With the downloaded example file open in Azure Data Studio, complete the following steps to set up a parameterized notebook and try using different parameters. 
 
 1. Verify that **Kernel** is set to **Python 3**:
 
@@ -156,7 +156,7 @@ To execute a notebook by using the CLI, in the terminal, enter the `papermill` c
 
    :::image type="content" source="media/notebooks-parameterization/python-api-execute.png" alt-text="Screenshot that shows the Python API execution.":::
 
-3. After you enter the new parameters, view the new parameterized notebook. Run all cells to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
+1. After you enter the new parameters, view the new parameterized notebook. Run all cells to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
 
     :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 

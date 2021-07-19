@@ -93,13 +93,13 @@ TLS uses the OpenSSL library. The following table shows the minimum supported ve
 |Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
-|OS X 10.11, macOS 10.12-10.15|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11, macOS|1.0.2|/usr/local/etc/openssl/certs|
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
-|Ubuntu 18.10, 19.04, 19.10, 20.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.10, 19.04, 19.10, 20.04, 21.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
 |Ubuntu 14.04|1.0.1|/etc/ssl/certs|
@@ -112,6 +112,7 @@ Starting in ODBC Driver 17.4, how often the driver sends keep-alive packets and 
 To configure, add the following settings to either the driver's section in `odbcinst.ini`, or the DSN's section in `odbc.ini`. When connecting
 with a DSN, the driver will use the settings in the DSN's section if present; otherwise, or if connecting with a connection string only, it will use the
 settings in the driver's section in `odbcinst.ini`. If the setting is not present in either location, the driver uses the default value.
+Beginning with ODBC Driver 17.8, **KeepAlive** and **KeepAliveInterval** keywords can now be put into the connection string.
 
 - `KeepAlive=<integer>` controls how often TCP attempts to verify that an idle connection is still intact by sending a keep-alive packet. The default is **30** seconds.
 

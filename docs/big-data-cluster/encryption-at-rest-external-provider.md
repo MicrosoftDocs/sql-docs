@@ -45,7 +45,7 @@ After the key is installed, the encryption and decryption of different payloads 
 
 The provided template application is the plugin used to interface with the external key provider. This application needs to be customized and deployed into BDC to serve as an integration point with the chosen external key provider.
 
-In the template application, there are examples on how to integrate with external provider implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There is also a examples using Azure Key Vault and Hashicorp Vault. The template applications are provided as-is as a reference implementations.
+In the template application, there are examples on how to integrate with external provider implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There are also examples using Azure Key Vault and Hashicorp Vault. The template applications are provided as-is as reference implementations.
 
 The following sections provide the steps required to configure an external key provider to serve as the root key of encryption for SQL Server databases and HDFS encryption zones.
 

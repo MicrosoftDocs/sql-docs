@@ -17,16 +17,16 @@ ms.author: mathoma
 ---
 # Data Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The Data Collector is a component of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that collects different sets of data. Data collection either runs constantly or on a user-defined schedule. The data collector stores the collected data in a relational database known as the management data warehouse.  
+  The Data Collector is a component of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] that collects different sets of data. Data collection either runs constantly or on a user-defined schedule. The data collector stores the collected data in a relational database known as the management data warehouse.  
   
 ## What is Data Collector? 
- The data collector is a core component of the data collection platform for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and the tools that are provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data collector provides one central point for data collection across your database servers and applications. This collection point can obtain data from a variety of sources and is not limited to performance data, unlike SQL Trace.  
+ The data collector is a core component of the data collection platform for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and the tools that are provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data collector provides one central point for data collection across your database servers and applications. This collection point can obtain data from a variety of sources and is not limited to performance data, unlike SQL Trace.  
   
  The data collector enables you to adjust the scope of data collection to suit your test and production environments. The data collector also uses a data warehouse, a relational database that enables you to manage the data that you collect by setting different retention periods for your data.  
   
  The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md).  
   
- The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  ![The Data Collector's Role in Data Management](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "The Data Collector's Role in Data Management")  
   

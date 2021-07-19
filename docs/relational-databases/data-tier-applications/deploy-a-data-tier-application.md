@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "How to [DAC], deploy"
   - "wizard [DAC], deploy"
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Deploy a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

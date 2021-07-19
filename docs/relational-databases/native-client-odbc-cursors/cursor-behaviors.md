@@ -4,7 +4,7 @@ title: "Cursor Behaviors | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"

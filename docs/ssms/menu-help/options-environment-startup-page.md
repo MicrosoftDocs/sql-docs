@@ -1,14 +1,15 @@
 ---
-description: "Options (Environment - Startup page)"
 title: " SQL Server Options page - Environment - Startup"
-ms.date: 11/05/2018
+description: "Options (Environment - Startup page)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: 11/05/2018
 ---
+
 # Options (Environment - Startup page)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -18,7 +18,7 @@ ms.author: "maghan"
 ---
 # Configure Login Auditing (SQL Server Management Studio)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
+This topic describes how to configure login auditing in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
   
 -   Failed logins  
   

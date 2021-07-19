@@ -4,7 +4,7 @@ description: Learn how to install the Azure Data CLI (azdata) tool with apt.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/30/2020
+ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 For Linux distributions with `apt` there is a package for the `azdata-cli`. The CLI package has been tested on Linux versions which use `apt`:
 
-- Ubuntu 16.04, Ubuntu 18.04
+- Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 

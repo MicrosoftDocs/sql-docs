@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "wizard [DAC], upgrade"
   - "How to [DAC], upgrade"
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Upgrade a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

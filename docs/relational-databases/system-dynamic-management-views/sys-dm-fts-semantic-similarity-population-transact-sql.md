@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_fts_semantic_similarity_population_TSQL"
   - "sys.dm_fts_semantic_similarity_population"
@@ -27,9 +27,8 @@ ms.reviewer: mikeray
   
  The population step follows the extraction step. For status information about the similarity extraction step, see [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
     
-||||  
-|-|-|-|  
 |**Column name**|**Type**|**Description**|  
+|-|-|-|  
 |**database_id**|**int**|ID of the database that contains the full-text index being populated.|  
 |**catalog_id**|**int**|ID of the full-text catalog that contains this full-text index.|  
 |**table_id**|**int**|ID of the table for which the full-text index is being populated.|  

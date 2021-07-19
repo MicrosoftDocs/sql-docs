@@ -4,10 +4,10 @@ title: "DROP STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP STATISTICS"
   - "DROP_STATISTICS_TSQL"

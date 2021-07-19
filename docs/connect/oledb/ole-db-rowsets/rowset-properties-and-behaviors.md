@@ -4,7 +4,7 @@ description: These are the OLE DB Driver for SQL Server rowset properties, inclu
 ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"

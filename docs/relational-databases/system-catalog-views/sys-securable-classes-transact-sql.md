@@ -4,10 +4,10 @@ title: "sys.securable_classes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "securable_classes_TSQL"
   - "securable_classes"

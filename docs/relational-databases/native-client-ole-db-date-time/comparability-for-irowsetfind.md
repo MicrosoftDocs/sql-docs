@@ -3,7 +3,7 @@ description: "SQL Server Native Client Comparability for IRowsetFind"
 title: "Comparability for IRowsetFind"
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 

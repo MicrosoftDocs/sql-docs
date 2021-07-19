@@ -4,7 +4,6 @@ description: Learn how to control Windows PowerShell tab completion by making pr
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier

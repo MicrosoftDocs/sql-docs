@@ -6,7 +6,7 @@ ms.date: "03/30/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_os_windows_info"
   - "dm_os_windows_info_TSQL"

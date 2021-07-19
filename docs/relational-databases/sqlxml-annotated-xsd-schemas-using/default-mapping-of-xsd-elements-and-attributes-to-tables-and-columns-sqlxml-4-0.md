@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "table/view mapping [SQLXML], default mapping"
   - "element/attribute mapping [SQLXML]"
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

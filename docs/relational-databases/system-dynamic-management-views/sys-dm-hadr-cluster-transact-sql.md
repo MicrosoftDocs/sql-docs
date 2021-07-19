@@ -6,7 +6,7 @@ ms.date: "01/31/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_hadr_cluster"
   - "dm_hadr_cluster_HADR"

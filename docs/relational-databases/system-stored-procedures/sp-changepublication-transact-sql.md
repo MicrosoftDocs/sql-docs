@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_changepublication"
   - "sp_changepublication_TSQL"
@@ -109,7 +109,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**concurrent**|Uses native-mode bulk-copy program output of all tables, but does not lock tables during the snapshot generation process. Not valid for snapshot replication.|  
 ||**concurrent_c**|Uses character-mode bulk copy program output of all tables, but does not lock tables during the snapshot generation process. Not valid for snapshot replication.|  
 |**taskid**||This property has been deprecated and is no longer supported.|  
-|**allow_drop**|**true**|Enables `DROP TABLE` DLL support for articles which are part of transactional replication. Minimum supported version: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 or above and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 or above. Additional reference: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Enables `DROP TABLE` DLL support for articles which are part of transactional replication. Minimum supported version: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 or above and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 or above. Additional reference: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Disables `DROP TABLE` DLL support for articles that are part of transactional replication. This is the **default** value for this property.|
 |**NULL** (default)||Returns the list of supported values for *property*.|  
   

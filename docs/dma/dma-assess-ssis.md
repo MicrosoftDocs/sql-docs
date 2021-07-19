@@ -31,6 +31,8 @@ DMA needs to run with **administrator** access to assess SSIS packages in Packag
 
 The following step-by-step instructions help you perform your first assessment for migrating SQL Server Integration Service (SSIS) packages to Azure SQL Database or Azure SQL Managed Instance, by using Data Migration Assistant.
 
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
 ## Create an assessment
 
 1. Select the **New** (+) icon, and then select the **Assessment** project type as **Integration Service**.

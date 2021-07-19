@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_usage_TSQL"
   - "resource_usage"

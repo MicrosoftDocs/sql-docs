@@ -6,7 +6,7 @@ ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "5120 (Database Engine error)"
 ms.assetid: 

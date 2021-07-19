@@ -24,7 +24,7 @@ manager: amitban
 # Add persisted log buffer to a database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Permissions
 
@@ -51,6 +51,8 @@ ALTER DATABASE <MyDB>
     SIZE = 20MB
   );
 ```
+
+Note that the log file on the DAX volume will be sized at 20MB regardless of the size specified wih the ADD FILE command.
 
 The volume or mount the new log file is placed must be formatted with DAX (NTFS) or mounted with the DAX option (XFS/EXT4).
 

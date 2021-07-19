@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Transparent Data Encryption, moving"
   - "TDE, moving a database"
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: jaszymas
-ms.author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ---
 # Move a TDE Protected Database to Another SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.author: jaszymas
   
 ##  <a name="SSMSProcedure"></a> To create a database protected by transparent data encryption  
 
-The following procedures show you have to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
+The following procedures show you how to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Using SQL Server Management Studio  
   
@@ -132,7 +132,7 @@ The following procedures show you have to create a database protected by TDE usi
   
 ##  <a name="TsqlProcedure"></a> To move a database protected by transparent data encryption 
 
-The following procedures show you have to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
+The following procedures show you how to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Using SQL Server Management Studio  
   

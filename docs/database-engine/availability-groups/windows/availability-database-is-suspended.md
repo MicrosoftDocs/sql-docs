@@ -20,18 +20,13 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Database Suspension State|  
-|**Issue**|Availability database is suspended.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability database|  
+- **Policy Name**: Availability Database Suspension State
+- **Issue**: Availability database is suspended.
+- **Category**: **Warning**
+- **Facet**: Availability database  
   
 ## Description  
  This policy checks the state of data movement of the secondary database (also known as a "secondary database replica"). The policy is in an unhealthy state when the data movement is suspended. The policy is otherwise in a healthy state.  
-  
-> [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability database is suspended](https://go.microsoft.com/fwlink/p/?LinkId=220860) on the TechNet Wiki.  
   
 ## Possible Causes  
  Data synchronization on this availability database might have been suspended because of the following:  

@@ -6,7 +6,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_filestream_file_io_requests"
   - "dm_filestream_file_io_requests"

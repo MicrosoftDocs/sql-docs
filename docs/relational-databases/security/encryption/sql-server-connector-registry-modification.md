@@ -19,7 +19,7 @@ This article describes modifying registry entries to enable SQL Server Connector
 
 The [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344) enables SQL Server encryption to use the Microsoft Azure Key Vault as an extensible key management (EKM) provider to protect its encryption keys.
 
-The [download](https://www.microsoft.com/download/details.aspx?id=45344) consists of the SQL Server Connector as well as sample scripts to enable a SQL Server Administrator to learn how to configure the SQL Server Connector and enable SQL Server encryption scenarios. For more information, see [Extensible key management using Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690).
+The [download](https://www.microsoft.com/download/details.aspx?id=45344) consists of the SQL Server Connector as well as sample scripts to enable a SQL Server Administrator to learn how to configure the SQL Server Connector and enable SQL Server encryption scenarios. For more information, see [Extensible key management using Key Vault (SQL Server)](./extensible-key-management-using-azure-key-vault-sql-server.md).
 
 Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/AzureKeyVault) to ask questions, share insights, and discuss the SQL Server Connector.
 
@@ -66,7 +66,7 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a date of September 2
 
 **System Requirements** - Supported SQL Server versions:
 
-- SQL Server 2019 RTM Enterprise 64-bit
+- SQL Server 2019 RTM Enterprise or Standard 64-bit
 - SQL Server 2017 RTM Enterprise 64-bit
 - SQL Server 2016 RTM Enterprise 64-bit
 - SQL Server 2014 RTM Enterprise 64-bit

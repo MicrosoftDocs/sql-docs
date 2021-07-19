@@ -7,7 +7,7 @@ ms.date: "01/19/2017"
 ms.reviewer: 
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RDS samples [ADO]"
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00

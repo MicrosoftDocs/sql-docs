@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "7995 (Database Engine error)"
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933

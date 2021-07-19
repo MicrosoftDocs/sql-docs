@@ -6,7 +6,7 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 04/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,23 +18,9 @@ ms.technology: big-data-cluster
 
 Applications deployed on SQL Server Big Data Clusters (BDC) not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It dramatically improve the performance since your app sits in the same cluster where the data lives.
 
-This article describes how to deploy and manage R and Python script as an application inside a SQL Server Big Data Cluster.
+Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
 
-## What's new and improved
-
-- A single command-line utility to manage cluster and app.
-- Simplified app deployment while providing granular control through spec files.
-- Support hosting additional application types - SQL Server Integration Services (SSIS) and MLeap.
-- [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
-
-Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
-
-The following types of apps are supported:
-
-- **Python** - One of the most popular general programming languages for various personas such as Data Engineers, Data Scientists or DevOps engineers, supports numerous scenarios such as data wrangling,  automation, prototyping, to some extent,  it also increasingly used to program enterprise-grade application working in conjunction with web development frameworks such as Flask and Django to address different business requirements.  
-- **R** – Another popular programming language for Data Engineering and Data Scientists. Compared to Python, R is a programming language with more specific focus on statistical computing and graphics.  
-- **SQL Server Integration Services (SSIS)**  -  high-performance data integration solutions for building and debugging ETL packages, it uses Data Transformation Services Package File Format (DTSX) which is an XML-based file format that stores the instructions for the processing of migrating data between databases and the integration of external data sources.   
-- **MLeap** - is a common serialization format and provides everything needed to execute and serialize SparkML pipelines and others that can then be loaded at runtime to process ML scoring tasks in near real-time and close to the data.  
+This article provides examples of how to deploy apps from the command line inside a SQL Server Big Data Cluster. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 ## Prerequisites
 

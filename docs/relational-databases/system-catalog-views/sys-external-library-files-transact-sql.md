@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/25/2020"
 ms.prod: sql
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "external_library_files"
   - "external_library_files_TSQL"

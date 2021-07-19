@@ -4,7 +4,7 @@ description: "Learn about how errors are returned in the OLE DB Driver for SQL S
 ms.custom: ""
 ms.date: "05/06/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"

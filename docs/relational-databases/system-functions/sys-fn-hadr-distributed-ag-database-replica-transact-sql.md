@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_hadr_distributed_ag_database_replica"
   - "sys.fn_hadr_distributed_ag_database_replica_TSQL"

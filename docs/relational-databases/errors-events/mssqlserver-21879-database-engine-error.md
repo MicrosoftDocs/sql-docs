@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "21879 (Database Engine error)"
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
@@ -38,7 +38,7 @@ The linked server used to query the redirected publisher uses the security mode,
   
     -   If **sp_validate_redirected_publisher** is called explicitly by a user, the Windows login that the user is running under is used for the connection.  
   
-    -   If **sp_validate_redirected_**publisher is called by a replication agent from **sp_get_redirected_publisher**, the Windows login associated with the agent is used.  
+    -   If **sp_validate_redirected_publisher** is called by a replication agent from **sp_get_redirected_publisher**, the Windows login associated with the agent is used.  
   
 Error 21879 can indicate that **sp_validate_redirected_publisher** was called using a login that is not known at the redirected target publisher.  
   

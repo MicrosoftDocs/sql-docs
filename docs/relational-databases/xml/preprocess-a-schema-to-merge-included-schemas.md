@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "preprocessor tool [XML schemas]"
   - "XML schemas [SQL Server]"
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Preprocess a Schema to Merge Included Schemas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

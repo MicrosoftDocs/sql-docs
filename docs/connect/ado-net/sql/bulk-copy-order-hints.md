@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
-ms.reviewer: 
+ms.reviewer: v-daenge
 ---
 # Order hints for bulk copy operations
 

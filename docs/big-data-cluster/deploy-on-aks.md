@@ -2,11 +2,11 @@
 title: Configure Azure Kubernetes Service
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster deployments.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/02/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -98,7 +98,7 @@ Before you run the command, update the script. Replace `<Azure data center>` wit
    az aks get-versions `
    --location <Azure data center> `
    --query orchestrators `
-   --o table
+   -o table
    ```
 
 Choose the latest available version for your cluster. Record the version number. You will use it in the next step.
@@ -144,7 +144,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Connect to the cluster
 
-1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
+1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks#az_aks_get_credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster

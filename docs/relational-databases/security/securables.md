@@ -4,7 +4,7 @@ description: Learn about the securable scopes, which the SQL Server Database Eng
 ms.custom: ""
 ms.date: "10/18/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

@@ -19,7 +19,7 @@ ms.author: chadam
 # Results Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  This help topic describes the options of the **Results** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)], and [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use this page to view the results of the wizard.  
+  This help topic describes the options of the **Results** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)], and [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Use this page to view the results of the wizard.  
   
 ##  <a name="PageOptions"></a> Results Page Options  
  The **Summary** grid contains the following columns:  

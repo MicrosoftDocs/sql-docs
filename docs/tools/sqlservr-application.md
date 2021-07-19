@@ -87,7 +87,7 @@ Disables the keeping of CPU time and cache-hit ratio statistics. Allows maximum 
 In most cases, the sqlservr.exe program is only used for troubleshooting or major maintenance. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started from the command prompt with sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not start as a service, so you cannot stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using **net** commands. Users can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools show the status of the service, so [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager correctly indicates that the service is stopped. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can connect to the server, but it also indicates that the service is stopped.
 
 ## Compatibility Support
-The following parameters are obsolete and not supported in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+The following parameters are obsolete and not supported in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 |Parameter | More information|
 |:-----|:-----|

@@ -4,10 +4,10 @@ title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "datetimeoffset_TSQL"
   - "datetimeoffset"
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.
+Defines a date that is combined with a time of a day based on a 24-hour clock like [datetime2](../../t-sql/data-types/datetime2-transact-sql.md), and adds time zone awareness based on UTC (Universal Time Coordinate or Greenwich Mean Time). 
 
 ## datetimeoffset description
   

@@ -55,9 +55,9 @@ You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPre
     - You cannot specify Product IDs for a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express editions.  
   
 ## Supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations  
-SysPrep in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports all features, including tools, of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+SysPrep in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports all features, including tools.  
   
-You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or earlier versions. The features of these instances must support SysPrep.  
+You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or earlier versions. The features of these instances must support SysPrep.  
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is automatically installed and completed at the end of the prepare image step.  
   

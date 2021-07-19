@@ -6,7 +6,7 @@ ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "15401 (Database Engine error)"
 ms.assetid: 
@@ -75,4 +75,4 @@ Verify that your name resolution mechanism (such as, WINS, DNS, HOSTS, or LMHOST
 
 - [Test a channel between the local computer and its domain](/powershell/module/microsoft.powershell.management/test-computersecurechannel#example-1--test-a-channel-between-the-local-computer-and-its-domain)
 - [LogonSessions v1.4](/sysinternals/downloads/logonsessions)
-- [sp_change_users_login (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)
+- [sp_change_users_login (Transact-SQL)](../system-stored-procedures/sp-change-users-login-transact-sql.md)

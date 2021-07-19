@@ -1,8 +1,8 @@
 ---
-description: "SQLXML interface"
-title: "SQLXML interface | Microsoft Docs"
+title: SQLXML interface
+description: Learn about using the SQLXML interface from the JDBC 4.0 API with the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

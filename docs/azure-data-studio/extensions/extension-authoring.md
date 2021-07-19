@@ -30,7 +30,7 @@ To develop an extension, you need [Node.js](https://nodejs.org/) installed and a
 To create your new extension, you can use the Azure Data Studio extension generator. The Yeoman [extension generator](https://www.npmjs.com/package/generator-azuredatastudio) is a beneficial starting point for extension projects. To start the generator, enter the following command in a command prompt:
 
 ```console
-npm install -g yo generator-azuredatastudio # Install the generator
+npm install -g yo generator-azuredatastudio
 yo azuredatastudio
 ```
 

@@ -4,7 +4,6 @@ description: Learn how to load the SQL Server Management Object (SMO) assemblies
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier

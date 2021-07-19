@@ -16,7 +16,7 @@ manager: amitban
 # Hybrid Buffer Pool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Hybrid Buffer Pool enables buffer pool objects to reference data pages in database files residing on persistent memory (PMEM) devices, instead of copies of the data pages cached in volatile DRAM. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+Hybrid Buffer Pool enables buffer pool objects to reference data pages in database files residing on persistent memory (PMEM) devices, instead of copies of the data pages cached in volatile DRAM. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)].
 
 ![Hybrid Buffer Pool](./media/hybrid-buffer-pool.png)
 
@@ -36,7 +36,7 @@ For more information, see:
 
 ## Enable hybrid buffer pool
 
-[!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] introduces dynamic data language (DDL) to control hybrid buffer pool.
+[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] introduces dynamic data language (DDL) to control hybrid buffer pool.
 
 The following example enables hybrid buffer pool for an instance of SQL Server:
 

@@ -1,13 +1,12 @@
 ---
-title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
-description: Learn how to view automatic tuning options on an SQL Database. See required permissions and view additional available resources.
+title: "sys.database_automatic_tuning_options (Transact-SQL)"
+description: Learn how to view automatic tuning options on SQL Server or Azure SQL Database. See required permissions and view additional available resources.
 ms.custom: ""
-ms.date: "07/20/2017"
+ms.date: "07/06/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "database_automatic_tuning_options_tsql"
   - "database_automatic_tuning_options"
@@ -18,19 +17,19 @@ dev_langs:
 helpviewer_keywords: 
   - "database_automatic_tuning_options catalog view"
   - "sys.database_automatic_tuning_options catalog view"
-ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-author: "jovanpop-msft"
-ms.author: "jovanpop"
+author: "danimir"
+ms.author: "danil"
+ms.reviewer: "wiassaf"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb-asdbmi](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
   Returns the Automatic Tuning options for this database.  
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|The name of the automatic tuning option. Refer to [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) for available options.|  
+|**name**|**nvarchar(128)**|The name of the automatic tuning option. Refer to [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_tuning) for available options.|  
 |**desired_state**|**smallint**|Indicates the desired operation mode for Automatic Tuning option, explicitly set by user.<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|Textual description of the desired operation mode of Automatic Tuning option.<br />OFF<br />ON|  
 |**actual_state**|**smallint**|Indicates the operation mode of Automatic Tuning option.<br />0 = OFF<br />1 = ON|  
@@ -41,9 +40,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 ## Permissions  
  Requires the `VIEW DATABASE STATE` permission.  
   
-## See Also  
- [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+## See also  
+ - [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+ - [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ - [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ - [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ - [sys.database_automatic_tuning_mode](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
  

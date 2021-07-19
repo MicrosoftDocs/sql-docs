@@ -2,9 +2,9 @@
 description: "ISDATE (Transact-SQL)"
 title: ISDATE (Transact-SQL)
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ISDATETIME"
   - "ISDATE_TSQL"

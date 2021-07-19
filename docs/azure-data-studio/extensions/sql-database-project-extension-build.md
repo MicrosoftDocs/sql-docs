@@ -13,7 +13,7 @@ ms.date: 06/25/2020
 
 # Build and Publish a project
 
-The build process in the SQL Database Projects extension for Azure Data Studio allows for *dacpac* creation in Windows, macOS, and Linux environments. The project can be deployed to a local or cloud environment with the publish process.
+The build process in the SQL Database Projects extension (preview) for Azure Data Studio allows for *dacpac* creation in Windows, macOS, and Linux environments. The project can be deployed to a local or cloud environment with the publish process.
 
 ## Prerequisites
 

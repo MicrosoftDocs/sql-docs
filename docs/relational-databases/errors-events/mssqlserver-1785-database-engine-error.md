@@ -6,7 +6,7 @@ ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "1785 (Database Engine error)"
 ms.assetid: 
@@ -75,4 +75,4 @@ GO
 
 ### See also
 
-[Cascading Referential Integrity](/sql/relational-databases/tables/primary-and-foreign-key-constraints#referential-integrity)
+[Cascading Referential Integrity](../tables/primary-and-foreign-key-constraints.md#referential-integrity)

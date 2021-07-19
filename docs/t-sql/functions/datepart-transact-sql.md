@@ -3,10 +3,10 @@ title: "DATEPART (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the DATEPART function. This function returns an integer corresponding to the datepart of a specified date."
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATEPART_TSQL"
   - "DATEPART"

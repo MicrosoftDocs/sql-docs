@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ""
-ms.date: 10/14/2020
+ms.date: 10/14/2020 
 ---
 
 # Install the SQL Server PowerShell module

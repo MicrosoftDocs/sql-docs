@@ -5,7 +5,7 @@ description: This article provides guidance joining a SQL Server Linux host mach
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 11/30/2020
+ms.date: 06/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -22,6 +22,8 @@ Before you configure Active Directory authentication, you need to set up an Acti
 
 > [!IMPORTANT]
 > The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps may slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
+>
+> For information on configuring Active Directory with newer versions of Ubuntu, RHEL, or SLES, see [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md).
 
 ### Reverse DNS (RDNS)
 

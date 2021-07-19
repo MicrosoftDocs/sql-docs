@@ -6,7 +6,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XQuery, XML DML"
   - "xml data type [SQL Server], XML DML"
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # XML Data Modification Language (XML DML)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

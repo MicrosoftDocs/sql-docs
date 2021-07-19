@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RDS API reference [ADO]"
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a

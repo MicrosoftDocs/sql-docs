@@ -3,7 +3,7 @@ description: "SQL Server Native Client Conversions Performed from Client to Serv
 title: "Conversions Performed from Client to Server"
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 

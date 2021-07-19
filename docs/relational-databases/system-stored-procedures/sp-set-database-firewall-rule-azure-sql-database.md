@@ -6,7 +6,7 @@ ms.date: "08/04/2017"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_set_database_firewall_rule"
   - "sp_set_database_firewall_rule_TSQL"

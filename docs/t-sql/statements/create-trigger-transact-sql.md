@@ -5,7 +5,7 @@ ms.date: "10/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE TRIGGER"
   - "TRIGGER"
@@ -159,7 +159,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 
 ## Arguments
 OR ALTER  
-**Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+**Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1). 
   
 Conditionally alters the trigger only if it already exists. 
   

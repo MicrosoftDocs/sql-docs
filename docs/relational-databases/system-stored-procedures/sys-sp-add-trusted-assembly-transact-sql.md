@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_add_trusted_assembly_TSQL"
   - "sp_add_trusted_assembly"

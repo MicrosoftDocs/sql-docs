@@ -6,7 +6,7 @@ ms.date: "01/28/2019"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "event_log"
   - "sys.event_log_TSQL"

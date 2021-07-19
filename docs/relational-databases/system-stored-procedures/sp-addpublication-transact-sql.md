@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addpublication_TSQL"
   - "sp_addpublication"
@@ -167,7 +167,7 @@ sp_addpublication [ @publication = ] 'publication'
  Specifies the location of the alternate folder for the snapshot. *alternate_snapshot_folder* is **nvarchar(255)** with a default of NULL.  
   
 `[ \@pre_snapshot_script = ] 'pre_snapshot_script'`
- Specifies a pointer to an **.sql** file location. *pre_snapshot_script* is **nvarchar(255),**with a default of NULL. The Distribution Agent will run the pre-snapshot script before running any of the replicated object scripts when applying a snapshot at a Subscriber. The script is executed in the security context used by the Distribution Agent when connecting to the subscription database.  
+ Specifies a pointer to an **.sql** file location. *pre_snapshot_script* is **nvarchar(255)**, with a default of NULL. The Distribution Agent will run the pre-snapshot script before running any of the replicated object scripts when applying a snapshot at a Subscriber. The script is executed in the security context used by the Distribution Agent when connecting to the subscription database.  
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'`
  Specifies a pointer to an **.sql** file location. *post_snapshot_script* is **nvarchar(255)**, with a default of NULL. The Distribution Agent will run the post-snapshot script after all the other replicated object scripts and data have been applied during an initial synchronization. The script is executed in the security context used by the Distribution Agent when connecting to the subscription database.  

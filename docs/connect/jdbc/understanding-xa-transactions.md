@@ -1,8 +1,8 @@
 ---
-title: "Understanding XA transactions"
-description: "The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions."
+title: Understanding XA transactions
+description: The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions.
 ms.custom: ""
-ms.date: "09/29/2020"
+ms.date: 06/01/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,12 +16,12 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions. JDBC connections obtained from the [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) class can participate in standard distributed transaction processing environments such as Java Platform, Enterprise Edition (Java EE) application servers.  
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions. JDBC connections obtained from the [SQLServerXADataSource](reference/sqlserverxadatasource-class.md) class can participate in standard distributed transaction processing environments such as Java Platform, Enterprise Edition (Java EE) application servers.
 
 In this article, XA stands for extended architecture.
 
 > [!WARNING]  
-> Microsoft JDBC Driver 4.2 (and higher) for SQL includes new timeout options for the existing feature for automatic rollback of unprepared transactions. See [Configuring server-side timeout settings for automatic rollback of unprepared transactions](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) later in this topic for more detail.  
+> Microsoft JDBC Driver 4.2 (and higher) for SQL includes new timeout options for the existing feature for automatic rollback of unprepared transactions. See [Configuring server-side timeout settings for automatic rollback of unprepared transactions](understanding-xa-transactions.md#BKMK_ServerSide) later in this topic for more detail.
 
 ## Remarks
 
@@ -43,7 +43,7 @@ The following additional guidelines apply to tightly coupled transactions:
   
 - MS DTC also supports tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:
+- A [SSTRANSTIGHTLYCPLD](reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -57,7 +57,7 @@ The following steps are required if you want to use XA data sources together wit
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.  
 
 > [!NOTE]  
-> The JDBC XA distributed transaction components are included in the SQL Server engine in SQL Server 2017 starting with cumulative update 16 and in SQL Server 2019, and can be enabled or disabled with a system stored procedure.
+> The JDBC XA distributed transaction components are included in the SQL Server engine in SQL Server 2017 starting with cumulative update 16 and in SQL Server 2019, and can be enabled or disabled with a system stored procedure. The sqjdbc_xa.dll from the driver is not required and it is recommended to enable the server components instead for these server versions.
 > To enable the required components to perform XA distributed transactions using the JDBC driver, execute the following stored procedure.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -84,7 +84,7 @@ On Windows Vista and later:
   
 6. Click **OK** again to close the **Properties** dialog box, and then close **Component Services**.  
   
-7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make sure that it syncs with the MS DTC changes.  
+7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make sure that it syncs with the MS DTC changes. (This step is optional for SQL Server 2019 and SQL Server 2017 CU 16 and higher.)
 
 ### Configuring the JDBC distributed transaction components  
 
@@ -346,4 +346,4 @@ class XidImpl implements Xid {
 
 ## See also  
 
-[Performing transactions with the JDBC driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[Performing transactions with the JDBC driver](performing-transactions-with-the-jdbc-driver.md)

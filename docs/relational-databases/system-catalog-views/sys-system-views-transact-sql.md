@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.system_views_TSQL"
   - "system_views"
@@ -24,7 +24,7 @@ ms.author: wiassaf
 # sys.system_views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contains one row for each system view that is shipped with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. All system views are contained in the schemas named **sys** or **INFORMATION_SCHEMA**.  
+  Contains one row for each system view that is shipped with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. All system views are contained in the schemas named **sys** or **INFORMATION_SCHEMA**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

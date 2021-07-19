@@ -1,9 +1,9 @@
 ---
-title: "Deprecated Database Engine Features | Microsoft Docs"
+title: "Deprecated Database Engine Features"
 titleSuffix: "SQL Server 2016"
 description: Find out about deprecated database engine features that are still available in SQL Server 2016 (13.x), but shouldn't be used in new applications.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "02/11/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -13,25 +13,24 @@ helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
-ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Deprecated Database Engine Features in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Deprecated features should not be used in new applications.  
+This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Deprecated features should not be used in new applications.  
   
 When a feature is marked deprecated, it means:
--  The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
--  We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
--  For new development work, we do not recommend using deprecated features.      
+- The feature is in maintenance mode only. No new changes will be done, including those related to addressing inter-operability with new features.
+- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently discontinue (remove) the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
+- For new development work, do not use deprecated features. For existing aplications, plan to modify applications that currently use these features as soon as possible.     
 
-For [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], see [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
+For [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], see [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
 
 You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-The value of these counters are also available by executing the following statement:  
+The value of these counters is also available by executing the following statement:  
   
 ```sql  
 SELECT * FROM sys.dm_os_performance_counters   
@@ -39,7 +38,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## Features deprecated in the next version of SQL Server
- The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
+ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
@@ -61,6 +60,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Compatibility levels|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release. However, we will continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
+|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>For more information, see [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md).|[sys.sp_db_selective_xml_index](../relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md)|
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
 |Backup and restore|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |Backup and restore|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -127,13 +127,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SMO classes|**Microsoft.SQLServer. Management.Smo.Information** class<br /><br /> **Microsoft.SQLServer. Management.Smo.Settings** class<br /><br /> **Microsoft.SQLServer.Management. Smo.DatabaseOptions** class<br /><br /> **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** property|**Microsoft.SqlServer.  Management.Smo.Server** class<br /><br /> **Microsoft.SqlServer.  Management.Smo.Server** class<br /><br /> **Microsoft.SqlServer. Management.Smo.Database** class<br /><br /> None|None|None|  
 |SQL Server Agent|**net send** notification<br /><br /> Pager notification|E-mail notification<br /><br /> E-mail notification |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Solution Explorer integration in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
-|System Stored Procedures|sp_db_increased_partitions|None. Support for increased partitions is available by default in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
+|System Stored Procedures|sp_db_increased_partitions|None. Support for increased partitions is now available by default.|sp_db_increased_partitions|253|  
 |System tables|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Compatibility views. For more information, see [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br /> **Important:** The compatibility views do not expose metadata for features that were introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. We recommend that you upgrade your applications to use catalog views. For more information, see [Catalog Views &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |System tables|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |System functions|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |System views|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|Table compression|The use of the vardecimal storage format.|Vardecimal storage format is deprecated. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format.|Vardecimal storage format|200|  
-|Table compression|Use of the sp_db_vardecimal_storage_format procedure.|Vardecimal storage format is deprecated. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format.|sp_db_vardecimal_storage_format|201|  
+|Table compression|The use of the vardecimal storage format.|Vardecimal storage format is deprecated. Data compression in this version compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format.|Vardecimal storage format|200|  
+|Table compression|Use of the sp_db_vardecimal_storage_format procedure.|Vardecimal storage format is deprecated. [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format.|sp_db_vardecimal_storage_format|201|  
 |Table compression|Use of the sp_estimated_rowsize_reduction_for_vardecimal procedure.|Use data compression and the sp_estimate_data_compression_savings procedure instead.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |Table hints|Specifying NOLOCK or READUNCOMMITTED in the FROM clause of an UPDATE or DELETE statement.|Remove the NOLOCK or READUNCOMMITTED table hints from the FROM clause.|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|1|  
 |Table hints|Specifying table hints without using the WITH keyword.|Use WITH.|Table hint without WITH|8|  
@@ -156,7 +156,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode|Use COUNT_BIG (\*).|Index view select list without COUNT_BIG(\*)|2|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|The indirect application of table hints to an invocation of a multi-statement table-valued function (TVF) through a view.|None.|Indirect TVF hints|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE syntax:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
-|Other|DB-Library<br /><br /> Embedded SQL for C|Although the [!INCLUDE[ssDE](../includes/ssde-md.md)] still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will drop support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0, or [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
+|Other|DB-Library<br /><br /> Embedded SQL for C|Although the [!INCLUDE[ssDE](../includes/ssde-md.md)] still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will drop support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. The current version does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0, or [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
 |Tools|SQL Server Profiler for Trace Capture|Use Extended Events Profiler embedded in SQL Server Management Studio.|SQL Server Profiler|None|  
 |Tools|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|None|  
 |Trace Management Objects|Microsoft.SqlServer.Management.Trace namespace (contains the APIs for SQL Server Trace and Replay objects)|Trace Configuration: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Trace Reading: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Trace Replay: None|||  
@@ -169,4 +169,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## See Also  
  [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
- [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)
+ [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)  

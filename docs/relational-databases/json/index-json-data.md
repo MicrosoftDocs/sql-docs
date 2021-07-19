@@ -54,6 +54,18 @@ ADD vCustomerName AS JSON_VALUE(Info,'$.Customer.Name')
 CREATE INDEX idx_soh_json_CustomerName
 ON Sales.SalesOrderHeader(vCustomerName)  
 ```  
+
+This statement will return the following warning:
+```
+Warning! The maximum key length for a nonclustered index is 1700 bytes.
+The index 'vCustomerName' has maximum length of 8000 bytes.
+For some combination of large values, the insert/update operation will fail.
+```
+
+The `JSON_VALUE` function might return text values up to 8000 bytes (for example, as the NVARCHAR(4000) type). However, the values that are longer than 1700 bytes cannot be indexed. If you try to enter the value in the indexed computed column that is longer than 1700 bytes, the DML operation will fail. This will be the runtime error.
+
+For better performance try to cast the value that you have exposed using the computed column into the smallest applicable type. Useint and datetime2 types instead of string types.
+
 ### More info about the computed column 
 The computed column is not persisted. It's computed only when the index needs to be rebuilt. It does not occupy additional space in the table.   
   

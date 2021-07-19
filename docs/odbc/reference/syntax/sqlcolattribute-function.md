@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLColAttribute"
 apilocation: 
@@ -71,7 +71,7 @@ SQLRETURN SQLColAttribute (
   
 -   If *CharacterAttributePtr* is a pointer to a binary buffer, the application places the result of the SQL_LEN_BINARY_ATTR(*length*) macro in *BufferLength*. This places a negative value in *BufferLength*.  
   
--   If *CharacterAttributePtr* is a pointer to a fixed-length data type, *BufferLength* must be one of the following: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, or SQLUSMALLINT.  
+-   If *CharacterAttributePtr* is a pointer to a fixed-length data type, *BufferLength* must be one of the following: SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT, or SQL_IS_USMALLINT.  
   
  *StringLengthPtr*  
  [Output] Pointer to a buffer in which to return the total number of bytes (excluding the null-termination byte for character data) available to return in **CharacterAttributePtr*.  

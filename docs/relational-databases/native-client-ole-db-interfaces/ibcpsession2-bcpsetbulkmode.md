@@ -4,7 +4,7 @@ title: "IBCPSession2::BCPSetBulkMode (Native Client OLE DB provider) | Microsoft
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -52,7 +52,7 @@ HRESULT BCPSetBulkMode (
 ## Returns  
  IBCPSession2::BCPSetBulkMode can return one of the following:  
   
-|||  
+|Value|Description|  
 |-|-|  
 |**S_OK**|The method succeeded.|  
 |**E_FAIL**|A provider specific error occurred, for detailed information use the ISQLServerErrorInfo interface.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "VERIFYONLY"
   - "RESTORE VERIFYONLY"
@@ -104,7 +104,7 @@ FROM <backup_device> [ ,...n ]
 >  RESTORE VERIFYONLY does not work on a database snapshot. To verify a database snapshot before a revert operation, you can run DBCC CHECKDB.  
   
 > [!NOTE]  
->  With snapshot backups, RESTORE VERIFYONLY confirms the existence of the snapshots in the locations specified in the backup file. Snapshot backups are a new feature in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. For more information about Snapshot Backups, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+>  With snapshot backups, RESTORE VERIFYONLY confirms the existence of the snapshots in the locations specified in the backup file. Snapshot backups are a new feature in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. For more information about Snapshot Backups, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ## Security  
  A backup operation may optionally specify passwords for a media set, a backup set, or both. When a password has been defined on a media set or backup set, you must specify the correct password or passwords in the RESTORE statement. These passwords prevent unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  

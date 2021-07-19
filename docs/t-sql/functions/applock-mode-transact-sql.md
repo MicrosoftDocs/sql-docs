@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "APPLOCK_MODE_TSQL"
   - "APPLOCK_MODE"
@@ -52,12 +52,19 @@ The owner of the lock, which is the *lock_owner* value when the lock was request
   
 ## Return value
 Returns the lock mode held by the lock owner on a particular application resource. Lock mode can have any one of these values:
-  
-||||  
-|-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
-|**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**Exclusive**||  
+
+:::row:::
+   :::column span="":::
+      **NoLock**<br>      **Update**<br>      **\*SharedIntentExclusive**
+   :::column-end:::
+   :::column span="":::
+      **IntentShared**<br>      **IntentExclusive**<br>      **\*UpdateIntentExclusive**
+
+   :::column-end:::
+   :::column span="":::
+      **Shared**<br>      **Exclusive**
+   :::column-end:::
+:::row-end:::
   
 *This lock mode is a combination of other lock modes and sp_getapplock cannot explicitly acquire it.
   

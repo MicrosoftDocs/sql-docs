@@ -4,21 +4,25 @@ titleSuffix:
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft Python and R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/10/2020
+ms.date: 03/17/2021
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # What is SQL Server Machine Learning Services with Python and R?
-[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL](../includes/applies-to-version/sqlserver2017.md)]
 
 Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft Python and R packages](#packages), for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 
-For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
-
+::: moniker range="=sql-server-2017"
+> [!NOTE]
+> Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
+> Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
+>
 > For executing Java in SQL Server, see the [Java Language Extension documentation](../language-extensions/java-overview.md).
 ::: moniker-end
 
@@ -49,13 +53,6 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
    + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current"
-+ Write your first Python or R script.
-
-   + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
-   + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
-::: moniker-end
-
 ::: moniker range="=sql-server-2017"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md).
 
@@ -73,10 +70,11 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 The following lists the versions of Python and R that are included in Machine Learning Services.
 
-| SQL Server version | Python version | R version |
-|-|-|-|
-| SQL Server 2017 | 3.5.2 | 3.3.3 |
-| SQL Server 2019 | 3.7.3 | 3.5.2 |
+| SQL Server version | Cumulative Update | Python runtime version | R runtime versions |
+|-|-|-|-|
+| SQL Server 2019 | RTM and later | 3.7.1 | 3.5.2 |
+| SQL Server 2017 | CU22 and later | 3.5.2 and 3.7.2 | 3.3.3 and 3.5.2 |
+| SQL Server 2017 | RTM - CU21 | 3.5.2 | 3.3.3 |
 
 For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)
 

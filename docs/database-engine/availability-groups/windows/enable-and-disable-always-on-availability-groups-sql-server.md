@@ -115,7 +115,7 @@ ms.author: chadam
   
 4.  Select the **Always On High Availability** tab.  
   
-5.  Verify that **Windows failover cluster name** field contains the name of the local failover cluster. If this field is blank, this server instance currently does not support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that does not support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+5.  Verify that **Windows failover cluster name** field contains the name of the local failover cluster. If this field is blank, this server instance currently does not support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] that does not support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 6.  Select the **Enable Always On Availability Groups** check box, and click **OK**.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_server_info"
   - "sp_server_info_TSQL"
@@ -54,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |ATTRIBUTE_ID|ATTRIBUTE_NAME Description|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
+|**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *xxxx* - *x.xx.xxxx*<br/><br> For example, `Microsoft SQL Server 2017 - 14.0.3257.3`|  
 |**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
@@ -87,7 +87,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  **sp_server_info** returns a subset of the information provided by **SQLGetInfo** in ODBC.  
   
 ## Permissions  
- Requires SELECT permission on the schema.  
+Requires membership in the **public** role. 
   
 ## See Also  
  [Catalog Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   

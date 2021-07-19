@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "08/04/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_database_firewall_rule"
   - "sp_delete_database_firewall_rule_TSQL"

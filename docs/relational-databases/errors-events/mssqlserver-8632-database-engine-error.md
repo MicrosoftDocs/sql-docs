@@ -6,7 +6,7 @@ ms.date: 10/27/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "8632 (Database Engine error)"
 ms.assetid: 

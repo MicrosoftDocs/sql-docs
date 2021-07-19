@@ -1,19 +1,15 @@
 # YamlMime:ZonePivotGroups
 # GitHub repository = 'MicrosoftDocs/sql-docs-pr/docs/machine-learning'
 groups:
-- id: python-custom-runtime-platform
-  title: Platform
-  prompt: Choose your platform
+- id: sqlml-platforms
+  title: Platforms
+  prompt: Choose a platform
   pivots:
-  - id: python-custom-runtime-windows
+  - id: platform-windows
     title: Windows
-  - id: python-custom-runtime-linux
-    title: Linux
-- id: r-custom-runtime-platform
-  title: Platform
-  prompt: Choose your platform
-  pivots:
-  - id: r-custom-runtime-windows
-    title: Windows
-  - id: r-custom-runtime-linux
-    title: Linux
+  - id: platform-linux-ubuntu
+    title: Ubuntu Linux
+  - id: platform-linux-rhel
+    title: Red Hat Enterprise Linux
+  - id: platform-linux-sles
+    title: SUSE Linux Enterprise Server

@@ -46,7 +46,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 |Parameter|Description|
 |---|---|

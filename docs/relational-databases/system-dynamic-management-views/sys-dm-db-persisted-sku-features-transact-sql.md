@@ -6,7 +6,7 @@ ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_persisted_sku_features_TSQL"
   - "sys.dm_db_persisted_sku_features"
@@ -60,7 +60,7 @@ ms.author: wiassaf
 -   **TransparentDataEncryption.** Indicates that a database is encrypted by using transparent data encryption. To remove transparent data encryption, use the ALTER DATABASE statement. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, these features, except **TransparentDataEncryption.** are available across multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1, these features, except **TransparentDataEncryption.** are available across multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
 
  To determine whether a database uses any features that are restricted to specific editions, execute the following statement in the database:  
   

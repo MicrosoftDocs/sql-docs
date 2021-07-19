@@ -4,10 +4,10 @@ title: "sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/28/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_partition_stats"
   - "dm_db_partition_stats_TSQL"
@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns page and row-count information for every partition in the current database.  
   
 > [!NOTE]  
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure Synapse Analytics.
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure Synapse Analytics. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

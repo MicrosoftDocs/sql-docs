@@ -3,10 +3,10 @@ title: "REPLACE (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the REPLACE function, which replaces all occurrences of a specified string value with another string value."
 ms.date: "08/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "REPLACE_TSQL"
   - "REPLACE"
@@ -43,7 +43,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *string_expression* can be of a character or binary data type.  
   
  *string\_pattern*  
- Is the substring to be found. *string_pattern* can be of a character or binary data type. *string_pattern* cannot be an empty string (''), and must not exceed the maximum number of bytes that fits on a page.  
+ Is the substring to be found. *string_pattern* can be of a character or binary data type. *string_pattern* must not exceed the maximum number of bytes that fits on a page. If *string_pattern* is an empty string (''), *string_expression* is returned unchanged. 
   
  *string\_replacement*  
  Is the replacement string. *string_replacement* can be of a character or binary data type.  
@@ -61,7 +61,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in REPLACE.  
   
 ## Examples  
- The following example replaces the string `cde` in `abcdefghi` with `xxx`.  
+ The following example replaces the string `cde` in `abcdefghicde` with `xxx`.  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  

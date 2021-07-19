@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Contained Database Collations
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -125,12 +125,12 @@ END;
 |User Data (default)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Temp Data (default)|TempDB Collation|DATABASE_DEFAULT|  
 |Metadata|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
-|Temporary Metadata|tempdb Collation|CATALOG_DEFAULT|  
+|Temporary Metadata|TempDB Collation|CATALOG_DEFAULT|  
 |Variables|Instance Collation|CATALOG_DEFAULT|  
 |Goto Labels|Instance Collation|CATALOG_DEFAULT|  
 |Cursor Names|Instance Collation|CATALOG_DEFAULT|  
   
- If we temp table example previously described, we can see that this collation behavior eliminates the need for an explicit **COLLATE** clause in most temp table uses. In a contained database, this code now runs without error, even if the database and instance collations differ:  
+ In the temp table example previously described, we can see that this collation behavior eliminates the need for an explicit **COLLATE** clause in most temp table uses. In a contained database, this code now runs without error, even if the database and instance collations differ:  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

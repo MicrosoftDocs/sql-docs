@@ -6,7 +6,7 @@ ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 
@@ -19,7 +19,10 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Monitors real time data warehouse query progress while the query is in execution.   
+Monitors real time data warehouse query progress while the query is in execution. 
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 ## Table returned
   
@@ -63,7 +66,7 @@ The counters returned are per operator per thread. The results are dynamic and d
 |segment_read_count|**int**|Number of segment read-aheads so far.|  
 |segment_skip_count|**int**|Number of segments skipped so far.| 
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
-|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
+|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
   
 ## Remarks
 

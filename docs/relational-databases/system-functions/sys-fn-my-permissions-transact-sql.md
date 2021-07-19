@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_my_permissions_TSQL"
   - "fn_my_permissions_TSQL"
@@ -76,7 +76,11 @@ GO
 ```  
   
  If DEFAULT is supplied as the value of *securable* or *securable_class*, the value will be interpreted as NULL.  
-  
+ 
+   
+## Permissions  
+ Requires membership in the public role.  
+ 
 ## Examples  
   
 ### A. Listing effective permissions on the server  

@@ -4,10 +4,10 @@ title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_spaceused_TSQL"
   - "sp_spaceused"
@@ -35,8 +35,10 @@ sp_spaceused [[ @objname = ] 'objname' ]
 [, [ @mode = ] 'mode' ]  
 [, [ @oneresultset = ] oneresultset ]  
 [, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
-```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+```
+  
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 

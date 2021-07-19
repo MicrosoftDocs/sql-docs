@@ -89,7 +89,7 @@ SELECT * FROM Employee
         WHERE EmployeeID = 1000 ORDER BY ValidFrom;
 ```
 
-Replace FOR SYSTEM_TIME BETWEEN...AND with FOR SYSTEM_TIME ALL to analyze the entire history of data changes for that particular employee:
+Replace `FOR SYSTEM_TIME BETWEEN...AND` with `FOR SYSTEM_TIME ALL` to analyze the entire history of data changes for that particular employee:
 
 ```sql
 SELECT * FROM Employee
@@ -97,7 +97,7 @@ SELECT * FROM Employee
         EmployeeID = 1000 ORDER BY ValidFrom;
 ```
 
-To search for row versions that were active only within a period (and not outside of it), use CONTAINED IN. This query is very efficient because it only queries the history table:
+To search for row versions that were active only within a period (and not outside of it), use `CONTAINED IN`. This query is very efficient because it only queries the history table:
 
 ```sql
 SELECT * FROM Employee FOR SYSTEM_TIME
@@ -111,7 +111,7 @@ Finally, in some audit scenarios, you may want to see how entire table looked li
 SELECT * FROM Employee FOR SYSTEM_TIME AS OF '2014-01-01 00:00:00.0000000' ;
 ```
 
-System-versioned temporal tables store values for period columns in UTC time zone, while it is always more convenient to work with local time zone both for filtering data and displaying results. The following code example shows how to apply filtering condition that is originally specified in the local time zone and then converted to UTC using AT TIME ZONE introduced in SQL Server 2016:
+System-versioned temporal tables store values for period columns in UTC time zone, while it is always more convenient to work with local time zone both for filtering data and displaying results. The following code example shows how to apply filtering condition that is originally specified in the local time zone and then converted to UTC using `AT TIME ZONE` introduced in SQL Server 2016:
 
 ```sql
 /*Add offset of the local time zone to current time*/
@@ -129,16 +129,16 @@ SELECT
     , ValidFrom AT TIME ZONE 'Pacific Standard Time' AS ValidFromPT
     , ValidTo AT TIME ZONE 'Pacific Standard Time' AS ValidToPT
 FROM Employee
-    FOR SYSTEM_TIME AS OF @asOf where EmployeeId = 1000
+    FOR SYSTEM_TIME AS OF @asOf where EmployeeId = 1000;
 ```
 
-Using AT TIME ZONE is helpful in all other scenarios where system-versioned tables are used.
+Using `AT TIME ZONE` is helpful in all other scenarios where system-versioned tables are used.
 
 > [!TIP]
-> Filtering conditions specified in temporal clauses with FOR SYSTEM_TIME are SARG-able (i.e SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation.
-> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
-> If you apply AT TIME ZONE to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:
-> \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition.
+> Filtering conditions specified in temporal clauses with `FOR SYSTEM_TIME` are SARGable. (SARGable means that SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation. For more information, see [SQL Server Index Architecture and Design Guide](../sql-server-index-design-guide.md#query-considerations).)
+> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of `\<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'`.
+> If you apply `AT TIME ZONE` to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:
+> `\<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition`.
 
 See also: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 
@@ -187,8 +187,8 @@ BEGIN
     BEGIN
         ALTER TABLE [dbo].[ProductInventory] SET (SYSTEM_VERSIONING = OFF)
     END
-    DROP TABLE IF EXISTS [dbo].[ProductInventory]
-       DROP TABLE IF EXISTS [dbo].[ProductInventoryHistory]
+    DROP TABLE IF EXISTS [dbo].[ProductInventory];
+       DROP TABLE IF EXISTS [dbo].[ProductInventoryHistory];
 END
 GO
 
@@ -321,7 +321,7 @@ ALTER TABLE [Location]
     SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.LocationHistory));
 ```
 
-Since the data model now involves multiple temporal tables, the best practice for AS OF analysis is to create a view that extracts necessary data from the related tables and apply FOR SYSTEM_TIME AS OF to the view as this will greatly simplify reconstructing the state of entire data model:
+Since the data model now involves multiple temporal tables, the best practice for `AS OF` analysis is to create a view that extracts necessary data from the related tables and apply `FOR SYSTEM_TIME AS OF` to the view as this will greatly simplify reconstructing the state of entire data model:
 
 ```sql
 DROP VIEW IF EXISTS vw_ProductInventoryDetails;
@@ -342,7 +342,7 @@ SELECT * FROM vw_ProductInventoryDetails
     FOR SYSTEM_TIME AS OF '2015.01.01';
 ```
 
-The following picture shows the execution plan generated for the SELECT query. This illustrates that all complexity of dealing with temporal relations is fully handled by the SQL Server engine:
+The following picture shows the execution plan generated for the `SELECT` query. This illustrates that all complexity of dealing with temporal relations is fully handled by the SQL Server engine:
 
 ![Diagram showing the execution plan generated for the SELECT query illustrating that all complexity of dealing with temporal relations is fully handled by the SQL Server engine.](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
@@ -519,7 +519,7 @@ AS
 ;WITH History
 AS
 (
-        /* Order historical rows by tehir age in DESC order*/
+        /* Order historical rows by their age in DESC order*/
         SELECT ROW_NUMBER () OVER (PARTITION BY EmployeeID ORDER BY [ValidTo] DESC) AS RN, *
         FROM Employee FOR SYSTEM_TIME ALL WHERE YEAR (ValidTo) < 9999 AND Employee.EmployeeID = @EmployeeID
 )
@@ -572,7 +572,7 @@ Data correction can become part of automated data loading in data warehousing an
 ## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
+- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
 - [Temporal Table System Consistency Checks](../../relational-databases/tables/temporal-table-system-consistency-checks.md)
 - [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)
 - [Temporal Table Considerations and Limitations](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)

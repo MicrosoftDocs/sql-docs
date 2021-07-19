@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "833 (Database Engine error)"
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b

@@ -4,7 +4,7 @@ description: To run code examples for importing and exporting bulk data in SQL S
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)
@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Many of the code examples in [Importing and Exporting Bulk Data](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) require a special-purpose test table named **myTeam**. Before you can run the examples, you must create the **myTeam** table in the **HumanResources** schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is one of the sample databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is one of the sample databases in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  The **myTeam** table contains the following columns.  
   

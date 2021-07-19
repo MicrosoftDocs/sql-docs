@@ -1,8 +1,8 @@
 ---
 title: Secure SQL Server Docker containers
 description: Understand the different ways to secure SQL Server Docker containers and how you can run containers as different non-root user on the host
-author: vin-yu
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
@@ -121,9 +121,10 @@ This can be the default non-root user, or any other non-root user you’d like t
 ```bash
 chown -R 10001:0 <database file dir>
 ```
+
 ## Encrypting connections to SQL Server Linux Containers
 
-To encrypt connections to SQL Server Linux containers, you will need a certificate the requirements of which are documented [here].
+To encrypt connections to SQL Server Linux containers, you will need a certificate with the following [requirements](sql-server-linux-encrypted-connections.md).
 
 Below is an example of how the connection can be encrypted to SQL Server Linux Containers. Here we use a Self-Signed Certificate, this should not be used for production scenarios for such environments, you should use CA certificates.
 
@@ -170,11 +171,7 @@ Below is an example of how the connection can be encrypted to SQL Server Linux C
     > [!NOTE]
     > If you are using RHEL 8 and above you can also use the \'podman run\' command instead of \'docker run\'. 
 
-Follow the \"Register the certificate on your client machine\" and \"Example connection strings\" sections documented [here][1] to start encrypting connections to SQL Server on Linux containers.
-
-  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
-  [here]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
-  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
+Follow the \"Register the certificate on your client machine\" and \"Example connection strings\" sections documented in [Client Initiated Encryption](sql-server-linux-encrypted-connections.md#client-initiated-encryption) to start encrypting connections to SQL Server on Linux containers.
 
 ## Next steps
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC], Cursor Library"
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2

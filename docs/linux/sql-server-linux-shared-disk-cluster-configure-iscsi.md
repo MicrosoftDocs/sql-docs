@@ -52,7 +52,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
     See the following example:
 
-    ![Screenshot of the file with the files completely filled out.][2]
+    ![Screenshot of the file with the values completely filled out.][2]
 
 3.	Find the iSCSI target.
 

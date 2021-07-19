@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_rda_test_connection"
   - "sys.sp_rda_test_connection_TSQL"

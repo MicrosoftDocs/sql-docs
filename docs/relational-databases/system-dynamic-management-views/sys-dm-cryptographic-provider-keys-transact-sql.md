@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_cryptographic_provider_keys_TSQL"
   - "dm_cryptographic_provider_keys_TSQL"
@@ -26,7 +26,10 @@ ms.author: wiassaf
   Returns information about the keys provided by a Extensible Key Management (EKM) provider.  
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!IMPORTANT]
+> This dynamic management view is currently not supported by the SQL Server EKM Connector. The SQL Server product team is aware of this issue and will address this in the future.
+
 ## Syntax  
   
 ```  

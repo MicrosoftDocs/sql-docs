@@ -6,7 +6,7 @@ ms.date: "05/19/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DELETE"
   - "DELETE_TSQL"

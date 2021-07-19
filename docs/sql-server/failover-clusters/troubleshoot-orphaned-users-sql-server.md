@@ -4,7 +4,7 @@ description: Orphaned users occur when a database user login no longer exist in 
 ms.custom: "seo-lt-2019"
 ms.date: "07/14/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: troubleshooting

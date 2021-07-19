@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "07/27/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_firewall_rule_TSQL"
   - "sp_delete_firewall_rule"

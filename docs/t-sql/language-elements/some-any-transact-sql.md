@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SOME"
   - "SOME_TSQL"
@@ -111,7 +111,7 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can''t be manufactured in specified number of days.'
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   

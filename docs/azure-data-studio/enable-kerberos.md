@@ -6,12 +6,12 @@ ms.technology: azure-data-studio
 ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
+ms.date: 05/03/2021
 ---
 
-# Connect Azure Data Studio to SQL Server using Windows authentication - Kerberos
+# Connect Azure Data Studio to SQL Server using Kerberos
 
 Azure Data Studio supports connecting to SQL Server by using Kerberos.
 
@@ -22,15 +22,13 @@ To use integrated authentication (Windows Authentication) on macOS or Linux, you
 To get started, you need:
 
 - Access to a Windows domain-joined machine to query your Kerberos domain controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is supported only by using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be service principal names (SPNs) registered for each instance of SQL Server you're trying to connect to. For more information, see [Registering a service principal name](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats).
-
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is supported only by using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be [service principal names (SPNs)](/windows/win32/ad/service-principal-names) registered for each instance of SQL Server you're trying to connect to. For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## Check if SQL Server has a Kerberos setup
 
-Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com, which means that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
+Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. Verify there are entries that begin with MSSQLSvc/HostName.Domain.com. These entries mean that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
 
 If you don't have access to the host of the SQL Server instance, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>`, where *<SQLSERVER_NETBIOS>* is the computer name of the host of the SQL Server instance.
-
 
 ## Get the Kerberos Key Distribution Center
 
@@ -89,6 +87,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ```
    
 ### RedHat Enterprise Linux
+
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -120,11 +119,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### macOS
+### Configure KDC in krb5.conf with macOS
 
-Join your macOS to the Active Directory domain controller by following these steps.
-
-## Configure KDC in krb5.conf
+This section discusses the [Kerberos configuration file](http://web.mit.edu/macdev/KfM/Common/Documentation/preferences-osx.html).
 
 Edit the `/etc/krb5.conf` file in an editor of your choice. Configure the following keys:
 
@@ -146,7 +143,7 @@ Then save the krb5.conf file and exit.
 > The domain must be in ALL CAPS.
 
 
-## Test the Ticket Granting Ticket retrieval
+## Test the ticket granting ticket retrieval
 
 Get a Ticket Granting Ticket (TGT) from KDC.
 

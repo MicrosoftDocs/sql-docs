@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "events [SQL Server], event classes"
   - "event classes [SQL Server], listed"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server event classes, listed"
   - "SQL Server event classes"
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Event Class Reference

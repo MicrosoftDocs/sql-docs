@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 01/19/2017
 ms.prod: sql
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "data types [ODBC], parameters"
   - "parameter data type [ODBC]"

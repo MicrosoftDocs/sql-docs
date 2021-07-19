@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FOR XML query"
   - "queries [XML in SQL Server], comparing query types"
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FOR XML Query Compared to Nested FOR XML Query
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

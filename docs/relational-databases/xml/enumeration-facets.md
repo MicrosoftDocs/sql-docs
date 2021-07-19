@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "enumeration facets"
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Enumeration Facets
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

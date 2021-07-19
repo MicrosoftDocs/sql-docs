@@ -6,7 +6,7 @@ ms.date: "07/27/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CHECKPOINT_TSQL"
   - "CHECKPOINT"

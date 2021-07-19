@@ -1,8 +1,8 @@
 ---
 title: "Step 3: Connecting to SQL using Java"
-description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Java and JDBC. The basic examples demonstrate selecting and inserting data."
+description: Step 3 is a proof of concept, which shows how you can connect to SQL Server using Java and JDBC. The basic examples demonstrate selecting and inserting data.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -13,14 +13,14 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using Java
-  
-This example should be considered a proof of concept only. The sample code is simplified for clarity, and doesn't necessarily represent best practices recommended by Microsoft.  
-  
-## Step 1: Connect  
-  
-Use the connection class to connect to SQL Database.   
-  
-```java  
+
+This example should be considered a proof of concept only. The sample code is simplified for clarity, and doesn't necessarily represent best practices recommended by Microsoft.
+
+## Step 1: Connect
+
+Use the connection class to connect to SQL Database.
+
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -47,12 +47,13 @@ public class SQLDatabaseConnection {
         }
     }
 }
-```  
-  
-## Step 2: Execute a query  
-In this sample, connect to Azure SQL Database, execute a SELECT statement, and return selected rows.   
-  
-```java  
+```
+
+## Step 2: Execute a query
+
+In this sample, connect to Azure SQL Database, execute a SELECT statement, and return selected rows.
+
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -92,12 +93,13 @@ public class SQLDatabaseConnection {
         }
     }
 }
-```  
-  
-## Step 3: Insert a row  
-In this example, execute an INSERT statement, pass parameters, and retrieve the auto-generated Primary Key value.   
-  
-```java  
+```
+
+## Step 3: Insert a row
+
+In this example, execute an INSERT statement, pass parameters, and retrieve the auto-generated Primary Key value.
+
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -141,7 +143,8 @@ public class SQLDatabaseConnection {
         }
     }
 }
-```  
-  
-## Additional samples  
+```
+
+## Additional samples
+
 [Sample JDBC driver applications](../../connect/jdbc/sample-jdbc-driver-applications.md)

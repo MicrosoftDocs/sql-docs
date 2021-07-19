@@ -2,15 +2,15 @@
 description: "Publish a Database (SQL Server Management Studio)"
 title: "Publish a Database (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Publish a Database (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -19,26 +19,19 @@ ms.author: "sstein"
 > [!NOTE]  
 >  The functionality described in this topic used to be provided by the Publish Database Wizard. The publishing functionality has been added to the Generate and Publish Scripts Wizard, and the Publish Database Wizard has been discontinued.  
   
-## Generate and Publish Scripts Wizard  
- The Generate and Publish Scripts Wizard can be used to publish a database or selected database objects to a Web hosting provider. A SQL Server Web hosting provider is a connectivity interface to a Web service. The Web service is created by using the Database Publishing Services project from the SQL Server Hosting Toolkit on CodePlex. The Web service makes it easy for the Web hoster customers to publish their databases to the service by using the Generate and Publish Scripts Wizard. For more information about downloading the SQL Server Hosting Toolkit, see [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
+## Generate Scripts Wizard  
   
- The Generate and Publish Scripts Wizard can also be used to create a script for transferring a database.  
+ The Generate Scripts Wizard can be used to create a script for transferring a database.  
   
-#### To publish a database to a Web service  
+#### To publish a database   
   
-1.  In Object Explorer, expand **Databases**, right-click a database, point to **Tasks**, and then click **Generate and Publish Scripts**. Follow the steps in the wizard to script the database objects for publishing.  
+1.  In Object Explorer, expand **Databases**, right-click a database, point to **Tasks**, and then click **Generate Scripts**. Follow the steps in the wizard to script the database objects.  
   
-2.  On the **Choose Objects** page, select the objects to be published to the Web hosting service.  
+2.  On the **Choose Objects** page, select the objects to be published.  
   
-3.  On the **Set Scripting Options** page, select **Publish to Web Service**.  
+3.  On the **Set Scripting Options** page, modify script with **Advance** options, then select **Save as script file**.  
   
-    1.  In the **Provider** box, specify the provider for your Web service. If you have not configured a Web hosting provider, select **Manage Providers** and use the **Manage Providers** dialog box to configure a provider for your Web service.  
-  
-    2.  To specify advanced publishing options, select the **Advanced** button in the **Publish to Web Service** section.  
-  
-4.  On the **Summary** page, review your selections. Click **Previous** to change your selections. Click **Next** to publish the objects you selected.  
-  
-5.  On the **Save or Publish Scripts** page, monitor the progress of the publication.  
+   
 
 ## See Also  
  [Generate Scripts &#40;SQL Server Management Studio&#41;](../../ssms/scripting/generate-scripts-sql-server-management-studio.md)   

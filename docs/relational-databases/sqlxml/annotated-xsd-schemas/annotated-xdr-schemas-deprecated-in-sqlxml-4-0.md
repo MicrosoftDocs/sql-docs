@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "annotated XDR schemas"
   - "schemas [SQLXML]"
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)

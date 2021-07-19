@@ -150,7 +150,7 @@ Scripts generated will be targeted for the specified [Engine Edition](/dotnet/ap
 Scripts generated will be targeted for the specified [Database Engine Type](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)).
 
 **Script for server version**  
-Scripts generated will be targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Scripts generated will be targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## See also  
 [Generate Scripts (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

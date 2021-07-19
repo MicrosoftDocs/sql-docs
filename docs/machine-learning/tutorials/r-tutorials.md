@@ -8,7 +8,7 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.reviewer: garye, davidph
-ms.date: 05/21/2020  
+ms.date: 05/07/2021
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
@@ -60,4 +60,4 @@ If you are new to SQL machine learning, you can also try the R quickstarts.
 
 ## Next steps
 
-+ [Python extension in SQL Server](../concepts/extension-r.md)
++ [R extension in SQL Server](../concepts/extension-r.md)

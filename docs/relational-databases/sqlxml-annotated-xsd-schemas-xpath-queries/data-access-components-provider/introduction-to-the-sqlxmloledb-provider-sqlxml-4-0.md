@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "adExecuteStream flag"
   - "SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider"
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

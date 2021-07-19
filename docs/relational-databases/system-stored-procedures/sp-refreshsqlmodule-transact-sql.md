@@ -1,13 +1,11 @@
 ---
+title: sp_refreshsqlmodule (Transact-SQL)
 description: "sp_refreshsqlmodule (Transact-SQL)"
-title: "sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_refreshsqlmodule_TSQL"
   - "sp_refreshsqlmodule"
@@ -23,17 +21,20 @@ helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
-ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: "07/25/2018"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sp_refreshsqlmodule (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects.
+Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects. For example, you might see an error like `The definition for user-defined data type 'typename' has changed`. Refreshing the metadata for the module that uses the type specified in the error might resolve the problem.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

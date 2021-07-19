@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "message_type_xml_schema_collection_usages_TSQL"
   - "sys.message_type_xml_schema_collection_usages_TSQL"

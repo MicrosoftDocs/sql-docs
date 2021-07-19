@@ -4,7 +4,7 @@ description: Learn about the software prerequisites necessary to use data access
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"

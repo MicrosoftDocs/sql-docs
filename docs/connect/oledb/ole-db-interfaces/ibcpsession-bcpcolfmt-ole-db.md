@@ -4,10 +4,10 @@ description: Learn how the IBCPSession::BCPColFmt method creates a binding betwe
 ms.custom: ""
 ms.date: "05/25/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "IBCPSession::BCPColFmt (OLE DB)"
 apitype: "COM"

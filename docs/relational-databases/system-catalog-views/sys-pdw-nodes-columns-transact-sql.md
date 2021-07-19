@@ -6,7 +6,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260

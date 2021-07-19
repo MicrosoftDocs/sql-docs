@@ -6,7 +6,7 @@ ms.date: "12/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_incremental_stats_properties"
   - "sys.dm_db_incremental_stats_properties_TSQL"
@@ -25,7 +25,7 @@ ms.author: wiassaf
 
   Returns properties of incremental statistics for the specified database object (table) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The use of `sys.dm_db_incremental_stats_properties` (which contains a partition number) is similar to `sys.dm_db_stats_properties` which is used for non-incremental statistics. 
   
-  This function was introduced in [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service Pack 2 and [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Service Pack 1.
+  This function was introduced in [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service Pack 2 and [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1.
   
 ## Syntax  
   

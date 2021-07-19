@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "hierarchies [Master Data Services], derived hierarchies"
   - "derived hierarchies, about derived hierarchies"
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Derived Hierarchies (Master Data Services)

@@ -49,11 +49,11 @@ author: cawrites
 # SQL Server 2019: Hardware and software requirements
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-The article lists the minimum hardware and software requirements to install and run SQL Server 2019 on the Windows operating system.
+The article lists the minimum hardware and software requirements to install and run [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on the Windows operating system.
 
-For hardware and software requirements for other versions of SQL Server, see:
-- [SQL Server 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
-- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
+For hardware and software requirements for other versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , see:
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Linux](../../linux/sql-server-linux-setup.md#system)
 - [Big data cluster](../../big-data-cluster/deployment-guidance.md)
 
 ##  <a name="pmosr"></a> Hardware requirements  
@@ -94,12 +94,12 @@ The following requirements apply to all installations:
 > There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
 
-##  <a name="TOP_Principal"></a> Operating system support 
+## Operating system support
 
-The following table shows which editions of SQL Server 2019 are compatible with which versions of Windows:  
+The following table shows which editions of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] are compatible with which versions of Windows:  
   
 
-| SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition:               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
@@ -115,7 +115,7 @@ The following table shows which editions of SQL Server 2019 are compatible with 
 
 ### Server core support
 
-Installing SQL Server 2019 on Server Core mode is supported by the following editions of Windows Server:
+Installing [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Server Core mode is supported by the following editions of Windows Server:
 
 :::row:::
     :::column:::
@@ -132,11 +132,11 @@ Installing SQL Server 2019 on Server Core mode is supported by the following edi
     :::column-end:::
 :::row-end:::
 
-For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
+For more information on installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core, see [Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
 
 ##  <a name="CrossLanguageSupport"></a> Cross-language support  
- For more information about cross-language support and considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in localized languages, see [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md).  
+ For more information about cross-language support and considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in localized languages, see [Local Language Versions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](../../sql-server/install/local-language-versions-in-sql-server.md).  
   
 ##  <a name="HardDiskSpace"></a>  Disk space requirements  
  During installation of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], Windows Installer creates temporary files on the system drive. Before you run Setup to install or upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verify that you have at least 6.0 GB of available disk space on the system drive for these files. This requirement applies even if you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to a non-default drive.  
@@ -167,13 +167,13 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
  The supported storage types for data files are:  
   
 - Local Disk 
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online.
 - Shared Storage  
 - [Storage Spaces Direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - SMB File Share  
     - SMB storage is not supported for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files for either standalone or clustered installations. Use direct attached storage, a storage area network, or S2D instead. 
-    - SMB storage can be hosted by a Windows File Server or a third-party SMB storage device. If Windows File Server is used, the Windows File Server version should be 2008 or later. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using SMB file share as a storage option, see [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    - SMB storage can be hosted by a Windows File Server or a third-party SMB storage device. If Windows File Server is used, the Windows File Server version should be 2008 or later. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using SMB file share as a storage option, see [Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
   
   
@@ -191,12 +191,12 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
 
 You can get relevant installation media from the following locations: 
   
-- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
-Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
+Alternatively, you can create an [Azure virtual machine already running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on a virtual machine will be slower than running natively because of the overhead of virtualization.
 
 
 ## Next steps
 
-Once you've reviewed the hardware and software requirements for installing SQL Server, you can start to [Plan a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
+Once you've reviewed the hardware and software requirements for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , you can start to [Plan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).

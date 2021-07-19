@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "location path for XPath query"
   - "axes [SQLXML]"
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

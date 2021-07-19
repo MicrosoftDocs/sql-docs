@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Errors collection [ADO], members"
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619

@@ -4,10 +4,10 @@ title: "SUSER_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/12/2020"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, sql-database"
+ms.prod_service: "synapse-analytics, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SUSER_NAME"
   - "SUSER_NAME_TSQL"

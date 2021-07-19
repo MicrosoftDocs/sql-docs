@@ -6,15 +6,15 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "nodes() method"
   - "nodes method"
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # nodes() Method (xml Data Type)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], queries"
   - "templates [SQLXML], annotated XSD schemas in queries"
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

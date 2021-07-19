@@ -35,9 +35,22 @@ catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime
  [ @use32bitruntime= ] *use32bitruntime*  
  When the parameter is set to **1**, the 32-bit version of dtexec is called. The *use32bitruntime* is an **int**.  
   
+ 
+## Return Code Value 
+Returns 0 for success. 
+
 ## Result Set  
- None  
-  
+
+Returns a table that has the following format:
+
+| Column name | Data type | Description |
+|---|---|---|
+| SERVER_BUILD | **decimal** | SQL Server version. For example, a server running SQL Server 2014 is `14.0.3335.7`. |
+| SCHEMA_VERSION | **tinyint** | SQL Server version number. For example, SQL Server 2017 and 2019 are `6` and `7` respectively.|
+| SCHEMA_BUILD | **string** | Schema build. |
+| ASSEMBLY_BUILD | **string** | Assembly build. |
+| SHARED_COMPONENT_VERSION | **string** | Shared component version. | 
+
 ## Permissions  
  This stored procedure requires the following permission:  
   

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "UDTs [SQL Server], XML"
   - "user-defined types [SQL Server], XML"
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)

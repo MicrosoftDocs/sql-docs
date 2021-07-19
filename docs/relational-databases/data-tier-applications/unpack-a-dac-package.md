@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "How to [DAC], unpack"
   - "unpack DAC"
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Unpack a DAC Package
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "functions [ODBC], setup DLL functions"
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191

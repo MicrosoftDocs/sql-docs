@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "xml columns [full-text search]"
   - "indexes [full-text search]"
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use Full-Text Search with XML Columns
 

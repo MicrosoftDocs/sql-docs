@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], modifying"
   - "modifying indexes"
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Modify XML Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

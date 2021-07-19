@@ -45,7 +45,7 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 
 - [Node.js](https://nodejs.org) installed and available in your `$PATH`. Node.js includes [npm](https://www.npmjs.com/), the Node.js Package Manager, which is used to install the extension generator.
 - [Visual Studio Code](https://code.visualstudio.com) to make any changes to your extension and debug the extension.
-- Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the **Add to Path** option in setup.exe. For Mac or Linux, run the **Install 'azuredatastudio' command in PATH** option.
+- Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the **Add to Path** option in setup.exe. For Mac or Linux, run **Install 'azuredatastudio' command in PATH** from the Command Palette in Azure Data Studio.
 
 ## Install the extension generator
 

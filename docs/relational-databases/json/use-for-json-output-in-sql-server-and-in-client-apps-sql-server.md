@@ -87,20 +87,24 @@ SET Details =
   
 ```csharp  
 var queryWithForJson = "SELECT ... FOR JSON";
-var conn = new SqlConnection("<connection string>");
-var cmd = new SqlCommand(queryWithForJson, conn);
-conn.Open();
-var jsonResult = new StringBuilder();
-var reader = cmd.ExecuteReader();
-if (!reader.HasRows)
+using(var conn = new SqlConnection("<connection string>"))
 {
-    jsonResult.Append("[]");
-}
-else
-{
-    while (reader.Read())
+    using(var cmd = new SqlCommand(queryWithForJson, conn))
     {
-        jsonResult.Append(reader.GetValue(0).ToString());
+        conn.Open();
+        var jsonResult = new StringBuilder();
+        var reader = cmd.ExecuteReader();
+        if (!reader.HasRows)
+        {
+            jsonResult.Append("[]");
+        }
+        else
+        {
+            while (reader.Read())
+            {
+                jsonResult.Append(reader.GetValue(0).ToString());
+            }
+        }
     }
 }
 ```  

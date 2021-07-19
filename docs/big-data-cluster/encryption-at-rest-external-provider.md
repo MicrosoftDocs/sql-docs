@@ -63,7 +63,8 @@ For example: The key file may be added to the KV store in Hashicorp Vault at pat
     * File ```custom_softhsm.py``` contains a reference implementation using SoftHSM
     * File ```custom_akv.py``` contains a Azure Key Vault example
     * File ```custom_hcv.py``` contains a HashiCorp Vault example.
-    > [!CAUTION] Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed.
+> [!CAUTION] 
+> Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed.
 
 1. Name the file you are creating from the template above accordingly. For example, save ```custom_softhsm.py``` as ```my_custom_integration_v1.py``` and then perform your customizations. This is important for the next step.
 1. ```app.py``` is the entry point that will load the application, understand it completely before deploying. In this file you are __required to change line eleven__ to point to the custom file name (without the .py extension) from the previous step. Per example above, change:

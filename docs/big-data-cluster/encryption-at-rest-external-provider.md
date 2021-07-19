@@ -58,7 +58,7 @@ For example: The key file may be added to the KV store in Hashicorp Vault at pat
 ### 2 - Customize and deploy the integration application on BDC
 
 1. In your local machine, navigate to the folder containing [kms_plugin_app](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider) BDC AppDeploy template applications.
-1. Customize the application by choose one of the templates and adjusting it to your scenario:
+1. Customize the application by choosing one of the templates and adjusting it to your scenario:
 
     * File ```custom_softhsm.py``` contains a reference implementation using SoftHSM
     * File ```custom_akv.py``` contains a Azure Key Vault example

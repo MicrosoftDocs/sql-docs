@@ -69,4 +69,4 @@ ADF is now a [trusted Microsoft service](/azure/storage/common/storage-network-s
 secure your storage account by [limiting access to selected networks](/azure/storage/common/storage-network-security.md#change-the-default-network-access-rule) while still allowing your ADF to access it. Please refer to the [Managing exceptions](/azure/storage/common/storage-network-security.md#managing-exceptions) article for instructions.
 
 ## See also
-[Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)
+- [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

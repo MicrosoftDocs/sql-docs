@@ -156,6 +156,6 @@ Finally, you can configure AAD authentication with the specified system/user-ass
 To configure AAD authentication with the specified system/user-assigned managed identity for your ADF on your existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](../../ssdt/download-sql-server-data-tools-ssdt.md) at least once. Redeploy your SSIS project to run on Azure-SSIS IR, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all OLEDB connection managers in your project. The alternative way is to directly use property overrides with the property path *\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]* assigned to `True` at run time.
 
 ## See also
-[OLEDB Source](../../integration-services/data-flow/ole-db-source.md)
-[OLEDB Destination](../../integration-services/data-flow/ole-db-destination.md)
-[Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)
+- [OLEDB Source](../../integration-services/data-flow/ole-db-source.md)
+- [OLEDB Destination](../../integration-services/data-flow/ole-db-destination.md)
+- [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

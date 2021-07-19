@@ -11,7 +11,7 @@ metadata:
   ms.technology: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.date: 07/16/2021
+  ms.date: 07/19/2021
   ms.prod: sql
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -45,6 +45,112 @@ landingContent:
           - text: Run a spark job
             url: spark-submit-job.md
   
+  # Card (Load data)
+  - title: Load data
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Virtualize CSV
+          url: ../relational-databases/polybase/data-virtualization-csv.md
+        - text: Configure HDFS tiering
+          url: hdfs-tiering.md
+        - text: Mount ADLS Gen2
+          url: hdfs-tiering-mount-adlsgen2.md
+      - linkListType: concept
+        links:
+        - text: Data ingestion - curl
+          url: data-ingestion-curl.md
+        - text: Data ingestion - restore 
+          url: data-ingestion-restore-database.md
+      - linkListType: tutorial
+        links: 
+        - text: Sample notebook using Spark
+          url: notebooks-tutorial-spark.md
+        - text: Ingest data into data pool with Spark jobs
+          url: tutorial-data-pool-ingest-spark.md
+        - text: Ingest data into data pool with T-SQL
+          url: tutorial-data-pool-ingest-sql.md
+        - text: Load Sample Data
+          url: tutorial-load-sample-data.md
+
+  # Card (ML)
+  - title: Big Data and ML
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: ML Services
+          url: machine-learning-services.md
+        - text: Install big data tools
+          url: deploy-big-data-tools.md          
+      - linkListType: how-to-guide
+        links:
+        - text: Create, export, and score Spark ML models
+          url: spark-create-machine-learning-model.md
+        - text: Spark library management
+          url: spark-install-packages.md
+        - text: Sparklyr from RStudio
+          url: sparklyr-from-RStudio.md      
+        - text: Spark Streaming guide
+          url: spark-streaming-guide.md
+        - text: Delta Lake
+          url: package-management-delta-lake.md
+      - linkListType: tutorial
+        links:
+        - text: Run a sample notebook using Spark
+          url: notebooks-tutorial-spark.md
+        - text: Query HDFS 
+          url: tutorial-query-hdfs-storage-pool.md
+        - text: Query Oracle
+          url: tutorial-query-Oracle.md
+          
+  # Card (Architect)
+  - title: Architect
+    linkLists:
+      - linkListType: architecture
+        links:
+          - text: Deploy on Kubernetes
+            url: deployment-guidance.md
+          - text: Resources deployed
+            url: concept-architecture-pods.md
+          - text: Security
+            url: concept-security.md
+          - text: Configure HDFS tiering
+            url: hdfs-tiering.md          
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Deploy on AKS with Notebook
+            url: notebooks-deploy.md
+          - text: Configure deployment settings
+            url: deployment-custom-configuration.md
+          - text: Configure settings post-deployment            
+            url: configure-bdc-postdeployment.md
+          - text: Deploy offline
+            url: deploy-offline.md
+          - text: Private cluster deploy
+            url: private-deploy.md
+          - text: Upgrade
+            url: deployment-upgrade.md
+      - linkListType: quickstart
+        links:
+          - text: Deploy on Azure Kubernetes Service (AKS)
+            url: quickstart-big-data-cluster-deploy.md
+          - text: Deploy on Azure Red Hat OpenShift (ARO)
+            url: quickstart-big-data-cluster-deploy-aro.md  
+          - text: Deploy on OpenShift
+            url: deploy-openshift.md            
+      - linkListType: tutorial
+        links:
+          - text: Configure AKS for Big Data Clusters
+            url: deploy-on-aks.md
+          - text: Kubeadm 
+            url: deploy-with-kubeadm.md
+          - text: Deploy with high availability
+            url: deployment-high-availability.md
+          - text: Deploy in Active Directory mode
+            url: deploy-active-directory.md
+
   # Card (Manage)
   - title: Administration and Logging
     linkLists:        
@@ -102,112 +208,6 @@ landingContent:
           url: encryption-at-rest-hdfs-encryption-zones.md
         - text: TDE usage guide
           url: encryption-at-rest-sql-server-tde.md     
-          
-  # Card (Architect)
-  - title: Architect
-    linkLists:
-      - linkListType: architecture
-        links:
-          - text: Deploy on Kubernetes
-            url: deployment-guidance.md
-          - text: Resources deployed
-            url: concept-architecture-pods.md
-          - text: Security
-            url: concept-security.md
-          - text: Configure HDFS tiering
-            url: hdfs-tiering.md          
-      - linkListType: how-to-guide
-        links:
-          - text: Deploy
-            url: deploy-get-started.md
-          - text: Deploy on AKS with Notebook
-            url: notebooks-deploy.md
-          - text: Configure deployment settings
-            url: deployment-custom-configuration.md
-          - text: Configure settings post-deployment            
-            url: configure-bdc-postdeployment.md
-          - text: Deploy offline
-            url: deploy-offline.md
-          - text: Private cluster deploy
-            url: private-deploy.md
-          - text: Upgrade
-            url: deployment-upgrade.md
-      - linkListType: quickstart
-        links:
-          - text: Deploy on Azure Kubernetes Service (AKS)
-            url: quickstart-big-data-cluster-deploy.md
-          - text: Deploy on Azure Red Hat OpenShift (ARO)
-            url: quickstart-big-data-cluster-deploy-aro.md  
-          - text: Deploy on OpenShift
-            url: deploy-openshift.md            
-      - linkListType: tutorial
-        links:
-          - text: Configure AKS for Big Data Clusters
-            url: deploy-on-aks.md
-          - text: Kubeadm 
-            url: deploy-with-kubeadm.md
-          - text: Deploy with high availability
-            url: deployment-high-availability.md
-          - text: Deploy in Active Directory mode
-            url: deploy-active-directory.md
-
-  # Card (ML)
-  - title: Big Data and ML
-    linkLists:
-      - linkListType: concept
-        links:
-        - text: ML Services
-          url: machine-learning-services.md
-        - text: Install big data tools
-          url: deploy-big-data-tools.md          
-      - linkListType: how-to-guide
-        links:
-        - text: Create, export, and score Spark ML models
-          url: spark-create-machine-learning-model.md
-        - text: Spark library management
-          url: spark-install-packages.md
-        - text: Sparklyr from RStudio
-          url: sparklyr-from-RStudio.md      
-        - text: Spark Streaming guide
-          url: spark-streaming-guide.md
-        - text: Delta Lake
-          url: package-management-delta-lake.md
-      - linkListType: tutorial
-        links:
-        - text: Run a sample notebook using Spark
-          url: notebooks-tutorial-spark.md
-        - text: Query HDFS 
-          url: tutorial-query-hdfs-storage-pool.md
-        - text: Query Oracle
-          url: tutorial-query-Oracle.md
-
-  # Card (Load data)
-  - title: Load data
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-        - text: Virtualize CSV
-          url: ../relational-databases/polybase/data-virtualization-csv.md
-        - text: Configure HDFS tiering
-          url: hdfs-tiering.md
-        - text: Mount ADLS Gen2
-          url: hdfs-tiering-mount-adlsgen2.md
-      - linkListType: concept
-        links:
-        - text: Data ingestion - curl
-          url: data-ingestion-curl.md
-        - text: Data ingestion - restore 
-          url: data-ingestion-restore-database.md
-      - linkListType: tutorial
-        links: 
-        - text: Sample notebook using Spark
-          url: notebooks-tutorial-spark.md
-        - text: Ingest data into data pool with Spark jobs
-          url: tutorial-data-pool-ingest-spark.md
-        - text: Ingest data into data pool with T-SQL
-          url: tutorial-data-pool-ingest-sql.md
-        - text: Load Sample Data
-          url: tutorial-load-sample-data.md
 
   # Card (Related technologies)
   - title: Related technologies

@@ -28,6 +28,10 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 
 The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
 
+## Named Pipes
+
+Connecting to SQL Server on Linux via Named Pipes is not possible. Connecting to SQL Server on Linux via TCP/IP is supported.
+
 ## SQL Server Management Studio on Windows
 
 SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing SQL Server. Although it currently runs only on Windows, you can use it to remotely connect to your Linux SQL Server instances. For more information on using SSMS to manage SQL Server, see [Use SSMS to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).

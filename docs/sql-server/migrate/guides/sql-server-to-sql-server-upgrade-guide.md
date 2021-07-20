@@ -205,7 +205,7 @@ Additional considerations may be needed
 based on the complexity of your data and 
 environment.
 
-[Troubleshoot orphaned users.](/../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)
+[Troubleshoot orphaned users.](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
 [Migrating-triggers.](/../../relational-databases/linked-servers/linked-servers-database-engine.md)
 

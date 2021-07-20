@@ -46,7 +46,7 @@ Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x6
 |Debian Linux 10                |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
 |Oracle Linux 7                 |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Oracle Linux 8                 |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
-|Red Hat Enterprise Linux 6     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Red Hat Enterprise Linux 6     |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Red Hat Enterprise Linux 7     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Red Hat Enterprise Linux 8     |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
 |SUSE Linux Enterprise Server 11<sup>1</sup>|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
@@ -56,7 +56,6 @@ Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x6
 |Ubuntu Linux 16.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Ubuntu Linux 18.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
 |Ubuntu Linux 20.04             |Yes |Yes |Yes |    |    |    |    |    |    |    |   |
-|Ubuntu Linux 20.10             |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Ubuntu Linux 21.04             |Yes |Yes |    |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only

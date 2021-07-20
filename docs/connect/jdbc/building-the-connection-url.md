@@ -85,7 +85,7 @@ To use a JDBC URL property, use the following format:
 
 You might have to escape certain parts of the connection URL values if the values include special characters like spaces, semicolons, and quotation marks. The JDBC driver supports escaping these characters by enclosing them in braces. For example, {;} escapes a semicolon.
 
-Prior to version 8.4, escaped values can contain special characters (especially '=', ';', '[]', and space) but can't contain braces. Values that must be escaped and contain braces should be added to a properties collection.
+Before version 8.4, escaped values can contain special characters (especially '=', ';', '[]', and space) but can't contain braces. Values that must be escaped and contain braces should be added to a properties collection.
 
 In version 8.4 and above, escaped values can contain special characters, including braces. However, closing braces must be escaped. For example, with a password of `pass";{word`, a connection string would need to escape the password as follows:
 

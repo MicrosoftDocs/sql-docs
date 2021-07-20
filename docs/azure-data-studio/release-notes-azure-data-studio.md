@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 06/28/2021
+ms.date: 07/21/2021
 ---
 
 # Release notes for Azure Data Studio
@@ -19,34 +19,38 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### June 2021
+### July 2021
 
-Azure Data Studio 1.30.0 is the latest general availability (GA) release.
+Azure Data Studio 1.31.0 is the latest general availability (GA) release.
 
-- Release number: 1.30.0
-- Release date: June 17, 2021
+- Release number: 1.31.0
+- Release date: July 21, 2021
 
-#### What's new in 1.30.0
+#### What's new in 1.31.0
 
 | New item | Details |
 |----------|---------|
-| Results Grid | Added filtering/sorting feature for query result grid in query editor and notebook, the feature can be invoked from the column headers. note that this feature is only available when you enable the preview features. |
-| Results Grid | Added a status bar item to show summary of the selected cells if there are multiple numeric values |
-| Notebooks | Added new book icon |
-| Notebooks | Notebook URI Handler File Support |
-| Python | Updated Python to 3.8.10 |
+| Notebooks | WYSIWYG link improvements |
+| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
 
-#### Bug fixes in 1.30.0
+#### Bug fixes in 1.31.0
 
 | New Item | Details |
 |----------|---------|
-| Notebooks | Fixed WYWIWYG Table cell adding new line in table cell |
-| Notebooks | Fixed issue that Kusto notebook does not change kernels properly |
+| Import Wizard | Fixed Import extension next button does not work in July release |
+| Schema Compare| Fixed issue that Schema compare Select Source target dialog's OK button not enabled |
+| Notebooks | Fixed Export Notebook as SQL file has no query editor toolbar |
+| SQL Server Big Data Clusters | Fixed Can't connect to BDC Clusters | 
+| Accessibility bug fixes | | 
 
 
-For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/73?closed=1).
+For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
 
-#### Known issues in 1.30.0
+#### Known issues in 1.31.0
+| New Item | Details |
+|----------|---------|
+| Portugese language pack is not supported | Currently, Portugese language pack is not working, and will be fixed in a future release. |
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
@@ -58,6 +62,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------
+| [June 2021](#june-2021) | 1.30.0 | June 17, 2021 | N/A |
 | [May 2021](#may-2021) | 1.29.0 | May 19, 2021 | N/A |
 | [April 2021](#april-2021) | 1.28.0 | April 15, 2021 | N/A |
 | [March 2021](#march-2021) | 1.27.0 | March 17, 2021 | N/A |
@@ -90,6 +95,37 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
+
+### June 2021
+
+Azure Data Studio 1.30.0 is the latest general availability (GA) release.
+
+- Release number: 1.30.0
+- Release date: June 17, 2021
+
+#### What's new in 1.30.0
+
+| New item | Details |
+|----------|---------|
+| Results Grid | Added filtering/sorting feature for query result grid in query editor and notebook, the feature can be invoked from the column headers. note that this feature is only available when you enable the preview features. |
+| Results Grid | Added a status bar item to show summary of the selected cells if there are multiple numeric values |
+| Notebooks | Added new book icon |
+| Notebooks | Notebook URI Handler File Support |
+| Python | Updated Python to 3.8.10 |
+
+#### Bug fixes in 1.30.0
+
+| New Item | Details |
+|----------|---------|
+| Notebooks | Fixed WYWIWYG Table cell adding new line in table cell |
+| Notebooks | Fixed issue that Kusto notebook does not change kernels properly |
+
+
+For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/73?closed=1).
+
+#### Known issues in 1.30.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### May 2021
 

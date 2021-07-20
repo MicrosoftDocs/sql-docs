@@ -30,7 +30,7 @@ The new Azure Data Studio is a cross-platform tool for managing SQL Server. For 
 
 ## Named Pipes
 
-Connecting to SQL Server on Linux via Named Pipes is not possible. Connecting to SQL Server on Linux via TCP/IP is supported.
+Named Pipes protocol is not supported for SQL Server on Linux.
 
 ## SQL Server Management Studio on Windows
 

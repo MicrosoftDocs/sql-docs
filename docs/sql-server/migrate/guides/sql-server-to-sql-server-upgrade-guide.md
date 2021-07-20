@@ -243,7 +243,6 @@ To use DMA to create a migration project, complete the following steps.
       ![Migration Logins](./media/sql-server-to-sql-server-upgrade-guide/dma-select-logins.png)
    1. Now, monitor the progress of migration in the **View Results** screen.
 
-      ![Migration View Results](./media/sql-server-to-sql-server-upgrade-guide/dma migrate results.png)
 2. **Review Migration Results**
    1. Select **Export report** to save the migration results to a .csv or .json file.
    1. Review the saved file for details about data and logins migration and verify successful completion of the process.

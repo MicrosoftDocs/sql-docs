@@ -15,17 +15,17 @@ ms.technology: linux
 
 This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in a Kubernetes cluster. In this tutorial, Azure Kubernetes Service (AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
 
-For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-availability-groups/).
-
-> [!NOTE]
-> Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
-
 > [!div class="checklist"]
 > - Deploy Azure Kubernetes Service
 > - Prepare the SQL Server & DH2i custom container image
 > - Deploy containers on Azure Kubernetes Service
 > - Configure the DxEnterprise cluster
 > - Configure Read_Write_Routing_URL for listener functionality - Optional
+
+For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-availability-groups/).
+
+> [!NOTE]
+> Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
 
 ## Prerequisites
 
@@ -400,7 +400,7 @@ ALTER AVAILABILITY GROUP AGS1 MODIFY REPLICA ON N'<name of the secondary-1 repli
 GO 
 ```
 
-## Next Steps
+## Next steps
 
 - [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
 - [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)

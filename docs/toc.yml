@@ -10064,7 +10064,7 @@ items:
     - name: Deploy on Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Deploy availability group with DH2i on AKS
-      href: linux/tutorial-sql-server-containers-kubernetes-DH2i.md
+      href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
   - name: Concepts

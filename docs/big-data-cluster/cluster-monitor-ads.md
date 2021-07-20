@@ -26,7 +26,7 @@ After downloading the latest **insiders build** of [Azure Data Studio](../azure-
 
    ![right click manage](media/view-cluster-status/right-click-manage.png)
 
-1. Select the **SQL Server Big Data Cluster** tab to access the big data clusters dashboard.
+1. Select the **SQL Server Big Data Cluster** tab to access the big data cluster dashboard.
 
    ![Big data cluster dashboard](media/view-cluster-status/bdc-dashboard.png)
 

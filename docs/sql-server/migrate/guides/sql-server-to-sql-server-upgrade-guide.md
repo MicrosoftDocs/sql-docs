@@ -207,15 +207,15 @@ environment.
 
 [Troubleshoot orphaned users.](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
-[Migrating-triggers.](/../../relational-databases/linked-servers/linked-servers-database-engine.md)
+[Migrating-triggers.](../../../relational-databases/linked-servers/linked-servers-database-engine.md)
 
-[Migrate system objects using scripts wizard.](/../../ssms/scripting/generate-and-publish-scripts-wizard.md)
+[Migrate system objects using scripts wizard.](../../../ssms/scripting/generate-and-publish-scripts-wizard.md)
 
-[Mirrored backup media sets.](/../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
+[Mirrored backup media sets.](../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
 
-[Backup overview of SQL Server.](/../../relational-databases/backup-restore/backup-overview-sql-server.md)
+[Backup overview of SQL Server.](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
 
-[Editions and supported features of SQL Server.](/../../sql-server/editions-and-components-of-sql-server-version-15.md)
+[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-version-15.md)
 
 ### Migrate schema and data
 

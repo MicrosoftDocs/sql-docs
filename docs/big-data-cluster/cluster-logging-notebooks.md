@@ -35,7 +35,7 @@ This section contains a set of notebooks useful for getting logs from a SQL Serv
 
 
 
-## Analzse logs from Big Data Clusters
+## Analyze logs from Big Data Clusters
 
 A set of notebooks to gather and analyze logs from a SQL Server big data cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
 

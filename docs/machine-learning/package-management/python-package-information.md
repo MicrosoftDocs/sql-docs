@@ -160,5 +160,5 @@ print(sys.version)
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
-+ [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages with sqlmlutils](install-additional-python-packages-on-sql-server.md)
 ::: moniker-end

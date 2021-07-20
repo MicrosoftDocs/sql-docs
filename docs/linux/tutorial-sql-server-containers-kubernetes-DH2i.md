@@ -133,227 +133,227 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
 
 1. Create the SA password secret on kubernetes before deploying the SQL Server containers using the following command:
 
-```bash
-kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
-```
+    ```bash
+    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+    ```
 
-Replace `MyC0m9l&xP@ssw0rd` with your own complex password.
+    Replace `MyC0m9l&xP@ssw0rd` with your own complex password.
 
 1. Create a manifest (a YAML file) to describe the deployment. The example below shows our current deployment, which makes use of the custom container image created in the preceding steps.
 
-> [!NOTE]
-> The below is an example and will need to be modified to fit your environment, such as replacing port, image, and storage details.
+    > [!NOTE]
+    > The below is an example and will need to be modified to fit your environment, such as replacing port, image, and storage details.
 
-```bash
-kind: StorageClass 
-apiVersion: storage.k8s.io/v1 
-metadata: 
-     name: azure-disk 
-provisioner: kubernetes.io/azure-disk 
-parameters: 
-  storageaccounttype: Standard_LRS 
-  kind: Managed 
---- 
-apiVersion: apps/v1 
-kind: StatefulSet 
-metadata: 
-  name: mssql-pri 
-  labels: 
-    app: mssql 
-spec: 
-  serviceName: "mssql-pri" 
-  replicas: 1  
-  selector: 
-    matchLabels: 
-      app: mssql 
-  template: 
+    ```bash
+    kind: StorageClass 
+    apiVersion: storage.k8s.io/v1 
     metadata: 
+         name: azure-disk 
+    provisioner: kubernetes.io/azure-disk 
+    parameters: 
+      storageaccounttype: Standard_LRS 
+      kind: Managed 
+    --- 
+    apiVersion: apps/v1 
+    kind: StatefulSet 
+    metadata: 
+      name: mssql-pri 
       labels: 
         app: mssql 
     spec: 
-      securityContext: 
-        fsGroup: 10001 
-      containers: 
-      - name: mssql 
-        image: <registry-name>.azurecr.io/sqldh2i:latest 
-        env: 
-        - name: ACCEPT_EULA 
-          value: "Y" 
-        - name: MSSQL_AGENT_ENABLED 
-          value: "Y" 
-        - name: MSSQL_ENABLE_HADR 
-          value: "1" 
-        - name: SA_PASSWORD 
-          valueFrom: 
-            secretKeyRef: 
-              name: mssql 
-              key: SA_PASSWORD 
-        volumeMounts: 
-        - name: dxe 
-          mountPath: "/etc/dh2i" 
-        - name: mssql 
-          mountPath: "/var/opt/mssql" 
-      nodeSelector: 
-       role: ags-primary 
-  volumeClaimTemplates: 
-  - metadata: 
-      name: dxe 
-    spec: 
-      accessModes: 
-        - ReadWriteOnce 
-      resources: 
-        requests: 
-          storage: 1Gi 
-  - metadata: 
-      name: mssql 
-    spec: 
-      accessModes: 
-        - ReadWriteOnce 
-      resources: 
-        requests: 
-          storage: 8Gi 
---- 
-apiVersion: apps/v1 
-kind: StatefulSet 
-metadata: 
-  name: mssql-sec 
-  labels: 
-    app: mssql 
-spec: 
-  serviceName: "mssql-sec" 
-  replicas: 2 
-  selector: 
-    matchLabels: 
-      app: mssql 
-  template: 
+      serviceName: "mssql-pri" 
+      replicas: 1  
+      selector: 
+        matchLabels: 
+          app: mssql 
+      template: 
+        metadata: 
+          labels: 
+            app: mssql 
+        spec: 
+          securityContext: 
+            fsGroup: 10001 
+          containers: 
+          - name: mssql 
+            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            env: 
+            - name: ACCEPT_EULA 
+              value: "Y" 
+            - name: MSSQL_AGENT_ENABLED 
+              value: "Y" 
+            - name: MSSQL_ENABLE_HADR 
+              value: "1" 
+            - name: SA_PASSWORD 
+              valueFrom: 
+                secretKeyRef: 
+                  name: mssql 
+                  key: SA_PASSWORD 
+            volumeMounts: 
+            - name: dxe 
+              mountPath: "/etc/dh2i" 
+            - name: mssql 
+              mountPath: "/var/opt/mssql" 
+          nodeSelector: 
+           role: ags-primary 
+      volumeClaimTemplates: 
+      - metadata: 
+          name: dxe 
+        spec: 
+          accessModes: 
+            - ReadWriteOnce 
+          resources: 
+            requests: 
+              storage: 1Gi 
+      - metadata: 
+          name: mssql 
+        spec: 
+          accessModes: 
+            - ReadWriteOnce 
+          resources: 
+            requests: 
+              storage: 8Gi 
+    --- 
+    apiVersion: apps/v1 
+    kind: StatefulSet 
     metadata: 
+      name: mssql-sec 
       labels: 
         app: mssql 
     spec: 
-      securityContext: 
-        fsGroup: 10001 
-      containers: 
-      - name: mssql 
-        image: <registry-name>.azurecr.io/sqldh2i:latest 
-        env: 
-        - name: ACCEPT_EULA 
-          value: "Y" 
-        - name: MSSQL_AGENT_ENABLED 
-          value: "Y" 
-        - name: MSSQL_ENABLE_HADR 
-          value: "1" 
-        - name: SA_PASSWORD 
-          valueFrom: 
-            secretKeyRef: 
-              name: mssql 
-              key: SA_PASSWORD 
-        volumeMounts: 
-        - name: dxe 
-          mountPath: "/etc/dh2i" 
-        - name: mssql 
-          mountPath: "/var/opt/mssql" 
-      nodeSelector: 
-       role: ags-secondary 
-  volumeClaimTemplates: 
-  - metadata: 
-      name: dxe 
+      serviceName: "mssql-sec" 
+      replicas: 2 
+      selector: 
+        matchLabels: 
+          app: mssql 
+      template: 
+        metadata: 
+          labels: 
+            app: mssql 
+        spec: 
+          securityContext: 
+            fsGroup: 10001 
+          containers: 
+          - name: mssql 
+            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            env: 
+            - name: ACCEPT_EULA 
+              value: "Y" 
+            - name: MSSQL_AGENT_ENABLED 
+              value: "Y" 
+            - name: MSSQL_ENABLE_HADR 
+              value: "1" 
+            - name: SA_PASSWORD 
+              valueFrom: 
+                secretKeyRef: 
+                  name: mssql 
+                  key: SA_PASSWORD 
+            volumeMounts: 
+            - name: dxe 
+              mountPath: "/etc/dh2i" 
+            - name: mssql 
+              mountPath: "/var/opt/mssql" 
+          nodeSelector: 
+           role: ags-secondary 
+      volumeClaimTemplates: 
+      - metadata: 
+          name: dxe 
+        spec: 
+          accessModes: 
+            - ReadWriteOnce 
+          resources: 
+            requests: 
+              storage: 1Gi 
+      - metadata: 
+          name: mssql 
+        spec: 
+          accessModes: 
+            - ReadWriteOnce 
+          resources: 
+            requests: 
+              storage: 8Gi 
+    ---      
+    apiVersion: v1 
+    kind: Service 
+    metadata: 
+      name: mssql-pri-0 
     spec: 
-      accessModes: 
-        - ReadWriteOnce 
-      resources: 
-        requests: 
-          storage: 1Gi 
-  - metadata: 
-      name: mssql 
+      type: LoadBalancer 
+      selector: 
+        statefulset.kubernetes.io/pod-name: mssql-pri-0 
+      ports: 
+      - name: sql 
+        protocol: TCP 
+        port: 1433 
+        targetPort: 1433 
+      - name: dxe 
+        protocol: TCP 
+        port: 7979 
+        targetPort: 7979 
+    --- 
+    apiVersion: v1 
+    kind: Service 
+    metadata: 
+      name: mssql-sec-0 
     spec: 
-      accessModes: 
-        - ReadWriteOnce 
-      resources: 
-        requests: 
-          storage: 8Gi 
----      
-apiVersion: v1 
-kind: Service 
-metadata: 
-  name: mssql-pri-0 
-spec: 
-  type: LoadBalancer 
-  selector: 
-    statefulset.kubernetes.io/pod-name: mssql-pri-0 
-  ports: 
-  - name: sql 
-    protocol: TCP 
-    port: 1433 
-    targetPort: 1433 
-  - name: dxe 
-    protocol: TCP 
-    port: 7979 
-    targetPort: 7979 
---- 
-apiVersion: v1 
-kind: Service 
-metadata: 
-  name: mssql-sec-0 
-spec: 
-  type: LoadBalancer 
-  selector: 
-    statefulset.kubernetes.io/pod-name: mssql-sec-0 
-  ports: 
-  - name: sql 
-    protocol: TCP 
-    port: 1433 
-    targetPort: 1433 
-  - name: dxe 
-    protocol: TCP 
-    port: 7979 
-    targetPort: 7979 
---- 
-apiVersion: v1 
-kind: Service 
-metadata: 
-  name: mssql-sec-1 
-spec: 
-  type: LoadBalancer 
-  selector: 
-    statefulset.kubernetes.io/pod-name: mssql-sec-1 
-  ports: 
-  - name: sql 
-    protocol: TCP 
-    port: 1433 
-    targetPort: 1433 
-  - name: dxe 
-    protocol: TCP 
-    port: 7979 
-    targetPort: 7979           
-```
+      type: LoadBalancer 
+      selector: 
+        statefulset.kubernetes.io/pod-name: mssql-sec-0 
+      ports: 
+      - name: sql 
+        protocol: TCP 
+        port: 1433 
+        targetPort: 1433 
+      - name: dxe 
+        protocol: TCP 
+        port: 7979 
+        targetPort: 7979 
+    --- 
+    apiVersion: v1 
+    kind: Service 
+    metadata: 
+      name: mssql-sec-1 
+    spec: 
+      type: LoadBalancer 
+      selector: 
+        statefulset.kubernetes.io/pod-name: mssql-sec-1 
+      ports: 
+      - name: sql 
+        protocol: TCP 
+        port: 1433 
+        targetPort: 1433 
+      - name: dxe 
+        protocol: TCP 
+        port: 7979 
+        targetPort: 7979           
+    ```
 
-Copy the preceding code into a new file called **sqldeployment.yaml**.
+    Copy the preceding code into a new file called **sqldeployment.yaml**.
 
-Create the deployment using the command below:
+    Create the deployment using the command below:
 
-```bash
-kubectl apply -f <Path to sqldeployment.yaml file>
-```
+    ```bash
+    kubectl apply -f <Path to sqldeployment.yaml file>
+    ```
 
-Once the deployment completes, run the **kubectl get all** command. You should see result as shown below:
+    Once the deployment completes, run the **kubectl get all** command. You should see result as shown below:
 
-```output
-C:\>kubectl get all
-NAME              READY   STATUS    RESTARTS   AGE
-pod/mssql-pri-0   1/1     Running   0          33h
-pod/mssql-sec-0   1/1     Running   0          33h
-pod/mssql-sec-1   1/1     Running   0          33h
-
-NAME                  TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                         AGE
-service/kubernetes    ClusterIP      10.0.0.1       <none>          443/TCP                         33h
-service/mssql-pri-0   LoadBalancer   10.0.134.183   20.204.22.235   1433:30678/TCP,7979:31136/TCP   33h
-service/mssql-sec-0   LoadBalancer   10.0.74.50     20.204.23.32    1433:31009/TCP,7979:30114/TCP   33h
-service/mssql-sec-1   LoadBalancer   10.0.63.62     20.204.74.9     1433:31616/TCP,7979:32190/TCP   33h
-
-NAME                         READY   AGE
-statefulset.apps/mssql-pri   1/1     33h
-statefulset.apps/mssql-sec   2/2     33h
-```
+    ```output
+    C:\>kubectl get all
+    NAME              READY   STATUS    RESTARTS   AGE
+    pod/mssql-pri-0   1/1     Running   0          33h
+    pod/mssql-sec-0   1/1     Running   0          33h
+    pod/mssql-sec-1   1/1     Running   0          33h
+    
+    NAME                  TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                         AGE
+    service/kubernetes    ClusterIP      10.0.0.1       <none>          443/TCP                         33h
+    service/mssql-pri-0   LoadBalancer   10.0.134.183   20.204.22.235   1433:30678/TCP,7979:31136/TCP   33h
+    service/mssql-sec-0   LoadBalancer   10.0.74.50     20.204.23.32    1433:31009/TCP,7979:30114/TCP   33h
+    service/mssql-sec-1   LoadBalancer   10.0.63.62     20.204.74.9     1433:31616/TCP,7979:32190/TCP   33h
+    
+    NAME                         READY   AGE
+    statefulset.apps/mssql-pri   1/1     33h
+    statefulset.apps/mssql-sec   2/2     33h
+    ```
 
 As you can see, we have three SQL Server instances, each with its own storage and services exposing ports 1433 (SQL) and 7979 (DxEnterprise Cluster). You can connect to each SQL Server instance using the External-IP address. The SA PASSWORD is the same password you provided when creating the mssql secret in the preceding steps.
 

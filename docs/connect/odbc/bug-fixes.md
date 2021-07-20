@@ -21,7 +21,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Fix for restrictions on connection string regarding usage of UID and PWD keywords
+- Fix for restrictions on connection string regarding usage of `UID` and `PWD` keywords
 - Fix for inconsistent fonts in non-English dialogs
 - Fix issue with having multiple connections with different AKV credentials
 - Fix issue with NVDA not reading connection test results in DSN configuration UI

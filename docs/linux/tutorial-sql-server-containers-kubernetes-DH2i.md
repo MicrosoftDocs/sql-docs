@@ -5,7 +5,7 @@ ms.custom:
 author: amvin87
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
-ms.date: 07/09/2021
+ms.date: 07/20/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -13,29 +13,30 @@ ms.technology: linux
 
 # Deploy availability group with DH2i for SQL Server containers on AKS
 
-This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in Kubernetes cluster. In this case, Azure Kubernetes Service (AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
+This tutorial explains how to configure SQL Server Always On availability group for SQL Server Linux based containers deployed in a Kubernetes cluster. In this tutorial, Azure Kubernetes Service (AKS) is used as the kubernetes cluster and the tutorial consists of the following tasks:
 
 For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-availability-groups/).
 
 > [!NOTE]
 > Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
 
-1. Deploy Azure Kubernetes Service. 
-2. Prepare the SQL Server & DH2i custom container image. 
-3. Deploy containers on Azure Kubernetes Service. 
-4. Configure the DxEnterprise cluster. 
-5. Configure Read_Write_Routing_URL for listener functionality - Optional. 
+> [!div class="checklist"]
+> - Deploy Azure Kubernetes Service
+> - Prepare the SQL Server & DH2i custom container image
+> - Deploy containers on Azure Kubernetes Service
+> - Configure the DxEnterprise cluster
+> - Configure Read_Write_Routing_URL for listener functionality - Optional
 
 ## Prerequisites
 
-1. To deploy Azure Kubernetes Service, you must have an Azure account. A two-node cluster is a good starting point for this tutorial. 
-2. Create Azure Container Registry. This will be used in our deployment scripts to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of Azure Container Registry (ACR), you could use your preferred container registry to push the custom container images.
+- To deploy Azure Kubernetes Service, you must have an [Azure account](https://azure.microsoft.com/free/). A two-node cluster is a good starting point for this tutorial.
+- Create [Azure Container Registry](/azure/container-registry/container-registry-get-started-portal). This will be used in our deployment scripts to retrieve the custom image and deploy the containers to Azure Kubernetes. Instead of Azure Container Registry (ACR), you could use your preferred container registry to push the custom container images.
 
 ## Deploy Azure Kubernetes Service
 
-Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the article's ["connect to the cluster"](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
+Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster using the Azure Kubernetes Service. After you've created the cluster, you can connect to it by following the steps outlined in the [Connect to the cluster](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
 
-You should now have a two-node kubernetes cluster, and running **kubectl get nodes** from your client machine should yield results similar to this:
+You should now have a two-node kubernetes cluster. Running `kubectl get nodes` from your client machine using a console app should yield results similar to the following:
 
 ```bash
 C:\>kubectl get nodes
@@ -46,7 +47,9 @@ aks-nodepool1-75119571-vmss000001   Ready    agent   61d   v1.19.9
 
 ## Prepare the SQL Server & DH2i DxEnterprise custom container image
 
-Next, we'll create the custom container image that will be used in our deployment manifests. This custom container image will deploy SQL Server, .Net, and DxEnterprise in a container. The deployment sample dockerfile is provided below; you can modify it to meet your needs, such as changing the SQL Server version.
+Create the custom container image that will be used in our deployment manifests. The custom container image will deploy SQL Server, .NET, and DxEnterprise in a container. The deployment sample dockerfile is provided below. You can modify it to meet your needs, such as changing the SQL Server version.
+
+For more information on Docker and using dockerfiles, see the [docker documentation](https://docs.docker.com/get-started/).
 
 ```bash
 FROM mcr.microsoft.com/mssql/server:2019-latest
@@ -88,48 +91,58 @@ $nano Dockerfile
 # paste the sample dockerfile content shared above 
 # now build the image using the command: 
 $docker build -t <tagname> . 
-# you should now be able to see the new image sqlimage when you run the docker images command 
+# you should now be able to see the new image, sqlimage when you run the docker images command 
 ```
 
-Now, tag the image and push it to Azure Container Registry (ACR) using the commands below. Make sure you've already logged in to Azure Container Registry (ACR) using the docker login command; for more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
+Tag the image and push it to Azure Container Registry (ACR) using the commands below. Make sure you've already logged into Azure Container Registry (ACR) using the docker login command. For more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
 
 ```bash
-$docker tag sqlimage/latest amvinacr.azurecr.io/sqlimage:latest 
+$docker tag sqlimage/latest <registry-name>.azurecr.io/sqlimage:latest 
 #now push to the ACR repo: 
-$docker push amvinacr.azurecr.io/sqlimage:latest 
+$docker push <registry-name>.azurecr.io/sqlimage:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
-This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service with Azure Container Registry by running the following command; for more information, see this [article](/azure/aks/cluster-container-registry-integration).
+
+This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see this [Integrate ACR with an AKS cluster](/azure/aks/cluster-container-registry-integration).
 
 ```bash
-az aks update -n myAKSCluster -g amvindomain --attach-acr amvinacr
+az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
 ```
 
 ## Deploy containers on Azure Kubernetes Service
 
-We will deploy SQL Server containers as statefulset deployments; a sample deployment file that deploys the containers on the Azure Kubernetes Service is provided below for reference. Take note of the following points:
+We'll deploy SQL Server containers as StatefulSet deployments; a sample deployment file that deploys the containers on the Azure Kubernetes Service is provided below for reference.
 
-1. We will set up three SQL Server instances, one as a primary replica and two as secondary replicas. You can optionally add labels to the node to ensure that the primary replica always runs on one node and the secondary replicas run on another. The following are the steps for labelling the nodes:
+1. We'll set up three SQL Server instances. One as a primary replica and two as secondary replicas. You can optionally add labels to the node to ensure that the primary replica always runs on one node and the secondary replicas run on another. The following are the steps for labeling the nodes:
 
-    1. Get the node names of the cluster using the command: 
-        ```bash
-        kubectl get nodes
-        ```
+    1. Get the node names of the cluster using the command:
 
-    2. Now label the nodes using the commands:
-        ```bash
-        kubectl label node aks-nodepool1-75119571-vmss000000 <role=ags-primary> 
-        kubectl label node aks-nodepool1-75119571-vmss000001 <role=ags-secondary> 
-        ```
+       ```bash
+       kubectl get nodes
+       ```
 
-2. Create the SA password secret on kubernetes before deploying the SQL Server containers using the command:
+    1. Label the nodes using the following commands:
+
+       ```bash
+       kubectl label node aks-nodepool1-75119571-vmss000000 <role=ags-primary>
+       ```
+
+       ```bash
+       kubectl label node aks-nodepool1-75119571-vmss000001 <role=ags-secondary> 
+       ```
+
+1. Create the SA password secret on kubernetes before deploying the SQL Server containers using the following command:
 
 ```bash
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
 ```
-Replace MyC0m9l&xP@ssw0rd with your own complex password
 
-3. Create a manifest (a YAML file) to describe the deployment. The example below depicts our current deployment, which makes use of the custom container image created in the preceding steps.
+Replace `MyC0m9l&xP@ssw0rd` with your own complex password.
+
+1. Create a manifest (a YAML file) to describe the deployment. The example below shows our current deployment, which makes use of the custom container image created in the preceding steps.
+
+> [!NOTE]
+> The below is an example and will need to be modified to fit your environment, such as replacing port, image, and storage details.
 
 ```bash
 kind: StorageClass 
@@ -162,7 +175,7 @@ spec:
         fsGroup: 10001 
       containers: 
       - name: mssql 
-        image: amvinacr.azurecr.io/sqldh2i:latest 
+        image: <registry-name>.azurecr.io/sqldh2i:latest 
         env: 
         - name: ACCEPT_EULA 
           value: "Y" 
@@ -221,7 +234,7 @@ spec:
         fsGroup: 10001 
       containers: 
       - name: mssql 
-        image: amvinacr.azurecr.io/sqldh2i:latest 
+        image: <registry-name>.azurecr.io/sqldh2i:latest 
         env: 
         - name: ACCEPT_EULA 
           value: "Y" 
@@ -314,14 +327,17 @@ spec:
     targetPort: 7979           
 ```
 
-Copy the preceding code into a new file called sqldeployment.yaml, update the values like port, image, and storage details to suit your needs. Create the deployment using the command below:
+Copy the preceding code into a new file called **sqldeployment.yaml**.
+
+Create the deployment using the command below:
 
 ```bash
 kubectl apply -f <Path to sqldeployment.yaml file>
 ```
-Once the deployment completes when you run the **kubectl get all** command you should see result as shown below:
 
-```bash
+Once the deployment completes, run the **kubectl get all** command. You should see result as shown below:
+
+```output
 C:\>kubectl get all
 NAME              READY   STATUS    RESTARTS   AGE
 pod/mssql-pri-0   1/1     Running   0          33h
@@ -338,17 +354,18 @@ NAME                         READY   AGE
 statefulset.apps/mssql-pri   1/1     33h
 statefulset.apps/mssql-sec   2/2     33h
 ```
-As you can see, we have three SQL Server instances, each with its own storage and services exposing ports 1433 (SQL) and 7979 (DxEnterprise Cluster). You can connect to each SQL Server instance using the External-IP address, and the SA PASSWORD is the same password you provided when creating the mssql secret in the preceding steps.
 
-## Configure the DxEnterprise Cluster on the Containers deployed 
+As you can see, we have three SQL Server instances, each with its own storage and services exposing ports 1433 (SQL) and 7979 (DxEnterprise Cluster). You can connect to each SQL Server instance using the External-IP address. The SA PASSWORD is the same password you provided when creating the mssql secret in the preceding steps.
 
-DxEnterprise is high availability clustering software from DH2i that supports SQL Server availability groups, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf). 
+## Configure the DxEnterprise cluster on the containers deployed
+
+DxEnterprise is high availability clustering software from DH2i that supports SQL Server availability groups, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
 
 With this, you should have an Always On availability group created and database(s) added to the group supporting high availability.
 
-## Steps to configure Read/write connection redirection: (Optional) 
+## Steps to configure read/write connection redirection: (Optional)
 
-After you've created the availability group, you can enable read/write connection redirection from secondary to primary by following the steps below. For more information, see [Read write routing URL](/sql/database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups).
+After you've created the availability group, you can enable read/write connection redirection from the secondary to primary by following the steps below. For more information, see [Secondary to primary replica read/write connection redirection](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
 
 ```bash
 USE [master] 
@@ -385,5 +402,5 @@ GO
 
 ## Next Steps
 
-1. [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
-2. [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)
+- [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
+- [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)

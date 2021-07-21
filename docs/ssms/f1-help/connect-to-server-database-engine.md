@@ -1,6 +1,6 @@
 ---
-description: "Connect to Server (Database Engine)"
 title: Connect to Server (Database Engine)
+description: "Connect to Server (Database Engine)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -13,7 +13,6 @@ f1_keywords:
   - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.manageSS2k.f1"
   - "connect-to-server-database-engine"
-ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""

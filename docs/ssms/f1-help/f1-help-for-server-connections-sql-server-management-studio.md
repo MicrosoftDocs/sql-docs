@@ -1,6 +1,6 @@
 ---
-description: "F1 Help for Server Connections (SQL Server Management Studio)"
 title: F1 Help for Server Connections
+description: "F1 Help for Server Connections (SQL Server Management Studio)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "connections [SQL Server Management Studio], help"
   - "connections [SQL Server Management Studio]"
   - "Connect to Server dialog box"
-ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""

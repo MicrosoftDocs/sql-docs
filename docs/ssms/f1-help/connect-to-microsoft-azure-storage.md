@@ -1,6 +1,6 @@
 ---
-description: "Connect to Microsoft Azure Storage"
 title: Connect to Microsoft Azure Storage
+description: "Connect to Microsoft Azure Storage"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -8,7 +8,6 @@ ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.windowsazurestorage.connect.f1"
   - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
-ms.assetid:
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""

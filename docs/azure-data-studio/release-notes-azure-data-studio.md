@@ -39,18 +39,14 @@ Azure Data Studio 1.31.0 is the latest general availability (GA) release.
 | New Item | Details |
 |----------|---------|
 | Import Wizard | Fixed Import extension next button does not work in July release |
-| Schema Compare| Fixed issue that Schema compare Select Source target dialog's OK button not enabled |
+| Schema Compare| Fixed issue that Schema compare Select Source target dialog OK button not enabled |
 | Notebooks | Fixed Export Notebook as SQL file has no query editor toolbar |
-| SQL Server Big Data Clusters | Fixed Can't connect to BDC Clusters | 
-| Accessibility bug fixes | | 
-
+| SQL Server Big Data Clusters | Fixed Can't connect to BDC Clusters |
+| Accessibility bug fixes | |
 
 For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
 
 #### Known issues in 1.31.0
-| New Item | Details |
-|----------|---------|
-| Portugese language pack is not supported | Currently, Portugese language pack is not working, and will be fixed in a future release. |
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
@@ -86,7 +82,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | [July 2019](#july-2019) | 1.9.0 | July 11, 2019 | N/A |
 | [June 2019](#june-2019) | 1.8.0 | June 6, 2019 | N/A |
 | [May 2019](#may-2019) | 1.7.0 | May 8, 2019 | N/A |
-| [April 2019 ](#april-2019)| 1.6.0 | April 18, 2019 | N/A |
+| [April 2019](#april-2019)| 1.6.0 | April 18, 2019 | N/A |
 | [March 2019](#march-2019) | 1.5.1 | March 18, 2019 | [hotfix](#march-2019-hotfix) |
 | [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
 | [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |

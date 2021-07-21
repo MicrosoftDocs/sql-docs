@@ -4,7 +4,7 @@ description: SQL Server Management Studio (SSMS) Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - sql13.swb.query.advanced.f1
   - sql13.swb.query.ansi.f1

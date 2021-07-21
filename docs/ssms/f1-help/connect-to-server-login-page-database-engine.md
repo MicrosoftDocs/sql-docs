@@ -4,7 +4,7 @@ title: Connect to Server (Login Page) Database Engine
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.connecttosqlserver.login.f1"
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32

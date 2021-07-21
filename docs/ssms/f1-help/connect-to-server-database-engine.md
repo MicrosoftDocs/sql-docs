@@ -4,7 +4,7 @@ title: Connect to Server (Database Engine)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.connectoserverunknownservertype.f1"
   - "sql13.swb.connection.login.sqlce.f1"

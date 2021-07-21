@@ -4,7 +4,7 @@ title: Connect to Any SQL Server Component
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "connections [SQL Server], SQL Server Management Studio"
   - "saving connections"

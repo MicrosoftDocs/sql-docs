@@ -1,7 +1,6 @@
 ---
 title: "About SQL Server Management Studio"
 description: "About SQL Server Management Studio"
-ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

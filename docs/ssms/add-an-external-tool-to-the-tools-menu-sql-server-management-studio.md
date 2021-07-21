@@ -19,7 +19,7 @@ ms.author: "maghan"
 ---
 # Add an External Tool to the Tools Menu (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-You can launch any [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] application from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. External applications can be added to, and run from, the **Tools** menu.  
+You can launch any [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] application from SQL Server Management Studio. External applications can be added to, and run from, the **Tools** menu.  
   
 ### To add an external tool to the Tools menu  
   

@@ -87,9 +87,9 @@ You might have to escape certain parts of the connection URL values if the value
 
 Before version 8.4, escaped values can contain special characters (especially '=', ';', '[]', and space) but can't contain braces. Values that must be escaped and contain braces should be added to a properties collection.
 
-In version 8.4 and above, escaped values can contain special characters, including braces. However, closing braces must be escaped. For example, with a password of `pass";{word`, a connection string would need to escape the password as follows:
+In version 8.4 and above, escaped values can contain special characters, including braces. However, closing braces must be escaped. For example, with a password of `pass";{}word`, a connection string would need to escape the password as follows:
 
-`jdbc:sqlserver://localhost;username=MyUsername;password={pass";{{word};`
+`jdbc:sqlserver://localhost;username=MyUsername;password={pass";{}}word};`
 
 > [!NOTE]
 > White space inside the braces is literal and not trimmed.

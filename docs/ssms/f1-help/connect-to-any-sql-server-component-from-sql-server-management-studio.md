@@ -1,6 +1,6 @@
 ---
-description: "Connect to Any SQL Server Component from SQL Server Management Studio"
 title: Connect to Any SQL Server Component
+description: "Connect to Any SQL Server Component from SQL Server Management Studio"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -10,7 +10,6 @@ helpviewer_keywords:
   - "saving connections"
   - "components [SQL Server], connections"
   - "SQL Server Management Studio [SQL Server], connections"
-ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -21,7 +20,7 @@ ms.date: 01/19/2017
 # Connect to Any SQL Server Component from SQL Server Management Studio
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to connect to:  
+SQL Server Management Studio provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to connect to:  
   
 -   An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
   

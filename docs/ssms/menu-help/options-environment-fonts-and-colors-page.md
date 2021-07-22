@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: "markingmyname"
 ms.author: "maghan"

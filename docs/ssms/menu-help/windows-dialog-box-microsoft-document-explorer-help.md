@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "Windows dialog box"
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f

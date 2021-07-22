@@ -42,8 +42,6 @@ Each of the following links provides information for all of the applicable produ
 |SQL Server 2008 |SP4 [(KB 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|N/A|N/A|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|SP3 [(KB 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 17 [(KB 2958696)](https://support.microsoft.com/kb/2958696)|5/19/2014|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 
-**Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
-
 [!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
 ## Knowledge base

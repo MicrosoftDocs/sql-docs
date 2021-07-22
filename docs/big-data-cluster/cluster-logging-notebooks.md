@@ -1,7 +1,7 @@
 ---
 title: Gathering and analyzing logs with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Logging cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
+description: Logging cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -12,17 +12,17 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Gathering and analyzing logs in the cluster with notebooks
+# Gathering and analyzing logs in Big Data Clusters by using notebooks
 
-This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging Big Data Clusters.
+This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging big data clusters.
 
 Each notebook is designed to check for its own dependencies. A **Run all cells** will either complete successfully or will raise an exception with a hyperlinked hint to another notebook to resolve the missing dependency. Follow the hint hyperlink to the subsequent notebook, press **Run all cells**, and upon success return back to the original notebook, and **Run all cells**.
 
 Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
-## Gathering logs from Big Data Cluster (BDC)
+## Gathering logs from Big Data Clusters 
 
-This section contains a set of notebooks useful for getting logs from a SQL Server Big Data Cluster (BDC).
+This section contains a set of notebooks useful for getting logs from a SQL Server big data cluster.
 
 | Name | Description |
 |--|--|
@@ -35,9 +35,9 @@ This section contains a set of notebooks useful for getting logs from a SQL Serv
 
 
 
-## Analyse logs from Big Data Clusters (BDC)
+## Analyze logs from Big Data Clusters
 
-A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
+A set of notebooks to gather and analyze logs from a SQL Server big data cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
 
 |Name|Description |
 |---|---|
@@ -60,4 +60,4 @@ A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What is SQL Server Big Data Clusters?](big-data-cluster-overview.md).

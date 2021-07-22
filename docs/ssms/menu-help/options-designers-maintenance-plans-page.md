@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.MaintenancePlans"
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005

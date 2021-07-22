@@ -44,7 +44,7 @@ Azure Data Studio 1.31.0 is the latest general availability (GA) release.
 | SQL Server Big Data Clusters | Fixed Can't connect to BDC Clusters |
 | Accessibility bug fixes | |
 
-For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
+For a full list of bug fixes addressed for the July 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
 
 #### Known issues in 1.31.0
 

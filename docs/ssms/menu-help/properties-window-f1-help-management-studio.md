@@ -4,7 +4,7 @@ title: "Properties Window F1 Help (Management Studio)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - ".SPID"
   - ".ExecutionTime"

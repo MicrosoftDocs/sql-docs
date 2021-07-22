@@ -119,7 +119,27 @@ SET @to_lsn = sys.fn_cdc_map_time_to_lsn('largest less than or equal', @end_time
 -- Return the net changes occurring within the query window.  
 SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all');  
 ```  
-  
+
+**NOTE:**
+
+ Error 313 is expected if LSN range supplied is not appropriate when calling cdc.fn_cdc_get_all_changes_<capture_instance> or cdc.fn_cdc_get_net_changes_<capture_instance> and it should be handled. This example shows how to handle this scenario for dbo.HR_Department table.
+
+```
+begin try
+DECLARE @from_lsn binary(10), @to_lsn binary(10), @save_to_lsn binary(10); 
+SET @save_to_lsn = sys.fn_cdc_get_min_lsn('dbo_HR_Department')
+select @save_to_lsn
+SET @from_lsn = sys.fn_cdc_increment_lsn(0x00000026000005F00003); 
+select @from_lsn
+SET @to_lsn = sys.fn_cdc_get_max_lsn(); 
+select @to_lsn
+SELECT * from cdc.fn_cdc_get_all_changes_dbo_Tab1( @from_lsn, @to_lsn, 'all' ); 
+end try
+begin catch
+if @@ERROR = 313
+RAISERROR ('Invalid range passed to fn_cdc_get_all_changes_dbo_HR_Department.', 16, 1); 
+```
+
 ## See Also  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   

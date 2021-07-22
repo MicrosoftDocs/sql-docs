@@ -19,7 +19,7 @@ ms.author: "maghan"
 ---
 # Understand SQL Server Management Studio Windows Management
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-The tool windows in [!INCLUDE[msCoName](../includes/msconame_md.md)] SQL Server Management Studio are a highly functional, flexible, and efficient system that allows you to:  
+The tool windows in Microsoft SQL Server Management Studio are a highly functional, flexible, and efficient system that allows you to:  
   
 -   Maximize the user workspace for development and management.  
   

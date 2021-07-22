@@ -17,7 +17,7 @@ ms.author: "maghan"
 ---
 # General User Interface Elements
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-The **Editor**, the **Properties** window, and the **Toolbox** are some of the basic elements of [!INCLUDE[msCoName](../includes/msconame_md.md)] SQL Server Management Studio.  
+The **Editor**, the **Properties** window, and the **Toolbox** are some of the basic elements of Microsoft SQL Server Management Studio.  
   
 ## In This Section  
 [About Dialog Box](../ssms/about-dialog-box.md)  

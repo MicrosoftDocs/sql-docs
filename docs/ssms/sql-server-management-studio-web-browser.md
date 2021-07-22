@@ -21,7 +21,7 @@ ms.date: 01/19/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-SQL Server Management Studio hosts a version of [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. This Web browser allows you to browse URLs, and view MSDN Library help topics without leaving SQL Server Management Studio. You can access the Web browser by pointing to **Web Browser** on the **View** menu, and then clicking **Show Browser**.
+SQL Server Management Studio hosts a version of Microsoft Internet Explorer. This Web browser allows you to browse URLs, and view MSDN Library help topics without leaving SQL Server Management Studio. You can access the Web browser by pointing to **Web Browser** on the **View** menu, and then clicking **Show Browser**.
 
 ## See Also
 

@@ -20,7 +20,7 @@ ms.date: 01/19/2017
 
 # F1 Help for Server Connections (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This section contains the F1 Help for the **Connect to Server** dialog box pages in SQL Server Management Studio.  
   

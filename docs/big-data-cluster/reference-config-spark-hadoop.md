@@ -1,6 +1,6 @@
 ---
 title: Apache Spark & Apache Hadoop configuration properties
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for configuration properties for Apache Spark & Apache Hadoop (HDFS).
 author: MikeRayMSFT
 ms.author: mikeray

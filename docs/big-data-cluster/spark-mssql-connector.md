@@ -1,6 +1,6 @@
 ---
 title: Using the Apache Spark Connector for SQL Server and Azure SQL
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use the Apache Spark Connector for SQL Server and Azure SQL to read and write to SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray

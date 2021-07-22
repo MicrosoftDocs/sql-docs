@@ -5,13 +5,13 @@ description: This article explains how to view the status of a big data cluster 
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 07/02/2021
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Administration resources for Big Data Clusters 
+# Administration resources for Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -30,8 +30,8 @@ The following articles describe how to manage and operate big data clusters:
 - [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
 - [Manage big data clusters for SQL Server controller dashboard](manage-with-controller-dashboard.md)
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md)
-- [Manage Big Data Clusters by using notebooks](cluster-manage-notebooks.md)
-- [Run a sample notebook by using Spark](notebooks-tutorial-spark.md)
+- [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md)
+- [Run a sample notebook using Spark](notebooks-tutorial-spark.md)
 
 ## Monitor with tools
 
@@ -74,7 +74,7 @@ The following articles describe how to troubleshoot big data clusters deployed i
 
 ### Access to local notebooks 
 
-After you connect to a big data cluster with Azure Data Studio, on the **[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]** tab, you can find a link to all the local notebooks: 
+After you connect to a big data cluster with Azure Data Studio (ADS), on the **[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]** tab, you can find a link to all the local notebooks: 
 
 ![Screenshot that shows where to find links to local notebooks.](media/view-cluster-status/bdc-local-guides.png)
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.Table_Designer"
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741

@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Run a sample notebook using Spark
+# Run a sample notebook by using Spark
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
+This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a SQL Server 2019 big data cluster. This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
 
 > [!TIP]
 > If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Spark samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) on GitHub.

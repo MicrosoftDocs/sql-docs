@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"
   - "SQL Server Management Studio Help [SQL Server], menu items"

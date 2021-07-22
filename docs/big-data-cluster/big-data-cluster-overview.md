@@ -119,3 +119,7 @@ Application deployment enables the deployment of applications on a SQL Server Bi
 ## Next steps
 
 * For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+
+* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  
+
+

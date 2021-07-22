@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Big Data Clusters with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Troubleshooting BDC with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
+description: Troubleshooting Big Data Clusters with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Troubleshooting Big Data Clusters with notebooks
+# Troubleshoot Big Data Clusters by using Jupyter Notebooks and Azure Data Studio
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to help troubleshooting big data clusters.
 
@@ -23,13 +23,13 @@ Once all dependencies are installed, but **Run all cells** fails, each notebook 
 * For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
 * For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
 
-## Troubleshooting Big Data Cluster
+## Troubleshooting Big Data Clusters
 
-This section contains a set of notebooks for getting logs from a SQL Server Big Data Cluster.
+This section contains a set of notebooks for getting logs from a SQL Server big data cluster.
 
 |Name |Description |
 |---|---|---|---|
-|TSG100 - The Big Data Cluster troubleshooter|Overview of all available notebooks on troubleshooting Big Data Cluster issues and when to use them  |
+|TSG100 - The Big Data Clusters troubleshooter|Overview of all available notebooks on troubleshooting Big Data Clusters issues and when to use them  |
 |TSG101 - SQL Server troubleshooter|Overview of all available notebooks on troubleshooting SQL Server issues and when to use them  |
 |TSG102 - HDFS troubleshooter|Overview of all available notebooks on troubleshooting HDFS issues and when to use them  |
 |TSG103 - Spark troubleshooter|Overview of all available notebooks on troubleshooting Spark issues and when to use them  |
@@ -41,44 +41,44 @@ This section contains a set of notebooks for getting logs from a SQL Server Big 
 
 ## Diagnose issues from Big Data Clusters
 
-A set of notebooks for diagnosing situations and states with a Big Data Cluster.
+A set of notebooks for diagnosing situations and states with a big data cluster.
 
 |Name |Description |
 |---|---|---|---|
 |TSG002 - CrashLoopBackoff|This TSG will connect to each container whose last attempt to get into a 'Running' state failed, and get the current and previous container logs. This is useful for debugging CrashLoopBackOff issues reported in kubectl get pods.|
 |TSG025 - FSM Browser - Query Controller FSM state|Use this notebook to connect to the controller database and browse the Finite State Machine (FSM) state. Use this notebook to list active state machines and identify stuck workflows.|
 |TSG026 - Connect to data pool node (to run T-SQL)|Use this notebook to connect to data pool node (to run T-SQL)|
-|TSG027 - Observe cluster deployment|Use this notebook to observe cluster deployment, it provides guidance to troubleshoot SQL Server big data cluster create issues the following commands are often useful for pinpointing underlying causes. |
+|TSG027 - Observe cluster deployment|Use this notebook to observe cluster deployment, it provides guidance to troubleshoot SQL Server Big Data Clusters create issues the following commands are often useful for pinpointing underlying causes. |
 |TSG029 - Find dumps in the cluster|Use this notebook to look for coredumps and minidumps from processes like SQL Server or controller in a big data cluster.|
 |TSG032 - CPU and Memory usage for all containers|Use this notebook to check CPU and Memory usage for all containers.|
-|TSG037 - Determine master pool pod hosting primary replica|Use this notebook to determine master pool pod hosting primary replica for the Big Data Cluster when master pool high availability is enabled.|
+|TSG037 - Determine master pool pod hosting primary replica|Use this notebook to determine master pool pod hosting primary replica for the big data cluster when master pool high availability is enabled.|
 |TSG044 - Run sqlcmd in master pool container|Use this notebook to connect to a master pool node directly via T-SQL.|
 |TSG055 - Time Curl to Sparkhead|Use this notebook to diagnose step to understand what the Curl response time is from the controller pod to the sparkhead pod.|
-|TSG060 - Persistent Volume disk space for all BDC PVCs|Use this notebook to connect to each container and get the disk space used/available for each Persisted Volume (PV) mapped to each Persisted Volume Claim (PVC) of a Big Data Cluster.|
-|TSG078 - Is cluster healthy|Use this notebook to check if your Big Data Cluster is healthy.|
+|TSG060 - Persistent Volume disk space for all big data cluster PVCs|Use this notebook to connect to each container and get the disk space used/available for each Persisted Volume (PV) mapped to each Persisted Volume Claim (PVC) of a big data cluster.|
+|TSG078 - Is cluster healthy|Use this notebook to check if your big data cluster is healthy.|
 |TSG079 - Generate controller core dump|Use this notebook to generate controller core dump.|
 |TSG086 - Run top in all containers|Use this notebook to Run top in all containers.|
 |TSG087 - Use hadoop fs CLI on namenode pod|Use this notebook to use hadoop fs CLI on namenode pod.|
-|TSG108 - View the controller upgrade config map|Use this notebook to troubleshoot the failure when running a Big Data Cluster upgrade using **azdata bdc upgrade**.|
-|TSG112 - Active Directory Pre-Deployment Checks|Use this notebook to validate a Big Data Cluster configuration is valid for an Active Directory (AD) deployment.|
-|TSG115 - SQL Server on Linux security log translator|Use this notebook to to parse the logs generated by the secuirty.ldap and security.kerberos loggers for SQL Server on Linux. To enable these loggers, place the lines below in /var/opt/mssql/logger.ini on the machine running SQL Server on Linux. Note: this file is case sensitive.|
-|TSG116 - SQL BDC security support log translator|Use this notebook to parse the logs generated by the security support service in SQL BDC. To get the logs, we will copy the debug logs from the cluster and extract them. Follow the steps below - run "azdata bdc debug copy-logs -n <namespace>*". This will create several .tar.gz files - Extract the contents of debuglogs-*<namespace>-<date>-<time>.tar.gz - Locate the security support log stored at ./<namespace>/control-<…>/security-support/supervisol/log/secsupp-stderr---<…>.log.|
-|TSG119 - Active Directory Post-Deployment Checks|This notebook is designed to validate your BDC configuration after an AD deployment. It will check the existence of DNS entries for all endpoints with a dnsName attribute and these DNS entries should be host records, not aliases (i.e. A records not CNAME records).Also the existence of well-known AD accounts and whether or not they are enabled and the existence of the expected SPNs|
+|TSG108 - View the controller upgrade config map|Use this notebook to troubleshoot the failure when running a big data cluster upgrade using **azdata bdc upgrade**.|
+|TSG112 - Active Directory Pre-Deployment Checks|Use this notebook to validate a big data cluster configuration is valid for an Active Directory deployment.|
+|TSG115 - SQL Server on Linux security log translator|Use this notebook to parse the logs generated by the secuirty.ldap and security.kerberos loggers for SQL Server on Linux. To enable these loggers, place the lines below in /var/opt/mssql/logger.ini on the machine running SQL Server on Linux. Note: this file is case sensitive.|
+|TSG116 - SQL BDC security support log translator|Use this notebook to parse the logs generated by the security support service in SQL BDC. To get the logs, we'll copy the debug logs from the cluster and extract them. Follow the steps below - run "azdata bdc debug copy-logs -n <namespace>*". This will create several .tar.gz files - Extract the contents of debuglogs-*<namespace>-<date>-<time>.tar.gz - Locate the security support log stored at ./<namespace>/control-<…>/security-support/supervisol/log/secsupp-stderr---<…>.log.|
+|TSG119 - Active Directory Post-Deployment Checks|This notebook is designed to validate your BDC configuration after an AD deployment. It will check the existence of DNS entries for all endpoints with a dnsName attribute and these DNS entries should be host records, not aliases (i.e. A records not CNAME records).Also the existence of well-known AD accounts and whether they're enabled and the existence of the expected SPNs|
 
 
 
 
 
 
-## Repair issues from Big Data Clusters
+## Repair issues from Big Data Clusters 
 
-A set of notebooks for repairing known situations and states of a SQL Server Big Data Cluster.
+A set of notebooks for repairing known situations and states of a SQL Server big data cluster.
 
 |Name |Description |
 |---|---|---|---|
 |TSG005 - Forwarding loop detected|Use this notebook to dealing with forwarding loop detected since the utility dnsmasq can put a local loopback in resolv.conf, which can cause the controller pods to go into a CrashLoopBackOff during initial cluster deployment: https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
 |TSG011 - Restart sparkhistory server|Use this notebook to restart sparkhistory server since the sparkhistory java process can stop responding during startup. Restarting the sparkhistory server (supervisorctl restart sparkhistory) can resolve this issue.|
-|TSG018 - Kill sqlservr process on the master pool| Use this notebook when T-SQL SHUTDOWN does not successfully re-cycle the ./sqlservr process. Use this notebook to kill the main sqlservr process which will get automatically restarted by the ./sqlservr front end process.|
+|TSG018 - Kill sqlservr process on the master pool| Use this notebook when T-SQL SHUTDOWN doesn't successfully re-cycle the ./sqlservr process. Use this notebook to kill the main sqlservr process which will get automatically restarted by the ./sqlservr front-end process.|
 |TSG024 - Namenode is in safe mode| Use this notebook when HDFS gets itself into Safe mode. For example if too many Pods are re-cycled too quickly in the Storage Pool then Safe mode may be automatically enabled.|
 |TSG028 - Restart node manager on all storage pool nodes| Use this notebook when needs to restart node manager on all storage pool nodes.|
 |TSG038 - BDC create failures due to - doc is missing key| Use this notebook when BDC create failures due to - doc is missing key.|
@@ -100,4 +100,4 @@ A set of notebooks for repairing known situations and states of a SQL Server Big
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md).

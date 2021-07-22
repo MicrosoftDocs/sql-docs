@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Installation Tasks for Master Data Services

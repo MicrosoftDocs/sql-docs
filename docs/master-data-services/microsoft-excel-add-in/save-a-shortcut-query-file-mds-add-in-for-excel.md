@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Save a Shortcut Query File (MDS Add-in for Excel)

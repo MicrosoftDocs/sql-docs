@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Refreshing Data (MDS Add-in for Excel)

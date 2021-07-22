@@ -1,24 +1,26 @@
 ---
-description: "About SQL Server Management Studio"
 title: "About SQL Server Management Studio"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+description: "About SQL Server Management Studio"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.aboutsqlserverworkbench.f1"
 helpviewer_keywords: 
   - "SQL Server Management Studio dialog box"
-ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "01/19/2017"
 ---
+
 # About SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Use this dialog box to view or copy information about your installation of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Evaluation editions list the number of days remaining until the product expires.  
+
   
 ## Options  
 **Component Name**  

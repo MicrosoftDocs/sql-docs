@@ -104,10 +104,10 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", true);
 
 * For information on how to enable the switch by using a configuration file see [Enable safety switch](configurable-retry-logic-config-file-sqlclient.md#enable-safety-switch).
 
-## Enabling row version null behavior
+## Enabling rowversion null behavior
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
-Starting in version 3.0, `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior of returning an empty `byte[]`, enable the AppContext switch **Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior** on application startup.
+Starting in version 3.0, when a rowversion has a value of null, `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior of returning an empty `byte[]`, enable the AppContext switch **Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior** on application startup.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior", true);

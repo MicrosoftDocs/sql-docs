@@ -1,11 +1,11 @@
 ---
 title: SQL Server Big Data Clusters release notes
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 04/06/2021
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: melqin
+ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,11 +15,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## Supported platforms
 
-This section explains platforms that are supported with BDC.
+This section explains platforms that are supported with [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ### Kubernetes platforms
 
@@ -55,12 +55,23 @@ This section explains platforms that are supported with BDC.
 
 For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
 
+### Monitoring Tools
+
+- [Monitor cluster with Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor cluster with Azdata utility](cluster-monitor-cmdlet.md)
+- [Monitor cluster with Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+
+> [!IMPORTANT]
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review the [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+
 ## Release history
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
+| Release <sup>1</sup> | SQL Server Big Data Clusters Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU11](#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
 | [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
@@ -81,6 +92,22 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
+## <a id="cu11"></a> CU11 (June 2021)
+
+Cumulative Update 11 (CU11) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4138.2|[2019-CU11-ubuntu-20.04]|
+
+SQL Server 2019 CU11 for SQL Server Big Data Clusters, includes important capabilities:
+
+- Encryption at Rest with external key providers via BDC KMS, commonly known as bring your own key (BYOK). For more information, see [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md).
+- Several SQL Server PolyBase Hadoop fixes and SQL Server PolyBase support of the following data sources: Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[S]). For more information, see:
+    - [PolyBase Connectivity Configuration (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)
+    - [Configure PolyBase to access external data in Hadoop](../relational-databases/polybase/polybase-configure-hadoop.md)
+    - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../t-sql/statements/create-external-data-source-transact-sql.md)
+
 ## <a id="cu10"></a> CU10 (April 2021)
 
 Cumulative Update 10 (CU10) release for SQL Server 2019.
@@ -96,7 +123,7 @@ SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabi
    > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
-- Resource management for Spark-related containers through [BDC cluster-scope settings](reference-config-bdc-overview.md#bdc-cluster-scope-settings).
+- Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
 
 ## <a id="cu9"></a> CU9 (February 2021)
 
@@ -137,7 +164,7 @@ This release includes several fixes and a couple of enhancements.
 
 ### Added capabilities
 
-- [SQL Server Big Data Clusters encryption at rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.
+- [SQL Server Big Data Clusters encryption at rest](encryption-at-rest-concepts-and-configuration.md) using system-managed keys and certificates.
    > [!CAUTION]
    > This is the initial release of SQL Server BDC encryption at rest. Review the following articles: 
    > - [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)
@@ -158,7 +185,7 @@ This release includes minor fixes and enhancements. The following articles inclu
 - [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
 - [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on AKS in Active Directory mode](active-directory-deployment-aks.md)
 - [Deploy big data clusters with Azure Kubernetes Service (AKS) Private Cluster](private-deploy.md)
-- [Restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
+- [Restrict egress traffic of big data clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
 - [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
 - [Configure a SQL Server Big Data Cluster](./configure-bdc-overview.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
@@ -181,8 +208,8 @@ Cumulative Update 5 (CU5) release for SQL Server 2019.
 - Added support for deploying multiple big data clusters against an Active Directory domain.
 - [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
 - Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
-- Added support to persist customizations performed in Grafana. Before CU5 customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
-- Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
+- Added support to persist customizations performed in Grafana. Before CU5, customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
+- Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role, and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
 - Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
 
 ## <a id="cu4"></a> CU4 (April 2020)
@@ -236,6 +263,12 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### MicrosoftML packages on SQL Server Machine Learning Services
+
+- **Affected releases**: CU10 and CU11
+
+- **Issue and customer impact**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
+
 ### Failed to connect to remote instance of SQL Server 2016 or older
 
 - **Affected releases**: CU10
@@ -246,8 +279,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 > `Additional error <2>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection, SqlState: 08001, NativeError: 10054 Additional error <3>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]`
 > `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
 
-- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
-
+- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 ### Partial loss of logs collected in ElasticSearch upon rollback
 
@@ -261,7 +293,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: Existing and new clusters upon upgrade to CU9
 
-- **Issue and customer impact**: As a result of upgrading the version of Telegraf used for the BDC monitoring components in CU9, when upgrading the cluster to CU9 release, you will notice that pods and container metrics are not being collected. This is because an additional resource is required in the definition of the cluster role used for Telegraf as result of the software upgrade. If the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+- **Issue and customer impact**: As a result of upgrading the version of Telegraf used for the BDC monitoring components in CU9, when upgrading the cluster to CU9 release, you will notice that pods and container metrics are not being collected. This is because an additional resource is required in the definition of the cluster role used for Telegraf as a result of the software upgrade. If the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create or update the role and the corresponding service account (either before or after the deployment/upgrade), and BDC will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -277,7 +309,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: All big data cluster deployment configurations, irrespective of the release.
 
-- **Issue and customer impact**: With SQL Server deployed within BDC as SQL Server master instance, the MSDTC feature can not be enabled. There is no workaround to this issue.
+- **Issue and customer impact**: With SQL Server deployed within BDC as SQL Server master instance, the MSDTC feature cannot be enabled. There is no workaround to this issue.
 
 ### HA SQL Server Database Encryption key encryptor rotation
 
@@ -289,13 +321,13 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
     ENCRYPTION BY SERVER
     CERTIFICATE <NewCertificateName>
     ```
-    There is no impact, the command fails and the target database encryption is preserved using the previous certificate.
+    There is no impact, the command fails, and the target database encryption is preserved using the previous certificate.
 
 ### Enabling HDFS Encryption Zones support on CU8
 
-- **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9.
+- **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9. CU10 or superior releases are not affected.
 
-- **Issue and customer impact**: HDFS Encryption Zones support is not enabled by default in this scenario and need to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
+- **Issue and customer impact**: HDFS Encryption Zones support is not enabled by default in this scenario and needs to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
 
 ### Empty Livy jobs before you apply cumulative updates
 
@@ -315,7 +347,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: All big data cluster deployments with Active Directory integration, irrespective of the release
 
-- **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md).Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met.
+- **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md). Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met.
 
 - **Workaround**: Update the expiration policy for the BDC service accounts to "Password never expires" in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
 
@@ -326,13 +358,13 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 - **Issue and customer impact**: For new big data clusters deployed using SQL Server 2019 CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server 2019 CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
 
 - **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio release](../azure-data-studio/download-azure-data-studio.md) that includes the necessary changes that address this use case.
-For other scenarios where  you must provide credentials for accessing service through the gateway (e.g. logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
+For other scenarios where  you must provide credentials for accessing service through the gateway (for example, logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
 
 ### Pods and nodes metrics not being collected
 
 - **Affected releases**: New and existing clusters that are using CU5 images
 
-- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may noticed that the metrics are not being collected. This is possible in both new and existing deployments of BDC (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may noticed that the metrics are not being collected. This is possible in both new and existing deployments of BDC (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and BDC will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -340,7 +372,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
-- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a BDC cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
+- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a big data cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
 
 - **Workaround**: Install `kubectl` tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
@@ -476,4 +508,4 @@ Upgrading using different repositories for current and target builds is not supp
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

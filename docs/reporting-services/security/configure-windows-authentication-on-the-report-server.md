@@ -70,11 +70,10 @@ ms.author: maggies
           <AuthenticationTypes>  
                  <RSWindowsNTLM />  
           </AuthenticationTypes>  
-          <EnableAuthPersistence>true</EnableAuthPersistence>  
+          <EnableAuthPersistence>true</EnableAuthPersistence>
+    </Authentication>
     ```  
-  
-     \</Authentication>  
-  
+    
      The third XML structure specifies all of the security packages that are used in Windows integrated security:  
   
     ```  

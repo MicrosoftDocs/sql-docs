@@ -22,7 +22,7 @@ ms.reviewer:
 
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### To upgrade legacy database diagrams  

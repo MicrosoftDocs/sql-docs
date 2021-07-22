@@ -74,14 +74,14 @@ This topic describes how the following features interact with change data captur
 Running point-in-time-restore (PITR) on a Azure SQL Database that has change data capture enabled will not preserve the change data capture artifacts (e.g. system tables). After PITR, CDC artifacts will not be available.
 
 > [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in preview. 
+> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). 
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database (Preview)
 
 If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database. 
 
 > [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in preview. 
+> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). 
 
 
 ## See Also  

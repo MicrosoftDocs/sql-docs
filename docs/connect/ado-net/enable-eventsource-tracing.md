@@ -51,9 +51,14 @@ The following example enables event tracing for a data operation on the **Advent
 
 ## Event tracing support in Native SNI
 
-**Microsoft.Data.SqlClient** v2.1.0 extends event tracing support in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime**. By sending an EventCommand to `SqlClientEventSource`, events in native SNI.dll can be collected using [Xperf](/windows-hardware/test/wpt/) and [PerfView](https://github.com/microsoft/perfview) tools. The valid EventCommand values are listed as below:
+**Microsoft.Data.SqlClient** provides event tracing support in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime** starting with v2.1. Events can be collected from the native DLLs using [Xperf](/windows-hardware/test/wpt/) and [PerfView](https://github.com/microsoft/perfview) tools.
+
+Starting with **Microsoft.Data.SqlClient** v3.0, event tracing can be enabled without any modifications in the client application using event collection tools.
+
+With **Microsoft.Data.SqlClient** v2.1, event tracing needs to be enabled by configuring `EventCommand` with event source listener. The valid `EventCommand` values applicable to Native SNI are listed as below:
 
 ```cs
+
 // Enables trace events:
 EventSource.SendCommand(eventSource, (EventCommand)8192, null);
 
@@ -64,11 +69,11 @@ EventSource.SendCommand(eventSource, (EventCommand)16384, null);
 EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
 ```
 
-The following example enables event tracing in native SNI.dll when the application targets .NET Framework. 
+
+The following example enables event tracing in native SNI DLLs.
 
 ```cs
 // Native SNI tracing example
-// .NET Framework application
 using System;
 using System.Diagnostics.Tracing;
 using Microsoft.Data.SqlClient;
@@ -91,6 +96,7 @@ class Program
 
     static void Main(string[] args)
     {
+        // Event source listener configuration is not required in v3.0 onwards.
         using (SqlClientListener listener = new SqlClientListener())
         using (SqlConnection connection = new SqlConnection(connectionString))
         {

@@ -29,7 +29,7 @@ This tutorial takes a different approach, and uses data from a file saved in the
 
 **What is XDF?**
 
-The XDF format is an XML standard developed for high-dimensional data and is the native file format used by [Machine Learning Server](/machine-learning-server/r/concept-what-is-xdf). It is a binary file format with an R interface that optimizes row and column processing and analysis.  You can use it for moving data and to store subsets of data that are useful for analysis.
+The XDF format is an XML standard developed for high-dimensional data. It is a binary file format with an R interface that optimizes row and column processing and analysis.  You can use it for moving data and to store subsets of data that are useful for analysis.
 
 1. Set the compute context to the local workstation. **DDL permissions are needed for this step.**
 

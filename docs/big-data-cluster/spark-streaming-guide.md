@@ -2,11 +2,11 @@
 title: SQL Server Big Data Clusters Spark Streaming guide
 titleSuffix: SQL Server Big Data Clusters
 description: This guide covers streaming use cases and how to stream by using SQL Server Big Data Clusters capabilities.
-author: dacoelho 
-ms.author: dacoelho
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
 ms.metadata: seo-lt-2019
-ms.date: 04/06/2021
+ms.date: 07/12/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -51,6 +51,9 @@ The following articles provide excellent conceptual baselines:
 ### Reproducibility
 
 This guide uses the producer application provided in [Quickstart: Data streaming with Event Hubs by using the Kafka protocol](/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). You can find sample applications in many programming languages at [Azure Event Hubs for Apache Kafka](https://github.com/Azure/azure-event-hubs-for-kafka) on GitHub. Use these applications to jump-start streaming scenarios.
+
+> [!NOTE]
+> One of the steps accomplished by the quickstart is that the Kafka streaming option is enabled when creating the Azure Event Hub. Confirm that the Kafka endpoint for the Azure Event Hub namespace is enabled.
 
 The following modified `producer.py` code streams simulated sensor JSON data into the streaming engine by using a Kafka-compatible client. Notice that Azure Event Hubs is compatible with the Kafka protocol. Follow the [setup instructions](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/python) in GitHub to make the sample work for you. 
 
@@ -211,13 +214,13 @@ def foreach_batch_function(df, epoch_id):
         # |-- ts: timestamp (nullable = false)
         sensor_stats_df.write.format('parquet').mode('append').saveAsTable('sensor_data_stats')
         # Group by and send metrics to an output Kafka topic
-        sensor_stats_df.writeStream
-            .format("kafka")
-            .option("topic", topic_to)
-            .option("kafka.bootstrap.servers", bootstrap_servers)
-            .option("kafka.sasl.mechanism", "PLAIN")
-            .option("kafka.security.protocol", "SASL_SSL")
-            .option("kafka.sasl.jaas.config", sasl)
+        sensor_stats_df.writeStream \
+            .format("kafka") \
+            .option("topic", topic_to) \ 
+            .option("kafka.bootstrap.servers", bootstrap_servers) \
+            .option("kafka.sasl.mechanism", "PLAIN") \
+            .option("kafka.security.protocol", "SASL_SSL") \
+            .option("kafka.sasl.jaas.config", sasl) \
             .save()
         # For example, you could write to SQL Server
         # df.write.format('com.microsoft.sqlserver.jdbc.spark').mode('append').option('url', url).option('dbtable', datapool_table).save()
@@ -228,8 +231,10 @@ writer = streaming_input_df.writeStream.foreachBatch(foreach_batch_function).sta
 
 ```
 
-Create the following tables by using _Spark SQL_.
-```sql
+Create the following tables by using Spark SQL. The PySpark kernel in an Azure Data Studio notebook is one way to run Spark SQL interactively. In a new notebook in Azure Data Studio, connect to the Spark pool of your big data cluster. Choose the PySpark kernel, and execute the following: 
+
+```python
+%%sql
 CREATE TABLE IF NOT EXISTS sensor_data (sensor string, measure1 double, measure2 double)
 USING PARQUET;
 

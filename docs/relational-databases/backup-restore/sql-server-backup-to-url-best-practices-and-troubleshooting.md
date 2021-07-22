@@ -130,7 +130,6 @@ When such error occurs, the blob files need to be deleted. For more information 
 When backing up a database, you may see error `Operating system error 50(The request is not supported)` for the following reasons: 
 
    - The specified storage account is not General Purpose V1/V2.
-   - The SAS token is more than 128 characters.
    - The SAS token had a `?` symbol at the beginning of the token when the credential was created. If yes, then remove it.
    - The current connection is unable to connect to the storage account from the current machine using Storage Explorer or SQL Server Management Studio (SSMS). 
    - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again. 

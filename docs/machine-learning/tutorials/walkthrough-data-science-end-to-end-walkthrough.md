@@ -41,9 +41,6 @@ Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-> [!NOTE]
-> If you are using [Machine Learning Server](/machine-learning-server/) or the [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/), instead of R Client, the path to RevoScaleR is C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
-
 <a name="add-packages"></a>
 
 ## Additional R packages

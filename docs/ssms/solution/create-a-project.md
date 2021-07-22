@@ -32,7 +32,7 @@ You can create one or more projects within an existing solution.
     In the **Templates** box, select a template. A brief description of the selected project template appears beneath the **Templates** box.  
   
     **Name**  
-    Enter the name of the script project you want to create. A folder with the same name as the project is also created in the location displayed in the **Location** field. For some projects, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates source and other supporting files and adds them to the new project folder.  
+    Enter the name of the script project you want to create. A folder with the same name as the project is also created in the location displayed in the **Location** field. For some projects, SQL Server Management Studio creates source and other supporting files and adds them to the new project folder.  
   
     > [!NOTE]  
     > For some project types, the **Name** text box is unavailable because specifying the location sets the name. For example, Web applications and Web services are located on a Web server and derive their name from the virtual directory specified on that server.  

@@ -146,7 +146,7 @@ Azure Storage account is needed if backup files are located on an on-premises ne
 
 Azure Storage account isn't required if the files already exist on a supported type of storage account.
 
-## Networking
+### Networking
 
 1. From the machine(s) where Self-Hosted Integration Runtime (SHIR) is installed, outbound port 443 (HTTPS) to the following domain names should be enabled.
 
@@ -162,7 +162,7 @@ Azure Storage account isn't required if the files already exist on a supported t
 
 4. From target SQL VM, outbound port 443 should be enabled to Azure storage account where backups are uploaded.
 
-## Permissions
+### Permissions
 
 | User Credentials | Required | Permission needed |
 |------------------|----------|-------------------|

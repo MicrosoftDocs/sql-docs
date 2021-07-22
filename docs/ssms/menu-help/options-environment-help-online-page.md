@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "VS.ToolsOptionsPages.Environment.Help.Online"
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de

@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 ms.custom: "contperf-fy22q1"
 ---
 
-# What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# What are SQL Server Big Data Clusters?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -109,7 +109,7 @@ The compute pool provides computational resources to the cluster. It contains no
 
 ### <a id="dataplane"></a> Data pool
 
-The data pool is used for data persistence and caching. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server big data cluster data marts are persisted in the data pool. 
+The data pool is used for data persistence and caching. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server Big Data Clusters data marts are persisted in the data pool. 
 
 ### Storage pool
 
@@ -121,3 +121,7 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 ## Next steps
 
 * For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+
+* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  
+
+

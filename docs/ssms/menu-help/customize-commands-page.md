@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.vs.customizecom.f1"
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b

@@ -14,6 +14,7 @@ ms.author: "maghan"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ---
+
 # Arguments for External Tools
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

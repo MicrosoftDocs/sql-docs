@@ -22,7 +22,7 @@ ms.date: 01/19/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+This section contains the F1 Help for the **Connect to Server** dialog box pages in SQL Server Management Studio.  
   
 [Browse for Servers &#40;Local Servers&#41;](../../tools/configuration-manager/sql-server-browser-service.md)  
   

@@ -30,7 +30,7 @@ By default, the **Run Custom Reports** dialog box appears before a custom report
   
 3.  Change**<SuppressWarning>true\<\/SuppressWarning> to <SuppressWarning>false\<\/SuppressWarning>**.  
   
-4.  Restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Restart SQL Server Management Studio.  
   
 #### To unsuppress the drill-through custom report warning dialog box  
   
@@ -40,7 +40,7 @@ By default, the **Run Custom Reports** dialog box appears before a custom report
   
 3.  Change **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>to <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**.  
   
-4.  Restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+4.  Restart SQL Server Management Studio.  
   
 ## See Also  
 [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  

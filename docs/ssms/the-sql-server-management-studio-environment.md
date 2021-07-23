@@ -31,4 +31,4 @@ Outline general features of the user interface, such as Solution Explorer, Objec
 Introduces Solution Explorer, which provides you with an organized view of your projects and their files as well as ready access to commands for managing them.  
   
 [Solution Explorer Source Control](./solution/solution-explorer.md)  
-Describes how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrates with source control products.  
+Describes how SQL Server Management Studio integrates with source control products.  

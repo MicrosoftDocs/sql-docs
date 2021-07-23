@@ -43,7 +43,7 @@ Use these containers to:
   
 -   Work on miscellaneous files that are independent from solutions or projects.  
   
-The items contained in projects depend on the project type and whether you are using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+The items contained in projects depend on the project type and whether you are using SQL Server Management Studio.  
   
 ## Related Tasks  
 Use the following topics to get started with SQL Server Solutions:  
@@ -52,5 +52,5 @@ Use the following topics to get started with SQL Server Solutions:
 |-|-|    
 |Describes how to collect one or more projects in a solution.|[Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Describes how to create a project and add items like scripts and connections.|[Projects &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
-|Provides information about the files used by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage solutions and files.|[Files That Manage Solutions and Projects](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
+|Provides information about the files used by SQL Server Management Studio to manage solutions and files.|[Files That Manage Solutions and Projects](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Regular expressions are a concise and flexible notation for finding and replacing patterns of text. A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.
+Regular expressions are a concise and flexible notation for finding and replacing patterns of text. A specific set of regular expressions can be used in the **Find what** field of the SQL Server Management Studio **Find and Replace** dialog box.
 
 ## Find using regular expressions
 1. To enable the use of regular expressions in the **Find what** field during **QuickFind**, **FindinFiles**, **Quick Replace**, or **Replace in Files** operations, select the **Use** option under **Find Options** and choose **Regular expressions**.

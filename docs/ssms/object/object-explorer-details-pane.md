@@ -45,7 +45,7 @@ Object Explorer Details includes a toolbar which contains the icons described in
 |**Search**|Provides an area to enter a search term for certain database objects.|  
   
 ### Column Header Selections  
-Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart SQL Server Management Studio.  
   
 > [!CAUTION]  
 > Showing all columns for some object types (such as Databases) might slow the display rendering slightly for large sets of objects.  

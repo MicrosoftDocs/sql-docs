@@ -128,7 +128,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  When this check box is selected selected, the results of the current search will be appended to the content of the Find Results 2 window. This window opens automatically to display your search results. To open this window manually, click **Other Windows** on the **View** menu and then click **Find Results 2**.  
   
  **Display file names only**  
- Displays one entry per file containing a search match rather than one entry per search match in either the Find Results 1 or Find Results 2 window. This option is not available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Displays one entry per file containing a search match rather than one entry per search match in either the Find Results 1 or Find Results 2 window. This option is not available in SQL Server Management Studio.  
   
  **Keep modified files open after Replace All**  
  When selected, leaves open all files in which replacements have been made, so you can undo or save the changes. Memory constraints might limit the number of files that can remain open after a replace operation.  

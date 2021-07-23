@@ -17,7 +17,7 @@ ms.author: "maghan"
 ---
 # User Assistance in SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-User assistance is available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] through the Help menu and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. The Help menu in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offers several different routes to information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also provides access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community and MSDN Online resources not previously available from within the Help environment. In addition, the Help environment is now configurable to launch either within the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment or in an associated external window of its own.  
+User assistance is available in SQL Server Management Studio through the Help menu and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. The Help menu in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offers several different routes to information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also provides access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community and MSDN Online resources not previously available from within the Help environment. In addition, the Help environment is now configurable to launch either within the SQL Server Management Studio environment or in an associated external window of its own.  
   
 ## The Help Interface  
 The **Contents** and **Index** provide functionality and an interface already familiar to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] users. The other options are:  
@@ -40,7 +40,7 @@ The **Contents** and **Index** provide functionality and an interface already fa
   
     Stores user topic bookmarks for easy access later.  
   
-Help on Help ( [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
+Help on Help ( Microsoft Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## MSDN Online and SQL Server Communities  
 Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides users ways to contact MSDN Online and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-focused communities on the Web for information. You can:  
@@ -51,7 +51,7 @@ Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides use
   
 #### To access SQL Server-focused communities from the How Do I page  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **Help** menu, click **How Do I**.  
+1.  In SQL Server Management Studio, on the **Help** menu, click **How Do I**.  
   
 2.  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **How Do I** page opens. In the Community Links sidebar, click the name of the community site you want to access.  
   
@@ -81,7 +81,7 @@ Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides use
 Whether or not you perform a search using the filters available (technology, language, and topic type), your search will now be run against all the search providers you selected.  
   
 ## Launching Help  
-There are two ways to display Help from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. By default, when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online is opened from within [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], it opens in a document window external to the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. This window is still associated with the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]; it can respond to some [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] events; and when you close [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], Books Online will close as well. Opening Books Online this way is particularly useful when you are using two monitors; you can drag the Books Online window to the second monitor, out of the way of work you are doing in the first one, but still easily referenced.  
+There are two ways to display Help from SQL Server Management Studio. By default, when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online is opened from within [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], it opens in a document window external to the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. This window is still associated with the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]; it can respond to some [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] events; and when you close [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], Books Online will close as well. Opening Books Online this way is particularly useful when you are using two monitors; you can drag the Books Online window to the second monitor, out of the way of work you are doing in the first one, but still easily referenced.  
   
 You can also open Books Online as a document window inside [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. This is preferable when you have limited screen space and want to take advantage of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and its ability to hide windows.  
   

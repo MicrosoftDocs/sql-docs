@@ -17,7 +17,7 @@ ms.date: "08/09/2017"
 ---
 # Output Window in SQL Server Management Studio
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The Output Window can be opened from the View menu or by using the key combination Ctrl+Alt+O. There are multiple channels of output available.
 

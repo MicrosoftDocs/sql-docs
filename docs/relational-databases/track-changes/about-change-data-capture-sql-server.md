@@ -185,6 +185,9 @@ CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1
 **Capture and Cleanup Customization on Azure SQL Databases (Preview)**
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
 
+**ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
+DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
+
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

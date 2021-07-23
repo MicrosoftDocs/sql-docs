@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains how to deploy a SQL Server Big Data Cluster (BDC) on OpenShift environments, on-premises or on Azure Red Hat OpenShift (ARO).
+This article explains how to deploy a SQL Server Big Data Cluster on OpenShift environments, on-premises or on Azure Red Hat OpenShift (ARO).
 
 > [!TIP]
 > For a quick way to bootstrap a sample environment using ARO and then BDC deployed on this platform, you can use the Python script available [here](quickstart-big-data-cluster-deploy-aro.md).

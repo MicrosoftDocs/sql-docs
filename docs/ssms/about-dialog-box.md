@@ -19,17 +19,19 @@ ms.date: "01/19/2017"
 # About Dialog Box
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
-The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  
+
+The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the Microsoft SQL Server Management Studio entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  
   
-## Options  
-**Component Name**  
+## Options
+
+**Component Name**
 Lists the name of each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] item installed.  
   
 **Version**  
 Lists the version of each installed component.  
   
 **Copy Info**  
-Copies the component names and versions to the [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows clipboard.  
+Copies the component names and versions to the Microsoft Windows clipboard.  
   
 ## See Also  
 [General User Interface Elements](../ssms/general-user-interface-elements.md)  

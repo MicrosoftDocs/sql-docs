@@ -32,7 +32,7 @@ You must restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before t
   
 #### To configure login auditing  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] with Object Explorer.  
+1.  In SQL Server Management Studio, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] with Object Explorer.  
   
 2.  In Object Explorer, right-click the server name, and then click **Properties**.  
   

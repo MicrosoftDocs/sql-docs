@@ -4,9 +4,9 @@ titleSuffix: SQL Server Big Data Clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -23,7 +23,7 @@ Spark & Hive Tools can be installed on platforms that are supported by Visual St
 
 The following items are required for completing the steps in this article:
 
-- A SQL Server big data cluster. See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).
+- A SQL Server big data cluster. See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono is only required for Linux and macOS.
 - [Set up PySpark interactive environment for Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
@@ -251,4 +251,4 @@ Spark & Hive for Visual Studio Code supports the following features:
 3. Review **OUTPUT** view for verification.  
 
 ## Next steps
-For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).
+For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

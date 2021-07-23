@@ -29,7 +29,7 @@ SQL Server Management Studio is a suite of administrative tools for managing the
   
 SQL Server Management Studio includes the following tools:  
   
--   Code Editor is a rich script editor for writing and editing scripts. SQL Server Management Studio provides four versions of the Code Editor; the [!INCLUDE[ssDE](../includes/ssde_md.md)] Query Editor for [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, the DMX Query Editor, the MDX Query Editor, and the XML/A Query Editor.  
+-   Code Editor is a rich script editor for writing and editing scripts. SQL Server Management Studio provides four versions of the Code Editor; the Database Engine Query Editor for [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, the DMX Query Editor, the MDX Query Editor, and the XML/A Query Editor.  
   
 -   Object Explorer for locating, modifying, scripting or running objects belonging to instances of SQL Server.  
   

@@ -34,8 +34,9 @@ You can add one or more projects to an existing solution. A project can be assoc
   
 > [!NOTE]  
 > Before adding an existing project from shared directories in a multideveloper environment, you should attempt to ensure that your changes do not adversely affect or overwrite another developer's changes.  
-  
-## See Also  
+
+## See Also
+
 [Projects &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   

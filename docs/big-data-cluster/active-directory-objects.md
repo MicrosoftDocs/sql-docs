@@ -13,15 +13,15 @@ ms.technology: big-data-cluster
 
 # Auto generated Active Directory objects
 
-This article describes what are the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster (BDC) deployment.
+This article describes what are the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster deployment.
 
 ## Accounts & groups
 
 The user accounts and groups are generated in the provided [organizational unit (OU)](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) during cluster deployment.
 
-Each of the accounts represents a service in BDC. The accounts own the Service Principal Names (SPNs) required by each service. The SPNs owned by each account can be listed using [setspn](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spn-setspn-syntax.aspx) command.
+Each of the accounts represents a service in Big Data Clusters. The accounts own the Service Principal Names (SPNs) required by each service. The SPNs owned by each account can be listed using [setspn](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spn-setspn-syntax.aspx) command.
 
-The deployment automatically generates account and group names. Beginning with SQL Server 2019 CU5, the account or group name prefix is the deployment namespace name (BDC cluster name). If the cluster name is `bdc` for the items on this article, replace `<prefix>` with `bdc` to identify your accounts.
+The deployment automatically generates account and group names. Beginning with SQL Server 2019 CU5, the account or group name prefix is the deployment namespace name (big data cluster name). If the cluster name is `bdc` for the items on this article, replace `<prefix>` with `bdc` to identify your accounts.
 
 The pod suffix (-x) denotes a variable pod ID below. The names below do not include a variable prefix that is user provided during deployment.
 

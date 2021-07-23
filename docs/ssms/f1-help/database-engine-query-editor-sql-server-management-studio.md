@@ -46,7 +46,7 @@ ms.date: 08/28/2020
 
 # SQL Server Management Studio (SSMS) Query Editor
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article explains the query editor's features and functions in SQL Server Management Studio (SSMS).
 

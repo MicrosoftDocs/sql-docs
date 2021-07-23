@@ -157,7 +157,7 @@ When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]
   
 -   Identify the database OLAP server in which to run the job step.  
   
--   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** method. Notice that, while [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not.  
+-   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** method. Notice that, while SQL Server Management Studio supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not.  
   
 ### Analysis Services Query Job Steps  
 When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] query job step, you must:  

@@ -20,7 +20,7 @@ ms.date: 01/19/2017
 
 # Build Database Projects by Using SQL Server Management Studio
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A database script project is an organized set of scripts, connection information, and templates that are all associated with a database or one part of a database. Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the SQL Server Management Studio for administering and designing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases within the context of a script project. SQL Server Management Studio includes designers, editors, guides and wizards to assist users in developing, deploying and maintaining databases.  
   

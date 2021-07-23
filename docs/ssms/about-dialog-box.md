@@ -1,6 +1,6 @@
 ---
-description: "About Dialog Box"
 title: "About Dialog Box"
+description: "About Dialog Box"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -8,7 +8,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "status information [SQL Server Management Studio]"
   - "About dialog box"
-ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""

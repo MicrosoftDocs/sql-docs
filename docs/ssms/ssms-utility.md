@@ -1,6 +1,6 @@
 ---
-description: "SSMS Utility"
 title: SSMS Utility
+description: "SSMS Utility"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "sqlwb utility"
   - "Management Studio command line"
   - "opening SQL Server Management Studio"
-ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -21,7 +20,7 @@ ms.date: 07/24/2020
 
 # SSMS Utility
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The **SSMS** utility opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If specified, **Ssms** also establishes a connection to a server, and opens queries, scripts, files, projects, and solutions.
 

@@ -2,7 +2,7 @@
 description: "Create Indexed Views"
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/19/2018"
+ms.date: "07/23/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""

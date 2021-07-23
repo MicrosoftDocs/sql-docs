@@ -92,7 +92,7 @@ The following table maps server types to file extensions.
 
 | Server type | Extension |
 |-------------|-----------|
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|.sql|
+|SQL Server|.sql|
 |SQL Server Analysis Services|.mdx<br /><br /> .xmla|
 
 ## Examples

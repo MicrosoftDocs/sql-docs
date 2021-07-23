@@ -54,17 +54,7 @@ Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides use
 
 ### To access SQL Server-focused communities from the How Do I page  
   
-<<<<<<< HEAD
--   Access [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] communities from the How Do I page.  
-  
--   Search MSDN Online and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community sites.  
-  
-#### To access SQL Server-focused communities from the How Do I page  
-  
-1.  In SQL Server Management Studio, on the **Help** menu, click **How Do I**.  
-=======
 1. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **Help** menu, click **How Do I**.  
->>>>>>> d9144f8a1e9427b21c3daabed3b29cb03b3e9e8c
   
 2. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **How Do I** page opens. In the Community Links sidebar, click the name of the community site you want to access.  
   
@@ -88,28 +78,22 @@ Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides use
 ### To search MSDN Online and SQL Server-focused communities from the Search page  
   
 1. On the **Help** menu, click **Search**.  
-  
+
 2. Enter your search terms in the **Search for** text box, and then click **Search**.  
-  
+
 Whether or not you perform a search using the filters available (technology, language, and topic type), your search will now be run against all the search providers you selected.  
-  
-<<<<<<< HEAD
-## Launching Help  
-There are two ways to display Help from SQL Server Management Studio. By default, when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online is opened from within [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], it opens in a document window external to the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. This window is still associated with the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]; it can respond to some [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] events; and when you close [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], Books Online will close as well. Opening Books Online this way is particularly useful when you are using two monitors; you can drag the Books Online window to the second monitor, out of the way of work you are doing in the first one, but still easily referenced.  
-=======
+
 ## Launching Help
 
 There are two ways to display Help from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. By default, when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online is opened from within [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], it opens in a document window external to the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. This window is still associated with the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]; it can respond to some [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] events; and when you close [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], Books Online will close as well. Opening Books Online this way is particularly useful when you are using two monitors; you can drag the Books Online window to the second monitor, out of the way of work you are doing in the first one, but still easily referenced.  
->>>>>>> d9144f8a1e9427b21c3daabed3b29cb03b3e9e8c
   
 You can also open Books Online as a document window inside [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. This is preferable when you have limited screen space and want to take advantage of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and its ability to hide windows.  
   
 > [!NOTE]
 > If you want Books Online to be completely independent of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online from the **Start** menu, and it will not react to your actions in the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment, nor will it close if you exit [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
-  
+
 ### To configure Help and SQL Server Books Online to launch inside the Management Studio window  
-  
+
 1. On the **Tools** menu, click **Options**, expand **Environment**, expand **Help**, and then click **General**.  
-  
-2. In the **Show Help Using** box, click **Integrated Help Viewer**.  
-  
+
+2. In the **Show Help Using** box, click **Integrated Help Viewer**.

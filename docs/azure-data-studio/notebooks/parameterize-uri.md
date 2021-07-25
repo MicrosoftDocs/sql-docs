@@ -41,10 +41,10 @@ In the URI query, use `&` to indicate a new parameter to be injected.
 
 ## Parameterization example
 
-For an example notebook to work with in this article, save an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), and then open the file in Azure Data Studio:
+You can use an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to go through the steps in this article:
 
-1. In [GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb), select **Raw**.
-1. Select Ctrl+S or right-click and save the file with the .ipynb extension.  
+1. Go to the [notebook file in GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb). Select **Raw**.
+1. Select Ctrl+S or right-click, and then save the file with the .ipynb extension.  
 1. Open the file in Azure Data Studio.
 
 Here are the contents and structure of the notebook:
@@ -66,31 +66,31 @@ print("Multiplication: " + str(multiply))
 
 ## Set up a notebook for parameterization
 
-Start with the example notebook open in Azure Data Studio.
+Start with the example notebook open in Azure Data Studio. Or, use any notebook that has contents similar to the example notebook and a tagged parameters cell.
 
-1. You must use a notebook that has a cell tagged with parameters. Make a new code cell. Select **Parameters** to tag the cell as a parameters cell.
+1. If you're using the example notebook, verify that the first code cell is tagged with parameters. If you're using a new notebook file, make a new code cell. Select **Parameters** to tag the cell as a parameters cell.
 
-     :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
+   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
 
 1. You can use either the search bar of any browser or a Markdown cell to open the notebook URI link.
 
-     Use the following the notebook URI to parameterize the notebook with new values for *x* and *y*:
+   Copy the following notebook URI to parameterize the example input notebook on GitHub with new values for *x* and *y*. Paste the URI in a browser search bar:
 
-     `azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20`
+   `azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20`
 
-     :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="Screenshot that shows the URI link in a browser search bar.":::
+   :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="Screenshot that shows the URI link in a browser search bar.":::
 
-     When you open the link from the web browser, you're prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
+   When you open the link from the web browser, you're prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
 
-     :::image type="content" source="media/notebooks-parameterization/download-prompt.png" alt-text="Screenshot that shows the download prompt.":::
+   :::image type="content" source="media/notebooks-parameterization/download-prompt.png" alt-text="Screenshot that shows the download prompt.":::
 
 1. You're prompted to download and open the notebook with new parameters.
 
-     Select **Yes**, and then view the new parameterized notebook. Select **run all cells** to see the new output.
+   Select **Yes**, and then view the new parameterized notebook. Select **run all cells** to see the new output.
 
-     A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
+   A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
  
-     :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
+   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 
 ## Next steps
 

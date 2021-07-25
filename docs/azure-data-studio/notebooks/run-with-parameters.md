@@ -63,7 +63,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
    y = 5.0
    ```
 
-  :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
+   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
 
 1. Add other cells to test different parameters:
 

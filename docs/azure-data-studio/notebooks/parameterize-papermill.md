@@ -27,7 +27,7 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 ## Install and set up Papermill in Azure Data Studio
 
-The steps in this section all run inside an Azure Data Studio notebook.
+All the steps in this section run inside an Azure Data Studio notebook.
 
 1. Create a new notebook. Change **Kernel** to **Python 3**:
 
@@ -44,7 +44,7 @@ The steps in this section all run inside an Azure Data Studio notebook.
    !{sys.executable} -m pip install papermill --no-cache-dir --upgrade
    ```
 
-   Verify that it's installed:
+   Verify that Papermill is installed:
 
    ```python
    import sys
@@ -53,7 +53,7 @@ The steps in this section all run inside an Azure Data Studio notebook.
 
    :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="Screenshot that shows selecting Papermill in a list of application names.":::
 
-1. You can test to see whether Papermill installed correctly by checking the version of Papermill:
+1. To verify that Papermill installed correctly, check the version of Papermill:
 
    ```python
    import papermill
@@ -64,7 +64,7 @@ The steps in this section all run inside an Azure Data Studio notebook.
 
 ## Parameterization example
 
-You can use an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to walk through the steps in this article:
+You can use an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to go through the steps in this article:
 
 1. Go to the [notebook file in GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb). Select **Raw**.
 1. Select Ctrl+S or right-click, and then save the file with the .ipynb extension.  
@@ -72,7 +72,7 @@ You can use an [example notebook file](https://github.com/microsoft/sql-server-s
 
 ## Set up a parameterized notebook
 
-With the downloaded example file open in Azure Data Studio, verify the following steps in the notebook to see how you can use different parameters in the notebook: 
+You can begin with the example notebook open in Azure Data Studio or complete the following steps to create a notebook. Then, try using different parameters. All the steps run inside an Azure Data Studio notebook.
 
 1. Verify that **Kernel** is set to **Python 3**:
 
@@ -116,7 +116,7 @@ You can execute Papermill in two ways:
 
 ### Parameterized CLI execution
 
-To execute a notebook by using the CLI, in the terminal, enter the `papermill` command with the input notebook, location for the output notebook, and options.
+To execute a notebook by using the CLI, in the terminal, enter the `papermill` command with the input notebook, the location for the output notebook, and options.
 
 > [!NOTE]
 > To learn more, see the [Papermill CLI documentation](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-cli).

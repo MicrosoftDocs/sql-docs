@@ -13,7 +13,7 @@ ms.date: 06/18/2021
 
 # Create a parameterized notebook by using Papermill
 
-*Parameterization* is the ability to execute the same notebook by using different parameters.
+*Parameterization* is being able to run the same notebook by using different parameters.
 
 This article shows you how to create and run a parameterized notebook in Azure Data Studio by using the Python kernel.
 

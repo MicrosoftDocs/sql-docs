@@ -13,7 +13,7 @@ ms.date: 06/14/2021
 
 # Create a parameterized notebook by using the notebook URI
 
-*Parameterization* is being able to run the same notebook by using different parameters.
+*Parameterization* in Azure Data Studio is running the same notebook with a different set of parameters.
 
 This article shows you how to create and run a parameterized notebook in Azure Data Studio by using the Python kernel.
 

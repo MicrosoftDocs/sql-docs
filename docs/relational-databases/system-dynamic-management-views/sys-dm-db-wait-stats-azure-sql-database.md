@@ -381,6 +381,22 @@ monikerRange: "= azuresqldb-current"
 |FT_IFTSHC_MUTEX|Full-text is waiting on an fdhost control operation. Documented for informational purposes only. Not supported. Future compatibility is not guaranteed.|  
 |FT_IFTSISM_MUTEX|Full-text is waiting on communication operation. Documented for informational purposes only. Not supported. Future compatibility is not guaranteed.|  
 |FT_MASTER_MERGE|Full-text is waiting on master merge operation. Documented for informational purposes only. Not supported. Future compatibility is not guaranteed.|  
+
+
+## Examples
+
+### A. Finding top waits on an Azure SQL Database
+
+The following example returns top 10 waits on an Azure SQL Database.
+
+```sql
+SELECT   TOP (10) wait_type,
+                  CAST (([wait_time_ms] / 1000.0) AS DECIMAL (16, 2)) AS [WaitS],
+                  CAST (100.0 * [wait_time_ms] / SUM([wait_time_ms]) OVER () AS DECIMAL (16, 2)) AS [Percentage]
+FROM     sys.dm_db_wait_stats
+ORDER BY [Percentage] DESC;
+```
+
   
   
 ## See also

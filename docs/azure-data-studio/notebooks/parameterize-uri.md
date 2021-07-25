@@ -11,9 +11,9 @@ ms.custom: ""
 ms.date: 06/14/2021
 ---
 
-# Create a parameterized notebook by using the Notebook URI
+# Create a parameterized notebook by using the notebook URI
 
-*Parameterization* is the ability to execute the same notebook by using different parameters.
+*Parameterization* is being able to run the same notebook by using different parameters.
 
 This article shows you how to create and run a parameterized notebook in Azure Data Studio by using the Python kernel.
 
@@ -29,7 +29,7 @@ This article shows you how to create and run a parameterized notebook in Azure D
 
 URI parameterization programmatically adds parameters to the query of the Azure Data Studio URI to open the notebook in Azure Data Studio with new parameters.
 
-Azure Data Studio notebook URI supports HTTPS, HTTP, and FILE URI schema and follows this format:  
+Azure Data Studio notebook URI supports HTTPS, HTTP, and FILE URI schema and uses this format:  
 
 `azuredatastudio://microsoft.notebook/open?url=`
 
@@ -66,9 +66,9 @@ print("Multiplication: " + str(multiply))
 
 ## Set up a notebook for parameterization
 
-Start with the example notebook open in Azure Data Studio. Or, use any notebook that has contents similar to the example notebook and a tagged parameters cell.
+You can begin with the example notebook open in Azure Data Studio or complete the following steps to create a notebook. Then, try using different parameters. All the steps run inside an Azure Data Studio notebook.
 
-1. If you're using the example notebook, verify that the first code cell is tagged with parameters. If you're using a new notebook file, make a new code cell. Select **Parameters** to tag the cell as a parameters cell.
+1. The first code cell must be tagged with parameters. If you're using a new notebook file, make a new code cell. Select **Parameters** to tag the cell as a parameters cell.
 
    :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
 

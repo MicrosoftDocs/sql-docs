@@ -98,6 +98,12 @@ FROM sys.dm_db_partition_stats
 WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index_id=1);  
 GO  
 ```  
+### D. Get the reserved space of an Azure SQL Database  
+ The following example uses the sys.dm_db_partition_stats DMV to get the current size of an Azure SQL Database.  
+  
+```sql  
+SELECT SUM(reserved_page_count) * 8.0 / 1024 AS 'Database size [MB]' FROM sys.dm_db_partition_stats
+```  
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

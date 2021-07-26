@@ -97,7 +97,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
 
    :::image type="content" source="media/notebooks-parameterization/second-parameter.png" alt-text="Screenshot that shows entering a new parameter for y.":::  
 
-1. After you enter the new parameters, view the new parameterized notebook. Run all cells to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
+1. After you enter the new parameters, view the new parameterized notebook. Select the **Run all cells** icon to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 

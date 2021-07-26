@@ -42,6 +42,28 @@ ms.author: wiassaf
   
 ## Permissions  
  If the user has **VIEW SERVER STATE** permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
+ 
+  
+## Examples 
+
+### A. Obtaining waits related to each user session on Azure SQL Database.
+The following query returns waits related to each user session on an Azure SQL Database, and provides a sense how much users are waiting and what type of waits are affecting them the most.
+   
+      ```sql
+        select s.session_id, 
+               w.wait_type, 
+               w.wait_time_ms, 
+               w.signal_wait_time_ms, 
+               s.total_elapsed_time, 
+               s.cpu_time, 
+               w.wait_time_ms/cast(nullif(s.total_elapsed_time,0) as float) wait_percent_of_elapsed
+        from  sys.dm_exec_sessions s
+        join sys.dm_exec_session_wait_stats w
+          on s.session_id = w.session_id
+        where w.wait_time_ms > 0
+        order by wait_percent_of_elapsed desc
+      ```
+      
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

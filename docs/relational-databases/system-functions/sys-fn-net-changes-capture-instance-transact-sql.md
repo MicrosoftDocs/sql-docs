@@ -86,7 +86,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  The column __CDC_OPERATION will be one of the following two values:  
   
--   D, if the row must be deletedr  
+-   D, if the row must be deleted.
   
 -   M, if the row must be inserted or updated.  
   

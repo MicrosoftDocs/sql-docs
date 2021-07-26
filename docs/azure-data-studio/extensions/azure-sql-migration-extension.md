@@ -29,15 +29,6 @@ The following prerequisites are also required:
 
 - [Azure Data Studio installed](../download-azure-data-studio.md).
 
-### Environment requirements
-
-- Source SQL Server version 2008 or later.
-- SQL Server editions: Enterprise, Standard, Express, or Developer.
-- Full backup is taken as one file or striped into multiple files.
-- Log back up taken as one file or stripped into multiple files
-- The **CHECKSUM option needs to be enabled for the backups provided for migration**. This option is mandatory for migrating to SQL MI and optional for SQL VM.
-- Each backup should have its own backup set and can't be appended to any existing backup set. DMS always uses the first backup file in the set and ignores the rest.
-
 ## Install the Azure SQL Migration extension
 
 To install the Azure SQL Migration extension in Azure Data Studio, follow the steps below.
@@ -75,10 +66,6 @@ Select one of the Azure SQL targets and migration modes to follow that environme
 | [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
 | [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
-### SQL Server on Azure Virtual Machines (SQL VM)
-
-SQL VM runs on Windows and is registered with the [SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management) in FULL management mode.
-
 Supported versions: SQL Server 2012 and later.
 
 | Migration mode | Description |
@@ -86,11 +73,16 @@ Supported versions: SQL Server 2012 and later.
 | [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
 | [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
-## Self-Hosted Integration Runtime (SHIR)
-
-Install the [Self-Hosted Integration Runtime (SHIR)](/azure/data-factory/create-self-hosted-integration-runtime) on a Windows machine that can connect to the source SQL Server instance.
-
 ## Environments and regions
+
+### Environment requirements
+
+- Source SQL Server version 2008 or later.
+- SQL Server editions: Enterprise, Standard, Express, or Developer.
+- Full backup is taken as one file or striped into multiple files.
+- Log back up taken as one file or stripped into multiple files
+- The **CHECKSUM option needs to be enabled for the backups provided for migration**. This option is mandatory for migrating to SQL MI and optional for SQL VM.
+- Each backup should have its own backup set and can't be appended to any existing backup set. DMS always uses the first backup file in the set and ignores the rest.
 
 ### Source SQL Server environments
 
@@ -104,20 +96,18 @@ Install the [Self-Hosted Integration Runtime (SHIR)](/azure/data-factory/create-
 - SQL Server running on GCP Compute Engine (IaaS) Linux VM Supported SQL Server services
 - SQL Server database engine
 
-### Azure regions
-
-- Canada Central
-- East US
-- East US 2
-
-## System requirements
-
 ### Operating System
 
 - Windows Server 2012 - 2019, Windows 8.1 - 10.
 - Microsoft Integration Runtime (Self-hosted) requires a 64-bit Operating System with .NET Framework 4.7.2 or above.
 - The minimum configuration for the Integration Runtime (Self-hosted) machine is 2 GHz, four Core CPUs, 8 GB Memory, and 80-GB disk.
 
+### Azure regions
+
+- Canada Central
+- East US
+- East US 2
+- 
 ## Extension settings
 
 To change the settings for the Kusto extension, follow the steps below.
@@ -132,12 +122,12 @@ To change the settings for the Kusto extension, follow the steps below.
 
 The extensions settings look like this:
 
-## Known issues
+## Limitations and unsupported environments
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
 You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
-### Implicit Assessment – Unsupported features
+### Unsupported implicit assessment
 
 - Ability to assess SQL Server extended event files.
 - Ability to consume Data Access Migration Toolkit (DAMT) input file for assessment.
@@ -169,7 +159,7 @@ You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?ass
 - Third-party backup solutions like Tivoli
 - Volume Shadow Copy Service (VSS) backups
 
-### Database backups
+### Unsupported database backups
 
 Migration workflow doesn't generate the latest backups to use for migration and instead uses existing backup files.
 
@@ -186,17 +176,7 @@ Migration workflow doesn't generate the latest backups to use for migration and 
 > [!Note]
 > Supporting differential backups for DMS is complex due to upload or copy step involved from on-premise network file share or Azure Storage File Share to Azure Storage account, which is the size of data operation and may cause potential wastage of network bandwidth if multiple differential backups are to be uploaded or copied as database restore plan can change dynamically.
 
-### Unsupported target SQL MI scenarios
-
-- Reusing target database name in a particular SQL MI while repeating migration even after deleting the migrated database.
-- Provisioning a new SQL MI during migration
-- Recommendation for SQL MI SKU size.
-- If the database is encrypted with Transparent Data Encryption (TDE), ensure the corresponding certificate from the source SQL Server instance is already migrated to target SQL MI before starting database migration.
-- If database backup is encrypted with a certificate or symmetric key, ensure the corresponding certificate from the source SQL Server instance is already migrated to target SQL MI before starting database migration.
-- Overwriting an existing database in target SQL MI.
-- Customization of blocksize, buffer count, maxtransfersize parameters in RESTORE operation.
-
-### Unsupported target SQL VM scenarios
+### Unsupported SQL VM target scenarios
 
 - Reusing target database name in a particular SQL VM while repeating migration even after deleting the migrated database.
 - SQL VM with SQL Server 2008 R2 and below versions.
@@ -209,6 +189,16 @@ Migration workflow doesn't generate the latest backups to use for migration and 
 - Customization of blocksize, buffer count, maxtransfersize parameters in RESTORE operation.
 - Renaming of target physical data file names for the restored database.
 - There's an issue were concurrent database migration actions like start, cancel & cut over against a particular SQL VM may hit a race condition resulting in errors.
+
+### Unsupported SQL MI target scenarios
+
+- Reusing target database name in a particular SQL MI while repeating migration even after deleting the migrated database.
+- Provisioning a new SQL MI during migration
+- Recommendation for SQL MI SKU size.
+- If the database is encrypted with Transparent Data Encryption (TDE), ensure the corresponding certificate from the source SQL Server instance is already migrated to target SQL MI before starting database migration.
+- If database backup is encrypted with a certificate or symmetric key, ensure the corresponding certificate from the source SQL Server instance is already migrated to target SQL MI before starting database migration.
+- Overwriting an existing database in target SQL MI.
+- Customization of blocksize, buffer count, maxtransfersize parameters in RESTORE operation.
 
 ### Unsupported server objects
 
@@ -232,7 +222,7 @@ Migration workflow doesn't generate the latest backups to use for migration and 
 - SQLCLR
 - Server level triggers
 
-### Command-line Interface (CLI)
+### Unsupported command-line interface (CLI)
 
 There's no CLI support.
 

@@ -2985,8 +2985,6 @@
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: Feature guides
       items:
-      - name: Connection resiliency
-        href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
       - name: Driver-aware connection pooling
         href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
     - name: Asynchronous execution (notification method) sample
@@ -3005,6 +3003,8 @@
         href: ../connect/odbc/windows/sql-server-login-dialog.md
   - name: Feature guides
     items:
+    - name: Connection resiliency
+      href: ../connect/odbc/connection-resiliency.md
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
     - name: DSN and Connection String Keywords and Attributes

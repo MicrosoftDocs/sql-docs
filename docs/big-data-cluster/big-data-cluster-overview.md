@@ -1,18 +1,18 @@
 ---
-title: What are Big Data Clusters?
+title: Introducing Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
 description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin
-ms.date: 07/12/2021
+ms.date: 07/16/2021
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: "contperf-fy22q1"
 ---
 
-# What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -55,13 +55,7 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 ![Data lake](media/big-data-cluster-overview/data-lake.png)
 
-## Scale-out data mart
-
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide scale-out compute and storage to improve the performance of analyzing any data. Data from a variety of sources can be ingested and distributed across *data pool* nodes as a cache for further analysis.
-
-![Data mart](media/big-data-cluster-overview/data-mart.png)
-
-## Integrated AI and Machine Learning
+### Integrated AI and Machine Learning
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] enable AI and machine learning tasks on the data stored in HDFS storage pools and the data pools. You can use Spark as well as built-in AI tools in SQL Server using R, Python, Scala, or Java.
 
@@ -109,7 +103,7 @@ The compute pool provides computational resources to the cluster. It contains no
 
 ### <a id="dataplane"></a> Data pool
 
-The data pool is used for data persistence and caching. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server big data cluster data marts are persisted in the data pool. 
+The data pool is used for data persistence. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. 
 
 ### Storage pool
 
@@ -118,6 +112,14 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 > [!TIP]
 > For an in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc).
 
+### App pool
+
+Application deployment enables the deployment of applications on a SQL Server Big Data Clusters by providing interfaces to create, manage, and run applications.
+
 ## Next steps
 
 * For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+
+* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  
+
+

@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This document explains how to prepare to deploy a SQL Server big data cluster (BDC) in the Active Directory
+This document explains how to prepare to deploy a SQL Server big data cluster in the Active Directory
 authentication mode. The cluster uses an existing AD domain for authentication.
 
 >[!Note]
@@ -40,10 +40,10 @@ You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/review
 To be able to create all the required objects in Active Directory automatically, the BDC needs an AD account which have specific permissions to create users, groups, and machine accounts inside the provided organizational unit (OU). This article will explain how to configure the permission of this AD account. We use an AD Account call `bdcDSA` as an example in this article.
 
 ### Auto generated Active Directory objects
-BDC deployment automatically generates account and group names. Each of the accounts represents a service in BDC and will be managed by BDC throughout the lifetime where BDC cluster is in use. Those accounts own the Service Principal Names (SPNs) are required by each service.  For a full list of AD auto-generated accounts, groups, and service that they managed, see [Auto generated Active Directory objects](active-directory-objects.md).
+Big Data Clusters deployment automatically generates account and group names. Each of the accounts represents a service and will be managed by the big data cluster throughout the lifetime where the big data cluster is in use. Those accounts own the Service Principal Names (SPNs) are required by each service.  For a full list of AD auto-generated accounts, groups, and service that they managed, see [Auto generated Active Directory objects](active-directory-objects.md).
 
 >[!IMPORTANT]
->Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire. The default expiration policy is 42 days. There is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met. To workaround this issue, update the expiration policy for the BDC service accounts to “Password never expires” in the Domain Controller. This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
+>Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire. The default expiration policy is 42 days. There is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met. To workaround this issue, update the expiration policy for the BDC service accounts to "Password never expires" in the Domain Controller. This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
 >
 >The following image shows where to set this property in in Active Directory Users and Computers.
 >

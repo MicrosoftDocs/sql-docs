@@ -73,4 +73,4 @@ After the Spark job is submitted, the Spark job submission and execution status 
 
 ## Next steps
 
-For more information on SQL Server big data cluster and related scenarios, see [What are SQL Server big data clusters?](big-data-cluster-overview.md)
+For more information on SQL Server big data cluster and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

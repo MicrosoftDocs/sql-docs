@@ -22,8 +22,6 @@ You can connect your SQL Server instance to Azure Arc by following these steps.
 
 To register the resource provider, use one of the methods below:  
 
-### Register resource provider
-
 # [Azure portal](#tab/azure)
 
 1. Select **Subscriptions** 
@@ -46,7 +44,6 @@ Run:
 ```azurecli
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
-
 ---
 
 ## Initiate the connection from Azure
@@ -55,6 +52,23 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 
 > [!IMPORTANT]
 > The __SQL Server - Azure Arc__ resource for each SQL Server instance installed on the machine will be created in the same region and the resource group as the corresponding __Machine - Azure Arc__ resource.
+
+# [Azure portal](#tab/azure)
+
+1. Open the __Machine - Azure Arc__ resource. 
+2. Under __Extensions__, click __+ Add__ 
+1. Select `WindowsAgent.SqlServer` from the list and click __Create__.
+
+# [Azure CLI](#tab/az)
+
+Run:
+```console
+   az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+```
+---
+
+> [!NOTE]
+> The specified resource group must match the resource group of the corresponding __Machine - Azure Arc__ resource. Otherwise, the command will fail.
 
 ## Initiate the connection from the target machine
 

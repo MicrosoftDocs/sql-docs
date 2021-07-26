@@ -1,7 +1,7 @@
 ---
 title: Connect SQL Servers on Azure-arc enabled servers at scale
 titleSuffix:
-description: In this article, you learn how to connect SQL Server instances as Azure Arc enabled SQL Servers using a service principal.
+description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -12,18 +12,18 @@ ms.prod: sql
 
 # Connect SQL Server instances to Azure Arc at scale
 
-This article describes how to connect multiple instances of SQL Server to Azure Arc.
+This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using Azure policy. Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.  
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect and register each machine and the installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled servers. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
+## Connecting at-scale using Azure policy
 
-## At-scale registration from Azure
-
-You can use a built-in Azure policy _Configure SQL Server extension on Azure Arc enabled servers_ to automatically register the SQL Server instances on multiple machines. This policy is disabled by default. If you assign this policy to a scope of your choice, the policy will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers in the specified scope. Once installed, the extension will recognize the SQL Server instances installed on the machine and register them with Azure Arc. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure Arc. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
+You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
 > The __SQL Server - Azure Arc__ resources for the SQL Server instances will be created in the same region and the resource group as the corresponding __Machine - Azure Arc__ resource. Because the SQL Serve extension synchronizes with Azure once an hour, it may take up to one hour before these resources are created.  
 
-## Register multiple SQL Server instances using one script
+## Connecting multiple SQL Server instances using script
+
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect and register each machine and the installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled servers. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
 
 You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script connects and registers each machine and the installed SQL Server instances to Azure Arc.
 

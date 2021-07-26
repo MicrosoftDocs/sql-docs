@@ -15,8 +15,6 @@ ms.prod: sql
 
 Azure Arc-enabled SQL Server releases for general availability support
 
-## July 2021
-
 ### Breaking changes
 
 This release introduces a SQL Server extension that continuously monitors for changes of the SQL Server configuration and automatically updates the corresponding __SQL Server - Azure Arc__ resources. The extension is installed as part of the SQL Server instance registration process. To upgrade your existing __SQL Server - Azure Arc__ resources to an agent-based configuration, use any of the methods described in [Connect your SQL Server to Azure Arc](connect.md).

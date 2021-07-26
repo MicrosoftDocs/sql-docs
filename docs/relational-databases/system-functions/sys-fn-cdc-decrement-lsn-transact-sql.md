@@ -1,8 +1,8 @@
 ---
 description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
-title: "sys.fn_cdc_decrement_lsn (Transact-SQL) | Microsoft Docs"
+title: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn"
-ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -31,13 +30,14 @@ ms.author: wiassaf
   
 ## Syntax  
   
-```  
+```syntaxsql  
   
 sys.fn_cdc_decrement_lsn ( lsn_value )  
 ```  
   
 ## Arguments  
- *lsn_value*  
+
+#### *lsn_value*  
  LSN value. *lsn_value* is **binary(10)**.  
   
 ## Return Type  
@@ -52,7 +52,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
 ## Examples  
  The following example uses `sys.fn_cdc_decrement_lsn` to set the upper LSN boundary in a query that returns change data rows that have LSN values less than the maximum LSN value.  
   
-```  
+```sql  
 Use AdventureWorks2012;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10);  

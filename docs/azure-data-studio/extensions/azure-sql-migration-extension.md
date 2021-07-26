@@ -107,7 +107,7 @@ Supported versions: SQL Server 2012 and later.
 - Canada Central
 - East US
 - East US 2
-- 
+
 ## Extension settings
 
 To change the settings for the Kusto extension, follow the steps below.

@@ -129,7 +129,7 @@ To execute a notebook by using the CLI, in the terminal, enter the `papermill` c
 
    This command executes the input notebook with new values for parameters *x* and *y*.
 
-1. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in via the CLI:
+1. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in via the CLI. The new `# Injected-Parameters` values are used for the new output that's shown in the last cell:
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 
@@ -156,7 +156,7 @@ To execute a notebook by using the CLI, in the terminal, enter the `papermill` c
 
    :::image type="content" source="media/notebooks-parameterization/python-api-execute.png" alt-text="Screenshot that shows the Python API execution.":::
 
-1. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
+1. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in. The new `# Injected-Parameters` values are used for the new output that's shown in the last cell:
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 

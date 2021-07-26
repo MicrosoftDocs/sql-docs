@@ -13,7 +13,7 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ---
-# Create the Function to Retrieve the Change Data
+# Create the function to retrieve the change data
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -23,7 +23,7 @@ ms.author: chugu
 > [!NOTE]  
 >  The creation of a function to retrieve the change data is the second step in the process of creating a package that performs an incremental load of change data. For a description of the overall process for creating this package, see [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Design Considerations for Change Data Capture Functions  
+## Design considerations for change data capture (CDC) functions  
  To retrieve change data, a source component in the data flow of the package calls one of the following change data capture query functions:  
   
 -   **cdc.fn_cdc_get_net_changes_<capture_instance>** For this query, the single row returned for each update contains the final state of each changed row. In most cases, you only need the data returned by a query for net changes. For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  

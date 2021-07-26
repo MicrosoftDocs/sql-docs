@@ -13,8 +13,6 @@ ms.prod: sql
 
 You can connect your SQL Server instance to Azure Arc by following these steps.
 
-
-
 ## Prerequisites
 
 * Your machine has at least one instance of SQL Server installed
@@ -59,12 +57,20 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 2. Under __Extensions__, click __+ Add__ 
 1. Select `WindowsAgent.SqlServer` from the list and click __Create__.
 
+# [PowerShell](#tab/powershell)
+
+```powershell
+az provider 
+```
+
 # [Azure CLI](#tab/az)
 
 Run:
-```console
+
+```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
+
 ---
 
 > [!NOTE]

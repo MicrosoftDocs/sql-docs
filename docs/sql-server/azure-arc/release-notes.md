@@ -24,7 +24,7 @@ This release introduces a SQL Server extension that continuously monitors for ch
 
 ### Other changes
 
-This release includes a new Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#at-scale-registration-from-azure).
+This release includes a new Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connecting-at-scale-using-azure-policy).
 
 ## April 2021
 

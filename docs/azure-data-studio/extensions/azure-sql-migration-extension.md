@@ -17,7 +17,7 @@ The Azure SQL Migration extension for [Azure Data Studio](../what-is-azure-data-
 
 The Azure SQL Migration extension guides you to migrate your on-premises SQL Server or your SQL virtual machines (IaaS) running in any cloud platform to Azure SQL Managed Instance (SQL MI) or SQL Server on Azure Virtual Machines (SQL VM).
 
-This article captures various aspects of Azure SQL migration through Azure Data Studio, powered by the Azure Database Migration service.
+This article describes how to install the Azure SQL migration extension through Azure Data Studio, powered by the Azure Database Migration service.
 
 This extension is currently in preview.
 
@@ -64,20 +64,16 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
 When a newer version of the Azure SQL Migration extension is published in the Azure Data Studio marketplace, the extension gets updated automatically.
 
-## Azure Database Migration service
+## Azure SQL targets and migration modes
 
-If you don’t have an existing Azure Database Migration service, then [register the resource provider](/azure/dms/quickstart-create-data-migration-service-portal#register-the-resource-provider).
-
-## Supported Azure SQL targets and migration modes
-
-To follow the migration steps, select one of the Azure SQL targets and migration modes.
+Select one of the Azure SQL targets and migration modes to follow that environment's migration steps.
 
 ### Azure SQL Managed Instance (SQL MI)
 
 | Migration mode | Description |
 |----------------|-------------|
-| Online | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
-| Offline | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
+| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
+| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
 ### SQL Server on Azure Virtual Machines (SQL VM)
 
@@ -87,14 +83,14 @@ Supported versions: SQL Server 2012 and later.
 
 | Migration mode | Description |
 |----------------|-------------|
-| Online | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
-| Offline | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
+| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
+| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
 ## Self-Hosted Integration Runtime (SHIR)
 
 Install the [Self-Hosted Integration Runtime (SHIR)](/azure/data-factory/create-self-hosted-integration-runtime) on a Windows machine that can connect to the source SQL Server instance.
 
-## Supported environments and regions
+## Environments and regions
 
 ### Source SQL Server environments
 
@@ -114,20 +110,6 @@ Install the [Self-Hosted Integration Runtime (SHIR)](/azure/data-factory/create-
 - East US
 - East US 2
 
-### Backup file locations
-
-- On-premise network file share
-
-Supported migration mode, back up file location, and backup type.
-
-| Migration Mode | Backup file location | DMS associated with Self-Hosted Integration Runtime (SHIR) | Backup types allowed |
-|----------------|----------------------|--------------------------|----------------------|
-| Online | On-premise network file share | Yes | Full backup and Transaction log backups. |
-| Offline | On-premise network file share | Yes | Only Full backup. |
-
-> [!Note]
-> Supporting differential backups for DMS is complex due to the upload or copy step involved from on-premise network file share or Azure Storage File Share to Azure Storage account. The size of the data operation may cause a potential waste of network bandwidth if multiple differential backups are to be uploaded or copied as the database restore plan can change dynamically.
-
 ## System requirements
 
 ### Operating System
@@ -135,156 +117,6 @@ Supported migration mode, back up file location, and backup type.
 - Windows Server 2012 - 2019, Windows 8.1 - 10.
 - Microsoft Integration Runtime (Self-hosted) requires a 64-bit Operating System with .NET Framework 4.7.2 or above.
 - The minimum configuration for the Integration Runtime (Self-hosted) machine is 2 GHz, four Core CPUs, 8 GB Memory, and 80-GB disk.
-
-### Azure Storage account
-
-For migrating to Azure SQL, DMS needs a storage account to upload backup files to and then restore the files from that storage account. Backup files are uploaded as block blobs in your Azure Storage account.
-
-Use [General Purpose V2 Azure Storage account](/azure/storage/common/storage-account-overview#types-of-storage-accounts) in standard performance tier or [Block Blob Storage account](/azure/storage/common/storage-account-overview#types-of-storage-accounts) in premium performance tier with any redundancy option.
-
-Azure Storage account is needed if backup files are located on an on-premises network file share or an Azure file share.
-
-Azure Storage account isn't required if the files already exist on a supported type of storage account.
-
-### Networking
-
-1. From the machine(s) where Self-Hosted Integration Runtime (SHIR) is installed, outbound port 443 (HTTPS) to the following domain names should be enabled.
-
-    | Domain Name | Outbound port | Description |
-    |-------------|---------------|-------------|
-    | `{datafactory}.{region}.datafactory.azure.net` </br> or </br> `*.frontend.clouddatahub.net` | 443 | Required by the self-hosted integration runtime to connect to the Data Factory service. </br> For new created Data Factory, find the FQDN from your Self-hosted Integration Runtime key,  which is in format `{datafactory}.{region}.datafactory.azure .net`. If you don't see the FQDN in your Self-hosted Integration key for the old Data Factory, use `*.frontend.clouddatahub.net` instead. |
-    | `download.microsoft.com` | 443 | Required by the self-hosted integration runtime for downloading the updates. If you have disabled auto-update, you can skip configuring this domain. |
-    | `*.core.windows.net` | 443 | Used by the self-hosted integration runtime to connect to the Azure storage account for uploading database backups. |
-
-2. The machine(s) where Self-Hosted Integration Runtime (SHIR) is installed outbound SMB port 445 and other dependent ports should allow access to the on-premise network file share.
-
-3. Connecting to the source SQL Server instance should succeed from the machine(s) where Self-Hosted Integration Runtime (SHIR) is installed.
-
-4. From target SQL VM, outbound port 443 should be enabled to Azure storage account where backups are uploaded.
-
-### Permissions
-
-| User Credentials | Required | Permission needed |
-|------------------|----------|-------------------|
-| Source SQL Server connection in Azure Data Studio | Invoking implicit assessment | SYSADMIN fixed server role or CONTROL SERVER permission |
-| Source SQL Server credentials in Azure Data Studio | ADF pipeline to connect to source SQL Server and RESTORE HEADER ONLY. | CONNECT SQL |
-| Azure Account | Listing Resource Groups | Need one of the following built-in roles: </br> Owner / Contributor role at subscription level </br> Owner / Contributor role for each resource group. </br> SQL Managed Instance Contributor, Virtual Machine Contributor, Storage Account Contributor |
-| Azure Account | Listing Azure SQL targets | Need one of the following built-in roles: </br> Owner / Contributor role at subscription level </br> Owner / Contributor role for each resource group. </br> SQL Managed Instance Contributor, Virtual Machine Contributor, Storage Account Contributor |
-| Azure Account | Listing Azure Storage Accounts | Need one of the following built-in roles: </br> Owner / Contributor role at subscription level </br> Owner / Contributor role for each resource group. </br> SQL Managed Instance Contributor, Virtual Machine Contributor, Storage Account Contributor |
-| On-premise network file share credentials | ADF pipeline to access network share | On-premise network file share credentials should have read permissions on the network file share. |
-| Source SQL Server service account | Running RESTORE HEADER ONLY statement | SQL Server service account should have read permissions on the network file share. </br> If backups are taken directly to the same network file share, the SQL Server service account should also have written permissions on the network file share. Status Possible status for various stages of migration workflow. |
-
-## DMS migration Status
-
-1. Succeeded
-2. Failed
-3. Canceled
-4. InProgress
-5. Creating
-6. Completing
-
-## Self-Hosted Integration Runtime (SHIR) status
-
-1. Need Registration
-2. Online
-3. Limited
-4. Offline
-5. Upgrading
-6. Initializing
-7. InitializeFailed
-
-## Backup file status
-
-1. Arrived
-2. Uploading
-3. Uploaded
-4. Restoring
-5. Restored
-6. Canceled
-7. Ignored
-
-## Migration time factors
-
-Key factors that affect the time taken for migrating database to Azure SQL MI or SQL VM using SQL Server native backup files are:
-
-1. Availability of latest database backups as DMS doesn't generate backups and instead uses existing backups.
-2. Database backup size based on whether the backups are compressed or not.
-3. Number of stripes in the backup.
-4. Location of backup files (on-premise or Azure)
-5. Physical distance between backup files and target Azure SQL region.
-6. Network bandwidth between backup file's location and target Azure SQL region.
-7. On-premise storage bottleneck if backup files must be read from on-premise.
-8. Azure SQL MI or SQL VM SKU size determines the resource governance and throttling while restoring database backups.
-9. Azure storage account throttling, as backup files must be copied from on-premise to Azure storage account before restoring them on target Azure SQL.
-
-## Migration checklist
-
-### SQL Managed Instance (SQL MI)
-
-1. Ensure the Managed Instance selected meets the following criteria.
-    a. The total size of databases selected for migration + the full Size of existing databases on the target is less than:
-
-    | Business Type | Size |
-    |---------|------|
-    | General Purpose | 8 TB |
-    | Business Critical with 4,8,16 vCores | 1 TB |
-    | Business Critical with 24 vCores | 2 TB |
-    | Business Critical with 32,40,64,80 vCores | 4 TB |
-
-    b. The number of databases selected for migration + the number of databases on target is less than 100.
-    c. The number of database files in the databases selected for migration + the number of existing database files in the user's target databases is less than:
-
-    | Business type | Size |
-    |---------|------|
-    | General Purpose | 280 |
-    | Business Critical | 32,767 |
-
-    d. For the target, General Purpose SQL MI, databases can't include any in-memory OLTP objects. Examine if you have any in-memory OLTP objects in your database before migration by using the T-SQL script for [In-Memory OLTP (memory-optimized tables)](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview#in-memory-oltp-memory-optimized-tables).
-    e. If the target is a business critical SQL MI environment, The total in-memory space required + any existing in-memory space on the target should be less than the [limits](/azure/azure-sql/managed-instance/resource-limits#in-memory-oltp-available-space).
-
-2. Ensure that server collation of target Azure SQL matches with the source SQL Server.
-
-3. Ensure Azure DMS and target Azure SQL region are the same.
-
-4. Ensure that the on-premises network file share or Azure Storage File Share or Azure Storage Blob Container contains only backup files belonging to the migrated databases.
-
-5. For more extensive databases, stripe full database backup into multiple files.
-
-6. Enable compression for database backups.
-
-7. When specifying Azure Storage account to upload/copy backup files from on-premises network file share or Azure File share, use a Block Blob Storage account in the premium performance tier to achieve higher migration speed. Azure Premium Storage provides consistent low latency and better throughput performance. Backup files are uploaded as block blobs.
-
-8. Set up a [maintenance window](/azure/azure-sql/database/maintenance-window) for SQL MI to ensure routine service maintenance events don't impact migrations.
-
-9. For a [high availability of Self-Hosted Integration Runtime (SHIR)](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability), install it on multiple nodes. Currently, four nodes are supported, and we recommend installing them on at least two nodes. High availability for Self-Hosted Integration Runtime (SHIR) avoids a single point of failure and ensures that scanning network share and backups uploading is resilient.
-
-## SQL Virtual Machines (SQL VM)
-
-1. Ensure the SQL VM selected meets the following criteria:
-    a. The default location of data and log file locations set for SQL Server instance meets the requirements as it's used by DMS for restoring databases and cannot be configured.
-    b. The target SQL Server version should be equal to or higher than the source SQL Server version.
-    c. If the source SQL Server instance/database has file stream enabled, make sure it's enabled even in the target SQL VM.
-
-2. Ensure that server collation of target Azure SQL matches with the source SQL Server.
-
-3. Ensure Azure DMS and target Azure SQL region are the same.
-
-4. Ensure the on-premises network file share or Azure Storage File Share or Azure Storage Blob Container contains only backup files belonging to the databases being migrated.
-
-5. For larger databases, stripe full database backup into multiple files.
-
-6. Enable compression for database backups.
-
-7. When specifying Azure Storage account to upload/copy backup files from on-premises network file share or Azure File share, use [Block Blob Storage account](/azure/storage/common/storage-account-overview#types-of-storage-accounts) in premium performance tier if you want to achieve higher migration speed. Azure Premium Storage provides consistent low latency and better throughput performance. Backup files are uploaded as block blobs.
-
-8. For [high availability of Self-Hosted Integration Runtime (SHIR)](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability), install it on multiple nodes. Currently, four nodes are supported, and we recommend installing them on at least two nodes. High availability for Self-Hosted Integration Runtime (SHIR) avoids a single point of failure and ensures that scanning network share and backups uploading is resilient.
-
-## Billing
-
-DMS for Azure SQL migration doesn't incur any billing on your subscriptions.
-
-- Billing for orchestrating activities through the ADF Self-Hosted Integration Runtime (SHIR) component is accrued in Microsoft-owned subscription.
-- Azure Storage Account provided to DMS for uploading database backups is subject to usage charges based on the size of backup files and retention. DMS creates a new container for uploading backups, and it doesn't delete the container once the migration is completed.
 
 ## Extension settings
 
@@ -300,7 +132,7 @@ To change the settings for the Kusto extension, follow the steps below.
 
 The extensions settings look like this:
 
-## Known issues and considerations
+## Known issues
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
 You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
@@ -402,10 +234,14 @@ Migration workflow doesn't generate the latest backups to use for migration and 
 
 ### Command-line Interface (CLI)
 
-Currently, there's no CLI support.
+There's no CLI support.
 
 ## Next steps
 
+- [SQL on Azure VM Online migration]()
+- [SQL on Azure VM Offline migration]()
+- [SQL MI Online migration]()
+- [SQL MI Offline migration]()
 - [Download Azure Data Studio](../download-azure-data-studio.md)
 - [Azure Data Studio release notes](../release-notes-azure-data-studio.md)
 - [Azure Data Studio extensions](add-extensions.md)

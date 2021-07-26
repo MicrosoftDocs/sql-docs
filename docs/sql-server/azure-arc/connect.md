@@ -60,7 +60,9 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 # [PowerShell](#tab/powershell)
 
 ```powershell
-az provider 
+$Settings = @{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}
+
+New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
 
 # [Azure CLI](#tab/az)

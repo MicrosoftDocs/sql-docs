@@ -72,7 +72,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
 
    :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
 
-1. You can use either the search bar of any browser or a Markdown cell to open the notebook URI link. Using the Azure Data Studio notebook URI (shown next), you can parameterize the example input notebook on GitHub. Microsoft supports HTTP, HTTPS, and file URI schemas for URI parameterization.
+1. You can use either the search bar of any browser or a Markdown cell to open the notebook URI link. Using the Azure Data Studio notebook URI (shown next), you can parameterize the example input notebook on GitHub.
 
    Copy the following notebook URI to parameterize the example input notebook on GitHub with new values for *x* and *y*. Paste the URI in a browser search bar:
 
@@ -86,7 +86,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
 
 1. You're prompted to download and open the notebook with new parameters.
 
-   Select **Yes**, and then view the new parameterized notebook. Select **run all cells** to see the new output.
+   Select **Yes**, and then view the new parameterized notebook. On the toolbar, select **Run all** to run all cells and see the new output.
 
    A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
  

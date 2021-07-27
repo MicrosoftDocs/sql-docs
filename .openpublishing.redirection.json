@@ -45066,6 +45066,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md",
+      "redirect_url": "/sql/connect/odbc/connection-resiliency",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
       "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
       "redirect_document_id": false
@@ -57203,11 +57208,6 @@
     {
       "source_path": "docs/analytics-platform-system/index.md",
       "redirect_url": "/sql/analytics-platform-system/home-analytics-platform-system-aps-pdw",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/big-data-cluster/index.md",
-      "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
       "redirect_document_id": false
     },
     {

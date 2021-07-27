@@ -87,7 +87,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
 
 ## Run the notebook with parameters
 
-1. On the notebook toolbar, select the Run with Parameters icon:
+1. On the notebook toolbar, select the **Run with Parameters** icon:
 
    :::image type="content" source="media/notebooks-parameterization/run-with-parameters.png" alt-text="Screenshot that shows the Run with Parameters icon selected on the toolbar.":::
 
@@ -97,7 +97,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
 
    :::image type="content" source="media/notebooks-parameterization/second-parameter.png" alt-text="Screenshot that shows entering a new parameter for y.":::  
 
-1. After you enter the new parameters, view the new parameterized notebook. Select the **Run all cells** icon to see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
+1. After you enter the new parameters, view the new parameterized notebook. On the toolbar, select **Run all** to run all cells and see the new output. A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
 
    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 

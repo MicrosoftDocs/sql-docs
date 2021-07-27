@@ -128,8 +128,6 @@ To change the settings for the Kusto extension, follow the steps below.
 
 4. Select the **Extension Settings** icon.
 
-The extensions settings look like this:
-
 ## Limitations and unsupported environments
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  

@@ -107,7 +107,7 @@ You can begin with the example notebook open in Azure Data Studio or complete th
 
    :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Screenshot that shows saving the notebook file.":::
 
-## How to execute a Papermill notebook
+## Execute a Papermill notebook
 
 You can execute Papermill in two ways:
 

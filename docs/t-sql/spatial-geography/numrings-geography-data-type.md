@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # NumRings (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the total number of rings in a **Polygon** instance. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** type, external and internal rings are not distinguished, as any ring can be taken to be the external ring.  
   

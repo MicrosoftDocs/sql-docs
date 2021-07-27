@@ -1,8 +1,8 @@
 ---
 description: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
-title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs"
+title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "07/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "fn_cdc_get_net_changes_<capture_instance>"
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_net_changes_<capture_instance>"
-ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -35,7 +34,7 @@ ms.author: wiassaf
   
 ## Syntax  
   
-```  
+```syntaxsql  
   
 cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_option>' )  
   
@@ -46,18 +45,19 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 }  
 ```  
   
-## Arguments  
- *from_lsn*  
+## Arguments 
+ 
+#### *from_lsn*  
  The LSN that represents the low endpoint of the LSN range to include in the result set. *from_lsn* is **binary(10)**.  
   
  Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in __$start_lsn greater than or equal to *from_lsn* are included in the result set.  
   
- *to_lsn*  
+#### *to_lsn*  
  The LSN that represents the high endpoint of the LSN range to include in the result set. *to_lsn* is **binary(10)**.  
   
  Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in __$start_lsn less than or equal to *from_lsn* or equal to *to_lsn* are included in the result set.  
   
- *<row_filter_option>* ::= { all | all with mask | all with merge }  
+#### *<row_filter_option>* ::= { all | all with mask | all with merge }  
  An option that governs the content of the metadata columns as well as the rows returned in the result set. Can be one of the following options:  
   
  all  
@@ -71,7 +71,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Because the logic to determine the precise operation for a given change adds to query complexity, this option is designed to improve query performance when it is sufficient to indicate that the operation needed to apply the change data is either an insert or an update, but it is not necessary to explicitly distinguish between the two. This option is most attractive in target environments where a merge operation is available directly, such as a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] environment.  
   
-## Table Returned  
+## Table returned  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -81,19 +81,20 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |*\<captured source table columns>*|varies|The remaining columns returned by the function are the columns from the source table that were identified as captured columns when the capture instance was created. If no columns were specified in the captured column list, all columns in the source table are returned.|  
   
 ## Permissions  
- Requires membership in the sysadmin fixed server role or db_owner fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 208 (Invalid object name).  
+ Requires membership in the sysadmin fixed server role or db_owner fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 208 `Invalid object name`.  
   
 ## Remarks  
- If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).
+ 
+ Modifications on the unique identifier of a row will cause `fn_cdc_get_net_changes` to show the initial UPDATE command with a DELETE and then INSERT command instead.  This behavior is necessary to track the key both before and after the change.
 
- Modifications on the unique identifier of a row will cause fn_cdc_get_net_changes to show the initial UPDATE command with a DELETE and then INSERT command instead.  This behavior is necessary to track the key both before and after the change.
+ Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the value of either @start_time or @end_time parameter is beyond the time of lowest LSN or highest LSN, then execution of generated wrapper functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
   
 ## Examples  
  The following example uses the function `cdc.fn_cdc_get_net_changes_HR_Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  
   
  First, the `GETDATE` function is used to mark the beginning of the time interval. After several DML statements are applied to the source table, the `GETDATE` function is called again to identify the end of the time interval. The function [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) is then used to map the time interval to a change data capture query range bounded by LSN values. Finally, the function `cdc.fn_cdc_get_net_changes_HR_Department` is queried to obtain the net changes to the source table for the time interval. Notice that the row that is inserted and then deleted does not appear in the result set returned by the function. This is because a row that is first added and then deleted within a query window produces no net change on the source table for the interval. Before you run this example, you must first run example B in [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @begin_time datetime, @end_time datetime, @from_lsn binary(10), @to_lsn binary(10);  

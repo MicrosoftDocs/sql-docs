@@ -17,7 +17,6 @@ ms.date: "01/19/2017"
 ---
 
 # About SQL Server Management Studio
-
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Use this dialog box to view or copy information about your installation of SQL Server Management Studio. Evaluation editions list the number of days remaining until the product expires.  

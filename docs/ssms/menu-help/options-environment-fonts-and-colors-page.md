@@ -13,8 +13,8 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Environment - Fonts and Colors Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame_md.md)] SQL Server Management Studio. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  
   
 Color scheme changes do not take effect during the session in which you make them. You can evaluate color changes by opening another instance of SQL Server Management Studio and producing the conditions under which you expect your changes to apply.  
   

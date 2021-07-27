@@ -45,19 +45,19 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-market-place.jpg" alt-text="Azure SQl Migration extension from market place":::
 
-5. Once installed you can see the extension in the extension list once installed.
+5. You can see the Azure SQL Migration extension in the extension list once installed.
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Azure SQL migration extension":::
 
 6. You can connect to the SQL Server instance in Azure Data Studio and either double-click the instance name or right-click the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration extension landing page**.
 
-:::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
+    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
 
 When a newer version of the Azure SQL Migration extension is published in the Azure Data Studio marketplace, the extension gets updated automatically.
 
 ## Azure SQL targets and migration modes
 
-There are only two Azure SQL targets available to be used with the migration extension.
+There are only two Azure SQL targets available to use with the Azure SQL migration extension.
 
 - **SQL on Azure Virtual Machines (SQL VM)**
 - **Azure SQL Managed Instance (SQL MI)**
@@ -78,7 +78,7 @@ Select one of the Azure SQL targets and migration modes to follow that environme
 | [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
 | [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
-## Environments and regions
+## Environment and region requirements
 
 ### Environment requirements
 

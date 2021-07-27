@@ -30,7 +30,7 @@
     href: tutorial-table-space-sql-server.md
   - name: Build a custom insight
     href: tutorial-build-custom-insight-sql-server.md
-  - name: Backup & restore
+  - name: Back up & restore
     href: tutorial-backup-restore-sql-server.md
 - name: Concepts
   items:
@@ -172,7 +172,7 @@
     href: troubleshooting.md
   - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
-  - name: Report issues & make suggestions >
+  - name: Report issues & suggestions >
     href: https://github.com/microsoft/azuredatastudio/issues
   - name: SQL Server documentation >
     href: ../sql-server/index.yml

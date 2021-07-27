@@ -57,20 +57,25 @@ When a newer version of the Azure SQL Migration extension is published in the Az
 
 ## Azure SQL targets and migration modes
 
+There are only two Azure SQL targets available to be used with the migration extension.
+
+- **SQL on Azure Virtual Machines (SQL VM)**
+- **Azure SQL Managed Instance (SQL MI)**
+
 Select one of the Azure SQL targets and migration modes to follow that environment's migration steps.
+
+### SQL on Azure Virtual Machines (SQL VM)
+
+| Migration mode | Description |
+|----------------|-------------|
+| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
+| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
 ### Azure SQL Managed Instance (SQL MI)
 
 | Migration mode | Description |
 |----------------|-------------|
-| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
-| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
-
-Supported versions: SQL Server 2012 and later.
-
-| Migration mode | Description |
-|----------------|-------------|
-| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cutover at the end of migration. |
+| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
 | [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
 ## Environments and regions
@@ -228,8 +233,8 @@ There's no CLI support.
 
 ## Next steps
 
-- [SQL on Azure VM Online migration]()
-- [SQL on Azure VM Offline migration]()
+- [SQL VM Online migration]()
+- [SQL VM Offline migration]()
 - [SQL MI Online migration]()
 - [SQL MI Offline migration]()
 - [Download Azure Data Studio](../download-azure-data-studio.md)

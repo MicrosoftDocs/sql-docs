@@ -21,8 +21,8 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Files That Manage Solutions and Projects
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
- This topic describes the file types that are specific to [!INCLUDE[msCoName](../../includes/msconame_md.md)] SQL Server Management Studio. By default, all solutions and their projects are created in \My Documents\SQL Server Management Studio Projects.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+ This topic describes the file types that are specific to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. By default, all solutions and their projects are created in \My Documents\SQL Server Management Studio Projects.  
 
 
 ## Management Studio Solution Files  

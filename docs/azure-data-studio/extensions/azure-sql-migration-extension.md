@@ -77,8 +77,8 @@ Select one of the Azure SQL targets and migration modes to follow that environme
 
 | Migration mode | Description |
 |----------------|-------------|
-| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
-| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
+| [Online](/azure/dms/tutorial-sql-server-managed-instance-online) | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
+| [Offline](/azure/dms/tutorial-sql-server-to-managed-instance) | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
 
 ## Environment and region requirements
 
@@ -236,8 +236,8 @@ There's no CLI support.
 
 - [SQL VM Online migration]()
 - [SQL VM Offline migration]()
-- [SQL MI Online migration]()
-- [SQL MI Offline migration]()
+- [SQL MI Online migration](/azure/dms/tutorial-sql-server-managed-instance-online)
+- [SQL MI Offline migration](/azure/dms/tutorial-sql-server-to-managed-instance)
 - [Download Azure Data Studio](../download-azure-data-studio.md)
 - [Azure Data Studio release notes](../release-notes-azure-data-studio.md)
 - [Azure Data Studio extensions](add-extensions.md)

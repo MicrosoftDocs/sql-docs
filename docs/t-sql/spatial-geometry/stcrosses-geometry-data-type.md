@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STCrosses (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns 1 if a **geometry** instance crosses another **geometry** instance. Returns 0 if it does not.
   

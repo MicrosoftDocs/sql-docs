@@ -99,7 +99,6 @@ The following migration modes are supported for the corresponding Azure SQL targ
 | SQL Server on Azure VM | [Online]() |
 | SQL Server on Azure VM | [Offline]() |
 
-
 ### Environment requirements
 
 - Source SQL Server version 2008 or later.
@@ -129,7 +128,7 @@ The following migration modes are supported for the corresponding Azure SQL targ
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
 You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
-### Unsupported Azure SQL target
+### Unsupported Azure SQL targets
 
 - Azure SQL Database
 - SQL VM running on Linux

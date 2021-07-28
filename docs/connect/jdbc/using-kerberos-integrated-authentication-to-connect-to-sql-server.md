@@ -2,7 +2,7 @@
 description: "Using Kerberos integrated authentication to connect to SQL Server"
 title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "07/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -50,7 +50,7 @@ A new logger has been added to support Kerberos authentication: com.microsoft.sq
 The following guidelines will help you to configure Kerberos:
 
 1. Set **AllowTgtSessionKey** to 1 in the registry for Windows. For more information, see [Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003](https://support.microsoft.com/kb/837361).
-2. Make sure that the Kerberos configuration (krb5.conf in UNIX environments), points to the correct realm and KDC for your environment.
+2. Make sure that the Kerberos configuration (krb5.conf in UNIX environments), points to the correct and KDC for your environment.
 3. Initialize the TGT cache by using kinit or logging into the domain.
 4. When an application that uses **authenticationScheme=JavaKerberos** runs on the Windows Vista or Windows 7 operating systems, you should use a standard user account. However if you run the application under an administrator's account, the application must run with administrator privileges.
 
@@ -178,7 +178,7 @@ driverProperties.put("gsscredential", impersonatedUserCredential);
 Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 ```
 
-## Kerberos connection using principal names and password
+## Kerberos connection using principal name, password, and realm
 
 Beginning in Microsoft JDBC Driver 6.2, the driver can establish Kerberos connection using the Principal Name and Password passed in connection string.
 
@@ -187,6 +187,12 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 ```
 
 The username property does not require REALM if user belongs to the default_realm set in krb5.conf file. When `userName` and `password` is set along with `integratedSecurity=true;` and `authenticationScheme=JavaKerberos;` property, the connection is established with value of userName as Kerberos Principal along with the password supplied.
+
+Beginning in Microsoft JDBC Driver 9.4, the user can specify the realm for Kerberos authentication in the connection string.
+
+```java
+jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user;password=****;realm=REALM
+```
 
 ## Using Kerberos authentication from Unix Machines on the same domain
 

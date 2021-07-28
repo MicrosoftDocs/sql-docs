@@ -22,21 +22,21 @@ The connection string properties can be specified in various ways:
 
 - As name=value properties in the connection URL when you connect by using the DriverManager class.
 - As name=value properties in the *Properties* parameter of the Connect method in the DriverManager class.
-- As values in the appropriate setter method of the data source of the driver. For example:  
-  
+- As values in the appropriate setter method of the data source of the driver. For example:
+ 
     ```java
-    datasource.setServerName(value)  
-    datasource.setDatabaseName(value)  
-    ```  
+    datasource.setServerName(value)
+    datasource.setDatabaseName(value)
+    ``` 
   
 ## Remarks
 
 Property names are case-insensitive, and duplicate property names are resolved in the following order:
-  
+ 
 1. API arguments (such as user and password)
 2. Property collection
 3. Last instance in the connection string
-  
+ 
 Also, unknown values are allowed for the property names, and their values are not validated by the JDBC driver for case sensitivity.
 
 Synonyms are allowed and are resolved in order, just as duplicate property names.
@@ -118,7 +118,7 @@ The following table lists all the currently available connection string properti
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | Set to "true" to specify that the driver returns XOPEN-compliant state codes in exceptions. <br/><br/>The default is to return SQL 99 state codes. |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]  
+> [!NOTE]
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for ANSI_DEFAULTS and IMPLICIT_TRANSACTIONS. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets ANSI_DEFAULTS to ON and IMPLICIT_TRANSACTIONS to OFF.
 
 > [!Important]
@@ -132,4 +132,4 @@ The following table lists all the currently available connection string properti
 ## See also
 
 [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
-[FIPS mode](fips-mode.md)  
+[FIPS mode](fips-mode.md)

@@ -1,6 +1,6 @@
 ---
-description: "Auto Restart SQL Server Agent"
 title: Auto Restart SQL Server Agent
+description: "Auto Restart SQL Server Agent"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -8,12 +8,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, starting"
   - "autostart SQL Server Agent"
-ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 07/28/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -21,28 +20,30 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to automatically restart if it should stop unexpectedly.  
   
-## <a name="BeforeYouBegin"></a>Before You Begin  
+## <a name="BeforeYouBegin"></a>Before You Begin
   
-### <a name="Restrictions"></a>Limitations and Restrictions  
+### <a name="Restrictions"></a>Limitations and Restrictions
+
 Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node if you have permission to use it.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Security
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permissions
+
 To perform its functions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be configured to use the credentials of an account that is a member of the **sysadmin** fixed server role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The account must have the following Windows permissions:  
   
--   Log on as a service (SeServiceLogonRight)  
+- Log on as a service (SeServiceLogonRight)  
   
--   Replace a process-level token (SeAssignPrimaryTokenPrivilege)  
+- Replace a process-level token (SeAssignPrimaryTokenPrivilege)  
   
--   Bypass traverse checking (SeChangeNotifyPrivilege)  
+- Bypass traverse checking (SeChangeNotifyPrivilege)  
   
--   Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
+- Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
   
  > [!NOTE]
  > For Auto Restart to function properly, the account running the SQL Server Agent service must be a local administrator on the server.
@@ -51,10 +52,10 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   
-#### To configure SQL Server Agent to automatically restart  
+### To configure SQL Server Agent to automatically restart  
   
-1.  In **Object Explorer**, click the plus sign to expand the server where you want to configure SQL Server Agent to automatically restart.  
-  
-2.  Right-click **SQL Server Agent**, and then click **Properties**.  
-  
-3.  On the **General** page, check **Auto restart SQL Server Agent if it stops unexpectedly**.  
+1. In **Object Explorer**, click the plus sign to expand the server where you want to configure SQL Server Agent to automatically restart.  
+
+2. Right-click **SQL Server Agent**, and then click **Properties**.  
+
+3. On the **General** page, check **Auto restart SQL Server Agent if it stops unexpectedly**.  

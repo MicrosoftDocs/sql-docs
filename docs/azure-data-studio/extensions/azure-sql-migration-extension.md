@@ -51,17 +51,18 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Azure SQL migration extension":::
 
-6. You can connect to the SQL Server instance in Azure Data Studio and either double-click the instance name or right-click the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
+6. You can connect to the SQL Server instance in Azure Data Studio and either double-Select the instance name or right-Select the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
 
-### Auto Updates for the extension
+### Set up auto update for the extension
+
 You can check for updates to the extension and have them automatically updated by configuring **Auto Update** in Azure Data Studio settings.
 
-To enable this:
-1. Click on the Settings icon in Azure Data Studio.
-1. Select the checkbox under User > Features > Extensions > Auto Check Updates.
-1. click on the dropdown under User > Features > Extensions > Auto Update and select either **All Extensions** or **Only Enabled Extensions**.
+To enable auto updates:
+1. Select the **Settings** icon in Azure Data Studio.
+1. Select the **checkbox** under **User > Features > Extensions > Auto Check Updates**.
+1. Select on the **dropdown** under **User > Features > Extensions > Auto Update** and select either **All Extensions** or **Only Enabled Extensions**.
 
 > [!NOTE]
 > If you want to update the extension manually, you can disable **Auto Update** and install the updates from the extension in the Marketplace.
@@ -79,12 +80,12 @@ The Azure SQL Migration extension supports database migrations to the following 
 
 The Azure SQL Migration extension supports target readiness for the following Azure SQL targets.
 
-- SQL on Azure Virtual Machines (SQL VM)
 - Azure SQL Managed Instance (SQL MI)
+- SQL on Azure Virtual Machines (SQL VM)
 
 ### Migration modes
 
-Moreover, the following migration modes are supported for the corresponding Azure SQL targets.
+The following migration modes are supported for the corresponding Azure SQL targets.
 
 - **Online** - The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to duration for the cutover at the end of migration. 
 - **Offline** - The source database cannot be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime persists through the start until the completion of the migration process.
@@ -93,8 +94,8 @@ Moreover, the following migration modes are supported for the corresponding Azur
 
 | Azure SQL target | Migration mode |
 |-----------------|----------------|
-| Azure SQL Managed Instance | [Online]() |
-| Azure SQL Managed Instance | [Offline]() |
+| Azure SQL Managed Instance | [Online](/azure/dms/tutorial-sql-server-managed-instance-online) |
+| Azure SQL Managed Instance | [Offline](/azure/dms/tutorial-sql-server-to-managed-instance) |
 | SQL Server on Azure VM | [Online]() |
 | SQL Server on Azure VM | [Offline]() |
 
@@ -128,104 +129,30 @@ Moreover, the following migration modes are supported for the corresponding Azur
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
 You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
-### Unsupported implicit assessment
-
-- Ability to assess SQL Server extended event files.
-- Ability to consume Data Access Migration Toolkit (DAMT) input file for assessment.
-
-### Unsupported source SQL Server environments
-
-- Migrating from AWS RDS (PaaS offering) for SQL Server to Azure SQL PaaS offering.
-- Migration from GCP Cloud SQL (PaaS offering) for SQL Server to Azure SQL PaaS offering.
-- Azure Arc enabled SQL Managed Instance (preview).
-
-### Unsupported SQL Server services
-
-- SQL Server reporting services
-- SQL Server analysis services
-- SQL Server integration services
-- SQL Server Master Data Services (MDS)
-- SQL Server Data Quality Services (DQS)
-
 ### Unsupported Azure SQL target
 
 - Azure SQL Database
 - SQL VM running on Linux
 
-### Unsupported backup file locations
+### Unsupported SQL Server services
 
-- Azure recovery services vault
-- AWS S3
-- GCP Cloud Storage
-- Third-party backup solutions like Tivoli
-- Volume Shadow Copy Service (VSS) backups
-
-### Unsupported database backups
-
-Migration workflow doesn't generate the latest backups to use for migration and instead uses existing backup files.
-
-#### Unsupported migration mode, back up file location, and backup type
-
-| Migration Mode | Backup file location | DMS associated with Self-Hosted Integration Runtime (SHIR) | Backup types allowed |
-|----------------|----------------------|--------------------------|----------------------|
-| Online | Azure Storage Blob Container | No | Full backup, Differential backup, and Transaction log backups. |
-| Online | Azure Storage File Share | Yes | Full backup and Transaction log backups. (See below note for challenges related to differential backups.) |
-| Offline | On-premise network file share | Yes | Differential Backup (Latest), one or more Transaction log backups. |
-| Offline | Azure Storage Blob Container | No | Full backup (Latest), Differential Backup (Latest), one or more Transaction log backups. |
-| Offline | Azure Storage File Share | Yes | Full backup (Latest), Differential Backup (Latest), one or more Transaction log backups. |
-
-> [!Note]
-> Supporting differential backups for DMS is complex due to upload or copy step involved from on-premise network file share or Azure Storage File Share to Azure Storage account, which is the size of data operation and may cause potential wastage of network bandwidth if multiple differential backups are to be uploaded or copied as database restore plan can change dynamically.
-
-### Unsupported SQL VM target scenarios
-
-- Reusing target database name in a particular SQL VM while repeating migration even after deleting the migrated database.
-- SQL VM with SQL Server 2008 R2 and below versions.
-- Provisioning a new SQL VM during migration.
-- Recommendation on SQL VM SKU size and disk layout.
-- If the database is encrypted with Transparent Data Encryption (TDE), ensure the corresponding certificate from the source SQL Server instance is already migrated to the target SQL VM before starting database migration.
-- If database backup is encrypted with a certificate or symmetric key, then ensure corresponding certificate or symmetric key from the source SQL Server instance is backed up and created on target SQL VM before starting database migration.
-- Setting up high availability and disaster recovery (Availability Groups, Failover Clustering, Log Shipping, Replication) in SQL VM to match the source topology.
-- Overwriting an existing database in target SQL VM.
-- Customization of blocksize, buffer count, maxtransfersize parameters in RESTORE operation.
-- Renaming of target physical data file names for the restored database.
-- There's an issue were concurrent database migration actions like start, cancel & cut over against a particular SQL VM may hit a race condition resulting in errors.
+- SQL Server Reporting Services
+- SQL Server Analysis Services
+- SQL Server Integration Services
+- SQL Server Master Data Services (MDS)
+- SQL Server Data Quality Services (DQS)
 
 ### Unsupported SQL MI target scenarios
 
-- Reusing target database name in a particular SQL MI while repeating migration even after deleting the migrated database.
-- Provisioning a new SQL MI during migration
-- Recommendation for SQL MI SKU size.
-- If the database is encrypted with Transparent Data Encryption (TDE), ensure the corresponding certificate from the source SQL Server instance is already migrated to target SQL MI before starting database migration.
-- If database backup is encrypted with a certificate or symmetric key, ensure the corresponding certificate from the source SQL Server instance is already migrated to target SQL MI before starting database migration.
-- Overwriting an existing database in target SQL MI.
-- Customization of blocksize, buffer count, maxtransfersize parameters in RESTORE operation.
+For details about unsupported online SQL MI scenarios visit, [Limitations and unsupported environments for online SQL MI]().
 
-### Unsupported server objects
+For details about unsupported offline SQL MI scenarios visit, [Limitations and unsupported environments for offline SQL MI]().
 
-- Logins
-- SQL Server Agent jobs
-- Linked Servers
-- Credentials
-- SQL Server Integration Services (SSIS) packages
-- Cryptographic providers
-- Server roles
-- Server audit
-- Database audit
-- Extended event sessions
-- Maintenance plans
-- Database mail
-- DTC
-- Policy-Based Management (PBM)
-- Instance Trace Flags
-- Service Broker
-- Event notifications
-- SQLCLR
-- Server level triggers
+### Unsupported SQL VM target scenarios
 
-### Unsupported command-line interface (CLI)
+For details about unsupported online SQL VM scenarios visit, [Limitations and unsupported environments for online SQL VM]().
 
-There's no CLI support.
+For details about unsupported offline SQL VM scenarios visit, [Limitations and unsupported environments for offline SQL VM]().
 
 ## Next steps
 

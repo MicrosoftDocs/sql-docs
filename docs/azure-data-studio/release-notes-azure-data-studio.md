@@ -85,8 +85,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 ### July 2021
 
-Azure Data Studio 1.31.0 is the latest general availability (GA) release.
-
 - Release number: 1.31.0
 - Release date: July 21, 2021
 
@@ -116,8 +114,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 ### June 2021
 
-Azure Data Studio 1.30.0 is the latest general availability (GA) release.
-
 - Release number: 1.30.0
 - Release date: June 17, 2021
 
@@ -138,7 +134,6 @@ Azure Data Studio 1.30.0 is the latest general availability (GA) release.
 | Notebooks | Fixed WYWIWYG Table cell adding new line in table cell |
 | Notebooks | Fixed issue that Kusto notebook does not change kernels properly |
 
-
 For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/73?closed=1).
 
 #### Known issues in 1.30.0
@@ -146,8 +141,6 @@ For a full list of bug fixes addressed for the May 2021 release, visit the [bugs
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### May 2021
-
-Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 
 - Release number: 1.29.0
 - Release date: May 19, 2021

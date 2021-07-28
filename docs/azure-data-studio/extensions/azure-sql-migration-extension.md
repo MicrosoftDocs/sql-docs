@@ -13,13 +13,13 @@ ms.date: 07/30/2021
 
 # Azure SQL Migration extension for Azure Data Studio (Preview)
 
-The Azure SQL Migration extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to use the new migration capability in Azure Data Studio.
+The Azure SQL Migration extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to use the new SQL Server assessment and migration capability in Azure Data Studio.
 
 The Azure SQL Migration extension guides you to migrate your on-premises SQL Server or your SQL virtual machines (IaaS) running in any cloud platform to:
 
 **SQL Server on Azure Virtual Machines (SQL VM) or Azure SQL Managed Instance (SQL MI)**.
 
-This article describes how to install the Azure SQL migration extension through Azure Data Studio, powered by the Azure Database Migration service.
+This article describes how to install the Azure SQL migration extension through Azure Data Studio, powered by the [Azure Database Migration service (DMS)]().
 
 This extension is currently in preview.
 
@@ -41,7 +41,7 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
 2. Type in *Azure SQL Migration* in the search bar.
 
-3. Select the **sql migration** extension and view its details.
+3. Select the **Azure SQL Migration** extension and view its details.
 
 4. Select **Install**.
 
@@ -51,36 +51,53 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Azure SQL migration extension":::
 
-6. You can connect to the SQL Server instance in Azure Data Studio and either double-click the instance name or right-click the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration extension landing page**.
+6. You can connect to the SQL Server instance in Azure Data Studio and either double-click the instance name or right-click the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
 
-When a newer version of the Azure SQL Migration extension is published in the Azure Data Studio marketplace, the extension gets updated automatically.
+### Auto Updates for the extension
+You can check for updates to the extension and have them automatically updated by configuring **Auto Update** in Azure Data Studio settings.
 
-## Azure SQL targets and migration modes
+To enable this:
+1. Click on the Settings icon in Azure Data Studio.
+1. Select the checkbox under User > Features > Extensions > Auto Check Updates.
+1. click on the dropdown under User > Features > Extensions > Auto Update and select either **All Extensions** or **Only Enabled Extensions**.
 
-There are only two Azure SQL targets available to use with the Azure SQL migration extension.
+> [!NOTE]
+> If you want to update the extension manually, you can disable **Auto Update** and install the updates from the extension in the Marketplace.
 
-- **SQL on Azure Virtual Machines (SQL VM)**
-- **Azure SQL Managed Instance (SQL MI)**
+## Features
 
-Select one of the Azure SQL targets and migration modes to follow that environment's migration steps.
+### Azure SQL targets
 
-### SQL on Azure Virtual Machines (SQL VM)
+The Azure SQL Migration extension supports database migrations to the following Azure SQL targets.
 
-| Migration mode | Description |
-|----------------|-------------|
-| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
-| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
+- SQL on Azure Virtual Machines (SQL VM)
+- Azure SQL Managed Instance (SQL MI)
 
-### Azure SQL Managed Instance (SQL MI)
+### Azure SQL target readiness assessment
 
-| Migration mode | Description |
-|----------------|-------------|
-| [Online]() | The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to cut over at the end of migration. |
-| [Offline]() | The source database can't be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime starts when the migration begins. |
+The Azure SQL Migration extension supports target readiness for the following Azure SQL targets.
 
-## Environment and region requirements
+- SQL on Azure Virtual Machines (SQL VM)
+- Azure SQL Managed Instance (SQL MI)
+
+### Migration modes
+
+Moreover, the following migration modes are supported for the corresponding Azure SQL targets.
+
+- **Online** - The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to duration for the cutover at the end of migration. 
+- **Offline** - The source database cannot be used for write activity while database backup files are restored on the target Azure SQL database. Application downtime persists through the start until the completion of the migration process.
+
+### Support matrix
+
+| Azure SQL target | Migration mode |
+|-----------------|----------------|
+| Azure SQL Managed Instance | [Online]() |
+| Azure SQL Managed Instance | [Offline]() |
+| SQL Server on Azure VM | [Online]() |
+| SQL Server on Azure VM | [Offline]() |
+
 
 ### Environment requirements
 
@@ -89,8 +106,7 @@ Select one of the Azure SQL targets and migration modes to follow that environme
 - Full backup is taken as one file or striped into multiple files.
 - Log back up taken as one file or stripped into multiple files
 - The **CHECKSUM option needs to be enabled for the backups provided for migration**.
-    - This option is mandatory for migrating to SQL MI and optional for SQL VM.
-- Each backup should have its own backup set and can't be appended to any existing backup set. DMS always uses the first backup file in the set and ignores the rest.
+- Each backup should have its own backup set and can't be appended to any existing backup set. Azure DMS always uses the first backup file in the set and ignores the rest.
 
 ### Source SQL Server environments
 
@@ -104,29 +120,8 @@ Select one of the Azure SQL targets and migration modes to follow that environme
 - SQL Server running on GCP Compute Engine (IaaS) Linux VM Supported SQL Server services
 - SQL Server database engine
 
-### Operating Systems
-
-- Windows Server 2012 - 2019, Windows 8.1 - 10.
-- Microsoft Integration Runtime (Self-hosted) requires a 64-bit Operating System with .NET Framework 4.7.2 or above.
-- The minimum configuration for the Integration Runtime (Self-hosted) machine is 2 GHz, four Core CPUs, 8 GB Memory, and 80-GB disk.
-
-### Azure regions
-
-- Canada Central
-- East US
-- East US 2
-
-## Extension settings
-
-To change the settings for the Kusto extension, follow the steps below.
-
-1. Open the extension manager in Azure Data Studio. You can either select the extensions icon or select **Extensions** in the View menu.
-
-2. Find the **Azure SQL Migration** extension.
-
-3. Select the **Manage** icon.
-
-4. Select the **Extension Settings** icon.
+> [!NOTE]
+> The Azure SQL Migration extension is supported in Azure Data Studio that is installed on a Windows Operating System.
 
 ## Limitations and unsupported environments
 

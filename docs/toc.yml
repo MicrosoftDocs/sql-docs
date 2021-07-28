@@ -8899,7 +8899,7 @@ items:
             href: ssms/agent/assign-alerts-to-an-operator.md
           - name: Automatically Delete a Job
             href: ssms/agent/automatically-delete-a-job.md
-          - name: Auto restart SQL Server Agent
+          - name: Auto Restart SQL Server Agent
             href: ssms/agent/autorestart-sql-server-agent-sql-server-management-studio.md
           - name: Change an Operator's Availability
             href: ssms/agent/change-an-operator-s-availability.md

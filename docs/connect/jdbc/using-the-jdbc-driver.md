@@ -72,6 +72,7 @@ If using JDBC Driver 4.1 or 4.2, set the classpath to include **sqljdbc41.jar** 
 
 If the classpath is missing an entry for the right Jar file, an application will throw the common `Class not found` exception.  
 
+
 ### For Microsoft JDBC Driver 9.4
 
 The **mssql-jdbc-9.4.0.jre8.jar**, **mssql-jdbc-9.4.0.jre11.jar**, or **mssql-jdbc-9.4.0.jre16.jar** files are installed in the following locations:
@@ -93,6 +94,28 @@ The following snippet is an example of the CLASSPATH statement that is used for 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre11.jar`
 
 Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-9.4.0.jre8.jar**, **mssql-jdbc-9.4.0.jre11.jar**, or **mssql-jdbc-9.4.0.jre16.jar**.
+
+### For Microsoft JDBC Driver 9.2
+
+The **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar** files are installed in the following locations:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre15.jar
+```
+
+The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.2 for SQL Server\sqljdbc_9.2\enu\mssql-jdbc-9.2.1.jre11.jar`
+
+The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.2/enu/mssql-jdbc-9.2.1.jre11.jar`
+
+Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar**.
 
 
 ### For Microsoft JDBC Driver 8.4

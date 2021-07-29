@@ -19,6 +19,8 @@ Azure Arc-enabled SQL Server releases for general availability support
 
 This release introduces a SQL Server extension that continuously monitors for changes of the SQL Server configuration and automatically updates the corresponding __SQL Server - Azure Arc__ resources. The extension is installed as part of the SQL Server instance registration process. To upgrade your existing __SQL Server - Azure Arc__ resources to an agent-based configuration, use any of the methods described in [Connect your SQL Server to Azure Arc](connect.md).
 
+This release also introduces a built-in role *Azure Connected SQL Server Onboarding* that defines the minimal permissions that would allow the hosting machine's MSI to onboard both the machine and the SQL Server instances to to Azure Arc.
+
 > [!NOTE]
 > In this release, the SQL Server extension is only available for  Windows. A Linux version of the extension will be announced separately.  
 

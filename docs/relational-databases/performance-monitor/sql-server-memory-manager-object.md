@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Memory Manager Object | Microsoft Docs"
+title: "SQL Server, Memory Manager object"
 description: Learn about the Memory Manager object, which provides counters to monitor overall server memory usage in SQL Server. 
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,11 +11,10 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Memory Manager"
   - "Memory Manager object"
-ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Memory Manager Object
+# SQL Server, Memory Manager object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Memory Manager** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor overall server memory usage. Monitoring overall server memory usage to gauge user activity and resource usage can help you to identify performance bottlenecks. Monitoring the memory used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can help determine:  
   
@@ -48,9 +47,19 @@ ms.author: wiassaf
 |**Stolen Server Memory (KB)**|Specifies the amount of memory the server is using for purposes other than database pages.|  
 |**Target Server Memory (KB)**|Indicates the ideal amount of memory the server can consume.|  
 |**Total Server Memory (KB)**|Specifies the amount of memory the server has committed using the memory manager.|  
+ 
   
-## See Also  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Memory Manager%';
+```  
+
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Buffer Manager Object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
-[sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
+ [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   

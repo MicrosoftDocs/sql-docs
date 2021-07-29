@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Automatically Generate Attribute Values Other Than Code (Master Data Services)

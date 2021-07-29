@@ -2,7 +2,7 @@
 title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
 description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "05/31/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: v-daenge
@@ -47,6 +47,8 @@ Use the Advanced tab to view and set additional initialization properties.
 |Option|Description|
 |---   |---        |
 | Connect timeout | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server waits for initialization to complete. If initialization times out, an error is returned and the connection is not created.|
+| Connect retry count | Specifies the number of times that the Microsoft OLE DB Driver for SQL Server will attempt to reconnect in the case of connection loss.|
+| Connect retry interval | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server will wait between reconnection attempts.|
 
 
 > [!NOTE]  

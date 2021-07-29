@@ -90,9 +90,7 @@ For information on which version of Python is included, see [Python and R versio
 
 ### Component upgrades
 
-By default, Python packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core Python components are possible only through product upgrades or by binding Python support to Microsoft Machine Learning Server.
-
-For more information, see [Upgrade R and Python components in SQL Server](../install/upgrade-r-and-python.md).
+By default, Python packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core Python components are possible only through product upgrades.
 
 ## Default open-source Python packages
 
@@ -162,5 +160,5 @@ print(sys.version)
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
-+ [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages with sqlmlutils](install-additional-python-packages-on-sql-server.md)
 ::: moniker-end

@@ -24,7 +24,6 @@ This article provides step-by-step instructions for leveraging the [Data Migrati
 
 [!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
->
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Create a project and add a tool

@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # InstanceOf (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Tests if the **geography** instance is the same as the specified type.  
   

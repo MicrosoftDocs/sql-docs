@@ -8,8 +8,8 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
-ms.date: 12/11/2020
+ms.reviewer: "maghan"
+ms.date: 7/2/2021
 ---
 
 # SqlPackage Export parameters and properties
@@ -33,7 +33,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Export /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-export-action);{PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |

@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
+The SQL Server Management Studio **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -59,7 +59,7 @@ The **Error List** provides the following functionality:
  The **Error List** does not link to additional information about specific errors.  
   
 ## Transact-SQL Errors in Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays errors for [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts in the following locations:  
+ SQL Server Management Studio displays errors for [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts in the following locations:  
   
 -   The **Error List** contains all syntax and semantic errors found by IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Editor. This list of errors is dynamically updated as you edit [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. The list includes all errors that the editor has found in each [!INCLUDE[tsql](../../includes/tsql-md.md)] script. The editor does not stop parsing a file after encountering errors in a script. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Editor does not support all [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax elements. The **Error List** contains only errors from the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is supported by IntelliSense.  
   

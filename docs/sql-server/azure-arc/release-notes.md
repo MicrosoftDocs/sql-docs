@@ -21,6 +21,8 @@ This release introduces a SQL Server extension that continuously monitors for ch
 
 This release also introduces a built-in role *Azure Connected SQL Server Onboarding* that defines the minimal permissions that would allow the hosting machine's MSI to onboard both the machine and the SQL Server instances to to Azure Arc.
 
+The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [Required permissions](overview.md#required-permissions).  
+
 > [!NOTE]
 > In this release, the SQL Server extension is only available for  Windows. A Linux version of the extension will be announced separately.  
 

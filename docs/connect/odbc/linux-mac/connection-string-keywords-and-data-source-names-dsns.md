@@ -2,7 +2,7 @@
 title: "Connecting from Linux or macOS"
 description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 09/10/2020
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

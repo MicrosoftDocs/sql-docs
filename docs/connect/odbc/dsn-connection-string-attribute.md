@@ -2,7 +2,7 @@
 title: ODBC DSN and connection string keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 ms.custom: ""
-ms.date: 07/23/2021
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -40,8 +40,8 @@ The following table lists the available keywords and the attributes for each pla
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only)| | LMW |
-| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only) | | LMW |
+| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8)| | LMW |
+| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8) | | LMW |
 | [KeystoreAuthentication](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |

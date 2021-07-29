@@ -2,7 +2,7 @@
 description: Learn how the JDBC driver supports Java EE and the JBDC API and the packages Java applications need to use to take advantage of that functionality.
 title: Understanding Java EE support
 ms.custom: ""
-ms.date: "07/29/2021"
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

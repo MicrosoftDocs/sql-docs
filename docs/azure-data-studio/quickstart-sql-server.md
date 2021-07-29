@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: "alayu, maghan"
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ---

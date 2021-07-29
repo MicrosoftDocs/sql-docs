@@ -8,7 +8,7 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
+ms.reviewer: "maghan"
 ms.date: 06/24/2021
 ---
 

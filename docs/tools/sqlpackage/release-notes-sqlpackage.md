@@ -4,7 +4,7 @@ description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
 ms.date: 06/02/2021
 ms.prod: sql
-ms.reviewer: "llali; sstein"
+ms.reviewer: "llali"
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared

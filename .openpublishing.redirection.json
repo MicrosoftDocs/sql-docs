@@ -58846,6 +58846,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/agent/autorestart-sql-server-agent-sql-server-management-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/f1-help/index.md",
       "redirect_url": "/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
       "redirect_document_id": false

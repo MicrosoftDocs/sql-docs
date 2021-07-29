@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: MikeRayMSFT 
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/09/2021
+ms.reviewer: danibunny
+ms.date: 07/29/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -61,6 +61,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU12](#cu12) |  15.0.4153.1 | 20.3.6    | 2021-08-10 |
 | [CU11](#cu11) |  15.0.4138.2 | 20.3.3    | 2021-06-10 |
 | [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
@@ -81,6 +82,16 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu12"></a> CU11 (June 2021)
+
+Cumulative Update 12 (CU12) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4153.1|[2019-CU12-ubuntu-20.04]|
+
+SQL Server 2019 CU12 for SQL Server Big Data Clusters changes the operating system default python version from 3.5 to 3.6 on all its images. This has no impact on Spark and SQL Server Machine Learning Services, as those components use dedicated Python installations and don't rely on OS python.
 
 ## <a id="cu11"></a> CU11 (June 2021)
 

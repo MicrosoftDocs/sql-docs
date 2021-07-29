@@ -30,7 +30,7 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 
 Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems:
 
-|Driver version&nbsp;&#8594;<br />&#8595; Operating System     |17.8||17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|Driver version&nbsp;&#8594;<br />&#8595; Operating System     |17.8|17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|----|----|----|---|
 |Apple OS X 10.11 (El Capitan)  |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.12 (Sierra)     |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|

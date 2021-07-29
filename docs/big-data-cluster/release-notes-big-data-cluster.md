@@ -11,13 +11,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server 2019 Big Data Clusters release notes
+# SQL Server Big Data Clusters release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
-## Supported platforms
+## Tested configurations
 
 This section explains platforms that are supported with [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
@@ -26,9 +26,9 @@ This section explains platforms that are supported with [!INCLUDE[ssbigdataclust
 |Platform|Supported versions|
 |---------|---------|
 |Vanilla (upstream) Kubernetes|Deploy BDC on premises using a Kubernetes cluster version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
-|Red Hat OpenShift|Deploy BDC on premises using an OpenShift cluster version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
+|Red Hat OpenShift|Deploy BDC on premises using an OpenShift cluster version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server Big Data Clusters CU5.|
 |Azure Kubernetes Service (AKS)|Deploy BDC on AKS cluster version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
-|Azure Red Hat OpenShift (ARO)|Deploy BDC on ARO version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
+|Azure Red Hat OpenShift (ARO)|Deploy BDC on ARO version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server Big Data Clusters CU5.|
 
 ### Host OS for Kubernetes
 
@@ -38,7 +38,7 @@ This section explains platforms that are supported with [!INCLUDE[ssbigdataclust
 |Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
 
-<sup>*</sup>Beginning with cumulative update 10 (CU10) release for SQL Server 2019. 
+<sup>*</sup>Beginning with cumulative update 10 (CU10) release for SQL Server Big Data Clusters. 
 
 ### SQL Server Editions
 
@@ -50,7 +50,7 @@ This section explains platforms that are supported with [!INCLUDE[ssbigdataclust
 
 |Platform|Supported versions|
 |---------|---------|
-|[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
+|[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]|As a best practice, use the latest version available. Starting with SQL Server Big Data Clusters CU5 release, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).|
 
 For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
@@ -85,23 +85,23 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## <a id="cu12"></a> CU12 (August 2021)
 
-Cumulative Update 12 (CU12) release for SQL Server 2019.
+Cumulative Update 12 (CU12) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
 |15.0.4153.1|[2019-CU12-ubuntu-20.04]|
 
-SQL Server 2019 CU12 for SQL Server Big Data Clusters changes the operating system default python version from 3.5 to 3.6 on all its images. This has no impact on Spark and SQL Server Machine Learning Services, as those components use dedicated Python installations and don't rely on OS python.
+SQL Server Big Data Clusters CU12 changes the operating system default python version from 3.5 to 3.6 on all its images. This has no impact on Spark and SQL Server Machine Learning Services, as those components use dedicated Python installations and don't rely on OS python.
 
 ## <a id="cu11"></a> CU11 (June 2021)
 
-Cumulative Update 11 (CU11) release for SQL Server 2019.
+Cumulative Update 11 (CU11) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
 |15.0.4138.2|[2019-CU11-ubuntu-20.04]|
 
-SQL Server 2019 CU11 for SQL Server Big Data Clusters, includes important capabilities:
+SQL Server Big Data Clusters CU11 includes important capabilities:
 
 - Encryption at Rest with external key providers via BDC KMS, commonly known as bring your own key (BYOK). For more information, see [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md).
 - Several SQL Server PolyBase Hadoop fixes and SQL Server PolyBase support of the following data sources: Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[S]). For more information, see:
@@ -111,13 +111,13 @@ SQL Server 2019 CU11 for SQL Server Big Data Clusters, includes important capabi
 
 ## <a id="cu10"></a> CU10 (April 2021)
 
-Cumulative Update 10 (CU10) release for SQL Server 2019.
+Cumulative Update 10 (CU10) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
 |15.0.4123.1|[2019-CU10-ubuntu-20.04]|
 
-SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabilities:
+SQL Server Big Data Clusters CU10 includes important capabilities:
 
 - Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
    > [!CAUTION]
@@ -128,13 +128,13 @@ SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabi
 
 ## <a id="cu9"></a> CU9 (February 2021)
 
-Cumulative Update 9 (CU9) release for SQL Server 2019.
+Cumulative Update 9 (CU9) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
 |15.0.4102.2|[2019-CU9-ubuntu-16.04]|
 
-SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabilities:
+SQL Server Big Data Clusters CU9 includes important capabilities:
 
 - Support to configure BDC post deployment and provide increased visibility of system settings.
 
@@ -147,7 +147,7 @@ SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabil
 
 ## <a id="cu8-gdr"></a> CU8-GDR(January 2021)
 
-Cumulative Update 8 GDR (CU8-GDR) release for SQL Server 2019.
+Cumulative Update 8 GDR (CU8-GDR) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
@@ -155,7 +155,7 @@ Cumulative Update 8 GDR (CU8-GDR) release for SQL Server 2019.
 
 ## <a id="cu8"></a> CU8 (September 2020)
 
-Cumulative Update 8 (CU8) release for SQL Server 2019.
+Cumulative Update 8 (CU8) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
@@ -174,7 +174,7 @@ This release includes several fixes and a couple of enhancements.
 
 ## <a id="cu6"></a> CU6 (July 2020)
 
-Cumulative Update 6 (CU6) release for SQL Server 2019.
+Cumulative Update 6 (CU6) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
@@ -196,7 +196,7 @@ This release includes minor fixes and enhancements. The following articles inclu
 
 ## <a id="cu5"></a> CU5 (June 2020)
 
-Cumulative Update 5 (CU5) release for SQL Server 2019.
+Cumulative Update 5 (CU5) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag |
 |-----|-----|
@@ -205,7 +205,7 @@ Cumulative Update 5 (CU5) release for SQL Server 2019.
 ### Added capabilities
 
 - Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform deployed on premises version 4.3 and up and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
-- Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
+- Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server Big Data Clusters CU5. 
 - Added support for deploying multiple big data clusters against an Active Directory domain.
 - [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
 - Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
@@ -215,7 +215,7 @@ Cumulative Update 5 (CU5) release for SQL Server 2019.
 
 ## <a id="cu4"></a> CU4 (April 2020)
 
-Cumulative Update 4 (CU4) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4033.1.
+Cumulative Update 4 (CU4) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4033.1.
 
 |Package version | Image tag |
 |-----|-----|
@@ -223,7 +223,7 @@ Cumulative Update 4 (CU4) release for SQL Server 2019. The SQL Server Database E
 
 ## <a id="cu3"></a> CU3 (March 2020)
 
-Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4023.6.
+Cumulative Update 3 (CU3) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4023.6.
 
 |Package version | Image tag |
 |-----|-----|
@@ -231,14 +231,14 @@ Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database E
 
 ### Resolved issues
 
-SQL Server 2019 CU3 resolves the following issues from previous releases.
+SQL Server Big Data Clusters CU3 resolves the following issues from previous releases.
 
 - [Deployment with private repository](#deployment-with-private-repository)
 - [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2 (February 2020)
 
-Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4013.40.
+Cumulative Update 2 (CU2) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4013.40.
 
 |Package version | Image tag |
 |-----|-----|
@@ -246,7 +246,7 @@ Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database E
 
 ## <a id="cu1"></a> CU1 (January 2020)
 
-Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
+Cumulative Update 1 (CU1) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4003.23.
 
 |Package version | Image tag |
 |-----|-----|
@@ -254,7 +254,7 @@ Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database E
 
 ## <a id="rtm"></a> GDR1 (November 2019)
 
-SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
+SQL Server Big Data Clusters General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
 
 |Package version | Image tag |
 |-----|-----|
@@ -356,7 +356,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: New clusters deployed starting with CU5.
 
-- **Issue and customer impact**: For new big data clusters deployed using SQL Server 2019 CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server 2019 CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
+- **Issue and customer impact**: For new big data clusters deployed using SQL Server Big Data Clusters CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server Big Data Clusters CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
 
 - **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio release](../azure-data-studio/download-azure-data-studio.md) that includes the necessary changes that address this use case.
 For other scenarios where  you must provide credentials for accessing service through the gateway (for example, logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.

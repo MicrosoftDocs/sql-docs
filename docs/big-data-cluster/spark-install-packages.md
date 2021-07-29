@@ -1,11 +1,11 @@
 ---
 title: Spark Library Management
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Spark Library Management
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: rahul.ajmera
-ms.date: 02/25/2021
+ms.date: 07/12/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -42,7 +42,6 @@ If the __"spark.pyspark.virtualenv.enabled" : "true"__ configuration is not set,
 
 ### Session/Job configuration with requirements.txt
 
-If 
 Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
 
 ```python

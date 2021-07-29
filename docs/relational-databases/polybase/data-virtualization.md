@@ -86,4 +86,4 @@ If you select **Generate script**, you see the T-SQL query that's generated to c
 
 ## Next steps
 
-For more information on SQL Server big data clusters and related scenarios, see [What are SQL Server big data clusters?](../../big-data-cluster/big-data-cluster-overview.md).
+For more information on SQL Server Big Data Clusters and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md).

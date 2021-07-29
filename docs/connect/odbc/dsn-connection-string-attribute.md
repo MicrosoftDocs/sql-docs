@@ -30,8 +30,8 @@ The following table lists the available keywords and the attributes for each pla
 | [Authentication](dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | [SQL_COPT_SS_AUTHENTICATION](dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | LMW |
 | [AutoTranslate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRANSLATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstranslate) | LMW |
 | [ColumnEncryption](dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
-| [ConnectRetryCount](windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [ConnectRetryInterval](windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
+| [ConnectRetryCount](connection-resiliency.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](connection-resiliency.md) | LMW |
+| [ConnectRetryInterval](connection-resiliency.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](connection-resiliency.md) | LMW |
 | [Database](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [Description](dsn-connection-string-attribute.md#description) | | LMW |
 | [Driver](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |

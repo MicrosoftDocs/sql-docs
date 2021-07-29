@@ -1,18 +1,18 @@
 ---
-title: Monitor cluster with azdata and kubectl
+title: Monitor Big Data Clusters with azdata and kubectl
 titleSuffix: SQL Server Big Data Clusters
-description: Monitoring applications with azdata and kubectl on SQL Server 2019 big data cluster.
+description: Monitoring applications with azdata and kubectl on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 09/22/2020
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor cluster with azdata and kubectl
+# Monitor Big Data Clusters by using azdata and kubectl
 
 ## Use azdata
 
@@ -20,7 +20,7 @@ You can also use [azdata](../azdata/install/deploy-install-azdata.md) commands t
 
 ### Service endpoints
 
-1. Log in to the big data cluster with [azdata login](../azdata/reference/reference-azdata.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Authenticate to the big data cluster with [azdata login](../azdata/reference/reference-azdata.md). Set the `--controller-endpoint` parameter to the external IP address of the controller endpoint.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -143,9 +143,9 @@ The following shows sample output from this command:
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-### View specific resource status
+### Specific resource status
 
-You can view the status of a specific resource within the cluster with the [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) command. When you use this command you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
+You can view the status of a specific resource within the cluster with the [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) command. When you use this command, you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
 
 - master
 - control
@@ -159,13 +159,13 @@ For example, the following command displays the status of the storage pool:
 azdata bdc status show --all --resource storage-0
 ```
 
-To see the status of all components that are running a specific service you must use the corresponding command group `azdata bdc <serviceName> status show`. For example:
+To see the status of all components that are running a specific service, you must use the corresponding command group `azdata bdc <serviceName> status show`. For example:
 
-- azdata bdc sql status show --all
-- azdata bdc hdfs status show --all
-- azdata bdc spark status show --all
+- `azdata bdc sql status show --all`
+- `azdata bdc hdfs status show --all`
+- `azdata bdc spark status show --all`
 
-Here is a sample output:
+Sample output:
 
 ```output
   Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy
@@ -242,4 +242,4 @@ You can view the controller status with the [`azdata bdc control status show`](.
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

@@ -17,7 +17,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard 
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The [SQL Server Import and Export Wizard](../../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) is a tool that allows you to copy data from a source to a destination. This document describes how to use the SQL Server Import and Export Wizard if a source and/or a destination is a SQL Server database containing columns protected with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 

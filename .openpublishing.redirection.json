@@ -41296,6 +41296,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/dma/dma-consolidatereports.md",
+      "redirect_url": "/azure/migrate/tutorial-assess-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/dma/dma-powerbiassesreport.md",
       "redirect_url": "/sql/dma/dma-consolidatereports",
       "redirect_document_id": false
@@ -45059,6 +45064,11 @@
       "source_path": "docs/connect/odbc/windows/release-notes.md",
       "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md",
+      "redirect_url": "/sql/connect/odbc/connection-resiliency",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
@@ -57201,11 +57211,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-cluster/index.md",
-      "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/connect/ado-net/index.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false
@@ -58751,6 +58756,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/agent/autorestart-sql-server-agent-sql-server-management-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/f1-help/index.md",
       "redirect_url": "/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
       "redirect_document_id": false
@@ -59141,6 +59151,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-parameterization.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/parameterize-papermill",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
@@ -59189,6 +59204,11 @@
       "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
       "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/support-policy.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
     }
   ]
 }

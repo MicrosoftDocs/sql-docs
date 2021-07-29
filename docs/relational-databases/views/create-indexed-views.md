@@ -2,7 +2,7 @@
 description: "Create Indexed Views"
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/19/2018"
+ms.date: "07/23/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -192,8 +192,8 @@ SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev,
 FROM Sales.SalesOrderDetail AS od
 JOIN Sales.SalesOrderHeader AS o
    ON od.SalesOrderID=o.SalesOrderID
-      AND ProductID BETWEEN 700 and 800
-      AND OrderDate >= CONVERT(datetime,'05/01/2002',101)
+      AND o.OrderDate >= CONVERT(datetime,'05/01/2012',101)
+WHERE od.ProductID BETWEEN 700 and 800
    GROUP BY OrderDate, ProductID
    ORDER BY Rev DESC;
 GO
@@ -202,8 +202,8 @@ SELECT OrderDate, SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev
 FROM Sales.SalesOrderDetail AS od
 JOIN Sales.SalesOrderHeader AS o
    ON od.SalesOrderID=o.SalesOrderID
-      AND DATEPART(mm,OrderDate)= 3
-      AND DATEPART(yy,OrderDate) = 2002
+      AND o.OrderDate >= CONVERT(datetime,'03/01/2012',101)
+      AND o.OrderDate < CONVERT(datetime,'04/01/2012',101)
     GROUP BY OrderDate
     ORDER BY OrderDate ASC;
 ```

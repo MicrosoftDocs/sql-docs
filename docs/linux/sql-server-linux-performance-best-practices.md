@@ -101,7 +101,7 @@ Use of **noatime** attribute with any file system that is used to store SQL Serv
 The mount point entry in ***/etc/fstab***
 
 ```bash
-UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1 xfs,rw,attr2,noatime 0 0
+UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1 xfs rw,attr2,noatime 0 0
 ```
 
 In the example above, UUID represents the device that you can find using the ***blkid*** command.
@@ -303,8 +303,8 @@ Like there are storage and CPU recommendations, there are Network specific recom
 
    ```bash
             #command to set the port for adaptive RX/TX IRQ coalescing
-            echtool -C eth0 adaptive-rx on
-            echtool -C eth0 adaptive-tx on
+            ethtool -C eth0 adaptive-rx on
+            ethtool -C eth0 adaptive-tx on
             #confirm the setting using the command:
             ethtool -c eth0
    ```
@@ -314,8 +314,8 @@ Like there are storage and CPU recommendations, there are Network specific recom
 
    ```bash
             #commands to disable adaptive RX/TX IRQ coalescing
-            echtool -C eth0 adaptive-rx off
-            echtool -C eth0 adaptive-tx off
+            ethtool -C eth0 adaptive-rx off
+            ethtool -C eth0 adaptive-tx off
             #confirm the setting using the command:
             ethtool -c eth0
             #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:

@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, SQL Statistics Object | Microsoft Docs"
+title: "SQL Server, SQL Statistics object"
 description: Learn about the SQLServer:SQL Statistics object, which provides counters to monitor compilation and the type of requests sent to an instance of SQL Server.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:SQL Statistics"
   - "SQL Statistics object"
-ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, SQL Statistics Object
+# SQL Server, SQL Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The **SQLServer:SQL Statistics** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor compilation and the type of requests sent to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Monitoring the number of query compilations and recompilations and the number of batches received by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you an indication of how quickly [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is processing user queries and how effectively the query optimizer is processing the queries.  
   
  Compilation is a significant part of a query's turnaround time. In order to save the compilation cost, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] saves the compiled query plan in a query cache. The objective of the cache is to reduce compilation by storing compiled queries for later reuse, therefore ending the requirement to recompile queries when later executed. However, each unique query must be compiled at least one time. Query recompilations can be caused by the following factors:  
@@ -43,7 +43,17 @@ ms.author: wiassaf
 |**SQL Re-Compilations/sec**|Number of statement recompiles per second. Counts the number of times statement recompiles are triggered. Generally, you want the recompiles to be low.|  
 |**Unsafe Auto-Params/sec**|Number of unsafe auto-parameterization attempts per second. For example, the query has some characteristics that prevent the cached plan from being shared. These are designated as unsafe. This does not count the number of forced parameterizations.|  
   
-## See Also  
+  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%SQL Statistics%';
+```  
+
+## See also  
  [SQL Server, Plan Cache Object](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

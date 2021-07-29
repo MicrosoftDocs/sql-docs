@@ -43,9 +43,11 @@ items:
       href: sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Big Data Clusters
   items:
+  - name: Big Data Clusters
+    href: big-data-cluster/index.yml
   - name: Overview
     items:
-    - name: What are SQL Server Big Data Clusters?
+    - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
       href: big-data-cluster/release-notes-big-data-cluster.md
@@ -115,8 +117,6 @@ items:
           href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
-    - name: App Pool
-      href: big-data-cluster/concept-application-deployment.md
     - name: Controller
       href: big-data-cluster/concept-controller.md
     - name: Master instance
@@ -127,10 +127,14 @@ items:
       href: big-data-cluster/concept-storage-pool.md
     - name: Compute pool
       href: big-data-cluster/concept-compute-pool.md
+    - name: App Pool
+      href: big-data-cluster/concept-application-deployment.md
     - name: Security
       href: big-data-cluster/concept-security.md
     - name: Administration resources
       href: big-data-cluster/view-cluster-status.md
+    - name: Key Versions
+      href: big-data-cluster/big-data-cluster-key-versions.md       
     - name: Active Directory mode
       items:
       - name: Prerequisites
@@ -398,7 +402,7 @@ items:
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: List operations notebooks
+      - name: Operational notebooks
         href: big-data-cluster/cluster-manage-notebooks.md
     - name: Monitor
       items:
@@ -432,11 +436,13 @@ items:
         items:
           - name: Concepts and configuration
             href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+          - name: External Key Providers
+            href: big-data-cluster/encryption-at-rest-external-provider.md
           - name: SQL Server TDE
             href: big-data-cluster/encryption-at-rest-sql-server-tde.md
           - name: HDFS encryption zones
             href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
-    - name: Spark jobs
+    - name: Spark
       items:
       - name: Submit Spark jobs in Azure Data Studio
         href: big-data-cluster/spark-submit-job.md
@@ -446,12 +452,14 @@ items:
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Submit Spark jobs in IntelliJ
         href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Manage libraries
+        href: big-data-cluster/spark-install-packages.md
+      - name: Delta Lake
+        href: big-data-cluster/package-management-delta-lake.md
       - name: Spark streaming guide
         href: big-data-cluster/spark-streaming-guide.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
-      - name: Manage libraries
-        href: big-data-cluster/spark-install-packages.md
     - name: Troubleshoot
       items:
       - name: Troubleshoot Kubernetes
@@ -1748,7 +1756,7 @@ items:
         href: relational-databases/indexes/columnstore-indexes-query-performance.md
       - name: Real-time operational analytics
         href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Azure Synapse Analytics
+      - name: Data warehouse
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -1761,6 +1769,8 @@ items:
       href: relational-databases/graphs/sql-graph-sample.md
     - name: SHORTEST_PATH
       href: relational-databases/graphs/sql-graph-shortest-path.md
+    - name: Edge constraints
+      href: relational-databases/tables/graph-edge-constraints.md
   - name: Sequence numbers
     href: relational-databases/sequence-numbers/sequence-numbers.md
     items:
@@ -1882,8 +1892,6 @@ items:
         href: relational-databases/tables/use-column-sets.md
       - name: Table-Valued Parameters
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-    - name: Edge constraints
-      href: relational-databases/tables/graph-edge-constraints.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -4870,6 +4878,8 @@ items:
     href: /azure/dms/dms-overview
   - name: Migration guides
     items:
+    - name: From SQL Server (upgrade)
+      href: sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide.md
     - name: From Access
       href: sql-server/migrate/guides/access-to-sql-server.md
     - name: From Db2
@@ -6092,7 +6102,7 @@ items:
     - name: Usage and Diagnostic Data
       href: dma/dma-diagnostic-data-collection.md
     - name: What's new
-      href: dma/dma-whatsnew.md
+      href: dma/dma-whats-new.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
@@ -6107,8 +6117,6 @@ items:
       href: dma/dma-migrateserverlogins.md
     - name: Best practices
       href: dma/dma-bestpractices.md
-    - name: Consolidate assessment reports
-      href: dma/dma-consolidatereports.md
     - name: Assess an app's data access layer
       href: dma/dma-assess-app-data-layer.md
     - name: Run from the command-line
@@ -6133,16 +6141,32 @@ items:
       href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
       href: tools/synapse-pathway/pathway-faq.md
-    - name: Behind the scenes
-      href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
-    - name: Tutorial - Run Azure Synapse Pathway
-      href: tools/synapse-pathway/synapse-pathway-assessment.md
-    - name: Tutorial - Save and load
-      href: tools/synapse-pathway/tutorial-save-load-assessment.md
-    - name: Generate reports
-      href: tools/synapse-pathway/report-generation.md
+    - name: Tutorials
+      items:
+      - name: Tutorial - Run Azure Synapse Pathway
+        href: tools/synapse-pathway/synapse-pathway-assessment.md
+      - name: Tutorial - Save and load
+        href: tools/synapse-pathway/tutorial-save-load-assessment.md
+      - name: Generate reports
+        href: tools/synapse-pathway/report-generation.md
+    - name: Data Type Mappings
+      items:
+        - name: Data Type Mappings Overview
+          href: tools/synapse-pathway/data-type-mappings.md
+        - name: IBM Netezza
+          href: tools/synapse-pathway/data-type-mappings-ibm-netezza.md
+        - name: Microsoft SQL Server
+          href: tools/synapse-pathway/data-type-mappings-microsoft-sql-server.md
+        - name: Snowflake
+          href: tools/synapse-pathway/data-type-mappings-snowflake.md
+        - name: Teradata Vantage
+          href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
+    - name: Errors and Warnings
+      items:
+        - name: ASP1001
+          href: tools/synapse-pathway/transpiler-messages/asp1001.md
 - name: Manage, monitor, & tune
   items:
   - name: Manage
@@ -6703,6 +6727,10 @@ items:
             items:
             - name: Access Methods
               href: relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: Advanced Analytics
+              href: relational-databases/performance-monitor/sql-server-advanced-analytics.md
+            - name: Availability Group
+              href: relational-databases/performance-monitor/sql-server-availability-group.md
             - name: Availability Replica
               href: relational-databases/performance-monitor/sql-server-availability-replica.md
             - name: Backup Device
@@ -8873,6 +8901,8 @@ items:
           href: ssms/troubleshoot/get-full-memory-dump.md
         - name: Get diagnostic data
           href: ssms/troubleshoot/ssms-troubleshoot.md
+        - name: Install failed or requires restart
+          href: ssms/troubleshoot/install-failed-requires-restart.md
       - name: SQL Server Agent
         items:
         - name: Configure
@@ -8885,8 +8915,8 @@ items:
             href: ssms/agent/assign-alerts-to-an-operator.md
           - name: Automatically Delete a Job
             href: ssms/agent/automatically-delete-a-job.md
-          - name: Autostart SQL Server Agent
-            href: ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
+          - name: Auto Restart SQL Server Agent
+            href: ssms/agent/autorestart-sql-server-agent-sql-server-management-studio.md
           - name: Change an Operator's Availability
             href: ssms/agent/change-an-operator-s-availability.md
           - name: Change the Membership of a Job Category
@@ -10055,6 +10085,8 @@ items:
       href: linux/sql-server-availability-group-ha-hpe.md
     - name: Deploy on Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
+    - name: Deploy availability group with DH2i on AKS
+      href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
   - name: Concepts
@@ -10261,7 +10293,7 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: Azure Arc enabled SQL Server (preview)
+- name: SQL Server on Azure Arc-enabled servers (preview)
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -10405,7 +10437,7 @@ items:
         href: azdata/reference/reference-azdata-bdc-sql-settings.md
       - name: bdc status
         href: azdata/reference/reference-azdata-bdc-status.md
-    - name: Azure Arc enabled data services
+    - name: Azure Arc-enabled data services
       items:
       - name: arc
         href: azdata/reference/reference-azdata-arc.md
@@ -10703,6 +10735,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3452-database-engine-error.md
         - name: 3456
           href: relational-databases/errors-events/mssqlserver-3456-database-engine-error.md
+        - name: 3617
+          href: relational-databases/errors-events/mssqlserver-3617-database-engine-error.md
         - name: 3619
           href: relational-databases/errors-events/mssqlserver-3619-database-engine-error.md
         - name: 3937
@@ -11550,6 +11584,12 @@ items:
         href: relational-databases/event-classes/user-configurable-event-class.md
     - name: ObjectType Trace Event Column
       href: relational-databases/event-classes/objecttype-trace-event-column.md
+  - name: Native interfaces
+    items: 
+    - name: GetSvcInstanceIDFromName
+      href: native-interfaces/getsvcinstanceidfromname.md
+    - name: GetSQLInstanceRegStringByID
+      href: native-interfaces/getsqlinstanceregstringbyid.md
   - name: SQL PowerShell
     items:
     - name: Install SQL PowerShell module
@@ -11726,8 +11766,10 @@ items:
         href: relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_options (T-SQL)
+      - name: sys.database_automatic_tuning_options
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
+      - name: sys.database_automatic_tuning_mode
+        href: relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md
       - name: sys.master_files
         href: relational-databases/system-catalog-views/sys-master-files-transact-sql.md
     - name: Endpoints

@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Query Definitions Differ Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box notifies you that your query cannot be represented graphically in the Diagram and Criteria panes, and that you can edit your query only in the SQL pane.  
   
 This dialog box may appear when you enter or edit an SQL statement in the SQL pane; you then move to another pane, verify the query, or attempt to execute the query; and one of the following conditions applies:  

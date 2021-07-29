@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STLength (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the total length of the elements in a **geography** instance or the **geography** instances within a **GeometryCollection**.  
   

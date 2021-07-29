@@ -17,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Registered Servers F1 Help
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This section contains the F1 Help for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. It describes the various options.
   
  To learn about Registered Servers and get links to what to do with them, go to the [Register Servers](./register-servers.md) topic. 

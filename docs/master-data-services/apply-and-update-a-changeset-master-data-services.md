@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Apply and Update a Changeset (Master Data Services)

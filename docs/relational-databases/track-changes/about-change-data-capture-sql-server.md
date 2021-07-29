@@ -23,7 +23,8 @@ Change data capture (CDC) records insert, update, and delete activity that appli
   
 A good example of a data consumer that this technology targets is an extraction, transformation, and loading (ETL) application. An ETL application incrementally loads change data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source tables to a data warehouse or data mart. Although the representation of the source tables within the data warehouse must reflect changes in the source tables, an end-to-end technology that refreshes a replica of the source is not appropriate. Instead, you need a reliable stream of change data that is structured so that consumers can apply it to dissimilar target representations of the data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change data capture provides this technology.  
 
-
+To learn how about Change Data Capture, you can also refer to this Data Exposed episode.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Track-and-Record-Data-Changes-with-Change-Data-Capture-CDC-in-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
   
 ## Data Flow  
 
@@ -115,14 +116,14 @@ Although it is common for the database validity interval and the validity interv
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
 
 > [!NOTE]  
->  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically.  
+>  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically. 
  
  ## CDC and cleanup in Azure SQL Database (Preview)
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
 
 > [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in preview. 
+> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). 
  
 ## Collation differences
 
@@ -184,6 +185,9 @@ CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1
 
 **Capture and Cleanup Customization on Azure SQL Databases (Preview)**
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
+
+**ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
+DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

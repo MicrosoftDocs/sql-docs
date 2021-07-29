@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Create Self-Joins Automatically (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 If a table has a reflexive relationship in the database, you can join it to itself automatically.  
   
 ### To create a self-join automatically  

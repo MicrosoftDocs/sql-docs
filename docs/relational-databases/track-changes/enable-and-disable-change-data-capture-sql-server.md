@@ -22,7 +22,7 @@ ms.author: jroth
   This topic describes how to enable and disable change data capture for a database and a table.  
 
 > [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in preview. 
+> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). 
   
 ## Enable for a database  
 

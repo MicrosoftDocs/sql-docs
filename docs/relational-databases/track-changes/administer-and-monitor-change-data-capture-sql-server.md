@@ -22,7 +22,7 @@ ms.custom: seo-dt-2019
 This topic describes how to administer and monitor change data capture.  
   
 > [!NOTE]  
-> Support for change data capture in Azure SQL Database is currently in preview. In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. 
+> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). In Azure SQL Database, the capture and cleanup SQL Server Agent jobs are replaced by a change data capture scheduler that invokes stored procedures to start periodic capture and cleanup of the change tables. 
 
 ## <a name="Capture"></a> Capture job
 

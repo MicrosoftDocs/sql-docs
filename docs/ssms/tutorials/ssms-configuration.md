@@ -8,7 +8,7 @@ ms.topic: tutorial
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein
+ms.reviewer: 
 ms.date: 03/16/2018
 ---
 

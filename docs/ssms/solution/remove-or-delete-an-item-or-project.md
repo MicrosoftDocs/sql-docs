@@ -17,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Remove or Delete an Item or Project
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Project items in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects are Queries, Connections, and Miscellaneous files. You can remove project queries and miscellaneous files from your solution without erasing the files from storage. Remove a project or item when it is not useful in the current solution but you want to include it in another solution.  
   
 ### To remove a project item  
@@ -38,7 +38,7 @@ A removed item still exists on the file system. Therefore, you can add a removed
   
 3.  On the confirmation dialog, click **OK**, to remove the project from the solution.  
   
-You can delete a project permanently, but you first need to remove any references to the project from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solutions, and then use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer to permanently delete the associated files from storage.  
+You can delete a project permanently, but you first need to remove any references to the project from SQL Server Management Studio solutions, and then use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer to permanently delete the associated files from storage.  
   
 #### To delete a project  
   

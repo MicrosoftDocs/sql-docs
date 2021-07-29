@@ -178,7 +178,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 >
 > Starting with SQL Server 2017 CU20, RHEL 8 is supported.
 >
-> If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`. Our packages are agnostic to RHEL minor versions. This means that if you are using RHEL 7.6, you will need to use the path `/rhel/7` to configure your repository.
+> If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`. Our packages are agnostic to RHEL minor versions. This means that if you are using RHEL 7.7, you will need to use the path `/rhel/7` to configure your repository.
 
 | Repository | Version | Command |
 |---|---|---|

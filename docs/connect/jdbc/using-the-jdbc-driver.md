@@ -2,7 +2,7 @@
 title: "Using the JDBC driver | Microsoft Docs"
 description: "This section provides quick start instructions for making a simple connection to a SQL Server database by using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "07/29/2021"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -68,7 +68,7 @@ If using JDBC Driver 6.4, set the classpath to include the **mssql-jdbc-6.4.0.jr
 
 If using JDBC Driver 6.2, set the classpath to include the **mssql-jdbc-6.2.2.jre7.jar** or **mssql-jdbc-6.2.2.jre8.jar**.
 
-If using JDBC Driver 4.1 or 4.2, set the classpath to include **sqljdbc41.jar** or **sqljdbc42.jar** file from respective driver download.
+If using JDBC Driver 4.1 or 4.2, set the classpath to include **sqljdbc41.jar** or **sqljdbc42.jar** file from the respective driver download.
 
 If the classpath is missing an entry for the right Jar file, an application will throw the common `Class not found` exception.  
 

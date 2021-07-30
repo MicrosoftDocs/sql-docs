@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
-ms.date: 07/19/2021
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -66,7 +66,7 @@ curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#Debian 8
+#Debian 8 (only supported up to driver version 17.6)
 curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 9
@@ -99,7 +99,7 @@ sudo su
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#Red Hat Enterprise Server 6
+#Red Hat Enterprise Server 6 (only supported up to driver version 17.7)
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 #Red Hat Enterprise Server 7 and Oracle Linux 7
@@ -169,9 +169,6 @@ curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sou
 #Ubuntu 20.04
 curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 20.10
-curl https://packages.microsoft.com/config/ubuntu/20.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 21.04
 curl https://packages.microsoft.com/config/ubuntu/21.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
@@ -185,11 +182,6 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
 ```
-
-> [!NOTE]
->
-> - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
-> - Driver version 17.3 or higher is required for Ubuntu 18.10 support.
 
 > [!NOTE]
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`

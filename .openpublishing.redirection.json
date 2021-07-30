@@ -41347,7 +41347,7 @@
     },
     {
       "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-endpoint.md",
-      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-endpoint",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server-endpoint",
       "redirect_document_id": false
     },
     {

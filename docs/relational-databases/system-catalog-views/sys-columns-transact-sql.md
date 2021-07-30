@@ -80,6 +80,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |graph_type_desc |**nvarchar(60)**  |internal column with a set of values |
 |ledger_view_column_type|**tinyint**|**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, indicates the type of a column in a ledger view:<br /><br /> 1 = TRANSACTION_ID<br /> 2 = SEQUENCE_NUMBER<br /> 3 = OPERATION_TYPE<br /> 4 = OPERATION_TYPE_DESC<br/><br/>For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).|
 |ledger_view_column_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, contains a textual description of the the type of a column in a ledger view:<br /><br /> TRANSACTION_ID<br /> SEQUENCE_NUMBER<br /> OPERATION_TYPE<br /> OPERATION_TYPE_DESC|
+|is_data_deletion_filter_column|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]1 = Data deletion occurred.|
 
 
 ## Permissions  

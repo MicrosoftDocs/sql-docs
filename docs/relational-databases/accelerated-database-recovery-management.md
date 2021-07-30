@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver15"
 ## Enabling and controlling ADR
 
 ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
-```sql
+```syntaxsql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
 

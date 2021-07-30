@@ -34,9 +34,10 @@ Restrictions:
 * The open source components included by SQL Server Big Data Clusters are fixed for that particular release and must not be updated or modified.
 * Container images are provided “as-is”. It may not be built on.
 
-Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages: 
+Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages:
+
 * https://www.microsoft.com/sql-server/sql-server-2019
-* https://docs.microsoft.com/sql/sql-server/partner-big-data-cluster
+* [SQL Server Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
 
 ## Release history
 

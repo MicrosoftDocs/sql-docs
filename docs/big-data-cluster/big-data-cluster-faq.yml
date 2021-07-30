@@ -232,7 +232,7 @@ sections:
           SQL Server ML Services support policy is same as that of SQL Server, except that every major release comes with a new runtime version. SparkML library itself is open source software (OSS). We do package many OSS components in Big Data Cluster and this is supported by Microsoft. 
       - question: Is Red Hat Enterprise Linux 8 (RHEL8) supported platform for SQL Server Big Data Clusters?
         answer: |
-          Not at this time. See here for the [supported platforms](release-notes-big-data-cluster.md#supported-platforms).
+          Not at this time. See here for the [tested configurations](release-notes-big-data-cluster.md#tested-configurations).
   - name: Tools
     questions: 
       - question: Are the notebooks available in Azure Data Studio essentially Jupyter notebooks?

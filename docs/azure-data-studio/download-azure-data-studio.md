@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 07/21/2021
+ms.date: 07/29/2021
 ---
 
 # Download and install Azure Data Studio
@@ -23,10 +23,10 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.31.0 is the latest general availability (GA) version. If you have an earlier GA version installed, installing Azure Data Studio 1.31.0 updates it to the latest version.
+Azure Data Studio 1.31.1 is the latest general availability (GA) version.
 
-- Release number: 1.31.0
-- Release date: July 21, 2021
+- Release number: 1.31.1
+- Release date: July 29, 2021
 
 | Platform | Download |
 |----------|----------|

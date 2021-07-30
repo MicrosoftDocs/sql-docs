@@ -15,18 +15,20 @@ ms.prod: sql
 
 Azure Arc-enabled SQL Server releases for general availability support
 
-## July 2021
-
 ### Breaking changes
 
 This release introduces a SQL Server extension that continuously monitors for changes of the SQL Server configuration and automatically updates the corresponding __SQL Server - Azure Arc__ resources. The extension is installed as part of the SQL Server instance registration process. To upgrade your existing __SQL Server - Azure Arc__ resources to an agent-based configuration, use any of the methods described in [Connect your SQL Server to Azure Arc](connect.md).
+
+This release also introduces a built-in role *Azure Connected SQL Server Onboarding* that defines the minimal permissions that would allow the hosting machine's MSI to onboard the SQL Server instances to to Azure Arc.
+
+The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [Required permissions](overview.md#required-permissions).  
 
 > [!NOTE]
 > In this release, the SQL Server extension is only available for  Windows. A Linux version of the extension will be announced separately.  
 
 ### Other changes
 
-This release includes a new Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#at-scale-registration-from-azure).
+This release includes a new Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connecting-at-scale-using-azure-policy).
 
 ## April 2021
 

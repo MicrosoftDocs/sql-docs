@@ -51,11 +51,13 @@ SQL Server on Azure Arc-enabled servers supports SQL Server 2012 or higher runni
 
 To connect the SQL Server instances and the hosting machine to Azure Arc, you must have an account with privileges to perform the following actions:
 
-- Microsoft.AzureArcData/sqlServerInstances/read
-- Microsoft.AzureArcData/sqlServerInstances/write
+- Microsoft.HybridCompute/machines/extensions/write
+- Microsoft.HybridCompute/machines/extensions/delete
 - Microsoft.HybridCompute/machines/read
 - Microsoft.HybridCompute/machines/write
 - Microsoft.GuestConfiguration/guestConfigurationAssignments/read
+- Microsoft.Authorization/roleAssignments/write
+- Microsoft.Authorization/roleAssignments/read
 
 For optimal security, create a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
@@ -78,11 +80,17 @@ Arc-enabled SQL Server is available in the following regions:
 - East US
 - East US 2
 - West US 2
-- Australia East
-- Southeast Asia
-- North Europe
-- West Europe
+- Central US
+- South Central US
 - UK South
+- France Central
+- West Europe
+- North Europe
+- Japan East
+- Korea Central
+- East Asia
+- Southeast Asia
+- Australia East
 
 ## Next steps
 

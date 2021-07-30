@@ -23,16 +23,13 @@ SQL Server Big Data Clusters is a fully containerized solution orchestrated by K
 
 The following table contains the tested configuration matrix for each release of SQL Server Big Data Clusters:
 
-| BDC Release | Container OS | K8s API | Runtime | Data Storage | Log Storage |
+| Big Data Clusters Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
-| CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | containerd 1.4.3, 1.4.6 | Block only | Block only |
-| CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | docker 19.3.14, 20.10.7 | Block only | Block only |
-| CU12 | Ubuntu 20.04.2 LTS | 1.19.0 | CRI-O 1.19.1-11 | Block only | Block only |
-| CU12 | Ubuntu 20.04.2 LTS | 1.18.14 | docker 19.3.14  | Block only | Block only |
+| CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | containerd 1.4.6; docker 20.10.7; CRI-O 1.19.1-11 | Block only | Block only |
 
 Restrictions:
 
-* SQL Server Big Data Clusters is supported as a *workload*. Microsoft provides support for the software released containers only. Kubernetes itself is not supported by SQL Server Big Data Clusters. For Kubernetes support please contact your certified Kubernetes distribution provider.
+* SQL Server Big Data Clusters is supported as a *workload*. Microsoft provides support for the software released containers only. Kubernetes itself is not supported by SQL Server Big Data Clusters support team. For Kubernetes support please contact your certified Kubernetes distribution provider.
 * SQL Server Big Data Clusters requires block storage for all persisted volumes.
 * The open source components included by SQL Server Big Data Clusters are fixed for that particular release and must not be updated or modified.
 * Container images are provided “as-is”. It may not be built on.

@@ -2,7 +2,7 @@
 title: ODBC DSN and connection string keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 ms.custom: ""
-ms.date: 07/23/2021
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -40,8 +40,8 @@ The following table lists the available keywords and the attributes for each pla
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only)| | LMW |
-| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only) | | LMW |
+| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8)| | LMW |
+| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+; DSN only prior to 17.8) | | LMW |
 | [KeystoreAuthentication](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -56,6 +56,7 @@ The following table lists the available keywords and the attributes for each pla
 | [QueryLogTIme](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_INTERVAL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfqueryinterval) | W |
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
 | [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [Replication](dsn-connection-string-attribute.md#replication) | | LMW |
 | [SaveFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -197,6 +198,15 @@ Controls the use of SET FMTONLY for metadata when connecting to SQL Server 2012 
 |-|-|
 |No|(Default) Use sp_describe_first_result_set for metadata if available. |
 |Yes| Use SET FMTONLY for metadata. |
+
+### Replication
+
+Specifies the use of a replication login on ODBC Driver version 17.8 and newer.
+
+| Keyword Value | Description |
+|-|-|
+|No|(Default) Replication login will not be used. |
+|Yes| Triggers with the `NOT FOR REPLICATION` option won't fire on the connection. |
 
 ## ClientCertificate
 

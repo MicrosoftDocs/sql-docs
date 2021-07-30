@@ -35,8 +35,8 @@ Restrictions:
 * Container images are provided “as-is”. It may not be built on.
 
 Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages: 
-* https://www.microsoft.com/en-us/sql-server/sql-server-2019
-* https://docs.microsoft.com/en-us/sql/sql-server/partner-big-data-cluster
+* https://www.microsoft.com/sql-server/sql-server-2019
+* https://docs.microsoft.com/sql/sql-server/partner-big-data-cluster
 
 ## Release history
 

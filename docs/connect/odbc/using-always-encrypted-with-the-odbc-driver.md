@@ -468,6 +468,8 @@ To allow the driver to use CMKs stored in AKV for column encryption, use the fol
 | Managed Identity | `KeyVaultManagedIdentity` | Object ID (optional, for user-assigned only) | (not specified) |
 | AKV Interactive | `KeyVaultInteractive` | (not set) | (not set) |
 
+Starting in v17.8, the KeystoreAuthentication and KeystorePrincipalId can be edited using the DSN configuration UI in the ODBC Datasource Administrator.
+
 #### Example connection strings
 
 The following connection strings show how to authenticate to Azure Key Vault with the two credential types:

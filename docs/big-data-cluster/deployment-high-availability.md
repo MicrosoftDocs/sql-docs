@@ -146,7 +146,7 @@ Here is an example that shows how to expose this endpoint and then add the datab
 
 - Expose the external endpoint by creating a new Kubernetes service
 
-    For a `kubeadm` cluster run below command. Replace `podName` with the name of the server returned at previous step, `serviceName` with the preferred name for the Kubernetes service created  and `namespaceName`* with the name of your BDC cluster.
+    For a `kubeadm` cluster run below command. Replace `podName` with the name of the server returned at previous step, `serviceName` with the preferred name for the Kubernetes service created  and `namespaceName`* with the name of your big data cluster.
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort

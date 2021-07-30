@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Environment - Fonts and Colors Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  
   
-Color scheme changes do not take effect during the session in which you make them. You can evaluate color changes by opening another instance of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and producing the conditions under which you expect your changes to apply.  
+Color scheme changes do not take effect during the session in which you make them. You can evaluate color changes by opening another instance of SQL Server Management Studio and producing the conditions under which you expect your changes to apply.  
   
 ## UI element list  
 **Show settings for**  
@@ -24,9 +24,9 @@ Lists all the user interface elements for which you can change font and color sc
   
 |Term|Definition|  
 |--------|--------------|  
-|Text Editor|Changes to font style, size, and color display settings for Text Editor affect the appearance of text in your default text editor. Documents opened in a text editor outside [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] will not be affected by these settings.|  
+|Text Editor|Changes to font style, size, and color display settings for Text Editor affect the appearance of text in your default text editor. Documents opened in a text editor outside SQL Server Management Studio will not be affected by these settings.|  
 |Printer|Changes to font style, size, and color display settings for Printer affect the appearance of text in printed documents.<br /><br />Note: you can select a different default font for printing than that used for display in the Text Editor. This can be useful when printing code that contains both single-byte and double-byte characters.|  
-|[All Text Tool Windows **]**|Changes to font style, size, and color display settings for this item affect the appearance of text in tool windows that have output panes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For example, Output window, TextResults window, and so on.<br /><br />Note: Changes to the text of [All Text Tool Windows] items do not take effect during the session in which you make them. You can evaluate such changes by opening another instance of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[All Text Tool Windows **]**|Changes to font style, size, and color display settings for this item affect the appearance of text in tool windows that have output panes in SQL Server Management Studio. For example, Output window, TextResults window, and so on.<br /><br />Note: Changes to the text of [All Text Tool Windows] items do not take effect during the session in which you make them. You can evaluate such changes by opening another instance of SQL Server Management Studio.|  
 |Find Results Window|Changes to font style, size, and color display settings for this item affect the appearance of text in the FindResults window.|  
 |Output Window|Changes to font style, size, and color display settings for this item affect the appearance of text in the Output window.|  
 |Grid Results|Changes to the font style, size, and color display settings for this item affect the appearance of text in the **Grid Results** area of the Query window.|  
@@ -62,7 +62,7 @@ Lists the available colors you can choose for the foreground of the item selecte
 Displays the **Color** dialog box, where you set a custom color for the item selected in the **Display items** list.  
   
 > [!NOTE]  
-> Your ability to define custom colors may be limited by the color settings for your computer display. For example, if your computer is set to display 256 colors and you select a custom color from the **Color** dialog box, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] chooses to the closest available value in **Basic colors** as the default, and displays the color black in the **Color** dialog box.  
+> Your ability to define custom colors may be limited by the color settings for your computer display. For example, if your computer is set to display 256 colors and you select a custom color from the **Color** dialog box, SQL Server Management Studio chooses to the closest available value in **Basic colors** as the default, and displays the color black in the **Color** dialog box.  
   
 **Item background**  
 Provides a color palette from which you can choose a background color for the item selected in **Display items**. Because some items are related, a consistent display scheme should be maintained; for example, changing the background color of text also changes the background color for elements such as SQL String.  

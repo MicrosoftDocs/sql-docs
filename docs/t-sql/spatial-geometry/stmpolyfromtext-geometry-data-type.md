@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STMPolyFromText (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation with any Z (elevation) and M (measure) values carried by the instance.
   

@@ -21,7 +21,7 @@ ms.date: "07/26/2017"
 ---
 
 # xml (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   

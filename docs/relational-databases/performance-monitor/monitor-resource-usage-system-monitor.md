@@ -1,8 +1,8 @@
 ---
-title: "Monitor Resource Usage (System Monitor) | Microsoft Docs"
+title: "Monitor Resource Usage (System Monitor)"
 description: Use System Monitor to measure the performance of SQL Server objects, performance counters, and the behavior of other objects, such as processors and memory.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -23,12 +23,12 @@ helpviewer_keywords:
   - "database performance [SQL Server], resource usage"
   - "tuning databases [SQL Server], resource usage"
   - "server performance [SQL Server], resource usage"
-ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Monitor Resource Usage (System Monitor)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
+
   If you are running Microsoft Windows server operating system, use the System Monitor graphical tool to measure the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, performance counters, and the behavior of other objects, such as processors, memory, cache, threads, and processes. Each of these objects has an associated set of counters that measure device usage, queue lengths, delays, and other indicators of throughput and internal congestion.  
   
 > [!NOTE]  

@@ -1,13 +1,12 @@
 ---
-description: "Connect to Server (Login Page) Database Engine"
 title: Connect to Server (Login Page) Database Engine
+description: "Connect to Server (Login Page) Database Engine"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.connecttosqlserver.login.f1"
-ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
@@ -17,7 +16,8 @@ ms.date: 04/07/2020
 
 # Connect to Server (Login Page) Database Engine
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. In most cases, you can connect by entering the computer name of the database server in the **Server name** box and then clicking **Connect**. If you're connecting to a named instance, use the computer name followed by a backslash, and then the instance name. For example, `mycomputer\myinstance`. If you're connecting to [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use the computer name followed by **\sqlexpress**.
 
 Many factors can affect your ability to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For help, see the following resources:

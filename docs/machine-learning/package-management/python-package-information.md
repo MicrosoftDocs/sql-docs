@@ -92,8 +92,6 @@ For information on which version of Python is included, see [Python and R versio
 
 By default, Python packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core Python components are possible only through product upgrades.
 
-For more information, see [Upgrade R and Python components in SQL Server](../install/upgrade-r-and-python.md).
-
 ## Default open-source Python packages
 
 When you select the Python language option during setup, Anaconda 4.2 distribution (over Python 3.5) is installed. In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts.
@@ -162,5 +160,5 @@ print(sys.version)
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
-+ [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages with sqlmlutils](install-additional-python-packages-on-sql-server.md)
 ::: moniker-end

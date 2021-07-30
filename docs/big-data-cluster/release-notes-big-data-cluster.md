@@ -1,6 +1,6 @@
 ---
 title: SQL Server Big Data Clusters release notes
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -15,11 +15,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## Supported platforms
 
-This section explains platforms that are supported with [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
+This section explains platforms that are supported with [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ### Kubernetes platforms
 
@@ -57,10 +57,10 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 ### Monitoring Tools
 
-- [Monitor BDC Cluster with Azure Data Studio](cluster-monitor-ads.md)
-- [Monitor BDC Cluster with Azdata utility](cluster-monitor-cmdlet.md)
-- [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+- [Monitor cluster with Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor cluster with Azdata utility](cluster-monitor-cmdlet.md)
+- [Monitor cluster with Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
 
 > [!IMPORTANT]
 > The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review the [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
@@ -69,7 +69,7 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
+| Release <sup>1</sup> | SQL Server Big Data Clusters Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
 | [CU11](#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
 | [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
@@ -123,7 +123,7 @@ SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabi
    > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
-- Resource management for Spark-related containers through [BDC cluster-scope settings](reference-config-bdc-overview.md#bdc-cluster-scope-settings).
+- Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
 
 ## <a id="cu9"></a> CU9 (February 2021)
 
@@ -185,7 +185,7 @@ This release includes minor fixes and enhancements. The following articles inclu
 - [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
 - [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on AKS in Active Directory mode](active-directory-deployment-aks.md)
 - [Deploy big data clusters with Azure Kubernetes Service (AKS) Private Cluster](private-deploy.md)
-- [Restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
+- [Restrict egress traffic of big data clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
 - [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
 - [Configure a SQL Server Big Data Cluster](./configure-bdc-overview.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
@@ -372,7 +372,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
-- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a BDC cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
+- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a big data cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
 
 - **Workaround**: Install `kubectl` tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
@@ -508,4 +508,4 @@ Upgrading using different repositories for current and target builds is not supp
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

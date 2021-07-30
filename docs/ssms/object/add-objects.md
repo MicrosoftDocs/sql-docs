@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Add Objects
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Limits the object selection dialog boxes to the types of objects you want to see.  
   
 ## Options  

@@ -2,7 +2,7 @@
 description: "sys.allocation_units (Transact-SQL)"
 title: "sys.allocation_units (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "07/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -39,7 +39,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |data_pages|**bigint**|Number of used pages that have:<br /><br /> In-row data<br /><br /> LOB data<br /><br /> Row-overflow data<br /><br /> <br /><br /> Note that the value returned excludes internal index pages and allocation-management pages.|  
   
 > [!NOTE]  
->  When you drop or rebuild large indexes, or drop or truncate large tables, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sys.allocation_units immediately after dropping or truncating a large object may not reflect the actual disk space available.  
+>  When you drop or rebuild large indexes, drop large tables, or truncate large tables or partitions, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sys.allocation_units immediately after dropping or truncating a large object may not reflect the actual disk space available.
+>
+>  When [Accelerated Database Recovery](../../relational-databases/accelerated-database-recovery-concepts.md) is enabled, deferred drop is used regardless of object size.
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

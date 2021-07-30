@@ -22,7 +22,7 @@ ms.author: mikeray
 
 # GetLevel (Database Engine)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns an integer that represents the depth of the node *this* in the tree.
   

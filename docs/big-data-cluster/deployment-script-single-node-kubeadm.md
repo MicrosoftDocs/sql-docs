@@ -20,7 +20,7 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 
 ## Prerequisites
 
-- A vanilla Ubuntu 18.04 or 16.04 **server** virtual or physical machine. All dependencies are set up by the script, and you run the script from within the VM.
+- A vanilla Ubuntu 20.04 **server** virtual or physical machine. All dependencies are set up by the script, and you run the script from within the VM.
 
   > [!NOTE]
   > Using Azure Linux VMs is not yet supported.

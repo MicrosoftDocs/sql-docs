@@ -40,7 +40,7 @@ To install the Azure Monitor Logs extension in Azure Data Studio, follow the ste
 
 :::image type="content" source="media/azure-monitor-logs-extension/azure-monitor-logs-extension-icon.png" alt-text="Kusto extension":::
 
-## How to connect to a Azure Monitor Log workspace
+## How to connect to an Azure Monitor Log workspace
 
 ### Find your Azure Monitor Log workspace
 

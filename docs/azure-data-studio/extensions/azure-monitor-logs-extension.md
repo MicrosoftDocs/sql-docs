@@ -28,7 +28,7 @@ If you don't have an Azure subscription, create a [free Azure account](https://a
 The following prerequisites are also required:
 
 - [Azure Data Studio installed](../download-azure-data-studio.md).
-- [An Azure Monitor Logs Workspace](/azure/azure-sql/database/metrics-diagnostic-telemetry-logging-streaming-export-configure?tabs=azure-portal#stream-into-sql-analytics).
+- [Azure Monitor Logs Workspace](/azure/azure-sql/database/metrics-diagnostic-telemetry-logging-streaming-export-configure?tabs=azure-portal#stream-into-sql-analytics).
 
 ## Install the Azure Monitor Logs extension
 
@@ -91,26 +91,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-For more information about writing KQL queries, visit [Write queries for Azure Data Explorer](/azure/data-explorer/write-queries#overview-of-the-query-language)
-
-## View extension settings
-
-To change the settings for the Kusto extension, follow the steps below.
-
-1. Open the extension manager in Azure Data Studio. You can either select the extensions icon or select **Extensions** in the View menu.
-
-2. Find the **Azure Monitor Logs** extension.
-
-3. Select the **Manage** icon.
-
-4. Select the **Extension Settings** icon.
-
-The extensions settings look like this:
-
-:::image type="content" source="media/azure-monitor-logs-extension/azure-monitor-logs-extension-settings.png" alt-text="Azure Monitor Logs extension settings":::
-
-## Known issues
-
+For more information about writing Azure Monitor Logs, visit [Azure Monitor documentation](/azure/azure-monitor/)
 
 ## Next steps
 

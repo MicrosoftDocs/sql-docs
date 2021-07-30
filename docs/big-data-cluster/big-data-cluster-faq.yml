@@ -12,7 +12,7 @@ metadata:
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: 
-  ms.date: 07/09/2021
+  ms.date: 07/13/2021
 
 title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -99,7 +99,7 @@ sections:
       - question: What happens when one of the Kubernetes worker nodes shuts down or has an outage?
         answer: |
           Pods that are not affinitized to the respective worker node will be moved to another node in the Kubernetes cluster provided there are sufficient resources. Otherwise, the pod(s) will be unavailable causing outages.
-      - question: Does Big Data Cluster rebalance automatically if I add a node to the Kubernetes cluster?
+      - question: Does Big Data Cluster re-balance automatically if I add a node to the Kubernetes cluster?
         answer: |
           This action depends only on Kubernetes. Apart from pod placement using node labels, there is no other mechanism to control re-balancing Kubernetes resources from within Big Data Cluster.
       - question: What is the consequence on Big Data Cluster resources when I remove a node from the Kubernetes cluster?

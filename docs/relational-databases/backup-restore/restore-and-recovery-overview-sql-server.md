@@ -178,7 +178,7 @@ For more information, see about the Database Recovery Advisor, see the following
 You can enable accelerated database recovery per-database on [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] using the following syntax:
 
 ```sql
-ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
+ALTER DATABASE [<db_name>] SET ACCELERATED_DATABASE_RECOVERY = ON;
 ```
 
 > [!NOTE]

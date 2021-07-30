@@ -15,55 +15,31 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release describing the CU changes. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## Tested configurations
 
-This section explains platforms that are supported with [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)].
+SQL Server Big Data Clusters is a fully containerized solution orchestrated by Kubernetes. Starting with CU12, each release of SQL Server Big Data Clusters is tested against a fixed configuration of components. The configuration is evaluated with each release and adjustments are made to stay in-line with the ecosystem as Kubernetes continues to evolve.
 
-### Kubernetes platforms
+The following table contains the tested configuration matrix for each release of SQL Server Big Data Clusters:
 
-|Platform|Supported versions|
-|---------|---------|
-|Vanilla (upstream) Kubernetes|Deploy BDC on premises using a Kubernetes cluster version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
-|Red Hat OpenShift|Deploy BDC on premises using an OpenShift cluster version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server Big Data Clusters CU5.|
-|Azure Kubernetes Service (AKS)|Deploy BDC on AKS cluster version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
-|Azure Red Hat OpenShift (ARO)|Deploy BDC on ARO version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server Big Data Clusters CU5.|
+| BDC Release | Container OS | K8s API | Runtime | Data Storage | Log Storage |
+| ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | containerd 1.4.3, 1.4.6 | Block only | Block only |
+| CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | docker 19.3.14, 20.10.7 | Block only | Block only |
+| CU12 | Ubuntu 20.04.2 LTS | 1.19.0 | CRI-O 1.19.1-11 | Block only | Block only |
+| CU12 | Ubuntu 20.04.2 LTS | 1.18.14 | docker 19.3.14  | Block only | Block only |
 
-### Host OS for Kubernetes
+Restrictions:
 
-|Platform|Host OS|Supported versions|
-|---------|---------|---------|
-|Kubernetes|Ubuntu|16.04, 20.04<sup>*</sup>|
-|Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
-|OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
+* SQL Server Big Data Clusters is supported as a *workload*. Microsoft provides support for the software released containers only. Kubernetes itself is not supported by SQL Server Big Data Clusters. For Kubernetes support please contact your certified Kubernetes distribution provider.
+* SQL Server Big Data Clusters requires block storage for all persisted volumes.
+* The open source components included by SQL Server Big Data Clusters are fixed for that particular release and must not be updated or modified.
+* Container images are provided “as-is”. It may not be built on.
 
-<sup>*</sup>Beginning with cumulative update 10 (CU10) release for SQL Server Big Data Clusters. 
-
-### SQL Server Editions
-
-|Edition|Notes|
-|---------|---------|
-|Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](./configure-sql-server-master-instance.md). |
-
-## Tools
-
-|Platform|Supported versions|
-|---------|---------|
-|[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]|As a best practice, use the latest version available. Starting with SQL Server Big Data Clusters CU5 release, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
-|Azure Data Studio|Get the latest build of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).|
-
-For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
-
-### Monitoring Tools
-
-- [Monitor cluster with Azure Data Studio](cluster-monitor-ads.md)
-- [Monitor cluster with Azdata utility](cluster-monitor-cmdlet.md)
-- [Monitor cluster with Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
-
-> [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Grafana and Kibana. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review the [supported browsers for Grafana](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers) and [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages: 
+* https://www.microsoft.com/en-us/sql-server/sql-server-2019
+* https://docs.microsoft.com/en-us/sql/sql-server/partner-big-data-cluster
 
 ## Release history
 

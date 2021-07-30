@@ -4,7 +4,7 @@ description: Options (Azure Services)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - VS.ToolsOptionsPages.Azure_Services.Azure_Cloud
 dev_langs: 

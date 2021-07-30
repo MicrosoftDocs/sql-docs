@@ -1,5 +1,5 @@
 ---
-title: Manage big data clusters (BDC) in Azure Kubernetes Service (AKS) private cluster
+title: Manage big data clusters in Azure Kubernetes Service (AKS) private cluster
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to manage a  SQL Server Big Data Clusters in Azure Kubernetes Service (AKS) private cluster.
 author: cloudmelon
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Manage big data cluster in AKS private cluster
 
-This article explains how to manage an Azure Kubernetes Service (AKS) private cluster with SQL Server big data clusters (BDC) deployed in Azure.
+This article explains how to manage an Azure Kubernetes Service (AKS) private cluster with SQL Server big data clusters deployed in Azure.
 
 As described in [Create a private cluster](/azure/aks/private-clusters/), the AKS private cluster API server endpoint has no public IP address. To manage, the API server, use a VM that has access to the AKS clusters's Azure Virtual Network (VNet).
 

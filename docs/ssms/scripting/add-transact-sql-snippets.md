@@ -16,23 +16,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Add Transact-SQL Snippets
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can add your own Transact-SQL code snippets to the set of pre-defined snippets included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## Creating a Transact-SQL Snippet File  
  The first part of creating a [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet is to create an XML file with the text of your code snippet. The file must have a .snippet file extension, and meet the requirements of the [Code Snippets Schema](/previous-versions/visualstudio/visual-studio-2015/ide/code-snippets-schema-reference). Set the snippet language to SQL.  
   
- You can use the pre-defined snippets that ship with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as examples. To find the pre-defined snippets, open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the **Tools** menu, and click **Code Snippet Manager**. Select **SQL** in the **Language** list box, the path to the [!INCLUDE[tsql](../../includes/tsql-md.md)] snippets is displayed in the **Location** box.  
+ You can use the pre-defined snippets that ship with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as examples. To find the pre-defined snippets, open SQL Server Management Studio, select the **Tools** menu, and click **Code Snippet Manager**. Select **SQL** in the **Language** list box, the path to the [!INCLUDE[tsql](../../includes/tsql-md.md)] snippets is displayed in the **Location** box.  
   
 ## Registering the Code Snippet  
- After creating the snippet file, use the Code Snippets Manager to register the snippet with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can either add a folder containing multiple snippets, or import individual snippets to the **My Code Snippets** folder.  
+ After creating the snippet file, use the Code Snippets Manager to register the snippet with SQL Server Management Studio. You can either add a folder containing multiple snippets, or import individual snippets to the **My Code Snippets** folder.  
   
 ## Procedures  
   
 #### Adding a Snippet Folder  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open SQL Server Management Studio.  
   
 2.  Select the **Tools** menu, and click **Code Snippets Manager**.  
   
@@ -42,7 +42,7 @@ You can add your own Transact-SQL code snippets to the set of pre-defined snippe
   
 #### Importing a Snippet  
   
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Open SQL Server Management Studio.  
   
 2.  Select the **Tools** menu, and click **Code Snippets Manager**.  
   
@@ -51,7 +51,7 @@ You can add your own Transact-SQL code snippets to the set of pre-defined snippe
 4.  Navigate to the folder containing your snippet, click on the .snippet file, and click the **Open** button.  
   
 ## Examples  
- The following example creates a **TRY-CATCH** surround-with snippet and imports it to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ The following example creates a **TRY-CATCH** surround-with snippet and imports it to SQL Server Management Studio.  
   
 1.  Paste the following code into notepad, then save as a file named TryCatch.snippet.  
   
@@ -102,7 +102,7 @@ You can add your own Transact-SQL code snippets to the set of pre-defined snippe
     </CodeSnippets>  
     ```  
   
-2.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+2.  Open SQL Server Management Studio.  
   
 3.  Select the **Tools** menu, and click **Code Snippets Manager**.  
   

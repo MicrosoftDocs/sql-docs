@@ -24,7 +24,7 @@ ms.reviewer: ""
 
 # Customize Menus and Shortcut Keys
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A keyboard accelerator allows you to select a menu command or button by pressing ALT+*\<single letter>*. For example, to open the **Edit** menu, press ALT+E. You can rearrange and modify toolbar buttons, menus, and menu commands by using the **Customize** dialog box. Instructions are provided for changing the settings using the mouse and using only the keyboard.  
   
 Keyboard accelerators for stored procedures using the Ctrl key can be created from the **Keyboard** page of the **Tools**/**Options** dialog box.  
@@ -155,7 +155,7 @@ Keyboard accelerators for stored procedures using the Ctrl key can be created fr
 6.  In the **Customize** dialog box, click **Close**.  
   
 > [!NOTE]  
-> Some commands are available only when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
+> Some commands are available only when SQL Server Management Studio is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
   
 ## See Also  
 [Features in SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

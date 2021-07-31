@@ -26,14 +26,14 @@ AUTO mode determines the shape of returned XML based on the query. In determinin
 ```sql
 SELECT T1.Id, T2.Id, T1.Name  
 FROM   T1, T2  
-WHERE ...  
+WHERE Col1 = 1 /* actual predicate goes here*/  
 ORDER BY T1.Id
 FOR XML AUTO;
 ```  
   
  To determine where a new <`T1`> element starts, all column values of T1, except **ntext**, **text**, **image** and **xml**, are compared if the key on the table T1 is not specified. Next, assume that the **Name** column is **nvarchar(40)** and the SELECT statement returns this rowset:  
   
-```  
+```txt
 T1.Id  T1.Name  T2.Id  
 -----------------------  
 1       Andrew    2  

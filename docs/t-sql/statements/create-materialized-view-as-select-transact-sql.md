@@ -161,7 +161,7 @@ A user needs following permissions to create a materialized view in addition to 
 ## Example
 A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions un-supported in CREATE MATERIALIZED VIEW, such as COUNT(DISTINCT expression). A query used to take multiple seconds to complete now finishes in sub-second without any change in the user query.   
 
-``` sql 
+```sql 
 
 -- Create a table with ~536 million rows
 create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
@@ -212,7 +212,9 @@ SchemaY owner = User1
 *****************************************************************/
 CREATE USER User1 WITHOUT LOGIN ;
 CREATE USER User2 WITHOUT LOGIN ;
-CREATE SCHEMA SchemaX;  
+GO
+CREATE SCHEMA SchemaX;
+GO
 CREATE SCHEMA SchemaY AUTHORIZATION User1;
 GO
 CREATE TABLE [SchemaX].[T1] (	[vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL,	[puYear] [int] NULL );

@@ -130,25 +130,27 @@ To maintain a sliding window, you need to make predicate function to be accurate
 
 ```sql
 BEGIN TRAN
+GO
 /*(1) Create new predicate function definition */
-  CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151102(@systemEndTime datetime2)
-   RETURNS TABLE
-    WITH SCHEMABINDING
-      AS
-        RETURN SELECT 1 AS is_eligible
-          WHERE @systemEndTime < CONVERT(datetime2,'2015-11-02T00:00:00', 101)
-  GO
+CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151102(@systemEndTime datetime2)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+    AS
+      RETURN SELECT 1 AS is_eligible
+        WHERE @systemEndTime < CONVERT(datetime2,'2015-11-02T00:00:00', 101)
+GO
  
 /*(2) Set the new function as filter predicate */
-  ALTER TABLE <history table name>
-    SET
-      (
-        REMOTE_DATA_ARCHIVE = ON
-          (
-            FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
-              MIGRATION_STATE = OUTBOUND
-          )
-      )
+ALTER TABLE [<history table name>]
+  SET
+    (
+      REMOTE_DATA_ARCHIVE = ON
+        (
+          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
+            MIGRATION_STATE = OUTBOUND
+        )
+    )
+GO
 COMMIT ;
 ```
 

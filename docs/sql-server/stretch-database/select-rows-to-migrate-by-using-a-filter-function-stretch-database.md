@@ -38,12 +38,12 @@ ms.custom: seo-dt-2019
  The inline table-valued function required for a Stretch Database filter predicate looks like the following example.  
   
 ```sql  
-CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
+CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 /*[, ...n]*/)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
 AS   
 RETURN  SELECT 1 AS is_eligible  
-        WHERE <predicate>  
+        WHERE someCol = @column1 /* replace with an actual predicate */
 ```  
   
  The parameters for the function have to be identifiers for columns from the table.  

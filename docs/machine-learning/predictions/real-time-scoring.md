@@ -106,7 +106,7 @@ Because the binary format is the same as that used by the PREDICT function, you 
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 
-AND model_version = 'v1''
+AND model_version = 'v1'
 
 EXEC sp_rxPredict
 @model = @irismodel,

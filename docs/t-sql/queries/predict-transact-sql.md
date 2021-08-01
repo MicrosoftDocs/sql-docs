@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||>=azure-sqldw-latest"
 ---
 # PREDICT (Transact-SQL)
 
@@ -98,7 +98,7 @@ The `MODEL` parameter is used to specify the model used for scoring or predictio
 ::: moniker range="=azuresqldb-mi-current"
 The `MODEL` parameter is used to specify the model used for scoring or prediction. The model is specified as a variable or a literal or a scalar expression.
 
-In Azure SQL Managed Instance, `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) and [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages.
+In Azure SQL Managed Instance (In preview), `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) and [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages.
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest"
@@ -114,9 +114,9 @@ The DATA parameter is used to specify the data used for scoring or prediction. D
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview), and [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
+> The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](in Preview)(/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview), and [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`. The parameter is required for Azure SQL Edge and Azure Synapse Analytics. On Azure SQL Managed Instance, the parameter is optional and only used when using ONNX models.
+Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`. The parameter is required for Azure SQL Edge and Azure Synapse Analytics. On Azure SQL Managed Instance(in Preview), the parameter is optional and only used when using ONNX models.
 
 **WITH ( <result_set_definition> )**
 

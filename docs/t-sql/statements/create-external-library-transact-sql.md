@@ -377,7 +377,7 @@ When you use `sp_execute_external_script` to install the package, depending on t
 EXECUTE sp_execute_external_script 
     @LANGUAGE = N'R',
     @SCRIPT = N'
-library(packageA)
+library(packageA)'
 ```
 ::: moniker-end
 

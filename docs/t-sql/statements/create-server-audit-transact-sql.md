@@ -2,7 +2,7 @@
 description: "CREATE SERVER AUDIT (Transact-SQL)"
 title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ""
-ms.date: "01/07/2019"
+ms.date: "08/01/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -57,6 +57,7 @@ CREATE SERVER AUDIT audit_name
     [   QUEUE_DELAY = integer ]  
     [ , ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION } ]  
     [ , AUDIT_GUID = uniqueidentifier ]  
+    [ , OPERATOR_AUDIT = { ON | OFF } ]  
 }  
   
 <predicate_expression>::=  
@@ -115,6 +116,10 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
  AUDIT_GUID =*uniqueidentifier*  
  To support scenarios such as database mirroring, an audit needs a specific GUID that matches the GUID found in the mirrored database. The GUID cannot be modified after the audit has been created.  
   
+ OPERATOR_AUDIT
+ **Applies to**: [Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) only.  
+ Indicates whether auditing will capture Microsoft support engineers' operations when they need to access your server during a support request.
+
  predicate_expression  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   

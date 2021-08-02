@@ -584,8 +584,13 @@ MainCleanup:
 ```  
   
 ```sql
-sp_detach_db 'DBFsa'  
-IF EXISTS (SELECT name FROM master..sysdatabases WHERE name = 'DBFsa') DROP DATABASE [DBFsa] |  
+EXEC sp_detach_db 'DBFsa'
+GO
+
+IF EXISTS (SELECT name
+           FROM   master..sysdatabases
+           WHERE  name = 'DBFsa')
+    DROP DATABASE [DBFsa];
 ```  
   
   

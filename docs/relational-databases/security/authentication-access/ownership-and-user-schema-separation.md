@@ -29,9 +29,9 @@ Server.Database.DatabaseSchema.DatabaseObject
   
  By default, when developers create objects in a schema, the objects are owned by the security principal that owns the schema, not the developer. Object ownership can be transferred with [ALTER AUTHORIZATION Transact-SQL](../../../t-sql/statements/alter-authorization-transact-sql.md) statement. A schema can also contain objects that are owned by different users and have more granular permissions than those assigned to the schema, although this isn't recommended because it adds complexity to managing permissions. Objects can be moved between schemas, and schema ownership can be transferred between principals. Database users can be dropped without affecting schemas.  
   
-### Built-In Schemas  
+### Built-In Schemas for backward compatibility 
 
- SQL Server ships with nine pre-defined schemas that have the same names as the built-in database users and roles. These exist for backward compatibility the recommendation is to not use them for user objects. You can drop the schemas that have the same names as the fixed database roles - unless they're already in use.
+ SQL Server ships with nine pre-defined schemas that have the same names as the built-in database users and roles: *db_accessadmin, db_backupoperator, db_datareader, db_datawriter, db_ddladmin, db_denydatareader, db_denydatawriter, db_owner, db_securityadmin*. These exist for backward compatibility. The recommendation is to not use them for user objects. You can drop the schemas that have the same names as the fixed database roles - unless they're already in use, in which case the drop-command will simply return an error and block the drop of the used schema.
 
 ```sql  
 IF EXISTS (SELECT * FROM sys.schemas WHERE name = N'db_accessadmin')
@@ -85,9 +85,9 @@ The following schemas cannot be dropped:
   
 #### The dbo Schema  
 
- The `dbo` schema is the default schema for a newly created database. The `dbo` schema is owned by the `dbo` user account. By default, users created with the CREATE USER Transact-SQL command have `dbo` as their default schema.  
+ The `dbo` schema is the default schema of every database. By default, users created with the CREATE USER Transact-SQL command have `dbo` as their default schema. The `dbo` schema is owned by the `dbo` user account. 
   
- Users who are assigned the `dbo` schema don't inherit the permissions of the `dbo` user account. No permissions are inherited from a schema by users; schema permissions are inherited by the database objects contained in the schema.  
+ Users who are assigned the `dbo` as default schema don't inherit the permissions of the `dbo` user account. No permissions are inherited from a schema by users; schema permissions are inherited by the database objects contained in the schema.  The default schema for a user is solely used for object-reference in case the user omits the schema when querying objects.
   
 > [!NOTE]
 > When database objects are referenced by using a one-part name, SQL Server first looks in the user's default schema. If the object is not found there, SQL Server looks next in the `dbo` schema. If the object is not in the `dbo` schema, an error is returned.  
@@ -102,7 +102,7 @@ The following schemas cannot be dropped:
   
 ## See also
 
-- [Securing ADO.NET Applications](/dotnet/framework/data/adonet/securing-ado-net-applications)
 - [Protecting Your SQL Server Intellectual Property](../protecting-your-sql-server-intellectual-property.md)
 - [Getting Started with Database Engine Permissions](../authentication-access/getting-started-with-database-engine-permissions.md)
 - [Server-Level Roles](../authentication-access/server-level-roles.md)
+- [Securing ADO.NET Applications](/dotnet/framework/data/adonet/securing-ado-net-applications)

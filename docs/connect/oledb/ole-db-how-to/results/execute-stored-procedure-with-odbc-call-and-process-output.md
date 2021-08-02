@@ -51,14 +51,14 @@ ms.author: v-daenge
   
  Execute the third ( [!INCLUDE[tsql](../../../../includes/tsql-md.md)]) code listing to delete the stored procedure used by the application.  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
 GO  
   
 CREATE PROCEDURE myProc   
-    @inparam nvarchar(5),,  
+    @inparam nvarchar(5),
     @outparam int OUTPUT  
   
 AS  
@@ -73,7 +73,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -345,7 +345,7 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql  
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  

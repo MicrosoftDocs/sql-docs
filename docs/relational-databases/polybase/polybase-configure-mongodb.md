@@ -43,7 +43,7 @@ The following Transact-SQL commands are used in this section:
     - Replace `<password>` with the appropriate password. 
 
     ```sql
-    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    CREATE DATABASE SCOPED CREDENTIAL [<credential_name>] WITH IDENTITY = '<username>', Secret = '<password>';
     ```
 
    > [!IMPORTANT]

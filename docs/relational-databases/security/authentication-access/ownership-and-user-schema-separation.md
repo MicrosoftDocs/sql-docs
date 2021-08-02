@@ -4,6 +4,7 @@ description: Learn how user-schema separation allows flexibility in managing SQL
 ms.date: "08/02/2021"
 ms.prod: sql
 ms.technology: security
+ms.topic: conceptual
 ms.reviewer: vanto
 author: AndreasWolter
 ms.author: anwolter

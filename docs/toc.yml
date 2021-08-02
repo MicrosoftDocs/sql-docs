@@ -56,7 +56,7 @@ items:
         - name: Cumulative Update 12
           href: big-data-cluster/release-notes-cumulative-update-12.md
         - name: Cumulative Update history
-          href: big-data-cluster/release-notes-cumulative-update-history.md
+          href: big-data-cluster/release-notes-cumulative-updates-history.md
   - name: Install
     items:
     - name: Get Started

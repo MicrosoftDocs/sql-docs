@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 07/29/2021
+ms.date: 08/02/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -29,7 +29,6 @@ The following table contains the tested configuration matrix for each release of
 | Big Data Clusters Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
 | CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | containerd 1.4.6; docker 20.10.7; CRI-O 1.19.1-11 | Block only | Block only |
-| CU11 | Ubuntu 20.04.0 LTS | 1.19.0, 1.20.7 | containerd 1.4.3; docker 19.3.14; CRI-O 1.19.1-11 | Block only | Block only |
 
 Restrictions:
 
@@ -50,18 +49,18 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | Release <sup>1</sup> | SQL Server Big Data Clusters Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
 | [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.1 | 20.3.6    | 2021-08-10 |
-| [CU11](release-notes-cumulative-update-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
-| [CU10](release-notes-cumulative-update-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
-| [CU9](release-notes-cumulative-update-history.md#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
-| [CU8-GDR](release-notes-cumulative-update-history.md#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
-| [CU8](release-notes-cumulative-update-history.md#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
-| [CU6](release-notes-cumulative-update-history.md#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
-| [CU5](release-notes-cumulative-update-history.md#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
-| [CU4](release-notes-cumulative-update-history.md#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
-| [CU3](release-notes-cumulative-update-history.md#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
-| [CU2](release-notes-cumulative-update-history.md#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
-| [CU1](release-notes-cumulative-update-history.md#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
-| [GDR1](release-notes-cumulative-update-history.md#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
+| [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
+| [CU10](release-notes-cumulative-updates-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
+| [CU9](release-notes-cumulative-updates-history.md#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
+| [CU8-GDR](release-notes-cumulative-updates-history.md#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
+| [CU8](release-notes-cumulative-updates-history.md#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
+| [CU6](release-notes-cumulative-updates-history.md#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
+| [CU5](release-notes-cumulative-updates-history.md#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
+| [CU4](release-notes-cumulative-updates-history.md#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
+| [CU3](release-notes-cumulative-updates-history.md#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
+| [CU2](release-notes-cumulative-updates-history.md#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
+| [CU1](release-notes-cumulative-updates-history.md#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
+| [GDR1](release-notes-cumulative-updates-history.md#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
 
 <sup>1</sup> CU7 is not available for BDC.
 

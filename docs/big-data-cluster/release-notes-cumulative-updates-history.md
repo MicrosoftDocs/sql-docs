@@ -1,5 +1,5 @@
 ---
-title: SQL Server Big Data Clusters cumulative update history
+title: SQL Server Big Data Clusters cumulative updates history
 titleSuffix: SQL Server Big Data Clusters
 description: This article describes the updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters cumulative update history
+# SQL Server Big Data Clusters cumulative updates history
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -55,7 +55,7 @@ SQL Server Big Data Clusters CU10 includes important capabilities:
 
 - Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
    > [!CAUTION]
-   > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
+   > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](release-notes-big-data-cluster.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
 - Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
@@ -79,6 +79,26 @@ SQL Server Big Data Clusters CU9 includes important capabilities:
 - Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
 - Other miscellaneous improvements and bug fixes.
 
+### OSS component versions
+
+| Project | Version |
+|--|--|
+| [collectd](https://collectd.org/) | 5.12 |
+| [InfluxDB](https://www.influxdata.com) | 1.8.3 |
+| [Elasticsearch](https://www.elastic.co/) | 7.9.1 |
+| [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit) | 1.6.3 |
+| [Grafana](https://grafana.com/) | 7.3.1 |
+| Hadoop <br/>[HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |3.1.4|
+| [Hive (Metastore)](https://hive.apache.org/) |2.3.7<br/>3.0.0 (standalone)<br/>3.1.2 (hive)|
+| [Kibana](https://www.elastic.co/kibana) | 7.9.1 |
+| [Knox](https://knox.apache.org/) |1.4.0|
+| [Livy](https://livy.apache.org/) |0.7.0|
+| [opendistro-elasticsearch-security](https://www.elastic.co/what-is/elastic-stack-security) | 1.10.1.0 |
+| [Openresty (Nginx)](https://openresty.org/) | 1.17.8.2 |
+| [Spark](configure-spark-hdfs.md) | 2.4.10 |
+| [Telegraf](https://docs.influxdata.com/telegraf/) | 1.16.1 |
+| [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) | 3.6.2 |
+
 ## <a id="cu8-gdr"></a> CU8-GDR(January 2021)
 
 Cumulative Update 8 GDR (CU8-GDR) release for SQL Server Big Data Clusters.
@@ -86,6 +106,28 @@ Cumulative Update 8 GDR (CU8-GDR) release for SQL Server Big Data Clusters.
 |Package version | Image tag |
 |-----|-----|
 |15.0.4083.2 |[2019-CU8-GDR2-ubuntu-16.04]|
+
+### OSS component versions
+
+The table below shows the open-source projects in use as of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU8 and prior.
+
+| Project | Version |
+|--|--|
+| [collectd](https://collectd.org/) | 5.8.1 |
+| [InfluxDB](https://www.influxdata.com) | 1.7.6 |
+| [Elasticsearch](https://www.elastic.co/) | 7.0.1 |
+| [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit) | 1.1.1 |
+| [Grafana](https://grafana.com/) | 6.3.6 |
+| Hadoop <br/>[HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |3.1.3+|
+| [Hive (Metastore)](https://hive.apache.org/) |2.3.7|
+| [Kibana](https://www.elastic.co/kibana) | 7.0.1 |
+| [Knox](https://knox.apache.org/) |1.2.0|
+| [Livy](https://livy.apache.org/) |0.6.0|
+| [opendistro-elasticsearch-security](https://www.elastic.co/what-is/elastic-stack-security) | 1.0.0.1 |
+| [Openresty (Nginx)](https://openresty.org/) | 1.15.8 |
+| [Spark](configure-spark-hdfs.md) |2.4.6+|
+| [Telegraf](https://docs.influxdata.com/telegraf/) | 1.10.3 |
+| [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) | 3.5.8 |
 
 ## <a id="cu8"></a> CU8 (September 2020)
 
@@ -167,8 +209,8 @@ Cumulative Update 3 (CU3) release for SQL Server Big Data Clusters. The SQL Serv
 
 SQL Server Big Data Clusters CU3 resolves the following issues from previous releases.
 
-- [Deployment with private repository](#deployment-with-private-repository)
-- [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
+- [Deployment with private repository](release-notes-big-data-cluster.md#deployment-with-private-repository)
+- [Upgrade may fail due to timeout](release-notes-big-data-cluster.md#upgrade-may-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2 (February 2020)
 

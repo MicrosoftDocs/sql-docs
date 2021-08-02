@@ -95,7 +95,7 @@ See also:
 You can also use Transact-SQL to enable Stretch on the local server and [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). You can then [use Transact-SQL to enable Stretch Database on a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). With a database previously enabled for Stretch Database, execute the following Transact-SQL script to stretch an existing system-versioned temporal history table:
 
 ```sql
-ALTER TABLE <history table name>
+ALTER TABLE [<history table name>]
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```
 
@@ -115,7 +115,7 @@ RETURN SELECT 1 AS is_eligible
 Next, use the following script to add the filter predicate to the history table and set the migration state to OUTBOUND to enable predicate based data migration for the history table.
 
 ```sql
-ALTER TABLE <history table name>
+ALTER TABLE [<history table name>]
 SET (
       REMOTE_DATA_ARCHIVE = ON
         (
@@ -130,25 +130,27 @@ To maintain a sliding window, you need to make predicate function to be accurate
 
 ```sql
 BEGIN TRAN
+GO
 /*(1) Create new predicate function definition */
-  CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151102(@systemEndTime datetime2)
-   RETURNS TABLE
-    WITH SCHEMABINDING
-      AS
-        RETURN SELECT 1 AS is_eligible
-          WHERE @systemEndTime < CONVERT(datetime2,'2015-11-02T00:00:00', 101)
-  GO
+CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151102(@systemEndTime datetime2)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+    AS
+      RETURN SELECT 1 AS is_eligible
+        WHERE @systemEndTime < CONVERT(datetime2,'2015-11-02T00:00:00', 101)
+GO
  
 /*(2) Set the new function as filter predicate */
-  ALTER TABLE <history table name>
-    SET
-      (
-        REMOTE_DATA_ARCHIVE = ON
-          (
-            FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
-              MIGRATION_STATE = OUTBOUND
-          )
-      )
+ALTER TABLE [<history table name>]
+  SET
+    (
+      REMOTE_DATA_ARCHIVE = ON
+        (
+          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
+            MIGRATION_STATE = OUTBOUND
+        )
+    )
+GO
 COMMIT ;
 ```
 
@@ -190,7 +192,7 @@ The detailed steps for the recurring partition maintenance tasks are:
 1. SWITCH OUT: Create a staging table and then switch a partition between the history table and the staging table using the [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) statement with the SWITCH PARTITION argument (see Example C. Switching partitions between tables).
 
     ```sql
-    ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>
+    ALTER TABLE [<history table>] SWITCH PARTITION 1 TO [<staging table>]
     ```
 
     After the partition switch, you can optionally archive the data from staging table and then either drop or truncate the staging table to be ready for the next time you need to perform this recurring partition maintenance task.
@@ -438,7 +440,7 @@ FROM sys.databases
 Database flag **is_temporal_history_retention_enabled** is set to ON by default, but users can change it with ALTER DATABASE statement. It is also automatically set to OFF after point in time restore operation. To enable temporal history retention cleanup for your database, execute the following statement:
 
 ```sql
-ALTER DATABASE <myDB>
+ALTER DATABASE [<myDB>]
 SET TEMPORAL_HISTORY_RETENTION ON
 ```
 

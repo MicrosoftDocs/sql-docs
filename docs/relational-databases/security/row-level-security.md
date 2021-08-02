@@ -554,7 +554,7 @@ Create a sample schema and a fact table to hold data.
 
 ```sql
 CREATE SCHEMA Sample;
-
+GO
 CREATE TABLE Sample.Sales  
     (  
     OrderID int,  
@@ -606,7 +606,7 @@ Create a new schema, and an inline table-valued function. The function returns 1
 
 ```sql
 CREATE SCHEMA Security ;
-
+GO
 CREATE FUNCTION Security.fn_securitypredicate
          (@Product AS varchar(10))
 RETURNS TABLE

@@ -148,7 +148,8 @@ CDC might fail to capture the binary data for column C2, because its collation i
 ```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
-     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type
+     )
 ```
 
 ## Performance impact on Azure SQL Databases (Preview)

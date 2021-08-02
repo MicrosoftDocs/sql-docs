@@ -1,5 +1,5 @@
 ---
-title: SQL Server Big Data Clusters platform release notes
+title: SQL Server Big Data Clusters release notes
 titleSuffix: SQL Server Big Data Clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters platform release notes
+# SQL Server Big Data Clusters release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -49,19 +49,19 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | SQL Server Big Data Clusters Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.1 | 20.3.6    | 2021-08-10 |
-| [CU11](release-notes-cumulative-update-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
-| [CU10](release-notes-cumulative-update-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
-| [CU9](release-notes-cumulative-update-history.md#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
-| [CU8-GDR](release-notes-cumulative-update-history.md#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
-| [CU8](release-notes-cumulative-update-history.md#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
-| [CU6](release-notes-cumulative-update-history.md#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
-| [CU5](release-notes-cumulative-update-history.md#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
-| [CU4](release-notes-cumulative-update-history.md#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
-| [CU3](release-notes-cumulative-update-history.md#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
-| [CU2](release-notes-cumulative-update-history.md#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
-| [CU1](release-notes-cumulative-update-history.md#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
-| [GDR1](release-notes-cumulative-update-history.md#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
+| [CU12](#cu12) |  15.0.4153.1 | 20.3.6    | 2021-08-10 |
+| [CU11](#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
+| [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
+| [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
+| [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
+| [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
+| [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
+| [CU5](#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
+| [CU4](#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
+| [CU3](#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
+| [CU2](#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
+| [CU1](#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
+| [GDR1](#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
 
 <sup>1</sup> CU7 is not available for BDC.
 
@@ -70,6 +70,185 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu12"></a> CU12 (August 2021)
+
+Cumulative Update 12 (CU12) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4153.1|[2019-CU12-ubuntu-20.04]|
+
+SQL Server Big Data Clusters CU12 changes the operating system default python version from 3.5 to 3.6 on all its images. This has no impact on Spark and SQL Server Machine Learning Services, as those components use dedicated Python installations and don't rely on OS python.
+
+## <a id="cu11"></a> CU11 (June 2021)
+
+Cumulative Update 11 (CU11) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4138.2|[2019-CU11-ubuntu-20.04]|
+
+SQL Server Big Data Clusters CU11 includes important capabilities:
+
+- Encryption at Rest with external key providers via BDC KMS, commonly known as bring your own key (BYOK). For more information, see [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md).
+- Several SQL Server PolyBase Hadoop fixes and SQL Server PolyBase support of the following data sources: Hortonworks HDP 3.1, Cloudera CDH 6.1, 6.2, 6.3, Azure Blob Storage (WASB[S]) and Azure Data Lake Storage Gen2 (ABFS[S]). For more information, see:
+    - [PolyBase Connectivity Configuration (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)
+    - [Configure PolyBase to access external data in Hadoop](../relational-databases/polybase/polybase-configure-hadoop.md)
+    - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../t-sql/statements/create-external-data-source-transact-sql.md)
+
+## <a id="cu10"></a> CU10 (April 2021)
+
+Cumulative Update 10 (CU10) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4123.1|[2019-CU10-ubuntu-20.04]|
+
+SQL Server Big Data Clusters CU10 includes important capabilities:
+
+- Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
+   > [!CAUTION]
+   > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
+- High availability support for Hadoop KMS components.
+- Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
+- Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
+
+## <a id="cu9"></a> CU9 (February 2021)
+
+Cumulative Update 9 (CU9) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4102.2|[2019-CU9-ubuntu-16.04]|
+
+SQL Server Big Data Clusters CU9 includes important capabilities:
+
+- Support to configure BDC post deployment and provide increased visibility of system settings.
+
+   Clusters using `mssql-conf` for SQL Server master instance configurations require additional steps after upgrading to CU9. Follow the instructions [here](bdc-upgrade-configuration.md).
+
+- Improved [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] experience for encryption at rest.
+- Ability to dynamically [install Python Spark packages](spark-install-packages.md) using virtual environments.
+- Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
+- Other miscellaneous improvements and bug fixes.
+
+## <a id="cu8-gdr"></a> CU8-GDR(January 2021)
+
+Cumulative Update 8 GDR (CU8-GDR) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4083.2 |[2019-CU8-GDR2-ubuntu-16.04]|
+
+## <a id="cu8"></a> CU8 (September 2020)
+
+Cumulative Update 8 (CU8) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4073.23 |[2019-CU8-ubuntu-16.04]
+
+This release includes several fixes and a couple of enhancements.
+
+### Added capabilities
+
+- [SQL Server Big Data Clusters encryption at rest](encryption-at-rest-concepts-and-configuration.md) using system-managed keys and certificates.
+   > [!CAUTION]
+   > This is the initial release of SQL Server BDC encryption at rest. Review the following articles: 
+   > - [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)
+   > - [Encryption at rest concepts and configuration Guide](encryption-at-rest-concepts-and-configuration.md)
+- [Oracle Proxy User](tutorial-query-oracle.md) support to the Data Virtualization scenario.
+
+## <a id="cu6"></a> CU6 (July 2020)
+
+Cumulative Update 6 (CU6) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+This release includes minor fixes and enhancements. The following articles include information related to these updates:
+
+- [Manage big data cluster access in Active Directory mode](manage-user-access.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on AKS in Active Directory mode](active-directory-deployment-aks.md)
+- [Deploy big data clusters with Azure Kubernetes Service (AKS) Private Cluster](private-deploy.md)
+- [Restrict egress traffic of big data clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
+- [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
+- [Configure a SQL Server Big Data Cluster](./configure-bdc-overview.md)
+- [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
+- [SQL Server master instance configuration properties](reference-config-master-instance.md)
+- [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
+
+## <a id="cu5"></a> CU5 (June 2020)
+
+Cumulative Update 5 (CU5) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4043.16 |[2019-CU5-ubuntu-16.04]
+
+### Added capabilities
+
+- Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform deployed on premises version 4.3 and up and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
+- Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server Big Data Clusters CU5. 
+- Added support for deploying multiple big data clusters against an Active Directory domain.
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
+- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
+- Added support to persist customizations performed in Grafana. Before CU5, customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
+- Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role, and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
+- Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
+
+## <a id="cu4"></a> CU4 (April 2020)
+
+Cumulative Update 4 (CU4) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4033.1.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a id="cu3"></a> CU3 (March 2020)
+
+Cumulative Update 3 (CU3) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4023.6.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### Resolved issues
+
+SQL Server Big Data Clusters CU3 resolves the following issues from previous releases.
+
+- [Deployment with private repository](#deployment-with-private-repository)
+- [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
+
+## <a id="cu2"></a> CU2 (February 2020)
+
+Cumulative Update 2 (CU2) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4013.40.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
+
+## <a id="cu1"></a> CU1 (January 2020)
+
+Cumulative Update 1 (CU1) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4003.23.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
+
+## <a id="rtm"></a> GDR1 (November 2019)
+
+SQL Server Big Data Clusters General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## Known issues
 

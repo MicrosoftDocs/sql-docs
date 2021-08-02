@@ -148,7 +148,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Dynamic data masking|Yes|Yes|Yes|Yes|   
 |Basic auditing|Yes|Yes|Yes|Yes| 
 |Fine grained auditing|Yes|Yes|Yes|Yes| 
-|Transparent database encryption|Yes|Yes|No|No|   
+|Transparent database encryption (TDE)|Yes|Yes|No|No|   
 |User-defined roles|Yes|Yes|Yes|Yes| 
 |Contained databases|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|  
@@ -225,7 +225,7 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
-| **Security** | Extensible Key Management |
+| **Security** | Extensible Key Management (EKM) |
 | &nbsp; | AD Authentication for Linked Servers |
 | &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |

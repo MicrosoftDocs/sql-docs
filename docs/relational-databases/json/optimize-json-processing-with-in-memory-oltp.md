@@ -120,6 +120,7 @@ CREATE TABLE xtp.Product(
     INDEX [idx_Product_MadeIn] NONCLUSTERED (MadeIn)
 
 ) WITH (MEMORY_OPTIMIZED=ON)
+GO
 
 ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
@@ -142,6 +143,7 @@ AS BEGIN
 		JOIN OPENJSON(@ProductIds)
 			ON ProductID = value
 END;
+GO
 
 CREATE PROCEDURE xtp.UpdateProductData(@ProductId int, @Property nvarchar(100), @Value nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
@@ -152,6 +154,7 @@ AS BEGIN
 	SET Data = JSON_MODIFY(Data, @Property, @Value)
 	WHERE ProductID = @ProductId;
 END
+GO
 ```
 
 ## Learn more about JSON in SQL Server and Azure SQL Database  

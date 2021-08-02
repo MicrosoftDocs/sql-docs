@@ -1277,7 +1277,7 @@ The data files for an external table are stored in Hadoop or Azure blob storage.
 
 ```sql
 SELECT cs.user_ip FROM ClickStream cs
-JOIN User u ON cs.user_ip = u.user_ip
+JOIN [User] u ON cs.user_ip = u.user_ip
 WHERE cs.url = 'www.microsoft.com'
 ;
 ```

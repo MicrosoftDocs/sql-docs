@@ -37,14 +37,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazure_md.md](../../includes/ssazure_md.md)].
 
 ```syntaxsql
-
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   
 ### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 
 ```syntaxsql
-  
 OPTION ( <query_option> [ ,...n ] )  
   
 <query_option> ::=  
@@ -62,7 +60,6 @@ OPTION ( <query_option> [ ,...n ] )
 ### Syntax for [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 
 ```syntaxsql
-
 OPTION ( <query_option> [ ,...n ] )
 
 <query_option> ::=
@@ -132,29 +129,29 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
  The following example creates a view named CustomerView and then uses a HASH JOIN query hint in a query that references a view and a table.  
   
 ```sql
--- Uses AdventureWorks  
+-- Uses the AdventureWorks sample database
   
 CREATE VIEW CustomerView  
 AS  
 SELECT CustomerKey, FirstName, LastName FROM ssawPDW..DimCustomer;  
-  
+GO
 SELECT COUNT (*) FROM dbo.CustomerView a  
 INNER JOIN dbo.FactInternetSales b  
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
-  
+GO
 DROP VIEW CustomerView;
+GO
 ```  
   
 ### F. Query with a subselect and a query hint  
  The following example shows a query that contains both a subselect and a query hint. The query hint is applied globally. Query hints are not allowed to be appended to the subselect statement.  
   
 ```sql
--- Uses AdventureWorks  
-  
+-- Uses the AdventureWorks sample database
 CREATE VIEW CustomerView AS  
 SELECT CustomerKey, FirstName, LastName FROM ssawPDW..DimCustomer;  
-  
+GO
 SELECT * FROM (  
 SELECT COUNT (*) AS a FROM dbo.CustomerView a  
 INNER JOIN dbo.FactInternetSales b  

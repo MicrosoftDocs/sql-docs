@@ -98,7 +98,7 @@ The `MODEL` parameter is used to specify the model used for scoring or predictio
 ::: moniker range="=azuresqldb-mi-current"
 The `MODEL` parameter is used to specify the model used for scoring or prediction. The model is specified as a variable or a literal or a scalar expression.
 
-In Azure SQL Managed Instance (In preview), `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) and [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages.
+In Azure SQL Managed Instance (in preview), `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) and [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages.
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest"

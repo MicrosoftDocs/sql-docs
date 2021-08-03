@@ -30,7 +30,7 @@ The [Azure Arc extension (preview)](/azure/azure-arc/data/) is an extension for 
 
 [Download and Install Azure Data Studio](../download-azure-data-studio.md).
 
-## Install the extension
+## Install the extensions
 
 1. [Install Azure CLI](/cli/azure/install-azure-cli)
 2. [Install Azure `arcdata` extension](/azure/azure-arc/data/install-arcdata-extension)

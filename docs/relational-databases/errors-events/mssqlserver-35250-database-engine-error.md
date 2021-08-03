@@ -35,7 +35,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 > [!div class="nextstepaction"]
 > [Download and run Azure Data Studio Notebook for this topic](https://github.com/microsoft/tigertoolbox/blob/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)
 
-Click on "Doc-To-Notebooks" link above the Notebook and then download the MSSQLSERVER_35250.ipynb file.
+    Once you follow the link from button above, click on "Doc-To-Notebooks" link at the upper part of the page and then download the MSSQLSERVER_35250.ipynb file.
 
 > [!NOTE]  
 > All the following steps must be run on both the Primary replica and the problematic Secondary replica(s).

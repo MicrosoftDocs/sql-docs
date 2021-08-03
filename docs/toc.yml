@@ -7994,6 +7994,8 @@ items:
         href: relational-databases/security/permissions-hierarchy-database-engine.md
       - name: Using Service SIDs to grant permissions to services in SQL Server
         href: relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
+      - name: Ownership and user-schema separation
+        href: relational-databases/security/authentication-access/ownership-and-user-schema-separation.md
     - name: Encryption
       href: relational-databases/security/encryption/sql-server-encryption.md
       items:

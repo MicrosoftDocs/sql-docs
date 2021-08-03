@@ -48,8 +48,11 @@ You must be connected to the server instance that hosts the primary replica.
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as the following example:  
   
      ```sql
-     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT , FAILOVER_MODE = MANUAL );  
+     ALTER AVAILABILITY GROUP [<availability_group_name>] MODIFY REPLICA ON '*server_name*'  
+     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT)
+	 
+     ALTER AVAILABILITY GROUP [<availability_group_name>] MODIFY REPLICA ON '*server_name*'  
+     WITH ( FAILOVER_MODE = MANUAL );  
      ```
      
      Where *group_name* is the name of the availability group and *server_name* is the name of the server instance that hosts the replica to be modified.  

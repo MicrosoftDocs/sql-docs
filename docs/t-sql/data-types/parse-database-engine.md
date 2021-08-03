@@ -26,7 +26,7 @@ Parse converts the canonical string representation of a **hierarchyid** to a **h
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::Parse ( input )  
 -- This is functionally equivalent to the following syntax   
@@ -72,7 +72,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```
+```txt
 hierarchyidRepresentation    StringRepresentation
 -------------------------    -----------------------
 0x5ADE                       /1/1/3/

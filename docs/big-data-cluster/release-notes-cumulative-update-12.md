@@ -1,5 +1,5 @@
 ---
-title: SQL Server Big Data Clusters release notes
+title: SQL Server Big Data Clusters CU12 release notes
 titleSuffix: SQL Server Big Data Clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT

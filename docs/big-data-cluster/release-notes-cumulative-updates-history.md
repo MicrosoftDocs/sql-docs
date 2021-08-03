@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
+For the latest release notes, see [SQL Server Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+
 ## <a id="cu12"></a> CU12 (August 2021)
 
 Cumulative Update 12 (CU12) release for SQL Server Big Data Clusters.

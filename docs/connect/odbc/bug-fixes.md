@@ -19,7 +19,7 @@ manager: kenvh
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.8 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix for restrictions on connection string regarding usage of `UID` and `PWD` keywords
 - Fix for inconsistent fonts in non-English dialogs

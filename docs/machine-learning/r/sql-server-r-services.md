@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/06/2020
 ms.topic: overview
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: "=sql-server-2016"
 ---
 # What is SQL Server 2016 R Services?

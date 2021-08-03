@@ -41298,11 +41298,101 @@
     {
       "source_path": "docs/dma/dma-consolidatereports.md",
       "redirect_url": "/azure/migrate/tutorial-assess-sql",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/dma/dma-powerbiassesreport.md",
       "redirect_url": "/sql/dma/dma-consolidatereports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc.md",
+      "redirect_url": "/azure/azure-arc/data/reference/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-debug.md",
+      "redirect_url": "/azure/azure-arc/data/reference/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-status.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-backup.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server-backup.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-resource.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-resource-kind",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-resource-kind.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-resource-kind",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
       "redirect_document_id": false
     },
     {
@@ -45064,6 +45154,11 @@
       "source_path": "docs/connect/odbc/windows/release-notes.md",
       "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md",
+      "redirect_url": "/sql/connect/odbc/connection-resiliency",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
@@ -58751,6 +58846,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/agent/autorestart-sql-server-agent-sql-server-management-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/f1-help/index.md",
       "redirect_url": "/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
       "redirect_document_id": false
@@ -59194,6 +59294,11 @@
       "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
       "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/support-policy.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
     }
   ]
 }

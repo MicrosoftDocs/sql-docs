@@ -6141,16 +6141,32 @@ items:
       href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
       href: tools/synapse-pathway/pathway-faq.md
-    - name: Behind the scenes
-      href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
-    - name: Tutorial - Run Azure Synapse Pathway
-      href: tools/synapse-pathway/synapse-pathway-assessment.md
-    - name: Tutorial - Save and load
-      href: tools/synapse-pathway/tutorial-save-load-assessment.md
-    - name: Generate reports
-      href: tools/synapse-pathway/report-generation.md
+    - name: Tutorials
+      items:
+      - name: Tutorial - Run Azure Synapse Pathway
+        href: tools/synapse-pathway/synapse-pathway-assessment.md
+      - name: Tutorial - Save and load
+        href: tools/synapse-pathway/tutorial-save-load-assessment.md
+      - name: Generate reports
+        href: tools/synapse-pathway/report-generation.md
+    - name: Data Type Mappings
+      items:
+        - name: Data Type Mappings Overview
+          href: tools/synapse-pathway/data-type-mappings.md
+        - name: IBM Netezza
+          href: tools/synapse-pathway/data-type-mappings-ibm-netezza.md
+        - name: Microsoft SQL Server
+          href: tools/synapse-pathway/data-type-mappings-microsoft-sql-server.md
+        - name: Snowflake
+          href: tools/synapse-pathway/data-type-mappings-snowflake.md
+        - name: Teradata Vantage
+          href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
+    - name: Errors and Warnings
+      items:
+        - name: ASP1001
+          href: tools/synapse-pathway/transpiler-messages/asp1001.md
 - name: Manage, monitor, & tune
   items:
   - name: Manage
@@ -8899,8 +8915,8 @@ items:
             href: ssms/agent/assign-alerts-to-an-operator.md
           - name: Automatically Delete a Job
             href: ssms/agent/automatically-delete-a-job.md
-          - name: Autostart SQL Server Agent
-            href: ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
+          - name: Auto Restart SQL Server Agent
+            href: ssms/agent/autorestart-sql-server-agent-sql-server-management-studio.md
           - name: Change an Operator's Availability
             href: ssms/agent/change-an-operator-s-availability.md
           - name: Change the Membership of a Job Category
@@ -10421,44 +10437,6 @@ items:
         href: azdata/reference/reference-azdata-bdc-sql-settings.md
       - name: bdc status
         href: azdata/reference/reference-azdata-bdc-status.md
-    - name: Azure Arc-enabled data services
-      items:
-      - name: arc
-        href: azdata/reference/reference-azdata-arc.md
-      - name: arc dc
-        href: azdata/reference/reference-azdata-arc-dc.md
-      - name: arc dc config
-        href: azdata/reference/reference-azdata-arc-dc-config.md
-      - name: arc dc debug
-        href: azdata/reference/reference-azdata-arc-dc-debug.md
-      - name: arc dc endpoint
-        href: azdata/reference/reference-azdata-arc-dc-endpoint.md
-      - name: arc dc status
-        href: azdata/reference/reference-azdata-arc-dc-status.md
-      - name: arc postgres
-        href: azdata/reference/reference-azdata-arc-postgres.md
-      - name: arc postgres backup
-        href: azdata/reference/reference-azdata-arc-postgres-backup.md
-      - name: arc postgres endpoint
-        href: azdata/reference/reference-azdata-arc-postgres-endpoint.md
-      - name: arc postgres server
-        href: azdata/reference/reference-azdata-arc-postgres-server.md
-      - name: arc postgres server backup
-        href: azdata/reference/reference-azdata-arc-postgres-server-backup.md
-      - name: arc postgres server config
-        href: azdata/reference/reference-azdata-arc-postgres-server-config.md
-      - name: arc resource
-        href: azdata/reference/reference-azdata-arc-resource.md
-      - name: arc resource kind
-        href: azdata/reference/reference-azdata-arc-resource-kind.md
-      - name: arc sql
-        href: azdata/reference/reference-azdata-arc-sql.md
-      - name: arc sql endpoint
-        href: azdata/reference/reference-azdata-arc-sql-endpoint.md
-      - name: arc sql mi
-        href: azdata/reference/reference-azdata-arc-sql-mi.md
-      - name: arc sql mi config
-        href: azdata/reference/reference-azdata-arc-sql-mi-config.md
   - name: Database samples
     items:
     - name: Overview

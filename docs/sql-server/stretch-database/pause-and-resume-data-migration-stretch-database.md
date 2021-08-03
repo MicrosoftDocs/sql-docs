@@ -34,9 +34,9 @@ ms.custom: seo-dt-2019
  Run the following command.  
   
 ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-ALTER TABLE <Stretch-enabled table name>  
+ALTER TABLE [<Stretch-enabled table name>]
     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = PAUSED ) ) ;  
 GO 
 ```  
@@ -53,11 +53,11 @@ GO
  Run the following command.  
   
 ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-ALTER TABLE <Stretch-enabled table name>   
+ALTER TABLE [<Stretch-enabled table name>]
     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = OUTBOUND ) ) ;  
- GO
+GO
 ```  
 
 ## Check whether migration is active or paused

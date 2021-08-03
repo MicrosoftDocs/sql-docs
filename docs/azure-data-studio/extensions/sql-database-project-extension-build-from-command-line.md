@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: maghan, sstein
+ms.reviewer: maghan
 ms.custom: 
 ms.date: 08/07/2020
 ---

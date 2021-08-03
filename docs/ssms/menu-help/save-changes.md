@@ -18,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Save Changes
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Warns you that changes to the items listed will not be saved unless you click **Yes**.  
   
 This dialog box can appear when you are closing solutions, maintenance plans, or other open files.  

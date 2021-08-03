@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 04/07/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: contperf-fy21q3
 zone_pivot_groups: sqlml-platforms
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

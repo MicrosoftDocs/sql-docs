@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020  
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 
 ms.custom: contperf-fy21q1
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"

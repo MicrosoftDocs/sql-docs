@@ -103,7 +103,6 @@ The mount point entry in ***/etc/fstab***
 ```bash
 UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1 xfs rw,attr2,noatime 0 0
 ```
-
 In the example above, UUID represents the device that you can find using the ***blkid*** command.
 
 #### SQL Server and Forced Unit Access (FUA) I/O subsystem capability

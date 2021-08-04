@@ -66,7 +66,7 @@ Transforms data from an input data set to an output data set.
 
 ### data
 
-A [revoscalepy](../revoscalepy/revoscalepy-package.md) data source object, a data frame, or the path
+A [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package.md) data source object, a data frame, or the path
 to a `.xdf` file.
 
 
@@ -171,7 +171,7 @@ The default value is *None*.
 NOT SUPPORTED. A character vector specifying additional Python packages
 (outside of those specified in `RxOptions.get_option("transform_packages")`) to
 be made available and preloaded for use in variable transformation functions.
-For example, those explicitly defined in [revoscalepy](../revoscalepy/revoscalepy-package.md) functions via
+For example, those explicitly defined in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package.md) functions via
 their `transforms` and `transform_function` arguments or those defined
 implicitly via their `formula` or `row_selection` arguments.  The
 `transform_packages` argument may also be *None*, indicating that
@@ -220,21 +220,21 @@ The default value is `1`.
 
 Sets the context in which computations are executed,
 specified with a valid revoscalepy.RxComputeContext.
-Currently local and [revoscalepy.RxInSqlServer](../revoscalepy/RxInSqlServer.md) compute contexts
+Currently local and [revoscalepy.RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/RxInSqlServer.md) compute contexts
 are supported.
 
 
 ## Returns
 
-A data frame or an [revoscalepy.RxDataSource](../revoscalepy/RxDataSource.md) object
+A data frame or an [revoscalepy.RxDataSource](/machine-learning-server/python-reference/revoscalepy/RxDataSource.md) object
 representing the created output data.
 
 
 ## See also
 
 [`rx_predict`](rx-predict.md),
-[revoscalepy.rx_data_step](../revoscalepy/rx-data-step.md),
-[revoscalepy.rx_import](../revoscalepy/rx-import.md).
+[revoscalepy.rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step.md),
+[revoscalepy.rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import.md).
 
 
 ## Example

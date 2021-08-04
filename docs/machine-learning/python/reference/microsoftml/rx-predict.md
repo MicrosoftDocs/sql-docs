@@ -80,7 +80,7 @@ For example, an object returned from `rx_fast_trees` or `rx_logistic_regression`
 
 ### data
 
-A [revoscalepy](../revoscalepy/index.md) data source object, a data frame, or the path
+A [revoscalepy](/machine-learning-server/python-reference/revoscalepy/index.md) data source object, a data frame, or the path
 to a `.xdf` file.
 
 
@@ -162,7 +162,7 @@ The default value is `1`.
 
 Sets the context in which computations are executed,
 specified with a valid revoscalepy.RxComputeContext.
-Currently local and [revoscalepy.RxInSqlServer](../revoscalepy/RxInSqlServer.md) compute contexts
+Currently local and [revoscalepy.RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/RxInSqlServer.md) compute contexts
 are supported.
 
 
@@ -173,7 +173,7 @@ Additional arguments sent to compute engine.
 
 ## Returns
 
-A data frame or an [revoscalepy.RxDataSource](../revoscalepy/RxDataSource.md) object
+A data frame or an [revoscalepy.RxDataSource](/machine-learning-server/python-reference/revoscalepy/RxDataSource.md) object
 representing the created output data. By default, output from scoring binary
 classifiers include three variables: `PredictedLabel`,
 `Score`, and `Probability`; `rx_oneclass_svm` and regression
@@ -186,8 +186,8 @@ of these output variable names.
 ## See also
 
 [`rx_featurize`](rx-featurize.md),
-[revoscalepy.rx_data_step](../revoscalepy/rx-data-step.md),
-[revoscalepy.rx_import](../revoscalepy/rx-import.md).
+[revoscalepy.rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step.md),
+[revoscalepy.rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import.md).
 
 
 ## Binary classification example

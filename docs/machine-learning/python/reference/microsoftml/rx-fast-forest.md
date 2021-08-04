@@ -105,7 +105,7 @@ decision trees. Each tree in a decision forest outputs a Gaussian distribution.
 
 The formula as described in revoscalepy.rx_formula.
 Interaction terms and `F()` are not currently supported in
-[microsoftml](microsoftml-package.md).
+[microsoftml](../../ref-py-microsoftml.md).
 
 
 ### data
@@ -262,7 +262,7 @@ the transformation function.
 NOT SUPPORTED. A character vector specifying additional Python packages
 (outside of those specified in `RxOptions.get_option("transform_packages")`) to
 be made available and preloaded for use in variable transformation functions.
-For example, those explicitly defined in [revoscalepy](../revoscalepy/revoscalepy-package.md) functions via
+For example, those explicitly defined in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) functions via
 their `transforms` and `transform_function` arguments or those defined
 implicitly via their `formula` or `row_selection` arguments.  The
 `transform_packages` argument may also be *None*, indicating that

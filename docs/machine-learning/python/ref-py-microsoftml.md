@@ -18,13 +18,13 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 |-----------------------|-------------|
 | Current version:      |  9.4        |
 | Built on:             | [Anaconda 4.2](https://www.continuum.io/why-anaconda) distribution of [Python 3.7.1](https://www.python.org/doc) |
-| Package distribution: | [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/python/sql-server-python-services) version 2017 or 2019. |
+| Package distribution: | [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) version 2017 or 2019. |
 
 ## How to use microsoftml
 
 The **microsoftml** module is installed as part of SQL Server Machine Learning Services when you add Python to your installation. You get the full collection of proprietary packages plus a Python distribution with its modules and interpreters. You can use any Python IDE to write Python script calling functions in **microsoftml**, but the script must run on a computer having SQL Server Machine Learning Services with Python.
 
-**Microsoftml** and **revoscalepy** are tightly coupled; data sources used in **microsoftml** are defined as [**revoscalepy**](../revoscalepy/revoscalepy-package.md) objects. Compute context limitations in **revoscalepy** transfer to **microsoftml**. Namely, all functionality is available for local operations, but switching to a remote compute context requires [RxSpark](/machine-learning-server/python-reference/revoscalepy/rxspark) or [RxInSQLServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
+**Microsoftml** and **revoscalepy** are tightly coupled; data sources used in **microsoftml** are defined as [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) objects. Compute context limitations in **revoscalepy** transfer to **microsoftml**. Namely, all functionality is available for local operations, but switching to a remote compute context requires [RxSpark](/machine-learning-server/python-reference/revoscalepy/rxspark) or [RxInSQLServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 
 ## Versions and platforms
 

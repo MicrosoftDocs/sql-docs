@@ -219,7 +219,7 @@ the transformation function.
 NOT SUPPORTED. A character vector specifying additional Python packages
 (outside of those specified in `RxOptions.get_option("transform_packages")`) to
 be made available and preloaded for use in variable transformation functions.
-For example, those explicitly defined in [revoscalepy](../revoscalepy/revoscalepy-package.md) functions via
+For example, those explicitly defined in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) functions via
 their `transforms` and `transform_function` arguments or those defined
 implicitly via their `formula` or `row_selection` arguments.  The
 `transform_packages` argument may also be *None*, indicating that
@@ -265,8 +265,8 @@ values from `1` to `4` provide increasing amounts of information.
 
 Sets the context in which computations are executed,
 specified with a valid `revoscalepy.RxComputeContext`.
-Currently local and [revoscalepy.RxSpark](../revoscalepy/RxSpark.md) compute contexts
-are supported. When [revoscalepy.RxSpark](../revoscalepy/RxSpark.md) is specified,
+Currently local and [revoscalepy.RxSpark](/machine-learning-server/python-reference/revoscalepy/RxSpark) compute contexts
+are supported. When [revoscalepy.RxSpark](/machine-learning-server/python-reference/revoscalepy/revoscalepy/RxSpark) is specified,
 the training of the models is done in a distributed way, and the ensembling
 is done locally. Note that the compute context cannot be non-waiting.
 

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to deploy SQL Server Big Data Clusters on Kubernetes.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
+ms.reviewer: dacoelho
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -21,9 +21,9 @@ SQL Server Big Data Cluster is deployed as docker containers on a Kubernetes clu
 - Install the cluster configuration tool [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-## Supported platforms
+## Tested configurations
 
-See [Supported platforms](release-notes-big-data-cluster.md#supported-platforms) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
+See [Tested configurations](release-notes-big-data-cluster.md#tested-configurations) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
 
 ### SQL Server editions
 

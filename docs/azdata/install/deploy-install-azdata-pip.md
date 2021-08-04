@@ -4,8 +4,8 @@ titleSuffix:
 description: Learn how to install the azdata tool with pip.
 author: MikeRayMSFT 
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 09/30/2020
+ms.reviewer: danibunny
+ms.date: 07/29/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,7 +22,7 @@ This article describes how to install the [!INCLUDE [azure-data-cli-azdata](../.
 
 ## <a id="prerequisites"></a> Prerequisites
 
-`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage data resources via REST APIs. The minimum Python version required is v3.5. `pip` is required to download and install the `azdata` tool. The instructions below provide examples for Windows, Linux (Ubuntu) and macOS/OS X. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download). In addition, install and update the latest version of `requests` Python package:
+`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage data resources via REST APIs. The minimum Python version required is v3.6. `pip` is required to download and install the `azdata` tool. The instructions below provide examples for Windows, Linux (Ubuntu) and macOS/OS X. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download). In addition, install and update the latest version of `requests` Python package:
 
 ```bash
 pip3 install -U requests
@@ -30,7 +30,7 @@ pip3 install -U requests
 
 ## <a id="windows"></a> Windows `azdata` installation
 
-1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python 3.5.3 and later, pip3 is also installed when you install Python.
+1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python 3.6 and later, pip3 is also installed when you install Python.
 
    > [!TIP]
    > When installing Python3, select to add Python to your `PATH`. If you do not, you can later find where pip3 is located and manually add it to your `PATH`.
@@ -56,7 +56,7 @@ pip3 install -U requests
 
 ## <a id="linux"></a> Linux `azdata` installation
 
-On Linux, you must install Python 3.5 and then upgrade pip. The following example shows the commands that would work for Ubuntu. For other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
+On Linux, you must install Python 3.6 and then upgrade pip. The following example shows the commands that would work for Ubuntu. For other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 1. Install the necessary Python packages:
 

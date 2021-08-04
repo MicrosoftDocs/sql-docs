@@ -26,9 +26,12 @@ SQL Server Big Data Clusters is a fully containerized solution orchestrated by K
 
 The following table contains the tested configuration matrix for each release of SQL Server Big Data Clusters:
 
-| Big Data Clusters Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
+| Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
-| CU12 | Ubuntu 20.04.2 LTS | 1.20.7 | containerd 1.4.6; docker 20.10.7; CRI-O 1.19.1-11 | Block only | Block only |
+| CU12 | Ubuntu 20.04.2 | 1.20.7 | containerd 1.4.3 | Block only | Block only |
+|  | Ubuntu 20.04.2 | 1.20.7 | docker 19.3.14; 20.10.7 | Block only | Block only |
+|  | Ubuntu 18.04.5 | 1.20.7 | containerd 1.4.4 | Block only | Block only |
+|  | RHEL CoreOS 46.82 | 1.19.0 | CRI-O 1.19.1-11 | Block only | Block only |
 
 Restrictions:
 
@@ -48,7 +51,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | SQL Server Big Data Clusters Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.1 | 20.3.6    | 2021-08-10 |
+| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.1 | 20.3.7    | 2021-08-04 |
 | [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
 | [CU10](release-notes-cumulative-updates-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](release-notes-cumulative-updates-history.md#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |

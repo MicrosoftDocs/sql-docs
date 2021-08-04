@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 08/02/2021
+ms.date: 08/04/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -17,15 +17,15 @@ ms.technology: big-data-cluster
 
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 12 (CU12).
 
-## Tested configurations
+## Tested configurations for CU12
 
 SQL Server Big Data Clusters CU12 was tested on the following environment combinations:
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
-| Ubuntu 20.04.2 | 1.20.7 | containerd 1.4.3 | Block only | Block only |
-| Ubuntu 20.04.2 | 1.20.7 | docker 19.3.14; 20.10.7 | Block only | Block only |
-| Ubuntu 18.04.5 | 1.20.7 | containerd 1.4.4 | Block only | Block only |
+| Ubuntu 20.04.2 LTS | 1.20.7 | containerd 1.4.3 | Block only | Block only |
+| Ubuntu 20.04.2 LTS | 1.20.7 | docker 19.3.14; 20.10.7 | Block only | Block only |
+| Ubuntu 18.04.5 LTS | 1.20.7 | containerd 1.4.4 | Block only | Block only |
 | RHEL CoreOS 46.82 | 1.19.0 | CRI-O 1.19.1-11 | Block only | Block only |
 
 Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages:
@@ -35,21 +35,16 @@ Reference Architecture White Papers for SQL Server Big Data Clusters can be foun
 
 ## System environment
 
-* __Operating System__: Ubuntu 20.04.2
-* __SQL Server__: 15.0.4153.13
-    * __Java__: Azul
-    * __Python__: 3.x
-    * __R__: 3.x
-* __Spark__: 2.4.7
-    * __Java__: Azul
-    * __Scala__: Microsoft R 3.4.2
-    * __Python__: 3.8
-    * __R__: Microsoft R 3.4.2
-* __App Pool__
-    * __Java__: Azul
-    * __Python__: 3.8
-    * __R__: Microsoft R 3.4.2
-    * __MLeap__: Microsoft R 3.4.2
+* __Operating System__: Ubuntu 20.04.2 LTS
+* __SQL Server__: 15.0.4153.1
+    * __Java__: Azul Zulu JRE 11.0.9.1
+    * __Python__: 3.7.2 (miniconda 4.5.12)
+    * __R__: Microsoft R 3.5.2
+* __Spark__: 2.4
+    * __Java__: Azul Zulu JRE 1.8.0_275
+    * __Scala__: 2.11
+    * __Python__: 3.7.2 (miniconda 4.5.12)
+    * __R__: Microsoft R 3.5.2
 
 ## Embedded OSS component versions
 
@@ -58,60 +53,18 @@ Reference Architecture White Papers for SQL Server Big Data Clusters can be foun
 | [collectd](https://collectd.org/) | 5.12 |
 | [InfluxDB](https://www.influxdata.com) | 1.8.3 |
 | [Elasticsearch](https://www.elastic.co/) | 7.9.1 |
+| [opendistro-elasticsearch-security](https://www.elastic.co/what-is/elastic-stack-security) | 1.10.1.0 |
 | [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit) | 1.6.3 |
-| [Grafana](https://grafana.com/) | 7.3.1 |
-| Hadoop <br/>[HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) | 3.1.4 |
-| [Hive (Metastore)](https://hive.apache.org/) | 2.3.7<br/>3.0.0 (standalone)<br/>3.1.2 (hive) |
+| [Grafana](https://grafana.com/) | 7.3.6 |
+| Hadoop <br/>[HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) | 3.1 |
+| [Hive (Metastore)](https://hive.apache.org/) | 2.3 |
 | [Kibana](https://www.elastic.co/kibana) | 7.9.1 |
 | [Knox](https://knox.apache.org/) | 1.4.0 |
-| [Livy](https://livy.apache.org/) | 0.7.0 |
-| [opendistro-elasticsearch-security](https://www.elastic.co/what-is/elastic-stack-security) | 1.10.1.0 |
-| [Openresty (Nginx)](https://openresty.org/) | 1.17.8.2 |
-| [Spark](configure-spark-hdfs.md) | 2.4.10 |
+| [Livy](https://livy.apache.org/) | 0.6 |
+| [Openresty (Nginx)](https://openresty.org/) | 1.17.8-2 |
+| [Spark](configure-spark-hdfs.md) | 2.4 |
 | [Telegraf](https://docs.influxdata.com/telegraf/) | 1.16.1 |
-| [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) | 3.6.2 |
-
-## Installed Java and Scala libraries
-
-### SQL Server Machine Learning Services
-
-| Library | Version | Library | Version | Library | Version |
-|--|--|--|--|--|--|
-|--|--|--|--|--|--|
-
-### Spark
-
-| Library | Version | Library | Version | Library | Version |
-|--|--|--|--|--|--|
-|--|--|--|--|--|--|
-
-## Installed Python Libraries
-
-### SQL Server Machine Learning Services
-
-| Library | Version | Library | Version | Library | Version |
-|--|--|--|--|--|--|
-|--|--|--|--|--|--|
-
-### Spark
-
-| Library | Version | Library | Version | Library | Version |
-|--|--|--|--|--|--|
-|--|--|--|--|--|--|
-
-## Installed Python libraries
-
-### SQL Server Machine Learning Services
-
-| Library | Version | Library | Version | Library | Version |
-|--|--|--|--|--|--|
-|--|--|--|--|--|--|
-
-### Spark
-
-| Library | Version | Library | Version | Library | Version |
-|--|--|--|--|--|--|
-|--|--|--|--|--|--|
+| [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) | 3.5.8 |
 
 ## Next steps
 

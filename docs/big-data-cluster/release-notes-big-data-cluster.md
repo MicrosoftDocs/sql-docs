@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 08/02/2021
+ms.date: 08/04/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

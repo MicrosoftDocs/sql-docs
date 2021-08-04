@@ -59,7 +59,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="cu12"></a> CU11 (August 2021)
+## <a id="cu12"></a> CU12 (August 2021)
 
 This is the Cumulative Update 12 (CU12) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4153.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/5004524>.
 

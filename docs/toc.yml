@@ -50,7 +50,13 @@ items:
     - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
-      href: big-data-cluster/release-notes-big-data-cluster.md
+      items:
+        - name: Platform release notes
+          href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 12
+          href: big-data-cluster/release-notes-cumulative-update-12.md
+        - name: Cumulative Update history
+          href: big-data-cluster/release-notes-cumulative-updates-history.md
   - name: Install
     items:
     - name: Get Started

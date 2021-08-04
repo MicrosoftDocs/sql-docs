@@ -53,13 +53,13 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.rx_ensemble](/sql/machine-learning/python/reference/microsoftml/rx-ensemble) | Train an ensemble of models. |
-|[microsoftml.rx_fast_forest](/sql/machine-learning/python/reference/microsoftml/rx-fast-forest)  | Random Forest. |
-|[microsoftml.rx_fast_linear](/sql/machine-learning/python/reference/microsoftml/rx-fast-linear) | Linear Model. with Stochastic Dual Coordinate Ascent. |
-|[microsoftml.rx_fast_trees](/sql/machine-learning/python/reference/microsoftml/rx-fast-trees) | Boosted Trees. |
-|[microsoftml.rx_logistic_regression](/sql/machine-learning/python/reference/microsoftml/rx-logistic-regression) | Logistic Regression. |
-|[microsoftml.rx_neural_network](/sql/machine-learning/python/reference/microsoftml/rx-neural-network) | Neural Network. |
-|[microsoftml.rx_oneclass_svm](/sql/machine-learning/python/reference/microsoftml/rx-oneclass-svm) | Anomaly Detection. |
+|[microsoftml.rx_ensemble](reference/microsoftml/rx-ensemble) | Train an ensemble of models. |
+|[microsoftml.rx_fast_forest](reference/microsoftml/rx-fast-forest)  | Random Forest. |
+|[microsoftml.rx_fast_linear](reference/microsoftml/rx-fast-linear) | Linear Model. with Stochastic Dual Coordinate Ascent. |
+|[microsoftml.rx_fast_trees](reference/microsoftml/rx-fast-trees) | Boosted Trees. |
+|[microsoftml.rx_logistic_regression](reference/microsoftml/rx-logistic-regression) | Logistic Regression. |
+|[microsoftml.rx_neural_network](reference/microsoftml/rx-neural-network) | Neural Network. |
+|[microsoftml.rx_oneclass_svm](reference/microsoftml/rx-oneclass-svm) | Anomaly Detection. |
 
 <a name="ml-transforms"></a>
 
@@ -69,45 +69,45 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.categorical](/sql/machine-learning/python/reference/microsoftml/categorical) | Converts a text column into categories. |
-|[microsoftml.categorical_hash](/sql/machine-learning/python/reference/microsoftml/categorical-hash) | Hashes and converts a text column into categories. |
+|[microsoftml.categorical](reference/microsoftml/categorical) | Converts a text column into categories. |
+|[microsoftml.categorical_hash](reference/microsoftml/categorical-hash) | Hashes and converts a text column into categories. |
 
 ### Schema manipulation
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.concat](/sql/machine-learning/python/reference/microsoftml/concat) | Concatenates multiple columns into a single vector. |
-|[microsoftml.drop_columns](/sql/machine-learning/python/reference/microsoftml/drop-columns) | Drops columns from a dataset. |
-|[microsoftml.select_columns](/sql/machine-learning/python/reference/microsoftml/select-columns) | Retains columns of a dataset. |
+|[microsoftml.concat](reference/microsoftml/concat) | Concatenates multiple columns into a single vector. |
+|[microsoftml.drop_columns](reference/microsoftml/drop-columns) | Drops columns from a dataset. |
+|[microsoftml.select_columns](reference/microsoftml/select-columns) | Retains columns of a dataset. |
 
 ### Variable selection
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.count_select](/sql/machine-learning/python/reference/microsoftml/count-select) |Feature selection based on counts. |
-|[microsoftml.mutualinformation_select](/sql/machine-learning/python/reference/microsoftml/mutualinformation-select) | Feature selection based on mutual information. |
+|[microsoftml.count_select](reference/microsoftml/count-select) |Feature selection based on counts. |
+|[microsoftml.mutualinformation_select](reference/microsoftml/mutualinformation-select) | Feature selection based on mutual information. |
 
 ### Text analytics
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.featurize_text](/sql/machine-learning/python/reference/microsoftml/featurize-text) | Converts text columns into numerical features. |
-|[microsoftml.get_sentiment](/sql/machine-learning/python/reference/microsoftml/get-sentiment) | Sentiment analysis. |
+|[microsoftml.featurize_text](reference/microsoftml/featurize-text) | Converts text columns into numerical features. |
+|[microsoftml.get_sentiment](reference/microsoftml/get-sentiment) | Sentiment analysis. |
 
 ### Image analytics
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.load_image](/sql/machine-learning/python/reference/microsoftml/load-image) | Loads an image. |
-|[microsoftml.resize_image](/sql/machine-learning/python/reference/microsoftml/resize-image) | Resizes an Image. |
-|[microsoftml.extract_pixels](/sql/machine-learning/python/reference/microsoftml/extract-pixels) | Extracts pixels from an image. |
-|[microsoftml.featurize_image](/sql/machine-learning/python/reference/microsoftml/featurize-image) | Converts an image into features. |
+|[microsoftml.load_image](reference/microsoftml/load-image) | Loads an image. |
+|[microsoftml.resize_image](reference/microsoftml/resize-image) | Resizes an Image. |
+|[microsoftml.extract_pixels](reference/microsoftml/extract-pixels) | Extracts pixels from an image. |
+|[microsoftml.featurize_image](reference/microsoftml/featurize-image) | Converts an image into features. |
 
 ### Featurization functions
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.rx_featurize](/sql/machine-learning/python/reference/microsoftml/rx-featurize) | Data transformation for data sources |
+|[microsoftml.rx_featurize](reference/microsoftml/rx-featurize) | Data transformation for data sources |
 
 <a name="ml-scoring"></a>
 
@@ -115,7 +115,7 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function | Description |
 |----------|-------------|
-|[microsoftml.rx_predict](/sql/machine-learning/python/reference/microsoftml/rx-predict) | Scores using a Microsoft machine learning model |
+|[microsoftml.rx_predict](reference/microsoftml/rx-predict) | Scores using a Microsoft machine learning model |
 
 ## How to call microsoftml
 

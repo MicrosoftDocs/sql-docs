@@ -55,7 +55,7 @@ When an application is executed, the Kubernetes service for the application prox
 
 ## <a id="app-deploy-security"></a> Security considerations for applications deployments on OpenShift
 
-SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-big-data-cluster.md#cu5).
+SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-cumulative-updates-history.md#cu5).
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 

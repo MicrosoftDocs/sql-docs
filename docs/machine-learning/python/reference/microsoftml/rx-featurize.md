@@ -4,12 +4,13 @@
 title: "rx_featurize: Data Transformation for revoscalepy data sources" 
 description: "Transforms data from an input data set to an output data set." 
 keywords: "transform, featurizer" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "garyericson"
+ms.author: "garye" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "mlserver" 
+ms.prod: "sql"
+ms.technology: "machine-learning-services" 
 ms.service: "" 
 ms.assetid: "" 
  
@@ -20,8 +21,8 @@ ms.devlang: "Python"
 ms.reviewer: "" 
 ms.suite: "" 
 ms.tgt_pltfrm: "" 
-#ms.technology: "" 
 ms.custom: "" 
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
  
 ---
 

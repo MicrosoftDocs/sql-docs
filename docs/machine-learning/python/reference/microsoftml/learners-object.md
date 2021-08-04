@@ -4,12 +4,13 @@
 title: "BaseLearner,coef_,fit,get_algo_args,predict,summary_,FastTrees,get_train_node,OneClassSvm,get_train_node,FastForest,get_train_node,FastLinear,get_train_node,LogisticRegression,aic,coef_,deviance_,get_algo_args,get_train_node,NeuralNetwork,get_train_node,OneClassSvm,get_train_node: Learners Python Objects" 
 description: "An instance of the following objects is returned by every training function. They all inherit from the class BaseLearner and implement common methods.get_algo_args returns the training parameters,  coef_ retrieves the coefficients,  summary_ returns training information.The content changes based on the trained learner." 
 keywords: "models, learners" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "garyericson"
+ms.author: "garye" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "mlserver" 
+ms.prod: "sql"
+ms.technology: "machine-learning-services" 
 ms.service: "" 
 ms.assetid: "" 
  
@@ -20,8 +21,8 @@ ms.devlang: "Python"
 ms.reviewer: "" 
 ms.suite: "" 
 ms.tgt_pltfrm: "" 
-#ms.technology: "" 
 ms.custom: "" 
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
  
 ---
 

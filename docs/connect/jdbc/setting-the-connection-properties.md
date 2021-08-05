@@ -2,7 +2,7 @@
 title: Setting the connection properties
 description: The connection string properties for the Microsoft JDBC Driver for SQL Server can be specified in various ways.
 ms.custom: ""
-ms.date: 05/06/2021
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -22,7 +22,6 @@ The connection string properties can be specified in various ways:
 - As name=value properties in the connection URL when you connect by using the DriverManager class.
 - As name=value properties in the *Properties* parameter of the Connect method in the DriverManager class.
 - As values in the appropriate setter method of the data source of the driver. For example:
-
     ```java
     datasource.setServerName(value)
     datasource.setDatabaseName(value)
@@ -31,11 +30,9 @@ The connection string properties can be specified in various ways:
 ## Remarks
 
 Property names are case-insensitive, and duplicate property names are resolved in the following order:
-
 1. API arguments (such as user and password)
 2. Property collection
 3. Last instance in the connection string
-
 Also, unknown values are allowed for the property names, and their values are not validated by the JDBC driver for case sensitivity.
 
 Synonyms are allowed and are resolved in order, just as duplicate property names.
@@ -56,6 +53,8 @@ The following table lists all the currently available connection string properti
 | clientKey <br/><br/>String<br/><br/>null | (Version 8.4+) Specifies the location of the private key for PEM, DER, and CER certificates specified by the clientCertificate attribute. <br/><br/>For details, see [Client Certificate Authentication for Loopback Scenarios](client-certification-authentication-for-loopback-scenarios.md). |
 | clientKeyPassword <br/><br/>String<br/><br/>null | (Version 8.4+) Specified the optional password string for accessing the clientKey file's private key. <br/><br/>For details, see [Client Certificate Authentication for Loopback Scenarios](client-certification-authentication-for-loopback-scenarios.md). |
 | columnEncryptionSetting<br/><br/>String<br/>["Enabled" &#124; "Disabled"]<br/><br/>Disabled | (Version 6.0+) Set to "Enabled" to use the Always Encrypted (AE) feature. When AE is enabled, the JDBC driver transparently encrypts and decrypts sensitive data stored in encrypted database columns on the server.<br/><br/> For more information about Always Encrypted, see [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md).<br/><br/> **Note:**  Always Encrypted is available with SQL Server 2016 or later and Azure SQL Database. |
+| connectRetryCount<br/><br/>int<br/>[0..255]<br/><br/>1 | (Version 9.4+) The number of reconnection attempts if there is a connection failure. |
+| connectRetryInterval<br/><br/>int<br/>[1..60]<br/><br/>10 | (Version 9.4+) The number of seconds between each connection retry attempt. |
 | databaseName,<br/>database<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | The name of the database to connect to. <br/><br/>If not stated, a connection is made to the default database. |
 | delayLoadingLobs<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | Flag to indicate whether to stream or not stream all the LOB objects being retrieved from the ResultSet. Setting this property to "false" will load the entire LOB object into memory without streaming. |
 | domainName,<br/>domain<br/><br/>String<br/>null | (Version 7.4+) The Windows domain to authenticate to when using NTLM authentication. |
@@ -86,6 +85,8 @@ The following table lists all the currently available connection string properti
 | password<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | The database password, if connection with SQL user and password.<br/>For Kerberos connection with principal name and password, this property is set to the Kerberos Principal password. |
 | portNumber,<br/>port<br/><br/>int<br/>[0..65535]<br/><br/>1433 | The port where the server is listening. If the port number is specified in the connection string, no request to SQLbrowser is made. When the port and instanceName are both specified, the connection is made to the specified port. However, the **instanceName** is validated and an error is thrown if it doesn't match the port.<br/><br/> **Important:** We recommend that the port number is always specified, as it's more secure than using SQLbrowser. |
 | queryTimeout<br/><br/>int<br/><br/>-1 | The number of seconds to wait before a timeout has occurred on a query. The default value is -1, which means infinite timeout. Setting this value to 0 also implies to wait indefinitely. |
+| realm<br/><br/>String<br/><br/>null | (Version 9.4+) The realm for Kerberos authentication. Setting this value will override the Kerberos authentication realm the driver auto-detects from the server's realm. |
+| replication<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | (Version 9.4+) This setting tells the server if the connection is used for replication. When enabled, triggers with the `NOT FOR REPLICATION` option won't fire on the connection. |
 | responseBuffering<br/><br/>String<br/>["full" &#124; "adaptive"]<br/><br/>adaptive | If this property is set to "adaptive", the minimum possible data is buffered when necessary. The default mode is "adaptive."<br/><br/> If this property is set to "full", the entire result set is read from the server when a statement is executed.<br/><br/> **Note:** After upgrading the JDBC driver from version 1.2, the default buffering behavior will be "adaptive." If you want to keep the version 1.2 default behavior in your application, you must set the responseBufferring property to "full" either in the connection properties, or by using the [setResponseBuffering](reference/setresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](reference/sqlserverstatement-class.md) object. |
 | selectMethod<br/><br/>String<br/>["direct" &#124; "cursor"]<br/><br/>direct | If this property is set to "cursor," a database cursor is created for each query created on the connection for **TYPE_FORWARD_ONLY** and **CONCUR_READ_ONLY** cursors. This property is typically required only if the application generates large result sets that cannot be fully contained in client memory. If this property is set to "cursor," only a limited number of result set rows are kept in client memory. <br/><br/>The default behavior is that all result set rows are kept in client memory. This behavior provides the fastest performance when the application is processing all rows. |
 | sendStringParameters...<br/>AsUnicode<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | If the **sendStringParametersAsUnicode** property is set to "true", String parameters are sent to the server in Unicode format.<br/><br/> If the **sendStringParametersAsUnicode** property is set to "false", String parameters are sent to the server in non-Unicode format such as ASCII/MBCS instead of Unicode.<br/><br/> The default value for the **sendStringParametersAsUnicode** property is "true".<br/><br/> **Note:** The **sendStringParametersAsUnicode** property is only checked when sending a parameter value with **CHAR**, **VARCHAR**, or **LONGVARCHAR** JDBC types. The new JDBC 4.0 national character methods, such as the setNString, setNCharacterStream, and setNClob methods of [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) classes, always send their parameter values to the server in Unicode whatever the setting of this property.<br/><br/> For optimal performance with the **CHAR**, **VARCHAR**, and **LONGVARCHAR** JDBC data types, an application should set the **sendStringParametersAsUnicode** property to "false" and use the setString, setCharacterStream, and setClob non-national character methods of the [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) classes.<br/><br/> When the application sets the **sendStringParametersAsUnicode** property to "false" and uses a non-national character method to access Unicode data types on the server side (such as **nchar**, **nvarchar** and **ntext**), some data might be lost if the database collation doesn't support the characters in the String parameters passed by the non-national character method.<br/><br/> An application should use the setNString, setNCharacterStream, and setNClob national character methods of the [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) classes for the **NCHAR**, **NVARCHAR**, and **LONGNVARCHAR** JDBC data types. |
@@ -127,4 +128,4 @@ The following table lists all the currently available connection string properti
 ## See also
 
 [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
-[FIPS mode](fips-mode.md)  
+[FIPS mode](fips-mode.md)

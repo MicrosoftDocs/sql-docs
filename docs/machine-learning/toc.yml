@@ -345,7 +345,84 @@ items:
     - name: revoscalepy
       href: ../machine-learning/python/ref-py-revoscalepy.md
     - name: microsoftml
-      href: ../machine-learning/python/ref-py-microsoftml.md
+      items:
+      - name: Package overview
+        href: ../machine-learning/python/ref-py-microsoftml.md
+      - name: adadelta_optimizer
+        href: ../machine-learning/python/reference/microsoftml/adadelta-optimizer.md
+      - name: avx_math
+        href: ../machine-learning/python/reference/microsoftml/avx-math.md
+      - name: categorical
+        href: ../machine-learning/python/reference/microsoftml/categorical.md
+      - name: categorical_hash
+        href: ../machine-learning/python/reference/microsoftml/categorical-hash.md
+      - name: clr_math
+        href: ../machine-learning/python/reference/microsoftml/clr-math.md
+      - name: concat
+        href: ../machine-learning/python/reference/microsoftml/concat.md
+      - name: 'count_select '
+        href: ../machine-learning/python/reference/microsoftml/count-select.md
+      - name: custom
+        href: ../machine-learning/python/reference/microsoftml/custom.md
+      - name: drop_columns
+        href: ../machine-learning/python/reference/microsoftml/drop-columns.md
+      - name: extract_pixels
+        href: ../machine-learning/python/reference/microsoftml/extract-pixels.md
+      - name: featurize_image
+        href: ../machine-learning/python/reference/microsoftml/featurize-image.md
+      - name: featurize_text
+        href: ../machine-learning/python/reference/microsoftml/featurize-text.md
+      - name: get_sentiment
+        href: ../machine-learning/python/reference/microsoftml/get-sentiment.md
+      - name: gpu_math
+        href: ../machine-learning/python/reference/microsoftml/gpu-math.md
+      - name: hinge_loss
+        href: ../machine-learning/python/reference/microsoftml/hinge-loss.md
+      - name: load_image
+        href: ../machine-learning/python/reference/microsoftml/load-image.md
+      - name: log_loss
+        href: ../machine-learning/python/reference/microsoftml/log-loss.md
+      - name: mkl_math
+        href: ../machine-learning/python/reference/microsoftml/mkl-math.md
+      - name: mutualinformation_select
+        href: ../machine-learning/python/reference/microsoftml/mutualinformation-select.md
+      - name: n_gram
+        href: ../machine-learning/python/reference/microsoftml/n-gram.md
+      - name: n_gram_hash
+        href: ../machine-learning/python/reference/microsoftml/n-gram-hash.md
+      - name: predefined
+        href: ../machine-learning/python/reference/microsoftml/predefined.md
+      - name: resize_image
+        href: ../machine-learning/python/reference/microsoftml/resize-image.md
+      - name: rx_ensemble
+        href: ../machine-learning/python/reference/microsoftml/rx-ensemble.md
+      - name: rx_fast_forest
+        href: ../machine-learning/python/reference/microsoftml/rx-fast-forest.md
+      - name: rx_fast_linear
+        href: ../machine-learning/python/reference/microsoftml/rx-fast-linear.md
+      - name: rx_fast_trees
+        href: ../machine-learning/python/reference/microsoftml/rx-fast-trees.md
+      - name: rx_featurize
+        href: ../machine-learning/python/reference/microsoftml/rx-featurize.md
+      - name: rx_logistic_regression
+        href: ../machine-learning/python/reference/microsoftml/rx-logistic-regression.md
+      - name: rx_neural_network
+        href: ../machine-learning/python/reference/microsoftml/rx-neural-network.md
+      - name: rx_oneclass_svm
+        href: ../machine-learning/python/reference/microsoftml/rx-oneclass-svm.md
+      - name: rx_predict
+        href: ../machine-learning/python/reference/microsoftml/rx-predict.md
+      - name: select_columns
+        href: ../machine-learning/python/reference/microsoftml/select-columns.md
+      - name: sgd_optimizer
+        href: ../machine-learning/python/reference/microsoftml/sgd-optimizer.md
+      - name: smoothed_hinge_loss
+        href: ../machine-learning/python/reference/microsoftml/smoothed-hinge-loss.md
+      - name: squared_loss
+        href: ../machine-learning/python/reference/microsoftml/squared-loss.md
+      - name: sse_math
+        href: ../machine-learning/python/reference/microsoftml/sse-math.md
+
   - name: R packages
     items:
     - name: RevoScaleR

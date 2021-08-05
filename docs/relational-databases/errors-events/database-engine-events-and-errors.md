@@ -9105,6 +9105,14 @@ ORDER BY message_id
 |    [41399](mssqlserver-41399-database-engine-error.md)    |        |        |    The sort operation is too complex. Consult SQL Server Books Online for more information.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
+## Errors 41,400 to 42109
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
+|    42108    |    16    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
+|    42109    |    16    |    No    |    The SQL pool is warming up. Please try again.    |
+|    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
+
 ## See Also
 
 [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)

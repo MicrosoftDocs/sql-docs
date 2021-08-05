@@ -17,16 +17,16 @@ ms.author: stefanazaric
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-## Details  
+## Details
   
-| Attribute | Value |  
-| :-------- | :---- |  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Event ID|42108|  
-|Event Source|MSSQLSERVER|  
-|Component|SQLEngine|  
-|Symbolic Name|GATEWAY_SQL_POOL_CONNECT_ACTIVATION_BLOCKED|  
-|Message Text|Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.|  
+| Attribute | Value |
+| :-------- | :---- |
+|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|Event ID|42108|
+|Event Source|MSSQLSERVER|
+|Component|SQLEngine|
+|Symbolic Name|GATEWAY_SQL_POOL_CONNECT_ACTIVATION_BLOCKED|
+|Message Text|Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.|
   
 ## Explanation  
 

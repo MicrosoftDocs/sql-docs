@@ -57,9 +57,9 @@ ms.author: v-daenge
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|  
-|mssql-jdbc-9.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 9.4 include: JDK 16 support, support for Azure Active Directory Interactive Authentication, support for Azure Active Directory Service Principal Authentication, and support for useBulkCopyForBatchInsert for non-Azure Synapse Analytics servers. |
-|mssql-jdbc-9.4.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 9.4 include: JDK 16 support, support for Azure Active Directory Interactive Authentication, support for Azure Active Directory Service Principal Authentication, and support for useBulkCopyForBatchInsert for non-Azure Synapse Analytics servers. |
-|mssql-jdbc-9.4.0.jre16.jar|4.3|16|Requires a Java Runtime Environment (JRE) 16.0. Using JRE 15.0 or lower throws an exception.<br /><br /> New Features in 9.4 include: JDK 16 support, support for Azure Active Directory Interactive Authentication, support for Azure Active Directory Service Principal Authentication, and support for useBulkCopyForBatchInsert for non-Azure Synapse Analytics servers. |
+|mssql-jdbc-9.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
+|mssql-jdbc-9.4.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
+|mssql-jdbc-9.4.0.jre16.jar|4.3|16|Requires a Java Runtime Environment (JRE) 16.0. Using JRE 15.0 or lower throws an exception. |
 
   The JDBC Driver 9.4 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
   

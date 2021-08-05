@@ -22,6 +22,7 @@ The connection string properties can be specified in various ways:
 - As name=value properties in the connection URL when you connect by using the DriverManager class.
 - As name=value properties in the *Properties* parameter of the Connect method in the DriverManager class.
 - As values in the appropriate setter method of the data source of the driver. For example:
+
     ```java
     datasource.setServerName(value)
     datasource.setDatabaseName(value)
@@ -30,6 +31,7 @@ The connection string properties can be specified in various ways:
 ## Remarks
 
 Property names are case-insensitive, and duplicate property names are resolved in the following order:
+
 1. API arguments (such as user and password)
 2. Property collection
 3. Last instance in the connection string

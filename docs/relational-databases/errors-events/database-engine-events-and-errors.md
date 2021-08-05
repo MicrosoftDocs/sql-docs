@@ -9109,8 +9109,8 @@ ORDER BY message_id
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
-|    42108    |    20    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
-|    42109    |    20    |    No    |    The SQL pool is warming up. Please try again.    |
+|    [42108](mssqlserver-42108-database-engine-error.md)    |    20    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
+|    [42109](mssqlserver-42109-database-engine-error.md)    |    20    |    No    |    The SQL pool is warming up. Please try again.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## See Also

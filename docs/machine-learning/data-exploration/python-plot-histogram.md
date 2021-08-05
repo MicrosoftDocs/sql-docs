@@ -82,7 +82,7 @@ password = 'databasename'
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 sql = "SELECT DATEDIFF(year, c.BirthDate, GETDATE()) AS Age FROM [dbo].[FactInternetSales] s INNER JOIN dbo.DimCustomer c ON s.CustomerKey = c.CustomerKey"
-df = pd.read_sql(sql, cnxn)
+df = plt.read_sql(sql, cnxn)
 df.hist(bins=10)
 ```
 

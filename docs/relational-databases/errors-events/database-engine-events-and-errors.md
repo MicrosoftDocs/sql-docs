@@ -9109,8 +9109,8 @@ ORDER BY message_id
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
-|    42108    |    16    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
-|    42109    |    16    |    No    |    The SQL pool is warming up. Please try again.    |
+|    42108    |    20    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
+|    42109    |    20    |    No    |    The SQL pool is warming up. Please try again.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## See Also

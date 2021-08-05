@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 04/05/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -106,7 +106,7 @@ Because the binary format is the same as that used by the PREDICT function, you 
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 
-AND model_version = 'v1''
+AND model_version = 'v1'
 
 EXEC sp_rxPredict
 @model = @irismodel,

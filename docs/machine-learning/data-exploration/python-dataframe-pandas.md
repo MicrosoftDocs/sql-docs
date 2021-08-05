@@ -2,8 +2,8 @@
 title: Insert data from a SQL table into a Python pandas dataframe
 titleSuffix: SQL machine learning
 description: Learn how to read data from a SQL table and insert into a pandas dataframe using Python.
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql

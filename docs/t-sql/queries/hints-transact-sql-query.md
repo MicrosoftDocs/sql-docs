@@ -135,6 +135,8 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 <use_hint_name> ::=
 { 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'
   | 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'
+  | 'ASSUME_FULL_INDEPENDENCE_FOR_FILTER_ESTIMATES'
+  | 'ASSUME_PARTIAL_CORRELATION_FOR_FILTER_ESTIMATES'
   | 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
   | 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
   | 'DISABLE_DEFERRED_COMPILATION_TV'
@@ -300,19 +302,25 @@ The following hint names are supported:
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
    Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a query plan using the Simple Containment assumption instead of the default Base Containment assumption for joins, under the Query Optimizer [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for correlation. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for full correlation. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
+*  'ASSUME_FULL_INDEPENDENCE_FOR_FILTER_ESTIMATES'      
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using maximum selectivity when estimating AND predicates for filters to account for full independence. This hint name is the default behavior of the cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9472 when used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.     
+   **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+*  'ASSUME_PARTIAL_CORRELATION_FOR_FILTER_ESTIMATES'      
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using most to least selectivity when estimating AND predicates for filters to account for partial correlation. This hint name is the default behavior of the cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.     
+   **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).     
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
    Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   Disables table variable deferred compilation. For more information, see [Table variable deferred compilation](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Disables interleaved execution for multi-statement table-valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Instructs the query processor not to use a sort operation (batch sort) for optimized nested loop joins when generating a query plan. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -328,13 +336,13 @@ The following hint names are supported:
    Instructs Query Optimizer to use average data distribution while compiling a query with one or more parameters. This instruction makes the query plan independent on the parameter value that was first used when the query was compiled. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting `PARAMETER_SNIFFING = OFF`.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
   Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   Disables scalar UDF inlining. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).     
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).    
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 * 'DISALLOW_BATCH_MODE'    
   Disables batch mode execution. For more information, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Enables automatically generated quick statistics (histogram amendment) for any leading index column for which cardinality estimation is needed. The histogram used to estimate cardinality will be adjusted at query compile time to account for actual maximum or minimum value of this column. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -345,7 +353,7 @@ The following hint names are supported:
    Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Forces the Query Optimizer behavior at a query level. This behavior happens as if the query was compiled with database compatibility level _n_, where _n_ is a supported database compatibility level (for example 100, 130, etc.). Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for _n_.      
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 
    > [!NOTE]
    > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint doesn't override default or legacy cardinality estimation setting, if it's forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.   

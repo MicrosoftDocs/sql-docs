@@ -51,7 +51,7 @@ The following Transact-SQL commands are used in this section:
 1. Create a database scoped credential for accessing the ODBC source.
 
     ```sql
-    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    CREATE DATABASE SCOPED CREDENTIAL [<credential_name>] WITH IDENTITY = '<username>', Secret = '<password>';
     ```
 
     For example, the following example creates a credential named `credential_name`, with an identity of `username` and a complex password.
@@ -63,12 +63,12 @@ The following Transact-SQL commands are used in this section:
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
     ```sql
-    CREATE EXTERNAL DATA SOURCE <external_data_source_name>
+    CREATE EXTERNAL DATA SOURCE [<external_data_source_name>]
     WITH ( LOCATION = 'odbc://<ODBC server address>[:<port>]',
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = [ON] | OFF,
-    CREDENTIAL = <credential_name> );
+    CREDENTIAL = [<credential_name>] );
     ```
 
     The following example creates an external data source:
@@ -101,15 +101,15 @@ The following Transact-SQL commands are used in this section:
    Create an external table. You will need to reference the external data source created above using the `DATA_SOURCE` argument and specify the source table as the `LOCATION`. You do not need to reference all columns but you will need to ensure that the types are correctly mapped.  
 
    ```sql
-     CREATE EXTERNAL TABLE <your_table_name>
+     CREATE EXTERNAL TABLE [<your_table_name>]
      (
-     <col1_name>     DECIMAL(38) NOT NULL,
-     <col2_name>     DECIMAL(38) NOT NULL,
-     <col3_name>     CHAR COLLATE Latin1_General_BIN NOT NULL
+     [<col1_name>]     DECIMAL(38) NOT NULL,
+     [<col2_name>]     DECIMAL(38) NOT NULL,
+     [<col3_name>]     CHAR COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
      LOCATION='<sap_table_name>',
-     DATA_SOURCE= <external_data_source_name>
+     DATA_SOURCE= [<external_data_source_name>]
      )
      ;
    ```

@@ -854,7 +854,7 @@ END CATCH;
 
 GO
 EXEC Production.uspDeleteWorkOrder 13;
-
+GO
 /* Intentionally generate an error by reversing the order in which rows
    are deleted from the parent and child tables. This change does not
    cause an error when the procedure definition is altered, but produces
@@ -888,7 +888,7 @@ END CATCH;
 GO
 -- Execute the altered procedure.
 EXEC Production.uspDeleteWorkOrder 15;
-
+GO
 DROP PROCEDURE Production.uspDeleteWorkOrder;
 ```
 

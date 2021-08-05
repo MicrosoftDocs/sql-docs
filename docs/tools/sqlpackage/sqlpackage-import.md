@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
+ms.reviewer: "maghan"
 ms.date: 7/2/2021
 ---
 
@@ -51,7 +51,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database.|
+|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as"P0" or "S1".|

@@ -92,7 +92,7 @@ ms.author: maggies
   
 6.  Type a command with the following format:  
   
-     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
+     `msiexec /i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
      The two options specific to installing [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] are: RBINSTALLDIR and RBSERVERURL. You don't have to include these arguments in the command line. The following is the baseline command:  
   

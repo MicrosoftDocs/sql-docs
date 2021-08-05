@@ -75,9 +75,9 @@ ms.custom: seo-dt-2019
  Here's an example that migrates the entire table and begins data migration immediately.  
   
 ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-ALTER TABLE <table name>  
+ALTER TABLE [<table name>]
     SET ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) ) ;  
 GO
 ```  
@@ -85,9 +85,9 @@ GO
  Here's an example that migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-ALTER TABLE <table name>  
+ALTER TABLE [<table name>]
     SET ( REMOTE_DATA_ARCHIVE = ON (  
         FILTER_PREDICATE = dbo.fn_stretchpredicate(),  
         MIGRATION_STATE = PAUSED ) ) ;  
@@ -102,10 +102,13 @@ ALTER TABLE <table name>
  Here's an example that migrates the entire table and begins data migration immediately.  
   
 ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-CREATE TABLE <table name>
-    ( ... )  
+CREATE TABLE [<table name>]
+    (
+        col1 int
+        /* replace the sample "col1" column shown above, with the actual list of columns */
+    )
     WITH ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) ) ;  
 GO
 ```  
@@ -113,10 +116,13 @@ GO
  Here's an example that migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-CREATE TABLE <table name> 
-    ( ... )  
+CREATE TABLE [<table name>]
+    (
+        col1 int
+        /* replace the sample "col1" column shown above, with the actual list of columns */
+    )
     WITH ( REMOTE_DATA_ARCHIVE = ON (  
         FILTER_PREDICATE = dbo.fn_stretchpredicate(),  
         MIGRATION_STATE = PAUSED ) ) ;  

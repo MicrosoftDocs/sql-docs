@@ -54,6 +54,10 @@ PolyBase has the following limitations:
 
 - PolyBase on SQL Server on Linux will not function if IPv6 is disabled in the kernel. See [Release notes for SQL Server 2019 on Linux](../../linux/sql-server-linux-release-notes-2019.md#networking) for further information on this limitation.
 
+- PolyBase services require Shared Memory protocol to be enabled to function properly.
+
+- If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing sp_polybase_join_group, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
+
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "
 

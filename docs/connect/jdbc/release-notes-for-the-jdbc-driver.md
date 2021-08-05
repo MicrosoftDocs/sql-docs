@@ -65,6 +65,9 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | [GitHub Issue #1499](https://github.com/microsoft/mssql-jdbc/issues/1499) | Fixed: Batch fails when always encrypted is enabled in the connection string and clearParameters is called. |
 | [GitHub Issue #1632](https://github.com/microsoft/mssql-jdbc/issues/1632) | Fixed: Small memory leak on new connection. |
+| [GitHub Issue #1565](https://github.com/microsoft/mssql-jdbc/issues/1565) | Fixed an issue where trustStorePassword is null when using applicationIntent=ReadOnly |
+| [GitHub Issue #1568](https://github.com/microsoft/mssql-jdbc/issues/1568) | Fixed an issue where redirected token contains named instance in servername |
+| [GitHub Issue #1531](https://github.com/microsoft/mssql-jdbc/issues/1531) | Fixed potential integer overflow in TDSWriter.writeString() |
 | &nbsp; | &nbsp; |
 
 ## Previous releases

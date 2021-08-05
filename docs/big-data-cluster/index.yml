@@ -51,7 +51,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
         - text: Virtualize CSV
-          url: ../relational-databases/polybase/data-virtualization-csv.md
+          url: ./data-virtualization-csv.md
         - text: Configure HDFS tiering
           url: hdfs-tiering.md
         - text: Mount ADLS Gen2
@@ -149,7 +149,7 @@ landingContent:
           - text: Deploy with high availability
             url: deployment-high-availability.md
           - text: Deploy in Active Directory mode
-            url: deploy-active-directory.md
+            url: ./active-directory-prerequisites.md
 
   # Card (Manage)
   - title: Administration and Logging

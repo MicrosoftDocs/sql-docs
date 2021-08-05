@@ -11167,9 +11167,9 @@ items:
           href: relational-databases/errors-events/mssqlserver-41399-database-engine-error.md
       - name: Errors 41,400 to 41,209
         items:
-        - name: 41208
+        - name: 42108
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
-        - name: 41209
+        - name: 42109
           href: relational-databases/errors-events/mssqlserver-42109-database-engine-error.md
       - name: Native Client Error 50000
         href: relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md

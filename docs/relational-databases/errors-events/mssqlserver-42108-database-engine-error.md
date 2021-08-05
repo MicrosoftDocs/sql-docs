@@ -30,9 +30,8 @@ ms.author: stefanazaric
   
 ## Explanation  
 
-Synapse SQL pool is paused and needs to be resumed before retrying connection to the pool. This error requires action from the user.
+Synapse SQL pool is in status called Paused and needs to be resumed before retrying connection to the pool. This error requires action from the user.
   
 ## User Action  
 
-Synapse SQL pool is in status Paused and needs to be resumed.
-After resuming of the pool you can retry connecting to the Synapse SQL pool.
+Resume a SQL pool and retry connecting to the Synapse SQL pool.

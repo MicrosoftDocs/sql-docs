@@ -17,7 +17,7 @@ This article describes how to perform an offline deployment of a [!INCLUDE[big-d
 
 ## Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
+- Docker Engine on any supported Linux distribution or Docker for Mac/Windows. Validate the engine version against the tested configurations on the [SQL Server Big Data Clusters release notes](release-notes-big-data-cluster.md).For more information, see [Install Docker](https://docs.docker.com/engine/installation/). 
 
 ## Load images into a private repository
 
@@ -26,7 +26,7 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-GDR1-ubuntu-16.04**.  
+1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-CU12-ubuntu-20.04**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>

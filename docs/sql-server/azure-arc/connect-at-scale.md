@@ -1,28 +1,47 @@
 ---
 title: Connect SQL Servers on Azure-arc enabled servers at scale
 titleSuffix:
-description: In this article, you learn how to connect an instance of SQL Server instances to Azure-arc enabled servers (preview) using a service principal.
+description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 04/06/2021
+ms.date: 07/30/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
 
 # Connect SQL Server instances to Azure Arc at scale
 
+This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using Azure policy. Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.  
+
+## Connecting at-scale using Azure policy
+
+You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
+
+> [!IMPORTANT]
+> The __SQL Server - Azure Arc__ resources for the SQL Server instances will be created in the same region and the resource group as the corresponding __Machine - Azure Arc__ resource. Because the SQL Serve extension synchronizes with Azure once an hour, it may take up to one hour before these resources are created.  
+
+## Connecting multiple SQL Server instances using script
+
 You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect and register each machine and the installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled servers. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
 
-The installation methods to install and configure the Connected Machine agent requires that the automated method you use has  administrator permissions on the machines. On Linux, by using the root account and on Windows, as a member of the Local Administrators group.
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script connects and registers each machine and the installed SQL Server instances to Azure Arc.
+
+### Use Azure Active Directory service principal
+
+For the best experience, use an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc enabled server and Azure Arc enabled SQL Server. The service principal is safer than using a higher privileged account like a Tenant Administrator, and follows access control security best practices.  
+
+The installation methods to install and configure the Connected Machine agent requires that the automated method you use has administrator permissions on the machines. On Linux, use the root account. Windows, use a member of the Local Administrators group.
 
 Before you get started, be sure to review the [prerequisites](overview.md#prerequisites) and make sure that you have created a custom role that meets the required permissions.
 
-## Connecting multiple SQL Server instances on Windows using Azure PowerShell
+### Connect multiple instances
+
+# [Windows](#tab/windows)
 
 Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) installed.
 
-1. Create the service principal using PowerShell using the [`New-AzADServicePrincipal`](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet. Make sure to store the output in a variable. Otherwise, you will not be able to retrieve the password needed later.
+1. Create the service principal. Use the [`New-AzADServicePrincipal`](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet. Make sure to store the output in a variable. Otherwise, you will not be able to retrieve the password needed later.
 
     ```azurepowershell-interactive
     $sp = New-AzADServicePrincipal -DisplayName "Arc-for-servers" -Role <your custom role>
@@ -48,19 +67,21 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
    $credential = New-Object pscredential -ArgumentList "temp", $sp.Secret
    $credential.GetNetworkCredential().password
    ```
-3. Retrieve the value of the service principal’s tenant ID:
- 
+
+3. Retrieve the value of the service principal's tenant ID:
+
    ```azurepowershell-interactive
    $tenantId= (Get-AzContext).Tenant.Id
    ```
-4. Copy and save the the password, application ID and tenant ID values using the appropriate security practices. If you forget or lose your service principal password, you can reset it using the [`New-AzADSpCredential`](/powershell/module/azurerm.resources/new-azurermadspcredential) cmdlet.
+
+4. Copy and save the password, application ID, and tenant ID values using the appropriate security practices. If you forget or lose your service principal password, you can reset it using the [`New-AzADSpCredential`](/powershell/module/azurerm.resources/new-azurermadspcredential) cmdlet.
 
    > [!NOTE]
-   > Note that Azure Arc for servers doesn’t currently support signing in with a certificate, so the service principal must have a secret to authenticate with.
+   > Note that Azure Arc for servers doesn't currently support signing in with a certificate, so the service principal must have a secret to authenticate with.
 
 5. Download the PowerShell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
-6. Open the script in an admin instance of PowerShell ISE and replace the following environment variables using the values generated during the service principal provisioning described earlier. These variable are initially empty.
+6. Open the script in an administrator instance of PowerShell ISE and replace the following environment variables using the values generated during the service principal provisioning described earlier. These variables are initially empty.
 
    ```azurepowershell-interactive
    $servicePrincipalAppId="{serviceprincipalAppID}"
@@ -70,9 +91,9 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
 
 7. Execute the script on each target machine
 
-## Connecting multiple SQL Server instances on Linux using Azure CLI
+# [Linux](#tab/linux)
 
-Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). The registration script will automatically sign in to Azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
+Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). The registration script will automatically sign in to Azure with the service principal credentials if they're provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
 
 1. Create the service principal using the ['az ad sp create-for-rbac'](/cli/azure/ad/sp#az_ad_sp_create_for_rbac) command.
 
@@ -94,9 +115,9 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
-3. Replace the following variables in the script using the values returned by the 'az ad sp create-for-rbac' command. These variable are initially empty.
+3. Replace the following variables in the script using the values returned by the 'az ad sp create-for-rbac' command. These variables are initially empty.
 
-   ```bash
+   ```console
    servicePrincipalAppId="{serviceprincipalAppID}"
    servicePrincipalSecret="{serviceprincipalPassword}"
    servicePrincipalTenant="{serviceprincipalTenant}"
@@ -104,14 +125,16 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 3. Execute the script on each target machines
  
-   ```bash
+   ```console
    sudo chmod +x ./RegisterSqlServerArc.sh
    ./RegisterSqlServerArc.sh
    ```
 
+---
+
 ## Validate successful onboarding
 
-After you register instances of SQL Server on Azure Arc-enabled servers, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each registered SQL Server instance. 
+After you register SQL Server instances with Azure Arc enabled SQL Server, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each connected SQL Server instance.
 
 ![A successful onboard](./media/join-at-scale/successful-onboard.png)
 

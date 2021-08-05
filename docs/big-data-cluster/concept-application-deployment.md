@@ -55,7 +55,7 @@ When an application is executed, the Kubernetes service for the application prox
 
 ## <a id="app-deploy-security"></a> Security considerations for applications deployments on OpenShift
 
-SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-big-data-cluster.md#cu5).
+SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-cumulative-updates-history.md#cu5).
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
@@ -102,7 +102,7 @@ The followings are the target scenarios for app deploy:
 
 In app deploy, BDC python runtime allows Python application inside the big data cluster to address variety of use cases such as machine learning inferencing, API serving and more.
 
-Python 3.5 for Ubuntu 16.04 and Python 3.8 for Ubuntu 20.04.
+The app deploy Python runtime uses Python 3.8 on SQL Server Big Data Clusters CU10+.
 
 In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
@@ -146,7 +146,7 @@ App deploy Python runtime doesn't support scheduling scenario. Once Python app i
 
 In app deploy, BDC Python runtime allows R application inside the big data cluster to address variety of use cases such as machine learning inferencing, API serving and more.
 
-The app deploy R runtime supports Microsoft R Open (MRO) 3.5.2.
+The app deploy R runtime uses Microsoft R Open (MRO) version 3.5.2 on SQL Server Big Data Clusters CU10+.
 
 #### How to use it?
 

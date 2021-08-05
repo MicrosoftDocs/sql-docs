@@ -2,7 +2,7 @@
 title: "Release notes for mssql-tools on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
@@ -17,6 +17,14 @@ manager: kenvh
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools on Linux and macOS.
+
+## 17.8.1.1, July 2021
+
+| Feature added | Details |
+| :------------ | :------ |
+| Sqlcmd Token Authentication | Now supported. See [Connecting with sqlcmd](connecting-with-sqlcmd.md) |
+| BCP Token Authentication | Now supported. See [Connecting with bcp](connecting-with-bcp.md) |
+| &nbsp; | &nbsp; |
 
 ## 17.7.1.1, January 2021
 

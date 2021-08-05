@@ -7,7 +7,7 @@ ms.prod_service: sql-tools
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein
+ms.reviewer: 
 helpviewer_keywords:
   - "source controls [SQL Server Management Studio], tutorials"
   - "Help [SQL Server], SQL Server Management Studio"

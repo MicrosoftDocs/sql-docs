@@ -2,10 +2,10 @@
 title: Deploy SQL Server Big Data Cluster with high availability
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability 
 description: Learn how to deploy SQL Server Big Data Cluster with high availability.
-author: mihaelablendea
-ms.author: mihaelab 
-ms.reviewer: mikeray
-ms.date: 09/18/2020
+author: cloudmelon 
+ms.author: melqin 
+ms.reviewer: wiassaf
+ms.date: 07/30/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -210,6 +210,8 @@ These are known issues and limitations with contained availability groups for SQ
 - Replication feature is not supported for contained availability groups. SQL Server instances part of a contained AG can not function as a distributor or publisher, at either the instance level or contained AG level.
 - Adding file groups while creating the database is not supported. As a workaround, you can first create the database and then issue an ALTER DATABASE statement to add any file groups.
 - Prior to SQL Server 2019 CU2, databases created as result of workflows other than `CREATE DATABASE` and `RESTORE DATABASE` like `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
+- Service Broker and Database Mail are not currently supported on Big Data Clusters deployed with high availability.
+
 
 ## Next steps
 

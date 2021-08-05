@@ -1,46 +1,44 @@
 ---
+title: Stopping System-Versioning on a System-Versioned Temporal Table
 description: "Stopping System-Versioning on a System-Versioned Temporal Table"
-title: "Stopping System-Versioning on a System-Versioned Temporal Table | Microsoft Docs"
-ms.custom: ""
-ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 04/28/2020
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Stopping system-versioning on a system-versioned temporal table
 
+# Stopping system-versioning on a system-versioned temporal table
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-
-You may want to stop versioning on your temporal table either temporarily or permanently. You can do that by setting **SYSTEM_VERSIONING** clause to **OFF**.
+You may want to stop versioning on your temporal table either temporarily or permanently. You can do that by setting the **SYSTEM_VERSIONING** clause to **OFF**.
 
 ## Setting SYSTEM_VERSIONING = OFF
 
-Stop system-versioning if you want to perform specific maintenance operations on temporal table or if you don't need a versioned table anymore. As a result of this operation you will get two independent tables:
+Stop system-versioning if you want to perform specific maintenance operations on a temporal table or don't need a versioned table anymore. Because of this operation, you get two independent tables:
 
-- Current table with period definition
+- Current table with a period definition
 
 - History table as a regular table
 
 ### Important remarks
 
-- History Table will **stop** caturing the updates for the duration of **SYSTEM_VERSIONING = OFF**.
+- History Table **stops** capturing the updates during **SYSTEM_VERSIONING = OFF**.
 - No data loss happens on the **temporal table** when you set**SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.
-- When you set **SYSTEM_VERSIONING = OFF** and do not remove drop the **SYSTEM_TIME** period, the system will continue to update the period columns for every insert and update operation. Deletes on current table will be permanent.
-- Drop the **SYSTEM_TIME** period to remove the period columns completely.
-- When you set **SYSTEM_VERSIONING = OFF**, all users that have sufficient permissions will be able to modify schema and content of history table or even to permanently delete the history table.
-- You cannot set **SYSTEM_VERSIONING = OFF** if you have other objects created with SCHEMABINDING using temporal query extensions - such as referencing **SYSTEM_TIME**. This restriction prevents these objects from failing if you set **SYSTEM_VERSIONING = OFF**.
+- When you set **SYSTEM_VERSIONING = OFF** and don't remove drop the **SYSTEM_TIME** period, the system continues to update the period columns for every insert and update operation. Deletes on the current table are permanent.
+- Drop the **SYSTEM_TIME** period to delete the period columns.
+- When you set, **SYSTEM_VERSIONING = OFF**, all users with sufficient permissions can modify the schema and content of the history table or even permanently delete the history table.
+- You can't set **SYSTEM_VERSIONING = OFF** if you have other objects created with SCHEMABINDING using temporal query extensions - such as referencing **SYSTEM_TIME**. This restriction prevents these objects from failing if you set **SYSTEM_VERSIONING = OFF**.
 
 ### Permanently remove SYSTEM_VERSIONING
 
-This example permanently removes SYSTEM_VERSIONING and removes the period columns completely. Removing the period columns is optional.
+This example permanently removes SYSTEM_VERSIONING and deletes the period columns. Removing the period columns is optional.
 
 ```sql
 ALTER TABLE dbo.Department SET (SYSTEM_VERSIONING = OFF);
@@ -55,13 +53,13 @@ This is the list of operations that requires system-versioning to be set to **OF
 
 - Removing unnecessary data from history (**DELETE** or **TRUNCATE**)
 - Removing data from current table without versioning (**DELETE**, **TRUNCATE**)
-- Partition **SWITCH OUT** from current table
-- Partition **SWITCH IN** into history table
+- Partition **SWITCH OUT** from the current table
+- Partition **SWITCH IN** into the history table
 
 This example temporarily stops SYSTEM_VERSIONING to allow you to perform specific maintenance operations. If you stop versioning temporarily as a prerequisite for table maintenance, we strongly recommend doing this inside a transaction to keep data consistency.
 
 > [!NOTE]
-> When turning system versioning back on, do not forget to specify the HISTORY_TABLE argument. Failing to do so will result in a new history table being created and associated with the current table. The original history table will still exist as a normal table, but won't be associated with the current table.
+> When turning system versioning back on, don't forget to specify the HISTORY_TABLE argument. Failing to do so results in a new history table being created and associated with the current table. The original history table can still exist as a normal table but won't be associated with the current table.
 
 ```sql
 BEGIN TRAN

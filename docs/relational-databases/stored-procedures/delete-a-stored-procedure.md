@@ -80,7 +80,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 5.  Copy and paste the following example into the query editor and insert a stored procedure name to delete from the current database.  
   
     ```sql  
-    DROP PROCEDURE <stored procedure name>;  
+    DROP PROCEDURE [<stored procedure name>];  
     GO  
     ```  
   

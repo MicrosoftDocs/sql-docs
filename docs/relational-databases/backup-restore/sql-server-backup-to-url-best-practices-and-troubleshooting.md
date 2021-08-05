@@ -147,7 +147,7 @@ To avoid this issue, you can include T-SQL statements to create the credential i
 IF NOT EXISTS  
 (SELECT * FROM sys.credentials   
 WHERE credential_identity = 'mycredential')  
-CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+CREATE CREDENTIAL [<credential name>] WITH IDENTITY = 'mystorageaccount'  
 , SECRET = '<storage access key>' ;  
 ```  
   

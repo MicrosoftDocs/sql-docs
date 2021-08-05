@@ -5,8 +5,8 @@ description: In part four of this four-part tutorial series, you'll deploy a clu
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019

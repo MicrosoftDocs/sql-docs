@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/17/2021
 ms.topic: overview
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # What is SQL Server Machine Learning Services with Python and R?

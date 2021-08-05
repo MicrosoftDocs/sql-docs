@@ -2,7 +2,7 @@
 title: "Connecting with bcp"
 description: "Learn how to use the bcp utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "02/24/2021"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -71,7 +71,8 @@ Specifies the full path of a format file.
 Specifies the number of the first row to export from a table or import from a data file.  
 
 - -G  
-This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. It can be combined with just the -P option to use access token authentication (v17.8+). The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
@@ -93,7 +94,8 @@ Specifies the maximum number of syntax errors that can occur before the `bcp` op
 Uses the native (database) data types of the data to perform the bulk-copy operation.  
   
 - -P *password*  
-Specifies the password for the login ID.  
+Specifies the password for the login ID. When used with the -G option without -U, specifies a file that contains an access token (v17.8+). The token file should be in UTF-16 format.
+
   
 - -q  
 Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

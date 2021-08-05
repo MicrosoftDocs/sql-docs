@@ -19,7 +19,7 @@ The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides d
 
 Version 9.4 is the latest general availability (GA) version. It supports Java 8, 11, and 16. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. We're continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2168495)**
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2168495)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2168494)**
 
 ### Version information

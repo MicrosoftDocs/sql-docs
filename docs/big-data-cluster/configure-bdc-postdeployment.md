@@ -57,7 +57,7 @@ azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.core
 
 ### Configure additional paths to the default classpath of Spark applications
 
-The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the refered path is not loaded by default in the classpath of Spark applications. To enable this setting apply the following configuration pattern.
+The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the referred path is not loaded by default in the classpath of Spark applications. To enable this setting apply the following configuration pattern.
 
 ```bash
 azdata bdc hdfs settings set --settings hadoop-env.HADOOP_CLASSPATH="/opt/hadoop/share/hadoop/tools/lib/*"

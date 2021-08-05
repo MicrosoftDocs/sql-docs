@@ -67,7 +67,7 @@ Reference Architecture White Papers for SQL Server Big Data Clusters can be foun
 | [Telegraf](https://docs.influxdata.com/telegraf/) | 1.16.1 |
 | [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) | 3.5.8 |
 
-## Installed Python Libraries
+## Installed Python libraries
 
 | Library | Version | Library | Version | Library | Version |
 |--|--|--|--|--|--|

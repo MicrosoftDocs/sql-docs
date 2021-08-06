@@ -2,7 +2,7 @@
 title: Setting the connection properties
 description: The connection string properties for the Microsoft JDBC Driver for SQL Server can be specified in various ways.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 08/06/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,9 +19,9 @@ ms.author: v-daenge
 
 The connection string properties can be specified in various ways:
 
-- As name=value properties in the connection URL when you connect by using the DriverManager class.
-- As name=value properties in the *Properties* parameter of the Connect method in the DriverManager class.
-- As values in the appropriate setter method of the data source of the driver. For example:
+- As name=value properties in the connection URL when you connect by using the DriverManager class. For connection string syntax, see [Building the connection URL](building-the-connection-url.md).
+- As name=value properties in the *Properties* parameter of the [Connect method in the DriverManager class](https://javadoc.io/static/com.microsoft.sqlserver/mssql-jdbc/9.4.0.jre16/com.microsoft.sqlserver.jdbc/com/microsoft/sqlserver/jdbc/SQLServerDriver.html#connect(java.lang.String,java.util.Properties)).
+- As values in the appropriate setter method of the [data source of the driver](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/latest/com.microsoft.sqlserver.jdbc/com/microsoft/sqlserver/jdbc/ISQLServerDataSource.html). For example:
 
     ```java
     datasource.setServerName(value)
@@ -38,6 +38,8 @@ Property names are case-insensitive, and duplicate property names are resolved i
 Also, unknown values are allowed for the property names, and their values are not validated by the JDBC driver for case sensitivity.
 
 Synonyms are allowed and are resolved in order, just as duplicate property names.
+
+## Properties
 
 The following table lists all the currently available connection string properties for the JDBC driver.
 

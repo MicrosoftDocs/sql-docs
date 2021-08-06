@@ -32,9 +32,13 @@ This message occurs when attempting to join secondary databases to an Always On 
   
 ## User Action  
 
-> [!div class="nextstepaction"]
-> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/tigertoolbox/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)
+### Follow the steps by executing a Azure Data Studio Notebook
 
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/tigertoolbox/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)  [Learn how to install Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+
+
+### Follow step manually
 
 > [!NOTE]  
 > All the following steps must be run on both the Primary replica and the problematic Secondary replica(s).

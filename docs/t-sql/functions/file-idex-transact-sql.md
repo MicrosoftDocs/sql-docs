@@ -25,7 +25,7 @@ author: cawrites
 ms.author: chadam
 ---
 # FILE_IDEX (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the file identification (ID) number for the specified logical name of a data, log, or full-text file of the current database. 
   

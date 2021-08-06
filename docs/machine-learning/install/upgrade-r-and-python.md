@@ -79,7 +79,7 @@ Microsoft R Open (MRO) over R | R 3.3.3 | R 3.4.3 | R 3.5.2 |
 [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
 Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
-[microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[microsoftml](../python/ref-py-microsoftml.md) | 9.2  | 9.3| 9.4.7 |
 [pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
 ::: moniker-end
 

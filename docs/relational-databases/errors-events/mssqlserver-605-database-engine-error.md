@@ -64,7 +64,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
   
     JOIN sys.filegroups AS fg ON fg.data_space_id = au.data_space_id  
   
-    WHERE au.allocation_unit_id = `allocation_unit_id` OR au.allocation_unit_id = `allocation_unit_id`  
+    WHERE au.allocation_unit_id = '<allocation_unit_id>' OR au.allocation_unit_id = '<allocation_unit_id>'  
   
     ORDER BY au.allocation_unit_id;  
   

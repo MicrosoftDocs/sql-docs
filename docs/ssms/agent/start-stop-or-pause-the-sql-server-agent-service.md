@@ -68,4 +68,4 @@ For more information, see:
   
 -   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
--   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
+-   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](./autorestart-sql-server-agent-sql-server-management-studio.md)

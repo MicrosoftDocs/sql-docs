@@ -307,6 +307,9 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
 
 You can set multiple Query Store options at once with a single ALTER DATABASE statement.
 
+> [!NOTE]
+> These configuration options are not currently supported in Azure Synapse Analytics. Only the default configuration for query store is available.
+
 ```sql
 ALTER DATABASE <database name>
 SET QUERY_STORE (

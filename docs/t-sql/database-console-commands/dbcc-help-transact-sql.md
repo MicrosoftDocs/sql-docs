@@ -21,7 +21,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC HELP (Transact-SQL)
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Returns syntax information for the specified DBCC command.
   

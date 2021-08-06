@@ -28,7 +28,7 @@ ms.author: umajay
 
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Checks the integrity of a specified constraint or all constraints on a specified table in the current database.
   

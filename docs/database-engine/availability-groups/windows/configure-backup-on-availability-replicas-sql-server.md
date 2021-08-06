@@ -27,7 +27,7 @@ ms.author: chadam
 >  For an introduction to backup on secondary replicas, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the server instance that hosts the primary replica.  
+ You must be connected to the server instance that hosts the primary replica in SSMS. The secondary replica must be healthy, which includes being connected to the current primary replica and in the secondary role.
  
    > [!NOTE]
    > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 

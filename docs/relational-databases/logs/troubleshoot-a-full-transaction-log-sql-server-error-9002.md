@@ -20,6 +20,17 @@ ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
+ 
+ **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
+ 
+ > [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/tigertoolbox/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
+
+[Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
+ 
+ 
+ **Option 2: Follow the step manually**
+ 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
   

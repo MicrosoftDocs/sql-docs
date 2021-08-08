@@ -50,6 +50,9 @@ sudo systemctl restart mssql-server
 > [!NOTE]
 > If you are upgrading from 2017 CU3 or below with Agent installed, SQL Server Agent will be enabled automatically and previous Agent packages will be uninstalled.  
 
+> [!NOTE]
+> SSMS Management Studio Object Explorer does not display the contents of the SQL ServerAgent node unless ‘Agent XPs’ extended stored procedures are enabled regardless of the SQL Server Agent service state. For more information please visit [Agent XPs Server Configuration Option  ]( https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/agent-xps-server-configuration-option?view=sql-server-ver15)
+
 ## <a name="InstallAgentBelowCU4"></a>Install the SQL Server Agent
 
 For SQL Server 2017 CU3 and earlier, you must install the SQL Server Agent package.

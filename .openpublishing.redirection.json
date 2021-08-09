@@ -59294,11 +59294,6 @@
       "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
       "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssms/support-policy.md",
-      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
-      "redirect_document_id": false
     }
   ]
 }

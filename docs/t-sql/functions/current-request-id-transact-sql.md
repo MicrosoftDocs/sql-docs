@@ -20,7 +20,7 @@ author: cawrites
 ms.author: chadam
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the ID of the current request within the current session.
   

@@ -21,6 +21,9 @@ ms.custom: "seo-lt-2019"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ 
+ 
  **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
  
  > [!div class="nextstepaction"]
@@ -31,7 +34,7 @@ ms.custom: "seo-lt-2019"
  
  **Option 2: Follow the step manually**
  
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ 
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
   
   When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
@@ -131,7 +134,7 @@ BEGIN
     BEGIN
         select 'Is '+ @recovery_model_desc +' recovery model the intended choice for your database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server'
         select 'To truncate the log consider performing a transaction log backup on database ''' + @dbname+ ''' which is in ' + @recovery_model_desc +' recovery model. Be mindful of any existing log backup chains that could be broken' as Recommendation
-        select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder' + @dbname + '_LOG.trn''' as BackupLogCommand
+        select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder\' + @dbname + '_LOG.trn''' as BackupLogCommand
     END
     else if (@log_reuse_wait = 3)
     BEGIN

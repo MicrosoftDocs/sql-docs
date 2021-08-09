@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # $PARTITION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
   

@@ -25,7 +25,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Generates a sequence number from the specified sequence object.  
   

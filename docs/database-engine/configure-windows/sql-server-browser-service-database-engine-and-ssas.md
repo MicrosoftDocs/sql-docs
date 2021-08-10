@@ -79,6 +79,9 @@ ms.author: maghan
   
 > [!NOTE]  
 >  When listening on IP_ANY, when you enable listening on specific IPs, the user must configure the same TCP port on each IP, because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser returns the first IP/port pair that it encounters.  
+
+> [!NOTE]  
+>  When you use a default SQL Server instance and try to connect without inform the port, it automatically's will try the default SQL Server port 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Which means that for a default instance you always need to inform the port in case of this one is different from the default 1433, otherwise the connection will fail.  
   
 ## Installing, Uninstalling, and Running from the Command Line  
  By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser program is installed at C:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe.  

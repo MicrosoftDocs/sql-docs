@@ -28,7 +28,7 @@ author: cawrites
 ms.author: chadam
 ---
 # SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Sets a savepoint within a transaction.  
   

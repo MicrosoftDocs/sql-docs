@@ -1,7 +1,7 @@
 ---
 title: "Ownership and user-schema separation in SQL Server"
 description: Learn how user-schema separation allows flexibility in managing SQL Server database object permissions. Schemas group objects into separate namespaces. 
-ms.date: "08/02/2021"
+ms.date: "08/09/2021"
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -10,6 +10,8 @@ author: AndreasWolter
 ms.author: anwolter
 ---
 # Ownership and user-schema separation in SQL Server
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A core concept of SQL Server security is that owners of objects have irrevocable permissions to administer them. You can't remove privileges from an object owner, and you can't drop users from a database if they own objects in it.  
   

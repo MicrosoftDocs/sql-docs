@@ -9818,7 +9818,7 @@ items:
     - name: Resources
       items:
       - name: SSMS Support Policy
-        href: ./ssms/download-sql-server-management-studio-ssms.md
+        href: ssms/support-policy.md
       - name: User Assistance in SSMS
         href: ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data

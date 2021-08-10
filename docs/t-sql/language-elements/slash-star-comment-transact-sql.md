@@ -25,8 +25,7 @@ ms.author: chadam
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Indicates user-provided text. The text between the /* and \*/ is not evaluated by the server.  
   

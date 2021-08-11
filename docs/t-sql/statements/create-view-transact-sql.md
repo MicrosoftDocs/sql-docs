@@ -84,7 +84,10 @@ AS <select_statement>
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT <select_criteria>  
 ```  
-  
+> [!Note] 
+> Please note that currently views in Azure Synapse Analytics do not support schema binding. For more information, see [Limitations](/azure/synapse-analytics/sql/develop-views#limitations).
+
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

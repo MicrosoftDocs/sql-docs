@@ -2,7 +2,7 @@
 description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 title: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 ms.custom: ""
-ms.date: "07/26/2021"
+ms.date: "08/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

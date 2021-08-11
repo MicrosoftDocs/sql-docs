@@ -48,7 +48,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
  To systematically query a stream of change data over time, you can repeat the query function call periodically, each time specifying a new query interval to bound the changes returned in the query. To help insure that no data is lost, the upper bound for the previous query is often used to generate the lower bound for the subsequent query. Because the query interval is a closed interval, the new lower bound must be larger than the previous upper bound, but small enough to ensure no changes have LSN values that lie between this value and the old upper bound. The function `sys.fn_cdc_increment_lsn` is used to obtain this value.  
   
- Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the value of either @start_time or @end_time parameter is beyond the time of lowest LSN or highest LSN, then execution of generated wrapper functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
+ Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the `lsn_value` is beyond the time of lowest LSN or highest LSN, then execution of these generated wrapper functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
 
 ## Permissions  
  Requires membership in the public database role.  

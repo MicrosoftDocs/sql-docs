@@ -111,7 +111,8 @@ GO
   
 ```  
 ------------  
-Number of spaces in the sentence:8  
+Number of spaces in the sentence: 8  
+
 (1 row(s) affected)  
 ```  
 

@@ -92,7 +92,8 @@ This is a desk
 (1 row(s) affected)  
 ```  
 
-The following example calculates the number of spaces in a sentence using the `REPLACE` function. First, it calculates the length of the sentence with the `LEN` function. It then replaces the ' ' characters with '' with REPLACE . After this process, it calculates the length of the sentence again. The resulting difference is the number of space characters in the sentence.
+The following example calculates the number of spaces in a sentence using the `REPLACE` function. First, it calculates the length of the sentence with the `LEN` function. It then replaces the ' ' characters with '' with `REPLACE` . After this process, it calculates the length of the sentence again. The resulting difference is the number of space characters in the sentence.
+
 
 ```sql  
 DECLARE @str NVARCHAR(100), @len1 INT, @len2 INT

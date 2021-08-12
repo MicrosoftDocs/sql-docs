@@ -2,7 +2,7 @@
 description: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 ms.custom: ""
-ms.date: "07/26/2021"
+ms.date: "08/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -96,7 +96,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Column name|Column type|Description|  
 |-----------------|-----------------|-----------------|  
-|\<columns from @column_list>|**varies**|The columns that are identified in the **column_list** argument to the sp_cdc_generate_wrapper_function when it is called to generate the script to create the wrapper. If *column_list* is NULL, all tracked source columns will appear in the result set.|  
+|\<columns from @column_list>|**varies**|The columns that are identified in the **column_list** argument to the `sp_cdc_generate_wrapper_function` when it is called to generate the script to create the wrapper. If *column_list* is NULL, all tracked source columns will appear in the result set.|  
 |__CDC_OPERATION|**nvarchar(2)**|An operation code that indicates which operation is required to apply the row to the target environment. The operation will vary based on the value of the argument *row_filter_option* that is supplied in the following call:<br /><br /> *row_filter_option* = 'all' , 'all with mask'<br /><br /> 'D' - delete operation<br /><br /> 'I' - insert operation<br /><br /> 'UN' - update operation<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - delete operation<br /><br /> 'M' - either insert operation or update operation|  
 |\<columns from @update_flag_list>|**bit**|A bit flag that is named by appending _uflag to the column name. The flag takes on a non-NULL value only when *row_filter_option* **= 'all with mask'** and \__CDC_OPERATION **= 'UN'**. It is set to 1 if the corresponding column was modified within the query window. Otherwise, 0.|  
   
@@ -117,10 +117,14 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Bit flags are then appended to the result set for each column that is identified in the parameter @update_flag_list. For the **net changes** wrapper, the bit flags will always be NULL if the @row_filter_option that is used in the call to the wrapper function is 'all' or 'all with merge'. If the @row_filter_option is set to 'all with mask', and __CDC_OPERATION is 'D' or 'I',  the value of the flag will also be NULL. If \__CDC_OPERATION is 'UN', the flag will be set to 1 or 0, depending on whether the **net** update operation caused a change to the column.  
   
- The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
+ The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the `sp_cdc_generate_wrapper_function` stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
+
+ The wrapper functions `sys.fn_all_changes_<capture_instance>` and `sys.fn_net_changes_<capture_instance>` are dependent on the system functions `cdc.fn_cdc_get_all_changes_<capture_instance>` and `cdc.fn_cdc_get_net_changes_<capture_instance>`. Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the passed `lsn_value` is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
   
 ## See Also  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+
+ - [sys.fn_all_changes_<capture_instance>](sys-fn-all-changes-capture-instance-transact-sql.md)
+ - [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ - [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

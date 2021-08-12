@@ -2,7 +2,7 @@
 description: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
 title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
 ms.custom: ""
-ms.date: "07/26/2021"
+ms.date: "08/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -78,7 +78,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
    
  Columns of data type **image**, **text**, and **ntext** are always assigned a NULL value when **__$operation** = 1 or **__$operation** = 3. Columns of data type **varbinary(max)**, **varchar(max)**, or **nvarchar(max)** are assigned a NULL value when **__$operation** = 3 unless the column changed during the update. When **__$operation** = 1, these columns are assigned their value at the time of the delete. Computed columns that are included in a capture instance always have a value of NULL.  
 
- Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the value of either @start_time or @end_time parameter is beyond the time of lowest LSN or highest LSN, then execution of generated wrapper functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
+ Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the passed `lsn_value` is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
   
 ## Examples  
  Several [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] templates are available that show how to use the change data capture query functions. These templates are available on the **View** menu in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Template Explorer](../../ssms/template/template-explorer.md).  
@@ -101,11 +101,11 @@ GO
 ```  
   
 ## See Also  
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ - [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/ - cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ - [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ - [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ - [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ - sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ - [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ - sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ - [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

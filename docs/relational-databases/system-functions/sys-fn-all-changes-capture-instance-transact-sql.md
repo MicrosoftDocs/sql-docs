@@ -2,7 +2,7 @@
 description: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
 ms.custom: ""
-ms.date: "07/26/2021"
+ms.date: "08/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -85,7 +85,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|The commit LSN of the transaction that is associated with the change. All changes that are committed in the same transaction share the same commit LSN.|  
 |__CDC_SEQVAL|**binary(10)**|Sequence value that is used to order the row changes in a transaction.|  
-|\<columns from @column_list>|**varies**|The columns that are identified in the *column_list* argument to sp_cdc_generate_wrapper_function when it is called to generate the script that creates the wrapper function.|  
+|\<columns from @column_list>|**varies**|The columns that are identified in the *column_list* argument to `sp_cdc_generate_wrapper_function` when it is called to generate the script that creates the wrapper function.|  
 |__CDC_OPERATION|**nvarchar(2)**|Operation code that indicates the operation that is required to apply the row to the target environment. It will vary based on the value of the argument *row_filter_option* supplied in the call:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - delete operation<br /><br /> 'I' - insert operation<br /><br /> 'UN' - update operation new values<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' - delete operation<br /><br /> 'I' - insert operation<br /><br /> 'UN' - update operation new values<br /><br /> 'UO' - update operation old values|  
 |\<columns from @update_flag_list>|**bit**|A bit flag is named by appending _uflag to the column name. The flag is always set to NULL when \__CDC_OPERATION is 'D', 'I', of 'UO'. When \__CDC_OPERATION is 'UN', it is set to 1 if the update produced a change to the corresponding column. Otherwise, 0.|  
   
@@ -106,10 +106,14 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Bit flags are then appended to the result set for each column that is identified in the @update_flag_list parameter. For the **all changes** wrapper, the bit flags will always be NULL if __CDC_OPERATION is 'D', 'I', or 'UO'. If \__CDC_OPERATION is 'UN', the flag will be set to 1 or 0, depending on whether the update operation caused a change to the column.  
   
- The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
+ The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the `sp_cdc_generate_wrapper_function` stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
+
+ The wrapper functions `sys.fn_all_changes_<capture_instance>` and `sys.fn_net_changes_<capture_instance>` are dependent on the system functions `cdc.fn_cdc_get_all_changes_<capture_instance>` and `cdc.fn_cdc_get_net_changes_<capture_instance>`. Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the passed `lsn_value` is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
   
 ## See Also  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+
+ - [sys.fn_net_changes_<capture_instance>](sys-fn-net-changes-capture-instance-transact-sql.md)
+ - [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ - [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

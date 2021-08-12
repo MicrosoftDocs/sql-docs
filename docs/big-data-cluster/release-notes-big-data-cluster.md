@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 08/04/2021
+ms.date: 08/12/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -75,9 +75,15 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## Known issues
 
+### Kubernetes platforms with Kubernetes API version 1.21+
+
+- **Affected releases**: All releases
+
+- **Issue and customer impact**: Kubernetes API 1.21 or superior is not a tested configuration of SQL Server Big Data Clusters as of CU12.
+
 ### MicrosoftML packages on SQL Server Machine Learning Services
 
-- **Affected releases**: CU10 and CU11
+- **Affected releases**: CU10, CU11 and CU12
 
 - **Issue and customer impact**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
 

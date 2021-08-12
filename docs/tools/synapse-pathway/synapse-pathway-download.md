@@ -43,8 +43,8 @@ Download the latest version of the tool from the [Microsoft Download Center](htt
 ## Pricing
 
 1. Synapse Pathway is **free to download**. There's no associated cost to run your code translation.
-1. Data Ingress: There's no cost associated with bringing your data into Azure. For more information, see the [Bandwidth pricing details](https://azure.microsoft.com/en-us/pricing/details/bandwidth/).
-1. See the [Azure Synapse pricing page](https://azure.microsoft.com/en-us/pricing/calculator/?service=synapse-analytics) to see the cost of provisioning Azure Synapse.
+1. Data Ingress: There's no cost associated with bringing your data into Azure. For more information, see the [Bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/).
+1. See the [Azure Synapse pricing page](https://azure.microsoft.com/pricing/calculator/?service=synapse-analytics) to see the cost of provisioning Azure Synapse.
 
 ## Next steps
 

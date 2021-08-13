@@ -165,6 +165,18 @@ The following example shows how to stop an orphaned distributed transaction (ses
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  
 ```  
 
+### D. Using KILL in Active Database Deletion
+ If you get the error "**Cannot drop database TestData because it is currently in use.**", active connections are closed with the code below.
+
+  ```sql
+USE master;
+GO
+DECLARE @kill varchar(8000); SET @kill = '';  
+SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), spid) + ';'  
+FROM master..sysprocesses  
+WHERE dbid = db_id('TestData') -- We will drop TestData database
+EXEC(@kill); 
+```  
   
 ## See Also  
 [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   

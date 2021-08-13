@@ -102,7 +102,7 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 5. Verify that the node has been removed by running the DMV sys.dm_exec_compute_nodes on PQTH4A-CMP01. Now, PQTH4A-CMP02 will function as a standalone head node  
 
 ## Known limitations
-If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing sp_polybase_join_group, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
+If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing `sp_polybase_join_group`, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
 
 ## Next steps  
 

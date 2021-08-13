@@ -43,7 +43,7 @@ STRING_SPLIT ( string , separator [ , enable_ordinal ] )
 ```
 
 > [!NOTE]
-> The *enable_ordinal* argument and **ordinal** output column are not supported in the current versions of SQL Server.
+> The *enable_ordinal* argument and **ordinal** output column are only supported in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics (serverless SQL pool only).
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

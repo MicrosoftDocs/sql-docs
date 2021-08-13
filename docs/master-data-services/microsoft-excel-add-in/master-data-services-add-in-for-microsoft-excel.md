@@ -1,5 +1,5 @@
 ---
-title: Overview - Master Data Services Add-ion for Microsoft Excel
+title: Overview
 description: Learn how to load data from Master Data Services into Excel, and then publish it back to MDS by using the Master Data Services Add-in for Excel.
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
@@ -29,16 +29,16 @@ With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Q
 - [Master Data Services Add-in for Excel for SQL Server 2019 CTP](https://go.microsoft.com/fwlink/?linkid=2086948).
 
 > [!NOTE]
-> The Master Data Services Add-in for Excel requires the Office Automation Security level to be set to either:
+> The Master Data Services Add-in for Excel requires the Office Automation Security to be set to one of the following:
 >
-> - 1 : Macros enabled (default)
-> - 2 : Use application macro security level
-  
+> - Level 1 : Macros enabled (default)
+> - Level 2 : Use application macro security level
+
 ## Terms
 
 When working with the add-in, you might come across the following terms. For more information about these concepts, see [Master Data Services Overview &#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md).  
 
-- The *MDS repository* is where all master data is stored. It's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database configured to store MDS data. To work with data from the repository, you load data it into Excel. When you're done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.
+- The *MDS repository* is where all master data is stored. It's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database configured to store MDS data. To work with data from the repository, you load it into Excel. When you're done working with it, you publish the changes back to the repository. Administrators can add new entities and attributes to the repository.
   
 - *MDS-managed data* is data stored in the MDS repository. When you load MDS-managed data into Excel, it's displayed as highlighted rows. You can also add data to your Excel worksheet that's not MDS-managed. Such data won't be affected if you refresh the MDS-managed data.
 
@@ -58,7 +58,7 @@ When working with the add-in, you might come across the following terms. For mor
 | Load MDS-managed data into Excel. | [Export data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md) |  
 | Save a shortcut query to open the currently displayed MDS-managed data in the future. | [Save a shortcut query file](../../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 | Share shortcuts with others. | [Email a shortcut query file](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md) |  
-| View all changes that have been made to a member. | [View all annotations or transactions for a member](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+| View all the changes that have been made to a member. | [View all annotations or transactions for a member](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 | Find duplications before publishing new data. | [Match similar data](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md) |  
 | Publish data from a worksheet into the MDS repository. | [Import data from Excel to Master Data Services](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md) |  
 | Create a new entity by using data in the worksheet. (Administrators only) | [Create an entity](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md) |  

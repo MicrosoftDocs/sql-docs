@@ -40,9 +40,9 @@ To install the Azure Monitor Logs extension in Azure Data Studio, follow the ste
 
 :::image type="content" source="media/azure-monitor-logs-extension/azure-monitor-logs-extension-icon.png" alt-text="Kusto extension":::
 
-## How to connect to an Azure Monitor Log workspace
+## How to connect to a Log Analytics workspace
 
-### Find your Azure Monitor Log workspace
+### Find your Log Analytics workspace
 
 Find your **Log Analytics Workspace** in the [Azure portal](https://ms.portal.azure.com/#home), then find the Workspace ID.
 
@@ -70,9 +70,7 @@ To set up an Azure Monitor Log workspace, follow the steps below.
 For more information about writing Azure Monitor Logs, visit [Azure Monitor documentation](/azure/azure-monitor/)
 
 ## Next steps
-
-- [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
-- [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
+- [Create diagnostic settings to send platform logs and metrics to different destinations](/azure/azure-monitor/essentials/diagnostic-settings)
 - [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
+- [What is Azure Monitor Logs?](/azure/azure-monitor/logs/data-platform-logs)
 - [Using SandDance visualizations](https://sanddance.js.org/)

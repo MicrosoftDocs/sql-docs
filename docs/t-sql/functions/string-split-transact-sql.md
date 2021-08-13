@@ -21,7 +21,7 @@ monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || 
 ---
 # STRING_SPLIT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 A table-valued function that splits a string into rows of substrings, based on a specified separator character.
 

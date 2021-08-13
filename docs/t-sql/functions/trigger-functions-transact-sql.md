@@ -15,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Trigger Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The following scalar functions can be used in the definition of a trigger to test for changes in data values or to return other data.  
   

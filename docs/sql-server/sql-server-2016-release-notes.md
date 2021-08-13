@@ -1,18 +1,17 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2016 releases.
-ms.date: "04/25/2018"
+ms.date: "09/01/2021"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: "pelopes"
 ms.custom: ""
 ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "build notes"
   - "release issues"
-ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 
@@ -23,6 +22,67 @@ monikerRange: "= sql-server-2016"
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
 - [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+
+## <a name="bkmk_2016sp3"></a>SQL Server 2016 Service Pack 3 (SP3)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP3 includes all cumulative updates released after 2016 SP2, up to and including CU17.
+
+# Update links <- I'm using an H1 here so we get a warning
+
+- [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=56836)
+- For a complete list of updates, see [SQL Server 2016 Service Pack 3 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-3-release-information)
+
+The SQL Server 2016 SP3 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP3.
+
+Performance and Scale related improvements included in SQL Server 2016 SP3.
+
+|Feature|Description|More information|
+|---|---|---|
+
+Supportability and Diagnostics related improvements included in SQL Server 2016 SP3.
+
+|Feature|Description|More information|
+|---|---|---|
+
+## Known issues
+
+This section identifies issues which may occur after you apply SQL Server 2016 SP3.
+
+### R script failure
+
+- **Issue**: An R script fails with an error like:
+
+   `Error: executable command line exceeds the 2047 characters limit.`
+
+- **Solution**: Uninstall Microsoft MPI v7. Install Microsoft MPI v10. For more information, see [Microsoft MPI](/message-passing-interface/microsoft-mpi).
+
+### Removing SP3 issue
+
+- **Issue**: During removal of SP3, the 20 user accounts in the `SQLRUserGroup` used by launchpad are deleted. Any execution of `sp_execute_external_script` results in this error:
+
+   ```output
+   Unable to launch the runtime. ErrorCode 0x80070718: 1816(Not enough quota is available to process this command.).
+   ```
+
+- **Solution**: Run repair. For example:
+
+   ```console
+   setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
+   ```
+
+   For more information, see [Repair a Failed SQL Server Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).
+
+### Install SP3 with `SysPrep`
+
+- **Issue**: When you use SysPrep to install SP3 with extensibility feature, SysPrep doesn't install the SP3 version of the extensibility framework correctly. Instead, some binaries are missing/incorrect. For example, R runtime 3.5.2 is missing.
+
+- **Solution**: Run repair after completing the image. For example:
+
+   ```console
+   setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
+   ```
+
+   For more information, see [Repair a Failed SQL Server Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 

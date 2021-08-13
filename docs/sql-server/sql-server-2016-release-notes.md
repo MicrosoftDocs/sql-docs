@@ -27,8 +27,6 @@ monikerRange: "= sql-server-2016"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP3 includes all cumulative updates released after 2016 SP2, up to and including CU17.
 
-# Update links <- I'm using an H1 here so we get a warning
-
 - [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=56836)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 3 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-3-release-information)
 

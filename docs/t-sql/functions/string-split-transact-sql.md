@@ -39,8 +39,11 @@ To change the compatibility level of a database, refer to [View or Change the Co
 ## Syntax  
 
 ```syntaxsql
-STRING_SPLIT ( string , separator )  
+STRING_SPLIT ( string , separator [ , enable_ordinal ] )  
 ```
+
+> [!NOTE]
+> The *enable_ordinal* argument and **ordinal** output column are only supported in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics (serverless SQL pool only).
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -51,16 +54,31 @@ STRING_SPLIT ( string , separator )
   
  *separator*  
  Is a single character [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar(1)**, **varchar(1)**, **nchar(1)**, or **char(1)**) that is used as separator for concatenated substrings.  
-  
+
+ *enable_ordinal*  
+An **int** or **bit** [expression](../../t-sql/language-elements/expressions-transact-sql.md) that serves as a flag to enable or disable the **ordinal** output column. A value of 1 enables the ordinal column. If *enable_ordinal* is omitted, null or has a value of 0, the ordinal column is disabled.  
+
+
 ## Return Types  
 
-Returns a single-column table whose rows are the substrings. The name of the column is **value**. Returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise returns **varchar**. The length of the return type is the same as the length of the string argument.  
+If the **ordinal** output column is not enabled, STRING_SPLIT returns a single-column table whose rows are the substrings. The name of the column is **value**. It returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise, it returns **varchar**. The length of the return type is the same as the length of the *string* argument.  
+
+If the *enable_ordinal* argument is passed a value of 1, a second column named **ordinal** is returned that consists of the 1-based index values of each substring’s position in the input string. The return type is **bigint**.  
+
   
 ## Remarks  
 
-**STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**.
+**STRING_SPLIT** inputs a string that has delimited substrings and inputs one character to use as the delimiter or separator. Optionally, the function supports a third argument with a value of 0 or 1 that disables or enables, respectively, the **ordinal** output column.  
 
-The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
+STRING_SPLIT outputs a single-column or double-column table, depending on the *enable_ordinal* argument.  
+
+If *enable_ordinal* is null, omitted or has a value of 0, STRING_SPLIT returns a single-column table whose rows contain the substrings. The name of the output column is **value**.  
+
+If *enable_ordinal* has a value of 1, the function returns an additional **ordinal** column that consists of the 1-based index values of the substrings in the original input string.  
+
+Note that the *enable_ordinal* argument must be a constant value, not a column or variable. It must also be either a **bit** or **int** data type with a value of 0 or 1. Otherwise, the function will raise an error.  
+
+The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value` or `ORDER BY ordinal`).  
 
 0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in STRING_SPLIT.
 
@@ -82,6 +100,23 @@ In a practice run, the preceding SELECT returned following result table:
 |sit|  
 |amet.|  
 | &nbsp; |
+
+The following example enables the ordinal column by passing 1 for the optional third argument:  
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
+```
+
+This statement then returns the following result table:  
+
+|value|ordinal|  
+| :-- | :-- |  
+|Lorem|1|  
+|ipsum|2|  
+|dolor|3|  
+|sit|4|  
+|amet.|5|  
+| &nbsp; ||
 
 ## Examples  
   
@@ -185,6 +220,43 @@ SELECT ProductId, Name, Tags
 FROM Product  
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```
+
+### F. Find rows by ordinal values  
+
+The following statement finds all rows with an even index value:  
+
+```sql
+SELECT *
+FROM STRING_SPLIT('Austin,Texas,Seattle,Washington,Denver,Colorado', ',', 1)
+WHERE ordinal % 2 = 0;  
+```
+
+The above statement returns the following table:  
+
+|value|ordinal|  
+|----------|--------|  
+|Texas|2|  
+|Washington|4|  
+|Colorado|6|  
+
+## G. Order rows by ordinal values  
+
+The following statement returns the split substring values of the input string and their ordinal values, ordered by the ordinal column:  
+
+```sql
+SELECT * FROM STRING_SPLIT('E-D-C-B-A', '-', 1) ORDER BY ordinal DESC;  
+```
+
+The above statement returns the following table:
+
+|value|ordinal|  
+|-----|--------|  
+|A|5|  
+|B|4|  
+|C|3|  
+|D|2|  
+|E|1|  
+
 
 ## See Also
 

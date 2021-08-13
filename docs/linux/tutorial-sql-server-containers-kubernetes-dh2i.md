@@ -376,20 +376,21 @@ You can also configure an Always On availability group listener; to do so, follo
 2. After you have created an IP address, you assign that IP address and create the load balancer service, as shown in the sample yaml below:
 
 ```bash
-		apiVersion: v1
-		kind: Service
-		metadata:
-		  name: agslistener
-		spec:
-		  type: LoadBalancer
-		  loadBalancerIP: 52.140.117.62
-		  selector:
-		    app: mssql
-		  ports:
-		  - protocol: TCP
-		    port: 44444
+apiVersion: v1
+kind: Service
+metadata:
+  name: agslistener
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 52.140.117.62
+  selector:
+    app: mssql
+  ports:
+  - protocol: TCP
+    port: 44444
     targetPort: 44444
 ```
+
 3. Once the service has been created, we will proceed to create the AG listener within SQL Server and associate it with port 44444. The command to create the AG listener using dxcli is documented [here](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
 
 

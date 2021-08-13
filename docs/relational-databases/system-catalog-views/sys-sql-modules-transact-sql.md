@@ -57,11 +57,29 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example returns the name, type, and definition of each module in the current database.  
   
 ```  
-SELECT sm.object_id, OBJECT_NAME(sm.object_id) AS object_name, o.type, o.type_desc, sm.definition  
+SELECT 
+          sm.object_id
+        , ss.[name] as [schema]
+        , o.[name] as object_name
+        , o.[type]
+        , o.[type_desc]
+        , sm.[definition]  
+
 FROM sys.sql_modules AS sm  
-JOIN sys.objects AS o ON sm.object_id = o.object_id  
-ORDER BY o.type;  
-GO  
+    
+JOIN sys.objects AS o 
+
+    ON sm.object_id = o.object_id  
+
+JOIN sys.schemas AS ss
+
+    ON o.schema_id = ss.schema_id  
+
+ORDER BY 
+      o.[type]
+    , ss.[name]
+    , o.[name]
+;  
 ```  
   
 ## See Also  

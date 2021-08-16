@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # = (Assignment Operator) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics Parallel Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The equal sign (=) is the only [!INCLUDE[tsql](../../includes/tsql-md.md)] assignment operator. In the following example, the `@MyCounter` variable is created, and then the assignment operator sets `@MyCounter` to a value returned by an expression.  
   

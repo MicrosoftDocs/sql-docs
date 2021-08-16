@@ -20,7 +20,8 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-curren
 ---
 # TRANSLATE (Transact-SQL)
 
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
+
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 

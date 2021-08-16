@@ -31,7 +31,7 @@ ms.author: umajay
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance Azure Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Shrinks the size of the data and log files in the specified database.
   

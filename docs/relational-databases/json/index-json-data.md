@@ -26,7 +26,30 @@ Database indexes improve the performance of filter and sort operations. Without 
 When you store JSON data in SQL Server, typically you want to filter or sort query results by one or more *properties* of the JSON documents.  
 
 ### Example 
-In this example, assume that the AdventureWorks `SalesOrderHeader` table has an `Info` column that contains various information in JSON format about sales orders. For example, it contains information about customer, sales person, shipping and billing addresses, and so forth. You want to use values from the `Info` column to filter sales orders for a customer.
+In this example, assume that the AdventureWorks `SalesOrderHeader` table has an `Info` column that contains various information in JSON format about sales orders. For example, it contains information about customer, sales person, shipping and billing addresses, and so forth. You want to use values from the `Info` column to filter sales orders for a customer. By default, the column `Info` used in this document does exists, it can be created with the following code.
+
+```sql  
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('[Sales].[SalesOrderHeader]') AND name = 'Info')
+	ALTER TABLE [Sales].[SalesOrderHeader] ADD [Info] NVARCHAR(MAX) NULL
+GO
+UPDATE d
+  SET 
+      Info =
+(
+    SELECT concat(p.FirstName, N' ', p.LastName) AS [Customer.Name], 
+           p.BusinessEntityID AS [Customer.ID], 
+           P.[PersonType] AS [Customer.Type], 
+           j.SalesOrderID AS [Order.ID], 
+           j.SalesOrderNumber AS [Order.Number], 
+           j.OrderDate AS [Order.CreationData], 
+           j.TotalDue AS [Order.TotalDue]
+    FROM Sales.SalesOrderHeader j
+         INNER JOIN [Sales].[Customer] c ON c.CustomerID = j.CustomerID
+         INNER JOIN [Person].[Person] p ON p.BusinessEntityID = c.CustomerID
+    WHERE j.SalesOrderID = d.SalesOrderID FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
+)
+FROM Sales.SalesOrderHeader d; 
+```  
 
 ### Query to optimize
 Here's an example of the type of query that you want to optimize by using an index.  

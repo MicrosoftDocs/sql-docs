@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 ---
 # Lesson 3: Delete database objects
 
-[!INCLUDE[sql-asdb-asdbmi-pdw-md](../applies-to-version/includes/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database.  
   

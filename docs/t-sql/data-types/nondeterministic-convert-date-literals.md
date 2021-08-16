@@ -15,7 +15,7 @@ ms.reviewer: "genemi"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Nondeterministic conversion of literal date strings into DATE values
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Use caution when allowing conversion of your CHARACTER strings into DATE data types. The reason is that such conversions are often _nondeterministic_.
 

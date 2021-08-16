@@ -26,65 +26,68 @@ ms.author: mathoma
 |Component|SQLEngine|  
 |Symbolic Name|DB_RUNSCRIPTUPGRADE_STEP_FAILED|  
 |Message Text|	Script level upgrade for database '%.*ls' failed because upgrade step '%.*ls' encountered error %d, state %d, severity %d. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.|  
-                
-  
-## Explanation  
-The database script level could not be upgraded to the latest requred by the server. Examine the errorlog for upgrade errors, correct them and re-start the database.
 
-Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is appled, only the binaries are upgraded and not the database and its objects. Once the binaries are replaced with new versions and the service restarts for the first time, it starts a database upgrade using 'msdb110_upgrade.sql' T-SQL script which is located under 'C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.'
+## Explanation
 
-Under certain scenarios, the upgrade script encounters Script level upgrade errors which always includes Error 912 (the generic error message which will contain a reference to the script that failed and what error the failed script encountered). For example:
+Error 912 indicates that the database script failed to executed and to upgrade the database(s) to the latest level required by the server. It is a general error message which contain a reference to the upgrade script that failed and what error the failed script encountered.
 
-	
-	Error: 912, Severity: 21, State: 2.
-	Script level upgrade for database 'master' failed because upgrade step 'xxx.sql' encountered error <Error Number>, state <Error State>, severity <Error Severity>. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
-	
-	Error: 3417, Severity: 21, State: 3.
-	Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.
+Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are initially upgraded. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, the services initiates a database upgrade using the 'msdb110_upgrade.sql' T-SQL script which is located under 'C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.'
+
+Under certain scenarios, the upgrade script encounters script-level upgrade errors which includes Error 912 and typically another error. For example:
+
+    Error: 912, Severity: 21, State: 2.
+    Script level upgrade for database 'master' failed because upgrade step 'xxx.sql' encountered error <Error Number>, state <Error State>, severity <Error Severity>. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
+
+    Error: 3417, Severity: 21, State: 3.
+    Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.
 
 ## User Action  
   
-To find the cause of the issue, we need to look at the error log entries preceding error 912 and troubleshoot the error referenced in the messaging of Error 912. To do this, we usually need to start the SQL Server Service with trace flag 902.  This allows the SQL service to skip the upgrade script during startup so that we get a chance to investigate and fix the issue. 
+To find the cause of the issue, you need to look at the [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) entries preceding error 912 and troubleshoot the error referenced in the messaging of Error 912. To troubleshoot this, you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 902.  This allows the SQL service to skip the upgrade script during startup so that you get a chance to investigate and fix the issue. 
 
-	Steps to start SQL with trace flag 902 by Configuration Manager, sqlservr.exe or NET START
-	
-Configuration Manager
-		Open SQL Server Configuration Manager
-	-  Select the SQL server instance in SQL Server Services,
-	-  Right-click the instance, and then click Properties.
-	-  Click the Startup Parameter tab.
-	-  Add “-T902”
-	-  Close instance properties
-	-  Start SQL Server Service
+Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with trace flag 902 via SQL Server Configuration Manager, sqlservr.exe or NET START
 
-Command Prompt Using Sqlservr.exe
--  Open an administrative command prompt and migrate to the SQL Server Binn directory   
-    Default Instance :      	\Program Files\Microsoft SQL Server\MSSQL<version>\MSSQL\Binn
-    Named Instance : 	\Program Files\Microsoft SQL Server\MSSQL<version>.<instance name>\MSSQL\Binn
-	
-- For a Default Instance use the following command:
+### Using Configuration Manager
 
-```DOS
-Sqlservr.exe -s MSSQLSERVER  -T902
+1. Open SQL Server Configuration Manager
+1. Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in SQL Server Services,
+1. Right-click the instance, and then click Properties.
+1. Click the Startup Parameter tab.
+1. Add “-T902”
+1. Close instance properties
+1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service
+
+
+For more information on how to configure startup-options, see [SQL Configuration Manager Services - Configure Server Startup Options ](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+### Command prompt using Sqlservr.exe
+
+1. Open an administrative Command Prompt and change directory to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Binn directory
+
+**Default Instance:**
+
+```dos
+cd \Program Files\Microsoft SQL Server\MSSQL<version>\MSSQL\Binn
+sqlservr.exe -s MSSQLSERVER  -T902
 ```
 
-- For a Named Instance use the following command ***where sql2016 is an example of an instance name:
+**Named Instance, where "sql2016" is an example of an instance name:**
 
-    ```dos
-    sqlservr.exe -s sql2016  -T902
-    ```
+```dos
+cd \Program Files\Microsoft SQL Server\MSSQL<version>.<instance name>\MSSQL\Binn
+sqlservr.exe -s sql2016  -T902
+```
 
-Command Prompt Using Net Start
+### Command prompt using `net start`
 
-- Default Instance:
+**Default Instance:**
 
-    ```dos
-    NET START MSSQLSERVER /902 
-    ```
+```dos
+NET START MSSQLSERVER /T902 
+```
 
-- Named Instance :   
+**Named Instance:**
 
-    ```dos
-    NET START MSSQL$INSTANCENAME  /T902
-    ```
-
+```dos
+NET START MSSQL$INSTANCENAME  /T902
+```

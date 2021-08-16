@@ -274,7 +274,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 > - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
 > - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
 > - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
-
+>
 > To check which hash distributed tables in a database cannot work with MERGE due to this issue, run this statement
 >```sql
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
@@ -385,13 +385,13 @@ In terms of locking, MERGE is different from discrete, consecutive INSERT, UPDAT
 
 MERGE statements are a suitable replacement for discrete INSERT, UPDATE, and DELETE operations in (but not limited to) the following scenarios:
 
-1. ETL operations involving large row counts be executed during a time when other concurrent operations are *not* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
-1. Complex operations involving small row counts and transactions unlikely to execute for extended duration.
-1. Complex operations involving user tables where indexes can be designed to ensure optimal execution plans, avoiding table scans and lookups in favor of index scans or - ideally - index seeks.
+- ETL operations involving large row counts be executed during a time when other concurrent operations are *not* expected. When heavy concurrency is expected, separate INSERT, UPDATE, and DELETE logic may perform better, with less blocking, than a MERGE statement. 
+- Complex operations involving small row counts and transactions unlikely to execute for extended duration.
+- Complex operations involving user tables where indexes can be designed to ensure optimal execution plans, avoiding table scans and lookups in favor of index scans or - ideally - index seeks.
 
 Other considerations for concurrency:
 
-1. In some scenarios where unique keys are expected to be both inserted and updated by the MERGE, specifying the HOLDLOCK will prevent against unique key violations. HOLDLOCK is a synonym for the SERIALIZABLE transaction isolation level, which does not allow for other concurrent transactions to modify data that this transaction has read.  SERIALIZABLE is the safest isolation level but provides for the least concurrency with other transactions that retains locks on ranges of data to prevent phantom rows from being inserted or updated while reads are in progress. For more information on HOLDLOCK, see [Hints](../queries/hints-transact-sql-table.md) and [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md).
+- In some scenarios where unique keys are expected to be both inserted and updated by the MERGE, specifying the HOLDLOCK will prevent against unique key violations. HOLDLOCK is a synonym for the SERIALIZABLE transaction isolation level, which does not allow for other concurrent transactions to modify data that this transaction has read.  SERIALIZABLE is the safest isolation level but provides for the least concurrency with other transactions that retains locks on ranges of data to prevent phantom rows from being inserted or updated while reads are in progress. For more information on HOLDLOCK, see [Hints](../queries/hints-transact-sql-table.md) and [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](set-transaction-isolation-level-transact-sql.md).
 
 ### JOIN best practices
 

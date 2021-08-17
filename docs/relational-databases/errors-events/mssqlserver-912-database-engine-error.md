@@ -33,13 +33,16 @@ Error 912 indicates that the database script failed to executed and to upgrade t
 
 Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are initially upgraded. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, the services initiates a database upgrade using the 'msdb110_upgrade.sql' T-SQL script which is located under 'C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.'
 
-Under certain scenarios, the upgrade script encounters script-level upgrade errors which includes Error 912 and typically another error. For example:
+Under certain scenarios, the upgrade script encounters script-level upgrade errors which includes Error 912 and typically another error before it. For example:
 
-    Error: 912, Severity: 21, State: 2.
-    Script level upgrade for database 'master' failed because upgrade step 'xxx.sql' encountered error <Error Number>, state <Error State>, severity <Error Severity>. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
+`Error: 1101, Severity: 17, State: 1.` </br>
+`Could not allocate a new page for database 'tempdb' because of insufficient disk space in filegroup 'PRIMARY'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
 
-    Error: 3417, Severity: 21, State: 3.
-    Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.
+`Error: 912, Severity: 21, State: 2.` </br>
+`Script level upgrade for database 'master' failed because upgrade step 'xxx.sql' encountered error <Error Number>, state <Error State>, severity <Error Severity>. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.`
+
+`Error: 3417, Severity: 21, State: 3.` </br>
+`Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.`
 
 ## User Action  
   

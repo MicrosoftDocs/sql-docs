@@ -34,7 +34,7 @@ The following diagram illustrates the architecture of Azure Arc enable SQL Serve
 ![Customer infrastructure hosts virtualization and persistent storage. Use the Azure portal or the appropriate CLI to manage the SQL Server instance.](media/overview/architecture.png)
 
 To learn more about these capabilities, you can also refer to this Data Exposed episode.
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Understanding-Azure Arc-Enabled-SQL-Server/player?format=ny]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Understanding-Azure-Arc-Enabled-SQL-Server/player?format=ny]
 
 ## Prerequisites
 

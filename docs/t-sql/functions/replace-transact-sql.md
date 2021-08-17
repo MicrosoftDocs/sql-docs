@@ -92,6 +92,31 @@ This is a desk
 (1 row(s) affected)  
 ```  
 
+The following example calculates the number of spaces in a sentence using the `REPLACE` function. First, it calculates the length of the sentence with the `LEN` function. It then replaces the ' ' characters with '' with `REPLACE`. After this process, it calculates the length of the sentence again. The resulting difference is the number of space characters in the sentence.
+
+
+```sql  
+DECLARE @str NVARCHAR(100), @len1 INT, @len2 INT;
+SET @str = N'This is a sentence with spaces in it.';
+SET @len1 = LEN(@str);
+SET @str = REPLACE(@str, N' ', N'');
+SET @len2 = LEN(@str);
+SELECT N'Number of spaces in the string: ' + CONVERT(NVARCHAR(20), @len1 - @len2);
+
+GO  
+```  
+
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+------------  
+Number of spaces in the sentence: 8  
+
+(1 row(s) affected)  
+```  
+
+
   
 ## See Also  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 08/04/2021
+ms.date: 08/12/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -28,10 +28,7 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
-| CU12 | Ubuntu 20.04.2 | 1.20.7 | containerd 1.4.3 | Block only | Block only |
-|  | Ubuntu 20.04.2 | 1.20.7 | docker 19.3.14; 20.10.7 | Block only | Block only |
-|  | Ubuntu 18.04.5 | 1.20.7 | containerd 1.4.4 | Block only | Block only |
-|  | RHEL CoreOS 46.82 | 1.19.0 | CRI-O 1.19.1-11 | Block only | Block only |
+| CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
 
 Restrictions:
 
@@ -75,9 +72,15 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## Known issues
 
+### Kubernetes platforms with Kubernetes API version 1.21+
+
+- **Affected releases**: All releases
+
+- **Issue and customer impact**: Kubernetes API 1.21 or superior is not a tested configuration of SQL Server Big Data Clusters as of CU12.
+
 ### MicrosoftML packages on SQL Server Machine Learning Services
 
-- **Affected releases**: CU10 and CU11
+- **Affected releases**: CU10, CU11 and CU12
 
 - **Issue and customer impact**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
 

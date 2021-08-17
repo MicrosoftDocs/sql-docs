@@ -36,7 +36,7 @@ ms.author: vanto
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # LOGINPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
   Returns information about login policy settings.  
   

@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Release notes - Azure Arc enabled SQL Server
+# Release notes - Azure Arc-enabled SQL Server
 
 ## July 30, 2021
 
@@ -28,7 +28,7 @@ The introduction of SQL Server extension requires that the user accounts have mo
 
 ### Other changes
 
-This release includes a new Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connecting-at-scale-using-azure-policy).
+This release includes a new Azure policy _Configure SQL Server extension on Azure Arc-enabled servers_. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connecting-at-scale-using-azure-policy).
 
 ## April 2021
 
@@ -116,4 +116,4 @@ The following issues apply to the September release:
 
 ## Next steps
 
-**Just want to try things out?**  Get started quickly with [SQL Server on Azure-arc enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+**Just want to try things out?**  Get started quickly with [SQL Server on Azure-Arc-enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).

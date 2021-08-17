@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
-This article describes how to install `azdata` on Windows with an installer. Use `azdata` to manage SQL Server Big Data Clusters or Azure Arc enabled data services.
+This article describes how to install `azdata` on Windows with an installer. Use `azdata` to manage SQL Server Big Data Clusters.
 
 ## Steps to Install `azdata` with the Microsoft Windows Installer
 
@@ -38,5 +38,3 @@ The program to uninstall is called `Azure Data CLI` . Select this application, t
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
-
-Use `azdata` with [Azure Arc enabled data services](/azure/azure-arc/data/)

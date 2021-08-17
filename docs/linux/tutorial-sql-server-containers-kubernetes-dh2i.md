@@ -364,16 +364,18 @@ DxEnterprise is high availability clustering software from DH2i that supports SQ
 With this, you should have an Always On availability group created and database(s) added to the group supporting high availability.
 
 > [!NOTE]
-> You can deploy [basic Always On availability group](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-ver15) with SQL Server standard editions, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-availability-group-overview?view=sql-server-ver15#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [Dh2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration-only'.
+> You can deploy [basic Always On availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups) with SQL Server standard edition, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](https://docs.microsoft.com/sql/linux/sql-server-linux-availability-group-overview#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [Dh2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
 
 
 ## Steps to configure Always On availability group listener: (Optional)
 
 You can also configure an Always On availability group listener; to do so, follow the steps below:
 
-1. In Kubernetes, you can optionally create static IP addresses. Creating static IP addresses ensures that if the listener service is deleted and recreated, the external IP address assigned to your listener service does not change and thus remains static. Follow the steps outlined [here](https://docs.microsoft.com/en-us/azure/aks/static-ip#create-a-static-ip-address) to create a static IP address in Azure Kubernetes Service (AKS).
+1. Ensure you've created the AG listener using DxEnterprise as outlined in the options step near the end of the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
+
+2. In Kubernetes, you can optionally create static IP addresses. Creating static IP addresses ensures that if the listener service is deleted and recreated, the external IP address assigned to your listener service does not change and thus remains static. Follow the steps outlined [here](https://docs.microsoft.com/en-us/azure/aks/static-ip#create-a-static-ip-address) to create a static IP address in Azure Kubernetes Service (AKS).
    
-2. After you have created an IP address, you assign that IP address and create the load balancer service, as shown in the sample yaml below:
+3. After you have created an IP address, you assign that IP address and create the load balancer service, as shown in the sample yaml below:
 
    ```bash
    apiVersion: v1
@@ -390,9 +392,6 @@ You can also configure an Always On availability group listener; to do so, follo
        port: 44444
        targetPort: 44444
    ```
-
-3. Once the service has been created, we will proceed to create the AG listener within SQL Server and associate it with port 44444. The command to create the AG listener using dxcli is documented [here](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
-
 
 ## Steps to configure read/write connection redirection: (Optional)
 

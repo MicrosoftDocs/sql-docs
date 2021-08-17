@@ -1,5 +1,5 @@
 ---
-title: Connect SQL Servers on Azure-Arc-enabled servers at scale
+title: Connect SQL Servers on Azure Arc-enabled servers at scale
 titleSuffix:
 description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
 author: anosov1960

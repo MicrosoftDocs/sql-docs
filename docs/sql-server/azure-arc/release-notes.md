@@ -116,4 +116,4 @@ The following issues apply to the September release:
 
 ## Next steps
 
-**Just want to try things out?**  Get started quickly with [SQL Server on Azure-Arc-enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+**Just want to try things out?**  Get started quickly with [SQL Server on Azure Arc-enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).

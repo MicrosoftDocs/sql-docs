@@ -21,6 +21,49 @@ ms.author: "jroth"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can access user-defined type (UDT) functionality in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the [!INCLUDE[tsql](../../includes/tsql-md.md)] language by using regular query syntax. UDTs can be used in the definition of database objects, as variables in [!INCLUDE[tsql](../../includes/tsql-md.md)] batches, in functions and stored procedures, and as arguments in functions and stored procedures.  
   
+## EXAMPLES
+
+### Example 1: Creating a user-defined data type and then using it as input parameter for a stored procedure.
+```
+CREATE TYPE [IntListType] AS TABLE
+   (   [T] INT  );
+GO
+
+
+CREATE PROCEDURE [myTest]
+ (
+       @IntListInput IntListType READONLY
+ )
+ AS
+ BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @myInt INT;
+    DECLARE intListCursor CURSOR LOCAL FAST_FORWARD
+    FOR
+    SELECT [T]
+    FROM @IntListInput;
+
+    OPEN intListCursor;
+
+    FETCH NEXT FROM intListCursor INTO @myInt;
+
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+
+       PRINT 'Int var is : ' + CONVERT(VARCHAR(max),@myInt);
+
+       FETCH NEXT FROM intListCursor INTO @myInt;
+    END;
+
+    CLOSE intListCursor;
+    DEALLOCATE intListCursor;
+ END;
+ GO
+```
+
+The above script creates a user-defined data type, then creates a stored procedure that uses the newly created data type.The stored procedure uses a cursor to display the data contained on the user-defined data type.
+  
 ## In This Section  
  [Defining UDT Tables and Columns](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  
  Describes how to use [!INCLUDE[tsql](../../includes/tsql-md.md)] to create a UDT column in a table.  

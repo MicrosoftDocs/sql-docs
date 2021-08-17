@@ -1,7 +1,7 @@
 ---
 title: SQL Server help and feedback | Microsoft Docs
 description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation. 
-ms.date: 07/11/2019
+ms.date: 08/17/2021
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: ""
@@ -19,8 +19,6 @@ This article explains different ways to get assistance with your issue, or provi
 ## Contact Microsoft Support
 
 Customers with a support plan can [open a ticket](https://support.microsoft.com/hub/4343728/support-for-business) with Microsoft support.  Review the [support options for businesses](https://support.microsoft.com/help/4341255/support-for-business) for more information. 
-
-Customers without a support plan can ask the community for help, or submit a bug via UserVoice at [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback).
 
 ## Ask community for help
 
@@ -43,10 +41,7 @@ There are a few communities that can help you with your SQL Server issues.
 
 You can submit suggestions for improvement, as well as submit bugs for:
 
-- **SQL Server feedback**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
-- **SQL Server Big Data Clusters feedback**: [SQL Server Big Data Clusters feedback](https://aka.ms/sql-server-bdc-feedback)
 - **Azure Data Studio issues**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
- 
 
 ###  SQL Server documentation
 

@@ -37,5 +37,3 @@ To find your installed version and see if you need to update, run `azdata --vers
 ## Next steps
 
 Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
-
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

@@ -40,6 +40,8 @@
       href: extensions/add-extensions.md
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
+    - name: Azure Monitor Logs extension
+      href: extensions/azure-monitor-logs-extension.md
     - name: Data Virtualization extension
       href: extensions/data-virtualization-extension.md
     - name: Kusto extension

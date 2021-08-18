@@ -46,6 +46,40 @@ By using the [run](https://docs.github.com/en/free-pro-team@latest/actions/refer
 
 :::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
 
+
+## Obtaining SqlPackage diagnostics from a pipeline agent
+
+Diagnostic information from SqlPackage is available in the command line through the parameter `/DiagnosticsFile`, which can be used in virtual environments such as Azure Pipelines and GitHub Actions.  The diagnostic information is written to a file in the working directory.  The file name is dictated by the `/DiagnosticsFile` parameter.
+
+### Azure Pipelines
+Adding the `/DiagnosticsFile` parameter to the "Additional SqlPackage.exe Arguments" field in the Azure Pipeline agent configuration will cause the diagnostic information to be written to the file specified.  Following the SqlAzureDacpacDeployment task, the diagnostic file can be made available outside of the agent by publishing a pipeline artifact.
+
+```yaml
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: '$(azuresubscription)'
+    AuthenticationType: 'server'
+    ServerName: '$(servername)'
+    DatabaseName: '$(databasename)'
+    SqlUsername: '$(sqlusername)'
+    SqlPassword: '$(sqladminpassword)'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    DacpacFile: '$(Build.Repository.LocalPath)\$(dacpacname).dacpac'
+    AdditionalArguments: '/DiagnosticsFile:$(System.DefaultWorkingDirectory)/output.txt'
+    IpDetectionMethod: 'AutoDetect'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/output.txt'
+    artifact: 'Diagnostic File'
+    publishLocation: 'pipeline'
+```
+
+After the pipeline run, the diagnostic file can be downloaded from the run summary page under "Published Artifacts".
+
+### GitHub Actions
+
 ## Update SqlPackage on the pipeline agent
 
 In some scenarios, the current version of SqlPackage installed in the pipeline environment may be insufficient. An additional step can be used to install a newer version of SqlPackage. It is important to run the install step before running any DacPac or BacPac operations in the pipeline. This task can be combined with a step to [check the version](#checking-the-sqlpackage-version) to ensure that the upgrade completed as expected.

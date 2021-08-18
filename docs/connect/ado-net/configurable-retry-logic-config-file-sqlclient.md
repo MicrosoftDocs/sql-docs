@@ -36,7 +36,7 @@ Default retry logic options for an application can be changed by adding the foll
         type="Microsoft.Data.SqlClient.SqlConfigurableRetryCommandSection, Microsoft.Data.SqlClient"/>
 ```
 
-- `AppContextSwitchOverrides`: .NET Framework supports AppContext switches via an `AppContextSwitchOverrides` section, which doesn't need to be defined explicitly. To turn on a switch in .NET Core, you must specify this section.
+- `AppContextSwitchOverrides`: .NET Framework supports AppContext switches via an [AppContextSwitchOverrides](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) section, which doesn't need to be defined explicitly. To turn on a switch in **.NET Core**, you must specify this section.
 
 ```csharp
 <section name="AppContextSwitchOverrides"
@@ -70,11 +70,11 @@ The following attributes can be used to specify the default retry logic for all 
 
 - **numberOfTries**: sets the number of times to try.
 
-- **deltaTime**: sets the gap time interval as a `System.TimeSpan` object.
+- **deltaTime**: sets the gap time interval as a <xref:System.TimeSpan> object.
 
-- **minTime**: sets the allowed minimum gap time interval as a `System.TimeSpan` object.
+- **minTime**: sets the allowed minimum gap time interval as a <xref:System.TimeSpan> object.
 
-- **maxTime**: sets the allowed maximum gap time interval as a `System.TimeSpan` object.
+- **maxTime**: sets the allowed maximum gap time interval as a <xref:System.TimeSpan> object.
 
 - **transientErrors**: sets the list of transient error numbers on which to retry.
 

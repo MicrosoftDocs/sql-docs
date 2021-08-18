@@ -32,12 +32,12 @@ monikerRange: "= sql-server-2016"
 
 The SQL Server 2016 SP3 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP3.
 
-Performance and Scale related improvements included in SQL Server 2016 SP3.
+Performance and scale related improvements included in SQL Server 2016 SP3.
 
 |Feature|Description|More information|
 |---|---|---|
 
-Supportability and Diagnostics related improvements included in SQL Server 2016 SP3.
+Supportability and diagnostics related improvements included in SQL Server 2016 SP3.
 
 |Feature|Description|More information|
 |---|---|---|
@@ -91,7 +91,7 @@ This section identifies issues which may occur after you apply SQL Server 2016 S
 
 The SQL Server 2016 SP2 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP2.
 
-Performance and Scale related improvements included in SQL Server 2016 SP2.
+Performance and scale related improvements included in SQL Server 2016 SP2.
 
 |Feature|Description|More information|
 |---|---|---|
@@ -106,7 +106,7 @@ Performance and Scale related improvements included in SQL Server 2016 SP2.
 |Support MAXDOP option for statistics create/update   |    This enhancement allows to specify the MAXDOP option for a CREATE/UPDATE statistics statement, as well as make sure the right MAXDOP setting is used when statistics are updated as part of create or rebuild for all types of indexes (if the MAXDOP option is present)   |   [KB4041809](https://support.microsoft.com/help/4041809)   |
 |Improved Auto Statistics Update for Incremental Statistics   |    In certain scenarios, when a number of data changes happened across multiple partitions in a table in a way that the total modification counter for incremented statistics exceeds the auto update threshold, but none of the individual partitions exceed the auto update threshold, statistics update may be delayed until much more modifications happen in the table. This behavior is corrected under trace flag 11024.   |      |
 
-Supportability and Diagnostics related improvements included in SQL Server 2016 SP2.
+Supportability and diagnostics related improvements included in SQL Server 2016 SP2.
 
 |Feature|Description|More information|
 |---|---|---|

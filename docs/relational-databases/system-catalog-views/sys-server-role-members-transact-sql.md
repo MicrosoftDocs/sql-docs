@@ -35,21 +35,24 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
  To add or remove server role membership, use the [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)statement.  
   
 ## Permissions  
- Logins can view their own server role membership and can view the principal_id's of the members of the fixed server roles. To view all server role membership requires the **VIEW DEFINITION ON SERVER ROLE** permission or membership in the **securityadmin** fixed server role.  
-  
- For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Logins can view their own server role membership and can view the principal_id's of the members of the fixed server roles. To view all server role membership requires the **VIEW ANY DEFINITION** permission or membership in the **securityadmin** fixed server role.  
+ Logins can also view role memberships of roles they own. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
  The following example returns the names and id's of the roles and their members.  
   
 ```  
-SELECT sys.server_role_members.role_principal_id, role.name AS RoleName,   
-    sys.server_role_members.member_principal_id, member.name AS MemberName  
-FROM sys.server_role_members  
-JOIN sys.server_principals AS role  
-    ON sys.server_role_members.role_principal_id = role.principal_id  
-JOIN sys.server_principals AS member  
-    ON sys.server_role_members.member_principal_id = member.principal_id;  
+SELECT	roles.principal_id							AS RolePrincipalID
+	,	roles.name									AS RolePrincipalName
+	,	server_role_members.member_principal_id		AS MemberPrincipalID
+	,	members.name								AS MemberPrincipalName
+FROM sys.server_role_members AS server_role_members
+INNER JOIN sys.server_principals AS roles
+    ON server_role_members.role_principal_id = roles.principal_id
+INNER JOIN sys.server_principals AS members 
+    ON server_role_members.member_principal_id = members.principal_id  
+;
+
 ```  
   
 ## See Also  

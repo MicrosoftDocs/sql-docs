@@ -90,5 +90,3 @@ sudo yum update azdata-cli
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
-
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

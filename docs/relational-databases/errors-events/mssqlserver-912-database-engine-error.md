@@ -33,7 +33,7 @@ Error 912 indicates that the database script failed to executed and to upgrade t
 
 Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are initially upgraded. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, the services initiates a database upgrade using the 'msdb110_upgrade.sql' T-SQL script which is located under 'C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.'
 
-Under certain scenarios, the upgrade script encounters script-level upgrade errors which includes Error 912 and typically another error before it. For example:
+Commonly the upgrade process encounters script-level upgrade errors (Error 912) together with some other error before it. For example:
 
 `Error: 1101, Severity: 17, State: 1.` </br>
 `Could not allocate a new page for database 'tempdb' because of insufficient disk space in filegroup 'PRIMARY'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
@@ -46,7 +46,7 @@ Under certain scenarios, the upgrade script encounters script-level upgrade erro
 
 ## User Action  
   
-To find the cause of the issue, you need to look at the [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) entries preceding error 912 and troubleshoot the error referenced in the messaging of Error 912. To troubleshoot this, you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 902.  This allows the SQL service to skip the upgrade script during startup so that you get a chance to investigate and fix the issue. 
+To find the cause of the issue, you need to look at the [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) entries preceding error 912 and troubleshoot the error referenced in the messaging of Error 912. To troubleshoot this, in some cases you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 902.  This allows the SQL service to skip the upgrade script during startup so that you get a chance to investigate further and fix the issue.
 
 Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with trace flag 902 via SQL Server Configuration Manager, sqlservr.exe or NET START
 
@@ -59,7 +59,6 @@ Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with tr
 1. Add “-T902”
 1. Close instance properties
 1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service
-
 
 For more information on how to configure startup-options, see [SQL Configuration Manager Services - Configure Server Startup Options ](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
 

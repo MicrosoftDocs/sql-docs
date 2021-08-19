@@ -42,7 +42,7 @@ This article describes how to view the definition of procedure in Object Explore
  The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 > [!NOTE]
-> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view. Samples are provided later in this article.
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use `sys.sql_modules` object catalog view. Samples are provided later in this article.
   
 ##  <a name="Procedures"></a> How to View the Definition of a Stored Procedure  
  You can use one of the following:  

@@ -505,7 +505,8 @@ GO
 |Category|Featured syntax elements|
 |--------------|------------------------------|
 |[Basic Syntax](#BasicSyntax)|CREATE PROCEDURE|
-|[Passing parameters](#Parameters)|@parameter <br> &nbsp;&nbsp;* = default <br> &nbsp;&nbsp; * OUTPUT <br> &nbsp;&nbsp; * table-valued parameter type <br> &nbsp;&nbsp; * CURSOR VARYING|
+|[Passing parameters](#Parameters)|@parameter <br><ul><li> = default</li><li> OUTPUT </li><li> table-valued parameter type </li><li> CURSOR VARYING</li></ul>|
+
 |[Modifying data by using a stored procedure](#Modify)|UPDATE|
 |[Error Handling](#Error)|TRY...CATCH|
 |[Obfuscating the procedure definition](#Encrypt)|WITH ENCRYPTION|

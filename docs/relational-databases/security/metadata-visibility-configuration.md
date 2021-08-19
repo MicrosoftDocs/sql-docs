@@ -163,7 +163,7 @@ GO
 >  The SQL definitions of built-in system procedures and functions are publicly visible through the `sys.system_sql_modules` catalog view, the `sp_helptext` stored procedure, and the OBJECT_DEFINITION() function.  
 
 > [!NOTE]
-> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view.
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `sys.sql_modules` object catalog view.
   
 ## General Principles of Metadata Visibility  
  The following are some general principles to consider regarding metadata visibility:  

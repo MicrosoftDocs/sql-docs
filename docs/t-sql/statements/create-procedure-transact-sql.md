@@ -941,7 +941,7 @@ NULL
 ```
 
 > [!NOTE]
-> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view.
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `sys.sql_modules` object catalog view.
 
 ### <a name="Recompile"></a> Forcing the Procedure to Recompile
 

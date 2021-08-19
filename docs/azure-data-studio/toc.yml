@@ -42,6 +42,8 @@
       href: extensions/azure-arc-extension.md
     - name: Azure SQL Migration extension
       href: extensions/azure-sql-migration-extension.md
+    - name: Azure Monitor Logs extension
+      href: extensions/azure-monitor-logs-extension.md
     - name: Data Virtualization extension
       href: extensions/data-virtualization-extension.md
     - name: Kusto extension

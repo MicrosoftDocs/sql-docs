@@ -66,12 +66,12 @@ Adding the `/DiagnosticsFile` parameter to the "Additional SqlPackage.exe Argume
     deployType: 'DacpacTask'
     DeploymentAction: 'Publish'
     DacpacFile: '$(Build.Repository.LocalPath)\$(dacpacname).dacpac'
-    AdditionalArguments: '/DiagnosticsFile:$(System.DefaultWorkingDirectory)/output.txt'
+    AdditionalArguments: '/DiagnosticsFile:$(System.DefaultWorkingDirectory)/output.log'
     IpDetectionMethod: 'AutoDetect'
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(System.DefaultWorkingDirectory)/output.txt'
+    targetPath: '$(System.DefaultWorkingDirectory)/output.log'
     artifact: 'Diagnostic File'
     publishLocation: 'pipeline'
 ```
@@ -91,13 +91,13 @@ Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub A
     connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
     # Path to DACPAC file to deploy
     dacpac-package: .\DatabaseProjectAdventureWorksLT\bin\Release\DatabaseProjectAdventureWorksLT.dacpac
-    # additional SqlPackage.exe arguments, leave all existing indexes in place
-    arguments: /DiagnosticsFile:DatabaseProjectAdventureWorksLT/DiagnosticLog.txt
+    # additional SqlPackage.exe arguments
+    arguments: /DiagnosticsFile:DatabaseProjectAdventureWorksLT/DiagnosticLog.log
 
 - uses: actions/upload-artifact@v2
   with:
     name: 'DiagnosticLog.txt'
-    path: 'DatabaseProjectAdventureWorksLT/DiagnosticLog.txt'
+    path: 'DatabaseProjectAdventureWorksLT/DiagnosticLog.log'
 ```
 
 ## Update SqlPackage on the pipeline agent

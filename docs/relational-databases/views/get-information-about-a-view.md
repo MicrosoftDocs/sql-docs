@@ -1,8 +1,8 @@
 ---
 description: "Get Information About a View"
-title: "Get Information About a View | Microsoft Docs"
+title: "Get Information About a View"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "viewing view information"
   - "status information [SQL Server], views"
   - "view dependencies"
-ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -182,7 +181,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Copy and paste one of the following examples into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SELECT definition, uses_ansi_nulls, uses_quoted_identifier, is_schema_bound  
@@ -191,18 +190,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     GO  
     ```  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT OBJECT_DEFINITION (OBJECT_ID('HumanResources.vEmployee')) AS ObjectDefinition;   
     GO  
     ```  
   
-    ```  
+    ```sql  
     EXEC sp_helptext 'HumanResources.vEmployee';  
     ```  
   
  For more information, see [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) and [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
+
+> [!NOTE]
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view.
   
 #### To get the dependencies of a view  
   
@@ -212,7 +214,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   

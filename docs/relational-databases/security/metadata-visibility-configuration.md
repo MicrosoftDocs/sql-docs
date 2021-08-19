@@ -1,8 +1,8 @@
 ---
-title: "Metadata Visibility Configuration | Microsoft Docs"
+title: "Metadata Visibility Configuration"
 description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "08/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "displaying metadata"
   - "database metadata [SQL Server]"
   - "metadata [SQL Server], permissions"
-ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -86,7 +85,7 @@ GO
   
  SQL modules, such as stored procedures and triggers, run under the security context of the caller and, therefore, have limited metadata accessibility. For example, in the following code, when the stored procedure tries to access metadata for the table `myTable` on which the caller has no rights, an empty result set is returned. In earlier releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a row is returned.  
   
-```  
+```sql  
 CREATE PROCEDURE assumes_caller_can_access_metadata  
 BEGIN  
 SELECT name, object_id   
@@ -103,7 +102,7 @@ GO
 > [!NOTE]  
 >  The following example uses the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view instead of the [sys.sysobjects](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md) compatibility view.  
   
-```  
+```sql  
 CREATE PROCEDURE does_not_assume_caller_can_access_metadata  
 WITH EXECUTE AS OWNER  
 AS  
@@ -125,7 +124,7 @@ GO
   
  The following metadata is not subject to forced disclosure:  
   
--   The value stored in the **provider_string** column of **sys.servers**. A user that does not have ALTER ANY LINKED SERVER permission will see a NULL value in this column.  
+-   The value stored in the `provider_string` column of `sys.servers`. A user that does not have ALTER ANY LINKED SERVER permission will see a NULL value in this column.  
   
 -   Source definition of a user-defined object such as a stored procedure or trigger. The source code is visible only when one of the following is true:  
   
@@ -135,17 +134,17 @@ GO
   
 -   The definition columns found in the following catalog views:  
 
-    - **sys.all_sql_modules**  
-    - **sys.server_sql_modules**  
-    - **sys.default_constraints**
-    - **sys.numbered_procedures**
-    - **sys.sql_modules**
-    - **sys.check_constraints**
-    - **sys.computed_columns**
+    - `sys.all_sql_modules`  
+    - `sys.server_sql_modules`  
+    - `sys.default_constraints`
+    - `sys.numbered_procedures`
+    - `sys.sql_modules`
+    - `sys.check_constraints`
+    - `sys.computed_columns`
 
--   The **ctext** column in the **syscomments** compatibility view.  
+-   The `ctext` column in the `syscomments` compatibility view.  
   
--   The output of the **sp_helptext** procedure.  
+-   The output of the `sp_helptext` procedure.  
   
 -   The following columns in the information schema views:
 
@@ -158,10 +157,13 @@ GO
 
 -   OBJECT_DEFINITION() function  
   
--   The value stored in the password_hash column of **sys.sql_logins**.  A user that does not have CONTROL SERVER permission will see a NULL value in this column.  
+-   The value stored in the password_hash column of `sys.sql_logins`.  A user that does not have CONTROL SERVER permission will see a NULL value in this column.  
   
 > [!NOTE]  
->  The SQL definitions of built-in system procedures and functions are publicly visible through the **sys.system_sql_modules** catalog view, the **sp_helptext** stored procedure, and the OBJECT_DEFINITION() function.  
+>  The SQL definitions of built-in system procedures and functions are publicly visible through the `sys.system_sql_modules` catalog view, the `sp_helptext` stored procedure, and the OBJECT_DEFINITION() function.  
+
+> [!NOTE]
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view.
   
 ## General Principles of Metadata Visibility  
  The following are some general principles to consider regarding metadata visibility:  
@@ -194,11 +196,12 @@ GO
  The visibility of subcomponents, such as indexes, check constraints, and triggers is determined by permissions on the parent. These subcomponents do not have grantable permissions. For example, if a user has been granted some permission on a table, the user can view the metadata for the tables, columns, indexes, check constraints, triggers, and other such subcomponents.  Another example is granting SELECT on only an individual column of a given table: this will allow the grantee to view the matadata of the whole table, including all columns. One way to think of it, is that the VIEW DEFINITION permission only works on entity-level (the table in this case) and is not available for Sub-entity lists (such as column or security expressions).
  
 The following code demonstrates this behavior:
+
 ```sql
 CREATE TABLE t1
 (
-	c1 int,
-	c2 varchar
+    c1 int,
+    c2 varchar
  );
 GO
 CREATE USER testUser WITHOUT LOGIN;

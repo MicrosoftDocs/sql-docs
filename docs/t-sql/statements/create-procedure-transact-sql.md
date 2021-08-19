@@ -314,7 +314,7 @@ Specifies that statements cannot read data that has been modified but not yet co
 Specifies the following:
 
 - Statements cannot read data that has been modified but not yet committed by other transactions.
-- If another transactions modifies data that has been read by the current transaction, the current transaction fails.
+- If another transaction modifies data that has been read by the current transaction, the current transaction fails.
 - If another transaction inserts new rows with key values that would fall in the range of keys read by any statements in the current transaction, the current transaction fails.
 
 #### SNAPSHOT
@@ -332,7 +332,7 @@ For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/sta
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Specifies the order of the month, day, and year date parts for interpreting date, smalldatetime, datetime, datetime2 and datetimeoffset character strings. DATEFORMAT is optional. If it is not specified, the setting is inferred from the specified language.
+Specifies the order of the month, day, and year date parts for interpreting date, smalldatetime, datetime, datetime2, and datetimeoffset character strings. DATEFORMAT is optional. If it is not specified, the setting is inferred from the specified language.
 
 For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).
 
@@ -368,7 +368,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 
 Provide a database ID number when you call the procedure. For example, `EXEC What_DB_is_that 2;` returns `tempdb`.
 
-See [Examples](#Examples) towards the end of this topic for many more examples.
+See [Examples](#Examples) towards the end of this article for many more examples.
 
 ## Best Practices
 
@@ -651,7 +651,7 @@ EXECUTE HumanResources.uspGetEmployees2 N'H%', N'S%';
 
 #### F. Using OUTPUT parameters
 
-The following example creates the `uspGetList` procedure. This procedures returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. OUTPUT parameters enable an external procedure, a batch, or more than one [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.
+The following example creates the `uspGetList` procedure. This procedure returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. OUTPUT parameters enable an external procedure, a batch, or more than one [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.
 
 ```sql
 IF OBJECT_ID ( 'Production.uspGetList', 'P' ) IS NOT NULL

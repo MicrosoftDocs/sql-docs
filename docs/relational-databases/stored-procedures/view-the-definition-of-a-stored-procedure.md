@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ##  <a name="Top"></a> View the definition of a stored procedure 
 
-This topic describes how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.  
+This article describes how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.  
   
 -   **Before you begin:**  [Security](#Security)  
   
@@ -33,10 +33,10 @@ This topic describes how to view the definition of procedure in Object Explorer 
   
 ####  <a name="Permissions"></a> Permissions  
  System Stored Procedure: **sp_helptext**  
- Requires membership in the **public** role. System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: ALTER, CONTROL, TAKE OWNERSHIP, or VIEW DEFINITION.  
+ Requires membership in the **public** role. System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: **ALTER**, **CONTROL**, **TAKE OWNERSHIP**, or **VIEW DEFINITION**.  
   
  System Function: **OBJECT_DEFINITION**  
- System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: ALTER, CONTROL, TAKE OWNERSHIP, or VIEW DEFINITION. These permissions are implicitly held by members of the **db_owner**, **db_ddladmin**, and **db_securityadmin** fixed database roles.  
+ System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: **ALTER**, **CONTROL**, **TAKE OWNERSHIP**, or **VIEW DEFINITION**. These permissions are implicitly held by members of the **db_owner**, **db_ddladmin**, and **db_securityadmin** fixed database roles.  
   
  Object Catalog View: **sys.sql_modules**  
  The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -58,7 +58,7 @@ This topic describes how to view the definition of procedure in Object Explorer 
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
-3.  Expand **Stored Procedures**, right-click the procedure and then click **Script Stored Procedure as**, and then click one of the following: **Create To**, **Alter To**, or **Drop and Create To**.  
+3.  Expand **Stored Procedures**, right-click the procedure and then select **Script Stored Procedure as**, and then select one of the following: **Create To**, **Alter To**, or **Drop and Create To**.  
   
 4.  Select **New Query Editor Window**. This will display the procedure definition.  
 
@@ -69,7 +69,7 @@ This topic describes how to view the definition of procedure in Object Explorer 
  System Stored Procedure: **sp_helptext**  
  1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the toolbar, click **New Query**.  
+2.  On the toolbar, select **New Query**.  
   
 3.  In the query window, enter the following statement that uses the `sp_helptext` system stored procedure. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   
@@ -83,7 +83,7 @@ This topic describes how to view the definition of procedure in Object Explorer 
 
  1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the toolbar, click **New Query**.  
+2.  On the toolbar, select **New Query**.  
   
 3.  In the query window, enter the following statements that use the `OBJECT_DEFINITION` system function. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   
@@ -97,7 +97,7 @@ This topic describes how to view the definition of procedure in Object Explorer 
 
  1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the toolbar, click **New Query**.  
+2.  On the toolbar, select **New Query**.  
   
 3.  In the query window, enter the following statements that use the `sys.sql_modules` catalog view. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   

@@ -28,8 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]  
 ```  
   
@@ -56,7 +55,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 > The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view for equivalent results.
   
 ## Permissions  
- Requires membership in the **public** role. System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: ALTER, CONTROL, TAKE OWNERSHIP, or VIEW DEFINITION.  
+ Requires membership in the **public** role. System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: **ALTER**, **CONTROL**, **TAKE OWNERSHIP**, or **VIEW DEFINITION**.  
   
 ## Examples  
   

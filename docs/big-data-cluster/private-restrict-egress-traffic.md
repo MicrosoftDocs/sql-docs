@@ -1,7 +1,7 @@
 ---
-title: Restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster
+title: Restrict egress traffic of Big Data Clusters in Azure Kubernetes Service (AKS) private cluster
 titleSuffix: SQL Server Big Data Clusters
-description: Learn how to restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster.
+description: Learn how to restrict egress traffic of Big Data Clusters in Azure Kubernetes Service (AKS) private cluster.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster
+# Restrict egress traffic of big data clusters in Azure Kubernetes Service (AKS) private cluster
 
 AKS provisions a standard SKU Load Balancer to be set up and used for egress by default. However, the default setup may not meet the requirements of all scenarios if public IPs are disallowed or additional hops are required for egress. Define a user user-defined route table if the cluster disallows public IPs and sits behind a network virtual appliance (NVA).
 
@@ -210,9 +210,9 @@ az aks create \
     --generate-ssh-keys
 ```
 
-## Build Big Data Cluster (BDC) deployment profile
+## Build Big Data Cluster deployment profile
 
-You can create BDC clusters with custom profile: 
+You can create big data clusters with custom profile: 
 
 ```console
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
@@ -249,7 +249,7 @@ Use a third-party firewall to restrict egress traffic when deployed BDC with AKS
 * Azure Global required network rules / FQDN/application rules mentioned [here](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
 * Optional recommended FQDN / application rules for AKS clusters mentioned [here](/azure/aks/limit-egress-traffic#optional-recommended-fqdn--application-rules-for-aks-clusters). 
 
-Please check how to [manage BDC in AKS private cluster](private-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
+Please check how to [manage a big data cluster in AKS private cluster](private-manage.md)  and then the next step is to [connect to a big data cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 

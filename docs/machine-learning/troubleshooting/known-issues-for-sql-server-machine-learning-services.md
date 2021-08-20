@@ -5,13 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/31/2021
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Known issues for Python and R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 

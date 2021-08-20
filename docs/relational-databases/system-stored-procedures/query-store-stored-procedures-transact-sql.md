@@ -2,7 +2,7 @@
 description: "Query Store Stored Procedures (Transact-SQL)"
 title: "Query Store Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2016"
+ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], query store"
   - "stored procedures [SQL Server], query store"
   - "query store [SQL Server], stored procedures"
-ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: markingmyname
 ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -25,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   This section contains the following stored procedures used to configure the query store.  
   
-## In this Section  
+## In this section  
   
 -   [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
   
@@ -38,9 +37,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 -   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
   
 -   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
+
+-   [sp_query_store_set_hints (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)  
   
-## See Also  
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
-  
+## See also  
+ - [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  

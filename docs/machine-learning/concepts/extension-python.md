@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
@@ -37,7 +37,7 @@ Python packages added by Microsoft for parallel and distributed workloads includ
 | Library | Description |
 |---------|-------------|
 | [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information, see [revoscalepy module with SQL Server](../python/ref-py-revoscalepy.md).  |
-| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
+| [**microsoftml**](../python/ref-py-microsoftml.md) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml and revoscalepy are tightly coupled; data sources used in microsoftml are defined as revoscalepy objects. Compute context limitations in revoscalepy transfer to microsoftml. Namely, all functionality is available for local operations, but switching to a remote compute context requires RxInSqlServer.
 

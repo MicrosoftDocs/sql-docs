@@ -19,7 +19,7 @@ ms.author: jroth
 
 # Guidelines for Using xml Data Type Methods
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This topic describes guidelines for using the **xml** data type methods.
 

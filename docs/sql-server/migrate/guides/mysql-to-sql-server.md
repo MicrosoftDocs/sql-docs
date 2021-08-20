@@ -147,7 +147,7 @@ To publish your schema and migrate the data:
 
    ![Screenshot that shows the Data Migration Report.](./media/mysql-to-sql-server/migration-report.png)
 
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and validate the migration by reviewing the data and schema.
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and validate the migration by reviewing the data and schema.
 
    ![Screenshot that shows validation in SQL Server Management Studio.](./media/mysql-to-sql-server/validate-in-ssms.png)
 
@@ -182,6 +182,7 @@ For more assistance with completing this migration scenario, see the following r
 | Title                    | Description            |
 | ----------------------------- | ---------------------- |
 | [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process.                |
+|[MySQL to SQL Server - Database Compare utility](https://www.microsoft.com/download/details.aspx?id=103016)|The Database Compare utility is a Windows console application that you can use to verify that the data is identical both on source and target platforms. You can use the tool to efficiently compare data down to the row or column level in all or selected tables, rows, and columns.|
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 

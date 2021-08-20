@@ -3,8 +3,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/18/2021
 ms.topic: include
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ---
 + RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your Red Hat Enterprise Linux (RHEL) installation provides this.
 

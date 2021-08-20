@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: Big Data Clusters Post-Deployment Configuration Overview
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: rahul.ajmera
-ms.date: 02/11/2021
+ms.reviewer: dacoelho
+ms.date: 08/04/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -24,13 +24,15 @@ Cluster, service, and resource scoped settings for Big Data Clusters can be conf
 ## Step by Step: Configure BDC to meet your Spark workload requirements
 
 ### View the current configurations of the Big Data Cluster Spark service
+
 The following example shows how to view the user configured settings of the Spark service. You can view all possible configurable settings, system-managed and all configurable settings, and pending settings through optional parameters. Visit [`azdata bdc spark` statement](../azdata/reference/reference-azdata-bdc-spark-statement.md) for more information.
 
 ```bash
 azdata bdc spark settings show
 ```
 #### Sample output
-Spark Service 
+
+Spark Service
 
 |Setting|Running Value|
 | --- | --- |
@@ -38,6 +40,7 @@ Spark Service
 |`spark-defaults-conf.spark.driver.memory`|`1664m` |
 
 ### Change the default number of cores and memory for the Spark driver across all resources with Spark (i.e. for the Spark service)
+
 Update the default number of cores to 2 and default memory to 7424m for the Spark service.
 
 ```bash
@@ -45,16 +48,27 @@ azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=
 ```
 
 ### Change the default number of cores and memory for the Spark executors in the Storage Pool
+
 Update the default number of executor cores to 4 for the Storage Pool.
 
 ```bash
 azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
-### View the pending settings changes staged in the BDC
-View the pending settings changes for the Spark service only and across the entire BDC cluster.
+### Configure additional paths to the default classpath of Spark applications
+
+The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the referred path is not loaded by default in the classpath of Spark applications. To enable this setting apply the following configuration pattern.
+
+```bash
+azdata bdc hdfs settings set --settings hadoop-env.HADOOP_CLASSPATH="/opt/hadoop/share/hadoop/tools/lib/*"
+```
+
+### View the pending settings changes staged in the big data cluster
+
+View the pending settings changes for the Spark service only and across the entire big data cluster.
 
 #### Pending Spark Service Settings
+
 ```bash
 azdata bdc spark settings show --filter-option=pending --include-details
 ```
@@ -67,6 +81,7 @@ azdata bdc spark settings show --filter-option=pending --include-details
 |`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` |
 
 #### All Pending Settings
+
 ```bash
 azdata bdc settings show --filter-option=pending --include-details --recursive
 ```

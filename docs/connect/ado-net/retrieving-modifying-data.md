@@ -60,8 +60,8 @@ Describes how to use stored procedure input parameters and output parameters to 
 [Data tracing in SqlClient](data-tracing.md)  
 Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.
   
-[Performance counters in SqlClient](performance-counters.md)  
-Describes performance counters available for Microsoft SqlClient Data Provider for SQL Server.
+[Diagnostic counters in SqlClient](diagnostic-counters.md)  
+Describes diagnostic counters and available for Microsoft SqlClient Data Provider for SQL Server.
   
 [Asynchronous programming](asynchronous-programming.md)  
 Describes Microsoft SqlClient Data Provider for SQL Server support for asynchronous programming.

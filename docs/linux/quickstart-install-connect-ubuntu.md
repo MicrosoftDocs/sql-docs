@@ -47,7 +47,7 @@ You must have an Ubuntu 16.04 or 18.04 machine with **at least 2 GB** of memory.
 To install Ubuntu 18.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target for production workloads.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -66,7 +66,7 @@ You must have an Ubuntu 16.04, 18.04, or 20.04 machine with **at least 2 GB** of
 To install Ubuntu 20.04 on your own machine, go to <https://releases.ubuntu.com/20.04/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target for production workloads.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -217,6 +217,14 @@ At this point, SQL Server 2019 is running on your Ubuntu machine and is ready to
 To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools: [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
 Use the following steps to install the **mssql-tools** on Ubuntu. 
+
+> [!NOTE] 
+> By default, curl isn't installed on Ubuntu. To install curl, run this code:
+>
+> ```bash
+> sudo apt-get update 
+> sudo apt install curl 
+> ```
 
 1. Import the public repository GPG keys.
 

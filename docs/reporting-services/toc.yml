@@ -711,16 +711,16 @@
   - name: Images, Text Boxes, Rectangles, and Lines
     href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
     items:
-    - name: Text Boxes (Report Builder and SSRS)
+    - name: Text Boxes (Report Builder)
       href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
       items:
-      - name: Add, Move, or Delete a Text Box (Report Builder and SSRS)
+      - name: Add, Move, or Delete a Text Box (Report Builder)
         href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
-      - name: Set Text Box Orientation (Report Builder and SSRS)
+      - name: Set Text Box Orientation (Report Builder)
         href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
-      - name: Allow a Text Box to Grow or Shrink (Report Builder and SSRS)
+      - name: Allow a Text Box to Grow or Shrink (Report Builder)
         href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
-    - name: Rectangles and Lines (Report Builder and SSRS)
+    - name: Rectangles and Lines (Report Builder)
       href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
       items:
       - name: Add a Rectangle or Container (Report Builder and SSRS)
@@ -729,16 +729,16 @@
         href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
       - name: Add a Border to a Report (Report Builder and SSRS)
         href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
-    - name: Images (Report Builder and SSRS)
+    - name: Images (Report Builder)
       href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
       items:
-      - name: Add an External Image (Report Builder and SSRS)
+      - name: Add an External Image (Report Builder)
         href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
-      - name: Embed an Image in a Report (Report Builder and SSRS)
+      - name: Embed an Image in a Report (Report Builder)
         href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
-      - name: Add a Background Image (Report Builder and SSRS)
+      - name: Add a Background Image (Report Builder)
         href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
-      - name: Add a Data-Bound Image (Report Builder and SSRS)
+      - name: Add a Data-Bound Image (Report Builder)
         href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
   - name: Formatting Report Items
     href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md

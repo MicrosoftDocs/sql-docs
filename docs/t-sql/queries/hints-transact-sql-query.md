@@ -1,11 +1,10 @@
 ---
 description: "Hints (Transact-SQL) - Query"
-title: "Query Hints (Transact-SQL) | Microsoft Docs"
+title: "Query Hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "08/27/2020"
+ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -53,9 +52,10 @@ helpviewer_keywords:
   - "EXTERNALPUSHDOWN query hint"
   - "USE HINT query hint"
   - "QUERY_PLAN_PROFILE query hint"
-ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: pelopes
+ms.reviewer: wiassaf
+
 ---
 # Hints (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -135,6 +135,8 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 <use_hint_name> ::=
 { 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'
   | 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'
+  | 'ASSUME_FULL_INDEPENDENCE_FOR_FILTER_ESTIMATES'
+  | 'ASSUME_PARTIAL_CORRELATION_FOR_FILTER_ESTIMATES'
   | 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
   | 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
   | 'DISABLE_DEFERRED_COMPILATION_TV'
@@ -204,7 +206,7 @@ Forces the Query Optimizer to relax the estimated recompile threshold for a quer
 Specifying KEEP PLAN makes sure a query won't be recompiled as frequently when there are multiple updates to a table.  
   
 KEEPFIXED PLAN  
-Forces the Query Optimizer not to recompile a query because of changes in statistics. Specifying KEEPFIXED PLAN makes sure that a query recompiles only if the schema of the underlying tables changes or if **sp_recompile** runs against those tables.  
+Forces the Query Optimizer not to recompile a query because of changes in statistics. Specifying KEEPFIXED PLAN makes sure that a query recompiles only if the schema of the underlying tables changes or if `sp_recompile` runs against those tables.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
@@ -224,7 +226,7 @@ The minimum memory grant size in PERCENT of configured memory limit. The query i
 MAXDOP <integer_value>      
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-Overrides the **max degree of parallelism** configuration option of **sp_configure**. Also overrides the Resource Governor for the query specifying this option. The MAXDOP query hint can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the **max degree of parallelism** configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+Overrides the **max degree of parallelism** configuration option of `sp_configure`. Also overrides the Resource Governor for the query specifying this option. The MAXDOP query hint can exceed the value configured with `sp_configure`. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the **max degree of parallelism** configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]     
 > If MAXDOP is set to zero, then the server chooses the max degree of parallelism.  
@@ -300,19 +302,25 @@ The following hint names are supported:
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
    Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a query plan using the Simple Containment assumption instead of the default Base Containment assumption for joins, under the Query Optimizer [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for correlation. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for full correlation. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
+*  'ASSUME_FULL_INDEPENDENCE_FOR_FILTER_ESTIMATES'      
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using maximum selectivity when estimating AND predicates for filters to account for full independence. This hint name is the default behavior of the cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9472 when used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.     
+   **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+*  'ASSUME_PARTIAL_CORRELATION_FOR_FILTER_ESTIMATES'      
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using most to least selectivity when estimating AND predicates for filters to account for partial correlation. This hint name is the default behavior of the cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.     
+   **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).     
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
    Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   Disables table variable deferred compilation. For more information, see [Table variable deferred compilation](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Disables interleaved execution for multi-statement table-valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Instructs the query processor not to use a sort operation (batch sort) for optimized nested loop joins when generating a query plan. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -328,13 +336,13 @@ The following hint names are supported:
    Instructs Query Optimizer to use average data distribution while compiling a query with one or more parameters. This instruction makes the query plan independent on the parameter value that was first used when the query was compiled. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting `PARAMETER_SNIFFING = OFF`.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
   Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   Disables scalar UDF inlining. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).     
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).    
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 * 'DISALLOW_BATCH_MODE'    
   Disables batch mode execution. For more information, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
-  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Enables automatically generated quick statistics (histogram amendment) for any leading index column for which cardinality estimation is needed. The histogram used to estimate cardinality will be adjusted at query compile time to account for actual maximum or minimum value of this column. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -345,7 +353,7 @@ The following hint names are supported:
    Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Forces the Query Optimizer behavior at a query level. This behavior happens as if the query was compiled with database compatibility level _n_, where _n_ is a supported database compatibility level (for example 100, 130, etc.). Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for _n_.      
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     
 
    > [!NOTE]
    > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint doesn't override default or legacy cardinality estimation setting, if it's forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.   
@@ -413,7 +421,10 @@ Is the table hint to apply to the table or view that corresponds to *exposed_obj
 You can specify INDEX, FORCESCAN, and FORCESEEK table hints as query hints for a query that doesn't have any existing table hints. You can also use them to replace existing INDEX, FORCESCAN, or FORCESEEK hints in the query, respectively. 
 
 Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **\@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. 
-  
+
+## Specifying hints with Query Store hints
+ You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature. Use the [sys.sp_query_store_set_hints](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query. See Example N.
+
 ## Examples  
   
 ### A. Using MERGE JOIN  
@@ -649,9 +660,45 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
 
-## See Also  
-[Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
-[sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
-[sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
-[Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
-[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
+### N. Using Query Store hints (Preview)
+
+The [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature in Azure SQL Database provides an easy-to-use method for shaping query plans without changing application code.
+
+First, identify the query that has already been executed in the Query Store catalog views, for example:
+
+```sql
+SELECT q.query_id, qt.query_sql_text
+FROM sys.query_store_query_text qt 
+INNER JOIN sys.query_store_query q ON 
+    qt.query_text_id = q.query_text_id 
+WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'  
+  AND query_sql_text not like N'%query_store%';
+GO
+```
+
+ The following example applies the hint to force the [legacy cardinality estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md) to query_id 39, identified in Query Store:
+  
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HINT(''FORCE_LEGACY_CARDINALITY_ESTIMATION''))';
+```  
+
+ The following example applies the hint to enforce a maximum memory grant size in PERCENT of configured memory limit to query_id 39, identified in Query Store:
+
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(MAX_GRANT_PERCENT=10)';
+```
+
+ The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2012 query optimizer behavior:
+
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
+```
+
+## See also  
+
+ - [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
+ - [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ - [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ - [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
+ - [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
+ - [Query Store hints](../../relational-databases/performance/query-store-hints.md)   

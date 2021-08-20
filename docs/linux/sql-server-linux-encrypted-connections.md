@@ -58,7 +58,7 @@ sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
-systemctl start mssql-server 
+systemctl restart mssql-server 
 ```
 
 - **Register the certificate on your client machine (Windows, Linux, or macOS)**
@@ -116,7 +116,7 @@ sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1
-systemctl start mssql-server 
+systemctl restart mssql-server 
 ```
 
 -	**Example connection strings** 
@@ -148,3 +148,17 @@ systemctl start mssql-server
 |The target principal name is incorrect.  |Make sure that Common Name field on SQL Server's certificate matches the server name specified in the client's connection string. |  
 |An existing connection was forcibly closed by the remote host. |This error can occur when the client doesn't support the TLS protocol version required by SQL Server. For example, if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured to require TLS 1.2, make sure your clients also support the TLS 1.2 protocol. |
 | | |   
+
+### Ubuntu 20.04 and other recent Linux distribution releases
+
+**Symptom**
+
+When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux instance loads a certificate that was created with a signature algorithm using less than 112 bits of security (examples: MD5, SHA-1), you might observe a connection failure error, like this example:
+
+`A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.) (Microsoft SQL Server, Error: 10054)`
+
+The error is due to OpenSSL security level 2 being enabled by default on Ubuntu 20.04 and later. Security level 2 prohibits TLS connections that have less than 112 bits of security from being established.
+
+**Solution**
+
+Install a certificate with a signature algorithm using at least 112 bits of security. Signature algorithms that satisfy this requirement include SHA-224, SHA-256, SHA-384, and SHA-512.

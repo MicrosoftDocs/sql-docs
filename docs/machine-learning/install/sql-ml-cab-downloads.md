@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/25/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
@@ -195,8 +195,6 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 > [!NOTE]
 > 
 > When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
-
-If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 

@@ -2,7 +2,7 @@
 description: "Example demonstrating use of Azure Key Vault provider with Always Encrypted"
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/03/2021
+ms.date: 06/03/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -24,6 +24,10 @@ This example demonstrates use of Azure Key Vault Provider when accessing encrypt
 ## AzureKeyVaultProvider v2.0+
 
 [!code-csharp [Azure Key Vault Provider 2.0 Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample_2_0.cs#1)]
+
+### Legacy callback implementation design example with v2.0+
+
+[!code-csharp [Azure Key Vault Provider 2.0 Legacy Example#2](~/../sqlclient/doc/samples/AzureKeyVaultProviderLegacyExample_2_0.cs#1)]
 
 ## AzureKeyVaultProvider v1.x
 

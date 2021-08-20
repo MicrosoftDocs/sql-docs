@@ -1,11 +1,11 @@
 ---
 title: Security concepts
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article describes security concepts for SQL Server Big Data Clusters. This content includes describing the cluster endpoints and cluster authentication.
 author: nelgson 
 ms.author: negust
-ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.reviewer: wiassaf
+ms.date: 05/20/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -32,7 +32,7 @@ The external cluster endpoints support AD authentication. Use your AD identity t
 
 There are five entry points to the big data cluster
 
-* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], the tool will connect to the other endpoints, depending on the operation.
+* Master instance - TDS endpoint for accessing SQL Server master instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], the tool will connect to the other endpoints, depending on the operation.
 
 * Gateway to access HDFS files, Spark (Knox) - HTTPS endpoint for accessing services like webHDFS and Spark.
 
@@ -80,7 +80,7 @@ You can choose to deploy the cluster in either AD mode, or using only basic admi
 
 Even if you choose Active directory mode, basic logins will be created for the cluster administrator. This feature provides alternative access, in case AD connectivity is down.
 
-Upon deployment, this basic login will be given administrator permissions in the cluster. The login user will be system administrator in SQL Server Master Instance and an administrator in the cluster controller.
+Upon deployment, this basic login will be given administrator permissions in the cluster. The login user will be system administrator in SQL Server master instance and an administrator in the cluster controller.
 Hadoop components do not support mixed mode authentication, which means that a basic administrator login can't be used to authenticate to Gateway (Knox).
 
 The login credentials you need to define during deployment include.
@@ -97,9 +97,13 @@ Cluster admin password:
 > 
 > [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
+## Manage key versions
+
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] allows for key version management for SQL Server and HDFS using encryption zones. For more information, see [Key versions in Big Data Cluster](big-data-cluster-key-versions.md).
+
 ## Next steps
 
-[What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+[Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
 [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)
 

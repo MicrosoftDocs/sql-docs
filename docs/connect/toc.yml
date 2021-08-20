@@ -157,6 +157,13 @@
       items:
       - name: Obtain a SqlClientFactory
         href: ../connect/ado-net/obtain-sqlclientfactory.md
+    - name: Diagnostic counters
+      href: ../connect/ado-net/diagnostic-counters.md
+      items:
+      - name: Event counters
+        href: ../connect/ado-net/event-counters.md
+      - name: Performance counters
+        href: ../connect/ado-net/performance-counters.md
     - name: Retrieve identity or autonumber values
       href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data
@@ -165,8 +172,6 @@
       href: ../connect/ado-net/modify-data-with-stored-procedures.md
     - name: Data tracing in SqlClient
       href: ../connect/ado-net/data-tracing.md
-    - name: Performance counters in SqlClient
-      href: ../connect/ado-net/performance-counters.md
     - name: Asynchronous programming
       href: ../connect/ado-net/asynchronous-programming.md
     - name: SqlClient streaming support
@@ -2980,8 +2985,6 @@
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: Feature guides
       items:
-      - name: Connection resiliency
-        href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
       - name: Driver-aware connection pooling
         href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
     - name: Asynchronous execution (notification method) sample
@@ -3000,6 +3003,8 @@
         href: ../connect/odbc/windows/sql-server-login-dialog.md
   - name: Feature guides
     items:
+    - name: Connection resiliency
+      href: ../connect/odbc/connection-resiliency.md
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
     - name: DSN and Connection String Keywords and Attributes
@@ -5278,6 +5283,8 @@
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
       href: ../connect/oledb/features/using-encryption-without-validation.md
+    - name: Idle Connection Resiliency
+      href: ../connect/oledb/features/idle-connection-resiliency.md
     - name: Using Large Value Types
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)

@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 10/30/2020 
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Use R code profiling functions to improve performance

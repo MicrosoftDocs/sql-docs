@@ -22,7 +22,7 @@ author: cawrites
 ms.author: chadam
 ---
 # CURSOR_STATUS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 For a given parameter, `CURSOR_STATUS` shows whether or not a cursor declaration has returned a cursor and result set.
   

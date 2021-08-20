@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 10/17/2018  
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Firewall configuration for SQL Server Machine Learning Services

@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Data type synonyms (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ISO compatibility. The following table lists the synonyms and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types that they map to.
   

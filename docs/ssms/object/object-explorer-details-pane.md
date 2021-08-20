@@ -21,7 +21,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Object Explorer Details Pane
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Object Explorer Details, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], provides a tabular view of all the objects in the server and presents a user interface to manage them. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases and management features for all server types.  
   
 The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer Details** or press **F7**.  
@@ -45,7 +45,7 @@ Object Explorer Details includes a toolbar which contains the icons described in
 |**Search**|Provides an area to enter a search term for certain database objects.|  
   
 ### Column Header Selections  
-Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Object Explorer Details has selectable columns. You can right-click in any column header and check the items that you want to display. Your selections will be persisted across the different objects you navigate through. Selections for each user are retained when you leave and restart SQL Server Management Studio.  
   
 > [!CAUTION]  
 > Showing all columns for some object types (such as Databases) might slow the display rendering slightly for large sets of objects.  

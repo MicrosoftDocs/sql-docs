@@ -25,8 +25,8 @@ Most services and their properties can be configured by using SQL Server Configu
 | SQL Server 2019 | C:\Windows\SysWOW64\SQLServerManager15.msc |
 | SQL Server 2017 | C:\Windows\SysWOW64\SQLServerManager14.msc |
 | SQL Server 2016 | C:\Windows\SysWOW64\SQLServerManager13.msc |
-| [SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014/) | C:\Windows\SysWOW64\SQLServerManager12.msc |
-| [SQL Server 2012](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh231622(v=sql.110)) | C:\Windows\SysWOW64\SQLServerManager11.msc |
+| [SQL Server 2014](/previous-versions/sql/2014/) | C:\Windows\SysWOW64\SQLServerManager12.msc |
+| [SQL Server 2012](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110)) | C:\Windows\SysWOW64\SQLServerManager11.msc |
 
 ## <a name="Service_Details"></a> Services Installed by SQL Server
 
@@ -65,6 +65,9 @@ Depending on the components that you decide to install, SQL Server setup install
 ## <a name="Serv_Prop"></a> Service Properties and Configuration
 
 Startup accounts used to start and run SQL Server can be [domain user accounts](#Domain_User), [local user accounts](#Local_User), [managed service accounts](#MSA), [virtual accounts](#VA_Desc), or [built-in system accounts](#Local_Service). To start and run, each service in SQL Server must have a startup account configured during installation.
+
+  > [!NOTE]
+  > For SQL Server Failover Cluster Instance for SQL Server 2016 and later, [domain user accounts](#Domain_User) or [Group-Managed Service Accounts](#GMSA) can be used as startup accounts for SQL Server.
 
 This section describes the accounts that can be configured to start SQL Server services, the default values used by SQL Server Setup, the concept of per-service SID's, the startup options, and configuring the firewall.
 

@@ -19,7 +19,7 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.reviewer: wiassaf
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -49,13 +49,13 @@ monikerRange: "=azuresqldb-current"
   
 ## Permissions
  This view requires **VIEW DATABASE STATE** permission.  
-  
+
 ## Remarks
  The data returned by `sys.dm_db_resource_stats` is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.
  
  If the database was failed over to another server within the last 60 minutes, the view will only return data for the time since that failover.  
   
- For a less granular view of this data with longer retention period, use `sys.resource_stats` catalog view in the `master` database. This view captures data every 5 minutes and maintains historical data for 14 days.  For more information, see [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ For a less granular view of this data with longer retention period, use the `sys.resource_stats` catalog view in Azure SQL Database, or the `sys.server_resource_stats` catalog view in Azure SQL Managed Instance. This view captures data every 5 minutes and maintains historical data for 14 days.  For more information, see [sys.resource_stats](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) or [sys.server_resource_stats](../../relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md).  
   
  When a database is a member of an elastic pool, resource statistics presented as percent values are expressed as the percent of the max limit for the databases as set in the elastic pool configuration.  
 
@@ -94,5 +94,6 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## See Also  
- [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)
- [Service Tiers](/azure/azure-sql/database/purchasing-models)
+ - [sys.resource_stats](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)
+ - [sys.server_resource_stats](../../relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md)
+ - [Service Tiers](/azure/azure-sql/database/purchasing-models)

@@ -58,8 +58,7 @@ monikerRange: "=azuresqldb-current"
     
 ## Permissions  
  In Azure SQL Database, this view is available to all user roles with permissions to connect to the virtual `master` database. 
- In Azure SQL Managed Instance, querying a dynamic management view requires **VIEW SERVER STATE** permissions. 
-  
+   
 ## Remarks  
  The data returned by `sys.resource_stats` is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
   

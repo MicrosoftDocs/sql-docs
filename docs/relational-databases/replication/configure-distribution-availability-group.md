@@ -365,7 +365,7 @@ N'SQLNode2' WITH (ENDPOINT_URL = N'TCP://SQLNode2.contoso.com:5022',
 ALTER AVAILABILITY GROUP [DistributionDB_AG] JOIN;
 GO  
 ALTER AVAILABILITY GROUP [DistributionDB_AG] GRANT CREATE ANY DATABASE;
-Go
+GO
 
 --STEP4 - Create the Listener for the Availability Group. This is very important.
 :Connect SQLNode1
@@ -385,27 +385,28 @@ GO
 
 --STEP 6 - On all Distributor Nodes Configure the Publisher Details 
 :CONNECT SQLNODE1
-EXEC sp_addDistPublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
+EXEC sp_adddistpublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
 	@working_directory = '\\sqlfileshare\Dist_Work_Directory\';
 GO
 :CONNECT SQLNODE2
-EXEC sp_addDistPublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
+EXEC sp_adddistpublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
 	@working_directory = '\\sqlfileshare\Dist_Work_Directory\';
 GO
 
 -- SECTION 2 ---- CONFIGURE THE PUBLISHER SERVER
 :CONNECT SQLNODE4
-EXEC sp_addDistributor @distributor = 'DistributionDBList', -- Listener for the Distribution DB.	
+EXEC sp_adddistributor @distributor = 'DistributionDBList', -- Listener for the Distribution DB.	
 	@password = 'Pass@word1';
-Go
+GO
 
 -- SECTION 3 ---- CONFIGURE THE SUBSCRIBERS 
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
 EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct = N'SQL Server';
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'SQLNODE5',@useself = N'True',@locallogin = NULL,@rmtuser = NULL,@rmtpassword = NULL;
+/* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'SQLNODE5', @useself = N'True',
+	@locallogin = NULL,@rmtuser = NULL,@rmtpassword = NULL;
 ```
 
 ## See Also  

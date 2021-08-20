@@ -7355,8 +7355,9 @@ items:
       - name: Host database on a managed instance
         href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
     - name: Excel add-in
-      href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       items:
+      - name: Excel Add-in Overview
+        href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       - name: Data Quality Matching
         href: master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md
       - name: Match Similar Data

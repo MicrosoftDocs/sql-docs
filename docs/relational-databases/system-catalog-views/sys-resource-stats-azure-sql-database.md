@@ -4,7 +4,6 @@ title: "sys.resource_stats (Azure SQL Database)"
 ms.custom: ""
 ms.date: "08/19/2021"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 
   - resource_stats

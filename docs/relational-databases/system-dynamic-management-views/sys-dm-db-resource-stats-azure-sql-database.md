@@ -4,7 +4,6 @@ title: "sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Insta
 ms.custom: ""
 ms.date: "08/19/2021"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_resource_stats"

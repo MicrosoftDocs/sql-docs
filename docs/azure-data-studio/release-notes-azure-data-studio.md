@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 08/18/2021
+ms.date: 08/19/2021
 ---
 
 # Release notes for Azure Data Studio
@@ -31,6 +31,7 @@ Azure Data Studio 1.32.0 is the latest general availability (GA) release.
 | New item | Details |
 |----------|---------|
 | Notebooks | Large performance improvement for large notebooks |
+| Extension (new)  | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
 | Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
 | Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
 | Extension update | [MachineLearning](extensions/machine-learning-extension.md) |

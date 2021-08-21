@@ -74,7 +74,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  *polling_interval* is valid only for capture jobs when *continuous* is set to 1.  
   
 `[ @retention ] = retention_`
- Number of minutes that change rows are to be retained in change tables. *retention* is **bigint** with a default of NULL, which indicates no change for this parameter. The maximum value is 52494800 (100 years). If specified, the value must be a positive integer.  
+ Number of seconds that change rows are to be retained in change tables. *retention* is **bigint** with a default of NULL, which indicates no change for this parameter. The maximum value is 52494800 (100 years). If specified, the value must be a positive integer.  
   
  *retention* is valid only for cleanup jobs.  
   

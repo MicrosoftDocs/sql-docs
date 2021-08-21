@@ -1,6 +1,6 @@
 ---
 title: "MSSQLSERVER_912 Microsoft Docs"
-description: The database script level could not be upgraded to the latest requred by the server.
+description: The database script level could not be upgraded to the latest required by the server.
 ms.custom: ""
 ms.date: "08/16/2021"
 ms.prod: sql
@@ -29,11 +29,11 @@ ms.author: mathoma
 
 ## Explanation
 
-Error 912 indicates that the database script failed to executed and to upgrade the database(s) to the latest level required by the server. It is a general error message which contain a reference to the upgrade script that failed and what error the failed script encountered.
+Error 912 indicates that the database script failed to executed and to upgrade the database(s) to the latest level required by the server. It is a general error message that contains a reference to the upgrade script that failed and what error the failed script encountered.
 
-Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are initially upgraded. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, the services initiates a database upgrade using the 'msdb110_upgrade.sql' T-SQL script which is located under 'C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.'
+When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are upgraded initially. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, a database upgrade is started using the 'msdb110_upgrade.sql' T-SQL script. This script is located under 'C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.'
 
-Commonly the upgrade process encounters script-level upgrade errors (Error 912) together with some other error before it. For example:
+If the upgrade process encounters script-level upgrade errors (Error 912) the latter is raised together with some other error before it. For example:
 
 `Error: 1101, Severity: 17, State: 1.` </br>
 `Could not allocate a new page for database 'tempdb' because of insufficient disk space in filegroup 'PRIMARY'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
@@ -46,11 +46,11 @@ Commonly the upgrade process encounters script-level upgrade errors (Error 912) 
 
 ## User Action  
   
-To find the cause of the issue, you need to look at the [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) entries preceding error 912 and troubleshoot the error referenced in the messaging of Error 912. To troubleshoot this, in some cases you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 902.  This allows the SQL service to skip the upgrade script during startup so that you get a chance to investigate further and fix the issue.
+To find the cause of the issue, you need to look at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). Examine the log for errors that occurred before error 912 and troubleshoot the error referenced in the messaging of Error 912. In some cases, as part of the process, you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag 902](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf902).  This step allows the SQL service to skip the upgrade script during startup so that you get a chance to investigate and fix the issue. Be sure to remove the trace flag once you have resolved the issue so the setup process can restart the upgrade script execution.
 
-Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with trace flag 902 via SQL Server Configuration Manager, sqlservr.exe or NET START
+### Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with trace flag 902 
 
-### Using Configuration Manager
+#### Using Configuration Manager
 
 1. Open SQL Server Configuration Manager
 1. Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in SQL Server Services,
@@ -62,25 +62,32 @@ Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with tr
 
 For more information on how to configure startup-options, see [SQL Configuration Manager Services - Configure Server Startup Options ](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
 
-### Command prompt using Sqlservr.exe
+>[!NOTE]
+> Be sure to remove -T902 from the configuration once you have resolved the issue.
+
+#### Command prompt using Sqlservr.exe
 
 1. Open an administrative Command Prompt and change directory to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Binn directory
 
-**Default Instance:**
+1. Execute the `sqlservr.exe -s <instance> -T902`
 
-```dos
-cd \Program Files\Microsoft SQL Server\MSSQL<version>\MSSQL\Binn
-sqlservr.exe -s MSSQLSERVER  -T902
-```
+   **Default Instance:**
 
-**Named Instance, where "sql2016" is an example of an instance name:**
+    ```dos
+    cd \Program Files\Microsoft SQL Server\MSSQL<version>\MSSQL\Binn
+    sqlservr.exe -s MSSQLSERVER  -T902
+    ```
 
-```dos
-cd \Program Files\Microsoft SQL Server\MSSQL<version>.<instance name>\MSSQL\Binn
-sqlservr.exe -s sql2016  -T902
-```
+    **Named Instance, where "sql2016" is an example of an instance name:**
 
-### Command prompt using `net start`
+    ```dos
+    cd \Program Files\Microsoft SQL Server\MSSQL<version>.<instance name>\MSSQL\Binn
+    sqlservr.exe -s sql2016  -T902
+    ```
+
+1. To stop the instance when you finished, press `CTRL+C` , then `Y`
+
+#### Command prompt using `net start`
 
 **Default Instance:**
 
@@ -93,3 +100,4 @@ NET START MSSQLSERVER /T902
 ```dos
 NET START MSSQL$INSTANCENAME  /T902
 ```
+

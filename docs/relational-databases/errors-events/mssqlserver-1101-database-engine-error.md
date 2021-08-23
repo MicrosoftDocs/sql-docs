@@ -41,7 +41,7 @@ The following actions may make space available in the filegroup.
   
 This T-SQL script can help you diagnose which files are full and offer a solution command to resolve the issue. Note that it does not diagnose disk space issues.
 
-```SQL
+```sql
 set nocount on
 declare @prcnt_full int = 95
 SELECT db_name(database_id) DbName,

@@ -9,7 +9,6 @@ ms.technology: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "912 (Database Engine error)"
-ms.assetid: E9C55C8B-EC83-4E20-A54C-5B0FE61AE053
 author: PijoCoder
 ms.author: mathoma
 ---

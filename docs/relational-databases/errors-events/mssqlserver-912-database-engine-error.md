@@ -72,7 +72,7 @@ For more information on how to configure startup-options, see [SQL Configuration
 
    **Default Instance:**
 
-    ```dos
+    ```console
     cd \Program Files\Microsoft SQL Server\MSSQL<version>\MSSQL\Binn
     sqlservr.exe -s MSSQLSERVER  -T902
     ```

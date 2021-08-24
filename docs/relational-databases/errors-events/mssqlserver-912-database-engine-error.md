@@ -57,7 +57,7 @@ To find the cause of the issue, you need to look at the [!INCLUDE[ssNoVersion](.
 1. Click the Startup Parameter tab.
 1. Add “-T902”
 1. Select **OK** and close instance properties.
-1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service
+1. Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.
 
 For more information on how to configure startup-options, see [SQL Configuration Manager Services - Configure Server Startup Options ](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
 

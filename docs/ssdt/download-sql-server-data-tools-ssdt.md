@@ -11,7 +11,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 02/20/2020
+ms.date: 08/20/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
@@ -20,6 +20,31 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 **SQL Server Data Tools (SSDT)** is a modern development tool for building SQL Server relational databases, databases in Azure SQL, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
+
+## SSDT for Visual Studio 2022 (Preview)
+
+### Changes in SSDT for Visual Studio 2022
+
+The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, Integration Services, and Reporting Services projects are not available for Visual Studio 2022 (Preview) at this time.
+
+> [!NOTE]
+> There's no SSDT standalone installer for Visual Studio 2022 (Preview).
+
+### Install SSDT with Visual Studio 2022 (Preview)
+
+If [Visual Studio 2022 (Preview)](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2022 (Preview) installed, then you can download and install [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/downloads/).
+
+To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
+
+1. Launch the Visual Studio Installer. In the Windows Start menu, you can search for "installer".
+
+   ![Visual Studio Installer in the Windows Start menu for 2022](../ssdt/media/visual-studio-installer.png)
+
+2. In the installer, select for the edition of Visual Studio that you want to add SSDT to, and then choose **Modify**.
+
+3. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
+
+   ![Data storage and processing workload 2022](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png)
 
 ## SSDT for Visual Studio 2019
 

@@ -28,7 +28,7 @@ Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/AzureKe
 
 ## Upgrade SQL Server Connector to the latest version
 
-To upgrade the SQL Server Connector (Version: 1.0.5.0 with a date of September 2020) to the latest version DLL Crypto provider, follow these steps.
+To upgrade the SQL Server Connector (Version: 1.0.5.0 with a Date Published: September 2020) to the latest version DLL Crypto provider, follow these steps.
 
 ### Upgrade
 

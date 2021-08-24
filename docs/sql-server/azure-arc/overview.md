@@ -11,7 +11,7 @@ ms.prod: sql
 ms.custom: references_regions
 ---
 
-# Azure Arc-enabled SQL Server
+# SQL Server on Azure Arc-enabled servers
 
 You can manage your instances of SQL Server from Azure with SQL Server on Azure Arc-enabled servers.
 

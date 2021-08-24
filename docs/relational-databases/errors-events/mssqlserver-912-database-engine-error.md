@@ -96,7 +96,7 @@ NET START MSSQLSERVER /T902
 
 **Named Instance:**
 
-```dos
+```console
 NET START MSSQL$INSTANCENAME  /T902
 ```
 

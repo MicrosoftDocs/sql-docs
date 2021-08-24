@@ -54,7 +54,7 @@ String connectionUrl =
     "jdbc:sqlserver://localhost:1433;" +
      "databaseName=AdventureWorks;integratedSecurity=true;" +
      "encrypt=true; trustServerCertificate=false;" +
-     "trustStore=storeName;trustStorePassword=storePassword" +
+     "trustStore=storeName;trustStorePassword=storePassword;" +
      "hostNameInCertificate=hostName";
 ```
 

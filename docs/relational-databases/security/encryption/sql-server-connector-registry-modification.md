@@ -35,11 +35,11 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a Date Published: Sep
 1. Stop SQL Server service using SQL Server Configuration Manager
 1. Uninstall the old version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.300.96
+    1. Version: 15.0.300.96 (original 1.0.5.0 version)
     1. DLL file date: 01/30/2018 3:00 PM
 1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
-    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+    1. Version: 15.0.2000.440 (or latest version)
+    1. DLL file date: 09/11/2020 ‏‎5:17 AM (or later)
 1. Start SQL Server service
 1. Test encrypted DB(s) is/are accessible
 
@@ -48,7 +48,7 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a Date Published: Sep
 1. Stop SQL Server service using SQL Server Configuration Manager
 1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96

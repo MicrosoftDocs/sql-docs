@@ -32,7 +32,7 @@ Error 912 indicates that the database script failed to executed and to upgrade t
 
 When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are upgraded initially. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, a database upgrade is started using the 'msdb110_upgrade.sql' T-SQL script. This script is located under C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.
 
-If the upgrade process encounters script-level upgrade errors (Error 912) the latter is raised together with some other error before it. For example:
+If the upgrade process encounters script-level upgrade errors (Error 912), other errors may be raised. For example, these errors may accompany error 912 and help further explain the failure:
 
 `Error: 1101, Severity: 17, State: 1.` </br>
 `Could not allocate a new page for database 'tempdb' because of insufficient disk space in filegroup 'PRIMARY'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`

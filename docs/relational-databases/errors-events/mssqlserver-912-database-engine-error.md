@@ -79,7 +79,7 @@ For more information on how to configure startup-options, see [SQL Configuration
 
     **Named Instance, where "sql2016" is an example of an instance name:**
 
-    ```dos
+    ```console
     cd \Program Files\Microsoft SQL Server\MSSQL<version>.<instance name>\MSSQL\Binn
     sqlservr.exe -s sql2016  -T902
     ```

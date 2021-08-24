@@ -90,7 +90,7 @@ For more information on how to configure startup-options, see [SQL Configuration
 
 **Default Instance:**
 
-```dos
+```console
 NET START MSSQLSERVER /T902 
 ```
 

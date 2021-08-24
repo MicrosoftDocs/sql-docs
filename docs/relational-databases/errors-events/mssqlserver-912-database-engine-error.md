@@ -66,7 +66,7 @@ For more information on how to configure startup-options, see [SQL Configuration
 
 #### Command prompt using Sqlservr.exe
 
-1. Open an administrative Command Prompt and change directory to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Binn directory
+1. Open a command prompt with administrative privileges and change directory to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Binn directory, for example, C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Binn\.
 
 1. Execute the `sqlservr.exe -s <instance> -T902`
 

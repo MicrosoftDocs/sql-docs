@@ -13,7 +13,7 @@ author: PijoCoder
 ms.author: mathoma
 ---
 # MSSQLSERVER_912
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
   
 ## Details  
   

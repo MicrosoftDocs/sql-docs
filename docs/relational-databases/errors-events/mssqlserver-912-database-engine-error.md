@@ -53,7 +53,7 @@ To find the cause of the issue, you need to look at the [!INCLUDE[ssNoVersion](.
 
 1. Launch SQL Server Configuration Manager.
 1. Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in **SQL Server Services**.
-1. Right-click the instance, and then click Properties.
+1. Right-click the instance, and then select **Properties**.
 1. Click the Startup Parameter tab.
 1. Add “-T902”
 1. Select **OK** and close instance properties.

@@ -51,6 +51,9 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
 
+> [!NOTE]
+> The Azure SQL Migration extension is supported in Azure Data Studio that is installed on a Windows Operating System.
+
 ### Set up auto update for the extension
 
 You can check for updates to the extension and have them automatically updated by configuring **Auto Update** in Azure Data Studio settings.
@@ -67,16 +70,9 @@ To enable auto updates:
 
 ## Features
 
-### Azure SQL targets
+### Azure SQL target readiness assessment and database migrations
 
-The Azure SQL Migration extension supports database migrations to the following Azure SQL targets.
-
-- SQL Server on Azure Virtual Machines (SQL VM)
-- Azure SQL Managed Instance (SQL MI)
-
-### Azure SQL target readiness assessment
-
-The Azure SQL Migration extension supports target readiness for the following Azure SQL targets.
+The Azure SQL Migration extension supports target readiness and database migrations for the following Azure SQL targets.
 
 - SQL Server on Azure Virtual Machines (SQL VM)
 - Azure SQL Managed Instance (SQL MI)
@@ -97,8 +93,15 @@ The following migration modes are supported for the corresponding Azure SQL targ
 | SQL Server on Azure VM | Online |
 | SQL Server on Azure VM | Offline |
 
+### Get help from Microsoft support
+
+You can raise a support request for a Microsoft engineer to assist if you encounter issues or errors with your database migrations using this extension.
+
+Select **New support request** on the extension to navigate to the Azure portal where you can submit a support request.
+:::image type="content" source="media/azure-sql-migration-extension/extension-support.png" alt-text="Get help from Microsoft support for the extension":::
+
 > [!NOTE]
-> The Azure SQL Migration extension is supported in Azure Data Studio that is installed on a Windows Operating System.
+> Select the **Feedback** button if you have any suggestions or feedback to improve the extension.
 
 ## Next steps
 

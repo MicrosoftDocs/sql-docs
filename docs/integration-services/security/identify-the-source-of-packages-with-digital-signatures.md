@@ -45,7 +45,12 @@ ms.author: chugu
 ## <a name="registry"></a> Implement a Signing Policy by Setting a Registry Value
   You can use an optional registry value to manage an organization's policy for loading signed or unsigned packages. If you use this registry value, you must create this registry value on each computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages will run and on which you want to enforce the policy. After the registry value has been set, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will check or verify the signatures before loading packages.  
   
- This procedure in this topic describes how to add the optional **BlockedSignatureStates** DWORD value to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS registry key. The data value in **BlockedSignatureStates** determines whether a package should be blocked if it has an untrusted signature, has an invalid signature, or is unsigned. With regard to the status of signatures used to sign packages, the **BlockedSignatureStates** registry value uses the following definitions:  
+ This procedure in this topic describes how to add the optional **BlockedSignatureStates** DWORD value to the HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\150\SSIS\Setup\DTSPath registry key. 
+ 
+ > **NOTE:** Registry location under 150 represents SQL Server 2019, 140 represents SQL Server 2017, 130 represents SQL Server 2016, 120 represents SQL Server 2014 and 110 represents SQL Server 2012.
+ 
+ The data value in **BlockedSignatureStates** determines whether a package should be blocked if it has an untrusted signature, has an invalid signature, or is unsigned. 
+ With regard to the status of signatures used to sign packages, the **BlockedSignatureStates** registry value uses the following definitions:  
   
 -   A *valid signature* is one that can be read successfully.  
   

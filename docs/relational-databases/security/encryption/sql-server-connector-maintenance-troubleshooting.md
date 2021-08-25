@@ -2,13 +2,13 @@
 title: "SQL Server Connector maintenance & troubleshooting"
 description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
 ms.custom: seo-lt-2019
-ms.date: "10/08/2019"
+ms.date: "08/25/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "SQL Server Connector, appendix"
+  - "SQL Server Connector, appendix, EKM"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: Rupp29
 ms.author: arupp

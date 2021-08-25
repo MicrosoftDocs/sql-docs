@@ -93,6 +93,9 @@ The following migration modes are supported for the corresponding Azure SQL targ
 | SQL Server on Azure VM | Online |
 | SQL Server on Azure VM | Offline |
 
+> [!TIP]
+> For information on pre-requisites, features and migration workflow, see [Migration using Azure Data Studio](/azure/dms/migration-using-azure-data-studio)
+
 ### Get help from Microsoft support
 
 You can raise a support request for a Microsoft engineer to assist if you encounter issues or errors with your database migrations using this extension.

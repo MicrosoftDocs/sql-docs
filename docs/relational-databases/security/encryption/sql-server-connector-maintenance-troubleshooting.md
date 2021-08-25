@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: jaszymas
-ms.author: jaszymas
+author: Rupp29
+ms.author: arupp
 ---
 # SQL Server Connector Maintenance & Troubleshooting
 
@@ -95,12 +95,12 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 ### Upgrade
 
 1. Stop SQL Server service using SQL Server Configuration Manager
-1. Uninstall the old version using Control Panel\Programs\Programs and Features
+1. Uninstall the old version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96 (or older)
     1. DLL file date: 01/30/2018 3:00 PM (or older)
 1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 1. Start SQL Server service
 1. Test encrypted DB(s) is/are accessible
@@ -109,9 +109,9 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 
 1. Stop SQL Server service using SQL Server Configuration Manager
 
-1. Uninstall the new version using Control Panel\Programs\Programs and Features
+1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
@@ -372,7 +372,7 @@ The Windows event log also logs errors associated with the SQL Server Connector,
 SQL Server Version  |Redistributable Install Link
 ---------|---------
 2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
   
 ## Additional References
 

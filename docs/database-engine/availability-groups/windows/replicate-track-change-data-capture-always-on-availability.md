@@ -179,7 +179,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 >   
 >  Msg 22117, Level 16, State 1, Line1  
 >   
->  For databases that are members of a secondary replica (that is, for secondary databases), change tracking is not supported. As an alternative to running change tracking queries on the primary replica, you can create a database snapshot of an AG database from the secondary replica and then use that to query change data. A database snapshot is a read-only, static view of a SQL Server database (the source database), so change tracking in the database snapshot will be of the time when the snapshot was taken on the AG database from the secondary replica.
+>  For databases that are members of a secondary replica (that is, for secondary databases), change tracking is not supported. As an alternative to running change tracking queries on the primary replica, you can create a database snapshot of an AG database from the secondary replica and then use that to query change data. A database snapshot is a read-only, static view of a SQL Server database (the source database), so change tracking data in the database snapshot will be of the time when the snapshot was taken on the AG database from the secondary replica.
   
 ##  <a name="Prereqs"></a> Prerequisites, Restrictions, and Considerations for Using Replication  
  This section describes considerations for deploying replication with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations.  

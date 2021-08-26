@@ -28,7 +28,7 @@ ms.author: umajay
 
 # DBCC SHOWCONTIG (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Displays fragmentation information for the data and indexes of the specified table or view.
   

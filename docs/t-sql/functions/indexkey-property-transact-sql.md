@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about the index key. Returns NULL for XML indexes.  
   

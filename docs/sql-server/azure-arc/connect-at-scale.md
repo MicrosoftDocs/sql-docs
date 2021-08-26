@@ -1,5 +1,5 @@
 ---
-title: Connect SQL Servers on Azure-arc enabled servers at scale
+title: Connect SQL Servers on Azure Arc-enabled servers at scale
 titleSuffix:
 description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
 author: anosov1960
@@ -16,7 +16,7 @@ This article describes how to connect multiple instances of SQL Server to Azure 
 
 ## Connecting at-scale using Azure policy
 
-You can automatically connect the SQL Server instances on multiple machines using a built-in Azure policy _Configure SQL Server extension on Azure Arc enabled servers_. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers in the specified scope. Once installed, the extension will connect the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically connect it to  Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
+You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy _Configure SQL Server extension on Azure Arc-enabled servers_. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
 > The __SQL Server - Azure Arc__ resources for the SQL Server instances will be created in the same region and the resource group as the corresponding __Machine - Azure Arc__ resource. Because the SQL Serve extension synchronizes with Azure once an hour, it may take up to one hour before these resources are created.  
@@ -27,7 +27,9 @@ You can connect multiple SQL Server instances installed on multiple Windows or L
 
  ### Use Azure Active Directory service principal
 
-For the best experience, use an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines and SQL Server instances to Azure. The service principal is safer than using a higher privileged account like a Tenant Administrator, and follows access control security best practices.  
+### Use Azure Active Directory service principal
+
+For the best experience, use an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server. The service principal is safer than using a higher privileged account like a Tenant Administrator, and follows access control security best practices.  
 
 The installation methods to install and configure the Connected Machine agent requires that the automated method you use has administrator permissions on the machines. On Linux, use the root account. Windows, use a member of the Local Administrators group.
 
@@ -132,7 +134,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 ## Validate successful onboarding
 
-After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You should see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each connected SQL Server instance within approximately 1 minute. If these resource are not created means, something wrong happened with the extension installation and activation process. See [Troubleshoot SQL Server extension](./connect-at-scale.md#troubleshoot-sql-server-extension) for the troubleshooting options.
+After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each connected SQL Server instance within approximately 1 minute. If these resource are not created, it means something went wrong during the extension installation and activation process. See [Troubleshoot SQL Server extension](./connect-at-scale.md#troubleshoot-sql-server-extension) for the troubleshooting options.
 
 ![A successful onboard](./media/join-at-scale/successful-onboard.png)
 

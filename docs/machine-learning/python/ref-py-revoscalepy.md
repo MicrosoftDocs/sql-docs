@@ -77,7 +77,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 |[rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) | Create a logistic regression model|
 |[rx_summary](/machine-learning-server/python-reference/revoscalepy/rx-summary) | Produce univariate summaries of objects in revoscalepy.|
 
-You should also review the functions in [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) for additional approaches.
+You should also review the functions in [microsoftml](../python/ref-py-microsoftml.md) for additional approaches.
 
 <a name="ml-scoring"></a>
 

@@ -22,7 +22,7 @@ SELECT message_id AS Error, severity AS Severity,
 [Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
 text AS [Description]
 FROM sys.messages
-WHERE language_id = <desired language, such as 1033 for US English>
+WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1033 for US English*/
 ORDER BY message_id
 ```
 
@@ -9103,6 +9103,14 @@ ORDER BY message_id
 |    [41368](mssqlserver-41368-database-engine-error.md)    |        |        |    Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).    |
 |    [41396](mssqlserver-41396-database-engine-error.md)    |        |        |    The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information.    |
 |    [41399](mssqlserver-41399-database-engine-error.md)    |        |        |    The sort operation is too complex. Consult SQL Server Books Online for more information.    |
+|    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
+
+## Errors 41,400 to 42109
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
+|    [42108](mssqlserver-42108-database-engine-error.md)    |    20    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
+|    [42109](mssqlserver-42109-database-engine-error.md)    |    20    |    No    |    The SQL pool is warming up. Please try again.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## See Also

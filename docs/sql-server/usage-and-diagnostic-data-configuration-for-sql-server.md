@@ -62,6 +62,7 @@ After setup, the usage and diagnostic data collection setting for SQL Server com
 
 > [!NOTE]
 > The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage and Diagnostic Data collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage and Diagnostic Data collection, therefore can be turned on or off independently from Usage and Diagnostic Data collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](./sql-server-privacy.md).
+> 
 > The Error and Usage Reporting application is not included in the SQL Server Reporting Services 2017 and later setup. The only mechanism available to configure sending information to Microsoft is by setting registry subkeys on the server.
 
 To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage and diagnostic data as well as serious errors that are collected for instances and components that are installed on that computer.

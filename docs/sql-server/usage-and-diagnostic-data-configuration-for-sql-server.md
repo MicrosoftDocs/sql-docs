@@ -77,7 +77,7 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
 - For SQL Server instance features:
     
-    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\{InstanceID}\CPE
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\{InstanceID}\CPE
     
     RegEntry name = CustomerFeedback
     
@@ -115,7 +115,7 @@ Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Ent
 
 - For SQL Server instance features:
 
-    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\{InstanceID}\CPE
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\{InstanceID}\CPE
 
     RegEntry name = EnableErrorReporting
 

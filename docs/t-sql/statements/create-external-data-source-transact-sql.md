@@ -60,6 +60,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 ::: moniker range="=sql-server-2016"
 
 ## Overview: SQL Server
+
 [!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
@@ -1528,7 +1529,8 @@ WITH
 &nbsp;
 
 ## Overview: Analytics Platform System
-[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)] [!INCLUDE [aps](../../includes/ssaps-md.md)]
+
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support the following use case: Data virtualization and data load using [PolyBase][intro_pb].
 

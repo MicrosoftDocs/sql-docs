@@ -23,7 +23,7 @@ You can create an extension for the extensibility points, as shown in the follow
 |--------------|------------------------|-------------|  
 |Build|BuildContributor|This type of extension is executed when the SQL project is built after the project model has been completely validated. The build contributor can access the completed model, in addition to all properties of the Build task and any custom arguments.|  
 |Deploy|DeploymentPlanModifier|This type of extension is executed when the SQL project is deployed, as part of the deployment pipeline, after the deployment plan has been generated, but before the deployment plan is executed. You can use a DeploymentPlanModifier to modify the deployment plan by adding or removing steps. Deployment contributors can access the deployment plan, the comparison results, and the source and target models.|  
-|Deploy|DeploymentPlanExecutor|This type of extension is executed when the deployment plan is executed and provides read-only access to the deployment plan. The DeploymentPlanExectutor performs actions based on the deployment plan.|  
+|Deploy|DeploymentPlanExecutor|This type of extension is executed when the deployment plan is executed and provides read-only access to the deployment plan. The DeploymentPlanExecutor performs actions based on the deployment plan.|  
   
 ### Supported Extensibility Scenarios  
 You can implement build or deployment contributors to enable the following example scenarios:  

@@ -23,7 +23,7 @@ You can automatically register the SQL Server instances on multiple machines usi
 
 ## Connecting multiple SQL Server instances using script
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect and connect each machine and the installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled servers. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect each machine and all installed SQL Server instances on it to Azure Arc. For the best experience, we recommend using an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled servers. This is safer than using a higher privileged account like a Tenant Administrator, and follows our access control security best practices.  
 
  ### Use Azure Active Directory service principal
 

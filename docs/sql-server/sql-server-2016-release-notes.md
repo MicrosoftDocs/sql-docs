@@ -48,7 +48,7 @@ This section identifies issues which may occur after you apply SQL Server 2016 S
 
 ### R script failure
 
-- **Issue**: An R script fails with an error like:
+- **Issue**: After you install SP3, R script execution fails. The R script fails with an error like:
 
    `Error: executable command line exceeds the 2047 characters limit.`
 
@@ -56,7 +56,7 @@ This section identifies issues which may occur after you apply SQL Server 2016 S
 
 ### Removing SP3 issue
 
-- **Issue**: During removal of SP3, the 20 user accounts in the `SQLRUserGroup` used by launchpad are deleted. Any execution of `sp_execute_external_script` results in this error:
+- **Issue**: If you remove SP3, the 20 user accounts in the `SQLRUserGroup` used by launchpad are deleted. Any execution of `sp_execute_external_script` results in this error:
 
    ```output
    Unable to launch the runtime. ErrorCode 0x80070718: 1816(Not enough quota is available to process this command.).

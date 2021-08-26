@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL TABLE (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 08/13/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -808,6 +808,8 @@ Use an external table to:
 - Import and store data from Azure Data Lake Store.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
+
+For more guidance and examples on using external tables with Azure Synapse, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
 
 ## Syntax
 

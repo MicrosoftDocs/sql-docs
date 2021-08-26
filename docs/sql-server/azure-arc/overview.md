@@ -25,7 +25,7 @@ The Connected Machine agent communicates outbound securely to Azure Arc over TCP
 
 __SQL Server on Azure Arc-enabled servers__ supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to an Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
 
-The following diagram illustrates the architecture of Azure Arc enable SQL Server.
+The following diagram illustrates the architecture of SQL Server on Azure Arc enable servers.
 
 ![Customer infrastructure hosts virtualization and persistent storage. Use the Azure portal or the appropriate CLI to manage the SQL Server instance.](media/overview/architecture.png)
 

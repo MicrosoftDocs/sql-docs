@@ -28,7 +28,7 @@ ms.author: umajay
 
 # DBCC INDEXDEFRAG (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Defragments indexes of the specified table or view.
   

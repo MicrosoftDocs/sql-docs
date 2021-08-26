@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Release notes - Azure Arc enabled SQL Server
+# Release notes - Azure Arc-enabled SQL Server
 
 ## July 30, 2021
 
@@ -117,4 +117,4 @@ The following issues apply to the September release:
 
 ## Next steps
 
-**Just want to try things out?**  Get started quickly with [SQL Server on Azure-arc enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+**Just want to try things out?**  Get started quickly with [SQL Server on Azure Arc-enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).

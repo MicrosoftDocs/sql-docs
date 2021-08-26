@@ -1,7 +1,7 @@
 ---
 title: SQL Server Connector error and information logging
 description: This article describes enabling errors and logging for SQL Server Connector by modifying registry entries
-ms.date: 10/08/2020
+ms.date: 08/23/2021
 ms.localizationpriority: medium
 ms.prod: sql
 ms.reviewer: vanto
@@ -28,18 +28,18 @@ Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/AzureKe
 
 ## Upgrade SQL Server Connector to the latest version
 
-To upgrade the SQL Server Connector (Version: 1.0.5.0 with a date of September 2020) to the latest version DLL Crypto provider, follow these steps.
+To upgrade the SQL Server Connector (Version: 1.0.5.0 with a Date Published: September 2020) to the latest version DLL Crypto provider, follow these steps.
 
 ### Upgrade
 
 1. Stop SQL Server service using SQL Server Configuration Manager
 1. Uninstall the old version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.300.96
+    1. Version: 15.0.300.96 (original 1.0.5.0 version)
     1. DLL file date: 01/30/2018 3:00 PM
 1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
-    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+    1. Version: 15.0.2000.440 (or latest version)
+    1. DLL file date: 09/11/2020 ‏‎5:17 AM (or later)
 1. Start SQL Server service
 1. Test encrypted DB(s) is/are accessible
 
@@ -48,7 +48,7 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a date of September 2
 1. Stop SQL Server service using SQL Server Configuration Manager
 1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96
@@ -59,10 +59,10 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a date of September 2
 > [!NOTE]
 > - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. For more information on troubleshooting SQL Server Connector issues, see [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
-> - Starting with [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi), there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
+> - Starting with [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.4.0.msi), there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **Starting with version 1.0.5.0 (with a file date of September 2020), the SQL Server Connector supports filtering messages and network request retry logic.**
-> - *The old version of the SQL Server Connector is also version: [1.0.5.0 (version 15.0.300.96) – File date January 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)*. Upgrade to the newest SQL Server Connector if you experience any issues.
+> - **Starting with version [1.0.5.0 (with a file date of September 2020)](https://www.microsoft.com/en-us/download/details.aspx?id=45344), the SQL Server Connector supports filtering messages and network request retry logic.**
+> - *The old version of the SQL Server Connector is also version: [1.0.5.0 (version 15.0.300.96) – File date January 2018](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)*. Upgrade to the newest SQL Server Connector if you experience any issues.
 
 **System Requirements** - Supported SQL Server versions:
 
@@ -82,7 +82,7 @@ Have the appropriate version of the Visual Studio C++ redistributable installed 
 
 - For SQL Server versions 2008, 2008 R2, 2012, and 2014, install the 2013 Visual C++ Redistributable.
 
-- For SQL Server 2016, install the 2015 Visual C++ Redistributable.
+- For SQL Server 2016, 2017, 2019, install the 2015 Visual C++ Redistributable.
 
 ## Modify Windows registry steps
 

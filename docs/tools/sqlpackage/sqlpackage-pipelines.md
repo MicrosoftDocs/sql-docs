@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 06/25/2021
+ms.date: 08/18/2021
 ---
 
 # SqlPackage in development pipelines
@@ -45,6 +45,60 @@ By using the [run](https://docs.github.com/en/free-pro-team@latest/actions/refer
 ```
 
 :::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
+
+
+## Obtaining SqlPackage diagnostics in a pipeline agent
+
+Diagnostic information from SqlPackage is available in the command line through the parameter `/DiagnosticsFile`, which can be used in virtual environments such as Azure Pipelines and GitHub Actions.  The diagnostic information is written to a file in the working directory.  The file name is dictated by the `/DiagnosticsFile` parameter.
+
+### Azure Pipelines
+Adding the `/DiagnosticsFile` parameter to the "Additional SqlPackage.exe Arguments" field in the Azure Pipeline SqlAzureDacpacDeployment configuration will cause the SqlPackage diagnostic information to be written to the file specified.  Following the SqlAzureDacpacDeployment task, the diagnostic file can be made available outside of the virtual environment by publishing a pipeline artifact as seen in the example below.
+
+```yaml
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: '$(azuresubscription)'
+    AuthenticationType: 'server'
+    ServerName: '$(servername)'
+    DatabaseName: '$(databasename)'
+    SqlUsername: '$(sqlusername)'
+    SqlPassword: '$(sqladminpassword)'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    DacpacFile: '$(Build.Repository.LocalPath)\$(dacpacname).dacpac'
+    AdditionalArguments: '/DiagnosticsFile:$(System.DefaultWorkingDirectory)/output.log'
+    IpDetectionMethod: 'AutoDetect'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/output.log'
+    artifact: 'Diagnostic File'
+    publishLocation: 'pipeline'
+```
+
+After the pipeline run, the diagnostic file can be downloaded from the run summary page under "Published Artifacts".
+
+### GitHub Actions
+Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub Action sql-action configuration will cause the SqlPackage diagnostic information to be written to the file specified.  Following the sql-action task, the diagnostic file can be made available outside of the virtual environment by publishing an artifact as seen in the example below.
+
+```yaml
+- name: Azure SQL Deploy
+  uses: Azure/sql-action@v1
+  with:
+    # Name of the Azure SQL Server name, like Fabrikam.database.windows.net.
+    server-name: ${{ secrets.AZURE_SQL_SERVER }}
+    # The connection string, including authentication information, for the Azure SQL Server database.
+    connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+    # Path to DACPAC file to deploy
+    dacpac-package: .\DatabaseProjectAdventureWorksLT\bin\Release\DatabaseProjectAdventureWorksLT.dacpac
+    # additional SqlPackage.exe arguments
+    arguments: /DiagnosticsFile:DatabaseProjectAdventureWorksLT/DiagnosticLog.log
+
+- uses: actions/upload-artifact@v2
+  with:
+    name: 'DiagnosticLog.txt'
+    path: 'DatabaseProjectAdventureWorksLT/DiagnosticLog.log'
+```
 
 ## Update SqlPackage on the pipeline agent
 

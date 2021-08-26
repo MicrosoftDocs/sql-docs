@@ -363,6 +363,36 @@ DxEnterprise is high availability clustering software from DH2i that supports SQ
 
 With this, you should have an Always On availability group created and database(s) added to the group supporting high availability.
 
+> [!NOTE]
+> You can deploy [basic Always On availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups) with SQL Server standard edition, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](https://docs.microsoft.com/sql/linux/sql-server-linux-availability-group-overview#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
+
+
+## Steps to configure Always On availability group listener: (Optional)
+
+You can also configure an Always On availability group listener; to do so, follow the steps below:
+
+1. Ensure you've created the AG listener using DxEnterprise as outlined in the optional step near the end of the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
+
+2. In Kubernetes, you can optionally create static IP addresses. Creating static IP addresses ensures that if the listener service is deleted and recreated, the external IP address assigned to your listener service does not change and thus remains static. Follow the steps outlined [here](https://docs.microsoft.com/azure/aks/static-ip#create-a-static-ip-address) to create a static IP address in Azure Kubernetes Service (AKS).
+   
+3. After you have created an IP address, you assign that IP address and create the load balancer service, as shown in the sample yaml below:
+
+   ```bash
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: agslistener
+   spec:
+     type: LoadBalancer
+     loadBalancerIP: 52.140.117.62
+     selector:
+       app: mssql
+     ports:
+     - protocol: TCP
+       port: 44444
+       targetPort: 44444
+   ```
+
 ## Steps to configure read/write connection redirection: (Optional)
 
 After you've created the availability group, you can enable read/write connection redirection from the secondary to primary by following the steps below. For more information, see [Secondary to primary replica read/write connection redirection](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).

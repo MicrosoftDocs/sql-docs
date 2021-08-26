@@ -276,7 +276,8 @@ CREATE TABLE t_float(c1 FLOAT, c2 DECIMAL (5,4));
  The user wants to bulk import data into the `t_float` table. The data file, C:\t_float-c.dat, contains scientific notation **float** data; for example:
 
 ```input
-8.0000000000000002E-28.0000000000000002E-2
+8.0000000000000002E-2 8.0000000000000002E-2
+
 ```
 
 However, BULK INSERT cannot import this data directly into `t_float`, because its second column, `c2`, uses the `decimal` data type. Therefore, a format file is necessary. The format file must map the scientific notation **float** data to the decimal format of column `c2`.

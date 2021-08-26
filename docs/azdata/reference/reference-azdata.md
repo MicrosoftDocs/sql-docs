@@ -21,7 +21,7 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-|[azdata arc](reference-azdata-arc.md) | Commands for using Azure Arc for Azure data services. |
+|[azdata arc](/azure/azure-arc/data/reference/overview) | Commands for using Azure Arc for Azure data services. |
 |[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 [azdata login](#azdata-login) | Log in to the cluster's controller endpoint and set its namespace as your active context. To use a password on login, you must set the AZDATA_PASSWORD environment variable.
 [azdata logout](#azdata-logout) | Log out of cluster.

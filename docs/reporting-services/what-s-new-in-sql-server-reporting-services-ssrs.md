@@ -18,7 +18,7 @@ ms.date: 08/26/2021
 
 Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This article covers the major feature areas and is updated as new items are released.
 
-For information about Power BI Report Server, see [What is Power BI Report Server?](/power-bi/report-server/get-started).
+For information about Power BI Report Server, see [What is Power BI Report Server?](/power-bi/report-server/get-started)
 
 ::: moniker range=">=sql-server-ver15"
 

@@ -67,6 +67,12 @@ Select one of the below options:
 
 Click **Test Connection** to verify if the information provided is correct. You will receive the message **Test connection succeeded**, if the information entered is able to connect to the Oracle database.
 
+> [!NOTE]
+>
+> If you wanna specify **ConnectionString** directly, here is the sample with Oracle Authentication:
+>
+>SERVER=\<YourOracleServerName or EzConnect format>;USERNAME=\<YourUserName>;PWD=\<YourPassword>;WINAUTH=0
+
 ### Custom properties
 
 There are following custom connection manager properties in the Oracle connection manager:
@@ -82,6 +88,7 @@ Custom properties are not listed in Oracle Connection Manager Editor. To set the
 1. From the Connection Manager area, right-click the Oracle connection manager you are working with and select **Properties**.
 
 2. In the **Properties** pane, set the **OracleHome** or **OracleHome64** property with the full path to the Oracle home directory.
+
 
 ## Next steps
 

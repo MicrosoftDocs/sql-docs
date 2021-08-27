@@ -369,11 +369,17 @@ If you don't see your error code in this table, here are some other reasons the 
 
 The Windows event log also logs errors associated with the SQL Server Connector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
   
-SQL Server Version  |Redistributable Install Link
+#### C++ Runtime Libraries for SQL Server Connector 1.0.5.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.5.0
 ---------|---------
 2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
 2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
-  
+
+#### C++ Runtime Libraries for SQL Server Connector 1.0.4.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.4.0
+---------|---------
+2008, 2008 R2, 2012, 2014, 2016, 2017, 2019 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
+
 ## Additional References
 
  More About Extensible Key Management:  

@@ -9,4 +9,4 @@
  ms.author: maggies 
  ms.custom: include file
 ---
-✔ Report Designer in SQL Server Data Tools
+✔️ Report Designer in SQL Server Data Tools

@@ -5,10 +5,10 @@
  author: maggiesMSFT
  ms.service: 
  ms.topic: include
- ms.date: 03/26/2018
+ ms.date: 08/26/2021
  ms.author: maggies
  ms.custom: include file
 ---
 
 
-✔️ SQL Server 2016 Reporting Services and later
+✔️ SQL Server Reporting Services Enterprise Edition (2017 and later)

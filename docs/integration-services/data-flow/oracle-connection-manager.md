@@ -69,7 +69,7 @@ Click **Test Connection** to verify if the information provided is correct. You 
 
 > [!NOTE]
 >
-> If you wanna specify ConnectionString directly, here is the sample with Oracle Authentication:
+> If you wanna specify **ConnectionString** directly, here is the sample with Oracle Authentication:
 >
 >SERVER=\<YourOracleServerName or EzConnect format>;USERNAME=\<YourUserName>;PWD=\<YourPassword>;WINAUTH=0
 

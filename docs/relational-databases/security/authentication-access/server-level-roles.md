@@ -26,7 +26,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-Level Roles
-[!INCLUDE[SQL Server Azure SQL Managed Instance Parallel Data Warehouse](../../../includes/sql-asdbmi-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance Parallel Data Warehouse](../../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. (*Roles* are like *groups* in the Windows operating system.)  
   

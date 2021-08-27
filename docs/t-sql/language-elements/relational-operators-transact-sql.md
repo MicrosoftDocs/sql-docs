@@ -2,7 +2,7 @@
 description: "Relational operators (Transact-SQL)"
 title: "Relational operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "08/27/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

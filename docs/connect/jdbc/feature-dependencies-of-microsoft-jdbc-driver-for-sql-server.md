@@ -2,7 +2,7 @@
 title: Feature dependencies
 description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
 ms.custom: ""
-ms.date: "04/29/2021"
+ms.date: 08/27/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -31,6 +31,22 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Run time
 
 Projects that require any of the preceding features need to explicitly declare the respective dependencies in their POM file that match the dependencies of the version of the driver used.
+
+**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 9.4.0 and above, you need to declare the `azure-identity` dependency in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.4.0.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.3.3</version>
+</dependency>
+```
 
 **For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-identity` dependency in your project's POM file. See the following snippet:
 
@@ -67,6 +83,28 @@ Projects that require any of the preceding features need to explicitly declare t
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
     <version>1.7.4</version>
+</dependency>
+```
+
+**For example:** If you're using the Azure Key Vault feature with JDBC driver version 9.4.0 and above, you need to declare the `azure-security-keyvault-keys` and `azure-identity` dependencies in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.4.0.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.3.3</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-security-keyvault-keys</artifactId>
+    <version>4.2.8</version>
 </dependency>
 ```
 

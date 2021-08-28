@@ -46,10 +46,12 @@ In [part three](r-clustering-model-build.md), you learned how to create and trai
 ## Prerequisites
 
 * Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [**part two**](r-clustering-model-build.md) and [**part three**](r-clustering-model-build.md).
+* If you are using SQL Server Express Edition, implied authentication prevents the R script from successful execution. To resolve this, perform the following steps: 1. Launch "ODBC Data Sources (64-bit)" (or 32-bit if applicable). This will open a window titled "ODBC Data Source Administration."     2. Navigate to the "System DSN" tab.     3. Click "Add."     4. Select "ODBC Driver 17 for SQL Server."     5. In the next window, the Name field should be 'SQL Server' (without the quotes), because this will be referenced in the following script.     6. The server field may be set to '(local)' if performing this tutorial on the same machine in which the server is running.     7. After clicking Next, choose Integrated Windows authenticate. Click next again.     8. Tick the checkbox next to "Change the default database to:" and specify the tpcxbb_1gb database from the dropdown (this may take a minute to load). Click Next.     9. Leave the next page at default values and click finish.     10. Test the connection and click okay, then okay.
 
 ## Create a stored procedure that generates the model
 
 Run the following T-SQL script to create the stored procedure. The procedure recreates the steps you developed in parts two and three of this tutorial series:
+NOTE: You should change the uid and pwd values accordingly in the section which defines the connection string (near the bottom of the script).
 
 * classify customers based on their purchase and return history
 * generate four clusters of customers using a K-Means algorithm

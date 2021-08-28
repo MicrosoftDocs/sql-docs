@@ -1,7 +1,7 @@
 ---
 title: "Exporting to an Image File (Report Builder) | Microsoft Docs"
 description: In Report Builder, the Image rendering extension renders a paginated report to a bitmap or metafile. The default is a TIFF file viewable in multiple pages.
-ms.date: 03/07/2017
+ms.date: 08/26/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
@@ -18,7 +18,7 @@ ms.author: maggies
 
   The Image rendering extension renders a paginated report to a bitmap or metafile. By default, the Image rendering extension produces a TIFF file of the report, which can be viewed in multiple pages. When the client receives the image, it can be displayed in an image viewer and printed. This topic provides Image renderer-specific information and describes exceptions to the rendering rules.  
   
- The Image rendering extension can generate files in any of the formats supported by [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG, and TIFF. For TIFF format, the file name of the primary stream is *ReportName*.tif. For all other formats, which render as a single page per file, the file name is *ReportName_Page.ext* where. *ext* is the file extension for the chosen format. To produce a file in another Image-supported format, specify any of the above listed strings in the **OutputFormatDeviceInfo** setting.  
+ The Image rendering extension can generate files in any of the formats supported by [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG, and TIFF. For TIFF format, the file name of the primary stream is *ReportName*.tif. For all other formats, which render as a single page per file, the file name is *ReportName_Page.ext* where *.ext* is the file extension for the chosen format. To produce a file in another Image-supported format, specify any of the above listed strings in the **OutputFormatDeviceInfo** setting.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

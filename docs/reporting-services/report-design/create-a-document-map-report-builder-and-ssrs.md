@@ -1,7 +1,7 @@
 ---
 title: "Create a document map or table of contents (Report Builder) | Microsoft Docs"
 description: Learn how to use a document map to provide a set of navigational links to report items in a rendered report in Report Builder.
-ms.date: 05/24/2018
+ms.date: 08/26/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -22,15 +22,18 @@ A document map provides a set of navigational links or a table of contents in a 
  To add links to the document map, you set the **DocumentMapLabel** property of the report item to text that you create or to an expression that evaluates to the text that you want display in the document map. You can also add the unique values for a table or matrix group to the document map. For example, for a group based on color, each unique color is a link to the report page that displays the group instance for that color.  
   
  You can also create a URL to a report that overrides the display of the document map, so that you can run the report without displaying the document map, and then click the **Show/Hide Document Map** button on the report viewer toolbar to toggle the display.  
+
+> [!NOTE]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Document Maps and Rendering Extensions  
  The document map is intended for use in the HTML rendering extension-for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
   
--   PDF renders a document map as the Bookmarks pane.  
+-   PDF renders a document map as the Bookmarks pane. See [Exporting to a PDF File (Report Builder)](../report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md) for more information.
   
--   Excel renders a document map as a named worksheet that includes a hierarchy of links. Report sections are rendered in separate worksheets that are included with the document map in the same workbook.  
+-   Excel renders a document map as a named worksheet that includes a hierarchy of links. Report sections are rendered in separate worksheets that are included with the document map in the same workbook. See [Exporting to Microsoft Excel (Report Builder)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) for more information.
   
--   Word includes a document map as the table of contents.  
+-   Word includes a document map as the table of contents. See [Exporting to Microsoft Word (Report Builder)](../report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md) for more information.
   
 -   Atom, TIFF, XML, and CSV ignore document maps.  
   

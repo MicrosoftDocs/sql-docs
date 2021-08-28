@@ -12,7 +12,10 @@ ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Exporting to an Image File (Report Builder and SSRS)
+# Exporting to an Image File (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   The Image rendering extension renders a paginated report to a bitmap or metafile. By default, the Image rendering extension produces a TIFF file of the report, which can be viewed in multiple pages. When the client receives the image, it can be displayed in an image viewer and printed. This topic provides Image renderer-specific information and describes exceptions to the rendering rules.  
   
  The Image rendering extension can generate files in any of the formats supported by [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG, and TIFF. For TIFF format, the file name of the primary stream is *ReportName*.tif. For all other formats, which render as a single page per file, the file name is *ReportName_Page.ext* where. *ext* is the file extension for the chosen format. To produce a file in another Image-supported format, specify any of the above listed strings in the **OutputFormatDeviceInfo** setting.  

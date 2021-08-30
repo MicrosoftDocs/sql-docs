@@ -100,7 +100,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9.1
 
-![download](media/download-icon.png) [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2161193)
+![download](media/download-icon.png) [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
 
 - Release number: 18.9.1
 - Build number: 15.0.18384.0

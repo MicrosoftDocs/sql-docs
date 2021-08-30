@@ -30,14 +30,14 @@ _SSDT for Visual Studio 2017._
 | New Item | Details |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration Services (SSIS) | Azure-enabled SQL Server Integration Services (SSIS) projects now support national cloud (Azure US Government and Azure China). |
-| Integration Services (SSIS) | Fixed an issue that cannot sign in with AAD when editing Analysis Services Processing Task. |
+| Integration Services (SSIS) | Fixed an issue that can't sign in with Azure Active Directory when editing Analysis Services Processing Task. |
 | Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
 
 ### Known issues
 
 | Known issue | Details |
 | :---------- | :------ |
-| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog aren't affected. |
 | &nbsp; | &nbsp; |
 
 ## 15.9.8,&nbsp; SSDT for VS 2017

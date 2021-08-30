@@ -16,6 +16,16 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v8.22
+
+The v8.22 release of SSMA for DB2 contains the following changes:
+
+* Fix AM/PM handling in `ssma_db2.TIMESTAMP_FORMAT` emulation function
+* Improve day-of-week validation in `ssma_db2.TIMESTAMP_FORMAT` emulation function
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
 ## SSMA v8.21
 
 The v8.21 release of SSMA for DB2 contains the following changes:

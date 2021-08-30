@@ -17,7 +17,7 @@ The Azure SQL Migration extension for [Azure Data Studio](../what-is-azure-data-
 
 [!INCLUDE [database-migration-services-sql-mi-sql-vm](../../includes/database-migration-services-sql-mi-sql-vm.md)]
 
-This article describes how to install the Azure SQL migration extension through Azure Data Studio, powered by the [Azure Database Migration service (DMS)](/azure/dms/dms-overview.md).
+This article describes how to install the Azure SQL migration extension through Azure Data Studio.
 
 ## Prerequisites
 

@@ -11,9 +11,9 @@ ms.custom:
 ms.date: 07/30/2021
 ---
 
-# Azure SQL Migration extension for Azure Data Studio (Preview)
+# Azure SQL Migration extension for Azure Data Studio (preview)
 
-The Azure SQL Migration extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to use the new SQL Server assessment and migration capability in Azure Data Studio.
+The Azure SQL Migration extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to use the SQL Server assessment and migration capability in Azure Data Studio.
 
 [!INCLUDE [database-migration-services-sql-mi-sql-vm](../../includes/database-migration-services-sql-mi-sql-vm.md)]
 
@@ -47,12 +47,12 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Azure SQL migration extension":::
 
-6. You can connect to the SQL Server instance in Azure Data Studio and either double-Select the instance name or right-Select the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
+6. You can connect to the SQL Server instance in Azure Data Studio. Right-select the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
 
 > [!NOTE]
-> The Azure SQL Migration extension is supported in Azure Data Studio that is installed on a Windows Operating System.
+> The Azure SQL Migration extension requires Azure Data Studio on a Windows operating system.
 
 ### Set up auto update for the extension
 

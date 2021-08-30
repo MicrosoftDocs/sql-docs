@@ -7,7 +7,7 @@ ms.date: 07/30/2021
 ---
 
 > [!NOTE]
-> You can use the new Azure SQL Migration extension in Azure Data Studio to migrate SQL Server databases to either Azure SQL Managed Instance (Platform-as-a-Service) or to SQL Server on Azure Virtual Machines (Infrastructure-as-a-Service).<br/><br/>
+> You can use the Azure SQL Migration extension in Azure Data Studio to migrate SQL Server databases to either Azure SQL Managed Instance (Platform-as-a-Service) or to SQL Server on Azure Virtual Machines (Infrastructure-as-a-Service).<br/><br/>
 >The new Azure SQL Migration extension in Azure Data Studio brings together a simplified assessment and migration experience that delivers the following capabilities:<br/>
 > - A responsive user interface that provides an easy-to-navigate step-by-step wizard to deliver an integrated assessment and migration experience.
 > - An enhanced assessment engine that can assess SQL Server instances and identify databases that are ready for migration to Azure SQL Managed Instance or SQL Server on Azure Virtual Machines.

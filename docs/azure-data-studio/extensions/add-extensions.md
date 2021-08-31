@@ -63,9 +63,6 @@ Azure Data Studio automatically checks for and installs updates for any of your 
 
 [!INCLUDE [auto-update-extension](../../includes/auto-update-extension.md)]
 
-If you would like to turn off the auto-update feature, you can disable auto-update with the **Extensions: Disable Auto Updating Extensions** command.
-
-
 ## Install from a VSIX
 
 You can manually install an Azure Data Studio extension packaged in a `.vsix` file using the **Install from VSIX** command in the Extensions view command drop-down, or the **Extensions: Install from VSIX command** in the Command Palette and point to the extension's `.vsix` file.

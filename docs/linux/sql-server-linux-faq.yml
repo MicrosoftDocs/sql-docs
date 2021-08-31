@@ -169,6 +169,6 @@ sections:
            
            1. **Can we remove the Builtin\Administrator account from SQL Server on Linux and containers instances?** 
               
-              We are aware that dropping “Builtin\administrators” for SQL Server on Linux breaks execution of some of the system stored procedures and we are working on fixing this. Until then we suggest to not remove/drop Builtin\administrator account from SQL Server on Linux/containers.
+              Dropping *Builtin\administrators* for SQL Server on Linux breaks execution of some of the system stored procedures. We suggest to not remove or drop the *Builtin\administrator* account from SQL Server on Linux/containers.
               
           [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

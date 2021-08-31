@@ -33,7 +33,7 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
 1. Open the extensions manager in Azure Data Studio. You can either select the extensions icon or select **Extensions** in the View menu.
 
-    :::image type="content" source="media/azure-sql-migration-extension/extension-icon.jpg" alt-text="Extension icon":::
+    :::image type="content" source="media/azure-sql-migration-extension/extension-icon.png" alt-text="Extension icon":::
 
 2. Type in *Azure SQL Migration* in the search bar.
 
@@ -41,7 +41,7 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
 4. Select **Install**.
 
-    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-market-place.jpg" alt-text="Azure SQl Migration extension from market place":::
+    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-market-place.png" alt-text="Azure SQl Migration extension from market place":::
 
 5. You can see the Azure SQL Migration extension in the extension list once installed.
 
@@ -49,24 +49,14 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
 6. You can connect to the SQL Server instance in Azure Data Studio. Right-select the instance name and select **Manage** to see the instance dashboard and the **Azure SQL Migration** extension landing page.
 
-    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.jpg" alt-text="Landing page":::
+    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.png" alt-text="Landing page":::
 
 > [!NOTE]
 > The Azure SQL Migration extension requires Azure Data Studio on a Windows operating system.
 
 ### Set up auto update for the extension
 
-You can check for updates to the extension and have them automatically updated by configuring **Auto Update** in Azure Data Studio settings.
-
-To enable auto updates:
-1. Select the **Settings** icon in Azure Data Studio.
-2. Select the **checkbox** under **User > Features > Extensions > Auto Check Updates**.
-3. Select on the **dropdown** under **User > Features > Extensions > Auto Update** and select either **All Extensions** or **Only Enabled Extensions**.
-
-:::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-auto-update.jpg" alt-text="auto update the extension":::
-
-> [!NOTE]
-> If you want to update the extension manually, you can disable **Auto Update** and install the updates from the extension in the Marketplace.
+[!INCLUDE [auto-update-extension](../../includes/auto-update-extension.md)]
 
 ## Features
 

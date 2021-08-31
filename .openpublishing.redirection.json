@@ -59294,6 +59294,11 @@
       "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
       "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
+      "redirect_document_id": true
     }
   ]
 }

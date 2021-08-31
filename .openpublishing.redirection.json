@@ -20932,7 +20932,7 @@
     },
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md",
-      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -56847,7 +56847,7 @@
     },
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/index.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=sql-server-2014",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-2014",
       "redirect_document_id": false
     },
     {
@@ -58017,7 +58017,7 @@
     },
     {
       "source_path": "docs/relational-databases/in-memory-oltp/index.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {

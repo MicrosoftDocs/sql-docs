@@ -166,5 +166,9 @@ sections:
            1. **Is Symbolic links supported for SQL Server data and log directories?** 
               
               No, symbolic links are not supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir).
+           
+           1. **Can we remove the Builtin\Administrator account from SQL Server on Linux and containers instances?** 
+              
+              Dropping *Builtin\administrators* for SQL Server on Linux breaks execution of some of the system stored procedures. We suggest to not remove or drop the *Builtin\administrator* account from SQL Server on Linux/containers.
               
           [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

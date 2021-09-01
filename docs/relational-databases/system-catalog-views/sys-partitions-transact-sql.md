@@ -48,17 +48,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following query returns all the object in a database, the amount of space used in each object and partition information related to each object
 
 ```sql
-SELECT object_name(object_id) ObjectName,
-       total_pages /128 SpaceUsed_KB,
-       p.partition_id,
-       p.object_id,
-       p.index_id,
-       p.partition_number,
-       p.rows,
-       p.data_compression_desc
-FROM sys.partitions p
-JOIN sys.allocation_units au ON p.partition_id = au.container_id
-ORDER BY SpaceUsed_KB DESC
+SELECT object_name(object_id) AS ObjectName,
+total_pages / 128. AS SpaceUsed_MB,
+p.partition_id,
+p.object_id,
+p.index_id,
+p.partition_number,
+p.rows,
+p.data_compression_desc
+FROM sys.partitions AS p
+JOIN sys.allocation_units AS au ON p.partition_id = au.container_id
+ORDER BY SpaceUsed_MB DESC;
 ```  
 
 ## See Also  

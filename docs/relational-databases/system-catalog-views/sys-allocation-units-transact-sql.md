@@ -48,8 +48,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 ## Examples
   
-### Determine space used by object and type of Allocation unit
- The following query returns all the user tables in a database, the amount of space used in each object and by allocation unit type
+### Determine space used by object and type of an allocation unit
+
+The following query returns all the user tables in a database and the amount of space used in each, by allocation unit type.
+
   
 ```sql
 SELECT t.object_id ObjectID,

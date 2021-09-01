@@ -54,6 +54,10 @@ For more syntax options related to the Query Store, see [ALTER DATABASE SET Opti
 
 > [!NOTE]
 > Query Store cannot be enabled for the **master** or **tempdb** databases.
+> For Azure Synapse Analytics, addition syntax and configurations are not supported. To enable Query Store for Azure Synapse Analytics, use ```sql
+ALTER DATABASE <database_name>
+SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
+```
 
 > [!IMPORTANT]
 > For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).

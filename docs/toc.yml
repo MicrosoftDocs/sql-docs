@@ -6887,8 +6887,6 @@ items:
             href: relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
           - name: Quick survey
             href: relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-          - name: Video, sample, resources
-            href: relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
         - name: Planning for In-Memory
           href: relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
           items:

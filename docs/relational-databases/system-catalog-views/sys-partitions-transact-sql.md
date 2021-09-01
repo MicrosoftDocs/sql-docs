@@ -45,7 +45,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples
 
 ### Determine space used by object and show related partition information 
- The following query returns all the object in a database, the amount of space used in each object and partition information related to each object
+ The following query returns all the object in a database, the amount of space used in each object, and partition information related to each object.
+
 
 ```sql
 SELECT object_name(object_id) AS ObjectName,

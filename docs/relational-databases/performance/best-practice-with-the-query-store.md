@@ -372,6 +372,7 @@ Keep the most relevant data in Query Store. The following table describes typica
 ## Keep the most relevant data in Query Store
 
 Configure Query Store to contain only the relevant data so that it runs continuously and provides a great troubleshooting experience with a minimal impact on your regular workload.
+
 The following table provides best practices:
 
 |Best practice|Setting|

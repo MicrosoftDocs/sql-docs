@@ -1,5 +1,5 @@
 ---
-title: "MSSQLSERVER_912 Microsoft Docs"
+title: "MSSQLSERVER_912"
 description: The database script level could not be upgraded to the latest required by the server.
 ms.custom: ""
 ms.date: "08/16/2021"
@@ -43,7 +43,7 @@ If the upgrade process encounters script-level upgrade errors (Error 912), other
 `Error: 3417, Severity: 21, State: 3.` </br>
 `Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.`
 
-## User Action  
+## User action  
   
 To find the cause of the issue, you need to look at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). Examine the log for errors that occurred before error 912 and troubleshoot the error referenced in the messaging of Error 912. In some cases, as part of the process, you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag 902](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf902).  This step allows the SQL service to skip the upgrade scripts execution during startup so that you get a chance to investigate and fix the issue. Be sure to remove the trace flag once you have resolved the issue so the setup process can restart the upgrade script execution.
 
@@ -55,7 +55,7 @@ To find the cause of the issue, you need to look at the [!INCLUDE[ssNoVersion](.
 1. Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in **SQL Server Services**.
 1. Right-click the instance, and then select **Properties**.
 1. Select the **Startup Parameters** tab.
-1. Use the **Specify a startup paramater** field to add the trace flag. Type “-T902” (without quotes) and click **Add**.
+1. Use the **Specify a startup parameter** field to add the trace flag. Type “-T902” (without quotes) and click **Add**.
 1. Select **OK** and close instance properties.
 1. Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.
 

@@ -2,7 +2,7 @@
 description: "sys.partitions (Transact-SQL)"
 title: "sys.partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -41,7 +41,26 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-  
+
+## Examples
+
+### Determine space used by object and show related partition information 
+ The following query returns all the object in a database, the amount of space used in each object and partition information related to each object
+
+```sql
+SELECT object_name(object_id) ObjectName,
+       total_pages /128 SpaceUsed_KB,
+       p.partition_id,
+       p.object_id,
+       p.index_id,
+       p.partition_number,
+       p.rows,
+       p.data_compression_desc
+FROM sys.partitions p
+JOIN sys.allocation_units au ON p.partition_id = au.container_id
+ORDER BY SpaceUsed_KB DESC
+```  
+
 ## See Also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

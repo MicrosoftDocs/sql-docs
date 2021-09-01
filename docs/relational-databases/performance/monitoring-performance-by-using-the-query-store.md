@@ -2,7 +2,7 @@
 title: "Monitoring Performance By Using the Query Store"
 description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
-ms.date: 02/19/2021
+ms.date: 09/01/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -54,10 +54,6 @@ For more syntax options related to the Query Store, see [ALTER DATABASE SET Opti
 
 > [!NOTE]
 > Query Store cannot be enabled for the **master** or **tempdb** databases.
-> For Azure Synapse Analytics, addition syntax and configurations are not supported. To enable Query Store for Azure Synapse Analytics, use ```sql
-ALTER DATABASE <database_name>
-SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
-```
 
 > [!IMPORTANT]
 > For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
@@ -154,9 +150,12 @@ Here are some examples how you can get more insights into your workload before a
 
 For the available options to configure Query Store parameters, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
-Query the **sys.database_query_store_options** view to determine the current options of the Query Store. For more information about the values, see [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
+Query the `sys.database_query_store_options` view to determine the current options of the Query Store. For more information about the values, see [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 For examples about setting configuration options using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).
+
+> [!NOTE]
+> For Azure Synapse Analytics, the Query Store can be enabled as on other platforms but additional configuration options are not supported. 
 
 ## <a name="Related"></a> Related Views, Functions, and Procedures
 
@@ -289,7 +288,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 > [!NOTE]
 > Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
 
-New value for interval is exposed through **sys.database_query_store_options** view.
+New value for interval is exposed through `sys.database_query_store_options` view.
 
 **Query Store space usage**
 
@@ -352,26 +351,26 @@ SET NOCOUNT ON
 DECLARE @id int;
 DECLARE adhoc_queries_cursor CURSOR
 FOR
-	SELECT q.query_id
-	FROM sys.query_store_query_text AS qt
-	JOIN sys.query_store_query AS q
-	ON q.query_text_id = qt.query_text_id
-	JOIN sys.query_store_plan AS p
-	ON p.query_id = q.query_id
-	JOIN sys.query_store_runtime_stats AS rs
-	ON rs.plan_id = p.plan_id
-	WHERE q.is_internal_query = 1  -- is it an internal query then we dont care to keep track of it
-	   OR q.object_id = 0 -- if it does not have a valid object_id then it is an adhoc query and we don't care about keeping track of it
-	GROUP BY q.query_id
-	HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE())  -- if it has been more than 5 minutes since the adhoc query ran
-	ORDER BY q.query_id;
+    SELECT q.query_id
+    FROM sys.query_store_query_text AS qt
+    JOIN sys.query_store_query AS q
+    ON q.query_text_id = qt.query_text_id
+    JOIN sys.query_store_plan AS p
+    ON p.query_id = q.query_id
+    JOIN sys.query_store_runtime_stats AS rs
+    ON rs.plan_id = p.plan_id
+    WHERE q.is_internal_query = 1  -- is it an internal query then we dont care to keep track of it
+       OR q.object_id = 0 -- if it does not have a valid object_id then it is an adhoc query and we don't care about keeping track of it
+    GROUP BY q.query_id
+    HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE())  -- if it has been more than 5 minutes since the adhoc query ran
+    ORDER BY q.query_id;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
 BEGIN
-	PRINT 'EXEC sp_query_store_remove_query ' + str(@id);
-	EXEC sp_query_store_remove_query @id;
-	FETCH NEXT FROM adhoc_queries_cursor INTO @id;
+    PRINT 'EXEC sp_query_store_remove_query ' + str(@id);
+    EXEC sp_query_store_remove_query @id;
+    FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 END
 CLOSE adhoc_queries_cursor;
 DEALLOCATE adhoc_queries_cursor;
@@ -380,16 +379,18 @@ DEALLOCATE adhoc_queries_cursor;
 
 You can define your own procedure with different logic for clearing up data you no longer want.
 
-The example above uses the **sp_query_store_remove_query** extended stored procedure for removing unnecessary data. You can also use:
+The example above uses the `sp_query_store_remove_query` extended stored procedure for removing unnecessary data. You can also:
 
-- **sp_query_store_reset_exec_stats** to clear runtime statistics for a given plan.
-- **sp_query_store_remove_plan** to remove a single plan.
+- Use `sp_query_store_reset_exec_stats` to clear runtime statistics for a given plan.
+- Use `sp_query_store_remove_plan` to remove a single plan.
 
 ### <a name="Peformance"></a> Performance Auditing and Troubleshooting
 
-Query Store keeps a history of compilation and runtime metrics throughout query executions, allowing you to ask questions about your workload.
+Query Store keeps a history of compilation and runtime metrics throughout query executions, allowing you to ask questions about your workload. The following sample queries may be helpful in your performance baseline and query performance investigation:
 
-**Last *n* queries executed on the database?**
+#### Last queries executed on the database
+
+The last *n* queries executed on the database:
 
 ```sql
 SELECT TOP 10 qt.query_sql_text, q.query_id,
@@ -404,7 +405,9 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;
 ```
 
-**Number of executions for each query?**
+#### Execution counts
+
+Number of executions for each query:
 
 ```sql
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,
@@ -420,7 +423,9 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;
 ```
 
-**The number of queries with the longest average execution time within last hour?**
+#### Longest average execution time
+
+The number of queries with the longest average execution time within last hour:
 
 ```sql
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,
@@ -437,7 +442,9 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;
 ```
 
-**The number of queries that had the biggest average physical I/O reads in last 24 hours, with corresponding average row count and execution count?**
+#### Biggest average physical I/O reads
+
+The number of queries that had the biggest average physical I/O reads in last 24 hours, with corresponding average row count and execution count:
 
 ```sql
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,
@@ -456,7 +463,9 @@ WHERE rsi.start_time >= DATEADD(hour, -24, GETUTCDATE())
 ORDER BY rs.avg_physical_io_reads DESC;
 ```
 
-**Queries with multiple plans?** These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
+#### Queries with multiple plans
+
+These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
 
 ```sql
 WITH Query_MultPlans
@@ -485,7 +494,27 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;
 ```
 
- **Queries that recently regressed in performance (comparing different point in time)?** The following query example returns all queries for which execution time doubled in last 48 hours due to a plan choice change. Query compares all runtime stat intervals side by side.
+#### Highest wait durations 
+
+This query will return top 10 queries with the highest wait durations:
+
+```sql
+SELECT TOP 10
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC
+```
+
+ #### Queries that recently regressed in performance
+
+The following query example returns all queries for which execution time doubled in last 48 hours due to a plan choice change. This query compares all runtime stat intervals side by side:
 
 ```sql
 SELECT
@@ -524,24 +553,9 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 
 If you want to see performance all regressions (not only those related to plan choice change) than just remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
 
-**Queries that are waiting the most?**
-This query will return top 10 queries that wait the most.
+ #### Queries with historical regression in performance
 
-```sql
-SELECT TOP 10
-    qt.query_text_id,
-    q.query_id,
-    p.plan_id,
-    sum(total_query_wait_time_ms) AS sum_total_wait_ms
-FROM sys.query_store_wait_stats ws
-JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
-JOIN sys.query_store_query q ON p.query_id = q.query_id
-JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
-GROUP BY qt.query_text_id, q.query_id, p.plan_id
-ORDER BY sum_total_wait_ms DESC
-```
-
-**Queries that recently regressed in performance (comparing recent vs. history execution)?** The next query compares query execution based periods of execution. In this particular example the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metrics is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
+Comparing recent execution to historical execution, the next query compares query execution based periods of execution. In this particular example the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metrics is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
 
 ```sql
 --- "Recent" workload - last 1 hour

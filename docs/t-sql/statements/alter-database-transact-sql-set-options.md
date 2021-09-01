@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 07/06/2021
+ms.date: 09/01/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -3300,6 +3300,9 @@ Disables the Query Store. OFF is the default value.
 
 > [!NOTE]
 > For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
+
+> [!NOTE]
+> For Azure Synapse Analytics, the Query Store can be enabled as on other platforms but additional configuration options are not supported. 
 
 #### **<result_set_caching_option> ::=**     
 **Applies to**: Azure Synapse Analytics  

@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "6/09/2021"
+ms.date: "09/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -18,6 +18,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [SQL Server ASDB, ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article outlines the best practices for using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store with your workload.
+
+> [!NOTE]
+> In Azure Synapse Analytics, configuration options for Query Store are not supported. 
 
 ## <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 

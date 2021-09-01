@@ -126,7 +126,7 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 Release Date: September 1, 2021
 
-- Update Standalone SSIS DevOps Tools to release version.
+- General Availability(GA) release.
     
 ### Version 0.1.3.1 Preview
 

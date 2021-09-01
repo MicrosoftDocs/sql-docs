@@ -70,7 +70,7 @@ cat log.txt
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will stop responding and time out during execution.
 
-## SSIS Build task version 1.* (Preview)
+## SSIS Build task version 1.* 
 
 Enhancements in version 1.*:
 
@@ -167,7 +167,7 @@ SSIS Deploy Task doesn't support the following scenarios currently:
 - Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
 
-## SSIS Deploy task version 1.* (Preview)
+## SSIS Deploy task version 1.* 
 
 Enhancements in version 1.*:
 
@@ -370,6 +370,12 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.6
+
+Release Date: September 1, 2021
+
+- General Availability(GA) release.
     
 ### Version 1.0.5
 

@@ -45,7 +45,29 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## Examples
   
+### Determine space used by object and type of Allocation unit
+ The following query returns all the user tables in a database, the amount of space used in each object and by allocation unit type
+  
+```sql
+SELECT t.object_id ObjectID,
+       OBJECT_NAME(t.object_id) ObjectName,
+       sum(u.total_pages) * 8 Total_Reserved_kb,
+       sum(u.used_pages) * 8 Used_Space_kb,
+       u.type_desc TypeDesc,
+       max(p.rows) RowsCount
+FROM sys.allocation_units u
+JOIN sys.partitions p ON u.container_id = p.hobt_id
+JOIN sys.tables t ON p.object_id = t.object_id
+GROUP BY t.object_id,
+         OBJECT_NAME(t.object_id),
+         u.type_desc
+ORDER BY Used_Space_kb DESC,
+         ObjectName
+```  
+
 ## See Also  
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

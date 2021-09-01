@@ -10554,6 +10554,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
+        - name: 912
+          href: relational-databases/errors-events/mssqlserver-912-database-engine-error.md
         - name: 916
           href: relational-databases/errors-events/mssqlserver-916-database-engine-error.md
         - name: 926

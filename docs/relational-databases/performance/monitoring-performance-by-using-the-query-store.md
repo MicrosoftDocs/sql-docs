@@ -32,7 +32,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-1. In Object Explorer, right-click a database, and then click **Properties**.
+1. In Object Explorer, right-click a database, and then select **Properties**.
 
    > [!NOTE]
    > Requires at least version 16 of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
@@ -43,7 +43,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ### Use Transact-SQL Statements
 
-Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
+Use the `ALTER DATABASE` statement to enable the query store for a given database. For example:
 
 ```sql
 ALTER DATABASE <database_name>
@@ -53,7 +53,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 For more syntax options related to the Query Store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 > [!NOTE]
-> Query Store cannot be enabled for the **master** or **tempdb** databases.
+> Query Store cannot be enabled for the `master` or `tempdb` databases.
 
 > [!IMPORTANT]
 > For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
@@ -117,7 +117,7 @@ Select a plan to see the graphical query plan. Buttons are available to view the
 
 ![SQL Server 2016 Regressed Queries in SSMS Object Explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")
 
-To force a plan, select a query and plan, and then click **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
+To force a plan, select a query and plan, then select **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
 
 ## <a name="Waiting"></a> Finding waiting queries
 
@@ -135,7 +135,7 @@ Select a wait category by clicking on the bar and a detail view on the selected 
 
 Use the drop-down box at the top to filter queries based on various wait time criteria for the selected wait category: avg, max, min, std dev, and **total** (default). Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.
 
-**Wait categories** are combining different wait types into buckets similar by nature. Different wait categories require a different follow up analysis to resolve the issue, but wait types from the same category lead to very similar troubleshooting experiences, and providing the affected query on top of waits would be the missing piece to complete the majority of such investigations successfully.
+**Wait categories** are combining different wait types into buckets similar by nature. Different wait categories require a different follow-up analysis to resolve the issue, but wait types from the same category lead to very similar troubleshooting experiences, and providing the affected query on top of waits would be the missing piece to complete most such investigations successfully.
 
 Here are some examples how you can get more insights into your workload before and after introducing wait categories in Query Store:
 
@@ -209,7 +209,7 @@ Catalog views present information about the Query Store.
 :::row-end:::
 
 
-### Query Store Stored Procedures
+### Query Store stored procedures
 
 Stored procedures configure the Query Store.
 
@@ -245,7 +245,7 @@ Stored procedures configure the Query Store.
     :::column-end:::
 :::row-end:::
 
-<sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the sp_query_store_consistency_check stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the actual_state_desc column description.
+<sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the `sp_query_store_consistency_check` stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the `actual_state_desc` column description.
 
 ## <a name="Scenarios"></a> Key Usage Scenarios
 
@@ -253,7 +253,7 @@ Stored procedures configure the Query Store.
 
 This section provides some guidelines on managing Query Store feature itself.
 
-**Is Query Store currently active?**
+#### Query Store state
 
 Query Store stores its data inside the user database and that is why it has size limit (configured with `MAX_STORAGE_SIZE_MB`). If data in Query Store hits that limit Query Store will automatically change state from read-write to read-only and stop collecting new data.
 
@@ -265,10 +265,9 @@ SELECT actual_state, actual_state_desc, readonly_reason,
 FROM sys.database_query_store_options;
 ```
 
-Query Store status is determined by actual_state column. If it's different than the desired status, the `readonly_reason` column can give you more information.
-When Query Store size exceeds the quota, the feature will switch to read_only mode.
+Query Store status is determined by the `actual_state` column. If it's different than the desired status, the `readonly_reason` column can give you more information. When Query Store size exceeds the quota, the feature will switch to read_only mode and provide a reason. For information on reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-**Get Query Store options**
+#### Get Query Store options
 
 To find out detailed information about Query Store status, execute following in a user database.
 
@@ -276,7 +275,7 @@ To find out detailed information about Query Store status, execute following in 
 SELECT * FROM sys.database_query_store_options;
 ```
 
-**Setting Query Store interval**
+#### Setting Query Store interval
 
 You can override interval for aggregating query runtime statistics (default is 60 minutes).
 
@@ -290,7 +289,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 
 New value for interval is exposed through `sys.database_query_store_options` view.
 
-**Query Store space usage**
+#### Query Store space usage
 
 To check current the Query Store size and limit execute the following statement in the user database.
 
@@ -306,7 +305,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
 ```
 
-**Set Query Store options**
+#### Set Query Store options
 
 You can set multiple Query Store options at once with a single ALTER DATABASE statement.
 
@@ -327,7 +326,7 @@ SET QUERY_STORE (
 
 For the full list of configuration options, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-**Cleaning up the space**
+#### Cleaning up the space
 
 Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space you might want to clear older Query Store data by using the following statement.
 
@@ -337,7 +336,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space.
 
-**Delete ad-hoc queries**
+#### Delete ad-hoc queries
 
 This purges adhoc and internal queries from the Query Store so that the Query Store does not run out of space and remove queries we really need to track.
 
@@ -384,7 +383,7 @@ The example above uses the `sp_query_store_remove_query` extended stored procedu
 - Use `sp_query_store_reset_exec_stats` to clear runtime statistics for a given plan.
 - Use `sp_query_store_remove_plan` to remove a single plan.
 
-### <a name="Peformance"></a> Performance Auditing and Troubleshooting
+### <a name="Performance"></a> Performance Auditing and Troubleshooting
 
 Query Store keeps a history of compilation and runtime metrics throughout query executions, allowing you to ask questions about your workload. The following sample queries may be helpful in your performance baseline and query performance investigation:
 
@@ -555,7 +554,7 @@ If you want to see performance all regressions (not only those related to plan c
 
  #### Queries with historical regression in performance
 
-Comparing recent execution to historical execution, the next query compares query execution based periods of execution. In this particular example the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metrics is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
+Comparing recent execution to historical execution, the next query compares query execution based periods of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
 
 ```sql
 --- "Recent" workload - last 1 hour
@@ -640,9 +639,9 @@ OPTION (MERGE JOIN);
 
 ### <a name="Stability"></a> Maintaining query performance stability
 
-For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
+For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store, you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
 
-You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans you can identify the plan which is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
+You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
 
 ### Force a plan for a query (apply forcing policy)
 
@@ -652,7 +651,7 @@ When a plan is forced for a certain query, [!INCLUDE[ssNoVersion](../../includes
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```
 
-When using **sp_query_store_force_plan** you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute that query while Query Store was active.
+When using `sp_query_store_force_plan` you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute that query while Query Store was active.
 
 #### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
 
@@ -660,7 +659,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and Azur
 
 ### Remove plan forcing for a query
 
-To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use **sp_query_store_unforce_plan** to unforce the plan that was selected for the query.
+To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use `sp_query_store_unforce_plan` to unforce the plan that was selected for the query.
 
 ```sql
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

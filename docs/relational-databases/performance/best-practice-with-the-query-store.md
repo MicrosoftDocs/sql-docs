@@ -293,11 +293,11 @@ FROM sys.database_query_store_options;
 
 The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the ERROR state because of internal errors.
 
-When the actual state is read-only, use the **readonly_reason** column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the **readonly_reason** is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
+When the actual state is read-only, use the `readonly_reason` column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the `readonly_reason` is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 Consider the following steps to switch Query Store to read-write mode and activate data collection:
 
-- Increase the maximum storage size by using the **MAX_STORAGE_SIZE_MB** option of **ALTER DATABASE**.
+- Increase the maximum storage size by using the **MAX_STORAGE_SIZE_MB** option of `ALTER DATABASE`.
 - Clean up Query Store data by using the following statement:
 
   ```sql

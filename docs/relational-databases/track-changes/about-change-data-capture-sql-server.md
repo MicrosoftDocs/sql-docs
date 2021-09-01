@@ -190,6 +190,9 @@ Configuring the frequency of the capture and the cleanup processes for CDC in Az
 **ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
 DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
 
+**Computed columns**
+CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
+
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

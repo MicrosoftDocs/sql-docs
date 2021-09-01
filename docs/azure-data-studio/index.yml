@@ -80,6 +80,8 @@ landingContent:
             url:  extensions/kusto-extension.md
           - text: Notebook extension
             url:  extensions/notebook-extension.md
+          - text: Azure SQL Migration extension
+            url:  extensions/azure-sql-migration-extension.md
           - text: PostgreSQL extension
             url:  extensions/postgres-extension.md
           - text: PowerShell Editor Support

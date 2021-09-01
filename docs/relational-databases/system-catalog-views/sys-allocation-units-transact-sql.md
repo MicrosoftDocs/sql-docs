@@ -2,7 +2,7 @@
 description: "sys.allocation_units (Transact-SQL)"
 title: "sys.allocation_units (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2021"
+ms.date: "09/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

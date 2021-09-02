@@ -276,6 +276,7 @@ When you convert data types that differ in decimal places, [!INCLUDE[ssNoVersion
 |**float**|**numeric**|Round<br /><br /> Conversion of **float** values that use scientific notation to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any value with precision higher than 17 rounds to zero.|  
 |**float**|**datetime**|Round|  
 |**datetime**|**int**|Round|  
+|**datetime**|**time**|Round|
   
 For example, the values 10.6496 and -10.6496 may be truncated or rounded during conversion to **int** or **numeric** types:
   

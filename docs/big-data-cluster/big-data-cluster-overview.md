@@ -135,7 +135,3 @@ Related technologies Microsoft Learn:
 * [Introduction to Kubernetes](/learn/modules/intro-to-kubernetes/)
 * [Distributed file systems](/learn/modules/cmu-case-study-distributed-file-systems/)
 * [Introduction to Python](/learn/modules/intro-to-python/)
-
-
-
-

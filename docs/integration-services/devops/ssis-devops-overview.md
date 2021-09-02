@@ -166,7 +166,7 @@ SSIS Deploy Task doesn't support the following scenarios currently:
 - Configure environment in SSIS catalog.
 - Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
-- Upload SSIS Azure DevOps directly is not allowed.Operating according to the following steps: 
+- Uploading to on-premises DevOps server might hit error "The extension package size exceeds the maximum package size". You can apply below work-around. If below work-around does not work, please contact Azure DevOps support: 
     - Get the publisher name of the extension you want to increase size limit for - this is typically the part on the left side of ‘.’ character in the URL of the item details page of the extension on marketplace.
         -e.g. If the extension’s item details page is https://marketplace.visualstudio.com/items?itemName=tylermurry.pr-auto-comment, then the publisher name is ‘tylermurry’.
     - Connect to on-premises SQL server instance and select the database ‘Gallery_Configuration’.

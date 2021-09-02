@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |data_source_id|**int**|Object ID for the external data source.||  
 |name|**sysname**|Name of the external data source.||  
 |location|**nvarchar(4000)**|The connection string, which includes the protocol, IP address, and port for the external data source.||  
-|type_desc|**nvarchar(255)**|Data source type displayed as a string.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
+|type_desc|**nvarchar(255)**|Data source type displayed as a string.|HADOOP, RDBMS, SHARD_MAP_MANAGER, REMOTE_DATA_ARCHIVE, BLOB_STORAGE, NONE|  
 |type|**tinyint**|Data source type displayed as a number.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - REMOTE_DATA_ARCHIVE<br /><br /> 4 - *internal use only*<br /><br /> 5 - BLOB_STORAGE<br /><br /> 6 - NONE |  
 |resource_manager_location|**nvarchar(4000)**|For type HADOOP, the IP and port location of the Hadoop resource manager. The `resource_manager_location` is used for submitting a job on a Hadoop data source.<br /><br /> `NULL` for other types of external data sources.||  
 |credential_id|**int**|The object ID of the database scoped credential used to connect to the external data source.||  

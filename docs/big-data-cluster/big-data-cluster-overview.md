@@ -76,7 +76,7 @@ The following sections provide more information about these scenarios.
 
 ## Data virtualization
 
-By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces new connectors to data sources.
+By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces new connectors to data sources, for more information see [What's new in PolyBase 2019?](../relational-databases/polybase/polybase-faq#what-s-new-in-polybase-2019).
 
 ![Data virtualization](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -122,12 +122,13 @@ In [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], Kube
 
 * For more information about deploying [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md). 
 
-* Then, get started by [Loading data](data-ingestion-restore-database.md) and [running a spark job](spark-submit-job.md).
+* Then, get started with [loading data](data-ingestion-restore-database.md) and [running a spark job](spark-submit-job.md).
 
 ## Learn more
 
-* WATCH: [Introduction to Big Data Cluster on SQL Server 2019 | Virtualization, Kubernetes, and Containers](https://www.youtube.com/watch?v=q7mxWcYqBMM)
 * [Big Data Clusters Architecture Workshop](https://github.com/microsoft/sqlworkshops-bdc)
+* WATCH: [Introduction to Big Data Cluster on SQL Server 2019 | Virtualization, Kubernetes, and Containers](https://www.youtube.com/watch?v=q7mxWcYqBMM)
+* WATCH: [Big Data Clusters in a Nutshell](https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-in-a-Nutshell)
 
 Related technologies Microsoft Learn:
 

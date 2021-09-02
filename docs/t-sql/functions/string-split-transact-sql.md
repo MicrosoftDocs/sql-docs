@@ -1,7 +1,7 @@
 ---
 title: "STRING_SPLIT (Transact-SQL)"
 description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
-ms.date: "8/13/2021"
+ms.date: "09/02/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: wiassaf
@@ -42,7 +42,7 @@ STRING_SPLIT ( string , separator [ , enable_ordinal ] )
 ```
 
 > [!NOTE]
-> The *enable_ordinal* argument and `ordinal` output column are only supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only).
+> The *enable_ordinal* argument and `ordinal` output column are currently only supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only).
 
 ## Arguments
 
@@ -161,9 +161,9 @@ FROM Product
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
 
-  >[!NOTE]
-  > The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
-  
+>[!NOTE]
+> The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
+
 ### C. Aggregation by values
 
 Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  

@@ -187,7 +187,7 @@ Make sure the machine's managed identity has been assigned the _Azure Connected 
 Check the extension log for the following record:
 `[7/14/2021 5:35:04 PM UTC] [INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc for Sql Server upload response status: InternalServerError.`
 
-Make sure to migrate the __SQL Server - Azure Arc__ resource to `Microsoft.AzureArcData` following [these steps](.\release-notes.md##breaking-change-1).
+Make sure to migrate the __SQL Server - Azure Arc__ resource to `Microsoft.AzureArcData` following [these steps](.\release-notes.md#breaking-change-1).
 
 ## Next steps
 

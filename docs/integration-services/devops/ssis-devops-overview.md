@@ -166,6 +166,7 @@ SSIS Deploy Task doesn't support the following scenarios currently:
 - Configure environment in SSIS catalog.
 - Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
+- Upload SSIS Azure DevOps is not allowed because it exceeds the allowed package size. 
 
 ## SSIS Deploy task version 1.* 
 

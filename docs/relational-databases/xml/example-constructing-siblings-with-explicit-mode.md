@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EXPLICIT FOR XML mode"
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Constructing Siblings with EXPLICIT Mode
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

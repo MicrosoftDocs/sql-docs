@@ -36,6 +36,9 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## Arguments  
 `[ @publisher = ] 'publisher'`
  Is the Publisher to drop. *publisher* is **sysname**, with no default.  
+ 
+> [!NOTE]
+>  Using a custom port for the SQL Server publisher was introduced in SQL Server 2019. If the SQL Server publisher is configured with a custom port, then when dropping such a publisher on the distributor, supply the publisher server name instead of `<Hostname>,<PortNumber>`. 
   
 `[ @no_checks = ] no_checks`
  Specifies whether **sp_dropdistpublisher** checks that the Publisher has uninstalled the server as the Distributor. *no_checks* is **bit**, with a default of **0**.  

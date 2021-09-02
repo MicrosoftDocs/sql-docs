@@ -1,6 +1,6 @@
 ---
-description: Find examples of how to connect using TLS encryption in your Java application by using the JDBC driver for SQL Server.
 title: Connecting with encryption
+description: Find examples of how to connect using TLS encryption in your Java application by using the JDBC driver for SQL Server.
 ms.custom: ""
 ms.date: 03/31/2021
 ms.prod: sql
@@ -54,7 +54,7 @@ String connectionUrl =
     "jdbc:sqlserver://localhost:1433;" +
      "databaseName=AdventureWorks;integratedSecurity=true;" +
      "encrypt=true; trustServerCertificate=false;" +
-     "trustStore=storeName;trustStorePassword=storePassword" +
+     "trustStore=storeName;trustStorePassword=storePassword;" +
      "hostNameInCertificate=hostName";
 ```
 

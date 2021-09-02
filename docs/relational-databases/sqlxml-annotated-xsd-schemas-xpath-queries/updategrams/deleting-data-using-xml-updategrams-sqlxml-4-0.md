@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "mapping-schema attribute"
   - "record deletions [SQLXML]"
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

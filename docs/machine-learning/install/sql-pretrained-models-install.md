@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 07/30/2019
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -22,8 +22,8 @@ To use the pretrained models, call the functions listed in the following table.
 
 | R function (MicrosoftML) | Python function (microsoftml) | Usage |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Generates  positive-negative sentiment score over text inputs. |
-| [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Extracts text information from image file inputs. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](../python/reference/microsoftml/get-sentiment.md) | Generates  positive-negative sentiment score over text inputs. |
+| [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](../python/reference/microsoftml/featurize-image.md) | Extracts text information from image file inputs. |
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ You must have administrator rights on the computer and SQL Server to add pre-tra
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for enabling and verifying these capabilities. 
 
 ::: moniker range=">=sql-server-2017"
-[MicrosoftML R package](/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml Python package](/machine-learning-server/python-reference/microsoftml/microsoftml-package) contain the pre-trained models.
+[MicrosoftML R package](/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml Python package](../python/ref-py-microsoftml.md) contain the pre-trained models.
 
 [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) includes both language versions of the machine learning library, so this prerequisite is met with no further action on your part. Because the libraries are present, you can use the PowerShell script described in this article to add the pre-trained models to these libraries.
 ::: moniker-end
@@ -211,4 +211,4 @@ For more information about the algorithms used in these deep learning models, an
 + [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
 + [Upgrade R and Python components in SQL Server instances](../install/upgrade-r-and-python.md)
 + [MicrosoftML package for R](/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ [microsoftml package for Python](/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ [microsoftml package for Python](../python/ref-py-microsoftml.md)

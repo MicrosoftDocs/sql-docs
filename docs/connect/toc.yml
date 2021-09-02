@@ -141,11 +141,29 @@
         href: ../connect/ado-net/common-schema-collections.md
       - name: SQL Server schema collections
         href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: Configurable retry logic
+      href: ../connect/ado-net/configurable-retry-logic.md
+      items:
+      - name: Introduction
+        href: ../connect/ado-net/configurable-retry-logic-sqlclient-introduction.md
+      - name: Internal providers
+        href: ../connect/ado-net/internal-retry-logic-providers-sqlclient.md
+      - name: Core APIs
+        href: ../connect/ado-net/configurable-retry-logic-core-apis-sqlclient.md
+      - name: Configuration file
+        href: ../connect/ado-net/configurable-retry-logic-config-file-sqlclient.md
     - name: DbProviderFactories
       href: ../connect/ado-net/dbproviderfactories.md
       items:
       - name: Obtain a SqlClientFactory
         href: ../connect/ado-net/obtain-sqlclientfactory.md
+    - name: Diagnostic counters
+      href: ../connect/ado-net/diagnostic-counters.md
+      items:
+      - name: Event counters
+        href: ../connect/ado-net/event-counters.md
+      - name: Performance counters
+        href: ../connect/ado-net/performance-counters.md
     - name: Retrieve identity or autonumber values
       href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data
@@ -154,8 +172,6 @@
       href: ../connect/ado-net/modify-data-with-stored-procedures.md
     - name: Data tracing in SqlClient
       href: ../connect/ado-net/data-tracing.md
-    - name: Performance counters in SqlClient
-      href: ../connect/ado-net/performance-counters.md
     - name: Asynchronous programming
       href: ../connect/ado-net/asynchronous-programming.md
     - name: SqlClient streaming support
@@ -2935,9 +2951,9 @@
       items:
       - name: Connecting from Linux or macOS
         href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
-      - name: Data Access Tracing with the ODBC Driver on Linux and macOS
+      - name: Data Access Tracing on Linux and macOS
         href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
-      - name: ODBC Driver on Linux and macOS - High Availability and Disaster Recovery
+      - name: High Availability and Disaster Recovery
         href: ../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
       - name: Programming Guidelines
         href: ../connect/odbc/linux-mac/programming-guidelines.md
@@ -2969,8 +2985,6 @@
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: Feature guides
       items:
-      - name: Connection resiliency
-        href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
       - name: Driver-aware connection pooling
         href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
     - name: Asynchronous execution (notification method) sample
@@ -2989,6 +3003,8 @@
         href: ../connect/odbc/windows/sql-server-login-dialog.md
   - name: Feature guides
     items:
+    - name: Connection resiliency
+      href: ../connect/odbc/connection-resiliency.md
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
     - name: DSN and Connection String Keywords and Attributes
@@ -5267,6 +5283,8 @@
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
       href: ../connect/oledb/features/using-encryption-without-validation.md
+    - name: Idle Connection Resiliency
+      href: ../connect/oledb/features/idle-connection-resiliency.md
     - name: Using Large Value Types
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)

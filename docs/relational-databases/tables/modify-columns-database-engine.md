@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "column data types [SQL Server]"
   - "data types [SQL Server], columns"
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Columns (Database Engine)

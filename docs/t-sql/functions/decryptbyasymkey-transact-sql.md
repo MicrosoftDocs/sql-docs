@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function uses an asymmetric key to decrypt encrypted data.  
   

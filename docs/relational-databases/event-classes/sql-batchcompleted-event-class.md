@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SQL:BatchCompleted event class"
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:BatchCompleted Event Class

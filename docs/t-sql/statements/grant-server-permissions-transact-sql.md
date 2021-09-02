@@ -135,7 +135,7 @@ GRANT permission [ ,...n ]
  When granted, allows a middle-tier process to impersonate the account of clients connecting to it, as it connects to databases. When denied, a high privileged login can be blocked from impersonating other logins. For example, a login with **CONTROL SERVER** permission can be blocked from impersonating other logins.  
   
  **SELECT ALL USER SECURABLES** Permission  
- When granted, a login such as an auditor can view data in all databases that the user can connect to. When denied, prevents access to objects unless they are in the **sys** schema.  
+ When granted, a login can view data from all schema-level objects, such as tables, views and table valued functions that reside user-writable schemas (any schema except sys and INFORMATION_SCHEMA) can be used to create user-objects. This permission has effect in all databases that the user can connect to. When denied, it prevents access to all objects unless they are in the sys- or INFORMATION_SCHEMA-schema. This also has effect on metadata visibility of the covered objects also see: [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Permissions  
  The grantor (or the principal specified with the AS option) must have either the permission itself with GRANT OPTION or a higher permission that implies the permission being granted. Members of the sysadmin fixed server role can grant any permission.  
@@ -161,14 +161,12 @@ GO
 ```  
   
 ### C. Granting a permission to a server role  
- The following example creates two server roles named `ITDevAdmin` and `ITDevelopers`. It grants the `ALTER ANY DATABASE` permission to the `ITDevAdmin` user-defined server role including the `WITH GRANT` option so that the `ITDevAdmin` server role can reassign the `ALTER ANY DATABASE` permission. Then, the example grants the `ITDevelopers` the permission to use the `ALTER ANY DATABASE` permission of the `ITDevAdmin` server role.  
+ The following example creates a server role named `ITDevelopers`. It grants the `ALTER ANY DATABASE` permission to the `ITDevelopers` server role..  
   
 ```sql  
 USE master;  
-CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  
-GRANT ALTER ANY DATABASE TO ITDevAdmin WITH GRANT OPTION ;  
-GRANT ALTER ANY DATABASE TO ITDevelopers AS ITDevAdmin ;  
+GRANT ALTER ANY DATABASE TO ITDevelopers ;  
 GO  
 ```  
   

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

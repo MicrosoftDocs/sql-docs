@@ -11,7 +11,7 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 05/01/2020
+ms.date: 05/06/2021
 ---
 
 # Upgrade and Migrate Reporting Services
@@ -85,7 +85,9 @@ ms.date: 05/01/2020
 -   Remove invalid TLS/SSL certificates.  This includes certificates that are expired and you do not plan to update prior to upgrading Reporting Services.  Invalid certificates will cause upgrade to fail and an error message similar to the following will be written to the Reporting Services Log file: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.**.  
   
  Before you upgrade a production environment, always run a test upgrade in a pre-production environment that has the same configuration as your production environment.  
-  
+ 
+> [!IMPORTANT]
+> These steps must be completed in full for a later rollback to be possible. Microsoft Support cannot recover backups, encryption keys, or configuration files that were not backed up.
   
 ## Overview of Migration Scenarios  
  If you are upgrading from a supported version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can usually run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard to upgrade the report server program files, database, and all application data.  
@@ -143,7 +145,30 @@ ms.date: 05/01/2020
 4.  Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to add the report servers back to the scale-out deployment. For more information, see [Configure a Native Mode Report Server Scale-Out Deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      For each server, repeat the upgrade and Scale-out steps.  
-  
+
+## <a name="rollback_native"></a> Roll back a Reporting Services Cumulative Update
+
+Cumulative Updates in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] versions 2017 and later support in-place upgrade but cannot be selectively uninstalled. To roll back an upgrade, you must uninstall the entire service and reinstall the prior version following the directions below:
+
+> [!IMPORTANT]
+> These steps require that the pre-upgrade checklist has been followed completely. Step 2 will render existing configuration files, service configurations, and encryption keys irrecoverable. Microsoft Support cannot recover these configuration files or decrypt these encryption keys to assist in rollback. 
+
+1. Take note of any custom configurations including service credentials, email or file share settings, or report server URLs.
+
+2. Uninstall SQL Server Reporting Services. In a scale-out deployment, repeat for all nodes in the scale-out. For more information, see [Uninstall Native Mode](../../sql-server/install/uninstall-reporting-services.md)
+
+3. Restore backups of ReportServer database. For more information, see [Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)
+
+4. Reinstall the prior update of SQL Server Reporting Services.
+
+5. Restore pre-upgrade configuration files.
+
+6. Restore the encryption key backup. For more information, see [Back Up and Restore Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
+
+7. Recreate all of the custom configurations noted in step 1.
+
+8. In a scale-out deployment, repeat steps 4 through 7 for all other nodes in the scale-out deployment.
+
 ##  <a name="bkmk_sharePoint_scenarios"></a> SharePoint Mode Upgrade and Migration Scenarios  
  The following sections describe the issues and basic steps needed to upgrade or migrate from specified versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode to SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.  
   

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current"
+monikerRange: "= azuresqldb-current || =azure-sqldw-latest"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

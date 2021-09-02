@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "PreConnect:Starting Event Class"
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PreConnect:Starting Event Class

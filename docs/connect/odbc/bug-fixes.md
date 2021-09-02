@@ -2,7 +2,7 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
@@ -11,13 +11,20 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: "v-chojas"
-ms.author: v-jizho2
+author: v-chojas
+ms.author: v-chojas
 manager: kenvh
 ---
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.8 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix for restrictions on connection string regarding usage of `UID` and `PWD` keywords
+- Fix for inconsistent fonts in non-English dialogs
+- Fix issue with having multiple connections with different AKV credentials
+- Fix issue with NVDA not reading connection test results in DSN configuration UI
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

@@ -19,7 +19,10 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Monitors real time data warehouse query progress while the query is in execution.   
+Monitors real time data warehouse query progress while the query is in execution. 
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 ## Table returned
   

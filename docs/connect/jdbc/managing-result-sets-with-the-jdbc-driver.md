@@ -1,6 +1,6 @@
 ---
+title: Managing result sets
 description: Learn how to manage the results of a query by using result sets in the JDBC driver for SQL Server.
-title: Managing result sets with the JDBC driver
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

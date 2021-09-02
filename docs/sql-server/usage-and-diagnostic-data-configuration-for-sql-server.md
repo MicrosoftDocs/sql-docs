@@ -3,7 +3,7 @@ title: Configure usage and diagnostic data collection for SQL Server (CEIP) | Mi
 description: Learn about the information that SQL Server collects from users to improve products. See how to configure SQL Server not to send this information.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 03/27/2019
+ms.date: 08/26/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ""
@@ -62,6 +62,8 @@ After setup, the usage and diagnostic data collection setting for SQL Server com
 
 > [!NOTE]
 > The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage and Diagnostic Data collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage and Diagnostic Data collection, therefore can be turned on or off independently from Usage and Diagnostic Data collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](./sql-server-privacy.md).
+> 
+> The Error and Usage Reporting application is not included in the SQL Server Reporting Services 2017 and later setup. The only mechanism available to configure sending information to Microsoft is by setting registry subkeys on the server.
 
 To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage and diagnostic data as well as serious errors that are collected for instances and components that are installed on that computer.
 
@@ -75,7 +77,7 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
 - For SQL Server instance features:
     
-    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\{InstanceID}\CPE
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\{InstanceID}\CPE
     
     RegEntry name = CustomerFeedback
     
@@ -85,18 +87,25 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
     - MSSQL14.CANBERRA for SQL Server 2017 Database engine and Instance name of "CANBERRA"
     - MSAS14.CANBERRA for SQL Server 2017 Analysis Services and Instance name of "CANBERRA"
-    - MSRS14.CANBERRA for SQL Server 2017 Reporting Services and Instance name of "CANBERRA"
+
+- For SQL Server Reporting Services 2017 and later instance features:
+
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\SSRS\CPE
+    
+    RegEntry name = CustomerFeedback
+    
+    Entry type DWORD: 0 is opt out; 1 is opt in
 
 - For all shared features:
     
-    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\{Major Version}
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\{Major Version}
     
     RegEntry name = CustomerFeedback
     
     Entry type DWORD: 0 is opt out; 1 is opt in
 
 > [!NOTE]
-> {Major Version} refers to the version of SQL Server-for example, 140 for SQL Server 2017
+> {Major Version} refers to the version of SQL Server. For example, "140" refers to SQL Server 2017.
 
 - For SQL Server Management Studio 17 and SQL Server Management Studio 18, refer to [User Assistance in SQL Server Management Studio](../ssms/sql-server-management-studio-telemetry-ssms.md)
 
@@ -106,7 +115,7 @@ Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Ent
 
 - For SQL Server instance features:
 
-    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\{InstanceID}\CPE
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\{InstanceID}\CPE
 
     RegEntry name = EnableErrorReporting
 
@@ -116,12 +125,18 @@ Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Ent
 
     - MSSQL14.CANBERRA for SQL Server 2017 Database engine and Instance name of "CANBERRA"
     - MSAS14.CANBERRA for SQL Server 2017 Analysis Services and Instance name of "CANBERRA"
-    - MSRS14.CANBERRA for SQL Server 2017 Reporting Services and Instance name of "CANBERRA"
  
+- For SQL Server Reporting Services 2017 and later instance features:
 
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\SSRS\CPE
+    
+    RegEntry name = EnableErrorReporting
+    
+    Entry type DWORD: 0 is opt out; 1 is opt in
+    
 - For all shared features:
     
-    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\{Major Version}
+    Subkey = HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\{Major Version}
 
     RegEntry name = EnableErrorReporting
 

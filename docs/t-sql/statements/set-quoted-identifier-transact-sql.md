@@ -90,7 +90,9 @@ To view the current setting for this setting, run the following query:
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
 IF ( (256 & @@OPTIONS) = 256 ) 
-SET @QUOTED_IDENTIFIER = 'ON';
+BEGIN
+    SET @QUOTED_IDENTIFIER = 'ON';
+END
 
 SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```

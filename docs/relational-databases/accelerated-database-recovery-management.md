@@ -21,13 +21,15 @@ monikerRange: ">=sql-server-ver15"
 ## Enabling and controlling ADR
 
 ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
-```sql
+```syntaxsql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
 
 ```
 
 Use this syntax to control whether the feature is on or off, and designate a specific filegroup for the *persistent version store* (PVS) data. If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup.
+
+Note that SQL will take an exclusive lock on the database to change this state.  That means that the ALTER DATABASE command will stall until all active sessions are gone, and that any new sessions will wait behind the ALTER DATABASE command.  If it is important to complete the operation and remove the lock, you can use the termination clause, WITH ROLLBACK [IMMEDIATE | AFTER {number} SECONDS | NO_WAIT] to abort any active sessions in the database.
 
 ## Managing the persistent version store Filegroup
 The ADR feature is based on having changes versioned, with different versions of a data element kept in the PVS.

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 # Linked Servers (Database Engine)

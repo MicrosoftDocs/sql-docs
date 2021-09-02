@@ -59,6 +59,8 @@ RETURNS return_data_type
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
 ```
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
@@ -75,7 +77,6 @@ RETURNS TABLE
 [ ; ]
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  

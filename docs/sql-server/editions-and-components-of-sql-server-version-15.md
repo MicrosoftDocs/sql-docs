@@ -1,8 +1,8 @@
 ---
 description: "Editions and supported features of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
-title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
+title: "Editions and supported features of SQL Server 2019"
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -198,7 +198,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|
 |Data compression|Yes|Yes|Yes|Yes|Yes|
 |Resource governor|Yes|No|No|No|No|
-|Partitioned table parallelism|Yes|No|No|No|No|
+|Partitioned table parallelism|Yes|Yes|Yes|Yes|Yes|
 |Multiple filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA aware and large page memory and buffer array allocation|Yes|No|No|No|No|
 |Buffer pool extension|Yes|Yes|No|No|No|
@@ -233,8 +233,8 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
 |Server audit|Yes|Yes|Yes|Yes|Yes|
 |Database audit|Yes|Yes|Yes|Yes|Yes|
-|Transparent database encryption|Yes|Yes|Yes|No|No|
-|Extensible key management|Yes|Yes|No|No|No|
+|Transparent Database Encryption (TDE)|Yes|Yes|Yes|No|No|
+|Extensible key management (EKM)|Yes|Yes|No|No|No|
 |User-defined roles|Yes|Yes|Yes|Yes|Yes|
 |Contained databases|Yes|Yes|Yes|Yes|Yes|
 |Encryption for backups|Yes|Yes|No|No|No|

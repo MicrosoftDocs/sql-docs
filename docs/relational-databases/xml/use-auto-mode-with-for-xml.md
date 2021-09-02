@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "FOR XML AUTO mode"
   - "AUTO FOR XML mode"
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use AUTO Mode with FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

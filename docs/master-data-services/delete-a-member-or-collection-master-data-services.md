@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "members [Master Data Services], deleting"
   - "consolidated members [Master Data Services], deleting"
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Delete a Member or Collection (Master Data Services)

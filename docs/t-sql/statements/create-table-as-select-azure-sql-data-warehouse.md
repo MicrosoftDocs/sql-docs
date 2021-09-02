@@ -3,7 +3,8 @@ description: "CREATE TABLE AS SELECT (Azure Synapse Analytics)"
 title: "CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2016"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: reference
 dev_langs: 
@@ -28,7 +29,8 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 > [!NOTE]  
 > Since CTAS adds to the capabilities of creating a table, this topic tries not to repeat the CREATE TABLE topic. Instead, it describes the differences between the CTAS and CREATE TABLE statements. For the CREATE TABLE details, see [CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) statement. 
   
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

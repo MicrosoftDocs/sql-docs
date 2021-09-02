@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sql:max-depth"
   - "recursive joins [SQLXML]"
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

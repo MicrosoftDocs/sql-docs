@@ -2,11 +2,11 @@
 description: "RENAME (Transact-SQL)"
 title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
-ms.service: sql-data-warehouse
-ms.reviewer: ""
+ms.date: "07/20/2021"
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
+ms.reviewer: "WilliamDAssafMSFT"
 ms.topic: reference
-ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
@@ -18,6 +18,10 @@ Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. R
 
 > [!NOTE]
 > To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+
+
+> [!NOTE]
+> Renaming a dedicated SQL pool in Azure Synapse Analytics is not currently supported.
 
 ## Syntax
 
@@ -45,7 +49,8 @@ RENAME DATABASE [::] database_name TO new_database_name
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 

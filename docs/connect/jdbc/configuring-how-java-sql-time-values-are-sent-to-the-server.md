@@ -1,8 +1,8 @@
 ---
-description: Learn how to configure how java.sql.Time values are sent to the server using the sendTimeAsDatetime connection option.
 title: Configuring how java.sql.Time values are sent to the server
+description: Learn how to configure how java.sql.Time values are sent to the server using the sendTimeAsDatetime connection option.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

@@ -3,7 +3,8 @@ description: "sp_datatype_info_90 (Azure Synapse Analytics)"
 title: "sp_datatype_info_90 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 
@@ -29,7 +30,8 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 `[ @data_type = ] data_type`

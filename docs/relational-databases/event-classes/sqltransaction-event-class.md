@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "SQLTransaction event class"
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLTransaction Event Class

@@ -75,6 +75,11 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
       -v sql1data:/var/opt/mssql `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   
+   > [!IMPORTANT]
+   > Host volume mapping for **Docker on Windows** does not currently support mapping the complete `/var/opt/mssql` directory. However, you can map a subdirectory, such as `/var/opt/mssql/data` to your host machine.
+   >
+   > Host volume mapping for **Docker on Mac** with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
 
    This command creates a SQL Server 2017 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
@@ -109,11 +114,11 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 1. Pull the SQL Server 2019 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-latest
    ```
 
    > [!TIP]
@@ -125,15 +130,20 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-latest
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-latest
    ```
+   
+      > [!IMPORTANT]
+   > Host volume mapping for **Docker on Windows** does not currently support mapping the complete `/var/opt/mssql` directory. However, you can map a subdirectory, such as `/var/opt/mssql/data` to your host machine.
+   >
+   > Host volume mapping for **Docker on Mac** with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
 
    This command creates a SQL Server 2019 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
@@ -486,13 +496,13 @@ In addition to taking database backups for protecting your data, you can also us
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
     ```
 
 1. The Wide World Importers database is now in the new container. Run a query to verify the previous change you made.

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "EKM, TDE how to"
   - "Transparent Data Encryption, using EKM"
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-author: jaszymas
-ms.author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ---
 # Enable TDE on SQL Server Using EKM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.author: jaszymas
   
 #### To enable TDE using EKM  
   
-1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM** folder.  
+1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM_Files** folder.  
   
 2.  Install certificates to the computer as required by your EKM provider.  
   

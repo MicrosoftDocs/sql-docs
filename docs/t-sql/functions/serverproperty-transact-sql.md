@@ -2,7 +2,7 @@
 description: "SERVERPROPERTY (Transact-SQL)"
 title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2020"
+ms.date: "06/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -71,6 +71,7 @@ Is an expression that contains the property information to be returned for the s
 |IsAdvancedAnalyticsInstalled|Returns 1 if the Advanced Analytics feature was installed during setup; 0 if Advanced Analytics was not installed.<br /><br /> Base data type: **int**|  
 |IsBigDataCluster| Introduced in [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] beginning with CU4.<br /><br />Returns 1 if the instance is SQL Server Big Data Cluster; 0 if not.<br /><br /> Base data type: **int**|  
 |IsClustered|Server instance is configured in a failover cluster.<br /><br /> 1 = Clustered.<br /><br /> 0 = Not Clustered.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
+|IsExternalAuthenticationOnly|**Applies to**: Azure SQL Database and Azure SQL Managed Instance.<br /><br /> Returns whether [Azure AD-only authentication](/azure/azure-sql/database/authentication-azure-ad-only-authentication) is enabled.<br /><br /> 1 = Azure AD-only authentication is enabled.<br /><br /> 0 = Azure AD-only authentication is disabled.<br /><br /> Base data type: **int**|
 |IsFullTextInstalled|The full-text and semantic indexing components are installed on the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Full-text and semantic indexing components are installed.<br /><br /> 0 = Full-text and semantic indexing components are not installed.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsHadrEnabled|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is enabled on this server instance.<br /><br /> 0 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is disabled.<br /><br /> 1 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is enabled.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**<br /><br /> For availability replicas to be created and run on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] must be enabled on the server instance. For more information, see [Enable and Disable AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Note:** The IsHadrEnabled property pertains only to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Other high availability or disaster recovery features, such as database mirroring or log shipping, are unaffected by this server property.|  
 |IsIntegratedSecurityOnly|Server is in integrated security mode.<br /><br /> 1 = Integrated security (Windows Authentication)<br /><br /> 0 = Not integrated security. (Both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.)<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
@@ -99,7 +100,7 @@ Is an expression that contains the property information to be returned for the s
 |SqlCharSetName|The SQL character set name from the collation.<br /><br /> Base data type: **nvarchar(128)**|  
 |SqlSortOrder|The SQL sort order ID from the collation<br /><br /> Base data type: **tinyint**|  
 |SqlSortOrderName|The SQL sort order name from the collation.<br /><br /> Base data type: **nvarchar(128)**|  
-  
+
 ## Return Types  
 
 **sql_variant**

@@ -3,7 +3,9 @@ description: "Azure Synapse Analytics and Parallel Data Warehouse Catalog Views"
 title: Catalog Views
 titleSuffix: Azure Synapse Analytics and Parallel Data Warehouse
 ms.date: 10/29/2019
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
+ms.technology: system-objects
 ms.reviewer: jrasnick
 ms.topic: language-reference
 dev_langs: 

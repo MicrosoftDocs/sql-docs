@@ -1,5 +1,5 @@
 ---
-title: dta Utility
+title: dta utility
 description: The dta utility is a command prompt version of Database Engine Tuning Advisor that allows you to use functionality in applications and scripts.
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,26 +15,28 @@ helpviewer_keywords:
   - "performance [SQL Server], Database Engine Tuning Advisor"
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
-ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 01/09/2017
+ms.date: 05/11/2021
 ---
 
-# dta Utility
+# dta utility
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
+  
+> [!NOTE]
+> The Database Engine Tuning Advisor is not supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
 
 Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
 ## Syntax  
   
-```  
-  
+```console
+
 dta  
 [ -? ] |  
 [  
@@ -79,7 +81,7 @@ dta
  Displays usage information.  
   
  **-A** _time_for_tuning_in_minutes_  
- Specifies the tuning time limit in minutes. **dta** uses the specified amount of time to tune the workload and generate a script with the recommended physical design changes. By default **dta** assumes a tuning time of 8 hours. Specifying 0allows unlimited tuning time. **dta** might finish tuning the entire workload before the time limit expires. However, to make sure that the entire workload is tuned, we recommend that you specify unlimited tuning time (-A 0).  
+ Specifies the tuning time limit in minutes. **dta** uses the specified amount of time to tune the workload and generate a script with the recommended physical design changes. By default **dta** assumes a tuning time of 8 hours. Specifying 0 allows unlimited tuning time. **dta** might finish tuning the entire workload before the time limit expires. However, to make sure that the entire workload is tuned, we recommend that you specify unlimited tuning time (-A 0).  
   
  **-a**  
  Tunes workload and applies the recommendation without prompting you.  
@@ -102,13 +104,13 @@ dta
  **-D** _database_name_  
  Specifies the name of each database that is to be tuned. The first database is the default database. You can specify multiple databases by separating the database names with commas, for example:  
   
-```  
+```console   
 dta -D database_name1, database_name2...  
 ```  
   
  Alternatively, you can specify multiple databases by using the **-D** argument for each database name, for example:  
   
-```  
+```console   
 dta -D database_name1 -D database_name2... n  
 ```  
   
@@ -116,20 +118,20 @@ dta -D database_name1 -D database_name2... n
   
  For example, if you have a workload that contains no explicit `USE database_name` clause, and you use the following **dta** command, a recommendation will not be generated:  
   
-```  
+```console  
 dta -D db_name1, db_name2...  
 ```  
   
  But if you use the same workload, and use the following **dta** command that uses the **-d** argument, a recommendation will be generated:  
   
-```  
+```console  
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
  **-d** _database_name_  
  Specifies the first database to which **dta** connects when tuning a workload. Only one database can be specified for this argument. For example:  
   
-```  
+```console  
 dta -d AdventureWorks2012 ...  
 ```  
   
@@ -261,7 +263,7 @@ dta -d AdventureWorks2012 ...
  **-n** _number_of_events_  
  Specifies the number of events in the workload that **dta** should tune. If this argument is specified and the workload is a trace file that contains duration information, then **dta** tunes events in decreasing order of duration. This argument is useful to compare two configurations of physical design structures. To compare two configurations, specify the same number of events to be tuned for both configurations and then specify an unlimited tuning time for both also as follows:  
   
-```  
+```console  
 dta -n number_of_events -A 0  
 ```  
   
@@ -270,7 +272,7 @@ dta -n number_of_events -A 0
  **-l** _time_window_in_hours_   
    Specifies the time window (in hours) when a query must have executed for it to be considered by DTA for tuning when using **-iq** option (Workload from Query Store).
    
-```  
+```console  
 dta -iq -l 48  
 ```  
 
@@ -324,7 +326,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
   
  Specify multiple reports by separating the values with commas, for example:  
   
-```  
+```console  
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
@@ -371,7 +373,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
   
  This example uses a secure connection (`-E`) to connect to the **tpcd1G** database on MyServer to analyze a workload and create recommendations. It writes the output to a script file named script.sql. If script.sql already exists, then **dta** will overwrite the file because the `-F` argument has been specified. The tuning session runs for an unlimited length of time to ensure a complete analysis of the workload (`-A 0`). The recommendation must provide a minimum improvement of 5% (`-m 5`). **dta** should include indexes and indexed views in its final recommendation (`-fa IDX_IV`).  
   
-```  
+```console  
 dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
@@ -379,7 +381,7 @@ dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX
   
  This example limits the total database size, which includes the raw data and the additional indexes, to 3 gigabytes (GB) (`-B 3000`) and directs the output to d:\result_dir\script1.sql. It runs for no more than 1 hour (`-A 60`).  
   
-```  
+```console  
 dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
@@ -387,7 +389,7 @@ dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60
   
  This example limits the number of queries read from the file orders_wkld.sql to a maximum of 10 (`-n 10`) and runs for 15 minutes (`-A 15`), whichever comes first. To make sure that all 10 queries are tuned, specify an unlimited tuning time with `-A 0`. If time is important, specify an appropriate time limit by specifying the number of minutes that are available for tuning with the `-A` argument as shown in this example.  
   
-```  
+```console  
 dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
@@ -395,7 +397,7 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 
  This example demonstrates the use of *table_list_file* (the **-Tf** argument). The contents of the file table_list.txt are as follows:  
 
-```
+```console
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
@@ -413,11 +415,11 @@ The contents of table_list.txt specifies that:
     
     The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
 
-``` 
+```console 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ``` 
 
-## See Also
+## See also
 
 - [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
 - [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

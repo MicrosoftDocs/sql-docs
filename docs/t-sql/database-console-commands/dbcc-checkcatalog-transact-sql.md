@@ -26,7 +26,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Checks for catalog consistency within the specified database. The database must be online.  
   
@@ -54,7 +54,7 @@ DBCC CHECKCATALOG
  Suppresses all informational messages.  
   
 ## Remarks  
-After the DBCC CATALOG command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.
+After the DBCC CHECKCATALOG command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.
   
 |State|Description|  
 |-----------|-----------------|  

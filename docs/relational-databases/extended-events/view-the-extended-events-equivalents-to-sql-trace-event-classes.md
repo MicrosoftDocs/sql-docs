@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], SQL Trace equivalents"
   - "extended events [SQL Server], user configurable events"
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "PROPERTY index"
   - "XML indexes [SQL Server], creating"
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # XML Indexes (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.author: genemi
   
  XML instances are stored in **xml** type columns as large binary objects (BLOBs). These XML instances can be large, and the stored binary representation of **xml** data type instances can be up to 2 GB. Without an index, these binary large objects are shredded at run time to evaluate a query. This shredding can be time-consuming. For example, consider the following query:  
   
-```  
+```sql  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
@@ -101,16 +101,22 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  For example, the following query returns summary information stored in the `CatalogDescription`**xml** type column in the `ProductModel` table. The query returns <`Summary`> information only for product models whose catalog description also stores the <`Features`> description.  
   
-```  
-WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+```sql  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")
+SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as Result
+FROM Production.ProductModel 
+WHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  With regard to the primary XML index, instead of shredding each XML binary large object instance in the base table, the rows in the index that correspond to each XML binary large object are searched sequentially for the expression specified in the `exist()` method. If the path is found in the Path column in the index, the <`Summary`> element together with its subtrees is retrieved from the primary XML index and converted into an XML binary large object as the result of the `query()` method.  
   
  Note that the primary XML index is not used when retrieving a full XML instance. For example, the following query retrieves from the table the whole XML instance that describes the manufacturing instructions for a specific product model.  
   
-```  
-USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE ProductModelID=7;  
+```sql  
+USE AdventureWorks2012;
+SELECT Instructions
+FROM Production.ProductModel 
+WHERE ProductModelID=7;  
 ```  
   
 ## Secondary XML Indexes  
@@ -143,7 +149,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
  The following query shows where the PATH index is helpful:  
   
-```  
+```sql  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
@@ -166,14 +172,14 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  The following query returns `ContactID` from the `Contact` table. The `WHERE` clause specifies a filter that looks for values in the `AdditionalContactInfo`**xml** type column. The contact IDs are returned only if the corresponding additional contact information XML binary large object includes a specific telephone number. Because the <`telephoneNumber`> element may appear anywhere in the XML, the path expression specifies the descendent-or-self axis.  
   
-```  
+```sql  
 WITH XMLNAMESPACES (  
   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
-FROM   Person.Contact  
-WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-1111"]') = 1  
+FROM Person.Contact  
+WHERE AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-1111"]') = 1  
 ```  
   
  In this situation, the search value for <`number`> is known, but it can appear anywhere in the XML instance as a child of the <`telephoneNumber`> element. This kind of query might benefit from an index lookup based on a specific value.  
@@ -185,11 +191,11 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
   
  For example, for product model `19`, the following query retrieves the `ProductModelID` and `ProductModelName` attribute values using the `value()` method. Instead of using the primary XML index or the other secondary XML indexes, the PROPERTY index may provide faster execution.  
   
-```  
+```sql  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
-SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
-       CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          
+SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') AS ModelID,  
+  CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') AS ModelName          
 FROM Production.ProductModel     
 WHERE ProductModelID = 19  
 ```  

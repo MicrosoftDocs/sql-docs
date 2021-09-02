@@ -159,7 +159,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  > [!TIP]  
 >  When designing a database and its objects, from the beginning, plan who or which applications will access which objects and based on that place objects, namely tables but also views, functions and stored procedures in schemas according to buckets of access type as much as possible. You can read more about this approach in this blog post by Andreas Wolter [Schema-design for SQL Server: recommendations for Schema design with security in mind](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/). 
   
-## Diagramm of Permissions  
+## Diagram of Permissions  
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

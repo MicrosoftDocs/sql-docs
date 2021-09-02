@@ -42,8 +42,8 @@ Returns information about all spinlock waits organized by type.
 
 
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.    
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.   
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.    
   
 ## Remarks  
  
@@ -84,7 +84,7 @@ GO
 |ASYNCSTATSLIST|Internal use only.|
 |BACKUP|Internal use only.|
 |BACKUP_COPY_CONTEXT|Internal use only.|
-|BACKUP_CTX|Internal use only.|
+|BACKUP_CTX|Protects access to list of pages involved in I/O while a backup is happening on that particular database. High spins could be observed when long checkpoints or lazwriter activity happen during backup operations. You can obtain relief using one of the following methods: <br /><br /> - a) Use [indirect checkpoint](../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt) instead of [automatic checkpoint](../../relational-databases/logs/database-checkpoints-sql-server.md#AutomaticChkpt) <br /><br /> - b) Minimize lazywriter activity by properly allocating memory required for this instance <br /><br /> - c) Avoid too many concurrent backups for databases on the instance|
 |BASE_XACT_HASH|Internal use only.|
 |BLOCKER_ENUM|Internal use only.|
 |BPREPARTITION|Internal use only.|

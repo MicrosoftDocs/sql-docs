@@ -1,12 +1,12 @@
 ---
 title: Configure Windows to receive remote table copies
 description: Describes how to purchase and configure a non-appliance Windows system connected using the InfiniBand network for use with the remote table copy feature in Parallel Data Warehouse. The Windows system will host the SQL Server database that receives the remote table copy from a SQL Server PDW database. It is purchased separately from the appliance and connected to the appliance InfiniBand network. 
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---

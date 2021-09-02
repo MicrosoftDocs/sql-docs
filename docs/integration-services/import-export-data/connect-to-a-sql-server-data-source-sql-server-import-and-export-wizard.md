@@ -112,10 +112,7 @@ Here's the screen that you see after entering the connection string.
 
 ## Connect to SQL Server with the Microsoft OLE DB Provider for SQL Server or SQL Server Native Client
 
-> [!IMPORTANT]
-> The Microsoft OLE DB Provider for SQL Server and SQL Server Native Client are not supported in versions of SQL Server after SQL Server 2012. Use the ODBC driver instead. To learn more about the transition to the ODBC driver, see the following blog posts.
->   -   [Microsoft is Aligning with ODBC for Native Relational Data Access](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)
->   -   [Introducing the new Microsoft ODBC Drivers for SQL Server](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server)
+[Microsoft OLE DB Provider for SQL Server](../../connect/connect-history.md#ole-db) is the current OLE DB provider for SQL Server.
 
 ## Other data providers and more info
 For info about how to connect to SQL Server with a data provider that's not listed here, see [SQL Server connection strings](https://www.connectionstrings.com/sql-server/). This third-party site also contains more info about the data providers and the connection parameters described on this page.

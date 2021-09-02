@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # sqlrutils (R package in SQL Server Machine Learning Services)
@@ -29,7 +29,7 @@ You can also execute the stored procedure from an R environment, by passing well
   
 ## Full reference documentation
 
-The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, documentation for individual sqlrutils functions is published to just one location under the [sqlrutils package reference](/machine-learning-server/r-reference/sqlrutils/sqlrutils) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, documentation for individual sqlrutils functions is published to just one location under the [sqlrutils package reference](/machine-learning-server/r-reference/sqlrutils/sqlrutils). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Functions list
 

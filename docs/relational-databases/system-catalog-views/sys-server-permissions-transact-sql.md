@@ -29,8 +29,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifies class of thing on which permission exists.<br /><br /> 100 = Server<br /><br /> 101 = Server-principal<br /><br /> 105 = Endpoint|  
-|**class_desc**|**nvarchar(60)**|Description of class on which permission exists. One of the following values:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class**|**tinyint**|Identifies class of thing on which permission exists.<br /><br /> 100 = Server<br /><br /> 101 = Server-principal<br /><br /> 105 = Endpoint<br /><br /> 108 = Availability Group|  
+|**class_desc**|**nvarchar(60)**|Description of class on which permission exists. One of the following values:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**<br /><br /> **AVAILABILITY GROUP**|  
 |**major_id**|**int**|ID of the securable on which permission exists, interpreted according to class. For most, this is just the kind of ID that applies to what the class represents. Interpretation for non-standard is as follows:<br /><br /> 100 = Always 0|  
 |**minor_id**|**int**|Secondary ID of thing on which permission exists, interpreted according to class.|  
 |**grantee_principal_id**|**int**|Server-principal-ID to which the permissions are granted.|  

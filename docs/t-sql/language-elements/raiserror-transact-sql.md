@@ -128,9 +128,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  *severity*  
  Is the user-defined [severity level](../../relational-databases/errors-events/database-engine-error-severities.md) associated with this message. When using *msg_id* to raise a user-defined message created using sp_addmessage, the severity specified on RAISERROR overrides the severity specified in sp_addmessage.  
-  
- Severity levels from 0 through 18 can be specified by any user. Severity levels from 19 through 25 can only be specified by members of the sysadmin fixed server role or users with ALTER TRACE permissions. For severity levels from 19 through 25, the WITH LOG option is required. Severity levels less than 0 are interpreted as 0. Severity levels greater than 25 are interpreted as 25.  
-  
+For severity levels from 19 through 25, the WITH LOG option is required. Severity levels less than 0 are interpreted as 0. Severity levels greater than 25 are interpreted as 25.    
 > [!CAUTION]  
 >  Severity levels from 20 through 25 are considered fatal. If a fatal severity level is encountered, the client connection is terminated after receiving the message, and the error is logged in the error and application logs.  
   
@@ -210,7 +208,11 @@ RAISERROR (N'<\<%7.3s>>', -- Message text.
            N'abcde'); -- First argument supplies the string.  
 -- The message text returned is: <<    abc>>.  
 GO  
-```  
+```
+
+ ## Permissions  
+   Severity levels from 0 through 18 can be specified by any user. Severity levels from 19 through 25 can only be specified by members of the sysadmin fixed server role or users with ALTER TRACE permissions. 
+
   
 ## Examples  
   

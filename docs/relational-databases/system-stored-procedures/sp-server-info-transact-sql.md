@@ -87,7 +87,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  **sp_server_info** returns a subset of the information provided by **SQLGetInfo** in ODBC.  
   
 ## Permissions  
- Requires SELECT permission on the schema.  
+Requires membership in the **public** role. 
   
 ## See Also  
  [Catalog Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   

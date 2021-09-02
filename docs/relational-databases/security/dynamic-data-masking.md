@@ -25,7 +25,7 @@ Dynamic data masking helps prevent unauthorized access to sensitive data by enab
 * DDM features full masking and partial masking functions, and a random mask for numeric data.
 * Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
 
-The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
+The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use it in conjunction with them in order to better protect the sensitive data in the database.  
   
 Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview).  
   
@@ -46,7 +46,10 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
   
  Users with **SELECT** permission on a table can view the table data. Columns that are defined as masked, will display the masked data. Grant the **UNMASK** permission to a user to enable them to retrieve unmasked data from the columns for which masking is defined.  
   
- The **CONTROL** permission on the database includes both the **ALTER ANY MASK** and **UNMASK** permission.  
+ The **CONTROL** permission on the database includes both the **ALTER ANY MASK** and **UNMASK** permission. 
+ 
+  > [!NOTE]  
+>  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others. Also see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## Best Practices and Common Use Cases  
   
@@ -85,6 +88,8 @@ WHERE is_masked = 1;
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  
  Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
+ 
+Whenever you project an expression referencing a column for which a data masking function is defined, the expression will also be masked. Regardless of the function (default, email, random, custom string) used to mask the referenced column, the resulting expression will always be masked with the default function.
  
 
 ## Security Note: Bypassing masking using inference or brute-force techniques

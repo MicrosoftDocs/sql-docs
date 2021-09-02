@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/14/2019
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
@@ -18,7 +18,7 @@ Use dynamic management views (DMVs) to monitor the execution of external scripts
 In this article, you will find the DMVs that are specific for SQL Server Machine Learning Services. You will also find example queries that show:
 
 + Settings and configuration options for machine learning
-+ Active sessions running external Python or scripts
++ Active sessions running external Python or R scripts
 + Execution statistics for the external runtime for Python and R
 + Performance counters for external scripts
 + Memory usage for the OS, SQL Server, and external resource pools

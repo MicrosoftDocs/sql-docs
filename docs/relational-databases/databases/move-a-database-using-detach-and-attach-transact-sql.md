@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 # Move a database using detach and attach (Transact-SQL)

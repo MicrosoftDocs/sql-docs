@@ -5,12 +5,10 @@ titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.service: sql-data-warehouse
-ms.subservice: design
+ms.prod: sql
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
@@ -31,7 +29,8 @@ ms.custom: seo-dt-2019
 sp_pdw_remove_network_credentials 'target_server_name'  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  '*target_server_name*'  

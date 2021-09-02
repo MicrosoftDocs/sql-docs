@@ -2,7 +2,7 @@
 description: "ALTER WORKLOAD GROUP (Transact-SQL)"
 title: ALTER WORKLOAD GROUP (Transact-SQL) 
 ms.custom: ""
-ms.date: "05/05/2020"
+ms.date: "05/04/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -15,7 +15,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "ALTER WORKLOAD GROUP statement"
-ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"

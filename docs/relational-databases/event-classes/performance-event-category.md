@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Performance event category [SQL Server]"
   - "event classes [SQL Server], Performance event category"
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performance Event Category

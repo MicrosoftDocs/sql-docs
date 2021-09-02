@@ -1,8 +1,8 @@
 ---
 description: "Configure Database Mail"
-title: "Configure Database Mail | Microsoft Docs"
+title: "Configure Database Mail"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -37,9 +37,8 @@ f1_keywords:
   - "sql13.swb.dbmail.newsqlimailaccount.f1"
   - "sql13.swb.dbmail.manageexistingprofile.f1"
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
-ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Configure Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -341,6 +340,10 @@ ms.author: sstein
   
  **Profile Name**  
  Displays the name of the profile.  
+ 
+> [!NOTE]  
+>  If you're configuring database mail for an Azure SQL Managed Instance and you want to use SQL Agent jobs to send messages, you must create a database mail profile named '**AzureManagedInstance_dbmail_profile**'. For more information and for a sample script, see [SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
+
   
  **Default Profile**  
  Select this option to make the specified profile the default profile.  

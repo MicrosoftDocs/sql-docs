@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Degree of Parallelism event class"
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Degree of Parallelism (7.0 Insert) Event Class

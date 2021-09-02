@@ -1,5 +1,5 @@
 ## :::image type="icon" source="../media/edit-topic-pencil.png" border="false"::: Contribute to SQL documentation
 
-Did you know that you could edit the content yourself? If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page.
+Did you know that you can edit SQL content yourself? If you do so, not only do you help improve our documentation, but you also get credited as a contributor to the page.
 
-- [How to contribute to SQL Server Documentation](../../sql-server/sql-server-docs-contribute.md)
+For more information, see [How to contribute to SQL Server documentation](../../sql-server/sql-server-docs-contribute.md)

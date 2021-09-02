@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Migrate database"
   - "DAC"
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

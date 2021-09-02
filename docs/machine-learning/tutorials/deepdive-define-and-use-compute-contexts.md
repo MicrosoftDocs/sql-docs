@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -58,7 +58,7 @@ This section walks you through each part.
   
     The *wait* argument to **RxInSqlServer** supports these options:
   
-    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.  For more information, see [Distributed and parallel computing in Machine Learning Server](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.
   
     -   **FALSE**. Jobs are configured as non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
 

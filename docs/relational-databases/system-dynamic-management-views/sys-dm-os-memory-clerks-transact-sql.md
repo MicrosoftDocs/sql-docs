@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns the set of all memory clerks that are currently active in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_clerks**. 
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_clerks**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -67,13 +67,13 @@ Cache store and user store differ in the way they control lifetime of allocation
 
 Visibility control manages visibility of an entry. An entry in a cache can exist but might not be visible. For example, if a cache entry is marked for single use only, the entry will not be visible after it is used. In addition, the cache entry might be marked as dirty; it will continue to live in the cache but won't be visible to any lookups. For both stores, entry visibility is controlled by the caching framework.
 
-For more information, see [SQLOS Caching](https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching).
+For more information, see [SQLOS Caching](/archive/blogs/slavao/sqlos-caching).
 
 ### OBJECTSTORE
 
 Object store is a simple pool. It is used to cache homogeneous data. All entries in the pools are considered equal.  Object stores implement a maximum cap to control size relative to other caches.
 
-For more information, see [SQLOS Caching](https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching).
+For more information, see [SQLOS Caching](/archive/blogs/slavao/sqlos-caching).
 
 ## Types
 
@@ -98,7 +98,7 @@ The following table lists the memory clerk types:
 |CACHESTORE_QDSRUNTIMESTATS     |   This cache store is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  runtime statistics |
 |CACHESTORE_SEARCHPROPERTYLIST     |     This cache store is used for allocations by Full-Text engine for [Property List](../search/search-document-properties-with-search-property-lists.md) Cache  |
 |CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |  This cache store is used by storage engine for caching Heap or B-Tree (HoBT) column metadata structures.      |
-|CACHESTORE_SQLCP     |    This cache store is used for caching ad hoc queries, prepared statements, and server-side cursors in plan cache. Ad hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cache store - they are submitted by the application using API calls like [SQLPrepare()](../../odbc/reference/syntax/sqlprepare-function.md)/ [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) (ODBC) or [SqlCommand.Prepare](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cache store ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
+|CACHESTORE_SQLCP     |    This cache store is used for caching ad hoc queries, prepared statements, and server-side cursors in plan cache. Ad hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cache store - they are submitted by the application using API calls like [SQLPrepare()](../../odbc/reference/syntax/sqlprepare-function.md)/ [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) (ODBC) or [SqlCommand.Prepare](/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cache store ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
 |CACHESTORE_STACKFRAMES     |    This cache store is used for allocations of internal SQL OS structures related to stack frames.     |
 |CACHESTORE_SYSTEMROWSET     |   This cache store is used for allocations of internal structures related to transaction logging and recovery.      |
 |CACHESTORE_TEMPTABLES     |     This cache store is used for allocations related to [temporary tables and table variables caching](../databases/tempdb-database.md#performance-improvements-in-tempdb-for-sql-server) - part of plan cache.    |
@@ -134,7 +134,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_SECURITYAPI     |    This memory clerk is used for allocations by SQL OS functionality.  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
 |MEMORYCLERK_SERIALIZATION     |     Internal use only    |
 |MEMORYCLERK_SLOG     |     This memory clerk is used for allocations by sLog (secondary in-memory log stream) in [Accelerated Database Recovery](../accelerated-database-recovery-concepts.md) <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SNI     |     This memory clerk allocates memory for the Server Network Interface (SNI) components. SNI manages connectivity and [TDS](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/893fcc7e-8a39-4b3c-815a-773b7b982c50) packets for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  |
+|MEMORYCLERK_SNI     |     This memory clerk allocates memory for the Server Network Interface (SNI) components. SNI manages connectivity and [TDS](/openspecs/windows_protocols/ms-tds/893fcc7e-8a39-4b3c-815a-773b7b982c50) packets for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  |
 |MEMORYCLERK_SOSMEMMANAGER     |   This memory clerk allocates structures for  SQLOS (SOS) thread scheduling and memory and I/O management..     |
 |MEMORYCLERK_SOSNODE     |     This memory clerk allocates structures for SQLOS (SOS) thread scheduling and memory and I/O management.    |
 |MEMORYCLERK_SOSOS     |     This memory clerk allocates structures for  SQLOS (SOS) thread scheduling and memory and I/O management..    |
@@ -180,7 +180,7 @@ The following table lists the memory clerk types:
 |USERSTORE_OBJPERM     |     This store is used for structures keeping track of object security/permission     |
 |USERSTORE_QDSSTMT     |  This cache store is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  statements       |
 |USERSTORE_SCHEMAMGR     |    Schema manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table-valued parameters, worktables, workfiles, version store.  |
-|USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
+|USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
 |USERSTORE_TOKENPERM     |    TokenAndPermUserStore is a single SOS user store that keeps track of security entries for security context, login, user, permission, and audit. Multiple hash tables are allocated to store these objects.    |
 
 ## See Also  
@@ -191,4 +191,3 @@ The following table lists the memory clerk types:
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
-  

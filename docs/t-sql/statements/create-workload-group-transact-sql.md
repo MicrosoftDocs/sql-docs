@@ -1,8 +1,8 @@
 ---
 description: "CREATE WORKLOAD GROUP (Transact-SQL)"
-title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
+title: "CREATE WORKLOAD GROUP (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/27/2020
+ms.date: 05/04/2021
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

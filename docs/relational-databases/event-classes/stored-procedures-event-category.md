@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server event classes, Stored Procedures event category"
   - "event classes [SQL Server], Stored Procedures event category"
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures Event Category

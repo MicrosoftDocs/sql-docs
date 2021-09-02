@@ -62,7 +62,7 @@ The evaluated result of *expression* determines the return type.
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** category (p, s)|**decimal(38, min(s,6))**|  
+|**decimal** category (p, s)|**decimal(38, max(s,6))**|  
 |**money** and **smallmoney** category|**money**|  
 |**float** and **real** category|**float**|  
   

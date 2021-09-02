@@ -1,8 +1,8 @@
 ---
-title: "Release notes for the JDBC Driver"
-description: "This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described."
+title: Release notes
+description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 ms.custom: ""
-ms.date: "03/02/2021"
+ms.date: 08/04/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -15,6 +15,62 @@ ms.author: v-daenge
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
+
+## <a id="94"></a> 9.4
+
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2168495)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2168494)**  
+
+Version number: 9.4.0  
+Released: July 30, 2021
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x40a)  
+
+### 9.4 Compliance
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Download the latest updates for JDBC Driver 9.4. | &bull; &nbsp; [GitHub, 9.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 9.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-9.4.0.jre16.jar file from the 9.4 package should be used with Java 16. |
+| Compatible with Java Development Kit (JDK) version 16.0, 11.0, and 1.8. | Microsoft JDBC Driver 9.4 for SQL Server is now compatible with Java Development Kit (JDK) version 16.0 in addition to JDK 11.0 and 1.8. |
+| &nbsp; | &nbsp; |
+
+### New features in 9.4
+
+| Feature | Details |
+| :---------- | :----------- |
+| Java 16 support | The driver is now compatible with Java Development Kit (JDK) version 16.0 in addition to JDK 11.0 and 1.8. |
+| Replication connection support | Replication connections are now supported. See [Setting the connection properties](setting-the-connection-properties.md). |
+| Custom Kerberos authentication realm | The driver now supports specifying a custom authentication realm when using Kerberos authentication. See [Setting the connection properties](setting-the-connection-properties.md). |
+| Open Connection Retry | The `connectRetryCount` and `connectRetryInterval` connection properties have been added to configure automatic retries when opening connections. See [Setting the connection properties](setting-the-connection-properties.md) for details on these new properties. |
+| &nbsp; | &nbsp; |
+
+### Changes in 9.4
+
+| Change | Details |
+| :---------- | :----------- |
+| Azure Key Vault Provider | Multiple, successive connections can be opened that specify different Azure Key Vault provider information. |
+| Updated error messages | Error messages related to Enclave exceptions now include a link to a troubleshooting guide.<br/>Error messages related to Active Directory authentication failures now include the error string from the underlying library. |
+| Driver version sent to server | The driver version is now correctly sent to the database during `PRELOGIN`. |
+| Client process ID | The client process ID is now sent to the server when running on Java 9+. Java 8 keeps the previous functionality of sending `0` for the client process ID. |
+| Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, `antlr`, and `bouncycastle`. |
+| Removed unnecessary references | Removed unused Java 9-specific class references from the Java 8 jar |
+| &nbsp; | &nbsp; |
+
+### Fixes in 9.4
+
+| Fix | Details |
+| :---------- | :----------- |
+| [GitHub Issue #1499](https://github.com/microsoft/mssql-jdbc/issues/1499) | Fixed: Batch fails when always encrypted is enabled in the connection string and clearParameters is called. |
+| [GitHub Issue #1632](https://github.com/microsoft/mssql-jdbc/issues/1632) | Fixed: Small memory leak on new connection. |
+| [GitHub Issue #1565](https://github.com/microsoft/mssql-jdbc/issues/1565) | Fixed an issue where trustStorePassword is null when using applicationIntent=ReadOnly |
+| [GitHub Issue #1568](https://github.com/microsoft/mssql-jdbc/issues/1568) | Fixed an issue where redirected token contains named instance in servername |
+| [GitHub Issue #1531](https://github.com/microsoft/mssql-jdbc/issues/1531) | Fixed potential integer overflow in TDSWriter.writeString() |
+| &nbsp; | &nbsp; |
+
+## Previous releases
 
 ## <a id="92"></a> 9.2
 
@@ -52,8 +108,9 @@ Released: January 29, 2021
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
 
-Zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
-Tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
 
 ### Support for JDK 15
 
@@ -63,14 +120,14 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault via interactive authentication. | See [Connecting using Azure Active Directory authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault via interactive authentication. | See [Connecting using Azure Active Directory authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### Added support for Azure Active Directory Service Principal Authentication
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault using the client ID and secret of a service principal identity. | See [Connecting using Azure Active Directory authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault using the client ID and secret of a service principal identity. | See [Connecting using Azure Active Directory authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### Updated Azure Key Vault library to use modern Azure Key Vault library
@@ -84,10 +141,8 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 
 | useBulkCopyForBatchInsert changes for non Azure Synapse Analytics servers | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 9.2 now allows bulk copy API for batch insert operation against non-Azure Synapse Analytics servers. | See [Using bulk copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
+| Microsoft JDBC Driver 9.2 now allows bulk copy API for batch insert operation against non-Azure Synapse Analytics servers. | See [Using bulk copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md). |
 | &nbsp; | &nbsp; |
-
-## Previous releases
 
 ## <a id="84"></a> 8.4
 
@@ -131,14 +186,14 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Extended support for bulk copy for Azure Data Warehouse
 
 | Bulk copy changes for Azure Data Warehouse | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](using-bulk-copy-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Added support for Azure SQL DNS caching
@@ -159,7 +214,7 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | Client certificate authentication | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
+| Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](client-certification-authentication-for-loopback-scenarios.md). |
 
 ## <a id="82"></a> 8.2
 
@@ -208,7 +263,7 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | Always Encrypted change | Details |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
-| More details and sample code. | See [Always Encrypted with secure enclaves](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
+| More details and sample code. | See [Always Encrypted with secure enclaves](using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Performance Improvement when Retrieving Temporal Datatypes from SQL Server <sup>1</sup>

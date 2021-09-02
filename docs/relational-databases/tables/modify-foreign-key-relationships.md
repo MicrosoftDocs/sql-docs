@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "foreign keys [SQL Server], modifying"
   - "modifying foreign keys"
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Foreign Key Relationships

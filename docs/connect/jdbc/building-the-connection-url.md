@@ -1,8 +1,8 @@
 ---
 title: Building the connection URL
-description: Learn the format of the connection string used by the Microsoft JDBC Driver for SQL Server.
+description: Learn the format of the connection string used by the Microsoft JDBC Driver for SQL Server. Samples of connection strings are included in the examples section.
 ms.custom: ""
-ms.date: 01/29/2020
+ms.date: 08/06/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,7 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-daenge
 ---
-# Building the Connection URL
+# Building the connection URL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -37,6 +37,10 @@ where:
 
 > [!CAUTION]
 > For security purposes, you should avoid building the connection URLs based on user input. You should only specify the server name and driver in the URL. For user name and password values, use the connection property collections. For more information about security in your JDBC applications, see [Securing JDBC driver applications](securing-jdbc-driver-applications.md).
+
+## Connection properties
+
+For a detailed list of properties that can be set in the connection string, see [Setting the connection properties](setting-the-connection-properties.md#properties).
 
 ## Connection examples
 
@@ -85,7 +89,11 @@ To use a JDBC URL property, use the following format:
 
 You might have to escape certain parts of the connection URL values if the values include special characters like spaces, semicolons, and quotation marks. The JDBC driver supports escaping these characters by enclosing them in braces. For example, {;} escapes a semicolon.
 
-Escaped values can contain special characters (especially '=', ';', '[]', and space) but can't contain braces. Values that must be escaped and contain braces should be added to a properties collection.
+Before version 8.4, escaped values can contain special characters (especially '=', ';', '[]', and space) but can't contain braces. Values that must be escaped and contain braces should be added to a properties collection.
+
+In version 8.4 and above, escaped values can contain special characters, including braces. However, closing braces must be escaped. For example, with a password of `pass";{}word`, a connection string would need to escape the password as follows:
+
+`jdbc:sqlserver://localhost;username=MyUsername;password={pass";{}}word};`
 
 > [!NOTE]
 > White space inside the braces is literal and not trimmed.

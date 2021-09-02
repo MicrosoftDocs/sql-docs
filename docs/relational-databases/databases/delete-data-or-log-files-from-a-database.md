@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "file deletion [SQL Server]"
   - "deleting data"
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Delete Data or Log Files from a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

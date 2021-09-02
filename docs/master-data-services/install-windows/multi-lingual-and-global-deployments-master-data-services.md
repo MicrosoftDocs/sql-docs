@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Multi-Lingual and Global Deployments (Master Data Services)

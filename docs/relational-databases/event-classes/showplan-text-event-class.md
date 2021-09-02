@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Showplan Text event class"
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Text Event Class

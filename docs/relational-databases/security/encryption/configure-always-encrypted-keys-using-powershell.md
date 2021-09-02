@@ -2,7 +2,7 @@
 title: "Provision Always Encrypted keys using PowerShell | Microsoft Docs"
 description: Learn how to provision keys for Always Encrypted using the SqlServer PowerShell module to provide control access to the encryption keys and the database.
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 04/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,7 +13,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Provision Always Encrypted keys using PowerShell
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
     
 This article provides the steps to provision keys for Always Encrypted using the [SqlServer PowerShell module](../../../powershell/sql-server-powershell-provider.md). You can use PowerShell to provision Always Encrypted keys both [with and without role separation](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles), providing control over who has access to the actual encryption keys in the key store, and who has access to the database. 
@@ -74,7 +74,7 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ## Azure Key Vault without Role Separation (Example)
 
-This script is an end-to-end example for provisioning and configuring an Azure Key Vault, generating a column master key in the vault, generating and encrypting a column encryption key, and creating key metadata in an Azure SQL database.
+This script is an end-to-end example for provisioning and configuring a key vault in Azure Key Vault, generating a column master key in the vault, generating and encrypting a column encryption key, and creating key metadata in an Azure SQL database.
 
 
 ```powershell

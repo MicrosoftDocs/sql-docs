@@ -55,7 +55,7 @@ If you plan to deploy the packages to a different computer, you must create two 
   
 8.  Click **OK** to exit the **Environment Variables** dialog box.  
   
-9. Click **OK** to exit the **System Properties** dialog box.\  
+9. Click **OK** to exit the **System Properties** dialog box.
   
 10. Optionally, restart your computer. If you do not restart the computer, the name of the new variable will not be displayed in the Package Configuration Wizard, but you can still use it.  
   
@@ -77,7 +77,7 @@ If you plan to deploy the packages to a different computer, you must create two 
   
 8.  Click **OK** to exit the **Environment Variables** dialog box.  
   
-9. Click **OK** to exit the **System Properties** dialog box.\  
+9. Click **OK** to exit the **System Properties** dialog box.
   
 10. Optionally, restart your computer.  
   

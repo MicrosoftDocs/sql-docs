@@ -2,13 +2,12 @@
 title: "Overview and Usage Scenarios | Microsoft Docs"
 description: Learn about In-Memory OLTP, a technology in SQL Server and Azure SQL Database for optimized transaction processing. Review examples and additional resources.
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "05/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: "kevin-farlee"
 ms.author: "kfarlee"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -56,13 +55,8 @@ Use memory-optimized tables for your core transaction tables, i.e., the tables w
 
 To get started in an existing application:
 
-1. use the [transaction performance analysis report](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) to identify the objects you want to migrate,
-2. and use the [memory-optimization](memory-optimization-advisor.md) and [native compilation](native-compilation-advisor.md) advisors to help with migration.
-
-#### Customer Case Studies
-
-- CMC Markets leverages In-Memory OLTP in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to achieve consistent low latency: [Because a second is too long to wait, this financial services firm is updating its trading software now.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco leverages In-Memory OLTP in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to support increased throughput and handle spikes in the workload: [When an online gaming company doesn't want to risk its future, it bets on [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+1. Use the [transaction performance analysis report](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) to identify the objects you want to migrate.
+2. Use the [memory-optimization](memory-optimization-advisor.md) and [native compilation](native-compilation-advisor.md) advisors to help with migration.
 
 ### Data ingestion, including IoT (Internet-of-Things)
 
@@ -85,12 +79,6 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
 - [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0)
 - [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
 
-#### Customer Case Studies
-
-- [Quorum doubles key database's workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet improved the performance of batch data load and removed the need to maintain a mid-tier cache, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
-
 ### Caching and session state
 
 The In-Memory OLTP technology makes SQL really attractive for maintaining session state (e.g., for an ASP.NET application) and for caching.
@@ -103,9 +91,8 @@ You can use non-durable memory-optimized tables as a simple key-value store by s
 
 Get started with memory-optimizing ASP.NET session state by leveraging the scripts published on GitHub to replace the objects created by the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session state provider: [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state)
 
-#### Customer case studies
+#### Customer case study
 
-- bwin was able to dramatically increase throughput and reduce hardware footprint for ASP.NET session state, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
 - bwin increased throughput with ASP.NET session state even further and implemented an enterprise-wide mid-tier caching system, with In-Memory OLTP in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### Tempdb object replacement

@@ -16,12 +16,12 @@ ms.reviewer:
 
 ---
 # Print Dialog Box
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can specify how you want to print a document by selecting options in the **Print** dialog box.  
   
 ## Printer  
 **Name**  
-Specifies the printer. Select a printer from the list. The printer you select becomes the default printer until you close [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or select a different printer. The information that appears in the fields below the list applies to the selected printer.  
+Specifies the printer. Select a printer from the list. The printer you select becomes the default printer until you close SQL Server Management Studio or select a different printer. The information that appears in the fields below the list applies to the selected printer.  
   
 **Status**  
 Describes the state of the selected printer-for example, busy or ready.  

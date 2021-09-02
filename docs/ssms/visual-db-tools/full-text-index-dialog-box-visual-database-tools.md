@@ -16,11 +16,11 @@ ms.reviewer:
 
 ---
 # Full-Text Index Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box allows you to create a full-text index, for full-text searches on text-based columns in your database tables. A full-text index relies on a regular index, so you must create that first. The regular index must be created on a single, non-null column; it is best to choose a column with small values rather than a column with large ones.  
   
 > [!NOTE]
-> To create a full-text index, you must first create a full-text catalog for the database using an outside tool, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Enterprise Manager.  
+> To create a full-text index, you must first create a full-text catalog for the database using an outside tool, such as SQL Server Management Studio or Enterprise Manager.  
 > 
 > [!NOTE]
 > Full-text index functionality is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](../../sql-server/editions-and-components-of-sql-server-2016.md).  
@@ -45,7 +45,7 @@ Displays a comma-separated list of the names of full-text-searchable columns. To
 Displays the name of the full-text catalog on which this full-text index is stored. To store the index on a different catalog, click the catalog name and choose another from the drop-down list.  
   
 > [!NOTE]  
-> The catalog must be created first in an outside tool, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Enterprise Manager.  
+> The catalog must be created first in an outside tool, such as SQL Server Management Studio or Enterprise Manager.  
   
 **Identity Category**  
 When expanded, shows the name field for this index.  

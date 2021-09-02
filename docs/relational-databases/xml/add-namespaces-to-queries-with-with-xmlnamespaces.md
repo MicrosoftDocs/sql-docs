@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], WITH XMLNAMESPACES clause"
   - "WITH XMLNAMESPACES clause"
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

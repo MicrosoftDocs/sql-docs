@@ -90,4 +90,4 @@ monikerRange: ">=sql-server-2016"
 [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## Additional resources 
-[Database Migration Guide](https://aka.ms/datamigration)
+[Database Migration Guide](/data-migration/)

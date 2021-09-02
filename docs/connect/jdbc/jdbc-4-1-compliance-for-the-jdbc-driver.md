@@ -1,6 +1,6 @@
 ---
+title: JDBC 4.1 compliance
 description: Read about how the JDBC Driver for SQL Server is compliant with the JDBC 4.1 specification.
-title: JDBC 4.1 compliance for the JDBC driver
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

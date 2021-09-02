@@ -20,7 +20,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # GetDescendant (Database Engine)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a child node of the parent.
   

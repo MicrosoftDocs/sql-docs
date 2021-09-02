@@ -19,7 +19,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # View or Change the Properties of a Connection in a Project
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The properties of a connection saved in a project can be viewed and some can be modified.  
   
 ### To change the properties of a connection in a project  

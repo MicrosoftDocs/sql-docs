@@ -2,10 +2,10 @@
 title: "Docker: Install containers for SQL Server on Linux"
 description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
 ms.custom: seo-lt-2019, contperf-fy21q1
-author: vin-yu 
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 09/07/2020
+ms.date: 06/11/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -34,7 +34,8 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+> - Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
 
 In this quickstart, you use Docker to pull and run the SQL Server 2019 container image, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
 
@@ -43,11 +44,11 @@ In this quickstart, you use Docker to pull and run the SQL Server 2019 container
 
 ::: moniker-end
 
-This image consists of SQL Server running on Linux based on Ubuntu 18.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **Linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **Linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
+- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#pmosr).
 - Docker **overlay2** storage driver. This is the default for most users. If you find that you are not using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Minimum of 2 GB of disk space.
 - Minimum of 2 GB of RAM.

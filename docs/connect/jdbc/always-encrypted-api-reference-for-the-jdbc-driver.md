@@ -1,6 +1,6 @@
 ---
-description: Always Encrypted API reference for the JDBC driver
-title: Learn about the Always Encrypted APIs in the JDBC driver and how you can use them to encrypt and secure data in your Java application.
+title: Always Encrypted API reference
+description: Learn about the Always Encrypted APIs in the JDBC driver and how you can use them to encrypt and secure data in your Java application.
 ms.custom: ""
 ms.date: 01/29/2021
 ms.prod: sql

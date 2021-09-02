@@ -194,8 +194,9 @@ ms.author: chugu
  **FirstRow**  
  Specify the first row from which to start copying.  
   
- **Options**  
- |Term|Definition|  
+ **Options**
+ 
+|Term|Definition|  
 |----------|----------------|  
 |**Check constraints**|Select to check the table and column constraints.|  
 |**Keep nulls**|Select to retain null values during the bulk insert operation, instead of inserting any default values for empty columns.|  

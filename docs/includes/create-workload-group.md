@@ -39,9 +39,9 @@ Specifies the relative importance of a request in the workload group. Importance
 IMPORTANCE is local to the resource pool; workload groups of different importance inside the same resource pool affect each other, but do not affect workload groups in another resource pool.
 
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
-Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT.
+Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT. Default value is 25. 
 
-*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](sssql19-md.md)] and in Azure SQL Managed Instance. Default value is 25. The allowed range for *value* is from 1 through 100.
+*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and the allowed range is from 1 through 100. Starting with [!INCLUDE[sql-server-2019](sssql19-md.md)], the value is a `float` data type and the allowed range is from 0 through 100.
 
 > [!IMPORTANT]  
 > The amount specified only refers to query execution grant memory.

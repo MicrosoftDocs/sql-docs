@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "rebuilding databases, master"
   - "system databases [SQL Server], rebuilding"
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Rebuild System Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

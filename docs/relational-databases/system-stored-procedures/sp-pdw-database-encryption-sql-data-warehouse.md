@@ -3,7 +3,8 @@ description: "sp_pdw_database_encryption (Azure Synapse Analytics)"
 title: "sp_pdw_database_encryption (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 
@@ -26,7 +27,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### Parameters  
 `[ @enabled = ] enabled`

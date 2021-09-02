@@ -5,8 +5,7 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.service: sql-data-warehouse
-ms.subservice: design
+ms.prod: sql
 ms.topic: conceptual
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"

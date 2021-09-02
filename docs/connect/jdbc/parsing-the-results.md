@@ -1,16 +1,16 @@
 ---
-description: Learn about fully processing results, including multiple result sets, from a query execution in the JDBC driver.
 title: Parsing the results
+description: Learn about fully processing results, including multiple result sets, from a query execution in the JDBC driver.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ""
-author: rene-ye
-ms.author: v-reye
+author: DavidEngel
+ms.author: v-daenge
 manager: kenvh
 ---
 # Parsing the results
@@ -21,7 +21,7 @@ This article describes how SQL Server expects users to fully process results ret
 
 ## Update counts and result sets
 
-This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned. Users are expected to handle both when processing results.
+This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one or more of these results to be returned. Users are expected to handle both when processing results.
 
 The following code is an example of how a user could iterate through all results from the server:
 

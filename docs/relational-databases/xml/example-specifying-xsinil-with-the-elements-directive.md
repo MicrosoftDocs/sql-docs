@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, specifying XSINIL example"
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive

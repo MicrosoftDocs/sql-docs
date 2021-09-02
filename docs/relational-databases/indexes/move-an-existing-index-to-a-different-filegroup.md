@@ -2,7 +2,7 @@
 description: "Move an Existing Index to a Different Filegroup"
 title: "Move an Existing Index to a Different Filegroup | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/17/2017"
+ms.date: "05/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -18,28 +18,17 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Move an Existing Index to a Different Filegroup
+# Move an existing index to a different filegroup
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+
+For design considerations including why you might want to place a nonclustered index on a different filegroup, see [Index Placement on Filegroups or Partitions Schemes](../sql-server-index-design-guide.md#Index_placement).
+
+##  <a name="BeforeYouBegin"></a> Before you begin  
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To move an existing index to a different filegroup, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   If a table has a clustered index, moving the clustered index to a new filegroup moves the table to that filegroup.  
   
@@ -50,7 +39,7 @@ ms.author: mikeray
 ####  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   
 #### To move an existing index to a different filegroup using Table Designer  
   
@@ -177,7 +166,9 @@ ms.author: mikeray
         ON TransactionsFG1;  
     GO  
     ```  
+
+## Next steps
+
+For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+[SQL Server Index Architecture and Design Guide](../sql-server-index-design-guide.md)

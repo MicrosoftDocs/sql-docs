@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [STMPointFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stmpointfromtext-geography-data-type.md)  
   
  **To construct a geography LineString instance from WKT input**  
- STLineFromText (geography Data Type)  
+ [STLineFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stlinefromtext-geography-data-type.md) 
   
  **To construct a geography MultiLineString instance from WKT input**  
  [STMLineFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stmlinefromtext-geography-data-type.md)  

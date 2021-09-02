@@ -40,7 +40,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
   SQL Server version  | Visual Studio C++ Redistributable version
   ---------|---------
   2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-  2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+  2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
 
 ## Step 1: Set up an Azure AD service principal
 
@@ -442,6 +442,27 @@ For a note about the minimum permission levels needed for each action in this se
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
+  
+   Beginning with updated version 1.0.5.0 of the SQL Server connector, you can refer to a specific key version in the Azure key vault:
+   
+   ```sql  
+   CREATE ASYMMETRIC KEY EKMSampleASYKey
+   FROM PROVIDER [AzureKeyVault_EKM]  
+   WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0/1a4d3b9b393c4678831ccc60def75379',  
+   CREATION_DISPOSITION = OPEN_EXISTING; 
+   ```
+
+   In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations. For this scenario, you must complete two prerequisites:
+   
+   1. Create a **SQL Server Cryptographic Provider** key on **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\**.
+   1. Delegate access permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
+
+   > [!NOTE]
+   > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider** to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
+   >  
+   > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
+   > 
+   > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
 
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 
@@ -481,8 +502,7 @@ For a note about the minimum permission levels needed for each action in this se
     CREATE DATABASE ENCRYPTION KEY
     WITH ALGORITHM = AES_256
     ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
-    ```
-  
+    ``` 
 1. Encrypt the test database. Enable TDE by setting ENCRYPTION ON.
 
      ```sql  
@@ -508,6 +528,21 @@ For a note about the minimum permission levels needed for each action in this se
     DROP ASYMMETRIC KEY [EKMSampleASYKey]
     DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
     ```  
+      > [!NOTE]
+      > If the credential has a client secret that is about to expire, a new secret can be assigned to the credential.
+      > <ol>1. Update the secret originally create in <b>Step 1: Set up an Azure AD service principal.</b>
+      >
+      >    Alter the credential using the same identity and new secret using the following code:
+      >
+      >    ```sql
+      >    ALTER CREDENTIAL CREDName
+      >    WITH IDENTITY = 'Original Identity',
+      >    SECRET = 'New Secret';
+      >    ```
+      >
+      ></ol>
+      > <ol>2. Restart the SQL service</ol>
+      > <ol>3. Steps 2 and 3 need to be done on all nodes of an Availability Group</ol>
 
 For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 

@@ -14,7 +14,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides information on how to develop .NET applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/).
 
@@ -309,7 +309,10 @@ You do not need to make any application code changes to use these providers but 
 
 ### Using Azure Key Vault provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package, that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
+Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package, that you can easily integrate with your application. For details, see:
+
+- [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider/)
+- [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
 
 ### Implementing a custom column master key store provider
 

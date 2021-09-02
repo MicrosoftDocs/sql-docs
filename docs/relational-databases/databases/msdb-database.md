@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "jobs [SQL Server], msdb database"
   - "msdb database [SQL Server]"
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # msdb Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

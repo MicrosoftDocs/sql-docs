@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "dropping indexes"
   - "XML indexes [SQL Server], dropping"
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Drop XML Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

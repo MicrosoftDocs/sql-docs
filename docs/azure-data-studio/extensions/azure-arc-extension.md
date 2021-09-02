@@ -6,9 +6,9 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+ms.reviewer: maghan
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 08/02/2021
 ---
 
 # Azure Arc extension for Azure Data Studio (Preview)
@@ -26,17 +26,26 @@ The [Azure Arc extension (preview)](/azure/azure-arc/data/) is an extension for 
     - View PostgreSQL for Azure Arc dashboard
 - Run Azure Arc Jupyter Book
 
-## Install the extension
-- Install the **Azure Data CLI** extension from the gallery.
-- Install the **Azure Arc** extension from the gallery.
-- Restart Azure Data Studio
+## Prerequisite
+
+[Download and Install Azure Data Studio](../download-azure-data-studio.md).
+
+## Install the extensions
+
+1. [Install Azure CLI](/cli/azure/install-azure-cli)
+2. [Install Azure `arcdata` extension](/azure/azure-arc/data/install-arcdata-extension)
+3. Install Azure CLI extension for Azure Data Studio from the Azure Data Studio gallery
+4. Install the Azure Arc extension for Azure Data Studio from the gallery
+5. Restart Azure Data Studio
 
 ## Sign in with Azure account
+
 1. Select Accounts on bottom left
 1. Select Add Account
 1. This action will launch a browser. Sign in to your Azure Account.
 
 ## Create a resource
+
 This extension supports deployment of Azure Arc data controllers, Postgres for Azure Arc, and SQL Managed Instance for Azure Arc. Deployments can be done through the built-in Deployment wizard.
 
 1. Select Connections viewlet on left Activity Bar
@@ -44,6 +53,7 @@ This extension supports deployment of Azure Arc data controllers, Postgres for A
 1. Follow prompts to create a new Azure Arc resource.
 
 ## Manage a resource
+
 After deploying an Azure Arc data controller from azdata, Azure portal, or Azure Data Studio, you can connect to it from Azure Data Studio.
 
 1. Open Connections viewlet on the left activity bar.
@@ -56,4 +66,5 @@ Once connected, you can view the resources deployed on the data controller. You 
 These dashboards will provide additional information about the resource, including option to open in Azure portal.
 
 ## Next steps
+
 To learn more about Azure Arc data services, [check our documentation.](/azure/azure-arc/data/)

@@ -3,7 +3,7 @@ title: "Installing SSMA components on SQL Server (OracleToSQL) | Microsoft Docs"
 description: Learn how to install the SSMA extension pack and Oracle providers on the computer that runs SQL Server to support Oracle database conversion.
 ms.prod: sql
 ms.custom: ""
-ms.date: "11/16/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -21,7 +21,7 @@ In addition to installing SSMA, you must also install components on the computer
 
 ## SSMA for Oracle extension pack
 
-The SSMA extension pack deploys extended stored procedures, and adds the **sysdb** and **ssmatesterdb** databases to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Extended stored procedures provide functionality required to emulate features and behaiov of Oracle, while the **sysdb** database contains the tables and stored procedures required to migrate the data. The **ssmatesterdb** database contains the tables and procedures required by the Tester component (if installed).
+The SSMA extension pack deploys extended stored procedures, and adds the **sysdb** database to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Extended stored procedures provide functionality required to emulate features and behavior of Oracle, while the **sysdb** database contains the tables and stored procedures required to migrate the data.
 
 Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA creates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs when the server-side data migration engine is used for migrating the data.
 
@@ -72,11 +72,9 @@ To install the extension pack:
 
 10. Next step requires you to set the password for a master key that will be used to encrypt any sensitive data stored in the extension pack database during server-side data migration. Provide a strong password and click **Next**.
 
-11. On the next page, select **Install Utilities Database *n* and Install Extension Pack libraries**, where *n* is the version number. If you plan on using the Tester feature, select **Install Tester Database** check box, and then select **Next**.
+11. On the next page, select **Install Utilities Database *n* and Install Extension Pack libraries**, where *n* is the version number and click **Next**.
 
     The **sysdb** database is created with the tables and stored procedures required for data migration (using server-side data migration engine) are created in this database.
-
-    If **Install Tester Database** option is checked, the **ssmatesterdb** database will be created.
 
 12. Once installation is complete, a prompt will appear asking if you want to install Utilities Database on another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Yes**, and then select **Next**, or to exit the wizard, select **No** and then select **Exit**.
 

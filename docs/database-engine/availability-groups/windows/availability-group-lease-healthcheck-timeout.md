@@ -105,7 +105,17 @@ When increasing the Delay \* Threshold product to make the cluster timeout more 
 
 ### Lease Timeout 
 
-The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. To navigate to this value in Failover Cluster Manager:
+The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. A lease timeout may result in the following errors: 
+
+``` 
+Error 35201:
+A connection timeout has occurred while attempting to establish a connection to availability replica 'replicaname'
+Error 35206:
+A connection timeout has occurred on a previously established connection to availability replica 'replicaname'
+```
+
+To modify the lease time out value, use the Failover Cluster Manager and follow these steps: 
+
 
 1. In the roles tab, find the target AG role. Click on the target AG role. 
 2. Right-click the AG resource at the bottom of the window and select **Properties**. 

@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "12/17/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,32 @@ ms.author: alexiva
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for MySQL contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for MySQL contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for MySQL contains the following changes:
+
+* Minor performance improvements and bug fixes
 
 ## SSMA v8.18
 

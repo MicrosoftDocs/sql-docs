@@ -1,6 +1,6 @@
 ---
-description: Learn about application security and java policy permissions when developing an application using the JDBC driver.
 title: Application security
+description: Learn about application security and java policy permissions when developing an application using the JDBC driver.
 ms.custom: ""
 ms.date: 08/12/2019
 ms.prod: sql

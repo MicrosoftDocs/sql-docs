@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "deploy database wizard"
   - "database deploy [SQL Server]"
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Deploy a Database By Using a DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

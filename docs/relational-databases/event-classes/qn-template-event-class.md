@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Template"
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Template Event Class

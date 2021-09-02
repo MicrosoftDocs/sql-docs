@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
@@ -42,13 +42,13 @@ SSMS is a separate download, useful for creating and running stored procedures o
 
 Local workstations must have the same Python package versions as those on SQL Server, including the base Anaconda 4.2.0 with Python 3.5.2 distribution, and Microsoft-specific packages.
 
-An installation script adds three Microsoft-specific libraries to the Python client. The script installs [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. It installs [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) providing machine learning algorithms. The [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context and might be of limited use for in-database analytics.
+An installation script adds three Microsoft-specific libraries to the Python client. The script installs [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. It installs [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. The [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
 
 1. Download an installation script.
 
    + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
 
-   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages.
 
 2. Open a PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
@@ -87,7 +87,7 @@ On systems having multiple versions of Python, remember to use this particular P
 
 Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run some Python code containing the libraries you just installed.
 
-1. At the Powershell prompt, still in the C:\Program Files\Microsoft\PyForMLS directory, open Jupyter Notebooks from the Scripts folder:
+1. At the PowerShell prompt, still in the C:\Program Files\Microsoft\PyForMLS directory, open Jupyter Notebooks from the Scripts folder:
 
    ```powershell
    .\Scripts\jupyter-notebook
@@ -288,7 +288,7 @@ For help configuring a Python environment, see [Managing Python environments in 
 
 ### PyCharm
 
-In PyCharm, set the interpreter to the Python executable installed by Machine Learning Server.
+In PyCharm, set the interpreter to the Python executable installed.
 
 1. In a new project, in Settings, click **Add Local**.
 

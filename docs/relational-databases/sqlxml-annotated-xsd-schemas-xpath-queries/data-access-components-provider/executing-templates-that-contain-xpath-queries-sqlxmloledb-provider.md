@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

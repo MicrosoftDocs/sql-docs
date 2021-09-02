@@ -2,10 +2,10 @@
 title: Deploy SQL Server Big Data Cluster with high availability
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability 
 description: Learn how to deploy SQL Server Big Data Cluster with high availability.
-author: mihaelablendea
-ms.author: mihaelab 
-ms.reviewer: mikeray
-ms.date: 09/18/2020
+author: cloudmelon 
+ms.author: melqin 
+ms.reviewer: wiassaf
+ms.date: 07/30/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -27,9 +27,10 @@ Here are some of the capabilities that availability groups enable:
 - All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This capability provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
 
   > [!IMPORTANT]
-  > Databases created on the instance as result of workflows like attach database are not automatically added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions how to enable a temporary endpoint ot the SQL Server instance master database. Prior to SQL Server 2019 CU2 release, databases created as result of a restore statement had the same behavior and required manually adding the databases to the contained availability group.
+  > Databases that are created on the instance as a result of a workflow, like attach database, aren't automatically added to the availability group. SQL Server Big Data Clusters administrators will have to do this manually. To learn how to enable a temporary endpoint to the SQL Server instance master database, see [Connect to SQL Server instance](#instance-connect). Before the SQL Server 2019 CU2 release, databases that were created as a result of a restore statement had the same behavior, and databases had to be added manually to the contained availability group.
   >
-- Polybase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
+
+- PolyBase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
 - An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
 - A second external endpoint is provisioned for read-only connections to the secondary replicas to scale out the read workloads.
 
@@ -145,7 +146,7 @@ Here is an example that shows how to expose this endpoint and then add the datab
 
 - Expose the external endpoint by creating a new Kubernetes service
 
-    For a `kubeadm` cluster run below command. Replace `podName` with the name of the server returned at previous step, `serviceName` with the preferred name for the Kubernetes service created  and `namespaceName`* with the name of your BDC cluster.
+    For a `kubeadm` cluster run below command. Replace `podName` with the name of the server returned at previous step, `serviceName` with the preferred name for the Kubernetes service created  and `namespaceName`* with the name of your big data cluster.
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
@@ -209,6 +210,8 @@ These are known issues and limitations with contained availability groups for SQ
 - Replication feature is not supported for contained availability groups. SQL Server instances part of a contained AG can not function as a distributor or publisher, at either the instance level or contained AG level.
 - Adding file groups while creating the database is not supported. As a workaround, you can first create the database and then issue an ALTER DATABASE statement to add any file groups.
 - Prior to SQL Server 2019 CU2, databases created as result of workflows other than `CREATE DATABASE` and `RESTORE DATABASE` like `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
+- Service Broker and Database Mail are not currently supported on Big Data Clusters deployed with high availability.
+
 
 ## Next steps
 

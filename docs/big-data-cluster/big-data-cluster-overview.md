@@ -120,8 +120,21 @@ In [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], Kube
 
 ## Next steps
 
-* For more information about deploying [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+* For more information about deploying [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md). 
 
-* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  
+* Then, get started by [Loading data](data-ingestion-restore-database.md) and [running a spark job](spark-submit-job.md).
+
+## Learn more
+
+* WATCH: [Introduction to Big Data Cluster on SQL Server 2019 | Virtualization, Kubernetes, and Containers](https://www.youtube.com/watch?v=q7mxWcYqBMM)
+* [Big Data Clusters Architecture Workshop](https://github.com/microsoft/sqlworkshops-bdc)
+
+Related technologies Microsoft Learn:
+
+* [Introduction to Kubernetes](/learn/modules/intro-to-kubernetes/)
+* [Distributed file systems](/learn/modules/cmu-case-study-distributed-file-systems/)
+* [Introduction to Python](/learn/modules/intro-to-python/)
+
+
 
 

@@ -87,4 +87,5 @@ Explore security anomalies and threats in Azure Security Center.
 
 ## Next steps
 
-You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). Follow these instructions to [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).
+* To configure Azure Defender for SQL Server at scale, see [Enable Azure Defender for SQL servers on machines](/azure/security-center/defender-for-sql-usage.md).
+* You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details,see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).

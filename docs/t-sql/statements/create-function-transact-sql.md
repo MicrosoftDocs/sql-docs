@@ -737,17 +737,18 @@ WITH EMP_cte(EmployeeID, OrganizationNode, FirstName, LastName, JobTitle, Recurs
         -- Get the initial list of Employees for Manager n
         SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, 0
         FROM HumanResources.Employee e
-INNER JOIN Person.Person p
-ON p.BusinessEntityID = e.BusinessEntityID
+              INNER JOIN Person.Person p
+              ON p.BusinessEntityID = e.BusinessEntityID
         WHERE e.BusinessEntityID = @InEmpID
         UNION ALL
         -- Join recursive member to anchor
         SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, RecursionLevel + 1
         FROM HumanResources.Employee e
-            INNER JOIN EMP_cte
-            ON e.OrganizationNode.GetAncestor(1) = EMP_cte.OrganizationNode
-INNER JOIN Person.Person p
-ON p.BusinessEntityID = e.BusinessEntityID
+              INNER JOIN EMP_cte 
+              ON e.OrganizationNode.GetAncestor(1) = case when EMP_cte.OrganizationNode is NULL then CAST('/' AS hierarchyid)
+			                               						     else EMP_cte.OrganizationNode end
+              INNER JOIN Person.Person p
+              ON p.BusinessEntityID = e.BusinessEntityID
         )
 -- copy the required columns to the result of the function
     INSERT @retFindReports

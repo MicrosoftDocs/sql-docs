@@ -24,23 +24,6 @@ Starting with [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)], [!INCLUDE[
  - For new features for latest release, see the [release notes](release-notes-big-data-cluster.md)
  - For frequently asked questions, see [Big Data Clusters FAQ](big-data-cluster-faq.yml)
 
-## <a id="scenarios"></a> Scenarios and Features
-
-[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] provide flexibility in how you interact with your big data. You can query external data sources, store big data in HDFS managed by SQL Server, or query data from multiple external data sources through the cluster. You can then use the data for AI, machine learning, and other analysis tasks. 
-
-Use [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] to:
-
-- [Deploy scalable clusters](./deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
-- Read, write, and process big data from Transact-SQL or Spark.
-- Easily combine and analyze high-value relational data with high-volume big data.
-- Query external data sources.
-- Store big data in HDFS managed by SQL Server.
-- Query data from multiple external data sources through the cluster.
-- Use the data for AI, machine learning, and other analysis tasks.
-- [Deploy and run applications](./concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
-- Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and generic ODBC data sources with external tables.
-- Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
-
 ## Big data clusters architecture
 
 The following diagram shows the components of a SQL Server big data cluster:
@@ -70,6 +53,26 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 ### App pool
 
 Application deployment enables the deployment of applications on a SQL Server Big Data Clusters by providing interfaces to create, manage, and run applications.
+
+
+## <a id="scenarios"></a> Scenarios and Features
+
+[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] provide flexibility in how you interact with your big data. You can query external data sources, store big data in HDFS managed by SQL Server, or query data from multiple external data sources through the cluster. You can then use the data for AI, machine learning, and other analysis tasks. 
+
+Use [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] to:
+
+- [Deploy scalable clusters](./deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
+- Read, write, and process big data from Transact-SQL or Spark.
+- Easily combine and analyze high-value relational data with high-volume big data.
+- Query external data sources.
+- Store big data in HDFS managed by SQL Server.
+- Query data from multiple external data sources through the cluster.
+- Use the data for AI, machine learning, and other analysis tasks.
+- [Deploy and run applications](./concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and generic ODBC data sources with external tables.
+- Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
+
+The following sections provide more information about these scenarios.
 
 ## Data virtualization
 

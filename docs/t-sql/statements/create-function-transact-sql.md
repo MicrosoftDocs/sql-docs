@@ -735,7 +735,8 @@ BEGIN
 WITH EMP_cte(EmployeeID, OrganizationNode, FirstName, LastName, JobTitle, RecursionLevel) -- CTE name and columns
     AS (
         -- Get the initial list of Employees for Manager n
-        SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, 0
+        SELECT e.BusinessEntityID, OrganizationNode = ISNULL(e.OrganizationNode, CAST('/' AS hierarchyid)) 
+        , p.FirstName, p.LastName, e.JobTitle, 0
         FROM HumanResources.Employee e
               INNER JOIN Person.Person p
               ON p.BusinessEntityID = e.BusinessEntityID

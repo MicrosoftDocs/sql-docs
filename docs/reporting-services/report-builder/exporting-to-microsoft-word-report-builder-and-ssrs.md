@@ -1,6 +1,6 @@
 ---
-title: "Exporting to Microsoft Word (Report Builder) | Microsoft Docs"
-ms.date: 08/26/2021
+title: "Export a paginated report to Microsoft Word (Report Builder) | Microsoft Docs"
+ms.date: 09/02/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
@@ -12,7 +12,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Exporting to Microsoft Word (Report Builder)
+# Export a paginated report to Microsoft Word (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

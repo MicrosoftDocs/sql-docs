@@ -104,7 +104,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
   
 ### Query backup history
 
-The following query returns successful backups information from the past 2 month.
+The following query returns successful backup information from the past two months.
+
 
   
 ```sql

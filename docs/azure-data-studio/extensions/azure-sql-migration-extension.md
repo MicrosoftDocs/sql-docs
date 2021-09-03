@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: mokabiru, chadam
 ms.custom: 
-ms.date: 07/30/2021
+ms.date: 09/01/2021
 ---
 
 # Azure SQL Migration extension for Azure Data Studio (preview)

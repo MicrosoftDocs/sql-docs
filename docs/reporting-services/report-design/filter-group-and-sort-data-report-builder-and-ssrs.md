@@ -1,7 +1,7 @@
 ---
-title: "Filter, Group, and Sort Data (Report Builder) | Microsoft Docs"
+title: "Filter, group, and sort data in paginated reports (Report Builder) | Microsoft Docs"
 description: Learn about ways to control, organize, and sort report data with expressions based on dataset fields, parameters in the Report Data pane of Report Builder. 
-ms.date: 08/17/2018
+ms.date: 08/27/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -21,8 +21,11 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Filter, Group, and Sort Data (Report Builder and SSRS)
-  In a report, expressions are used to help control, organize, and sort report data. By default, as you create datasets and design the report layout, properties of report items are set automatically to expressions based on the dataset fields, parameters, and other items that appear in the Report Data pane. You can also add an interactive sort button to a table or matrix cell to enable a user to interactively change the row sort order for groups or rows within groups.  
+# Filter, group, and sort data in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In a paginated report, expressions are used to help control, organize, and sort report data. By default, as you create datasets and design the report layout, properties of report items are set automatically to expressions based on the dataset fields, parameters, and other items that appear in the Report Data pane. You can also add an interactive sort button to a table or matrix cell to enable a user to interactively change the row sort order for groups or rows within groups.  
   
 -   **Filter expressions** A filter expression tests data for inclusion or exclusion based on a comparison that you specify. Filters are applied to data in a report after the data is retrieved from a data connection. You can add any combination of filters to the following items:  a shared dataset definition on the report server; a shared dataset instance or embedded dataset in a report; a data region such as a table or a chart; or a data region group, such as a row group in a table or a category group in a chart.  
   
@@ -94,7 +97,7 @@ ms.author: maggies
  For more information, see [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### Groups and Scope in Data Regions  
- To provide multiple views of data from the same dataset, you can specify the same group expressions for eac data region. For example, you can display categorized data in a table to show all detail data and in a pie chart to show aggregates and to help visualize each category in relation to the entire dataset. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ To provide multiple views of data from the same dataset, you can specify the same group expressions for each data region. For example, you can display categorized data in a table to show all detail data and in a pie chart to show aggregates and to help visualize each category in relation to the entire dataset. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  When you nest a data region in a cell in a table, matrix, or list, you are automatically scoping the data to the innermost group memberships of the cell. For example, assume that you add a chart to a cell that is in both a row group and a column group. The data available to that chart is scoped to the innermost row group instance and innermost column group instance at run time. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

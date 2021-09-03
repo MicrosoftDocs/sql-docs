@@ -1,7 +1,7 @@
 ---
-title: "Export Reports (Report Builder) | Microsoft Docs"
+title: "Export paginated reports (Report Builder) | Microsoft Docs"
 description: You can export a Reporting Services report to another file format, like PowerPoint or PDF, using Report Builder, Report Designer, or the report server.
-ms.date: 05/24/2021
+ms.date: 09/02/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
@@ -10,9 +10,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Export paginated reports (Report Builder and SSRS)
+# Export paginated reports (Report Builder)
 
-  You can export a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report to another file format, such as PowerPoint, Image, PDF, [Accessible PDF](/power-bi/report-server/rendering-extension-support), [!INCLUDE[ofprword](../../includes/ofprword-md.md)], or [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report. You can export your report from Report Builder, Report Designer ( [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]), or the report server.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+You can export a paginated report to another file format, such as PowerPoint, Image, PDF, [Accessible PDF](/power-bi/report-server/rendering-extension-support), [!INCLUDE[ofprword](../../includes/ofprword-md.md)], or [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] or export the report by generating an Atom service document, listing the Atom-compliant data feeds available from the report. You can export your report from Report Builder, Report Designer ( [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]), or the report server.  
   
  Export a report to do the following:  
   

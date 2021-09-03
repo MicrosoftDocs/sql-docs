@@ -134,7 +134,8 @@ SELECT bs.database_name,
 	BackupStartDate = bs.Backup_Start_Date,
 	BackupFinishDate = bs.Backup_Finish_Date,
 	LatestBackupLocation = bf.physical_device_name,
-	backup_size_mb = convert(decimal(10, 2), bs.backup_size/1024./1024.),
+	backup_size_mb = CONVERT(decimal(10, 2), bs.backup_size/1024./1024.),
+
 	compressed_backup_size_mb = convert(decimal(10, 2), bs.compressed_backup_size/1024./1024.),
 	database_backup_lsn, -- For tlog and differential backups, this is the checkpoint_lsn of the FULL backup it is based on.
 	checkpoint_lsn,

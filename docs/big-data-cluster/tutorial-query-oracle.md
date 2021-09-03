@@ -107,7 +107,7 @@ If your scenario requires the usage of an oracle proxy user, __replace the previ
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
-   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
    CREDENTIAL = [OracleProxyCredential]);
    ```
 

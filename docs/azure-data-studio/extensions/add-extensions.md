@@ -59,11 +59,9 @@ If an extension has been disabled, it will be in the **Disabled** section of the
 
 ### Updating an extension
 
-Azure Data Studio automatically checks for and installs updates for any of your installed extensions. If you would like to turn off the auto-update feature, you can disable auto-update with the **Extensions: Disable Auto Updating Extensions** command.
+Azure Data Studio automatically checks for and installs updates for any of your installed extensions. 
 
-To manually update an extension, you can check for extension updates with the **Extensions: Show Outdated Extensions** command which searches through your extension list using the `@outdated` filter. This will show any available updates for all currently installed extensions. Click the **Update** button on an outdated extension and the update will be installed. You will then be prompted to reload Azure Data Studio. You can also update all of your outdated extensions simultaneously with the **Extensions: Update All Extensions** command.
-
-The **Extensions: Check for Extensions Updates** command is another way to check which of your extensions have updates available.
+[!INCLUDE [auto-update-extension](../../includes/auto-update-extension.md)]
 
 ## Install from a VSIX
 

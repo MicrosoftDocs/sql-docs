@@ -10,7 +10,7 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ---
-# Standalone SQL Server Integration Service (SSIS) DevOps Tools (Preview)
+# Standalone SQL Server Integration Service (SSIS) DevOps Tools
 
 Standalone **SSIS DevOps Tools** provide a set of executables to do SSIS CICD tasks. Without the dependency on the installation of Visual Studio or SSIS runtime, these executables can be easily integrated with any CICD platform. The executables provided are:
 
@@ -122,7 +122,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## Release notes
+### Version 1.0.0.0
 
+Release Date: September 1, 2021
+
+- General Availability(GA) release.
+    
 ### Version 0.1.3.1 Preview
 
 Release Date: June 10, 2021

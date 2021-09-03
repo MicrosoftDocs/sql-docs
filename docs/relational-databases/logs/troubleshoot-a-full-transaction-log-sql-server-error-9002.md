@@ -76,8 +76,61 @@ The following set of T-SQL commands will help you identify if a database transac
 SET NOCOUNT ON
 DECLARE @SQL VARCHAR (8000), @log_reuse_wait tinyint, @log_reuse_wait_desc nvarchar(120), @dbname sysname, @database_id int, @recovery_model_desc varchar (24)
 
-DROP TABLE IF EXISTS #CannotTruncateLog_Db
 
+IF ( OBJECT_id (N'tempdb..#CannotTruncateLog_Db') is not null)
+BEGIN
+    DROP TABLE #CannotTruncateLog_Db
+END
+
+
+--get info about transaction logs in each db. Use a DMV which supports all supported versions
+
+IF ( OBJECT_id (N'tempdb..#dm_db_log_space_usage') is not null)
+BEGIN
+    DROP TABLE #dm_db_log_space_usage 
+END
+SELECT * INTO #dm_db_log_space_usage FROM sys.dm_db_log_space_usage where 1=0
+
+DECLARE log_space CURSOR FOR SELECT NAME FROM sys.databases
+OPEN log_space 
+
+FETCH NEXT FROM log_space into @dbname
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+
+	set @SQL = '
+	insert into #dm_db_log_space_usage (
+	database_id, 
+	total_log_size_in_bytes, 
+	used_log_space_in_bytes, 
+	used_log_space_in_percent, 
+	log_space_in_bytes_since_last_backup
+	)
+	select
+	database_id, 
+	total_log_size_in_bytes, 
+	used_log_space_in_bytes, 
+	used_log_space_in_percent, 
+	log_space_in_bytes_since_last_backup
+	from ' + @dbname +'.sys.dm_db_log_space_usage'
+
+	
+	BEGIN TRY  
+		exec (@SQL)
+	END TRY  
+
+	BEGIN CATCH  
+        SELECT ERROR_MESSAGE() AS ErrorMessage;  
+	END CATCH;
+
+	FETCH NEXT FROM log_space into @dbname
+END
+
+CLOSE log_space 
+DEALLOCATE log_space 
+
+--select the affected databases 
 SELECT 
     sdb.name as DbName, 
     sdb.log_reuse_wait, sdb.log_reuse_wait_desc, 
@@ -99,16 +152,14 @@ SELECT
 
     sdb.database_id,
     sdb.recovery_model_desc,
-    ls.total_log_size_mb,
-    ls.active_log_size_mb,
-    ls.total_log_size_mb - ls.active_log_size_mb as Free_Space_mb
+    lsu.used_log_space_in_bytes/1024 as Used_log_size_MB,
+	lsu.total_log_size_in_bytes /1024 as Total_log_size_MB,
+    100 - lsu.used_log_space_in_percent as Percent_Free_Space
 INTO #CannotTruncateLog_Db
-FROM sys.databases AS sdb CROSS APPLY sys.dm_db_log_stats(database_id) AS ls
+FROM sys.databases AS sdb INNER JOIN #dm_db_log_space_usage lsu ON sdb.database_id = lsu.database_id
+WHERE log_reuse_wait > 0
 
-WHERE sdb.log_reuse_wait != 0;
-
-
-SELECT * FROM #CannotTruncateLog_Db;
+SELECT * FROM #CannotTruncateLog_Db 
 
 
 DECLARE no_truncate_db CURSOR FOR
@@ -121,8 +172,9 @@ FETCH NEXT FROM no_truncate_db into @log_reuse_wait, @log_reuse_wait_desc, @dbna
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    if (@log_reuse_wait is not null)
-        select '-- ''' + @dbname +  ''' database --' as "Individual Database Report"
+    if (@log_reuse_wait > 0)
+        select '-- ''' + @dbname +  ''' database has log_reuse_wait = ' + @log_reuse_wait_desc + ' --'  as 'Individual Database Report'
+
 
     if (@log_reuse_wait = 1)
     BEGIN
@@ -132,9 +184,9 @@ BEGIN
     END
     else if (@log_reuse_wait = 2)
     BEGIN
-        select 'Is '+ @recovery_model_desc +' recovery model the intended choice for your database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server'
+        select 'Is '+ @recovery_model_desc +' recovery model the intended choice for ''' + @dbname+ ''' database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server' as RecoveryModelChoice
         select 'To truncate the log consider performing a transaction log backup on database ''' + @dbname+ ''' which is in ' + @recovery_model_desc +' recovery model. Be mindful of any existing log backup chains that could be broken' as Recommendation
-        select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder\' + @dbname + '_LOG.trn''' as BackupLogCommand
+        select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder\' + @dbname + '_LOG.trn ''' as BackupLogCommand
     END
     else if (@log_reuse_wait = 3)
     BEGIN
@@ -170,6 +222,7 @@ BEGIN
         select 'select availability_group=cast(ag.name as varchar(30)), primary_replica=cast(ags.primary_replica as varchar(30)),primary_recovery_health_desc=cast(ags.primary_recovery_health_desc as varchar(30)), synchronization_health_desc=cast(ags.synchronization_health_desc as varchar(30)),ag.failure_condition_level, ag.health_check_timeout, automated_backup_preference_desc=cast(ag.automated_backup_preference_desc as varchar(10))  from sys.availability_groups ag join sys.dm_hadr_availability_group_states ags on ag.group_id=ags.group_id' as CheckAGHealth
         select 'SELECT  group_name=cast(arc.group_name as varchar(30)), replica_server_name=cast(arc.replica_server_name as varchar(30)), node_name=cast(arc.node_name as varchar(30)),role_desc=cast(ars.role_desc as varchar(30)), ar.availability_mode_Desc, operational_state_desc=cast(ars.operational_state_desc as varchar(30)), connected_state_desc=cast(ars.connected_state_desc as varchar(30)), recovery_health_desc=cast(ars.recovery_health_desc as varchar(30)), synhcronization_health_desc=cast(ars.synchronization_health_desc as varchar(30)), ars.last_connect_error_number, last_connect_error_description=cast(ars.last_connect_error_description as varchar(30)), ars.last_connect_error_timestamp, primary_role_allow_connections_desc=cast(ar.primary_role_allow_connections_desc as varchar(30)) from sys.dm_hadr_availability_replica_cluster_nodes arc join sys.dm_hadr_availability_replica_cluster_states arcs on arc.replica_server_name=arcs.replica_server_name join sys.dm_hadr_availability_replica_states ars on arcs.replica_id=ars.replica_id join sys.availability_replicas ar on ars.replica_id=ar.replica_id join sys.availability_groups ag on ag.group_id = arcs.group_id and ag.name = arc.group_name ORDER BY cast(arc.group_name as varchar(30)), cast(ars.role_desc as varchar(30))' as CheckReplicaHealth
         select 'select database_name=cast(drcs.database_name as varchar(30)), drs.database_id, drs.group_id, drs.replica_id, drs.is_local,drcs.is_failover_ready,drcs.is_pending_secondary_suspend, drcs.is_database_joined, drs.is_suspended, drs.is_commit_participant, suspend_reason_desc=cast(drs.suspend_reason_desc as varchar(30)), synchronization_state_desc=cast(drs.synchronization_state_desc as varchar(30)), synchronization_health_desc=cast(drs.synchronization_health_desc as varchar(30)), database_state_desc=cast(drs.database_state_desc as varchar(30)), drs.last_sent_lsn, drs.last_sent_time, drs.last_received_lsn, drs.last_received_time, drs.last_hardened_lsn, drs.last_hardened_time,drs.last_redone_lsn, drs.last_redone_time, drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate, drs.filestream_send_rate, drs.end_of_log_lsn, drs.last_commit_lsn, drs.last_commit_time, drs.low_water_mark_for_ghosts, drs.recovery_lsn, drs.truncation_lsn, pr.file_id, pr.error_type, pr.page_id, pr.page_status, pr.modification_time from sys.dm_hadr_database_replica_cluster_states drcs join sys.dm_hadr_database_replica_states drs on drcs.replica_id=drs.replica_id and drcs.group_database_id=drs.group_database_id left outer join sys.dm_hadr_auto_page_repair pr on drs.database_id=pr.database_id  order by drs.database_id' as LogMovementHealth
+        select 'For more information see https://docs.microsoft.com/en-us/troubleshoot/sql/availability-groups/error-9002-transaction-log-large' as OnlineDOCResource
     END    
     else if (@log_reuse_wait in (10, 11, 12, 14))
     BEGIN

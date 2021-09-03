@@ -94,7 +94,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 >
 > - Ubuntu 18.04 is supported starting with SQL Server 2019 CU3.
 > - Ubuntu 20.04 is supported starting with SQL Server 2019 CU10.
-> - If you are using Ubuntu 20.04, change the repository path from `/ubuntu/16.04` to `/ubuntu/20.04`.
+> - If you are using Ubuntu 18.04 or Ubuntu 20.04, change the repository path in step 2 below from `/ubuntu/16.04` to `/ubuntu/18.04` or `/ubuntu/20.04`.
 
 1. Import the public repository GPG keys.
 

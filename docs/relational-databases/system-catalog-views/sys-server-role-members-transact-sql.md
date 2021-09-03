@@ -37,8 +37,11 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 ## Permissions  
  Logins can view their own server role membership and can view the principal_id's of the members of the fixed server roles. To view all server role membership requires the **VIEW ANY DEFINITION** permission or membership in the **securityadmin** fixed server role.  
  Logins can also view role memberships of roles they own.
- <br/> In Azure SQL Database, members of the server-role **##MS_DefinitionReader##** can query all catalog views.
-<br /> For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+In Azure SQL Database, members of the server-role **##MS_DefinitionReader##** can query all catalog views.
+
+For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
   
 ## <a name="_examples"></a> Examples
 
@@ -46,7 +49,8 @@ The examples in this section show how to work with server-level roles in Azure S
 
 ### A. Return list of server-role members
 
- The following example returns the names and id's of the roles and their members.  
+ The following example returns the names and IDs of the roles and their members.  
+
   
 ```  
 SELECT	roles.principal_id							AS RolePrincipalID
@@ -63,7 +67,8 @@ INNER JOIN sys.server_principals AS members
 ```  
 
 > [!NOTE]
-> in Azure SQL Database, SQL Logins are not persisted in the `sys.server_principals` catalog view. TTherefore, to retrieve the server-role membership in Azure SQL Database, the catalog view `sys.sql_logins` needs to be joined.
+> In Azure SQL Database, SQL Logins are not persisted in the `sys.server_principals` catalog view. TTherefore, to retrieve the server-role membership in Azure SQL Database, the catalog view `sys.sql_logins` needs to be joined.
+
 
 ### B. Azure SQL Database: Listing all principals (SQL authentication) which are members of a server-level role
 

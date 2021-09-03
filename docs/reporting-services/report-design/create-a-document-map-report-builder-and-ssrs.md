@@ -24,9 +24,9 @@ Create a document map to provides a set of clickable links or table of contents 
  You can also create a URL to a report that overrides the display of the document map, so that you can run the report without displaying the document map, and then click the **Show/Hide Document Map** button on the report viewer toolbar to toggle the display.  
 
 > [!NOTE]  
-> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md) 
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 > 
-> Document maps don't render when you view a paginated report in the Power BI service. They do render when you export the report.]  
+> Document maps don't render when you view a paginated report in the Power BI service. They do render when you export the report. 
   
 ##  <a name="DocMapRenderExtensions"></a> Document maps and rendering extensions  
  The document map is intended for use in the HTML rendering extension-for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  

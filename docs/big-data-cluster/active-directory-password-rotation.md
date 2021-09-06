@@ -35,14 +35,21 @@ Use the following azdata command to update the auto generated passwords:
    azdata bdc rotate -n <clusterName> 
    ```
 
-This initiates a control plane upgrade followed by a big data cluster upgrade. For each rotation, a target AD Credential version will be generated to identify the same rotation across multiple services or different iterations of password rotations. For each service, if it contains a generated password, a new generated password (The passwords are 32 characters long, it contains at least 1 uppercase, 1 lowercase, and 1 digit,  and special character is not guaranteed ) will be generated will be updated in the Domain Controller. The corresponding pods will be restarted.  
+This initiates a control plane upgrade followed by a big data cluster upgrade. For each rotation, a target AD Credential version will be generated to identify the same rotation across multiple services or different iterations of password rotations. For each service, if it contains a generated password, a new generated password (The passwords are 32 characters long, it contains at least 1 uppercase, 1 lowercase, and 1 digit,  and special character is not guaranteed ) will be generated will be updated in the Domain Controller. The corresponding pods will be restarted. 
+
+>[!NOTE]
+>If you have used the [App deploy feature](concept-application-deployment.md) of SQL Server BDC and have apps up and running on your current BDC cluster, you'll need to reploy the apps after the password rotation. 
 
 ### Rotating password for the BDC domain service account (DSA) 
 
 The following notebook is aiming to update the [DSA password](active-directory-prerequisites.md#ad-account-for-bdc-domain-service-account) for SQL Server Big Data Clusters: PASS001 - Update Administrator Domain Controller Password. It’s located with other cluster management notebooks [here](cluster-manage-notebooks.md). The customer can manually update the DSA password as Big Data Clusters do not manage it. Once they do, they can provide the DSA admin username and password as environment variable parameters to the notebook. 
 
- 
-**Note** that:  The rotation such as upgrade can take some time to complete depending on network speed, number of pods and more. A password rotation is separate process and cannot be done in parallel with [the cluster upgrade operation](deployment-upgrade.md) and DSA password rotation.  
+
+>[!IMPORTANT]
+>**Note** that:  The rotation such as upgrade can take some time to complete depending on network speed, number of pods and more. A password rotation is separate process and cannot be done in parallel with [the cluster upgrade operation](deployment-upgrade.md) and DSA password rotation.  
+>
+
+
 
 ## Next steps
 

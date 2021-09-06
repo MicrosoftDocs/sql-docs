@@ -64,6 +64,7 @@ A set of notebooks to run a notebook for managing Certificates on Big Data Clust
 
 |Name |Description |
 |---|---|
+|PASS001 - Update Administrator Domain Controller Password |This notebook assumes the DSA password is already updated in the Domain Controller. Run this notebook with the given parameters to update the Big Data Cluster with the new DSA password. This will restart the controller pod. |
 |CER001 - Generate a Root CA certificate|Generate a Root CA certificate. Consider using one Root CA certificate for all non-production clusters in each environment, as this technique reduces the number of Root CA certificates that need to be uploaded to clients connecting to these clusters. |
 |CER002 - Download existing Root CA certificate|Use this notebook to download a generated Root CA certificate from a cluster.|
 |CER003 - Upload existing Root CA certificate|CER003 - Upload existing Root CA certificate.|

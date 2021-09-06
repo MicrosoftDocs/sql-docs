@@ -87,9 +87,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 ## Relationship Cardinalities  
   
-|From|To|Relationship|  
-|----------|--------|------------------|  
-|dm_db_task_space_usage.request_id|dm_exec_requests.request_id|One-to-one|  
+![Capture](https://user-images.githubusercontent.com/73323764/132151558-1440cc03-4a35-42f4-9fb1-9d8e399af4d3.PNG)
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|One-to-one|  
   
 ## See Also  

@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL)
 description: "Transact-SQL reference for the CREATE TRIGGER statement, which is used to create a DML, DDL, or logon trigger."
-ms.date: "10/30/2019"
+ms.date: "09/05/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -459,12 +459,10 @@ AFTER INSERT
 AS  
 IF (ROWCOUNT_BIG() = 0)
 RETURN;
-IF EXISTS (SELECT *  
-           FROM Purchasing.PurchaseOrderHeader AS p   
-           JOIN inserted AS i   
-           ON p.PurchaseOrderID = i.PurchaseOrderID   
+IF EXISTS (SELECT 1  
+           FROM inserted AS i   
            JOIN Purchasing.Vendor AS v   
-           ON v.BusinessEntityID = p.VendorID  
+           ON v.BusinessEntityID = i.VendorID  
            WHERE v.CreditRating = 5  
           )  
 BEGIN  

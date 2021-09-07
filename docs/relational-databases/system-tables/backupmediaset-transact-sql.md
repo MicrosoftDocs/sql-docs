@@ -2,7 +2,7 @@
 title: "backupmediaset (Transact-SQL) | Microsoft Docs"
 description: Reference for backupmediaset, which contains one row for each backup media set.
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "09/07/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects

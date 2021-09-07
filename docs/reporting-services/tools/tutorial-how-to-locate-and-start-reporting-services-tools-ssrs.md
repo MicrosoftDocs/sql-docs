@@ -182,4 +182,4 @@ You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 [Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)  
 [Reporting Services Tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

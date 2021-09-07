@@ -12,7 +12,7 @@ metadata:
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: 
-  ms.date: 07/13/2021
+  ms.date: 09/07/2021
 
 title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -223,7 +223,7 @@ sections:
         answer: |
           Yes. For more information, see [Key versions in Big Data Cluster](big-data-cluster-key-versions.md).
 
-      - question: Can I rotate active directory passwords?
+      - question: Can I rotate the passwords of auto-generated Active Directory objects?
         answer: | 
           Yes, with a new feature introduced in SQL Server Big Data Clusters CU13. For more information, see [AD password rotation](active-directory-password-rotation.md).
 

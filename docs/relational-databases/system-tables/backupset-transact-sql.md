@@ -2,7 +2,7 @@
 description: "backupset (Transact-SQL)"
 title: "backupset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/24/2020"
+ms.date: "09/07/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""

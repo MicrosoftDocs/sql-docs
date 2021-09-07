@@ -49,7 +49,8 @@ Contains one row for each backup media set. This table is stored in the **msdb**
   
 ### Query backup history
 
-The following query returns successfull backups information from the past 2 month.
+The following query returns successful backup information from the past 2 months.
+
 
   
 ```sql

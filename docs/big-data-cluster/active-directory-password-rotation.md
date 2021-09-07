@@ -4,7 +4,7 @@ description: Rotate the password for an existing Big Data Clusters integrated wi
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 09/30/2020
+ms.date: 09/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,43 +13,37 @@ ms.technology: big-data-cluster
 # Auto Generated Active Directory Objects Password Rotation
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to rotate the password for an existing Big Data Clusters integrated with Active Directory. 
+This article describes how to rotate passwords for active directory objects in a big data cluster integrated with Active Directory. 
 
 ## Overview
 
-When the big data cluster was deployed with Active Directory integration, there were the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster deployment, see [auto-generated active directory objects](active-directory-objects.md) for further information. These objects are usually found in the [provided organizational unit (OU)](active-directory-prerequisites.md#create-an-ou) in the deployment profile configurations.  
+When a big data cluster is deployed with Active Directory integration, there are the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster deployment. For more information on these AD accounts and groups, see [auto-generated active directory objects](active-directory-objects.md). These objects are usually found in the [provided organizational unit (OU)](active-directory-prerequisites.md#create-an-ou) in the deployment profile configurations.  
 
-## Challenges
+One of the biggest challenges for enterprise customers is security hardening. For many customers, [setting a password expiration policy](/microsoft-365/admin/manage/set-password-expiration-policy) is required, which allows the administrator to set user password expiration after a certain number of days. For a big data cluster, in the past this required manually rotated passwords for those auto-generated active directory objects. 
 
-One of the greatest challenging for enterprise customers are security hardening, when it comes to security-sensitive customers, they usually require security reinforcement such as [setting password expiration policy](/microsoft-365/admin/manage/set-password-expiration-policy) which allows the administrator to set user passwords never expire or expire after a certain number of days.  For a big data cluster has been deployed for a while, it requires to rotate manually the password for [those auto-generated active directory objects](active-directory-objects.md). 
+To get around aforementioned challenges, auto-rotation of passwords for auto-generated AD objects was introduced with [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13. 
 
-## Solution
+The following two steps are required, regardless of the sequence, to complete password auto-rotation:  
 
-To get around aforementioned challenges, this feature is enabled to rotate the auto-generated AD objects password starting from BDC CU13 release.  The following steps are required regardless the sequence:  
+### 1. Use azdata command to rotate the password 
 
-### Use azdata command to rotate the password 
-
-Use the following azdata command to update the auto generated passwords:  
+Use the following `azdata` command to update the auto generated passwords:  
 
 ```bash
    azdata bdc rotate -n <clusterName> 
-   ```
+```
 
-This initiates a control plane upgrade followed by a big data cluster upgrade. For each rotation, a target AD Credential version will be generated to identify the same rotation across multiple services or different iterations of password rotations. For each service, if it contains a generated password, a new generated password (The passwords are 32 characters long, it contains at least 1 uppercase, 1 lowercase, and 1 digit,  and special character is not guaranteed ) will be generated will be updated in the Domain Controller. The corresponding pods will be restarted. 
+This initiates a control plane upgrade, followed by a big data cluster upgrade. For each rotation, a target AD Credential version will be generated to identify the same rotation across multiple services or different iterations of password rotations. For each service, if it contains a generated password, a new generated password will be generated will be updated in the Domain Controller. The passwords are 32 characters long, contain at least one uppercase character, one lowercase character, and one digit. A special character is not guaranteed. The corresponding pods will then be restarted. 
 
 >[!NOTE]
->If you have used the [App deploy feature](concept-application-deployment.md) of SQL Server BDC and have apps up and running on your current BDC cluster, you'll need to reploy the apps after the password rotation. 
+>If you have used the [App deploy feature](concept-application-deployment.md) of [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] and have apps up and running on your current BDC cluster, you'll need to reploy the apps after password rotation. 
 
-### Rotating password for the BDC domain service account (DSA) 
+### 2. Rotating password for the domain service account (DSA) 
 
-The following notebook is aiming to update the [DSA password](active-directory-prerequisites.md#ad-account-for-bdc-domain-service-account) for SQL Server Big Data Clusters: PASS001 - Update Administrator Domain Controller Password. It’s located with other cluster management notebooks [here](cluster-manage-notebooks.md). The customer can manually update the DSA password as Big Data Clusters do not manage it. Once they do, they can provide the DSA admin username and password as environment variable parameters to the notebook. 
-
+The following notebook is aiming to update the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] [DSA password](active-directory-prerequisites.md#ad-account-for-bdc-domain-service-account): PASS001 - Update Administrator Domain Controller Password. For more information on this notebook and other cluster management notebooks, see [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md). The customer can manually update the DSA password as Big Data Clusters does not manage it. Once changed, provide the DSA admin username and password as environment variable parameters to the notebook. 
 
 >[!IMPORTANT]
->**Note** that:  The rotation such as upgrade can take some time to complete depending on network speed, number of pods and more. A password rotation is separate process and cannot be done in parallel with [the cluster upgrade operation](deployment-upgrade.md) and DSA password rotation.  
->
-
-
+> The password rotation and big data cluster upgrade can take some time to complete depending on network speed, the number of pods, and more. A password rotation is separate process, and cannot be done in parallel with [the cluster upgrade operation](deployment-upgrade.md) or DSA password rotation.
 
 ## Next steps
 

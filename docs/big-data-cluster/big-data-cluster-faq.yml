@@ -222,6 +222,15 @@ sections:
       - question: Can I rotate the keys for SQL Server and HDFS encryption in Big Data cluster?
         answer: |
           Yes. For more information, see [Key versions in Big Data Cluster](big-data-cluster-key-versions.md).
+
+      - question: Can I rotate active directory passwords?
+        answer: | 
+          Yes, with a new feature introduced in SQL Server Big Data Clusters CU13. For more information, see [AD password rotation](active-directory-password-rotation.md).
+
+      - question: Can I rotate the password for the domain service account (DSA)?
+        answer: | 
+          Yes, with a new notebook introduced in SQL Server Big Data Clusters CU13. For more information, see [AD password rotation](active-directory-password-rotation.md).
+
   - name: Support
     questions: 
       - question: Are Spark and HDFS deployed within Big Data Cluster supported by Microsoft?

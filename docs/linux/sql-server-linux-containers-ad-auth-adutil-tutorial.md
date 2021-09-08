@@ -150,7 +150,7 @@ adutil keytab createauto --help
 To create the keytab for the user, the command is:
 
 ```bash
-adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
+adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd'
 ```
 
 > [!NOTE]

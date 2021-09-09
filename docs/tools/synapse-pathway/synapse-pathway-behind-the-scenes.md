@@ -28,7 +28,7 @@ Synapse Pathway defines source grammars that allow the tool to identify and proc
 
 ## Stage 2 - Augmented abstract syntax tree (AST)
 
-Synapse Pathway defines a common representation of all objects in an augmented Abstract Syntax Tree (AST). The Pathway AST includes metadata from other statements or fragements to assist in the proper conversion of a statement.
+Synapse Pathway defines a common representation of all objects in an augmented Abstract Syntax Tree (AST). The Pathway AST includes metadata from other statements or fragments to assist in the proper conversion of a statement.
 
 By not just tracking that a token is a function but rather the source system type requirement, the script generation components can make smarter decisions about translating to Synapse SQL.
 

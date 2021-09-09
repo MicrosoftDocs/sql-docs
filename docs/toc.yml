@@ -6171,8 +6171,20 @@ items:
           href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
     - name: Errors and Warnings
       items:
-        - name: ASP1001
-          href: tools/synapse-pathway/transpiler-messages/asp1001.md
+        - name: ASP0001
+          href: tools/synapse-pathway/transpiler-messages/asp0001.md
+          name: ASP0002
+          href: tools/synapse-pathway/transpiler-messages/asp0002.md
+          name: ASP0003
+          href: tools/synapse-pathway/transpiler-messages/asp0003.md
+          name: ASP0011
+          href: tools/synapse-pathway/transpiler-messages/asp0011.md
+          name: ASP0012
+          href: tools/synapse-pathway/transpiler-messages/asp0012.md
+          name: ASP0013
+          href: tools/synapse-pathway/transpiler-messages/asp0013.md
+          name: ASP0014
+          href: tools/synapse-pathway/transpiler-messages/asp0014.md
 - name: Manage, monitor, & tune
   items:
   - name: Manage

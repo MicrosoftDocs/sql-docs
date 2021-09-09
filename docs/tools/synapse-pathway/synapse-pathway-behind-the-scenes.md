@@ -28,7 +28,7 @@ Synapse Pathway defines source grammars that allow the tool to identify and proc
 
 ## Stage 2 - Augmented abstract syntax tree (AST)
 
-Synapse Pathway defines a common representation of all objects in an augmented Abstract Syntax Tree (AST). The Synapse Pathway AST includes additional statements or fragmented metadata that is used to make the proper decision when translating code between the two systems.
+Synapse Pathway defines a common representation of all objects in an augmented Abstract Syntax Tree (AST). The Pathway AST includes metadata from other statements or fragements to assist in the proper conversion of a statement.
 
 By not just tracking that a token is a function but rather the source system type requirement, the script generation components can make smarter decisions about translating to Synapse SQL.
 
@@ -60,7 +60,7 @@ INSERT INTO staging.table1…
 FROM staging.table2;
 ```
 
-Synapse SQL has an optimized path for this scenario – a [CREATE TABLE AS SELECT](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-develop-ctas). The CTAS statement is a batch based operation and minimally logged driving high performance by using all the compute infrastructure available. Without this insight about Synapse SQL, tools often produce a truncate and INSERT/SELECT statement.
+Synapse SQL has an optimized path for this scenario – a [CREATE TABLE AS SELECT](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-develop-ctas). The CTAS statement is a batch-based operation and minimally logged driving high performance by using all the compute infrastructure available. Without this insight about Synapse SQL, tools often produce a truncate and INSERT/SELECT statement.
 
 ```sql  
 TRUNCATE TABLE staging.table1;

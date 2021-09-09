@@ -85,7 +85,7 @@ Is the name of the table or view schema. *schema_name* is optional if the defaul
 #### *table_name*
 Is the name of the table or view to bulk import data into. Only views in which all columns refer to the same base table can be used. For more information about the restrictions for loading data into views, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).
 
-#### **'** _data_file_ **'**
+#### FROM **'** _data_file_ **'**
 Is the full path of the data file that contains data to import into the specified table or view. BULK INSERT can import data from a disk or Azure Blob storage (including network, floppy disk, hard disk, and so on).
 
 *data_file* must specify a valid path from the server on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. If *data_file* is a remote file, specify the Universal Naming Convention (UNC) name. A UNC name has the form \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. For example:

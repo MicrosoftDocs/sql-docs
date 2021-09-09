@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway Preview download 
+title: Azure Synapse Pathway download
 description: Learn how to get download Azure Synapse Pathway
 ms.date: 03/02/2021
 ms.prod: sql
@@ -13,22 +13,21 @@ monikerRange: "=azure-sqldw-latest"
 ms.author: anrampal
 ---
 
-# Azure Synapse Pathway Preview download
+# Azure Synapse Pathway download
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-This article contains directions to download Azure Synapse Pathway preview.
+This article contains directions to download Azure Synapse Pathway.
 
 ## Prerequisites
 
-Azure Synapse Pathway (Preview) requires [.NET Core Desktop Runtime 3.1.11 or later](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+Azure Synapse Pathway requires [.NET Core Desktop Runtime 5.0.8 or later](https://dotnet.microsoft.com/download/dotnet/5.0).
 
 ## Download
 
-Download the latest version of the tool from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download), and then run the **AzureSynapsePathway.msi** file.
+Download the latest version of Azure Synapse Pathway from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download), and then run the **AzureSynapsePathway.msi** file.
 
 > [!IMPORTANT]
-> Azure Synapse Pathway is currently in public preview.
-> This preview version is provided without a service level agreement, and it's not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. 
+> Azure Synapse Pathway is currently in active development. Certain features might not be supported or might have constrained capabilities.
 > For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 ## Install

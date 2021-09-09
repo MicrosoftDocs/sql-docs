@@ -6173,17 +6173,17 @@ items:
       items:
         - name: ASP0001
           href: tools/synapse-pathway/transpiler-messages/asp0001.md
-          name: ASP0002
+        - name: ASP0002
           href: tools/synapse-pathway/transpiler-messages/asp0002.md
-          name: ASP0003
+        - name: ASP0003
           href: tools/synapse-pathway/transpiler-messages/asp0003.md
-          name: ASP0011
+        - name: ASP0011
           href: tools/synapse-pathway/transpiler-messages/asp0011.md
-          name: ASP0012
+        - name: ASP0012
           href: tools/synapse-pathway/transpiler-messages/asp0012.md
-          name: ASP0013
+        - name: ASP0013
           href: tools/synapse-pathway/transpiler-messages/asp0013.md
-          name: ASP0014
+        - name: ASP0014
           href: tools/synapse-pathway/transpiler-messages/asp0014.md
 - name: Manage, monitor, & tune
   items:

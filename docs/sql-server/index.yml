@@ -187,7 +187,7 @@ landingContent:
       - text: Database Tuning Advisor 
         url: ../relational-databases/performance/database-engine-tuning-advisor.md
       - text: In-memory OLTP
-        url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+        url: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
     - linkListType: concept
       links:
       - text: Cardinality estimation

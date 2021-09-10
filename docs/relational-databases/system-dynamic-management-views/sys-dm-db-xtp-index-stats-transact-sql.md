@@ -27,7 +27,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
   Contains statistics collected since the last database restart.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
 
   
 |Column name|Data type|Description|  
@@ -56,4 +56,3 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
 ## See Also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  

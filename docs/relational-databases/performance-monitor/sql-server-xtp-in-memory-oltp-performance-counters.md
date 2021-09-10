@@ -37,4 +37,4 @@ ms.author: wiassaf
 |[SQL Server XTP Transactions](../../relational-databases/performance-monitor/sql-server-xtp-transactions.md)|The SQL Server XTP Transactions performance object contains counters related to In-Memory OLTP engine transactions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## See also
-- [In-Memory OLTP and Memory-Optimization](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)

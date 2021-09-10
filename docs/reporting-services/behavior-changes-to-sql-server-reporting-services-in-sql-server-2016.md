@@ -43,4 +43,4 @@ There are no behavior changes.
 [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [Breaking changes in SQL Server Reporting Services in SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

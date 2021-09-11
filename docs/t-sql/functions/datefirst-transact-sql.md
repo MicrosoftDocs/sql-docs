@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;DATEFIRST (Transact-SQL)"
+description: "@@DATEFIRST (Transact-SQL)"
 title: "@@DATEFIRST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"

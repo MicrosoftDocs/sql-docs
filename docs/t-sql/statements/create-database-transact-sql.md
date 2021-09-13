@@ -435,7 +435,7 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
 
-Specifies that the filegroup stores memory_optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one MEMORY_OPTIMIZED_DATA filegroup is allowed per database. For code samples that create a filegroup to store memory-optimized data, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
+Specifies that the filegroup stores memory_optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md). Only one MEMORY_OPTIMIZED_DATA filegroup is allowed per database. For code samples that create a filegroup to store memory-optimized data, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
 DEFAULT
 Specifies the named filegroup is the default filegroup in the database.

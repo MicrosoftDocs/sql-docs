@@ -2,10 +2,10 @@
 title: Use sparklyr from RStudio
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use sparklyr in a SQL Server Big Data Cluster to connect to Spark through the R interface.
-author: jejiang
-ms.author: jejiang
-ms.reviewer: mikeray
-ms.date: 06/22/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
+ms.date: 09/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
@@ -21,21 +21,23 @@ Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for
 
 - [Deploy a SQL Server 2019 big data cluster](quickstart-big-data-cluster-deploy.md).
 
-### Install RStudio Desktop
+### Install R and RStudio Desktop
 
 Install and configure **RStudio Desktop** with the following steps:
 
-1. If you are running on a Windows client, [download and install R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
+1. If you are running on a Windows client, [download and install R 3.6.3](https://cran.rstudio.com/bin/windows/base/old/3.6.3).
 
-1. [Download and install RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
+> [!WARNING]
+> R version 4.x and sparklyr versions other that the one specified bellow are verified not to work as of SQL Server Big Data Clusters CU12.
+
+1. [Download and install RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). (optional, all samples work on the R shell)
 
 1. After installation completes, run the following commands inside of RStudio Desktop to install the required packages:
 
-   ```RStudioDesktop
-   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
-   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
-   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
-   ```
+```R
+install.packages("devtools")
+devtools::install_github('rstudio/sparklyr', ref = 'v1.7.0', upgrade = 'always', repos = 'https://cran.microsoft.com/snapshot/2021-06-11/')
+```
 
 ## Connect to Spark in a big data cluster
 

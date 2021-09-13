@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full transaction log"
   - "9002 (Database Engine error)"
   - "transaction logs [SQL Server], truncation"
-  - "backing up transaction logs [SQL Server], full logs"
+  - "back up transaction logs [SQL Server], full logs"
   - "transaction logs [SQL Server], full log"
   - "full transaction logs [SQL Server]"
 author: "MashaMSFT"
@@ -43,19 +43,16 @@ ms.custom: "seo-lt-2019"
 > **This article is focused on SQL Server.** For more specific information on this error in Azure SQL Database and Azure SQL Managed Instance, see [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-transaction-log-errors-issues). Azure SQL Database and Azure SQL Managed Instance are based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar though troubleshooting options and tools may differ.
   
 ## Common reasons for a full transaction log
+
  The appropriate response to a full transaction log depends on what conditions caused the log to fill.  Common causes include: 
+
  - Log not being truncated
  - Disk volume is full
- - Log size is set to a fixed maximum value (autogrow is disabled)
+ - Log size is set to a fixed maximum value or autogrow is disabled
  - Replication or availability group synchronization that is unable to complete
 
 
-If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. For more information and a script to review backup history, see the section [Backing up the log](#backing-up-the-log) in this article.
-
-
-
 ## Resolving a full transaction log
-
 
 The following specific steps will help you find the reason for a full transaction log and resolve the issue.
 
@@ -66,8 +63,7 @@ There is a difference between truncating a transaction log and shrinking a trans
 > [!WARNING]
 > Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and might slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  For more information, see [Shrink a database](../databases/shrink-a-database.md).
 
-
-To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). 
+To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
 The following set of T-SQL commands will help you identify if a database transaction log is not truncated and the reason for it. The following script will also recommend steps to resolve the issue:
 
@@ -180,7 +176,7 @@ BEGIN
     BEGIN
         select 'Consider running the checkpoint command to attempt resolving this issue or further t-shooting may be required on the checkpoint process. Also, examine the log for active VLFs at the end of file' as Recommendation
         select 'USE ''' + @dbname+ '''; CHECKPOINT' as CheckpointCommand
-        select 'select * from sys.dm_db_log_info(' + convert(varchar,@database_id)+ ')' as VLF_LogInfo
+        select 'select * from sys.dm_db_log_info(' + CONVERT(varchar,@database_id)+ ')' as VLF_LogInfo
     END
     else if (@log_reuse_wait = 2)
     BEGIN
@@ -197,7 +193,7 @@ BEGIN
     BEGIN
         select 'Active transactions currently running  for database ''' +@dbname+ '''. To check for active transactions, run these commands:' as Recommendation
         select 'DBCC OPENTRAN (''' +@dbname+ ''')' as FindOpenTran
-        select 'select database_id, db_name(database_id) dbname, database_transaction_begin_time, database_transaction_state, database_transaction_log_record_count, database_transaction_log_bytes_used, database_transaction_begin_lsn, stran.session_id from sys.dm_tran_database_transactions dbtran left outer join sys.dm_tran_session_transactions stran on dbtran.transaction_id = stran.transaction_id where database_id = ' + convert(varchar, @database_id) as FindOpenTransAndSession
+        select 'select database_id, db_name(database_id) dbname, database_transaction_begin_time, database_transaction_state, database_transaction_log_record_count, database_transaction_log_bytes_used, database_transaction_begin_lsn, stran.session_id from sys.dm_tran_database_transactions dbtran left outer join sys.dm_tran_session_transactions stran on dbtran.transaction_id = stran.transaction_id where database_id = ' + CONVERT(varchar, @database_id) as FindOpenTransAndSession
     END
 
     else if (@log_reuse_wait = 5)
@@ -253,12 +249,13 @@ DEALLOCATE no_truncate_db
 > [!IMPORTANT]  
 >  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
- More information about the following two actions is provided below:  
+### More information on LOG_BACKUP log_reuse_wait
 
-- Backing up the log
-- Completing or killing a long-running transaction
+#### Recovery model
 
-### Backing up the log  
+The transaction log may be failing to truncate with LOG_BACKUP log_reuse_wait category, because you have never backed it up. In many of those cases, you may find that your database is using FULL or BULK_LOGGED recovery model, but you do not really intend to back up transaction logs for it. In such cases, you should consider switching your database to SIMPLE recovery model and only perform full and differential database backups. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
+
+#### Back up the log
 
 Under the FULL or BULK_LOGGED recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
 
@@ -300,8 +297,9 @@ ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
   
 - <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
+### More information on ACTIVE_TRANSACTION log_reuse_wait
 
-### Discovering long-running transactions
+#### Discover long-running transactions
 
 A very long-running transaction can cause the transaction log to fill. To look for long-running transactions, use one of the following:
 
@@ -312,9 +310,13 @@ This dynamic management view returns information about transactions at the datab
 - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back).
 
-### Kill a transaction
+##### Kill a transaction
 
-Sometimes you just have to end the process; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
+Sometimes you just have to end the transaction; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
+
+### More information on AVAILABILITY_REPLICA log_reuse_wait
+
+When transaction changes at primary Availability replica are not yet hardened on the secondary replica the transaction log cannot be  truncated. This can cause the log to grow. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)[Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
 
 ## Disk volume is full
 
@@ -337,7 +339,7 @@ See [Move Database Files](../../relational-databases/databases/move-database-fil
 
 Add a new log file to the database on a different disk that has sufficient space by using `ALTER DATABASE <database_name> ADD LOG FILE`. Multiple log files for a single database should be considered a temporary condition to resolve a space issue, not a long-term condition. Most databases should only have one transaction log file. Continue to investigate the reason why the transaction log is full and cannot be truncated. Consider adding temporary additional transaction log files as an advanced troubleshooting step. 
 
-  
+
 For more information see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
 
 
@@ -353,14 +355,14 @@ DECLARE @log_reached_disk_size BIT = 0
 SELECT 
     name LogName, 
     physical_name, 
-    convert(bigint, size)*8/1024 LogFile_Size_MB, 
+    CONVERT(bigint, size)*8/1024 LogFile_Size_MB, 
     volume_mount_point, 
     available_bytes/1024/1024 Available_Disk_space_MB,
-    (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 file_size_as_percentage_of_disk_space,
+    (CONVERT(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 file_size_as_percentage_of_disk_space,
     db_name(mf.database_id) DbName
 FROM sys.master_files mf CROSS APPLY sys.dm_os_volume_stats (mf.database_id, file_id)
 WHERE mf.[type_desc] = 'LOG'
-    and (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 > 90 --log is 90% of disk drive
+    AND (CONVERT(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 > 90 --log is 90% of disk drive
 ORDER BY size DESC
 
 if @@ROWCOUNT > 0
@@ -380,7 +382,7 @@ BEGIN
             name
         FROM sys.master_files mf CROSS APPLY sys.dm_os_volume_stats (mf.database_id, file_id)
         WHERE mf.[type_desc] = 'LOG'
-            and (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 > 90 --log is 90% of disk drive
+            AND (convert(bigint, size)*8.0/1024)/(available_bytes/1024/1024 )*100 > 90 --log is 90% of disk drive
         ORDER BY size desc
 
     OPEN log_filled_disk
@@ -390,7 +392,7 @@ BEGIN
     WHILE @@FETCH_STATUS = 0
     BEGIN
         
-        SELECT 'Transaction log for database "' + @db_name_filled_disk + '" has nearly or comletely filled disk volume it resides on!' AS Finding
+        SELECT 'Transaction log for database "' + @db_name_filled_disk + '" has nearly or completely filled disk volume it resides on!' AS Finding
         SELECT 'Consider using one of the below commands to shrink the "' + @log_name_filled_disk +'" transaction log file size or add a new file to a NEW volume' AS Recommendation
         SELECT 'DBCC SHRINKFILE(''' + @log_name_filled_disk + ''')' AS Shrinkfile_Command
         SELECT 'ALTER DATABASE ' + @db_name_filled_disk + ' ADD LOG FILE ( NAME = N''' + @log_name_filled_disk + '_new'', FILENAME = N''NEW_VOLUME_AND_FOLDER_LOCATION\' + @log_name_filled_disk + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' AS AddNewFile
@@ -411,50 +413,63 @@ END
 
 ```
 
-## Log size is set to a fixed maximum value
+## Log size set to a fixed maximum or Autogrow is disabled
 
-Error 9002 can be generated if the transaction log size has been set to an upper limit and autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
+Error 9002 can be generated if the transaction log size has been set to an upper limit or Autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
 ```tsql
-SELECT db_name(database_id) DbName,
+SELECT DB_NAME(database_id) DbName,
        name LogName,
        physical_name,
        type_desc ,
-       convert(bigint, SIZE)*8/1024 LogFile_Size_MB ,
-       convert(bigint,max_size)*8/1024 LogFile_MaxSize_MB ,
-       (SIZE*8.0/1024)/(max_size*8.0/1024)*100 percent_full_of_max_size
+       CONVERT(bigint, SIZE)*8/1024 LogFile_Size_MB ,
+       CONVERT(bigint,max_size)*8/1024 LogFile_MaxSize_MB ,
+       (SIZE*8.0/1024)/(max_size*8.0/1024)*100 percent_full_of_max_size,
+       CASE WHEN growth = 0 THEN 'AUTOGROW_DISABLED' ELSE 'Autogrow_Enabled' END as AutoGrow
 FROM sys.master_files
 WHERE file_id = 2
-  AND max_size not in (-1, 268435456)
-  AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
+    AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
+    AND max_size not in (-1, 268435456)
+    OR growth = 0
 
 if @@ROWCOUNT > 0
 BEGIN
-    DECLARE @db_name_max_size sysname, @log_name_max_size sysname, @configured_max_log_boundary bigint 
+    DECLARE @db_name_max_size sysname, @log_name_max_size sysname, @configured_max_log_boundary bigint, @auto_grow int
     
     DECLARE reached_max_size CURSOR FOR
         SELECT db_name(database_id),
                name,
-               convert(bigint, SIZE)*8/1024
+               CONVERT(bigint, SIZE)*8/1024,
+               growth
         FROM sys.master_files
         WHERE file_id = 2
-          AND max_size not in (-1,
-                               268435456)
-          AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
+            AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
+            AND max_size not in (-1, 268435456)
+            OR growth = 0 
 
     OPEN reached_max_size
 
-    FETCH NEXT FROM reached_max_size into @db_name_max_size , @log_name_max_size, @configured_max_log_boundary 
+    FETCH NEXT FROM reached_max_size into @db_name_max_size , @log_name_max_size, @configured_max_log_boundary, @auto_grow 
 
     WHILE @@FETCH_STATUS = 0
     BEGIN
-        SELECT 'The database "' + @db_name_max_size+'" contains a log file "' + @log_name_max_size + '" whose max limit is set to ' + convert(varchar(24), @configured_max_log_boundary) + ' MB and this limit has been reached!' as Finding
-        SELECT 'Consider using one of the below ALTER DATABASE commands to either change the log file size or add a new file' as Recommendation
+        IF @auto_grow = 0
+          BEGIN
+            SELECT 'The database "' + @db_name_max_size+'" contains a log file "' + @log_name_max_size + '" whose autogrow has been DISABLED' as Finding
+            SELECT 'Consider enabling autogrow or increasing file size via these ALTER DATABASE commands' as Recommendation
+            SELECT 'ALTER DATABASE ' + @db_name_max_size + ' MODIFY FILE ( NAME = N''' + @log_name_max_size + ''', FILEGROWTH = 65536KB)' as AutoGrowth
+          END
+        ELSE
+          BEGIN
+            SELECT 'The database "' + @db_name_max_size+'" contains a log file "' + @log_name_max_size + '" whose max limit is set to ' + convert(varchar(24), @configured_max_log_boundary) + ' MB and this limit has been reached!' as Finding
+            SELECT 'Consider using one of the below ALTER DATABASE commands to either change the log file size or add a new file' as Recommendation
+          END
+        
         SELECT 'ALTER DATABASE ' + @db_name_max_size + ' MODIFY FILE ( NAME = N''' + @log_name_max_size + ''', MAXSIZE = UNLIMITED)' as UnlimitedSize
         SELECT 'ALTER DATABASE ' + @db_name_max_size + ' MODIFY FILE ( NAME = N''' + @log_name_max_size + ''', MAXSIZE = something_larger_than_' + CONVERT(varchar(24), @configured_max_log_boundary) +'MB )' as IncreasedSize
         SELECT 'ALTER DATABASE ' + @db_name_max_size + ' ADD LOG FILE ( NAME = N''' + @log_name_max_size + '_new'', FILENAME = N''SOME_FOLDER_LOCATION\' + @log_name_max_size + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' as AddNewFile
 
-        FETCH NEXT FROM reached_max_size into @db_name_max_size , @log_name_max_size, @configured_max_log_boundary 
+        FETCH NEXT FROM reached_max_size into @db_name_max_size , @log_name_max_size, @configured_max_log_boundary, @auto_grow
 
     END
 
@@ -465,14 +480,14 @@ ELSE
     SELECT 'Found no files that have reached max log file size' as Findings
 ```
 
-### Increase log file size  
+### Increase log file size  or enable Autogrow
 
 If space is available on the log disk, you can increase the size of the log file. The maximum size for log files is two terabytes (TB) per log file.  
   
 If autogrow is disabled, the database is online, and sufficient space is available on the disk, do either of these:  
   
 - Manually increase the file size to produce a single growth increment.  
-- Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option.  
+- Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option. See [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink)  
   
 > [!NOTE]
 > In either case, if the current size limit has been reached, increase the MAXSIZE value.  
@@ -483,3 +498,4 @@ If autogrow is disabled, the database is online, and sufficient space is availab
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
+ [Manage the size of the transaction log file](manage-the-size-of-the-transaction-log-file.md)

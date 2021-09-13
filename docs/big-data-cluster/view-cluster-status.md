@@ -73,7 +73,9 @@ The following articles describe how to troubleshoot big data clusters deployed i
 
 ### Add remote notebooks
 
-Because notebooks are sourced remotely, you need to select a notebook for the correct version. To add a remote notebook from Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P. (Or select **View** and then **Command Palette**.)
+To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P (or select **View**, and then **Command Pallette**). Select **Add Remote Book**. 
+
+In the **Add Remote Book** dialogue, select the desired latest version for operational notebooks and select on **Add**, as shown below:
 
 ![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
 

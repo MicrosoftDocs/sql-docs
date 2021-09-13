@@ -1,5 +1,5 @@
 ---
-title: "Format text in a text box (paginated reports) | Microsoft Docs"
+title: "Format text in a text box in paginated reports | Microsoft Docs"
 description: Discover how to format text within a text box and how to mix placeholder text and static text to create mail merges or templates for text in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Format text in a text box (Report Builder paginated reports)
+# Format text in a text box in paginated reports (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

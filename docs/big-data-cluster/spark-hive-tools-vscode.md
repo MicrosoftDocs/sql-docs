@@ -6,7 +6,7 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 07/16/2021
+ms.date: 09/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,6 +25,7 @@ The following items are required for completing the steps in this article:
 
 - A SQL Server big data cluster. See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 - [Visual Studio Code](https://code.visualstudio.com/).
+- [Python and the Python extension on Visual Studio Code](https://code.visualstudio.com/docs/languages/python).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono is only required for Linux and macOS.
 - [Set up PySpark interactive environment for Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
 - A local directory named **SQLBDCexample**.  This article uses  **C:\SQLBDC\SQLBDCexample**.
@@ -58,28 +59,28 @@ Complete the following steps to open a work folder, and create a file in Visual 
 3. Name the new file with the `.py` (Spark script) file extension.  This example uses **HelloWorld.py**.
 4. Copy and paste the following code into the script file:
    ```python
-    import sys
-    from operator import add
-    from pyspark.sql import SparkSession, Row
+   import sys
+   from operator import add
+   from pyspark.sql import SparkSession, Row
     
-    spark = SparkSession\
-        .builder\
-        .appName("PythonWordCount")\
-        .getOrCreate()
+   spark = SparkSession\
+      .builder\
+      .appName("PythonWordCount")\
+      .getOrCreate()
     
-    data = [Row(col1='pyspark and spark', col2=1), Row(col1='pyspark', col2=2), Row(col1='spark vs hadoop', col2=2), Row(col1='spark', col2=2), Row(col1='hadoop', col2=2)]
-    df = spark.createDataFrame(data)
-    lines = df.rdd.map(lambda r: r[0])
+   data = [Row(col1='pyspark and spark', col2=1), Row(col1='pyspark', col2=2), Row(col1='spark vs hadoop', col2=2), Row(col1='spark', col2=2), Row(col1='hadoop', col2=2)]
+   df = spark.createDataFrame(data)
+   lines = df.rdd.map(lambda r: r[0])
 
-    counters = lines.flatMap(lambda x: x.split(' ')) \
-        .map(lambda x: (x, 1)) \
-        .reduceByKey(add)
+   counters = lines.flatMap(lambda x: x.split(' ')) \
+      .map(lambda x: (x, 1)) \
+      .reduceByKey(add)
     
-    output = counters.collect()
-    sortedCollection = sorted(output, key = lambda r: r[1], reverse = True)
+   output = counters.collect()
+   sortedCollection = sorted(output, key = lambda r: r[1], reverse = True)
     
-    for (word, count) in sortedCollection:
-        print("%s: %i" % (word, count))
+   for (word, count) in sortedCollection:
+      print("%s: %i" % (word, count))
    ```
 
 ## Link a SQL Server big data cluster

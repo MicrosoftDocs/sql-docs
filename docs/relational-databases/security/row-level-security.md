@@ -396,7 +396,7 @@ ON dbo.Sales_ext
 WITH (STATE = ON);
 ```
 
-Now test the filtering predicate, by selecting from the Sales_ext external table. Sign in as each user, Sales1, Sales2, and manager. Run the following command as each user.
+Now test the filtering predicate, by selecting from the Sales_ext external table. Sign in as each user, Sales1, Sales2, and Manager. Run the following command as each user.
 
 ```sql
 SELECT * FROM Sales_ext;

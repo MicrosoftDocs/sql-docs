@@ -961,7 +961,7 @@ GO
 |WINFAB_REPORT_FAULT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |WORKTBL_DROP |Occurs while pausing before retrying, after a failed worktable drop.| 
 |WRITE_COMPLETION |Occurs when a write operation is in progress.| 
-|<a name="writelog"></а>WRITELOG |Occurs while waiting for a log flush to complete. Common operations that cause log flushes are transaction commits and checkpoints. Common reasons for long waits on WRITELOG are: disk latency (where transaction log files reside), the inability for I/O to keep up with transactions, or, a large number of transaction log operations and flushes (commits, rollback)| 
+|<a name="writelog"></a> WRITELOG |Occurs while waiting for a log flush to complete. Common operations that cause log flushes are transaction commits and checkpoints. Common reasons for long waits on WRITELOG are: disk latency (where transaction log files reside), the inability for I/O to keep up with transactions, or, a large number of transaction log operations and flushes (commits, rollback)| 
 |XACT_OWN_TRANSACTION |Occurs while waiting to acquire ownership of a transaction.| 
 |XACT_RECLAIM_SESSION |Occurs while waiting for the current owner of a session to release ownership of the session.| 
 |XACTLOCKINFO |Occurs during synchronization of access to the list of locks for a transaction. In addition to the transaction itself, the list of locks is accessed by operations such as deadlock detection and lock migration during page splits.| 

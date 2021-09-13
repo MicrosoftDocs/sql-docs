@@ -69,21 +69,11 @@ The following articles describe how to troubleshoot big data clusters deployed i
 
 ## Where to find [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] administration notebooks 
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience via Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting. 
-
-
-### Access to local notebooks 
-
-After you connect to a big data cluster with Azure Data Studio (ADS), on the **[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]** tab, you can find a link to all the local notebooks: 
-
-![Screenshot that shows where to find links to local notebooks.](media/view-cluster-status/bdc-local-guides.png)
-
-You can also access the notebooks directly from Azure Data Studio. Use keyboard shortcut Ctrl+Shift+P (or select **View** and then **Command Palette**) to find the option **Jupyter Books: Get localized SQL Server 2019 guide**. 
-
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience via Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting.
 
 ### Add remote notebooks
 
-Because notebooks are sourced remotely, you can select a notebook for the correct version. To add a remote notebook from Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P. (Or select **View** and then **Command Palette**.)
+Because notebooks are sourced remotely, you need to select a notebook for the correct version. To add a remote notebook from Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P. (Or select **View** and then **Command Palette**.)
 
 ![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
 

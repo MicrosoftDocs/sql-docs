@@ -71,7 +71,6 @@ The following articles describe how to troubleshoot big data clusters deployed i
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience via Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting.
 
-### Add remote notebooks
 
 To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P (or select **View**, and then **Command Pallette**). Select **Add Remote Book**. 
 

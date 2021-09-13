@@ -6185,6 +6185,10 @@ items:
           href: tools/synapse-pathway/transpiler-messages/asp0013.md
         - name: ASP0014
           href: tools/synapse-pathway/transpiler-messages/asp0014.md
+        - name: ASP0015
+          href: tools/synapse-pathway/transpiler-messages/asp0015.md
+        - name: ASP0117
+          href: tools/synapse-pathway/transpiler-messages/asp0015.md
 - name: Manage, monitor, & tune
   items:
   - name: Manage

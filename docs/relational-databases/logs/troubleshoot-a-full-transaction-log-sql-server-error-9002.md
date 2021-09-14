@@ -253,7 +253,7 @@ DEALLOCATE no_truncate_db
 
 #### Recovery model
 
-The transaction log may be failing to truncate with LOG_BACKUP log_reuse_wait category, because you have never backed it up. In many of those cases, you may find that your database is using FULL or BULK_LOGGED recovery model, but you do not really intend to back up transaction logs for it. In such cases, you should consider switching your database to SIMPLE recovery model and only perform full and differential database backups. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
+Consider each database's to recovery model carefully. Perform log backups on all databases in FULL or BULK_LOGGED recovery models. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
 
 #### Back up the log
 

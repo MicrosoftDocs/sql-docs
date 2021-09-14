@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot full transaction log error 9002"
 description: Learn about possible responses to a full transaction log in SQL Server and how to avoid the problem in the future.
-ms.date: "06/22/2021"
+ms.date: "09/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -52,7 +52,7 @@ ms.custom: "seo-lt-2019"
  - Replication or availability group synchronization that is unable to complete
 
 
-## Resolving a full transaction log
+## How to resolve a full transaction log
 
 The following specific steps will help you find the reason for a full transaction log and resolve the issue.
 
@@ -255,13 +255,13 @@ The most common actions you can consider here is to review your database recover
 
 #### Recovery model
 
-Consider each database's to recovery model carefully. Perform log backups on all databases in FULL or BULK_LOGGED recovery models. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
+The transaction log may be failing to truncate with LOG_BACKUP log_reuse_wait category, because you have never backed it up. In many of those cases, your database is using FULL or BULK_LOGGED recovery model, but you did not back up transaction logs. You should consider each database recovery model carefully: perform transaction log backups on all databases in FULL or BULK LOGGED recovery models to minimize occurrences of error 9002. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
 
 #### Back up the log
 
-Under the FULL or BULK_LOGGED recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
+Under the FULL or BULK_LOGGED recovery model, if the transaction log has not been backed up recently, backup might be what is preventing log truncation. You must back up the transaction log to allow log records to be released and the log truncated. If the log has never been backed up, you **must create two log backups** to permit the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to truncate the log to the point of the last backup. Truncating the log frees logical space for new log records. To keep the log from filling up again, take log backups regularly and more frequently. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md).
 
-To review the complete backup history of a database, use the following sample script:
+A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. To review the complete backup history of a database, use the following sample script:
 
 ```tsql
 SELECT bs.database_name
@@ -290,7 +290,9 @@ AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last
 ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
 ```
 
- **To create a transaction log backup**  
+A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. For more information on backup history, see [Backup History and Header Information (SQL Server)](/sql/relational-databases/backup-restore/backup-history-and-header-information-sql-server).
+
+#### To create a transaction log backup
   
 > [!IMPORTANT]  
 > If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
@@ -322,8 +324,7 @@ Sometimes you just have to end the transaction; you may have to use the [KILL](.
 
 When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)[Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
 
-
-## Disk volume is full
+## Resolve full disk volume
 
 In some situations the disk volume that hosts the transaction log file may fill up. You can take one of the following actions to resolve the log-full scenario that results from a full disk:
 
@@ -418,7 +419,7 @@ END
 
 ```
 
-## Log size set to a fixed maximum or Autogrow is disabled
+## Change log size limit or enable Autogrow
 
 Error 9002 can be generated if the transaction log size has been set to an upper limit or Autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
@@ -486,7 +487,7 @@ ELSE
     SELECT 'Found no files that have reached max log file size' as Findings
 ```
 
-### Increase log file size  or enable Autogrow
+### Increase log file size or enable Autogrow
 
 If space is available on the log disk, you can increase the size of the log file. The maximum size for log files is two terabytes (TB) per log file.  
   

@@ -443,9 +443,10 @@ BEGIN
                growth
         FROM sys.master_files
         WHERE file_id = 2
-            AND (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
+            AND ( (SIZE*8.0/1024)/(max_size*8.0/1024)*100 > 90
             AND max_size not in (-1, 268435456)
-            OR growth = 0 
+            OR growth = 0 )
+
 
     OPEN reached_max_size
 

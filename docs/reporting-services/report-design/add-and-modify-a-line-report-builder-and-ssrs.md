@@ -13,6 +13,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add and Modify a Line (Report Builder and SSRS)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   You can add a line to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report when you want a graphical element to separate sections of the report. You can customize the appearance of the line by editing line properties such as color or style. For example, you might want to incorporate company colors into the report.    
     
 > [!NOTE]    

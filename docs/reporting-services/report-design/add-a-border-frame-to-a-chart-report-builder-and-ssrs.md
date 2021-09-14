@@ -13,6 +13,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add a Border Frame to a Chart (Report Builder and SSRS)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   To give a chart more visual impact, consider using a border frame around the outside of the chart. You can select a border frame by using the **Chart Properties** dialog box or by using the Properties pane. The chart border frames cannot be applied to any other data region.  
   
 > [!NOTE]  

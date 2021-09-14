@@ -13,6 +13,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add a multi-value parameter to a Report
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   You can add a parameter to a report that allows the user to select more than one value for the parameter.  
   
  You can pass multiple parameter values to the report within the report URL. For a URL example includes a multi-value parameter, see [Pass a Report Parameter Within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  

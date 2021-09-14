@@ -13,6 +13,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add a Bookmark to a Report (Report Builder and SSRS)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   Add bookmarks and bookmark links to a report when you want to provide a customized table of contents or to provide customized internal navigation links in the report. Typically, you add bookmarks to locations in the report to which you want to direct users, such as to each table or chart or to the unique group values displayed in a table or matrix. You can create your own strings to use as bookmarks, or, for groups, you can set the bookmark to the group expression.  
   
  After you create bookmarks, you can add report items that the user can click to go to each bookmark. These items are typically text boxes or images.  

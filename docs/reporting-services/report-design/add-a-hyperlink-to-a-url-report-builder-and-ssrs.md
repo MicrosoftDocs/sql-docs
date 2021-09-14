@@ -13,6 +13,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add a Hyperlink to a URL (Report Builder and SSRS)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
 Learn how to add hyperlink actions to text boxes, images, charts, and gauges in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  paginated reports. Links can go to other reports, to bookmarks in a report, or to  static or dynamic URLs. 
 
  You can add a hyperlink action to any item that has an **Action** property, for example, a text box, an image, or a calculated series in a chart. When the user clicks that report item, the action that you define takes place.  

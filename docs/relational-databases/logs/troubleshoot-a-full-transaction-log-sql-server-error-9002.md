@@ -251,6 +251,8 @@ DEALLOCATE no_truncate_db
   
 ### More information on LOG_BACKUP log_reuse_wait
 
+The most common actions you can consider here is to review your database recovery model and backup the transaction log of your database. 
+
 #### Recovery model
 
 Consider each database's to recovery model carefully. Perform log backups on all databases in FULL or BULK_LOGGED recovery models. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
@@ -298,6 +300,8 @@ ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
 - <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
 ### More information on ACTIVE_TRANSACTION log_reuse_wait
+
+The steps to troubleshoot ACTIVE_TRANSACTION reason include discovering the long running transaction and resolving it (in some case using the KILL command to do so).
 
 #### Discover long-running transactions
 

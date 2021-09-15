@@ -292,7 +292,8 @@ ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
 
 A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. For more information on backup history, see [Backup History and Header Information (SQL Server)](/sql/relational-databases/backup-restore/backup-history-and-header-information-sql-server).
 
-#### To create a transaction log backup
+#### Create a transaction log backup
+
   
 > [!IMPORTANT]  
 > If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  

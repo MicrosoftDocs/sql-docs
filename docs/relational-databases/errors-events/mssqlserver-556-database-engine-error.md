@@ -32,16 +32,16 @@ Query store is on.
 
 The plan is removed after the query store fills up.
 
-## User Action
+## User action
 
 Increase the size of the query store.
 
 Clear the procedure cache when query store comes back from READ WRITE state
 
-Recompile just the INSERT EXEC statement to force it to go through the regular compile path and avoid hitting this exception due to unplanned recomplilation caused by plan missing in query store.
+Recompile just the INSERT EXEC statement to force it to go through the regular compile path and avoid hitting this exception due to unplanned recompilation caused by plan missing in query store.
 
 For more information, see our [troubleshooting article on error 556](/troubleshoot/sql/database-design/error-556-insert-exec-failed).
   
-## See Also  
-[DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
-  
+## See also
+
+[DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md)

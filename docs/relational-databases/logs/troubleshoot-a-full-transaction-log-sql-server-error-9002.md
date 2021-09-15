@@ -253,7 +253,8 @@ DEALLOCATE no_truncate_db
 
 The most common actions you can consider here is to review your database recovery model and backup the transaction log of your database. 
 
-#### Recovery model
+#### Consider the database's recovery model
+
 
 The transaction log may be failing to truncate with LOG_BACKUP log_reuse_wait category, because you have never backed it up. In many of those cases, your database is using FULL or BULK_LOGGED recovery model, but you did not back up transaction logs. You should consider each database recovery model carefully: perform transaction log backups on all databases in FULL or BULK LOGGED recovery models to minimize occurrences of error 9002. For more information, see [Recovery Models](../backup-restore/recovery-models-sql-server.md)
 

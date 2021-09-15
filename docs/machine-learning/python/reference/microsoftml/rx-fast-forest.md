@@ -341,7 +341,7 @@ memory.
 
 [Quantile regression forest](http://jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf)
 
-[From Stumps to Trees to Forests](https://blogs.technet.microsoft.com/machinelearning/2014/09/10/from-stumps-to-trees-to-forests/)
+[From Stumps to Trees to Forests](/archive/blogs/machinelearning/from-stumps-to-trees-to-forests)
 
 
 ## Binary classification example
@@ -499,4 +499,3 @@ Writing completed.
 3    187.0   5.1  87.0  80.662109
 4    175.0   7.4  89.0  67.570549
 ```
-

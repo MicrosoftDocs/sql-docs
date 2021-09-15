@@ -841,8 +841,8 @@ A value of 0 indicates that automatic growth is set to off and no additional spa
 
 If FILEGROWTH is not specified, the default values are:
 
-- Data 64 MB
-- Log files 64 MB
+- Data 16 MB
+- Log files 16 MB
 
 **\<add_or_modify_filegroups>::=**
 

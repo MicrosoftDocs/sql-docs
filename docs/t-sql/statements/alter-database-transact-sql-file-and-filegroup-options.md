@@ -3,7 +3,7 @@ title: "ALTER DATABASE File and Filegroups"
 description: Update a database's files and filegroups using Transact-SQL.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
-ms.date: "02/21/2019"
+ms.date: "09/15/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

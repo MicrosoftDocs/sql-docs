@@ -31,9 +31,9 @@ This article describes how to insert a [pandas](https://pandas.pydata.org/) data
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+* Azure Data Studio. To install, see [Download and install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 
-* Follow the steps in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md) to restore the OLTP version of the AdventureWorks sample database.
+* Follow the steps in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md) to restore the OLTP version of the AdventureWorks sample database for your version of SQL Server.
 
   You can verify that the database was restored correctly by querying the **HumanResources.Department** table:
 
@@ -82,7 +82,7 @@ DepartmentID,Name,GroupName,
 
 ## Create a new database table
 
-Follow the steps in [Connect to a SQL Server](https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-sql-server?view=sql-server-ver15#connect-to-a-sql-server) to connect to the AdventureWorks database.
+1. Follow the steps in [Connect to a SQL Server](../../azure-data-studio/quickstart-sql-server?view=sql-server-ver15&preserve-view=true#connect-to-a-sql-server) to connect to the AdventureWorks database.
 
 1. Create a table named **HumanResources.DepartmentTest**. The SQL table will be used for the dataframe insertion.
 
@@ -126,7 +126,9 @@ Use the Python `pandas` package to create a dataframe, load the CSV file, and th
    cursor.close()
    ```
 
-## Confirm row count in SQL
+1. Run the cell.
+
+## Confirm data in the database
 
 Connect to the SQL kernel and AdventureWorks database and run the following SQL statement to confirm the table was successfully loaded with data from the dataframe.
 

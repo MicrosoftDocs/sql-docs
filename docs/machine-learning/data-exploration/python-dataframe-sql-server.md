@@ -82,7 +82,7 @@ DepartmentID,Name,GroupName,
 
 ## Create a new database table
 
-1. Follow the steps in [Connect to a SQL Server](../../azure-data-studio/quickstart-sql-server?view=sql-server-ver15&preserve-view=true#connect-to-a-sql-server) to connect to the AdventureWorks database.
+1. Follow the steps in [Connect to a SQL Server](../../azure-data-studio/quickstart-sql-server.md?view=sql-server-ver15&preserve-view=true#connect-to-a-sql-server) to connect to the AdventureWorks database.
 
 1. Create a table named **HumanResources.DepartmentTest**. The SQL table will be used for the dataframe insertion.
 

@@ -6887,8 +6887,6 @@ items:
             href: relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
           - name: Quick survey
             href: relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-          - name: Video, sample, resources
-            href: relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
         - name: Planning for In-Memory
           href: relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
           items:
@@ -8722,7 +8720,7 @@ items:
             href: ssms/agent/jobs-that-reference-a-schedule.md
           - name: Alerts Page
             href: ssms/agent/job-properties-new-job-alerts-page.md
-          - name: General Page)
+          - name: General Page
             href: ssms/agent/job-properties-new-job-general-page.md
           - name: Notifications Page
             href: ssms/agent/job-properties-new-job-notifications-page.md
@@ -10516,6 +10514,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-360-database-engine-error.md
         - name: 511
           href: relational-databases/errors-events/mssqlserver-511-database-engine-error.md
+        - name: 556
+          href: relational-databases/errors-events/mssqlserver-556-database-engine-error.md
         - name: 601
           href: relational-databases/errors-events/mssqlserver-601-database-engine-error.md
         - name: 605
@@ -10554,6 +10554,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
+        - name: 912
+          href: relational-databases/errors-events/mssqlserver-912-database-engine-error.md
         - name: 916
           href: relational-databases/errors-events/mssqlserver-916-database-engine-error.md
         - name: 926

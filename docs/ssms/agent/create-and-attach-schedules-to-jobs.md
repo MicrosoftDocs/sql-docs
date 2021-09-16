@@ -36,7 +36,10 @@ There are two ways to create a schedule:
 -   Create the schedule in Object Explorer.  
   
 After a schedule has been created, you can attach that schedule to multiple jobs, even if the schedule was created for a specific job. You can also detach schedules from jobs.  
-  
+
+> [!WARNING]
+> Updating a schedule will impact all the jobs attached to the schedule. If you want to control the schedule of individual jobs, be sure to create a separate schedule object for each job.
+
 A schedule can be based upon time or an event. For example, you can schedule a job to run at the following times:  
   
 -   Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts.  

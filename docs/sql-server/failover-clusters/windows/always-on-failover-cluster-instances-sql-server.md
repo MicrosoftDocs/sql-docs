@@ -29,7 +29,7 @@ ms.author: chadam
  An FCI can leverage  [Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
  
  > [!NOTE]  
- > Windows Server 2016 Datacenter edition introduces support for Storage Spaces Direct (S2D). SQL Server Failover Cluster Instances support S2D for cluster storage resources. For more information, see [Storage Spaces Direct in Windows Server 2016](/windows-server/storage/storage-spaces/storage-spaces-direct-overview).
+ > Windows Server 2016 Datacenter edition introduces support for Storage Spaces Direct (S2D). SQL Server Failover Cluster Instances support S2D for cluster storage resources. For more information, see [Storage Spaces Direct in Windows Server](/windows-server/storage/storage-spaces/storage-spaces-direct-overview).
  > 
  >Failover Cluster Instances also support Clustered Shared Volumes (CSV). For more information, see [Understanding Cluster Shared Volumes in a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)). 
    

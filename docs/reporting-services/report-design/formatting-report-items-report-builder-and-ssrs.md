@@ -1,6 +1,6 @@
 ---
 title: "Format paginated report items | Microsoft Docs"
-description:  Discover how formatting enhances readability and makes your reports more attractive in Report Builder.
+description:  Discover how formatting enhances readability and makes your paginated reports more attractive in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -18,7 +18,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  Formatting the items in your report makes the report look more attractive and enhances its readability. You can format the text boxes and individual items within text boxes, the images, the expressions, and the data while in report design mode.  
+  Formatting the items in your paginated reports makes them look more attractive and enhances readability. You can format the text boxes and individual items within text boxes, the images, the expressions, and the data while in report design mode.  
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   

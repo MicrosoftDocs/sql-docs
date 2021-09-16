@@ -27,7 +27,7 @@ ms.custom: "seo-lt-2019"
  **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
  
  > [!div class="nextstepaction"]
-> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/tigertoolbox/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
 
 [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
  
@@ -56,12 +56,18 @@ ms.custom: "seo-lt-2019"
 
 The following specific steps will help you find the reason for a full transaction log and resolve the issue.
 
-## Truncate the Log
+## 1. Truncate the Log
+
+A very common solution to this problem is to ensure transaction log backups are performed for your database which will ensure the log is truncated. If no recent transaction log history is indicated for the database with a full transaction log, the solution to the problem is straightforward: resume regular transaction log backups of the database. 
+
+### Log truncation explained
 
 There is a difference between truncating a transaction log and shrinking a transaction log. [Log Truncation](the-transaction-log-sql-server.md#Truncation) occurs normally during a transaction log backup, and is a logical operation which removes committed records inside the log, whereas [log shrinking](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md#shrinking-a-log-file) reclaims physical space on the file system by reducing the file size. Log truncation occurs on a [virtual-log-file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) boundary, and a log file may contain many VLFs. A log file can be shrunk only if there is empty space inside the log file to reclaim. Shrinking a log file alone cannot solve the problem of a full log file, instead, you must discover why the log file is full and cannot be truncated.
 
 > [!WARNING]
 > Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and might slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  For more information, see [Shrink a database](../databases/shrink-a-database.md).
+
+### What is preventing log truncation?
 
 To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
@@ -296,13 +302,20 @@ A complete history of all SQL Server backup and restore operations on a server i
 
 #### Create a transaction log backup
 
-  
-> [!IMPORTANT]  
-> If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
-  
+Example of how to back up the log:
+
+```tsql
+BACKUP LOG [dbname] TO DISK = 'some_volume:\some_folder\dbname_LOG.trn'
+```
+
 - [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 - <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
+  
+> [!IMPORTANT]  
+> If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+
+
   
 ### More information on ACTIVE_TRANSACTION log_reuse_wait
 
@@ -327,7 +340,7 @@ Sometimes you just have to end the transaction; you may have to use the [KILL](.
 
 When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)[Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
 
-## Resolve full disk volume
+## 2. Resolve full disk volume
 
 In some situations the disk volume that hosts the transaction log file may fill up. You can take one of the following actions to resolve the log-full scenario that results from a full disk:
 
@@ -422,7 +435,7 @@ END
 
 ```
 
-## Change log size limit or enable Autogrow
+## 3. Change log size limit or enable Autogrow
 
 Error 9002 can be generated if the transaction log size has been set to an upper limit or Autogrow is not allowed. In this case, enabling autogrow or increasing the log size manually can help resolve the issue. Use this T-SQL command to find such log files and follow the recommendations provided:
 
@@ -509,3 +522,4 @@ If autogrow is disabled, the database is online, and sufficient space is availab
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
  [Manage the size of the transaction log file](manage-the-size-of-the-transaction-log-file.md)
+ [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)

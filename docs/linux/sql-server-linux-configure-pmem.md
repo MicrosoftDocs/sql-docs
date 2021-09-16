@@ -81,6 +81,20 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 Once the device has been configured with `ndctl`, created, and mounted, you can place database files in it or create a new database.
 
+You can store the SQL Server datafiles(mdfs,ndfs), tempdb files on pmem device when configured with the mode fsdax using the command below. This should not be used to store the SQL Server log (ldfs) files, as transaction log needs to be on storage that provides sector atomic guarantees:
+
+```bash
+ndctl create-namespace -f -e namespace0.0 --mode=fsdax --map=dev
+```
+Before you set the map option in the preceding command, please keep the following points in mind:
+•	For best performance at accessing and updating these NVDIMM page entries for this device, it is preferable to use -map=mem 
+•	But, If the capacity of the NVDIMM, is too large (>= 512GB), please set the –map=dev which would impact the IO throughput and stymie the performance
+ 
+For SQL Server log files on PMEM devices, provision the pmem device(s) to use sector/BTT (Block Translation Table) as this provides the needed sector atomicity for SQL Server logs files for this technology of storage devices. We also recommend that you perform workload performance validations and compare the SQL log performance for your workload between this solution and best-in-class NVMe SSDs, and then select the solution that best meets your needs and provides better performance.
+
+```bash
+ndctl create-namespace -f -e namespace0.0 --mode= sector
+```
 Because PMEM devices are O_DIRECT (direct I/O) safe, consider enabling trace flag 3979 to disable the forced flush mechanism. For more information see [FUA support](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Forced unit access internals are covered here [FUA internals](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
 ## Next steps

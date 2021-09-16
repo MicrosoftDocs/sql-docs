@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 06/24/2021
+ms.date: 09/16/2021
 ---
 
 # Download and install sqlpackage
@@ -150,6 +150,7 @@ sqlpackage runs on Windows, macOS, and Linux and is built using .NET Core 3.1.  
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2019
+- Windows Server 2022
 
 ### macOS
 

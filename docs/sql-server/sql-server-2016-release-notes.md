@@ -27,7 +27,7 @@ monikerRange: "= sql-server-2016"
 
 ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 includes all cumulative updates released after [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP2, up to and including CU17.
 
-- [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)
+- [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=103440) [Download SQL Server 2016 Service Pack 3 (SP3)](https://www.microsoft.com/download/details.aspx?id=103440)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 3 release information](https://support.microsoft.com/help/5003279/sql-server-2016-service-pack-3-release-information)
 
 The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.

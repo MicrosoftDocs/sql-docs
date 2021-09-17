@@ -4,7 +4,7 @@ titleSuffix:
 description: R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 09/16/2021
 ms.topic: overview
 author: garyericson
 ms.author: garye
@@ -80,7 +80,7 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 | [sqlrutils](../r/ref-r-sqlrutils.md) | A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](../r/set-up-a-data-science-client.md). |
 | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
 
-## How do I get started with RServices?
+## How do I get started with R Services?
 
 1. [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 

@@ -57,7 +57,7 @@ Expression2
   
 ```sql
 USE AdventureWorks;  
-GO  
+GO
 DECLARE @myDoc XML;         
 SET @myDoc = '<Root>         
     <ProductDescription ProductID="1" ProductName="Road Bike">         
@@ -68,33 +68,33 @@ SET @myDoc = '<Root>
 SELECT @myDoc;     
 -- insert first feature child (no need to specify as first or as last)         
 SET @myDoc.modify('         
-INSERT <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
-INTO (/Root/ProductDescription/Features)[1]') ;  
+insert <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
+into (/Root/ProductDescription/Features)[1]') ;  
 SELECT @myDoc ;        
 -- insert second feature. We want this to be the first in sequence so use 'as first'         
 SET @myDoc.modify('         
-INSERT <Warranty>1 year parts and labor</Warranty>          
-AS first         
-INTO (/Root/ProductDescription/Features)[1]         
+insert <Warranty>1 year parts and labor</Warranty>          
+as first         
+into (/Root/ProductDescription/Features)[1]         
 ')  ;       
 SELECT @myDoc  ;       
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-INSERT <Material>Aluminium</Material>          
-AS last         
-INTO (/Root/ProductDescription/Features)[1]         
+insert <Material>Aluminium</Material>          
+as last         
+into (/Root/ProductDescription/Features)[1]         
 ')         
 SELECT @myDoc ;        
 -- Add fourth feature - this time as a sibling (and not a child)         
 -- 'after' keyword is used (instead of as first or as last child)         
 SELECT @myDoc  ;       
 SET @myDoc.modify('         
-INSERT <BikeFrame>Strong long lasting</BikeFrame>   
-AFTER (/Root/ProductDescription/Features/Material)[1]         
+insert <BikeFrame>Strong long lasting</BikeFrame>   
+after (/Root/ProductDescription/Features/Material)[1]         
 ')  ;       
-SELECT @myDoc;  
-GO  
+SELECT @myDoc;
+GO
 ```  
   
  Note that various path expressions in this example specify "[1]" as a per-static typing requirement. This ensures a single target node.  

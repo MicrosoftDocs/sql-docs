@@ -45,7 +45,11 @@ ms.author: wiassaf
 |blocked_event_fire_time|**int**|The length of time that event firings were blocked when buffers were full. This value is **0** if the buffer policy is "Drop full buffer" or "Drop event". Is not nullable.|  
 |create_time|**datetime**|The time that the session was created. Is not nullable.|  
 |largest_event_dropped_size|**int**|The size of the largest event that did not fit into the session buffer. Is not nullable.|  
-  
+|session_source|**nvarchar(256)**|The source of the session. Is not nullable. Introduced in sql server 2014.  Valid Values are internal and
+server.  The examples of sessions flagged as internals are hkenginexesession and sp_server_diagnostics session.  On the other hand, the examples of sessions flagged as servers are system_health and telemetry_xevents |  
+|buffer_processed_count|**bigint**|The number of buffers that have been processed. Is not nullable.  Introduced in sql server 2017.|
+|buffer_full_count|**bigint**|The number of buffers that are currently full. Is not nullable.  Introduced in sql server 2017.|  
+|total_bytes_generated|**bigint**|The total number of bytes that has been generated. Is not nullable.  Introduced in sql server 2017.|  
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   

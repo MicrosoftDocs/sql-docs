@@ -9,7 +9,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 12/05/2019
+ms.date: 08/26/2021
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -18,7 +18,7 @@ ms.date: 12/05/2019
 
 Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This article covers the major feature areas and is updated as new items are released.
 
-For information about Power BI Report Server, see [What is Power BI Report Server?](/power-bi/report-server/get-started).
+For information about Power BI Report Server, see [What is Power BI Report Server?](/power-bi/report-server/get-started)
 
 ::: moniker range=">=sql-server-ver15"
 
@@ -73,10 +73,6 @@ Comments are now available for reports, to add perspective, and collaborate with
 ![Comments within a report server](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
 For more information, see [Add comments to a report in a report server](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
-
-### DAX queries in reporting tools
-
-In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against the SQL Server Analysis Services tabular data models. You can drag and drop fields in the query designers. See the [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
 ### REST API support
 
@@ -250,4 +246,4 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

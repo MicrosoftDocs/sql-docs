@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Choose Name Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box appears when you choose **Save \<TableName**> , **Save <DiagramName>**, or **Save <ViewName>** from the **File** menu.  
   
 **Enter a name for the table, diagram, or view.**  

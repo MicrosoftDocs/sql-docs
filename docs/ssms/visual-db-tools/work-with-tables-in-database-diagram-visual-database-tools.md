@@ -1,6 +1,6 @@
 ---
-description: "Work with Tables in Database Diagram (Visual Database Tools)"
 title: Work with Tables in Database Diagram
+description: "Work with Tables in Database Diagram (Visual Database Tools)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -20,7 +20,8 @@ ms.date: 01/19/2017
 
 # Work with Tables in Database Diagram (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 You can modify and create database tables in either Table Designer or Database Diagram Designer.  
   
 > [!NOTE]  

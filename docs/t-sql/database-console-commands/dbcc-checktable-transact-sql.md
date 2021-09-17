@@ -29,7 +29,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Checks the integrity of all the pages and structures that make up the table or indexed view.
 

@@ -19,7 +19,7 @@ In-Memory OLTP uses memory and disk in different ways than traditional disk-base
 > [!NOTE]
 > This article was a blog published on August 1, 2013, by the Microsoft SQL Server 2014 team. The blog webpage is being retired.
 >
-> [SQL Server In-Memory-OLTP](./in-memory-oltp-in-memory-optimization.md)
+> [SQL Server In-Memory-OLTP](./overview-and-usage-scenarios.md)
 
 <!--
     Here was the link to the blog. This blog was captured into this new article on 2018/11/30, by GeneMi (MightyPen).

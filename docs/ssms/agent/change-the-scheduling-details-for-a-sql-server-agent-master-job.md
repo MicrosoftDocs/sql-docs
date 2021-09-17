@@ -21,13 +21,16 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to change the scheduling details for a job definition in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to change the scheduling details for a job definition in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
-  
+
+> [!WARNING]
+> It is possible to attach multiple jobs to the same schedule. Note that updating a schedule will impact all the jobs attached to the schedule.
+
 ### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Permissions  

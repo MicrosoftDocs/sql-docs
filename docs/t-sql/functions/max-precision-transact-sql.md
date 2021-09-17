@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;MAX_PRECISION (Transact-SQL)"
+description: "@@MAX_PRECISION (Transact-SQL)"
 title: "@@MAX_PRECISION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # &#x40;&#x40;MAX_PRECISION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the precision level used by **decimal** and **numeric** data types as currently set in the server.  
   

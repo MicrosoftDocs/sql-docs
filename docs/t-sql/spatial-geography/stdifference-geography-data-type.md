@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STDifference (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns an object that represents the point set from one **geography** instance that lies outside another **geography** instance.  
   

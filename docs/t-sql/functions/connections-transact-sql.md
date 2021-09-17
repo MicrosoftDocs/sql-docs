@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
   

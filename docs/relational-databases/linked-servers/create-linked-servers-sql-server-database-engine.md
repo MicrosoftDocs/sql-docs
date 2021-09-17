@@ -223,7 +223,7 @@ ms.custom: seo-dt-2019
   
 #### To test the linked server  
   
--   Execute the following code to test the connection to the linked server. This example the returns the names of the databases on the linked server.  
+-   Execute the following code to test the connection to the linked server. This example returns the names of the databases on the linked server.  
   
     ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  

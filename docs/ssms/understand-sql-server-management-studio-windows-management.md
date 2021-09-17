@@ -1,11 +1,8 @@
 ---
-description: "Understand SQL Server Management Studio Windows Management"
 title: "Understand SQL Server Management Studio Windows Management"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+description: "Understand SQL Server Management Studio Windows Management"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,12 +10,16 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tool windows"
   - "push pin [SQL Server Management Studio]"
   - "tool windows [SQL Server Management Studio]"
-ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "01/19/2017"
 ---
 # Understand SQL Server Management Studio Windows Management
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 The tool windows in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] are a highly functional, flexible, and efficient system that allows you to:  
   
 -   Maximize the user workspace for development and management.  
@@ -34,10 +35,10 @@ To increase your editing space while maintaining functionality, all windows offe
 Some components can be configured in either tabbed mode where components appear as tabs in the same docking location, or in multiple document interface (MDI) mode where each document has its own window. To configure this feature, on the **Tools** menu, click **Options**, click **Environment**, and then click **General**.  
   
 > [!IMPORTANT]  
-> When a login (or a contained database user) connects and is authenticated, the connection stores identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
+> When a login (or a contained database user) connects and is authenticated, the connection stores identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or SQL Server), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. SQL Server Management Studio can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
   
 > [!IMPORTANT]  
-> When a login (or a contained database user) connects and is authenticated, the connection caches identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
+> When a login (or a contained database user) connects and is authenticated, the connection caches identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or SQL Server), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. SQL Server Management Studio can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
   
 ## See Also  
 [Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

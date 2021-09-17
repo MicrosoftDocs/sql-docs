@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # olapR (R package in SQL Server Machine Learning Services)
@@ -30,7 +30,7 @@ Current version is 1.0.0 in all Windows-only products and downloads providing th
 
 ## Full reference documentation
 
-The **olapr** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual sqlrutils functions](/machine-learning-server/r-reference/olapr/olapr) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **olapr** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual sqlrutils functions](/machine-learning-server/r-reference/olapr/olapr) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Availability and location
 

@@ -23,7 +23,7 @@ ms.author: wiassaf
 Returns list of table objects that are available to be virtualized.
 
 > [!NOTE]
-> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
+> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 

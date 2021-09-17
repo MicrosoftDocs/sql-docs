@@ -18,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Rename Solutions and Project Items
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can rename a solution and its project items in Solution Explorer.  
   
 > [!NOTE]  

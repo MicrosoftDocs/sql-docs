@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "6/09/2021"
+ms.date: "09/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -11,13 +11,16 @@ helpviewer_keywords:
   - "Query Store, best practices"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Best practices with Query Store
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article outlines the best practices for using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store with your workload.
+
+> [!NOTE]
+> In Azure Synapse Analytics, configuration options for Query Store are not supported. 
 
 ## <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -290,11 +293,11 @@ FROM sys.database_query_store_options;
 
 The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the ERROR state because of internal errors.
 
-When the actual state is read-only, use the **readonly_reason** column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the **readonly_reason** is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
+When the actual state is read-only, use the `readonly_reason` column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the `readonly_reason` is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 Consider the following steps to switch Query Store to read-write mode and activate data collection:
 
-- Increase the maximum storage size by using the **MAX_STORAGE_SIZE_MB** option of **ALTER DATABASE**.
+- Increase the maximum storage size by using the **MAX_STORAGE_SIZE_MB** option of `ALTER DATABASE`.
 - Clean up Query Store data by using the following statement:
 
   ```sql
@@ -369,6 +372,7 @@ Keep the most relevant data in Query Store. The following table describes typica
 ## Keep the most relevant data in Query Store
 
 Configure Query Store to contain only the relevant data so that it runs continuously and provides a great troubleshooting experience with a minimal impact on your regular workload.
+
 The following table provides best practices:
 
 |Best practice|Setting|

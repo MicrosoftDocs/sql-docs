@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # CurveToLineWithTolerance (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a polygonal approximation of a **geography** instance that contains circular arc segments.  
   

@@ -1,8 +1,8 @@
 ---
-title: "SQL Server XTP Databases | Microsoft Docs"
+title: "SQL Server XTP Databases object"
 description: Learn about the SQL Server XTP Databases performance object, which provides In-Memory OLTP database-specific counters.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,17 +10,18 @@ ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2016 XTP Databases"
-ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
+  - "SQL Server 2017 XTP Databases"
+  - "SQL Server XTP Databases"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server XTP Databases
+# SQL Server XTP Databases object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **SQL Server XTP Databases** performance object provides In-Memory OLTP database-specific counters.
 
 > [!NOTE]
->  The SQL Server XTP Databases counters are not currently visible from sys.dm_os_performance_counters.  The counters can be viewed from [System Monitor](../../relational-databases/performance/start-system-monitor-windows.md).
+>  The SQL Server XTP Databases counters are not currently visible from `sys.dm_os_performance_counters`. On Windows, the counters can be viewed from [System Monitor](../../relational-databases/performance/start-system-monitor-windows.md).
 
 This table describes the **SQL Server XTP Databases** counters.
 
@@ -56,9 +57,13 @@ This table describes the **SQL Server XTP Databases** counters.
 |**Num Merges/sec**|The number of merges created per second (on average).|
 |**Num Serializations**|The number of serializations in flight.|
 |**Num Serializations/sec**|The number of serializations created per second (on average).|
+|**Redo Active Worker**|The number of active redo workers.|
+|**Redo Log Processed Bytes/sec**|Log bytes per second that Redo controller has processed.|
+|**Redo Segment Definition/Sec**|The number segments definitions seen per second. This is a very low-level counter, not intended for customer use.|
 |**Tail Cache Page Count**|Number of pages allocated in the Tail Cache. This is a very low-level counter, not intended for customer use.|
 |**Tail Cache Page Count Peak**|Highest number of pages allocated in the Tail Cache. This is a very low-level counter, not intended for customer use.|
 
 
-## See Also  
-[SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+## See also  
+- [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

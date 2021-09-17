@@ -8,8 +8,8 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
-ms.date: 12/4/2020
+ms.reviewer: "maghan"
+ms.date: 7/2/2021
 ---
 
 # SqlPackage Script parameters and properties
@@ -37,7 +37,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs.|
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Script /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-script-action); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
@@ -78,7 +78,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Specifies whether the declaration of SETVAR variables should be commented out in the generated publish script. You might choose to do this if you plan to specify the values on the command line when you publish by using a tool such as SQLCMD.EXE.
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|This setting dictates how the database's collation is handled during deployment; by default the target database's collation will be updated if it does not match the collation specified by the source. When this option is set, the target database's (or server's) collation should be used.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Specifies whether the target database should be updated or whether it should be dropped and re-created when you publish to a database.
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database.|
+|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as "P0" or "S1".

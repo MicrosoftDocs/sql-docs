@@ -21,7 +21,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Use with Scripting Variables
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Variables that are used in scripts are called scripting variables. Scripting variables enable one script to be used in multiple scenarios. For example, if you want to run one script against multiple servers, instead of modifying the script for each server, you can use a scripting variable for the server name. By changing the server name supplied to the scripting variable, the same script can be executed on different servers.  
   
  Scripting variables can be defined explicitly by using the **setvar** command, or implicitly by using the **sqlcmd -v** option.  

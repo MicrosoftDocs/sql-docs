@@ -19,7 +19,9 @@ ms.reviewer:
 
 ---
 # Rename a Database Diagram (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 You can rename a database diagram in Object Explorer. Requires ALTER permission on the database.  
   
 ### To rename a database diagram  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.Table_Designer"
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Designers - Table and Database Designers Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  
   
 ## UI element list  

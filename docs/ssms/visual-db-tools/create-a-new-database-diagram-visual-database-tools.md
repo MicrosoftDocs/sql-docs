@@ -16,7 +16,9 @@ ms.author: maghan
 ms.reviewer: 
 ---
 # Create a New Database Diagram (Visual Database Tools)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 You can use Object Explorer to create new database diagrams. Database diagrams graphically show the structure of the database. Using database diagrams you can create and modify tables, columns, relationships, and keys. Additionally, you can modify indexes and constraints.  
   
 ### To create a new database diagram  

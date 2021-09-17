@@ -30,7 +30,7 @@
     href: tutorial-table-space-sql-server.md
   - name: Build a custom insight
     href: tutorial-build-custom-insight-sql-server.md
-  - name: Backup & restore
+  - name: Back up & restore
     href: tutorial-backup-restore-sql-server.md
 - name: Concepts
   items:
@@ -40,6 +40,10 @@
       href: extensions/add-extensions.md
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
+    - name: Azure SQL Migration extension
+      href: extensions/azure-sql-migration-extension.md
+    - name: Azure Monitor Logs extension
+      href: extensions/azure-monitor-logs-extension.md
     - name: Data Virtualization extension
       href: extensions/data-virtualization-extension.md
     - name: Kusto extension
@@ -120,6 +124,8 @@
       href: notebooks/notebooks-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks/notebooks-python-kernel.md
+    - name: Use Python Kernel Offline
+      href: notebooks/notebooks-python-offline-installation.md
     - name: Use Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
     - name: Use Kqlmagic
@@ -168,7 +174,7 @@
     href: troubleshooting.md
   - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
-  - name: Report issues & make suggestions >
+  - name: Report issues & suggestions >
     href: https://github.com/microsoft/azuredatastudio/issues
   - name: SQL Server documentation >
     href: ../sql-server/index.yml

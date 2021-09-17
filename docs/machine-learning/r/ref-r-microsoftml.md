@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/06/2019
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # MicrosoftML (R package in SQL Server Machine Learning Services)
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 ## Full reference documentation
 
-The **MicrosoftML** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **MicrosoftML** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
@@ -24,7 +24,6 @@ The **MicrosoftML** package is based on R 3.4.3 and available only when you inst
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 or later](/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
 > [!NOTE]
@@ -132,7 +131,7 @@ This section lists the functions by category to give you an idea of how each one
 
 Functions in **MicrosoftML** are callable in R code encapsulated in stored procedures. Most developers build **MicrosoftML** solutions locally, and then migrate finished R code to stored procedures as a deployment exercise.
 
-The **MicrosoftML** package for R is installed "out-of-the-box" in SQL Server 2017. It is also available for use with SQL Server 2016 if you upgrade the R components for the instance: [Upgrade an instance of SQL Server using binding](../install/upgrade-r-and-python.md)
+The **MicrosoftML** package for R is installed "out-of-the-box" in SQL Server 2017.
 
 The package is not loaded by default. As a first step, load the **MicrosoftML** package, and then load **RevoScaleR** if you need to use remote compute contexts or related connectivity or data source objects. Then, reference the individual functions you need.
 
@@ -148,4 +147,4 @@ logisticRegression(args);
 + [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [R reference (Microsoft Machine Learning Server)](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)
++ [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

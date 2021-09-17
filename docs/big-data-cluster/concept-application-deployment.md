@@ -1,10 +1,10 @@
 ---
-title: What is application deployment?
+title: Introducing application deployment in SQL Server Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how application deployment provides interfaces to create, manage, and run applications on a SQL Server 2019 Big Data Cluster.
 author: cloudmelon 
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 04/12/2021
 ms.topic: conceptual
@@ -15,11 +15,11 @@ dev_langs:
 ms.technology: big-data-cluster
 ---
 
-# What is application deployment on a [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]?
+# Introducing app deployment in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Application deployment enables the deployment of applications on a [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] (BDC) by providing interfaces to create, manage, and run applications. Applications deployed on a Big Data Cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are: R, Python, dtexec, and MLeap.
+Application deployment enables the deployment of applications on a [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] by providing interfaces to create, manage, and run applications. Applications deployed on a Big Data Cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are: R, Python, dtexec, and MLeap.
 
 The following sections describe the architecture and functionality of application deployment.
 
@@ -55,7 +55,7 @@ When an application is executed, the Kubernetes service for the application prox
 
 ## <a id="app-deploy-security"></a> Security considerations for applications deployments on OpenShift
 
-SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-big-data-cluster.md#cu5).
+SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-cumulative-updates-history.md#cu5).
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
@@ -94,15 +94,15 @@ Application deployment enables the deployment of applications on a SQL Server BD
 
 The followings are the target scenarios for app deploy:
 
-- Deploy Python or R web services inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving, etc.
+- Deploy Python or R web services inside the big data cluster to address variety of use cases such as machine learning inferencing, API serving, etc.
 - Create a machine learning inferencing endpoint using the MLeap engine.
 - Schedule and run packages from DTSX files using dtexec utility for data transformation and movement.
 
 ### Use app deploy Python runtime
 
-In app deploy, BDC python runtime allows Python application inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving and more.
+In app deploy, BDC python runtime allows Python application inside the big data cluster to address variety of use cases such as machine learning inferencing, API serving and more.
 
-Python 3.5 for Ubuntu 16.04 and Python 3.8 for Ubuntu 20.04.
+The app deploy Python runtime uses Python 3.8 on SQL Server Big Data Clusters CU10+.
 
 In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
@@ -130,7 +130,7 @@ output:
   result: int
 ```
 
-You can create the basic folder and file structure needed to deploy a Python app running on BDC cluster:
+You can create the basic folder and file structure needed to deploy a Python app running on Big Data Clusters:
 
 ```console
 azdata app init --template python --name hello-py --version v1
@@ -144,9 +144,9 @@ App deploy Python runtime doesn't support scheduling scenario. Once Python app i
 
 ### Use app deploy R runtime
 
-In app deploy, BDC Python runtime allows R application inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving and more.
+In app deploy, BDC Python runtime allows R application inside the big data cluster to address variety of use cases such as machine learning inferencing, API serving and more.
 
-The app deploy R runtime supports Microsoft R Open (MRO) 3.5.2.
+The app deploy R runtime uses Microsoft R Open (MRO) version 3.5.2 on SQL Server Big Data Clusters CU10+.
 
 #### How to use it?
 
@@ -282,4 +282,4 @@ To learn more about how to create and run applications on [!INCLUDE[big-data-clu
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

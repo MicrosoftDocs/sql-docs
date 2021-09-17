@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # value() Method (xml Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Performs an XQuery against the XML and returns a value of SQL type. This method returns a scalar value.  
   

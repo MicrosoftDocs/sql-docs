@@ -159,9 +159,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ```  
     USE AdventureWorks2012;  
     GO  
-    -- Find an existing index named AK_UnitMeasure_Name and delete it if found  
+    -- Find an existing index named AK_UnitMeasure_Name 
+    -- on the Production.UnitMeasure table and delete it if found. 
     IF EXISTS (SELECT name from sys.indexes  
-               WHERE name = N'AK_UnitMeasure_Name')   
+               WHERE name = N'AK_UnitMeasure_Name'
+               AND object_id = OBJECT_ID(N'Production.UnitMeasure', N'U'))   
        DROP INDEX AK_UnitMeasure_Name ON Production.UnitMeasure;   
     GO  
     -- Create a unique index called AK_UnitMeasure_Name  

@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)"
+description: "@@MAX_CONNECTIONS (Transact-SQL)"
 title: "@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the maximum number of simultaneous user connections allowed on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The number returned is not necessarily the number currently configured.  
   

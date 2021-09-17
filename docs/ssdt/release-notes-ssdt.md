@@ -5,7 +5,6 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
-ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
@@ -20,25 +19,26 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
-<!--
-Hello.  We have switched to a newer standardized format for Release Notes articles.
-Basically we have switched from bullet lists to a 2-column table.
-And we have shortened the H2 titles, to reduce wrapping in the rightNav.
-And we have renamed the .md file to the standard format, from 'changelog-for-sql-server-data-tools-ssdt.md' to 'release-notes-ssdt.md'.
-The presently latest H2 section (## 15.9.0) has been converted to the new format.
-But the older sections are too numerous and long to warrant conversion.
+## 15.9.9,&nbsp; SSDT for VS 2017
 
-REQUEST_1:  Please use the newer 2-column table format from now onward, for each new release section.
+_Released:_ &nbsp; Aug 27, 2021  
+_Build Number:_ &nbsp; 14.0.16245.0  
+_SSDT for Visual Studio 2017._
 
-REQUEST_2:  Please consider whether it is time to erase perhaps the oldest 25% of these H2 sections.
-Or maybe move all but the latest 9 (of 25) H2 sections to a new file perhaps named 'release-notes-history-ssdt.md', and link to it from the bottom of this file.
+### What's New?
 
-For questions, contact CraigG or SStein or GeneMi.
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Azure-enabled SQL Server Integration Services (SSIS) projects now support national cloud (Azure US Government and Azure China). |
+| Integration Services (SSIS) | Fixed an issue that can't sign in with Azure Active Directory when editing Analysis Services Processing Task. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
 
-GeneMi , 2019/03/22.
+### Known issues
 
-P.S.  there's no need to keep this large HTML comment indefinitely.
--->
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog aren't affected. |
+| &nbsp; | &nbsp; |
 
 ## 15.9.8,&nbsp; SSDT for VS 2017
 

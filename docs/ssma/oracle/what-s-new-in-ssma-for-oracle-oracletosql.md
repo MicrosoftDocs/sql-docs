@@ -16,6 +16,23 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
 
+## SSMA v8.22
+
+The v8.22 release of SSMA for Oracle contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for Oracle contains the following changes:
+
+* Fix OLE DB connection string mode to respect the provider name
+* Add missing `ssma_oracle.fn_getColEntryByRange` emulation function
+* Use `COUNT_BIG` in row count queries for the target database
+* Add setting to emulate Oracle's empty string behavior in coalesce operations
+
 ## SSMA v8.20
 
 The v8.20 release of SSMA for Oracle contains the following changes:

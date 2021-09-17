@@ -26,7 +26,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-Level Roles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance Parallel Data Warehouse](../../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. (*Roles* are like *groups* in the Windows operating system.)  
   
@@ -82,12 +82,11 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[sp_srvrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|Metadata|Displays the permissions of a server-level role.|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Metadata|Indicates whether a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login is a member of the specified server-level role.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|Metadata|Returns one row for each member of each server-level role.|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|Adds a login as a member of a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead.|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|Removes a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows user or group from a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead.|  
 |[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|Command|Creates a user-defined server role.|  
 |[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|Command|Changes the membership of a server role or changes name of a user-defined server role.|  
 |[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|Removes a user-defined server role.|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Function|Determines membership of server role.|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|Adds a login as a member of a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead.|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|Removes a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows user or group from a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead.|  
   
 ## See Also  
  [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)   

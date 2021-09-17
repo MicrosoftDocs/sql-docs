@@ -16,6 +16,20 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
 
+## SSMA v8.22
+
+The v8.22 release of SSMA for Access contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for Access contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
 ## SSMA v8.20
 
 The v8.20 release of SSMA for Access contains the following changes:

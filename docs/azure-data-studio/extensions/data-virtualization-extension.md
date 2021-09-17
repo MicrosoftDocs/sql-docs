@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, sstein, maghan
+ms.reviewer: alayu
 ms.custom: 
 ms.date: 11/04/2019
 ---

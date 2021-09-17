@@ -2,14 +2,15 @@
 metadata:
   title: "Frequently Asked Questions in PolyBase"
   description: Compare PolyBase and linked servers and compare PolyBase in Big Data Clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
-  ms.date: 6/02/2021
+  ms.date: 08/13/2021
   ms.prod: sql
   ms.technology: polybase
   ms.topic: conceptual
-  author: MikeRayMSFT
-  ms.author: mikeray
-  ms.reviewer: mikeray
-    
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: 
+  monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
+
 title: Frequently asked questions
 summary: |
    [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sections:
           |Scale-out query execution | X| X (Windows only) |
           
           > [!NOTE]
-          > The table does not describe the functionality available in the latest [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP. For the available features, please reference the release notes. For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
+          > For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
 
       - question: How can I view the remote query execution plan of PolyBase pushdown computation?
         answer: |
@@ -73,3 +74,28 @@ sections:
       - question: How can I tell whether PolyBase pushdown computation is happening?
         answer: |
           See [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+      - question: Which ports should I allow through my firewall for PolyBase?
+        answer: | 
+          No additional ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. Without a scale-out group, the PolyBase service alone should not require any firewall rule. 
+          
+          On Windows servers, PolyBase will leverage the ports used by SQL Server in the **IPAll** section of the TCP/IP settings in SQL Server Configuration Manager. For more information, see [TCP/IP Properties](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). On Linux servers, PolyBase will leverage the **network.tcpport** setting. For more information, see [TCP port](../../linux/sql-server-linux-configure-mssql-conf.md#tcpport).
+          
+          For PolyBase scale-out groups over multiple Windows servers, see port information in the next question.
+
+          However, you must allow other ports for communication to the various external data source(s) used by PolyBase. Refer to ODBC configuration, Azure resource configuration, or specific data source documentation. For example:
+
+          | Source platform | Reference | 
+          | ---- | ---- |
+          | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
+          | Hortonworks HDP | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
+          | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
+          | | | 
+
+      - question: What ports are used for PolyBase scale-out group? 
+        answer: | 
+          By default, the PolyBase data movement service connects to the head node of a scale-out group over a range of ports from TCP 16450-16460, typically using 16450-16453, plus port 17001. These ports are only used when a PolyBase scale-out group is configured and should be allowed through server firewalls. SQL Server Setup should automatically create a local firewall rule allowing these ports upon feature installation. For more information, see [Configure PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md). 
+          
+          
+      
+          

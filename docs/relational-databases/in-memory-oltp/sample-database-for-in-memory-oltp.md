@@ -754,4 +754,4 @@ ORDER BY state, file_type
   
 ## See Also
 
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)
+[In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)

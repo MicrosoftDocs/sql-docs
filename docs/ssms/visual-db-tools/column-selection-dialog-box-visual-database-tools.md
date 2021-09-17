@@ -1,8 +1,6 @@
 ---
-description: "Column Selection Dialog Box (Visual Database Tools)"
 title: Column Selection Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: "Column Selection Dialog Box (Visual Database Tools)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -10,14 +8,17 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.columnselection"
   - "vdtsql.chm:65548"
-ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: markingmyname
 ms.author: maghan
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Column Selection Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 Lets you change the Custom view for tables in the database diagram. Custom view shows only the column properties identified by the user.  
   
 This dialog box appears when you right-click a table and then choose **Modify Custom View** from the shortcut menu.  

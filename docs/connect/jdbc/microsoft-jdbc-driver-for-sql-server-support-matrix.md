@@ -2,7 +2,7 @@
 title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 02/26/2021
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -28,6 +28,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|
+|Microsoft JDBC Driver 9.4 for SQL Server|9.4|mssql-jdbc-9.4.0.jre16.jar<br> mssql-jdbc-9.4.0.jre11.jar<br> mssql-jdbc-9.4.0.jre8.jar|July 30, 2026|
 |Microsoft JDBC Driver 9.2 for SQL Server|9.2|mssql-jdbc-9.2.1.jre15.jar<br> mssql-jdbc-9.2.1.jre11.jar<br> mssql-jdbc-9.2.1.jre8.jar|January 29, 2026|
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|July 31, 2025|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|January 31, 2025|
@@ -56,6 +57,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
+|9.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |9.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |8.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
 |8.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
@@ -87,6 +89,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
+|[9.4](release-notes-for-the-jdbc-driver.md#94)|1.8, 11, 16|4.2, 4.3 (partially)|
 |[9.2](release-notes-for-the-jdbc-driver.md#92)|1.8, 11, 15|4.2, 4.3 (partially)|
 |[8.4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (partially)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (partially)|

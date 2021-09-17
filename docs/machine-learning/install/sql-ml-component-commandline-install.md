@@ -84,7 +84,7 @@ In-database analytics are available for database engine instances, required for 
 To view progress information without the interactive on-screen prompts, use the /qs argument.
 
 > [!IMPORTANT]
-> After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
+> After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation configuration](#post-install) for instructions.
 
 ::: moniker range=">=sql-server-2017"
 ### SQL Server Machine Learning Services: database engine, advanced analytics with Python and R
@@ -126,7 +126,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Post-install configuration (required)
+## <a name="post-install"></a> Post-installation configuration (required)
 
 Applies to in-database installations only.
 

@@ -31,7 +31,7 @@ If you are utilizing SqlPackage in a self-hosted virtual environment such as a s
 There are a few files related to SqlPackage that can be captured as pipeline artifacts to create pipeline execution reproducibility and improve deployment tracking. The implementation and use cases vary dependent on your specific architecture and automation environment.
 
 - **Dacpac file**
-- **Diagnostic file output from any action:** Use the `/DiagnosticsFile:` parameter on any SqlPackage action, see [below example](#Obtaining-SqlPackage-diagnostics-in-a-pipeline-agent)
+- **Diagnostic file output from any action:** Use the `/DiagnosticsFile:` parameter on any SqlPackage action, see [below example](#obtaining-sqlpackage-diagnostics-in-a-pipeline-agent)
 - **Output from script action prior to publish action:**  Use the [Script](sqlpackage-script.md) SqlPackage action before invoking a publish action
 
 ## Additional SqlPackage Examples

@@ -2,7 +2,7 @@
 title: "Configure distributed transactions for an availability group"
 description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
 ms.custom: "seodec18"
-ms.date: "02/06/2019"
+ms.date: "09/16/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -41,13 +41,11 @@ Before you configure an availability group to support distributed transactions, 
 
 * All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] or later.
 
-* Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
+* Availability groups must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
 
 ## Create an availability group for distributed transactions
 
 Configure an availability group to support distributed transactions. Set the availability group to allow each database to register as a resource manager. This article explains how to configure an availability group so that each database can be a resource manager in DTC.
-
-
 
 You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
@@ -161,7 +159,7 @@ failed to reenlist citing that the database RMID does
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
 associated with the transaction.  Please manually resolve
 the transaction.
-	
+    
 SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.

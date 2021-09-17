@@ -16,13 +16,19 @@ ms.date: 11/4/2020
 
 **SqlPackage.exe** is a command-line utility that automates several database development tasks and can be incorporated into CI/CD pipelines.
 
-## Managed virtual environments
+## Virtual environments
 
-The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [virtual-environments](https://github.com/actions/virtual-environments) GitHub repository.  SqlPackage is included in the `windows-latest` environment and updates to the images are made within a few weeks of each SqlPackage release.
+### Managed virtual environments
+
+The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [virtual-environments](https://github.com/actions/virtual-environments) GitHub repository.  SqlPackage is included in several environments including `windows-latest` and `ubuntu-latest`. Updates to the images in [virtual-environments](https://github.com/actions/virtual-environments) are made within a few weeks of each SqlPackage release.
+
+### Self-hosted virtual environments
+
+If you are utilizing SqlPackage in a self-hosted virtual environment such as a self-hosted Azure DevOps agent, it is recommended to [update the application](sqlpackage-download.md) on a regular basis to maintain the environment with the latest version.
 
 ## Checking the SqlPackage version
 
-During troubleshooting efforts, it is important to know the SqlPackage version in use.  Capturing this information can be done by adding a step to the pipeline to run SqlPackage with the `/version` parameter.  Examples are given below based on the Microsoft and GitHub managed environments, self-hosted environments may have different installation paths for the working directory.
+During troubleshooting efforts, it is important to know the SqlPackage version is in use.  Capturing this information can be done by adding a step to the pipeline to run SqlPackage with the `/version` parameter.  Examples are given below based on the Microsoft and GitHub managed environments, self-hosted environments may have different installation paths for the working directory.
 
 ### Azure Pipelines
 
@@ -45,6 +51,14 @@ By leveraging the [run](https://docs.github.com/en/free-pro-team@latest/actions/
 ```
 
 :::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
+
+## Tracking deployments
+
+There are a few files related to SqlPackage that can be captured as pipeline artifacts to create pipeline execution reproducibility and improve deployment tracking. The implementation and use cases vary dependent on your specific architecture and automation environment.
+
+- **Dacpac file**
+- **Diagnostic file output from any action:** Use the `/DiagnosticsFile:` parameter on any SqlPackage action
+- **Output from script action prior to publish action:**  Use the [Script](sqlpackage-script.md) SqlPackage action before invoking a publish action
 
 ## Next steps
 

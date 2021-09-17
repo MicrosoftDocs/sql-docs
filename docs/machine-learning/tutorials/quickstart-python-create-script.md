@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: Run a set of simple Python scripts using Machine Learning Services on SQL Server, Big Data Clusters, or Azure SQL Managed Instances. Learn how to use the stored procedure sp_execute_external_script to execute the script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/28/2020  
+ms.date: 09/16/2021 
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -179,8 +179,8 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
     ![Query results using @script as input](./media/python-data-generated-output.png)
 
-> [!NOTE]
-> Python uses leading spaces to group statements. So when the imbedded Python script spans multiple lines, as in the preceding script, don't try to indent the Python commands to be in line with the SQL commands. For example, this script will produce an error:
+> [!TIP]
+> Python uses leading spaces to group statements. So when the imbedded Python script spans multiple lines, as in the preceding script, don't try to indent the Python commands to be in line with the SQL commands. For example, **this script will produce an error:**
 >
 > ```sql
 > EXECUTE sp_execute_external_script @language = N'Python'

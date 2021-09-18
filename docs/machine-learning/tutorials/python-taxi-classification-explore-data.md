@@ -5,7 +5,7 @@ description: Explore sample data and generate some plots in preparation for usin
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/29/2020
+ms.date: 09/17/2021
 ms.topic: tutorial
 author: garyericson
 ms.author: garye

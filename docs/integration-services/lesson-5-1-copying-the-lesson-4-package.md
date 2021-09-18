@@ -32,9 +32,9 @@ Use this procedure if you're copying the completed Lesson 4.  To copy the sample
 
 4.  In **Solution Explorer**, right-click **SSIS Packages** and then select **Paste**.
 
-    By default, the name of the copied package is **Lesson 4.dtsx**.
+    By default, the name of the copied package is **Lesson 5.dtsx**.
 
-5.  In **Solution Explorer**, double-click **Lesson 4.dtsx** to open the package.
+5.  In **Solution Explorer**, double-click **Lesson 5.dtsx** to open the package.
 
 6.  Right-click anywhere in the background of the **Control Flow** design surface and select **Properties**.
 

@@ -522,7 +522,9 @@ ELSE
 ### Increase log file size or enable Autogrow
 
 If space is available on the log disk, you can increase the size of the log file. The maximum size for log files is two terabytes (TB) per log file.  
-  
+
+These are [general recommendations](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) on log size growth and size.
+
 If autogrow is disabled, the database is online, and sufficient space is available on the disk, do either of these:  
   
 - Manually increase the file size to produce a single growth increment.  

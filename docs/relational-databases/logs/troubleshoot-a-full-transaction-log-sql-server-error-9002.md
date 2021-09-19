@@ -255,7 +255,7 @@ DEALLOCATE no_truncate_db
 > [!IMPORTANT]  
 >  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-### More information on LOG_BACKUP log_reuse_wait
+### LOG_BACKUP log_reuse_wait
 
 The most common actions you can consider here is to review your database recovery model and backup the transaction log of your database. 
 
@@ -317,7 +317,7 @@ BACKUP LOG [dbname] TO DISK = 'some_volume:\some_folder\dbname_LOG.trn'
 
 
   
-### More information on ACTIVE_TRANSACTION log_reuse_wait
+### ACTIVE_TRANSACTION log_reuse_wait
 
 The steps to troubleshoot ACTIVE_TRANSACTION reason include discovering the long running transaction and resolving it (in some case using the KILL command to do so).
 
@@ -336,9 +336,25 @@ This statement lets you identify the user ID of the owner of the transaction, so
 
 Sometimes you just have to end the transaction; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
-### More information on AVAILABILITY_REPLICA log_reuse_wait
+### AVAILABILITY_REPLICA log_reuse_wait
 
-When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)[Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
+When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
+
+### CHECKPOINT log_reuse_wait
+
+No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond a virtual log file (VLF). (All recovery models)
+
+This is a routine reason for delaying log truncation. If delayed, consider executing the `CHECKPOINT` command on the database or examining the log [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). 
+
+```TSQL
+USE dbname; CHECKPOINT
+
+select * from sys.dm_db_log_info(db_id('dbname'))
+```
+
+### For more information on log_reuse_wait factors
+
+For a more detailed list of [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)
 
 ## 2. Resolve full disk volume
 
@@ -521,5 +537,6 @@ If autogrow is disabled, the database is online, and sufficient space is availab
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
- [Manage the size of the transaction log file](manage-the-size-of-the-transaction-log-file.md)
- [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)
+  [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)
+ [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)
+ [SQL Server: Understanding Logging and Recovery in SQL Server](../../previous-versions/technet-magazine/dd392031(v=msdn.10)?redirectedfrom=MSDN)

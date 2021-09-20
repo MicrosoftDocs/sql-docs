@@ -7,13 +7,16 @@ ms.prod_service: "dma"
 ms.reviewer: ""
 ms.technology: dma
 ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
+keywords:
+  - ""
+helpviewer_keywords:
   - "Data Migration Assistant, login migration"
 ms.assetid: ""
 author: rajeshsetlem
 ms.author: rajpo
-ms.custom: "seo-lt-2019"
+ms.custom:
+  - seo-lt-2019
+  - intro-migration
 ---
 
 # Migrate SQL Server logins with Data Migration Assistant

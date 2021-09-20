@@ -1,12 +1,14 @@
 ---
 title: "Ubuntu: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---

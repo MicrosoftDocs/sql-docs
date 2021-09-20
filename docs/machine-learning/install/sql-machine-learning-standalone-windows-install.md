@@ -7,7 +7,9 @@ ms.date: 01/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup

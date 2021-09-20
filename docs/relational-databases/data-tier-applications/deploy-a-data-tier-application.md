@@ -1,19 +1,15 @@
 ---
 description: "Deploy a Data-tier Application"
 title: "Deploy a Data-tier Application | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-deployment
 ms.date: "01/31/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.deploydacwizard.introduction.f1"
-  - "sql13.swb.deploydacwizard.deploydac.f1"
-  - "sql13.swb.deploydacwizard.summary.f1"
-  - "sql13.swb.deploydacwizard.updateconfiguration.f1"
-  - "sql13.swb.deploydacwizard.selectdac.f1"
-helpviewer_keywords: 
+f1_keywords: "sql13.swb.deploydacwizard.introduction.f1", "sql13.swb.deploydacwizard.deploydac.f1", "sql13.swb.deploydacwizard.summary.f1", "sql13.swb.deploydacwizard.updateconfiguration.f1", "sql13.swb.deploydacwizard.selectdac.f1"
+helpviewer_keywords:
   - "Deploy data-tier application"
   - "deploy DAC"
   - "data-tier application [SQL Server], deploy"

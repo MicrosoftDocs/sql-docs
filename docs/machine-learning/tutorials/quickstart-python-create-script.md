@@ -4,12 +4,13 @@ titleSuffix: SQL machine learning
 description: Run a set of simple Python scripts using Machine Learning Services on SQL Server, Big Data Clusters, or Azure SQL Managed Instances. Learn how to use the stored procedure sp_execute_external_script to execute the script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/28/2020  
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-
-ms.custom: contperf-fy21q1
+ms.custom:
+  - contperf-fy21q1
+  - intro-quickstart
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

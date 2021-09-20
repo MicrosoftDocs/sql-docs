@@ -1,6 +1,6 @@
 ---
-title: "Add a Gauge to a Report (Report Builder) | Microsoft Docs"
-description: Learn how to summarize data in a visual format by creating a gauge data region and dragging report dataset fields to a pane on the gauge in Report Builder.
+title: "Add a gauge to a paginated report | Microsoft Docs"
+description: Learn how to summarize data in a paginated report in a visual format by creating a gauge data region and dragging report dataset fields to a pane on the gauge in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add a Gauge to a Report (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, when you want to summarize data in a visual format, you can use a gauge data region. After you add a gauge data region to the design surface, you can drag report dataset fields to a data pane on the gauge.  
+# Add a gauge to a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In a paginated report, when you want to summarize data in a visual format, you can use a gauge data region. After you add a gauge data region to the design surface, you can drag report dataset fields to a data pane on the gauge.  
   
 ## To add a gauge to your report  
   

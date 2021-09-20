@@ -5,7 +5,8 @@ ms.date: "04/10/2020"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu

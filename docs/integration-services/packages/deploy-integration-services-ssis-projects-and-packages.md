@@ -1,21 +1,15 @@
 ---
 description: "Deploy Integration Services (SSIS) Projects and Packages"
 title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-deployment
 ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: "vanto"
 ms.technology: integration-services
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.bids.converttolegacydeployment.f1"
-  - "sql13.ssis.deploymentwizard.f1"
-  - "sql13.ssis.ssms.isenvprop.permissions.f1"
-  - "sql13.ssis.ssms.isenvprop.general.f1"
-  - "sql13.ssis.ssms.iscreateenv.f1"
-  - "sql13.ssis.ssms.isenvprop.variables.f1"
-  - "sql13.ssis.migrationwizard.f1"
+f1_keywords: "sql13.ssis.bids.converttolegacydeployment.f1", "sql13.ssis.deploymentwizard.f1", "sql13.ssis.ssms.isenvprop.permissions.f1", "sql13.ssis.ssms.isenvprop.general.f1", "sql13.ssis.ssms.iscreateenv.f1", "sql13.ssis.ssms.isenvprop.variables.f1", "sql13.ssis.migrationwizard.f1"
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu

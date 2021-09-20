@@ -4,7 +4,8 @@ description: "Deploy an SSIS project with SQL Server Management Studio (SSMS)"
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: integration-services
-f1_keywords: sql13.swb.deploymentwizard.deploymentsettings.f1
+f1_keywords:
+  - sql13.swb.deploymentwizard.deploymentsettings.f1
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ""

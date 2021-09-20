@@ -9,7 +9,12 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
-f1_keywords: "sql13.swb.dbdeployment.settings.f1", "sql13.swb.dbdeployment.progress.f1", "sql13.swb.dbdeployment.summary.f1", "sql13.swb.dbdeployment.results.f1", "sql13.swb.dbdeployment.welcome.f1"
+f1_keywords:
+  - "sql13.swb.dbdeployment.settings.f1"
+  - "sql13.swb.dbdeployment.progress.f1"
+  - "sql13.swb.dbdeployment.summary.f1"
+  - "sql13.swb.dbdeployment.results.f1"
+  - "sql13.swb.dbdeployment.welcome.f1"
 helpviewer_keywords:
   - "deploy database wizard"
   - "database deploy [SQL Server]"

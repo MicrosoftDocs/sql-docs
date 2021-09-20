@@ -8,7 +8,12 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
-f1_keywords: "sql13.swb.deploydacwizard.introduction.f1", "sql13.swb.deploydacwizard.deploydac.f1", "sql13.swb.deploydacwizard.summary.f1", "sql13.swb.deploydacwizard.updateconfiguration.f1", "sql13.swb.deploydacwizard.selectdac.f1"
+f1_keywords: 
+  - "sql13.swb.deploydacwizard.introduction.f1"
+  - "sql13.swb.deploydacwizard.deploydac.f1"
+  - "sql13.swb.deploydacwizard.summary.f1"
+  - "sql13.swb.deploydacwizard.updateconfiguration.f1"
+  - "sql13.swb.deploydacwizard.selectdac.f1"
 helpviewer_keywords:
   - "Deploy data-tier application"
   - "deploy DAC"

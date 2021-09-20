@@ -8,7 +8,10 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: clr
 ms.topic: quickstart
-dev_langs: "TSQL", "VB", "CSharp"
+dev_langs: 
+  - "TSQL"
+  - "VB"
+  - "CSharp"
 helpviewer_keywords:
   - "database objects [CLR integration]"
   - "namespaces [CLR integration]"

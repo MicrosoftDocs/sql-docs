@@ -5,7 +5,11 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: xevents
 ms.topic: quickstart
-f1_keywords: sql11.ssms.XeNewEventSession.General.f1, sql11.ssms.XeNewEventSession.Events.f1, sql11.ssms.XeNewEventSession.Targets.f1, sql11.ssms.XeNewEventSession.Advanced.f1
+f1_keywords:
+  - sql11.ssms.XeNewEventSession.General.f1
+  - sql11.ssms.XeNewEventSession.Events.f1
+  - sql11.ssms.XeNewEventSession.Targets.f1
+  - sql11.ssms.XeNewEventSession.Advanced.f1
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: rothja
 ms.author: jroth

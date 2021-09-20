@@ -5,7 +5,9 @@ ms.date: 03/23/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
-f1_keywords: "PolyBase", "PolyBase, guide"
+f1_keywords:
+  - "PolyBase"
+  - "PolyBase, guide"
 helpviewer_keywords:
   - "PolyBase"
   - "PolyBase, overview"

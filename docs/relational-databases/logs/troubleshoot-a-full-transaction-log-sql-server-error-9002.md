@@ -538,4 +538,3 @@ If autogrow is disabled, the database is online, and sufficient space is availab
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
  [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)  
  [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)  
-  [SQL Server: Understanding Logging and Recovery in SQL Server](../../previous-versions/technet-magazine/dd392031(v=msdn.10))  

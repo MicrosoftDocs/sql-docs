@@ -1,16 +1,19 @@
 ---
-title: Azure Synapse Pathway Preview download 
+title: Azure Synapse Pathway Preview download
 description: Learn how to get download Azure Synapse Pathway
 ms.date: 03/02/2021
 ms.prod: sql
 ms.technology: tools-other
-ms.topic: conceptual 
-keywords: ""
-helpviewer_keywords: 
+ms.topic: conceptual
+keywords:
+  - ""
+helpviewer_keywords:
   - "Azure Synapse Pathway, download"
 author: anshul82-ms
 monikerRange: "=azure-sqldw-latest"
 ms.author: anrampal
+ms.custom:
+  - intro-installation
 ---
 
 # Azure Synapse Pathway Preview download
@@ -52,4 +55,3 @@ Advance to the tutorial to run your first translation
 
 > [!div class="nextstepaction"]
 > [Start code translation](synapse-pathway-assessment.md)
-

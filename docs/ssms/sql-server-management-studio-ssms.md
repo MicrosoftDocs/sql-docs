@@ -7,7 +7,8 @@ ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-f1_keywords: "sql13.ssms.viewhelp.f1"
+f1_keywords:
+  - "sql13.ssms.viewhelp.f1"
 helpviewer_keywords:
   - "SQL Server Management Studio"
   - "SQL Server Management Studio for Integration Services"

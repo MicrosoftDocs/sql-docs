@@ -1,7 +1,8 @@
 ---
 title: "Install SQL Server Servicing Updates | Microsoft Docs"
 description: This article provides information about installing updates for SQL Server during a new installation or after SQL Server has been installed.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "09/05/2017"
 ms.prod: sql
 ms.reviewer: ""

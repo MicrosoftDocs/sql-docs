@@ -1,14 +1,15 @@
 ---
 title: Install Azure Data CLI (azdata) for macOS
-titleSuffix:
 description: Learn how to install the Azure Data CLI (azdata) tool on macOS.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] on macOS
@@ -58,4 +59,3 @@ brew uninstall azdata-cli
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
-

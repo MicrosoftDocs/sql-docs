@@ -1,13 +1,15 @@
 ---
 title: "Install using graphical user interface"
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
-ms.custom: "seo-lt-2019"
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing SQL Server, steps"
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"

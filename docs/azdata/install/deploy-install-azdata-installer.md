@@ -1,14 +1,15 @@
 ---
 title: Install Azure Data CLI (azdata) with Windows Installer
-titleSuffix:
-description: Learn how to install the Azure Data CLI (azdata) tool with the installer. 
-author: MikeRayMSFT 
+description: Learn how to install the Azure Data CLI (azdata) tool with the installer.
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with Windows Installer

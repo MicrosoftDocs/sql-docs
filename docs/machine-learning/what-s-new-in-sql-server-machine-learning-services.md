@@ -6,7 +6,9 @@ ms.date: 11/17/2020
 ms.topic: overview
 author: garyericson
 ms.author: garye
-ms.custom: sqlseattle
+ms.custom:
+  - sqlseattle
+  - intro-whats-new
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"

@@ -1,7 +1,8 @@
 ---
 title: "IBM Db2 to SQL Server: Migration guide"
 description: 'This guide teaches you how to migrate your Db2 databases to Microsoft SQL Server by using SQL Server Migration Assistant (SSMA) for Db2.'
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: 03/19/2021
 ms.prod: sql
 ms.reviewer: ""

@@ -5,23 +5,16 @@ ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: quickstart
-f1_keywords: 
-  - "sql13.swb.stretchwizard.f1"
-  - "sql13.swb.stretchwizard.createdatabasecredentials.f1"
-  - "sql13.swb.stretchwizard.selectdatabasetables.f1"
-  - "sql13.swb.stretchwizard.validatesqlserver.f1"
-  - "sql13.swb.stretchwizard.selectazuredeployment.f1"
-  - "sql13.swb.stretchwizard.configureazuredeployment.f1"
-  - "sql13.swb.stretchwizard.Summary.f1"
-  - "sql13.swb.stretchwizard.Results.f1"
-  - "sql13.swb.stretchwizard.introduction.f1"
-helpviewer_keywords: 
+f1_keywords: "sql13.swb.stretchwizard.f1", "sql13.swb.stretchwizard.createdatabasecredentials.f1", "sql13.swb.stretchwizard.selectdatabasetables.f1", "sql13.swb.stretchwizard.validatesqlserver.f1", "sql13.swb.stretchwizard.selectazuredeployment.f1", "sql13.swb.stretchwizard.configureazuredeployment.f1", "sql13.swb.stretchwizard.Summary.f1", "sql13.swb.stretchwizard.Results.f1", "sql13.swb.stretchwizard.introduction.f1"
+helpviewer_keywords:
   - "Stretch Database, wizard"
   - "Enable Database for Stretch Wizard"
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]

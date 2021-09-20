@@ -8,7 +8,8 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: 08/26/2021
 ---
 

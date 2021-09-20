@@ -4,7 +4,7 @@ description: How to modify the SQL Server Launchpad service account used for ext
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 10/17/2018  
+ms.date: 09/16/2021
 ms.topic: how-to
 author: garyericson
 ms.author: garye

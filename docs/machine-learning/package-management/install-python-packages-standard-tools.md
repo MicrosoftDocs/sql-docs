@@ -4,7 +4,7 @@ description: Learn how to use standard Python tools to install new Python packag
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 01/21/2020
+ms.date: 09/16/2021
 ms.topic: how-to
 author: garyericson
 ms.author: garye

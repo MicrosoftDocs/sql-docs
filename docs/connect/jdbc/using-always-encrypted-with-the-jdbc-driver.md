@@ -86,7 +86,7 @@ CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',
-    KEY_PATH = N'https://<MyKeyValutName>.vault.azure.net:443/keys/Always-Encrypted-Auto1/c61f01860f37302457fa512bb7e7f4e8'
+    KEY_PATH = N'https://<MyKeyVaultName>.vault.azure.net:443/keys/Always-Encrypted-Auto1/c61f01860f37302457fa512bb7e7f4e8'
 );
 
 CREATE COLUMN ENCRYPTION KEY [MyCEK]

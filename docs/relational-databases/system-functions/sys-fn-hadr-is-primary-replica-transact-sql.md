@@ -40,7 +40,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  Is the name of the database. *dbname* is type sysname.  
   
 ## Returns  
- Returns data type **bool**: 1 if the database on the current instance is the primary replica, otherwise 0.  
+ Returns data type **bit**: 1 if the database on the current instance is the primary replica, otherwise 0.  
   
 ## Remarks  
  Use this function to conveniently determine whether the local instance is hosting the primary replica of the specified availability database. Sample code could be similar to the following.  

@@ -45,6 +45,9 @@ SQL Server on Azure Arc-enabled servers supports SQL Server 2012 or higher runni
 - Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
+> [!NOTE]
+> SQL Server on Azure Arc-enabled servers does not support container images with SQL Server.  
+
 ### Required permissions
 
 To connect the SQL Server instances and the hosting machine to Azure Arc, you must have an account with privileges to perform the following actions:

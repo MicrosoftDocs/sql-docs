@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: Run a set of simple R scripts with SQL machine learning. Learn how to use the stored procedure sp_execute_external_script to execute the script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/16/2021
 ms.topic: quickstart
 author: garyericson
 ms.author: garye

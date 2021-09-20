@@ -1,6 +1,6 @@
 ---
-title: "Add, Change, or Delete a Map or Map Layer (Report Builder) | Microsoft Docs"
-description: Learn how to add, remove, or change map options manually or by using the map layer wizard in Report Builder.
+title: "Add, change, or delete a map or map layer in a paginated report | Microsoft Docs"
+description: Learn how to add, remove, or change map options manually or by using the map layer wizard in a paginated report in Report Builder.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,8 +29,11 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)
-  A map is a collection of layers. When you add a map to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  
+# Add, change, or delete a map or map layer in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A map is a collection of layers. When you add a map to a paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  
   
  The easiest way to add, remove, or change options for a layer is to use the map layer wizard. You can also change options manually from the Map pane. To display the **Map** pane, click in the map on the report design surface. The following figure displays the parts of the pane:  
   

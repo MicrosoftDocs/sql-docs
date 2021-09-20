@@ -18,7 +18,7 @@ ms.reviewer:
 ---
 # Show Diagram Properties (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 You can display properties for a database diagram in the Properties window.  
   

@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/21/2022
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

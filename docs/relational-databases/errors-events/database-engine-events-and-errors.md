@@ -6142,7 +6142,7 @@ ORDER BY message_id
 |    15253    |    11    |    No    |    Syntax error parsing SQL identifier '%s'.    |
 |    15254    |    16    |    No    |    Users other than the database owner or guest exist in the database. Drop them before removing the database.    |
 |    15255    |    11    |    No    |    '%s' is not a valid value for \@autofix. The only valid value is 'auto'.    |
-|    15256    |    16    |    No    |    Usage: sp_certify_removable <dbname> [,'auto']    |
+|    15256    |    16    |    No    |    Usage: sp_certify_removable \<dbname\> [,'auto']    |
 |    15257    |    16    |    No    |    The database that you are attempting to certify cannot be in use at the same time.    |
 |    15258    |    16    |    No    |    The database must be owned by a member of the sysadmin role before it can be removed.    |
 |    15259    |    16    |    No    |    The DEFAULT_SCHEMA clause cannot be used with a Windows group or with principals mapped to certificates or asymmetric keys.    |

@@ -21,7 +21,7 @@ The upgrade path depends on the current version of SQL Server Big Data Cluster. 
 - [Update a BDC deployment from CTP or release candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
 >[!NOTE]
->The first supported release of Big Data Clusters is SQL Server 2019 CU8.
+>The oldest currently supported release of Big Data Clusters is SQL Server 2019 CU8.
 
 ## Upgrade release notes
 

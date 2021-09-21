@@ -57,7 +57,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  data_source_name
  Specifies the user-defined name for the data source. The name must be unique.
 
- LOCATION = '<prefix>://<path>[:<port>]'
+ LOCATION = '\<prefix\>://\<path\>[:\<port\>]'
  Provides the connectivity protocol, path, and port to the external data source. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) for valid location options.
 
  RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Does not apply to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])

@@ -92,7 +92,7 @@ An *implicit permission* is a **GRANT** or **DENY** permission that a principal 
 
 -   A principal can inherit a permission on a subordinate object (such as a table) if the principal has a permission on one of the objects parent scopes (such as the  schema of the table or the permission on the entire database).
 
--   A principal can inherit a permission by having a permission that includes a subordinate permission. For example the **ALTER ANY USER** permission includes the both the **CREATE USER** and the **ALTER ON USER::**_<name>_ permissions.
+-   A principal can inherit a permission by having a permission that includes a subordinate permission. For example the **ALTER ANY USER** permission includes the both the **CREATE USER** and the **ALTER ON USER::**_\<name\>_ permissions.
 
 ### Determining Permissions When Performing Actions
 The process of determining which permission to assign to a principal is complex. The complexity occurs when determining implicit permissions because principals can be members of multiple roles and permissions can be passed through multiple levels in the role hierarchy.

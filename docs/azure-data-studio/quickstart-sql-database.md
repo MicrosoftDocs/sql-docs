@@ -45,7 +45,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
    | **Password (SQL Login)** | The server admin account password | The password from the account used to create the server. |
    | **Save Password?** | Yes or No | Select **Yes** if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | You're only connecting to the server here. |
-   | **Server Group** | Select <Default> | You can set this field to a specific server group you created. | 
+   | **Server Group** | Select \<Default\> | You can set this field to a specific server group you created. | 
 
    ![Screenshot of the Azure Data Studio - Connection page.](media/quickstart-sql-database/new-connection-screen.png)  
 

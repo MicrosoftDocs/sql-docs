@@ -24,21 +24,21 @@ By default, the **Run Custom Reports** dialog box appears before a custom report
   
 #### To unsuppress the main custom report warning dialog box  
   
-1.  Connect to \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
+1.  Connect to \<*Server*>\\\\<*Share*>|\<*Drive*>\Documents and Settings\\\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
   
 2.  Right-click **reports.xml**, and then click **Edit**.  
   
-3.  Change**<SuppressWarning>true\<\/SuppressWarning> to <SuppressWarning>false\<\/SuppressWarning>**.  
+3.  Change **\<SuppressWarning\>true\<\/SuppressWarning> to \<SuppressWarning\>false\<\/SuppressWarning>**.  
   
 4.  Restart SQL Server Management Studio.  
   
 #### To unsuppress the drill-through custom report warning dialog box  
   
-1.  Connect to \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
+1.  Connect to \<*Server*>\\\\<*Share*>|\<*Drive*>\Documents and Settings\\\\<UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
   
 2.  Right-click **reports.xml**, and click **Edit**.  
   
-3.  Change **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>to <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**.  
+3.  Change **\<SuppressDrillthroughWarning\>true\<\/SuppressDrillthroughWarning>to <\SuppressDrillthroughWarning\>false\<\/SuppressDrillthroughWarning>**.  
   
 4.  Restart SQL Server Management Studio.  
   

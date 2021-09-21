@@ -7,7 +7,8 @@ ms.reviewer: alayu, markingmyname
 ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.custom: ""
+ms.custom:
+  - intro-deployment
 ms.date: 10/16/2020
 ---
 

@@ -1,14 +1,16 @@
 ---
 title: Deploy SQL Server Big Data Cluster with high availability
-titleSuffix: Deploy SQL Server Big Data Cluster with high availability 
+titleSuffix: Deploy SQL Server Big Data Cluster with high availability
 description: Learn how to deploy SQL Server Big Data Cluster with high availability.
-author: cloudmelon 
-ms.author: melqin 
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: wiassaf
 ms.date: 07/30/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server Big Data Cluster with high availability

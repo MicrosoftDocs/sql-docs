@@ -5,17 +5,19 @@ ms.date: 03/23/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
-f1_keywords: 
+f1_keywords:
   - "PolyBase"
   - "PolyBase, guide"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase"
   - "PolyBase, overview"
   - "Hadoop import"
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-ms.custom: contperf-fy21q2
+ms.custom:
+  - contperf-fy21q2
+  - intro-overview
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""

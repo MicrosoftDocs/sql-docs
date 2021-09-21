@@ -9,6 +9,8 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)

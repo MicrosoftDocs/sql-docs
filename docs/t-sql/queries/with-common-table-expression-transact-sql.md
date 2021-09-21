@@ -268,8 +268,9 @@ FirstName NVARCHAR(30)  NOT NULL,
 LastName  NVARCHAR(40) NOT NULL,  
 Title NVARCHAR(50) NOT NULL,  
 DeptID SMALLINT NOT NULL,  
-ManagerID INT NULL,  
- CONSTRAINT PK_EmployeeID PRIMARY KEY CLUSTERED (EmployeeID ASC)   
+ManagerID SMALLINT NULL,  
+ CONSTRAINT PK_EmployeeID PRIMARY KEY CLUSTERED (EmployeeID ASC),
+ CONSTRAINT FK_MyEmployees_ManagerID_EmployeeID FOREIGN KEY (ManagerID) REFERENCES dbo.MyEmployees (EmployeeID)
 );  
 -- Populate the table with values.  
 INSERT INTO dbo.MyEmployees VALUES   

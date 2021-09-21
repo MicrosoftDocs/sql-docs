@@ -5,7 +5,8 @@ ms.date: "09/17/2020"
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu

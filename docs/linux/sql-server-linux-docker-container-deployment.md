@@ -4,7 +4,9 @@ description: Explore how SQL Server can be deployed on Docker containers and lea
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.custom: contperf-fy21q1
+ms.custom:
+  - contperf-fy21q1
+  - intro-deployment
 ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql

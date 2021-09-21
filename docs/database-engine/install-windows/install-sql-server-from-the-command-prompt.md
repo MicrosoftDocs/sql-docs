@@ -4,7 +4,7 @@ description: This article describes command parameters for SQL Server installati
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing SQL Server, command prompt"
   - "installation scripts [SQL Server]"
   - "maintenance scripts [SQL Server]"
@@ -82,7 +82,8 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: cawrites
 ms.author: chadam
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: 01/07/2020
 monikerRange: ">=sql-server-2016"
 ---

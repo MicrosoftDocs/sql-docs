@@ -1,11 +1,20 @@
 ---
-description: "Get started by running the Enable Database for Stretch Wizard"
 title: "Get started by running the Enable Database for Stretch Wizard"
+description: "Get started by running the Enable Database for Stretch Wizard"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: quickstart
-f1_keywords: "sql13.swb.stretchwizard.f1", "sql13.swb.stretchwizard.createdatabasecredentials.f1", "sql13.swb.stretchwizard.selectdatabasetables.f1", "sql13.swb.stretchwizard.validatesqlserver.f1", "sql13.swb.stretchwizard.selectazuredeployment.f1", "sql13.swb.stretchwizard.configureazuredeployment.f1", "sql13.swb.stretchwizard.Summary.f1", "sql13.swb.stretchwizard.Results.f1", "sql13.swb.stretchwizard.introduction.f1"
+f1_keywords: 
+  - "sql13.swb.stretchwizard.f1"
+  - "sql13.swb.stretchwizard.createdatabasecredentials.f1"
+  - "sql13.swb.stretchwizard.selectdatabasetables.f1"
+  - "sql13.swb.stretchwizard.validatesqlserver.f1"
+  - "sql13.swb.stretchwizard.selectazuredeployment.f1"
+  - "sql13.swb.stretchwizard.configureazuredeployment.f1"
+  - "sql13.swb.stretchwizard.Summary.f1"
+  - "sql13.swb.stretchwizard.Results.f1"
+  - "sql13.swb.stretchwizard.introduction.f1"
 helpviewer_keywords:
   - "Stretch Database, wizard"
   - "Enable Database for Stretch Wizard"

@@ -8,7 +8,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-f1_keywords: "instance configuration, Setup"
+f1_keywords:
+  - "instance configuration, Setup"
 helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"

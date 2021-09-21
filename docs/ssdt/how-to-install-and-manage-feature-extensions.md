@@ -8,7 +8,9 @@ ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: 04/26/2017
 ---
 

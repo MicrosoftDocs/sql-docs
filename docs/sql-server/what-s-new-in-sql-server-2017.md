@@ -1,7 +1,8 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 description: Find out what's new for SQL Server 2017, which brings the power of SQL Server to Linux and Linux-based Docker containers as well as Windows.
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""

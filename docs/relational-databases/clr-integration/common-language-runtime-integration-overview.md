@@ -46,6 +46,9 @@ CLR Integration enables you to implement complex features that are available in 
 -   **Streamlined development through a standardized environment.** Database development is integrated into future releases of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET development environment. Developers use the same tools for developing and debugging database objects and scripts as they use to write middle-tier or client-tier .NET Framework components and services.  
   
 -   **Potential for improved performance and scalability.** In many situations, the .NET Framework language compilation and execution models deliver improved performance over Transact-SQL.  
+
+> [!TIP]
+> [SQL Server language extensions](../../language-extensions/language-extensions-overview.md) provide an alternative execution environment for runtimes close to the database engine. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](../../language-extensions/concepts/compare-extensibility-to-clr.md).
   
  This following table lists the topics in this section.  
   

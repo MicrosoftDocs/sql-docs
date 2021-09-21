@@ -1,14 +1,15 @@
 ---
 description: "Installer DLL Function Summary"
 title: "Installer DLL Function Summary | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [ODBC], installer DLL functions"
   - "installer DLL [ODBC]"
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0

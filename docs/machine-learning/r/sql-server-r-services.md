@@ -9,6 +9,8 @@ ms.topic: overview
 author: garyericson
 ms.author: garye
 monikerRange: "=sql-server-2016"
+ms.custom:
+  - intro-overview
 ---
 # What is SQL Server 2016 R Services?
 

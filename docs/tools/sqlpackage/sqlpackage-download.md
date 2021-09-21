@@ -1,7 +1,9 @@
 ---
 title: Download and install sqlpackage
 description: 'Download and Install sqlpackage for Windows, macOS, or Linux'
-ms.custom: "tools|sos"
+ms.custom:
+  - tools|sos
+  - intro-installation
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

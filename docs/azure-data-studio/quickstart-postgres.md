@@ -7,7 +7,9 @@ author: "sunilagarwal"
 ms.author: "sunila"
 ms.reviewer: "alayu, maghan"
 ms.topic: "quickstart"
-ms.custom: "seodec18"
+ms.custom:
+  - seodec18
+  - intro-quickstart
 ms.date: "09/18/2019"
 ---
 

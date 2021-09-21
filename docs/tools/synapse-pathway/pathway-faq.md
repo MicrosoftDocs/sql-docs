@@ -1,14 +1,16 @@
 ---
-title: Azure Synapse Pathway Preview FAQ 
+title: Azure Synapse Pathway Preview FAQ
 description: Frequently asked question for Azure Synapse Pathway
 author: twounder
 ms.author: mausher
-ms.topic: overview 
+ms.topic: overview
 ms.date: 05/10/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
-ms.custom: template-overview 
+ms.custom:
+  - template-overview
+  - intro-overview
 ---
 # Azure Synapse Pathway Preview FAQ
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]

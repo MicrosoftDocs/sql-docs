@@ -5,11 +5,11 @@ ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
-
-
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site

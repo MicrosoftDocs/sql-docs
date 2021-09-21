@@ -75,7 +75,7 @@ Next, you will add the necessary references to the project.
   
 6.  On the **Project** menu, click **Unload Project**.  
   
-7.  Right-click on the project in **Solution Explorer** and choose **Edit <project name>.csproj**.  
+7.  Right-click on the project in **Solution Explorer** and choose **Edit \<project name\>.csproj**.  
   
 8.  Add the following Import statement after the import of **Microsoft.CSharp.targets**:  
   
@@ -342,9 +342,9 @@ Next, we will build the project.
 ## <a name="xxx"></a>Compiling the project and installing your test condition  
 On the **Build** menu, click **Build Solution**.  
   
-Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory and subdirectories, and make them available for use:  
+Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory and subdirectories, and make them available for use:  
   
-Copy the **ColumnCountCondition.dll** assembly file from the output directory to the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory.  
+Copy the **ColumnCountCondition.dll** assembly file from the output directory to the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory.  
   
 By default, the path of your compiled .dll file is *YourSolutionPath*\\*YourProjectPath*\bin\Debug or *YourSolutionPath*\\*YourProjectPath*\bin\Release.  
   

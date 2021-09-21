@@ -2,10 +2,10 @@
 title: Upgrade to a new release
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 09/02/2020
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,11 +21,15 @@ The upgrade path depends on the current version of SQL Server Big Data Cluster. 
 - [Update a BDC deployment from CTP or release candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
 >[!NOTE]
->The first supported release of Big Data Clusters is SQL Server 2019 GDR1.
+>The oldest currently supported release of Big Data Clusters is SQL Server 2019 CU8.
 
 ## Upgrade release notes
 
 Before you proceed, check the [upgrade release notes for known issues](release-notes-big-data-cluster.md#known-issues).
+
+> [!WARNING]
+> The parameter ```imagePullPolicy``` was required to be set as ```"Always"``` in the deployment profile control.json file when the cluster was initially deployed. This parameter can't be changed after deployment.
+> In the case that it is set with a different value, unexpected results may happen during the upgrade process and a cluster redeployment will be required.
 
 ## Upgrade from supported release
 

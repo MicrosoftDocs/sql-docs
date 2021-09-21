@@ -420,7 +420,7 @@ We recommend that you use a strong password.
 > [!NOTE]  
 >  The actual time out value may vary from the specified *time_out* value by several seconds.  
   
- **-vvar =**  _value_[ **var =** _value_...]  
+ **-v var =**  _value_[ **var =** _value_...]  
  Creates a **sqlcmd**scripting variable that can be used in a **sqlcmd** script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple _**var**_=**"**_values_**"** values. If there are errors in any of the values specified, **sqlcmd** generates an error message and then exits.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  

@@ -7,8 +7,9 @@ ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+ms.custom:
+  - intro-installation
 ---
 
 # Install Python packages with sqlmlutils

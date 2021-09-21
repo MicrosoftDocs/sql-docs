@@ -5,12 +5,14 @@ ms.date: 08/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-helpviewer_keywords: 
-   - "PolyBase, installation"
+helpviewer_keywords:
+  - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install PolyBase on Windows
 

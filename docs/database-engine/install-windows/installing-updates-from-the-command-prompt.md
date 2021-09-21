@@ -1,7 +1,8 @@
 ---
 title: "Installing Updates from the Command Prompt | Microsoft Docs"
 description: This article describes command syntax for SQL Server update installation. You can test and modify installation scripts to meet the needs of your organization.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "05/11/2021"
 ms.prod: sql
 ms.reviewer: ""

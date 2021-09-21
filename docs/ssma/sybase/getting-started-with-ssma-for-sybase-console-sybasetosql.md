@@ -1,13 +1,14 @@
 ---
 description: "Getting Started with the SSMA for Sybase Console (SybaseToSQL)"
 title: "Getting Started with the SSMA for Sybase Console (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "09/30/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sybase Console,Launching SSMA Console"
   - "Sybase Console,Output Conventions"
   - "Sybase Console,Procedure for Using Console"

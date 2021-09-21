@@ -1,13 +1,15 @@
 ---
 title: "Getting Started with availability groups"
 description: "Learn the steps to configure instances of SQL Server to support Always On availability groups, and for creating, managing, and monitoring an availability group."
-ms.custom: "seodec18"
+ms.custom:
+  - seodec18
+  - intro-get-started
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], about"
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa

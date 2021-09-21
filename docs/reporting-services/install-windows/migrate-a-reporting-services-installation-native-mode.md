@@ -7,6 +7,8 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
+ms.custom:
+  - intro-migration
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

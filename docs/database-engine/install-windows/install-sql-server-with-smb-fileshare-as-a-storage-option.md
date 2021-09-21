@@ -1,7 +1,8 @@
 ---
 title: "Install SQL Server with SMB fileshare storage | Microsoft Docs"
 description: In SQL Server, system databases and Database Engine user databases can be installed with Server Message Block (SMB) file server as a storage option.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "09/05/2017"
 ms.prod: sql
 ms.reviewer: ""

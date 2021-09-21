@@ -1,11 +1,14 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
 description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
-ms.custom: seo-lt-2019, contperf-fy21q1
+ms.custom:
+  - seo-lt-2019
+  - contperf-fy21q1
+  - intro-quickstart
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 06/11/2021
+ms.date: 09/21/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -167,7 +170,11 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
+
+   ```bash
+   podman exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
+   ```
 
 The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 

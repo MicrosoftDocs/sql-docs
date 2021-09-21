@@ -8,6 +8,8 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
+ms.custom:
+  - intro-installation
 ---
 
 # Install SQL Server Agent on Linux

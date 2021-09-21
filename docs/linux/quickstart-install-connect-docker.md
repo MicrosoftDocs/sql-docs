@@ -8,7 +8,7 @@ ms.custom:
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 06/11/2021
+ms.date: 09/21/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -170,7 +170,11 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server errorlogs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server errorlog inside the container using the command:
+
+   ```bash
+   podman exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
+   ```
 
 The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 

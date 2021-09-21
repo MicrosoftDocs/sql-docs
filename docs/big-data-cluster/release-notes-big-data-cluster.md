@@ -28,6 +28,7 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>CRI-O 1.20.0 | Block only | Block only |
 | CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
 
 Restrictions:
@@ -48,6 +49,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | SQL Server Big Data Clusters Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU13](release-notes-cumulative-update-13.md) |  15.0.4163.5 | 20.3.8    | 2021-09-29 |
 | [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.1 | 20.3.7    | 2021-08-04 |
 | [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
 | [CU10](release-notes-cumulative-updates-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
@@ -80,7 +82,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ### MicrosoftML packages on SQL Server Machine Learning Services
 
-- **Affected releases**: CU10, CU11 and CU12
+- **Affected releases**: CU10, CU11, CU12 and CU13
 
 - **Issue and customer impact**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
 

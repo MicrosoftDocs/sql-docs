@@ -2,12 +2,13 @@
 description: "Migration Wizard (AccessToSQL)"
 title: "Migration Wizard (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Migration Wizard dialog box"
   - "Migration Wizard, adding Access databases"
   - "Migration Wizard, Connect to SQL Azure"

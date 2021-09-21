@@ -3,12 +3,14 @@ title: Release notes - Azure Synapse Pathway
 description: Azure Synapse Pathway release notes
 author: twounder
 ms.author: mausher
-ms.topic: overview 
+ms.topic: overview
 ms.date: 07/15/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
-ms.custom: template-overview 
+ms.custom:
+  - template-overview
+  - intro-overview
 ---
 # Azure Synapse Pathway - release notes
 

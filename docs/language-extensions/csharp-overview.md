@@ -15,50 +15,24 @@ ms.custom:
 # What is C# Language Extension?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-C# Language Extension is a feature of SQL Server used for executing external C# code. The relational data can be used in the external C# code using the [extensibility framework](concepts/extensibility-framework.md). The C# Language Extension is supported by [SQL Server Language Extensions](language-extensions-overview.md).
-
-***&#709;&#709;&#709; UPDATE HERE &#709;&#709;&#709;***
-
-The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
-
-***&#708;&#708;&#708; UPDATE HERE &#708;&#708;&#708;***
-
-## What you can do with the C# Language Extension
-
-The C# Language Extension uses the extensibility framework for executing external C# code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. You can execute C# code at the data's source, eliminating the need to pull data across the network.
+The open source [.NET 5 C# language extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp) is a feature of [SQL Server Language Extensions](language-extensions-overview.md) that can be used for executing C# code within SQL Server. You can pass an existing SQL Server table to a C# application as a DataFrame, perform operations in C# using rich libraries, and obtain back a result set. This C# language extension allows you to reuse existing C# code, calculations, logic, or extensive libraries that provide functionality which you cannot get in T-SQL.
 
 The external C# language is defined with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). The system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is used as the interface for executing the C# code.
 
-## Get started with C# Language Extension
+> [!NOTE]
+> The C# language extension is compatible with SQL Server 2019 CU3 or later. It integrates .NET core in SQL Server and works with .NET 5.0 in Windows only.
 
-***&#709;&#709;&#709; UPDATE HERE &#709;&#709;&#709;***
+## What you can do
 
-1. [Install SQL Server Java Language Extension on Windows](install/windows-java.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions-java.md).
+The C# language extension uses the extensibility framework for executing external C# code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. You can execute C# code at the data's source, eliminating the need to pull data across the network.
 
-1. Configure a development tools.
+You can do data cleaning, fast data querying, or any other processing in C# that can occur through a DataFrame. By embedding C# code in stored procedures, you can push business logic down into the database for better performance. This helps avoid unnecessary data movement and latency because data does not need to be retrieved from SQL Server and moved into the app tier to do the business logic processing.
 
-    + Use the IDE you prefer for developing Java code.
-    + Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md) to execute Java code on SQL Server.
-    + Use [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) for executing external code on SQL Server.
-    + Use the system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your Java code on SQL Server.
+## Get started
 
-1. Write your first Java code.
-
-    + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
-
-***&#708;&#708;&#708; UPDATE HERE &#708;&#708;&#708;***
-
-***&#709;&#709;&#709; UPDATE HERE &#709;&#709;&#709;***
-
-## Limitations
-
-The number of values in input and output buffers can't exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
-
-***&#708;&#708;&#708; UPDATE HERE &#708;&#708;&#708;***
+To install and configure the C# extension, see [.NET Core CSharp Language Extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp). The [Regex Sample](https://github.com/microsoft/sql-server-language-extensions/blob/main/language-extensions/dotnet-core-CSharp/sample/regex/README.md) shows you how to create a .NET Core C# program that uses a regular expression to check input text.
 
 ## Next steps
 
-***&#709;&#709;&#709; UPDATE HERE &#709;&#709;&#709;***
-
-+ Install the [SQL Server Java Language Extension on Windows](install/windows-java.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
-+ Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)
++ Install the [SQL Server Language Extensions on Windows](install/windows-java.md)
++ Install the [.NET Core CSharp Language Extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp)

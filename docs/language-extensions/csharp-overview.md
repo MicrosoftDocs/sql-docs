@@ -30,7 +30,7 @@ You can do data cleaning, fast data querying, or any other processing in C# that
 
 ## Get started
 
-To install and configure the C# extension, see [.NET Core CSharp Language Extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp). The [Regex Sample](https://github.com/microsoft/sql-server-language-extensions/blob/main/language-extensions/dotnet-core-CSharp/sample/regex/README.md) shows you how to create a .NET Core C# program that uses a regular expression to check input text.
+To install and configure the C# extension, see [.NET Core CSharp Language Extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp). The [Regex Sample](https://github.com/microsoft/sql-server-language-extensions/blob/main/language-extensions/dotnet-core-CSharp/sample/regex/README.md) tutorial shows you how to create a C# program that uses a regular expression to check text in a SQL table.
 
 ## Next steps
 

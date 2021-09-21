@@ -15,11 +15,11 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the extensibility framework.
+[SQL Server Language Extensions](../language-extensions-overview.md) is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the extensibility framework.
 
 The native [common language runtime (CLR)](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) allows you to implement some of the functionalities of SQL Server with .NET languages. The CLR supplies managed code with services such as cross-language integration, code access security, object lifetime management, and debugging and profiling support.
 
-The languages available in SQL Server Language Extensions are not a direct replacement for SQL Common Language Runtime (CLR). The extensibility framework and the language extensions extend the surface area of SQL Server and provide an execution environment for runtimes closer to the database engine. They also provide an open source framework that can be used to onboard new runtimes without engine changes. Currently the surface area is restricted to the system stored procedure, `sp_execute_external_script`.
+The languages available in SQL Server Language Extensions are not a direct replacement for SQL CLR. The extensibility framework and the language extensions extend the surface area of SQL Server and provide an execution environment for runtimes closer to the database engine. They also provide an open source framework that can be used to onboard new runtimes without engine changes. Currently the surface area is restricted to the system stored procedure, `sp_execute_external_script`.
 
 The following are some of the key differences between SQL Language Extensions and SQL CLR:
 
@@ -37,7 +37,7 @@ The following are some of the key differences between SQL Language Extensions an
 | Resource Governance     | None - few knobs outside of resource governor | Provides EXTERNAL RESOURCE POOL object as a separate mechanism to govern resources consumed by the runtime/external scripts, policies can be defined for external runtimes in addition to the SQL workload |
 | Permission model        | Instance level control with db scoped objects | Instance level control with db scoped objects |
 | Performance             | SQL CLR code will typically outperform Extensibility due to nature of execution | Ideal for batch oriented execution |
-| Monitoring capabilities | `sys.dm_clr*` DMVs & limited SQLCLR specific perfmon counter | `sys.dm_external*` DMVs, external resource pool DMVs, Windows Jobobject perfmon counters |
+| Monitoring capabilities | `sys.dm_clr*` DMVs & limited SQL CLR specific perfmon counter | `sys.dm_external*` DMVs, external resource pool DMVs, Windows Jobobject perfmon counters |
 
 ## When to use each
 

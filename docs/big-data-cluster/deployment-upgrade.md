@@ -28,7 +28,7 @@ The upgrade path depends on the current version of SQL Server Big Data Cluster. 
 Before you proceed, check the [upgrade release notes for known issues](release-notes-big-data-cluster.md#known-issues).
 
 > [!WARNING]
-> The parameter ```imagePullPolicy``` was required to be set as ```"Always"``` in the deployment profile control.json file when the cluster was initially deployed. This parameter can't be changed after.
+> The parameter ```imagePullPolicy``` was required to be set as ```"Always"``` in the deployment profile control.json file when the cluster was initially deployed. This parameter can't be changed after deployment.
 > In the case that it is set with a different value, unexpected results may happen during the upgrade process and a cluster redeployment will be required.
 
 ## Upgrade from supported release

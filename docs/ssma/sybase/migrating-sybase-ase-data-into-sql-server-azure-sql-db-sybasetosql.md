@@ -1,13 +1,14 @@
 ---
 description: "Migrating Sybase ASE Data into SQL Server - Azure SQL Database  (SybaseToSQL)"
 title: "Migrate Sybase ASE Data into SQL Server - Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Migrating data,Client Side Data Migration"
   - "Migrating data,Server Side Data Migration"
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811

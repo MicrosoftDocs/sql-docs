@@ -1,14 +1,15 @@
 ---
 description: "Deploy Packages with SSIS"
 title: "Deploy Packages with SSIS | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deployment tutorial [Integration Services]"
   - "deploying packages [Integration Services]"
   - "SSIS, tutorials"

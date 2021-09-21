@@ -10,6 +10,8 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server big data cluster with Azure Data Studio notebook

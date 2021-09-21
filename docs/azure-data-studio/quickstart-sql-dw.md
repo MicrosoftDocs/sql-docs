@@ -7,7 +7,10 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, jrasnick
-ms.custom: seodec18; seo-lt-2019
+ms.custom:
+  - seodec18
+  - seo-lt-2019
+  - intro-quickstart
 ms.date: 10/15/2020
 ---
 

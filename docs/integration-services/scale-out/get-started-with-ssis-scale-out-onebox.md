@@ -1,7 +1,9 @@
 ---
 title: "Get Started with SSIS Scale Out on a Single Computer| Microsoft Docs"
 description: "This article shows you everything you need to know to get started with SSIS Scale Out on a single computer"
-ms.custom: performance
+ms.custom:
+  - performance
+  - intro-get-started
 ms.date: "12/13/2017"
 ms.prod: sql
 ms.technology: integration-services

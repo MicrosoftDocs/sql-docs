@@ -4,8 +4,10 @@ description: "Learn how to run the installation package Microsoft SQL Server Rep
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.custom:
+  - seo-lt-2019​
+  - seo-mmd-2019
+  - intro-installation
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT

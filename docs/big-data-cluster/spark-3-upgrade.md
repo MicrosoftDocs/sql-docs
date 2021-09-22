@@ -47,7 +47,7 @@ Persistent configuration changes made through the configuration framework will b
 User libraries and artifacts loaded directly into HDFS will be preserved. Yet, make sure that those libraries and artifacts are compatible with Spark 3.
 
 > [!WARNING]
-    > Customizations made directly to the pods will be lost, make sure you validate and re-apply those if still applicable to Spark 3.
+> Customizations made directly to the pods will be lost, make sure you validate and re-apply those if still applicable to Spark 3.
 
 ## Breaking changes
 

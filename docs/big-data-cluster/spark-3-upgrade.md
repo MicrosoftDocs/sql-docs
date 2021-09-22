@@ -23,7 +23,7 @@ Up to cumulative update 12 (CU12), Big Data Clusters relied on the Apache Spark 
 
 ### A new performance baseline
 
-This new version of Apache Spark brings stellar performance benefits over big data processing workloads.Using the reference __TCP-DS 10TB workload__ in our tests we were able to reduce runtime from 4.19 hours to 2.96 hours, a __29.36% improvement__ achieved by just by switching engines on the same hardware and Spark configuration profile on SQL Server Big Data Clusters, no additional application optimizations. The improvement mean of individual query performance is 36%.
+This new version of Apache Spark brings stellar performance benefits over big data processing workloads. Using the reference __TCP-DS 10TB workload__ in our tests we were able to reduce runtime from 4.19 hours to 2.96 hours, a __29.36% improvement__ achieved just by switching engines using the same hardware and configuration profile on SQL Server Big Data Clusters, no additional application optimizations. The improvement mean of individual query runtime is 36%.
 
 ![Submit menu by clicking dashboard](./media/spark-3-upgrade/spark-2-vs-3-tcpds-10tb.png)
 

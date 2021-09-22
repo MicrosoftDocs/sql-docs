@@ -4,7 +4,7 @@ description: Frequently asked question for Azure Synapse Pathway
 author: twounder
 ms.author: mausher
 ms.topic: overview 
-ms.date: 05/10/2021
+ms.date: 09/22/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
@@ -51,7 +51,6 @@ A. Synapse Pathway version supports code translation of databases, schemas, tabl
 | Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View | 
 | Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
 | Teradata | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
-
   
 ### Q. Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated?
 

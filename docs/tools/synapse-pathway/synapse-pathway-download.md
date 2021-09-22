@@ -1,7 +1,7 @@
 ---
 title: Azure Synapse Pathway download
 description: Learn how to get download Azure Synapse Pathway
-ms.date: 03/02/2021
+ms.date: 09/22/2021
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual 
@@ -51,4 +51,3 @@ Advance to the tutorial to run your first translation
 
 > [!div class="nextstepaction"]
 > [Start code translation](synapse-pathway-assessment.md)
-

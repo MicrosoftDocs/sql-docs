@@ -165,7 +165,10 @@ It is also possible to customize your deployment to accommodate the workloads yo
    azdata bdc create --config-profile custom --accept-eula yes
    ```
 
-> For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for Big Data Clusters](deployment-custom-configuration.md).
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
+
+For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for Big Data Clusters](deployment-custom-configuration.md).
 
 ## <a id="env"></a> Environment variables
 

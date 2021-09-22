@@ -44,7 +44,7 @@ Starting with SQL Server 2019 CU5, Telegraf requires a service account with clus
 
 Here are the steps to show how to create the required artifacts:
 
-1. Create a *metrics-role.yaml* file with below content. Make sure to replace the *<clusterName>* placeholders  with the name of your big data cluster.
+1. Create a *metrics-role.yaml* file with below content. Make sure to replace the *\<clusterName\>* placeholders  with the name of your big data cluster.
 
    ```yaml
    apiVersion: rbac.authorization.k8s.io/v1

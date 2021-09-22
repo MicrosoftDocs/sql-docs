@@ -47,10 +47,9 @@ CLR Integration enables you to implement complex features that are available in 
   
 -   **Potential for improved performance and scalability.** In many situations, the .NET Framework language compilation and execution models deliver improved performance over Transact-SQL.  
 
-> [!TIP]
-> [SQL Server language extensions](../../language-extensions/language-extensions-overview.md) provide an alternative execution environment for runtimes close to the database engine. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](../../language-extensions/concepts/compare-extensibility-to-clr.md).
+[SQL Server language extensions](../../language-extensions/language-extensions-overview.md) provide an alternative execution environment for runtimes close to the database engine. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](../../language-extensions/concepts/compare-extensibility-to-clr.md).
   
- This following table lists the topics in this section.  
+ The following table lists the topics in this section.  
   
  [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md)  
  Describes the kinds of objects that can be built using CLR integration, and reviews the requirements for building database objects using CLR integration.  

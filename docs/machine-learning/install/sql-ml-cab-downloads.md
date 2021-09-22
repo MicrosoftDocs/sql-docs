@@ -3,7 +3,7 @@ title: CAB download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/25/2021
+ms.date: 09/22/2021
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -31,7 +31,7 @@ Start with a baseline installation. On SQL Server Machine Learning Services, the
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
-Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
+Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, SP2, or SP3. 
 ::: moniker-end
 
 You can also apply cumulative updates.
@@ -158,7 +158,7 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 
 |Release  |Download link  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU14-CU15**     |
+|**SQL Server 2016 SP2 CU14-CU15** <br>&<br> **SQL Server 2016 SP3**     |
 |Microsoft R Open      |[SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)|
 |Microsoft R Server    |[SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)|
 |**SQL Server 2016 SP2 CU6-CU13**     |

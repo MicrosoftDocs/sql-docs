@@ -174,10 +174,10 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 {
                       OFF 
                     | ON  
-                        [(  [ FILTER_COLUMN = column_name ]   
+                        (  FILTER_COLUMN = column_name 
                             [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
                                     | MONTH | MONTHS | YEAR | YEARS }}]   
-                        )]
+                        )
      	           }
     | REBUILD
       [ [PARTITION = ALL]
@@ -807,10 +807,10 @@ SET (DATA_DELETION =
       {
             OFF 
         | ON  
-                [(  [ FILTER_COLUMN = column_name ]   
+                (  FILTER_COLUMN = column_name
                     [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
                             | MONTH | MONTHS | YEAR | YEARS }}]   
-                )]
+                )
        }   
 **Applies to:** Azure SQL Edge *only*
 

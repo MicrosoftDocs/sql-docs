@@ -2,7 +2,7 @@
 title: "Common Language Runtime (CLR) Overview"
 description: CLR integration with SQL Server allows you to implement some functionalities using any .NET Framework language as SQL Server server-side modules.
 ms.custom: "seo-lt-2019"
-ms.date: "06/20/2017"
+ms.date: "09/21/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: clr

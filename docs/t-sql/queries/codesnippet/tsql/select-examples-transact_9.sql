@@ -14,7 +14,7 @@ GO
 USE AdventureWorks2012;
 GO
 SELECT DISTINCT Name
-FROM Production.Product
+FROM Production.Product AS p
 WHERE ProductModelID IN
     (SELECT ProductModelID 
      FROM Production.ProductModel AS pm

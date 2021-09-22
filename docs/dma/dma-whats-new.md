@@ -14,13 +14,25 @@ keywords:
 helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
+author: aciortea
+ms.author: ajithkr-ms
 ---
 
 # What's new in Data Migration Assistant
 
 This article lists the additions in each release of Data Migration Assistant.
+
+## Data Migration Assistant v 5.5
+
+The v5.5 release of the Data Migration Assistant provides support for:
+- New console experience that provides recommendations as well as explanations for target Azure SQL Database, Azure SQL Managed Instance and SQL Server on Azure VM SKUs based on performance data points.
+- SQL Server 2005 has been deprecated and will be removed as a possible source in future releases.
+
+In addition, this release of Data Migration Assistant provides bug fixes and improvements for the following issues:
+- Fixed an RDS for SQL Server permissions error raised when assessing Azure SQL Managed Instance targets.
+- Fixed incorrectly reported blockers for Memory Optimized Data Filegroup (FX) in assessments.
+- Fixed missing rule to detect three-part or four-part cross-database references when assessing Azure SQL Database targets.
+- Fixed `specified value for 'AssessmentDatabases' is invalid` error when using AssessTargetReadiness option in DMA command line.
 
 ## Data Migration Assistant v 5.4
 

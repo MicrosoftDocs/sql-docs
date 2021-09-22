@@ -58,7 +58,7 @@ ms.author: chugu
   
  When creating an Oracle CDC Service on Windows Vista or Windows Server 2008, the default service account is the NETWORK SERVICE account.  
   
- On Windows 7, Windows Server 2008 R2 and later, the default service account is NT Service\\<service-name>.  
+ On Windows 7, Windows Server 2008 R2 and later, the default service account is NT Service\\\\<service-name\>.  
   
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on another machine or is a clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and there the service needs to connect to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Windows authentication, then the service account should be a domain account.  
   

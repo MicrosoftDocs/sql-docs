@@ -207,7 +207,7 @@ items:
           href: big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Manage HDFS permissions
           href: big-data-cluster/hdfs-tiering-manage-permissions.md
-    - name: Data ingestion
+    - name: Data movement
       items:
       - name: Load data with curl
         href: big-data-cluster/data-ingestion-curl.md
@@ -215,6 +215,8 @@ items:
         href: big-data-cluster/tutorial-data-pool-ingest-sql.md
       - name: Load data with Spark
         href: big-data-cluster/tutorial-data-pool-ingest-spark.md
+      - name: HDFS distributed data copy (distcp)
+        href: big-data-cluster/distributed-data-copy-hdfs.md
       - name: Restore a database
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps

@@ -31,7 +31,7 @@ Start with a baseline installation. On SQL Server Machine Learning Services, the
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
-Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, SP2, or SP2. 
+Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, SP2, or SP3. 
 ::: moniker-end
 
 You can also apply cumulative updates.

@@ -55,7 +55,7 @@ For customers that choose to configure the appliance to look for updates on the 
 > [!NOTE]  
 > The customer network administrator must provide the IP address for a corporate DNS server that can resolve names at **Microsoft.com**.  
   
-1.  Using remote desktop, log on to VMM VM (<fabric domain>-VMM) using the fabric domain administrator account.  
+1.  Using remote desktop, log on to VMM VM (\<fabric domain\>-VMM) using the fabric domain administrator account.  
   
 2.  Open the Control Panel, click **Network and Internet**, and then click **Network and Sharing Center**.  
   

@@ -112,7 +112,7 @@ Both regular and delimited identifiers must contain from 1 through 128 character
 
     -   Decimal numbers from either Basic Latin or other national scripts.
 
-    -   The at sign, dollar sign ($), number sign, or underscore.
+    -   The at sign (@), dollar sign ($), number sign (#), or underscore (\_).
 
 3.  The identifier must not be a [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved word. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserves both the uppercase and lowercase versions of reserved words. When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets. The words that are reserved depend on the database compatibility level. This level can be set by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) statement.
 

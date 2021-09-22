@@ -96,7 +96,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
        
       |Value|Description|  
       |-----------|-----------------|
-      |**<default>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the       table or view is partitioned, the primary filegroup is used|
+      |**\<default\>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the       table or view is partitioned, the primary filegroup is used|
       |**PRIMARY**|Select to use the primary filegroup for the new full-text index.|
       *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup       for the new full-text index.|
   
@@ -109,12 +109,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
      Select one of the following values:  
   
    |Value|Description|  
-    |-----------|-----------------|  
-    |**<system>**|Select to use the system stoplist on the new full-text index. This is the default|  
-    |**<off>**|Select to disable stoplists for the new full-text index.|  
-    |*user-defined-stoplist-name*|The list displays the name of each user-defined stoplist, if any, that has been created on the database. Select any user-defined stoplist to use for the new full-text index.|  
+   |-----------|-----------------|  
+   |**\<system\>**|Select to use the system stoplist on the new full-text index. This is the default|  
+   |**\<off\>**|Select to disable stoplists for the new full-text index.|  
+   |*user-defined-stoplist-name*|The list displays the name of each user-defined stoplist, if any, that has been created on the database. Select any user-defined stoplist to use for the new full-text index.|  
   
-  Click Next
+   Click Next
   
 11. Optionally, SQL Server only, define the population schedule. Indexing operations will begin immediately unless they have been scheduled for future execution. Schedules will be created immediately, although they will not run until their scheduled time.  
   

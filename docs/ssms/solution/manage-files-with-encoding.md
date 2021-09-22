@@ -38,7 +38,7 @@ You can also save your code with a Unicode encoding or a different code page to 
   
 #### To save a file with a different encoding or line ending type  
   
-1.  On the **File** menu, click **Save <filename> As**.  
+1.  On the **File** menu, click **Save \<filename\> As**.  
   
 2.  In the **Save File As** dialog, expand the **Save** button, and then click **Save with Encoding**.  
   

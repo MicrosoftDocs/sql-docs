@@ -24,7 +24,7 @@ Before you install a test condition that you did not create, you should understa
   
 To minimize risk, you should install a custom test condition only if it is from a known source. If you obtain a test condition from an untrusted source, you should inspect the source code for that test condition and its installation program (if it has one) before you install and it.  
   
-To install a custom test condition, copy the signed assembly (.dll) to the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions folder. If this folder does not exist, create it. You need administrative privileges on your machine to copy to this directory.  
+To install a custom test condition, copy the signed assembly (.dll) to the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions folder. If this folder does not exist, create it. You need administrative privileges on your machine to copy to this directory.  
   
 > [!NOTE]  
 > You need to install Visual Studio 2010 and Visual Studio 2012 versions of the test condition if,  

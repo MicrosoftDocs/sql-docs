@@ -433,7 +433,7 @@ To create a build contributor, you must perform the following tasks:
   
 3.  Click **Sign the assembly**.  
   
-4.  In **Choose a strong name key file**, click **<New>**.  
+4.  In **Choose a strong name key file**, click **\<New\>**.  
   
 5.  In the **Create Strong Name Key** dialog box, in **Key file name**, type **MyRefKey**.  
   
@@ -520,7 +520,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
 1.  In Visual Studio, right-click on your project and select "Rebuild". This will rebuild the project, and you should see the model statistics generated, with the output included in the build output and saved to ModelStatistics.xml. Note that you may need to choose "Show all Files" in Solution Explorer to see the xml file.  
   
-2.  Open a Visual Studio command prompt: On the **Start** menu, click **All Programs**, click **Microsoft Visual Studio <Visual Studio Version>**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt (<Visual Studio Version>)**.  
+2.  Open a Visual Studio command prompt: On the **Start** menu, click **All Programs**, click **Microsoft Visual Studio \<Visual Studio Version\>**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt (\<Visual Studio Version\>)**.  
   
 3.  At the command prompt, navigate to the folder that contains your SQL project.  
   

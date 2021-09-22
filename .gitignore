@@ -11,5 +11,3 @@ Tools/NuGet/
 .openpublishing.build.mdproj
 .openpublishing.buildcore.ps1
 packages.config
-rmohowto.sln
-rmohowtovb.sln

@@ -25,8 +25,11 @@ This article lists the additions in each release of Data Migration Assistant.
 ## Data Migration Assistant v 5.5
 
 The v5.5 release of the Data Migration Assistant provides support for:
-- New console experience that provides recommendations as well as explanations for target Azure SQL Database, Azure SQL Managed Instance and SQL Server on Azure VM SKUs based on performance data points.
-- SQL Server 2005 has been deprecated and will be removed as a possible source in future releases.
+
+- Elastic SKU recommendations option that generates an unique price-to-performance curve based on heuristic analysis of the collected performance data and workload pattern comparison with workloads in Azure SQL.
+- Improved user experience with the new HTML report for SKU recommendation results, in addition to the existing JSON file output.
+- Connection string wizard to enable users to intuitively provide SQL connection information for single SQL instances.
+- Enabling user selection of databases to include/exclude in the SKU recommendations.
 
 In addition, this release of Data Migration Assistant provides bug fixes and improvements for the following issues:
 - Fixed an RDS for SQL Server permissions error raised when assessing Azure SQL Managed Instance targets.

@@ -109,10 +109,10 @@ ALTER WORKLOAD GROUP group_name
 Is the name of the existing user-defined workload group being altered. group_name is not alterable. 
 
 #### MIN_PERCENTAGE_RESOURCE = value  
-Value is an integer range from 0 to 100.  When altering min_percentage_resource, the sum of min_percentage_resource across all workload groups cannot exceed 100.  Altering min_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details.
+Value is an integer range from 0 to 100.  When altering min_percentage_resource, the sum of min_percentage_resource across all workload groups cannot exceed 100.  Altering min_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the [ALTER WORKLOAD GROUP behavior](#alter-workload-group-behavior) section in this doc for further details.
 
 #### CAP_PERCENTAGE_RESOURCE = value  
-Value is an integer range from 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  Altering cap_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the [ALTER WORKLOAD GROUP Behavior](#alter-workload-group-behavior) section in this doc for further details. 
+Value is an integer range from 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  Altering cap_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the [ALTER WORKLOAD GROUP behavior](#alter-workload-group-behavior) section in this doc for further details. 
 
 #### REQUEST_MIN_RESOURCE_GRANT_PERCENT = value  
 Value is a decimal with a range between 0.75 to 100.00.  The value for request_min_resource_grant_percent needs to be a factor of min_percentage_resource and be less than cap_percentage_resource. 
@@ -164,7 +164,7 @@ For request_min_resource_grant_percent and request_max_resource_grant_percent, r
 **Min_percentage_resource or cap_percentage_resource**
 For min_percentage_resource and cap_percentage_resource, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values. 
 
-Changing min_percentage_resource and cap_percentage_resource requires draining of running requests in the workload group that is being altered.  When decreasing min_percentage_resource, the freed resources are returned to the share pool allowing requests from other workload groups the ability to utilize.  Conversely, increasing the min_percentage_resource will wait until requests utilizing only the needed resources from the shared pool to complete.  Alter workload group operation will have prioritized access to shared resources over other requests waiting to be executed on shared pool.  If the sum of min_percentage_resource exceeds 100%, the ALTER WORKLOAD GROUP request fails immediately. 
+Changing min_percentage_resource and cap_percentage_resource requires draining of running requests in the workload group that is being altered.  When decreasing min_percentage_resource, the freed resources are returned to the share pool allowing requests from other workload groups the ability to utilize.  Conversely, increasing the min_percentage_resource will wait until requests utilizing only the needed resources from the shared pool to complete.  The `ALTER WORKLOAD GROUP` operation will have prioritized access to shared resources over other requests waiting to be executed on shared pool.  If the sum of min_percentage_resource exceeds 100%, the `ALTER WORKLOAD GROUP` request fails immediately. 
 
 **Locking behavior**
 Altering a workload group requires a global lock across all workload groups.  A request to alter a workload group would queue behind already submitted create or drop workload group requests.  If a batch of alter statements is submitted at once, they are processed in the order in which they are submitted.  

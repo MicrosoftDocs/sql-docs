@@ -23,7 +23,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 #### *group_name* | "**default**"       
  Is the name of an existing user-defined workload group or the Resource Governor default workload group. Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](ssnoversion-md.md)] is installed.  
   
- The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../relational-databases/databases/database-identifiers.md).  
+ The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER WORKLOAD GROUP` to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../relational-databases/databases/database-identifiers.md).  
 
  Predefined workload groups and resource pools all use lowercase names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
   
@@ -93,10 +93,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 #### USING { *pool_name* | "**default**" }      
  Associates the workload group with the user-defined resource pool identified by *pool_name*, which in effect puts the workload group in the resource pool. If *pool_name* is not provided or if the USING argument is not used, the workload group is put in the predefined Resource Governor default pool.  
   
- The option "default" is case-sensitive and must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../relational-databases/databases/database-identifiers.md). 
+ The option "default" is case-sensitive and must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER WORKLOAD GROUP` to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../relational-databases/databases/database-identifiers.md). 
   
 ## Remarks  
- ALTER WORKLOAD GROUP is allowed on the default group.  
+ `ALTER WORKLOAD GROUP` is allowed on the default group.  
   
  Changes to the workload group configuration do not take effect until after `ALTER RESOURCE GOVERNOR RECONFIGURE` is executed. When changing a plan affecting setting, the new setting will only take effect in previously cached plans after executing `DBCC FREEPROCCACHE (*pool_name*)`, where *pool_name* is the name of a Resource Governor resource pool on which the workload group is associated with.  
   

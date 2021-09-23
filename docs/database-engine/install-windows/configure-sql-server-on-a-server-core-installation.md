@@ -29,7 +29,7 @@ For more information about configuring and managing a Server Core installation r
   
 - [Install Server Core](/windows-server/get-started/getting-started-with-server-core)  
   
-- [Configure a Server Core installation of Windows Server and Azure Stack HCI with the Server Configuration tool (SConfig)](/windows-server/get-started/server-core-sconfig)  
+- [Configure a Server Core installation of Windows Server and Azure Stack HCI with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig)  
   
 - [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   

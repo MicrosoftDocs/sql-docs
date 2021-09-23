@@ -213,7 +213,7 @@ Specify the destination for the data flow.
   
 5.  Fill in the information for the server, user, password, and destination database with information specific to your appliance. (Examples are shown below). Then click **OK**.  
   
-    For InfiniBand connections, **Server name**: Enter <appliance-name>-SQLCTL01,17001.  
+    For InfiniBand connections, **Server name**: Enter \<appliance-name\>-SQLCTL01,17001.  
   
     For Ethernet connections, **Server name**: Enter the IP address of the Control node cluster, comma, port 17001. For example, 10.192.63.134,17001.  
   

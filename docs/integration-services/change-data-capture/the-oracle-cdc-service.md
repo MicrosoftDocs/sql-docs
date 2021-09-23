@@ -70,7 +70,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  If a different algorithm is used, this key can be dropped and a new one by the same name and encrypted by the same password can be created.  
   
- The asymmetric key password is the master password that is saved in the registry under the path **HKLM\Software\Microsoft\XDBCDCSVC\\<service-name>**. That key is accessible only to local administrators and to the Oracle CDC Windows service account. The key contains an encrypted binary value **AsymmetricKeyPassword** that stored the asymmetric key password. Access to this registry key is required to be able to access to the Oracle log mining credentials.  
+ The asymmetric key password is the master password that is saved in the registry under the path **HKLM\Software\Microsoft\XDBCDCSVC\\\\<service-name\>**. That key is accessible only to local administrators and to the Oracle CDC Windows service account. The key contains an encrypted binary value **AsymmetricKeyPassword** that stored the asymmetric key password. Access to this registry key is required to be able to access to the Oracle log mining credentials.  
   
  To use the ENCRYPTION BY PASSWORD clause, the password must meet the Windows password policy requirements for the computer running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This is done by selecting the asymmetric key password according to that policy.  
   

@@ -1,12 +1,14 @@
 ---
 title: What's New for SQL Server 2019 on Linux
 description: This article highlights what's new for SQL Server 2019 on Linux.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
+ms.custom:
+  - intro-whats-new
 ---
 
 # What's new for SQL Server 2019 on Linux

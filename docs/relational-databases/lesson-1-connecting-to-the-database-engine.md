@@ -1,7 +1,8 @@
 ---
 description: "Lesson 1: Connecting to the Database Engine"
 title: "Lesson 1: Connecting to the Database Engine | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "02/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

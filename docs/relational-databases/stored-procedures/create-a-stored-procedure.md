@@ -1,13 +1,14 @@
 ---
 title: "Create a Stored Procedure | Microsoft Docs"
 description: Learn how to create a Transact-SQL stored procedure by using SQL Server Management Studio and by using the Transact-SQL CREATE PROCEDURE statement.
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "new stored procedures"
   - "stored procedures [SQL Server], creating"
   - "creating stored procedures"

@@ -9,6 +9,8 @@ ms.topic: overview
 author: garyericson
 ms.author: garye
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+ms.custom:
+  - intro-overview
 ---
 # What is SQL Server Machine Learning Services with Python and R?
 [!INCLUDE [SQL Server 2017 SQL](../includes/applies-to-version/sqlserver2017.md)]

@@ -1,7 +1,8 @@
 ---
 title: "Install SQL Server on Server Core | Microsoft Docs"
 description: You can install SQL Server on a Server Core installation. The Server Core installation option provides a minimal environment for running specific server roles.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: 09/16/2021
 ms.prod: sql
 ms.reviewer: ""

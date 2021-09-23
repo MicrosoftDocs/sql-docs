@@ -28,7 +28,7 @@ In the event of a user error on a source database project, you can revert the so
   
 1.  Right-click the **TradeDev** project in **Solution Explorer**, and select **Data-tier Application (\*.dacpac)...**.  
   
-2.  SSDT will attempt to build the project first. If there is no build error, a **Snapshot** folder is created in **Solution Explorer**. Inside this folder, SSDT creates a .dacpac file using the name format of "<Project Name>_YYYYMMDD_HH-MM-SS.dacpac".  
+2.  SSDT will attempt to build the project first. If there is no build error, a **Snapshot** folder is created in **Solution Explorer**. Inside this folder, SSDT creates a .dacpac file using the name format of "\<Project Name\>_YYYYMMDD_HH-MM-SS.dacpac".  
   
 3.  Right-click the .dacpac file and select **Rename**. Change the default file name to "TradeDev1.dacpac".  
   

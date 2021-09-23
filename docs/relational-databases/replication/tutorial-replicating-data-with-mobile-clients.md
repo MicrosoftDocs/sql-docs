@@ -1,14 +1,16 @@
 ---
 title: "Tutorial: Configure Merge Replication"
-description: This tutorial teaches you how to configure Merge Replication between a SQL Server and a mobile client. 
-ms.custom: seo-lt-2019
+description: This tutorial teaches you how to configure Merge Replication between a SQL Server and a mobile client.
+ms.custom:
+  - seo-lt-2019
+  - intro-quickstart
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: "MashaMSFT"

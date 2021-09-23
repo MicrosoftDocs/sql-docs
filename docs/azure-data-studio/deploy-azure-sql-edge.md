@@ -7,7 +7,8 @@ ms.topic: how-to
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: 
+ms.custom:
+  - intro-deployment
 ms.date: 09/22/2020
 ---
 

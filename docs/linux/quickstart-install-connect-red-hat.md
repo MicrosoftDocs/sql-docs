@@ -1,9 +1,11 @@
 ---
-title: "RHEL: Install SQL Server on Linux" 
+title: "RHEL: Install SQL Server on Linux"
 titleSuffix: SQL Server
-description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
-author: VanMSFT 
-ms.custom: seo-lt-2019
+description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
+author: VanMSFT
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.author: vanto
 ms.date: 06/22/2020
 ms.topic: conceptual

@@ -6,13 +6,15 @@ ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "semantic search [SQL Server], installing"
   - "semantic search [SQL Server], configuring"
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
+ms.custom:
+  - intro-installation
 ---
 # Install and Configure Semantic Search
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

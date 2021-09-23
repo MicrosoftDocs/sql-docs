@@ -8,7 +8,9 @@ ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: 04/26/2017
 ---
 
@@ -22,10 +24,10 @@ Where to install your extension depends on the extension type and where you inte
   
 |Extension Type|Install Location|  
 |------------------|--------------------|  
-|Custom Test Condition for SQL Server Unit Tests|<Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\TestConditions|  
-|Build Contributors<br /><br />Deployment Contributors<br /><br />Static Code Analysis Rules|<Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions|  
+|Custom Test Condition for SQL Server Unit Tests|\<Visual Studio Install Dir\>\Common7\IDE\Extensions\\Microsoft\SQLDB\TestConditions|  
+|Build Contributors<br /><br />Deployment Contributors<br /><br />Static Code Analysis Rules|\<Visual Studio Install Dir\>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions|  
   
-The <Visual Studio Install Dir> varies depending on which version of Visual Studio you are using and where you chose to install it. For Visual Studio 2012, it is usually C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013, it is usually C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
+The \<Visual Studio Install Dir\> varies depending on which version of Visual Studio you are using and where you chose to install it. For Visual Studio 2012, it is usually C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013, it is usually C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
   
 Extensions can be run as part of our command-line services:  
   

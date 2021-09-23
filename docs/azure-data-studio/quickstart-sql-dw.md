@@ -7,7 +7,10 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, jrasnick
-ms.custom: seodec18; seo-lt-2019
+ms.custom:
+  - seodec18
+  - seo-lt-2019
+  - intro-quickstart
 ms.date: 10/15/2020
 ---
 
@@ -43,7 +46,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | Select Yes if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | The name of the database to which to connect. |
-   | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
+   | **Server Group** | Select \<Default\> | If you created a server group, you can set to a specific server group. | 
 
 3. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
 

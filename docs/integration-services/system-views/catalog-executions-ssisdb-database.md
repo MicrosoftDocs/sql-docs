@@ -45,10 +45,10 @@ ms.author: chugu
 |process_id|**int**|The process ID of the external process, if applicable.|  
 |stopped_by_sid|**varbinary(85)**|The security ID (SID) of the user who stopped the instance of execution.|  
 |stopped_by_name|**nvarchar(128)**|The name of the user who stopped the instance of execution.|  
-|total_physical_memory_kb|**bigint**|The total physical memory (in megabytes) on the server when the execution is started.|  
-|available_physical_memory_kb|**bigint**|The available physical memory (in megabytes) on the server when the execution is started.|  
-|total_page_file_kb|**bigint**|The total page memory (in megabytes) on the server when the execution is started.|  
-|available_page_file_kb|**bigint**|The available page memory (in megabytes) on the server when the execution is started.|  
+|total_physical_memory_kb|**bigint**|The total physical memory (in kilobytes) on the server when the execution is started.|  
+|available_physical_memory_kb|**bigint**|The available physical memory (in kilobytes) on the server when the execution is started.|  
+|total_page_file_kb|**bigint**|The total page memory (in kilobytes) on the server when the execution is started.|  
+|available_page_file_kb|**bigint**|The available page memory (in kilobytes) on the server when the execution is started.|  
 |cpu_count|**int**|The number of logical CPUs on the server when the execution is started.|  
 |server_name|**nvarchar(128)**|The Windows server and instance information for a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|The computer name on which the server instance is running.|  

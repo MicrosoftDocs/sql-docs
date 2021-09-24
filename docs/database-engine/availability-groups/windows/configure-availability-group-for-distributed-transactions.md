@@ -33,7 +33,7 @@ In a distributed transaction, client applications work with Microsoft Distribute
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the new primary replica [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] instance may not be able to get the transaction outcome from DTC. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] instance to get the outcome of in-doubt transactions from the DTC after failover, configure the availability group for distributed transactions. 
 
-DTC is not involved in availability group processing unless a database is also a member of a Failover Cluster. Within an availability group, the consistency between replicas is maintained by the availability group logic: The primary will not complete the commit and acknowledge the commit to the caller until the secondary has acknowledged that it has persisted the log records in durable storage. Only then does the Primary declare the transaction complete. In async mode, we do not wait for the secondary to ack, and there is explicitly the chance of the loss of a small amount of data.
+DTC is not involved in availability group processing unless a database is also a member of a Failover Cluster. Within an availability group, the consistency between replicas is maintained by the availability group logic: The primary will not complete the commit and acknowledge the commit to the caller until the secondary has acknowledged that it has persisted the log records in durable storage. Only then will the Primary declare the transaction complete. In async mode, we do not wait for the secondary to ack, and there is explicitly the chance of the loss of a small amount of data.
 
 ## Prerequisites
 
@@ -119,7 +119,7 @@ The following list explains how the application works with DTC to complete distr
 3. The client issues commit or abort for the DTC transaction.
     - If the client issues abort, the transaction is aborted immediately.
     - If the client issues commit, DTC begins the two-phase commit protocol by asking all the resource managers in the transaction to prepare the transaction.
-4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgement, DTC aborts the transaction. 
+4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgment, DTC aborts the transaction. 
 
 ### Effects of configuring an availability group for distributed transactions
 

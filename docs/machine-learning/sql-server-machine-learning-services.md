@@ -26,6 +26,8 @@ Machine Learning Services is a feature in SQL Server that gives the ability to r
 > Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 >
 > For executing Java in SQL Server, see the [Java Language Extension documentation](../language-extensions/java-overview.md).
+>
+> For executing C# in SQL Server, see the [C# Language Extension documentation](../language-extensions/csharp-overview.md).
 ::: moniker-end
 
 ## Execute Python and R scripts in SQL Server

@@ -2,7 +2,7 @@
 title: "Configure Server Core Installation"
 description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "09/15/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -10,7 +10,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
-ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: cawrites
 ms.author: chadam
 monikerRange: ">=sql-server-2016"
@@ -30,7 +29,7 @@ For more information about configuring and managing a Server Core installation r
   
 - [Install Server Core](/windows-server/get-started/getting-started-with-server-core)  
   
-- [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](/windows-server/get-started/sconfig-on-ws2016)  
+- [Configure a Server Core installation of Windows Server and Azure Stack HCI with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig)  
   
 - [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   
@@ -39,7 +38,7 @@ For more information about configuring and managing a Server Core installation r
 - [Administering a Server Core installation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Updates  
-This section provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up-to-date with the most recent security updates. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+This section provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up to date with the most recent security updates. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
 The following are the two scenarios for installing product updates:  
   
@@ -88,58 +87,58 @@ The [sqlservr Application](../../tools/sqlservr-application.md) application star
   
 You can also use Net services to start and stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
   
-## <a name="BKMK_EnableAlwaysON"></a> Enable AlwaysOn Availability Groups  
-Being enabled for AlwaysOn Availability Groups is a prerequisite for a server instance to use availability groups as a high availability and disaster recovery solution. For more information about managing the Always On Availability Groups, see [Enable and Disable Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+## <a name="BKMK_EnableAlwaysON"></a> Enable Always On availability groups  
+Being enabled for Always On Availability Groups is a prerequisite for a server instance to use availability groups as a high availability and disaster recovery solution. For more information about managing the Always On availability groups, see [Enable and Disable Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager Remotely  
 These steps are meant to be performed on a PC running the client edition of Windows, or Windows Server that has the Server Graphical Shell installed.  
   
-1. Open **Computer Management**. To open **Computer Management**, click **Start**, type `compmgmt.msc`, and then click **OK**.    
+1. Open **Computer Management**. To open **Computer Management**, select **Start**, type `compmgmt.msc`, and then select **OK**.    
   
-2. In the console tree, right-click **Computer Management**, and then click **Connect to another computer...**.  
+2. In the console tree, right-click **Computer Management**, and then select **Connect to another computer...**.  
   
-3. In the **Select Computer** dialog box, type the name of the Server Core machine that you want to manage, or click **Browse** to find it, and then click **OK**.  
+3. In the **Select Computer** dialog box, type the name of the Server Core machine that you want to manage, or select **Browse** to find it, and then select **OK**.  
   
-4. In the console tree, under **Computer Management** of the Server Core machine, click **Services and Applications**.  
+4. In the console tree, under **Computer Management** of the Server Core machine, select **Services and Applications**.  
   
-5. Double click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
+5. Double-click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-6. In **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services**, right-click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), where \<instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.  
+6. In **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, select **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services**, right-click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), where \<instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and select **Properties**.  
   
-7. Select the **AlwaysOn High Availability** tab.  
+7. Select the **Always On High Availability** tab.  
   
-8. Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support AlwaysOn Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] does not support AlwaysOn Availability Groups.  
+8. Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support Always On Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] does not support Always On Availability Groups.  
   
-9. Select the Enable AlwaysOn Availability Groups check box, and click OK.  
+9. Select the **Enable Always On Availability Groups** check box, and select OK.  
   
-10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager saves your change. Then, you must manually restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. This enables you to choose a restart time that is best for your business requirements. When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service restarts, AlwaysOn will be enabled, and the IsHadrEnabled server property will be set to 1.  
+10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager saves your change. Then, you must manually restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. This enables you to choose a restart time that is best for your business requirements. When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service restarts, availability groups will be enabled, and the IsHadrEnabled server property will be set to 1.  
   
 > [!NOTE]
 >  -   You must have the appropriate user rights or you must have been delegated the appropriate authority on the target computer to connect to that computer.  
 > -   The name of the computer that you are managing appears in parentheses next to Computer Management in the console tree.  
   
-### Using PowerShell Cmdlets to Enable AlwaysOn Availability Groups  
-The PowerShell Cmdlet, Enable-SqlAlwaysOn, is used to enable AlwaysOn Availability Group on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If AlwaysOn Availability Groups is enable while the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is running, the Database Engine service must be restarted for the change to complete. Unless you specify the -Force parameter, the cmdlet prompts you to ask whether you wish to restart the service; if cancelled, no operation occurs.  
+### Using PowerShell Cmdlets to Enable Always On Availability Groups  
+The PowerShell Cmdlet `Enable-SqlAlwaysOn` is used to enable Always On Availability Group on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the Always On Availability Groups feature is enabled while the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is running, the Database Engine service must be restarted for the change to complete. Unless you specify the `-Force` parameter, the cmdlet prompts you to ask whether you wish to restart the service; if canceled, no operation occurs.  
   
 You must have Administrator permissions to execute this cmdlet.  
   
-You can use one of the following syntaxes to enable AlwaysOn Availability Groups for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+You can use one of the following syntaxes to enable Always On Availability Groups for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-```  
+```powershell
 Enable-SqlAlwaysOn [-Path <string>] [-Credential <PSCredential>] [-Force] [-NoServiceRestart] [-Confirm] [-WhatIf] [<Commom Parameters>]  
 ```  
   
-```  
+```powershell  
 Enable-SqlAlwaysOn -InputObject <Server> [-Credential <PSCredential>] [-Force] [-NoServiceRestart] [-Confirm] [-WhatIf] [<Commom Parameters>]  
 ```  
   
-```  
+```powershell  
 Enable-SqlAlwaysOn [-ServerInstance <string>] [-Credential <PSCredential>] [-Force] [-NoServiceRestart] [-Confirm] [-WhatIf] [<Commom Parameters>]  
 ```  
   
-The following PowerShell command enables AlwaysOn Availability Groups on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Machine\Instance):  
+The following PowerShell command enables Always On Availability Groups on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Machine\Instance):  
   
-```  
+```powershell  
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance  
 ```  
   
@@ -174,9 +173,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 1.  On the computer that is running Windows Server Core, launch **Task Manager**.  
   
-2.  On the **Applications** tab, click **New Task**.  
+2.  On the **Applications** tab, select **New Task**.  
   
-3.  In the **Create New Task** dialog box, type **sqlps.exe** in the **Open** field and then click **OK**. This opens the **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window.  
+3.  In the **Create New Task** dialog box, type **sqlps.exe** in the **Open** field and then select **OK**. This opens the **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window.  
   
 4.  In the **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window, run the following script to enable the TCP/IP protocol:  
   

@@ -32,10 +32,10 @@ The v5.5 release of the Data Migration Assistant provides support for:
 - Enabling user selection of databases to include/exclude in the SKU recommendations.
 
 In addition, this release of Data Migration Assistant provides bug fixes and improvements for the following issues:
-- Fixed an RDS for SQL Server permissions error raised when assessing Azure SQL Managed Instance targets.
-- Fixed incorrectly reported blockers for Memory Optimized Data Filegroup (FX) in assessments.
-- Fixed missing rule to detect three-part or ur-part cross-database references when assessing Azure SQL Database targets.
-- Fixed `specified value for 'AssessmentDatabases' is invalid` error when using AssessTargetReadiness option in DMA command line.
+
+- Fixed an error preventing collected performance data being read correctly in certain locales.
+- Fixed an issue related to incorrect SKU recommendations for environments with highly variable workload patterns.
+- Fixed an issue affecting data collection in high memory environments.
 
 ## Data Migration Assistant v 5.4
 

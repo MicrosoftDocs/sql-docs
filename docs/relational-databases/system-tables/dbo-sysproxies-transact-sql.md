@@ -33,7 +33,7 @@ ms.author: chadam
 |**credential_id**|**int**|ID of the credential that the proxy account uses.|  
 |**enabled**|**tinyint**|Status of the proxy account:<br /><br /> **0** = Disabled. **1** = Enabled.|  
 |**description**|**nvarchar(512)**|Description that the user entered when the proxy account was created.|  
-|**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* of the user or group associated with the proxy credential.|  
+|**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* of the user or group associated with the proxy credential, at the time the proxy is added. To make sure the information is up to date (e.g. after an `ALTER CREDENTIAL` was issued), please run sp_update_proxy to trigger a refresh of the information.|
 |**credential_date_created**|**datetime**|Date and time that the credential was created.|  
   
 ## Remarks  

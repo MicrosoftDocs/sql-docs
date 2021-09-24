@@ -2,7 +2,7 @@
 title: "Create Clustered DTC resource for an availability group"
 description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
 ms.custom: "seodec18"
-ms.date: "09/16/2021"
+ms.date: "09/24/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
-This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete. 
+This article walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete. 
 
 The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
@@ -534,7 +534,7 @@ END
 
 This test uses a linked server from `SQLNODE1` to `SQLNODE2` to create a distributed transaction.  Ensure the Availability Group primary replica is on `SQLNODE1`. To test the configuration you will:
 
-- Create linkes servers
+- Create linked servers
 - Execute a distributed transaction
 
 ### Create linked servers  
@@ -554,7 +554,7 @@ END
  ```
 
 ### Execute a distributed transaction
-This script will first return the current DTC transaction statistics.  Then the script will execute a distributed transaction utilizing databases on `SQLNODE1` and `SQLNODE2`.  Then the script will again return the DTC transaction statics which will now should an increased count.  Physically connect to `SQLNODE1` and run the following T-SQL Script in SSSMS against `SQLNODE1` in **SQLCMD mode**.
+This script will first return the current DTC transaction statistics.  Then the script will execute a distributed transaction utilizing databases on `SQLNODE1` and `SQLNODE2`.  Then the script will again return the DTC transaction statics, which will now should an increased count.  Physically connect to `SQLNODE1` and run the following T-SQL Script in SSSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************

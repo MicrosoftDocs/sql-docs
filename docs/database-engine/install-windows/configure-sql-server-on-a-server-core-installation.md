@@ -38,7 +38,7 @@ For more information about configuring and managing a Server Core installation r
 - [Administering a Server Core installation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Updates  
-This section provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up-to-date with the most recent security updates. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+This section provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up to date with the most recent security updates. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
 The following are the two scenarios for installing product updates:  
   
@@ -118,7 +118,7 @@ These steps are meant to be performed on a PC running the client edition of Wind
 > -   The name of the computer that you are managing appears in parentheses next to Computer Management in the console tree.  
   
 ### Using PowerShell Cmdlets to Enable Always On Availability Groups  
-The PowerShell Cmdlet `Enable-SqlAlwaysOn` is used to enable Always On Availability Group on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If Always On Availability Groups is enable while the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is running, the Database Engine service must be restarted for the change to complete. Unless you specify the -Force parameter, the cmdlet prompts you to ask whether you wish to restart the service; if cancelled, no operation occurs.  
+The PowerShell Cmdlet `Enable-SqlAlwaysOn` is used to enable Always On Availability Group on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the Always On Availability Groups feature is enabled while the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is running, the Database Engine service must be restarted for the change to complete. Unless you specify the `-Force` parameter, the cmdlet prompts you to ask whether you wish to restart the service; if canceled, no operation occurs.  
   
 You must have Administrator permissions to execute this cmdlet.  
   

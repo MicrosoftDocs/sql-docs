@@ -166,13 +166,11 @@ SSIS Deploy task currently doesn't support the following scenarios:
 - Configuring the environment in the SSIS catalog.
 - Deploying ISPAC to Azure SQL Server or Azure SQL Managed Instance, which allow only multifactor authentication.
 - Deploying packages to MSDB or SSIS Package Store.
-- Uploading to an on-premises DevOps server might result in the error "The extension package size exceeds the maximum package size". To resolve the error, first complete the following steps. If the error persists, please contact Azure DevOps support. 
-  1. Get the publisher name of the extension you want to increase the size limit for. The publisher name typically is on the left side of the `.` character in the URL of the extension's item details page in Azure Marketplace. For example, if the extension’s item details page is `https://marketplace.visualstudio.com/items?itemName=tylermurry.pr-auto-comment`, the publisher name is `tylermurry`.
-  1. Connect to the on-premises SQL Server instance and select the database **Gallery_Configuration**.
-  1. Run this query by replacing `<publisherName>` with the publisher name from step 1:  
-     `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\<publisherName>\','MaxPackageSizeMB\',50)`  
-     Change `50` to a higher number if the extension is larger than 50 MBs.
-  1. After you run the query, restart Internet Information Services. Try again to upload the extension.
+- Azure DevOps Server extension install ssis devops tools met "The extension package size exceeds the maximum package size"
+  1. Connect to the on-premises SQL Server instance and select the database `Gallery_Configuration`.
+  2. Run the query Change 50 to a higher number if the extension is larger than 50 MBs. `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`  
+  3. After you run the query, restart Internet Information Services. Try again to upload the extension.
+  4. If the error persists, please contact Azure DevOps support. 
 
 ## SSIS Deploy task version 1.* 
 

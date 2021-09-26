@@ -380,7 +380,26 @@ ms.author: chugu
 ## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
   This topic describes how to set or change the logging level for a package when you run a package that you have deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The logging level you set when you run the package overrides the package logging you configure at design time in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. See [Enable Package Logging in SQL Server Data Tools](#ssdt) for more information.  
   
- In SQL Server **Server Properties**, under the **Server logging level** property, you can select a default server-wide logging level. You can pick from one of the built-in logging levels described in this topic, or you can pick an existing customized logging level. The selected logging level applies by default to all packages deployed to the SSIS Catalog. It also applies by default to a SQL Agent job step that runs an SSIS package.  
+
+You can review and adjust the server's default logging level property by following these steps:
+
+1. Connect to the SQL Server Instance
+
+2. Access Object Explorer
+
+3. Access the server's Integration Services Catalog \ SSISDB node
+
+4. Right click on the SSISDB Node and select properties from the dropdown menu
+
+5. The "Catalog Properties" window appears
+
+6. We are interested in the "Operations Log" group box and "Service-Wide Default Logging Level" entry
+
+ 
+You can pick from one of the built-in logging levels described in this topic, or you can pick an existing customized logging level. The selected logging level applies by default to all packages deployed to the SSIS Catalog. It also applies by default to a SQL Agent job step that runs an SSIS package.  
+ 
+ 
+ 
   
  You can also specify the logging level for an individual package by using one of the following methods. This topic covers the first method.  
   

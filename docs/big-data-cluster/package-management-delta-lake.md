@@ -1,12 +1,12 @@
 ---
 title: SQL Server Big Data Clusters Delta Lake
 titleSuffix: SQL Server Big Data Clusters
-description: This guide covers how to configure Delta Lake using the Package Management feature set.
+description: This guide covers how to use Delta Lake on SQL Server Big Data Clusters.
 author: DaniBunny 
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 07/09/2021
+ms.date: 09/27/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,21 +20,27 @@ In this guide, you'll learn:
 
 > [!div class="checklist"]
 > * The requisites and capabilities of Delta Lake on SQL Server Big Data Clusters.
-> * How to load Delta Lake libraries to use with Spark sessions and jobs.
+> * How to load Delta Lake libraries on CU12 clusters to use with Spark 2.4 sessions and jobs.
 
 ## Introduction
 
 Linux Foundation Delta Lake is an open-source storage layer that brings ACID (atomicity, consistency, isolation, and durability) transactions to Apache Spark and big data workloads. To learn more about Delta Lake, see:
 
-* [What is Delta Lake](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
-* [Introduction to Delta Lake](https://docs.delta.io/0.6.1/delta-intro.html)
+* [What is Delta Lake?](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
+* [Introduction to Delta Lake](https://docs.delta.io/1.0.0/delta-intro.html)
 
-## Configure Delta Lake on SQL Server Big Data Clusters
+## Delta Lake on SQL Server Big Data Clusters CU13 and above (Spark 3)
 
-On SQL Server 2019 Big Data Clusters, it is possible to load Delta Lake libraries using the [Spark library management](spark-install-packages.md) feature.
+Delta Lake is installed and configured by default on SQL Server Big Data Clusters Cumulative Update 13 and above. No further action is required.
+
+The following sections of this article covers configuration of Delta Lake on Big Data Clusters CU12 and bellow.
+
+## Configure Delta Lake on SQL Server Big Data Clusters on CU12 and bellow (Spark 2.4)
+
+On SQL Server 2019 Big Data Clusters CU12 or bellow, it is possible to load Delta Lake libraries using the [Spark library management](spark-install-packages.md) feature.
 
 > [!NOTE]
-   > As a general rule, use the most recent compatible library. The code in this guide was tested by using Delta Lake 0.6.1 on SQL Server Big Data Clusters CU11. Delta Lake 0.6.1 is compatible with Apache Spark 2.4.x, later versions are not. The examples are provided as-is, not a supportability statement.
+   > As a general rule, use the most recent compatible library. The code in this guide was tested by using Delta Lake 0.6.1 on SQL Server Big Data Clusters CU12. Delta Lake 0.6.1 is compatible with Apache Spark 2.4.x, later versions are not. The examples are provided as-is, not a supportability statement.
 
 ### Configure Delta Lake library and Spark configuration options
 

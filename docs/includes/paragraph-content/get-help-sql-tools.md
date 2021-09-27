@@ -11,6 +11,6 @@ ms.author: jroth
 - [All the ways to get help](../../sql-server/sql-server-get-help.md)
 - [Submit an Azure Data Studio Git issue](https://github.com/Microsoft/azuredatastudio/issues)
 - [Contribute to Azure Data Studio](https://github.com/Microsoft/azuredatastudio)
-- [SQL Client Tools Forum](https://docs.microsoft.com/answers/products/sql-server)
+- [SQL Client Tools Forum](/answers/products/sql-server)
 - [SQL Server Data Tools - MSDN forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Support options for business users](https://support.microsoft.com/gp/support-options-for-business)

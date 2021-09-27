@@ -2,10 +2,10 @@
 title: Configure Kubernetes with kubeadm
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for SQL Server 2019 big data cluster deployments.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 08/21/2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
+ms.date: 09/27/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,18 +18,18 @@ ms.technology: big-data-cluster
 This article provides an example of how to use **kubeadm** to configure Kubernetes on multiple machines for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
 
 > [!TIP] 
-> For sample scripts that configure Kubernetes, see [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
+> For sample scripts that configure Kubernetes, see [Create a Kubernetes cluster using Kubeadm on Ubuntu 20.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample script that automates a deployment of a single node kubeadm deployment on a VM and then deploys a default configuration of big data cluster on top of it.
 
 ## Prerequisites
 
-- Minimum of 3 Linux physical machines or virtual machines
-- Recommended configuration per machine:
-   - 8 CPUs
-   - 64 GB of memory
-   - 100 GB of storage
- 
-> [!Important] 
+* Minimum of 3 Linux physical machines or virtual machines
+* Recommended configuration per machine:
+  * 8 CPUs
+  * 64 GB of memory
+  * 100 GB of storage
+
+> [!Important]
 > Before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 ## Prepare the machines

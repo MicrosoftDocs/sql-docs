@@ -155,7 +155,11 @@ write the datetime values as it is, if you are 100% sure that the written files
 will only be read by Spark 3.0+ or other systems that use Proleptic Gregorian calendar.
 ```
 
-__Solution:__ Set configuration spark.sql.legacy.parquet.int96RebaseModeInWrite to LEGACY or CORRECTED, as explained above.
+__Solution:__ Set configuration spark.sql.legacy.parquet.int96RebaseModeInWrite to LEGACY or CORRECTED, as explained above. This is what a possible solution looks like on PySpark code:
+
+```python
+spark.conf.set("spark.sql.legacy.parquet.int96RebaseModeInWrite","CORRECTED")
+```
 
 ## Next steps
 

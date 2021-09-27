@@ -18,12 +18,11 @@ keywords:
   - "ssms download"
   - "sql server ssms"
   - "ssms express"
-ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/15/2021 
+ms.date: 09/16/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -48,7 +47,7 @@ If you have comments or suggestions, or you want to report issues, the best way 
 
 The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.9.2. You can see if you have the preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -136,6 +135,7 @@ The current release of SSMS supports the following 64-bit platforms when used wi
 
 Supported Operating Systems:
 
+- Windows Server 2022 (64-bit)
 - Windows 10 (64-bit) version 1607 (10.0.14393) or later
 - Windows 8.1 (64-bit)
 - Windows Server 2019 (64-bit)

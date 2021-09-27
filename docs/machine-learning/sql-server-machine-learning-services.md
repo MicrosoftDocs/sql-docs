@@ -17,11 +17,11 @@ ms.custom:
 
 Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft Python and R packages](#packages), for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 
-::: moniker range="=sql-server-2017||=azuresqldb-mi-current"
+::: moniker range="=sql-server-2017"
 > [!NOTE]
 > Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > Machine Learning Services is also available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 >
@@ -55,7 +55,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
    + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=azuresqldb-mi-current"
+::: moniker range="=sql-server-2017"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md).
 
 1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also use T-SQL in [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
@@ -98,13 +98,13 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 For more information on which packages are installed with Machine Learning Services and how to install other packages, see:
 
-::: moniker||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Get Python package information](package-management/python-package-information.md)
 + [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
 + [Get R package information](package-management/r-package-information.md)
 + [Install new R packages with sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=azuresqldb-mi-current"
+::: moniker range="=sql-server-2017"
 + [Get Python package information](package-management/python-package-information.md)
 + [Install packages with Python tools on SQL Server](package-management/install-python-packages-standard-tools.md)
 + [Get R package information](package-management/r-package-information.md)

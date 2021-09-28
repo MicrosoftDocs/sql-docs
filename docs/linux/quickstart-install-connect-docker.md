@@ -341,7 +341,7 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
-1. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong!Passw0rd>`, with your own password values.
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
 
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `

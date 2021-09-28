@@ -56,6 +56,17 @@ Supportability and diagnostics related improvements included in [!INCLUDE[sssql1
 
 This section identifies issues which may occur after you apply [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
 
+### Change Tracking cleanup errors
+
+- **Issue**: The following error message occurs after you run a change tracking cleanup stored procedure `sp_flush_commit_table_on_demand` or `sp_flush_CT_internal_table_on_demand`:
+
+```
+Msg 8114, Level 16, State 1, Procedure sp_add_ct_history, Line LineNumber
+Error converting data type numeric to int.
+```
+
+For more information, refer to [KB5007039](https://support.microsoft.com/topic/kb5007039-fix-you-encounter-error-messages-8114-or-22122-when-performing-change-tracking-cleanup-b102b180-a80c-4b32-90d7-0811108fe7d1).
+
 ### R script failure
 
 - **Issue**: After you install SP3, R script execution fails. The R script fails with an error like:

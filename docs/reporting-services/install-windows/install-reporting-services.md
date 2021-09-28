@@ -86,7 +86,7 @@ For more information, see [Configure the report server service account](configur
 
 ## Windows Service
 
-A windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
+A Windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
 
 ## Default URL reservations
 

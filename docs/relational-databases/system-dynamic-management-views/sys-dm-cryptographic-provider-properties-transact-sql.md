@@ -33,7 +33,7 @@ ms.author: wiassaf
 |provider_version|**nvarchar(256)**|Version of the provider in the format '*aa.bb.cccc.dd*'.|  
 |sqlcrypt_version|**nvarchar(256)**|Major version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cryptographic API in the format '*aa.bb.cccc.dd*'.|  
 |friendly_name|**nvarchar(2048)**|Name supplied by the provider.|  
-|authentication_type|**nvarchar(256)**|WINDOWS, BASIC, or OTHER.|  
+|authentication_type|**nvarchar(256)**|`WINDOWS`, `BASIC`, or `OTHER`.|  
 |symmetric_key_support|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
 |symmetric_key_export|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
 |symmetric_key_import|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  

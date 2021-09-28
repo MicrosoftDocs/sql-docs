@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## User Action  
  Verify that the Distributor instance is registered properly. If the network name of the computer and the name of the SQL Server instance differ, either:  
   
--   Add the SQL Server instance name as a valid network name. One method to set an alternative network name is to add it to the local hosts file. The local hosts file is located by default at WINDOWS\system32\drivers\etc or WINNT\system32\drivers\etc. For more information, see the Windows documentation.  
+-   Add the SQL Server instance name as a valid network name. One method to set an alternative network name is to add it to the local hosts file. The local hosts file is located by default at `\Windows\system32\drivers\etc` or `WINNT\system32\drivers\etc`. For more information, see the Windows documentation.  
   
      For example, if the computer name is comp1 and the computer has an IP address of 10.193.17.129, and the instance name is inst1/instname, add the following entry to the hosts file:  
   

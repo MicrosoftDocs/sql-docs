@@ -42,7 +42,7 @@ For soft page-break renderers, to view all the data on one page, in Report prope
 For more information about categories of renderers, see [Rendering Behaviors](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## Reports do not run when your browser is configured to prompt for credentials  
-Viewing your reports may fail with an error message when your browser is configured to prompt for credentials and your data source is configured for integrated windows authentication. This occurs when your data source is on a separate computer than the report server, the data source is configured to use Windows Authentication, and the browser is set to prompt for credentials. The following are examples of messages you will see.  
+Viewing your reports may fail with an error message when your browser is configured to prompt for credentials and your data source is configured for integrated Windows authentication. This occurs when your data source is on a separate computer than the report server, the data source is configured to use Windows Authentication, and the browser is set to prompt for credentials. The following are examples of messages you will see.  
   
 When the data source is configured for a Microsoft SQL Server connection type:  
 `An error has occurred during report processing.`  
@@ -69,4 +69,3 @@ When the data source is configured for a Microsoft SharePoint List connection ty
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

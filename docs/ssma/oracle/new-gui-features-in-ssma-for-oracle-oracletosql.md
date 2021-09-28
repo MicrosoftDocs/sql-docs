@@ -16,10 +16,10 @@ manager: alexiva
 This chapter describes new features of SSMA User Interface.  
   
 ## Layouts  
-This feature allows you to choose one of two predefined windows lay-out or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
+This feature allows you to choose one of two predefined windows layout or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
   
 ### Add Current Layout  
-To save current windows layout, on the View menu point to Layouts, then click Add Current Layout.  
+To save the current layout, on the View menu point to Layouts, then click Add Current Layout.  
   
 ### Choose predefined layout  
 To choose one of the predefined layouts, on the View menu point to Layouts, then click Default Layout or Without Explorers. You can also use shortcuts Ctrl+Alt+1 or Ctrl+Alt+2 for predefined layouts.  
@@ -36,9 +36,9 @@ To open Manage Layouts dialog, on the View menu point to Layouts and click Manag
   
 -   Visibility and width of the source and target metadata explorers  
   
--   Visibility of the source or target windows and their sizes  
+-   Visibility of the source or target Windows and their sizes  
   
--   Visibility and height of auxiliary windows  
+-   Visibility and height of auxiliary Windows  
   
 ## Bookmarks  
 This feature allows you to set one or more bookmarks in the source or target code, quick found a bookmark by using shortcuts, manage the bookmarks with a friendly dialog.  

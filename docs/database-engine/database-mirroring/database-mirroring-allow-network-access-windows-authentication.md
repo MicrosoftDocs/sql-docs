@@ -28,7 +28,7 @@ ms.author: mikeray
   
 ### To configure logins for Windows Authentication  
   
-1.  For the user account of each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], create a login on the other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use a [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) statement with the FROM WINDOWS clause.  
+1.  For the user account of each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], create a login on the other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use a [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) statement with the `FROM WINDOWS` clause.  
   
      For more information, see [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md).  
   

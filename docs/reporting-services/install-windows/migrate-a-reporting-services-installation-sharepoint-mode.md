@@ -99,7 +99,7 @@ ms.custom:
   
 2.  Backup the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service application in SharePoint central Administration (or use PowerShell). This will also backup the service application databases in SharePoint. See topic  [Backup and Restore Reporting Services SharePoint Service Applications](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
-3.  If you have an Unattended Execution account (UEA) and windows authentication, make a note of the credentials so you can use them for the restore process.  
+3.  If you have an Unattended Execution account (UEA) and Windows authentication, make a note of the credentials so you can use them for the restore process.  
   
 4.  For more information, see [Back up service applications in SharePoint 2013](/SharePoint/administration/back-up-a-service-application).  
   
@@ -111,7 +111,7 @@ ms.custom:
   
      See the section "Key Management" in the topic [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
-3.  Configure the UEA and windows credentials on the service application.  
+3.  Configure the UEA and Windows credentials on the service application.  
   
 4.  For more information, see [Restore service applications in SharePoint 2013](/SharePoint/administration/restore-a-service-application).  
   

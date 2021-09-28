@@ -28,7 +28,7 @@ For other deployment scenarios, see:
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
 > [!NOTE]
-> This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+> This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [`mssql-server-windows` Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 > [!IMPORTANT]
 > Before choosing to run a SQL Server container for production use cases, please review our [support policy for SQL Server Containers](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to ensure that you are running on a supported configuration.

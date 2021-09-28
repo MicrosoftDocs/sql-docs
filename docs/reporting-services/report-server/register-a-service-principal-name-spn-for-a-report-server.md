@@ -18,11 +18,11 @@ ms.author: maggies
 ## About SPNs  
  An SPN is a unique identifier for a service on a network that uses Kerberos authentication. It consists of a service class, a host name, and sometimes a port. HTTP SPNs do not require a port. On a network that uses Kerberos authentication, an SPN for the server must be registered under either a built-in computer account (such as NetworkService or LocalSystem) or user account. SPNs are registered for built-in accounts automatically. However, when you run a service under a domain user account, you must manually register the SPN for the account you want to use.  
   
- To create an SPN, you can use the **SetSPN** command line utility. For more information, see the following:  
+ To create an SPN, you can use the **SetSPN** command line utility. For more information, see:  
   
--   [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
+- [`SetSPN`](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11))
   
--   [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
+- [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)
   
  You must be a domain administrator to run the utility on the domain controller.  
   

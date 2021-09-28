@@ -72,7 +72,7 @@ The instance collation for LocalDB is set to `SQL_Latin1_General_CP1_CI_AS` and 
 
 - LocalDB only allows local queues for Service Broker.
 
-- An instance of LocalDB owned by the built-in accounts such as `NT AUTHORITY\SYSTEM` can have manageability issues due to windows file system redirection. Instead use a normal windows account as the owner.
+- An instance of LocalDB owned by the built-in accounts such as `NT AUTHORITY\SYSTEM` can have manageability issues due to Windows file system redirection. Instead use a normal Windows account as the owner.
 
 ### Automatic and named instances
 

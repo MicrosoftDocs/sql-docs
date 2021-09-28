@@ -99,7 +99,7 @@ Store an encrypted user name and password in the report server database. Select 
   
 You can also choose the type of credential this would be. Either Windows authentication (Windows user name and password), or a specific database credential (Database user name and password) such as SQL authentication.  
   
-If the account is a windows credential, the account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
+If the account is a Windows credential, the account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
   
 Select **Log in using these credentials, but then try to impersonate the user viewing the report** to allow delegation of credentials, but only if a data source supports impersonation. For SQL Server databases, this option sets the SETUSER function. For Analysis Services, this uses EffectiveUserName.  
   

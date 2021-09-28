@@ -8950,7 +8950,7 @@ ORDER BY message_id
 |    33038    |    16    |    No    |    Operation is not supported by cryptographic provider key.    |
 |    33039    |    16    |    No    |    Invalid algorithm '%.*ls'. Provider error code: %d. (%S_MSG)    |
 |    33040    |    16    |    No    |    Cryptographic provider key cannot be encrypted by password or other key.    |
-|    33041    |    16    |    Yes    |    Cannot create login token for existing authenticators. If dbo is a Windows user, make sure that its Windows account information is accessible to SQL Server.    |
+|    33041    |    16    |    Yes    |    Cannot create login token for existing authenticators. If dbo is a windows user make sure that its windows account information is accessible to SQL Server.    |
 |    33042    |    16    |    No    |    Cannot add %S_MSG because it is already mapped to a login.    |
 |    33043    |    16    |    No    |    Cannot add %S_MSG '%.*ls' because there is already %S_MSG specified for the login.    |
 |    33044    |    16    |    No    |    Cannot drop %S_MSG because there is %S_MSG referencing this provider.    |

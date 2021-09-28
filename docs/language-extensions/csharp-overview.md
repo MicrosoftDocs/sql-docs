@@ -15,12 +15,12 @@ ms.custom:
 # What is C# Language Extension?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-The open-source [.NET 5 C# language extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp) is a feature of [SQL Server Language Extensions](language-extensions-overview.md) that can be used for executing C# code within SQL Server. You can pass an existing SQL Server table to a C# application as a DataFrame, perform operations in C# using rich libraries, and obtain back a result set. This C# language extension allows you to reuse existing C# code, calculations, logic, or extensive libraries that provide functionality which you cannot get in T-SQL.
+The open-source [.NET C# language extension](https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/dotnet-core-CSharp) is a feature of [SQL Server Language Extensions](language-extensions-overview.md) that can be used for executing C# code within SQL Server. You can pass an existing SQL Server table to a C# application as a DataFrame, perform operations in C# using rich libraries, and obtain back a result set. This C# language extension allows you to reuse existing C# code, calculations, logic, or extensive libraries that provide functionality which you cannot get in T-SQL.
 
 The external C# language is defined with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). The system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is used as the interface for executing the C# code.
 
 > [!NOTE]
-> The C# language extension is compatible with SQL Server 2019 CU3 or later. It integrates .NET core in SQL Server and works with .NET 5.0 in Windows only.
+> The C# language extension is compatible with SQL Server 2019 CU3 or later. Currently, it integrates .NET core on SQL Server Windows only.
 
 ## What you can do
 

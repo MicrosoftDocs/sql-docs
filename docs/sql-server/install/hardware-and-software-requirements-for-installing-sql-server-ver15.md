@@ -2,7 +2,7 @@
 title: "SQL Server 2019: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019. 
 ms.custom: sqlfreshmay19
-ms.date: 09/01/2020
+ms.date: 09/16/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -42,7 +42,6 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: chadam
 author: cawrites
 ---
@@ -101,6 +100,9 @@ The following table shows which editions of [!INCLUDE [sssql19-md](../../include
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition:               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2022 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Datacenter: Azure Edition|    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
@@ -117,6 +119,11 @@ The following table shows which editions of [!INCLUDE [sssql19-md](../../include
 
 Installing [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Server Core mode is supported by the following editions of Windows Server:
 
+:::row:::
+    :::column:::
+        Windows Server 2022 Core
+    :::column-end:::
+:::row-end:::
 :::row:::
     :::column:::
         Windows Server 2019 Core

@@ -4,9 +4,9 @@ titleSuffix: SQL Server Big Data Clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: wiassaf
+ms.reviewer: wiassaf, dacoelho
 ms.metadata: seo-lt-2019
-ms.date: 09/13/2021
+ms.date: 09/28/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -40,7 +40,7 @@ After you have completed the prerequisites, you can install  Spark & Hive Tools 
 
 3. In the search box, enter **Spark & Hive**.
 
-4. Select **Spark & Hive Tools** from the search results, and then select **Install**.  
+4. Select **Spark & Hive Tools**, published by Microsoft, from the search results, and then select **Install**.  
 
    ![Install Extension](./media/spark-hive-tools-vscode/extension.png)
 
@@ -58,6 +58,7 @@ Complete the following steps to open a work folder, and create a file in Visual 
 
 3. Name the new file with the `.py` (Spark script) file extension.  This example uses **HelloWorld.py**.
 4. Copy and paste the following code into the script file:
+
    ```python
    import sys
    from operator import add
@@ -95,11 +96,11 @@ Before you can submit scripts to your clusters from Visual Studio Code, you need
 
 3. Enter SQL Server Big Data endpoint.
 
-4. Enter SQL Server Big Data Cluster user name.
+4. Enter SQL Server big data cluster user name.
 
 5. Enter password for user admin.
 
-6. Set the display name of the cluster (Optional).
+6. Set the display name of the big data cluster (optional).
 
 7. List clusters, review **OUTPUT** view for verification.
 
@@ -177,19 +178,19 @@ You can submit interactive PySpark queries by following the steps below:
 #### Method 1
 
 1. From the menu bar, navigate to **File** > **Preferences** > **Settings**.  
-2. In the **Search settings** text box enter **HDInsight Job Sumission: Livy Conf**.  
+2. In the **Search settings** text box enter **HDInsight Job Submission: Livy Conf**.  
 3. Select **Edit in settings.json** for the relevant search result.
 
 #### Method 2
 
-Submit a file, notice the `.vscode` folder is added automatically to the work folder. You can find the Livy configuration by clicking `.vscode\settings.json`.
+Submit a file, notice the `.vscode` folder is added automatically to the work folder. You can find the Livy configuration by selecting `settings.json` under `.vscode`.
 
-+ The project settings:
+The project settings:
 
     ![Livy configuration](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
 
 >[!NOTE]
->For settings **driverMomory** and **executorMomry**, set the value with unit, for example 1g or 1024m. 
+>For settings **driverMemory** and **executorMemory**, set the value with unit, for example 1gb or 1024mb. 
 
 ### Supported Livy configurations
 
@@ -215,6 +216,7 @@ Submit a file, notice the `.vscode` folder is added automatically to the work fo
 | queue | The name of the YARN queue to which submitted | string |
 | name | The name of this session | string |
 | conf | Spark configuration properties | Map of key=val |
+| :- | :- | :- |
 
 #### Response Body
 
@@ -227,6 +229,7 @@ The created batch object.
 | appInfo | The detailed application info | Map of key=val |
 | log | The log lines | list of strings |
 | state | The batch state | string |
+| :- | :- | :- |
 
 >[!NOTE]
 >The assigned Livy config will display in output pane when submit script.
@@ -235,11 +238,12 @@ The created batch object.
 
 Spark & Hive for Visual Studio Code supports the following features:
 
-- **IntelliSense autocomplete**. Suggestions pop up for keyword, methods, variables, and so on. Different icons represent different types of objects.
+- **IntelliSense autocomplete**. Suggestions pop up for keyword, methods, variables, and more. Different icons represent different types of objects.
 
     ![Spark & Hive Tools for Visual Studio Code IntelliSense object types](./media/spark-hive-tools-vscode/hdinsight-for-vscode-auto-complete-objects.png)
+
 - **IntelliSense error marker**. The language service underlines the editing errors for the Hive script.     
-- **Syntax highlights**. The language service uses different colors to differentiate variables, keywords, data type, functions, and so on. 
+- **Syntax highlights**. The language service uses different colors to differentiate variables, keywords, data type, functions, and more. 
 
     ![Spark & Hive Tools for Visual Studio Code syntax highlights](./media/spark-hive-tools-vscode/hdinsight-for-vscode-syntax-highlights.png)
 

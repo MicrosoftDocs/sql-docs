@@ -4,8 +4,8 @@ titleSuffix: SQL Server
 description: This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: wiassaf
-ms.date: 07/16/2021
+ms.reviewer: wiassaf, dacoelho
+ms.date: 09/28/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -19,7 +19,7 @@ This article explains how to view the status of a big data cluster by using Azur
 
 ## Know your architecture
 
-Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md).
+Starting with SQL Server 2019 (15.x), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers that run on Kubernetes. For an overview, see [What are SQL Server Big Data Clusters?](big-data-cluster-overview.md)
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide coherent and consistent authorization and authentication. For an overview of Big Data Cluster security, see [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md).
 
@@ -71,9 +71,9 @@ The following articles describe how to troubleshoot big data clusters deployed i
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience via Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting.
 
-To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut Ctrl+Shift+P (or select **View**, and then **Command Pallette**). Select **Add Remote Book**. 
+To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut `Ctrl+Shift+P` (or select **View**, and then **Command Palette**). Select **Add Remote Book**. 
 
-In the **Add Remote Book** dialogue, select the desired latest version for operational notebooks and select on **Add**, as shown below:
+In the **Add Remote Book** dialogue, select the desired latest version for operational notebooks. Select **Add**, as shown below:
 
 ![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
 
@@ -97,4 +97,4 @@ To learn how to use the notebooks, see these articles:
 
 ## Next steps
 
-For more information, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).
+For more information, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md)

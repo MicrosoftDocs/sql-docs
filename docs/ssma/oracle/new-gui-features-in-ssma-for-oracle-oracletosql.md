@@ -36,9 +36,9 @@ To open Manage Layouts dialog, on the View menu point to Layouts and click Manag
   
 -   Visibility and width of the source and target metadata explorers  
   
--   Visibility of the source or target Windows and their sizes  
+-   Visibility of the source or target windows and their sizes  
   
--   Visibility and height of auxiliary Windows  
+-   Visibility and height of auxiliary windows  
   
 ## Bookmarks  
 This feature allows you to set one or more bookmarks in the source or target code, quick found a bookmark by using shortcuts, manage the bookmarks with a friendly dialog.  

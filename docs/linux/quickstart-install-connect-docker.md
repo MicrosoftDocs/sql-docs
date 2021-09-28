@@ -326,9 +326,9 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 The **SA** account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
 
+   ::: zone pivot="cs1-bash"
 1. Choose a strong password to use for the SA user.
 
-   ::: zone pivot="cs1-bash"
 1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input. 
 
    ```bash
@@ -341,16 +341,22 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
-1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+1. Choose a strong password to use for the SA user.
+
+1. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
 
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
+      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
+1. Choose a strong password to use for the SA user.
+
+1. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+
    ```cmd
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong!Passw0rd>" `

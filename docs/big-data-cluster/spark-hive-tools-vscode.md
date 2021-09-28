@@ -187,7 +187,7 @@ Submit a file, notice the `.vscode` folder is added automatically to the work fo
 
 The project settings:
 
-    ![Livy configuration](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
+![Livy configuration](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
 
 >[!NOTE]
 >For settings **driverMemory** and **executorMemory**, set the value with unit, for example 1gb or 1024mb. 

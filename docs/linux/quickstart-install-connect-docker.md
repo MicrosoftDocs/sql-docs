@@ -343,11 +343,11 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ::: zone pivot="cs1-powershell"
 1. Choose a strong password to use for the SA user.
 
-1. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
 
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
@@ -355,11 +355,11 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ::: zone pivot="cs1-cmd"
 1. Choose a strong password to use for the SA user.
 
-1. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
 
    ```cmd
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end

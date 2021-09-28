@@ -328,17 +328,21 @@ The **SA** account is a system administrator on the SQL Server instance that get
 
 1. Choose a strong password to use for the SA user.
 
-1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong!Passw0rd>`, with your own password values.
-
    ::: zone pivot="cs1-bash"
+1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input. 
+
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
-      -S localhost -U SA -P "<YourStrong@Passw0rd>" \
-      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong@Passw0rd>"'
+   -S localhost -U SA \
+    -P "$(read -sp "Enter current SA password: "; echo "${REPLY}")" \
+    -Q "ALTER LOGIN SA WITH PASSWORD=\"$(read -sp "Enter new SA password: "; echo "${REPLY}")\""
+
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
+1. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong!Passw0rd>`, with your own password values.
+
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong@Passw0rd>" `

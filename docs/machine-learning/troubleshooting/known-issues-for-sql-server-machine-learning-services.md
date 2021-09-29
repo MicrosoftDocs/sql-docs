@@ -270,7 +270,7 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
 
 - **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../install/change-default-language-runtime-version.md), after you complete the following tasks.
 
-   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared`.
+   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the instance shared directory, as configured.
    1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi140.dll` from the folder `C:\Program Files\Microsoft SQL Server\140\Shared` to the newly created folder.
    1. Rename the `instapi140.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
 

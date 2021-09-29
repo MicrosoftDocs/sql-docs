@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;IDENTITY (Transact-SQL)"
+description: "@@IDENTITY (Transact-SQL)"
 title: "@@IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"

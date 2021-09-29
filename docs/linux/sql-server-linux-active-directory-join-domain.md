@@ -216,7 +216,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    sudo hostname <old hostname>.contoso.com
    ```
    
-   After running the above command, your /etc/hostname file should contain <old hostname>.contoso.com.
+   After running the above command, your /etc/hostname file should contain \<old hostname\>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v

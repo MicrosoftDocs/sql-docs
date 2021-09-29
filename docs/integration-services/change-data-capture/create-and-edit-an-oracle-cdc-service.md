@@ -49,7 +49,7 @@ ms.author: chugu
   
      On Windows Vista or Windows Server 2008, the default service account is the NETWORK SERVICE account.  
   
-     On Windows 7, Windows Server 2008 R2 and later, the default service account is NT Service\\<service-name>.  
+     On Windows 7, Windows Server 2008 R2 and later, the default service account is NT Service\\\\<service-name\>.  
   
      Using these accounts lets you work without using passwords because a password is not necessary for these accounts. In addition these accounts provide only the necessary permissions required for the Oracle CDC Service to run.  
   

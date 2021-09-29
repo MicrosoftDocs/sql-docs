@@ -109,6 +109,12 @@ SET @info=JSON_MODIFY(@info,'$.surname','Smith')
 
 PRINT @info
 
+-- Set name NULL 
+
+SET @info=JSON_MODIFY(@info,'strict $.name',NULL)
+
+PRINT @info
+
 -- Delete name  
 
 SET @info=JSON_MODIFY(@info,'$.name',NULL)
@@ -264,7 +270,7 @@ PRINT @info
     "skills": ["C#", "SQL"]
 } {
     "name": "John",
-    "skills": "["C#","T-SQL","Azure"]"
+    "skills": "[\"C#\",\"T-SQL\",\"Azure\"]"
 }
 ```  
   

@@ -268,7 +268,7 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
   - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.
   - Streaming & partitioning: `RevoScaleR` and `MicrosoftML` data sources (i.e. `ODBC`, `XDF`) does not support reading rows in chunks for training or scoring scenarios. These scenarios always bring all data to memory for computation and the operations are memory bound
 
-- **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade, after you complete the following tasks.
+- **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../install/change-default-language-runtime-version.md), after you complete the following tasks.
 
    1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared`.
    1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi140.dll` from the folder `C:\Program Files\Microsoft SQL Server\140\Shared` to the newly created folder.

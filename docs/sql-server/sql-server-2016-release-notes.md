@@ -77,8 +77,8 @@ This section identifies issues which may occur after you apply [!INCLUDE[sssql16
 
 - **Issue**: The following error message occurs after you run a change tracking cleanup stored procedure `sp_flush_commit_table_on_demand` or `sp_flush_CT_internal_table_on_demand`:
 
-```
-Msg 8114, Level 16, State 1, Procedure sp_add_ct_history, Line LineNumber
+```output
+Msg 8114, Level 16, State 1, Procedure sp_add_ct_history, Line <LineNumber>
 Error converting data type numeric to int.
 ```
 

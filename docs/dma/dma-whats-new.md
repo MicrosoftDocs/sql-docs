@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ms.assetid: ""
 author: aciortea
-ms.author: ajithkr-ms
+ms.author: aciortea
 ---
 
 # What's new in Data Migration Assistant

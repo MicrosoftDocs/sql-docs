@@ -15,6 +15,8 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
+This article compares [SQL Server Language Extensions](../language-extensions-overview.md) and the native [common language runtime (CLR)](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md). It identifies the key differences between them and helps you decide which one to use.
+
 [SQL Server Language Extensions](../language-extensions-overview.md) is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the extensibility framework.
 
 The native [common language runtime (CLR)](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) allows you to implement some of the functionalities of SQL Server with .NET languages. The CLR supplies managed code with services such as cross-language integration, code access security, object lifetime management, and debugging and profiling support.

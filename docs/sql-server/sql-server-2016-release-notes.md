@@ -74,6 +74,8 @@ This section identifies issues which may occur after you apply [!INCLUDE[sssql16
 > [!IMPORTANT]
 > If you do the steps above, you must manually remove the added key prior to upgrading to a later version of SQL Server.
 
+For additional information, see [Change R runtime version in SQL Server 2016](../machine-learning/install/change-default-language-runtime-version.md#change-r-runtime-version-in-sql-server-2016).
+
 ### Change Tracking cleanup errors
 
 - **Issue**: The following error message occurs after you run a change tracking cleanup stored procedure `sp_flush_commit_table_on_demand` or `sp_flush_CT_internal_table_on_demand`:

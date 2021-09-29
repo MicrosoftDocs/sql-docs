@@ -58,7 +58,7 @@ This section identifies issues which may occur after you apply [!INCLUDE[sssql16
 
 ### R Services using specific algorithms, streaming, or partitioning
 
-- **Issue**: The following limitations apply on [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../machine-learning/install/change-default-language-runtime-version.md) or with SP3 slipstream install.
+- **Issue**: The following limitations apply on [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../machine-learning/install/change-default-language-runtime-version.md) or with SP3 slipstream install. This issue applies to Enterprise Edition.
 
   - Parallelism: `RevoScaleR` and `MicrosoftML` algorithm thread parallelism for scenarios are limited to maximum of 2 threads.
   - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.

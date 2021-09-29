@@ -58,7 +58,7 @@ This section identifies issues which may occur after you apply [!INCLUDE[sssql16
 
 ### R Services using specific algorithms, streaming, or partitioning
 
-- **Issue**: The following limitations apply on [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] with runtime upgrade or with SP3 slipstream install.
+- **Issue**: The following limitations apply on [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] if you apply SP3 and then switch to the new runtime or use the SP3 slipstream install. The behavior described in this issue only affects Enterprise Edition.
 
   - Parallelism: `RevoScaleR` and `MicrosoftML` algorithm thread parallelism for scenarios are limited to maximum of 2 threads.
   - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.
@@ -66,7 +66,8 @@ This section identifies issues which may occur after you apply [!INCLUDE[sssql16
 
 - **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3, after you complete the following tasks.
 
-   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared`.
+   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the shared directory as configured for the instance.
+
    1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi130.dll` from the folder `C:\Program Files\Microsoft SQL Server\130\Shared` to the newly created folder.
    1. Rename the `instapi130.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
 

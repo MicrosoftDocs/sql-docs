@@ -260,7 +260,7 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
 
 **Applies to:** SQL Server 2019
 
-### 16. R Services using specific algorithms, streaming, or partitioning
+### 16. R libraries using specific algorithms, streaming, or partitioning
 
 - **Issue**: The following limitations apply on  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade. This issue applies to Enterprise Edition.
 

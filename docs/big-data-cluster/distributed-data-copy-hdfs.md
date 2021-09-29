@@ -29,7 +29,7 @@ Hadoop HDFS DistCP is a command-line tool used to perform distributed parallel c
 
 It uses an internal MapReduce job to expand a list of files and directories into input to multiple map tasks, each of which will copy a partition of the files specified in the source list to the destination. This allows multiple data nodes in the source cluster to send data directly to multiple data nodes in the destination clusters, creating a truly distributed parallel copy scenario.
 
-On SQL Server Big Data Clusters CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command.
+On SQL Server Big Data Clusters CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command. The command is an asynchronous operation, it returns immediately and the copy job is running on the background. You should monitory the copy job using either ``azdata`` or the provided monitoring user interfaces.
 
 Only SQL Server Big Data Clusters sources and destinations are supported.
 
@@ -163,6 +163,50 @@ azdata bdc hdfs cp -f /tmp/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab -t /user/$DOM
 
     ```bash
     azdata bdc hdfs distcp submit --from-path https://$SOURCE_CLUSTER_IP:30443/file.txt --to-path /file.txt
+    ```
+
+## Monitoring the distributed copy job
+
+The ``azdata bdc hdfs distcp submit`` command is an asynchronous operation, it returns immediately while the copy job is running on the background. You should monitory the copy job using either ``azdata`` or the provided monitoring user interfaces.
+
+### List all distributed copy jobs
+
+```bash
+azdata bdc hdfs distcp list
+```
+
+Take note of the job id of job you and to track. All other commands depend on it.
+
+### Get the simple state of a distributed copy job
+
+```bash
+azdata bdc hdfs distcp state [--job-id | -i] <JOB_ID>
+```
+
+### Get the complete status of a distributed copy job
+
+```bash
+azdata bdc hdfs distcp status [--job-id | -i] <JOB_ID>
+```
+
+### Get the logs of a distributed copy job
+
+```bash
+azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
+```
+
+## Distributed copy hints
+
+1. In order to copy entire directories and its contents, end the path argument with a directory, without the '/'. The following example copies the entire ``sourceDirectories`` directory to the root HDFS destination:
+
+    ```bash
+    azdata bdc hdfs distcp submit --from-path https://$SOURCE_CLUSTER_IP:30443/sourceDirectories --to-path /
+    ```
+
+1. The command may contain options, supporting --overwrite, --preserve, --update, and --delete modifiers. The modifier should be placed just after the submit keyword, like bellow:
+
+    ```bash
+    azdata bdc hdfs distcp submit {options} --from-path https://$SOURCE_CLUSTER_IP:30443/sourceDirectories --to-path /
     ```
 
 ## Next steps

@@ -262,7 +262,7 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
 
 ### 16. R Services using specific algorithms, streaming, or partitioning
 
-- **Issue**: The following limitations apply on  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade.
+- **Issue**: The following limitations apply on  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade. This issue applies to Enterprise Edition.
 
   - Parallelism: `RevoScaleR` and `MicrosoftML` algorithm thread parallelism for scenarios are limited to maximum of 2 threads.
   - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.

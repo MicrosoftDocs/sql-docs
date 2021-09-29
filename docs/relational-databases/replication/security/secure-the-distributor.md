@@ -37,6 +37,19 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 > [!NOTE]  
 >  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.  
+
+## If distributor_admin account at distributor is disabled 
+
+**Incase of remote distributor**
+-  Publication creation/deletion will not work.
+-  Cannot change the articles in existing publication.
+-  Agent status from GUI at publisher will not work.
+-  Subscription creation/deletion will not work.
+-  Tracer token will not work.
+-  Cannot configure a remote publisher at distributor.
+
+**Incase of local distributor**
+-  Everything will work fine.
   
 ## Snapshot Folder Security  
  Ensure that the snapshot share has read access granted to the account under which the Merge Agent (for merge replication) or Distribution Agent (for snapshot or transactional replication) runs and write access granted to the account under which the Snapshot Agent runs. For more information about the snapshot folder, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  

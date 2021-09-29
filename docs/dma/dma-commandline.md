@@ -30,7 +30,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
 \[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
-/AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
+/AssessmentEvaluateRecommendati|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
@@ -300,9 +300,12 @@ These commands support recommendations for both Azure SQL Database single databa
 |`--targetSqlInstance` | Name of the SQL instance that SKU recommendation will be targeting. | N <br> (Specific for `GetSkuRecommendation`action)
 |`--targetPercentile` | Percentile of data points to be used during aggregation of the performance data. | N <br> (Specific for `GetSkuRecommendation`action, Default `95`)
 |`--scalingFactor` | Scaling (comfort) factor used during SKU recommendation. | N <br> (Specific for `GetSkuRecommendation`action. Default `100`) 
-|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action) 
-|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action) 
-|`--displayResult` | Whether or not to print the SKU recommendation results to the console | N <br> (Specific for `GetSkuRecommendation`action.Default: `true`)
+|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action)
+|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action)
+|`--elasticStrategy` | Whether or not to use the elastic strategy for SKU recommendations based on statistical resource usage profiling | N <br> (Specific for `GetSkuRecommendation`action. Default: `false`)
+|`--databaseAllowList` | Space separated list of names of databases to be included for SKU recommendations | N <br> (Specific for `GetSkuRecommendation`action. Default: `null`)
+|`--databaseDenyList` | Space separated list of names of databases to be excluded for SKU recommendations. Only set one of the following or neither: `databaseAllowList`, `databaseDenyList` | N <br> (Specific for `GetSkuRecommendation`action. Default: `null`)
+|`--displayResult` | Whether or not to print the SKU recommendation results to the console. Only set one of the following or neither: `databaseAllowList`, `databaseDenyList` | N <br> (Specific for `GetSkuRecommendation`action. Default: `true`)
 
 ## Examples of SKU assessments using the CLI
 

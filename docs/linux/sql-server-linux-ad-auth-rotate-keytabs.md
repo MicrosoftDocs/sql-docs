@@ -73,7 +73,7 @@ klist -kte /var/opt/mssql/secrets/mssql.keytab
 
 The last step is to update the password of the **network.privilegedadaccount** or the account that owns the SQL Server SPNs in Windows Active Directory. In the above scenario, we will have to update the password for the sqluser@CONTOSO.COM in the Active Directory. Change the password to the `<newpassword>` that you provided in the step 3 in the section above. AD authentication should continue to work, and without the need for SQL Server service to restart.
 
-## Next Steps
+## Next steps
 
 - [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)

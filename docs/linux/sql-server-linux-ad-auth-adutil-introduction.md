@@ -198,7 +198,7 @@ Each command is documented so that you can get started right away. Here are some
 
 You can refer to the reference manual page of adutil using the command `man adutil`.
 
-## Next Steps
+## Next steps
 
 - [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)

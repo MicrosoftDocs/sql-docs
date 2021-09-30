@@ -73,4 +73,4 @@ For more information about writing Azure Monitor Logs, visit [Azure Monitor docu
 - [Create diagnostic settings to send platform logs and metrics to different destinations](/azure/azure-monitor/essentials/diagnostic-settings)
 - [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Monitor Logs?](/azure/azure-monitor/logs/data-platform-logs)
-- [Using SandDance visualizations](https://sanddance.js.org/)
+- [Using SandDance visualizations](https://microsoft.github.io/SandDance/)

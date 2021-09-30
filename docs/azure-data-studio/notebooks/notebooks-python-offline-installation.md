@@ -7,7 +7,8 @@ ms.technology: azure-data-studio
 author: lucyzhang929
 ms.author: luczhan
 ms.reviewer: alayu, maghan
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: 07/02/2021
 ---
 

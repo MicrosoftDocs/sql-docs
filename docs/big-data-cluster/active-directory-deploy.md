@@ -9,6 +9,8 @@ ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server Big Data Cluster in Active Directory mode

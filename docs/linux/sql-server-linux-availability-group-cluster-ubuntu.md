@@ -211,7 +211,7 @@ Use constraints to configure the decisions of the cluster. Constraints have a sc
 To ensure that primary replica and the virtual ip resource are on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. 
 
 ```bash
-sudo pcs constraint colocation add master virtualip with master ag_cluster-clone INFINITY
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY
 ```
 
 ## Add ordering constraint

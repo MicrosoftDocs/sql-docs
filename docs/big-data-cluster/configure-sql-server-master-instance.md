@@ -2,13 +2,15 @@
 title: Configure SQL Server master instance
 titleSuffix: Configure SQL Server master instance of Big Data Cluster
 description: Configure the master instance of a SQL Server Big Data Cluster
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-overview
 ---
 
 # Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

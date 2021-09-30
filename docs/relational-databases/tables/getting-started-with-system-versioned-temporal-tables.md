@@ -1,7 +1,8 @@
 ---
 description: "Getting Started with System-Versioned Temporal Tables"
 title: "Getting Started with System-Versioned Temporal Tables | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "03/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

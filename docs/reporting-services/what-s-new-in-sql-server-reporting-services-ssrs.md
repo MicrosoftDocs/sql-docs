@@ -8,7 +8,8 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: 08/26/2021
 ---
 
@@ -24,7 +25,7 @@ For information about Power BI Report Server, see [What is Power BI Report Serve
 
 ## SQL Server 2019 Reporting Services
 
-**Download** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
+**Download** :::image type="icon" source="/analysis-services/analysis-services/media/download.png":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) is available for download from the Microsoft Download Center.
 
@@ -62,7 +63,7 @@ The newly released version of Report Builder is fully compatible with the 2016, 
 
 ## SQL Server 2017 Reporting Services
 
-**Download** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
+**Download** :::image type="icon" source="/analysis-services/analysis-services/media/download.png":::
 
 To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
@@ -246,4 +247,4 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

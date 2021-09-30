@@ -10,6 +10,8 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server big data cluster with Azure Data Studio notebook
@@ -20,7 +22,7 @@ ms.technology: big-data-cluster
 
 Implemented initially as an open-source project, [notebooks](../azure-data-studio/notebooks/notebooks-guidance.md) have been implemented into [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
-You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
+You can use notebooks to deploy SQL Server big data clusters.
 
 ## Prerequisites
 
@@ -80,6 +82,9 @@ Note: The same account is used for controller and SQL Server.
    ![Cluster settings](media/notebooks-deploy/cluster-settings.png)
 
 2. Enter the Docker settings as appropriate
+
+   > [!IMPORTANT]
+   > Make sure image tag field is latest: __2019-CU13-ubuntu-20.04__
 
    ![Docker settings](media/notebooks-deploy/docker-settings.png)
 

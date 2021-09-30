@@ -2,12 +2,14 @@
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
 description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sqlfreshmay19"
+ms.custom:
+  - sqlfreshmay19
+  - intro-installation
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
@@ -94,7 +96,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 >
 > - Ubuntu 18.04 is supported starting with SQL Server 2019 CU3.
 > - Ubuntu 20.04 is supported starting with SQL Server 2019 CU10.
-> - If you are using Ubuntu 20.04, change the repository path from `/ubuntu/16.04` to `/ubuntu/20.04`.
+> - If you are using Ubuntu 18.04 or Ubuntu 20.04, change the repository path in step 2 below from `/ubuntu/16.04` to `/ubuntu/18.04` or `/ubuntu/20.04`.
 
 1. Import the public repository GPG keys.
 

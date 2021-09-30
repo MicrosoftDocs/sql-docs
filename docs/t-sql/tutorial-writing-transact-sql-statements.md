@@ -1,13 +1,14 @@
 ---
 description: "Tutorial: Writing Transact-SQL Statements"
 title: "Tutorial: Writing Transact-SQL Statements | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "08/03/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL statements, tutorials"
   - "Transact-SQL tutorials"
   - "tutorials [Transact-SQL]"

@@ -2,7 +2,8 @@
 description: "Project Settings (Migration) (MySQLToSQL)"
 title: "Project Settings (Migration) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma

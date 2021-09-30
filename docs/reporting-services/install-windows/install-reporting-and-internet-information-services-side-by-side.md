@@ -4,13 +4,14 @@ title: "Install Reporting and Internet Information Services Side-by-Side | Micro
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deploying [Reporting Services], IIS"
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
+ms.custom:
+  - intro-installation
 ---
 
 # Install Reporting and Internet Information Services Side-by-Side
@@ -79,4 +80,4 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
 [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -2,7 +2,8 @@
 description: "Installing SSMA for DB2 (DB2ToSQL)"
 title: "Installing SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma

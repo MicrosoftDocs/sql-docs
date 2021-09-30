@@ -7,7 +7,8 @@ ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: 
+ms.custom:
+  - intro-get-started
 ms.date: 07/30/2020
 ---
 

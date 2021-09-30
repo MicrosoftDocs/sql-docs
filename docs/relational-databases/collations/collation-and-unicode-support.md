@@ -576,7 +576,7 @@ These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)]
 
 UTF-8 is available only to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **nchar** and **nvarchar** data types allow UCS-2 or UTF-16 encoding only, and they remain unchanged.
 
-Azure SQL Database and Azure SQL Managed Instance also support UTF-8.
+Azure SQL Database and Azure SQL Managed Instance also support UTF-8 on database and column level, while Managed Instance supports this on a server level as well.
 
 ### <a name="storage_differences"></a> Storage differences between UTF-8 and UTF-16
 The Unicode Consortium allocates to each character a unique code point, which is a value in the range 000000–10FFFF. With [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], both UTF-8 and UTF-16 encodings are available to represent the full range:    

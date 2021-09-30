@@ -4,13 +4,13 @@ title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft 
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-
-
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: "= sql-server-2016"
+ms.custom:
+  - intro-migration
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)
@@ -126,4 +126,4 @@ monikerRange: "= sql-server-2016"
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

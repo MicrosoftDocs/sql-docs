@@ -1,14 +1,15 @@
 ---
 description: "What Is ODBC?"
 title: "What Is ODBC? | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-overview
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC [ODBC], about ODBC"
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: David-Engel

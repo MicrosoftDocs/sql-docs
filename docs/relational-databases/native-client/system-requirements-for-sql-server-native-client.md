@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on your server.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requires Windows Installer 3.1. Windows Installer 3.1 is already installed on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating systems. For all other platforms you need to explicitly install it. For more information, see [Windows Installer 3.1 Redistributable (v2)](https://www.microsoft.com/download/details.aspx?id=25).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requires Windows Installer 3.1. Windows Installer 3.1 is already installed on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating systems. For all other platforms you need to explicitly install it. For more information, see [Windows Installer 3.1 Redistributable (v2)](https://support.microsoft.com/topic/windows-installer-3-1-v2-3-1-4000-2435-is-available-e3978d9b-5fbf-bfec-71b9-1a463290065a).  
   
 > [!NOTE]  
 >  Make sure you log on with administrator privileges before installing this software.  

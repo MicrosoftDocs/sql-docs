@@ -36,20 +36,22 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  The password configured for the **repl_distributor** remote server entry during setup is associated with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login, **distributor_admin**, which is added to the **sysadmin** fixed server role at the Distributor. The **distributor_admin** login is used by replication stored procedures when connecting to the Distributor.  
   
 > [!NOTE]  
->  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.  
+>  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.
 
-## If distributor_admin account at distributor is disabled 
+## Disabling the distributor_admin login
 
-**Incase of remote distributor**
--  Publication creation/deletion will not work.
--  Cannot change the articles in existing publication.
--  Agent status from GUI at publisher will not work.
--  Subscription creation/deletion will not work.
--  Tracer token will not work.
--  Cannot configure a remote publisher at distributor.
+It is not recommended to disable the **distributor_admin** login. If the **distributor_admin** login at distributor is disabled, you may experience the following or additional errors.
 
-**Incase of local distributor**
--  Everything will work fine.
+When using remote distributor, disabling the **distributor_admin** login will encounter the following issues.
+
+- The creation or deletion of publications will not be possible.
+- It will not be possible to change the articles of an existing publication.
+- It will not be possible to show the agent status using SSMS or replication monitor on the publisher.
+- It will not be possible to create or delete subscriptions.
+- The posting of tracer tokens via replication monitor or by executing **sys.sp_posttracertoken** will not be possible.
+- Configuring a remote publisher at the distributor will not be possible.
+
+When using a local distributor, disabling the **distributor_admin** login may not encounter any of the above issues but is still not a recommended practice.
   
 ## Snapshot Folder Security  
  Ensure that the snapshot share has read access granted to the account under which the Merge Agent (for merge replication) or Distribution Agent (for snapshot or transactional replication) runs and write access granted to the account under which the Snapshot Agent runs. For more information about the snapshot folder, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  

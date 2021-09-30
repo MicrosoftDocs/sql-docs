@@ -119,7 +119,7 @@ The extensions settings look like this:
 
 ## SandDance visualization
 
-The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
+The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://microsoft.github.io/SandDance/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
@@ -140,4 +140,4 @@ You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?ass
 - [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
-- [Using SandDance visualizations](https://sanddance.js.org/)
+- [Using SandDance visualizations](https://microsoft.github.io/SandDance/)

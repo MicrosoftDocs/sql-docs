@@ -4,7 +4,7 @@ description: Step by step on how to configure Active Directory authentication wi
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 07/01/2021
+ms.date: 09/30/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -35,7 +35,7 @@ The following are required before configuring AD authentication:
 
 ## Domain machine preparation
 
-Make sure there is forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
+Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 

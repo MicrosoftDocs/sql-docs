@@ -4,7 +4,7 @@ description: Overview of adutil and using it to configure Active Directory for S
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 07/01/2021
+ms.date: 09/30/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

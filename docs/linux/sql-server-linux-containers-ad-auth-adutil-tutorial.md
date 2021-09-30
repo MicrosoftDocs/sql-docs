@@ -4,7 +4,7 @@ description: Step by step on how to configure Active Directory authentication wi
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 07/01/2021
+ms.date: 09/30/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux

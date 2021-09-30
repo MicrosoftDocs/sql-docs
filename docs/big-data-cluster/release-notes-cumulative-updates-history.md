@@ -25,7 +25,7 @@ Cumulative Update 13 (CU13) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4163.5|[2019-CU13-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 13](release-notes-cumulative-update-13.md) |
+|15.0.4178.15|[2019-CU13-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 13](release-notes-cumulative-update-13.md) |
 
 SQL Server Big Data Clusters CU13 includes important changes and capabilities:
 

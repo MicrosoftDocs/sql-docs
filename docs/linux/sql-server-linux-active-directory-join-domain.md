@@ -257,7 +257,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    >
    > - If **kinit user\@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
-For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
+For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/windows_integration_guide/realmd-domain).
 
 ### <a id="option2"></a> Option 2: Use third-party openldap provider utilities
 

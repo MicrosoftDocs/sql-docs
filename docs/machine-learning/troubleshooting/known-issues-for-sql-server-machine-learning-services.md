@@ -260,6 +260,23 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
 
 **Applies to:** SQL Server 2019
 
+### 16. R libraries using specific algorithms, streaming, or partitioning
+
+- **Issue**: The following limitations apply on  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade. This issue applies to Enterprise Edition.
+
+  - Parallelism: `RevoScaleR` and `MicrosoftML` algorithm thread parallelism for scenarios are limited to maximum of 2 threads.
+  - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.
+  - Streaming & partitioning: `RevoScaleR` and `MicrosoftML` data sources (i.e. `ODBC`, `XDF`) does not support reading rows in chunks for training or scoring scenarios. These scenarios always bring all data to memory for computation and the operations are memory bound
+
+- **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../install/change-default-language-runtime-version.md), after you complete the following tasks.
+
+   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the instance shared directory, as configured.
+   1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi140.dll` from the folder `C:\Program Files\Microsoft SQL Server\140\Shared` to the newly created folder.
+   1. Rename the `instapi140.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
+
+> [!IMPORTANT]
+> If you do the steps above, you must manually remove the added key prior to upgrading to a later version of SQL Server.
+
 ## R script execution issues
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.

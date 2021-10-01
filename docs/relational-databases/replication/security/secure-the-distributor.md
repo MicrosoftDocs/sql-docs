@@ -40,18 +40,17 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 
 ## Disabling the distributor_admin login
 
-It is not recommended to disable the **distributor_admin** login. If the **distributor_admin** login at distributor is disabled, you may experience the following or additional errors.
+ If the **distributor_admin** login is disabled at a remote Distributor, you may no longer be able to do the following:
+ 
+ - Create or delete publications.
+ - Change the articles of an existing publication. 
+ - See the agent status using SQL Server Management Studio (SSMS) or Replication Monitor on the Publisher.
+ - Create or delete subscriptions. 
+ - Post tracer tokens by using Replication Monitor or by executing **sys.sp_posttracertoken**.
+ - Configure a remote Publisher at the Distributor. 
 
-When using remote distributor, disabling the **distributor_admin** login will encounter the following issues.
+As such, disabling the **distributor_admin** login at a remote Distributor is not recommended. While disabling the **distributor_admin** login on a local distributor may not impose the same limitations, it is still not a recommended practice. 
 
-- The creation or deletion of publications will not be possible.
-- It will not be possible to change the articles of an existing publication.
-- It will not be possible to show the agent status using SSMS or replication monitor on the publisher.
-- It will not be possible to create or delete subscriptions.
-- The posting of tracer tokens via replication monitor or by executing **sys.sp_posttracertoken** will not be possible.
-- Configuring a remote publisher at the distributor will not be possible.
-
-When using a local distributor, disabling the **distributor_admin** login may not encounter any of the above issues but is still not a recommended practice.
   
 ## Snapshot Folder Security  
  Ensure that the snapshot share has read access granted to the account under which the Merge Agent (for merge replication) or Distribution Agent (for snapshot or transactional replication) runs and write access granted to the account under which the Snapshot Agent runs. For more information about the snapshot folder, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  

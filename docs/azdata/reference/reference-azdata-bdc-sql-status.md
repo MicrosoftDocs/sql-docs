@@ -1,6 +1,6 @@
 ---
 title: azdata bdc sql status reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc sql status commands.
 author: MikeRayMSFT
 ms.author: mikeray

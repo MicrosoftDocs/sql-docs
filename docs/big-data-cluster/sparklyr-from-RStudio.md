@@ -69,7 +69,7 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 
 ## Run sparklyr queries
 
-After connecting to Spark, you can run sparklyr. The following example performs a query on iris dataset using sparklyr:
+After connecting to Spark, you can run sparklyr. The following example performs a query on the `iris` dataset using sparklyr:
 
 ```r
 iris_tbl <- copy_to(sc, iris)

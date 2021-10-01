@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains how to use **azdata** to perform high performant distributed data copies between [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+This article explains how to use **azdata** to perform high performant distributed data copies between [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## <a id="prereqs"></a> Prerequisites
 
@@ -25,15 +25,15 @@ This article explains how to use **azdata** to perform high performant distribut
 
 ## Introduction to distributed data copies on SQL Server Big Data Clusters
 
-Hadoop HDFS DistCP is a command-line tool used to perform distributed parallel copies of files and folders from one HDFS cluster to another. This enables fast transfer of Data Lake scale files and folders between two different clusters; enabling migrations, creation of segmented environments, high-availability and disaster recovery scenarios.
+Hadoop HDFS DistCP is a command-line tool used to perform distributed parallel copies of files and folders from one HDFS cluster to another. Distributed parallel copying enables fast transfer of Data Lake scale files and folders between two different clusters, enabling migrations, the creation of segmented environments, high-availability, and disaster recovery scenarios.
 
-It uses an internal MapReduce job to expand a list of files and directories into input to multiple map tasks, each of which will copy a partition of the files specified in the source list to the destination. This allows multiple data nodes in the source cluster to send data directly to multiple data nodes in the destination clusters, creating a truly distributed parallel copy scenario.
+Hadoop HDFS DistCP uses an internal MapReduce job to expand a list of files and directories into input to multiple map tasks, each of which will copy a partition of the files specified in the source list to the destination. This allows multiple data nodes in the source cluster to send data directly to multiple data nodes in the destination clusters, creating a truly distributed parallel copy scenario.
 
-On SQL Server Big Data Clusters CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command. The command is an asynchronous operation, it returns immediately and the copy job is running on the background. You should monitory the copy job using either ``azdata`` or the provided monitoring user interfaces.
+On [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command. The command is an asynchronous operation, it returns immediately while the copy job executes in the background. Monitor the copy job using either `azdata` or the provided monitoring user interfaces.
 
-Only SQL Server Big Data Clusters sources and destinations are supported.
+Only [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] sources and destinations are supported.
 
-Clusters may be deployed in both Active Directory enabled mode or basic security modes and copies may be performed between any combination of those modes. It is required that Active Directory enabled clusters are in the same domain.
+Clusters may be deployed in both Active Directory enabled mode or basic security modes. Copies may be performed between any combination of security modes. For Active Directory enabled clusters, it is required that they are in the same domain.
 
 In this guide we will cover the following data copy scenarios:
 
@@ -45,7 +45,7 @@ In this guide we will cover the following data copy scenarios:
 
 Certificates are required to create a trusted relationship between source and destination clusters. These steps are required only once per source/destination cluster combination.
 
-The required notebooks in the next steps are part of the Operational notebooks for SQL Server Big Data Clusters, to learn how to install and use the notebooks, see: [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md)
+The required notebooks in the next steps are part of the Operational notebooks for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]. For more information how to install and use the notebooks, see [Operational notebooks](cluster-manage-notebooks.md)
 
 ### Step 1 - Certificate creation and installation
 
@@ -69,7 +69,7 @@ Connect to your __destination cluster__ using Azure Data Studio. This is where t
 Perform the following steps:
 
    > [!WARNING]
-   > If you're using Azure Data Studio on different machines to perform this tasks, copy the ``cluster-ca-certificate.crt`` and ``cacert.pem`` files generated on Step 1 to the right locations on the other machine before running the notebook bellow.
+   > If you're using Azure Data Studio on different machines to perform this tasks, copy the ``cluster-ca-certificate.crt`` and ``cacert.pem`` files generated on Step 1 to the right locations on the other machine before running the notebook in the next step.
 
 1. Install the new root certificate from the source cluster to the destination cluster using ``cer005-install-existing-root-ca.ipynb``. This step will take 10-15 minutes.
 
@@ -77,7 +77,7 @@ Perform the following steps:
 
 You need to create a keytab file if __any__ of the clusters is Active Directory enabled. The file will perform authentication to enable the copy to take place.
 
-Create the keytab file using ktutil. Make sure to define or replace the environment variables ``DOMAIN_SERVICE_ACCOUNT_USERNAME``, ``DOMAIN_SERVICE_ACCOUNT_PASSWORD`` and ``REALM`` with the appropriate values.
+Create the keytab file using `ktutil`. An example follows. Make sure to define or replace the environment variables ``DOMAIN_SERVICE_ACCOUNT_USERNAME``, ``DOMAIN_SERVICE_ACCOUNT_PASSWORD``, and ``REALM`` with the appropriate values.
 
 ```bash
 ktutil
@@ -114,7 +114,7 @@ azdata bdc hdfs cp -f /tmp/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab -t /user/$DOM
     export DISTCP_KRB5KEYTAB=/user/$DOMAIN_SERVICE_ACCOUNT_USERNAME/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab
     ```
 
-2. Either define or replace ``CLUSTER_CONTROLLER``, ``DESTINATION_CLUSTER_NAMESPACE`` and ``PRINCIPAL`` variables with appropriate vales. Then use ``azdata`` to login to destination cluster:
+2. Either define or replace ``CLUSTER_CONTROLLER``, ``DESTINATION_CLUSTER_NAMESPACE``, and ``PRINCIPAL`` variables with appropriate vales. Then use `azdata` to authenticate to destination cluster:
 
     ```bash
     azdata login --auth ad --endpoint $CLUSTER_CONTROLLER --namespace $DESTINATION_CLUSTER_NAMESPACE --principal $PRINCIPAL
@@ -128,7 +128,7 @@ azdata bdc hdfs cp -f /tmp/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab -t /user/$DOM
 
 ### Scenario 2 - Basic security cluster to Active Directory enabled cluster
 
-1. Export the required environment variable ``DISTCP_KRB5KEYTAB``, ``DISTCP_AZDATA_USERNAME`` and ``DISTCP_AZDATA_PASSWORD``:
+1. Export the required environment variable ``DISTCP_KRB5KEYTAB``, ``DISTCP_AZDATA_USERNAME``, and ``DISTCP_AZDATA_PASSWORD``:
 
     ```bash
     export DISTCP_KRB5KEYTAB=/user/$DOMAIN_SERVICE_ACCOUNT_USERNAME/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab
@@ -136,7 +136,7 @@ azdata bdc hdfs cp -f /tmp/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab -t /user/$DOM
     export DISTCP_AZDATA_PASSWORD=<your basic security bdc password>
     ```
 
-2. Either define or replace ``CLUSTER_CONTROLLER``, ``DESTINATION_CLUSTER_NAMESPACE`` and ``PRINCIPAL`` variables with appropriate vales. Then use ``azdata`` to login to destination cluster:
+2. Either define or replace ``CLUSTER_CONTROLLER``, ``DESTINATION_CLUSTER_NAMESPACE``, and ``PRINCIPAL`` variables with appropriate vales. Then use ``azdata`` to authenticate to destination cluster:
 
     ```bash
     azdata login --auth ad --endpoint $CLUSTER_CONTROLLER --namespace $DESTINATION_CLUSTER_NAMESPACE --principal $PRINCIPAL
@@ -157,7 +157,7 @@ azdata bdc hdfs cp -f /tmp/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab -t /user/$DOM
     export DISTCP_AZDATA_PASSWORD=<your basic security bdc password>
     ```
 
-2. Use ``azdata`` to login to destination cluster
+2. Use ``azdata`` to authenticate to destination cluster
 
 3. Run the distributed data copy
 
@@ -167,7 +167,7 @@ azdata bdc hdfs cp -f /tmp/$DOMAIN_SERVICE_ACCOUNT_USERNAME.keytab -t /user/$DOM
 
 ## Monitoring the distributed copy job
 
-The ``azdata bdc hdfs distcp submit`` command is an asynchronous operation, it returns immediately while the copy job is running on the background. You should monitory the copy job using either ``azdata`` or the provided monitoring user interfaces.
+The ``azdata bdc hdfs distcp submit`` command is an asynchronous operation, it returns immediately while the copy job is running on the background. Monitor the copy job using either ``azdata`` or the provided monitoring user interfaces.
 
 ### List all distributed copy jobs
 
@@ -175,9 +175,9 @@ The ``azdata bdc hdfs distcp submit`` command is an asynchronous operation, it r
 azdata bdc hdfs distcp list
 ```
 
-Take note of the job id of job you and to track. All other commands depend on it.
+Take note of the `job-id` of job you and to track. All other commands depend on it.
 
-### Get the simple state of a distributed copy job
+### Get the state of a distributed copy job
 
 ```bash
 azdata bdc hdfs distcp state [--job-id | -i] <JOB_ID>
@@ -197,13 +197,13 @@ azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
 
 ## Distributed copy hints
 
-1. In order to copy entire directories and its contents, end the path argument with a directory, without the '/'. The following example copies the entire ``sourceDirectories`` directory to the root HDFS destination:
+1. In order to copy entire directories and their contents, end the path argument with a directory, without the '/'. The following example copies the entire ``sourceDirectories`` directory to the root HDFS destination:
 
     ```bash
     azdata bdc hdfs distcp submit --from-path https://$SOURCE_CLUSTER_IP:30443/sourceDirectories --to-path /
     ```
 
-1. The command may contain options, supporting --overwrite, --preserve, --update, and --delete modifiers. The modifier should be placed just after the submit keyword, like bellow:
+1. The command may contain options, supporting the `--overwrite`, `--preserve`, `--update`, and `--delete` modifiers. The modifier should be placed just after the submit keyword, like below:
 
     ```bash
     azdata bdc hdfs distcp submit {options} --from-path https://$SOURCE_CLUSTER_IP:30443/sourceDirectories --to-path /
@@ -211,6 +211,6 @@ azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
 
 ## Next steps
 
-For more information about SQL Server big data cluster, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
 For complete reference of the new command, see [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md).

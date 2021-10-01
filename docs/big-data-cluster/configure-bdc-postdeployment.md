@@ -1,7 +1,7 @@
 ---
-title: SQL Server Big Data Clusters Post-Deployment Configuration Overview
-titleSuffix: SQL Server big data clusters
-description: Big Data Clusters Post-Deployment Configuration Overview
+title: SQL Server Big Data Clusters post-deployment configuration overview
+titleSuffix: SQL Server Big Data Clusters
+description: Big data clusters post-deployment configuration overview
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to configure Big Data Clusters settings post deployment
+# How to configure big data clusters settings post deployment
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 > [!NOTE]
-> Post-deplyoment settings configuration is only available in BDC CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure BDC prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
+> Post-deployment settings configuration is only available in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
 
-Cluster, service, and resource scoped settings for Big Data Clusters can be configured post-deployment through the azdata CLI. This functionality allows BDC administrators to adjust configurations to always meet workload requirements. This article goes over example scenarios on how to configure timezone and Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
+Cluster, service, and resource scoped settings for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be configured post-deployment through the `azdata` CLI. This functionality allows [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] administrators to adjust configurations to always meet workload requirements. This article goes over example scenarios on how to configure timezone and Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
 
-## Step by Step Scenario: Configure timezone on Big Data Clusters
+## Step by Step Scenario: Configure timezone on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
-Starting on SQL Server Big Data Clusters CU13 it is possible to customize the cluster timezone configuration, so services timestamps align with the selected timezone. The setting does not apply to Big Data Clusters control plane, it sets the new timezone configuration for all SQL Server pools (master, compute and data), Hadoop components and Spark.
+Starting on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 it is possible to customize the cluster timezone configuration, so services timestamps align with the selected timezone. The setting does not apply to the big data cluster control plane, it sets the new timezone configuration for all SQL Server pools (master, compute, and data), Hadoop components, and Spark.
 
 > [!NOTE]
-> By default, Big Data Clusters sets UTC as the timezone.
+> By default, [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] sets UTC as the timezone.
 
 Use the following command to set the timezone configuration:
 
@@ -60,9 +60,9 @@ Spark Service
 |`spark-defaults-conf.spark.driver.cores`|`1` |
 |`spark-defaults-conf.spark.driver.memory`|`1664m` |
 
-### Change the default number of cores and memory for the Spark driver across all resources with Spark (i.e. for the Spark service)
+### Change the default number of cores and memory for the Spark driver 
 
-Update the default number of cores to 2 and default memory to 7424m for the Spark service.
+Update the default number of cores to two and default memory to 7424 MB for the Spark service. This affects all resources with Spark, for the Spark service.
 
 ```bash
 azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=2,spark-defaults-conf.spark.driver.memory=7424m
@@ -78,7 +78,7 @@ azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.core
 
 ### Configure additional paths to the default classpath of Spark applications
 
-The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the referred path is not loaded by default in the classpath of Spark applications. To enable this setting apply the following configuration pattern.
+The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the referred path is not loaded by default in the classpath of Spark applications. To enable this setting, apply the following configuration pattern.
 
 ```bash
 azdata bdc hdfs settings set --settings hadoop-env.HADOOP_CLASSPATH="/opt/hadoop/share/hadoop/tools/lib/*"

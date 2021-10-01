@@ -148,7 +148,7 @@ __Encryption Zones won't be configured__. The Hadoop KMS component won't be conf
 If you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones there are two options available:
 
 * Execution of the Azure Data Studio [Operational Notebook](cluster-manage-notebooks.md) named __SOP0128 - Enable HDFS Encryption zones in Big Data Clusters__ to perform the configuration.
-* Script execution as described bellow.
+* Script execution as described below.
 
 Requirements:
 

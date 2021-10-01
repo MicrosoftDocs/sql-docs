@@ -19,7 +19,7 @@ ms.technology: big-data-cluster
 In this guide, you'll learn:
 
 > [!div class="checklist"]
-> * The requisites and capabilities of Delta Lake on SQL Server Big Data Clusters.
+> * The requisites and capabilities of Delta Lake on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 > * How to load Delta Lake libraries on CU12 clusters to use with Spark 2.4 sessions and jobs.
 
 ## Introduction
@@ -29,18 +29,18 @@ Linux Foundation Delta Lake is an open-source storage layer that brings ACID (at
 * [What is Delta Lake?](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
 * [Introduction to Delta Lake](https://docs.delta.io/1.0.0/delta-intro.html)
 
-## Delta Lake on SQL Server Big Data Clusters CU13 and above (Spark 3)
+## Delta Lake on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 and above (Spark 3)
 
-Delta Lake is installed and configured by default on SQL Server Big Data Clusters Cumulative Update 13 and above. No further action is required.
+Delta Lake is installed and configured by default on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 and above. No further action is required.
 
-The following sections of this article covers configuration of Delta Lake on Big Data Clusters CU12 and bellow.
+This article covers configuration of Delta Lake on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU12 and below.
 
-## Configure Delta Lake on SQL Server Big Data Clusters on CU12 and bellow (Spark 2.4)
+## Configure Delta Lake on SQL Server Big Data Clusters CU12 and below (Spark 2.4)
 
-On SQL Server 2019 Big Data Clusters CU12 or bellow, it is possible to load Delta Lake libraries using the [Spark library management](spark-install-packages.md) feature.
+On [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU12 or below, it is possible to load Delta Lake libraries using the [Spark library management](spark-install-packages.md) feature.
 
 > [!NOTE]
-   > As a general rule, use the most recent compatible library. The code in this guide was tested by using Delta Lake 0.6.1 on SQL Server Big Data Clusters CU12. Delta Lake 0.6.1 is compatible with Apache Spark 2.4.x, later versions are not. The examples are provided as-is, not a supportability statement.
+> As a general rule, use the most recent compatible library. The code in this guide was tested by using Delta Lake 0.6.1 on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU12. Delta Lake 0.6.1 is compatible with Apache Spark 2.4.x, later versions are not. The examples are provided as-is, not a supportability statement.
 
 ### Configure Delta Lake library and Spark configuration options
 
@@ -48,9 +48,9 @@ Set up your Delta Lake libraries with your application before you submit the job
 
 * [delta-core](https://mvnrepository.com/artifact/io.delta/delta-core) - This core library enables Delta Lake support.
 
-The library must target Scala 2.11 and Spark 2.4.7. This SQL Server Big Data Cluster requirement is for SQL 2019 Cumulative Update 9 (CU9) or later.
+The library must target Scala 2.11 and Spark 2.4.7. This [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] requirement is for SQL Server 2019 Cumulative Update 9 (CU9) or later.
 
-It's also required to configure Spark to enable Delta Lake-specific Spark SQL commands and the metastore integration. The example bellow is how an Azure Data Studio notebook would configure Delta Lake support:
+It's also required to configure Spark to enable Delta Lake-specific Spark SQL commands and the metastore integration. The example below is how an Azure Data Studio notebook would configure Delta Lake support:
 
 ```python
 %%configure -f \
@@ -103,6 +103,6 @@ To learn how to effectively use Delta Lake, see the following articles.
 * [Linux Foundation Delta Lake](/azure/synapse-analytics/spark/apache-spark-delta-lake-overview)
 * [Delta Lake quickstart](https://docs.delta.io/0.6.1/quick-start.html)
 
-To submit Spark jobs to SQL Server Big Data Clusters by using `azdata` or Livy endpoints, see [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).
+To submit Spark jobs to [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] by using `azdata` or Livy endpoints, see [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).
 
-For more information about SQL Server Big Data Clusters and related scenarios, see [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

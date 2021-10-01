@@ -66,7 +66,8 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 copies the file MyAGCert.cer to the folder specified on the other server. Note that you must have permissions - and possibly ownership - of the file to copy it, so `chown` may also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file, the `mssql` user must be able to access it.
 
 Samba, which is the Linux variant of server message block (SMB), can also be used to create shares accessed by UNC paths such as `\\SERVERNAME\SHARE`. For more information on configuring Samba, see the information at the following links for each distribution:
--   [RHEL](https://access.redhat.com/documentation/ja_jp/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/chap-managing_confined_services-samba)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/chap-managing_confined_services-samba)
+
 -   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 

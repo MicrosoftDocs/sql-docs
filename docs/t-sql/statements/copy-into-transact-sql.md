@@ -15,8 +15,8 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: anumjs
-ms.author: anjangsh
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)

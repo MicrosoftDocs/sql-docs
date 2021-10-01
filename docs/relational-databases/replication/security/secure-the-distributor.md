@@ -36,7 +36,21 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  The password configured for the **repl_distributor** remote server entry during setup is associated with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login, **distributor_admin**, which is added to the **sysadmin** fixed server role at the Distributor. The **distributor_admin** login is used by replication stored procedures when connecting to the Distributor.  
   
 > [!NOTE]  
->  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.  
+>  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.
+
+## Disabling the distributor_admin login
+
+ If the **distributor_admin** login is disabled at a remote Distributor, you may no longer be able to do the following:
+ 
+ - Create or delete publications.
+ - Change the articles of an existing publication. 
+ - See the agent status using SQL Server Management Studio (SSMS) or Replication Monitor on the Publisher.
+ - Create or delete subscriptions. 
+ - Post tracer tokens by using Replication Monitor or by executing **sys.sp_posttracertoken**.
+ - Configure a remote Publisher at the Distributor. 
+
+As such, disabling the **distributor_admin** login at a remote Distributor is not recommended. While disabling the **distributor_admin** login on a local distributor may not impose the same limitations, it is still not a recommended practice. 
+
   
 ## Snapshot Folder Security  
  Ensure that the snapshot share has read access granted to the account under which the Merge Agent (for merge replication) or Distribution Agent (for snapshot or transactional replication) runs and write access granted to the account under which the Snapshot Agent runs. For more information about the snapshot folder, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  

@@ -63,7 +63,7 @@ Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | 
 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
 [MicrosoftML](../r/ref-r-microsoftml.md)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
 [pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[sqlrutils](../r/reference/sqlrutils/sqlrutils.md)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[sqlrutils](../r/ref-r-sqlrutils.md)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 [olapR](../r/ref-r-olapr.md) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
@@ -75,7 +75,7 @@ Component |Initial Release | Machine Learning Server 9.3 | Machine Learning Serv
 Microsoft R Open (MRO) over R | R 3.3.3 | R 3.4.3 | R 3.5.2 |
 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
 [MicrosoftML](../r/ref-r-microsoftml.md) | 9.2  | 9.3| 9.4.7 |
-[sqlrutils](../r/reference/sqlrutils/sqlrutils.md)| 1.0 |  1.0 | 1.0 |
+[sqlrutils](../r/ref-r-sqlrutils.md)| 1.0 |  1.0 | 1.0 |
 [olapR](../r/ref-r-olapr.md) | 1.0 |  1.0 | 1.0 |
 Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |

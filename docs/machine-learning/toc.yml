@@ -549,7 +549,6 @@ items:
       - name: Query
         href: ../machine-learning/r/reference/olapr/query.md
     - name: sqlrutils
-      href: ../machine-learning/r/ref-r-sqlrutils.md
       items:
       - name: Package overview
         href: ../machine-learning/r/ref-r-sqlrutils.md

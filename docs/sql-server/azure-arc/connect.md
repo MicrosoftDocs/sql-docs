@@ -177,7 +177,7 @@ To disconnect your SQL Server instance from Azure Arc, go to Azure portal, open 
 ![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
 
 > [!IMPORTANT]
-> Because there could be multiple SQL Server instances installed on the same machine, the *Unregister* button will not uninstall the SQL Server extension.  To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal.md#uninstall-extension) steps.
+> Because there could be multiple SQL Server instances installed on the same machine, the *Unregister* button will not uninstall the SQL Server extension.  To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
 
 ## Restore a deleted SQL Server - Azure Arc resource
 

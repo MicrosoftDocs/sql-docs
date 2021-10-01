@@ -443,11 +443,9 @@ items:
         href: big-data-cluster/kubernetes-rbac.md
       - name: Update AZDATA_PASSWORD
         href: big-data-cluster/change-azdata-password.md
-      - name: Password rotation for auto generated AD service accounts
-        href: big-data-cluster/password-rotation-for-service-accounts.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
-      - name: AD password rotation
+      - name: Password rotation for auto generated AD service accounts
         href: big-data-cluster/active-directory-password-rotation.md
       - name: Encryption at rest
         items:

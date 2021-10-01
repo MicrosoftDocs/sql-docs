@@ -447,6 +447,8 @@ items:
         href: big-data-cluster/password-rotation-for-service-accounts.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
+      - name: AD password rotation
+        href: big-data-cluster/active-directory-password-rotation.md
       - name: Encryption at rest
         items:
           - name: Concepts and configuration
@@ -2773,6 +2775,8 @@ items:
         href: language-extensions/language-extensions-overview.md
       - name: What is Java Language Extension?
         href: language-extensions/java-overview.md
+      - name: What is C# Language Extension?
+        href: language-extensions/csharp-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
     - name: Install
@@ -5356,6 +5360,16 @@ items:
           href: relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md
         - name: Publish stored procedure execution
           href: relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md
+        - name: Peer to peer replication
+          items:
+          - name: Administer a peer to peer topology
+            href: relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md
+          - name: One peer - availabilty group
+            href: relational-databases/replication/transactional/peer-to-peer/single-availability-group.md
+          - name: Two peers - availability groups
+            href: relational-databases/replication/transactional/peer-to-peer/multi-availability-group.md
+          - name: Configure last writer conflict detection & resolution
+            href: relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md
       - name: Merge replication
         items:
         - name: Specify properties
@@ -5408,10 +5422,6 @@ items:
             href: relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md
           - name: Resolving in a logical record
             href: relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md
-      - name: Peer to peer replication
-        items:
-        - name: Administer a P2P topology
-          href: relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md
       - name: Non-SQL replication
         items:
         - name: Create a publication from an Oracle DB
@@ -10268,6 +10278,10 @@ items:
         href: linux/sql-server-linux-active-directory-join-domain.md
       - name: Encrypting connections
         href: linux/sql-server-linux-encrypted-connections.md
+      - name: Introduction to adutil
+        href: linux/sql-server-linux-ad-auth-adutil-introduction.md
+      - name: Rotate SQL Server on Linux keytabs
+        href: linux/sql-server-linux-ad-auth-rotate-keytabs.md
     - name: Performance
       items:
       - name: Best practices

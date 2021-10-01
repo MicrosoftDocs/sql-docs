@@ -49,7 +49,7 @@ azdata bdc config init --source aks-dev-test --target custom
 ```
 ### Optional Parameters
 #### `--path -p`
-File path of where you would like the config profile placed, defaults to <cwd>/custom.
+File path of where you would like the config profile placed, defaults to \<cwd\>/custom.
 #### `--source -s`
 Config profile source: ['kubeadm-dev-test', 'kubeadm-prod', 'openshift-prod', 'aks-dev-test-ha', 'aks-dev-test', 'aro-dev-test', 'openshift-dev-test', 'aro-dev-test-ha']
 #### `--force -f`

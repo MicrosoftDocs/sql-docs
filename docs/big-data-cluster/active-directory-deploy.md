@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 07/09/2021
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -38,6 +38,7 @@ Requests are made on these protocols to and from the Kubernetes cluster services
 | DNS | 53 |
 | LDAP <BR> LDAPS | 389<BR> 636 |
 | Kerberos | 88 |
+| Kerberos/AD Password Change protocol | 464 |
 | Global Catalog port <BR>via LDAP<BR>via LDAPS |<BR> 3268 <BR> 3269 |
 
 ## Set security environment variables

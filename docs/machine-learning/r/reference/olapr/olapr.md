@@ -33,7 +33,7 @@ The **olapR** library provides R functions for importing data from OLAP cubes st
 |--------|-|
 | Current version: |  1.0.0 |
 | Built on: | R 3.4.3 |
-| Package distribution: | [Machine Learning Server for Windows](../../what-is-machine-learning-server.md) </br>[R Client (Windows)](../../r-client/what-is-microsoft-r-client.md) <br/>[R Server 9.1](../../what-is-microsoft-r-server.md)   <br/>[SQL Server 2017 Machine Learning Services (Windows only) and SQL Server 2016 R Services](/sql/machine-learning/sql-server-machine-learning-services) |
+| Package distribution: | [Machine Learning Server for Windows](/machine-learning-server/what-is-machine-learning-server.md) </br>[R Client (Windows)](/machine-learning-server/r-client/what-is-microsoft-r-client.md) <br/>[R Server 9.1](/machine-learning-server/what-is-microsoft-r-server.md)   <br/>[SQL Server 2017 Machine Learning Services (Windows only) and SQL Server 2016 R Services](/sql/machine-learning/sql-server-machine-learning-services) |
 
 
 ## How to use olapR
@@ -142,6 +142,6 @@ Learn more about MDX concepts:
 
 + [Using data from OLAP cubes in R (SQL Server)](https://docs.microsoft.com/sql/advanced-analytics/r/using-data-from-olap-cubes-in-r)
 + [R Package Reference](../introducing-r-server-r-package-reference.md) 
-+ [R Client](../../r-client/what-is-microsoft-r-client.md) 
-+ [R Server](../../what-is-microsoft-r-server.md)
++ [R Client](/machine-learning-server/r-client/what-is-microsoft-r-client.md) 
++ [R Server](/machine-learning-server/what-is-microsoft-r-server.md)
 

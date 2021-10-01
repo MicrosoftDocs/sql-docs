@@ -28,7 +28,7 @@ ms.author: chugu
   
     ![Screenshot showing the Azure Subscription Connection Manager Editor dialog box.](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
   
-2.  Enter your Azure subscription ID, which uniquely identifies an Azure subscription, for the **Azure subscription ID**.  The value can be found on the [Azure Management Portal](https://manage.windowsazure.com) under **Settings** page:  
+2.  Enter your Azure subscription ID, which uniquely identifies an Azure subscription, for the **Azure subscription ID**.  The value can be found on the [Azure Management Portal](https://ms.portal.azure.com) under **Settings** page:  
   
     ![Screenshot of the Azure Management Portal showing the SUBSCRIPTIONS tab of the Settings page.](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")  
   

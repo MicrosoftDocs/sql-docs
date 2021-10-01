@@ -12,6 +12,7 @@ author: "garyericson"
 ms.author: "garye"
 ms.reviewer: garye, davidph
 ms.custom: 
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 
 # Convert R code to a stored procedure using sqlrutils

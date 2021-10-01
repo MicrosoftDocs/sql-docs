@@ -23,6 +23,7 @@ ms.tgt_pltfrm: ""
 #ms.technology: "" 
 ms.custom: "" 
  
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 --- 
  
  

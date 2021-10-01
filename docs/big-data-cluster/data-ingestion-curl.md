@@ -103,4 +103,4 @@ curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<
 
 ## Next steps
 
-For more information, see [Introducing [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]](big-data-cluster-overview.md).
+For more information, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

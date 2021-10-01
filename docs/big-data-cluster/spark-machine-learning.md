@@ -1,7 +1,7 @@
 ---
 title: Use Spark Machine Learning | Microsoft Docs
 titleSuffix: SQL Server Big Data Clusters
-description: Introducing Spark Machine Learning on SQL Server big data clusters.
+description: Introducing Spark Machine Learning on SQL Server Big Data Clusters.
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Introducing Spark Machine Learning on SQL Server big data clusters
+# Introducing Spark Machine Learning on SQL Server Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -21,7 +21,7 @@ This article explains how to effectively use Spark for Machine Learning on [!INC
 
 __SQL Server Big Data Clusters__ enables machine learning scenarios and solutions using different technology stacks: __SQL Server Machine Learning Services__ and __Apache Spark ML__.
 
-To better understand when to use each technology stack, refer to [Machine Learning guide for SQL Server big data clusters](machine-learning-on-bdc.md). This guide covers __Apache Spark ML__.
+To better understand when to use each technology stack, refer to [Machine Learning guide for SQL Server Big Data Clusters](machine-learning-on-bdc.md). This guide covers __Apache Spark ML__.
 
 For big data based machine learning scenarios, the usage of HDFS for big data hosting and Apache Spark ML capabilities is a more cost-effective, scalable and powerful approach. Yet this far from an exhaustive list of the possibilities of what can be achieve with Spark Machine Learning, for a complete list of features see: [Spark MLlib](https://spark.apache.org/mllib/).
 
@@ -44,4 +44,4 @@ The next section provides a curated list of scenarios and references for Spark i
 
 ## Next steps
 
-For more information, see [Introducing [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]](big-data-cluster-overview.md).
+For more information, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

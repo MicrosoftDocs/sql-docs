@@ -36,7 +36,7 @@ Maven packages can be installed onto your Spark cluster using notebook cell conf
 
 ## Install Python packages at PySpark at runtime
 
-Session and Job level package management guarantees library consistency and isolation. The configuration is a Spark standard library configuration that can be applied on Livy sessions. __azdata spark__ support these configurations. The examples bellow are presented as __Azure Data Studio Notebooks__ configure cells that need to be run after attaching to a cluster with the PySpark kernel.
+Session and Job level package management guarantees library consistency and isolation. The configuration is a Spark standard library configuration that can be applied on Livy sessions. __azdata spark__ support these configurations. The examples below are presented as __Azure Data Studio Notebooks__ configure cells that need to be run after attaching to a cluster with the PySpark kernel.
 
 If the __"spark.pyspark.virtualenv.enabled" : "true"__ configuration is not set, the session will use the cluster default python and installed libraries.
 

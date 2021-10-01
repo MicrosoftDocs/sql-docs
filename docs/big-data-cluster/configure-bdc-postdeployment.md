@@ -1,6 +1,6 @@
 ---
-title: SQL Server big data clusters post-deployment configuration overview
-titleSuffix: SQL Server big data clusters
+title: SQL Server Big Data Clusters post-deployment configuration overview
+titleSuffix: SQL Server Big Data Clusters
 description: Big data clusters post-deployment configuration overview
 author: DaniBunny
 ms.author: dacoelho
@@ -16,16 +16,16 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 > [!NOTE]
-> Post-deployment settings configuration is only available in [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
+> Post-deployment settings configuration is only available in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
 
-Cluster, service, and resource scoped settings for [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] can be configured post-deployment through the `azdata` CLI. This functionality allows [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] administrators to adjust configurations to always meet workload requirements. This article goes over example scenarios on how to configure timezone and Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
+Cluster, service, and resource scoped settings for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be configured post-deployment through the `azdata` CLI. This functionality allows [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] administrators to adjust configurations to always meet workload requirements. This article goes over example scenarios on how to configure timezone and Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
 
-## Step by Step Scenario: Configure timezone on [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]
+## Step by Step Scenario: Configure timezone on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
-Starting on [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] CU13 it is possible to customize the cluster timezone configuration, so services timestamps align with the selected timezone. The setting does not apply to the big data cluster control plane, it sets the new timezone configuration for all SQL Server pools (master, compute, and data), Hadoop components, and Spark.
+Starting on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 it is possible to customize the cluster timezone configuration, so services timestamps align with the selected timezone. The setting does not apply to the big data cluster control plane, it sets the new timezone configuration for all SQL Server pools (master, compute, and data), Hadoop components, and Spark.
 
 > [!NOTE]
-> By default, [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] sets UTC as the timezone.
+> By default, [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] sets UTC as the timezone.
 
 Use the following command to set the timezone configuration:
 

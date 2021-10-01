@@ -1,6 +1,6 @@
 ---
 title: azdata sql reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata sql commands.
 author: MikeRayMSFT
 ms.author: mikeray

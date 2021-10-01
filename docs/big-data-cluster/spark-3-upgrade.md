@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article contains important information and guidance for migrating Apache Spark 2.4 workloads to Spark version 3.1. This is required in order to upgrade from SQL Server big data clusters CU12 to CU13, and above.
+This article contains important information and guidance for migrating Apache Spark 2.4 workloads to Spark version 3.1. This is required in order to upgrade from [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU12 to CU13, and above.
 
 ## Introduction of Apache Spark 3 on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -132,7 +132,7 @@ As covered by the [Microsoft Spark Runtime](microsoft-spark-runtime.md) specific
 
 ### How to solve strange java.lang.NoSuchMethodError or java.lang.ClassNotFoundException
 
-This is most likely caused by Spark or Scala version conflict. Please double-check the below and rebuild your project.
+This is most likely caused by Spark or Scala version conflict. Double-check the below and rebuild your project.
 
 1. Make sure all Scala versions are updated.
 1. Make sure all Spark dependencies are updated with correct scala version and spark version.
@@ -156,7 +156,7 @@ write the datetime values as it is, if you are 100% sure that the written files
 will only be read by Spark 3.0+ or other systems that use Proleptic Gregorian calendar.
 ```
 
-__Solution:__ Set configuration spark.sql.legacy.parquet.int96RebaseModeInWrite to LEGACY or CORRECTED, as explained above. This is what a possible solution looks like on PySpark code:
+__Solution:__ Set configuration spark.sql.legacy.parquet.int96RebaseModeInWrite to LEGACY or CORRECTED, as explained above. Below is a possible solution in PySpark code:
 
 ```python
 spark.conf.set("spark.sql.legacy.parquet.int96RebaseModeInWrite","CORRECTED")
@@ -164,4 +164,4 @@ spark.conf.set("spark.sql.legacy.parquet.int96RebaseModeInWrite","CORRECTED")
 
 ## Next steps
 
-For more information, see [Introducing [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]](big-data-cluster-overview.md).
+For more information, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

@@ -1,6 +1,6 @@
 ---
 title: HDFS distributed data copy | Microsoft Docs
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Use azdata distcp to perform data movement between SQL Server big data clusters.
 author: DaniBunny
 ms.author: dacoelho
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains how to use **azdata** to perform high performant distributed data copies between [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)].
+This article explains how to use **azdata** to perform high performant distributed data copies between [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## <a id="prereqs"></a> Prerequisites
 
@@ -23,15 +23,15 @@ This article explains how to use **azdata** to perform high performant distribut
 - [azdata](deploy-big-data-tools.md) version 20.3.8 or superior
 - Two SQL Server big data cluster CU13 or superior
 
-## Introduction to distributed data copies on SQL Server big data clusters
+## Introduction to distributed data copies on SQL Server Big Data Clusters
 
-Hadoop HDFS DistCP is a command-line tool used to perform distributed parallel copies of files and folders from one HDFS cluster to another. This enables fast transfer of Data Lake scale files and folders between two different clusters, enabling migrations, the creation of segmented environments, high-availability, and disaster recovery scenarios.
+Hadoop HDFS DistCP is a command-line tool used to perform distributed parallel copies of files and folders from one HDFS cluster to another. Distributed parallel copying enables fast transfer of Data Lake scale files and folders between two different clusters, enabling migrations, the creation of segmented environments, high-availability, and disaster recovery scenarios.
 
 Hadoop HDFS DistCP uses an internal MapReduce job to expand a list of files and directories into input to multiple map tasks, each of which will copy a partition of the files specified in the source list to the destination. This allows multiple data nodes in the source cluster to send data directly to multiple data nodes in the destination clusters, creating a truly distributed parallel copy scenario.
 
-On [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command. The command is an asynchronous operation, it returns immediately while the copy job executes in the background. Monitor the copy job using either `azdata` or the provided monitoring user interfaces.
+On [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 and above, the distributed copy functionality is integrated into the product and is exposed through the [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md) command. The command is an asynchronous operation, it returns immediately while the copy job executes in the background. Monitor the copy job using either `azdata` or the provided monitoring user interfaces.
 
-Only [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)] sources and destinations are supported.
+Only [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] sources and destinations are supported.
 
 Clusters may be deployed in both Active Directory enabled mode or basic security modes. Copies may be performed between any combination of security modes. For Active Directory enabled clusters, it is required that they are in the same domain.
 
@@ -45,7 +45,7 @@ In this guide we will cover the following data copy scenarios:
 
 Certificates are required to create a trusted relationship between source and destination clusters. These steps are required only once per source/destination cluster combination.
 
-The required notebooks in the next steps are part of the Operational notebooks for [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]. For more information how to install and use the notebooks, see [Operational notebooks](cluster-manage-notebooks.md)
+The required notebooks in the next steps are part of the Operational notebooks for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]. For more information how to install and use the notebooks, see [Operational notebooks](cluster-manage-notebooks.md)
 
 ### Step 1 - Certificate creation and installation
 
@@ -211,6 +211,6 @@ azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
 
 ## Next steps
 
-For more information, see [Introducing [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]](big-data-cluster-overview.md).
+For more information, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
 For complete reference of the new command, see [azdata bdc hdfs distcp](../azdata/reference/reference-azdata-bdc-hdfs.md).

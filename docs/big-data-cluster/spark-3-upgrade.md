@@ -15,32 +15,32 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article contains important information and guidance for migrating Apache Spark 2.4 workloads to Spark version 3.1. This is required in order to upgrade from SQL Server Big Data Clusters CU12 to CU13 and above.
+This article contains important information and guidance for migrating Apache Spark 2.4 workloads to Spark version 3.1. This is required in order to upgrade from SQL Server big data clusters CU12 to CU13, and above.
 
-## Introduction of Apache Spark 3 on SQL Server Big Data Clusters
+## Introduction of Apache Spark 3 on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
-Up to cumulative update 12 (CU12), Big Data Clusters relied on the Apache Spark 2.4 line, which reached its [end of life in May 2021](https://spark.apache.org/versioning-policy.html). Consistent with our commitment to continuous improvements of the Big Data and Machine Learning capabilities brought by the Apache Spark engine, CU13 brings in the current release of Apache Spark, version 3.1.2.
+Up to cumulative update 12 (CU12), big data clusters relied on the Apache Spark 2.4 line, which reached its [end of life in May 2021](https://spark.apache.org/versioning-policy.html). Consistent with our commitment to continuous improvements of the Big Data and Machine Learning capabilities brought by the Apache Spark engine, CU13 brings in the current release of Apache Spark, version 3.1.2.
 
 ### A new performance baseline
 
-This new version of Apache Spark brings stellar performance benefits over big data processing workloads. Using the reference __TCP-DS 10TB workload__ in our tests we were able to reduce runtime from 4.19 hours to 2.96 hours, a __29.36% improvement__ achieved just by switching engines using the same hardware and configuration profile on SQL Server Big Data Clusters, no additional application optimizations. The improvement mean of individual query runtime is 36%.
+This new version of Apache Spark brings performance benefits over big data processing workloads. Using the reference __TCP-DS 10TB workload__ in our tests we were able to reduce runtime from 4.19 hours to 2.96 hours, a __29.36% improvement__ achieved just by switching engines using the same hardware and configuration profile on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)], no additional application optimizations. The improvement mean of individual query runtime is 36%.
 
-![Submit menu by clicking dashboard](./media/spark-3-upgrade/spark-2-vs-3-tcpds-10tb.png)
+:::image type="content" source="./media/spark-3-upgrade/spark-2-vs-3-tcpds-10tb.png" alt-text="Submit menu by clicking dashboard" lightbox="./media/spark-3-upgrade/spark-2-vs-3-tcpds-10tb.png":::
 
 ### Upgrade guidance
 
-Spark 3 is a major release and as such, __contains breaking changes__. Following the same established best practice in the SQL Server universe, its recommended:
+Spark 3 is a major release and __contains breaking changes__. Following the same established best practice in the SQL Server universe, it's recommended:
 
-1. Review this document entirely
-1. Review the official [Apache Spark 3 Migration Guide](https://spark.apache.org/docs/3.1.2/core-migration-guide.html)
-1. Perform a side-by-side deployment of the new SQL Server Big Data Clusters CU13 with your current environment
-1. (Optional) Leverage the new [azdata HDFS distributed copy](distributed-data-copy-hdfs.md) capability to have a subset of your data needed for validation
-1. Validate your current workload with Spark 3 before upgrading
-1. Reassess enforced Spark optimizations in your code and table definition strategies. Spark 3 brings new shuffling, partitioning and Adaptive Query Execution enhancements; its a great opportunity to re-evaluate previous decisions and try leverage the newer engine out-of-the-box features.
+1. Review this article entirely.
+1. Review the official [Apache Spark 3 Migration Guide](https://spark.apache.org/docs/3.1.2/core-migration-guide.html).
+1. Perform a side-by-side deployment of a new big data cluster version CU13 with your current environment.
+1. (Optional) Leverage the new [azdata HDFS distributed copy](distributed-data-copy-hdfs.md) capability to have a subset of your data needed for validation.
+1. Validate your current workload with Spark 3 before upgrading.
+1. Reassess enforced Spark optimizations in your code and table definition strategies. Spark 3 brings new shuffling, partitioning, and Adaptive Query Execution enhancements. This is a great opportunity to re-evaluate previous decisions and try leverage the newer engine out-of-the-box features.
 
 ## What happens during cluster upgrade?
 
-The cluster upgrade process will deploy Spark pods with the new version and the refreshed [Microsoft Spark Runtime](microsoft-spark-runtime.md). After the upgrade there will be no Spark 2.4 components anylonger.
+The cluster upgrade process will deploy Spark pods with the new version and the refreshed [Microsoft Spark Runtime](microsoft-spark-runtime.md). After the upgrade there will be no Spark 2.4 components any longer.
 
 Persistent configuration changes made through the configuration framework will be preserved.
 
@@ -59,13 +59,13 @@ Spark 3 is not fully backward compatible with 2.4, the breaking changes are main
 
 ## Scala 2.12 used by Spark 3 is incompatible with Scala 2.11
 
-If running Spark jobs based on Scala 2.11 jars, it is required to rebuild it using Scala 2.12. Scala 2.11 and 2.12 are mostly source compatible, but not binary compatible. For details, please refer to [https://www.scala-lang.org/news/2.12.0](https://www.scala-lang.org/news/2.12.0/).
+If running Spark jobs based on Scala 2.11 jars, it is required to rebuild it using Scala 2.12. Scala 2.11 and 2.12 are mostly source compatible, but not binary compatible. For more information, see [Scala 2.12.0](https://www.scala-lang.org/news/2.12.0/).
 
 Below changes are needed:
 
-1. Change Scala version for all Scala dependencies
-1. Change Spark version for all Spark dependencies
-1. Change all Spark dependencies have provided scope except external dependencies such as ```spark-sql-kafka-0-10```
+1. Change Scala version for all Scala dependencies.
+1. Change Spark version for all Spark dependencies.
+1. Change all Spark dependencies have provided scope except external dependencies such as ```spark-sql-kafka-0-10```.
  
 Here is a sample pom.xml as below:
 
@@ -110,7 +110,7 @@ Here is a sample pom.xml as below:
 
 ## Spark 3 API changes and deprecations
 
-Review the official [Apache Spark 3 Migration Guide](https://spark.apache.org/docs/3.1.2/core-migration-guide.html), it covers all API changes in detail.
+Review the official [Apache Spark 3 Migration Guide](https://spark.apache.org/docs/3.1.2/core-migration-guide.html), which covers all API changes in detail.
 
 Some captured highlights are:
 
@@ -123,7 +123,7 @@ Some captured highlights are:
 
 ## Microsoft Spark Runtime library updates
 
-As covered by the [Microsoft Spark Runtime](microsoft-spark-runtime.md) specification, all default Python, R and Scala libraries were updated on the CU13 release. Also, many libraries were added to provide a better out-of-the-box experience.
+As covered by the [Microsoft Spark Runtime](microsoft-spark-runtime.md) specification, all default Python, R, and Scala libraries were updated on the CU13 release. Also, many libraries were added to provide a better out-of-the-box experience.
 
 1. Make sure that your workload works with the newer library set. 
 1. Review if a custom loaded library is now part of the default package baseline, and adjust your jobs specifications to remove the custom library to allow the job to use the shipped library.
@@ -132,15 +132,16 @@ As covered by the [Microsoft Spark Runtime](microsoft-spark-runtime.md) specific
 
 ### How to solve strange java.lang.NoSuchMethodError or java.lang.ClassNotFoundException
 
-This is most likely caused by Spark or Scala version conflict. Please double check below things and rebuild your project.
+This is most likely caused by Spark or Scala version conflict. Please double-check the below and rebuild your project.
 
-1. Make sure all Scala versions are updated
+1. Make sure all Scala versions are updated.
 1. Make sure all Spark dependencies are updated with correct scala version and spark version.
-1. Make sure all Spark dependencies have provided scope except spark-sql-kafka-0-10
+1. Make sure all Spark dependencies have provided scope except spark-sql-kafka-0-10.
 
 ### SparkUpgradeException due to calendar mode change
 
 There are changes in Spark 3.0 calendar model. You may see exception like this when writing calendar column in Spark SQL:
+
 ```txt
 Caused by: org.apache.spark.SparkUpgradeException: 
 You may get a different result due to the upgrading of Spark 3.0:
@@ -163,4 +164,4 @@ spark.conf.set("spark.sql.legacy.parquet.int96RebaseModeInWrite","CORRECTED")
 
 ## Next steps
 
-For more information about SQL Server big data cluster, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information, see [Introducing [!INCLUDE[big-data-clusters-nover-lowercase](../includes/ssbigdataclusters-ss-nover-lowercase.md)]](big-data-cluster-overview.md).

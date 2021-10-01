@@ -29,7 +29,7 @@ For big data-based machine learning scenarios, the usage of HDFS for big data ho
 
 The machine learning capabilities enable different applications and solutions such as: fraud detection, forecasting, churn, and general classification and regression tasks. Yet, it is important to use the best technology for a scenario.
 
-| |SQL Server Machine Learning Services|Apache Spark ML|
+|Aspect |SQL Server Machine Learning Services|Apache Spark ML|
 |---------|---------|---------|
 |Data placement|Leverages tabular data locality on SQL Server. Premium data tier.|Scalable Big Data data tier using HDFS; either unstructured, semi-structured, and structured data. |
 |Best for|Low latency inference and scoring scenarios|1. Distributed batch training and scoring machine learning models on top of Big Data<br/>2. ETL sinks and large-scale data preparation and featurization for ML|

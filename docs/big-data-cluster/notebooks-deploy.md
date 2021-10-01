@@ -66,7 +66,7 @@ Select the target configuration template from the available templates. The avail
 
 ### Azure settings
 
-If the deployment target is a new [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/), additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
+If the deployment target is a new [Azure Kubernetes Service (AKS)](/azure/aks/), additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
 
    ![Azure settings](media/notebooks-deploy/azure-settings.png)
 

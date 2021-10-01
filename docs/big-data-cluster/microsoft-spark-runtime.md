@@ -33,7 +33,7 @@ Benefits of the Microsoft Spark Runtime:
 
 ## The runtime and product offerings
 
-[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] and [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-version-support) implement the Microsoft Spark Runtime specification.
+[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] and [Azure Synapse Analytics](/azure/synapse-analytics/spark/apache-spark-version-support) implement the Microsoft Spark Runtime specification.
 
 This means that under the same specific runtime release version, for example, you can migrate a PySpark notebook between SQL Server big data cluster and your Azure Synapse workspace Spark Pool with minor modifications. The PySpark version, Spark core, all libraries will be the same. Modifications in the code might be required regarding hard-coded file and folder paths. This applies to languages that are available on both offerings.
 

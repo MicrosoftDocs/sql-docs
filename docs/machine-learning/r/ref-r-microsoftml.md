@@ -48,13 +48,13 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function name | Description |
 |---------------|-------------|
-|[rxFastTrees](reference/microsoftml/rxfasttrees) | An implementation of FastRank, an efficient implementation  of the MART gradient boosting algorithm.  |
-|[rxFastForest](reference/microsoftml/rxfastforest) | A random forest and Quantile regression forest  implementation using [rxFastTrees](reference/microsoftml/rxfasttrees).  |
-|[rxLogisticRegression](reference/microsoftml/logisticregression) | Logistic regression using L-BFGS.  |
-|[rxOneClassSvm](reference/microsoftml/rxoneclasssvm) | One class support vector machines.  
-|[rxNeuralNet](reference/microsoftml/rxneuralnet) | Binary, multi-class, and regression neural net.  |
-|[rxFastLinear](reference/microsoftml/rxfastlinear) | Stochastic dual coordinate ascent optimization for linear binary classification and regression. |
-|[rxEnsemble](reference/microsoftml/rxensemble) | Trains a number of models of various kinds to obtain better predictive performance than could be obtained from a single model.|
+|[rxFastTrees](reference/microsoftml/rxfasttrees.md) | An implementation of FastRank, an efficient implementation  of the MART gradient boosting algorithm.  |
+|[rxFastForest](reference/microsoftml/rxfastforest.md) | A random forest and Quantile regression forest  implementation using [rxFastTrees](reference/microsoftml/rxfasttrees.md).  |
+|[rxLogisticRegression](reference/microsoftml/logisticregression.md) | Logistic regression using L-BFGS.  |
+|[rxOneClassSvm](reference/microsoftml/rxoneclasssvm.md) | One class support vector machines.  
+|[rxNeuralNet](reference/microsoftml/rxneuralnet.md) | Binary, multi-class, and regression neural net.  |
+|[rxFastLinear](reference/microsoftml/rxfastlinear.md) | Stochastic dual coordinate ascent optimization for linear binary classification and regression. |
+|[rxEnsemble](reference/microsoftml/rxensemble.md) | Trains a number of models of various kinds to obtain better predictive performance than could be obtained from a single model.|
 
 <a name="ml-transforms"></a>
 
@@ -62,69 +62,69 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function name | Description |
 |---------------|-------------|
-|[concat](reference/microsoftml/concat) | Transformation to create a single vector-valued column from multiple columns.  |
-|[categorical](reference/microsoftml/categorical) | Create indicator vector using categorical transform with dictionary.  |
-|[categoricalHash](reference/microsoftml/categoricalhash) | Converts the categorical value into an indicator array by hashing. |
-|[featurizeText](reference/microsoftml/featurizetext) | Produces a bag of counts of sequences of consecutive words, called n-grams, from a given corpus of text. It offers language detection, tokenization, stopwords removing, text normalization, and feature generation.  |
-|[getSentiment](reference/microsoftml/getsentiment) | Scores natural language text and creates a column that contains probabilities that the sentiments in the text are positive.|
-|[ngram](reference/microsoftml/ngram) | allows defining arguments for count-based and hash-based feature extraction.|
-|[selectColumns](reference/microsoftml/selectcolumns) | Selects a set of columns to retrain, dropping all others. |
-|[selectFeatures](reference/microsoftml/selectfeatures) | Selects features from the specified variables using a specified mode.|
-|[loadImage](reference/microsoftml/loadimage) | Loads image data.|
-|[resizeImage](reference/microsoftml/resizeimage) | Resizes an image to a specified dimension using a specified resizing method.|
-|[extractPixels](reference/microsoftml/extractpixels) | Extracts the pixel values from an image.|
-|[featurizeImage](reference/microsoftml/featurizeimage) | Featurizes an image using a pre-trained deep neural network model.|
+|[concat](reference/microsoftml/concat.md) | Transformation to create a single vector-valued column from multiple columns.  |
+|[categorical](reference/microsoftml/categorical.md) | Create indicator vector using categorical transform with dictionary.  |
+|[categoricalHash](reference/microsoftml/categoricalhash.md) | Converts the categorical value into an indicator array by hashing. |
+|[featurizeText](reference/microsoftml/featurizetext.md) | Produces a bag of counts of sequences of consecutive words, called n-grams, from a given corpus of text. It offers language detection, tokenization, stopwords removing, text normalization, and feature generation.  |
+|[getSentiment](reference/microsoftml/getsentiment.md) | Scores natural language text and creates a column that contains probabilities that the sentiments in the text are positive.|
+|[ngram](reference/microsoftml/ngram.md) | allows defining arguments for count-based and hash-based feature extraction.|
+|[selectColumns](reference/microsoftml/selectcolumns.md) | Selects a set of columns to retrain, dropping all others. |
+|[selectFeatures](reference/microsoftml/selectfeatures.md) | Selects features from the specified variables using a specified mode.|
+|[loadImage](reference/microsoftml/loadimage.md) | Loads image data.|
+|[resizeImage](reference/microsoftml/resizeimage.md) | Resizes an image to a specified dimension using a specified resizing method.|
+|[extractPixels](reference/microsoftml/extractpixels.md) | Extracts the pixel values from an image.|
+|[featurizeImage](reference/microsoftml/featurizeimage.md) | Featurizes an image using a pre-trained deep neural network model.|
 
 
 ## 3-Scoring and training functions
 
 | Function name | Description |
 |---------------|-------------|
-|[rxPredict.mlModel](reference/microsoftml/rxpredict) | Runs the scoring library either from SQL Server, using the stored procedure, or from R code enabling real-time scoring to provide much faster prediction performance.|
-|[rxFeaturize](reference/microsoftml/rxfeaturize) | Transforms data from an input data set to an output data set.|
-|[mlModel](reference/microsoftml/mlmodel) | Provides a summary of a Microsoft R Machine Learning model.|
+|[rxPredict.mlModel](reference/microsoftml/rxpredict.md) | Runs the scoring library either from SQL Server, using the stored procedure, or from R code enabling real-time scoring to provide much faster prediction performance.|
+|[rxFeaturize](reference/microsoftml/rxfeaturize.md) | Transforms data from an input data set to an output data set.|
+|[mlModel](reference/microsoftml/mlmodel.md) | Provides a summary of a Microsoft R Machine Learning model.|
 
 
 ## 4-Loss functions for classification and regression
 
 | Function name | Description |
 |---------------|-------------|
-|[expLoss](reference/microsoftml/loss) | Specifications for exponential classification loss function. | 
-|[logLoss](reference/microsoftml/loss) | Specifications for log classification loss function.  |
-|[hingeLoss](reference/microsoftml/loss) | Specifications for hinge classification loss function. | 
-|[smoothHingeLoss](reference/microsoftml/loss) | Specifications for smooth hinge classification loss function.  |
-| [poissonLoss](reference/microsoftml/loss) | Specifications for poisson regression loss function. | 
-|[squaredLoss](reference/microsoftml/loss) | Specifications for squared regression loss function.   |   
+|[expLoss](reference/microsoftml/loss.md) | Specifications for exponential classification loss function. | 
+|[logLoss](reference/microsoftml/loss.md) | Specifications for log classification loss function.  |
+|[hingeLoss](reference/microsoftml/loss.md) | Specifications for hinge classification loss function. | 
+|[smoothHingeLoss](reference/microsoftml/loss.md) | Specifications for smooth hinge classification loss function.  |
+| [poissonLoss](reference/microsoftml/loss.md) | Specifications for poisson regression loss function. | 
+|[squaredLoss](reference/microsoftml/loss.md) | Specifications for squared regression loss function.   |   
 
 ## 5-Feature selection functions
 
 | Function name | Description |
 |---------------|-------------|
-|[minCount](reference/microsoftml/mincount) | Specification for feature selection in count mode. |
-|[mutualInformation](reference/microsoftml/mutualinformation) | Specification for feature selection in mutual information mode. |
+|[minCount](reference/microsoftml/mincount.md) | Specification for feature selection in count mode. |
+|[mutualInformation](reference/microsoftml/mutualinformation.md) | Specification for feature selection in mutual information mode. |
 
 ## 6-Ensemble modeling functions
 
 | Function name | Description |
 |---------------|-------------|
-|[fastTrees](reference/microsoftml/fasttrees) | Creates a list containing the function name and arguments to train a Fast Tree model with [rxEnsemble](reference/microsoftml/rxensemble).|
-|[fastForest](reference/microsoftml/rxfastforest) | Creates a list containing the function name and arguments to train a Fast Forest model with [rxEnsemble](reference/microsoftml/rxensemble).|
-|[fastLinear](reference/microsoftml/fastlinear) | Creates a list containing the function name and arguments to train a Fast Linear model with [rxEnsemble](reference/microsoftml/rxensemble).|
-|[logisticRegression](reference/microsoftml/logisticregression) | Creates a list containing the function name and arguments to train a  Logistic Regression model with [rxEnsemble](reference/microsoftml/rxensemble).|
-|[oneClassSvm](reference/microsoftml/oneclasssvm) | Creates a list containing the function name and arguments to train a OneClassSvm model with [rxEnsemble](reference/microsoftml/rxensemble).|
+|[fastTrees](reference/microsoftml/fasttrees.md) | Creates a list containing the function name and arguments to train a Fast Tree model with [rxEnsemble](reference/microsoftml/rxensemble.md).|
+|[fastForest](reference/microsoftml/rxfastforest.md) | Creates a list containing the function name and arguments to train a Fast Forest model with [rxEnsemble](reference/microsoftml/rxensemble.md).|
+|[fastLinear](reference/microsoftml/fastlinear.md) | Creates a list containing the function name and arguments to train a Fast Linear model with [rxEnsemble](reference/microsoftml/rxensemble.md).|
+|[logisticRegression](reference/microsoftml/logisticregression.md) | Creates a list containing the function name and arguments to train a  Logistic Regression model with [rxEnsemble](reference/microsoftml/rxensemble.md).|
+|[oneClassSvm](reference/microsoftml/oneclasssvm.md) | Creates a list containing the function name and arguments to train a OneClassSvm model with [rxEnsemble](reference/microsoftml/rxensemble.md).|
 
 ## 7-Neural networking functions
 
 | Function name | Description |
 |---------------|-------------|
-|[optimizer](reference/microsoftml/optimizer) | Specifies optimization algorithms for the [rxNeuralNet](reference/microsoftml/rxneuralnet) machine learning algorithm.|
+|[optimizer](reference/microsoftml/optimizer.md) | Specifies optimization algorithms for the [rxNeuralNet](reference/microsoftml/rxneuralnet.md) machine learning algorithm.|
 
 
 ## 8-Package state functions
 
 | Function name | Description |
 |---------------|-------------|
-|[rxHashEnv](reference/microsoftml/rxHashEnv) | An environment object used to store package-wide state. |
+|[rxHashEnv](reference/microsoftml/rxHashEnv.md) | An environment object used to store package-wide state. |
 
 
 ## How to use MicrosoftML

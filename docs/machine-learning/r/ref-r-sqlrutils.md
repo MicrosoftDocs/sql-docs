@@ -29,7 +29,7 @@ You can also execute the stored procedure from an R environment, by passing well
   
 ## Full reference documentation
 
-The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, documentation for individual sqlrutils functions is published to just one location under the [sqlrutils package reference](reference/sqlrutils/sqlrutils.md). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Functions list
 

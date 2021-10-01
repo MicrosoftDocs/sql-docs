@@ -229,5 +229,4 @@ myetl1function <- function() {
 
 ## See Also
 
-[sqlrutils reference](sqlrutils.md)
-[sqlrutils package](/sql/machine-learning/r/ref-r-sqlrutils)
+[sqlrutils reference](../../ref-r-sqlrutils.md)

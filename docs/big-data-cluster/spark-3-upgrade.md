@@ -36,11 +36,11 @@ Spark 3 is a major release and __contains breaking changes__. Following the same
 1. Perform a side-by-side deployment of a new big data cluster version CU13 with your current environment.
 1. (Optional) Leverage the new [azdata HDFS distributed copy](distributed-data-copy-hdfs.md) capability to have a subset of your data needed for validation.
 1. Validate your current workload with Spark 3 before upgrading.
-1. Reassess enforced Spark optimizations in your code and table definition strategies. Spark 3 brings new shuffling, partitioning, and Adaptive Query Execution enhancements. This is a great opportunity to re-evaluate previous decisions and try leverage the newer engine out-of-the-box features.
+1. Reassess enforced Spark optimizations in your code and table definition strategies. Spark 3 brings new shuffling, partitioning, and Adaptive Query Execution enhancements. This is a great opportunity to reevaluate previous decisions and try leverage the newer engine out-of-the-box features.
 
 ## What happens during cluster upgrade?
 
-The cluster upgrade process will deploy Spark pods with the new version and the refreshed [Microsoft Spark Runtime](microsoft-spark-runtime.md). After the upgrade there will be no Spark 2.4 components any longer.
+The cluster upgrade process will deploy Spark pods with the new version and the refreshed [Microsoft Spark Runtime](microsoft-spark-runtime.md). After the upgrade, there will be no Spark 2.4 components any longer.
 
 Persistent configuration changes made through the configuration framework will be preserved.
 
@@ -132,7 +132,7 @@ As covered by the [Microsoft Spark Runtime](microsoft-spark-runtime.md) specific
 
 ### How to solve strange java.lang.NoSuchMethodError or java.lang.ClassNotFoundException
 
-This is most likely caused by Spark or Scala version conflict. Double-check the below and rebuild your project.
+This error is most likely caused by Spark or Scala version conflict. Double-check the below and rebuild your project.
 
 1. Make sure all Scala versions are updated.
 1. Make sure all Spark dependencies are updated with correct scala version and spark version.

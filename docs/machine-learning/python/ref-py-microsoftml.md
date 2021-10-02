@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 | Package details       | Information |
 |-----------------------|-------------|
 | Current version:      |  9.4        |
-| Built on:             | [Anaconda 4.2](https://www.continuum.io/why-anaconda) distribution of [Python 3.7.1](https://www.python.org/doc) |
+| Built on:             | [Anaconda 4.2](https://anaconda.org/conda-forge/opencv/files?version=4.2.0) distribution of [Python 3.7.1](https://www.python.org/doc) |
 | Package distribution: | [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) version 2017 or 2019. |
 
 ## How to use microsoftml

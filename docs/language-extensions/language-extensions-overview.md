@@ -32,6 +32,8 @@ Language Extensions provides multiple advantages:
 + Speed. Databases are optimized for set-based operations. 
 + Ease of deployment and integration. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is the central point of operations for many other data management tasks and applications. By using data in the database, you ensure that the data used by the language extension is consistent and up-to-date.
 
+The native [SQL common language runtime (CLR)](../relational-databases/clr-integration/common-language-runtime-integration-overview.md) allows you to implement some of the functionalities of SQL Server with .NET languages. For a discussion of the differences between SQL CLR and SQL language extensions, see [Compare SQL Server Language Extensions to SQL CLR](concepts/compare-extensibility-to-clr.md).
+
 ## Next steps
 
 + Install the [Java language extension on Windows](install/windows-java.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions-java.md)

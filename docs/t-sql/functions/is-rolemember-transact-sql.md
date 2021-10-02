@@ -2,7 +2,7 @@
 description: "IS_ROLEMEMBER (Transact-SQL)"
 title: "IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "10/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -53,7 +53,10 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |1|*database_principal* is a member of *role*.|  
 |NULL|*database_principal* or *role* is not valid, or you do not have permission to view the role membership.|  
   
-## Remarks  
+## Remarks
+
+**IS_ROLEMEMBER** is not supported for Azure Active Directory users and applications.
+
  Use IS_ROLEMEMBER to determine whether the current user can perform an action that requires the database role's permissions.  
   
  If *database_principal* is based on a Windows login, such as Contoso\Mary5, IS_ROLEMEMBER returns NULL, unless the *database_principal* has been granted or denied direct access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

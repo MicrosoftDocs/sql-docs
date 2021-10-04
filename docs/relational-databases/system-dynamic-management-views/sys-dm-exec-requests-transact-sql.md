@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
-ms.reviewer: sstein
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
 ---
 # sys.dm_exec_requests (Transact-SQL)

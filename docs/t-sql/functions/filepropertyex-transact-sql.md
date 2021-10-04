@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "FILEPROPERTYEX function"
   - "file names [SQL Server], FILEPROPERTYEX"
 author: stevestein
-ms.author: sstein
+ms.author: mikeray
 ---
 # FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

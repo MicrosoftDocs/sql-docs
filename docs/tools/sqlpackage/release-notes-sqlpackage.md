@@ -52,7 +52,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Extract | Adds a retry to extract validation when first time fails due to race condition |
 | Import | Fixed occasional deadlocks when importing to Azure by setting MAXDOP to 1 |
 | Import | Fixed import failure when temporal table has dependency on security policy with schema binding on |
-| Platform | DacFramework.msi is now signed by "SQL Server Management Studio" instead of "SQL Server 2012" |
+| Platform | DacFramework.msi is now signed by "Microsoft SQL Server Data-Tier Application Framework" instead of "SQL Server 2012" |
 | Platform | Default to large arrays in x64 SqlPackage, fixes some scenarios involving large databases |
 | Schema Compare | Fix for schema compare failing for equal databases with database scoped configurations |
 | Schema Compare | Fixed schema compare with columnstore indexes |
@@ -65,6 +65,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
+| Deployment | The Azure SQL ledger table feature is not yet supported | N/A |
 
 ## 18.7.1 sqlpackage
 

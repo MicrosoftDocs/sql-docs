@@ -172,6 +172,7 @@
         "odbc/reference/**/*.md": "ODBC API Reference",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "reporting-services/report-design/*.md": "Microsoft Report Builder & Power BI Report Builder",
+        "reporting-services/report-builder/*.md": "Microsoft Report Builder & Power BI Report Builder",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
         "database-engine/availability-groups/**/*.md": "SQL Server Always On",

@@ -1,6 +1,6 @@
 ---
 title: azdata bdc debug reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray

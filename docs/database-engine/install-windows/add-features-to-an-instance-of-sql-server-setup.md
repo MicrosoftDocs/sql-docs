@@ -12,7 +12,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 02/05/2021
+ms.date: 10/04/2021
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -29,13 +29,11 @@ To add features to an instance of SQL Server from the command prompt, see [Insta
 
 ## Prerequisites
 
-Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).
+Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Also be aware of the following:
 
-> [!NOTE]
-> For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
-  
-> [!NOTE]
-> When you add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+- For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
+- When you add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+- You cannot add features to a failover cluster instance. For example, you cannot add the PolyBase feature to an existing failover cluster instance. Similarly, removing features from a failover cluster instance is also not supported.
 
 ## Procedures
 

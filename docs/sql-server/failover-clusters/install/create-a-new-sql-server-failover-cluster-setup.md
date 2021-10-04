@@ -2,7 +2,7 @@
 title: "Create new Failover Cluster Instance"
 description: This article describes how to use the Setup program to install or upgrade a SQL Server Always On failover cluster instance or add a node to an existing failover cluster instance.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "10/04/2021"
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: failover-cluster-instance
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "nodes [Faillover Clustering], adding"
   - "clusters [SQL Server], creating"
   - "removing nodes"
-ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: cawrites
 ms.author: chadam
 ---
@@ -99,6 +98,9 @@ ms.author: chadam
 8.  On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Click **Next** to continue. To end Setup, click **Cancel**.  
   
 9. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right pane after you select the feature name. You can select any combination of check boxes, but only [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in tabular mode, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in multidimensional mode support failover clustering. Other selected components will run as a stand-alone feature without failover capability on the current node that you are running Setup on. For more information on [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modes, see [Determine the Server Mode of an Analysis Services Instance](/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
+
+     > [!NOTE]
+     > You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance. Make note of what features are needed before beginning the installation of a failover cluster instance.
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   

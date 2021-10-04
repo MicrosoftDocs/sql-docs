@@ -113,7 +113,7 @@ An example of the constraint which gets created because of a manual failover.
 >Automatic failover does not add a location constraint, so no cleanup is necessary. 
 
 For more information:
-- [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
+- [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-manageresource-haar)
 - [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  

@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 09/21/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

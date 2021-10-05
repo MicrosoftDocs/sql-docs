@@ -5,7 +5,7 @@ description: This article describes the SQL Server Big Data Clusters Cumulative 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 09/22/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

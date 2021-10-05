@@ -8,7 +8,7 @@ ms.custom:
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 09/21/2021
+ms.date: 10/05/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux

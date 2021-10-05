@@ -2,7 +2,7 @@
 description: "sp_configure_peerconflictdetection (Transact-SQL)"
 title: "sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 09/21/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -75,7 +75,7 @@ Creates a list containing the function name and arguments to train a
   
   
  ### `maxNorm`
- Specifies an upper bound to constrain the norm of the incoming  weight vector at each hidden unit. This can be very important in maxout  neural networks as well as in cases where training produces unbounded weights. 
+ Specifies an upper bound to constrain the norm of the incoming  weight vector at each hidden unit. This can be important in maxout neural networks and in cases where training produces unbounded weights. 
   
   
   

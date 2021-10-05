@@ -5,7 +5,7 @@ description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 09/27/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

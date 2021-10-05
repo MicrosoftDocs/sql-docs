@@ -5,7 +5,7 @@ description: This article provides guidance joining a SQL Server Linux host mach
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 06/11/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

@@ -2,7 +2,7 @@
 title: "Tools to monitor availability groups"
 description: "A reference for the various tools available to monitor the performance and health of Always On availability groups. "
 ms.custom: "seodec18"
-ms.date: "06/08/2016"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups

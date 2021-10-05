@@ -12,7 +12,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 10/04/2021
+ms.date: 10/05/2021
 monikerRange: ">=sql-server-2016"
 ---
 

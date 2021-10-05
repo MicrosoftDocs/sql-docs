@@ -4,7 +4,7 @@ description: Rotate the password for an existing Big Data Clusters integrated wi
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 09/07/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

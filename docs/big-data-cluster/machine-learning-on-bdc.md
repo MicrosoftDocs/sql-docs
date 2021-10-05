@@ -5,7 +5,7 @@ description: Machine Learning guide for SQL Server Big Data Clusters.
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/23/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

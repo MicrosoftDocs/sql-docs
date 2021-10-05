@@ -5,7 +5,7 @@ description: Use PySpark to train and create machine learning models with Spark 
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf, melqin
-ms.date: 09/27/2021
+ms.date: 10/05/2021
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql

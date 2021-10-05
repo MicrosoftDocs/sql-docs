@@ -7,7 +7,7 @@ ms.author: jejiang
 ms.reviewer: mikeray
 ms.topic: conceptual
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

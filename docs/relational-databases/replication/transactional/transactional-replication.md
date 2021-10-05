@@ -2,7 +2,7 @@
 title: "Transactional Replication | Microsoft Docs"
 description: Transactional replication uses a snapshot of the database, applying changes to the Subscriber as they occurred at the Publisher to ensure consistency.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

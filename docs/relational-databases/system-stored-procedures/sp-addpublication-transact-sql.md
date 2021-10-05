@@ -2,7 +2,7 @@
 description: "sp_addpublication (Transact-SQL)"
 title: "sp_addpublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2021"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

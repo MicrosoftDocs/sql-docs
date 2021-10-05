@@ -4,7 +4,7 @@ description: "Learn the steps to configure instances of SQL Server to support Al
 ms.custom:
   - seodec18
   - intro-get-started
-ms.date: "05/17/2016"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups

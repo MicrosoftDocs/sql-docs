@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
 ms.metadata: seo-lt-2019
-ms.date: 09/27/2021
+ms.date: 10/05/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster

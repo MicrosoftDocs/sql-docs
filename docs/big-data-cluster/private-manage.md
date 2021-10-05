@@ -5,7 +5,7 @@ description: Learn how to manage a SQL Server Big Data Clusters in Azure Kuberne
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 08/20/2020
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

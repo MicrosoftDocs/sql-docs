@@ -22,7 +22,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 includes important changes and capabilities:
 
 * [HDFS distributed copy capabilities through azdata](distributed-data-copy-hdfs.md)
-* [Apache Spark 3.1.2](spark-3-upgrade.md) and the [Microsoft Spark Runtime 2021.1](microsoft-spark-runtime.md)
+* [Apache Spark 3.1.2](spark-3-upgrade.md) and the [SQL Server Big Data Clusters runtime for Apache Spark](runtime-for-apache-spark.md)
 
     > [!CAUTION]
     > Before upgrading make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).

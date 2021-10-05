@@ -2789,6 +2789,8 @@ items:
       items:
       - name: Extensibility framework
         href: language-extensions/concepts/extensibility-framework.md
+      - name: Compare extensibility to SQL CLR
+        href: language-extensions/concepts/compare-extensibility-to-clr.md
     - name: How-to guides
       items:
       - name: Call Java from SQL Server

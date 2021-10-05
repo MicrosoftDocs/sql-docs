@@ -183,6 +183,8 @@ items:
         href: big-data-cluster/bdc-upgrade-configuration.md
       - name: Post-deployment configuration
         href: big-data-cluster/configure-bdc-postdeployment.md
+      - name: Configure SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Overview - (pre CU9)
         href: big-data-cluster/configure-bdc-pre-configuration.md
     - name: Data virtualization
@@ -10455,6 +10457,8 @@ items:
         href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
       - name: bdc hdfs status
         href: azdata/reference/reference-azdata-bdc-hdfs-status.md
+      - name: bdc rotate
+        href: azdata/reference/reference-azdata-bdc-rotate.md
       - name: bdc settings
         href: azdata/reference/reference-azdata-bdc-settings.md
       - name: bdc spark

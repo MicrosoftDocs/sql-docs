@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns 1 if the *expression* is a valid **date**, **time**, or **datetime** value; otherwise, 0.  
+  Returns 1 if the *expression* is a valid **datetime** value; otherwise, 0.  
   
  ISDATE returns 0 if the *expression* is a **datetime2** value.  
   

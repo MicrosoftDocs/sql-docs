@@ -45,6 +45,7 @@ SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need 
 | Azure Synapse | Support for Gen3 Synapse Pool connections |
 | DacFx | Update DacFx to 15.0.5282.3 |
 | Import Flat File | Support for rich data types in Import Flat File wizard, including money. |
+| Replication | Support for peer to peer publication with [Last Writer Win (LWW) conflict detection](https://docs.microsoft.com/sql/relational-databases/replication/transactional/peer-to-peer/configure-last-writer) |
 | XEvents | Support for Ledger syntax in XEvents interface |
 
 #### Bug fixes in 18.10

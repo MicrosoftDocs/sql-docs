@@ -462,9 +462,9 @@ items:
       - name: concat
         href: ../machine-learning/r/reference/microsoftml/concat.md
       - name: dropColumns
-        href: ../machine-learning/r/reference/microsoftml/dropColumns.md
+        href: ../machine-learning/r/reference/microsoftml/dropcolumns.md
       - name: ensembleControl
-        href: ../machine-learning/r/reference/microsoftml/ensembleControl.md
+        href: ../machine-learning/r/reference/microsoftml/ensemblecontrol.md
       - name: extractPixels
         href: ../machine-learning/r/reference/microsoftml/extractpixels.md
       - name: fastForest
@@ -478,9 +478,9 @@ items:
       - name: featurizeText
         href: ../machine-learning/r/reference/microsoftml/featurizetext.md
       - name: getNetDefinition
-        href: ../machine-learning/r/reference/microsoftml/getNetDefinition.md
+        href: ../machine-learning/r/reference/microsoftml/getnetdefinition.md
       - name: getSampleDataDir
-        href: ../machine-learning/r/reference/microsoftml/getSampleDataDir.md
+        href: ../machine-learning/r/reference/microsoftml/getsampledatadir.md
       - name: getSentiment
         href: ../machine-learning/r/reference/microsoftml/getsentiment.md
       - name: kernel
@@ -530,7 +530,7 @@ items:
       - name: rxPredict
         href: ../machine-learning/r/reference/microsoftml/rxpredict.md
       - name: selectColumns
-        href: ../machine-learning/r/reference/microsoftml/selectColumns.md
+        href: ../machine-learning/r/reference/microsoftml/selectcolumns.md
       - name: selectFeatures
         href: ../machine-learning/r/reference/microsoftml/selectfeatures.md
     - name: olapR

@@ -75,7 +75,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
 ## References
-  For more information on Analysis Services connection strings: [`https://docs.microsoft.com/sql/analysis-services/instances/connection-string-properties-analysis-services`](https://docs.microsoft.com/sql/analysis-services/instances/connection-string-properties-analysis-services)
+  For more information on Analysis Services connection strings, see [Connection string properties](/analysis-services/instances/connection-string-properties-analysis-services).
 
 
 

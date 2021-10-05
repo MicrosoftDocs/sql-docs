@@ -65,7 +65,7 @@ Finally, pass the `olapCnn` and query into either `executeMD` or `execute2D` to 
 
 > [!Important]
 > **olapR** requires the Analysis Services OLE DB provider. If you do not have SQL Server Analysis Services installed on your computer, download the provider from Microsoft:
->[Data providers used for Analysis Services connections](https://docs.microsoft.com/sql/analysis-services/instances/data-providers-used-for-analysis-services-connections)
+>[Data providers used for Analysis Services connections](/analysis-services/client-libraries)
 >
 >The exact version you should install for SQL Server 2016 is [here](https://download.microsoft.com/download/8/7/2/872BCECA-C849-4B40-8EBE-21D48CDF1456/ENU/x64/SQL_AS_OLEDB.msi).
 >
@@ -105,7 +105,7 @@ FROM [Analysis Services Tutorial]
 WHERE [Sales Territory].[Sales Territory Country].[Australia]
 ```
 
-Using an AdventureWorks OLAP cube from the [multidimensional cube tutorial](https://docs.microsoft.com/sql/analysis-services/multidimensional-modeling-adventure-works-tutorial), this MDX query selects the internet sales count and sales amount and places them on the Column axis. On the Row axis it places all possible values of the "Product Line" dimension. Then, using the WHERE clause (which is the slicer axis in MDX queries), it filters the query so that only the sales from Australia matter. Without the slicer axis, we would roll up and summarize the sales from all countries.
+Using an AdventureWorks OLAP cube from the [multidimensional cube tutorial](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial), this MDX query selects the internet sales count and sales amount and places them on the Column axis. On the Row axis it places all possible values of the "Product Line" dimension. Then, using the WHERE clause (which is the slicer axis in MDX queries), it filters the query so that only the sales from Australia matter. Without the slicer axis, we would roll up and summarize the sales from all countries.
 
  ## olapR examples
 

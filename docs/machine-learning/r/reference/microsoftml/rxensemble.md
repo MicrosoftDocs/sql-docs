@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxEnsemble: Ensembles 
- ## Description
+ 
 
 Train an ensemble of models
 

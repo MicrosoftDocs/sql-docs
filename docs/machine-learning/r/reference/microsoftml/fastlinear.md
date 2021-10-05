@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # fastLinear: fastLinear 
- ## Description
+ 
  
 Creates a list containing the function name and arguments to train a
  Fast Linear model with [rxEnsemble](rxEnsemble.md).

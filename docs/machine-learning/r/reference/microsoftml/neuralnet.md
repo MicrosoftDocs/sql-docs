@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # neuralNet: neuralNet 
- ## Description
+ 
  
 Creates a list containing the function name and arguments to train a
  NeuralNet model with [rxEnsemble](rxEnsemble.md).

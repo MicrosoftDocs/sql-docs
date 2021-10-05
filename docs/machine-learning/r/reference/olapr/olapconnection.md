@@ -29,15 +29,15 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
 
- # OlapConnection: olapR OlapConnection Creation 
+# OlapConnection: olapR OlapConnection Creation 
 
- ## Description
+
 
 `OlapConnection` constructs a "OlapConnection" object.
 
 
 
- ## Usage
+## Usage
 
 ```   
   OlapConnection(connectionString="Data Source=localhost; Provider=MSOLAP;")
@@ -49,42 +49,42 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ```
 
 
- ## Arguments
+## Arguments
 
 
 
- ### `connectionString`
+### `connectionString`
  A valid connection string for connecting to Analysis Services 
 
 
- ### `ocs`
+### `ocs`
  An object of class "OlapConnection" 
 
 
 
 
- ## Details
+## Details
 
 `OlapConnection` validates and holds an Analysis Services connection string. By default, Analysis Services returns the first cube of the first database. To connect to a specific database, use the Initial Catalog parameter.
 
 
 
- ## Value
+## Value
 
 `OlapConnection` returns an object of type "OlapConnection". A warning is shown if the connection string is invalid.
 
 
- ## References
+## References
   For more information on Analysis Services connection strings: [`https://docs.microsoft.com/sql/analysis-services/instances/connection-string-properties-analysis-services`](https://docs.microsoft.com/sql/analysis-services/instances/connection-string-properties-analysis-services)
 
 
 
- ## See Also
+## See also
 
-[Query](Query.md), [executeMD](ExecuteMD.md), [execute2D](Execute2D.md)`, `[explore](Explore.md)
+[Query](Query.md), [executeMD](ExecuteMD.md), [execute2D](Execute2D.md), [explore](Explore.md)
 
 
- ## Examples
+## Examples
 
  ```
 

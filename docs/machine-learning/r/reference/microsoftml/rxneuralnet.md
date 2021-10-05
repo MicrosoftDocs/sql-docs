@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxNeuralNet: Neural Net 
- ## Description
+ 
 
 Neural networks for regression modeling and for Binary and
 multi-class classification.
@@ -244,15 +244,13 @@ problems where a more traditional regression model cannot fit a solution.
  ## Value
 
 
-* 
-  `rxNeuralNet`: an `rxNeuralNet` object with the
+ `rxNeuralNet`: an `rxNeuralNet` object with the
   trained model.  
-* 
-  `NeuralNet`: a learner specification object of
+ `NeuralNet`: a learner specification object of
   class `maml` for the Neural Net trainer.  
 
 
- ## Note
+ ## Notes
 
 This algorithm is single-threaded and will not attempt to load the entire dataset into
 memory.
@@ -270,7 +268,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md),
 [rxFastLinear](rxFastLinear.md), [rxLogisticRegression](rxLogisticRegression.md),

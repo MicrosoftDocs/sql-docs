@@ -31,7 +31,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # rxHashEnv: An environment object used to store package-wide state. 
- ## Description
+ 
  
 An environment object used to store package-wide state.
  

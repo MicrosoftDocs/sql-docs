@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxFastTrees: Fast Tree 
- ## Description
+ 
 
 Machine Learning Fast Tree
 
@@ -246,16 +246,13 @@ The output of the ensemble produced by MART on a given instance is the sum
 of the tree outputs. 
 
 
-* 
- In case of a binary classification problem, the output is converted to
+In case of a binary classification problem, the output is converted to
  a probability by using some form of calibration. 
 
-* 
- In case of a regression problem, the output is the predicted value of 
+In case of a regression problem, the output is the predicted value of 
  the function.
 
-* 
- In case of a ranking problem, the instances are ordered by the output value of
+In case of a ranking problem, the instances are ordered by the output value of
 the ensemble.
 
 
@@ -271,16 +268,14 @@ classification.
 
 
 
-* 
- `rxFastTrees`: A `rxFastTrees` object with the trained model.  
+`rxFastTrees`: A `rxFastTrees` object with the trained model.  
 
-* 
- `FastTree`: A learner specification object of class `maml`
+`FastTree`: A learner specification object of class `maml`
  for the Fast Tree trainer. 
 
 
 
- ## Note
+ ## Notes
 
 This algorithm is multi-threaded and will always attempt to load the entire dataset into
 memory.
@@ -301,7 +296,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastForest](rxFastForest.md), [rxFastLinear](rxFastLinear.md),
 [rxLogisticRegression](rxLogisticRegression.md), [rxNeuralNet](rxNeuralNet.md),

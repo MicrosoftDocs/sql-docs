@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxFastLinear: Fast Linear Model -- Stochastic Dual Coordinate Ascent 
- ## Description
+ 
 
 A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer 
 for linear binary classification and regression.  
@@ -244,16 +244,14 @@ Normalization rescales disparate data ranges to a standard scale. Feature scalin
 
 
 
-* 
-  `rxFastLinear`: A `rxFastLinear` object with the trained model.   
+ `rxFastLinear`: A `rxFastLinear` object with the trained model.   
 
-* 
-  `FastLinear`: A learner specification object of class `maml`
+ `FastLinear`: A learner specification object of class `maml`
   for the Fast Linear trainer. 
 
 
 
- ## Note
+ ## Notes
 
 This algorithm is multi-threaded and will not attempt to load the entire dataset into
 memory.
@@ -267,14 +265,14 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
  ## References
 
-[`Scaling Up Stochastic Dual Coordinate Ascent`](https://research.microsoft.com/en-us/um/people/mbilenko/papers/15-sasdca.pdf)
+[`Scaling Up Stochastic Dual Coordinate Ascent`](https://research.microsoft.com/um/people/mbilenko/papers/15-sasdca.pdf)
 
 
 [`Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization`](http://www.jmlr.org/papers/volume14/shalev-shwartz13a/shalev-shwartz13a.pdf)
 
 
 
- ## See Also
+ ## See also
 
 [logLoss](loss.md), [hingeLoss](loss.md),
 [smoothHingeLoss](loss.md), [squaredLoss](loss.md),

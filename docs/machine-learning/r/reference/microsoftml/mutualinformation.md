@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # mutualInformation: Feature Selection Mutual Information Mode 
- ## Description
+ 
 
 Mutual information mode of feature selection used in the feature selection
 transform [selectFeatures](selectFeatures.md).
@@ -75,7 +75,7 @@ where the expectation is taken over the joint distribution of `X` and
 `X` and `Y`, `p(x)` and `p(y)` are the marginal
 probability density functions of `X` and `Y` respectively. In
 general, a higher mutual information between the dependent variable (or
-label) and an independent varialbe (or feature) means that the label has
+label) and an independent variable (or feature) means that the label has
 higher mutual dependence over that feature.
 
 The mutual information feature selection mode selects the features based on
@@ -99,7 +99,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [minCount](minCount.md) [selectFeatures](selectFeatures.md)
 

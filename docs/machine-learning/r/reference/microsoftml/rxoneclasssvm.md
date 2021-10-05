@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxOneClassSvm: OneClass SVM 
- ## Description
+ 
 
 Machine Learning One Class Support Vector Machines
 
@@ -200,16 +200,14 @@ intrusion, fraud, or other types of anomalous behavior.
 
 
 
-* 
-  `rxOneClassSvm`: A `rxOneClassSvm` object with the trained model.  
+ `rxOneClassSvm`: A `rxOneClassSvm` object with the trained model.  
 
-* 
-  `OneClassSvm`: A learner specification object of class `maml` 
+ `OneClassSvm`: A learner specification object of class `maml` 
   for the OneClass Svm trainer.  
 
 
 
- ## Note
+ ## Notes
 
 This algorithm is single-threaded and will always attempt to load the entire dataset into
 memory.
@@ -239,7 +237,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rbfKernel](kernel.md), [linearKernel](kernel.md),
 [polynomialKernel](kernel.md), [sigmoidKernel](kernel.md)

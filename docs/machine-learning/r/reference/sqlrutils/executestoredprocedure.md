@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # executeStoredProcedure: Execute a SQL Stored Procedure 
- ## Description
+ 
 
 `executeStoredProcedure`: Executes a stored procedure registered with the database
 
@@ -70,7 +70,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 TRUE on success, FALSE on failure
 
- ## Note
+ ## Notes
 
 This function relies that the ODBC driver used supports ODBC 3.8 features.
 Otherwise it will fail.

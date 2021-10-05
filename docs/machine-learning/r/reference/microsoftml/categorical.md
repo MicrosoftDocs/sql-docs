@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # categorical: Machine Learning Categorical Data Transform 
- ## Description
+ 
 
 Categorical transform that can be performed on data before 
 training a model.
@@ -101,7 +101,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md),
 [rxNeuralNet](rxNeuralNet.md), [rxOneClassSvm](rxOneClassSvm.md),

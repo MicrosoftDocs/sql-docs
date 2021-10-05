@@ -33,7 +33,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # stopwordsDefault: Machine Learning Text Transform 
- ## Description
+ 
 
 Text transforms that can be performed on data before training 
 a model.
@@ -61,7 +61,7 @@ a model.
 
 
  ### `dataFile`
- character: <string>. Data file containing the terms (short form data). 
+ character: \<string\>. Data file containing the terms (short form data). 
 
 
 
@@ -177,11 +177,9 @@ sequences of consecutive words, called n-grams, from a given corpus of text.
 There are two ways it can do this: 
 
 
-* 
- build a dictionary of n-grams and use the ID in the dictionary as the index in the bag;
+build a dictionary of n-grams and use the ID in the dictionary as the index in the bag;
 
-* 
- hash each n-gram and use the hash value as the index in the bag.
+hash each n-gram and use the hash value as the index in the bag.
 
 
 The purpose of hashing is to convert variable-length text documents into 
@@ -200,16 +198,13 @@ space allows their contents to be compared in an efficient manner.
 The slot values in the vector can be weighted by the following factors:
 
 
-* 
- term frequency - The number of occurrences of the slot in the text 
+term frequency - The number of occurrences of the slot in the text 
 
-* 
- inverse document frequency - A ratio (the logarithm of 
+inverse document frequency - A ratio (the logarithm of 
 inverse relative slot frequency) that measures the information a slot 
 provides by determining how common or rare it is across the entire text.
 
-* 
- term frequency-inverse document frequency - the product
+term frequency-inverse document frequency - the product
 term frequency and the inverse document frequency.
 
 
@@ -225,7 +220,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [ngramCount](ngram.md), [ngramHash](ngram.md),
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md), [rxNeuralNet](rxNeuralNet.md),

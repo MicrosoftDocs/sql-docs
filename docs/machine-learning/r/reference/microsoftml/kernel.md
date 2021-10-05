@@ -35,7 +35,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # kernel: Kernel 
- ## Description
+ 
 
 Kernels supported for use in computing inner products.
 
@@ -90,20 +90,16 @@ Kernels supported for use in computing inner products.
  ## Details
 
 These helper functions specify the kernel that is used for training in
-relevant algorithms. The kernals that are suppored: 
+relevant algorithms. The kernels that are supported: 
 
 
-* 
- `linearKernel`: linear kernel.
+`linearKernel`: linear kernel.
 
-* 
- `rbfKernel`: radial basis function kernel. 
+`rbfKernel`: radial basis function kernel. 
 
-* 
- `polynomialKernel`: polynomial kernel. 
+`polynomialKernel`: polynomial kernel. 
 
-* 
- `sigmoidKernel`: sigmoid kernel. 
+`sigmoidKernel`: sigmoid kernel. 
 
 
 
@@ -127,7 +123,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxOneClassSvm](rxOneClassSvm.md)
 

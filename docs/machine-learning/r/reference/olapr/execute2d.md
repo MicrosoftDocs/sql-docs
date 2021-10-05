@@ -29,15 +29,15 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
 
- # execute2D: olapR execute2D Methods 
+# execute2D: olapR execute2D Methods 
 
- ## Description
+
 
 Takes a Query object or an MDX string, and returns the result as a data frame.
 
 
 
- ## Usage
+## Usage
 
 ```   
   execute2D(olapCnn, query)
@@ -46,25 +46,25 @@ Takes a Query object or an MDX string, and returns the result as a data frame.
 ```
 
 
- ## Arguments
+## Arguments
 
 
 
- ### `olapCnn`
+### `olapCnn`
  Object of class "OlapConnection" returned by `OlapConnection()` 
 
 
- ### `query`
+### `query`
  Object of class "Query" returned by `Query()` 
 
 
- ### `mdx`
+### `mdx`
  String specifying a valid MDX query 
 
 
 
 
- ## Details
+## Details
 
 If a query is provided:
 `execute2D` validates a query object (optional), generates an mdx query string from the query object, executes the mdx query across, and returns the result as a data frame.
@@ -74,20 +74,20 @@ If an MDX string is provided:
 
 
 
- ## Value
+## Value
 
 A data frame if the MDX command returned a result-set. 
 `TRUE` and a warning if the query returned no data. 
 An error if the query is invalid
 
 
- ## Note
+## Notes
 
 Multi-dimensional query results are flattened to 2D using a standard flattening algorithm.
 
 
 
- ## References
+## References
 
 Creating a Demo OLAP Cube (the same as the one used in the examples): 
 [`https://msdn.microsoft.com/library/ms170208.aspx`](https://msdn.microsoft.com/library/ms170208.aspx)
@@ -95,12 +95,12 @@ Creating a Demo OLAP Cube (the same as the one used in the examples):
 
 
 
- ## See Also
+## See also
 
-[Query](Query.md)`, `[OlapConnection](OlapConnection.md)`, `[executeMD](ExecuteMD.md)`, `[explore](Explore.md)`, `data.frame
+[Query](Query.md), [OlapConnection](OlapConnection.md), [executeMD](ExecuteMD.md), [explore](Explore.md), data.frame
 
 
- ## Examples
+## Examples
 
  ```
 

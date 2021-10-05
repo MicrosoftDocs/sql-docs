@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # InputData: Input Data for SQL Stored Procedure: Class Generator 
- ## Description
+ 
 
 `InputData`: generates an InputData Object that captures the
 information about the input parameter that is a data frame.

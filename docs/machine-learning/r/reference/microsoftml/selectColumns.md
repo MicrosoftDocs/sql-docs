@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # selectColumns: Selects a set of columns, dropping all others 
- ## Description
+ 
  
 Selects a set of columns to retrain, dropping all others.
  

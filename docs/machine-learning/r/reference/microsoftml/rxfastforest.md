@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxFastForest: Fast Forest 
- ## Description
+ 
 
 Machine Learning Fast Forest
 
@@ -222,18 +222,14 @@ node is reached and the output decision returned.
 Decision trees have several advantages: 
 
 
-* 
- They are efficient in both computation and memory usage during 
+They are efficient in both computation and memory usage during 
  training and prediction.  
 
-* 
- They can represent non-linear decision boundaries.  
+They can represent non-linear decision boundaries.  
 
-* 
- They perform integrated feature selection and classification.
+They perform integrated feature selection and classification.
 
-* 
- They are resilient in the presence of noisy features. 
+They are resilient in the presence of noisy features. 
 
 
 
@@ -256,16 +252,14 @@ for all trees in the model.
 
 
 
-* 
-  `rxFastForest`: A `rxFastForest` object with the trained model.
+ `rxFastForest`: A `rxFastForest` object with the trained model.
 
-* 
-  `FastForest`: A learner specification object of class `maml`
+ `FastForest`: A learner specification object of class `maml`
   for the Fast Forest trainer. 
 
 
 
- ## Note
+ ## Notes
 
 This algorithm is multi-threaded and will always attempt to load the entire dataset into
 memory.
@@ -289,7 +283,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastLinear](rxFastLinear.md),
 [rxLogisticRegression](rxLogisticRegression.md), [rxNeuralNet](rxNeuralNet.md),

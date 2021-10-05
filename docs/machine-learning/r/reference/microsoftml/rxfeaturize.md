@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxFeaturize: Data Transformation for RevoScaleR data sources 
- ## Description
+ 
 
 Transforms data from an input data set to an output data set.
 
@@ -169,7 +169,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 rxDataStep, rxImport,
 rxTransform.

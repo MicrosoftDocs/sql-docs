@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # setInputParameterValue: Assign a Value to the Input Data Parameter of the SQL Stored Procedure 
- ## Description
+ 
 
 `setInputParameterValue`: assigns a value to an input parameter of the
 stored procedure/embedded R function that is going to be

@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # resizeImage: Machine Learning Resize Image Transform 
- ## Description
+ 
 
 Resizes an image to a specified dimension using a specified
 resizing method.

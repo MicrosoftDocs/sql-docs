@@ -32,7 +32,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # ngram: Machine Learning Feature Extractors 
- ## Description
+ 
 
 Feature Extractors that can be used with mtText.
 
@@ -117,7 +117,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [featurizeText](featurizeText.md).
 

@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # fastForest: fastForest 
- ## Description
+ 
  
 Creates a list containing the function name and arguments to train a
  FastForest model with [rxEnsemble](rxEnsemble.md).

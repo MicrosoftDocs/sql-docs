@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # getInputParameters: Get a List of Input Parameters of a SQL Stored Procedure 
- ## Description
+ 
 
 `getInputParameters`: returns a list of SQL Server parameter objects
 that describe the input parameters associated

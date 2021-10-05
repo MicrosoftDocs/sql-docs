@@ -31,7 +31,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # summary.mlModel: Summary of a Microsoft R Machine Learning model. 
- ## Description
+ 
 
 Summary of a Microsoft R Machine Learning model.
 
@@ -116,7 +116,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md),
 [rxFastLinear](rxFastLinear.md), [rxOneClassSvm](rxOneClassSvm.md),

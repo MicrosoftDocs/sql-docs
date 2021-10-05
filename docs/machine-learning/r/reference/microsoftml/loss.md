@@ -36,7 +36,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # loss functions: Classification and Regression Loss functions 
- ## Description
+ 
 
 The loss functions for classification and regression.
 
@@ -91,27 +91,21 @@ cost of being wrong.
 The classification loss functions supported are:
 
 
-* 
- `logLoss` 
+`logLoss` 
 
-* 
- `expLoss` 
+`expLoss` 
 
-* 
- `hingeLoss` 
+`hingeLoss` 
 
-* 
- `smoothHingeLoss`
+`smoothHingeLoss`
 
 
 The regression loss functions supported are:
 
 
-* 
- `poissonLoss` 
+`poissonLoss` 
 
-* 
- `squaredLoss`.
+`squaredLoss`.
 
 
 
@@ -126,7 +120,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastLinear](rxFastLinear.md), [rxNeuralNet](rxNeuralNet.md)
 

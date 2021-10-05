@@ -2,7 +2,7 @@
 
 # required metadata 
 title: "getSentiment function (MicrosoftML) " 
-description: " Scores natual language text and creates a column that  contains probabilities that the sentiments in the text are positive. " 
+description: " Scores natural language text and creates a column that  contains probabilities that the sentiments in the text are positive. " 
 keywords: "(MicrosoftML), getSentiment, nlp, sentiment, text, transform" 
 author: "dphansen"
 ms.author: "davidph" 
@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # getSentiment: Machine Learning Sentiment Analyzer Transform 
- ## Description
+ 
 
 Scores natural language text and creates a column that 
 contains probabilities that the sentiments in the text are positive.
@@ -74,7 +74,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md),
 [rxNeuralNet](rxNeuralNet.md), [rxOneClassSvm](rxOneClassSvm.md),

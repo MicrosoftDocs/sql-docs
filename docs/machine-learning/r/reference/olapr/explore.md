@@ -28,15 +28,15 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
 
- # explore: olapR explore Method 
+# explore: olapR explore Method 
 
- ## Description
+
 
 Allows for exploration of cube metadata
 
 
 
- ## Usage
+## Usage
 
 ```   
   explore(olapCnn, cube = NULL, dimension = NULL, hierarchy = NULL, level = NULL)
@@ -44,60 +44,60 @@ Allows for exploration of cube metadata
 ```
 
 
- ## Arguments
+## Arguments
 
 
 
- ### `olapCnn`
+### `olapCnn`
  Object of class "OlapConnection" returned by `OlapConnection()` 
 
 
- ### `cube`
+### `cube`
  A string specifying a cube name 
 
 
- ### `dimension`
+### `dimension`
  A string specifying a dimension name 
 
 
- ### `hierarchy`
+### `hierarchy`
  A string specifying a hierarchy name 
 
 
- ### `level`
+### `level`
  A string specifying a level name 
 
 
 
 
- ## Details
+## Details
 
 `explore` 
 
 
 
- ## Value
+## Value
 
 Prints cube metadata. Returns NULL.
 An error is thrown if arguments are invalid.
 
 
- ## Note
+## Notes
 
 Arguments must be specified in order. For example: In order to explore hierarchies, a dimension and a cube must be specified.
 
 
 
- ## References
+## References
   See [execute2D](Execute2D.md) or [executeMD](ExecuteMD.md) for references.  
 
 
- ## See Also
+## See also
 
-query`, `[OlapConnection](OlapConnection.md)`, `[executeMD](ExecuteMD.md)`, `[execute2D](Execute2D.md)
+query, [OlapConnection](OlapConnection.md), [executeMD](ExecuteMD.md), [execute2D](Execute2D.md)
 
 
- ## Examples
+## Examples
 
  ```
 

@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # OutputParameter: Output Parameter for SQL Stored Procedure: Class Generator 
- ## Description
+ 
 
 `OutputParameter`: generates an OutputParameter Object that captures the
 information about the output parameters of the function that is

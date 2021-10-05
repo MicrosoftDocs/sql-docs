@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # concat: Machine Learning Concat Transform 
- ## Description
+ 
 
 Combines several columns into a single vector-valued column.
 
@@ -74,7 +74,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [featurizeText](featurizeText.md), [categorical](categorical.md),
 [categoricalHash](categoricalHash.md), [rxFastTrees](rxFastTrees.md),

@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # featurizeImage: Machine Learning Image Featurization Transform 
- ## Description
+ 
 
 Featurizes an image using a pre-trained deep neural network model.
 

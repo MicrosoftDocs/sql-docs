@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # extractPixels: Machine Learning Extract Pixel Data Transform 
- ## Description
+ 
 
 Extracts the pixel values from an image.
 

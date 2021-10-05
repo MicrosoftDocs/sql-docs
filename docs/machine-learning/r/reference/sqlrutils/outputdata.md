@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # OutputData: Output Data for SQL Stored Procedure: Class Generator 
- ## Description
+ 
 
 `OutputData`: generates an OutputData Object that captures the
 information about the data frame that needs to be returned after

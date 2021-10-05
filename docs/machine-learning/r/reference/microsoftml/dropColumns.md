@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # dropColumns: Drops columns from the dataset 
- ## Description
+ 
  
 Specified columns to drop from the dataset.
  

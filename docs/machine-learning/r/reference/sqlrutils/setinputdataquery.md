@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # setInputDataQuery: Assign a Query to the Input Data Parameter of the SQL Stored Procedure 
- ## Description
+ 
 
 `setInputDataQuery`: assigns a query to the InputData parameter of the
 stored procedure that is going to populate the input

@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # getSampleDataDir: Get Package Sample Data Location 
- ## Description
+ 
 
 Location where downloaded sample data is stored.
 

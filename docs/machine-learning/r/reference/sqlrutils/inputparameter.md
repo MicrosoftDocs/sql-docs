@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # InputParameter: Input Parameter for SQL Stored Procedure: Class Generator 
- ## Description
+ 
 
 `InputParameter`: generates an InputParameter Object, that captures the
 information about the input parameters of the R function that is

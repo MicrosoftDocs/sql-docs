@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # fastTrees: fastTrees 
- ## Description
+ 
  
 Creates a list containing the function name and arguments to train a
  FastTree model with [rxEnsemble](rxEnsemble.md).

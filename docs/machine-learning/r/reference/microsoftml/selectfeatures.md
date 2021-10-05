@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # selectFeatures: Machine Learning Feature Selection Transform 
- ## Description
+ 
 
 The feature selection transform selects features from the specified
 variables using the specified mode.
@@ -73,7 +73,7 @@ information, see [minCount](minCount.md) and [mutualInformation](mutualInformati
 
 A `maml` object defining the transform.
 
- ## See Also
+ ## See also
 
 [minCount](minCount.md) [mutualInformation](mutualInformation.md)
 

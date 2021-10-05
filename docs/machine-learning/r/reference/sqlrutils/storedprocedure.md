@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # StoredProcedure: SQL Server Stored Procedure: Class Generator 
- ## Description
+ 
 
 `StoredProcedure`: generates a SQLServer Stored Procedure Object
 and optionally a .sql file containing a query to create a stored

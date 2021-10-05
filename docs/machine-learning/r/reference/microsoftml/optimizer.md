@@ -32,7 +32,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # maOptimizer: Optimization Algorithms 
- ## Description
+ 
 
 Specifies Optimization Algorithms for Neural Net.
 
@@ -108,11 +108,9 @@ These functions can be used for the `optimizer` argument in
 [rxNeuralNet](rxNeuralNet.md). 
 
 
-* 
- The `sgd` function specifies Stochastic Gradient Descent. maOptimizer
+The `sgd` function specifies Stochastic Gradient Descent. maOptimizer
 
-* 
- The `adaDeltaSgd` function specifies the AdaDelta gradient 
+The `adaDeltaSgd` function specifies the AdaDelta gradient 
 descent, described in the 2012 paper "ADADELTA: An Adaptive Learning Rate 
 Method" by Matthew D.Zeiler. 
 
@@ -136,7 +134,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxNeuralNet](rxNeuralNet.md),
 

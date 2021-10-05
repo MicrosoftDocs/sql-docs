@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # loadImage: Machine Learning Load Image Transform 
- ## Description
+ 
 
 Loads image data.
 

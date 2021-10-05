@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # registerStoredProcedure: Register a SQL Stored Procedure with a Database 
- ## Description
+ 
 
 `registerStoredProcedure`: Uses the StoredProcedure object to register
 the stored procedure with the specified database

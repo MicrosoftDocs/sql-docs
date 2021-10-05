@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxPredict.mlModel: Score using a Microsoft R Machine Learning model 
- ## Description
+ 
 
 Reports per-instance scoring results in a data frame or RevoScaleR data source
 using a trained Microsoft R Machine Learning model with a RevoScaleR data
@@ -150,7 +150,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md),
 [rxLogisticRegression](rxLogisticRegression.md), [rxNeuralNet](rxNeuralNet.md),

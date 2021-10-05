@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # rxLogisticRegression: Logistic Regression 
- ## Description
+ 
 
 Machine Learning Logistic Regression
 
@@ -245,13 +245,11 @@ would be penalized less. L1 and L2 regularization have different effects
 and uses that are complementary in certain respects.  
 
 
-* 
- `l1Weight`: can be applied to sparse models, when working
+`l1Weight`: can be applied to sparse models, when working
  with high-dimensional data. It pulls small weights associated features
  that are relatively unimportant towards 0.
 
-* 
- `l2Weight`: is preferable for data that is not sparse. It pulls
+`l2Weight`: is preferable for data that is not sparse. It pulls
  large weights towards zero. 
 
 
@@ -270,17 +268,15 @@ performance of the logistic regression model.
 
 
 
-* 
-  `rxLogisticRegression`: A `rxLogisticRegression` object
+ `rxLogisticRegression`: A `rxLogisticRegression` object
   with the trained model.
 
-* 
-  `LogisticReg`: A learner specification object of class `maml`
+ `LogisticReg`: A learner specification object of class `maml`
   for the Logistic Reg trainer. 
 
 
 
- ## Note
+ ## Notes
 
 This algorithm will attempt to load the entire dataset into memory
 when `trainThreads > 1` (multi-threading).
@@ -307,7 +303,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
 
 
- ## See Also
+ ## See also
 
 [rxFastTrees](rxFastTrees.md), [rxFastForest](rxFastForest.md),
 [rxFastLinear](rxFastLinear.md), [rxNeuralNet](rxNeuralNet.md),

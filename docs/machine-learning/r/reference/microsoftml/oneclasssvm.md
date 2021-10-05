@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
  
  
  # oneClassSvm: oneClassSvm 
- ## Description
+ 
  
 Creates a list containing the function name and arguments to train a
  OneClassSvm model with [rxEnsemble](rxEnsemble.md).

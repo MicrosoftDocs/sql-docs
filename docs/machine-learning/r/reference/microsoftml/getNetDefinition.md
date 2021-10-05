@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
  # getNetDefinition: Get the Net# definition from a trained neural network model 
- ## Description
+ 
 
 Returns the Net# definition from a trained neural network model.
 
@@ -62,7 +62,7 @@ Returns the Net# definition from a trained neural network model. It is
 useful for implementing a form of continued training, where the initial weights
 of the model are obtained from a previously trained model. Because only the
 weights are initialized from the trained model (but not gradients, momentum
-etc.), the training is not really resumed where it was left at the end of
+etc.), the training is not resumed where it was left at the end of
 training of the first model.
 
 

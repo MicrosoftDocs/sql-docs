@@ -29,15 +29,15 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 
 
- # executeMD: olapR executeMD Methods 
+# executeMD: olapR executeMD Methods 
 
- ## Description
+
 
 Takes a Query object or an MDX string, and returns the result as a multi-dimensional array.
 
 
 
- ## Usage
+## Usage
 
 ```   
   executeMD(olapCnn, query)
@@ -46,25 +46,25 @@ Takes a Query object or an MDX string, and returns the result as a multi-dimensi
 ```
 
 
- ## Arguments
+## Arguments
 
 
 
- ### `olapCnn`
+### `olapCnn`
  Object of class "OlapConnection" returned by `OlapConnection()` 
 
 
- ### `query`
+### `query`
  Object of class "Query" returned by `Query()` 
 
 
- ### `mdx`
+### `mdx`
  String specifying a valid MDX query 
 
 
 
 
- ## Details
+## Details
 
 If a Query is provided:
 `executeMD` validates a Query object (optional), generates an mdx query string from the Query object, executes the mdx query across an XMLA connection, and returns the result  as a multi-dimensional array.
@@ -74,19 +74,19 @@ If an MDX string is provided:
 
 
 
- ## Value
+## Value
 
 Returns a multi-dimensional array.
 Returns an error if the Query is invalid.
 
 
- ## Note
+## Notes
 
 
 
 
 
- ## References
+## References
 
 Creating a Demo OLAP Cube (the same as the one used in the examples): 
 [`https://msdn.microsoft.com/library/ms170208.aspx`](https://msdn.microsoft.com/library/ms170208.aspx)
@@ -94,12 +94,12 @@ Creating a Demo OLAP Cube (the same as the one used in the examples):
 
 
 
- ## See Also
+## See also
 
-[Query](Query.md), [OlapConnection](OlapConnection.md)`, `[execute2D](Execute2D.md)`, `[explore](Explore.md)`, `array
+[Query](Query.md), [OlapConnection](OlapConnection.md), [execute2D](Execute2D.md), [explore](Explore.md), array
 
 
- ## Examples
+## Examples
 
  ```
 

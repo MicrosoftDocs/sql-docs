@@ -53,7 +53,7 @@ items:
   - name: Set up a Python client
     href: ../machine-learning/python/setup-python-client-tools-sql.md
   - name: Set up an R client
-    href: ../machine-learning/r/set-up-a-data-science-client.md
+    href: ../machine-learning/r/set-up-data-science-client.md
   - name: Install on Azure VM
     href: ../machine-learning/install/sql-machine-learning-azure-virtual-machine.md
   - name: Install standalone server

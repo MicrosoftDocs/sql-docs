@@ -42561,6 +42561,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/sql/machine-learning/r/set-up-a-data-science-client.md",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/advanced-analytics/r/sql-server-configuration-r-services.md",
       "redirect_url": "/sql/machine-learning/r/sql-server-configuration-r-services",
       "redirect_document_id": true

@@ -31,7 +31,7 @@ The **RevoScaleR** package is based on R 3.4.3 and available only when you insta
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft R client](set-up-a-data-science-client.md)
++ [Microsoft R client](set-up-data-science-client.md)
 
 > [!NOTE]
 > Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **RevoScaleR** in [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md).

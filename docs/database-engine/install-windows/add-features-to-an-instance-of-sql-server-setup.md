@@ -12,7 +12,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 02/05/2021
+ms.date: 10/05/2021
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -29,13 +29,11 @@ To add features to an instance of SQL Server from the command prompt, see [Insta
 
 ## Prerequisites
 
-Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).
+Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Also be aware:
 
-> [!NOTE]
-> For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
-  
-> [!NOTE]
-> When you add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+- For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
+- When you add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the existing usage report settings are applied to the newly added features. To change these settings, use the **SQL Server Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+- You cannot add features to a failover cluster instance. For example, you cannot add the PolyBase feature to an existing failover cluster instance. Similarly, removing features from a failover cluster instance is also not supported.
 
 ## Procedures
 
@@ -57,7 +55,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
 
-    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.
+    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisites that are not already installed during the installation step described later in this procedure.
 
     The System Configuration Checker will verify the system state of your computer before Setup continues. Select **Next** to continue.
 
@@ -77,7 +75,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 12. Use the **Server Configuration - Collation** tab to specify non-default collations for the Database Engine and Analysis Services. For more information, see [Server Configuration - Collation](./install-sql-server.md).
 
-13. Use the Database Engine Configuration - Account Provisioning page to specify the following:  
+13. Use the Database Engine Configuration - Account Provisioning page to specify the following settings:  
 
     - Security Mode - Select Windows Authentication or Mixed Mode Authentication for your instance of SQL Server. If you select Mixed Mode Authentication, you must provide a strong password for the built-in SQL Server system administrator account.
 
@@ -96,7 +94,9 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 15. Use the Database Engine Configuration - FILESTREAM page to enable FILESTREAM for your instance of SQL Server. For more information about FILESTREAM, see [Database Engine Configuration - Filestream](./install-sql-server.md). To continue, select Next.
 
-16. Use the Analysis Services Configuration - Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for Analysis Services. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for Analysis Services. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for Analysis Services. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](./install-sql-server.md).
+16. Use the Analysis Services Configuration - Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for Analysis Services. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. An instance of Analysis Services can support either conventional multidimensional cubes, or tabular models, but an instance cannot support both types of models. For new development, use the default option, **Tabular Mode**. 
+
+    Regarding administrator permissions, you must specify at least one system administrator for Analysis Services. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for Analysis Services. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](./install-sql-server.md).
 
     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.
 
@@ -117,7 +117,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 20. Use the Distributed Replay Client Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay client service. Users that have administrative permissions will have unlimited access to the Distributed Replay client service.
 
-    **Controller Name** is an optional parameter, and the default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service. Note the following:
+    **Controller Name** is an optional parameter, and the default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service. Note the following conditions:
 
     - If you have already set up a controller, enter the name of the controller while configuring each client.
 
@@ -129,7 +129,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     To continue, select **Next**.
 
-21. On the Error Reporting page, specify the information you would like to send to Microsoft that will help to improve SQL Server. By default, options for error reporting is enabled.
+21. On the Error Reporting page, specify the information you would like to send to Microsoft that will help to improve SQL Server. By default, the option for error reporting is enabled.
 
 22. The System Configuration Checker will run one more set of rules to validate your computer configuration with the SQL Server features you have specified.  
 

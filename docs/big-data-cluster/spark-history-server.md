@@ -2,11 +2,11 @@
 title: Debug & diagnose Spark applications
 titleSuffix: SQL Server Big Data Clusters
 description: Use Spark History Server to debug and diagnose Spark applications running on SQL Server 2019 big data cluster.
-author: jejiang
-ms.author: jejiang
-ms.reviewer: mikeray
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 06/22/2020
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -199,7 +199,7 @@ Note: Both of these logs have a default retention period of 7 days. If you want 
 ## Known issues
 The Spark History Server has the following known issues:
 
-+ Currently, it only works for Spark 2.3 cluster.
++ Currently, it only works for Spark 3.1 cluster (CU13+) and Spark 2.4 (CU12-).
 
 + Input/output data using RDD will not be shown in Data tab.
 

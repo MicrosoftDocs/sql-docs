@@ -2,11 +2,11 @@
 title: "Run jobs: Spark & Hive Tools for VS Code"
 titleSuffix: SQL Server Big Data Clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
-author: jejiang
-ms.author: jejiang
-ms.reviewer: wiassaf, dacoelho
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 09/28/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,7 +18,6 @@ Learn how to use Spark & Hive Tools for Visual Studio Code to create and submit 
 
 Spark & Hive Tools can be installed on platforms that are supported by Visual Studio Code, which include Windows, Linux, and macOS. Below you'll find the prerequisites for different platforms.
 
-
 ## Prerequisites
 
 The following items are required for completing the steps in this article:
@@ -28,7 +27,7 @@ The following items are required for completing the steps in this article:
 - [Python and the Python extension on Visual Studio Code](https://code.visualstudio.com/docs/languages/python).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono is only required for Linux and macOS.
 - [Set up PySpark interactive environment for Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
-- A local directory named **SQLBDCexample**.  This article uses  **C:\SQLBDC\SQLBDCexample**.
+- A local directory named **SQLBDCexample**.  This article uses **C:\SQLBDC\SQLBDCexample**.
 
 ## Install Spark & Hive Tools
 

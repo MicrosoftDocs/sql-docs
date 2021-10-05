@@ -5,7 +5,7 @@ description: Learn how to use sparklyr in a SQL Server Big Data Cluster to conne
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/28/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
@@ -25,14 +25,14 @@ Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for
 
 Install and configure **RStudio Desktop** with the following steps:
 
-1. If you are running on a Windows client, [download and install R 3.6.3](https://cran.rstudio.com/bin/windows/base/old/3.6.3).
+1. If you are running on a Windows client, [download and install R 3.6.3](https://cran.rstudio.com/bin/windows/base/old/3.6.3). Also, [download and install RTools 3.5](https://cran.r-project.org/bin/windows/Rtools/history.html). Make sure to configure RTools binary folder on your PATH environment variable.
 
     > [!WARNING]
-    > R version 4.x and sparklyr versions other that the one specified below are verified not to work as of SQL Server Big Data Clusters CU12.
-    
+    > R version 4.x and sparklyr versions other that the one specified below are verified not to work as of SQL Server Big Data Clusters CU13.
+
 1. [Download and install RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). Optionally, all samples work on the R shell.
 
-1. After installation completes, run the following commands inside of RStudio Desktop to install the required packages:
+1. After installation completes, run the following commands inside of RStudio Desktop or R shell to install the required packages. When asked, confirm to compile packages from source.
 
 ```r
 install.packages("devtools")

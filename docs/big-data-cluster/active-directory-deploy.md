@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
-ms.date: 09/21/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -127,7 +127,7 @@ mode](manage-user-access.md).
 ```
 
   >[!IMPORTANT]
-  >Create the groups provided for the settings bellow in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+  >Create the groups provided for the settings below in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
 - `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 

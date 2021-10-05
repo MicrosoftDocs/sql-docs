@@ -1,35 +1,56 @@
 ---
-title: SQL Server Big Data Clusters Post-Deployment Configuration Overview
-titleSuffix: SQL Server big data clusters
-description: Big Data Clusters Post-Deployment Configuration Overview
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: dacoelho
-ms.date: 08/04/2021
+title: SQL Server Big Data Clusters post-deployment configuration overview
+titleSuffix: SQL Server Big Data Clusters
+description: Big data clusters post-deployment configuration overview
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
+ms.date: 10/05/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-
-# How to configure BDC settings post deployment
+# How to configure big data clusters settings post deployment
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 > [!NOTE]
-> Post-deplyoment settings configuration is only available in BDC CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure BDC prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
+> Post-deployment settings configuration is only available in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
 
-Cluster, service, and resource scoped settings for Big Data Clusters can be configured post-deployment through the azdata CLI. This functionality allows BDC administrators to adjust configurations to always meet workload requirements. This article goes over example steps to configure a BDC to meet Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
+Cluster, service, and resource scoped settings for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be configured post-deployment through the `azdata` CLI. This functionality allows [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] administrators to adjust configurations to always meet workload requirements. This article goes over example scenarios on how to configure timezone and Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
 
-## Step by Step: Configure BDC to meet your Spark workload requirements
+## Step by Step Scenario: Configure timezone on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]
 
-### View the current configurations of the Big Data Cluster Spark service
+Starting on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 it is possible to customize the cluster timezone configuration, so services timestamps align with the selected timezone. The setting does not apply to the big data cluster control plane, it sets the new timezone configuration for all SQL Server pools (master, compute, and data), Hadoop components, and Spark.
+
+> [!NOTE]
+> By default, [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] sets UTC as the timezone.
+
+Use the following command to set the timezone configuration:
+
+```bash
+azdata bdc settings set --settings bdc.timezone=America/Los_Angeles
+```
+
+### Apply the pending settings to the cluster
+
+The following command will apply the configuration and restart all services. Review the last sections of this article on how to track changes and control the configuration process.
+
+```bash
+azdata bdc settings apply
+```
+
+## Step by Step Scenario: Configure the cluster to meet your Spark workload requirements
+
+### View the current configurations of the big data cluster Spark service
 
 The following example shows how to view the user configured settings of the Spark service. You can view all possible configurable settings, system-managed and all configurable settings, and pending settings through optional parameters. Visit [`azdata bdc spark` statement](../azdata/reference/reference-azdata-bdc-spark-statement.md) for more information.
 
 ```bash
 azdata bdc spark settings show
 ```
+
 #### Sample output
 
 Spark Service
@@ -39,9 +60,9 @@ Spark Service
 |`spark-defaults-conf.spark.driver.cores`|`1` |
 |`spark-defaults-conf.spark.driver.memory`|`1664m` |
 
-### Change the default number of cores and memory for the Spark driver across all resources with Spark (i.e. for the Spark service)
+### Change the default number of cores and memory for the Spark driver 
 
-Update the default number of cores to 2 and default memory to 7424m for the Spark service.
+Update the default number of cores to two and default memory to 7424 MB for the Spark service. This affects all resources with Spark, for the Spark service.
 
 ```bash
 azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=2,spark-defaults-conf.spark.driver.memory=7424m
@@ -57,7 +78,7 @@ azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.core
 
 ### Configure additional paths to the default classpath of Spark applications
 
-The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the referred path is not loaded by default in the classpath of Spark applications. To enable this setting apply the following configuration pattern.
+The ```/opt/hadoop/share/hadoop/tools/lib/``` path contains several libraries to be used by your spark applications, but the referred path is not loaded by default in the classpath of Spark applications. To enable this setting, apply the following configuration pattern.
 
 ```bash
 azdata bdc hdfs settings set --settings hadoop-env.HADOOP_CLASSPATH="/opt/hadoop/share/hadoop/tools/lib/*"
@@ -99,16 +120,16 @@ Storage-0 Resource Spark Settings - Pending
 | --- | --- | --- | --- | --- | --- |
 |`spark-defaults-conf.spark.executor.cores`|`1`| `4` | `true` | `true` |
 
-### Apply the pending settings to the BDC
+### Apply the pending settings to the big data cluster
 
 ```bash
 azdata bdc settings apply
 ```
 
-### Monitor the status of the BDC configuration update
+### Monitor the configuration update status
 
 ```bash
-azdata bdc status show -all
+azdata bdc status show
 ```
 
 ## Optional steps
@@ -123,7 +144,7 @@ azdata bdc settings revert
 
 ### Abort the configuration upgrade
 
-If the configuration upgrade fails for any of the components, you can cancel the upgrade process and return the BDC back to its prior configurations. Settings that were staged for change during the upgrade will again be listed as pending settings.
+If the configuration upgrade fails for any of the components, you can cancel the upgrade process and return the cluster back to its prior configurations. Settings that were staged for change during the upgrade will again be listed as pending settings.
 
 ```bash
 azdata bdc settings cancel-apply

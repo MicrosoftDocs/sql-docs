@@ -84,7 +84,7 @@ The examples in this article use `bdc` for the OU name.
 Whether you have created a new AD user or using an existing AD user, there are certain permissions the user needs to have. This account is the user account that the big data cluster controller will use when joining the cluster to AD.
 
 > [!IMPORTANT]
-> The DSA needs to be able to create users, groups, and computer accounts in the OU. In the following steps, we have named the big data cluster domain service account `bdcDSA`. You can choose any name for this account depending on your project requirements for big data cluster deployment, but we do not recommend altering the account name once the big data cluster is deployed.
+> The DSA needs to be able to create users, groups, and computer accounts in the OU. In the following steps, we have named the big data cluster domain service account `bdcDSA`. You can choose any name for the DSA, but we do not recommend altering the account name once the big data cluster is deployed.
 
 1. On the domain controller, open **Active Directory Users and Computers**
 

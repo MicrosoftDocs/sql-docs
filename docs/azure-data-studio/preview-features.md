@@ -4,8 +4,8 @@ description: Learn more about Azure Data Studio preview features and how to enab
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: hannahqin
-ms.author: hanqin
+author: yualan
+ms.author: alayu
 ms.reviewer: maghan
 ms.custom:
 ms.date: 10/14/2020

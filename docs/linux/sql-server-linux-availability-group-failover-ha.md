@@ -4,7 +4,7 @@ description: "This article describes types of failover: automatic, planned manua
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 03/01/2018
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

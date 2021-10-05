@@ -2,7 +2,7 @@
 description: "sp_helppublication (Transact-SQL)"
 title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/18/2019
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

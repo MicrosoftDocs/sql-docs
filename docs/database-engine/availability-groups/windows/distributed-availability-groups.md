@@ -4,7 +4,7 @@ description: "A distributed availability group is a special type of availability
 ms.custom:
   - seodec18
   - intro-overview
-ms.date: "10/15/2019"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -65,8 +65,15 @@ Because there are two separate availability groups, the process of installing a 
 
 3. As with a standard availability group, fail over the primary availability group to one of its own replicas (not to the primary of the second availability group) and patch it. If there is no replica other than the primary, a manual failover to the second availability group will be necessary.
 
-> [!NOTE]
-> No announcements have been made as to whether future versions of SQL Server will allow previous versions to participate in the same distributed availability group. If that scenario were enabled, it would allow distributed availability groups to be part of a SQL Server version upgrade plan.
+### Cautions when using Distributed Availability Groups to migrate to higher SQL Server versions
+1. Distributed Availability Group Setup:  When setting up a new AG (AG2) at a higher version, you will not be able to use Autoseeding to create repicas on the new database.  Instead, you must use backup/restore to create the databases in the new higher-verson AG.
+2. You will not have read access to any of the replica databases on the secondary AG as long as the primary AG is at a lower version.
+3. During this time, updates will continue to flow from the Primary AG (AG1) to the Secondary AG (AG2), but the status of the secondary AG will show as Partially Healthy.
+4. Once the Distributed AG is failed over to the higher version (AG2), AG2 should become Healthy.
+5. During this time, fail-back to AG1 will not be possible, as it is at a lower version.
+6. Because AG1 is at a lower version, updates will not be able to be replicated to it.
+7. From here, if the choice is to decommission the original AG, that can be done, and the process is complete.
+8. If the choice is to maintain the Distributed AG, then at this time, the first AG (AG1) should be upgraded.  At that point, AG1 should become healthy, and catch up.  Also, at that point, fail-back would be possible.
 
 ### Windows Server versions and distributed availability groups
 

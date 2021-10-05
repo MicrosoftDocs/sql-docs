@@ -5,7 +5,7 @@ description: Learn how to use sparklyr in a SQL Server Big Data Cluster to conne
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/30/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc

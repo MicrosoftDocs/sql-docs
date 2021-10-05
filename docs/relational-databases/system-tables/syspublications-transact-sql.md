@@ -2,7 +2,7 @@
 description: "syspublications (Transact-SQL)"
 title: "syspublications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

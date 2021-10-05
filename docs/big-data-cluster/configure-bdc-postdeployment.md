@@ -5,7 +5,7 @@ description: Big data clusters post-deployment configuration overview
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/29/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

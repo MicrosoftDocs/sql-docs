@@ -93,7 +93,7 @@ As a best practice, in a production deployment, you must also configure HDFS blo
 
 ## Known limitations
 
-The known issues and limitations with configuring high availability for the Hadoop services in the SQL Server big data clusters include:
+The known issues and limitations with configuring high availability for the Hadoop services in SQL Server Big Data Clusters include:
 
 - All configurations must be specified at the time of the big data cluster deployment. With SQL Server 2019 CU1 release, you cannot enable the high availability configuration after deployment.
 

@@ -1,6 +1,6 @@
 ---
 title: azdata bdc gateway settings reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc gateway settings commands.
 author: MikeRayMSFT
 ms.author: mikeray

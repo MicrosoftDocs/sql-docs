@@ -1,6 +1,6 @@
 ---
 title: azdata bdc config reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -127,7 +127,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.
 ```
 ### Optional Parameters
 #### `--config-file -c`
-Big data cluster config file path if you don't want the config of the cluster you are currentlylogged in to, i.e. custom/bdc.json
+Big data cluster config file path if you don't want the config of the cluster you are currently signed-in to, i.e. custom/bdc.json
 #### `--target -t`
 Output file to store the result in. Default: directed to stdout.
 #### `--json-path -j`

@@ -1,7 +1,7 @@
 ---
 description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
-ms.date: 09/15/2021
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual

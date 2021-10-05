@@ -100,4 +100,4 @@ The stored procedure object typically does not have any data or values associate
 
 ## See also
 
-[How to create a stored procedure using sqlrutils](reference/sqlrutils/how-to-create-a-stored-procedure-from-r.md)
+[How to create a stored procedure using sqlrutils](reference/sqlrutils/how-to-create-stored-procedure-from-r.md)

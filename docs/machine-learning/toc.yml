@@ -553,7 +553,7 @@ items:
       - name: Package overview
         href: ../machine-learning/r/ref-r-sqlrutils.md
       - name: Create a stored procedure from R code
-        href: ../machine-learning/r/reference/sqlrutils/how-to-create-a-stored-procedure-from-r.md
+        href: ../machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r.md
       - name: executeStoredProcedure
         href: ../machine-learning/r/reference/sqlrutils/executestoredprocedure.md
       - name: getInputParameters

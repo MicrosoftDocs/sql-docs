@@ -22,7 +22,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 09/16/2021 
+ms.date: 10/05/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -35,17 +35,17 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.9.2](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.10](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.9.2 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9.2 upgrades it to 18.9.2.
+SSMS 18.10 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.10 upgrades it to 18.10.
 
-- Release number: 18.9.2
-- Build number: 15.0.18386.0
-- Release date: July 15, 2021
+- Release number: 18.10
+- Build number: 15.0.18390.0
+- Release date: October 5, 2021
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).  By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement).
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.9.2. You can see if you have the preview version by going to the **Help > About** window.
+The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.10. You can see if you have the preview version by going to the **Help > About** window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**.
 
@@ -55,8 +55,8 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.9.2:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168063&clcid=0x40a)
+SQL Server Management Studio 18.10:  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40a)
 
 > [!TIP]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
@@ -136,6 +136,7 @@ The current release of SSMS supports the following 64-bit platforms when used wi
 Supported Operating Systems:
 
 - Windows Server 2022 (64-bit)
+- Windows 11 (64-bit)
 - Windows 10 (64-bit) version 1607 (10.0.14393) or later
 - Windows 8.1 (64-bit)
 - Windows Server 2019 (64-bit)

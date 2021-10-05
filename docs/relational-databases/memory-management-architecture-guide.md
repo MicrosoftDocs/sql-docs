@@ -2,7 +2,7 @@
 title: "Memory Management Architecture Guide | Microsoft Docs"
 description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
 ms.custom: ""
-ms.date: 01/09/2019
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -110,6 +110,7 @@ As soon as this allocation is performed, the *Resource Monitor* background task 
 
 This behavior is typically observed during the following operations: 
 -  Large Columnstore index queries.
+-  Large [Batch Mode on Rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) queries.
 -  Columnstore index (re)builds, which use large volumes of memory to perform Hash and Sort operations.
 -  Backup operations that require large memory buffers.
 -  Tracing operations that have to store large input parameters.
@@ -180,7 +181,7 @@ The instance then continues to acquire memory as needed to support the workload.
 As other applications are started on a computer running an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], they consume memory and the amount of free physical memory drops below the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] target. The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adjusts its memory consumption. If another application is stopped and more memory becomes available, the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] increases the size of its memory allocation. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can free and acquire several megabytes of memory each second, allowing it to quickly adjust to memory allocation changes.
 
 ## Effects of min and max server memory
-The *min server memory* and *max server memory* configuration options establish upper and lower limits to the amount of memory used by the buffer pool and other caches of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. The buffer pool does not immediately acquire the amount of memory specified in min server memory. The buffer pool starts with only the memory required to initialize. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] workload increases, it keeps acquiring the memory required to support the workload. The buffer pool does not free any of the acquired memory until it reaches the amount specified in min server memory. Once min server memory is reached, the buffer pool then uses the standard algorithm to acquire and free memory as needed. The only difference is that the buffer pool never drops its memory allocation below the level specified in min server memory, and never acquires more memory than the level specified in max server memory.
+The *min server memory* and *max server memory* configuration options establish upper and lower limits to the amount of memory used by the buffer pool and other caches of the [!INCLUDE[ssde_md](../includes/ssde_md.md)]. The buffer pool does not immediately acquire the amount of memory specified in min server memory. The buffer pool starts with only the memory required to initialize. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] workload increases, it keeps acquiring the memory required to support the workload. The buffer pool does not free any of the acquired memory until it reaches the amount specified in min server memory. Once min server memory is reached, the buffer pool then uses the standard algorithm to acquire and free memory as needed. The only difference is that the buffer pool never drops its memory allocation below the level specified in min server memory, and never acquires more memory than the level specified in max server memory.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a process acquires more memory than specified by max server memory option. Both internal and external components can allocate memory outside of the buffer pool, which consumes additional memory, but the memory allocated to the buffer pool usually still represents the largest portion of memory consumed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -189,7 +190,7 @@ The amount of memory acquired by the [!INCLUDE[ssDEnoversion](../includes/ssdeno
 
 If the same value is specified for both min server memory and max server memory, then once the memory allocated to the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] reaches that value, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] stops dynamically freeing and acquiring memory for the buffer pool.
 
-If an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on a computer where other applications are frequently stopped or started, the allocation and deallocation of memory by the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may slow the startup times of other applications. Also, if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is one of several server applications running on a single computer, the system administrators may need to control the amount of memory allocated to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In these cases, you can use the min server memory and max server memory options to control how much memory [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can use. The **min server memory** and **max server memory** options are specified in megabytes. For more information, see [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md).
+If an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on a computer where other applications are frequently stopped or started, the allocation and deallocation of memory by the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may slow the startup times of other applications. Also, if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is one of several server applications running on a single computer, the system administrators may need to control the amount of memory allocated to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In these cases, you can use the min server memory and max server memory options to control how much memory [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can use. The **min server memory** and **max server memory** options are specified in megabytes. For more information including recommendations on how to set these memory configurations, see [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
 ## Memory used by SQL Server objects specifications
 The following list describes the approximate amount of memory used by different objects in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The amounts listed are estimates and can vary depending on the environment and how objects are created:
@@ -197,7 +198,7 @@ The following list describes the approximate amount of memory used by different 
 * Lock (as maintained by the Lock Manager): 64 bytes + 32 bytes per owner   
 * User connection: Approximately (3 \* network_packet_size + 94 kb)    
 
-The **network packet size** is the size of the tabular data scheme (TDS) packets that are used to communicate between applications and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. The default packet size is 4 KB, and is controlled by the network packet size configuration option.
+The **network packet size** is the size of the tabular data stream (TDS) packets that are used to communicate between applications and the [!INCLUDE[ssde_md](../includes/ssde_md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.
 
 When multiple active result sets (MARS) are enabled, the user connection is approximately (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
 

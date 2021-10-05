@@ -459,7 +459,7 @@ items:
             href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
     - name: Spark
       items:
-      - name: SQL Server Big Data Clusters runtime for Apache Spark
+      - name: runtime for Apache Spark
         href: big-data-cluster/runtime-for-apache-spark.md
       - name: Spark 3 upgrade guide
         href: big-data-cluster/spark-3-upgrade.md

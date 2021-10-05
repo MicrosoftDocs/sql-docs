@@ -5,7 +5,7 @@ description: Spark 3 upgrade guide
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/21/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -40,7 +40,7 @@ Spark 3 is a major release and __contains breaking changes__. Following the same
 
 ## What happens during cluster upgrade?
 
-The cluster upgrade process will deploy Spark pods with the new version and the refreshed [Microsoft Spark Runtime](microsoft-spark-runtime.md). After the upgrade, there will be no Spark 2.4 components any longer.
+The cluster upgrade process will deploy Spark pods with the new version and the refreshed [runtime for Apache Spark](runtime-for-apache-spark.md). After the upgrade, there will be no Spark 2.4 components any longer.
 
 Persistent configuration changes made through the configuration framework will be preserved.
 
@@ -51,11 +51,11 @@ User libraries and artifacts loaded directly into HDFS will be preserved. Yet, m
 
 ## Breaking changes
 
-Spark 3 is not fully backward compatible with 2.4, the breaking changes are mainly caused by two parts:
+Spark 3 is not fully backward compatible with 2.4, the breaking changes are mainly caused by three parts:
 
 * Scala 2.12 used by Spark 3 is incompatible with Scala 2.11 used by Spark 2.4
 * Spark 3 API changes and deprecations
-* Microsoft Spark Runtime library updates
+* SQL Server Big Data Clusters runtime for Apache Spark library updates
 
 ## Scala 2.12 used by Spark 3 is incompatible with Scala 2.11
 
@@ -121,9 +121,9 @@ Some captured highlights are:
 |The order of argument is reversed in the TRIM method|Use ```TRIM(str, trimStr)``` instead of ```TRIM(trimStr, str)```|
 |Due to the upgrade to Scala 2.12, ```DataStreamWriter.foreachBatch``` is not a compatible source with Scala program|Update your Scala source code to distinguish between Scala function and Java lambda.|
 
-## Microsoft Spark Runtime library updates
+## SQL Server Big Data Clusters runtime for Apache Spark library updates
 
-As covered by the [Microsoft Spark Runtime](microsoft-spark-runtime.md) specification, all default Python, R, and Scala libraries were updated on the CU13 release. Also, many libraries were added to provide a better out-of-the-box experience.
+As covered by the [SQL Server Big Data Clusters runtime for Apache Spark](runtime-for-apache-spark.md) specification, all default Python, R, and Scala libraries were updated on the CU13 release. Also, many libraries were added to provide a better out-of-the-box experience.
 
 1. Make sure that your workload works with the newer library set. 
 1. Review if a custom loaded library is now part of the default package baseline, and adjust your jobs specifications to remove the custom library to allow the job to use the shipped library.

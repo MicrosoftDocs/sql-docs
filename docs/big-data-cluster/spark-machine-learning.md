@@ -5,7 +5,7 @@ description: Introducing Spark Machine Learning on SQL Server Big Data Clusters.
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 09/23/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -31,7 +31,7 @@ The next section provides a curated list of scenarios and references for Spark i
 
 |Learn|Contents  |Link  |
 |---------|---------|---------|
-|Microsoft Spark Runtime|This will show what's included with each release|[Microsoft Spark Runtime Guide](microsoft-spark-runtime.md)|
+|SQL Server Big Data Clusters runtime for Apache Spark|This will show what's included with each release|[SQL Server Big Data Clusters runtime for Apache Spark Guide](runtime-for-apache-spark.md)|
 |The Storage Pool|How to store and use HDFS + Spark together to unlock data for machine learning|[Introducing the storage pool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-storage-pool.md)|
 |Use notebook-based experiences and your tools of choice|Connect Spark-Livy endpoint using your tools of choice|[Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure Data Studio](spark-submit-job.md)<br/>[Submit Spark jobs on SQL Server big data cluster in Visual Studio Code](spark-hive-tools-vscode.md)<br/>[Use sparklyr in SQL Server big data cluster](sparklyr-from-RStudio.md)<br/>|
 |How to install extra packages|In the case a package is not provided out-of-the-box, install it|[Spark library management](spark-install-packages.md)|

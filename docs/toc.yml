@@ -459,8 +459,8 @@ items:
             href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
     - name: Spark
       items:
-      - name: Microsoft Spark Runtime
-        href: big-data-cluster/microsoft-spark-runtime.md
+      - name: SQL Server Big Data Clusters runtime for Apache Spark
+        href: big-data-cluster/runtime-for-apache-spark.md
       - name: Spark 3 upgrade guide
         href: big-data-cluster/spark-3-upgrade.md
       - name: Submit Spark jobs in Azure Data Studio

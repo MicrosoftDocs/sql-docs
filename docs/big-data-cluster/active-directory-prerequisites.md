@@ -86,7 +86,7 @@ The examples in this article use `bdc` for the OU name.
 
 Whether you have created a new AD user or using an existing AD user, there are certain permissions the user needs to have. This account is the user account that the BDC controller will use when joining the cluster to AD.
 
-The BDC domain service account (DSA) needs to be able to create users, groups, and computer accounts in the OU. In the following steps, we have named the BDC domain service account `bdcDSA`. You can choose any name for this account depending on your project requirements for BDC deployment, but we do not recommend to alter the account name once BDC cluster is deployed. To rotate the password of DSA account, a notebook is available for DSA account password rotation, see further information from [here](cluster-manage-notebooks.md)
+The BDC domain service account (DSA) needs to be able to create users, groups, and computer accounts in the OU. In the following steps, we have named the BDC domain service account `bdcDSA`. You can choose any name for this account depending on your project requirements for BDC deployment, but we do not recommend to alter the account name once BDC cluster is deployed.
 
 1. On the domain controller, open **Active Directory Users and Computers**
 

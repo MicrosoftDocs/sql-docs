@@ -124,7 +124,7 @@ This section lists the functions by category to give you an idea of how each one
 
 | Function name | Description |
 |---------------|-------------|
-|[rxHashEnv](reference/microsoftml/rxHashEnv.md) | An environment object used to store package-wide state. |
+|[rxHashEnv](reference/microsoftml/rxhashenv.md) | An environment object used to store package-wide state. |
 
 
 ## How to use MicrosoftML

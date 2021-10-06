@@ -1,8 +1,8 @@
 ---
 title: Release notes - Azure Synapse Pathway
 description: Azure Synapse Pathway release notes
-author: twounder
-ms.author: mausher
+author: charlesfeddersen
+ms.author: charlesf
 ms.topic: overview 
 ms.date: 09/22/2021
 ms.prod: sql

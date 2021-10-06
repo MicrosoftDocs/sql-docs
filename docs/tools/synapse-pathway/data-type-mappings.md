@@ -1,8 +1,8 @@
 ---
 title: Azure Synapse Pathway data type mappings
 description: Data type mappings for source platforms within Azure Synapse Pathway
-author: twounder
-ms.author: mausher
+author: charlesfeddersen
+ms.author: charlesf
 ms.topic: overview
 ms.date: 07/14/2021
 ms.prod: sql

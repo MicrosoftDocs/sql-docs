@@ -1,8 +1,8 @@
 ---
 title: Azure Synapse Pathway FAQ
 description: Frequently asked question for Azure Synapse Pathway
-author: twounder
-ms.author: mausher
+author: charlesfeddersen
+ms.author: charlesf
 ms.topic: overview 
 ms.date: 09/22/2021
 ms.prod: sql

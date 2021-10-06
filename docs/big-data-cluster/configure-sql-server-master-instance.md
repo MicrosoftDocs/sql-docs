@@ -2,10 +2,10 @@
 title: Configure SQL Server master instance
 titleSuffix: Configure SQL Server master instance of Big Data Cluster
 description: Configure the master instance of a SQL Server Big Data Cluster
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 11/04/2019
+author: dacoelho
+ms.author: dacoelho
+ms.reviewer: wiassaf
+ms.date: 10/04/2021
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -19,11 +19,13 @@ ms.custom:
 
 Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-Server configuration settings cannot be configured for SQL Server master instance at deployment time. This article describes a temporary workaround on how to configure settings like SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags or enable/disable customer feedback.
+Server configuration settings cannot be configured for SQL Server master instance at deployment time. Starting in CU9, Big Data Clusters includes a configuration management feature that enables administrators to alter or tune various parts of the Big Data Cluster post-deployment and get deeper insights into the configurations running in their big data cluster. 
+
+This article describes a temporary workaround on how to configure settings, including: SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags, enable/disable customer feedback, or `domainmapping`.
 
 To change any of these settings, follow these steps:
 
-1. Create a custom `mssql-custom.conf` file that includes targeted settings. The following example enables SQL Agent, telemetry, sets a PID for Enterprise Edition, and enables trace flag 1204.:
+1. Create a custom `mssql-custom.conf` file that includes targeted settings. The following example enables SQL Agent, telemetry, sets a PID for Enterprise Edition, and enables trace flag 1204:
 
    ```
    [sqlagent]

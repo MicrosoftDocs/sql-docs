@@ -111,7 +111,7 @@ Identify the file that receives output from `sqlcmd`.
 Print performance statistics for every result set.
 
 **-P**  
-Specify a user password. When used with the -G option without -U, specifies a file that contains an access token (v17.8+). The token file should be in UTF-16 format.
+Specify a user password. When used with the -G option without -U, specifies a file that contains an access token (v17.8+). The token file should be in UTF-16LE (no BOM) format.
 
 Access tokens can be obtained via various methods. It's important to ensure the access token is correct byte-for-byte, as it will be sent as-is. Below is an example command that obtains an access token. The command uses the Azure CLI and Linux commands and saves it to a file in the proper format. If your system or terminal's default encoding isn't ASCII or UTF-8, you may need to adjust the `iconv` options. Be sure to carefully secure the resulting file and delete it when it's no longer required.
 

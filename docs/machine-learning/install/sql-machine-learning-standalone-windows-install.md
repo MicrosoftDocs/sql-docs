@@ -217,7 +217,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 ## Development tools
 
-A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
+A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
 
 ## Next steps
 

@@ -128,7 +128,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C: Using SYSTEM_USER to return the current system user name  
+### C. Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  
   
 ```sql

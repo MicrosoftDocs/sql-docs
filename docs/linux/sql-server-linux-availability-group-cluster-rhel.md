@@ -15,7 +15,7 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This document explains how to create a three-node availability group cluster for SQL Server on Red Hat Enterprise Linux. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-6-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/). 
+This document explains how to create a three-node availability group cluster for SQL Server on Red Hat Enterprise Linux. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > Access to Red Hat full documentation requires a valid subscription. 

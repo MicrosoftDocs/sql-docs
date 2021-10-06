@@ -63,7 +63,7 @@ Install either one of these versions:
 
 On a standalone server, it's common to work locally using a development installed on the same computer.
 
-+ [Set up R tools](set-up-a-data-science-client.md)
++ [Set up R tools](set-up-data-science-client.md)
 + [Set up Python tools](../python/setup-python-client-tools-sql.md)
 
 ### Step 3: Write your first script

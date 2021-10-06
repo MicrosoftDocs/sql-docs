@@ -24,7 +24,7 @@ This lesson introduces you to functions in the **RevoScaleR** package and steps 
 
 ## Define a SQL Server compute context
 
-Run the following R statements in an R environment on the client workstation. This section assumes a [data science workstation with Microsoft R Client](../r/set-up-a-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use Rgui.exe to run the R script in this section.
+Run the following R statements in an R environment on the client workstation. This section assumes a [data science workstation with Microsoft R Client](../r/set-up-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use Rgui.exe to run the R script in this section.
 
 1. If the **RevoScaleR** package is  not already loaded, run this line of R code:
 

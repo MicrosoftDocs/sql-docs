@@ -36,7 +36,7 @@ SQL Server Big Data Clusters CU13 includes important changes and capabilities:
     > Before upgrading make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).
 
 * [Password rotation for Big Data Cluster's Auto Generated Active Directory service accounts during the BDC deployment](active-directory-password-rotation.md)
-* [New Advanced Encryption Standard (AES) optional parameter for the automatically generated AD accounts](active-directory-prerequisites.md)
+* [New Advanced Encryption Standard (AES) optional parameter `security.activeDirectory.enableAES` for the automatically generated AD accounts](active-directory-deploy.md)
 
 ## <a id="cu12"></a> CU12 (August 2021)
 

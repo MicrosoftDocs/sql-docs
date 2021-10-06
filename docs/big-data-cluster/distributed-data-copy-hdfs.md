@@ -209,6 +209,26 @@ azdata bdc hdfs distcp log [--job-id | -i] <JOB_ID>
     azdata bdc hdfs distcp submit {options} --from-path https://$SOURCE_CLUSTER_IP:30443/sourceDirectories --to-path /
     ```
 
+## Known issues
+
+### Basic authentication clusters upgraded to CU13
+
+If a SQL Server big data clusters with basic authentication (non-AD) is __upgraded to CU13__, the distcp functionality won't work. It doesn't affect secure mode (AD) upgraded clusters or new cluster deployments.
+
+To solve this issue execute the following additional steps once:
+
+```bash
+kubectl -n $CLUSTER_NAME exec -it nmnode-0-0 -- bash
+export HADOOP_USER_NAME=hdfs
+hadoop fs -mkdir -p /tmp/hadoop-yarn/staging/history
+hadoop fs -chown yarn /tmp/hadoop-yarn
+hadoop fs -chown yarn /tmp/hadoop-yarn/staging
+hadoop fs -chown yarn /tmp/hadoop-yarn/staging/history
+hadoop fs -chmod 733 /tmp/hadoop-yarn
+hadoop fs -chmod 733 /tmp/hadoop-yarn/staging
+hadoop fs -chmod 733 /tmp/hadoop-yarn/staging/history
+```
+
 ## Next steps
 
 For more information, see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

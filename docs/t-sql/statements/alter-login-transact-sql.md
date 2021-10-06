@@ -2,7 +2,7 @@
 description: "ALTER LOGIN (Transact-SQL)"
 title: "ALTER LOGIN (Transact-SQL)"
 ms.custom: ""
-ms.date: 06/08/2021
+ms.date: 10/06/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -421,25 +421,7 @@ ADD CREDENTIAL EKMProvider1;
 GO
 ```
 
-### F. Unlocking a login
-
-To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, execute the following statement, replacing \*\*\*\* with the desired account password.
-
-```sql
-ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
-
-GO
-```
-
-To unlock a login without changing the password, turn the check policy off and then on again.
-
-```sql
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
-GO
-```
-
-### G. Changing the password of a login using HASHED
+### F. Changing the password of a login using HASHED
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 

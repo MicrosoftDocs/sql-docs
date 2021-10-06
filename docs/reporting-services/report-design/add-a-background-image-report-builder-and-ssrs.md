@@ -1,5 +1,5 @@
 ---
-title: "Add a background image to a paginated report (Report Builder) | Microsoft Docs"
+title: "Add a background image to a paginated report | Microsoft Docs"
 description: Discover how to embed an image in the paginated report definition to add the image to a variety of report items including text boxes, lists, and page header.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,7 +14,7 @@ ms.author: maggies
 ---
 # Add a background image to a paginated report (Report Builder)
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrb-applies-to-report-builder-yes](../../includes/ssrb-applies-to-report-builder-yes.md)] [!INCLUDE [ssrb-applies-to-power-bi-rb-yes](../../includes/ssrb-applies-to-power-bi-rb-yes.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
 You can add a background image to a paginated report item such as a rectangle, text box, list, matrix, table, and some parts of a chart, or a report section such as the page header, page footer, or report body. You can define a background image for any selected item on the report design surface that displays **BackgroundImage** in the Properties pane. Like other images, the background image can be a URL to an image on the report server, an image from a dataset field, or an image embedded in the report definition. To use an image embedded in the report, you must first add the image to the report definition before you can add the image to the design surface.  
    

@@ -1,6 +1,6 @@
 ---
-title: "Add or Delete a Group in a Data Region (Report Builder) | Microsoft Docs"
-description: Consider adding a group to a data region to organize data by a specific value or set of expressions for display and calculations in Report Builder.
+title: "Add or delete a group in a data region in a paginated report | Microsoft Docs"
+description: Consider adding a group to a data region in a paginated report to organize data by a specific value or set of expressions for display and calculations in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,8 @@ ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add or Delete a Group in a Data Region (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, add a group to a data region when you want to organize data by a specific value or set of expressions, for display and calculations. A group has a name and an expression that identifies which data from a dataset belongs to the group. For more information about groups, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+# Add or delete a group in a data region in a paginated report (Report Builder)
+In paginated reports, add a group to a data region when you want to organize data by a specific value or set of expressions, for display and calculations. A group has a name and an expression that identifies which data from a dataset belongs to the group. For more information about groups, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  In a tablix data region, click in the table, matrix, or list to display the Grouping pane. Drag dataset fields to the Row Group and Column Group pane to create parent or child groups. Right-click an existing group to add an adjacent group. By definition, the details group is the innermost group and can only be added as a child group. Right-click an existing group to delete it. Rows and columns on which to display group values are automatically added for you. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   

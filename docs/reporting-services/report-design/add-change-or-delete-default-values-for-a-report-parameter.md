@@ -1,6 +1,6 @@
 ---
-title: "Add, Change, or Delete Default Values for a Report Parameter | Microsoft Docs"
-description: Use these steps to customize your reports with added, changed, or deleted  default values for report parameters.
+title: "Add, change, or delete default values for a paginated report parameter | Microsoft Docs"
+description: Use these steps to customize your reports with added, changed, or deleted  default values for paginated report parameters.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -16,8 +16,11 @@ ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add, Change, or Delete Default Values for a Report Parameter
-  After you create a report parameter, you can provide a list of default values. If all parameters have a valid default value, the report runs automatically when you first view or preview it.  
+# Add, change, or delete default values for a paginated report parameter
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  After you create a paginated report parameter, you can provide a list of default values. If all parameters have a valid default value, the report runs automatically when you first view or preview it.  
   
  Report parameters can represent one value or multiple values. For single values, you can provide a literal or expression. For multiple values, you can provide a static list or a list from a report dataset.  
   

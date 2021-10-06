@@ -42486,6 +42486,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r.md",
+      "redirect_url": "/sql/machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md",
       "redirect_url": "/sql/machine-learning/r/how-to-create-mdx-queries-using-olapr",
       "redirect_document_id": true
@@ -42557,7 +42562,12 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/set-up-a-data-science-client.md",
-      "redirect_url": "/sql/machine-learning/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/machine-learning/r/set-up-a-data-science-client.md",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
       "redirect_document_id": true
     },
     {
@@ -43487,7 +43497,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/setup-or-configure-r-tools.md",
-      "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/advanced-analytics/r/set-up-data-science-client",
       "redirect_document_id": false
     },
     {
@@ -44567,7 +44577,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r-services/set-up-a-data-science-client.md",
-      "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/advanced-analytics/r/set-up-data-science-client",
       "redirect_document_id": false
     },
     {

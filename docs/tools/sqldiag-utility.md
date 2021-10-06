@@ -2,7 +2,7 @@
 title: "SQLdiag Utility"
 description: Use the SQLdiag utility to collect logs and data files from SQL Server and other types of servers, and monitor servers over time or troubleshoot problems.
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -141,7 +141,7 @@ sqldiag
   
  The time is specified using 24-hour notation. For example, 2:00 P.M. should be specified as **14:00:00**.  
   
- Use **+** without the date (HH:MM:SS only) to specify a time that is relative to the current date and time. For example, if you specify a start time and end time by using **/B +02:00:00 /E +03:00:00**, **SQLdiag** waits 2 hours before it starts collecting information, then collects information for 3 hours before it stops and exits. If **/B** is not specified, **SQLdiag** starts collecting diagnostics immediately and ends at the date and time specified by **/E**.  
+ Use **+** without the date (HH:MM:SS only) to specify a time that is relative to the *start* date and time. For example, if you specify a start time and end time by using **/B +02:00:00 /E +03:00:00**, **SQLdiag** waits 2 hours before it starts collecting information, then collects information for 3 hours before it stops and exits. If **/B** is not specified, **SQLdiag** starts collecting diagnostics immediately and ends at the date and time specified by **/E**.  
   
  Do not insert a space between **+** and the specified *start_time* or *end_time*.  
   
@@ -290,10 +290,16 @@ SQLDIAG STOP /A Instance1
 >  Use **SQLDiag STOP** or **SQLDIAG STOP_ABORT** to stop the **SQLdiag** service. Do not use the Windows Services Console to stop **SQLdiag** or other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services.  
   
 ## Automatically Starting and Stopping SQLdiag  
- To automatically start and stop diagnostic data collection at a specified time, use the **/B**_start\_time_ and **/E**_stop\_time_ arguments, using 24-hour notation. For example, if you are troubleshooting a problem that consistently appears at approximately 02:00:00, you can configure **SQLdiag** to automatically start collecting diagnostic data at 01:00 and automatically stop at 03:00:00. Use the **/B** and **/E** arguments to specify the start and stop time. Use 24-hour notation to specify an exact start and stop date and time with the format YYYYMMDD_HH:MM:SS. To specify a relative start or stop time, prefix the start and stop time with **+** and omit the date portion (YYYYMMDD_) as shown in the following example, which causes **SQLdiag** to wait 1 hour before it starts collecting information, then it collects information for 3 hours before it stops and exits:  
+ To automatically start and stop diagnostic data collection at a specified time, use the **/B**_start\_time_ and **/E**_stop\_time_ arguments, using 24-hour notation. For example, if you are troubleshooting a problem that consistently appears at approximately 02:00:00, you can configure **SQLdiag** to automatically start collecting diagnostic data at 01:45 and automatically stop at 03:00:00. Use the **/B** and **/E** arguments to specify the start and stop time. Use 24-hour notation to specify an exact start and stop date and time with the general format YYYYMMDD_HH:MM:SS. The following will start data collection at 01:45 and stop it at 3:00.
   
 ```  
-sqldiag /B +01:00:00 /E +03:00:00  
+sqldiag /B 01:45:00 /E 03:00:00  
+```  
+
+To specify a relative start or stop time, prefix the start and stop time with **+** and omit the date portion (YYYYMMDD_) as shown in the following example. This causes **SQLdiag** to wait 1 hour before it starts collecting information, then it collects information for 2.5 hours before it stops and exits:  
+  
+```  
+sqldiag /B +01:00:00 /E +02:30:00  
 ```  
   
  When a relative *start_time* is specified, **SQLdiag** starts at a time that is relative to the current date and time. When a relative *end_time* is specified, **SQLdiag** ends at a time that is relative to the specified *start_time*. If the start or end date and time that you have specified is in the past, **SQLdiag** forcibly changes the start date so that the start date and time are in the future.  
@@ -304,7 +310,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- If the current time is 08:00, the end time passes before diagnostic collection actually begins. Because **SQLDiag** automatically adjusts start and end dates to the next day when they occur in the past, in this example diagnostic collection starts at 09:00 today (a relative start time has been specified with **+**) and continues collecting until 08:30 the following morning.  
+ If the current time is 08:00, the end time passes before diagnostic collection actually begins. Because **SQLDiag** automatically adjusts start and end dates to the next day when they occur in the past, in this example diagnostic collection starts at 09:00 today (a relative start time has been specified at 1 hour from now using **+**) and continues collecting until 08:30 the following morning.  
   
 ### Stopping and Restarting SQLdiag to Collect Daily Diagnostics  
  To collect a specified set of diagnostics on a daily basis without having to manually start and stop **SQLdiag**, use the **/L** argument. The **/L** argument causes **SQLdiag** to run continuously by automatically restarting itself after a scheduled shutdown. When **/L** is specified, and **SQLdiag** stops because it has reached the end time specified with the **/E** argument, or it stops because it is being run in snapshot mode by using the **/X** argument, **SQLdiag** restarts instead of exiting.  

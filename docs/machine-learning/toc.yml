@@ -53,7 +53,7 @@ items:
   - name: Set up a Python client
     href: ../machine-learning/python/setup-python-client-tools-sql.md
   - name: Set up an R client
-    href: ../machine-learning/r/set-up-a-data-science-client.md
+    href: ../machine-learning/r/set-up-data-science-client.md
   - name: Install on Azure VM
     href: ../machine-learning/install/sql-machine-learning-azure-virtual-machine.md
   - name: Install standalone server
@@ -452,11 +452,128 @@ items:
     - name: RevoScaleR
       href: ../machine-learning/r/ref-r-revoscaler.md
     - name: MicrosoftML
-      href: ../machine-learning/r/ref-r-microsoftml.md
+      items:
+      - name: Package overview
+        href: ../machine-learning/r/ref-r-microsoftml.md
+      - name: categorical
+        href: ../machine-learning/r/reference/microsoftml/categorical.md
+      - name: categoricalHash
+        href: ../machine-learning/r/reference/microsoftml/categoricalhash.md
+      - name: concat
+        href: ../machine-learning/r/reference/microsoftml/concat.md
+      - name: dropColumns
+        href: ../machine-learning/r/reference/microsoftml/dropcolumns.md
+      - name: ensembleControl
+        href: ../machine-learning/r/reference/microsoftml/ensemblecontrol.md
+      - name: extractPixels
+        href: ../machine-learning/r/reference/microsoftml/extractpixels.md
+      - name: fastForest
+        href: ../machine-learning/r/reference/microsoftml/fastforest.md
+      - name: fastLinear
+        href: ../machine-learning/r/reference/microsoftml/fastlinear.md
+      - name: fastTrees
+        href: ../machine-learning/r/reference/microsoftml/fasttrees.md
+      - name: featurizeImage
+        href: ../machine-learning/r/reference/microsoftml/featurizeimage.md
+      - name: featurizeText
+        href: ../machine-learning/r/reference/microsoftml/featurizetext.md
+      - name: getNetDefinition
+        href: ../machine-learning/r/reference/microsoftml/getnetdefinition.md
+      - name: getSampleDataDir
+        href: ../machine-learning/r/reference/microsoftml/getsampledatadir.md
+      - name: getSentiment
+        href: ../machine-learning/r/reference/microsoftml/getsentiment.md
+      - name: kernel
+        displayName: linearKernel,polynomialKernel,rbfKernel,sigmoidKernel
+        href: ../machine-learning/r/reference/microsoftml/kernel.md
+      - name: loadImage
+        href: ../machine-learning/r/reference/microsoftml/loadimage.md
+      - name: logisticRegression
+        href: ../machine-learning/r/reference/microsoftml/logisticregression.md
+      - name: loss
+        displayName: expLoss,hingeLoss,logLoss,poissonLoss,smoothHingeLoss,squaredLoss
+        href: ../machine-learning/r/reference/microsoftml/loss.md
+      - name: minCount
+        href: ../machine-learning/r/reference/microsoftml/mincount.md
+      - name: mlModel
+        href: ../machine-learning/r/reference/microsoftml/mlmodel.md
+      - name: mutualInformation
+        href: ../machine-learning/r/reference/microsoftml/mutualinformation.md
+      - name: NeuralNet
+        href: ../machine-learning/r/reference/microsoftml/neuralnet.md
+      - name: ngram
+        href: ../machine-learning/r/reference/microsoftml/ngram.md
+      - name: OneClassSvm
+        href: ../machine-learning/r/reference/microsoftml/oneclasssvm.md
+      - name: optimizer
+        href: ../machine-learning/r/reference/microsoftml/optimizer.md
+      - name: resizeImage
+        href: ../machine-learning/r/reference/microsoftml/resizeimage.md
+      - name: rxEnsemble
+        href: ../machine-learning/r/reference/microsoftml/rxensemble.md
+      - name: rxFastForest
+        href: ../machine-learning/r/reference/microsoftml/rxfastforest.md
+      - name: rxFastLinear
+        href: ../machine-learning/r/reference/microsoftml/rxfastlinear.md
+      - name: rxFastTrees
+        href: ../machine-learning/r/reference/microsoftml/rxfasttrees.md
+      - name: rxFeaturize
+        href: ../machine-learning/r/reference/microsoftml/rxfeaturize.md
+      - name: rxHashEnv
+        href: ../machine-learning/r/reference/microsoftml/rxhashenv.md
+      - name: rxLogisticRegression
+        href: ../machine-learning/r/reference/microsoftml/rxlogisticregression.md
+      - name: rxNeuralNet
+        href: ../machine-learning/r/reference/microsoftml/rxneuralnet.md
+      - name: rxOneClassSvm
+        href: ../machine-learning/r/reference/microsoftml/rxoneclasssvm.md
+      - name: rxPredict
+        href: ../machine-learning/r/reference/microsoftml/rxpredict.md
+      - name: selectColumns
+        href: ../machine-learning/r/reference/microsoftml/selectcolumns.md
+      - name: selectFeatures
+        href: ../machine-learning/r/reference/microsoftml/selectfeatures.md
     - name: olapR
-      href: ../machine-learning/r/ref-r-olapr.md
+      href: 
+      items:
+      - name: Package overview
+        href: ../machine-learning/r/ref-r-olapr.md
+      - name: Execute2D
+        href: ../machine-learning/r/reference/olapr/execute2d.md
+      - name: ExecuteMD
+        href: ../machine-learning/r/reference/olapr/executemd.md
+      - name: Explore
+        href: ../machine-learning/r/reference/olapr/explore.md
+      - name: OlapConnection
+        href: ../machine-learning/r/reference/olapr/olapconnection.md
+      - name: Query
+        href: ../machine-learning/r/reference/olapr/query.md
     - name: sqlrutils
-      href: ../machine-learning/r/ref-r-sqlrutils.md
+      items:
+      - name: Package overview
+        href: ../machine-learning/r/ref-r-sqlrutils.md
+      - name: Create a stored procedure from R code
+        href: ../machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r.md
+      - name: executeStoredProcedure
+        href: ../machine-learning/r/reference/sqlrutils/executestoredprocedure.md
+      - name: getInputParameters
+        href: ../machine-learning/r/reference/sqlrutils/getinputparameters.md
+      - name: InputData
+        href: ../machine-learning/r/reference/sqlrutils/inputdata.md
+      - name: InputParameter
+        href: ../machine-learning/r/reference/sqlrutils/inputparameter.md
+      - name: OutputData
+        href: ../machine-learning/r/reference/sqlrutils/outputdata.md
+      - name: OutputParameter
+        href: ../machine-learning/r/reference/sqlrutils/outputparameter.md
+      - name: registerStoredProcedure
+        href: ../machine-learning/r/reference/sqlrutils/registerstoredprocedure.md
+      - name: setInputDataQuery
+        href: ../machine-learning/r/reference/sqlrutils/setinputdataquery.md
+      - name: setInputParameterValue
+        href: ../machine-learning/r/reference/sqlrutils/setinputparametervalue.md
+      - name: StoredProcedure
+        href: ../machine-learning/r/reference/sqlrutils/storedprocedure.md
 - name: Resources
   items:
   - name: Release notes 2019 >

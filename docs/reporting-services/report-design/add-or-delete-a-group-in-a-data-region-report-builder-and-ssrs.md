@@ -13,6 +13,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add or delete a group in a data region in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
 In paginated reports, add a group to a data region when you want to organize data by a specific value or set of expressions, for display and calculations. A group has a name and an expression that identifies which data from a dataset belongs to the group. For more information about groups, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  In a tablix data region, click in the table, matrix, or list to display the Grouping pane. Drag dataset fields to the Row Group and Column Group pane to create parent or child groups. Right-click an existing group to add an adjacent group. By definition, the details group is the innermost group and can only be added as a child group. Right-click an existing group to delete it. Rows and columns on which to display group values are automatically added for you. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  

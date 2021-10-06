@@ -1,6 +1,6 @@
 ---
-title: "Area Charts (Report Builder) | Microsoft Docs"
-description: Learn how to use area charts, which display a series as a set of points connected by a line, with all the area filled in below the line in Report Builder.
+title: "Area charts in a paginated report | Microsoft Docs"
+description: Learn how to use area charts in a paginated report. Area charts display a series as a set of points connected by a line, with all the area filled in below the line in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,10 +12,13 @@ ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Area Charts (Report Builder and SSRS)
+# Area charts in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   An area chart displays a series as a set of points connected by a line, with all the area filled in below the line. For more information on how to add data to an area chart, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
- The following illustration shows an example of a stacked area chart. The data is well suited for display on a stacked area chart because the chart can display totals for all series as well as the proportion that each series contributes to the total.  
+ The following illustration shows an example of a stacked area chart in a paginated report. The data is well suited for display on a stacked area chart because the chart can display totals for all series as well as the proportion that each series contributes to the total.  
   
  ![Area chart](../../reporting-services/report-design/media/areachart.gif "Area chart")  
   

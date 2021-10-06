@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
-author: shkale-msft
-ms.author: shkale
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)

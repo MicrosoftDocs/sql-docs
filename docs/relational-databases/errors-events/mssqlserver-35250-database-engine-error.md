@@ -35,7 +35,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 **Option 1: Execute the steps directly in a notebook via Azure Data Studio**
 
 > [!div class="nextstepaction"]
-> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/tigertoolbox/master/Troubleshooting-Notebooks/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)  
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)  
 
 [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
 

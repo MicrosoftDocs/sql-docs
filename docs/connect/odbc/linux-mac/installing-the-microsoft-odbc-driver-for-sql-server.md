@@ -11,6 +11,8 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
+ms.custom:
+  - intro-installation
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (Linux)

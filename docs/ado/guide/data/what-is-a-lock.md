@@ -4,11 +4,12 @@ title: "What is a Lock? | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.custom: ""
+ms.custom:
+  - intro-overview
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [ADO], locking"
   - "locks [ADO], about locking"
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407

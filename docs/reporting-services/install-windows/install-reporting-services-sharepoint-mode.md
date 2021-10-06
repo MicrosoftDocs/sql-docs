@@ -4,9 +4,8 @@ title: "Install Reporting Services 2016 in SharePoint mode | Microsoft Docs"
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default configuration [Reporting Services]"
   - "installing Reporting Services, SharePoint integrated mode"
   - "installation options [Reporting Services]"
@@ -14,6 +13,8 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install Reporting Services 2016 in SharePoint mode
 

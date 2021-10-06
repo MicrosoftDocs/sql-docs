@@ -1,14 +1,16 @@
 ---
 description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database (preview)"
 title: "What is change data capture (CDC)?"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-overview
 ms.date: "01/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: "vanto"
 ms.technology: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture, about"
   - "change data capture"
   - "22832 (Database Engine error)"

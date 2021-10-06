@@ -1,7 +1,8 @@
 ---
 description: "Installation and Configuration Components Reference"
 title: "Installation and Configuration Components Reference | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity

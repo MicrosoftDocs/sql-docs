@@ -310,7 +310,7 @@ The Books Online provide more information about the following topics:
   
  Installation steps:  
   
-1.  Download and run the x64 installation package for the RML utilities from the following page: [Download RML for SQL Server](https://www.microsoft.com/download/details.aspx?id=4511)
+1.  Download and run the x64 installation package for the RML utilities from the following page: [Download RML for SQL Server](https://www.microsoft.com/download/details.aspx?id=103126)
 
 2.  If there is a dialog box saying certain files are in use, click 'Continue'  
   

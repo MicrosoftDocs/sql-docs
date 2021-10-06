@@ -139,7 +139,7 @@ Follow these steps to download and register the R language extension, which is u
     CREATE EXTERNAL LANGUAGE [myR]
     FROM (CONTENT = N'C:\path\to\R-lang-extension-windows-release.zip', 
         FILE_NAME = 'libRExtension.dll',
-        ENVIRONMENT_VARIABLES = N'{"R_HOME": "C:\\Program Files\\R\\R-4.0.3"}'););
+        ENVIRONMENT_VARIABLES = N'{"R_HOME": "C:\\Program Files\\R\\R-4.0.3"}');
     GO
     ```
 

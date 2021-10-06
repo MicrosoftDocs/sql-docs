@@ -26,7 +26,7 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 |Boolean|bit|bit|  
 |Integer|int|int|  
 |Float|float(24)|not supported|  
-|String (length less than 8000 bytes)|varchar(<string length>)|varchar(<string length>)|  
+|String (length less than 8000 bytes)|varchar(\<string length\>)|varchar(\<string length\>)|  
 |String (length greater than 8000 bytes)|varchar(max)|varchar(max)|  
 |Resource|Not supported.|Not supported.|  
 |Stream (encoding: not binary)|varchar(max)|varchar(max)|  

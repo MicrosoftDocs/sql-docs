@@ -1,14 +1,15 @@
 ---
 description: "Installing ODBC Components"
 title: "Installing ODBC Components | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing ODBC components [ODBC]"
   - "installing ODBC components [ODBC], about installing"
   - "ODBC [ODBC], component installation"

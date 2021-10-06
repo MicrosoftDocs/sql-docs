@@ -24,7 +24,7 @@ Transaction isolation levels control the following effects:
 
 - How long the read locks are held.
 
-- Whether a read operation referencing rows modified by another transaction:
+- Whether read operations referencing rows modified by another transaction:
 
   - Block until the exclusive lock on the row is freed.
 

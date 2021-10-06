@@ -30,7 +30,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
 \[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
-/AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
+/AssessmentEvaluateFeatureParity|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
@@ -42,9 +42,8 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
 |`/AssessmentSourcePlatform`     | Source platform for the assessment: <br>Supported values for Assessment: SqlOnPrem, RdsSqlServer (default) <br>Supported values for Target Readiness Assessment: SqlOnPrem, RdsSqlServer (default), Cassandra (preview)   | N
 |`/AssessmentTargetPlatform`     | Target platform for the assessment:  <br> Supported values for Assessment: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017 (default)  <br> Supported values for Target Readiness Assessment: ManagedSqlServer (default), CosmosDB (preview)   | N
-|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules. If source platform is RdsSqlServer, feature parity evaluation is not supported for target platform AzureSqlDatabase  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
-|`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required)
+|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules. If source platform is RdsSqlServer, feature parity evaluation is not supported for target platform AzureSqlDatabase  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateFeatureParity is required.)
+|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateFeatureParity is required.)
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
 |`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
 |`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
@@ -79,13 +78,13 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
-**Single-database assessment using SQL Server authentication and running feature recommendation**
+**Single-database assessment using SQL Server authentication and running feature parity**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
-/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
+/AssessmentEvaluateFeatureParity /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
@@ -96,7 +95,7 @@ DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="SqlServer2012"
-/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
+/AssessmentEvaluateFeatureParity /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
@@ -144,7 +143,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
-/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateFeatureParity 
 /AssessmentOverwriteResult 
 /AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
 
@@ -245,7 +244,6 @@ DmaCmd.exe
 /AssessmentSourcePlatform=SqlOnPrem 
 /AssessmentTargetPlatform=ManagedSqlServer
 /AssessmentEvaluateCompatibilityIssues 
-/AssessmentEvaluateRecommendations 
 /AssessmentEvaluateFeatureParity 
 /AssessmentOverwriteResult 
 /AssessmentName="assess-myDatabase"

@@ -4,12 +4,13 @@ titleSuffix: SQL machine learning
 description: In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your database, and then use the model to predict values from new data with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/28/2020  
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-quickstart
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

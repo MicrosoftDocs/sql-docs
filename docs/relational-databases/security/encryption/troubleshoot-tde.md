@@ -167,7 +167,7 @@ EventName: MakeDatabaseInaccessible
 
 Status: Started 
 
-Description: Database has lost access to Azure key vault key and is now inaccessible: <error message>   
+Description: Database has lost access to Azure key vault key and is now inaccessible: \<error message\>   
 
  
 

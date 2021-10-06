@@ -9,6 +9,8 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)

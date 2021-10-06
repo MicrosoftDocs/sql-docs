@@ -1,7 +1,8 @@
 ---
 title: Getting started with the SqlClient driver
 description: An introduction to using the SqlClient Driver. Learn basic steps for configuring your environment and writing a simple code example.
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity

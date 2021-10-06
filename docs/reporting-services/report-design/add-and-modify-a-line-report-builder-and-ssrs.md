@@ -1,5 +1,5 @@
 ---
-title: "Add and Modify a Line (Report Builder) | Microsoft Docs"
+title: "Add and modify a line in a paginated report | Microsoft Docs"
 description: Customize the appearance of reports by adding a graphical element to separate sections or by editing line properties to change color or style in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add and Modify a Line (Report Builder and SSRS)
-  You can add a line to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report when you want a graphical element to separate sections of the report. You can customize the appearance of the line by editing line properties such as color or style. For example, you might want to incorporate company colors into the report.    
+# Add and modify a line in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can add a line to a paginated report when you want a graphical element to separate sections of the report. You can customize the appearance of the line by editing line properties such as color or style. For example, you might want to incorporate company colors into the report.    
     
 > [!NOTE]    
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]    

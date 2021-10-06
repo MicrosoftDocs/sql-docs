@@ -8,7 +8,9 @@ ms.date: 09/22/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
-ms.custom: template-overview 
+ms.custom:
+  - template-overview
+  - intro-overview
 ---
 # Azure Synapse Pathway FAQ
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]

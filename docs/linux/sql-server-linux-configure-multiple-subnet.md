@@ -67,7 +67,7 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
     </instance attributes>
     ```
     
-    By default, there is only one <instance/> in the CIB XML file exported. Let's say there are two subnets, you need to have two <instance/> entries.
+    By default, there is only one \<instance\/> in the CIB XML file exported. Let's say there are two subnets, you need to have two \<instance/\> entries.
     Here is an example of entries for two subnets
     
     ```xml

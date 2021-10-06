@@ -1,7 +1,9 @@
 ---
 title: "Migrate managed backup settings"
 description: This topic covers migration considerations for SQL Server Managed Backup to Microsoft Azure when upgrading from SQL Server 2014 to SQL Server 2016.
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-migration
 ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore

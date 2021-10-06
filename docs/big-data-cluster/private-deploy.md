@@ -9,6 +9,8 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy BDC in Azure Kubernetes Service (AKS) private cluster

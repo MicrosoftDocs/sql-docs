@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016"
 Generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
 
 Provides scoring on R and Python machine learning models in near real time. `sp_rxPredict` is a stored procedure provided as a wrapper for 
-- `rxPredict` R function in [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package), and the [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](../../machine-learning/python/reference/microsoftml/microsoftml-package.md). It's written in C++ and is optimized specifically for scoring operations.
+- `rxPredict` R function in [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](../../machine-learning/r/ref-r-microsoftml.md), and the [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](../../machine-learning/python/ref-py-microsoftml.md). It's written in C++ and is optimized specifically for scoring operations.
 
 Although the model must be created using R or Python, once it's serialized and stored in a binary format on a target database engine instance, it can be consumed from that database engine instance even when R or Python integration is not installed. For more information, see [Real-time scoring with sp_rxPredict](../../machine-learning/predictions/real-time-scoring.md).
 

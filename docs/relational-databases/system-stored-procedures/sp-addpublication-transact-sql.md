@@ -2,7 +2,7 @@
 description: "sp_addpublication (Transact-SQL)"
 title: "sp_addpublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -71,10 +71,11 @@ sp_addpublication [ @publication = ] 'publication'
     [ , [ @publish_local_changes_only = ] 'publish_local_changes_only' ]  
     [ , [ @enabled_for_het_sub = ] 'enabled_for_het_sub' ]  
     [ , [ @p2p_conflictdetection = ] 'p2p_conflictdetection' ]  
-    [ , [ @p2p_originator_id = ] p2p_originator_id  
-    [ , [ @p2p_continue_onconflict = ] 'p2p_continue_onconflict'  
-    [ , [ @allow_partition_switch = ] 'allow_partition_switch'  
-    [ , [ @replicate_partition_switch = ]'replicate_partition_switch'  
+    [ , [ @p2p_originator_id = ] p2p_originator_id  ]
+    [ , [ @p2p_continue_onconflict = ] 'p2p_continue_onconflict'  ]
+    [ , [ @allow_partition_switch = ] 'allow_partition_switch'  ]
+    [ , [ @replicate_partition_switch = ] 'replicate_partition_switch' ] 
+    [ , [ @p2p_conflictdetection_policy = ] 'originatorid' | 'lastwriter' ]
 ```  
   
 ## Arguments  
@@ -352,8 +353,17 @@ sp_addpublication [ @publication = ] 'publication'
 `[ @allow_partition_switch = ] 'allow_partition_switch'`
  Specifies whether ALTER TABLE...SWITCH statements can be executed against the published database. *allow_partition_switch* is **nvarchar(5)** with a default value of FALSE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
-`[ @replicate_partition_switch = ] 'replicate_partition_switch'`
- Specifies whether ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. *replicate_partition_switch* is **nvarchar(5)** with a default value of FALSE. This option is valid only if *allow_partition_switch* is set to TRUE.  
+`[ \@replicate_partition_switch = ] 'replicate_partition_switch'`
+ Specifies whether ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. *replicate_partition_switch* is **nvarchar(5)** with a default value of FALSE. This option is valid only if *allow_partition_switch* is set to TRUE.
+
+`[ \@p2p_conflictdetection_policy = ] 'originatorid' | 'lastwriter'`
+ Introduced in SQL Server 2019 CU13.
+
+- `originatorid` (Default) Distribution agent detects the conflict and decides the winner based on the originator ID, if `p2p_continue_onconflict = 'true'`. Otherwise, it raises an error.
+- `lastwriter` Distribution agent detects the conflict and decides the winner based on the datetime of the last writer if `p2p_continue_onconflict = 'true'`. Otherwise, it raises an error.
+
+   > [!NOTE]
+   > When you specify `originatorid`, conflict detection is the same as it was prior to SQL Server 2019 CU 13. When you specify `lastwriter` SQL Server can allow conflicts to be resolved automatically based on the most recent write.
 
 ## Return Code Values  
  **0** (success) or **1** (failure)  

@@ -4,7 +4,7 @@ description: "A distributed availability group is a special type of availability
 ms.custom:
   - seodec18
   - intro-overview
-ms.date: "10/15/2019"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups

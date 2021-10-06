@@ -2,7 +2,7 @@
 description: "ToString (Database Engine)"
 title: ToString (Database Engine)
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

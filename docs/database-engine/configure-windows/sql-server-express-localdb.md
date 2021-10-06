@@ -33,7 +33,6 @@ LocalDB is a feature you select during SQL Server Express installation, and is a
 
 - [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
 - [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
-- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
 The LocalDB installer &mdash; `SqlLocalDB.msi` &mdash; is available in the installation media for all editions except for Express Core. It is located in the `<installation_media_root>\<LCID>_ENU_LP\x64\Setup\x64` folder. LCID is a locale identifier or language code. For example, an LCID value of 1033 refers to the **en-US** locale.
 

@@ -1,6 +1,6 @@
 ---
-title: "Add Bevel, Emboss, and Texture Styles to a Chart (Report Builder) | Microsoft Docs"
-description: Learn how to specify a drawing effect, such as bevels, embossing, or textures, to increase the visual impact of your chart in Report Builder. 
+title: "Add bevel, emboss, and texture styles to a paginated report chart | Microsoft Docs"
+description: Learn how to specify a drawing effect, such as bevels, embossing, or textures, to increase the visual impact of your paginated report chart in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,7 +12,10 @@ ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Chart Effects - Add Bevel, Emboss, or Texture (Report Builder)
+# Chart effects - add bevel, emboss, or texture to a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   When using certain chart types, you can specify a drawing effect to increase the visual impact of your chart. These drawing effects are only applied to the series of your chart. They have no effect on any other chart element.  
   
  When you are using any variant of a pie or doughnut chart, you can specify a soft edge or concave drawing style, similar to bevel or emboss effects that can be applied to an image.  

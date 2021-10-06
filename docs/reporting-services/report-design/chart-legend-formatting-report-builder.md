@@ -1,6 +1,6 @@
 ---
-title: "Formatting the Legend on a Chart (Report Builder) | Microsoft Docs"
-description: Learn how to format a legend on a chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
+title: "Formatting the legend on a paginated report chart | Microsoft Docs"
+description: Learn how to format a legend on a paginated report chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,8 +29,11 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Chart Legend - Formatting (Report Builder)
-  The chart legend contains descriptions for each category in a chart. A legend always contains one or more legend items, where each legend item consists of a colored box that represents the series, and a text string that describes the series, as indicated in the following illustration.  
+# Chart legend - formatting the legend on a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The chart legend contains descriptions for each category in a paginated report chart. A legend always contains one or more legend items, where each legend item consists of a colored box that represents the series, and a text string that describes the series, as indicated in the following illustration.  
   
  ![Diagram of a chart legend](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagram of a chart legend")  
   

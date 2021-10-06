@@ -1,5 +1,5 @@
 ---
-title: "Charts (Report Builder) | Microsoft Docs"
+title: "Charts in a paginated report | Microsoft Docs"
 description: Use chart data regions to help readers of your paginated reports understand large volumes of aggregated data at a glance in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -22,8 +22,11 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Charts (Report Builder and SSRS)
-Read about using chart data regions to help readers of your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports understand large volumes of aggregated data at a glance.  
+# Charts in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+Read about using chart data regions to help readers of your paginated reports understand large volumes of aggregated data at a glance.  
 
 The more time you spend carefully preparing and understanding your data before you create a chart, the easier it will be to design your charts quickly and efficiently. For help choosing which chart to use, see [Chart Types](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) To start experimenting with charts immediately, see the bar, column, sparkline, and pie chart tutorials in [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md).  
   

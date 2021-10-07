@@ -129,7 +129,7 @@ For details on how to update the AD groups for these settings see [Manage Big Da
 
 > [!NOTE]
 > The `security.activeDirectory.enableAES` parameter is available starting with SQL Server Big Data Clusters CU13. If the big data cluster is a version prior to CU13, the following steps are required:
-> 1. Run the `azdata bdc rotate -n <your-cluster-name>` command, this command will rotate the keytabs in the cluster which is necessary to ensure that the AES entries in keytabs are correct. For more information, see [azdata bdc](/sql/azdata/reference/reference-azdata-bdc). Additionally, `azdata bdc rotate` will rotate the passwords of the AD objects that were auto-generated during the initial deployment in the specified OU.
+> 1. Run the `azdata bdc rotate -n <your-cluster-name>` command, this command will rotate the keytabs in the cluster which is necessary to ensure that the AES entries in keytabs are correct. For more information, see [azdata bdc](../azdata/reference/reference-azdata-bdc.md). Additionally, `azdata bdc rotate` will rotate the passwords of the AD objects that were auto-generated during the initial deployment in the specified OU.
 > 2. Set the the following flags 'This account supports Kerberos AES 128 bit encryption' and 'This account supports Kerberos AES 256 bit encryption' on each of auto-generated AD objects in the OU that you provided during the initial big data cluster deployment. This can be achieved by executing the following PowerShell script  `Get-ADUser -Filter * -SearchBase '<OU Path>' | Set-ADUser -replace @{ 'msDS-SupportedEncryptionTypes' = '24' }` on your domain controller which sets the AES fields on each account in the OU given in `<OU Path>` parameter.
 
   >[!IMPORTANT]

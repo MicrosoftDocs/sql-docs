@@ -1,8 +1,8 @@
 ---
 title: Azure Synapse Pathway data type mappings Microsoft SQL Server
 description: Data type mappings for Microsoft SQL Server within Azure Synapse Pathway
-author: twounder
-ms.author: mausher
+author: charlesfeddersen
+ms.author: charlesf
 ms.topic: overview
 ms.date: 07/15/2021
 ms.prod: sql

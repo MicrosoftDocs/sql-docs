@@ -4,7 +4,7 @@ description: Step by step on how to configure Active Directory authentication wi
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 12/10/2020
+ms.date: 09/30/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -13,15 +13,12 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux using adutil
 
-> [!NOTE]
-> **adutil** is currently in **public preview**
-
-This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using adutil. For another method of configuring AD authentication using ktpass, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using [adutil](sql-server-linux-ad-auth-adutil-introduction.md). For another method of configuring AD authentication using ktpass, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> - Install adutil-preview
+> - Install adutil
 > - Join Linux machine to your AD domain
 > - Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 > - Create the SQL Server service keytab file
@@ -34,80 +31,11 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a Linux host machine. Follow the section below based on the Linux distribution that you're running to install adutil-preview.
-
-## Install adutil-preview
-
-On the Linux host machine, use the following commands to install adutil-preview.
-
-> [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
-
-### RHEL
-
-1. Download the Microsoft Red Hat repository configuration file.
-
-    ```bash
-    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages.
-
-    ```bash
-    sudo yum remove adutil
-    ```
-
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
-
-    ```bash
-    sudo ACCEPT_EULA=Y yum install -y adutil-preview
-    ```
-
-### Ubuntu
-
-1. Import the public repository GPG keys and then register the Microsoft Ubuntu repository.
-
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages using the below commands
-
-    ```bash
-    sudo apt-get remove adutil
-    ```
-
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
-
-    ```bash
-    sudo apt-get update
-    sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
-    ```
-
-### SLES
-
-1. Add the Microsoft SQL Server repository to Zypper.
-
-    ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages.
-
-    ```bash
-    sudo zypper remove adutil
-    ```
-
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
-
-    ```bash
-    sudo ACCEPT_EULA=Y zypper install -y adutil-preview
-    ```
+- Install the adutil tool on the domain joined host machine. 
 
 ## Domain machine preparation
 
-Make sure there is forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
+Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
@@ -116,6 +44,10 @@ For this tutorial, we're using an environment in Azure with three VMs. One VM ac
 ## Join the Linux host machine to your AD domain
 
 Join your SQL Server Linux host with an Active Directory domain controller. For information on how to join an active directory domain, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
+
+## Install adutil
+
+To install adutil tool, follow the steps explained in: [Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md) on the host machine that you added to the domain in the previous step.
 
 ## Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 
@@ -257,3 +189,4 @@ sqlcmd -E -S 'myubuntu.contoso.com'
 
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
 - If you're interested on how to configure AD authentication with SQL Server on Linux containers, see [Configure Active Directory authentication with SQL Server on Linux  containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- [Rotate SQL Server on Linux keytabs](sql-server-linux-ad-auth-rotate-keytabs.md)

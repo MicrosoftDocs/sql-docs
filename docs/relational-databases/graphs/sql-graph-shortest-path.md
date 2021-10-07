@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords:
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
-author: shkale-msft
-ms.author: shkale
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current"
 ---
 # SHORTEST_PATH (Transact-SQL)

@@ -24,7 +24,7 @@ This articles describes what new capabilities and features are included in each 
 This release adds the top-requested features for Python and R machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
 > [!NOTE]
-> For the what's new documentation on Java in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](../language-extensions/language-extensions-whats-new.md)
+> For the what's new documentation on Java and C# in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](../language-extensions/language-extensions-whats-new.md).
 
 Below are the new features for SQL Server Machine Learning Services, available on both **Windows** and **Linux**:
 

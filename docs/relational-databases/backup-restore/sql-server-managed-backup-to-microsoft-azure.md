@@ -2,7 +2,7 @@
 title: "SQL Server managed backup to Microsoft Azure | Microsoft Docs"
 description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob storage. 
 ms.custom: ""
-ms.date: "10/18/2016"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -36,7 +36,7 @@ ms.author: chadam
 |------------------|-----------------|  
 |**Microsoft Azure Account**|You can get started with Azure with a [free trial](https://azure.microsoft.com/pricing/free-trial/) before exploring [purchase options](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Azure Storage Account**|The backups are stored in Azure blob storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create).|  
-|**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://manage.windowsazure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](/powershell/azure/) command.|  
+|**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://portal.azure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](/powershell/azure/) command.|  
 |**Shared Access Signature (SAS)**|Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview). You can create a SAS token in code or with the **New-AzureStorageContainerSASToken** PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|SQL Server Agent must be running for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to work. Consider setting the startup option to automatic.|  
   

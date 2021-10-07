@@ -53,7 +53,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  -  For user-defined workload groups, the server tries to reduce the query degree of parallelism until the memory requirement falls under the limit, or until the degree of parallelism equals 1. If the query memory requirement is still greater than the limit, error 8657 occurs.    
  -  For internal and default workload groups, the server permits the query to obtain the required memory.  
    
- Be aware that both cases are subject to [time-out error 8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error) if the server has insufficient physical memory.  
+ Be aware that both cases are subject to [time-out error 8645](../relational-databases/errors-events/mssqlserver-8645-database-engine-error.md) if the server has insufficient physical memory.  
   
 #### REQUEST_MAX_CPU_TIME_SEC = *value*       
  Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited. By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
@@ -146,4 +146,4 @@ GO
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../t-sql/statements/alter-resource-governor-transact-sql.md)

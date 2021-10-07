@@ -299,7 +299,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 [`Training of L1-Regularized Log-Linear Models`](https://research.microsoft.com/apps/pubs/default.aspx?id=78900)
 
 
-[`and L2 Regularization for Machine Learning`](https://msdn.microsoft.com/magazine/dn904675.aspx)
+[`and L2 Regularization for Machine Learning`](/archive/msdn-magazine/2015/february/test-run-l1-and-l2-regularization-for-machine-learning)
 
 
 
@@ -352,7 +352,3 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
   badPrediction = scoreMultiDF$Species != scoreMultiDF$PredictedLabel
   scoreMultiDF[badPrediction,]
 ```
-
-
-
-

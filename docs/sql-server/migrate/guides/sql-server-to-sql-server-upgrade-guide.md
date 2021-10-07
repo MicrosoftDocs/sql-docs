@@ -18,7 +18,7 @@ For other migration guides, see [Azure Database Migration](/data-migration/).
 ## Prerequisites
 
 Before beginning your migration project, it's important to address the associated prerequisites.
-Learn about the supported versions and considerations for [upgrading SQL Server database.](/sql/database-engine/install-windows/upgrade-sql-server)
+Learn about the supported versions and considerations for [upgrading SQL Server database.](../../../database-engine/install-windows/upgrade-sql-server.md)
 
 To prepare for the migration, download and install the:
 
@@ -197,9 +197,9 @@ After you have the necessary prerequisites in place and have completed the tasks
 
 Review the compatibility issues discovered with DMA tool.
 
-Preserve backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](/sql/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server)
+Preserve backup logs, maintenance plans, and other automated tasks, including jobs by creating a backup of the system [database msdb.](../../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 
-View [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list.
+View [linked servers](../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list.
 
 Additional considerations may be needed 
 based on the complexity of your data and 
@@ -207,7 +207,7 @@ environment.
 
 [Troubleshoot orphaned users.](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
 
-[Migrating-triggers.](/sql/relational-databases/linked-servers/linked-servers-database-engine)
+[Migrating-triggers.](../../../relational-databases/linked-servers/linked-servers-database-engine.md)
 
 [Migrate system objects using scripts wizard.](../../../ssms/scripting/generate-and-publish-scripts-wizard.md)
 

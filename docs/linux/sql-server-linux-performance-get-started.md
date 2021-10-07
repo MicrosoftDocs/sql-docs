@@ -157,7 +157,7 @@ For more information about In-Memory OLTP, see the following topics:
 - [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
 - [Faster temp table and table variable by using memory optimization](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
-- [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
 
 ## Use Query Store
 Query Store collects detailed performance information about queries, execution plans, and runtime statistics.

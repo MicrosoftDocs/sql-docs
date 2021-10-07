@@ -17,6 +17,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Add, change, or delete default values for a paginated report parameter
+```suggestion
+# Add, change, or delete default values for a paginated report parameter (Report Builder)
+
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

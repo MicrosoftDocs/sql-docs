@@ -12,7 +12,8 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add dataset filters, data region filters, and group filters to a paginated report
+# Add dataset filters, data region filters, and group filters to a paginated report (Report Builder)
+
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

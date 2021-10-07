@@ -1,8 +1,8 @@
 ---
 title: Azure Synapse Pathway data type mappings IBM Netezza
 description: data type mappings for IBM Netezza within Azure Synapse Pathway
-author: twounder
-ms.author: mausher
+author: charlesfeddersen
+ms.author: charlesf
 ms.topic: overview
 ms.date: 07/15/2021
 ms.prod: sql

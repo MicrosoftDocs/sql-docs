@@ -1,6 +1,6 @@
 ---
-title: "Group Expression Examples (Report Builder) | Microsoft Docs"
-description:  Find out how to group data by a single field or create more complex expressions that identify the data on which to group in Report Builder. 
+title: "Group expression examples paginated report | Microsoft Docs"
+description:  Find out how to group paginated report data by a single field or create more complex expressions that identify the data on which to group in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,8 +17,11 @@ ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Group Expression Examples (Report Builder and SSRS)
-  In a data region, you can group data by a single field, or create more complex expressions that identify the data on which to group. Complex expressions include references to multiple fields or parameters, conditional statements, or custom code. When you define a group for a data region, you add these expressions to the **Group** properties. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+# Group expression examples paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In a data region in a paginated report, you can group data by a single field, or create more complex expressions that identify the data on which to group. Complex expressions include references to multiple fields or parameters, conditional statements, or custom code. When you define a group for a data region, you add these expressions to the **Group** properties. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
  To merge two or more groups that are based on simple field expressions, add each field to the group expressions list in the group definition.  
   

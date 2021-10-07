@@ -1,5 +1,5 @@
 ---
-title: "Customize the Parameters Pane in a Report (Report Builder) | Microsoft Docs"
+title: "Customize the parameters pane in a paginated report | Microsoft Docs"
 description: Learn how to customize the Parameters pane when creating paginated reports with parameters in Report Builder.
 ms.date: 06/15/2020
 ms.prod: reporting-services
@@ -11,7 +11,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Customize the Parameters Pane in a Report (Report Builder)
+# Customize the parameters pane in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   When creating paginated reports with parameters in Report Builder, you can customize the Parameters pane. In report design view, you can drag a parameter to a specific column and row in the Parameters pane. You can add and remove columns to change the layout of the pane.
 
  When you drag a parameter to a new column and row in the pane, the parameter order changes in the **Report Data** pane. When you change the order of the parameter in the **Report Data** pane, the location of the parameter in the pane is changed. For more information about why parameter order is important, see [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).

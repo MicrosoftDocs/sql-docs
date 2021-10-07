@@ -1,6 +1,6 @@
 ---
-title: "Display Percentage Values on Pie Chart (Report Builder) | Microsoft Docs"
-description: Learn how to display percentage values on a pie chart, in the legend or in the pie slices in Report Builder.
+title: "Display percentage values on pie chart in a paginated report | Microsoft Docs"
+description: Learn how to display percentage values in a paginated report on a pie chart, in the legend or in the pie slices in Report Builder.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Display Percentage Values on a Pie Chart (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, by default the legend shows categories. You may also want percentages in the legend or the pie slices themselves.   
+# Display percentage values on pie chart in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, by default the legend shows categories. You may also want percentages in the legend or the pie slices themselves.   
 
 ![Screenshot of a pie chart showing percentages for the slices of the pie.](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 

@@ -1,6 +1,6 @@
 ---
-title: "Displaying a Series with Multiple Data Ranges on a Chart | Microsoft Docs"
-description: Discover ways to improve readability of your charts using scale breaks, filters, and by separating the data ranges in Report Builder. 
+title: "Displaying a series with multiple data ranges on a paginated report chart | Microsoft Docs"
+description: Discover ways to improve readability of your paginated report charts using scale breaks, filters, and by separating the data ranges in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,9 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Displaying a Series with Multiple Data Ranges on a Chart
+# Displaying a series with multiple data ranges on a paginated report chart (Report Builder)
 
-  Chart will use the minimum and maximum values of a series to calculate the axis scale. When a series on your chart contains more than one range of data, the data points can become obscured, and only a few data points to be seen easily on the chart. For example, suppose a report displays daily sales totals over a period of 30 days.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Chart will use the minimum and maximum values of a series to calculate the axis scale in a paginated report. When a series on your chart contains more than one range of data, the data points can become obscured, and only a few data points to be seen easily on the chart. For example, suppose a report displays daily sales totals over a period of 30 days.  
   
  ![Chart with multiple data ranges](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "Chart with multiple data ranges")  
   
@@ -25,7 +27,7 @@ ms.author: maggies
   
 -   **Enable scale breaks**. If your data forms two or more sets of data ranges, use a scale break to remove the gap between the ranges. A scale break is a stripe drawn across the plotting area to denote a break between the high and low values of a series.  
   
--   **Filter out unnecessary values**. If you have data points that are obscuring the important data range to be displayed on the chart, remove the unwanted points using a report filter. For information on how to add a filter to the chart in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
+-   **Filter out unnecessary values**. If you have data points that are obscuring the important data range to be displayed on the chart, remove the unwanted points using a report filter. For information on how to add a filter to the chart in Report Builder, see [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 -   **Plot each data range as a separate series for multiple series comparison**. If you have more than two data ranges, consider separating the data ranges into separate series. For more information, see [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   

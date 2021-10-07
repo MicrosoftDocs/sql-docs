@@ -1,5 +1,5 @@
 ---
-title: "Embed an image in a paginated report (Report Builder) | Microsoft Docs"
+title: "Embed an image in a paginated report | Microsoft Docs"
 description: Make an image readily available to a paginated report. Use an image that's embedded in the report and listed in the Report Data pane of Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -17,7 +17,7 @@ ms.author: maggies
 ---
 # Embed an image in a paginated report (Report Builder)
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrb-applies-to-report-builder-yes](../../includes/ssrb-applies-to-report-builder-yes.md)] [!INCLUDE [ssrb-applies-to-power-bi-rb-yes](../../includes/ssrb-applies-to-power-bi-rb-yes.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
 A paginated report can include an embedded image. Embedding an image ensures that the image is always available to a report, but can affect the size of the report definition, the file that defines the report. The images embedded in a report are listed in the Report Data pane.  
   

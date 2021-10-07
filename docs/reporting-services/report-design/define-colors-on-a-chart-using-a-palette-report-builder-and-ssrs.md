@@ -1,6 +1,6 @@
 ---
-title: "Define Colors on a Chart Using a Palette (Report Builder) | Microsoft Docs"
-description: Change the color palette for a chart by selecting a pre-defined palette or by defining a custom palette. 
+title: "Define colors on a paginated report chart using a palette | Microsoft Docs"
+description: Change the color palette for a paginated report chart by selecting a pre-defined palette or by defining a custom palette. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Define Colors on a Chart Using a Palette (Report Builder and SSRS)
-  You can change the color palette for a chart by selecting a pre-defined palette or defining a custom palette. Custom palettes are chart-specific.  
+# Define colors on a paginated report chart using a palette (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can change the color palette for a paginated report chart by selecting a pre-defined palette or defining a custom palette. Custom palettes are chart-specific.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

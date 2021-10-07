@@ -6179,7 +6179,7 @@ items:
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Behind the scenes
-      href: tools/synapse-pathway/synapse-behind-the-scenes.md
+      href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Tutorials
       items:
       - name: Tutorial - Run Azure Synapse Pathway

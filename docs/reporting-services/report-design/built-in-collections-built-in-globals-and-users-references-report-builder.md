@@ -1,5 +1,6 @@
 ---
-title: "Built-in globals and users references in a paginated report | Microsoft Docs"
+title: "Built-in Globals and User references in a paginated report | Microsoft Docs"
+
 description: Find out about the values that can be used in expressions to filter results in a paginated report in Report Builder.
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -12,11 +13,13 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Built-in collections - built-in globals and users references in a paginated report (Report Builder)
+# Built-in collections - Globals and User references in a paginated report (Report Builder)
+
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  The Built-in fields collection, which includes both the **Globals** and the **User** collections, represent global values provided by Reporting Services when a paginated report is processed. The **Globals** collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The **User** collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  
+  The built-in fields collection, which includes both the **Globals** and the **User** collections, represent global values provided by Reporting Services when a paginated report is processed. The **Globals** collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The **User** collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  
+
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -6178,6 +6178,8 @@ items:
       href: tools/synapse-pathway/pathway-faq.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
+    - name: Behind the scenes
+      href: tools/synapse-pathway/synapse-behind-the-scenes.md
     - name: Tutorials
       items:
       - name: Tutorial - Run Azure Synapse Pathway
@@ -6200,6 +6202,8 @@ items:
           href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
     - name: Errors and Warnings
       items:
+        - name: ASP1001
+          href: tools/synapse-pathway/transpiler-messages/asp1001.md
         - name: ASP0001
           href: tools/synapse-pathway/transpiler-messages/asp0001.md
         - name: ASP0002

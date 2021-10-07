@@ -6,13 +6,13 @@ author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 10/05/2021
+ms.date: 10/06/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Configuring Delta Lake on SQL Server Big Data Clusters
+# Delta Lake on SQL Server Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 

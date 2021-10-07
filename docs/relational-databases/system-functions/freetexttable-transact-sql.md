@@ -171,5 +171,5 @@ GO
  [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [precompute rank Server Configuration Option](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server)  
- [Compare features in Azure SQL Database and Azure SQL Managed Instance](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)
+ [precompute rank Server Configuration Option](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
+ [Compare features in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)

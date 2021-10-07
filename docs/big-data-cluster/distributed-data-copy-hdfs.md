@@ -45,6 +45,23 @@ In this guide we will cover the following data copy scenarios:
 
 Certificates are required to create a trusted relationship between source and destination clusters. These steps are required only once per source/destination cluster combination.
 
+> [!IMPORTANT]
+> If a SQL Server big data cluster with basic authentication (non-AD) is __upgraded to CU13__, the distcp functionality won't work.
+>
+> To enable the distcp functionality in this scenario execute the following additional steps once:
+> 
+> ```bash
+> kubectl -n $CLUSTER_NAME exec -it nmnode-0-0 -- bash
+> export HADOOP_USER_NAME=hdfs
+> hadoop fs -mkdir -p /tmp/hadoop-yarn/staging/history
+> hadoop fs -chown yarn /tmp/hadoop-yarn
+> hadoop fs -chown yarn /tmp/hadoop-yarn/staging
+> hadoop fs -chown yarn /tmp/hadoop-yarn/staging/history
+> hadoop fs -chmod 733 /tmp/hadoop-yarn
+> hadoop fs -chmod 733 /tmp/hadoop-yarn/staging
+> hadoop fs -chmod 733 /tmp/hadoop-yarn/staging/history
+> ```
+
 The required notebooks in the next steps are part of the Operational notebooks for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]. For more information how to install and use the notebooks, see [Operational notebooks](cluster-manage-notebooks.md)
 
 ### Step 1 - Certificate creation and installation

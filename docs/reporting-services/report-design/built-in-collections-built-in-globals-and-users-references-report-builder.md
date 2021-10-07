@@ -1,6 +1,7 @@
 ---
-title: "Built-in Globals and Users References (Report Builder) | Microsoft Docs"
-description: Find out about the values that can be used in expressions to filter results in a report in Report Builder.
+title: "Built-in Globals and User references in a paginated report | Microsoft Docs"
+
+description: Find out about the values that can be used in expressions to filter results in a paginated report in Report Builder.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,13 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Built-in Collections - Built-in Globals and Users References (Report Builder)
-  The Built-in fields collection, which includes both the **Globals** and the **User** collections, represent global values provided by Reporting Services when a report is processed. The **Globals** collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The **User** collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  
+# Built-in collections - Globals and User references in a paginated report (Report Builder)
+
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The built-in fields collection, which includes both the **Globals** and the **User** collections, represent global values provided by Reporting Services when a paginated report is processed. The **Globals** collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The **User** collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  
+
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -70,7 +76,7 @@ ms.author: maggies
 |**Member**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
 |**Language**|**String**|The language of the user running the report. For example, `en-US`.|  
-|**UserID**|**String**|The ID of the user running the report. If you are using Windows Authentication, this value is the domain account of the current user. The value is determined by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] security extension, which can use Windows Authentication or custom authentication.|  
+|**UserID**|**String**|The ID of the user running the report. If you are using Windows Authentication, this value is the domain account of the current user. The value is determined by the Report Builder security extension, which can use Windows Authentication or custom authentication.|  
  
 ### Using Locale Settings  
  You can use expressions to refer to the locale settings on a client computer through the **User.Language** value to determine how a report appears to the user. For example, you can create a report that uses a different query expression based on the locale value. The query may change to retrieve localized information from a different column depending on the language returned. You can also use an expression in the language settings of the report or report items based on this variable.  

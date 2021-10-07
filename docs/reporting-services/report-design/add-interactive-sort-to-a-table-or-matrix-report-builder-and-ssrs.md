@@ -1,6 +1,6 @@
 ---
-title: "Add Interactive Sort to a Table or Matrix (Report Builder) | Microsoft Docs"
-description: Enable users to change the sort order of rows and columns in tables and matrices using interactive sort buttons in Report Builder.
+title: "Add interactive sort to a table or matrix in paginated reports | Microsoft Docs"
+description: Enable users to change the sort order of rows and columns in tables and matrices in paginated reports using interactive sort buttons in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,8 +15,11 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
-  Add interactive sort buttons to enable users to change the sort order of rows and columns in tables and matrices. This feature is supported only in rendering formats that support user interaction, such as HTML.  
+# Add interactive sort to a table or matrix in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Add interactive sort buttons to enable users to change the sort order of rows and columns in tables and matrices in paginated reports. This feature is supported only in rendering formats that support user interaction, such as HTML.  
   
  When you create an interactive sort button, you must specify what to sort, what to sort by, and the scope to which to apply the sort. For example, you can sort detail rows by customer last name, subcategory group values within a category group by sales, or category and subcategory group values combined by totals.  
   

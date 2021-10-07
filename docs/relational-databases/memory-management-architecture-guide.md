@@ -37,7 +37,7 @@ The committed regions of address space are mapped to the available physical memo
   
 For more information on the amount of physical memory supported by different operating systems, see the Windows documentation on [Memory Limits for Windows Releases](/windows/desktop/Memory/memory-limits-for-windows-releases).  
   
-Virtual memory systems allow the over-commitment of physical memory, so that the ratio of virtual-to-physical memory can exceed 1:1. As a result, larger programs can run on computers with a variety of physical memory configurations. However, using significantly more virtual memory than the combined average working sets of all the processes can cause poor performance. 
+Virtual memory systems allow the over-commitment of physical memory, so that the ratio of virtual-to-physical memory can exceed 1:1. As a result, larger programs can run on computers with various physical memory configurations. However, using significantly more virtual memory than the combined average working sets of all the processes can cause poor performance. 
 
 ## SQL Server Memory Architecture
 
@@ -45,7 +45,7 @@ Virtual memory systems allow the over-commitment of physical memory, so that the
 
 One of the primary design goals of all database software is to minimize disk I/O because disk reads and writes are among the most resource-intensive operations. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] builds a buffer pool in memory to hold pages read from the database. Much of the code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is dedicated to minimizing the number of physical reads and writes between the disk and the buffer pool. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tries to reach a balance between two goals:
 
-* Keep the buffer pool from becoming so big that the entire system is low on memory.
+* Keep the buffer pool from becoming so large that the entire system is low on memory.
 * Minimize physical I/O to the database files by maximizing the size of the buffer pool.
 
 > [!NOTE]
@@ -72,7 +72,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 <sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
 <sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
-<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, refer to [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
+<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, see [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
 > Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) and [Managing Memory for Large Databases](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105)) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
@@ -82,8 +82,8 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
--  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
--  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
+-  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8 KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+-  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8 KB.
 -  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
 -  Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
 -  **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
@@ -176,7 +176,7 @@ FROM sys.dm_os_process_memory;
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts, it computes the size of virtual address space for the buffer pool based on a number of parameters such as amount of physical memory on the system, number of server threads and various startup parameters. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserves the computed amount of its process virtual address space for the buffer pool, but it acquires (commits) only the required amount of physical memory for the current load.
 
-The instance then continues to acquire memory as needed to support the workload. As more users connect and run queries, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquires the additional physical memory on demand. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance continues to acquire physical memory until it either reaches its max server memory allocation target or the OS indicates there is no longer an excess of free memory; it frees memory when it has more than the min server memory setting, and the OS indicates that there is a shortage of free memory. 
+The instance then continues to acquire memory as needed to support the workload. As more users connect and run queries, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquires more physical memory on demand. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance continues to acquire physical memory until it either reaches its max server memory allocation target or the OS indicates there is no longer an excess of free memory; it frees memory when it has more than the min server memory setting, and the OS indicates that there is a shortage of free memory. 
 
 As other applications are started on a computer running an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], they consume memory and the amount of free physical memory drops below the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] target. The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adjusts its memory consumption. If another application is stopped and more memory becomes available, the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] increases the size of its memory allocation. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can free and acquire several megabytes of memory each second, allowing it to quickly adjust to memory allocation changes.
 
@@ -218,7 +218,7 @@ For **row mode execution**, the initial memory grant cannot be exceeded under an
 A spill that occurs during a Sort operation is known as a [Sort Warning](../relational-databases/event-classes/sort-warnings-event-class.md). Sort warnings indicate that sort operations do not fit into memory. This does not include sort operations involving the creation of indexes, only sort operations within a query (such as an `ORDER BY` clause used in a `SELECT` statement).
 
 A spill that occurs during a hash operation is known as a [Hash Warning](../relational-databases/event-classes/hash-warning-event-class.md). These occur when a hash recursion or cessation of hashing (hash bailout) has occurred during a hashing operation.
--  Hash recursion occurs when the build input does not fit into available memory, resulting in the split of input into multiple partitions that are processed separately. If any of these partitions still do not fit into available memory, it is split into sub-partitions, which are also processed separately. This splitting process continues until each partition fits into available memory or until the maximum recursion level is reached.
+-  Hash recursion occurs when the build input does not fit into available memory, resulting in the split of input into multiple partitions that are processed separately. If any of these partitions still do not fit into available memory, it is split into subpartitions, which are also processed separately. This splitting process continues until each partition fits into available memory or until the maximum recursion level is reached.
 -  Hash bailout occurs when a hashing operation reaches its maximum recursion level and shifts to an alternate plan to process the remaining partitioned data. These events can cause reduced performance in your server.
 
 For **batch mode execution**, the initial memory grant can dynamically increase up to a certain internal threshold by default. This dynamic memory grant mechanism is designed to allow memory-resident execution of **hash** or **sort** operations running in batch mode. If these operations still do not fit into memory, then these will spill to disk.
@@ -237,9 +237,9 @@ The interval between [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] star
 
 Because the buffer manager uses most of the memory in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process, it cooperates with the memory manager to allow other components to use its buffers. The buffer manager interacts primarily with the following components:
 
-* Resource manager to control overall memory usage and, in 32-bit platforms, to control address space usage.  
-* Database manager and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Operating System (SQLOS) for low-level file I/O operations.  
-* Log manager for write-ahead logging.  
+* Resource Manager to control overall memory usage and, in 32-bit platforms, to control address space usage.  
+* Database Manager and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Operating System (SQLOS) for low-level file I/O operations.  
+* Log Manager for write-ahead logging.  
 
 ### Supported Features
 The buffer manager supports the following features:

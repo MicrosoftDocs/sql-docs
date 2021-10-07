@@ -121,12 +121,12 @@ RECONFIGURE
 ## Examples  
   
 ### A. Listing the advanced configuration options  
- The following example shows how to set and list all configuration options. Advanced configuration options are displayed by first setting `show advanced option` to `1`. After this option has been changed, executing `sp_configure` with no parameters displays all configuration options.  
+ The following example shows how to set and list all configuration options. Advanced configuration options are displayed by first setting `show advanced options` to `1`. After this option has been changed, executing `sp_configure` with no parameters displays all configuration options.  
   
 ```sql  
 USE master;  
 GO  
-EXEC sp_configure 'show advanced option', '1';  
+EXEC sp_configure 'show advanced options', '1';  
 ```  
   
  Here is the message: "Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install."  

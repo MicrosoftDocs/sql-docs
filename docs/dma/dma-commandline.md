@@ -296,11 +296,14 @@ These commands support recommendations for both Azure SQL Database single databa
 |`--perfQueryIntervalInSec` | Interval at which performance data was queried, in seconds. | N <br> (Specific for `GetSkuRecommendation`action. This must match the value that was originally used during the performance data collection. Default: `30`) 
 |`--targetPlatform` | Target platform for SKU recommendation: either `AzureSqlDatabase`, `AzureSqlManagedInstance`, `AzureSqlVirtualMachine`, or `Any`. | N <br> (Specific for `GetSkuRecommendation`action. Default: `Any`)
 |`--targetSqlInstance` | Name of the SQL instance that SKU recommendation will be targeting. | N <br> (Specific for `GetSkuRecommendation`action)
-|`--targetPercentile` | Percentile of data points to be used during aggregation of the performance data. | N <br> (Specific for `GetSkuRecommendation`action, Default `95`)
-|`--scalingFactor` | Scaling (comfort) factor used during SKU recommendation. | N <br> (Specific for `GetSkuRecommendation`action. Default `100`) 
-|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action) 
-|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action) 
-|`--displayResult` | Whether or not to print the SKU recommendation results to the console | N <br> (Specific for `GetSkuRecommendation`action.Default: `true`)
+|`--targetPercentile` | Percentile of data points to be used during aggregation of the performance data. | N <br> (Specific for `GetSkuRecommendation`action. Only used for baseline (non-elastic) strategy.  Default: `95`)
+|`--scalingFactor` | Scaling (comfort) factor used during SKU recommendation. | N <br> (Specific for `GetSkuRecommendation`action. Default: `100`) 
+|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action. Only used for baseline (non-elastic) strategy) 
+|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action. Only used for baseline (non-elastic) strategy) 
+|`--elasticStrategy` | Whether or not to use the elastic strategy for SKU recommendations based on statistical resource usage profiling. Elastic strategy is currently available for Azure SQL Databases and SQL Managed Instance, not yet available for SQL Server on Azure VM target. | N <br> (Specific for `GetSkuRecommendation`action. Default: `false`)
+|`--databaseAllowList` | Space separated list of names of databases to be included for SKU recommendations | N <br> (Specific for `GetSkuRecommendation`action. Default: `null`)
+|`--databaseDenyList` | Space separated list of names of databases to be excluded for SKU recommendations. Only set one of the following or neither: `databaseAllowList`, `databaseDenyList` | N <br> (Specific for `GetSkuRecommendation`action. Default: `null`)
+|`--displayResult` | Whether or not to print the SKU recommendation results to the console. Only set one of the following or neither: `databaseAllowList`, `databaseDenyList` | N <br> (Specific for `GetSkuRecommendation`action. Default: `true`)
 
 ## Examples of SKU assessments using the CLI
 

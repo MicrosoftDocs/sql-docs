@@ -1,6 +1,6 @@
 ---
-title: Save and load assessments with Azure Synapse Pathway Preview
-description: Save and load data warehouse assessments with Azure Synapse Pathway Preview 
+title: Save and load assessments with Azure Synapse Pathway
+description: Save and load data warehouse assessments with Azure Synapse Pathway
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
@@ -10,7 +10,7 @@ ms.date: 03/02/2021
 monikerRange: "=azure-sqldw-latest"
 ---
 
-# Save and load assessments with Azure Synapse Pathway Preview
+# Save and load assessments with Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 The following step-by-step instructions demonstrate how to save and upload a data warehouse assessment from a file using Azure Synapse Pathway.

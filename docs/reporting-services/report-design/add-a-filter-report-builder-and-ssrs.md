@@ -1,6 +1,6 @@
 ---
-title: "Add a filter to a paginated report (Report Builder) | Microsoft Docs"
-description: Find out how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display.
+title: "Add a filter to a paginated report | Microsoft Docs"
+description: Find out how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display in a paginated report.
 ms.date: 09/02/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

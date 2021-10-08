@@ -22,7 +22,7 @@ Once Azure Data Studio is installed, select **Extensions** under the **View** me
 
 ## Upgrading Database Schema Conversion Toolkit (Oracle to MS SQL)
 
-Once available, latest version of the Database Schema Conversion Tookit will be automatically installed, if extensions [Auto Update](../../add-extensions.md#updating-an-extension) option is enabled in Azure Data Studio.
+Once available, latest version of the Database Schema Conversion Toolkit will be automatically installed, if extensions [Auto Update](../../add-extensions.md#updating-an-extension) option is enabled in Azure Data Studio.
 
 ## Removing Database Schema Conversion Toolkit (Oracle to MS SQL)
 

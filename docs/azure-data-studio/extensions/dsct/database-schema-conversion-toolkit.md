@@ -17,7 +17,7 @@ Database Schema Conversion Toolkit (DSCT) is a set of extensions for [Azure Data
   
 ## Supported sources and targets
   
-- [Oracle to Microsoft SQL](./oracle-to-mssql/dsct-oracle-to-mssql.md)  
+- [Oracle to Microsoft SQL](./oracle-to-mssql/database-schema-conversion-toolkit-oracle-to-mssql.md)  
   Supports migration from Oracle database to Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 ## Getting support

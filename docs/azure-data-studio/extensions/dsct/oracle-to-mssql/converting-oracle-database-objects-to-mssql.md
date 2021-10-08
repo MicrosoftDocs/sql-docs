@@ -43,7 +43,7 @@ First step in the conversion process is to prepare the target SQL Database proje
 
 Next step in the schema conversion process is to [connect to an Oracle database](../../../quickstart-oracle.md).
 
-## Convering Oracle database objects
+## Converting Oracle database objects
 
 When connection to the Oracle database is established, you can start converting database objects.
 

@@ -15,7 +15,7 @@ ms.date: "10/4/2021"
 
 The Database Schema Conversion Toolkit (Oracle to MS SQL) is aiming to provide a solution to database schema migrations. While default conversion is fairly reasonable, there are cases when users may want to adjust some of the conversion settings to better suit their needs.
 
-## Configuraton user interface
+## Configuration user interface
 
 When [performing a database schema conversion](./converting-oracle-database-objects-to-mssql.md) through the Database Schema Conversion Toolkit conversion wizard UI, the **Conversion settings** step will allow you to tweak basic conversion settings.
 

@@ -1,0 +1,40 @@
+---
+title: "Install and remove Database Schema Conversion Toolkit (Oracle to MS SQL)"
+description: "Learn how to install and remove Database Schema Conversion Toolkit (Oracle to MS SQL) extension."
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+author: "nahk-ivanov"
+ms.author: "alexiva"
+ms.reviewer: "maghan"
+ms.topic: conceptual
+ms.custom: 
+ms.date: "10/4/2021"
+---
+
+# Install and remove Database Schema Conversion Toolkit (Oracle to MS SQL)
+
+To use Database Schema Conversion Toolkit (Oracle to MS SQL) features, you will need to [install the Azure Data Studio](../../../download-azure-data-studio.md) first.
+
+Once Azure Data Studio is installed, select **Extensions** under the **View** menu and search for "Database Schema Conversion Toolkit" on the Extensions Marketplace. Select **Database Schema Conversion Toolkit (Oracle to MS SQL)** and select the **Install** button in the search results list.
+
+> [!NOTE]
+> The **Database Schema Conversion Toolkit (Oracle to MS SQL)** extension depends on **Extension for Oracle** and **SQL Database Projects** extensions. These extensions will be automatically installed.
+
+## Upgrading Database Schema Conversion Toolkit (Oracle to MS SQL)
+
+Once available, latest version of the Database Schema Conversion Tookit will be automatically installed, if extensions [Auto Update](../../add-extensions.md#updating-an-extension) option is enabled in Azure Data Studio.
+
+## Removing Database Schema Conversion Toolkit (Oracle to MS SQL)
+
+When you have finished migrating databases, you might want to uninstall the Database Schema Conversion Toolkit extension.
+
+To remove the Database Schema Conversion Toolkit extension, in Azure Data Studio, select **Extensions** under the **View** menu and search for "Database Schema Conversion Toolkit (Oracle to MS SQL)" in the list of installed extensions. Select the extension and select **Uninstall** to remove the extension.
+
+> [!NOTE]
+> A restart of Azure Data Studio may be necessary to complete the removal process.
+
+## Next steps
+
+- [Converting Oracle database objects to Microsoft SQL](.\converting-oracle-database-objects-to-mssql.md)
+- [Extend the functionality of Azure Data Studio - Add Azure Data Studio extensions](../../add-extensions.md#add-azure-data-studio-extensions)
+- [Extend the functionality of Azure Data Studio - Uninstall an extension](../../add-extensions.md#uninstall-an-extension)

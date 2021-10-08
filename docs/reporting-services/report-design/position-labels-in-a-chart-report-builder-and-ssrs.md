@@ -1,6 +1,6 @@
 ---
-title: "Position Labels in a Chart (Report Builder) | Microsoft Docs"
-description: Determine the type of chart you're using to find out how to change the position of labels in that type and shape of chart.
+title: "Position labels in a paginated report chart | Microsoft Docs"
+description: Determine the type of chart you're using in your paginated report to find out how to change the position of labels in that type and shape of chart.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Position Labels in a Chart (Report Builder and SSRS)
-  Because each chart type in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report has a different shape, data point labels are placed in an optimal location so as not to interfere on the chart. The default position of the labels varies with the chart type:  
+# Position labels in a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Because each chart type in a paginated report has a different shape, data point labels are placed in an optimal location so as not to interfere on the chart. The default position of the labels varies with the chart type:  
   
 -   On stacked charts, labels can only be positioned inside the series.  
   

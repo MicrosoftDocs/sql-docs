@@ -1,18 +1,21 @@
 ---
-title: "Importing HTML into a Report (Report Builder) | Microsoft Docs"
+title: "Importing html into a paginated report | Microsoft Docs"
 ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
-description: Learn about using a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a report.
+description: Learn about using a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a paginated report.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Importing HTML into a Report (Report Builder and SSRS)
-  You can use a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a report. The text can come from any simple or complex expression that evaluates to correctly formatted HTML. Formatted text can be rendered to all supported output formats, including PDF.  
+# Importing html into a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can use a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a paginated report. The text can come from any simple or complex expression that evaluates to correctly formatted HTML. Formatted text can be rendered to all supported output formats, including PDF.  
   
  ![rs_HTMLFormatting](../../reporting-services/report-design/media/rs-htmlformatting.gif "rs_HTMLFormatting")  
   
@@ -40,7 +43,7 @@ ms.author: maggies
   
  If the text in your text box contains only one block of text, any HTML in the placeholder that defines block elements will render correctly. However, if the text box has multiple blocks of text, the HTML tags are ignored and the structure of the text is defined by the blocks of text.  
   
- If more than one tag is defined for text, and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detects a conflict between the HTML and existing report constraints, only the innermost HTML tag will be treated as HTML.  
+ If more than one tag is defined for text, and Report Builder detects a conflict between the HTML and existing report constraints, only the innermost HTML tag will be treated as HTML.  
   
  For more information, see [Add HTML into a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   

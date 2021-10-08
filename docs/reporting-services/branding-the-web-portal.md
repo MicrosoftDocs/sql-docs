@@ -26,7 +26,7 @@ A brand package for Reporting Services consists of three items and is packaged a
 - metadata.xml  
 - logo.png (optional)  
   
-The files must have the names listed above. The zip file can be named however you like.  
+The files must have the names listed above. Package the files above into a zip file. The zip file can be named however you like.  
   
 ### metadata.xml
   
@@ -121,7 +121,7 @@ If you include a logo with your brand package, it will appear in the web portal 
   
 The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290px x 60px.  
    
-## Applying the brand package to the web portal
+## <a name="#applying-the-brand-package-to-the-web-portal"></a>Applying the brand package to the web portal
   
 To add, download, or remove a brand package, you can do the following.  
   
@@ -137,7 +137,7 @@ To add, download, or remove a brand package, you can do the following.
   
 **Currently installed brand package** will either display the name of the package that has been uploaded, or it will display None.  
   
-**Upload brand package** will apply the package to the web portal. You will see it take effect immediately.  
+**Upload brand package** will prompt you to select a zip file from a local folder and then apply the package to the web portal. You will see it take effect immediately.  
   
 You can also **Download** or **Remove** the package. Removing the package will reset the web portal to the default brand immediately.  
   
@@ -252,6 +252,9 @@ You can also **Download** or **Remove** the package. Removing the package will r
     }  
 }  
 ```
+
+##  <a name="bkmk_download_samples"></a> To Download the Sample Branding Packages
+ Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see the section [Applying the brand package to the web portal](#applying-the-brand-package-to-the-web-portal) in this article. 
 
 ## Next steps
 

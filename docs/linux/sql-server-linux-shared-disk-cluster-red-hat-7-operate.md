@@ -25,7 +25,7 @@ This document describes how to do the following tasks for SQL Server on a shared
 
 ## Architecture description
 
-The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on]https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/). Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/). Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
 
 The following diagram illustrates the components in a Linux cluster with SQL Server. 
 

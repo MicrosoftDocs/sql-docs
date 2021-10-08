@@ -28,7 +28,7 @@ This topic describes how to back up and restore a [!INCLUDE[ssRSnoversion](../..
 ### Limitations and restrictions
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications can partially be backed up and restored using the SharePoint backup and restore functionality. **Additional steps are required** and the steps are documented in this topic. Currently the backup process **does not** back up encryption keys and credentials for unattended execution accounts (UEA) or windows authentication to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database.
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications can partially be backed up and restored using the SharePoint backup and restore functionality. **Additional steps are required** and the steps are documented in this topic. Currently the backup process **does not** back up encryption keys and credentials for unattended execution accounts (UEA) or Windows authentication to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database.
 
 ### Recommendations
   

@@ -38,7 +38,7 @@ ms.author: jroth
 ## Type Casting String and Binary Instances  
  You can parse any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] string data types, such as [**n**][**var**]**char**, **[n]text**, **varbinary**,and **image**, into the **xml** data type by casting (CAST) or converting (CONVERT) the string to the **xml** data type. Untyped XML is checked to confirm that it is well formed. If there is a schema associated with the **xml** type, validation is also performed. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
- XML documents can be encoded with different encodings (for example, UTF-8, UTF-16, windows-1252). The following outlines the rules on how the string and binary source types interact with the XML document encoding and how the parser behaves.  
+ XML documents can be encoded with different encodings (for example, UTF-8, UTF-16, Windows-1252). The following outlines the rules on how the string and binary source types interact with the XML document encoding and how the parser behaves.  
   
  Since **nvarchar** assumes a two-byte unicode encoding such as UTF-16 or UCS-2, the XML parser will treat the string value as a two-byte Unicode encoded XML document or fragment. This means that the XML document needs to be encoded in a two-byte Unicode encoding as well to be compatible with the source data type. A UTF-16 encoded XML document can have a UTF-16 byte order mark (BOM), but it does not need to, since the context of the source type makes it clear that it can only be a two-byte Unicode encoded document.  
   

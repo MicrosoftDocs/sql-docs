@@ -39,7 +39,7 @@ Make sure there's a forwarding host (A) entry added in Active Directory for the 
 
 :::image type="content" source="media/sql-server-linux-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
-For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts SQL Server.
+For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the Windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts SQL Server.
 
 ## Join the Linux host machine to your AD domain
 

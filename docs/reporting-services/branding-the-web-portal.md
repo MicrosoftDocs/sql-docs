@@ -1,6 +1,6 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 07/01/2020
+ms.date: 10/08/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -57,7 +57,7 @@ Example with a logo file.
 </Contents>  
 ```
 
-### Colors.json
+### colors.json
   
 When the brand package is uploaded, the server extracts the appropriate name/value pairs from the colors.json file and merges them with the master LESS stylesheet, brand.less. This LESS file is then processed and the resulting CSS file is served to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.  
   
@@ -157,7 +157,7 @@ You can also **Download** or **Remove** the package. Removing the package will r
 </SystemResourcePackage>  
 ```
 
-## Colors.json example
+## colors.json example
 
 ```json
 {  

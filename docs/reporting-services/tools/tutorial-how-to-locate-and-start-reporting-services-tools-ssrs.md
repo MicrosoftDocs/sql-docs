@@ -40,7 +40,7 @@ Use the Native mode configuration manager to complete the following:
 
 ### To start the Report Server Configuration Manager
 
-1. On the Windows start screen, type **reporting** and in the **Apps** search results, click **Report Server Configuration Manager**.
+1. In the Windows start menu, type **reporting** and in the **Apps** search results, click **Report Server Configuration Manager**.
 
     ![Report Server Configuration Manager on start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Report Server Configuration Manager on start")
 
@@ -88,9 +88,9 @@ Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssman
 
 ### To Start SQL Server Management Studio
 
-1. From the Windows Start Screen type **sql server** and in the **Apps** search results, click **SQL Server Management Studio**.
+1. From the Windows start menu, type **sql server** and in the **Apps** search results, click **SQL Server Management Studio**.
 
-    ![management studio from windows start screen](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "management studio from windows start screen")
+    ![SQL Server Management Studio from the Windows start menu](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "SQL Server Management Studio from the Windows start menu")
 
     **Or**
 

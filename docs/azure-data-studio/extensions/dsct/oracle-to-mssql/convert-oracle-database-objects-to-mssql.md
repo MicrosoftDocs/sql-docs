@@ -1,5 +1,5 @@
 ---
-title: "Converting Oracle database objects to Microsoft SQL"
+title: "Convert Oracle database objects to Microsoft SQL"
 description: "Learn how to use Database Schema Conversion Toolkit (Oracle to MS SQL) to convert Oracle database objects to Microsoft SQL platform."
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -11,11 +11,11 @@ ms.custom:
 ms.date: "10/4/2021"
 ---
 
-# Converting Oracle database objects to Microsoft SQL
+# Convert Oracle database objects to Microsoft SQL
 
 Once Database Schema Conversion Toolkit (Oracle to MS SQL) extension is [installed](./install-remove-database-schema-conversion-toolkit-oracle-to-mssql.md), you can start converting your Oracle database objects to the Microsoft SQL platform.
 
-## Creating target SQL Database project
+## Create target SQL Database project
 
 First step in the conversion process is to prepare the target SQL Database project, where generated T-SQL scripts will be stored. In order to do this:
 
@@ -30,20 +30,20 @@ First step in the conversion process is to prepare the target SQL Database proje
    > [!NOTE]
    > When targeting on-premises SQL Server, only SQL Server 2012 and above is supported by the **Database Schema Conversion Toolkit (Oracle to MS SQL)**.
 
-   select **Create** to complete the SQL Database project creation.
+3. Select **Create** to complete the SQL Database project creation
    
    > [!NOTE]
    > At this point Azure Data Studio may need to restart for the project to be created and added to the workspace.
 
-3. You should be able to see an empty SQL Database project under the **Projects** view
+4. You should be able to see an empty SQL Database project under the **Projects** view
 
    ![Empty SQL Database project](./media/empty-sql-project.png)
 
-## Connecting to the source Oracle database
+## Connect to the source Oracle database
 
 Next step in the schema conversion process is to [connect to an Oracle database](../../../quickstart-oracle.md).
 
-## Converting Oracle database objects
+## Convert Oracle database objects
 
 When connection to the Oracle database is established, you can start converting database objects.
 
@@ -73,7 +73,7 @@ When connection to the Oracle database is established, you can start converting 
 
    Select **Next** when done to advance to the next step.
 
-4. On the **Conversion settings** step you can optionally load a [conversion configuration file](./configuring-conversion.md).
+4. On the **Conversion settings** step you can optionally load a [conversion configuration file](./configure-conversion.md).
 
    ![Configure conversion](./media/conversion-wizard-configure-conversion.png)
 
@@ -87,7 +87,7 @@ When connection to the Oracle database is established, you can start converting 
 
    ![Conversion progress log](./media/conversion-progress-log.png)
 
-## Working with the converted scripts
+## Review converted scripts
 
 Once conversion has completed, converted script files will be added to the target SQL Database project.
 
@@ -102,7 +102,7 @@ Conversion messages will also be embedded as comments in the converted SQL scrip
 > [!NOTE]
 > You can close the Azure Data Studio at any time and reopen the SQL Database project later. In order to discover conversion messages in the SQL Database project that was converted previously, open **Command Palette...** from the **View** menu and run **DSCT (Oracle to MS SQL): Discover problems** command.
 
-## Deploying the target Microsoft SQL database
+## Deploy the target Microsoft SQL database
 
 When all problems produced during conversion are addressed, you can [deploy your database](../../sql-database-project-extension-build.md) to the target server.
 

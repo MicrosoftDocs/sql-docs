@@ -35,6 +35,6 @@ To remove the Database Schema Conversion Toolkit extension, in Azure Data Studio
 
 ## Next steps
 
-- [Converting Oracle database objects to Microsoft SQL](.\converting-oracle-database-objects-to-mssql.md)
+- [Convert Oracle database objects to Microsoft SQL](.\convert-oracle-database-objects-to-mssql.md)
 - [Extend the functionality of Azure Data Studio - Add Azure Data Studio extensions](../../add-extensions.md#add-azure-data-studio-extensions)
 - [Extend the functionality of Azure Data Studio - Uninstall an extension](../../add-extensions.md#uninstall-an-extension)

@@ -1,10 +1,8 @@
 - name: Overview
   href: database-schema-conversion-toolkit-oracle-to-mssql.md
-- name: What's new
-  href: whats-new-oracle-to-mssql.md
 - name: Install and remove extension
   href: install-remove-database-schema-conversion-toolkit-oracle-to-mssql.md
-- name: Converting Oracle database objects to Microsoft SQL
-  href: converting-oracle-database-objects-to-mssql.md
-- name: Configuring conversion
-  href: configuring-conversion.md
+- name: Convert Oracle database objects to Microsoft SQL
+  href: convert-oracle-database-objects-to-mssql.md
+- name: Configure conversion
+  href: configure-conversion.md

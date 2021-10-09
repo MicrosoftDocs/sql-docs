@@ -313,6 +313,8 @@ ms.author: chadam
 
         [MSpeer_lsns](mspeer-lsns-transact-sql.md)
 
+        [MSredirected_publishers](msredirected-publishers.md)
+
         [MSrepl_identity_range](msrepl-identity-range-transact-sql.md)
 
         [MSrepl_queuedtraninfo](msrepl-queuedtraninfo-transact-sql.md)

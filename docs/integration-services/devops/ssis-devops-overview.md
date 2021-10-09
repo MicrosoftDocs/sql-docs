@@ -166,11 +166,12 @@ SSIS Deploy task currently doesn't support the following scenarios:
 - Configuring the environment in the SSIS catalog.
 - Deploying ISPAC to Azure SQL Server or Azure SQL Managed Instance, which allow only multifactor authentication.
 - Deploying packages to MSDB or SSIS Package Store.
-- Azure DevOps Server extension install ssis devops tools met "The extension package size exceeds the maximum package size"
+- Installing SSIS DevOps Tools extension to Azure DevOps Server, might hit the error "The extension package size exceeds the maximum package size". To resolve the error, first complete the following steps. 
   1. Connect to the on-premises SQL Server instance and select the database `Gallery_Configuration`.
   2. Run the query Change 50 to a higher number if the extension is larger than 50 MBs. `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`  
   3. After you run the query, restart Internet Information Services. Try again to upload the extension.
   4. If the error persists, please contact Azure DevOps support. 
+
 
 ## SSIS Deploy task version 1.* 
 

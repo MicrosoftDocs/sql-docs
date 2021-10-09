@@ -75,30 +75,31 @@ This message occurs when attempting to join secondary databases to an Always On 
 #### 2. Check if you can connect to the endpoint
 
 - Use Telnet or Test-NetConnection to validate connectivity. If the Endpoint is listening and connection is successful, then Telnet will show you a blank screen with a blinking cursor. If not, you will receive a connection error from Telnet. If you use Test-NetConnection look for the `TcpTestSucceeded        : True` or `TcpTestSucceeded        : False`. 
-    
 
   ```DOS
   telnet ServerName port_number
   telnet IP_Address port_number
   ```
-           
+
   ```powershell
   Test-NetConnection -ComputerName ServerName -Port port_number
   Test-NetConnection -ComputerName IP_address -Port port_number
   ```
   
 **DNS issues:**
-- If Telnet/Test-NetConnection succeeds to the IP address works but fails to the ServerName, there is likely a DNS or name resolution issue. See [Check for possible name resolution issues](#Check-for-possible-name-resolution-issues)
-    
+
+- If Telnet/Test-NetConnection succeeds to the IP address works but fails to the ServerName, there is likely a DNS or name resolution issue. See [Check for name resolution issues](#6-check-for-name-resolution-issues)
+
 **Multiple processes listening on the same port**
+
 - If Telnet/Test-NetConnection connection works by ServerName but fails by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is configured to listen on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections. To find the owning process:
-    
+
   ```powershell
   Get-Process -Id (Get-NetTCPConnection -LocalPort 1433).OwningProcess |Select-Object Name, ProductVersion, Path, Id
   ```
 
-    
 **Blocked endpoint (firewall, anti-virus)**
+
 - If Telnet or Test-NetConnection fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default). If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
   Run the following PowerShell script to examine for disabled inbound traffic rules
@@ -106,25 +107,25 @@ This message occurs when attempting to join secondary databases to an Always On 
   ```powershell
   Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
   ```
-    
+
 - Capture a `NETSTAT -a` or Get-NetTCPConnection output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
 
   ```dos
   netstat -a
   ```  
-    
+
   ```powershell
   Get-NetTCPConnection -LocalPort port_number    
   ```
-    
+
 - To find the port-owning process, you can run a command like this (e.g. using port 1433)
-    
+
   ```powershell
   Get-Process -Id (Get-NetTCPConnection -LocalPort 1433).OwningProcess |Select-Object Name, ProductVersion, Path, Id
   ```
-   
 
-#### 3. Check for errors in the system. 
+#### 3. Check for errors in the system
+
 - You can query the **sys.dm_hadr_availability_replica_states** for the last_connect_error_number that may help you diagnose the join issue. Depending on which replica was having difficulty communicating, you can query both the primary and secondary:
 
   ```sql
@@ -144,12 +145,13 @@ This message occurs when attempting to join secondary databases to an Always On 
 
   If the secondary was unable to communicate with the DNS server, for example, or if a replica's endpoint_url was configured incorrectly when creating the availability group, you may get the following results in the last_connect_error_description:
 
-  `DNS Lookup failed with error '11001(No such host is known)' `
+  `DNS Lookup failed with error '11001(No such host is known)'`
 
-#### 4. Ensure the endpoint is configured for the correct IP/port that AG is defined for.
+#### 4. Ensure the endpoint is configured for the correct IP/port that AG is defined for
+
 - Run the following query on the Primary and then each Secondary replica that is failing to connect. This will help you find the endpoint URL and port
 
-  ```sql 
+  ```sql
   select endpoint_url from sys.availability_replicas
   ```
 
@@ -174,8 +176,9 @@ This message occurs when attempting to join secondary databases to an Always On 
   > [!NOTE]  
   > If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
 
-#### 5. Check whether the network service account has CONNECT permission to the endpoint. 
- - Run the following queries to list the accounts that have connect permission to the endpoint on the server(s) in question, and to show the permission assigned to each relevant endpoint.
+#### 5. Check whether the network service account has CONNECT permission to the endpoint
+
+- Run the following queries to list the accounts that have connect permission to the endpoint on the server(s) in question, and to show the permission assigned to each relevant endpoint.
 
     ```sql
     SELECT 
@@ -205,7 +208,7 @@ This message occurs when attempting to join secondary databases to an Always On 
     ORDER BY Permission,grantor, grantee;   
     ```
 
-#### 6. Check for possible name resolution issues
+#### 6. Check for name resolution issues
 
 - Validate DNS resolution by using NSLookup or Resolve-DnsName on the IP address and the name:
 
@@ -225,7 +228,7 @@ This message occurs when attempting to join secondary databases to an Always On 
    ```DOS
    type C:\WINDOWS\system32\drivers\etc\hosts
    ```
-   
+
    ```powershell
    get-content 'C:\WINDOWS\system32\drivers\etc\hosts'
    ```
@@ -236,5 +239,5 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 - Update SQL Server versions to protect from running into issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2).
 
-  
+
 For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://techcommunity.microsoft.com/t5/sql-server-support/create-availability-group-fails-with-error-35250-failed-to-join/ba-p/317987)

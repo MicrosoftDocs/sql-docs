@@ -77,13 +77,13 @@ This message occurs when attempting to join secondary databases to an Always On 
 - Use Telnet or Test-NetConnection to validate connectivity. If the Endpoint is listening and connection is successful, then Telnet will show you a blank screen with a blinking cursor. If not, you will receive a connection error from Telnet. If you use Test-NetConnection look for the `TcpTestSucceeded        : True` or `TcpTestSucceeded        : False`. 
 
   ```DOS
-  telnet ServerName port_number
-  telnet IP_Address port_number
+  telnet ServerName <port_number>
+  telnet IP_Address <port_number>
   ```
 
   ```powershell
-  Test-NetConnection -ComputerName ServerName -Port port_number
-  Test-NetConnection -ComputerName IP_address -Port port_number
+  Test-NetConnection -ComputerName <ServerName> -Port <port_number>
+  Test-NetConnection -ComputerName <IP_address> -Port <port_number>
   ```
   
 **DNS issues:**
@@ -115,10 +115,10 @@ This message occurs when attempting to join secondary databases to an Always On 
   ```  
 
   ```powershell
-  Get-NetTCPConnection -LocalPort port_number    
+  Get-NetTCPConnection -LocalPort <port_number>
   ```
 
-- To find the port-owning process, you can run a command like this (e.g. using port 1433)
+- You can also find the port-owning process: run a command like this (e.g. using port 1433)
 
   ```powershell
   Get-Process -Id (Get-NetTCPConnection -LocalPort 1433).OwningProcess |Select-Object Name, ProductVersion, Path, Id
@@ -213,13 +213,13 @@ This message occurs when attempting to join secondary databases to an Always On 
 - Validate DNS resolution by using NSLookup or Resolve-DnsName on the IP address and the name:
 
   ```DOS
-  nslookup IP_Address
-  nslookup ServerName
+  nslookup <IP_Address>
+  nslookup <ServerName>
   ```
 
   ```powershell
-  Resolve-DnsName  -Name $ServerName
-  Resolve-DnsName  -Name $server_IP_address
+  Resolve-DnsName  -Name <ServerName>
+  Resolve-DnsName  -Name <IP_address>
   ```
   
 - Does the name resolve to the correct IP address? Does the IP address resolve to the correct name?

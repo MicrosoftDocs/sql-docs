@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;TRANCOUNT (Transact-SQL)"
+description: "@@TRANCOUNT (Transact-SQL)"
 title: "@@TRANCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -99,9 +99,9 @@ PRINT @@TRANCOUNT
 ```  
   
 ## See Also  
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
+ [BEGIN TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [COMMIT TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [ROLLBACK TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
+ [System Functions \(Transact-SQL\)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

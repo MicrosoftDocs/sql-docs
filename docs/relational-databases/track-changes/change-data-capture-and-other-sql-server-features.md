@@ -80,6 +80,8 @@ Running point-in-time-restore (PITR) on a Azure SQL Database that has change dat
 
 If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database. 
 
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work. 
+
 > [!NOTE]
 > Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
 

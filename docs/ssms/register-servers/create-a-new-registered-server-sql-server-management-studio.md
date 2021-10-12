@@ -20,7 +20,7 @@ ms.date: 03/14/2017
 
 # Create a New Registered Server (SQL Server Management Studio)
 
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to save the connection information for servers that you access frequently, by registering the server in the Registered Servers component of SQL Server Management Studio in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. A server can be registered before connecting, or when connecting from Object Explorer. There is a special menu option to register the server instances on the local computer.  
   

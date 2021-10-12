@@ -200,6 +200,20 @@ First, complete the following steps while **online**:
    SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive
    ```
    
+   c. For an unattended installation to a specific VS Instance that you may have previously installed, you can query the instance ID of the desired VS instance 
+   
+   ```dos
+   cd C:\Program Files (x86)\Microsoft Visual Studio\Installer
+   C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -all
+   ```
+ 
+    Then run this command by replacing the VS_INSTANCE_ID_HERE with your instanceID (it will look something like this: 49cf420b)
+    
+    ```dos
+    SSDT-Setup-ENU.exe /INSTALLALL[:VS_INSTANCE_ID_HERE] /passive
+    ```
+ 
+   
 
 For available options, run `SSDT-Setup-ENU.exe /help`
 

@@ -1,6 +1,6 @@
 ---
 title: "Configure a witness"
-description: "Describes how to configure a database mirroring witness with windows authentication using Transact-SQL. "
+description: "Describes how to configure a database mirroring witness with Windows authentication using Transact-SQL. "
 ms.custom: "seo-lt-2019"
 ms.date: "03/07/2017"
 ms.prod: sql

@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 A subquery is a query that is nested inside a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, or inside another subquery. 
 
 > [!NOTE]
-> The samples in this article use the AdventureWorks2016 database available for download at [AdventureWorks sample databases](/sql/samples/adventureworks-install-configure).
+> The samples in this article use the AdventureWorks2016 database available for download at [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 A subquery can be used anywhere an expression is allowed. In this example a subquery is used as a column expression named MaxUnitPrice in a `SELECT` statement.
 

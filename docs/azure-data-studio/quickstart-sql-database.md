@@ -1,13 +1,17 @@
 ---
 title: Connect and query an Azure SQL database
-description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database. 
+description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.reviewer: alayu, maghan
+ms.custom:
+  - seodec18
+  - sqlfreshmay19
+  - seo-lt-2019
+  - intro-quickstart
 ms.date: 05/14/2019
 ---
 # Quickstart: Use Azure Data Studio to connect and query Azure SQL database
@@ -45,7 +49,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
    | **Password (SQL Login)** | The server admin account password | The password from the account used to create the server. |
    | **Save Password?** | Yes or No | Select **Yes** if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | You're only connecting to the server here. |
-   | **Server Group** | Select <Default> | You can set this field to a specific server group you created. | 
+   | **Server Group** | Select \<Default\> | You can set this field to a specific server group you created. | 
 
    ![Screenshot of the Azure Data Studio - Connection page.](media/quickstart-sql-database/new-connection-screen.png)  
 

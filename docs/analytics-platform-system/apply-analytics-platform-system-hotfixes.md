@@ -48,7 +48,7 @@ Unlike the Microsoft updates, the hotfixes for the Analytics Platform System sof
   
     2.  Use the **Run as administrator** option to open a Command Prompt.  
   
-    3.  Run the following command, replacing *<HotfixPackageName>* with the name of the hotfix executable package, and replacing the other placeholder items *<  >* with the appropriate information.  
+    3.  Run the following command, replacing *\<HotfixPackageName\>* with the name of the hotfix executable package, and replacing the other placeholder items *<  >* with the appropriate information.  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  

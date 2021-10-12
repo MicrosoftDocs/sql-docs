@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS: The function successfully returned diagnostic information.  
   
--   SQL_SUCCESS_WITH_INFO: The \**MessageText* buffer was too small to hold the requested diagnostic message. No diagnostic records were generated. To determine that a truncation occurred, the application must compare *BufferLength* to the actual number of bytes available, which is written to **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: The \**MessageText* buffer was too small to hold the requested diagnostic message. No diagnostic records were generated. To determine that a truncation occurred, the application must compare *BufferLength* to the actual number of bytes available, which is written to **TextLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: The handle indicated by *HandleType* and *Handle* was not a valid handle.  
   

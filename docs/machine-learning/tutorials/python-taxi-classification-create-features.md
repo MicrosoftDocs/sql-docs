@@ -5,10 +5,10 @@ description: In part three of this five-part tutorial series, you'll add calcula
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/29/2020
+ms.date: 09/17/2021
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
@@ -40,12 +40,14 @@ The distance values reported in the original data are based on the reported mete
 
 You'll use one custom T-SQL function, _fnCalculateDistance_, to compute the distance using the Haversine formula, and use a second custom T-SQL function, _fnEngineerFeatures_, to create a table containing all the features.
 
-### Calculate trip distance using fnCalculateDistance
+### Calculate trip distance using _fnCalculateDistance_
 
-1. The function _fnCalculateDistance_ is included in the sample database. Take a minute to review the code.
-  
-2. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand **Programmability**, expand **Functions** and then **Scalar-valued functions**.
-   Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../includes/tsql-md.md)] script in a new query window.
+The function _fnCalculateDistance_ is included in the sample database. Take a minute to review the code:
+
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand **Programmability**, expand **Functions** and then **Scalar-valued functions**.
+1. Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../includes/tsql-md.md)] script in a new query window.
+
+   It should look something like this:
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -74,51 +76,49 @@ You'll use one custom T-SQL function, _fnCalculateDistance_, to compute the dist
 **Notes:**
 
 + The function is a scalar-valued function, returning a single data value of a predefined type.
-+ It takes latitude and longitude values as inputs, obtained from trip pick-up and drop-off locations. The Haversine formula converts locations to radians and uses those values to compute the direct distance in miles between those two locations.
-
-To add the computed value to a table that can be used for training the model, you'll use another function, _fnEngineerFeatures_.
++ The function takes latitude and longitude values as inputs, obtained from trip pick-up and drop-off locations. The Haversine formula converts locations to radians and uses those values to compute the direct distance in miles between those two locations.
 
 ### Save the features using _fnEngineerFeatures_
 
-1. Take a minute to review the code for the custom T-SQL function, _fnEngineerFeatures_, which is included in the sample database.
+To add the computed value to a table that can be used for training the model, you'll use the custom T-SQL function, _fnEngineerFeatures_. This function is a table-valued function that takes multiple columns as inputs, and outputs a table with multiple feature columns.  The purpose of this function is to create a feature set for use in building a model. The function _fnEngineerFeatures_ calls the previously created T-SQL function, _fnCalculateDistance_, to get the direct distance between pickup and dropoff locations.
+
+Take a minute to review the code:
+
+```sql
+CREATE FUNCTION [dbo].[fnEngineerFeatures] (
+@passenger_count int = 0,
+@trip_distance float = 0,
+@trip_time_in_secs int = 0,
+@pickup_latitude float = 0,
+@pickup_longitude float = 0,
+@dropoff_latitude float = 0,
+@dropoff_longitude float = 0)
+RETURNS TABLE
+AS
+  RETURN
+  (
+  -- Add the SELECT statement with parameter references here
+  SELECT
+    @passenger_count AS passenger_count,
+    @trip_distance AS trip_distance,
+    @trip_time_in_secs AS trip_time_in_secs,
+    [dbo].[fnCalculateDistance](@pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude) AS direct_distance
+  )
+GO
+```
   
-   This function is a table-valued function that takes multiple columns as inputs, and outputs a table with multiple feature columns.  The purpose of this function is to create a feature set for use in building a model. The function _fnEngineerFeatures_ calls the previously created T-SQL function, _fnCalculateDistance_, to get the direct distance between pickup and dropoff locations.
+To verify that this function works, you can use it to calculate the geographical distance for those trips where the metered distance was 0 but the pick-up and drop-off locations were different.
   
-   ```sql
-   CREATE FUNCTION [dbo].[fnEngineerFeatures] (
-   @passenger_count int = 0,
-   @trip_distance float = 0,
-   @trip_time_in_secs int = 0,
-   @pickup_latitude float = 0,
-   @pickup_longitude float = 0,
-   @dropoff_latitude float = 0,
-   @dropoff_longitude float = 0)
-   RETURNS TABLE
-   AS
-     RETURN
-     (
-     -- Add the SELECT statement with parameter references here
-     SELECT
-       @passenger_count AS passenger_count,
-       @trip_distance AS trip_distance,
-       @trip_time_in_secs AS trip_time_in_secs,
-       [dbo].[fnCalculateDistance](@pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude) AS direct_distance
-     )
-   GO
-   ```
+  ```sql
+      SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
+      trip_distance, pickup_datetime, dropoff_datetime,
+      dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
+      FROM nyctaxi_sample
+      WHERE pickup_longitude != dropoff_longitude and pickup_latitude != dropoff_latitude and trip_distance = 0
+      ORDER BY trip_time_in_secs DESC
+  ```
   
-2. To verify that this function works, you can use it to calculate the geographical distance for those trips where the metered distance was 0 but the pick-up and drop-off locations were different.
-  
-   ```sql
-       SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
-       trip_distance, pickup_datetime, dropoff_datetime,
-       dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
-       FROM nyctaxi_sample
-       WHERE pickup_longitude != dropoff_longitude and pickup_latitude != dropoff_latitude and trip_distance = 0
-       ORDER BY trip_time_in_secs DESC
-   ```
-  
-   As you can see, the distance reported by the meter doesn't always correspond to geographical distance. This is why feature engineering is important.
+As you can see, the distance reported by the meter doesn't always correspond to geographical distance. This is why feature engineering is important.
 
 In the next part, you'll learn how to use these data features to create and train a machine learning model using Python.
 

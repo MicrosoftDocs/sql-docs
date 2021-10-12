@@ -2,7 +2,7 @@
 title: "ADO.NET connection manager | Microsoft Docs"
 description: An ADO.NET connection manager enables a package to access data sources by using a .NET provider.
 ms.custom: ""
-ms.date: "05/24/2019"
+ms.date: "07/19/2021"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -79,62 +79,68 @@ Create an ADO.NET data connection by using the **Connection Manager** dialog box
 Select a connection, and then delete it by selecting **Delete**.  
   
 #### Managed identities for Azure resources authentication
-When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](/azure/data-factory/connector-azure-sql-database#managed-identity) associated with your data factory for Azure SQL Database or Azure SQL Managed Instance authentication. The designated factory can access and copy data from or to your database by using this identity.
+When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data Factory (ADF)](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use Azure Active Directory (AAD) authentication with [the specified system/user-assigned managed identity for your ADF](/azure/data-factory/connector-azure-sql-database#managed-identity) to access Azure SQL Database server/Managed Instance. Your Azure-SSIS IR can access and copy data from or to your database by using this managed identity.
 
 > [!NOTE]
->  When you use Azure Active Directory (Azure AD) authentication (including managed identity authentication) to connect to Azure SQL Database or Azure SQL Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [Azure AD features and limitations](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  When you use AAD authentication to access Azure SQL Database server/Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [AAD features and limitations](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
-To use managed identity authentication for Azure SQL Database, follow these steps to configure your database:
+To use AAD authentication with the specified system/user-assigned managed identity for your ADF to access Azure SQL Database server, follow these steps:
 
-1. [Provision an Azure Active Directory administrator](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) for your Azure SQL server on the Azure portal, if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip step 2 and 3. The administrator will have full access to the database.
+1. [Provision an AAD administrator](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) for your Azure SQL Database server in Azure portal, if you haven't already done so. The AAD administrator can be an AAD user or group. If you grant the group with specified system/user-assigned managed identity for your ADF an admin role, skip step 2 - 3. The administrator will have full access to your Azure SQL Database server.
 
-1. [Create contained database users](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) for the data factory managed identity. Connect to the database from or to which you want to copy data by using tools like SSMS, with an Azure AD identity that has at least ALTER ANY USER permission. Run the following T-SQL: 
+1. [Create a contained database user](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) to represent the specified system/user-assigned managed identity for your ADF. Connect to the database from or to which you want to copy data using SQL Server Management Studio (SSMS) with an AAD user that has at least ALTER ANY USER permission. Run the following T-SQL statement: 
+
+   ```sql
+   CREATE USER [your managed identity name] FROM EXTERNAL PROVIDER;
+   ```
+
+   If you use the system managed identity for your ADF, then *your managed identity name* should be your ADF name. If you use a user-assigned managed identity for your ADF, then *your managed identity name* should be the specified user-assigned managed identity name.
+
+1. Grant the specified system/user-assigned managed identity for your ADF the required permissions, as you normally do for SQL users. Refer to [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md) for appropriate roles. Run the following T-SQL statement. For more options, see [this article](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).
+
+   ```sql
+   EXEC sp_addrolemember [role name], [your managed identity name];
+   ```
+
+To use AAD authentication with the specified system/user-assigned managed identity for your ADF to access Azure SQL Managed Instance, follow these steps:
     
-    ```sql
-    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
-    ```
+1. [Provision an AAD administrator](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) for your Azure SQL Managed Instance in Azure portal, if you haven't already done so. The AAD administrator can be an AAD user or group. If you grant the group with specified system/user-assigned managed identity for your ADF an admin role, skip step 2 - 4. The administrator will have full access to your Azure SQL Managed Instance.
 
-1. Grant the data factory managed identity needed permissions, as you normally do for SQL users and others. Refer to [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md) for appropriate roles. Run the following code. For more options, see [this document](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).
+1. [Create a login](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) assigned to the specified system/user-assigned managed identity for your ADF. On SSMS, connect to your Azure SQL Managed Instance using SQL Server account that is a **sysadmin**. In **master** database, run the following T-SQL statement:
 
-    ```sql
-    EXEC sp_addrolemember [role name], [your data factory name];
-    ```
+   ```sql
+   CREATE LOGIN [your managed identity name] FROM EXTERNAL PROVIDER;
+   ```
 
-To use managed identity authentication for Azure SQL Managed Instance, follow these steps to configure your database:
-    
-1. [Provision an Azure Active Directory administrator](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) for your managed instance on the Azure portal, if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip step 2-4. The administrator will have full access to the database.
+   If you use the system managed identity for your ADF, then *your managed identity name* should be your ADF name. If you use a user-assigned managed identity for your ADF, then *your managed identity name* should be the specified user-assigned managed identity name.
 
-1. [Create logins](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) for the data factory managed identity. In SQL Server Management Studio (SSMS), connect to your Managed Instance using a SQL Server account that is a **sysadmin**. In **master** database, run the following T-SQL:
-
-    ```sql
-    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
-    ```
-
-1. [Create contained database users](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) for the data factory managed identity. Connect to the database from or to which you want to copy data, run the following T-SQL: 
+1. [Create a contained database user](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) representing the specified system/user-assigned managed identity for your ADF. Connect to the database from or to which you want to copy data using SSMS and run the following T-SQL statement:
   
-    ```sql
-    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
-    ```
+   ```sql
+   CREATE USER [your managed identity name] FROM EXTERNAL PROVIDER;
+   ```
 
-1. Grant the data factory managed identity needed permissions as you normally do for SQL users and others. Run the following code. For more options, see [this document](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
+1. Grant the specified system/user-assigned managed identity for your ADF the required permissions, as you normally do for SQL users. Run the following T-SQL statement. For more options, see [this article](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
 
-    ```sql
-    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
-    ```
+   ```sql
+   ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your managed identity name];
+   ```
 
-Finally, configure managed identity authentication for the ADO.NET connection manager. Here are the options to do this:
+Finally, you can configure AAD authentication with the specified system/user-assigned managed identity for your ADF on the ADO.NET connection manager. Here are the options to do this:
     
-- **Configure at design time.** In SSIS Designer, right-click the ADO.NET connection manager, and select **Properties**. Update the property `ConnectUsingManagedIdentity` to `True`.
-    > [!NOTE]
-    >  Currently, the connection manager property `ConnectUsingManagedIdentity` doesn't take effect (indicating that managed identity authentication doesn't work) when you run SSIS package in SSIS Designer or [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
-    
-- **Configure at runtime.** When you run the package via [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) or [Azure Data Factory Execute SSIS Package activity](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the ADO.NET connection manager. Update its property `ConnectUsingManagedIdentity` to `True`.
-    > [!NOTE]
-    >  In Azure-SSIS integration runtime, all other authentication methods (for example, integrated authentication and password) preconfigured on the ADO.NET connection manager are overridden when managed identity authentication is used to establish a database connection.
+- **Configure at design time.** In SSIS Designer, right-click on your ADO.NET connection manager, and select **Properties**. Update the property `ConnectUsingManagedIdentity` to `True`.
 
-> [!NOTE]
->  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](../../ssdt/download-sql-server-data-tools-ssdt.md) at least once. Redeploy that SSIS project to your Azure-SSIS integration runtime, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all ADO.NET connection managers in your SSIS project. The alternative way is to directly use a property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at runtime.
+  > [!NOTE]
+  >  Currently, the connection manager property `ConnectUsingManagedIdentity` doesn't take effect (indicating that AAD authentication with the specified system/user-assigned managed identity for your ADF doesn't work) when you run your package in SSIS Designer or on SQL Server.
 
-## See also  
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
+- **Configure at run time.** When you run your package via [SSMS](../ssis-quickstart-run-ssms.md) or [Execute SSIS Package activity in ADF pipeline](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the ADO.NET connection manager and update its property `ConnectUsingManagedIdentity` to `True`.
+
+  > [!NOTE]
+  > On Azure-SSIS IR, all other authentication methods (for example, integrated security and password) preconfigured on your ADO.NET connection manager are overridden when using AAD authentication with the specified system/user-assigned managed identity for your ADF.
+
+To configure AAD authentication with the specified system/user-assigned managed identity for your ADF on your existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](../../ssdt/download-sql-server-data-tools-ssdt.md) at least once. Redeploy your SSIS project to run on Azure-SSIS IR, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all ADO.NET connection managers in your project. The alternative way is to directly use property overrides with the property path *\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]* assigned to `True` at run time.
+
+## See also
+- [ADO.NET Source](../../integration-services/data-flow/ado-net-source.md)
+- [ADO.NET Destination](../../integration-services/data-flow/ado-net-destination.md)
+- [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

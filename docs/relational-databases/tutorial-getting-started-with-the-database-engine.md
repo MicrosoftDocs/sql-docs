@@ -1,14 +1,16 @@
 ---
 description: "Tutorial: Getting Started with the Database Engine"
 title: "Tutorial: Getting Started with the Database Engine"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ms.date: "06/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tutorials [connecting]"
   - "tutorials [Database Engine]"
   - "unable to connect [SQL Server]"

@@ -20,7 +20,7 @@ author: cawrites
 ms.author: chadam
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 For a request that comes in to the server, this function returns information about the connection properties of the unique connection which supports that request.
   

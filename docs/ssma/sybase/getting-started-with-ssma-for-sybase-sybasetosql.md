@@ -1,7 +1,8 @@
 ---
 title: "Getting Started with SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 description: Learn about the SQL Server Migration Assistant (SSMA) for SAP ASE installation process, and familiarize yourself with the SSMA user interface.
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "09/30/2017"
 ms.prod: sql
 ms.reviewer: ""

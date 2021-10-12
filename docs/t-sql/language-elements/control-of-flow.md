@@ -18,7 +18,7 @@ author: cawrites
 ms.author: chadam
 ---
 # Control-of-Flow
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The [!INCLUDE[tsql](../../includes/tsql-md.md)] control-of-flow language keywords are:  
   

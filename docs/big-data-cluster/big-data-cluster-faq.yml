@@ -12,7 +12,7 @@ metadata:
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: 
-  ms.date: 07/09/2021
+  ms.date: 10/05/2021
 
 title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -71,7 +71,7 @@ sections:
           Using HDFS tiering, data is cached withing the local HDFS running in Big Data Cluster to allow users to attach to large data lakes without having to bring all the data in. There is a configurable amount of space allocated to the cache which is defaulted to 2% today. Data is maintained in the cache but will be removed if that threshold is exceeded. Security is also maintained from the lake and all ACLs are applied. For more information, see [Configure HDFS tiering on Big Data Clusters](hdfs-tiering.md).
       - question: Can we use SQL Server 2019 to visualize Azure Data Lake Store Gen2? Will this integration take care of folder level permission?
         answer: |
-          Yes you can virtualize data stored in ADLS Gen2 using HDFS tiering. Once HDFS Tiering is mounted to ADLS Gen2, users gain ability to query the HDFS data and run Spark jobs against it. The mounted storage will appear in the HDFS for Big Data Cluster cluster in the location specified by --mount-path, and users can work with that mount path as if working with a local storage. See more details here: [Configure HDFS tiering on Big Data Cluster](hdfs-tiering.md). For more information on HDFS tier permissions, see [Manage HDFS permissions for SQL Server Big Data Clusters](hdfs-tiering-manage-permissions.md).
+          Yes you can virtualize data stored in ADLS Gen2 using HDFS tiering. Once HDFS Tiering is mounted to ADLS Gen2, users gain ability to query the HDFS data and run Spark jobs against it. The mounted storage will appear in the HDFS for Big Data Cluster in the location specified by --mount-path, and users can work with that mount path as if working with a local storage. See more details here: [Configure HDFS tiering on Big Data Cluster](hdfs-tiering.md). For more information on HDFS tier permissions, see [Manage HDFS permissions for SQL Server Big Data Clusters](hdfs-tiering-manage-permissions.md).
       - question: What's the default high-availability and/or redundancy setting for the master node on Azure Kubernetes Service (AKS)?
         answer: |
           The AKS control plane supports [uptime SLA guarantees 99.95% availability](/azure/aks/uptime-sla). The AKS cluster nodes (worker nodes) use Availability Zones, for more information see [AKS Availability Zones](/azure/aks/availability-zones). An Availability Zone (AZ) is a high availability offering from Azure that protects applications and data from datacenter failures. AKS supports 99.9% availability for clusters that don't use Availability Zones. For more information, please refer to [SLA for Azure Kubernetes Service (AKS)](https://azure.microsoft.com/support/legal/sla/kubernetes-service/v1_1/). 
@@ -99,7 +99,7 @@ sections:
       - question: What happens when one of the Kubernetes worker nodes shuts down or has an outage?
         answer: |
           Pods that are not affinitized to the respective worker node will be moved to another node in the Kubernetes cluster provided there are sufficient resources. Otherwise, the pod(s) will be unavailable causing outages.
-      - question: Does Big Data Cluster rebalance automatically if I add a node to the Kubernetes cluster?
+      - question: Does Big Data Cluster re-balance automatically if I add a node to the Kubernetes cluster?
         answer: |
           This action depends only on Kubernetes. Apart from pod placement using node labels, there is no other mechanism to control re-balancing Kubernetes resources from within Big Data Cluster.
       - question: What is the consequence on Big Data Cluster resources when I remove a node from the Kubernetes cluster?
@@ -162,8 +162,8 @@ sections:
           Yes, you can use PolyBase in Big Data Cluster to access data in Azure SQL Database.
       - question: Why do the CREATE TABLE statements include the key word EXTERNAL? What does EXTERNAL do differently than the standard CREATE TABLE?
         answer: |
-          In general, the external keyword implies that the data is not in the SQL Server instance. For example, you can define a storage pool table on top of an HDFS directory. The data are stored in HDFS files, not in your database files, but external table provided you the interface to query HDFS files as a relational table as if it is in the database.<BR>This concept of accessing external data is called data virtualization, for more information see [What is PolyBase and Data Virtualization?](../relational-databases/polybase/polybase-guide.md). For a tutorial on virtualizing data from CSV files in HDFS, see [Virtualize CSV data from storage pool [Big Data Clusters](data-virtualization-csv.md).
-      - question: What are the differences between data virtualization using SQL Server running within Big Data Cluster vs SQL Server?
+          In general, the external keyword implies that the data is not in the SQL Server instance. For example, you can define a storage pool table on top of an HDFS directory. The data are stored in HDFS files, not in your database files, but external table provided you the interface to query HDFS files as a relational table as if it is in the database.<BR>This concept of accessing external data is called data virtualization, for more information see [Introducing data virtualization with PolyBase](../relational-databases/polybase/polybase-guide.md). For a tutorial on virtualizing data from CSV files in HDFS, see [Virtualize CSV data from storage pool [Big Data Clusters](data-virtualization-csv.md).
+      - question: What are the differences between data virtualization using SQL Server running within SQL Server Big Data Clusters vs SQL Server?
         answer: |
           For an comparison, see [PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances](../relational-databases/polybase/polybase-faq.yml#polybase-in-big-data-clusters-vs--polybase-in-stand-alone-instances).
       - question: How can I easily tell that an external table is pointing to data pool vs storage pool?
@@ -191,7 +191,7 @@ sections:
           You can add packages at job submission using the steps in the [sample notebook for installing packages in Spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/config-install/installpackage_Spark.ipynb).
       - question: Do I need to use SQL Server 2019 to use R and Python for SQL Server Big Data Clusters?
         answer: |
-          Machine Learning (ML) Services (R and Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning?](../machine-learning/sql-server-machine-learning-services.md).
+          Machine Learning (ML) Services (R and Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning Services with Python and R?](../machine-learning/sql-server-machine-learning-services.md).
   - name: Licensing
     questions: 
       - question: How do SQL Server licenses work for SQL Server Big Data Clusters?
@@ -215,24 +215,29 @@ sections:
       - question: Can I deploy Big Data Cluster in an air-gapped environment?
         answer: |
           Yes, for more details see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).
-      - question: Does the feature "Azure Storage encryption" by default also applies to AKS-based Big Data Cluster clusters?
+      - question: Does the feature "Azure Storage encryption" by default also applies to AKS-based big data clusters?
         answer: |
           This depends on the dynamic storage provisioner configurations in Azure Kubernetes Service (AKS). See here for more details: [Best practices for storage and backups in Azure Kubernetes Service (AKS)](/azure/aks/operator-best-practices-storage).
 
       - question: Can I rotate the keys for SQL Server and HDFS encryption in Big Data cluster?
         answer: |
           Yes. For more information, see [Key versions in Big Data Cluster](big-data-cluster-key-versions.md).
+
+      - question: Can I rotate the passwords of autogenerated Active Directory objects?
+        answer: | 
+          Yes, you can easily rotate the passwords of [Autogenerated Active Directory objects](active-directory-objects.md) with a new feature introduced in SQL Server Big Data Clusters CU13. For more information, see [AD password rotation](active-directory-password-rotation.md).
+
   - name: Support
     questions: 
-      - question: Are Spark and HDFS deployed within Big Data Cluster supported by Microsoft?
+      - question: Are Spark and HDFS deployed within SQL Server Big Data Clusters supported by Microsoft?
         answer: |
-          Yes, Microsoft supports all components shipped within Big Data Cluster.
+          Yes, Microsoft supports all components shipped within Big Data Clusters.
       - question: What is the support model for SparkML and SQL Server ML Service?
         answer: |
           SQL Server ML Services support policy is same as that of SQL Server, except that every major release comes with a new runtime version. SparkML library itself is open source software (OSS). We do package many OSS components in Big Data Cluster and this is supported by Microsoft. 
       - question: Is Red Hat Enterprise Linux 8 (RHEL8) supported platform for SQL Server Big Data Clusters?
         answer: |
-          Not at this time. See here for the [supported platforms](release-notes-big-data-cluster.md#supported-platforms).
+          Not at this time. See here for the [tested configurations](release-notes-big-data-cluster.md#tested-configurations).
   - name: Tools
     questions: 
       - question: Are the notebooks available in Azure Data Studio essentially Jupyter notebooks?

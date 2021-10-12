@@ -15,7 +15,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # OGC Methods on Geography Instances
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the Open Geospatial Consortium (OGC) methods on **geography** instances.  
   

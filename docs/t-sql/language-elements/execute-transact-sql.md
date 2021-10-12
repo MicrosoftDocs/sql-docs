@@ -115,7 +115,7 @@ The following code block shows the syntax in SQL Server 2017 and earlier. Altern
 
 
 ```syntaxsql
--- Syntax for SQL Server 2017 and earleir  
+-- Syntax for SQL Server 2017 and earlier  
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  

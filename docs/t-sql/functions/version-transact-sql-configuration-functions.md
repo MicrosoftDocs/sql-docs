@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;Version - Transact SQL Configuration Functions"
+description: "@@VERSION - Transact SQL Configuration Functions"
 title: "@@VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"
@@ -23,7 +23,7 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# &#x40;&#x40;Version - Transact SQL Configuration Functions
+# @@VERSION - Transact SQL Configuration Functions
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns system and build information for the current installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

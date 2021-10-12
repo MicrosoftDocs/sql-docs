@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 04/05/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019, contperf-fy21q3 
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
@@ -72,12 +72,25 @@ How much you change your code depends on whether you intend to submit the code f
 
 + When running code in a stored procedure, you can pass through multiple **scalar** inputs. For any parameters that you want to use in the output, add the **OUTPUT** keyword.
 
-  For example, the following scalar input `@model_name` contains the model name, which is also output in its own column in the results:
+  For example, the following scalar input `@model_name` contains the model name, which is also later modified by the R script, and output in its own column in the results:
 
   ```sql
-  EXECUTE sp_execute_external_script @model_name = "DefaultModel" OUTPUT
-	,@language = N'R'
-	,@script = N'R code here'
+  -- declare a local scalar variable which will be passed into the R script
+  DECLARE @local_model_name AS NVARCHAR (50) = 'DefaultModel';
+
+  -- The below defines an OUTPUT variable in the scope of the R script, called model_name
+  -- Syntactically, it is defined by using the @model_name name. Be aware that the sequence
+  -- of these parameters is very important. Mandatory parameters to sp_execute_external_script
+  -- must appear first, followed by the additional parameter definitions like @params, etc.
+  EXECUTE sp_execute_external_script @language = N'R', @script = N'
+    model_name <- "Model name from R script"
+    OutputDataSet <- data.frame(InputDataSet$c1, model_name)'
+    , @input_data_1 = N'SELECT 1 AS c1'
+    , @params = N'@model_name nvarchar(50) OUTPUT'
+    , @model_name = @local_model_name OUTPUT;
+
+  -- optionally, examine the new value for the local variable:
+  SELECT @local_model_name;
   ```
 
 + Any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the code. By default, variables are mapped by name. All columns in the input dataset must also be mapped to variables in the script.

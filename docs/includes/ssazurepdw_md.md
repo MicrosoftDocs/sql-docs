@@ -2,8 +2,8 @@
 author: MikeRayMSFT
 ms.service: sql
 ms.topic: include
-ms.date: 06/11/2020
+ms.date: 08/23/2021
 ms.author: mikeray
 ---
 
-Parallel Data Warehouse
+Analytics Platform System (PDW)

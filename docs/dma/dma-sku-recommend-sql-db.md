@@ -35,9 +35,9 @@ The following are instructions to help you determine the SKU recommendations and
 > [!NOTE]
 > It is recommended that the tool is utilized from a separate tools (client) machine with connectivity to the target SQL instance(s), rather than from the machine hosting SQL Server itself, in order to minimize any potential overhead. When collecting performance data for SKU recommendations, it is recommended that the tool is ran with default option values over the span of several hours, covering both off-peak and on-peak workloads and excluding maintenance tasks such as index rebuild or backup database. Maintenance tasks can impact the CPU, Memory and IO consumption and subsequently drive higher recommended SKU tiers.
 
-## Collect performance data 
+## Collect performance data
 
-The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance counters from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency. The collected data is stored locally on your machine. The collected data can then be aggregated and analyzed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
+The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance data points from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency. The collected data is stored locally on your machine. The collected data can then be aggregated and analyzed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
 
 In the DMA installation path, locate the SQLAssessmentConsole folder and the SqlAssessment.exe application
 
@@ -45,14 +45,13 @@ In the DMA installation path, locate the SQLAssessmentConsole folder and the Sql
 
 In order to start the data collection process, specify the `PerfDataCollection` action in the console application, with the following arguments:
 
-  - **sqlConnectionStrings**: (_Required_) Quote-enclosed formal connection string(s) for the target SQL instance(s).
-  - **perfQueryIntervalInSec** (_Optional_):  Interval at which to query performance data, in seconds. (Default: 30)
-  - **staticQueryIntervalInSec** (_Optional_): Interval at which to query and persist static configuration data, in seconds. (Default: 60)
-  - **numberOfIterations** (_Optional_):  Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
-  - **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: %LocalAppData%/Microsoft/SqlAssessmentConsole)
+- **sqlConnectionStrings**: (_Required_) Quote-enclosed formal connection string(s) for the target SQL instance(s).
+- **perfQueryIntervalInSec** (_Optional_):  Interval at which to query performance data, in seconds. (Default: 30)
+- **staticQueryIntervalInSec** (_Optional_): Interval at which to query and persist static configuration data, in seconds. (Default: 60)
+- **numberOfIterations** (_Optional_):  Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
+- **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: %LocalAppData%/Microsoft/SqlAssessmentConsole)
 
-
-The following is a sample invocation: 
+The following is a sample invocation:
 
 ```
 .\SqlAssessment.exe PerfDataCollection 
@@ -60,16 +59,15 @@ The following is a sample invocation:
 --outputFolder C:\Output
 ```
 
-   
 Alternatively, the data collection process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 
   ```
 
  .\SqlAssessment.exe --configFile C:\path\to\config.json
   ```
-    
+
 Below is a sample ConfigFile equivalent to the performance data collection action described above:
-    
+
   ```
 
   {
@@ -86,27 +84,47 @@ Sample config files for all of the actions can be found in the `Example` folder 
 
 After the command executes, the performance and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server and instance name. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM.
 
-
 ## Use the console application to get SKU recommendations
 
 The data points collected by the previous step will be used as the input for the SKU recommendation process.
 
 For the single database option, DMA will provide recommendations for the Azure SQL Database single database tier, the compute level, and the recommended storage configuration for each database on your SQL instance.
 
-For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app will provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM tier, the compute level, and the recommended storage configuration for the set of databases on your SQL instance.
+For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app can provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM tier, the compute level, and the recommended storage configuration for the set of databases on your SQL instance. You can also specify only a subset of databases to be included or excluded from the SKU recommendations.
+
+`GetSkuRecommendation` uses by default a baseline strategy which maps collected performance data values representative for the workload (based on the percentile value specified) to the right Azure SQL SKU.
+We also expose an elastic strategy (statistical approach), which generates a unique price-to-performance curve based on the collected performance data, and by analyzing the workload patterns in comparison to customers already migrated to Azure SQL.
 
 In order to start the SKU recommendation process, specify the `GetSkuRecommendation` action in the console application, with the following arguments:
- 
+
 - **perfQueryIntervalInSec** (_Optional_):  Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
-- **targetPlatform** (_Optional_):  Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
-- **targetSqlInstance** (_Optional_):  Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
-- **targetPercentile** (_Optional_): Percentile of data points to be used during aggregation of the performance data. (Default: 95)
-- **scalingFactor** (_Optional_):  Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
-- **startTime** (_Optional_):  UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
-- **endTime** (_Optional_):  UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. (Default: all data points collected will be considered)
-- **overwrite** (_Optional_):  Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
-- **displayResult** (_Optional_):  Whether or not to print the SKU recommendation results to the console. (Default: true)
-- **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%/Microsoft/SqlAssessmentConsole)
+- **targetPlatform** (_Optional_): Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
+- **targetSqlInstance** (_Optional_): Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
+- **targetPercentile** (_Optional_): Percentile of data points to be used during aggregation of the performance data. Only used for baseline (non-elastic) strategy).Only used for baseline (non-elastic) strategy. (Default: 95)
+- **scalingFactor** (_Optional_): Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
+- **startTime** (_Optional_): UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. Only used for baseline (non-elastic) strategy. (Default: all data points collected will be considered)
+- **endTime** (_Optional_): UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. Only used for baseline (non-elastic) strategy. (Default: all data points collected will be considered)
+- **elasticStrategy** (_Optional_): Whether or not to use the elastic strategy for SKU recommendations based on resource usage profiling and cost-performance analysis. Elastic strategy is currently available for Azure SQL Databases and SQL Managed Instance, not yet available for SQL Server on Azure VM target. (Default: false)
+- **databaseAllowList** (_Optional_): Space separated list of names of databases to be allowed for SKU recommendation consideration while excluding all others. Only set one of the following or neither: databaseAllowList, databaseDenyList. (Default: null)
+- **databaseDenyList** (_Optional_): Space separated list of names of databases to be excluded for SKU recommendation. Only set one of the following or neither: databaseAllowList, databaseDenyList. (Default: null)
+- **overwrite** (_Optional_): Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
+- **displayResult** (_Optional_): Whether or not to print the SKU recommendation results to the console. (Default: true)
+- **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%/Microsoft/SqlAssessmentConsole)
+
+Advanced settings for the SKU recommendations can be found in the `Console.Settings.json` file in the root directory. Currently, it includes the following customizable parameters:
+
+**`CommandTimeoutGroupSetting`**: The time in seconds to wait for SQL query commands to execute before timing out.
+
+- `PerfCollectionCommandTimeout`: Command timeout for potentially long-running queries related to performance data collection (Default: 300)
+- `DefaultCollectionCommandTimeout`: Command timeout for all other queries (Default: 120)
+
+**`ThrottlingGroupSetting`**: Number of parallel tasks to create based on number of cores on the machine
+
+- `ServerInstancesParallelCount`: Number of server instances to assess in parallel (Default: 2)
+- `DatabasesParallelCount`: Number of databases to assess in parallel (Default: 4)
+- `UserDefinedObjectsParallelCountPerDb`: Number of user-defined objects (stored procedures, views, triggers, etc.) to assess in parallel per database (Default: 4)
+
+**`AllowTelemetry`**: Whether or not to allow the collection and transmission of anonymous feature usage and diagnostic data to Microsoft. (Default: true)
 
 Alternatively, the SKU recommendation process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 
@@ -143,12 +161,13 @@ In order to get SKU recommendations for a specific Azure SQL platform instead of
 --targetPlatform AzureSqlDatabase
 ```
 
-**Sample 2: Getting SKU recommendations  for Azure SQL Managed Instance.**
+**Sample 2: Getting SKU recommendations using elastic strategy for Azure SQL Managed Instance.**
 
 ```
 .\SqlAssessment.exe GetSkuRecommendation 
 --outputFolder C:\Output 
 --targetPlatform AzureSqlManagedInstance
+--elasticStrategy true
 ```
 
 **Sample 3: Getting SKU recommendations  for Azure SQL Virtual Machine.**
@@ -172,13 +191,13 @@ The following is an example output of a SQL Server on Azure VM recommendation:
 :::image type="content" source="media/sku-recommendations-azure-sql-virtual-machine.png" alt-text="Screenshot of SQL Server on Azure VM SKU tier and size recommendations output shown in console.":::
 
 The output of the SKU recommendations covers the following sections:
+
 - **Instance Name**: Name of the on-premises SQL Server instance(s)
 - **Database Name**: Name of the on-premises SQL Server database(s)
 - **SKU Recommendation**: The minimum cost-efficient SKU offering among all the performance eligible SKUs that could accommodate your workloads.
 - **Recommendation Reason**: For each tier that is recommended, we provide the reasons and collected data values driving the recommendations.
 
 The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is the S4 standard tier, then choosing S3 or below may cause queries to time out or fail to execute.
-
 
 ## Next step
 

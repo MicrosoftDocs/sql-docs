@@ -1,14 +1,16 @@
 ---
 title: Install big data tools
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to install tools used with SQL Server 2019 big data cluster.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-installation
 ---
 
 # Install SQL Server 2019 big data tools
@@ -91,4 +93,4 @@ After configuring the tools, deploy a SQL Server 2019 big data cluster to Kubern
 - [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
 - [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
 
-For More info about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For More info about big data clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

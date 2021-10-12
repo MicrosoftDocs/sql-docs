@@ -26,7 +26,7 @@ author: cawrites
 ms.author: chadam
 ---
 # FETCH (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Retrieves a specific row from a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor.  
   

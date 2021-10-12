@@ -84,7 +84,7 @@ The following Microsoft Python packages are installed with SQL Server Machine Le
 | Packages | Version |  Description |
 | ---------|---------|--------------|
 | [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Adds machine learning algorithms in Python. |
+| [microsoftml](../python/ref-py-microsoftml.md) | 9.4.7 | Adds machine learning algorithms in Python. |
 
 For information on which version of Python is included, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
 
@@ -160,5 +160,5 @@ print(sys.version)
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
-+ [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages with sqlmlutils](install-additional-python-packages-on-sql-server.md)
 ::: moniker-end

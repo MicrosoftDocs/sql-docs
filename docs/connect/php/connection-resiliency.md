@@ -1,7 +1,7 @@
 ---
-title: "Idle Connection Resiliency"
-description: "Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server."
-ms.date: "03/04/2021"
+title: Idle Connection Resiliency
+description: Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server.
+ms.date: 07/23/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -11,22 +11,23 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Idle Connection Resiliency
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Connection resiliency](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
+[Connection resiliency](../odbc/connection-resiliency.md) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to the database fails, connection resiliency allows the client to automatically try to reconnect. Connection resiliency is a property of the data source. Only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
 
-Connection resiliency is implemented with two connection keywords that can be added to connection strings: **ConnectRetryCount** and **ConnectRetryInterval**.
+Connection resiliency is implemented with two connection keywords that can be added to connection strings: `ConnectRetryCount` and `ConnectRetryInterval`.
 
 |Keyword|Values|Default|Description|
 |-|-|-|-|
-|**ConnectRetryCount**| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.|
-|**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|10| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
+|`ConnectRetryCount`| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of `0` means that no reconnection will be attempted.|
+|`ConnectRetryInterval`| Integer between 1 and 60 (inclusive)|10| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait `ConnectRetryInterval` seconds before trying again. This keyword is ignored if `ConnectRetryCount` is equal to 0.
 
-If the product of **ConnectRetryCount** multiplied by **ConnectRetryInterval** is larger than **LoginTimeout**, then the client will cease attempting to connect once **LoginTimeout** is reached; otherwise, it will continue to try to reconnect until **ConnectRetryCount** is reached.
+If the product of `ConnectRetryCount` multiplied by `ConnectRetryInterval` is larger than `LoginTimeout`, then the client will stop attempting to connect once `LoginTimeout` is reached; otherwise, it will continue to try to reconnect until `ConnectRetryCount` is reached.
 
-#### Remarks
+## Remarks
 
-Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, will not trigger reconnection attempts - they will fail as would otherwise be expected. The following situations, known as non-recoverable session states, will not trigger reconnection attempts:
+Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, won't trigger reconnection attempts - they'll fail as would otherwise be expected. The following situations, known as non-recoverable session states, won't trigger reconnection attempts:
 
 * Temporary tables
 * Global and local cursors
@@ -41,7 +42,7 @@ Connection resiliency applies when the connection is idle. Failures that occur w
 
 The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) sample database.
 
-In this example, we specify a buffered cursor before breaking the connection. If we do not specify a buffered cursor, the connection would not be reestablished because there would be an active server-side cursor and thus the connection would not be idle when broken. However, in that case we could call sqlsrv_free_stmt() before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
+In this example, we specify a buffered cursor before breaking the connection. If we don't specify a buffered cursor, the connection wouldn't be reestablished because there would be an active server-side cursor. As such, the connection wouldn't be idle when broken. However, in that case we could call `sqlsrv_free_stmt()` before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
 
 ```php
 <?php
@@ -116,13 +117,16 @@ sqlsrv_close( $conn );
 sqlsrv_close( $conn_break );
 ?>
 ```
+
 Expected output:
-```
+
+```output
 Statement 1 successful.
 290 rows in result set.
 Statement 2 successful.
 16 rows in result set.
 ```
 
-## See Also
-[Connection Resiliency in the Windows ODBC Driver](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
+## See also
+
+[Connection resiliency in the ODBC driver](../odbc/connection-resiliency.md)

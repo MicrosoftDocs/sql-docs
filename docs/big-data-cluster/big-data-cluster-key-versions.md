@@ -147,7 +147,7 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
 ```tsql
 USE db1;
@@ -158,7 +158,7 @@ Now, the DEK protector is changed to use the asymmetric key:
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-asymmetric.png" alt-text="After the DEK protector is changed to use the asymmetric key":::  
 
-If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
+If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_\<version\>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
 
 ## Customer provided key
 

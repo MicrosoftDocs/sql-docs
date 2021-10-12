@@ -71,10 +71,9 @@ GO
  Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
--- Uses AdventureWorks  
-  
+-- Uses the AdventureWorks sample database
 DECLARE @altstartdate DATETIME;  
-SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
+SET @altstartdate = CONVERT(DATETIME, 'January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
   

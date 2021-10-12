@@ -1,11 +1,14 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
 description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
-ms.custom: seo-lt-2019, contperf-fy21q1
+ms.custom:
+  - seo-lt-2019
+  - contperf-fy21q1
+  - intro-quickstart
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 06/11/2021
+ms.date: 10/05/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -167,7 +170,11 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
+
+   ```bash
+   docker exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
+   ```
 
 The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
@@ -319,19 +326,25 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 The **SA** account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
 
+   ::: zone pivot="cs1-bash"
 1. Choose a strong password to use for the SA user.
 
-1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong!Passw0rd>`, with your own password values.
+1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input. 
 
-   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
-      -S localhost -U SA -P "<YourStrong@Passw0rd>" \
-      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong@Passw0rd>"'
+   -S localhost -U SA \
+    -P "$(read -sp "Enter current SA password: "; echo "${REPLY}")" \
+    -Q "ALTER LOGIN SA WITH PASSWORD=\"$(read -sp "Enter new SA password: "; echo "${REPLY}")\""
+
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
+1. Choose a strong password to use for the SA user.
+
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong@Passw0rd>" `
@@ -340,9 +353,13 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
+1. Choose a strong password to use for the SA user.
+
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+
    ```cmd
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end

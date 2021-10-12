@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
+ms.reviewer: "maghan"
 ms.date: 7/2/2021
 ---
 

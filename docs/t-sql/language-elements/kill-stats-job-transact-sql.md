@@ -25,7 +25,7 @@ author: cawrites
 ms.author: chadam
 ---
 # KILL STATS JOB (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Terminates an asynchronous statistics update job in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

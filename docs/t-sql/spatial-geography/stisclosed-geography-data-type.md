@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STIsClosed (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns 1 if the start and end points of the given **geography** instance are the same. Returns 1 for **geography** collection types if each contained **geography** instance is closed. Returns 0 if the instance is not closed.  
   

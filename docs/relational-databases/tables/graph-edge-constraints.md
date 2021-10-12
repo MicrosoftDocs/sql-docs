@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "edge constraints [Azure SQL Database]"
   - "graph edge constraints"
   - "SQL Graph"
-author: "shkale-msft"
-ms.author: "shkale"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints

@@ -23,7 +23,7 @@ ms.author: chadam
 ---
 
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.  
   

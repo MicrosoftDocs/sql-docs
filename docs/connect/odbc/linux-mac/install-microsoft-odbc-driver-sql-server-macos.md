@@ -1,15 +1,17 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (macOS)
-description: "Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity."
-ms.date: 02/12/2021
+description: Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity.
+ms.date: 08/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver, installing"
 author: David-Engel
 ms.author: v-daenge
+ms.custom:
+  - intro-installation
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (macOS)
@@ -19,7 +21,7 @@ This article explains how to install the Microsoft ODBC Driver for SQL Server on
 This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
 > [!Note]
-> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture. The Apple M1 is not supported.
+> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. The Apple M1 (ARM64) is supported starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
 
 ## Microsoft ODBC 17
 
@@ -56,8 +58,8 @@ The ODBC driver on macOS consists of the following components:
 
 |Component|Description|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|The dynamic library (`dylib`) file that contains all of the driver's functionality. This file is installed in `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll` or `msodbcsqlr13.rll`|The accompanying resource file for the driver library. This file is installed in `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` for Driver 17 and in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` for Driver 13. | 
+|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|The dynamic library (`dylib`) file that contains all of the driver's functionality. This file is installed in `/usr/local/lib/`.|
+|`msodbcsqlr17.rll` or `msodbcsqlr13.rll`|The accompanying resource file for the driver library. This file is installed in `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` for Driver 17 and in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` for Driver 13. |
 |msodbcsql.h|The header file that contains all of the new definitions needed to use the driver.<br /><br /> **Note:**  You cannot reference msodbcsql.h and odbcss.h in the same program.<br /><br /> msodbcsql.h is installed in `/usr/local/include/msodbcsql17/` for Driver 17 and in `/usr/local/include/msodbcsql/` for Driver 13. |
 |LICENSE.txt|The text file that contains the terms of the End-User License Agreement. This file is placed in `/usr/local/share/doc/msodbcsql17/` for Driver 17 and in `/usr/local/share/doc/msodbcsql/` for Driver 13. |
 |RELEASE_NOTES|The text file that contains release notes. This file is placed in `/usr/local/share/doc/msodbcsql17/` for Driver 17 and in `/usr/local/share/doc/msodbcsql/` for Driver 13. |
@@ -79,6 +81,6 @@ For additional cases where you are unable to make a connection to SQL Server usi
 
 ## Next steps
 
-After installing the driver, you can try the [C++ ODBC example application](../../odbc/cpp-code-example-app-connect-access-sql-db.md). For more information about developing ODBC applications, see [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md).
+After installing the driver, you can try the [C++ ODBC example application](../cpp-code-example-app-connect-access-sql-db.md). For more information about developing ODBC applications, see [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md).
 
 For more information, see the ODBC driver [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).

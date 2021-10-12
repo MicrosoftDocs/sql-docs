@@ -27,7 +27,7 @@ author: cawrites
 ms.author: chadam
 ---
 # EVENTDATA (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns information about server or database events. When an event notification fires, and the specified service broker receives the results, `EVENTDATA` is called. A DDL or logon trigger also support internal use of `EVENTDATA`.  
   

@@ -25,7 +25,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 Rebuilds one or more indexes for a table in the specified database.
   
 > [!IMPORTANT]  

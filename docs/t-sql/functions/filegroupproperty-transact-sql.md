@@ -23,7 +23,7 @@ author: cawrites
 ms.author: chadam
 ---
 # FILEGROUPPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the filegroup property value for a specified name  and filegroup value.  
   

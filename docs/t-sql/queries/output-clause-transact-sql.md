@@ -263,17 +263,17 @@ DECLARE @MyTableVar TABLE
     employee VARCHAR(32)  
 );  
   
-PRINT 'table1, before delete'   
+PRINT 'table1, before delete';  
 SELECT * FROM dbo.table1;  
   
 DELETE FROM dbo.table1  
 OUTPUT DELETED.* INTO @MyTableVar  
 WHERE id = 4 OR id = 2;  
   
-PRINT 'table1, after delete'  
+PRINT 'table1, after delete';  
 SELECT * FROM dbo.table1;  
   
-PRINT '@MyTableVar, after delete'  
+PRINT '@MyTableVar, after delete';  
 SELECT * FROM @MyTableVar;  
   
 DROP TABLE dbo.table1;  

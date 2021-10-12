@@ -1,8 +1,6 @@
 ---
+title: sp_dropserver (Transact-SQL)
 description: "sp_dropserver (Transact-SQL)"
-title: "sp_dropserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -15,17 +13,20 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_dropserver"
-ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: "09/07/2018"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
+
 # sp_dropserver (Transact-SQL)
+
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -48,6 +49,8 @@ sp_dropserver [ @server = ] 'server'
  If you run **sp_dropserver** on a server that has associated remote and linked server login entries, or is configured as a replication publisher, an error message is returned. To remove all remote and linked server logins for a server when you remove the server, use the **droplogins** argument.  
   
  **sp_dropserver** cannot be executed inside a user-defined transaction.  
+  
+ **sp_dropserver** to change the local server name may cause unintended effects or unsupported configurations.
   
 ## Permissions  
  Requires ALTER ANY LINKED SERVER permission on the server.  

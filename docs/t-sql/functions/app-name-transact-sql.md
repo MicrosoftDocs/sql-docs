@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # APP_NAME (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the application name for the current session, if the application sets that name value.
   

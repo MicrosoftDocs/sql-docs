@@ -1,23 +1,23 @@
 ---
-title: AD mode deployment hangs - unhealthy `sparkhead` pods
+title: AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy `sparkhead` pods.
 author: macarv-ms
 ms.author: macarv
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# AD mode deployment hangs - unhealthy `sparkhead` pods
+# AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
 
 Deployment in Active Directory (AD) mode freezes. Check symptoms to see if the cause is a missing reverse lookup zone entry for the domain controller on the different networks of the cluster nodes.
 
 ## Symptom
 
-You started deploying BDC with AD mode however the deployment is stuck and not moving forward.
+You started deploying SQL Server Big Data Clusters with AD mode however the deployment is stuck and not moving forward.
 
 The following example shows the deployment results in a bash shell.
 
@@ -201,7 +201,7 @@ at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2876) 
 
 ## Cause
 
-The reverse lookup zone entry for the domain controller in the DC’s DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The `sparkhead` pod containers were trying to use the IP address 10.244.1.30:9000 to reach nnnode-0-1, but the DNS was not able to resolve it.
+The reverse lookup zone entry for the domain controller in the DC's DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The `sparkhead` pod containers were trying to use the IP address 10.244.1.30:9000 to reach nnnode-0-1, but the DNS was not able to resolve it.
 
 :::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller.png" alt-text="Missing reverse lookup zone entry for the domain controller":::
 

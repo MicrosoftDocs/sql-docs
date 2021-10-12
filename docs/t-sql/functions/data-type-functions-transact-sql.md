@@ -15,7 +15,7 @@ author: cawrites
 ms.author: chadam
 ---
 # Data Type Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 These scalar functions return information about various data type values.
   

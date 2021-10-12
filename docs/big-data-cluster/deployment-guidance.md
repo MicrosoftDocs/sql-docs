@@ -4,11 +4,13 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to deploy SQL Server Big Data Clusters on Kubernetes.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
+ms.reviewer: dacoelho
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes
@@ -21,9 +23,9 @@ SQL Server Big Data Cluster is deployed as docker containers on a Kubernetes clu
 - Install the cluster configuration tool [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-## Supported platforms
+## Tested configurations
 
-See [Supported platforms](release-notes-big-data-cluster.md#supported-platforms) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
+See [Tested configurations](release-notes-big-data-cluster.md#tested-configurations) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
 
 ### SQL Server editions
 
@@ -163,7 +165,10 @@ It is also possible to customize your deployment to accommodate the workloads yo
    azdata bdc create --config-profile custom --accept-eula yes
    ```
 
-> For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for Big Data Clusters](deployment-custom-configuration.md).
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
+
+For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for Big Data Clusters](deployment-custom-configuration.md).
 
 ## <a id="env"></a> Environment variables
 

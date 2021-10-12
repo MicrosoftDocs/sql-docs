@@ -19,7 +19,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # System Statistical Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The following scalar functions return statistical information about the system:  
 

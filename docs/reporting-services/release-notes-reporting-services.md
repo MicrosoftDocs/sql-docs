@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 07/06/2021
+ms.date: 07/27/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -48,12 +48,13 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
 
-## 15.0.1102.911, 2021/06/24 
+## 15.0.7842.32355, 2021/06/24 
 *(Product Version: 15.0.1102.911)*
 
 | Fixed issue | Details |
 | :---------- | :------ |
 | Fixed an issue for registering Report Server instance to enable Pin to Power BI feature  | &nbsp; |
+| Fixed an issue screen readers reading extra rows and columns for a tablix when exported to MHTML using new HTML DOCTYPE  | &nbsp; |
 
 ## 15.0.7765.17516, 2021/04/7 
 *(Product Version: 15.0.1102.896)*
@@ -228,4 +229,4 @@ Initial release.
 
 [What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

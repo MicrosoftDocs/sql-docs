@@ -21,15 +21,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
+
 # SQL Server Browser Service
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser program runs as a Windows service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contributes to the following actions:  
+
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
+
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser program runs as a Windows service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contributes to the following actions:  
+
+- Browsing a list of available servers  
   
--   Browsing a list of available servers  
+- Connecting to the correct server instance  
   
--   Connecting to the correct server instance  
-  
--   Connecting to dedicated administrator connection (DAC) endpoints  
+- Connecting to dedicated administrator connection (DAC) endpoints  
   
  For each instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssAS](../../includes/ssas-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service (sqlbrowser) provides the instance name and the version number. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -187,7 +187,7 @@ The following clauses can't be used for encrypted columns:
 
 The following features don't work on encrypted columns:
 
-- Transactional or merge replication
+- Transactional, merge, or snapshot replication
 - Distributed queries (linked servers, `OPENROWSET`(T-SQL), `OPENDATASOURCE`(T-SQL))
 
 Tool Requirements

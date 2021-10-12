@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
@@ -42,7 +42,7 @@ SSMS is a separate download, useful for creating and running stored procedures o
 
 Local workstations must have the same Python package versions as those on SQL Server, including the base Anaconda 4.2.0 with Python 3.5.2 distribution, and Microsoft-specific packages.
 
-An installation script adds three Microsoft-specific libraries to the Python client. The script installs [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. It installs [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) providing machine learning algorithms. The [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
+An installation script adds three Microsoft-specific libraries to the Python client. The script installs [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), used for defining data source objects and the compute context. It installs [microsoftml](../python/ref-py-microsoftml.md) providing machine learning algorithms. The [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone server context and might be of limited use for in-database analytics.
 
 1. Download an installation script.
 

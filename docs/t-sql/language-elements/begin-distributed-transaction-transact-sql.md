@@ -29,9 +29,10 @@ author: cawrites
 ms.author: chadam
 ---
 # BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Specifies the start of a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
+
+  Specifies the start of a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction. When using SQL Server the distributed transaction is managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC), and in case of Azure SQL Managed Instance the transaction is managed by the service itself and not MS DTC. 
     
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

@@ -32,7 +32,7 @@ ms.author: chadam
 ---
 # Backslash (Line Continuation) (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 `\`  breaks a long string constant, character or binary, into two or more lines for readability.  
   

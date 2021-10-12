@@ -20,7 +20,8 @@ author: cawrites
 ms.author: chadam
 ---
 # String Operators (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following string operators. String concatenation operators can combine two or more of the following data types into one expression: 
 * character or binary strings

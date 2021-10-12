@@ -46,7 +46,7 @@ There are several ways to open the Spark job submission dialog. The ways include
 
 - Use **Submit Spark Job** from the command palette by typing **Ctrl+Shift+P** (in Windows) and **Cmd+Shift+P** (in Mac).
 
-    ![Submit menu command palette in windows](./media/submit-spark-job/submit-spark-job-3.png)
+    ![Submit menu command palette in Windows](./media/submit-spark-job/submit-spark-job-3.png)
 
     ![Submit menu command palette in mac](./media/submit-spark-job/submit-spark-job-4.png)
   
@@ -73,4 +73,4 @@ After the Spark job is submitted, the Spark job submission and execution status 
 
 ## Next steps
 
-For more information on SQL Server big data cluster and related scenarios, see [What are SQL Server big data clusters?](big-data-cluster-overview.md)
+For more information on SQL Server big data cluster and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

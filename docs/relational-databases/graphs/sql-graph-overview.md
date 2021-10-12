@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL graph"
   - "SQL graph, overview"
 ms.assetid: 
-author: shkale-msft
-ms.author: shkale
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

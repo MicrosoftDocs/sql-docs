@@ -32,6 +32,16 @@ This message occurs when attempting to join secondary databases to an Always On 
   
 ## User Action  
 
+**Option 1: Execute the steps directly in a notebook via Azure Data Studio**
+
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/MSSQLSERVER_35250.ipynb)  
+
+[Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
+
+
+**Option 2: Follow the step manually**
+
 > [!NOTE]  
 > All the following steps must be run on both the Primary replica and the problematic Secondary replica(s).
 

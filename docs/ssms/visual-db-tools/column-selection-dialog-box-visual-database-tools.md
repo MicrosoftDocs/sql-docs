@@ -17,7 +17,7 @@ ms.date: 01/19/2017
 
 # Column Selection Dialog Box (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 Lets you change the Custom view for tables in the database diagram. Custom view shows only the column properties identified by the user.  
   

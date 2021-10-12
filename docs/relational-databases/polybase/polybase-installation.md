@@ -1,16 +1,18 @@
 ---
 title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
-ms.date: 06/09/2021
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-helpviewer_keywords: 
-   - "PolyBase, installation"
+helpviewer_keywords:
+  - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install PolyBase on Windows
 
@@ -32,8 +34,11 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
    
 - PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
 
->[!NOTE] 
-> PolyBase can be installed on only one SQL Server instance per machine.
+- PolyBase services require Shared Memory protocol to be enabled to function properly.
+
+- PolyBase can be installed on only one SQL Server instance per machine.
+
+- You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance.
 
  
 ## Single node or PolyBase scale-out group

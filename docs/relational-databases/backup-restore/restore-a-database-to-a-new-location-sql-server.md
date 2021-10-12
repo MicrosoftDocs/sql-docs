@@ -103,7 +103,7 @@ ms.author: chadam
 2.  Use the [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) statement to restore the full database backup. By default, data and log files are restored to their original locations. To relocate a database, use the MOVE option to relocate each of the database files and to avoid collisions with existing files.  
 
   The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
-  ```sql
+  ```syntaxsql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  

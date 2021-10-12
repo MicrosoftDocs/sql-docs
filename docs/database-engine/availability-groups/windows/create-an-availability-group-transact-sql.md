@@ -226,7 +226,7 @@ ms.author: chadam
   
      The following code example creates a transaction log backup on MyDb1 and on MyDb2.  
   
-    ```sql  
+    ```sql
     -- On the server instance that hosts the primary replica,   
     -- Backup the transaction log on each primary database:  
     BACKUP LOG MyDb1   
@@ -236,7 +236,7 @@ ms.author: chadam
   
     BACKUP LOG MyDb2   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITHNOFORMAT;  
+        WITH NOFORMAT;  
     GO
     ```  
   
@@ -409,7 +409,7 @@ GO
   
 BACKUP LOG MyDb2   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITHNOFORMAT  
+    WITH NOFORMAT  
 GO  
   
 -- Restore the transaction log on each secondary database,  

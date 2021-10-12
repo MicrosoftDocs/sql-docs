@@ -108,7 +108,7 @@ You work with .dacpac files in the context of a Visual Studio project of type *D
 
 For guidance on whether In-Memory OLTP features can improve the performance of your particular application, see:
 
-- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)
 
 
 
@@ -297,4 +297,4 @@ You can make your Transact-SQL scripts more robust against a possible transactio
 
 ## Related links
 
-- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)

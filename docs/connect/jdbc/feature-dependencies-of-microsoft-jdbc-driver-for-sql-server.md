@@ -2,7 +2,7 @@
 title: Feature dependencies
 description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
 ms.custom: ""
-ms.date: "04/29/2021"
+ms.date: 08/27/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -31,6 +31,22 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Run time
 
 Projects that require any of the preceding features need to explicitly declare the respective dependencies in their POM file that match the dependencies of the version of the driver used.
+
+**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 9.4.0 and above, you need to declare the `azure-identity` dependency in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.4.0.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.3.3</version>
+</dependency>
+```
 
 **For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-identity` dependency in your project's POM file. See the following snippet:
 
@@ -67,6 +83,28 @@ Projects that require any of the preceding features need to explicitly declare t
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
     <version>1.7.4</version>
+</dependency>
+```
+
+**For example:** If you're using the Azure Key Vault feature with JDBC driver version 9.4.0 and above, you need to declare the `azure-security-keyvault-keys` and `azure-identity` dependencies in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.4.0.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.3.3</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-security-keyvault-keys</artifactId>
+    <version>4.2.8</version>
 </dependency>
 ```
 
@@ -129,6 +167,7 @@ If you're using Maven to build or test your project, Maven will automatically do
 
 ### Working with the Azure Key Vault provider
 
+- JDBC driver version 9.4.0 - Dependency versions: Azure-security-keyvault-keys (version 4.2.8), and Azure-identity(version 1.3.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.2.1 - Dependency versions: Azure-security-keyvault-keys (version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 8.4.1 - Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 8.2.2 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
@@ -146,6 +185,7 @@ If you're using Maven to build or test your project, Maven will automatically do
 
 ### Working with Azure Active Directory authentication
 
+- JDBC driver version 9.4.0 - Dependency versions: Azure-identity(version 1.3.3), and their dependencies.
 - JDBC driver version 9.2.1 - Dependency versions: Azure-identity(version 1.1.3), and their dependencies.
 - JDBC Driver version 8.4.1 - Dependency versions: Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies.
 - JDBC Driver version 8.2.2 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'sqljdbc_auth.dll' has been renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'.

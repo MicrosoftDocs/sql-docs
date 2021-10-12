@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # GOTO (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Alters the flow of execution to a label. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements that follow GOTO are skipped and processing continues at the label. GOTO statements and labels can be used anywhere within a procedure, batch, or statement block. GOTO statements can be nested.  
   

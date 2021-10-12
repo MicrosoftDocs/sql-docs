@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;OPTIONS (Transact-SQL)"
+description: "@@OPTIONS (Transact-SQL)"
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -22,7 +22,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;OPTIONS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns information about the current SET options.  
   

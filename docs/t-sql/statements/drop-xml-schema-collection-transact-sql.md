@@ -63,9 +63,9 @@ You can't drop an XML schema collection when it's in use. So, the collection bei
     WITH SCHEMABINDING  
     AS  
     BEGIN  
-       ...  
+       /* some code may go here */
        DECLARE @x XML(MyCollection)  
-       ...  
+       /* more code may go here */
     END;  
     ```  
   

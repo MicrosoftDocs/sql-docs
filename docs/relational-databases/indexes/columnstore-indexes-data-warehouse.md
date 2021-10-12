@@ -115,7 +115,7 @@ BEGIN TRAN
     -- The query plan chooses a seek operation on the nonclustered index  
     -- and takes the row lock  
     SELECT * FROM t_account WHERE AccountKey = 100;  
-END TRAN  
+COMMIT TRAN  
 ```  
   
 ### Snapshot isolation and read-committed snapshot isolations  

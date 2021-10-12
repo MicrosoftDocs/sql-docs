@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
+ms.reviewer: "maghan"
 ms.date: 7/2/2021
 ---
 
@@ -75,7 +75,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|Storage=({File&#124;Memory} 'File')|Specifies the type of backing storage for the schema model used during extraction.|
 |**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
 |**/p:**| TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
-|**/p:**|VerifyExtraction=(BOOLEAN)|Specifies whether the extracted dacpac should be verified.|
+|**/p:**|VerifyExtraction=(BOOLEAN 'True')|Specifies whether the extracted schema model should be verified.|
 
 ## Next Steps
 

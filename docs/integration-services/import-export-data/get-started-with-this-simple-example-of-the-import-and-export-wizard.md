@@ -1,7 +1,8 @@
 ---
 description: "Get started with this simple example of the Import and Export Wizard"
 title: "Get started with this simple example of the Import and Export Wizard | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "02/15/2017"
 ms.prod: sql
 ms.reviewer: ""

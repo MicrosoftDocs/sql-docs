@@ -111,7 +111,7 @@ ms.custom: seo-dt-2019
      Specify that a connection will be made without using a security context for logins not defined in the list.  
   
      **Be made using the login's current security context**  
-     Specify that a connection will be made using the current security context of the login for logins not defined in the list. If connected to the local server using Windows Authentication, your windows credentials will be used to connect to the remote server. If connected to the local server using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, login name and password will be used to connect to the remote server. In this case a login with the exact same name and password must exist on the remote server.  
+     Specify that a connection will be made using the current security context of the login for logins not defined in the list. If connected to the local server using Windows Authentication, your Windows credentials will be used to connect to the remote server. If connected to the local server using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, login name and password will be used to connect to the remote server. In this case a login with the exact same name and password must exist on the remote server.  
   
      **Be made using this security context**  
      Specify that a connection will be made using the login and password specified in the **Remote login** and **With password** boxes for logins not defined in the list. The remote login must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
@@ -223,7 +223,7 @@ ms.custom: seo-dt-2019
   
 #### To test the linked server  
   
--   Execute the following code to test the connection to the linked server. This example the returns the names of the databases on the linked server.  
+-   Execute the following code to test the connection to the linked server. This example returns the names of the databases on the linked server.  
   
     ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  

@@ -30,7 +30,7 @@ ms.author: wiassaf
 select * from sys.dm_xtp_system_memory_consumers  
 ```  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -101,5 +101,4 @@ total_allocated_MB   total_used_MB
   
 ## See Also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

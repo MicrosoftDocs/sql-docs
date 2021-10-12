@@ -1,15 +1,15 @@
 ---
 description: "Getting Started in SMO"
 title: "Getting Started in SMO | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, about SQL Server Management Objects"
   - "SMO [SQL Server], about SQL Server Management Objects"
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7

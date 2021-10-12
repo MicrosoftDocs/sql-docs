@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ConvexHullAggregate (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a convex hull for a given set of **geography** objects.
   

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "rank"
 ms.custom: ""
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)

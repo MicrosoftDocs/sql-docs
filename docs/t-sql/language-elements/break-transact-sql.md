@@ -32,6 +32,7 @@ BREAK is usually inside an IF statement.
 
 ## Examples
 
+### Example for SQL Server
 ```sql
 WHILE (1=1)
 BEGIN
@@ -42,6 +43,26 @@ BEGIN
 
    PRINT N'The other process is not yet done.';  -- Re-confirm the non-done status to the console.
    WAITFOR DELAY '00:01:30';  -- Sleep for 90 seconds.
+END
+```
+
+### Example for Azure Synapse Dedicated SQL Pool
+```sql
+declare @sleeptimesec int = 5;
+declare @startingtime datetime2 = getdate();
+
+PRINT N'Sleeping for ' + cast(@sleeptimesec as varchar(5)) + ' seconds'
+WHILE (1=1)
+BEGIN
+  
+	PRINT N'Sleeping.';  
+	print datediff(s, getdate(),  @startingtime)
+
+	if datediff(s, getdate(),  @startingtime) < -@sleeptimesec
+		begin
+			print 'We have finished waiting.'
+			break;
+		end
 END
 ```
 

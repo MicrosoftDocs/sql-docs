@@ -1,6 +1,6 @@
 ---
 title: SQL Server Big Data Clusters Configuration Overview
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Big Data Clusters Configuration Overview
 author: MikeRayMSFT
 ms.author: mikeray

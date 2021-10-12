@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"
   - "SQL Server Management Studio Help [SQL Server], menu items"
@@ -16,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # SQL Server Management Studio Menu Help
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [About SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  

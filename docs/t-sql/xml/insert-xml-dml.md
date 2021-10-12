@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # insert (XML DML)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
   
@@ -27,7 +27,7 @@ ms.author: jroth
   
 ```syntaxsql 
 insert Expression1 (  
-{AS first | AS last} INTO | AFTER | BEFORE  
+{as first | as last} into | after | before  
 Expression2  
 )  
 ```  
@@ -68,29 +68,29 @@ SET @myDoc = '<Root>
 SELECT @myDoc;     
 -- insert first feature child (no need to specify as first or as last)         
 SET @myDoc.modify('         
-INSERT <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
-INTO (/Root/ProductDescription/Features)[1]') ;  
+insert <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
+into (/Root/ProductDescription/Features)[1]') ;  
 SELECT @myDoc ;        
 -- insert second feature. We want this to be the first in sequence so use 'as first'         
 SET @myDoc.modify('         
-INSERT <Warranty>1 year parts and labor</Warranty>          
-AS first         
-INTO (/Root/ProductDescription/Features)[1]         
+insert <Warranty>1 year parts and labor</Warranty>          
+as first         
+into (/Root/ProductDescription/Features)[1]         
 ')  ;       
 SELECT @myDoc  ;       
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-INSERT <Material>Aluminium</Material>          
-AS last         
-INTO (/Root/ProductDescription/Features)[1]         
+insert <Material>Aluminium</Material>          
+as last         
+into (/Root/ProductDescription/Features)[1]         
 ')         
 SELECT @myDoc ;        
 -- Add fourth feature - this time as a sibling (and not a child)         
 -- 'after' keyword is used (instead of as first or as last child)         
 SELECT @myDoc  ;       
 SET @myDoc.modify('         
-INSERT <BikeFrame>Strong long lasting</BikeFrame>   
+insert <BikeFrame>Strong long lasting</BikeFrame>   
 AFTER (/Root/ProductDescription/Features/Material)[1]         
 ')  ;       
 SELECT @myDoc;  
@@ -156,7 +156,7 @@ insert (
            attribute SetupHours {".5" },             
            attribute SomeOtherAtt {".2"}             
         )             
-INTO (/Root/Location[@LocationID=10])[1] ');             
+into (/Root/Location[@LocationID=10])[1] ');             
 SELECT @myDoc;  
 GO  
 ```  

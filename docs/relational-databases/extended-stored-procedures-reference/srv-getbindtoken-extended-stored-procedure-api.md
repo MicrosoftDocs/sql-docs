@@ -58,7 +58,7 @@ bindtoken
   
 ### To bind an extended stored procedure session to the client session that called it so they share the same transaction lock space  
   
-1.  The extended stored procedure calls **svr_getbindtoken** to get the bind token for the current transaction in the session. The token is returned in the given *bindtoken* parameter.  
+1.  The extended stored procedure calls **srv_getbindtoken** to get the bind token for the current transaction in the session. The token is returned in the given *bindtoken* parameter.  
   
 2.  The extended stored procedure opens new session(s) against the same server. Inside that session, the extended stored procedure uses the bind token with **sp_bindsession** to bind the new session to the same transaction. The extended stored procedure can create multiple sessions and bind all the sessions to the same transaction.  
   

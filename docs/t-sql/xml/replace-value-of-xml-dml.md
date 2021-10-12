@@ -20,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # replace value of (XML DML)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Updates the value of a node in the document.  
   

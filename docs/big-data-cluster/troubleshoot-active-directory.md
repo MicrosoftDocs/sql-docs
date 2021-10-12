@@ -19,7 +19,7 @@ This article explains how to troubleshoot deployment of a SQL Server Big Data Cl
 
 ## Symptom
 
-You started deploying BDC with AD mode however the deployment is stuck and not moving forward.
+You started deploying SQL Server Big Data Clusters with AD mode however the deployment is stuck and not moving forward.
 
 The following example shows the deployment results in a bash shell.
 

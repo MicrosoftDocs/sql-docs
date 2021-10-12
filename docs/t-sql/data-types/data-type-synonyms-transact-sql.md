@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Data type synonyms (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ISO compatibility. The following table lists the synonyms and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types that they map to.
   
@@ -41,7 +41,7 @@ Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**national character varying(**_n_**)**|**nvarchar(n)**|  
 |**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
-|**timestamp**|rowversion|  
+|**rowversion**|**timestamp**|  
   
 Data type synonyms can be used instead of the corresponding base data type name in data definition language (DDL) statements. These statements include CREATE TABLE, CREATE PROCEDURE, and DECLARE *\@variable*. However, after the object is created, the synonyms have no visibility. When the object is created, the object is assigned the base data type that is associated with the synonym. There's no record that the synonym was specified in the statement that created the object.
   

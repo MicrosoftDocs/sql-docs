@@ -24,7 +24,7 @@ author: cawrites
 ms.author: chadam
 ---
 # OPEN (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Opens a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor and populates the cursor by executing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement specified on the DECLARE CURSOR or SET *cursor_variable* statement.  
   

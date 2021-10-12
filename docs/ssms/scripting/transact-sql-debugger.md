@@ -40,7 +40,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following 
 
     If you're sure there are no errors in a stored procedure, you can step over it. The procedure is executed in full, and the results are returned to the code.  
 
-    If you want to debug a stored procedure or function, you can step into the module. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window that is populated with the source code for the module, places the window into debug mode, and then pauses execution on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
+    If you want to debug a stored procedure or function, you can step into the module. SQL Server Management Studio opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window that is populated with the source code for the module, places the window into debug mode, and then pauses execution on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
 
 For more information about how the debugger enables you to navigate code, see [Step Through Transact-SQL Code](./step-through-transact-sql-code.md).  
 

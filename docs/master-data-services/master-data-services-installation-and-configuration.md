@@ -6,8 +6,10 @@ ms.prod: sql
 ms.prod_service: "mds"
 ms.technology: master-data-services
 ms.topic: quickstart
-author: chugugrace 
+author: chugugrace
 ms.author: lle
+ms.custom:
+  - intro-quickstart
 ---
 # Master Data Services Installation and Configuration
 
@@ -114,7 +116,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
 > 
 > **Browser Requirement**
-> >The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
+> The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
 > Starting in [!INCLUDE[sqlv15](../includes/sssql19-md.md)], HTML controls replace all former Silverlight components, therefore the Silverlight dependency removed. More browsers, including Chrome and Edge, now work for the Master Data Services web app.
   
 1.  Launch the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Database Configuration** in the left pane.  
@@ -182,15 +184,18 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
   
     -   Enter a different user name, enter the password, and then click OK.  
   
-         You don't have to use the same account when you create the database and the web application.  
+         You don't have to use the same account when you create the database and the web application.
+         
+        > [!NOTE] 
+        >  Your MDS Application Pool identity must be a part of the Windows Authorization Access Group.
 
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;Master Data Services Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
 
     > [!NOTE] 
-    >  If your domain implement [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). You will see issue "The credentials could not be verified in Active Directory." when you using domain account to create Application Pool. For workaround, instead of domain user, use a **local machine user**. This can bypass the credential checking with Active Directory. After creating the web application, you can change the identity to domain user in **Internet Information Services (IIS) Manager**.
-  
+    >  If your domain implemented [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows), you'll see the error message "The credentials could not be verified in Active Directory" when you use the domain account to create an Application Pool. For a resolution, instead of the domain user, use a *local machine user*. This bypasses the credential checking with Active Directory. After you create the web application, you can change the identity to the domain user in Internet Information Services (IIS) Manager.
+   
 12. On the **Web Configuration** page in the **Web application** box, click the application you've created, and then click **Select** in the  **Associate Application with Database** section.  
   
 13. Click **Connect**, select the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database that you want to associate with the Web application, and then click **OK**.  

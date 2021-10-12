@@ -23,7 +23,7 @@ author: rothja
 ms.author: jroth
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Declares one or more XML namespaces.  
   

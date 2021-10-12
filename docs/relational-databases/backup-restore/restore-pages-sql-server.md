@@ -162,15 +162,17 @@ ms.author: chadam
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  To specify a page in a RESTORE DATABASE statement, you need the file ID of the file containing the page and the page ID of the page. The required syntax is as follows:  
+
+```syntaxsql  
+ RESTORE DATABASE <database_name>  
   
- `RESTORE DATABASE <database_name>`  
+ PAGE = '<file: page> [ ,... n ] ' [ ,... n ]
   
- `PAGE = '<file: page> [ ,... n ] ' [ ,... n ]`  
+ FROM <backup_device> [ ,... n ]
   
- `FROM <backup_device> [ ,... n ]`  
-  
- `WITH NORECOVERY`  
-  
+ WITH NORECOVERY
+```
+
  For more information about the parameters of the PAGE option, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). For more information about the RESTORE DATABASE syntax, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 #### To restore pages  
@@ -202,16 +204,16 @@ ms.author: chadam
  The following example restores four damaged pages of file `B` with `NORECOVERY`. Next, two log backups are applied with `NORECOVERY`, followed with the tail-log backup, which is restored with `RECOVERY`. This example performs an online restore. In the example, the file ID of file `B` is `1`, and the page IDs of the damaged pages are `57`, `202`, `916`, and `1016`.  
   
 ```sql  
-RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
-   FROM DISK <file_backup_of_file_B>   
+RESTORE DATABASE [<database>] PAGE='1:57, 1:202, 1:916, 1:1016'  
+   FROM DISK = '<file_backup_of_file_B>'
    WITH NORECOVERY;  
-RESTORE LOG <database> FROM <log_backup>   
+RESTORE LOG [<database>] FROM [<log_backup>]
    WITH NORECOVERY;  
-RESTORE LOG <database> FROM <log_backup>   
+RESTORE LOG [<database>] FROM [<log_backup>]
    WITH NORECOVERY;   
-BACKUP LOG <database> TO <new_log_backup>;   
-RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;  
-GO  
+BACKUP LOG [<database>] TO [<new_log_backup>];
+RESTORE LOG [<database>] FROM [<new_log_backup>] WITH RECOVERY;  
+GO
 ```  
   
 ## See Also  

@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Lat (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The latitude property of the **geography** instance.  
   

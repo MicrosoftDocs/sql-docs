@@ -27,7 +27,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[sqlserver2016-asdb-asdbmi-asa.md](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This command enables several database configuration settings at the **individual database** level. 
 

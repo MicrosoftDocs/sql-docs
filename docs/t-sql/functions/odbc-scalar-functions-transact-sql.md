@@ -129,7 +129,7 @@ DECLARE @len INT
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
-  
+GO
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
 ```  
@@ -203,7 +203,7 @@ DECLARE @len INT
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
-  
+GO
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
 ```  

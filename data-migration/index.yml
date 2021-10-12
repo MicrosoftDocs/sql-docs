@@ -6,6 +6,7 @@ metadata:
    title: Azure Database Migration Guides | Microsoft Docs
    description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
    ms.topic: hub-page
+   ms.prod: sql
    ms.technology: migration-guide
 
 # itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -16,7 +17,7 @@ conceptualContent:
     - title: "SQL Server to"
       links:
         - text: "SQL Server (upgrade)"
-          url: /sql/database-engine/install-windows/upgrade-sql-server
+          url: /sql/sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide
           itemType: how-to-guide
         - text: Azure SQL Database
           url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview

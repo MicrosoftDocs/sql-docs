@@ -4,7 +4,7 @@ description: SQL Server Management Studio (SSMS) Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - sql13.swb.query.advanced.f1
   - sql13.swb.query.ansi.f1
@@ -37,7 +37,6 @@ helpviewer_keywords:
   - "writing queries"
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
-ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -47,7 +46,7 @@ ms.date: 08/28/2020
 
 # SQL Server Management Studio (SSMS) Query Editor
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article explains the query editor's features and functions in SQL Server Management Studio (SSMS).
 

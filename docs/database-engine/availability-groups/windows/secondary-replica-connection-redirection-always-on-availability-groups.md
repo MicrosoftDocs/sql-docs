@@ -90,7 +90,7 @@ The following transact-SQL script creates this AG. In this example, Each replica
 CREATE AVAILABILITY GROUP MyAg   
      WITH ( CLUSTER_TYPE =  NONE )  
    FOR   
-     DATABASE  <Database1>   
+     DATABASE  [<Database1>]   
    REPLICA ON   
       'COMPUTER01' WITH   
          (  
@@ -100,8 +100,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER02, COMPUTER03),
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = ('COMPUTER02', 'COMPUTER03'),
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),   
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER02' WITH   
@@ -112,8 +112,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER03),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = ('COMPUTER01', 'COMPUTER03'),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER03' WITH   
@@ -124,8 +124,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER02),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
+            READ_ONLY_ROUTING_LIST = ('COMPUTER01', 'COMPUTER02'),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),
          SESSION_TIMEOUT = 10  
          );
 GO  

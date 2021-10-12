@@ -18,9 +18,9 @@ ms.date: 03/01/2017
 
 # Connect to a Registered Server (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to connect to a registered server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If the server is not running or cannot be found on the network, Registered Servers displays an error.  
+This topic describes how to connect to a registered server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio. If the server is not running or cannot be found on the network, Registered Servers displays an error.  
 
 ##  <a name="SSMSProcedure"></a>
 

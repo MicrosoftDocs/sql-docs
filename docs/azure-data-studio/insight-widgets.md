@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, sstein
+ms.reviewer: alayu
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ---

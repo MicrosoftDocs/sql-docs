@@ -25,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # VERIFYSIGNEDBYASYMKEY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Tests whether digitally signed data has been changed since it was signed.  
   

@@ -70,7 +70,7 @@ For a configuration option that is not dynamic there is no way to tell if the RE
  
  
 ## Permissions  
- Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requires membership in the **public** role.
   
 ## See Also  
  [Server-wide Configuration Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

@@ -38,12 +38,12 @@ ms.custom: seo-dt-2019
  The inline table-valued function required for a Stretch Database filter predicate looks like the following example.  
   
 ```sql  
-CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
+CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 /*[, ...n]*/)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
 AS   
 RETURN  SELECT 1 AS is_eligible  
-        WHERE <predicate>  
+        WHERE someCol = @column1 /* replace with an actual predicate */
 ```  
   
  The parameters for the function have to be identifiers for columns from the table.  
@@ -56,20 +56,20 @@ RETURN  SELECT 1 AS is_eligible
 ### Conditions  
  The &lt;*predicate*&gt; can consist of one condition, or of multiple conditions joined with the AND logical operator.  
   
-```  
+```syntaxsql
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
 ```  
   
  Each condition in turn can consist of one primitive condition, or of multiple primitive conditions joined with the OR logical operator.  
   
-```  
+```syntaxsql
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
 ```  
   
 ### Primitive conditions  
  A primitive condition can do one of the following comparisons.  
   
-```  
+```syntaxsql
 <primitive_condition> ::=   
 {  
 <function_parameter> <comparison_operator> constant  
@@ -94,7 +94,7 @@ RETURN  SELECT 1 AS is_eligible
   
     ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
         FILTER_PREDICATE = dbo.fn_stretchpredicate(date),  
-        MIGRATION_STATE = OUTBOUND  
+        MIGRATION_STATE = OUTBOUND
     ) )  
   
     ```  
@@ -126,7 +126,7 @@ RETURN  SELECT 1 AS is_eligible
   
  `<, <=, >, >=, =, <>, !=, !<, !>`  
   
-```  
+```syntaxsql
 <comparison_operator> ::= { < | <= | > | >= | = | <> | != | !< | !> }  
 ```  
   
@@ -152,9 +152,8 @@ RETURN  SELECT 1 AS is_eligible
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate(column1, column2),  
-    MIGRATION_STATE = <desired_migration_state>  
-) )  
-  
+    MIGRATION_STATE = OUTBOUND /* replace OUTBOUND in this example, with the actual, desired migration state */
+) )
 ```  
   
  After you bind the function to the table as a predicate, the following things are true.  
@@ -199,7 +198,7 @@ If you want use a function that you can't create in the **Enable Database for St
 1. Reverse the direction of migration and bring back the data already migrated. You can't cancel this operation after it starts. You also incur costs on Azure for outbound data transfers (egress). For more info, see [How Azure pricing works](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
     ```sql  
-    ALTER TABLE <table name>  
+    ALTER TABLE [<table name>]
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
@@ -210,11 +209,11 @@ If you want use a function that you can't create in the **Enable Database for St
 4. Add the function to the table and restart data migration to Azure.  
   
     ```sql  
-    ALTER TABLE <table name>  
+    ALTER TABLE [<table name>]
         SET ( REMOTE_DATA_ARCHIVE  
             (           
-                FILTER_PREDICATE = <predicate>,  
-                MIGRATION_STATE = OUTBOUND  
+                FILTER_PREDICATE = dbo.predicateFunction(col1) /* replace predicateFunction and col1 with the actual function call */
+                ,MIGRATION_STATE = OUTBOUND  
             )  
             );   
     ```  
@@ -271,16 +270,15 @@ RETURN SELECT 1 AS is_eligible
  Apply the filter function to the table.  
   
 ```sql  
-ALTER TABLE <table name>   
+ALTER TABLE [<table name>]
 SET (   
         REMOTE_DATA_ARCHIVE = ON   
                 (   
-                        FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160101(SysEndTime)  
+                        FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160101(SysEndTime)
                                 , MIGRATION_STATE = OUTBOUND   
                 )  
         )   
-;  
-  
+; 
 ```  
   
  When you want to update the sliding window, do the following things.  
@@ -304,7 +302,7 @@ GO
         GO  
   
         /*(2) Set the new function as the filter predicate */  
-        ALTER TABLE <table name>  
+        ALTER TABLE [<table name>]
         SET   
         (  
                REMOTE_DATA_ARCHIVE = ON  
@@ -313,8 +311,7 @@ GO
                        MIGRATION_STATE = OUTBOUND  
                )  
         )   
-COMMIT ;  
-  
+COMMIT ;
 ```  
   
 ## More examples of valid filter functions  
@@ -493,9 +490,8 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),  
-    MIGRATION_STATE = <desired_migration_state>  
-    ) ) 
-  
+    MIGRATION_STATE = OUTBOUND /* replace OUTBOUND in this example, with the actual, desired migration state */
+    ) )  
 ```  
   
  The new inline table-valued function has the following requirements.  
@@ -589,7 +585,7 @@ GO
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = NULL,  
-    MIGRATION_STATE = <desired_migration_state>  
+    MIGRATION_STATE = OUTBOUND /* replace OUTBOUND in this example, with the actual, desired migration state */
 ) )  
   
 ```  

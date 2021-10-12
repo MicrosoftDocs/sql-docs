@@ -310,7 +310,7 @@ The Books Online provide more information about the following topics:
   
  Installation steps:  
   
-1.  Download and run the x64 installation package for the RML utilities from the following page: [Download RML for SQL Server](https://www.microsoft.com/download/details.aspx?id=4511)
+1.  Download and run the x64 installation package for the RML utilities from the following page: [Download RML for SQL Server](https://www.microsoft.com/download/details.aspx?id=103126)
 
 2.  If there is a dialog box saying certain files are in use, click 'Continue'  
   
@@ -754,4 +754,4 @@ ORDER BY state, file_type
   
 ## See Also
 
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)
+[In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)

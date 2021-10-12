@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # IDENT_INCR (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the increment value specified when creating a table or view's identity column.  
   

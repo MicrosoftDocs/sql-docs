@@ -25,7 +25,7 @@ author: cawrites
 ms.author: chadam
 ---
 # FILEPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the specified file name property value when a file name in the current database and a property name are specified. Returns NULL for files that are not in the current database.  
   

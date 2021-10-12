@@ -51,8 +51,8 @@ FOR
  The following example changes a secondary selective XML index by dropping it and recreating it.  
   
 ```sql  
-DROP INDEX filt_sxi_index_c  
-  
+DROP INDEX Tbl.filt_sxi_index_c
+GO  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  

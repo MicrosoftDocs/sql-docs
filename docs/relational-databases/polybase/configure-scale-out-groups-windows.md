@@ -1,7 +1,7 @@
 ---
 title: "Configure PolyBase scale-out groups on Windows"
 description: Set up a PolyBase scale-out group to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
-ms.date: 07/07/2021
+ms.date: 08/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "tutorial"
@@ -100,7 +100,10 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 4. Start PolyBase Engine. Restart PolyBase data movement service.
   
 5. Verify that the node has been removed by running the DMV sys.dm_exec_compute_nodes on PQTH4A-CMP01. Now, PQTH4A-CMP02 will function as a standalone head node  
-  
+
+## Known limitations
+If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing `sp_polybase_join_group`, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
+
 ## Next steps  
 
 For troubleshooting, see [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130)).

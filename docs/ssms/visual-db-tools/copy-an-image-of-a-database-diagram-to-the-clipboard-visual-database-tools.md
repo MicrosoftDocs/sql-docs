@@ -18,7 +18,7 @@ ms.reviewer:
 ---
 # Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 You can create an image of a Database Diagram and copy it to another application.  
   

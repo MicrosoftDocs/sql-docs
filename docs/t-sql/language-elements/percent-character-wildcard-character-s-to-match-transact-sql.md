@@ -25,7 +25,7 @@ author: cawrites
 ms.author: chadam
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.  
   

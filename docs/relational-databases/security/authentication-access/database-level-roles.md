@@ -136,7 +136,40 @@ Some database roles are not applicable to Azure SQL or Synapse SQL:
   
 ## public Database Role  
  Every database user belongs to the **public** database role. When a user has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to **public** on that object. Database users cannot be removed from the **public** role. 
-  
+ 
+ 
+## <a name="_examples"></a> Examples
+
+The examples in this section show how to work with database-level roles.  
+
+### A.  Adding a User to a database-level role
+
+The following example adds the User 'Ben' to the fixed database-level role `db_datareader`. 
+
+```sql  
+ALTER ROLE db_datareader
+	ADD MEMBER Ben;  
+GO
+```  
+
+### B.  Listing all database-principals which are members of a database-level role
+
+The following statement returns all members of any database role. 
+
+```sql  
+SELECT	roles.principal_id							AS RolePrincipalID
+	,	roles.name									AS RolePrincipalName
+	,	database_role_members.member_principal_id	AS MemberPrincipalID
+	,	members.name								AS MemberPrincipalName
+FROM sys.database_role_members AS database_role_members  
+JOIN sys.database_principals AS roles  
+    ON database_role_members.role_principal_id = roles.principal_id  
+JOIN sys.database_principals AS members  
+    ON database_role_members.member_principal_id = members.principal_id;  
+GO
+```  
+
+ 
 ## Related Content  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
   

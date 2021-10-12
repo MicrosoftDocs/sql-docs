@@ -28,7 +28,7 @@ author: cawrites
 ms.author: chadam
 ---
 # FILE_NAME (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the logical file name for a given file identification (ID) number.  
   

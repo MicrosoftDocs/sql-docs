@@ -78,7 +78,7 @@ ms.author: maggies
   
 4.  Within a few minutes the report server will reload the configuration file and the new settings will take effect. You can restart the report server service to force the loading of the configuration file.  
   
-     The following event is written to the windows event log when the configuration is read.  
+     The following event is written to the Windows event log when the configuration is read.  
   
      **Event ID:** 109  
   
@@ -111,4 +111,3 @@ ms.author: maggies
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
-

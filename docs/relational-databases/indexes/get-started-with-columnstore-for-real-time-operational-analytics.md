@@ -1,7 +1,8 @@
 ---
 description: "Get started with Columnstore for real-time operational analytics"
 title: "Get started with Columnstore for real-time operational analytics | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "03/08/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
@@ -14,7 +15,7 @@ ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get started with Columnstore for real-time operational analytics
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real time, you can also eliminate the need for ETL and a data warehouse.  
   

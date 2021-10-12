@@ -1,6 +1,6 @@
 ---
 title: Upgrade to a Configuration Management Enabled Big Data Cluster
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Upgrade to a Configuration Management Enabled Big Data Cluster
 author: MikeRayMSFT
 ms.author: mikeray

@@ -2,7 +2,7 @@
 description: "CREATE PROCEDURE (Transact-SQL)"
 title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ""
-ms.date: "06/01/2021"
+ms.date: "08/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -43,7 +43,6 @@ helpviewer_keywords:
   - "size [SQL Server], stored procedures"
   - "automatic stored procedure execution"
   - "creating stored procedures"
-ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -59,7 +58,7 @@ Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime
 - Contain programming statements that perform operations in the database, including calling other procedures.
 - Return a status value to a calling procedure or batch to indicate success or failure (and the reason for failure).
 
-Use this statement to create a permanent procedure in the current database or a temporary procedure in the **tempdb** database.
+Use this statement to create a permanent procedure in the current database or a temporary procedure in the `tempdb` database.
 
 > [!NOTE]
 > The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
@@ -144,25 +143,26 @@ AS
 
 ## Arguments
 
-OR ALTER
+#### OR ALTER
 
 **Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).
 
 Alters the procedure if it already exists.
 
-*schema_name*
+#### *schema_name*
 The name of the schema to which the procedure belongs. Procedures are schema-bound. If a schema name is not specified when the procedure is created, the default schema of the user who is creating the procedure is automatically assigned.
 
-*procedure_name*
+#### *procedure_name*
 The name of the procedure. Procedure names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the schema.
 
-Avoid the use of the **sp_** prefix when naming procedures. This prefix is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to designate system procedures. Using the prefix can cause application code to break if there is a system procedure with the same name.
+> [!CAUTION]
+> Avoid the use of the **sp_** prefix when naming procedures. This prefix is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to designate system procedures. Using the prefix can cause application code to break if there is a system procedure with the same name.
 
 Local or global temporary procedures can be created by using one number sign (#) before *procedure_name* (*#procedure_name*) for local temporary procedures, and two number signs for global temporary procedures (*##procedure_name*). A local temporary procedure is visible only to the connection that created it and is dropped when that connection is closed. A global temporary procedure is available to all connections and is dropped at the end of the last session using the procedure. Temporary names cannot be specified for CLR procedures.
 
 The complete name for a procedure or a global temporary procedure, including ##, cannot exceed 128 characters. The complete name for a local temporary procedure, including #, cannot exceed 116 characters.
 
-**;** *number*
+#### **;** *number*
 
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -173,14 +173,14 @@ An optional integer that is used to group procedures of the same name. These gro
 
 Numbered procedures cannot use the **xml** or CLR user-defined types and cannot be used in a plan guide.
 
-**@** *parameter*
+#### **@** *parameter*
 A parameter declared in the procedure. Specify a parameter name by using the at sign (**@**) as the first character. The parameter name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Parameters are local to the procedure; the same parameter names can be used in other procedures.
 
 One or more parameters can be declared; the maximum is 2,100. The value of each declared parameter must be supplied by the user when the procedure is called unless a default value for the parameter is defined or the value is set to equal another parameter. If a procedure contains [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), and the parameter is missing in the call, an empty table is passed in. Parameters can take the place only of constant expressions; they cannot be used instead of table names, column names, or the names of other database objects. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).
 
 Parameters cannot be declared if FOR REPLICATION is specified.
 
-[ _type\_schema\_name_**.** ] *data_type*
+#### [ _type\_schema\_name_**.** ] *data_type*
 The data type of the parameter and the schema to which the data type belongs.
 
 **Guidelines for [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures**:
@@ -196,26 +196,26 @@ The data type of the parameter and the schema to which the data type belongs.
 - Table-valued or **cursor** data types cannot be used as parameters.
 - If the data type of the parameter is a CLR user-defined type, you must have EXECUTE permission on the type.
 
-VARYING
+#### VARYING
 Specifies the result set supported as an output parameter. This parameter is dynamically constructed by the procedure and its contents may vary. Applies only to **cursor** parameters. This option is not valid for CLR procedures.
 
-*default*
+#### *default*
 A default value for a parameter. If a default value is defined for a parameter, the procedure can be executed without specifying a value for that parameter. The default value must be a constant or it can be NULL. The constant value can be in the form of a wildcard, making it possible to use the LIKE keyword when passing the parameter into the procedure.
 
-Default values are recorded in the **sys.parameters.default** column only for CLR procedures. That column is NULL for [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure parameters.
+Default values are recorded in the `sys.parameters.default` column only for CLR procedures. That column is NULL for [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure parameters.
 
-OUT | OUTPUT
+#### OUT | OUTPUT
 Indicates that the parameter is an output parameter. Use OUTPUT parameters to return values to the caller of the procedure. **text**, **ntext**, and **image** parameters cannot be used as OUTPUT parameters, unless the procedure is a CLR procedure. An output parameter can be a cursor placeholder, unless the procedure is a CLR procedure. A table-value data type cannot be specified as an OUTPUT parameter of a procedure.
 
-READONLY
+#### READONLY
 Indicates that the parameter cannot be updated or modified within the body of the procedure. If the parameter type is a table-value type, READONLY must be specified.
 
-RECOMPILE
+#### RECOMPILE
 Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not cache a query plan for this procedure, forcing it to be compiled each time it is executed. For more information regarding the reasons for forcing a recompile, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). This option cannot be used when FOR REPLICATION is specified or for CLR procedures.
 
 To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query plans for individual queries inside a procedure, use the RECOMPILE query hint in the definition of the query. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).
 
-ENCRYPTION
+#### ENCRYPTION
 
 **Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -225,25 +225,25 @@ This option is not valid for CLR procedures.
 
 Procedures created with this option cannot be published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.
 
-EXECUTE AS *clause*
+#### EXECUTE AS *clause*
 Specifies the security context under which to execute the procedure.
 
 For natively compiled stored procedures, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there are no limitations on the EXECUTE AS clause. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the SELF, OWNER, and *'user_name'* clauses are supported with natively compiled stored procedures.
 
 For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
-FOR REPLICATION
+#### FOR REPLICATION
 
 **Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies that the procedure is created for replication. Consequently, it cannot be executed on the Subscriber. A procedure created with the FOR REPLICATION option is used as a procedure filter and is executed only during replication. Parameters cannot be declared if FOR REPLICATION is specified. FOR REPLICATION cannot be specified for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.
 
-A `FOR REPLICATION` procedure has an object type **RF** in **sys.objects** and **sys.procedures**.
+A `FOR REPLICATION` procedure has an object type **RF** in `sys.objects` and `sys.procedures`.
 
-{ [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }
+#### { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }
 One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For information, see the Best Practices, General Remarks, and Limitations and Restrictions sections that follow.
 
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_
+#### EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_
 
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
@@ -254,7 +254,7 @@ By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot exe
 > [!NOTE]
 > CLR procedures are not supported in a contained database.
 
-ATOMIC WITH
+#### ATOMIC WITH
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -278,28 +278,28 @@ BEGIN, ROLLBACK, and COMMIT operations cannot be used inside an atomic block.
 
 There is one ATOMIC block per natively compiled stored procedure, at the outer scope of the procedure. The blocks cannot be nested. For more information about atomic blocks, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
-**NULL** | NOT NULL
+#### **NULL** | NOT NULL
 Determines whether null values are allowed in a parameter. NULL is the default.
 
-NATIVE_COMPILATION
+#### NATIVE_COMPILATION
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indicates that the procedure is natively compiled. NATIVE_COMPILATION, SCHEMABINDING, and EXECUTE AS can be specified in any order. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
-SCHEMABINDING
+#### SCHEMABINDING
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Ensures that tables that are referenced by a procedure cannot be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
 
-LANGUAGE = [N] 'language'
+#### LANGUAGE = [N] 'language'
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) session option. LANGUAGE = [N] 'language' is required.
 
-TRANSACTION ISOLATION LEVEL
+#### TRANSACTION ISOLATION LEVEL
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -307,20 +307,20 @@ Required for natively compiled stored procedures. Specifies the transaction isol
 
 For more information about these options, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
 
-REPEATABLE READ
+#### REPEATABLE READ
 Specifies that statements cannot read data that has been modified but not yet committed by other transactions. If another transaction modifies data that has been read by the current transaction, the current transaction fails.
 
-SERIALIZABLE
+#### SERIALIZABLE
 Specifies the following:
 
 - Statements cannot read data that has been modified but not yet committed by other transactions.
-- If another transactions modifies data that has been read by the current transaction, the current transaction fails.
+- If another transaction modifies data that has been read by the current transaction, the current transaction fails.
 - If another transaction inserts new rows with key values that would fall in the range of keys read by any statements in the current transaction, the current transaction fails.
 
-SNAPSHOT
+#### SNAPSHOT
 Specifies that data read by any statement in a transaction is the transactionally consistent version of the data that existed at the start of the transaction.
 
-DATEFIRST = *number*
+#### DATEFIRST = *number*
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -328,15 +328,15 @@ Specifies the first day of the week to a number from 1 through 7. DATEFIRST is o
 
 For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).
 
-DATEFORMAT = *format*
+#### DATEFORMAT = *format*
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Specifies the order of the month, day, and year date parts for interpreting date, smalldatetime, datetime, datetime2 and datetimeoffset character strings. DATEFORMAT is optional. If it is not specified, the setting is inferred from the specified language.
+Specifies the order of the month, day, and year date parts for interpreting date, smalldatetime, datetime, datetime2, and datetimeoffset character strings. DATEFORMAT is optional. If it is not specified, the setting is inferred from the specified language.
 
 For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).
 
-DELAYED_DURABILITY = { OFF | ON }
+#### DELAYED_DURABILITY = { OFF | ON }
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -368,7 +368,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 
 Provide a database ID number when you call the procedure. For example, `EXEC What_DB_is_that 2;` returns `tempdb`.
 
-See [Examples](#Examples) towards the end of this topic for many more examples.
+See [Examples](#Examples) towards the end of this article for many more examples.
 
 ## Best Practices
 
@@ -395,7 +395,7 @@ Variables specified in the procedure can be user-defined or system variables, su
 
 When a procedure is executed for the first time, it is compiled to determine an optimal access plan to retrieve the data. Subsequent executions of the procedure may reuse the plan already generated if it still remains in the plan cache of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-One or more procedures can execute automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. The procedures must be created by the system administrator in the **master** database and executed under the **sysadmin** fixed server role as a background process. The procedures cannot have any input or output parameters. For more information, see [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md).
+One or more procedures can execute automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. The procedures must be created by the system administrator in the `master` database and executed under the **sysadmin** fixed server role as a background process. The procedures cannot have any input or output parameters. For more information, see [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md).
 
 Procedures are nested when one procedure call another or executes managed code by referencing a CLR routine, type, or aggregate. Procedures and managed code references can be nested up to 32 levels. The nesting level increases by one when the called procedure or managed code reference begins execution and decreases by one when the called procedure or managed code reference completes execution. Methods invoked from within the managed code do not count against the nesting level limit. However, when a CLR stored procedure performs data access operations through the SQL Server managed provider, an additional nesting level is added in the transition from managed code to SQL.
 
@@ -454,7 +454,7 @@ The following table lists the catalog views and dynamic management views that yo
 
 |View|Description|
 |----------|-----------------|
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Returns the definition of a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure. The text of a procedure created with the ENCRYPTION option cannot be viewed by using the **sys.sql_modules** catalog view.|
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Returns the definition of a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure. The text of a procedure created with the ENCRYPTION option cannot be viewed by using the `sys.sql_modules` catalog view.|
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Returns information about a CLR procedure.|
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Returns information about the parameters that are defined in a procedure|
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Returns the objects that are referenced by a procedure.|
@@ -505,7 +505,7 @@ GO
 |Category|Featured syntax elements|
 |--------------|------------------------------|
 |[Basic Syntax](#BasicSyntax)|CREATE PROCEDURE|
-|[Passing parameters](#Parameters)|@parameter <br> &nbsp;&nbsp;• = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • table-valued parameter type <br> &nbsp;&nbsp; • CURSOR VARYING|
+|[Passing parameters](#Parameters)|@parameter <br><ul><li> = default</li><li> OUTPUT </li><li> table-valued parameter type </li><li> CURSOR VARYING</li></ul>|
 |[Modifying data by using a stored procedure](#Modify)|UPDATE|
 |[Error Handling](#Error)|TRY...CATCH|
 |[Obfuscating the procedure definition](#Encrypt)|WITH ENCRYPTION|
@@ -651,7 +651,7 @@ EXECUTE HumanResources.uspGetEmployees2 N'H%', N'S%';
 
 #### F. Using OUTPUT parameters
 
-The following example creates the `uspGetList` procedure. This procedures returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. OUTPUT parameters enable an external procedure, a batch, or more than one [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.
+The following example creates the `uspGetList` procedure. This procedure returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. OUTPUT parameters enable an external procedure, a batch, or more than one [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.
 
 ```sql
 IF OBJECT_ID ( 'Production.uspGetList', 'P' ) IS NOT NULL
@@ -854,7 +854,7 @@ END CATCH;
 
 GO
 EXEC Production.uspDeleteWorkOrder 13;
-
+GO
 /* Intentionally generate an error by reversing the order in which rows
    are deleted from the parent and child tables. This change does not
    cause an error when the procedure definition is altered, but produces
@@ -888,7 +888,7 @@ END CATCH;
 GO
 -- Execute the altered procedure.
 EXEC Production.uspDeleteWorkOrder 15;
-
+GO
 DROP PROCEDURE Production.uspDeleteWorkOrder;
 ```
 
@@ -939,6 +939,9 @@ definition
 --------------------------------
 NULL
 ```
+
+> [!NOTE]
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use the `sys.sql_modules` object catalog view.
 
 ### <a name="Recompile"></a> Forcing the Procedure to Recompile
 

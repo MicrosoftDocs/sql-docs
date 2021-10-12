@@ -2,7 +2,7 @@
 description: "sys.columns (Transact-SQL)"
 title: "sys.columns (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "08/05/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -78,14 +78,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |is_masked|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is masked by a dynamic data masking:<br /><br /> 0 = regular, not-masked column<br /><br /> 1 = column is masked|  
 |graph_type |**int** |Internal column with a set of values. The values are between 1-8 for graph columns and `NULL` for others.  |
 |graph_type_desc |**nvarchar(60)**  |internal column with a set of values |
+|is_data_deletion_filter_column|**bit**|**Applies to**: Azure SQL Database Edge. Indicates if the column is the data retention filter column for the table.|
 |ledger_view_column_type|**tinyint**|**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, indicates the type of a column in a ledger view:<br /><br /> 1 = TRANSACTION_ID<br /> 2 = SEQUENCE_NUMBER<br /> 3 = OPERATION_TYPE<br /> 4 = OPERATION_TYPE_DESC<br/><br/>For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).|
 |ledger_view_column_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, contains a textual description of the the type of a column in a ledger view:<br /><br /> TRANSACTION_ID<br /> SEQUENCE_NUMBER<br /> OPERATION_TYPE<br /> OPERATION_TYPE_DESC|
 
-
 ## Permissions  
+
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## See Also  
+
  [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

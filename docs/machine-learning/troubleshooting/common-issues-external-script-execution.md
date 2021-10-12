@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 04/08/2021
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

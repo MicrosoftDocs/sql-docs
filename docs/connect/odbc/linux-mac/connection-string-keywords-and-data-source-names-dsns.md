@@ -2,7 +2,7 @@
 title: "Connecting from Linux or macOS"
 description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 09/10/2020
+ms.date: 07/30/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -63,7 +63,7 @@ Alternatively, you can add the DSN information to a template file, and execute t
 For complete documentation on ini files and `odbcinst`, see the [unixODBC documentation](http://www.unixodbc.org/odbcinst.html). For entries in the `odbc.ini` file specific to the ODBC Driver for SQL Server, see [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for ones supported on Linux and macOS.
 
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
- - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S \<server\> -U \<name\> -P \<password\>**  
 
 ## Using TLS/SSL  
 
@@ -93,13 +93,13 @@ TLS uses the OpenSSL library. The following table shows the minimum supported ve
 |Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
-|OS X 10.11, macOS 10.12-10.15|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11, macOS|1.0.2|/usr/local/etc/openssl/certs|
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
-|Ubuntu 18.10, 19.04, 19.10, 20.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 20.04, 21.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
 |Ubuntu 14.04|1.0.1|/etc/ssl/certs|
@@ -112,6 +112,7 @@ Starting in ODBC Driver 17.4, how often the driver sends keep-alive packets and 
 To configure, add the following settings to either the driver's section in `odbcinst.ini`, or the DSN's section in `odbc.ini`. When connecting
 with a DSN, the driver will use the settings in the DSN's section if present; otherwise, or if connecting with a connection string only, it will use the
 settings in the driver's section in `odbcinst.ini`. If the setting is not present in either location, the driver uses the default value.
+Beginning with ODBC Driver 17.8, `KeepAlive` and `KeepAliveInterval` keywords can be specified in the connection string.
 
 - `KeepAlive=<integer>` controls how often TCP attempts to verify that an idle connection is still intact by sending a keep-alive packet. The default is **30** seconds.
 

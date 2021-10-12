@@ -5,25 +5,31 @@ description: Manage instances of SQL Server on Azure Arc-enabled servers
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 04/06/2021
+ms.date: 07/30/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
 ---
 
-# SQL Server on Azure Arc-enabled servers (preview)
+# SQL Server on Azure Arc-enabled servers
 
-SQL Server on Azure Arc-enabled servers is part of the Azure Arc for servers. It extends Azure services to SQL Server instances hosted outside of Azure in the customer’s datacenter, on the edge or in a multi-cloud environment.
+You can manage your instances of SQL Server from Azure with SQL Server on Azure Arc-enabled servers.
 
-To enable Azure services, a running SQL Server instance must be registered with Azure Arc using the Azure portal and a registration script. After registration the instance will be represented on Azure as a __SQL Server – Azure Arc__ resource   . The properties of this resource reflect a subset of the SQL Server configuration settings.
+You can enable SQL Server on [Azure Arc-enabled servers](/azure/azure-arc/servers/overview). It extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
-The SQL Server can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the Connected Machine agent. The agent is installed and the machine is registered automatically as part of the SQL Server instance registration. The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or a HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
+To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a SQL Arc extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will a  __SQL Server – Azure Arc__ resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
-The public preview of SQL Server on Azure Arc-enabled servers supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to a Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
+## Architecture
 
-The following diagram illustrates the architecture of Azure Arc enable SQL Server.
+The SQL Server instance can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the [Connected Machine agent](/azure/azure-arc/servers/agent-overview). When you register the SQL Server instance, the agent is installed and the machine is registered automatically.
 
-![Public preview architecture](media/overview/architecture.png)
+The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or an HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
+
+SQL Server on Azure Arc-enabled servers supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to an Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
+
+The following diagram illustrates the architecture of SQL Server on Azure Arc enable servers.
+
+![Customer infrastructure hosts virtualization and persistent storage. Use the Azure portal or the appropriate CLI to manage the SQL Server instance.](media/overview/architecture.png)
 
 To learn more about these capabilities, you can also refer to this Data Exposed episode.
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Understanding-Azure-Arc-Enabled-SQL-Server/player?format=ny]
@@ -39,16 +45,22 @@ SQL Server on Azure Arc-enabled servers supports SQL Server 2012 or higher runni
 - Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
+> [!NOTE]
+> SQL Server on Azure Arc-enabled servers does not support container images with SQL Server.  
+
 ### Required permissions
 
 To connect the SQL Server instances and the hosting machine to Azure Arc, you must have an account with privileges to perform the following actions:
-   * Microsoft.AzureArcData/sqlServerInstances/read
-   * Microsoft.AzureArcData/sqlServerInstances/write
-   * Microsoft.HybridCompute/machines/read
-   * Microsoft.HybridCompute/machines/write
-   * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-For optimal security, we recommend creating a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
+- Microsoft.HybridCompute/machines/extensions/write
+- Microsoft.HybridCompute/machines/extensions/delete
+- Microsoft.HybridCompute/machines/read
+- Microsoft.HybridCompute/machines/write
+- Microsoft.GuestConfiguration/guestConfigurationAssignments/read
+- Microsoft.Authorization/roleAssignments/write
+- Microsoft.Authorization/roleAssignments/read
+
+For optimal security, create a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ### Azure subscription and service limits
 
@@ -56,23 +68,30 @@ Before configuring your SQL server instances and machines with Azure Arc, review
 
 ### Networking configuration and resource providers
 
-Review [networking configuration, transport layer security and resource providers](/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected machine agent.
+Review [networking configuration, transport layer security, and resource providers](/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected Machine agent.
 
-The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
+The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. To register the resource provider, follow the instructions in the [Prerequisites](connect.md#prerequisites) section.
 
-If you already have SQL Server instances connected to Azure Arc, follow these steps to migrate the existing **SQL Server - Azure Arc** resources to the new namespace.
+If you connected an instance of SQL Server ot Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing **SQL Server - Azure Arc** resources to the new namespace.
 
-### Supported Azure regions
+## Supported Azure regions
 
-The public preview is available in the following regions:
+Arc-enabled SQL Server is available in the following regions:
+
 - East US
 - East US 2
 - West US 2
-- Australia East
-- Southeast Asia
-- North Europe
-- West Europe
+- Central US
+- South Central US
 - UK South
+- France Central
+- West Europe
+- North Europe
+- Japan East
+- Korea Central
+- East Asia
+- Southeast Asia
+- Australia East
 
 ## Next steps
 

@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # ROWCOUNT_BIG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the number of rows affected by the last statement executed. This function operates like [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), except the return type of ROWCOUNT_BIG is **bigint**.  
   

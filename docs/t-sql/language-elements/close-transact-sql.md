@@ -22,7 +22,7 @@ author: cawrites
 ms.author: chadam
 ---
 # CLOSE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Closes an open cursor by releasing the current result set and freeing any cursor locks held on the rows on which the cursor is positioned. `CLOSE` leaves the data structures available for reopening, but fetches and positioned updates are not allowed until the cursor is reopened. CLOSE must be issued on an open cursor; `CLOSE` is not allowed on cursors that have only been declared or are already closed.  
   

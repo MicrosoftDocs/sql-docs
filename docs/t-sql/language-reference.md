@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Transact-SQL Reference (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic gives the basics about how to find and use the Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL) reference topics. T-SQL is central to using Microsoft SQL products and services. All tools and applications that communicate with a SQL database do so by sending T-SQL commands.  
 

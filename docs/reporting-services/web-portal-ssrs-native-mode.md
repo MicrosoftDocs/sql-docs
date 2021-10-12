@@ -1,6 +1,6 @@
 ---
 title: "The web portal of a report server (Native Mode) | Microsoft Docs"
-ms.date: 01/31/2020
+ms.date: 08/06/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -45,7 +45,7 @@ Some web portal features are only available in specified editions of [!INCLUDE[s
 On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
-> If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you are not running the browser as an admin. You are not able to run Microsoft Edge as an admin. You will need to use Internet Explorer. You can either browser to the server remotely, or launch Internet Explorer as admin and browser to the web portal. If you want to use the web portal remotely, you will need to give your account content manager rights on the folder.  
+> If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you are not running the browser as an admin. You will need to give your account content manager rights on the folder by either browsing to the server remotely, or use Edge locally to configure the permissions. You are not able to run Microsoft Edge as an admin via the "Run as administrator" context menu. However, you can run Edge as the local administrator account by holding SHIFT + right-clicking on the edge shortcut and selecting "Run as a different user" then providing the local machine administrator account information in the login dialog. If you want to use the web portal remotely, you will need to give your account content manager rights on the folder.  
 
 ## Start and use the web portal
 
@@ -114,4 +114,4 @@ Enter a search term, and see everything you can access. The results are categori
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

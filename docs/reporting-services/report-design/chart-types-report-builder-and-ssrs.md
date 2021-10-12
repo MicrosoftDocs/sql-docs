@@ -1,6 +1,6 @@
 ---
-title: "Chart Types (Report Builder) | Microsoft Docs"
-description: Choose from unique chart characteristics to help you visualize your dataset and assist you in choosing an appropriate chart type in Report Builder.
+title: "Chart types in a paginated report | Microsoft Docs"
+description: Choose from unique chart characteristics to help you visualize your dataset and assist you in choosing an appropriate chart type in a paginated report in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,9 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Chart Types (Report Builder and SSRS)
+# Chart types in a paginated report (Report Builder)
 
-It is important to choose an appropriate chart type for the type of data that you are presenting. This will determine how well the data can be interpreted when put in chart form. For example, if your dataset contains a lot of data points relative to the size of the chart, it may be better presented using an area, line, or scatter chart. For discussion on how to prepare your data depending on the chart type selected, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+It is important to choose an appropriate chart type for the type of data that you are presenting in a paginated report. This will determine how well the data can be interpreted when put in chart form. For example, if your dataset contains a lot of data points relative to the size of the chart, it may be better presented using an area, line, or scatter chart. For discussion on how to prepare your data depending on the chart type selected, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

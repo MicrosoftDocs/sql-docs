@@ -90,7 +90,7 @@ Multi-dimensional query results are flattened to 2D using a standard flattening 
 ## References
 
 Creating a Demo OLAP Cube (the same as the one used in the examples): 
-[`https://msdn.microsoft.com/library/ms170208.aspx`](https://msdn.microsoft.com/library/ms170208.aspx)
+[`/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial`](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
 
 
@@ -120,4 +120,3 @@ Creating a Demo OLAP Cube (the same as the one used in the examples):
 
   result2 <- execute2D(olapCnn, mdx)
 ```
-

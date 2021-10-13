@@ -1,5 +1,6 @@
 ---
-title: "Group expression examples paginated report | Microsoft Docs"
+title: "Group expression examples in paginated reports | Microsoft Docs"
+
 description:  Find out how to group paginated report data by a single field or create more complex expressions that identify the data on which to group in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services

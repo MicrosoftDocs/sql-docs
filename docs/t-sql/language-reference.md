@@ -78,4 +78,4 @@ The SQL docs include these other language references:
 Now that you understand how to find the T-SQL reference topics, you're ready to:
 
 - Work through a short tutorial about how to write T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
-- View the [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+- View the [Transact-SQL Syntax Conventions \(Transact-SQL\)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).

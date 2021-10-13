@@ -22,7 +22,8 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Formatting numbers and dates paginated report (Report Builder)
+# Formatting numbers and dates in paginated reports (Report Builder)
+
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

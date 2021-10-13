@@ -1,8 +1,8 @@
 ---
-title: "Database-Level Roles | Microsoft Docs"
+title: "Database-Level Roles"
 description: SQL Server provides several roles that are security principals that group other principals to manage the permissions in your databases.
 ms.custom: ""
-ms.date: 06/03/2020
+ms.date: 10/12/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, azure-synapse, pdw"
 ms.reviewer: ""
@@ -35,7 +35,6 @@ helpviewer_keywords:
   - "fixed database roles [SQL Server]"
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
-ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -87,7 +86,8 @@ These database roles exist only in the virtual master database. Their permission
 
 |Role name|Description|  
 |--------------------|-----------------|
-|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that database which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
+|**dbmanager** | Can create and delete databases. A member of the **dbmanager** role that creates a database, becomes the owner of that database which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the **dbmanager** role do not necessarily have permission to access databases that they do not own.|
+|**db_exporter** | *Applies only to Azure Synapse Analytics dedicated SQL pools (formerly SQL DW).*<BR>Members of the **db_exporter** fixed database role can perform all data export activities. Permissions granted via this role are CREATE TABLE, ALTER ANY SCHEMA, ALTER ANY EXTERNAL DATA SOURCE, ALTER ANY EXTERNAL FILE FORMAT. |
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]
@@ -148,7 +148,7 @@ The following example adds the User 'Ben' to the fixed database-level role `db_d
 
 ```sql  
 ALTER ROLE db_datareader
-	ADD MEMBER Ben;  
+    ADD MEMBER Ben;  
 GO
 ```  
 
@@ -157,10 +157,10 @@ GO
 The following statement returns all members of any database role. 
 
 ```sql  
-SELECT	roles.principal_id							AS RolePrincipalID
-	,	roles.name									AS RolePrincipalName
-	,	database_role_members.member_principal_id	AS MemberPrincipalID
-	,	members.name								AS MemberPrincipalName
+SELECT    roles.principal_id                            AS RolePrincipalID
+    ,    roles.name                                    AS RolePrincipalName
+    ,    database_role_members.member_principal_id    AS MemberPrincipalID
+    ,    members.name                                AS MemberPrincipalName
 FROM sys.database_role_members AS database_role_members  
 JOIN sys.database_principals AS roles  
     ON database_role_members.role_principal_id = roles.principal_id  

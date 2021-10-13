@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 08/04/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,6 +18,25 @@ ms.technology: big-data-cluster
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 For the latest release notes, see [SQL Server Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+
+## <a id="cu13"></a> CU13 (September 2021)
+
+Cumulative Update 13 (CU13) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag | Contents |
+|-----|-----| ----- |
+|15.0.4178.15|[2019-CU13-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 13](release-notes-cumulative-update-13.md) |
+
+SQL Server Big Data Clusters CU13 includes important changes and capabilities:
+
+* [HDFS distributed copy capabilities through azdata](distributed-data-copy-hdfs.md)
+* [Apache Spark 3.1.2](spark-3-upgrade.md) and the [SQL Server Big Data Clusters runtime for Apache Spark](runtime-for-apache-spark.md)
+
+    > [!CAUTION]
+    > Before upgrading make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).
+
+* [Password rotation for Big Data Cluster's Auto Generated Active Directory service accounts during the BDC deployment](active-directory-password-rotation.md)
+* [New Advanced Encryption Standard (AES) optional parameter `security.activeDirectory.enableAES` for the automatically generated AD accounts](active-directory-deploy.md)
 
 ## <a id="cu12"></a> CU12 (August 2021)
 

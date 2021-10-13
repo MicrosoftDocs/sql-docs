@@ -160,10 +160,10 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - The UDF does not reference the `STRING_AGG` function <sup>6</sup>. 
 - The UDF does not reference remote tables <sup>7</sup>.
 - The UDF-calling query does not use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
-- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
-- The UDF references encrypted columns <sup>8</sup>.
-- The UDF contains references to 'WITH XMLNAMESPACES' <sup>8</sup>.
-- The query invoking the UDF has Common Table Expressions (CTEs)<sup>8</sup>.
+- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`) <sup>7</sup>.
+- The UDF does not reference encrypted columns <sup>8</sup>.
+- The UDF does not contain references to `WITH XMLNAMESPACES` <sup>8</sup>.
+- The query invoking the UDF does not have Common Table Expressions (CTEs) <sup>8</sup>.
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation is not supported for inlining (such as `SELECT @val += col1 FROM table1`).
 

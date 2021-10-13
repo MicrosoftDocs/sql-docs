@@ -89,7 +89,7 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 |---------|---------|-------------|
 | [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
 | [sqlrutils](../r/ref-r-sqlrutils.md) | 1.0.0 | Used for including R script in stored procedures. |
-| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Adds machine learning algorithms in R. | 
+| [MicrosoftML](/en-us/sql/machine-learning/r/ref-r-microsoftml)| 1.4.0 | Adds machine learning algorithms in R. | 
 | [olapR](../r/ref-r-olapr.md) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end

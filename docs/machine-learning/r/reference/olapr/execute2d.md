@@ -90,7 +90,7 @@ Multi-dimensional query results are flattened to 2D using a standard flattening 
 ## References
 
 Creating a Demo OLAP Cube (the same as the one used in the examples): 
-[`/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial`](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
+[`https://docs.microsoft.com/en-us/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial`](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
 
 

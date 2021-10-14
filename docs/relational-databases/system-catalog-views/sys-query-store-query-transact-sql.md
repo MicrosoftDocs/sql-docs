@@ -2,7 +2,7 @@
 description: "sys.query_store_query (Transact-SQL)"
 title: "sys.query_store_query (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/25/2021"
+ms.date: "10/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

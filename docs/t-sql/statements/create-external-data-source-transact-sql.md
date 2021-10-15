@@ -639,7 +639,7 @@ Provides the connectivity protocol and path to the external data source.
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Azure Data Lake Storage Gen2 |   `abfs[s]` | `abfss://<container>@<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. |
 | SQL Server Big Data Clusters data pool | `sqldatapool` | `sqldatapool://controller-svc/default` | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | 
-| SQL Server Big Data Clusters storage pool HDFS | `sqlhds` | `sqlhdfs://controller-svc/default` | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | 
+| SQL Server Big Data Clusters storage pool | `sqlhdfs` | `sqlhdfs://controller-svc/default` | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | 
 
 |||||
 

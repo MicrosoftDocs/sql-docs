@@ -1,6 +1,6 @@
 ---
-title: "Expression Reference (Report Builder) | Microsoft Docs"
-description: Learn about the syntax required in expressions, before processing or publishing, to support references to built-in functions and collections in Report Builder. 
+title: "Expression reference in a paginated report | Microsoft Docs"
+description: Learn about the syntax required in expressions, before processing or publishing a paginated report, to support references to built-in functions and collections in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Expression Reference (Report Builder and SSRS)
-  Report expressions support a variety of references to built-in functions and built-in collections. Expressions must have valid [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] syntax before a report can be published or processed.  
+# Expression reference in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Paginated report expressions support a variety of references to built-in functions and built-in collections. Expressions must have valid [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] syntax before a report can be published or processed.  
   
  To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   

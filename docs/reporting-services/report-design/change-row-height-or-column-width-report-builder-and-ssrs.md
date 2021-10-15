@@ -1,6 +1,6 @@
 ---
-title: "Change Row Height or Column Width (Report Builder) | Microsoft Docs"
-description: Learn about setting a a column width or a fixed row height with text box properties for rendered reports in Report Builder. 
+title: "Change row height or column width in a paginated report | Microsoft Docs"
+description: Learn about setting a a column width or a fixed row height with text box properties for rendered paginated reports in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Change Row Height or Column Width (Report Builder and SSRS)
-  When you set a row height, you are specifying the maximum height for the row in the rendered report. However, by default, text boxes in the row are set to grow vertically to accommodate their data at run-time, and this can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they do not automatically expand.  
+# Change row height or column width in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  When you set a row height, you are specifying the maximum height for the row in the rendered paginated report. However, by default, text boxes in the row are set to grow vertically to accommodate their data at run-time, and this can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they do not automatically expand.  
   
  When you set a column width, you are specifying the maximum width for the column in the rendered report. Columns do not automatically adjust horizontally to accommodate text.  
   

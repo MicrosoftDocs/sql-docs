@@ -279,7 +279,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 [`Quantile regression forest`](http://jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf)
 
 
-[`From Stumps to Trees to Forests`](https://blogs.technet.microsoft.com/machinelearning/2014/09/10/from-stumps-to-trees-to-forests/)
+[`From Stumps to Trees to Forests`](/archive/blogs/machinelearning/from-stumps-to-trees-to-forests)
 
 
 
@@ -335,8 +335,3 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
   # Plot actual versus predicted values with smoothed line
   rxLinePlot(Score ~ Ozone, type = c("p", "smooth"), data = rxFastForestScoreDF)
 ```
-
-
-
-
-

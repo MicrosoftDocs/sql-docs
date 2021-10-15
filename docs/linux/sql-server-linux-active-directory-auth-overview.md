@@ -45,7 +45,7 @@ The details for how to configure AD authentication are provided in the tutorial,
 
 ## Known issues
 
-- At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
+- At this time, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` authentication method will be enabled in a future release.
 - SQL Server on Linux does not support NTLM protocol for remote connections. Local connection may work using NTLM.
 
 ## Next Steps

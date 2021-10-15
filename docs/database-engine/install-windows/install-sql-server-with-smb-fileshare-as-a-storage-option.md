@@ -35,15 +35,15 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
   
  The loopback UNC path (a UNC path whose server name is localhost, 127.0.0.1, or the local machine name) is not supported. As a special case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using File Server Cluster which is hosted on the same node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running is also not supported. To prevent this situation, it is recommended that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and File Server Cluster to be created on separated Windows Clusters.  
   
- The below UNC path formats are not supported:  
+ The following UNC path formats are not supported:
+
+- Loopback path, such as `\\localhost\...\` or `\\127.0.0.1\...\`
   
--   Loopback path, e.g., \\\localhost\\..\ or \\\127.0.0.1\\...\  
+- Administrative shares, such as `\\servername\x$`
   
--   Administrative shares, e.g., \\\servername\x$  
+- Other UNC path formats like `\\?\x:\`
   
--   Other UNC path formats like \\\\?\x:\  
-  
--   Mapped network drives.  
+- Mapped network drives
   
 ### Supported data definition language (DDL) statements  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements and database engine stored procedures support SMB file shares:  
@@ -74,15 +74,15 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     For more information about the usage of various command line parameter options in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], see [Install SQL Server 2016 from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
+     For more information about the usage of various command-line parameter options in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], see [Install SQL Server 2016 from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
 ## Operating system considerations (SMB Protocol vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
- Different Windows operating systems has different SMB protocol versions, and the SMB protocol version is transparent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can find the benefits of different SMB protocol versions with respect to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
+ Different Windows operating systems have different SMB protocol versions, and the SMB protocol version is transparent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can find the benefits of different SMB protocol versions with respect to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 |Operating System|SMB2 protocol version|Benefits to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Improved performance over previous SMB versions.<br /><br /> Durability, which helps recover from temporary network glitches.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, including Server Core|2.1|Support for large MTU, which benefits large data transfers, such as SQL backup and restore. This capability must be enabled by user. For more details on how to enable this capability, see [What's New in SMB](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Significant performance improvements, specifically for SQL OLTP style workloads. These performance improvements require applying a hotfix. For more information on the hotfix, see [this](https://mskb.pkisolutions.com/kb/2536493) (https://mskb.pkisolutions.com/kb/2536493).|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, including Server Core|2.1|Support for large MTU, which benefits large data transfers, such as SQL backup and restore. This capability must be enabled by user. For more information about enabling this capability, see [What's New in SMB](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Significant performance improvements, specifically for SQL OLTP style workloads. These performance improvements require applying a hotfix. For more information on the hotfix, see [this](https://mskb.pkisolutions.com/kb/2536493) (https://mskb.pkisolutions.com/kb/2536493).|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], including Server Core|3.0|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure.<br /><br /> Support for network interfaces with RDMA capabilities.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, including Server Core|3.2|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure, using SMB Multichannel.<br /><br /> Support for network interfaces with RDMA capabilities using SMB Direct.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.<br /><br /> Optimized for small random read/write I/O common to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Maximum Transmission Unit (MTU) is turned on by default, which significantly enhances performance in large sequential transfers like [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse and database backup or restore.|  
   
@@ -91,7 +91,7 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent service account should have FULL CONTROL share permissions and NTFS permissions on the SMB share folders. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account can be a domain account or a system account if an SMB file server is used. For more information about share and NTFS permissions, see [Share and NTFS Permissions on a File Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754178(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
-    >  The FULL CONTROL share permissions and NTFS permissions on the SMB share folders should be restricted to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account and windows users with admin server roles.  
+    >  The FULL CONTROL share permissions and NTFS permissions on the SMB share folders should be restricted to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account and Windows users with admin server roles.  
   
      It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: \<*domain_name*>\\<*computer_name*>\*$*.  
   
@@ -106,7 +106,7 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
   
 ## Known issues and limitations 
   
--   After you detach a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information see, [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
+-   After you detach a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   If SMB file share is used as a storage option for a clustered instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Diagnostics Log cannot be written to the file share because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource DLL lacks the read/write permission on the file share. To resolve this issue, try one of the following methods:  
   

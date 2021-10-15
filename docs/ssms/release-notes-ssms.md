@@ -41,8 +41,6 @@ SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need 
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.32.0. |
 | Analysis Services | Update BITools to 150.19714.0 |
-| Azure Synapse | Support for db@pool connectivity syntax |
-| Azure Synapse | Support for Gen3 Synapse Pool connections |
 | DacFx | Update DacFx to 15.0.5282.3 |
 | Import Flat File | Support for rich data types in Import Flat File wizard, including money. |
 | Replication | Support for peer to peer publication with [Last Writer Win (LWW) conflict detection](../relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md) |
@@ -900,7 +898,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Database.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
 |Azure SQL Managed Instance|Added new "Azure AD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
-|Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
+|Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. For more information, see [Monitor performance for Always On availability groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
 |Always Encrypted with secure enclaves| Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019:  A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).  The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.  Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
 |Audit Files|Changed authentication method from Storage Account Key based to Azure AD-based authentication.|

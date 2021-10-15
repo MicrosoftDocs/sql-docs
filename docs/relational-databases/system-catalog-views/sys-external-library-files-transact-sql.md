@@ -30,7 +30,7 @@ Lists a row for each file that makes up an external library.
 |external_library_id | int |ID of the external library object. |
 |content |varbinary(max) |Content of the external library file artifact. |
 |platform |tinyint |ID of the host platform on which SQL Server is installed. |
-|platform_desc | nvarchar(60) |Name of the host platform. Valid values are 'WINDOWS', 'LINUX'. |
+|platform_desc | nvarchar(60) |Name of the host platform. Valid values are `WINDOWS`, `LINUX`. |
 
 ### See also  
 

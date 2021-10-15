@@ -1,5 +1,5 @@
 ---
-title: "Hide Page Header or Footer on First or Last Page-Report Builder-SSRS | Microsoft Docs"
+title: "Hide page header or footer on first or last page of a paginated report | Microsoft Docs"
 description: Do you want a header or footer on the first or last page of your report? If not, find out how to turn off display of the header or footer in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Hide a Page Header or Footer on the First or Last Page (Report Builder and SSRS)
-  A report can contain a page header and page footer that run along the top and bottom of each page, respectively. After you a add a header or footer, you can selectively hide it on the first and last pages of a report.  
+# Hide page header or footer on first or last page of a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A paginated report can contain a page header and page footer that run along the top and bottom of each page, respectively. After you a add a header or footer, you can selectively hide it on the first and last pages of a report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

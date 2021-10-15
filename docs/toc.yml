@@ -6178,6 +6178,8 @@ items:
       href: tools/synapse-pathway/pathway-faq.md
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
+    - name: Behind the scenes
+      href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Tutorials
       items:
       - name: Tutorial - Run Azure Synapse Pathway
@@ -6200,6 +6202,26 @@ items:
           href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
     - name: Errors and Warnings
       items:
+        - name: ASP0001
+          href: tools/synapse-pathway/transpiler-messages/asp0001.md
+        - name: ASP0002
+          href: tools/synapse-pathway/transpiler-messages/asp0002.md
+        - name: ASP0003
+          href: tools/synapse-pathway/transpiler-messages/asp0003.md
+        - name: ASP0011
+          href: tools/synapse-pathway/transpiler-messages/asp0011.md
+        - name: ASP0012
+          href: tools/synapse-pathway/transpiler-messages/asp0012.md
+        - name: ASP0013
+          href: tools/synapse-pathway/transpiler-messages/asp0013.md
+        - name: ASP0014
+          href: tools/synapse-pathway/transpiler-messages/asp0014.md
+        - name: ASP0015
+          href: tools/synapse-pathway/transpiler-messages/asp0015.md
+        - name: ASP0101
+          href: tools/synapse-pathway/transpiler-messages/asp0101.md
+        - name: ASP0117
+          href: tools/synapse-pathway/transpiler-messages/asp0117.md
         - name: ASP1001
           href: tools/synapse-pathway/transpiler-messages/asp1001.md
 - name: Manage, monitor, & tune

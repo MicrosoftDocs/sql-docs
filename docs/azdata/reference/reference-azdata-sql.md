@@ -80,7 +80,7 @@ Database name to connect to.
 #### `--server -s`
 SQL Server instance name or address.
 #### `--integrated -e`
-Use integrated authentication on windows.
+Use integrated authentication on Windows.
 #### `--mssqlclirc`
 Location of mssqlclirc config file.
 #### `--row-limit`
@@ -151,7 +151,7 @@ Username to connect to the database.
 #### `--server -s`
 SQL Server instance name or address.
 #### `--integrated -e`
-Use integrated authentication on windows.
+Use integrated authentication on Windows.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

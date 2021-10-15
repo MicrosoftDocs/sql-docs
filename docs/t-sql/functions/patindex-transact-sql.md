@@ -124,7 +124,7 @@ position
 The following example uses the `[^]` [string operator](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) to find the position of a character that is not a number, letter, or space.
 
 ```sql
-SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+SELECT position = PATINDEX('%[^ 0-9A-Za-z]%', 'Please ensure the door is locked!'); 
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 

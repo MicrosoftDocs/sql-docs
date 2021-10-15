@@ -1,6 +1,6 @@
 ---
 title: "Configure conversion"
-description: "Learn how to adjust the conversion settings when using Database Schema Conversion Toolkit (Oracle to MS SQL)."
+description: "Learn how to adjust the conversion settings when using Database Schema Conversion Toolkit (Oracle to Microsoft SQL)."
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: "nahk-ivanov"
@@ -13,7 +13,7 @@ ms.date: "10/4/2021"
 
 # Configure conversion
 
-The Database Schema Conversion Toolkit (Oracle to MS SQL) is aiming to provide a solution to database schema migrations. While default conversion is fairly reasonable, there are cases when users may want to adjust some of the conversion settings to better suit their needs.
+The Database Schema Conversion Toolkit (Oracle to Microsoft SQL) is aiming to provide a solution to database schema migrations. While default conversion is fairly reasonable, there are cases when users may want to adjust some of the conversion settings to better suit their needs.
 
 ## Configuration user interface
 

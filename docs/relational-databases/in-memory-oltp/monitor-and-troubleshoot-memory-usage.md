@@ -141,7 +141,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  ![Screenshot of the Total Memory Usage By Memory Optimized Objects report.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="bkmk_UsingDMVs"></a> Using DMVs  
- There are a number of DMVs available to monitor memory consumed by memory-optimized tables, indexes, system objects, and by run-time structures.  
+ There are many of DMVs available to monitor memory consumed by memory-optimized tables, indexes, system objects, and by run-time structures.  
   
 #### Memory consumption by memory-optimized tables and indexes  
  You can find memory consumption for all user tables, indexes, and system objects by querying `sys.dm_db_xtp_table_memory_stats` as shown here.  
@@ -167,10 +167,11 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- For more information see [sys.dm_db_xtp_table_memory_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ For more information, see [sys.dm_db_xtp_table_memory_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 #### Memory consumption by internal system structures  
- Memory is also consumed by system objects, such as, transactional structures, buffers for data and delta files, garbage collection structures, and more. You can find the memory used for these system objects by querying `sys.dm_xtp_system_memory_consumers` as shown here.  
+
+ Memory is also consumed by system objects, such as transactional structures, buffers for data and delta files, garbage collection structures, and more. You can find the memory used for these system objects by querying `sys.dm_xtp_system_memory_consumers` as shown here.  
   
 ```sql  
 SELECT memory_consumer_desc  
@@ -206,7 +207,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- For more information see [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
+ For more information, see [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).  
   
 #### Memory consumption at run-time when accessing memory-optimized tables  
  You can determine the memory consumed by run time structures, such as the procedure cache with the following query: run this query to get the memory used by run-time structures such as for the procedure cache. All run-time structures are tagged with XTP.  
@@ -239,9 +240,10 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- For more information see [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ For more information, see [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
 #### Memory consumed by [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine across the instance  
+
  Memory allocated to the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine.  
   
 ```sql  
@@ -253,10 +255,10 @@ SELECT type
    FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
- The sample output shows that the total memory allocated is 18 MB system-level memory consumption and 1358MB allocated to database id of 5. Since this database is mapped to a dedicated resource pool, this memory is accounted for in that resource pool.  
+ The sample output shows that the memory allocated is 18 MB system-level memory and 1358 MB allocated to database id = 5. Since this database is mapped to a dedicated resource pool, this memory is accounted for in that resource pool.  
   
- **Sample Output**  
-  
+#### Sample Output
+
 ```  
 type                 name       memory_node_id pages_MB  
 -------------------- ---------- -------------- --------------------  
@@ -265,19 +267,20 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- For more information see [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
+ For more information, see [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-##  <a name="bkmk_MemOptObjects"></a> Managing memory consumed by memory-optimized objects  
+##  <a name="bkmk_MemOptObjects"></a> Managing memory consumed by memory-optimized objects 
+ 
  You can control the total memory consumed by memory-optimized tables by binding it to a named resource pool as described in the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
 ##  <a name="bkmk_Troubleshooting"></a> Troubleshooting Memory Issues  
- Troubleshooting memory issues is a three step process:  
+ Troubleshooting memory issues is a three-step process:  
   
-1.  Identify how much memory is being consumed by the objects in your database or instance. You can use a rich set of monitoring tools available for memory-optimized tables as described earlier.  For example the DMVs `sys.dm_db_xtp_table_memory_stats` or `sys.dm_os_memory_clerks`.  
+1.  Identify how much memory is being consumed by the objects in your database or instance. You can use a rich set of monitoring tools available for memory-optimized tables as described earlier.  For example, the DMVs `sys.dm_db_xtp_table_memory_stats` or `sys.dm_os_memory_clerks`.  
   
 2.  Determine how memory consumption is growing and how much head room you have left. By monitoring the memory consumption periodically, you can know how the memory use is growing. For example, if you have mapped the database to a named resource pool, you can monitor the performance counter Used Memory (KB) to see how memory usage is growing.  
   
-3.  Take action to mitigate the potential memory issues. For more information see [Resolve Out Of Memory Issues](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
+3.  Take action to mitigate the potential memory issues. For more information, see [Resolve Out Of Memory Issues](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
 ## See Also  
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

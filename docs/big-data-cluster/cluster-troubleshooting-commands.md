@@ -6,7 +6,7 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 06/22/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

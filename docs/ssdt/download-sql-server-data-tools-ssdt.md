@@ -175,7 +175,7 @@ First, complete the following steps while **online**:
    b. For all languages, omit the `--lang` argument. All languages are ~3.9 GB.
    
    ```dos
-   vs_sql.exe --layout c:\<filepath>` 
+   vs_sql.exe --layout c:\<filepath>
    ```
 
   After completing the previous steps, the following steps below can be done **offline**:

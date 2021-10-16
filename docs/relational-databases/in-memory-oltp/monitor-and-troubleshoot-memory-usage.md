@@ -141,7 +141,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  ![Screenshot of the Total Memory Usage By Memory Optimized Objects report.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="bkmk_UsingDMVs"></a> Using DMVs  
- There are many of DMVs available to monitor memory consumed by memory-optimized tables, indexes, system objects, and by run-time structures.  
+ There are many DMVs available to monitor memory consumed by memory-optimized tables, indexes, system objects, and by run-time structures.  
+
   
 #### Memory consumption by memory-optimized tables and indexes  
  You can find memory consumption for all user tables, indexes, and system objects by querying `sys.dm_db_xtp_table_memory_stats` as shown here.  

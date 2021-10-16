@@ -25,11 +25,12 @@ ms.custom: "seo-lt-2019"
  
  
  **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
+
+> [!NOTE]
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
  
  > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
-
-[Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
  
  
  **Option 2: Follow the step manually**

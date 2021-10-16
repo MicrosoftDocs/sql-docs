@@ -106,13 +106,13 @@ CREATE WORKLOAD GROUP group_name
 Specifies the name by which the workload group is identified. *group_name* is a sysname. It can be up to 128 characters long and must be unique within the instance.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups. *value* is an integer range from 0 to 100. The sum of min_percentage_resource across all workload groups cannot exceed 100. The value for min_percentage_resource cannot be greater than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups. Resource in this case is Memory.  *value* is an integer range from 0 to 100. The sum of min_percentage_resource across all workload groups cannot exceed 100. The value for min_percentage_resource cannot be greater than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Specifies the maximum resource utilization for all requests in a workload group. The allowed integer range for value is 1 through 100. The value for cap_percentage_resource must be greater than min_percentage_resource. The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
+Specifies the maximum resource utilization for all requests in a workload group. <<Resource in this case are CPU and Memory>>. The allowed integer range for value is 1 through 100. The value for cap_percentage_resource must be greater than min_percentage_resource. The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Sets the minimum amount of resources allocated per request. *value* is a required parameter with a decimal range between 0.75 to 100.00. The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
+Sets the minimum amount of resources allocated per request. <<Resources in this case is Memory only>>. *value* is a required parameter with a decimal range between 0.75 to 100.00. The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
 
 For example:
 
@@ -135,7 +135,7 @@ Consider the values that are used for resource classes as a guideline for reques
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
-Sets the maximum amount of resources allocated per request. *value* is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent. *value* must be greater than or equal to request_min_resource_grant_percent. When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
+Sets the maximum amount of resources allocated per request. <<Resources in this case is Memory>>. *value* is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent. *value* must be greater than or equal to request_min_resource_grant_percent. When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
 
 *IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 Specifies the default importance of a request for the workload group. Importance is one of the following, with NORMAL being the default:

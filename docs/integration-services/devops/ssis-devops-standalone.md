@@ -21,7 +21,9 @@ Standalone **SSIS DevOps Tools** provide a set of executables to do SSIS CICD ta
 
 .NET framework 4.6.2 or higher is required.
 
-Download the latest installer from [download center](https://aka.ms/AA9xp65), then install via wizard or command line:
+Download the latest installer from [download center](https://aka.ms/AA9xp65). Also, [direct download link](https://aka.ms/SSISDevOpsTools) is available for automation script.
+
+Then install via wizard or command line:
 
 - Install via wizard
 

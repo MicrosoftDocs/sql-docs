@@ -74,7 +74,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 #### 2. Check if you can connect to the endpoint
 
-- Use Telnet or Test-NetConnection to validate connectivity. If the Endpoint is listening and connection is successful, then Telnet will show you a blank screen with a blinking cursor. If not, you will receive a connection error from Telnet. If you use Test-NetConnection look for the `TcpTestSucceeded        : True` or `TcpTestSucceeded        : False`. 
+- Use **Telnet** or **Test-NetConnection** to validate connectivity. If the Endpoint is listening and connection is successful, then **Telnet** will show you a blank screen with a blinking cursor. If not, you will receive a connection error from **Telnet**. If you use **Test-NetConnection** look for the `TcpTestSucceeded        : True` or `TcpTestSucceeded        : False`. 
 
   ```DOS
   telnet ServerName <port_number>
@@ -88,11 +88,11 @@ This message occurs when attempting to join secondary databases to an Always On 
   
 **DNS issues:**
 
-- If Telnet/Test-NetConnection succeeds to the IP address but fails to the ServerName, there is likely a DNS or name resolution issue. See [Check for name resolution issues](#6-check-for-name-resolution-issues)
+- If **Telnet**/**Test-NetConnection** succeeds to the IP address but fails to the ServerName, there is likely a DNS or name resolution issue. See [Check for name resolution issues](#6-check-for-name-resolution-issues)
 
 **Multiple processes listening on the same port**
 
-- If Telnet/Test-NetConnection connection works using ServerName but fails using IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is configured to listen on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections. To find the owning process:
+- If **Telnet**/**Test-NetConnection** connection works using ServerName but fails using IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is configured to listen on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections. To find the owning process:
 
   ```powershell
   Get-Process -Id (Get-NetTCPConnection -LocalPort 1433).OwningProcess |Select-Object Name, ProductVersion, Path, Id
@@ -100,7 +100,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 **Blocked endpoint (firewall, anti-virus)**
 
-- If Telnet or Test-NetConnection fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default). If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+- If **Telnet** or **Test-NetConnection** fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default). If you are running SQL Server on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
   Run the following PowerShell script to check for disabled inbound traffic rules
 
@@ -108,7 +108,7 @@ This message occurs when attempting to join secondary databases to an Always On 
   Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
   ```
 
-- Capture a `NETSTAT -a` or Get-NetTCPConnection output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
+- Capture a `NETSTAT -a` or **Get-NetTCPConnection** output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
 
   ```dos
   netstat -a
@@ -210,7 +210,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 #### 6. Check for name resolution issues
 
-- Validate DNS resolution by using NSLookup or Resolve-DnsName on the IP address and the name:
+- Validate DNS resolution by using **nsLookup** or **Resolve-DnsName** on the IP address and the name:
 
   ```DOS
   nslookup <IP_Address>

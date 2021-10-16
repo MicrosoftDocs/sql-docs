@@ -1,6 +1,6 @@
 ---
 title: "Convert Oracle database objects to Microsoft SQL"
-description: "Learn how to use Database Schema Conversion Toolkit (Oracle to MS SQL) to convert Oracle database objects to Microsoft SQL platform."
+description: "Learn how to use Database Schema Conversion Toolkit (Oracle to Microsoft SQL) to convert Oracle database objects to Microsoft SQL platform."
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: "nahk-ivanov"
@@ -13,7 +13,7 @@ ms.date: "10/4/2021"
 
 # Convert Oracle database objects to Microsoft SQL
 
-Once Database Schema Conversion Toolkit (Oracle to MS SQL) extension is [installed](./install-remove-database-schema-conversion-toolkit-oracle-to-mssql.md), you can start converting your Oracle database objects to the Microsoft SQL platform.
+Once Database Schema Conversion Toolkit (Oracle to Microsoft SQL) extension is [installed](./install-remove-database-schema-conversion-toolkit-oracle-to-mssql.md), you can start converting your Oracle database objects to the Microsoft SQL platform.
 
 ## Create target SQL Database project
 
@@ -28,7 +28,7 @@ First step in the conversion process is to prepare the target SQL Database proje
    ![Configure new SQL Database project](./media/configure-new-sql-project.png)
 
    > [!NOTE]
-   > When targeting on-premises SQL Server, only SQL Server 2012 and above is supported by the **Database Schema Conversion Toolkit (Oracle to MS SQL)**.
+   > When targeting on-premises SQL Server, only SQL Server 2012 and above is supported by the **Database Schema Conversion Toolkit (Oracle to Microsoft SQL)**.
 
 3. Select **Create** to complete the SQL Database project creation
    
@@ -47,7 +47,7 @@ Next step in the schema conversion process is to [connect to an Oracle database]
 
 When connection to the Oracle database is established, you can start converting database objects.
 
-1. In the **Connections** view, right-click an Oracle schema that you wish to convert to Microsoft SQL and select **Convert to MS SQL**. If you want to convert multiple schemas at once, right-click the entire server element.
+1. In the **Connections** view, right-click an Oracle schema that you wish to convert to Microsoft SQL and select **Convert to Microsoft SQL**. If you want to convert multiple schemas at once, right-click the entire server element.
 
    ![Oracle schema context menu](./media/convert-to-mssql-menu.png)
 
@@ -83,7 +83,7 @@ When connection to the Oracle database is established, you can start converting 
 
    ![Conversion task in progress](./media/conversion-task-in-progress.png)
 
-   You can track conversion progress by switching to **Database Schema Conversion Toolkit (Oracle to MS SQL)** on the **Output** panel.
+   You can track conversion progress by switching to **Database Schema Conversion Toolkit (Oracle to Microsoft SQL)** on the **Output** panel.
 
    ![Conversion progress log](./media/conversion-progress-log.png)
 
@@ -100,7 +100,7 @@ If there are any conversion messages, they will appear on the **Problems** panel
 Conversion messages will also be embedded as comments in the converted SQL scripts. Once addressed, the comments can be removed.
 
 > [!NOTE]
-> You can close the Azure Data Studio at any time and reopen the SQL Database project later. In order to discover conversion messages in the SQL Database project that was converted previously, open **Command Palette...** from the **View** menu and run **DSCT (Oracle to MS SQL): Discover problems** command.
+> You can close the Azure Data Studio at any time and reopen the SQL Database project later. In order to discover conversion messages in the SQL Database project that was converted previously, open **Command Palette...** from the **View** menu and run **DSCT (Oracle to Microsoft SQL): Discover problems** command.
 
 ## Deploy the target Microsoft SQL database
 

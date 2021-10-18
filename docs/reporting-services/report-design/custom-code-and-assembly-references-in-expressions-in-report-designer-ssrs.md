@@ -1,5 +1,6 @@
 ---
-title: "Custom code and assembly references in expressions in a paginated report in report designer | Microsoft Docs"
+title: "Custom code and assembly references in expressions in a paginated report in Report Designer | Microsoft Docs"
+
 description: Find out how to add references to custom code embedded in a paginated report. Build and save to your computer and deploy to the report server in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services

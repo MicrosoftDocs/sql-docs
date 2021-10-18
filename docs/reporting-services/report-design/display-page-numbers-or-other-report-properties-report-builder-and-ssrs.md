@@ -1,6 +1,6 @@
 ---
-title: "Display Page Numbers or Other Report Properties (Report Builder) | Microsoft Docs"
-description:  Add properties of your report including page numbers, filenames, and titles, for display in page headers or footers. 
+title: "Display page numbers or other paginated report properties | Microsoft Docs"
+description:  Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Display Page Numbers or Other Report Properties (Report Builder and SSRS)
-  It's easy to add page numbers, a report title, file name, and other report properties to the page headers or footers of your report. These properties are stored as fields in the Built-in Fields folder in the Report Data pane:  
+# Display page numbers or other paginated report properties (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  It's easy to add page numbers, a report title, file name, and other report properties to the page headers or footers of your paginated report. These properties are stored as fields in the Built-in Fields folder in the Report Data pane:  
   
 -   Execution time  
   

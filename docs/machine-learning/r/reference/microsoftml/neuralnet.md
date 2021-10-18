@@ -65,7 +65,7 @@ Creates a list containing the function name and arguments to train a
   
   
  ### `netDefinition`
- The Net# definition of the structure of the neural network. For more information about the Net# language, see   [`Reference Guide`](https://azure.microsoft.com/documentation/articles/machine-learning-azure-ml-netsharp-reference-guide/)  
+ The Net# definition of the structure of the neural network. For more information about the Net# language, see   [`Reference Guide`](/azure/machine-learning/classic/azure-ml-netsharp-reference-guide)  
   
   
   

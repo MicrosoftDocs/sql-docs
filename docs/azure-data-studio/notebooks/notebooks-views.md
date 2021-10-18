@@ -1,5 +1,5 @@
 ---
-title: Use Jupyter Notebooks Views
+title: Use Jupyter Notebooks views
 description: Learn how to use notebook views
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio

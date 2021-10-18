@@ -255,7 +255,7 @@ EXEC master.dbo.sp_addlinkedserver
 @provider   = N'MSOLEDBSQL',
 @datasrc    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433'
 ```  
-    
+
 With pass-through authentication, security context of local login is carried over to a remote instance.
 Pass-through authentication requires AAD principal to be added as login on both local and remote Azure SQL Managed Instance. Both Managed Instances need to be in a [Server Trust Group](https://docs.microsoft.com/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can login to local instance and to query remote instance via linked server object.
 

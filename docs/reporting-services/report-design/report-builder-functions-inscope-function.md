@@ -1,6 +1,6 @@
 ---
-title: "InScope Function (Report Builder) | Microsoft Docs"
-description: The InScope function indicates whether the current instance of an item is in the specified scope in Report Builder.
+title: "InScope function in a paginated report | Microsoft Docs"
+description: The InScope function in a paginated report indicates whether the current instance of an item is in the specified scope in Report Builder.
 ms.date: 03/08/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - InScope Function
-  Indicates whether the current instance of an item is in the specified scope.  
+# Report Builder functions - InScope function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Indicates whether the current instance of an item is in the specified scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

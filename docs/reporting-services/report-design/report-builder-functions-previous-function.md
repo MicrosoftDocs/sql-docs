@@ -1,6 +1,6 @@
 ---
-title: "Previous Function (Report Builder) | Microsoft Docs"
-description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item. 
+title: "Previous function in a paginated report | Microsoft Docs"
+description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item in a paginated report. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Previous Function
-  Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.  
+# Report Builder functions - Previous function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the value or the specified aggregate value for the previous instance of an item within the specified scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

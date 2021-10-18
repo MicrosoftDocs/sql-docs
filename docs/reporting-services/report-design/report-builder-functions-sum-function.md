@@ -1,6 +1,6 @@
 ---
-title: "Sum Function (Report Builder) | Microsoft Docs"
-description: The Sum function in Report Builder returns the sum of all the non-null numeric values specified by the expression.
+title: "Sum function in a paginated report | Microsoft Docs"
+description: The Sum function in Report Builder returns the sum of all the non-null numeric values in a paginated report specified by the expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Sum Function
-  Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.  
+# Report Builder functions - Sum function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -88,7 +88,7 @@ ms.author: maggies
   
 4.  On the design surface, click the series. The properties for the series are displayed in the Properties pane.  
   
-5.  In the **Data** section, expand the **DataPoint** node, then expand the **Label**node.  
+5.  In the **Data** section, expand the **DataPoint** node, then expand the **Label** node.  
   
 6.  Select a value for the Position property.  
   

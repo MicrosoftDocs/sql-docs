@@ -1,5 +1,5 @@
 ---
-title: "Displaying a series with multiple data ranges on a paginated report chart | Microsoft Docs"
+title: "Displaying a series with multiple data ranges on a paginated report chart | Microsoft Docs"
 description: Discover ways to improve readability of your paginated report charts using scale breaks, filters, and by separating the data ranges in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,7 +13,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Displaying a series with multiple data ranges on a paginated report chart (Report Builder)
+# Displaying a series with multiple data ranges on a paginated report chart (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

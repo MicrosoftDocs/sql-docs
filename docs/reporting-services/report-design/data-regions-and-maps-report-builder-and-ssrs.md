@@ -1,5 +1,5 @@
 ---
-title: "Data regions and maps in a paginated report | Microsoft Docs"
+title: "Data regions and maps in a paginated report | Microsoft Docs"
 description: Explore the types and characteristics of data regions and maps to design the display from your paginated report datasets in Report Builder.  
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,7 +14,7 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Data regions and maps in a paginated report (Report Builder)
+# Data regions and maps in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

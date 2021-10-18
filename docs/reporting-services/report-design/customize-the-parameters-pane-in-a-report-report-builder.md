@@ -1,6 +1,5 @@
 ---
-title: "Customize the Parameters pane in a paginated report | Microsoft Docs"
-
+title: "Customize the Parameters pane in a paginated report | Microsoft Docs"
 description: Learn how to customize the Parameters pane when creating paginated reports with parameters in Report Builder.
 ms.date: 06/15/2020
 ms.prod: reporting-services
@@ -12,8 +11,7 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Customize the Parameters pane in a paginated report (Report Builder)
-
+# Customize the parameters pane in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

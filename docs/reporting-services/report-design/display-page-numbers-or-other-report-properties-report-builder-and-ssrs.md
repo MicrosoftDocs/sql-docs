@@ -1,5 +1,5 @@
 ---
-title: "Display page numbers or other paginated report properties | Microsoft Docs"
+title: "Display page numbers or other paginated report properties | Microsoft Docs"
 description:  Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Display page numbers or other paginated report properties (Report Builder)
+# Display page numbers or other paginated report properties (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

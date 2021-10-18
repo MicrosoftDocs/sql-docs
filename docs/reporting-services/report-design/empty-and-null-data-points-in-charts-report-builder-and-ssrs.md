@@ -1,5 +1,5 @@
 ---
-title: "Empty and null data points in paginated report charts | Microsoft Docs"
+title: "Empty and null data points in paginated report charts | Microsoft Docs"
 description: Learn about paginated report chart processing for empty values, use of placeholders, and how empty and null data points display in Report Builder. 
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -13,7 +13,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Empty and null data points in paginated report charts (Report Builder)
+# Empty and null data points in paginated report charts (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

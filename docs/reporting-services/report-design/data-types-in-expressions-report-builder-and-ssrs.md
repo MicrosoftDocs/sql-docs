@@ -1,5 +1,5 @@
 ---
-title: "Data types in expressions in a paginated report | Microsoft Docs"
+title: "Data types in expressions in a paginated report | Microsoft Docs"
 description:  Explore how data types represent different kinds of data in a paginated report so that the data can be stored and processed in Report Builder. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Data types in expressions in a paginated report (Report Builder)
+# Data types in expressions in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

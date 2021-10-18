@@ -1,5 +1,5 @@
 ---
-title: "Custom code and assembly references in expressions in a paginated report in report designer | Microsoft Docs"
+title: "Custom code and assembly references in expressions in a paginated report in report designer | Microsoft Docs"
 description: Find out how to add references to custom code embedded in a paginated report. Build and save to your computer and deploy to the report server in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -21,7 +21,7 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Custom code and assembly references in expressions in a paginated report in report designer (Report Builder)
+# Custom code and assembly references in expressions in a paginated report in report designer (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

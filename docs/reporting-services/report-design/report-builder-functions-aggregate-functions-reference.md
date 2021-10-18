@@ -72,7 +72,7 @@ ms.author: maggies
 |Location in Report|Fields|Parameters|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Page Header<br /><br /> Page Footer|Yes|Yes|At most one<br /><br /> Note 1|Yes|Yes|Yes|Yes|  
-|Body|Yes<br /><br /> Note 2|Yes|Only items in the currnet scope or a containing scope<br /><br /> Note 3|No|Yes|Yes|Yes|  
+|Body|Yes<br /><br /> Note 2|Yes|Only items in the current scope or a containing scope<br /><br /> Note 3|No|Yes|Yes|Yes|  
 |Report Parameter|No|Only parameters earlier in the list<br /><br /> Note 4|No|No|No|No|No|  
 |Field|Yes|Yes|No|No|No|No|No|  
 |Query Parameter|No|Yes|No|No|No|No|No|  

@@ -126,6 +126,8 @@
     items:
     - name: Notebooks overview
       href: notebooks/notebooks-guidance.md
+    - name: Notebooks views
+      href: notebooks/notebooks-views.md
     - name: Use SQL Kernel
       href: notebooks/notebooks-sql-kernel.md
     - name: Use Python Kernel

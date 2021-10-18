@@ -44,7 +44,7 @@ From here, you can delete, resize, and move the cells from the view.
 - To move, select the cell and drag the cell to the desired location.
 - To run the cell only, select the cell to activate the cell, then select the **Run** button from the top menu (circle 1 of the screenshot).
 
-> ![Note]
+> [!Note]
 > If the cell in the notebook has dependencies on the previous cells, this might result in an error.
 
 ## Insert and run all cell views

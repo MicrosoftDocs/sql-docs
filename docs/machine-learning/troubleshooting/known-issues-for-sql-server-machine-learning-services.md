@@ -293,7 +293,7 @@ The reason is that an R function attempts to read the path, and fails if the bui
 
 If you have installed SQL Server to the default location, this error does not occur, because all Windows users have read permissions on the `Program Files` folder.
 
-This issue ia addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
+This issue is addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
 
 ### 2. Serialization error between old and new versions of RevoScaleR
 

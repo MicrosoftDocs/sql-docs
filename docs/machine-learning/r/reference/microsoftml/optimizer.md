@@ -130,7 +130,7 @@ Microsoft Corporation [`Microsoft Technical Support`](https://go.microsoft.com/f
 
  ## References
 
-[`ADADELTA: An Adaptive Learning Rate Method`](http://www.matthewzeiler.com/pubs/googleTR2012/googleTR2012.pdf)
+[`ADADELTA: An Adaptive Learning Rate Method`](https://arxiv.org/abs/1212.5701)
 
 
 

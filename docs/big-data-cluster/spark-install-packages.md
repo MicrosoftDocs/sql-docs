@@ -94,13 +94,6 @@ Import jar at runtime through Azure Data Studio notebook cell configuration.
 {"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
 ```
 
-### Import .jar at runtime through Azure Data Studio notebook cell configuration
-
-```python
-%%configure -f
-{"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
-```
-
 ## Next steps
 
 For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

@@ -67,7 +67,7 @@ Finally, pass the `olapCnn` and query into either `executeMD` or `execute2D` to 
 > **olapR** requires the Analysis Services OLE DB provider. If you do not have SQL Server Analysis Services installed on your computer, download the provider from Microsoft:
 >[Data providers used for Analysis Services connections](/analysis-services/client-libraries)
 >
->The exact version you should install for SQL Server 2016 is [here](https://download.microsoft.com/download/8/7/2/872BCECA-C849-4B40-8EBE-21D48CDF1456/ENU/x64/SQL_AS_OLEDB.msi).
+>The exact version you should install for SQL Server 2016 is [here](https://download.microsoft.com/download/9/2/B/92BAD988-00C5-4F68-811E-B7FFBE009B00/SQLServer2016SP2-KB4052908-x64-ENU.exe).
 >
 
 ## Function list

@@ -36,7 +36,7 @@ This topic is a high-level description of package functionality. These classes a
 | Package details | Information |
 |--------|-|
 | Current version: |  1.0.1b7 |
-| Built on: | [Anaconda](https://www.continuum.io/why-anaconda) distribution of [Python 3.5](https://www.python.org/doc) |
+| Built on: | [Anaconda](https://www.anaconda.com/) distribution of [Python 3.5](https://www.python.org/doc) |
 | Package distribution: | [Machine Learning Server 9.x](/machine-learning-server/what-is-machine-learning-server) </br>[SQL Server 2017 Machine Learning Server (Standalone)](../../../r/r-server-standalone.md) |
 
 

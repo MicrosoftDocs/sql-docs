@@ -41,8 +41,6 @@ SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need 
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.32.0. |
 | Analysis Services | Update BITools to 150.19714.0 |
-| Azure Synapse | Support for db@pool connectivity syntax |
-| Azure Synapse | Support for Gen3 Synapse Pool connections |
 | DacFx | Update DacFx to 15.0.5282.3 |
 | Import Flat File | Support for rich data types in Import Flat File wizard, including money. |
 | Replication | Support for peer to peer publication with [Last Writer Win (LWW) conflict detection](../relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md) |

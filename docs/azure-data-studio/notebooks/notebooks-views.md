@@ -19,7 +19,7 @@ One notebook can have multiple views and work for any kernel.
 
 Notebook Views is now available in [Azure Data Studio](../download-azure-data-studio.md), starting with the October 2021 release (1.33.0).
 
-## Getting Started
+## Get started
 
 1. Enable Notebook Views from Settings.
 
@@ -54,7 +54,7 @@ From here, you can delete, resize, and move the cells from the view.
 - To add new cells, select the **Insert Cells** button on the top right of the Editor view.
 - To refresh the view, select **Run All**. This runs all the cells in the notebook, in the background, even if they aren't on the view itself.
 
-## Managing views
+## Manage views
 
 :::image type="content" source="media/notebooks-views/notebooks-views-manage-views.png" alt-text="manage views":::
 

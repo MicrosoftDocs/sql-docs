@@ -23,7 +23,8 @@ ms.author: maggies
   
 -   **What format do you want the report to appear in?**  
   
-     You can render reports online in a browser such as the Report Builder web portal or export them to other formats such as Excel, Word, or PDF. The final form your report takes is an important consideration because not all features are available in all export formats. For more information, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     You can render reports online in a browser such as the web portal or Power BI service, or export them to other formats such as Excel, Word, or PDF. The final form your report takes is an important consideration because not all features are available in all export formats. For more information, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+
   
 -   **What structure do you want to use to present the data in the report?**  
   

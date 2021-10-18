@@ -102,7 +102,7 @@ Azure SQL Managed Instance linked servers beside SQL authentication, also suppor
 ### Limitations of Azure AD authentication
 - Azure AD authentication is not supported for Managed Instances in different Azure AD tenants.
 - Azure AD authentication for linked servers is supported only with OLE DB driver version 18.2.1 and higher.
-- Azure AD authentication for linked servers from Managed Instance to SQL Server is supported for mapped local logins only. Propagating security context is not supported. That means that managed identity authenticaiton is supported, while pass-through authentication mode is not supported.
+- Azure AD authentication for linked servers from Managed Instance to SQL Server is supported for mapped local logins only. Propagating security context is not supported. That means that managed identity authenticaiton is supported, while pass-through authentication is not supported.
 
 ## Related Tasks  
  [Create Linked Servers &#40;SQL Server Database Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    

@@ -1,5 +1,5 @@
 ---
-title: "Change indicator icons and indicator sets in a paginated report | Microsoft Docs"
+title: "Change indicator icons and indicator sets in a paginated report | Microsoft Docs"
 description: Learn how to change the indicator icons and sets in a paginated report to include different, more, or fewer indicator icons enabling you to depict data better in Report Builder.  
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Change indicator icons and indicator sets in a paginated report (Report Builder)
+# Change indicator icons and indicator sets in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

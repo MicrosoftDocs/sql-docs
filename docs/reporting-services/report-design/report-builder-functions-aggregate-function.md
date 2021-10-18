@@ -33,7 +33,7 @@ Aggregate(expression, scope)
  The expression on which to perform the aggregation. The expression must be a simple field reference.  
   
  *scope*  
- (**String**) The name of a dataset, group, or data region that contains the report items to which to apply the aggregate function. *Scope* must be a string constant andcannot be an expression. If *scope* is not specified, the current scope is used.  
+ (**String**) The name of a dataset, group, or data region that contains the report items to which to apply the aggregate function. *Scope* must be a string constant and cannot be an expression. If *scope* is not specified, the current scope is used.  
   
 ## Return Type  
  Return type is determined by the data provider. Returns **Nothing** if the data provider does not support this function or data is not available.  

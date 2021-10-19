@@ -2,7 +2,7 @@
 title: "Hybrid Buffer Pool | Microsoft Docs"
 description: See how Hybrid Buffer Pool makes persistent memory devices accessible via the memory bus. Turn this SQL Server 2019 feature on or off, and view best practices.
 ms.custom: ""
-ms.date: 10/31/2019
+ms.date: 10/19/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -89,7 +89,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## Best Practices for hybrid buffer pool
 
- - When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
+ - When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019 and later) and ensure the device has been formatted for DAX (Direct Access).
 
  - Use [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 

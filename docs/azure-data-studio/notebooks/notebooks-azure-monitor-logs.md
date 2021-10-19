@@ -42,7 +42,8 @@ Let's do a simple query first to analyze the number of events by Operation Name.
 > [!Note]
 > Each row in AzureDiagnostic represents an event for specific Operation or category. Some SQL actions may result in generating multiple events of different types.
 
-`AzureDiagnostics | summarize count() by OperationName`
+AzureDiagnostics
+| summarize count() by OperationName
 
 The above query's equivalent in SQL is:
 
@@ -54,13 +55,20 @@ GROUP BY OperationName
 
 Count my Azure SQL DB events by category / diagnostic settings.
 
-`AzureDiagnostics | where LogicalServerName_s == "jukoesmasqldb" // | where TimeGenerated >= ago(5d) | summarize count() by Category`
+AzureDiagnostics
+| where LogicalServerName_s == "jukoesmasqldb" //
+| where TimeGenerated >= ago(5d) | summarize count() by Category
 
 ## 3. Performance troubleshooting Query (from Azure Portal)
 
 Potentially a query or deadlock on the system that could lead to poor performance. The following is a query suggested by Azure Portal.
 
-`AzureMetrics | where ResourceProvider == "MICROSOFT.SQL" | where TimeGenerated >=ago(12d) | where MetricName in ('deadlock') | parse _ResourceId with * "/microsoft.sql/servers/" Resource // subtract Resource name for _ResourceId | summarize Deadlock_max_60Mins = max(Maximum) by Resource, MetricName`
+AzureMetrics
+| where ResourceProvider == "MICROSOFT.SQL"
+| where TimeGenerated >=ago(12d)
+| where MetricName in ('deadlock')
+| parse _ResourceId with * "/microsoft.sql/servers/" Resource // subtract Resource name for _ResourceId
+| summarize Deadlock_max_60Mins = max(Maximum) by Resource, MetricName`
 
 # Azure Metrics
 
@@ -72,27 +80,42 @@ This is a sample query to dig into AzureMetrics
 
 This is a sample query to dig into AzureDiagnostics. This table tends to have more details than AzureMetrics.
 
-`AzureDiagnostics | project-away TenantId, ResourceId, SubscriptionId, ResourceGroup, _ResourceId // Hide sensitive columns :) | project TimeGenerated, Category, OperationName | take 10`
+AzureDiagnostics
+| project-away TenantId, ResourceId, SubscriptionId, ResourceGroup, _ResourceId // Hide sensitive columns :)
+| project TimeGenerated, Category, OperationName
+| take 10
 
-`AzureDiagnostics | make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m | render timechart`
+AzureDiagnostics
+| make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m
+| render timechart
 
 ## Deadlock Analysis
 
-`AzureDiagnostics | where OperationName == "DeadlockEvent" | project TimeGenerated, Category, Resource, OperationName, Type, deadlock_xml_s | sort by TimeGenerated desc | take 50`
+AzureDiagnostics
+| where OperationName == "DeadlockEvent"
+| project TimeGenerated, Category, Resource, OperationName, Type, deadlock_xml_s
+| sort by TimeGenerated desc | take 50
 
 Find the deadlock query plan
 
-`AzureDiagnostics | where OperationName == "DeadlockEvent" | extend d = parse_xml(deadlock_xml_s) | project TimeGenerated, QueryPlanHash = d.deadlock.["process-list"].process[0].executionStack.frame[0]["@queryplanhash"], QueryHash = d.deadlock.["process-list"].process[0].executionStack.frame[0]["@queryhash"] | take 50`
+AzureDiagnostics
+| where OperationName == "DeadlockEvent"
+| extend d = parse_xml(deadlock_xml_s)
+| project TimeGenerated, QueryPlanHash = d.deadlock.["process-list"].process[0].executionStack.frame[0]["@queryplanhash"],QueryHash = d.deadlock.["process-list"].process[0].executionStack.frame[0]["@queryhash"]
+| take 50
 
 ## Query Store Runtime Statistics Events
 
-`AzureDiagnostics | where OperationName == "QueryStoreRuntimeStatisticsEvent" | project TimeGenerated, query_hash_s statement_sql_handle_s query_plan_hash_s | take 10`
+AzureDiagnostics
+| where OperationName == "QueryStoreRuntimeStatisticsEvent"
+| project TimeGenerated, query_hash_s statement_sql_handle_s query_plan_hash_s
+| take 10
 
 ## Analyze Errors
 
 AzureDiagnostics
 | where OperationName == "ErrorEvent"
-| extend ErrorNumber =  tostring(error_number_d) 
+| extend ErrorNumber = tostring(error_number_d) 
 | summarize event_count=count() by EventTime = bin(TimeGenerated, 2d),  ErrorNumber
 | evaluate pivot(ErrorNumber, sum(event_count))
 | sort by EventTime asc

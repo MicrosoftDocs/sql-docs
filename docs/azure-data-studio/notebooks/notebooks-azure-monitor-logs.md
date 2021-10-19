@@ -30,7 +30,7 @@ Go to the Extension viewlet and type in Azure Monitor Logs. Install it and resta
 
 ### 1.2 Connect to the desired Azure Monitor Logs workspace
 
-Change the Kernel to "Log Analytics." Set Attach to a new or existing connection to the workspace. Note: you will need a workspace Id that you can obtain from the Azure portal.
+Change the Kernel to "Log Analytics." Set Attach to a new or existing connection to the workspace. Note: you will need a workspace ID that you can obtain from the Azure portal.
 
 > [!Note]
 > The name of the kernel is subject to change.
@@ -60,9 +60,9 @@ AzureDiagnostics
 // | where TimeGenerated >= ago(5d)
 | summarize count() by Category
 
-## 3. Performance troubleshooting Query (from Azure Portal)
+## 3. Performance troubleshooting Query (from Azure portal)
 
-Potentially a query or deadlock on the system that could lead to poor performance. The following is a query suggested by Azure Portal.
+Potentially a query or deadlock on the system that could lead to poor performance. The following is a query suggested by Azure portal.
 
 AzureMetrics
 | where ResourceProvider == "MICROSOFT.SQL"

@@ -20,7 +20,7 @@ By default, Microsoft SQL Server collects information about how its customers ar
 Specifically, Microsoft does not send any of the following types of information through this mechanism:
 - Any values from inside user tables
 - Any logon credentials or other authentication information
-- Personally Identifiable Information (PII)
+- Personal information
 
 The following sample scenario includes feature usage information that helps improve the product.
 

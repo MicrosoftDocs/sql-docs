@@ -22,9 +22,9 @@ Hybrid Buffer Pool enables buffer pool objects to reference data pages in databa
 
 Persistent memory (PMEM) devices are byte-addressable and if a direct access (DAX) persistent-memory aware file system (such as XFS, EXT4, or NTFS) is used, files on the file system can be accessed using the usual file system APIs in the OS. Alternatively, it can perform what is known as load and store operations against memory maps of the files on the device. This allows PMEM aware applications such as SQL Server to access files on the device without traversing the traditional storage stack.
 
-The hybrid buffer pool uses this ability to perform load and store operations against memory mapped files, to leverage the PMEM device as cache for the buffer pool as well as storing database files. This creates the unique situation where both a logical read and a physical read are essentially the same operation. Persistent memory devices are accessible via the memory bus just like regular volatile DRAM.
+The hybrid buffer pool uses this ability to perform load and store operations against memory mapped files, to leverage the PMEM device as cache for the buffer pool and storing database files. This creates the unique situation where both a logical read and a physical read are essentially the same operation. Persistent memory devices are accessible via the memory bus just like regular volatile DRAM.
 
-Only clean data pages are cached on the device for the Hybrid Buffer Pool. When a page is marked as dirty, it is copied to the DRAM buffer pool before eventually being written back to the PMEM device and marked as clean again. This will occur during regular checkpoint operations in a manner similar to that performed against a standard block device.
+Only clean data pages are cached on the device for the hybrid buffer pool. When a page is marked as dirty, it is copied to the DRAM buffer pool before eventually being written back to the PMEM device and marked as clean again. This page maintenance will occur during regular checkpoint operations in a manner similar to that performed against a standard block device.
 
 The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). XFS, EXT4, and NTFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping of database files upon startup, when a new database is attached, restored, or created.
 
@@ -62,7 +62,7 @@ The following example disables hybrid buffer pool at the instance level:
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-By default, hybrid buffer pool is disabled at the instance level. In order for this change to take effect, the instance must be restarted. This ensures enough hash pages are allocated for the buffer pool, as PMEM capacity on the server now needs to be accounted for.
+By default, hybrid buffer pool is disabled at the instance level. In order for this change to take effect, the instance must be restarted. The restart ensures enough hash pages are allocated for the buffer pool, as PMEM capacity on the server now needs to be accounted for.
 
 The following example disables hybrid buffer pool for a specific database.
 

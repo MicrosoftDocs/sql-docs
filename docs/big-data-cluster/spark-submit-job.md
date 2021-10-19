@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Submit Spark jobs on SQL Server big data cluster in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.topic: conceptual

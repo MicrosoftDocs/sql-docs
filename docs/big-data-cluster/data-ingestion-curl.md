@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Use curl to load data into HDFS on SQL Server 2019 big data cluster.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab 
+ms.reviewer: wiassaf
 ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql

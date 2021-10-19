@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Cluster
 description: Learn how to deploy a SQL Server Big Data Clusters with Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql

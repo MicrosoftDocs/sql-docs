@@ -2,9 +2,9 @@
 title: AD mode login fails - untrusted domain
 titleSuffix: SQL Server Big Data Cluster
 description: Fix behavior - clients fail to Authenticate when endpoints DNS entries are configures as CNAME pointing to an alias name.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
 ms.date: 05/01/2020
 ms.topic: how-to
 ms.prod: sql
@@ -95,7 +95,7 @@ Capturing on 'Ethernet 3'
 2 packets captured
 ```
 
-Notice the client requests `SPN MSSQLSvc,ReverseProxyServer.mydomain.com:31433` which doesn’t exist. The connection attempt eventually fails with error 7. Error 7 means `KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN Server not found in Kerberos database`.
+Notice the client requests `SPN MSSQLSvc,ReverseProxyServer.mydomain.com:31433` which doesn't exist. The connection attempt eventually fails with error 7. Error 7 means `KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN Server not found in Kerberos database`.
 
 In the correct configuration, the client requests the SPN registered by BDC. In the example, the correct SPN would have been `MSSQLSvc,bdc-sql.mydomain.com:31433`.
 

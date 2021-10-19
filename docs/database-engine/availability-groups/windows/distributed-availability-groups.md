@@ -77,7 +77,7 @@ Because there are two separate availability groups, the process of installing a 
 
 ### Windows Server versions and distributed availability groups
 
-A distributed availability group spans multiple availability groups, each on its own underlying WSFCer, and a distributed availability group is a SQL Server-only construct.  This means the WSFCs that house the individual availability groups can have different major versions of Windows Server. The major versions of SQL Server must be the same, as discussed in the previous section. Much like the initial figure, the following figure shows AG 1 and AG 2 participating in a distributed availability group, but each of the WSFCs is a different version of Windows Server.
+A distributed availability group spans multiple availability groups, each on its own underlying WSFC, and a distributed availability group is a SQL Server-only construct.  This means the WSFCs that house the individual availability groups can have different major versions of Windows Server. The major versions of SQL Server must be the same, as discussed in the previous section. Much like the initial figure, the following figure shows AG 1 and AG 2 participating in a distributed availability group, but each of the WSFCs is a different version of Windows Server.
 
 
 ![Distributed availability groups with WSFCs having different versions of Windows Server](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)

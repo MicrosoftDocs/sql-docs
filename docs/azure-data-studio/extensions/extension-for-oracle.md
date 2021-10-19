@@ -30,6 +30,10 @@ If you don't already have Azure Data Studio installed, see its [installation ins
 2. Type _"Oracle"_ into the search bar on the Extensions Marketplace and select the **Extension for Oracle**.
 3. Click **Install** to install the extension.
 
+## Copyright notice
+
+Oracle, Java, and MySQL are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.
+
 ## Next steps
 
 Learn how to connect to and explore [Oracle database objects from Azure Data Studio](../quickstart-oracle.md).

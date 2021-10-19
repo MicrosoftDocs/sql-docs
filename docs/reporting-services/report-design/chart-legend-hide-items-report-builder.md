@@ -1,5 +1,5 @@
 ---
-title: "Hide legend items on the paginated report chart | Microsoft Docs"
+title: "Hide legend items on the paginated report chart | Microsoft Docs"
 description: Discover how to choose paginated report items that appear on the legend to display the essential data in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Chart legend - hide items (Report Builder)
+# Chart legend - hide items in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

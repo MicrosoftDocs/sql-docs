@@ -89,7 +89,7 @@ Returns an error if the Query is invalid.
 ## References
 
 Creating a Demo OLAP Cube (the same as the one used in the examples): 
-[`https://msdn.microsoft.com/library/ms170208.aspx`](https://msdn.microsoft.com/library/ms170208.aspx)
+[`https://docs.microsoft.com/en-us/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial`](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
 
 
@@ -119,4 +119,3 @@ Creating a Demo OLAP Cube (the same as the one used in the examples):
 
   result2 <- executeMD(olapCnn, mdx)
 ```
-

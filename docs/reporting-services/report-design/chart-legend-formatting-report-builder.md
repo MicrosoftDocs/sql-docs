@@ -1,5 +1,5 @@
 ---
-title: "Formatting the legend on a paginated report chart | Microsoft Docs"
+title: "Formatting the legend on a paginated report chart | Microsoft Docs"
 description: Learn how to format a legend on a paginated report chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -29,7 +29,7 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Chart legend - formatting the legend on a paginated report chart (Report Builder)
+# Chart legend - formatting the legend on a paginated report chart (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

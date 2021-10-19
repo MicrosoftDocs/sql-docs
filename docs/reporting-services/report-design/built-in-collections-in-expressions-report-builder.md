@@ -1,5 +1,5 @@
 ---
-title: "Built-in collections in expressions in a paginated report | Microsoft Docs"
+title: "Built-in collections in expressions in a paginated report | Microsoft Docs"
 description: Discover built-in collections in expressions to reference collections in a paginated report such as parameters, fields, datasets in your reports in Report Builder. 
 ms.date: 3/14/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Built-in collections in expressions in a paginated report (Report Builder)
+# Built-in collections in expressions in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

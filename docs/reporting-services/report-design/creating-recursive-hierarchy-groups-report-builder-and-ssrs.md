@@ -1,5 +1,5 @@
 ---
-title: "Creating recursive hierarchy groups in a paginated report | Microsoft Docs"
+title: "Creating recursive hierarchy groups in a paginated report | Microsoft Docs"
 description: Discover uses for recursive hierarchy groups in a paginated report in Report Builder. Display hierarchical data such as employees in an organizational chart. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Creating recursive hierarchy groups in a paginated report (Report Builder)
+# Creating recursive hierarchy groups in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: "Collect small slices on a paginated report pie chart | Microsoft Docs"
+title: "Collect small slices on a paginated report pie chart | Microsoft Docs"
 description: Learn about collecting many small slices in a pie chart into one single slice in Report Builder paginated reports. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Collect small slices on a paginated report pie chart (Report Builder)
+# Collect small slices on a paginated report pie chart (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

@@ -20,11 +20,11 @@ By default, Microsoft SQL Server collects information about how its customers ar
 Specifically, Microsoft does not send any of the following types of information through this mechanism:
 - Any values from inside user tables
 - Any logon credentials or other authentication information
-- Personally Identifiable Information (PII)
+- Personal information
 
 The following sample scenario includes feature usage information that helps improve the product.
 
-SQL Server 2017 supports ColumnStore indexes to enable fast analytics scenarios. ColumnStore indexes combine a traditional "B-tree" index structure for newly inserted data with a special column-oriented compressed structure to compress data and speed query execution. The product contains heuristics to migrate data from the B-tree structure to the compressed structure in the background, thereby speeding up future query results.
+SQL Server 2017 supports columnstore indexes to enable fast analytics scenarios. Columnstore indexes combine a traditional "B-tree" index structure for newly inserted data with a special column-oriented compressed structure to compress data and speed query execution. The product contains heuristics to migrate data from the B-tree structure to the compressed structure in the background, thereby speeding up future query results.
 
 If the background operation does not keep pace with the rate at which data is inserted, query performance may be slower than expected. To improve the product, Microsoft collects information about how well SQL Server is keeping up with the automatic data compression process. The product team uses this information to fine-tune the frequency and parallelism of the code that performs compression. This query is run occasionally to collect this information so that we (Microsoft) can evaluate the data movement rate. This helps us optimize the product heuristics.  
 
@@ -41,7 +41,7 @@ AND instance_name = '_Total'
 ```
 
 Be aware that this process focuses on the necessary mechanisms for delivering value to customers. The product team does not look at the data in the index or send that data to Microsoft. 
-SQL Server 2017 always collects and sends information about the installation experience from the setup process so that we can quickly find and fix any installation problems that the customer is experiencing. SQL Server 2017 can be configured not to send information (on a per-server instance basis) to Microsoft through the following mechanisms:
+SQL Server always collects and sends information about the installation experience from the setup process so that we can quickly find and fix any installation problems that the customer is experiencing. SQL Server 2017 and later can be configured not to send information (on a per-server instance basis) to Microsoft through the following mechanisms:
 - By using the Error and Usage Reporting application
 - By setting registry subkeys on the server
 
@@ -65,7 +65,7 @@ After setup, the usage and diagnostic data collection setting for SQL Server com
 > 
 > The Error and Usage Reporting application is not included in the SQL Server Reporting Services 2017 and later setup. The only mechanism available to configure sending information to Microsoft is by setting registry subkeys on the server.
 
-To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage and diagnostic data as well as serious errors that are collected for instances and components that are installed on that computer.
+To start SQL Server Error and Usage Reporting, select **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage and diagnostic data as well as serious errors that are collected for instances and components that are installed on that computer.
 
 For paid versions, use the "Usage Reports" check boxes to manage sending usage and diagnostic data to Microsoft.
 
@@ -111,7 +111,7 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
 ## Set registry subkeys for crash dump collection
 
-Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Enterprise customers can configure Group Policy settings on the server to opt in or out of crash dump collection. This is done by configuring a registry-based policy. The relevant registry subkeys and settings are as follows: 
+Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 and later Enterprise edition customers can configure Group Policy settings on the server to opt in or out of crash dump collection. This is done by configuring a registry-based policy. The relevant registry subkeys and settings are as follows: 
 
 - For SQL Server instance features:
 
@@ -145,23 +145,22 @@ Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Ent
 > [!NOTE]
 > {Major Version} refers to the version of SQL Server. For example, "140" refers to SQL Server 2017.
 
-Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 crash dump collection. 
+Registry-based Group Policy on these registry subkeys is honored by SQL Server crash dump collection. 
 
 ## Crash dump collection for SSMS
-SSMS doesn't collect its own crash dump. Any crash dump that's related to SSMS is collected as part of Windows Error Reporting.
+SQL Server Management Studio (SSMS) doesn't collect its own crash dump. Any crash dump that's related to SSMS is collected as part of Windows Error Reporting.
 
 The procedure to turn this feature on or off is dependent on the OS version. To turn the feature on or off, follow the steps in the appropriate article for your Windows version.
  
-- Windows Server 2016 and Windows 10
-
+- Windows Server 2016 and later, and Windows 10 and later
     [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
-- Windows Server 2008 R2 and Windows 7
 
+- Windows Server 2008 R2 and Windows 7
     [WER Settings](/windows/desktop/wer/wer-settings)
  
 ## Feedback for Analysis Services
 
-During installation, SQL Server 2016 Analysis Services adds a special account to your Analysis Services instance. This account is a member of the Analysis Services Server Admin role. The account is used to collect information for feedback from the Analysis Services instance.  
+During installation, SQL Server 2016 and later Analysis Services adds a special account to your Analysis Services instance. This account is a member of the Analysis Services Server Admin role. The account is used to collect information for feedback from the Analysis Services instance.  
 
 You can configure your service not to send usage and diagnostic data, as described in the "Set registry subkeys on the server" section. However, doing this does not remove the service account. 
  

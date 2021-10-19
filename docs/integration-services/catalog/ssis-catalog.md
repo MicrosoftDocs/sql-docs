@@ -594,8 +594,6 @@ Do the following prerequisite steps before enabling Always On support for the SS
 > -   You must perform these steps on the **primary node** of the availability group.
 > -   You must enable **SSIS support for Always On** *after* you add SSISDB to an Always On Availability Group.  
 
-> [!NOTE]
-> For more info about this procedure, see the following walkthrough with additional screen shots by Data Platform MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> Step 1: Create Integration Services Catalog  
   

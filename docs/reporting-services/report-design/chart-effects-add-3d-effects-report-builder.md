@@ -1,5 +1,5 @@
 ---
-title: "Add 3D effects to a paginated report chart | Microsoft Docs"
+title: "Add 3D effects to a paginated report chart | Microsoft Docs"
 description: Provide depth and add visual impact to charts in your paginated report with three-dimensional effects in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Chart effects - add 3D effects to a paginated report chart  (Report Builder)
+# Chart effects - add 3D effects to a paginated report chart  (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

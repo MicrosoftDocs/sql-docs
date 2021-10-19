@@ -1,0 +1,79 @@
+---
+title: Notebooks with Azure Monitor Logs in Azure Data Studio
+description: This tutorial shows how you can create and run a notebook with Azure Monitor Logs.
+ms.topic: how-to
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu
+ms.custom: 
+ms.date: 10/19/2021
+---
+
+# Create and run a notebook with Azure Monitor Logs
+
+Once Azure Monitor Logs (Preview) extension installed in Azure Data Studio Insiders build, you can connect to your Azure Monitor Log workspace(s), browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
+
+There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events:
+
+1. AzureDiagnostics
+2. AzureMetric
+
+## 1. Connect to a Azure Monitor Logs (Log Analytics) workspace
+
+Workspace is similar to what a database is to SQL. You connect to Log Analytics workspace to start querying data.
+
+### 1.1 Install Azure Monitor Logs extension first
+
+Go to the Extension viewlet and type in Azure Monitor Logs. Install it and restart Azure Data Studio.
+
+### 1.2 Connect to the desired Azure Monitor Logs workspace
+
+Change the Kernel to "Log Analytics". Set Attach to to a new or existing connection to the workspace. Note: you will need a workspace Id that you can obtain from Azure portal.
+
+> [!Note]
+> The name of the kernel is subject to change.
+
+## 2. Analyze events by Diagnostic Settings
+
+Let's do a simple query first to analyze the number of events by Operation Name.
+
+> [!Note]
+> Each row in AzureDiagnostic represents an event for specific Operation or category. Some SQL actions may result in generating multiple events of different types.
+
+`AzureDiagnostics | summarize count() by OperationName`
+
+The above query's equivalent in SQL is:
+
+```sql
+SELECT OperationName, COUNT(*) AS [count_]
+FROM AzureDiagnostics
+GROUP BY OperationName
+```
+
+Count my Azure SQL DB events by category / diagnostic settings.
+
+`AzureDiagnostics | where LogicalServerName_s == "jukoesmasqldb" // | where TimeGenerated >= ago(5d) | summarize count() by Category`
+
+## 3. Performance troubleshooting Query (from Azure Portal)
+
+Potentially a query or deadlock on the system that could lead to poor performance. The following is a query suggested by Azure Portal.
+
+`AzureMetrics | where ResourceProvider == "MICROSOFT.SQL" | where TimeGenerated >=ago(12d) | where MetricName in ('deadlock') | parse _ResourceId with * "/microsoft.sql/servers/" Resource // subtract Resource name for _ResourceId | summarize Deadlock_max_60Mins = max(Maximum) by Resource, MetricName`
+
+# Azure Metrics
+
+This is a sample query to dig into AzureMetrics
+
+`AzureMetrics`
+
+# Azure Diagnostics
+
+This is a sample query to dig into AzureDiagnostics. This table tends to have more details than AzureMetrics.
+
+`AzureDiagnostics | project-away TenantId, ResourceId, SubscriptionId, ResourceGroup, _ResourceId // Hide sensitive columns :) | project TimeGenerated, Category, OperationName | take 10`
+
+`AzureDiagnostics | make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m | render timechart`
+
+`AzureDiagnostics | make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m | render timechart`

@@ -76,4 +76,30 @@ This is a sample query to dig into AzureDiagnostics. This table tends to have mo
 
 `AzureDiagnostics | make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m | render timechart`
 
-`AzureDiagnostics | make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m | render timechart`
+## Deadlock Analysis
+
+`AzureDiagnostics | where OperationName == "DeadlockEvent" | project TimeGenerated, Category, Resource, OperationName, Type, deadlock_xml_s | sort by TimeGenerated desc | take 50`
+
+Find the deadlock query plan
+
+`AzureDiagnostics | where OperationName == "DeadlockEvent" | extend d = parse_xml(deadlock_xml_s) | project TimeGenerated, QueryPlanHash = d.deadlock.["process-list"].process[0].executionStack.frame[0]["@queryplanhash"], QueryHash = d.deadlock.["process-list"].process[0].executionStack.frame[0]["@queryhash"] | take 50`
+
+## Query Store Runtime Statistics Events
+
+`AzureDiagnostics | where OperationName == "QueryStoreRuntimeStatisticsEvent" | project TimeGenerated, query_hash_s statement_sql_handle_s query_plan_hash_s | take 10`
+
+## Analyze Errors
+
+AzureDiagnostics
+| where OperationName == "ErrorEvent"
+| extend ErrorNumber =  tostring(error_number_d) 
+| summarize event_count=count() by EventTime = bin(TimeGenerated, 2d),  ErrorNumber
+| evaluate pivot(ErrorNumber, sum(event_count))
+| sort by EventTime asc
+
+AzureDiagnostics
+| where action_name_s in ('BATCH COMPLETED')
+| project TimeGenerated, Category, action_name_s, statement_s
+| where statement_s contains "DROP TABLE"
+| sort by TimeGenerated desc
+| take 10

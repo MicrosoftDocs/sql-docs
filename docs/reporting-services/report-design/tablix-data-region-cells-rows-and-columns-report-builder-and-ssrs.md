@@ -1,6 +1,6 @@
 ---
-title: "Cells, Rows, & Columns in a Tablix | Microsoft Docs"
-description: Understand how to specify rows and columns for data, labels, and totals, enabling you to control the display in a SQL Server report. 
+title: "Cells, rows, & columns in a tablix in a paginated report | Microsoft Docs"
+description: Understand how to specify rows and columns in a paginated report for data, labels, and totals, enabling you to control the display in a SQL Server report. 
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,9 +17,11 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Cells, Rows, & Columns in a Tablix Data Region (Report Builder) and SSRS
+# Cells, rows, & columns in a tablix in a paginated report (Report Builder)
 
-  To control how the rows and columns of a tablix data region display data in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you must understand how to specify rows and columns for detail data, for group data, and for labels and totals. In many cases, you can use the default structures for a table, matrix, or list to display your data. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Matrixes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), or [Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  To control how the rows and columns of a tablix data region display data in a paginated report, you must understand how to specify rows and columns for detail data, for group data, and for labels and totals. In many cases, you can use the default structures for a table, matrix, or list to display your data. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Matrixes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), or [Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
   
  A tablix data region displays detail data on detail rows and detail columns and grouped data on group rows and group columns. When you add row groups and column groups to a tablix data region, rows and columns on which to display the data are automatically added. You can manually add and remove rows and columns to customize a tablix data region and control the way your data displays in the report.  
   

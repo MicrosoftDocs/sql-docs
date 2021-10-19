@@ -53,8 +53,8 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Added <LINK> tag in PDF's exported with accessible PDF enabled on textboxs with 'Go to URL' actions.  | &nbsp; |
-| Added <UL> and <LI> tags in PDF's exported with accessible PDF enabled for textbox Lists | &nbsp; |
+| Added `<LINK>` tag in PDFs exported with accessible PDF enabled on textboxs with 'Go to URL' actions.  | &nbsp; |
+| Added `<UL>` and `<LI>` tags in PDFs exported with accessible PDF enabled for textbox Lists | &nbsp; |
 | Fixed an issue with date parameters in Oracle based reports failing with "ORA-01008: not all variables bound"  | &nbsp; |
 
 ## 15.0.7842.32355, 2021/06/24 

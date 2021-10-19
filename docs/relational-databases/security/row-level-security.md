@@ -253,7 +253,7 @@ Allow SELECT permissions to the fn_securitypredicate function
 ```sql
 GRANT SELECT ON Security.tvf_securitypredicate TO Manager;  
 GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
-GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep2;  
 
 ```
 

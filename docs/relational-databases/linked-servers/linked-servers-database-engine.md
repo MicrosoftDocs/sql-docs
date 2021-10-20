@@ -76,7 +76,7 @@ Typically, linked servers are used to handle distributed queries. When a client 
 ## Managing Providers  
 There is a set of options that control how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] loads and uses OLE DB providers that are specified in the registry.  
   
-## Managing Linked Server Definitions  
+## Managing linked server definitions
 When you are setting up a linked server, register the connection information and data source information with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After being registered, that data source can be referred to with a single logical name.  
   
 You can use stored procedures and catalog views to manage linked server definitions:  
@@ -94,17 +94,21 @@ You can also define linked servers by using [!INCLUDE[ssManStudioFull](../../inc
 > [!NOTE]  
 > Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.  
   
-## Linked Server authentication
-Azure SQL Managed Instance Linked Servers beside SQL authentication, also support Azure AD (AAD) authentication. Two supported AAD authentication modes are: Managed Identity and pass-through. Managed identity authentication can be used to allow local logins to query remote linked servers. Pass-through authentication allows a principal that can athenticate with local instance and to access to remote instance via linked server. Prerequisites for pass-through authentication are that the same principal is added as login on the remote server and that both instances are members of the [SQL trust group](https://docs.microsoft.com/azure/azure-sql/managed-instance/server-trust-group-overview).
+## Linked server authentication
+
+Azure SQL Managed Instance linked servers support both SQL authentication, and Azure AD (AAD) authentication. Two supported AAD authentication modes are: Managed identity and pass-through. Managed identity authentication can be used to allow local logins to query remote linked servers. Pass-through authentication allows a principal that can authenticate with a local instance to access a remote instance via linked server. Prerequisites for pass-through authentication are that the same principal is added as a login on the remote server and that both instances are members of the [SQL trust group](/azure/azure-sql/managed-instance/server-trust-group-overview).
+
 > [!NOTE]  
-> Note: Existing definitions of linked servers that were configured for pass-through mode will support Azure AD authentication. The only requirement for this would be to add Managed Instances to [Server Trust Group](https://docs.microsoft.com/azure/azure-sql/managed-instance/server-trust-group-overview).
+> Existing definitions of linked servers that were configured for pass-through mode will support Azure AD authentication. The only requirement for this would be to add Managed Instances to [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview).
 
 ### Limitations of Azure AD authentication
+
 - Azure AD authentication is not supported for Managed Instances in different Azure AD tenants.
 - Azure AD authentication for linked servers is supported only with OLE DB driver version 18.2.1 and higher.
-- Azure AD authentication for linked servers from Managed Instance to SQL Server is supported for mapped local logins only. Propagating security context is not supported. That means that managed identity authenticaiton is supported, while pass-through authentication is not supported.
+- Azure AD authentication for linked servers from Managed Instance to SQL Server is supported for mapped local logins only. Propagating security context is not supported. That means that managed identity authentication is supported, while pass-through authentication is not supported.
 
 ## Related Tasks  
+
  [Create Linked Servers &#40;SQL Server Database Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    

@@ -218,7 +218,7 @@ ms.custom: seo-dt-2019
     GO  
     ```  
   
-##### To create a linked server fiSQL Managed Instance linked server with managed identity Azure AD authentication
+##### Create SQL Managed Instance linked server with managed identity Azure AD authentication
 
 To create a linked server with managed identity authentication execute following T-SQL. The authentication method uses `ActiveDirectoryMSI` in the `@provstr` parameter.
 

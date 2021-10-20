@@ -35,7 +35,7 @@ InScope(scope)
  Returns a **Boolean**.  
   
 ## Remarks  
- The **InScope** function tests the scope of the current instance of a report item for membership in the scope specified by the *scope*parameter.  
+ The **InScope** function tests the scope of the current instance of a report item for membership in the scope specified by the *scope* parameter.  
   
  *Scope* cannot be an expression.  
   

@@ -94,7 +94,7 @@ You can also define linked servers by using [!INCLUDE[ssManStudioFull](../../inc
 > [!NOTE]  
 > Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.  
   
-## Linked server authentication
+## Azure SQL Managed Instance linked server authentication
 
 Azure SQL Managed Instance linked servers support both SQL authentication, and Azure AD (AAD) authentication. Two supported AAD authentication modes are: Managed identity and pass-through. Managed identity authentication can be used to allow local logins to query remote linked servers. Pass-through authentication allows a principal that can authenticate with a local instance to access a remote instance via linked server. Prerequisites for pass-through authentication are that the same principal is added as a login on the remote server and that both instances are members of the [SQL trust group](/azure/azure-sql/managed-instance/server-trust-group-overview).
 

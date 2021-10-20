@@ -1,6 +1,6 @@
 ---
-title: "Interactive Sort, Document Maps, and Links (Report Builder) | Microsoft Docs"
-description: Enable your users to change the sort order of values in a report, show or hide items, or select links to other reports or Web pages in Report Builder.
+title: "Interactive sort, document maps, and links in a paginated report | Microsoft Docs"
+description: Enable your users to change the sort order of values in a paginated report, show or hide items, or select links to other reports or Web pages in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Interactive Sort, Document Maps, and Links (Report Builder and SSRS)
-  In Web-based environments, you can add a number of features that let your users interact with reports. Your users can change the sort order of values in your report, show or hide items in the report, or click links that go to other reports or Web pages. You can also add a table of contents or document map. Your report users can click items in the table of contents or document map to jump to areas within a report.  
+# Interactive sort, document maps, and links in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In Web-based environments, you can add a number of features that let your users interact with paginated reports. Your users can change the sort order of values in your report, show or hide items in the report, or click links that go to other reports or Web pages. You can also add a table of contents or document map. Your report users can click items in the table of contents or document map to jump to areas within a report.  
   
  Report Builder and Report Designer support three types of links with the following actions:  
   

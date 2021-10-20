@@ -1,6 +1,6 @@
 ---
-title: "Empty and Null Data Points in Charts (Report Builder) | Microsoft Docs"
-description: Learn about chart processing for empty values, use of placeholders, and how empty and null data points display in Report Builder. 
+title: "Empty and null data points in paginated report charts | Microsoft Docs"
+description: Learn about paginated report chart processing for empty values, use of placeholders, and how empty and null data points display in Report Builder. 
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,9 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Empty and Null Data Points in Charts (Report Builder and SSRS)
+# Empty and null data points in paginated report charts (Report Builder)
 
-  If you are displaying fields with empty or null values in a chart in your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, the chart may not look as you expect. Charts process empty values differently depending on the specified chart type:  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  If you are displaying fields with empty or null values in a chart in your paginated report, the chart may not look as you expect. Charts process empty values differently depending on the specified chart type:  
   
 -   If the chart type is a linear chart type (bar, column, scatter, line, area, range), empty values are displayed as empty spaces or "gaps" in the chart. If you want to indicate empty points, you must add empty point placeholders. For more information, see [Add Empty Points to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   

@@ -1,6 +1,6 @@
 ---
-title: "Display the Same Data on a Matrix and a Chart (Report Builder) | Microsoft Docs"
-description: Show the same data in a matrix and in a chart in Report Builder. Set properties on these data regions to include the specifics.
+title: "Display the same data on a matrix and a chart in paginated report | Microsoft Docs"
+description: Show the same data in a paginated report in a matrix and in a chart in Report Builder. Set properties on these data regions to include the specifics.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Display the Same Data on a Matrix and a Chart (Report Builder)
-  When you want to show the same data in a matrix and a chart, you must set properties on both data regions to specify the same dataset, and also the same expressions for filters, groups, sorts, and data.  
+# Display the same data on a matrix and a chart in paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  When you want to show the same data in a matrix and a chart in a paginated report, you must set properties on both data regions to specify the same dataset, and also the same expressions for filters, groups, sorts, and data.  
   
  Because both data regions will have the same ancestor for data (the report dataset), you can add an interactive sort button to the matrix that, when the user clicks it, changes the sort order for both the matrix and the chart. For more information, see [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   

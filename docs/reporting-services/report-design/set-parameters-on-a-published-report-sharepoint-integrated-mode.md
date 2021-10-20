@@ -14,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Set parameters on a published paginated report - SharePoint Integrated Mode (Report Builder)
 

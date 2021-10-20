@@ -86,7 +86,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## Examples
 
 ### A. Use MultiLookup function
- Assume a dataset called "Category" contains the field CategoryList, which is a field that contains a comma-separated list of category identifers, for example, "2, 4, 2, 1".  
+ Assume a dataset called "Category" contains the field CategoryList, which is a field that contains a comma-separated list of category identifiers, for example, "2, 4, 2, 1".  
   
  The dataset CategoryNames contains the category identifier and category name, as shown in the following table.  
   

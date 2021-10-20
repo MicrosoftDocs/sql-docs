@@ -196,7 +196,7 @@ ms.custom: seo-dt-2019
   
 ##### To create a linked server to another instance of SQL Server using Transact-SQL  
   
-1.  In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
+1. In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
   
     ```sql  
     USE [master]  
@@ -208,7 +208,7 @@ ms.custom: seo-dt-2019
   
     ```  
   
-2.  Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
+2. Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
   
     ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
@@ -216,49 +216,8 @@ ms.custom: seo-dt-2019
         @locallogin = NULL ,   
         @useself = N'True' ;  
     GO  
-  
     ```  
   
-##### Create SQL Managed Instance linked server with managed identity Azure AD authentication
-
-To create linked server with managed identity authentication execute following T-SQL. For this authentication method `ActiveDirectoryMSI` should be used in `@provstr` parameter.
-
-```sql  
-EXEC master.dbo.sp_addlinkedserver
-@server     = N'MyLinkedServer',
-@srvproduct = N'',
-@provider   = N'MSOLEDBSQL',
-@provstr    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433;Authentication=ActiveDirectoryMSI;'
-
-EXEC master.dbo.sp_addlinkedsrvlogin
-@rmtsrvname = N'MyLinkedServer',
-@useself    = N'False',
-@locallogin = N'user1@domain1.com';  -- Use NULL to allow all local logins.
-```  
-    
-If Azure SQL Managed Instance managed identity (formerly called managed service identity, hence acronym MSI in ActiveDirectoryMSI) is added as login to a remote Managed Instance, then Managed Identity authentication is possible with linked server created as in the previous example. Both system assigned and user assigned managed identities are supported. If Primary identity is set then that one will be used, otherwise system assigned managed identity will be used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, as new managed identity Application ID and Managed Instance service principal sid are no longer matching. To verify these two values match, sid can be converted to application id with following query.
-
-```sql  
-SELECT convert(uniqueidentifier, sid) as AADApplicationID
-FROM sys.server_principals
-WHERE name = '<managed_instance_name>'
-```  
-
-##### Create SQL Managed Instance linked server with pass-through Azure AD authentication
-
-To create linked server with pass-through authentication execute following T-SQL.
-
-```sql  
-EXEC master.dbo.sp_addlinkedserver
-@server     = N'MyLinkedServer',
-@srvproduct = N'',
-@provider   = N'MSOLEDBSQL',
-@datasrc    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433'
-```  
-
-With pass-through authentication, security context of local login is carried over to a remote instance.
-Pass-through authentication requires AAD principal to be added as login on both local and remote Azure SQL Managed Instance. Both Managed Instances need to be in a [Server Trust Group](https://docs.microsoft.com/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can login to local instance and to query remote instance via linked server object.
-
 ##  <a name="FollowUp"></a> Follow Up: Steps to take after you create a linked server  
   
 #### To test the linked server  
@@ -284,7 +243,15 @@ Pass-through authentication requires AAD principal to be added as login on both 
     ```  
   
      When NULL is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
-  
+
+## Linked servers with Azure SQL Managed Instance
+
+If you're using Azure SQL Managed Instance, see:
+
+- [H. Create SQL Managed Instance linked server with managed identity Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication)
+
+[I. Create SQL Managed Instance linked server with pass-through Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
+
 ## See Also  
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   

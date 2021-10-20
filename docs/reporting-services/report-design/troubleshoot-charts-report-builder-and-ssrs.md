@@ -1,5 +1,6 @@
 ---
-title: "Troubleshoot charts in a paginate report | Microsoft Docs"
+title: "Troubleshoot charts in a paginated report | Microsoft Docs"
+
 description: Use fields with numeric data types along the value axis, rather than formatted numbers, to display a numeric value in a paginated report.
 ms.date: 01/17/2018
 ms.prod: reporting-services

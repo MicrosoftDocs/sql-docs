@@ -250,7 +250,7 @@ If you're using Azure SQL Managed Instance, see:
 
 - [H. Create SQL Managed Instance linked server with managed identity Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication)
 
-[I. Create SQL Managed Instance linked server with pass-through Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
+- [I. Create SQL Managed Instance linked server with pass-through Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
 
 ## See Also  
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

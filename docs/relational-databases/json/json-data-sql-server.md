@@ -190,8 +190,8 @@ The result of this query is shown in the following table:
 
 ### Convert SQL Server data to JSON or export JSON
 
->[!NOTE]
->Converting Azure Synapse Analytics data to JSON or exporting JSON is not supported.
+> [!NOTE]
+> Converting Azure Synapse Analytics data to JSON or exporting JSON is not supported.
 
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
@@ -406,7 +406,7 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 *Building REST API with SQL Server using JSON functions*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
-### Reference articles
+### Next
 
 - [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
 - [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

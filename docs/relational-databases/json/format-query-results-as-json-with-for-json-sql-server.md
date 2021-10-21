@@ -39,7 +39,6 @@ Here's a sample query that uses **PATH** mode with the `FOR JSON` clause. The fo
   
 :::image type="content" source="../../relational-databases/json/media/forjson-example1.png" alt-text="Diagram of flow of FOR JSON output" lightbox="../../relational-databases/json/media/forjson-example1.png":::
 
-
 ### More info about FOR JSON PATH
 For more detailed info and examples, see [Format Nested JSON Output with PATH Mode &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
 
@@ -177,7 +176,8 @@ The output of the `FOR JSON` clause has the following characteristics:
         -   By default, SQL Server Management Studio (SSMS) concatenates the results into a single row when the output setting is **Results to Grid**. The SSMS status bar displays the actual row count.
         -   Other client applications may require code to recombine lengthy results into a single, valid JSON string by concatenating the contents of multiple rows. For an example of this code in a C# application, see [Use FOR JSON output in a C# client app](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
-     ![Example of FOR JSON output](../../relational-databases/json/media/forjson-example2.png)  
+         :::image type="content" source="../../relational-databases/json/media/forjson-example2.png" alt-text="Example of FOR JSON output" lightbox="../../relational-databases/json/media/forjson-example2.png":::
+
   
 2.  The results are formatted as an array of JSON objects.  
   

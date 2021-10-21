@@ -27,8 +27,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 - System databases cannot be renamed.
 - The database name cannot be changed while other users are accessing the database. 
+  - Use SQL Server Management Studio Activity Monitor to find other connections to the database, and close them. For more information, see [Open Activity Monitor in SQL Server Management Studio (SSMS)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md).
   - In SQL Server, you can set a database in single user mode to close any open connections. For more information, see [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
   - In Azure SQL Database, you must make sure no other users have an open connection to the database to be renamed.
+- Renaming a database does not change the physical name of the database files on disk, or the logical names of the files. For more information, see [Database Files and Filegroups](database-files-and-filegroups.md#logical-and-physical-file-names).
 
 ## Permissions
 
@@ -46,9 +48,11 @@ Use the following steps to rename a SQL Server or Azure SQL database using SQL S
   
 4. In Object Explorer, expand **Databases**, right-click the database to rename, and then select **Rename**.  
   
-5. Enter the new database name, and then select **OK**.  
+5. Enter the new database name, and then select **OK**
   
-6. Optionally, if the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
+6. If the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
+
+7. Refresh the database list in Object Explorer.
 
 ## Use Transact-SQL  
   
@@ -103,7 +107,6 @@ GO
 ALTER LOGIN [login] WITH DEFAULT_DATABASE=[new-database-name];
 GO
 ```
-
 
 ## See Also
 

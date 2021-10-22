@@ -1,8 +1,8 @@
 ---
-title: "Estimate the Size of a Clustered Index | Microsoft Docs"
+title: "Estimate the Size of a Clustered Index"
 description: Use this procedure to estimate the amount of space that is required to store data in a clustered index in SQL Server.
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "10/21/2021"
 ms.prod: sql  
 ms.reviewer: ""
 ms.prod_service: database-engine, sql-database
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], table size"
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
-ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "= azuresqldb-current || >= sql-server-2016"
@@ -55,9 +54,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
      ***Max_Var_Size***  = maximum byte size of all variable-length columns  
   
-3.  If the clustered index is nonunique, account for the *uniqueifier* column:  
+3.  If the clustered index is non-unique, account for the *uniqueifier* column:  
   
-     The uniqueifier is a nullable, variable-length column. It will be nonnull and 4 bytes in size in rows that have nonunique key values. This value is part of the index key and is required to make sure that every row has a unique key value.  
+     The uniqueifier is a nullable, variable-length column. It will be non-null and 4 bytes in size in rows that have non-unique key values. This value is part of the index key and is required to make sure that every row has a unique key value.  
   
      ***Num_Cols***  = ***Num_Cols*** + 1  
   
@@ -65,7 +64,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
      ***Max_Var_Size***  = ***Max_Var_Size*** + 4  
   
-     These modifications assume that all values will be nonunique.  
+     These modifications assume that all values will be non-unique.  
   
 4.  Part of the row, known as the null bitmap, is reserved to manage column nullability. Calculate its size:  
   
@@ -129,9 +128,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
      ***Max_Var_Key_Size***  = maximum byte size of all variable-length key columns  
   
-2.  Account for any uniqueifier needed if the index is nonunique:  
+2.  Account for any uniqueifier needed if the index is non-unique:  
   
-     The uniqueifier is a nullable, variable-length column. It will be nonnull and 4 bytes in size in rows that have nonunique index key values. This value is part of the index key and is required to make sure that every row has a unique key value.  
+     The uniqueifier is a nullable, variable-length column. It will be nonnull and 4 bytes in size in rows that have non-unique index key values. This value is part of the index key and is required to make sure that every row has a unique key value.  
   
      ***Num_Key_Cols***  = ***Num_Key_Cols*** + 1  
   
@@ -139,7 +138,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
      ***Max_Var_Key_Size***  = ***Max_Var_Key_Size*** + 4  
   
-     These modifications assume that all values will be nonunique.  
+     These modifications assume that all values will be non-unique.  
   
 3.  Calculate the null bitmap size:  
   
@@ -179,7 +178,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
 8.  Calculate the number of non-leaf pages in the index:  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***^Level***))***  
+     ***Num_Index_Pages =*** ∑Level (***Num_Leaf_Pages*** / (***Index_Rows_Per_Page***^***Level***))
   
      where 1 <= Level <= ***Non-leaf_Levels***  
   
@@ -220,13 +219,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## See Also  
- [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
- [Estimate the Size of a Table](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
- [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)   
- [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Estimate the Size of a Nonclustered Index](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)   
- [Estimate the Size of a Heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
- [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+## Next Steps 
+ - [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
+ - [Estimate the Size of a Table](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
+ - [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)   
+ - [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
+ - [Estimate the Size of a Nonclustered Index](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)   
+ - [Estimate the Size of a Heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
+ - [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   

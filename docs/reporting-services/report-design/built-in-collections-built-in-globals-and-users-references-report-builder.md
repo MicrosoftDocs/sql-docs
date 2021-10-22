@@ -1,5 +1,5 @@
 ---
-title: "Built-in Globals and User references in a paginated report | Microsoft Docs"
+title: "Built-in Globals and User references in a paginated report | Microsoft Docs"
 
 description: Find out about the values that can be used in expressions to filter results in a paginated report in Report Builder.
 ms.date: 08/17/2018

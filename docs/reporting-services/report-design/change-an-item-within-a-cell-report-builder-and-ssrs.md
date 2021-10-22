@@ -1,5 +1,5 @@
 ---
-title: "Change an item within a cell in a paginated report | Microsoft Docs"
+title: "Change an item within a cell in a paginated report | Microsoft Docs"
 description: Replace a non-container item, such as a text box, line, or image, in paginated reports with a new report item in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,7 +12,7 @@ ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Change an item within a cell in a paginated report (Report Builder)
+# Change an item within a cell in a paginated report (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 

@@ -1,6 +1,6 @@
 ---
-title: "Aggregate Function (Report Builder) | Microsoft Docs"
-description: The Aggregate Function returns a custom aggregate of a specified expression as the expression is defined by the data provider.
+title: "Aggregate function in a paginated report | Microsoft Docs"
+description: The Aggregate Function returns a custom aggregate of a specified expression in a paginated report as the expression is defined by the data provider.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Aggregate Function
-  Returns a custom aggregate of the specified expression, as defined by the data provider.  
+# Report Builder functions - Aggregate function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns a custom aggregate of the specified expression in a paginated report, as defined by the data provider.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -30,7 +33,7 @@ Aggregate(expression, scope)
  The expression on which to perform the aggregation. The expression must be a simple field reference.  
   
  *scope*  
- (**String**) The name of a dataset, group, or data region that contains the report items to which to apply the aggregate function. *Scope* must be a string constant andcannot be an expression. If *scope* is not specified, the current scope is used.  
+ (**String**) The name of a dataset, group, or data region that contains the report items to which to apply the aggregate function. *Scope* must be a string constant and cannot be an expression. If *scope* is not specified, the current scope is used.  
   
 ## Return Type  
  Return type is determined by the data provider. Returns **Nothing** if the data provider does not support this function or data is not available.  
@@ -40,7 +43,7 @@ Aggregate(expression, scope)
   
  When you display the combination of aggregate and detail dataset values on detail rows of a Tablix data region, server aggregates would not typically be included because they are not detail data. However, you may want to display all values retrieved for the dataset and customize the way aggregate data is calculated and displayed.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detects the use of the **Aggregate** function in expressions in your report in order to determine whether to display server aggregates on detail rows. If you include **Aggregate** in an expression in a data region, server aggregates can only appear on group total or grand total rows, not on detail rows. If you want to display server aggregates on detail rows, do not use the **Aggregate** function.  
+ Report Builder detects the use of the **Aggregate** function in expressions in your report in order to determine whether to display server aggregates on detail rows. If you include **Aggregate** in an expression in a data region, server aggregates can only appear on group total or grand total rows, not on detail rows. If you want to display server aggregates on detail rows, do not use the **Aggregate** function.  
   
  You can change this default behavior by changing the value of the **Interpret subtotals as details** option on the **Dataset Properties** dialog box. When this option is set to **True**, all data, including server aggregates, appears as detail data. When set to **False**, server aggregates appear as totals. The setting for this property affects all data regions that are linked to this dataset.  
   

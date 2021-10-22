@@ -14,7 +14,7 @@ ms.author: wiassaf
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows Server 2016 introduced support for NVDIMM-N devices that allow for extremely fast input/output (I/O) operations. One attractive way of using such devices is as a write-back cache to achieve low write latencies. This topic discusses how to set up a mirrored storage space with a mirrored NVDIMM-N write-back cache as a virtual drive to store the SQL Server transaction log. If you are looking to utilize it to also store data tables or other data, you may include more disks in the storage pool, or create multiple pools, if isolation is important.  
     
-## Identifying the right disks  
+## Identify the right disks  
  Setup of storage spaces in Windows Server 2016, especially with advanced features, such as write-back caches is most easily achieved through PowerShell. The first step is to identify which disks should be part of the Storage Spaces pool that the virtual disk will be created from. NVDIMM-Ns have a media type and bus-type of SCM (storage class memory), which can be queried via the `Get-PhysicalDisk` PowerShell cmdlet.  
   
 ```powershell  
@@ -40,7 +40,7 @@ $pd | Select FriendlyName, MediaType, BusType
   
  ![Screenshot of a Windows Powershell window showing the output of the $pd cmdlet.](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
-## Creating the Storage Pool  
+## Create the Storage Pool  
  Using the $pd variable containing the PhysicalDisks, it is easy to build the storage pool using the New-StoragePool PowerShell cmdlet.  
   
 ```powershell  
@@ -49,7 +49,7 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
   
  ![Screenshot of a Windows Powershell window showing the output of the New-StoragePool cmdlet.](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
-## Creating the Virtual Disk and Volume  
+## Create the Virtual Disk and Volume  
  Now that a pool has been created, the next step is to carve out a virtual disk and format it. In this case only 1 virtual disk will be created and the New-Volume PowerShell cmdlet can be used to streamline this process:  
   
 ```powershell  
@@ -66,10 +66,9 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  ![Screenshot of a File Explorer window on the This PC page showing the Log_Space drive.](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## See Also  
+## Next Steps
 
  - [Windows Storage Spaces in Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
  - [Windows Storage Spaces in Windows 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11))   
  - [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  - [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
-  

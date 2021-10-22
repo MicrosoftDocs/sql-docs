@@ -47,7 +47,7 @@ To modify a procedure in SQL Server Management Studio:
 7.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, select **Save As**. Accept the file name or replace it with a new name, and then select **Save**.  
 
 > [!IMPORTANT]  
->  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input. For more information, see [SQL Injection](../../security/sql-injection.md).
+>  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input. For more information, see [SQL Injection](../security/sql-injection.md)
   
 ##  <a name="TsqlProcedure"></a> Use Transact-SQL  
  
@@ -127,5 +127,6 @@ To modify a procedure in SQL Server Management Studio:
     GO  
     ```  
   
-## See Also  
+## Next Steps
  - [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
+ - [SQL Injection](../security/sql-injection.md)

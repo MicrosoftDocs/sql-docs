@@ -106,4 +106,6 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
       column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
+## Next Steps
+
 For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).

@@ -284,7 +284,8 @@ Opens the **New Job Schedule** dialog box.  Configure as desired.  Select **OK**
 -    **Integration Services Proxy account**
 Select an available proxy account from the drop-down list.  To schedule the transfer, there must be at least one proxy account available to the user, configured with permission to the **SSIS package execution subsystem**.
 
-        To create a proxy account for SSIS package execution, in **Object Explorer**, expand **SQL Server Agent**, expand **Proxies**, right-click **SSIS Package Execution**, and then select **New Proxy**.
+        > [!NOTE] 
+        > To create a proxy account for SSIS package execution, in **Object Explorer**, expand **SQL Server Agent**, expand **Proxies**, right-click **SSIS Package Execution**, and then select **New Proxy**.
 
 ### Complete the wizard
 Displays summary of the selected options.  Select **Back** to change an option.  Select **Finish** to create the SSIS package. The **Performing operation** page monitors status information about the execution of the **Copy Database Wizard**.
@@ -345,18 +346,18 @@ The following example will move the `Sales` database, a Windows login named `con
 16.    **Post Move Steps**
 Consider executing the following T-SQL statements on the new host, `Server2`:
   
-     ```tsql 
-     ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
-     GO
-     ALTER DATABASE Sales 
-     SET COMPATIBILITY_LEVEL = 130;
-     GO
-
-     USE [Sales]
-     GO
-     EXEC sp_updatestats;
-     GO
-     ```
+        ```tsql 
+        ALTER AUTHORIZATION ON DATABASE::Sales TO sa;
+        GO
+        ALTER DATABASE Sales 
+        SET COMPATIBILITY_LEVEL = 130;
+        GO
+        
+        USE [Sales]
+        GO
+        EXEC sp_updatestats;
+        GO
+        ```
  
 17.    **Post Move Steps Cleanup**  
 Since `Server1` will be moved to a different team and the **Move** operation will not be repeated, consider executing the following steps:
@@ -379,9 +380,9 @@ In this example, the `Sales` database will be copied and created as `SalesCopy` 
 
 10.    **Schedule the Package** page:  Select the **Schedule:** radio button and then select the **Change Schedule** button. 
  
-    1. **New Job Schedule** page: In the **Name** text box enter `Weekly on Sunday`. 
-          
-    2. Select **OK**.
+        1. **New Job Schedule** page: In the **Name** text box enter "Weekly on Sunday". 
+              
+        2. Select **OK**.
 
 11.    Select the relevant proxy from the **Integration Services Proxy account** drop-down list.  Select **Next**.
 

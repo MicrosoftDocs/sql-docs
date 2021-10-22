@@ -170,7 +170,7 @@ Permission for creating a queue uses members of the `db_ddladmin` or `db_owner` 
 
 ## Examples
 
-### A. Creating a queue with no parameters
+### A. Create a queue with no parameters
 
 The following example creates a queue that is available to receive messages. No activation stored procedure is specified for the queue.
 
@@ -178,7 +178,7 @@ The following example creates a queue that is available to receive messages. No 
 CREATE QUEUE ExpenseQueue;
 ```
 
-### B. Creating an unavailable queue
+### B. Create an unavailable queue
 
 The following example creates a queue that is unavailable to receive messages. No activation stored procedure is specified for the queue.
 
@@ -186,7 +186,7 @@ The following example creates a queue that is unavailable to receive messages. N
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF;
 ```
 
-### C. Creating a queue and specify internal activation information
+### C. Create a queue and specify internal activation information
 
 The following example creates a queue that is available to receive messages. The queue starts the stored procedure `expense_procedure` when a message enters the queue. The stored procedure executes as the user `ExpenseUser`. The queue starts a maximum of `5` instances of the stored procedure.
 
@@ -199,7 +199,7 @@ CREATE QUEUE ExpenseQueue
         , EXECUTE AS 'ExpenseUser' );
 ```
 
-### D. Creating a queue on a specific filegroup
+### D. Create a queue on a specific filegroup
 
 The following example creates a queue on the filegroup `ExpenseWorkFileGroup`.
 
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
     ON ExpenseWorkFileGroup;
 ```
 
-### E. Creating a queue with multiple parameters
+### E. Create a queue with multiple parameters
 
 The following example creates a queue on the `DEFAULT` filegroup. The queue is unavailable. Messages are retained in the queue until the conversation that they belong to ends. When the queue is made available through `ALTER QUEUE`, the queue starts the stored procedure `AdventureWorks2012.dbo.expense_procedure` to process messages. The stored procedure executes as the user who ran the `CREATE QUEUE` statement. The queue starts a maximum of `10` instances of the stored procedure.
 
@@ -223,7 +223,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT];
 ```
 
-## See Also
+## Next Steps
 
 - [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)
 - [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)

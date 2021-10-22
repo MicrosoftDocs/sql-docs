@@ -108,7 +108,7 @@ ALTER LOGIN [login] WITH DEFAULT_DATABASE=[new-database-name];
 GO
 ```
 
-## See Also
+## Next Steps
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Database Identifiers](../../relational-databases/databases/database-identifiers.md)  

@@ -215,7 +215,7 @@ ms.custom: seo-dt-2019
   
 ##  <a name="FollowUp"></a> Follow Up: Steps to take after you create a linked server  
   
-#### To test the linked server  
+### To test the linked server  
   
 -   Execute the following code to test the connection to the linked server. This example returns the names of the databases on the linked server.  
   
@@ -225,7 +225,7 @@ ms.custom: seo-dt-2019
   
     ```  
   
-#### Writing a query that joins tables from a linked server  
+### To join tables from a linked server  
   
 -   Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
   
@@ -239,7 +239,7 @@ ms.custom: seo-dt-2019
   
      When `NULL` is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
   
-## See Also  
+## Next Steps  
 
  - [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   

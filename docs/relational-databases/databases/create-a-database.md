@@ -109,7 +109,8 @@ GO
   
  For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
-## See Also  
+## Next Steps
+
  - [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  - [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -78,7 +78,7 @@ GRANT EXECUTE ON SCHEMA::HumanResources
 GO  
 ```  
   
-## See Also  
+## Next Steps  
  - [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  - [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  - [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

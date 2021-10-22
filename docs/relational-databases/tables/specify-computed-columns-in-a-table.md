@@ -110,7 +110,7 @@ ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
 GO
 ```
 
-## See Also
+## Next Steps
 
  - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
  - [ALTER TABLE computed_column_definition (Transact-SQL)](../../t-sql/statements/alter-table-computed-column-definition-transact-sql.md)

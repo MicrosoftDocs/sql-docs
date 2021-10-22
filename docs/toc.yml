@@ -10379,8 +10379,6 @@ items:
       href: sql-server/educational-sql-resources.yml
     - name: Microsoft Learn >>
       href: /learn/
-    - name: SQL on Channel 9 >>
-      href: https://channel9.msdn.com/Search
   - name: Help
     items:
     - name: Get help

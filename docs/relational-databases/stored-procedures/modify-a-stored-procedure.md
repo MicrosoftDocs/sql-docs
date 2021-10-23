@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 <a name="Top"></a> This article describes how to modify a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   
-##  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and restrictions  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures cannot be modified to be CLR stored procedures and vice versa.  
   
  If the previous procedure definition was created using WITH ENCRYPTION or WITH RECOMPILE, these options are enabled only if they are included in the ALTER PROCEDURE statement.  
@@ -81,12 +81,12 @@ To modify a procedure in SQL Server Management Studio:
     GO   
     ```  
 
-> [!IMPORTANT]  
->  Dropping and recreating an existing stored procedure removes permissions that have been explicitly granted to the stored procedure. Use ALTER instead.
+      > [!IMPORTANT]  
+      >  Dropping and recreating an existing stored procedure removes permissions that have been explicitly granted to the stored procedure. Use ALTER instead.
       
 5.  On the **File** menu, select **New Query**.  
   
-6.  Copy and paste the following example into the query editor. The example modifies the `uspVendorAllInfo` procedure. The EXECUTE AS CALLER clause is removed and the body of the procedure is modified to return only those vendors that supply the specified product. The `LEFT` and `CASE` functions customize the appearance of the result set.  
+6.  Copy and paste the following example into the query editor. The example modifies the `uspVendorAllInfo` procedure. The `EXECUTE AS CALLER` clause is removed and the body of the procedure is modified to return only those vendors that supply the specified product. The `LEFT` and `CASE` functions customize the appearance of the result set.  
   
     ```sql  
     ALTER PROCEDURE Purchasing.uspVendorAllInfo  
@@ -127,6 +127,7 @@ To modify a procedure in SQL Server Management Studio:
     GO  
     ```  
   
-## Next Steps
+## Next steps
+
  - [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
  - [SQL Injection](../security/sql-injection.md)

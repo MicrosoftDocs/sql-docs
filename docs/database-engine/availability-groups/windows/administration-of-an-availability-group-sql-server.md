@@ -102,11 +102,6 @@ ms.author: chadam
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)    
 [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
   
--   **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)    
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
-  
 -   **White papers:**  
   
      [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)    

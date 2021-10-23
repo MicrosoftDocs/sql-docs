@@ -82,10 +82,6 @@ This topic introduces the steps for configuring instances of [!INCLUDE[ssnoversi
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   **Video-Introduction to Always On:**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
--   **Video-A Deep Dive into Always On:**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
-  
 -   **Whitepaper:**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 -   **Blogs:**  [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  

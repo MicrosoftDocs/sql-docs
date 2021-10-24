@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
 ms.date: 06/22/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

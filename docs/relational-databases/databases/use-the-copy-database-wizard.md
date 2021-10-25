@@ -364,10 +364,11 @@ Consider executing the following T-SQL statements on the new host, `Server2`:
 17.    **Post Move Steps Cleanup**  
 Since `Server1` will be moved to a different team and the **Move** operation will not be repeated, consider executing the following steps:
 
-    - Deleting SSIS package `SalesFromServer1toServer2_Move` on `Server2`.
-    - Deleting SQL Server Agent job `SalesFromServer1toServer2_Move` on `Server2`.
-    - Deleting SQL Server Agent job `Jennie's Report` on `Server1`.
-    - Dropping login `contoso\Jennie` on `Server1`.
+   - Deleting SSIS package `SalesFromServer1toServer2_Move` on `Server2`.
+   - Deleting SQL Server Agent job `SalesFromServer1toServer2_Move` on `Server2`.
+   - Deleting SQL Server Agent job `Jennie's Report` on `Server1`.
+   - Dropping login `contoso\Jennie` on `Server1`.
+
 
 
 

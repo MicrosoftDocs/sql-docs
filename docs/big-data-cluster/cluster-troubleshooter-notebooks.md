@@ -7,7 +7,7 @@ ms.author: melqin
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 07/16/2021
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

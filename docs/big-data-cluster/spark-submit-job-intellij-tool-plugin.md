@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how to submit Spark jobs on SQL Server Big Data Clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.topic: conceptual
 ms.metadata: seo-lt-2019
 ms.date: 10/05/2021

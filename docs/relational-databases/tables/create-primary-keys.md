@@ -39,7 +39,7 @@ Creating a primary key in an existing table requires ALTER permission on the tab
 
 ## <a name="SSMSProcedure"></a> Using SQL Server Management Studio
 
-### To create a primary key
+### Create a primary key
 
 1. In Object Explorer, right-click the table to which you want to add a unique constraint, and click **Design**.
 2. In **Table Designer**, click the row selector for the database column you want to define as the primary key. If you want to select multiple columns, hold down the CTRL key while you click the row selectors for the other columns.
@@ -56,7 +56,7 @@ If you define a compound key, the order of columns in the primary key matches th
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 
-### To create a primary key in an existing table
+### Create a primary key in an existing table
 
 The following example creates a primary key on the column `TransactionID` in the AdventureWorks database.
 
@@ -65,7 +65,7 @@ ALTER TABLE Production.TransactionHistoryArchive
    ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID);
 ```
 
-### To create a primary key in a new table
+### Create a primary key in a new table
 
 The following example creates a table and defines a primary key on the column `TransactionID` in the AdventureWorks database.
 
@@ -78,7 +78,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### To create a primary key with clustered index in a new table
+### Create a primary key with clustered index in a new table
 
 The following example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID` in the AdventureWorks database.
 

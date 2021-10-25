@@ -17,7 +17,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create a Stored Procedure
+# Create a stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
@@ -26,7 +26,7 @@ This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)]
 ## Permissions  
  Requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
-## How to Create a Stored Procedure  
+## How to create a stored procedure  
  You can use one of the following:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  

@@ -38,7 +38,8 @@ Learn about what browser versions are supported for managing and viewing SQL Ser
 The following is the current list of browsers supported for the web portal.
 
 **Microsoft Windows**  
-*Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2*, 2016, 2019
+*Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019*
+
 - Microsoft Edge (+)
 - Microsoft Internet Explorer 10 or 11
 - Google Chrome (+)

@@ -2,8 +2,8 @@
 title: SQL Server Big Data Clusters Configuration Properties
 titleSuffix: SQL Server Big Data Clusters
 description: Reference article for configuration properties for Big Data Clusters
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: rahul.ajmera
 ms.date: 02/11/2021
 ms.topic: reference

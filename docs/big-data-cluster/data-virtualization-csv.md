@@ -4,7 +4,7 @@ subtitle: SQL Server Big Data Clusters
 description: Steps detailing the create external table for virtualization of a CSV file in a Big Data Cluster
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: sql

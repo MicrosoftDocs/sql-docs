@@ -105,7 +105,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   A table that has an INSTEAD OF trigger cannot also have a REFERENCES clause that specifies a cascading action. However, an AFTER trigger on a table targeted by a cascading action can execute an INSERT, UPDATE, or DELETE statement on another table or view that fires an INSTEAD OF trigger defined on that object.  
   
-##  <a name="Tasks"></a> Next Steps
+##  <a name="Tasks"></a> Next steps
  The following table lists the common tasks associated with primary key and foreign key constraints.  
   
 |Task|Article|  

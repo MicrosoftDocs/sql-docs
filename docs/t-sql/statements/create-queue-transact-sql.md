@@ -223,7 +223,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT];
 ```
 
-## Next Steps
+## Next steps
 
 - [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)
 - [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)

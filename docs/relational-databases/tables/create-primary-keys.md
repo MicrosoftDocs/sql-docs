@@ -1,8 +1,8 @@
 ---
 description: "Create Primary Keys"
-title: "Create Primary Keys | Microsoft Docs"
+title: "Create Primary Keys in SQL Server"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 10/25/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -16,7 +16,6 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Primary Keys
-
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -97,7 +96,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
 ```
 
-## See Also
+## Next steps
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 

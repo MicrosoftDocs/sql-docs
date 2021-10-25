@@ -1,8 +1,8 @@
 ---
-title: "Create a Database Schema | Microsoft Docs"
+title: "Create a Database Schema"
 description: Learn how to create a schema in SQL Server by using SQL Server Management Studio or Transact-SQL, including limitations and restrictions.
 ms.custom: ""
-ms.date: "07/05/2017"
+ms.date: 10/25/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -96,6 +96,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
    SELECT * FROM sys.schemas;
    ```
 
- For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  
-  
-  
+## Next steps
+
+For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  

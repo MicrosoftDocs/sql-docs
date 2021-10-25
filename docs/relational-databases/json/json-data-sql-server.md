@@ -406,7 +406,7 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 *Building REST API with SQL Server using JSON functions*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
-## Next Steps
+## Next steps
 
 - [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
 - [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

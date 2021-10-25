@@ -89,8 +89,10 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
 
 -   Under the **detach and attach** method, a SQL Server Agent Proxy for the SQL Server Integration Services (SSIS) subsystem must exist on the destination server with a credential that can access the file system of both the source and destination servers. For more information on proxies, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).
 
+
 > [!IMPORTANT]
 > Under the **detach and attach** method, the copy or move process will fail if an Integration Services Proxy account is not used.  Under certain situations the source database will not become re-attached to the source server and all NTFS security permissions will be stripped from the data and log files.  If this happens, navigate to your files, re-apply the relevant permissions, and then re-attach the database to your instance of SQL Server.
+
   
 ##  <a name="Recommendations"></a> Recommendations  
   
@@ -361,10 +363,13 @@ Consider executing the following T-SQL statements on the new host, `Server2`:
  
 17.    **Post Move Steps Cleanup**  
 Since `Server1` will be moved to a different team and the **Move** operation will not be repeated, consider executing the following steps:
-     -    Deleting SSIS package `SalesFromServer1toServer2_Move` on `Server2`.
-     -    Deleting SQL Server Agent job `SalesFromServer1toServer2_Move` on `Server2`.
-     -    Deleting SQL Server Agent job `Jennie's Report` on `Server1`.
-     -    Dropping login `contoso\Jennie` on `Server1`.
+
+   - Deleting SSIS package `SalesFromServer1toServer2_Move` on `Server2`.
+   - Deleting SQL Server Agent job `SalesFromServer1toServer2_Move` on `Server2`.
+   - Deleting SQL Server Agent job `Jennie's Report` on `Server1`.
+   - Dropping login `contoso\Jennie` on `Server1`.
+
+
 
 
 ### **B.     Copy database using detach and attach method to the same instance and set recurring schedule.**  
@@ -407,7 +412,7 @@ For example, if you attach a database that was compatibility level 90 before att
 -    Dropping the SSIS package created by the Wizard on the destination server.
 -    Dropping the SQL Server Agent job created by the Wizard on the destination server.
 
-## Next Steps
+## Next steps
  - [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)   
  - [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md) 
  - [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

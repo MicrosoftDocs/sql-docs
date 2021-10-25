@@ -37,7 +37,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains
  
 5. The **Log File Viewer** appears (it might take a moment) with a list of logs for you to view.
 
-## Next Steps
+## Next steps
 
   For more information, see [MSSQLTips.com's](https://www.mssqltips.com/) helpful post [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/).
 

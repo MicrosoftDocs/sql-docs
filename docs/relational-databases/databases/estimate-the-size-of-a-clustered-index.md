@@ -219,7 +219,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
   
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Next Steps 
+## Next steps 
  - [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  - [Estimate the Size of a Table](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  - [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)   

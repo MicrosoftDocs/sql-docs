@@ -100,8 +100,6 @@ ALTER TABLE Sales.TempSalesReason
 
 ## Next steps
 
-For more information, see:
-
 - [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md)
 - [GRANT Database Permissions](../../t-sql/statements/grant-database-permissions-transact-sql.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)

@@ -76,5 +76,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-## Next Steps
+## Next steps
  - [ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

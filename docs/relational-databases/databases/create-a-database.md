@@ -22,7 +22,7 @@ ms.author: wiassaf
 > [!NOTE]
 > To create a database in Azure SQL Database using T-SQL, see [Create database in Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md).
   
-##  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   A maximum of 32,767 databases can be specified on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -109,7 +109,7 @@ GO
   
  For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
-## Next Steps
+## Next steps
 
  - [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  - [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

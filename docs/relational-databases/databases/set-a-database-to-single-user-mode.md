@@ -17,7 +17,7 @@ ms.author: wiassaf
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article describes how to set a user-defined database to single-user mode in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Single-user mode specifies that only one user at a time can access the database and is generally used for maintenance actions.  
   
-##  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   If other users are connected to the database at the time that you set the database to single-user mode, their connections to the database will be closed without warning. 
   
@@ -61,7 +61,7 @@ ms.author: wiassaf
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../relational-databases/databases/codesnippet/tsql/set-a-database-to-single_1.sql)]  
   
-## Next Steps  
+## Next steps  
  - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
   

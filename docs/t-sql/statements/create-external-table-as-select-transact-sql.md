@@ -263,7 +263,9 @@ AS SELECT T1.ProductKey AS ProductKeyNoChange,
           T1.CustomerKey AS CustomerKeyNoChange,
           T1.OrderQuantity AS Quantity,
           T1.SalesAmount AS Money
-FROM dbo.FactInternetSales T1 
+FROM dbo.FactInternetSales T1 JOIN dbo.DimCustomer T2  
+ON ( T1.CustomerKey = T2.CustomerKey )  
+OPTION ( HASH JOIN ); 
 ```
 
 

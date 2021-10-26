@@ -33,9 +33,9 @@ The following table contains the tested configuration matrix for each release of
 
 Restrictions:
 
-* SQL Server Big Data Clusters is supported as a *workload*. Microsoft provides support for the software components on the containers installed and configured by SQL Server Big Data Clusters only. Kubernetes itself, and other containers that may influence SQL Server Big Data Clusters behavior, are not supported by the support team. For Kubernetes support please contact your certified Kubernetes distribution provider.
-* SQL Server Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by SQL Server Big Data Cluster is a capability that depends on the storage provider. This includes, for example, the expansion of persistent volumes (PVs). Please reference your specific CSI storage provider documentation or the [partner reference architecture white papers](../sql-server/partner-big-data-cluster.md).
-* The open source components included by SQL Server Big Data Clusters are fixed for that particular release and must not be updated or modified.
+* SQL Server Big Data Clusters is supported as a *workload*. Microsoft provides support for the software components on the containers installed and configured by SQL Server Big Data Clusters only. Kubernetes itself, and other containers that may influence SQL Server Big Data Clusters behavior, are not supported by the support team. For Kubernetes support, contact your certified Kubernetes distribution provider.
+* SQL Server Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by SQL Server Big Data Cluster is a capability that depends on the storage provider. This includes, for example, the expansion of persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture white papers](../sql-server/partner-big-data-cluster.md).
+* The open-source components included by SQL Server Big Data Clusters are fixed for that particular release and must not be updated or modified.
 * Container images are provided "as-is". Composability features of Kubernetes are not supported. Changing the set of container images in a SQL Server Big Data Cluster release, or to customize the containers, is not supported.
 
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
@@ -130,7 +130,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Workaround**: Install `kubectl` version 1.15 or higher  tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
-### MSDTC capabilities can not be enabled for SQL Server master instance 
+### MSDTC capabilities cannot be enabled for SQL Server master instance 
 
 - **Affected releases**: All big data cluster deployment configurations, irrespective of the release.
 
@@ -168,13 +168,13 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
    ```
 
-### Big data cluster generated service accounts passwords expiration
+### Big data cluster-generated service accounts passwords expiration
 
 - **Affected releases**: All big data cluster deployments with Active Directory integration, irrespective of the release
 
 - **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md). Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in the big data cluster, so the cluster will become inoperable once the expiration period is met.
 
-- **Workaround**: Update the expiration policy for the the big data cluster service accounts to "Password never expires" in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
+- **Workaround**: Update the expiration policy for the big data cluster service accounts to "Password never expires" in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
 
 ### Credentials for accessing services through gateway endpoint
 
@@ -189,7 +189,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: New and existing clusters that are using CU5 images
 
-- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may noticed that the metrics are not being collected. This is possible in both new and existing deployments of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may have noticed that the metrics are not being collected. This is possible in both new and existing deployments of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -324,7 +324,7 @@ Upgrading using different repositories for current and target builds is not supp
 
 - **Workaround**: Modify the query in one of the following ways. Either join the storage pool table to a local table, or insert into the local table first, then read from the local table to insert into the data pool.
 
-### Transparent Data Encryption capabilities can not be used with databases that are part of the availability group in the SQL Server master instance
+### Transparent Data Encryption capabilities cannot be used with databases that are part of the availability group in the SQL Server master instance
 
 - **Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
 

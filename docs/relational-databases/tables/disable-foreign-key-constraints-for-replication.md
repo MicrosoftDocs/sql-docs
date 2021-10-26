@@ -82,7 +82,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     GO
     ```
   
-## Next Steps
+## Next steps
  - [ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)
  - [Script objects in SQL Server Management Studio](../../ssms/tutorials/scripting-ssms.md)
  - [Frequently Asked Questions for Replication Administrators](../replication/administration/frequently-asked-questions-for-replication-administrators.yml)

@@ -62,7 +62,7 @@ You can duplicate an existing table in [!INCLUDE[ssnoversion](../../includes/ssn
   
 5.  Select **Execute** to create the new table.
 
-## Next Steps
+## Next steps
 
 - [Copy Columns from One Table to Another (Database Engine)](copy-columns-from-one-table-to-another-database-engine.md)
 - [Script objects in SQL Server Management Studio](../../ssms/tutorials/scripting-ssms.md)

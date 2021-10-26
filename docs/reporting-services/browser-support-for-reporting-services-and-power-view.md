@@ -1,7 +1,7 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
-ms.date: 10/14/2021
+ms.date: 10/25/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -38,7 +38,8 @@ Learn about what browser versions are supported for managing and viewing SQL Ser
 The following is the current list of browsers supported for the web portal.
 
 **Microsoft Windows**  
-*Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
+*Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019*
+
 - Microsoft Edge (+)
 - Microsoft Internet Explorer 10 or 11
 - Google Chrome (+)

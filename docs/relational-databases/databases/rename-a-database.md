@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!NOTE]
 > To rename a database in Azure Synapse Analytics or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
   
-## Limitations and Restrictions  
+## Limitations and restrictions  
   
 - System databases cannot be renamed.
 - The database name cannot be changed while other users are accessing the database. 
@@ -108,7 +108,7 @@ ALTER LOGIN [login] WITH DEFAULT_DATABASE=[new-database-name];
 GO
 ```
 
-## Next Steps
+## Next steps
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Database Identifiers](../../relational-databases/databases/database-identifiers.md)  

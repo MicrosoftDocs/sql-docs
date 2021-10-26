@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   You can disable a foreign key constraint during INSERT and UPDATE transactions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use this option if you know that new data will not violate the existing constraint or if the constraint applies only to the data already in the database.  
   
-##  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and restrictions  
  After you disable these constraints, future inserts or updates to the column will not be validated against the constraint conditions.  
   
 ##  <a name="Security"></a><a name="Permissions"></a> Permissions  
@@ -71,7 +71,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     GO  
     ``` 
   
-## Next Steps
+## Next steps
 
 - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   

@@ -6,7 +6,7 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth

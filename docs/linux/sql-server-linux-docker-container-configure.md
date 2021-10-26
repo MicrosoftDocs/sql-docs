@@ -6,7 +6,7 @@ ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
 ms.date: 03/22/2021
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "

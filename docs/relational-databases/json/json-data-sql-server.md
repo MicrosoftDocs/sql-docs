@@ -1,14 +1,13 @@
 ---
 description: "JSON data in SQL Server"
 title: "Work with JSON data"
-ms.date: 06/03/2020
+ms.date: 10/21/2021
 ms.prod: sql
 ms.technology: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "JSON"
   - "JSON, built-in support"
-ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
@@ -24,7 +23,7 @@ monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=s
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
 
-JSON functions in SQL Server enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
+JSON functions, first introduced in SQL Server 2016, enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
 
 *JSON as a bridge between NoSQL and relational worlds*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
@@ -174,7 +173,8 @@ OUTER APPLY OPENJSON(skills)
   WITH (skill NVARCHAR(8) '$');
 ```
 
-**skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`.
+The **skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`.
+
 The result of this query is shown in the following table:
 
 **Results**
@@ -186,12 +186,12 @@ The result of this query is shown in the following table:
 |5|Jane|Smith||2005-11-04T12:00:00|C#|
 |5|Jane|Smith||2005-11-04T12:00:00|Azure|
 
-`OUTER APPLY OPENJSON` will join first level entity with sub-array and return flatten resultset. Due to JOIN, the second row will be repeated for every skill.
+`OUTER APPLY OPENJSON` will join first-level entity with sub-array and return flatten resultset. Due to JOIN, the second row will be repeated for every skill.
 
 ### Convert SQL Server data to JSON or export JSON
 
->[!NOTE]
->Converting Azure Synapse Analytics data to JSON or exporting JSON is not supported.
+> [!NOTE]
+> Converting Azure Synapse Analytics data to JSON or exporting JSON is not supported.
 
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
@@ -266,7 +266,7 @@ Here are some use cases that show how you can use the built-in JSON support in [
 
 ## Store and index JSON data in SQL Server
 
-JSON is a textual format so the JSON documents can be stored in `NVARCHAR` columns in a SQL Database. Since `NVARCHAR` type is supported in all SQL Server sub-systems you can put JSON documents in tables with **CLUSTERED COLUMNSTORE** indexes, **memory optimized** tables, or external files that can be read using OPENROWSET or PolyBase.
+JSON is a textual format so the JSON documents can be stored in `NVARCHAR` columns in a SQL Database. Since `NVARCHAR` type is supported in all SQL Server subsystems you can put JSON documents in tables with **CLUSTERED COLUMNSTORE** indexes, **memory optimized** tables, or external files that can be read using OPENROWSET or PolyBase.
 
 To learn more about your options for storing, indexing, and optimizing JSON data in SQL Server, see the following articles:
 
@@ -374,21 +374,21 @@ The output of this query is JSON text that's fully compliant with the OData spec
 
 To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
 
-After you restore the sample database to an instance of SQL Server 2016, extract the samples file, and then open the *JSON Sample Queries procedures views and indexes.sql* file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, test sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
+After you restore the sample database to an instance of SQL Server, extract the samples file, and then open the *JSON Sample Queries procedures views and indexes.sql* file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, test sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
   
 Here's what you can do with the scripts that are included in the file:  
   
 - Denormalize the existing schema to create columns of JSON data.
 
-  - Store information from SalesReasons, SalesOrderDetails, SalesPerson, Customer, and other tables that contain information related to sales order into JSON columns in the SalesOrder_json table.  
+  - Store information from `SalesReasons`, `SalesOrderDetails`, `SalesPerson`, `Customer`, and other tables that contain information related to sales order into JSON columns in the `SalesOrder_json` table.  
   
-  - Store information from EmailAddresses/PersonPhone tables in the Person_json table as arrays of JSON objects.  
+  - Store information from `EmailAddresses`/`PersonPhone` tables in the `Person_json` table as arrays of JSON objects.  
   
 - Create procedures and views that query JSON data.  
   
 - Index JSON data. Create indexes on JSON properties and full-text indexes.  
   
-- Import and export JSON. Create and run procedures that export the content of the Person and the SalesOrder tables as JSON results, and import and update the Person and the SalesOrder tables by using JSON input.  
+- Import and export JSON. Create and run procedures that export the content of the `Person` and the `SalesOrder` tables as JSON results, and import and update the `Person` and the `SalesOrder` tables by using JSON input.  
   
 - Run query examples. Run some queries that call the stored procedures and views that you created in steps 2 and 4.  
   
@@ -406,7 +406,7 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 *Building REST API with SQL Server using JSON functions*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
-### Reference articles
+## Next steps
 
 - [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
 - [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

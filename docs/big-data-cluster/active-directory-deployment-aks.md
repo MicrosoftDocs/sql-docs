@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Cluster
 description: Explains concepts and planning information for how to deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS).
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql

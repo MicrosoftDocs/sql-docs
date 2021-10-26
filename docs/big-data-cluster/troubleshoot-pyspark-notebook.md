@@ -6,7 +6,7 @@ author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.date: 06/01/2020
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

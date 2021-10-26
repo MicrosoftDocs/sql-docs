@@ -74,13 +74,13 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 ## Known issues
 
-### Cluster upgrade from a CU8 and bellow release to a post CU9 release is not supported
+### Cluster upgrade from a CU8 and below release to a post CU9 release is not supported
 
-- **Affected releases**: Releases CU8 and bellow
+- **Affected releases**: Releases CU8 and below
 
-- **Issue and customer impact**: When directly upgrading a cluster on CU8 release or bellow to any release above CU9, upgrade fails from at Monitoring Phase.
+- **Issue and customer impact**: When directly upgrading a cluster on CU8 release or below to any release above CU9, upgrade fails from Monitoring Phase.
 
-- **Solution**: Upgrade to CU9 first, then upgrade from CU9 to the latest release.
+- **Solution**: Upgrade to CU9 first. Then upgrade from CU9 to the latest release.
 
 ### Kubernetes platforms with Kubernetes API version 1.21+
 

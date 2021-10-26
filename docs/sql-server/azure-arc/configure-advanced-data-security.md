@@ -29,7 +29,7 @@ You can enable Azure Defender for your SQL Server instances on-premises by follo
    ![Create new workspace](media/configure-advanced-data-security/create-new-log-analytics-workspace.png)
 
    > [!NOTE]
-   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your __Machine - Azure Arc__ resource is created.
+   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your __Server - Azure Arc__ resource is created.
 
 1. Go to the overview page of the Log Analytics workspace resource and select **Windows, Linux, and other sources**. Copy the workspace ID and primary key for later use.
 
@@ -39,7 +39,7 @@ You can enable Azure Defender for your SQL Server instances on-premises by follo
 
 The next step is needed only if you have not yet configured MMA on the remote machine.
 
-1. Select the __Machine - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
+1. Select the __Server - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
 
    ![Install MMA](media/configure-advanced-data-security/install-mma-extension.png)
 
@@ -87,5 +87,5 @@ Explore security anomalies and threats in Azure Security Center.
 
 ## Next steps
 
-* To configure Azure Defender for SQL Server at scale, see [Enable Azure Defender for Azure SQL at the subscription level](/azure/azure-sql/database/azure-defender-for-sql.md#enable-azure-defender-for-azure-sql-database-at-the-subscription-level-from-azure-security-center).
+* To configure Azure Defender for SQL Server at scale, see [Enable Azure Defender for Azure SQL at the subscription level](/azure/azure-sql/database/azure-defender-for-sql#enable-azure-defender-for-azure-sql-database-at-the-subscription-level-from-azure-security-center).
 * You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details,see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).

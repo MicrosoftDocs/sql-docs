@@ -19,8 +19,7 @@ This article describes how to connect multiple instances of SQL Server to Azure 
 You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy _Configure Arc-enabled machines running SQL Server to have SQL Server extension installed_. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the SQL Server extension (*WindowsAgent.SqlServer*) on all Azure Arc connected servers, and will assign `Azure Connected SQL Server Onboarding` role to Arc managed identity in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
->The __SQL Server - Azure Arc__ resources for the SQL Server instances will be created in the same region and the resource group as the corresponding __Machine - Azure Arc__ resource. Because the SQL Serve extension synchronizes with Azure once an hour, it may take up to one hour before these resources are created.  
-
+>The __SQL Server - Azure Arc__ resources for the SQL Server instances will be created in the same region and the resource group as the corresponding __Server - Azure Arc__ resource. Because the SQL Serve extension synchronizes with Azure once an hour, it may take up to one hour before these resources are created.  
 
 ## Connecting multiple SQL Server instances using script
 
@@ -60,7 +59,13 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
    > [!NOTE]
    > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
 
-2. Retrieve the password stored in the `$sp` variable:
+2. Give the service principle permissions to access Microsoft Graph:
+    ```azurepowershell-interactive
+    $sp = New-AzADServicePrincipal -DisplayName "Arc-for-servers" -Role <your custom role>
+    ```
+. 
+1
+1. Retrieve the password stored in the `$sp` variable:
 
    ```azurepowershell-interactive
    $credential = New-Object pscredential -ArgumentList "temp", $sp.Secret
@@ -133,7 +138,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 ## Validate successful onboarding
 
-After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each connected SQL Server instance within approximately 1 minute. If these resource are not created, it means something went wrong during the extension installation and activation process. See [Troubleshoot SQL Server extension](./connect-at-scale.md#troubleshoot-sql-server-extension) for the troubleshooting options.
+After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Server - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each connected SQL Server instance within approximately 1 minute. If these resource are not created, it means something went wrong during the extension installation and activation process. See [Troubleshoot SQL Server extension](./connect-at-scale.md#troubleshoot-sql-server-extension) for the troubleshooting options.
 
 ![A successful onboard](./media/join-at-scale/successful-onboard.png)
 
@@ -168,7 +173,7 @@ Check the log files for any application errors.
 
 Check if SQL server installed.
 
-### Machine - Azure Arc ARM resource was manually deleted
+### Server - Azure Arc ARM resource was manually deleted
 
 Check the extension log for the following record:
  `[7/14/2021 9:36:18 PM UTC] [ERROR]   [UploadServiceProvider]      [ExtensionHandlerStatusQueryError] ArcSqlInstancesRequest request is null, not sending data to RP.`

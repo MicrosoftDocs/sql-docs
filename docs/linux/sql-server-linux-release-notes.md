@@ -86,7 +86,7 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 ## <a id="CU27"></a> CU27 (October 2021)
 
-This is the Cumulative Update 26 (CU26) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3411.3. For information about the fixes and improvements in this release, see <https://support.microsoft.com/help/5005226>.
+This is the Cumulative Update 27 (CU27) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3421.10. For information about the fixes and improvements in this release, see <https://support.microsoft.com/help/5006944>.
 
 ### Package details
 

@@ -8,7 +8,7 @@ ms.reviewer: wiassaf
 ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
 # Introducing Spark Machine Learning on SQL Server Big Data Clusters

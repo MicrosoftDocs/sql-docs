@@ -3,7 +3,7 @@ title: CAB download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/22/2021
+ms.date: 10/27/2021
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -85,7 +85,12 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)-[CU23](https://support.microsoft.com/help/5000685/)** |  |  |  |
+|**[SQL Server 2017 CU27](https://support.microsoft.com//help/5006944/)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | R Server              | [SRS_9.4.7.1162_1033.cab](https://go.microsoft.com/fwlink/?linkid=2174362)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.1162_1033.cab](https://go.microsoft.com/fwlink/?linkid=2174361)  |  |
+|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)-[CU26](https://support.microsoft.com/help/5005226/)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

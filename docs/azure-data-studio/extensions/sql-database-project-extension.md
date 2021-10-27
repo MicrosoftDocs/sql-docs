@@ -13,7 +13,7 @@ ms.date: 10/27/2021
 
 # SQL Database Projects extension (Preview)
 
-The SQL Database Projects extension (preview) is an Azure Data Studio and VS Code extension for developing SQL databases in a project-based development environment.  A SQL project is a local representation of SQL objects 
+The SQL Database Projects extension (preview) is an Azure Data Studio and VS Code extension for developing SQL databases in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise a single database's schema, such as tables, stored procedures, or functions.
 
 
 ## Extension features

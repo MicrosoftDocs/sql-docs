@@ -18,7 +18,8 @@ The SQL Database Projects extension (preview) is an Azure Data Studio and VS Cod
 
 ## Extension features
 
-- Create a new blank project or a project from a connected database.
+- Create a new blank project.
+- Create a new project from a connected database or from an [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification file.
 - Open a Project previously created in [Azure Data Studio, VS Code](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
 - Edit project by adding or removing objects (tables, views, stored procedures) or custom scripts in the project.
 - Organize files/scripts in folders.
@@ -54,18 +55,26 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 
 The SQL Database Projects extension is installed with the [mssql](/sql/tools/visual-studio-code/sql-server-develop-use-vscode) extension for VS Code.
 
-## .NET Core SDK
-The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if it cannot be detected by the extension.  The .NET Core SDK (v3.1 or higher) can be downloaded and installed from [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+## Dependencies
 
-Previous installations of the .NET Core SDK may be below the minimum required version and are unsupported for use with the SQL Database Projects extension.  If you would like to [check currently installed versions](/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command.
+### .NET Core SDK
+The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if it cannot be detected by the extension.  The .NET Core SDK (v3.1.x) can be downloaded and installed from [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). If you would like to [check currently installed versions](/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command.
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
+To force the SQL Database Projects extension to use the v3.1.x version of the .NET Core SDK when multiple versions are installed, add a [package.json](/dotnet/core/tools/global-json?tabs=netcore3x) file to a containing folder for the SQL project.
+
 Unsupported .NET Core SDK versions may result in error messages such as:
 - `error MSB4018: The "SqlBuildTask" task failed unexpectedly.`
 - ` error MSB4018: System.TypeInitializationException: The type initializer for 'SqlSchemaModelStaticState' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified. [c:\Users\ .sqlproj]_` (where the linked non-existing file has an unmatched closing square bracket)
+
+
+### AutoRest.Sql
+
+The SQL extension for [AutoRest](https://github.com/Azure/autorest) is automatically downloaded and used by the SQL Database Projects extension when a SQL project is generated from an OpenAPI specification file.
+
 
 ## Known limitations
 

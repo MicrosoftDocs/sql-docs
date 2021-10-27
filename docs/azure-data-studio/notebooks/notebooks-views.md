@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: 
 ms.custom: seo-lt-2019
-ms.date: 10/26/2021
+ms.date: 10/27/2021
 ---
 
 # Notebook views (Preview)

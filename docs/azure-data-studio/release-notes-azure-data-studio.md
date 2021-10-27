@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 08/19/2021
+ms.date: 10/27/2021
 ---
 
 # Release notes for Azure Data Studio
@@ -19,37 +19,46 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### August 2021
+### October 2021
 
-Azure Data Studio 1.32.0 is the latest general availability (GA) release.
+Azure Data Studio 1.33.0 is the latest general availability (GA) release.
 
-- Release number: 1.32.0
-- Release date: August 18, 2021
+- Release number: 1.33.0
+- Release date: October 27, 2021
 
-#### What's new in 1.32.0
+#### What's new in 1.33.0
 
 | New item | Details |
 |----------|---------|
-| Notebooks | Large performance improvement for large notebooks |
-| Extension (new)  | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
-| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
-| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
-| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
-| Extension update | [Azure Arc](extensions/azure-arc-extension.md) |
+| Notebooks | Added Notebook Views support |
+| Notebooks | Added split cell support |
+| Notebooks | Added keyboard shortcuts for Markdown Toolbar cells |
+| Notebooks | Large performance improvement for large notebooks <br/> &bull; &nbsp; Ctrl/Cmd + B = Bold Text <br/> &bull; &nbsp; Ctrl/Cmd + I = Italicize Text <br/> &bull; &nbsp; Ctrl/Cmd + U = Underline Text <br/>  &bull; &nbsp; Ctrl/Cmd + Shift + K = Add Code Block <br/> &bull; &nbsp; Ctrl/Cmd + Shift + H = Highlight Text |
+| Notebooks | Added Book improvements <br/> &bull; &nbsp; Add a new section <br/> &bull; &nbsp; Drag and Drop |
+| Extension update  | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
+| Extension update | [Schema Compare](extensions/schema-compare-extension.md) |
+| Extension update | [SQL Database Projects](extensions/sql-database-project-extension.md) |
+| Extension update | [Machine Learning](extensions/machine-learning-extension.md) |
+| Extension update | [Profiler](extensions/sql-server-profiler-extension.md) |
+| Extension update | [Import](extensions/sql-server-profiler-extension.md) |
+| Extension update | [Kusto](extensions/kusto-extension.md) |
+| Extension update | [Dacpac](extensions/sql-server-dacpac-extension.md)|
 | Extension update | Lang packs |
+| Extension update | Azure SQL Migration |
+| Extension update | CMS |
+| Extension update | Kusto |
 
-#### Bug fixes in 1.32.0
+#### Bug fixes in 1.33.0
 
 | New Item | Details |
 |----------|---------|
-| Database Projects | Fixed Seeing "Project already opened" message for every project I open or create |
-| Schema Compare | Fixed Schema compare subsequent results after once are not loading in view |
-| Lang packs | Fixed Localization for previously untranslated extensions. |
-| Machine Learning | Fixed Machine Learning - View models dialog is broken |
+| Notebook | Fixed Notebook linking |
+| Notebook | Fixed horizontal scrollbar  (when word wrap is off in MD Splitview / MD mode) in Notebooks |
+| Notebook| Fixed vertical scrollbar for MD Splitview in Notebooks |
 
-For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2021+Release%22+is%3Aclosed).
+For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22October+2021+Release%22+is%3Aclosed).
 
-#### Known issues in 1.32.0
+#### Known issues in 1.33.0
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
@@ -61,6 +70,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------
+| [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
 | [July 2021](#july-2021) | 1.31.0 | July 21, 2021 | N/A |
 | [June 2021](#june-2021) | 1.30.0 | June 17, 2021 | N/A |
 | [May 2021](#may-2021) | 1.29.0 | May 19, 2021 | N/A |
@@ -95,6 +105,40 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
+
+### August 2021
+
+Azure Data Studio 1.32.0 is the latest general availability (GA) release.
+
+- Release number: 1.32.0
+- Release date: August 18, 2021
+
+#### What's new in 1.32.0
+
+| New item | Details |
+|----------|---------|
+| Notebooks | Large performance improvement for large notebooks |
+| Extension (new)  | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
+| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Extension update | [Azure Arc](extensions/azure-arc-extension.md) |
+| Extension update | Lang packs |
+
+#### Bug fixes in 1.32.0
+
+| New Item | Details |
+|----------|---------|
+| Database Projects | Fixed Seeing "Project already opened" message for every project I open or create |
+| Schema Compare | Fixed Schema compare subsequent results after once are not loading in view |
+| Lang packs | Fixed Localization for previously untranslated extensions. |
+| Machine Learning | Fixed Machine Learning - View models dialog is broken |
+
+For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2021+Release%22+is%3Aclosed).
+
+#### Known issues in 1.32.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### July Hotfix 2021
 

@@ -135,6 +135,9 @@ The following are examples of **decimal** constants:
 1894.1204  
 2.0  
 ```  
+
+> [!NOTE]
+> If you are using the deprecated SQL Server Profiler, you may see decimal values represented incorrectly in the user interface.  For example, 0.00159 may be represented in the TextData field as 159.  This behavior is a display bug that occurs when the TextData value is reconstructed from other profiler fields.  This is a good reason to use SQL Server Profiler's replacement API, SQL Server Extended Events.  If you try to copy-paste the 159 literal into a SQL Server Management Studio query window and execute it, you will get an error.
   
 ## float and real constants
 **float** and **real** constants are represented by using scientific notation.

@@ -75,6 +75,9 @@ ms.author: chugu
  [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
  Lists the predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error codes, together with their symbolic names and descriptions.  
   
-  
+## Related Sections  
+ [Troubleshooting Tools for Package Development](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ Describes the features and tools that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for troubleshooting packages during development.  
+ 
 ## See Also  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  

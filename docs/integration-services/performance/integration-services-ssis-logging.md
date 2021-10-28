@@ -675,6 +675,3 @@ SQL Server Integration Services provides a rich set of custom events for writing
  The following list contains links to topics that show how to perform tasks related to the logging feature.  
   
 -   [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-  
-## Related Content  
- [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=150579)  

@@ -50,7 +50,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 ```
 
-In Azure Synapse Analytics, additional configuration options are not available. Enable the Query Store with a similar command, for example:
+In Azure Synapse Analytics, enable the Query Store without additional options, for example:
 
 ```sql
 ALTER DATABASE <database_name>
@@ -291,8 +291,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```
 
-> [!NOTE]
-> Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
+Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
 
 > [!NOTE]
 > For Azure Synapse Analytics, customizing Query Store configuration options, as demonstrated in this section, is not supported. 
@@ -562,11 +561,11 @@ WHERE rsi1.start_time > DATEADD(hour, -48, GETUTCDATE())
 ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```
 
-If you want to see performance all regressions (not only those related to plan choice change) than just remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
+If you want to see performance all regressions (not only those related to plan choice change), remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
 
  #### Queries with historical regression in performance
 
-Comparing recent execution to historical execution, the next query compares query execution based periods of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
+Comparing recent execution to historical execution, the next query compares query execution based on period of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
 
 ```sql
 --- "Recent" workload - last 1 hour
@@ -653,7 +652,7 @@ OPTION (MERGE JOIN);
 
 For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store, you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
 
-You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
+You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans, you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
 
 ### Force a plan for a query (apply forcing policy)
 

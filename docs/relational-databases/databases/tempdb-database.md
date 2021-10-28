@@ -1,6 +1,6 @@
 ---
 title: "tempdb database"
-description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
+description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
 ms.date: 10/28/2021
 ms.prod: sql

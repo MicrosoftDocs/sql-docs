@@ -386,6 +386,6 @@ You can stop, start, or restart the SQL Server service as needed using the follo
 
 - [Overview of SQL Server Setup Documentation](../install-windows/install-sql-server.md)
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [SQL Server Configuration Manager](../sql/relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager)
 - [Start SQL Server with Minimal Configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
 - [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)

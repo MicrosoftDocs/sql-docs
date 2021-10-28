@@ -55,7 +55,7 @@ ms.author: mikeray
 ## RBS Requirements  
  - RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).    
   
- RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on Codeplex.  
+ RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API.
   
 ## RBS Security  
  The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](/archive/blogs/sqlrbs/rbs-security-model).  
@@ -78,9 +78,6 @@ ms.author: mikeray
 If your security policies require different key properties (e.g., algorithm or key length) from the ones provided, then the script may be used as a template. Modify the key properties in two places: 1) the creation of the temporary key 2) the creation of the permanent key.  
   
 ##  <a name="rbsresources"></a> RBS resources  
-  
- **RBS samples**  
- The RBS samples available on Codeplex demonstrate how to develop an RBS application, and how to develop and install a custom RBS provider.  
   
  **RBS blog**  
  The [RBS blog](/archive/blogs/sqlrbs/) provides additional information to help you understand, deploy, and maintain RBS.  

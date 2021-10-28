@@ -115,6 +115,34 @@ Designate one or more parameter names as defined in the params argument.  There 
 ## Return Code Values  
  If params returns a NULL value, then the statement is not parameterized.  
   
+
+## Examples
+
+This example demonstrates the use of sp_cursorprepexec. It runs a query against the Person table in the AdventureWorks databas returing all records where first name is Katherine.
+
+```t-sql
+USE AdventureWorks2016;
+
+DECLARE @prep_handle INT,
+        @cursor      INT,
+        @scrollopt   INT = 4104,
+        @ccopt       INT = 8193,
+        @rowcnt      INT
+
+EXEC sp_cursorprepexec
+  @prep_handle output,
+  @cursor output,
+  N'@fName nvarchar(100)',
+  N'SELECT FirstName, LastName FROM Person.Person WHERE FirstName = @fName',
+  @scrollopt,
+  @ccopt,
+  @rowcnt output,
+  'Katherine';
+
+EXEC Sp_cursorfetch  @cursor; 
+```
+
+
 ## See Also  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

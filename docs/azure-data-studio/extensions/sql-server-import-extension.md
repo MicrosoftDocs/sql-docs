@@ -13,7 +13,7 @@ ms.date: 10/28/2021
 
 # SQL Server Import extension
 
-The SQL Server Import extension converts .txt and .csv files into a SQL table. This wizard utilizes a Microsoft Research framework known as [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) to intelligently parse the file with minimal user input. it's a powerful framework for data wrangling, and it's the same technology that powers Flash Fill-in Microsoft Excel
+The SQL Server Import extension converts .txt and .csv files into a SQL table. This wizard utilizes a Microsoft Research framework known as [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) to intelligently parse the file with minimal user input. It's a powerful framework for data wrangling, and it's the same technology that powers Flash Fill-in Microsoft Excel
 
 To learn more about the SSMS version of this feature, you can read [this article](../../relational-databases/import-export/import-flat-file-wizard.md).
 
@@ -44,7 +44,7 @@ To learn more about the SSMS version of this feature, you can read [this article
 
     ![Input file](media/sql-server-import-extension/import-wizard-input-file.png)
 
-2. The wizard will generate a preview based on the first 50 rows. Select **Next** to proceed or create new columns calculated based on the contents of existing columns by selecting **Create derived column**.  See the section on [Derived columns](#derived-columns) for more information.
+2. The wizard will generate a preview based on the first 50 rows. Select **Next** to proceed or create new columns calculated based on the contents of existing columns by selecting **Create derived column**.  For more information, see the section on [Derived columns](#derived-columns).
 
     ![Preview data](media/sql-server-import-extension/import-wizard-preview-data.png)
 
@@ -62,9 +62,9 @@ To learn more about the SSMS version of this feature, you can read [this article
 
 ## Derived columns
 
-Columns can be added dynamically based on the contents of existing columns. This is useful when you want to create a new column based on the contents of another column during the data import. This functionality also leverages the [Program Synthesis](https://microsoft.github.io/prose/) framework.
+Columns can be added dynamically based on the contents of existing columns. This functionality is especially useful when you want to create a new column based on the contents of another column during the data import. This functionality also uses the [Program Synthesis](https://microsoft.github.io/prose/) framework.
 
-When you enter the **Create derived column** portion of the Import Wizard, you will begin by selecting the one or more columns that the new column will be based on.  Following the column selection you can enter the name of the new column and begin providing one or more values to be used in determining the calculation of the new column.  As you enter values you can pause and select **Preview Transformation** to assess the results of the transformation against a sample of the data.
+When you enter the **Create derived column** portion of the Import Wizard, you will begin by selecting one or more columns that the new column will be based on.  Following the column selection you can enter the name of the new column and begin providing one or more values to be used in determining the calculation of the new column.  As you enter values, you can pause and select **Preview Transformation** to assess the results of the transformation against a sample of the data.
 
 When you are satisfied with the data transformation displayed, select **Done** to return to the primary Import Wizard and proceed to the next step or continue to add derived columns.
 

@@ -25,9 +25,10 @@ ms.author: wiassaf
 
   Reports system level memory consumers for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from internal pool (if the allocation is in the context of a system thread).  
   
-```  
+```sql
 -- system memory consumers @ instance  
-select * from sys.dm_xtp_system_memory_consumers  
+SELECT * 
+FROM sys.dm_xtp_system_memory_consumers  
 ```  
   
  For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
@@ -54,19 +55,18 @@ select * from sys.dm_xtp_system_memory_consumers
   
 ## User Scenario  
   
-```  
+```sql
 -- system memory consumers @ instance  
-selectmemory_consumer_type_desc,   
-allocated_bytes/1024 as allocated_bytes_kb,   
-used_bytes/1024 as used_bytes_kb, allocation_count  
-from sys.dm_xtp_system_memory_consumers  
+SELECT memory_consumer_type_desc, allocated_bytes/1024 as allocated_bytes_kb, 
+	used_bytes/1024 as used_bytes_kb, allocation_count  
+FROM sys.dm_xtp_system_memory_consumers
 ```  
   
  The output shows all memory consumers at system level. For example, there are consumers for transaction look aside.  
   
 ```  
-memory_consumer_type_name           memory_consumer_desc                           allocated_bytes_kb   used_bytes_kb        allocation_count  
--------------------------------          ---------------------                          -------------------  --------------        ----------------  
+memory_consumer_type_name                memory_consumer_desc                           allocated_bytes_kb   used_bytes_kb        allocation_count  
+-------------------------------          ---------------------                          -------------------  --------------       ----------------  
 VARHEAP                                  Lookaside heap                                 0                    0                    0  
 VARHEAP                                  System heap                                    768                  0                    2  
 LOOKASIDE                                GC transaction map entry                       64                   64                   910  
@@ -90,10 +90,13 @@ PGPOOL                                   System 4K page pool                    
   
  To see the total memory consumed by system allocators:  
   
-```  
-select sum(allocated_bytes)/(1024*1024) as total_allocated_MB, sum(used_bytes)/(1024*1024) as total_used_MB   
-from sys.dm_xtp_system_memory_consumers  
-  
+```sql
+SELECT SUM(allocated_bytes)/(1024*1024) AS total_allocated_MB, SUM(used_bytes)/(1024*1024) AS total_used_MB   
+FROM sys.dm_xtp_system_memory_consumers
+```
+ Here is the result set.
+
+```
 total_allocated_MB   total_used_MB  
 -------------------- --------------------  
 2                    2  

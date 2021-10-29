@@ -173,7 +173,7 @@ go
 ```  
   
 ## Sample: Returning the Results of a SQL Server Query  
- The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Lightweight database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Can link [here](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms#download-backup-files):
+ The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Lightweight database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Can link [here](/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms#download-backup-files):
   
  Name your source code file FindInvalidEmails.cs or FindInvalidEmails.vb.  
   

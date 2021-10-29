@@ -41,9 +41,8 @@ The following table lists and describes conventions that are used in the syntax 
 |UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] keywords.|  
 |_italic_|User-supplied parameters of [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax.|  
 |**bold**|Type database names, table names, column names, index names, stored procedures, utilities, data type names, and text exactly as shown.|  
-|underline|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
 |&#124; (vertical bar)|Separates syntax items enclosed in brackets or braces. You can use only one of the items.|  
-|`[ ]` (brackets)|Optional syntax items. Don't type the brackets.|  
+|[ ] (brackets)|Optional syntax item.|  
 |{ } (braces)|Required syntax items. Don't type the braces.|  
 |[**,**..._n_]|Indicates the preceding item can be repeated _n_ number of times. The occurrences are separated by commas.|  
 |[..._n_]|Indicates the preceding item can be repeated _n_ number of times. The occurrences are separated by blanks.|  

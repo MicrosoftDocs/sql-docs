@@ -5,7 +5,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod: sql
 ms.topic: how-to
-ms.date: 10/05/2021
+ms.date: 11/1/2021
 ms.custom: template-how-to 
 ---
 
@@ -13,7 +13,7 @@ ms.custom: template-how-to
 
 Beginning with [!INCLUDE [sssql19-md](../../../../includes/sssql19-md.md)] CU 13, you can configure peer-to-peer replication to automatically resolve conflicts by allowing the most recent insert or update to win the conflict. If either write deletes the row, SQL Server allows the delete to win the conflict. This method is known as last write wins.
 
-Use stored procedures to configure last write wins. You can't configure last write wins with SQL Server Management Studio.
+Use stored procedures to configure last write wins.
 
 ## Important configuration considerations
 

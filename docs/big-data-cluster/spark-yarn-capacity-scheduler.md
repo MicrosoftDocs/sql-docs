@@ -34,7 +34,7 @@ To achieve more granular resource management on SQL Server Big Data Clusters, us
 
 In this end-to-end resource map example, the following configuration is applied:
 
-1. Creates a queue called ***largebatch*** for long running ETL and data transformation. Configured with 70% capacity and 90% max capacity. Jobs submitted to this queue won’t be preempted. Note that it is still possible to achieve concurrency in this queue if the jobs are configured not to take all queue capacity. Accessible only by the admin user.
+- Creates a queue called ***largebatch*** for long running ETL and data transformation. Configured with 70% capacity and 90% max capacity. Jobs submitted to this queue won’t be preempted. Note that it is still possible to achieve concurrency in this queue if the jobs are configured not to take all queue capacity. Accessible only by the admin user.
 - Creates a queue called ***smallbatch*** for select data transformation jobs. Configured with 25% capacity and 50% max capacity. Accessible by the admin user and dataengineers group.
 3. Creates a queue called ***powerusers*** for notebook-based experimentation for data engineers and data scientists. Configured from 5% capacity to 50% max capacity. Accessible by the admin user, and the dataengineers and datascientists groups.
 4. Setup access control lists (ACLs) for these three queues so that only authorized users and groups can access a given queue, and setup automatic user/group queue mapping. 

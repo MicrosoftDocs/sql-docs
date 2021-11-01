@@ -56,9 +56,69 @@ The following table summarizes the different ways to start your instance in sing
   
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
-## Step by step instructions
 
-The following step-by-step instructions describe how to grant system administrator permissions to a SQL Server login that mistakenly no longer has access.
+
+
+## Using commands from Command Prompt
+
+1. Open a Command Prompt as Administrator
+1. Stop SQL Sever service so it can be restarted with single-user mode, using the following command:
+
+   ```Command Prompt
+   net stop MSSQL$instancename
+   ```
+
+   For a default instance name use: `net stop MSSQLSERVER`
+
+
+1. Now start your SQL Server instance in a single user mode and only allow SQLCMD.exe to connect (/mSQLCMD)
+
+   > [!NOTE]  
+   > Be sure to use upper-case SQLCMD
+
+   ```Command Prompt
+   net start MSSQL$instance /mSQLCMD
+   ```
+
+1. Using **SQLCMD** execute a CREATE LOGIN command followed by ALTER SERVER ROLE command. This step assumes you have logged into Windows with an account that is a member of the Local Administrators group. Replace the domain and login name with the credentials you want to give Sysadmin access.
+
+   ```Command Prompt
+   sqlcmd.exe -E -S.\instancename -Q "CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK]; "
+   ```
+
+   > [!NOTE]  
+   > If you receive the following error, you need to ensure no other SQLCMD has connected to SQL Server: </br>
+   > `Sqlcmd: Error: Microsoft ODBC Driver X for SQL Server : Login failed for user 'CONTOSO\BobD'. Reason: Server is in single user mode. Only one administrator can connect at this time..`
+
+
+1. **Mixed Mode (optional):** If your SQL Server is running in mixed authentication mode, you can also :
+    1. Grant a SQL login sysadmin access using. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace '************' with a strong password.
+
+       ```Command Prompt
+       sqlcmd.exe -E -S.\instancename -Q "CREATE LOGIN TempLogin WITH PASSWORD = '************'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
+       ```
+
+    1. Also, if your SQL Server is running in mixed authentication mode and you want to reset the password of the **sa** account. Change the password of the sa account with the following syntax. Be sure to replace '************' with a strong password:
+
+       ```Command Prompt
+       sqlcmd.exe -E -S.\instancename -Q "ALTER LOGIN sa WITH PASSWORD = '************'; "
+       ```
+
+1. Stop and restart your SQL Server instance in multi-user mode
+
+   ```Command Prompt
+   net stop MSSQL$instancename & net start MSSQL$instancename
+   ```
+
+1. Verify that you can connect to SQL Server using the account for which you granted access and if that account is member of Sysadmin role. 
+
+   ```Command Prompt
+   runas /noprofile /user:CONTOSO\PatK "sqlcmd.exe -E -S.\instancename -Q \"SELECT IS_SRVROLEMEMBER( 'sysadmin')\""
+   ```
+
+ 
+## Using SQL Server Configuration Manager and Management Studio (SSMS)
+
 
 These instructions assume,
 

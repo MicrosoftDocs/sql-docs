@@ -71,7 +71,7 @@ GO
 ### B. Getting the number of rows in each nonempty partition of a partitioned table or index  
  The following example returns the number of rows in each partition of table `TransactionHistory` that contains data. The `TransactionHistory` table uses partition function `TransactionRangePF1` and is partitioned on the `TransactionDate` column.  
   
- To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
+ To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. 
   
 ```sql
 USE AdventureWorks2012;  
@@ -87,7 +87,7 @@ GO
  The following example returns all rows that are in partition `5` of the table `TransactionHistory`.  
   
 > [!NOTE]  
->  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
+>  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. 
   
 ```sql  
 SELECT * FROM Production.TransactionHistory  
@@ -96,5 +96,4 @@ WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;
   
 ## See Also  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
-  
-  
+ 

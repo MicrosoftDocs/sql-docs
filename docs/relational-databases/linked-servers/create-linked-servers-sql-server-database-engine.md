@@ -228,13 +228,13 @@ ms.custom: seo-dt-2019
   
 Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
   
-    ```sql  
-    SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
-    FROM master.sys.server_principals AS local  
-    LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
-        ON local.name = linked.name;  
-    GO  
-    ```  
+```sql
+SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
+FROM master.sys.server_principals AS local  
+LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
+     ON local.name = linked.name;  
+     GO  
+```
   
 When NULL is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
 

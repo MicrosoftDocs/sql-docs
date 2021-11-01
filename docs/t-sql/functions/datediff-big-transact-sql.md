@@ -100,7 +100,7 @@ If only a time value is assigned to a date data type variable, `DATEDIFF_BIG` se
 If *startdate* and *enddate* have different date data types, and one has more time parts or fractional seconds precision than the other, `DATEDIFF_BIG` sets the missing parts of the other to 0.
   
 ## datepart boundaries
-The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by one microsecond (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF_BIG` will return 0 for *datepart* **week**.
+The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by one hundred nanoseconds (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF_BIG` will return 0 for *datepart* **week**.
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

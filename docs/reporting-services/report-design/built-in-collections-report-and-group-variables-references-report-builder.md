@@ -1,6 +1,6 @@
 ---
-title: "Report and Group Variables Collections References (Report Builder) | Microsoft Docs"
-description: Create a variable with a unique name when you have a complex calculation that you use in a report more than once. 
+title: "Report and group variables collections references in a paginated report | Microsoft Docs"
+description: Create a variable with a unique name when you have a complex calculation that you use in a paginated report more than once. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -21,8 +21,11 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Built-in Collections - Report and Group Variables References (Report Builder)
-  When you have a complex calculation that is used more than once in expressions in a report, you might want to create a variable. You can create a report variable or a group variable. Variable names must be unique in a report.  
+# Built-in collections - report and group variables references in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  When you have a complex calculation that is used more than once in expressions in a paginated report, you might want to create a variable. You can create a report variable or a group variable. Variable names must be unique in a report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

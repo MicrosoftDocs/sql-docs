@@ -56,7 +56,7 @@
       "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
-      "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",
+      "feedback_product_url": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
       "titleSuffix": "SQL Server",
       "recommendations": true
     },
@@ -171,6 +171,8 @@
         "odbc/**/*.md": "Open Database Connectivity (ODBC)",
         "odbc/reference/**/*.md": "ODBC API Reference",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
+        "reporting-services/report-design/*.md": "Microsoft Report Builder & Power BI Report Builder",
+        "reporting-services/report-builder/*.md": "Microsoft Report Builder & Power BI Report Builder",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
         "database-engine/availability-groups/**/*.md": "SQL Server Always On",

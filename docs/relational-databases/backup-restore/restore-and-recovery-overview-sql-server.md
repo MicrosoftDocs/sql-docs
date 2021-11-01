@@ -38,7 +38,7 @@ ms.author: chadam
   
 -   The data page (a *page restore*)  
   
-     Under the full recovery model or bulk-logged recovery model, you can restore individual databases. Page restores can be performed on any database, regardless of the number of filegroups.  
+     Under the full recovery model or bulk-logged recovery model, you can restore individual pages. Page restores can be performed on any database, regardless of the number of filegroups.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore work across all supported operating systems. For information about the supported operating systems, see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   

@@ -1,14 +1,16 @@
 ---
 title: Azure Synapse Pathway data type mappings Microsoft SQL Server
 description: Data type mappings for Microsoft SQL Server within Azure Synapse Pathway
-author: twounder
-ms.author: mausher
-ms.topic: overview 
+author: charlesfeddersen
+ms.author: charlesf
+ms.topic: overview
 ms.date: 07/15/2021
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
-ms.custom: template-overview 
+ms.custom:
+  - template-overview
+  - intro-overview
 ---
 # Microsoft SQL Server data type mapping
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]

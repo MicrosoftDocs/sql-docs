@@ -21,14 +21,14 @@ Use this page to set scripting options that apply to the following commands on o
   
 -   **Edit** commands for user tables and views.  
   
--   **Script <object> as** commands for user-created objects.  
+-   **Script \<object\> as** commands for user-created objects.  
   
 -   **Modify** command for user-created objects.  
   
 -   This page also sets the scripting option defaults for the **Generate SQL Server Script Wizard**.  
   
 ## Remarks  
-The **Edit** and **Modify** commands might produce results that are different from the **Script <object> as** command for the same option setting. The **Edit** and **Modify** commands are designed to modify objects in the current database during a Query Editor session. The **Script <object> as** command is designed to generate a script so that it can be used later to create objects.  
+The **Edit** and **Modify** commands might produce results that are different from the **Script \<object\> as** command for the same option setting. The **Edit** and **Modify** commands are designed to modify objects in the current database during a Query Editor session. The **Script \<object\> as** command is designed to generate a script so that it can be used later to create objects.  
   
 ## Options  
 Specify scripting options by selecting from the available settings in the list to the right of each option.
@@ -52,7 +52,7 @@ Includes change tracking information in the script.
 **Script full-text catalogs**  
 Includes a script for full-text catalogs. Default is False. For more information, see [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
-**Script USE <database>**  
+**Script USE \<database\>**  
 Adds the USE DATABASE statement to the script to create database objects in the context of the current **Object Explorer** database. When the script is expected for use in a different database, select False to omit. Default is True. For more information, see [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md).  
   
 ### Object scripting options  

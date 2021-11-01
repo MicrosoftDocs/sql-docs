@@ -194,7 +194,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 ![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
-1. Go to the Azure classic portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
+1. Go to the Azure classic portal: [https://portal.azure.com/](https://portal.azure.com/)  
 2. On the left-hand menu, select **Settings**.
 3. Select the Azure subscription you are currently using, and click **Edit Directory** from the commands at the bottom of the screen.
 4. In the pop-up window, use the **Directory** dropdown to select the Active Directory you'd like to use. This will make it the default Directory.
@@ -369,11 +369,17 @@ If you don't see your error code in this table, here are some other reasons the 
 
 The Windows event log also logs errors associated with the SQL Server Connector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
   
-SQL Server Version  |Redistributable Install Link
+#### C++ Runtime Libraries for SQL Server Connector 1.0.5.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.5.0
 ---------|---------
 2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
 2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
-  
+
+#### C++ Runtime Libraries for SQL Server Connector 1.0.4.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.4.0
+---------|---------
+2008, 2008 R2, 2012, 2014, 2016, 2017, 2019 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
+
 ## Additional References
 
  More About Extensible Key Management:  

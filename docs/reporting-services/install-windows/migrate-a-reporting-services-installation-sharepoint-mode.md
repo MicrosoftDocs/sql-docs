@@ -4,13 +4,13 @@ title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft 
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-
-
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: "= sql-server-2016"
+ms.custom:
+  - intro-migration
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)
@@ -99,7 +99,7 @@ monikerRange: "= sql-server-2016"
   
 2.  Backup the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service application in SharePoint central Administration (or use PowerShell). This will also backup the service application databases in SharePoint. See topic  [Backup and Restore Reporting Services SharePoint Service Applications](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
-3.  If you have an Unattended Execution account (UEA) and windows authentication, make a note of the credentials so you can use them for the restore process.  
+3.  If you have an Unattended Execution account (UEA) and Windows authentication, make a note of the credentials so you can use them for the restore process.  
   
 4.  For more information, see [Back up service applications in SharePoint 2013](/SharePoint/administration/back-up-a-service-application).  
   
@@ -111,7 +111,7 @@ monikerRange: "= sql-server-2016"
   
      See the section "Key Management" in the topic [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
-3.  Configure the UEA and windows credentials on the service application.  
+3.  Configure the UEA and Windows credentials on the service application.  
   
 4.  For more information, see [Restore service applications in SharePoint 2013](/SharePoint/administration/restore-a-service-application).  
   
@@ -126,4 +126,4 @@ monikerRange: "= sql-server-2016"
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -7,7 +7,10 @@ ms.topic: overview
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-ms.custom: seodec18, contperf-fy21q4
+ms.custom:
+  - seodec18
+  - contperf-fy21q4
+  - intro-overview
 ms.date: 08/18/2021
 ---
 
@@ -220,6 +223,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
 - Windows 7 (SP1)
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 (64-bit)

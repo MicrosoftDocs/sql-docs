@@ -113,7 +113,7 @@ To give permissions to SQL Server startup account to register and modify SPN do 
 
 2.  Select **View \> Advanced**.
 
-3.  Under **Users**, locate SQL Server startup account, and then right-click and select **Properties**.
+3.  Under **Computers**, locate the SQL Server computer, and then right-click and select **Properties**.
 
 4.  Select the **Security** tab and click **Advanced**.
 
@@ -139,7 +139,7 @@ Manual intervention might be required to register or unregister the SPN if the s
 
 To register the SPN manually, you can use Setspn tool that is built into Windows. Setspn.exe is a command-line tool that enables you to read, modify, and delete the Service Principal Names (SPN) directory property. This tool also enables you to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs.  
 
-For more information on the Setspn tool, required permissions and examples on how to use it, review [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).
+For more information on the Setspn tool, required permissions and examples on how to use it, review [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).
 
 The following example illustrates the syntax used to manually register an SPN for a TCP/IP connection using a domain user account:  
 

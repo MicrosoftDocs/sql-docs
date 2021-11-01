@@ -154,7 +154,7 @@ The default value is `sgd`.
 
 The Net# definition of the structure of the neural
 network. For more information about the Net# language, see
-[Reference Guide](https://azure.microsoft.com/documentation/articles/machine-learning-azure-ml-netsharp-reference-guide/)
+[Reference Guide](/azure/machine-learning/classic/azure-ml-netsharp-reference-guide)
 
 
 ### init_wts_diameter

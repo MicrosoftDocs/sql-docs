@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 08/12/2020
+ms.date: 10/15/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -395,7 +395,13 @@ To set up this new location, use the following commands:
 
 ## <a id="coredump"></a> Specify core dump settings
 
-If an exception occurs in one of the SQL Server processes, SQL Server creates a memory dump.
+If an exception or crash occurs in one of the SQL Server processes, SQL Server creates a memory dump. Capturing a memory dump may take a long time and take up significant space. To save resources and avoid repeated memory dumps, there is a setting to disable automatic dump capture, **coredump.disablecoredump**.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set coredump.disablecoredump <true or false>
+```
+
+Users can still generate memory dumps manually when automatic core dump is disabled (**coredump.disablecoredump** set to `true`).
 
 There are two options for controlling the type of memory dumps that SQL Server collects: **coredump.coredumptype** and **coredump.captureminiandfull**. These relate to the two phases of core dump capture. 
 

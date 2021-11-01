@@ -1,12 +1,12 @@
 ---
-title: "Common issues & resolutions with availability groups"
+title: "Troubleshoot Always On Availability Groups Configuration (SQL Server)"
 description: Troubleshoot typical problems with configuring server instances for Always On availability groups in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "troubleshooting [SQL Server], deploying"
   - "Availability Groups [SQL Server], troubleshooting"
@@ -187,7 +187,9 @@ Run the following PowerShell script to examine for disabled inbound traffic rule
 
  **Resolution:**  
  
-Summary of steps is outlined below. For detailed step-by-step instructions, please refer to Engine error [MSSQLSERVER_35250](../../../relational-databases/errors-events/mssqlserver-35250-database-engine-error.md)
+Summary of steps is outlined below. 
+
+For **detailed** step-by-step instructions, please refer to Engine error [MSSQLSERVER_35250](../../../relational-databases/errors-events/mssqlserver-35250-database-engine-error.md)
 
 1. Ensure the endpoint is created and started. 
 2. Check if you can connect to the endpoint via Telnet and ensure no firewall rules are blocking connectivity

@@ -190,7 +190,7 @@ Availability groups can provide minimal downtime during patching of the underlyi
 
 ### Always on failover cluster instances
 
-FCIs on their own cannot assist with a traditional migration or upgrade; an availability group or log shipping would have to be configured for the databases in the FCI and all other objects accounted for. However, FCIs under Windows Server are still a popular option for when the underlying Windows Servers need to be patched. A manual failover can be initiated, which means a brief outage instead of having the instance completely unavailable for the entire time Windows Server is being patched.
+FCIs on their own cannot assist with a traditional migration or upgrade; an availability group or log shipping would have to be configured for the databases in the FCI and all other objects accounted for. However, FCIs under Windows Server are still a popular option for when the underlying Windows Servers need to be patched. A manual failover can be initiated, which means a brief outage instead of having the instance completely unavailable for the entire time that Windows Server is being patched.
 An FCI can be upgraded in place to later versions of SQL Server. For information, see [Upgrade a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).
 
 ### Log shipping

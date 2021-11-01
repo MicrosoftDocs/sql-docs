@@ -2,7 +2,7 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
-ms.date: 06/02/2021
+ms.date: 10/04/2021
 ms.prod: sql
 ms.reviewer: "llali"
 ms.prod_service: sql-tools
@@ -15,6 +15,57 @@ ms.author: drskwier
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+
+## 18.8 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2164920)|October 4, 2021|18.8|15.0.5282.3|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165009)|October 4, 2021| 18.8|15.0.5282.3|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165008)|October 4, 2021| 18.8|15.0.5282.3|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165007)|October 4, 2021| 18.8|15.0.5282.3|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Export | Adds option VerifyExtraction to change behavior of schema model validation on export |
+| Azure SQL | Support for ledger database and tables, import and export |
+| Platform | Upgrade Microsoft.Data.SqlClient from 2.0.0 to 2.1.3 for .NET Core version |
+| Azure Synapse Analytics | Support for column encryption with symmetric key  |
+| Azure Synapse Analytics | Support for column encryption with CREATE CERTIFICATE |
+| Azure Synapse Analytics | Support for MERGE statement |
+| Deployment | Variable parameterization for AE columns, new publish property IsAlwaysEncryptedParameterizationEnabled |
+| Deployment | Support for IgnoreWorkloadClassifiers & IgnoreDatabaseWorkloadGroups publish properties |
+| Deployment | Support for external language runtimes |
+| ScriptDOM | Support for ledger database and tables |
+| ScriptDOM | Support for INCLUDE columns in inline index definitions |
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Fixed an issue where external user deployment to Managed Instance would fail |
+| Deployment | Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off |
+| Deployment | Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"  |
+| Export | Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s) |
+| Export | Fixed export failure when there are CDC objects in database by excluding |
+| Extract | Adds a retry to extract validation when first time fails due to race condition |
+| Import | Fixed occasional deadlocks when importing to Azure by setting MAXDOP to 1 |
+| Import | Fixed import failure when temporal table has dependency on security policy with schema binding on |
+| Platform | DacFramework.msi is now signed by "Microsoft SQL Server Data-Tier Application Framework" instead of "SQL Server 2012" |
+| Platform | Default to large arrays in x64 SqlPackage, fixes some scenarios involving large databases |
+| Schema Compare | Fix for schema compare failing for equal databases with database scoped configurations |
+| Schema Compare | Fixed schema compare with columnstore indexes |
+| SQL Project | Fixed a bug with build error for "GRANT EXECUTE ANY EXTERNAL SCRIPT" |
+| SQL Project | Fixed a bug where database project with columnstore index and a (n)varchar(max) column builds successfully but fails at deployment |
+| SQL Project | Fixed unresolved reference warnings for table distribution columns within Stored Procedures |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
+| Deployment | The Azure SQL ledger table feature is not yet supported | N/A |
 
 ## 18.7.1 sqlpackage
 

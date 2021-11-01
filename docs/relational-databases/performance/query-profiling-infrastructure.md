@@ -1,5 +1,5 @@
 ---
-title: "Query Profling Infrastruture | Microsoft Docs"
+title: "Query Profling Infrastructure | Microsoft Docs"
 description: Learn how the SQL Server Database Engine accesses runtime information on query execution plans to understand the workload and how resource usage is driven.
 ms.custom: ""
 ms.date: 04/23/2019

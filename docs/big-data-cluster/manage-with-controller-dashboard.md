@@ -4,7 +4,7 @@ titleSuffix: Manage SQL Server big data cluster with controller dashboard
 description: Use a notebook from Azure Data Studio to manage and troubleshoot a big data cluster.
 author: yualan
 ms.author: alanyu
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql

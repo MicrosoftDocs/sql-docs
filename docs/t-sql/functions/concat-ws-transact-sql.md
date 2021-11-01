@@ -2,12 +2,12 @@
 description: "CONCAT_WS (Transact-SQL)"
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2018"
+ms.date: "09/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "CONCAT_WS"
   - "CONCAT_WS_TSQL"

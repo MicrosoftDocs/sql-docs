@@ -98,4 +98,4 @@ If you create the report server database on a remote computer, configure the con
 
 Read about [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).  
 
-More questions? Ask the [Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+More questions? Ask the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

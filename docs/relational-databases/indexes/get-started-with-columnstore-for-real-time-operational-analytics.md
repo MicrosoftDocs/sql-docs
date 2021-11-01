@@ -1,7 +1,8 @@
 ---
 description: "Get started with Columnstore for real-time operational analytics"
 title: "Get started with Columnstore for real-time operational analytics | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "03/08/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"

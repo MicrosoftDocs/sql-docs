@@ -62,7 +62,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
 ## Using commands from Command Prompt
 
 1. Open a Command Prompt as Administrator
-1. Stop SQL Sever service so it can be restarted with single-user mode, using the following command:
+1. Stop SQL Server service so it can be restarted with single-user mode, using the following command:
 
    ```Command Prompt
    net stop MSSQL$instancename
@@ -91,8 +91,8 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
    > `Sqlcmd: Error: Microsoft ODBC Driver X for SQL Server : Login failed for user 'CONTOSO\BobD'. Reason: Server is in single user mode. Only one administrator can connect at this time..`
 
 
-1. **Mixed Mode (optional):** If your SQL Server is running in mixed authentication mode, you can also :
-    1. Grant a SQL login sysadmin access using. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace '************' with a strong password.
+1. **Mixed Mode (optional):** If your SQL Server is running in mixed authentication mode, you can also:
+    1. Grant a SQL login Sysadmin role membership. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace '************' with a strong password.
 
        ```Command Prompt
        sqlcmd.exe -E -S.\instancename -Q "CREATE LOGIN TempLogin WITH PASSWORD = '************'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
@@ -189,7 +189,7 @@ Perform these instructions while logged in to Windows as a member of the local a
   
 11. Right-click your server name, and then click **Restart**. Make sure to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent again if you stopped it before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
   
-Now you should be able to connect normally with one of the accounts which is now a member of the **sysadmin** fixed server role.  
+Now you should be able to connect normally with one of the accounts that is now a member of the **sysadmin** fixed server role.  
   
 ## See Also  
 

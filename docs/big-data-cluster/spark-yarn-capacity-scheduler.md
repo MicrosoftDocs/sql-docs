@@ -42,7 +42,7 @@ In this end-to-end resource map example, the following configuration is applied:
 > [!NOTE]
 > On SQL Server Big Data Clusters, Access Control Lists (ACLs) isolation is only possible on Active Directory enabled clusters. On clusters with basic authentication, all applications run using a single user context. Yet it is still possible to apply the techniques in this article to achieve resource segmentation.
 
-This following samples will apply settings on an existing big data cluster using the configuration framework. The configuration may also be performed at deployment time with a custom configuration profile.
+The following samples will apply settings on an existing big data cluster using the configuration framework. The configuration may also be performed at deployment time with a custom configuration profile.
 
 ## Configure YARN queues
 

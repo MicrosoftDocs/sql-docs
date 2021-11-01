@@ -22,7 +22,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/25/2021 
+ms.date: 11/1/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -108,9 +108,9 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 
 ## Uninstall
 
-There are shared components that remain installed after you uninstall SSMS.
+SSMS may install shared components if it is determined that they are missing during SSMS installation. SSMS will not automatically uninstall these components when you uninstall SSMS.
 
-The shared components that remain installed are:
+The shared components are:
 
 - Azure Data Studio
 - Microsoft .NET Framework 4.7.2

@@ -190,7 +190,7 @@ ms.custom: seo-dt-2019
   
 ##### To create a linked server to another instance of SQL Server using Transact-SQL  
   
-1.  In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
+1. In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
   
     ```sql  
     USE [master]  
@@ -202,7 +202,7 @@ ms.custom: seo-dt-2019
   
     ```  
   
-2.  Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
+2. Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
   
     ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
@@ -210,7 +210,6 @@ ms.custom: seo-dt-2019
         @locallogin = NULL ,   
         @useself = N'True';  
     GO  
-  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: Steps to take after you create a linked server  
@@ -227,7 +226,7 @@ ms.custom: seo-dt-2019
   
 ### To join tables from a linked server  
   
--   Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
+Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
   
     ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
@@ -237,12 +236,18 @@ ms.custom: seo-dt-2019
     GO  
     ```  
   
-     When `NULL` is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
-  
+When NULL is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
+
+## Linked servers with Azure SQL Managed Instance
+
+If you're using Azure SQL Managed Instance, see the following examples from [sp_addlinkedserver (Transact-SQL)](../system-stored-procedures/sp-addlinkedserver-transact-sql.md):
+
+- [Create SQL Managed Instance linked server with managed identity Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication)
+
+- [Create SQL Managed Instance linked server with pass-through Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
+
 ## Next steps  
 
- - [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
- - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
-  
-  
+- [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)
+- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

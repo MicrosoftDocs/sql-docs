@@ -9,7 +9,7 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 10/05/2021 
+ms.date: 11/1/2021 
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -43,7 +43,7 @@ SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need 
 | Analysis Services | Update BITools to 150.19714.0 |
 | DacFx | Update DacFx to 15.0.5282.3 |
 | Import Flat File | Support for rich data types in Import Flat File wizard, including money. |
-| Replication | Support for peer to peer publication with [Last Writer Win (LWW) conflict detection](../relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md) |
+| Replication | Support for scripting of peer to peer publication with [Last Writer Win (LWW) conflict detection](../relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md) |
 | XEvents | Support for Ledger syntax in XEvents interface |
 
 #### Bug fixes in 18.10

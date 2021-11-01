@@ -133,7 +133,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 -- Create a database scoped credential.
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
-    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>',
+    IDENTITY = '<client_id>@<OAuth_2.0_Token_EndPoint>',
     SECRET = '<key>'
 ;
 ```

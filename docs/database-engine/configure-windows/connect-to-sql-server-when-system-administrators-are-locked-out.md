@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: configuration
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "sa account"
   - "connecting when locked out [SQL Server]"

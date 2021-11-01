@@ -159,7 +159,7 @@ SET @json = N'[
   {"id": 5, "info": {"name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"]}, "dob": "2005-11-04T12:00:00"}  
 ]';
 
-SELECT *  
+SELECT id, firstName, lastName, age, dateOfBirth, skill  
 FROM OPENJSON(@json)  
   WITH (
     id INT 'strict $.id',

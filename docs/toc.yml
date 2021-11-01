@@ -439,6 +439,8 @@ items:
       items:
       - name: Tuning guide
         href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Spark workloads and YARN queues
+        href: big-data-cluster/spark-yarn-capacity-scheduler.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC

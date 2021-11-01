@@ -122,8 +122,6 @@ ms.author: wiassaf
 ## Using a .Net Framework Application  
  **To deploy a database using the DacStoreExport() and Import() methods in a .Net Framework application.**  
   
- To view a code example, download the DAC sample application on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
-  
 1.  Create a SMO Server object and set it to the instance or server that contains the database to be deployed.  
   
 2.  Open a **ServerConnection** object and connect to the same instance.  

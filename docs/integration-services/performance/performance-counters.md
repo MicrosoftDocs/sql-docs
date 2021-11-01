@@ -68,7 +68,6 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## Related Content  
   
--   Tool, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626), on codeplex.com.  
   
 -   Video, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)), on msdn.microsoft.com.  
   

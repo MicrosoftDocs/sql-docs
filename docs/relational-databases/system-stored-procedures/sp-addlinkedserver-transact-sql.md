@@ -321,7 +321,49 @@ EXEC ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer
 -- Query the data using 4-part names  
 SELECT * FROM myLinkedServer.myDatabase.dbo.myTable  
 ```  
-  
+
+### H. Create SQL Managed Instance linked server with managed identity Azure AD authentication
+
+To create a linked server with managed identity authentication execute following T-SQL. The authentication method uses `ActiveDirectoryMSI` in the `@provstr` parameter.
+
+```sql  
+EXEC master.dbo.sp_addlinkedserver
+@server     = N'MyLinkedServer',
+@srvproduct = N'',
+@provider   = N'MSOLEDBSQL',
+@provstr    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433;Authentication=ActiveDirectoryMSI;'
+
+EXEC master.dbo.sp_addlinkedsrvlogin
+@rmtsrvname = N'MyLinkedServer',
+@useself    = N'False',
+@locallogin = N'user1@domain1.com';  -- Use NULL to allow all local logins.
+```  
+
+If Azure SQL Managed Instance managed identity (formerly called managed service identity) is added as login to a remote managed instance, then Managed Identity authentication is possible with linked server created as in the previous example. Both system assigned and user assigned managed identities are supported. 
+
+If primary identity is set then that one will be used, otherwise system assigned managed identity will be used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, because new managed identity Application ID and Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
+
+```sql  
+SELECT convert(uniqueidentifier, sid) as AADApplicationID
+FROM sys.server_principals
+WHERE name = '<managed_instance_name>'
+```  
+
+### I. Create SQL Managed Instance linked server with pass-through Azure AD authentication
+
+To create a linked server with pass-through authentication execute following T-SQL.
+
+```sql  
+EXEC master.dbo.sp_addlinkedserver
+@server     = N'MyLinkedServer',
+@srvproduct = N'',
+@provider   = N'MSOLEDBSQL',
+@datasrc    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433'
+```  
+
+With pass-through authentication, security context of the local login is carried over to a remote instance.
+Pass-through authentication requires the AAD principal to be added as login on both local and remote Azure SQL Managed Instance. Both Managed Instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can login to a local instance and query the remote instance via the linked server object.
+
 ## See Also  
  [Distributed Queries Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   

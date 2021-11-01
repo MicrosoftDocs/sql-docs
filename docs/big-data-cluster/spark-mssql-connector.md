@@ -8,7 +8,7 @@ ms.reviewer: dacoelho
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning-bdc
+ms.technology: big-data-cluster
 ---
 
 # Use the Apache Spark Connector for SQL Server and Azure SQL

@@ -24,12 +24,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  To create working samples using the SQLXML 4.0 examples, you need to have the following installed.  
   
--   The AdventureWorks sample database. For more information, see [AdventureWorks Sample Databases](https://msftdbprodsamples.codeplex.com/).  
+-   The AdventureWorks sample database. For more information, see [AdventureWorks Sample Databases](/sql/samples/adventureworks-install-configure).  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 -   MDAC 2.6 or later  
   
- In many examples, templates are used to specify XPath queries against the mapping XSD schema. For more information, see [Using Annotated XSD Schemas in Queries &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
-  
-  
+ In many examples, templates are used to specify XPath queries against the mapping XSD schema. For more information, see [Using Annotated XSD Schemas in Queries &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).    

@@ -31,7 +31,7 @@ Column values in table-valued parameters can be accessed using standard Transact
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Table-Valued Parameters (Database Engine)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
 | [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
-| The [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
+
   
 ## Passing multiple rows in previous versions of SQL Server  
 

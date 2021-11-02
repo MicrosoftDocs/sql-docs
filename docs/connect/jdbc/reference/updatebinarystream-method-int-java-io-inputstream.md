@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBinaryStream Method (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

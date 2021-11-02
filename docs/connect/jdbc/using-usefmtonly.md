@@ -13,7 +13,7 @@ ms.topic: conceptual
 ms.assetid: ""
 caps.latest.revision: ""
 author: DavidEngel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Retrieving ParameterMetaData via useFmtOnly

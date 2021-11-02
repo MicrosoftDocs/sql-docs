@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Client Certificate Authentication for Loopback Scenarios
 

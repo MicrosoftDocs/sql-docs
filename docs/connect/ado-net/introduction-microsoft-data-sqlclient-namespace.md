@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-jizho2
 ---
 # Introduction to Microsoft.Data.SqlClient namespace

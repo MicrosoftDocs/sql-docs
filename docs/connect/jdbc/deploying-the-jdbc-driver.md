@@ -11,7 +11,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Deploying the JDBC driver
 

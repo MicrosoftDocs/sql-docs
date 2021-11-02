@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.custom:
   - intro-installation
 ---

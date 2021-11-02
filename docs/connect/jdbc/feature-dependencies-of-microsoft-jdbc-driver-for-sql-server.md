@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Feature dependencies of the Microsoft JDBC Driver for SQL Server
 

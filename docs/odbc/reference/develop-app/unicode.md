@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Unicode [ODBC], about Unicode"
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Unicode
 Unicode defines encoding for characters in many languages.  

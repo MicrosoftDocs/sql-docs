@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting with SQLDriverConnect
 

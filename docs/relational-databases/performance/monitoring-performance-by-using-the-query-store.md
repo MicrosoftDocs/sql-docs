@@ -2,7 +2,7 @@
 title: "Monitoring Performance By Using the Query Store"
 description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
-ms.date: 09/01/2021
+ms.date: 10/28/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -48,6 +48,13 @@ Use the `ALTER DATABASE` statement to enable the query store for a given databas
 ```sql
 ALTER DATABASE <database_name>
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
+```
+
+In Azure Synapse Analytics, enable the Query Store without additional options, for example:
+
+```sql
+ALTER DATABASE <database_name>
+SET QUERY_STORE = ON;
 ```
 
 For more syntax options related to the Query Store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
@@ -102,7 +109,7 @@ FROM sys.query_store_plan AS Pl
 INNER JOIN sys.query_store_query AS Qry
     ON Pl.query_id = Qry.query_id
 INNER JOIN sys.query_store_query_text AS Txt
-    ON Qry.query_text_id = Txt.query_text_id ;
+    ON Qry.query_text_id = Txt.query_text_id;
 ```
 
 ## <a name="Regressed"></a> Use the Regressed Queries feature
@@ -277,17 +284,17 @@ SELECT * FROM sys.database_query_store_options;
 
 #### Setting Query Store interval
 
-You can override interval for aggregating query runtime statistics (default is 60 minutes).
+You can override interval for aggregating query runtime statistics (default is 60 minutes). New value for interval is exposed through `sys.database_query_store_options` view.
 
 ```sql
 ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```
 
-> [!NOTE]
-> Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
+Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
 
-New value for interval is exposed through `sys.database_query_store_options` view.
+> [!NOTE]
+> For Azure Synapse Analytics, customizing Query Store configuration options, as demonstrated in this section, is not supported. 
 
 #### Query Store space usage
 
@@ -334,7 +341,9 @@ Query Store internal tables are created in the PRIMARY filegroup during database
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 ```
 
-Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space.
+Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
+
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 30 days.
 
 #### Delete ad-hoc queries
 
@@ -373,7 +382,6 @@ BEGIN
 END
 CLOSE adhoc_queries_cursor;
 DEALLOCATE adhoc_queries_cursor;
-
 ```
 
 You can define your own procedure with different logic for clearing up data you no longer want.
@@ -508,8 +516,11 @@ JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
 JOIN sys.query_store_query q ON p.query_id = q.query_id
 JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
 GROUP BY qt.query_text_id, q.query_id, p.plan_id
-ORDER BY sum_total_wait_ms DESC
+ORDER BY sum_total_wait_ms DESC;
 ```
+
+> [!NOTE]
+> In Azure Synapse Analytics, the Query Store sample queries in this section are supported with the exception of wait stats, which are not available in the Azure Synapse Analytics Query Store DMVs.
 
  #### Queries that recently regressed in performance
 
@@ -550,11 +561,11 @@ WHERE rsi1.start_time > DATEADD(hour, -48, GETUTCDATE())
 ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```
 
-If you want to see performance all regressions (not only those related to plan choice change) than just remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
+If you want to see performance all regressions (not only those related to plan choice change), remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
 
  #### Queries with historical regression in performance
 
-Comparing recent execution to historical execution, the next query compares query execution based periods of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
+Comparing recent execution to historical execution, the next query compares query execution based on period of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
 
 ```sql
 --- "Recent" workload - last 1 hour
@@ -641,7 +652,7 @@ OPTION (MERGE JOIN);
 
 For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store, you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
 
-You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
+You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans, you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
 
 ### Force a plan for a query (apply forcing policy)
 
@@ -652,6 +663,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```
 
 When using `sp_query_store_force_plan` you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute that query while Query Store was active.
+
+> [!NOTE]
+> Forcing plans in Query Store is not supported in Azure Synapse Analytics. 
 
 #### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
 

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Download Microsoft JDBC Driver for SQL Server
 

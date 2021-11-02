@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "converting data from c to SQL types [ODBC], time"
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: Time
 The identifier for the time ODBC C data type is:  

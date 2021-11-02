@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMetaData Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

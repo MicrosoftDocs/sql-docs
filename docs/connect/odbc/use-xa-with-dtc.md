@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Using XA Transactions

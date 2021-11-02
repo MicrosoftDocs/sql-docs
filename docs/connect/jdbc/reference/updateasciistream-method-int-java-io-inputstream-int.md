@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateAsciiStream Method (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,7 +7,7 @@ ms.technology: connectivity
 ms.custom: ""
 ms.topic: article
 ms.date: 03/06/2020
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connection modules for Microsoft SQL Database
 

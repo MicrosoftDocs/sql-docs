@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQL grammar [ODBC], between predicate"
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # BETWEEN Predicate
 The syntax:  

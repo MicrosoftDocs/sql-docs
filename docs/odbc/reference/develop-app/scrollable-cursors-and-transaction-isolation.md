@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "transactions [ODBC], isolation"
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Scrollable Cursors and Transaction Isolation
 The following table lists the factors governing the visibility of changes.  

@@ -1,6 +1,7 @@
 ---
-title: "Specify Consistent Colors in Multiple Shape Charts-Report Builder-SSRS | Microsoft Docs"
-description: Find out how choosing colors for a shape chart results in mapping each color in the pallette to a data point in the dataset.
+title: "Specify consistent colors in multiple shape charts in a paginated report | Microsoft Docs"
+description: Find out how choosing colors for a shape chart in a paginated report results in mapping each color in the palette to a data point in the dataset.
+
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,11 @@ ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS)
-  On non-shape charts in a paginated report, [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] selects a new color from the palette based on the index of series in the chart. For example, the first series on your chart will be mapped to the first color in the palette. However, this behavior differs for shape charts. On shape charts, each color in the palette is mapped to a data point in the dataset. For example, data point 1 is mapped to the first color in the palette, data point 2 is mapped to the second color palette and so on.  
+# Specify consistent colors in multiple shape charts in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  On non-shape charts in a paginated report, Report Builder selects a new color from the palette based on the index of series in the chart. For example, the first series on your chart will be mapped to the first color in the palette. However, this behavior differs for shape charts. On shape charts, each color in the palette is mapped to a data point in the dataset. For example, data point 1 is mapped to the first color in the palette, data point 2 is mapped to the second color palette and so on.  
   
  If a data point has no value, it is omitted from display on a shape chart. This means that the data point is skipped from being colored. For example, if point 2 has a value of zero, point 1 will be mapped to the first color in the palette, and point 3 will be mapped to the second color in the palette. This approach is useful because the empty points in the dataset of a pie chart do not unnecessarily use a palette color when the empty point does not need to be drawn.  
   

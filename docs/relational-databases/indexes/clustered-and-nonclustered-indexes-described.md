@@ -1,8 +1,8 @@
 ---
-description: "Clustered and Nonclustered Indexes Described"
-title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
+description: "Clustered and nonclustered indexes described"
+title: "Clustered and nonclustered indexes described"
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: 10/25/2021
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Clustered and Nonclustered Indexes Described
+# Clustered and nonclustered indexes described
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -34,21 +34,21 @@ A table or view can contain the following types of indexes:
   - Nonclustered indexes have a structure separate from the data rows. A nonclustered index contains the nonclustered index key values and each key value entry has a pointer to the data row that contains the key value.
   - The pointer from an index row in a nonclustered index to a data row is called a row locator. The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table. For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.
 
-  - You can add nonkey columns to the leaf level of the nonclustered index to by-pass existing index key limits, and execute fully covered, indexed, queries. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). For details about index key limits see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).
+  - You can add nonkey columns to the leaf level of the nonclustered index to by-pass existing index key limits, and execute fully covered, indexed, queries. For more information, see [Create indexes with included columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). For details about index key limits see [Maximum capacity specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).
 
-Both clustered and nonclustered indexes can be unique. This means no two rows can have the same value for the index key. Otherwise, the index is not unique and multiple rows can share the same key value. For more information, see [Create Unique Indexes](../../relational-databases/indexes/create-unique-indexes.md).
+Both clustered and nonclustered indexes can be unique. This means no two rows can have the same value for the index key. Otherwise, the index is not unique and multiple rows can share the same key value. For more information, see [Create unique indexes](../../relational-databases/indexes/create-unique-indexes.md).
 
 Indexes are automatically maintained for a table or view whenever the table data is modified.
 
 See [Indexes](../../relational-databases/indexes/indexes.md) for additional types of special purpose indexes.
 
-## Indexes and Constraints
+## Indexes and constraints
 
 Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table with a UNIQUE constraint, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a nonclustered index. If you configure a PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a clustered index, unless a clustered index already exists. When you try to enforce a PRIMARY KEY constraint on an existing table and a clustered index already exists on that table, SQL Server enforces the primary key using a nonclustered index.
 
-For more information, see [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) and [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).
+For more information, see [Create primary keys](../../relational-databases/tables/create-primary-keys.md) and [Create unique constraints](../../relational-databases/tables/create-unique-constraints.md).
 
-## How Indexes are used by the Query Optimizer
+## How indexes are used by the Query Optimizer
 
 Well-designed indexes can reduce disk I/O operations and consume fewer system resources therefore improving query performance. Indexes can be helpful for a variety of queries that contain SELECT, UPDATE, DELETE, or MERGE statements. Consider the query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. When this query is executed, the query optimizer evaluates each available method for retrieving the data and selects the most efficient method. The method may be a table scan, or may be scanning one or more indexes if they exist.
 
@@ -61,7 +61,7 @@ When the query optimizer uses an index, it searches the index key columns, finds
 > [!IMPORTANT]
 > For more information about index design guidelines and internals, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
-## Related content
+## Next steps
 
 - [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)
 - [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)

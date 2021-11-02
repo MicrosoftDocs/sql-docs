@@ -2,11 +2,11 @@
 title: Restore HDFS permissions
 titleSuffix: SQL Server Big Data Cluster
 description: TRestore HDFS admin rights.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
 ms.date: 04/21/2020
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

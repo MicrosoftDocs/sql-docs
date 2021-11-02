@@ -6,7 +6,7 @@ ms.author: alazad
 ms.reviewer: mikeray
 ms.technology: polybase
 ms.devlang: 
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

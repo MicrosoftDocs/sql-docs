@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLExecute function [ODBC]"
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExecute Function
 **Conformance**  

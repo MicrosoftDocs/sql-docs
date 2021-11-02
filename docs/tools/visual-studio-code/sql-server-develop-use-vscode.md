@@ -5,31 +5,23 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-author: markingmyname
-ms.author: maghan
-ms.date: 10/28/2019 
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
+ms.date: 10/27/2021
 ---
 
-# Use Visual Studio Code to create and run Transact-SQL scripts
+# SQL Server extension for Visual Studio Code
 
-[!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article shows how to use the **mssql** extension for Visual Studio Code to develop SQL Server databases. Because Visual Studio Code is cross-platform, you can use **mssql** extension on Linux, macOS, and Windows.
+This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to work with SQL Server and Azure SQL databases on Windows, macOS, and Linux. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
-## Install and start Visual Studio Code
+The mssql extension for VS Code includes the [SQL Database projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) with support for SQL projects on Windows, macOS, and Linux.
 
-Visual Studio Code is a cross-platform, graphical code editor that supports extensions.
+## Install the mssql extension in VS Code
 
 1. [Download and install Visual Studio Code](https://code.visualstudio.com/) on your machine.
-
-2. Start Visual Studio Code.
-
-    >[!NOTE]
-    >If Visual Studio Code does not start when you are connected through an xrdp remote desktop session, see [VS Code not working on Ubuntu when connected using XRDP](https://github.com/Microsoft/vscode/issues/3451).
-
-## Install the mssql extension
-
-The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
 1. In Visual Studio Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**.
 
@@ -54,7 +46,7 @@ The mssql extension enables mssql commands and T-SQL IntelliSense in the code ed
    ![SQL language mode](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
-   > If this is the first time you have used the extension, the extension installs supporting SQL Server tools.
+   > If this is the first time you have used the extension, the extension installs the SQL tools service in the background.
 
 If you open an existing file that has a *.sql* file extension, the language mode is automatically set to SQL.  
 
@@ -226,8 +218,7 @@ If you need to save and run SQL scripts later, for administration or a larger de
 
 ## Next steps
 
-If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../../t-sql/language-reference.md).
-
-For more information on using or contributing to the mssql extension, see the [mssql extension project wiki](https://github.com/Microsoft/vscode-mssql/wiki).
-
-For more information on using Visual Studio Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
+- If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../../t-sql/language-reference.md).
+- Develop for SQL databases in VS Code with the [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension)
+- For more information on using or contributing to the mssql extension, see the [mssql extension project wiki](https://github.com/Microsoft/vscode-mssql/wiki).
+- For more information on using Visual Studio Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).

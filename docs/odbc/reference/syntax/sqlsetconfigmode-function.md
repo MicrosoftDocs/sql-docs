@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetConfigMode function [ODBC]"
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConfigMode Function
 **Conformance**  

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1de95320-3085-4b34-b722-a02aaa2dd6b0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setTimestamp Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

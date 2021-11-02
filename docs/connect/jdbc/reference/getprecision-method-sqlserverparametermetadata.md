@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getPrecision Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

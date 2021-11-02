@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ""
 author: DavidEngel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Parsing the results

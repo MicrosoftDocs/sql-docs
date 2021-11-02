@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "installer DLL [ODBC]"
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installer DLL Function Summary
 The following table describes the functions in the installer DLL. For more information about the syntax and semantics for each function, see [Installer DLL API Reference](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

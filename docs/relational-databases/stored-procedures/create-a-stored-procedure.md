@@ -1,9 +1,9 @@
 ---
-title: "Create a Stored Procedure | Microsoft Docs"
+title: "Create a Stored Procedure"
 description: Learn how to create a Transact-SQL stored procedure by using SQL Server Management Studio and by using the Transact-SQL CREATE PROCEDURE statement.
 ms.custom:
   - intro-quickstart
-ms.date: "03/16/2017"
+ms.date: 10/25/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
@@ -17,20 +17,16 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create a Stored Procedure
+# Create a stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE statement.  
   
--   **Before you begin:**  [Permissions](#Permissions)  
-  
--   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="Permissions"></a> Permissions  
+## Permissions  
  Requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
-##  <a name="Procedures"></a> How to Create a Stored Procedure  
+## How to create a stored procedure  
  You can use one of the following:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -96,7 +92,7 @@ This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)]
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the same stored procedure as above using a different procedure name.  
   
-    ```  
+    ```sql 
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
@@ -115,7 +111,7 @@ This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)]
   
 4.  To run the procedure, copy and paste the following example into a new query window and click **Execute**. Notice that different methods of specifying the parameter values are shown.  
   
-    ```  
+    ```sql  
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
@@ -126,7 +122,7 @@ This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)]
   
     ```  
   
-## See Also  
+## Next steps  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Driver Manager, installing"
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installing the Driver Manager
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

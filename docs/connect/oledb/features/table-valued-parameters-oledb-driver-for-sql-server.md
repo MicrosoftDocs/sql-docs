@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, table-valued parameters"
   - "table-valued parameters (OLE DB Driver for SQL Server)"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Table-Valued Parameters (OLE DB Driver for SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Validating user input

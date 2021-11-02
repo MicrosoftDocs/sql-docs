@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLColAttribute function [ODBC]"
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttribute Function
 **Conformance**  

@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "known issues"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Known issues for the ODBC driver on Linux and macOS

@@ -54,12 +54,15 @@ The following table summarizes the different ways to start your instance in sing
 |`-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting. |
 | &nbsp; | &nbsp; | &nbsp; |
   
+
+
+
+## Step by step Instructions
+
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
 
-
-
-## Using commands from Command Prompt
+### Using Command Prompt
 
 1. Open a Command Prompt as Administrator
 1. Stop SQL Server service so it can be restarted with single-user mode, using the following command:
@@ -117,7 +120,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
    ```
 
  
-## Using SQL Server Configuration Manager and Management Studio (SSMS)
+### Using SQL Server Configuration Manager and Management Studio (SSMS)
 
 
 These instructions assume,

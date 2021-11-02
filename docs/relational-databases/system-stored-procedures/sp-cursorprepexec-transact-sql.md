@@ -118,7 +118,8 @@ Designate one or more parameter names as defined in the params argument.  There 
 
 ## Examples
 
-This example demonstrates the use of sp_cursorprepexec. It runs a query against the Person table in the AdventureWorks databas returing all records where first name is Katherine.
+This example demonstrates the use of sp_cursorprepexec. It runs a query against the Person table in the AdventureWorks database returning all records where first name is Katherine.
+
 
 ```t-sql
 USE AdventureWorks2016;

@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: 
-ms.date: 10/19/2021
+ms.date: 11/03/2021
 ---
 
 # Create and run a notebook with Azure Monitor Logs (Preview)
@@ -39,8 +39,6 @@ The following prerequisites are also required:
 ## Connect to an Azure Monitor Logs (Log Analytics) workspace
 
 You can connect to a [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces). 
-
-You must connect to the Log Analytics workspace to start querying data.
 
 ## Create an Azure Monitor Log notebook
 
@@ -87,7 +85,7 @@ Add a new code cell by selecting the **+Code** command in the toolbar.
 
 ### Analyze events by Diagnostic Settings
 
-Let's do a simple query first to analyze the number of events by Operation Name.
+Let's do a query first to analyze the number of events by Operation Name.
 
 > [!Note]
 > Each row in AzureDiagnostic represents an event for a specific Operation or category. Some SQL actions may result in generating multiple events of different types.
@@ -115,7 +113,9 @@ AzureDiagnostics
 
 ## Performance troubleshooting Query (from Azure portal)
 
-Potentially a query or deadlock on the system that could lead to poor performance. The following is a query suggested by Azure portal.
+Potentially a query or deadlock on the system that could lead to poor performance. 
+
+The following is a query suggested by Azure portal.
 
 ```kusto
 AzureMetrics

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "IIS [ODBC]"
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Microsoft Internet Information Services
 > [!IMPORTANT]  

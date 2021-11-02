@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "translator setup DLL [ODBC]"
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Translator Setup DLLs
 > [!NOTE]  

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

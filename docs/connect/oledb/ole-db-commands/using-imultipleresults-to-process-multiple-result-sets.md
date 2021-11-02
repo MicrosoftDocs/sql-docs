@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "IMultipleResults interface"
   - "multiple-rowset results"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using IMultipleResults to Process Multiple Result Sets
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

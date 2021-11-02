@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "data source objects [OLE DB]"
   - "CLSID"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Source Objects (OLE DB)
 

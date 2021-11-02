@@ -9,7 +9,7 @@ ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Release notes for the Microsoft SQL Server tools on Linux and macOS

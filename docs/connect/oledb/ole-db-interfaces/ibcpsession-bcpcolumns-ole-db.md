@@ -13,7 +13,7 @@ apitype: "COM"
 helpviewer_keywords: 
   - "BCPColumns method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installing and Configuring
 To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  

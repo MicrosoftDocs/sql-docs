@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # clearWarnings Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

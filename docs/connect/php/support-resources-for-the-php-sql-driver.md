@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "support"
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Support resources for the Microsoft Drivers for PHP for SQL Server
 

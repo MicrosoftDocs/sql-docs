@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], testing connections"
 ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Testing the ODBC Connection
 > [!IMPORTANT]  

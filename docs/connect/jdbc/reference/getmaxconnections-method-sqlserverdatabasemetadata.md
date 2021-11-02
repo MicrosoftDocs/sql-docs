@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxConnections Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

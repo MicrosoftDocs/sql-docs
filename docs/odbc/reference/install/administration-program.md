@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC administrator [ODBC]"
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Administration Program
 > [!NOTE]  

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "drivers [ODBC], middle component"
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Other Driver Architectures
 Some ODBC drivers do not strictly conform to the architecture described previously. This might be because the drivers perform duties other than those of a traditional ODBC driver, or are not drivers in the normal sense.  

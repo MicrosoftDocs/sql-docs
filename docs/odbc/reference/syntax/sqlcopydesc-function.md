@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLCopyDesc function [ODBC]"
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCopyDesc Function
 **Conformance**  

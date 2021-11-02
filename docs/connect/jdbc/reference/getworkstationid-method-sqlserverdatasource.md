@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getWorkstationID Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "GUID data type [ODBC]"
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: GUID
 The identifier for the GUID ODBC C data type is:  

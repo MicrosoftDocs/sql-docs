@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setBinaryStream Method (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

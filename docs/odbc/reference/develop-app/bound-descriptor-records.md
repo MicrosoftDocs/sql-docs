@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "descriptors [ODBC], bound descriptor records"
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Bound Descriptor Records
 When the application sets the SQL_DESC_DATA_PTR field of a descriptor record so that it no longer contains a null value, the record is said to be *bound*.  

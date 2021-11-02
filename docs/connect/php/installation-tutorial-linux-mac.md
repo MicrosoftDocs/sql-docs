@@ -9,7 +9,7 @@ ms.custom:
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: v-mabarw
 ---
 

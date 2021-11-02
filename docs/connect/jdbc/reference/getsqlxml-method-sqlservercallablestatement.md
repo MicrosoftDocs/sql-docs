@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSQLXML Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLTransact"
 ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTransact (Excel Driver)
 > [!NOTE]  

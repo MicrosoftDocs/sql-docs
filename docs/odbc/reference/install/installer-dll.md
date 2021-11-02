@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "installer DLL [ODBC]"
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installer DLL
 > [!NOTE]  

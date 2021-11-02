@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getTimestamp Method (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

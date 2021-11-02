@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetStmtOption function [ODBC]"
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetStmtOption Function
 **Conformance**  

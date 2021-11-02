@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLExtendedFetch function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExtendedFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

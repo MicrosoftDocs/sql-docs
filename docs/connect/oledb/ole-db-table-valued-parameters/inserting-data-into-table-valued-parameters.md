@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, inserting data into"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

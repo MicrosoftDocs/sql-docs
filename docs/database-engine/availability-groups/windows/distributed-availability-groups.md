@@ -22,6 +22,7 @@ ms.author: chadam
 Distributed availability groups are available in SQL Server 2016 and later. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](../../../sql-server/index.yml).
 
 To configure a distributed availability group, see [Configure distributed availability groups](configure-distributed-availability-groups.md).
+[!NOTE] DAG is not the abbreviation for a distributed availability group.
 
 ## Understand distributed availability groups
 

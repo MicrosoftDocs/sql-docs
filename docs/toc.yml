@@ -5259,7 +5259,7 @@ items:
         items:
         - name: Monitor replication agents
           href: relational-databases/replication/monitor/monitor-replication-agents.md
-        - name: System Monitor
+        - name: Performance Monitor
           href: relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md
         - name: Replication Monitor
           href: relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
@@ -6714,7 +6714,7 @@ items:
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
-      - name: Start System Monitor (Windows)
+      - name: Start Performance Monitor (Windows)
         href: relational-databases/performance/start-system-monitor-windows.md
       - name: Set Up a SQL Server Database Alert (Windows)
         href: relational-databases/performance/set-up-a-sql-server-database-alert-windows.md
@@ -6736,7 +6736,7 @@ items:
         href: relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       - name: Concepts
         items:
-        - name: Run System Monitor
+        - name: Run Performance Monitor
           href: relational-databases/performance-monitor/run-system-monitor.md
         - name: Monitor Disk Usage
           href: relational-databases/performance-monitor/monitor-disk-usage.md

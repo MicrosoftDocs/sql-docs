@@ -13,7 +13,7 @@ ms.date: 11/03/2021
 
 # Create and run a notebook with Azure Monitor Logs (Preview)
 
-This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md), connecting to a Log Analytics workspace.
+This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md), connecting to a [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-overview).
 
 Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspace(s), browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
 

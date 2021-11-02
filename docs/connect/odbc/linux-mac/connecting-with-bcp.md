@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting with bcp
 

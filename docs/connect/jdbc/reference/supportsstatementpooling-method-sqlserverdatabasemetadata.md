@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsStatementPooling Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

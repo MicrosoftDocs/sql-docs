@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, authorization properties"
   - "initialization properties [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Initialization and Authorization Properties
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], statement options"
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Statement Options
 > [!IMPORTANT]  

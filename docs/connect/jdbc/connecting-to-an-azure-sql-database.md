@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting to an Azure SQL database
 

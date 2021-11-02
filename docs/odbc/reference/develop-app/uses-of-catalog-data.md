@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "catalog functions [ODBC], using catalog data"
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Uses of Catalog Data
 Applications use catalog data in a variety of ways. Here are some common uses:  

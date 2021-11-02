@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateFloat Method (int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

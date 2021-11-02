@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "connection strings [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, connection string keywords"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Connection String Keywords with OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

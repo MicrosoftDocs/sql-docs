@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "deferred fields [ODBC]"
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Deferred Fields
 The values of *deferred fields* are not used when they are set, but the driver saves the addresses of the variables for a deferred effect. For an application parameter descriptor, the driver uses the contents of the variables at the time of the call to **SQLExecDirect** or **SQLExecute**. For an application row descriptor, the driver uses the contents of the variables at the time of the fetch.  

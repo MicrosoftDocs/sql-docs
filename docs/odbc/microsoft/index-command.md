@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "index command [ODBC]"
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # INDEX Command
 Creates an index file to display and access table records in a logical order.  

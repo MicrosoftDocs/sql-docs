@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLExecute function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExecute (Visual FoxPro ODBC Driver)
 > [!NOTE]  

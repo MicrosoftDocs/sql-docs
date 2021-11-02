@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBlob Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

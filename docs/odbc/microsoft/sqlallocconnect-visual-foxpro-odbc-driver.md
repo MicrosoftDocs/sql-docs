@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLAllocConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

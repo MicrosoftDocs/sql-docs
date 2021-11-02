@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNCharacterStream Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

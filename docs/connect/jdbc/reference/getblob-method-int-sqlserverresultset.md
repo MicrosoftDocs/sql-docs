@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBlob Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

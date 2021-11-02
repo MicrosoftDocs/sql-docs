@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getXAConnection Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sqlsrv_field_metadata"
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

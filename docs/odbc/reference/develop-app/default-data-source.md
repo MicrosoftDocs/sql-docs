@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Default Data Source
 The driver may select a data source, called the default data source, in certain cases where the application does not explicitly specify one:  

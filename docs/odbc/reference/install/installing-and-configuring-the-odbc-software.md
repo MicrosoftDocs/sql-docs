@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "installing ODBC [ODBC]"
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installing and Configuring the ODBC Software
 > [!NOTE]  

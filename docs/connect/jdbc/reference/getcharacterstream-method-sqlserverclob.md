@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getCharacterStream Method (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

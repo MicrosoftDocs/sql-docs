@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-jizho2
 ---
 

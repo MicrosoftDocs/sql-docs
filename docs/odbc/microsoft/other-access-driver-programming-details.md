@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Other Access Driver Programming Details
 > [!NOTE]  

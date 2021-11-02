@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLFetch function [ODBC]"
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFetch Function
 **Conformance**  

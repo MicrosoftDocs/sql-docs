@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getConcurrency Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

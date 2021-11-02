@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 93a2b22c-82b4-48c7-a428-369ebe98a372
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setObject Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

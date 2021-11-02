@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "descriptors [ODBC], types"
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Types of Descriptors
 A descriptor is used to describe one of the following:  

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Specify PHP Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

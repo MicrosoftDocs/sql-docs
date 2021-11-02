@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetCursorName function [ODBC]"
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetCursorName Function
 **Conformance**  

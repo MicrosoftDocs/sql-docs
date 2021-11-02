@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # moveToInsertRow Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

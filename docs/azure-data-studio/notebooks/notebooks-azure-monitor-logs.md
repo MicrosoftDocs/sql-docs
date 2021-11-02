@@ -11,31 +11,81 @@ ms.custom:
 ms.date: 10/19/2021
 ---
 
-# Create and run a notebook with Azure Monitor Logs
+# Create and run a notebook with Azure Monitor Logs (Preview)
 
-Once Azure Monitor Logs (Preview) extension is installed in Azure Data Studio Insiders build, you can connect to your Azure Monitor Log workspace(s), browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
+This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md) (Preview), connecting to a [Log Analytics workspace](azure/azure-monitor/logs/log-analytics-overview).
+
+Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspace(s), browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
 
 There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events:
 
-1. AzureDiagnostics
-2. AzureMetric
+1. [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#azure-diagnostics-mode)
+2. [AzureMetric](/azure/azure-monitor/reference/tables/azuremetrics#resource-types)
 
-## 1. Connect to an Azure Monitor Logs (Log Analytics) workspace
+With the Azure Monitor Log extension, you can change the kernel option to **Azure Monitor Log**.
 
-Workspace is similar to what a database is to SQL. You connect to the Log Analytics workspace to start querying data.
+This feature is currently in preview.
 
-### 1.1 Install Azure Monitor Logs extension first
+## Prerequisites
 
-Go to the Extension viewlet and type in Azure Monitor Logs. Install it and restart Azure Data Studio.
+If you don't have an Azure subscription, create a [free Azure account](https://azure.microsoft.com/free/) before you begin.
 
-### 1.2 Connect to the desired Azure Monitor Logs workspace
+The following prerequisites are also required:
 
-Change the Kernel to "Log Analytics." Set Attach to a new or existing connection to the workspace. Note: you will need a workspace ID that you can obtain from the Azure portal.
+- [Azure Data Studio installed](../download-azure-data-studio.md).
+- [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces).
+- [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md)
 
-> [!Note]
-> The name of the kernel is subject to change.
+## Connect to an Azure Monitor Logs (Log Analytics) workspace
 
-## 2. Analyze events by Diagnostic Settings
+You can connect to a [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces). 
+
+You must connect to the Log Analytics workspace to start querying data.
+
+## Create an Azure Monitor Log notebook
+
+The following steps show how to create a notebook file in Azure Data Studio:
+
+1. In Azure Data Studio, connect to your Log analytics workspace.
+
+2. Navigate to the **Connections** pane and under the **Servers** window, right-click the Log analytics workspace and select *New Notebook*. You can also go to **File** > **New Notebook**.
+
+    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Open notebook":::
+
+3. Select *Log Analytics* for the **Kernel**. Confirm that the **Attach to** menu is set to the workspace name.
+
+    :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Set Kernel and Attach to":::
+
+You can save the notebook using the **Save** or **Save as...** command from the **File** menu.
+
+To open a notebook, you can use the **Open file...** command in the **File** menu, select **Open file** on the **Welcome** page, or use the **File: Open** command from the command palette.
+
+## Change the connection
+
+To change the Azure Monitor Log connection for a notebook:
+
+1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
+
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="change connections":::
+
+   > [!Note]
+   > Ensure that the workspace value is populated. Anure Monitor Log notebooks require to have the Workspace ID specified in the **Server** field.
+
+2. Now you can either select a recent connection workspace or enter new connection details to connect.
+
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Select a different cluster":::
+
+## Run a code cell
+
+You can create cells containing KQL queries that you can run in place by selecting the **Run cell** button to the cell's left. The results are shown in the notebook after the cell runs.
+
+For example:
+
+Add a new code cell by selecting the **+Code** command in the toolbar.
+
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto kernel code block":::
+
+### Analyze events by Diagnostic Settings
 
 Let's do a simple query first to analyze the number of events by Operation Name.
 
@@ -59,12 +109,11 @@ Count my Azure SQL DB events by category / diagnostic settings.
 
 ```kusto
 AzureDiagnostics
-| where LogicalServerName_s == "<databasename>"
-// | where TimeGenerated >= ago(5d)
+| where LogicalServerName_s == "<servername>"
 | summarize count() by Category
 ```
 
-## 3. Performance troubleshooting Query (from Azure portal)
+## Performance troubleshooting Query (from Azure portal)
 
 Potentially a query or deadlock on the system that could lead to poor performance. The following is a query suggested by Azure portal.
 
@@ -90,9 +139,8 @@ AzureMetrics
 This is a sample query to dig into AzureDiagnostics. This table tends to have more details than AzureMetrics.
 
 ```kusto
-AzureMetrics
+AzureDiagnostics
 | project-away TenantId, ResourceId, SubscriptionId, _ResourceId, ResourceGroup // hide sensitive info
-| project TimeGenerated, MetricName, Total, Count, UnitName
 | take 10
 ```
 
@@ -119,7 +167,7 @@ AzureDiagnostics
 // | where OperationName <> "AuditEvent"
 ```
 
-``kusto
+```kusto
 AzureDiagnostics
 | make-series event_count = count() on TimeGenerated from datetime(2021-07-20 22:00:00) to now() step 1m   
 | render timechart
@@ -137,7 +185,7 @@ AzureDiagnostics
 
 Find the deadlock query plan.
 
-``kusto
+```kusto
 AzureDiagnostics
 | where OperationName == "DeadlockEvent"
 | extend d = parse_xml(deadlock_xml_s)
@@ -178,4 +226,5 @@ AzureDiagnostics
 
 ## Next steps
 
+- [Azure Monitor Log extension for Azure Data Studio](../extensions/azure-monitor-logs-extension.md)
 - [Notebook guidance](notebooks-guidance.md)

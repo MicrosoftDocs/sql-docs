@@ -87,7 +87,7 @@ ms.custom: seo-dt-2019
      To use impersonation, the configuration must meet the requirement for delegation.  
   
      **Remote User**  
-     Use the remote user to map users not defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
+     Use the remote user to map user defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
 
      **Remote Password**  
      Specify the password of the Remote User.  

@@ -463,7 +463,7 @@ The listener URL is the VNN of the primary FCI instance.
 
 ## Manually fail over FCI in distributed availability group
 
-To manually fail over the FCI availability group, update the distributed availability group to reflect the change of listener URL. For example, run the following DDL on both the primary AG and the secondary AG of SQLFCIAG:
+To manually fail over the FCI availability group, update the distributed availability group to reflect the change of listener URL. For example, run the following DDL on both the global primary of the distributed AG and the forwarder of the distributed AG of SQLFCIDAG:
 
 ```sql  
 ALTER AVAILABILITY GROUP [SQLFCIDAG]  

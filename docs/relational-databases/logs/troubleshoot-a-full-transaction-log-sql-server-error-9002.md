@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "logs [SQL Server], full"
   - "troubleshooting [SQL Server], full transaction log"

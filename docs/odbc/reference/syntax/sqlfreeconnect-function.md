@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLFreeConnect function [ODBC]"
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeConnect Function
 **Conformance**  

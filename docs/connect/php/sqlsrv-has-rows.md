@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "sqlsrv_has_rows"
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

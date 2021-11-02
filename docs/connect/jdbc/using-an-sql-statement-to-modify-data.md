@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Using an SQL statement to modify data

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBytes Method (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

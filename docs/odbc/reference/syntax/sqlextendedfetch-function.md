@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLExtendedFetch function [ODBC]"
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExtendedFetch Function
 **Conformance**  

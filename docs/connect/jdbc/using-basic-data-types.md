@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using basic data types
 

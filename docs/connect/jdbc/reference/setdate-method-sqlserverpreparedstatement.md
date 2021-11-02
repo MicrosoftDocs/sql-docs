@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f81e5203-71eb-407e-b71f-1bdc722887a3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setDate Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

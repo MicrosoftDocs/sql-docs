@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data types [ODBC], Visual FoxPro ODBC driver"
 ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Supported Data Types (Visual FoxPro ODBC Driver)
 The list of data types supported by the driver are presented through the ODBC API and in Microsoft Query.  

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetCursorName (Visual FoxPro ODBC Driver)
 > [!NOTE]  

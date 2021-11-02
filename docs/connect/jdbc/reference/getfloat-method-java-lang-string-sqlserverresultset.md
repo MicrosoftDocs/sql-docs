@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getFloat Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

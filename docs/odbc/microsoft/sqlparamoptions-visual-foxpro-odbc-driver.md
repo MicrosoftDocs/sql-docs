@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLParamOptions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

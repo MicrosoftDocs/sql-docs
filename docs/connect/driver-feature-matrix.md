@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-daenge
 ---
 # Driver feature support matrix for Microsoft SQL Server

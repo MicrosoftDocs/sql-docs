@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "date and time types, retrieving as strings"
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

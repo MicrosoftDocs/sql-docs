@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLColumns"
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColumns (Access Driver)
 > [!NOTE]  

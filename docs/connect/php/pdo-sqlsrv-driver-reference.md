@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # PDO_SQLSRV Driver Reference
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

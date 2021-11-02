@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "configuring, Internet Information Services"
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Configuring IIS for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_execute"
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

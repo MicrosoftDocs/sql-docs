@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLSetDriverConnectInfo function [ODBC]"
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetDriverConnectInfo Function
 **Conformance**  

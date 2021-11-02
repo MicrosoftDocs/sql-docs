@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBigDecimal Method (int, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

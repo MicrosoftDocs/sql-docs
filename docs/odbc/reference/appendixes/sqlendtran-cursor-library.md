@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLEndTran function [ODBC], Cursor Library"
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLEndTran (Cursor Library)
 > [!IMPORTANT]  

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # executeQuery Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

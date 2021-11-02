@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getShort Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQL statements [ODBC], constructing"
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Hard-Coded SQL Statements
 Applications that perform a fixed task usually contain hard-coded SQL statements. For example, an order entry system might use the following call to list open sales orders:  

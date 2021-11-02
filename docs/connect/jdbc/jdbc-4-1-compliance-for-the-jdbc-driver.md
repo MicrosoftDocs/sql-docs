@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # JDBC 4.1 compliance for the JDBC driver
 

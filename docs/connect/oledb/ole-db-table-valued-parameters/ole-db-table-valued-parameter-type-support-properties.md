@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (properties)"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # OLE DB Table-Valued Parameter Type Support (Properties)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

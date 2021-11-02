@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # valueOf Method (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

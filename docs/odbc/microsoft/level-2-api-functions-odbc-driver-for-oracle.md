@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "level 2 API functions [ODBC]"
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Level 2 API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

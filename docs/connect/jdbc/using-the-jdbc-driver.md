@@ -11,7 +11,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using the JDBC driver
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "CAST function [ODBC]"
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL-92 CAST Function
 The **CAST** function defined in SQL-92 is equivalent to the **CONVERT** function defined in ODBC. The syntax of the equivalent functions is as follows:  

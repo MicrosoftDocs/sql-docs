@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], driver-specific diagnostic values"
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes
 Drivers can allocate driver-specific values for the following:  

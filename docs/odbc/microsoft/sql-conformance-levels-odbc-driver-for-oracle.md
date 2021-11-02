@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], conformance levels"
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL Conformance Levels (ODBC Driver for Oracle)
 > [!IMPORTANT]  

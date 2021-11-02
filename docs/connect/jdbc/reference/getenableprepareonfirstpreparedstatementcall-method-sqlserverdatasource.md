@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid:
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

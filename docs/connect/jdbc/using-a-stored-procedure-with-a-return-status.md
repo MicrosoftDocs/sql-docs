@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Using a stored procedure with a return status

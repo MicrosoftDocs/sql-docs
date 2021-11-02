@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "SSVARIANT struct"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SSVARIANT Structure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

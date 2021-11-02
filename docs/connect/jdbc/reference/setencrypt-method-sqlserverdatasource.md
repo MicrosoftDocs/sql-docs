@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setEncrypt Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

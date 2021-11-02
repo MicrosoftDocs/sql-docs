@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "mapping deprecated functions [ODBC], SQLAllocEnv"
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocEnv Mapping
 When an application calls **SQLAllocEnv** through an ODBC *3.x* driver, the call to **SQLAllocEnv**(*phenv*) is mapped to **SQLAllocHandle** as follows:  

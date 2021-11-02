@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQL grammar [ODBC], selecting"
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Choosing an SQL Grammar
 The first decision to make when constructing SQL statements is which grammar to use. In addition to the grammars available from the various standards bodies, such as Open Group, ANSI, and ISO, virtually every DBMS vendor defines its own grammar, each of which varies slightly from the standard.  

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "sqlcmd"
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting with sqlcmd
 

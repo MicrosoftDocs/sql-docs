@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], text file driver"
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Other Text File Driver Programming Details
 > [!NOTE]  

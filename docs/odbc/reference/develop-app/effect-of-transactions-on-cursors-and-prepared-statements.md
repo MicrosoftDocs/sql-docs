@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "transactions [ODBC], cursors"
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Effect of Transactions on Cursors and Prepared Statements
 Committing or rolling back a transaction has one of the following effects on cursors and access plans:  

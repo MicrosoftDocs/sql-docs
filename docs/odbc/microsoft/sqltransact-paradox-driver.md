@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], SQLTransact"
 ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTransact (Paradox Driver)
 > [!NOTE]  

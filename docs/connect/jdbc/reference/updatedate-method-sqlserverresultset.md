@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateDate Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

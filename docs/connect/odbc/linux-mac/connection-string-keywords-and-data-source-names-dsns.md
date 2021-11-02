@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "configure odbc.ini"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Connecting from Linux or macOS

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "text file driver [ODBC], read-only status"
 ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Read-Only Status (Text File Driver)
 When the Text driver is used, data source tables are read-only. However, applications can perform insertions for Text tables.

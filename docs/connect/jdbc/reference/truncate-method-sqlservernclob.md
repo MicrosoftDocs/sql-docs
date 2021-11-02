@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # truncate Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "escape sequences [ODBC], outer join"
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Outer Joins
 ODBC supports the SQL-92 left, right, and full outer join syntax. The escape sequence for outer joins is  

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLSetScrollOptions function [ODBC]"
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetScrollOptions Function
 **Conformance**  

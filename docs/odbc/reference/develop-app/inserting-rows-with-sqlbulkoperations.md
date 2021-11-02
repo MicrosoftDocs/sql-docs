@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "updating data [ODBC], SQLBulkOperations"
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Inserting Rows with SQLBulkOperations
 Inserting data with **SQLBulkOperations** is similar to updating data with **SQLBulkOperations** because it uses data from the bound application buffers.  

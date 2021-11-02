@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "bookmarks [OLE DB]"
   - "rows [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Tables and Indexes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

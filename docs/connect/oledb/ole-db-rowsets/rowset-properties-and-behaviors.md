@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Rowset Properties and Behaviors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

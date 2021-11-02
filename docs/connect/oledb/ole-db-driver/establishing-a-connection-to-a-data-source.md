@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "CoCreateInstance method"
   - "OLE DB data sources [OLE DB Driver for SQL Server]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Establishing a Connection to a Data Source
 

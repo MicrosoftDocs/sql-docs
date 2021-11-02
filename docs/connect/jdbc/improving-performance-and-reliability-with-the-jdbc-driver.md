@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Improving performance and reliability with the JDBC driver

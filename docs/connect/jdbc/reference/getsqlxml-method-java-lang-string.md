@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSQLXML Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

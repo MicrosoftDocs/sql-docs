@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "requirements"
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # System Requirements (Linux and macOS)
 

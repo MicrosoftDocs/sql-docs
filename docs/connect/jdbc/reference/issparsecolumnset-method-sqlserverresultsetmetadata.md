@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isSparseColumnSet Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

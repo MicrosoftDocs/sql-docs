@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setTimestamp Method (java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

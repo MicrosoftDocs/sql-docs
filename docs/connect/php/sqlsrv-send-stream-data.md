@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

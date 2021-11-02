@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, bulk copy operations"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNumericFunctions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

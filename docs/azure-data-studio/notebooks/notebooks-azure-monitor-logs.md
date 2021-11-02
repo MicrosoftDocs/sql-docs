@@ -13,7 +13,7 @@ ms.date: 11/03/2021
 
 # Create and run a notebook with Azure Monitor Logs (Preview)
 
-This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/notebooks-azure-monitor-logs-extension.md), connecting to a [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-overview).
+This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md) connecting to a [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-overview).
 
 Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspace(s), browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
 
@@ -34,7 +34,7 @@ The following prerequisites are also required:
 
 - [Azure Data Studio installed](../download-azure-data-studio.md).
 - [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces).
-- [Azure Monitor Log extension](../extensions/notebooks-azure-monitor-logs-extension.md)
+- [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md)
 
 ## Connect to an Azure Monitor Logs (Log Analytics) workspace
 
@@ -81,7 +81,7 @@ For example:
 
 Add a new code cell by selecting the **+Code** command in the toolbar.
 
-   :::image type="content" source="media/notebooks-azure-monitor-logs/notebooks-azure-monitor-logs-kernel-code.png" alt-text="notebooks-azure-monitor-logs kernel code block":::
+   :::image type="content" source="media/notebooks-azure-monitor-logs/notebooks-azure-monitor-logs-kernel-code.png" alt-text="kernel code block":::
 
 ### Azure Metrics
 
@@ -91,7 +91,7 @@ This is a sample query to dig into AzureMetrics.
 AzureMetrics
 ```
 
-   :::image type="content" source="media/notebooks-azure-monitor-logs/azure-metrics-results.png" alt-text="notebooks-azure-monitor-logs kernel code block":::
+   :::image type="content" source="media/notebooks-azure-monitor-logs/azure-metrics-results.png" alt-text="azure metrics code cell results":::
 
 ### Azure Diagnostics
 
@@ -103,7 +103,7 @@ AzureDiagnostics
 | take 10
 ```
 
-   :::image type="content" source="media/notebooks-azure-monitor-logs/azure-diagnostics-results.png" alt-text="notebooks-azure-monitor-logs kernel code block":::
+   :::image type="content" source="media/notebooks-azure-monitor-logs/azure-diagnostics-results.png" alt-text="azure diagnostics code cell results":::
 
 ### Analyze events by Diagnostic Settings
 
@@ -117,7 +117,7 @@ AzureDiagnostics
 | summarize count() by OperationName
 ```
 
-   :::image type="content" source="media/notebooks-azure-monitor-logs/azure-diagnostics-summarize results-operation-name.png" alt-text="notebooks-azure-monitor-logs kernel code block":::
+   :::image type="content" source="media/notebooks-azure-monitor-logs/azure-diagnostics-summarize results-operation-name.png" alt-text="azure diagnostics summarize code cell results":::
 
 The above query's equivalent in SQL is:
 
@@ -131,5 +131,5 @@ You can try more examples from the [Azure Monitor Logs samples repo](https://git
 
 ## Next steps
 
-- [Azure Monitor Log extension for Azure Data Studio](../extensions/notebooks-azure-monitor-logs-extension.md)
+- [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md)
 - [Notebook guidance](notebooks-guidance.md)

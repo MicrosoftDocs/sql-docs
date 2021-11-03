@@ -129,7 +129,7 @@
     - name: Notebooks views
       href: notebooks/notebooks-views.md
     - name: Use Azure Monitor Logs
-      href: notebooks/notebooks-azure-monitor-logs.md
+      href: notebooks/notebooks-log-analytics.md
     - name: Use Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
     - name: Use Kqlmagic

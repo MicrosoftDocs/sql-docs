@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
-ms.custom: 
-ms.date: 08/18/2021
+ms.custom: ""
+ms.date: 11/03/2021
 ---
 
 # Azure Monitor Logs extension for Azure Data Studio (Preview)
 
-The Azure Monitor Logs extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to connect and query a [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces).
+The Azure Monitor Logs extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to connect and query a [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace).
 
 This extension is currently in preview.
 
@@ -67,9 +67,42 @@ To set up an Azure Monitor Log workspace, follow the steps below.
 
     :::image type="content" source="media/azure-monitor-logs-extension/azure-monitor-logs-extension-connection-details.png" alt-text="Connection details":::
 
+## How to query a Log Analytics Workspace in Azure Data Studio
+
+Now that you have set up a connection to your Log analytics workspace, you can query the workspace using Kusto (KQL).
+
+To create a new query tab, you can either select **File > New Query**, use *Ctrl + N*, or right-click the database and select **New Query**.
+
+Once you have your new query tab open, then enter your Kusto query.
+
+There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events for an Azure SQL database:
+
+1. [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#azure-diagnostics-mode)
+2. [AzureMetric](/azure/azure-monitor/reference/tables/azuremetrics#resource-types)
+
+To execute the samples below, you must be logged in to an [Azure SQL database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal).
+
+Here are some samples of KQL queries:
+
+```kusto
+AzureDiagnostics
+| summarize count() by OperationName
+```
+
+```kusto
+AzureDiagnostics
+| where LogicalServerName_s == "<servername>"
+| summarize count() by Category
+```
+
+> [!Note]
+> Allow about 15 minutes before the log results appear.
+
 For more information about writing Azure Monitor Logs, visit [Azure Monitor documentation](/azure/azure-monitor/)
 
 ## Next steps
+
+- [Create and run a notebook with Azure Monitor Logs](../notebooks/notebooks-azure-monitor-logs.md)
 - [Create diagnostic settings to send platform logs and metrics to different destinations](/azure/azure-monitor/essentials/diagnostic-settings)
 - [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Monitor Logs?](/azure/azure-monitor/logs/data-platform-logs)

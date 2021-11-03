@@ -78,8 +78,6 @@ azdata bdc settings apply
 
 Use the YARN UI page to validate and monitor queue usage.
 
-:::image type="content" source="media/spark-yarn-capacity-scheduler/yarn-ui.png" alt-text="YARN UI shows configured queues":::
-
 It's also possible to monitor YARN queue placement for jobs and sessions using the monitoring patterns described in [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).
 
 ## Submit Spark jobs on YARN queues

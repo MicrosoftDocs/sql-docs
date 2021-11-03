@@ -62,63 +62,62 @@ The following table summarizes the different ways to start your instance in sing
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
 
-### Using Command Prompt
+### Using Powershell
 
-1. Open a Command Prompt as Administrator
-1. Stop SQL Server service so it can be restarted with single-user mode, using the following command:
+1. Open a Windows Powershell command - Run as an Administrator
+1. Set up service name and SQL Server instance, and Windows login variables. Replace these with values to match your environment
 
-   ```Command Prompt
-   net stop MSSQL$instancename
+   ```powershell
+   $service_name = "MSSQL`$instancename"  # for a default instace use: "MSSQLSERVER"
+   $sql_server_instance = "machine_name\instance"
+   $login_to_be_granted_access = "[CONTOSO\PatK]"
    ```
 
-   For a default instance name use: `net stop MSSQLSERVER`
+1. Stop SQL Server service so it can be restarted with single-user mode, using the following command:
 
+   ```powershell
+   net stop $service_name
+   ```
 
 1. Now start your SQL Server instance in a single user mode and only allow SQLCMD.exe to connect (/mSQLCMD)
 
    > [!NOTE]  
    > Be sure to use upper-case SQLCMD
 
-   ```Command Prompt
-   net start MSSQL$instance /mSQLCMD
+   ```powershell
+   net start $service_name /mSQLCMD
    ```
 
 1. Using **SQLCMD** execute a CREATE LOGIN command followed by ALTER SERVER ROLE command. This step assumes you have logged into Windows with an account that is a member of the Local Administrators group. Replace the domain and login name with the credentials you want to give Sysadmin access.
 
-   ```Command Prompt
-   sqlcmd.exe -E -S.\instancename -Q "CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK]; "
+   ```powershell
+   sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN $login_to_be_granted_access FROM WINDOWS;  ALTER SERVER ROLE sysadmin ADD MEMBER $login_to_be_granted_access; "
    ```
 
    > [!NOTE]  
-   > If you receive the following error, you need to ensure no other SQLCMD has connected to SQL Server: </br>
+   > If you receive the following error, you must ensure no other SQLCMD has connected to SQL Server: </br>
    > `Sqlcmd: Error: Microsoft ODBC Driver X for SQL Server : Login failed for user 'CONTOSO\BobD'. Reason: Server is in single user mode. Only one administrator can connect at this time..`
 
-
 1. **Mixed Mode (optional):** If your SQL Server is running in mixed authentication mode, you can also:
-    1. Grant a SQL login Sysadmin role membership. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace '************' with a strong password.
+    1. Grant a SQL login Sysadmin role membership. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace "?j8:z$G=JE9" with a strong password of your choice.
 
-       ```Command Prompt
-       sqlcmd.exe -E -S.\instancename -Q "CREATE LOGIN TempLogin WITH PASSWORD = '************'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
+       ```powershell
+       $strong_password = "j8:zG=J?E9"
+       sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN TempLogin WITH PASSWORD = '$strong_password'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
        ```
 
-    1. Also, if your SQL Server is running in mixed authentication mode and you want to reset the password of the **sa** account. Change the password of the sa account with the following syntax. Be sure to replace '************' with a strong password:
+    1. Also, if your SQL Server is running in mixed authentication mode and you want to reset the password of the enabled **sa** account. Change the password of the sa account with the following syntax. Be sure to replace "j8:zG=J?E9" with a strong password of your choice:
 
-       ```Command Prompt
-       sqlcmd.exe -E -S.\instancename -Q "ALTER LOGIN sa WITH PASSWORD = '************'; "
+       ```powershell
+       $strong_password = "j8:zG=J?E9"
+       sqlcmd.exe -E -S $sql_server_instance -Q "ALTER LOGIN sa WITH PASSWORD = $strong_password; "
        ```
 
 1. Stop and restart your SQL Server instance in multi-user mode
 
-   ```Command Prompt
-   net stop MSSQL$instancename & net start MSSQL$instancename
+   ```powershell
+   net stop $service_name & net start $service_name
    ```
-
-1. Verify that you can connect to SQL Server using the account for which you granted access and if that account is member of Sysadmin role. 
-
-   ```Command Prompt
-   runas /noprofile /user:CONTOSO\PatK "sqlcmd.exe -E -S.\instancename -Q \"SELECT IS_SRVROLEMEMBER( 'sysadmin')\""
-   ```
-
  
 ### Using SQL Server Configuration Manager and Management Studio (SSMS)
 

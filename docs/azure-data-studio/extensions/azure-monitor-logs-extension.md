@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: 
-ms.date: 08/18/2021
+ms.date: 11/03/2021
 ---
 
 # Azure Monitor Logs extension for Azure Data Studio (Preview)

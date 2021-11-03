@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: 
-ms.date: 11/03/2021
+ms.date: 11/03/2021 
 ---
 
 # Create and run a notebook with Azure Monitor Logs (Preview)

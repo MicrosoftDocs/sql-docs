@@ -128,17 +128,17 @@
       href: notebooks/notebooks-guidance.md
     - name: Notebooks views
       href: notebooks/notebooks-views.md
-    - name: Use Azure Monitor Logs
-      href: notebooks/notebooks-log-analytics.md
-    - name: Use Kusto Kernel
+    - name: Log Analytics Kernel
+      href: notebooks/notebooks-azure-monitor-logs.md
+    - name: Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
-    - name: Use Kqlmagic
+    - name: Kqlmagic
       href: notebooks/notebooks-kqlmagic.md
-    - name: Use Python Kernel
+    - name: Python Kernel
       href: notebooks/notebooks-python-kernel.md
-    - name: Use Python Kernel Offline
+    - name: Python Kernel Offline
       href: notebooks/notebooks-python-offline-installation.md
-    - name: Use SQL Kernel
+    - name: SQL Kernel
       href: notebooks/notebooks-sql-kernel.md
     - name: Parameterization
       items: 

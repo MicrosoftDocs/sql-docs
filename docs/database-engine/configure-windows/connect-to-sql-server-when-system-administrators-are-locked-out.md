@@ -57,12 +57,12 @@ The following table summarizes the different ways to start your instance in sing
 | &nbsp; | &nbsp; | &nbsp; |
   
 
-## Step by step Instructions
+## Step-by-step instructions
 
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
 
-### Using Powershell
+### Using PowerShell
 
  **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
 
@@ -74,7 +74,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
 
 **Option 2: Follow the step manually**
  
-1. Open a Windows Powershell command - Run as an Administrator
+1. Open a Windows PowerShell command - Run as an Administrator
 1. Set up service name and SQL Server instance, and Windows login variables. Replace these with values to match your environment
 
    ```powershell

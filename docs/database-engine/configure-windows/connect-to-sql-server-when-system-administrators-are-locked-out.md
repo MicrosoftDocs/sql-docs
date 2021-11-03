@@ -1,13 +1,10 @@
 ---
 title: "Connect to SQL Server when system administrators are locked out | Microsoft Docs"
 description: Learn how to regain access to SQL Server as a system administrator if you've been mistakenly locked out. 
-ms.custom: contperf-fy20q4
-ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
-ms.topic: troubleshooting
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sa account"
   - "connecting when locked out [SQL Server]"
@@ -15,9 +12,14 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: contperf-fy20q4
+ms.date: 11/02/2021
 ---
+
 # Connect to SQL Server when system administrators are locked out 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 This article describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator if you've been locked out.  A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
   

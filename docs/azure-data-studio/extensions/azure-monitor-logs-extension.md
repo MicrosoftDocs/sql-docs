@@ -95,6 +95,9 @@ AzureDiagnostics
 | summarize count() by Category
 ```
 
+> [!Note]
+> Allow about 15 minutes before the log results appear.
+
 For more information about writing Azure Monitor Logs, visit [Azure Monitor documentation](/azure/azure-monitor/)
 
 ## Next steps

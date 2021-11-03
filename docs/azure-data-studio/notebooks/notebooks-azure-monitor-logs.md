@@ -10,14 +10,13 @@ ms.reviewer: alayu
 ms.custom: ""
 ms.date: 11/03/2021
 ---
-
 # Create and run a notebook with Azure Monitor Logs (Preview)
 
-This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md) connecting to a [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-overview).
+This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md) to connect to a [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-overview) to view results for an Azure SQL database.
 
-Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspaces, browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
+Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspaces, browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Log Analytics kernel.
 
-With the Azure Monitor Log extension, you can change the kernel option to **Azure Monitor Log**.
+With the Azure Monitor Log extension, you can change the kernel option to **Log Analytics**.
 
 This feature is currently in preview.
 
@@ -34,7 +33,7 @@ The following prerequisites are also required:
 
 ## Connect to an Azure Monitor Logs (Log Analytics) workspace
 
-There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events:
+There are two main tables in a Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events:
 
 In the examples below, this article uses the [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#azure-diagnostics-mode) table and the [AzureMetric](/azure/azure-monitor/reference/tables/azuremetrics#resource-types) table in a Log Analytics workspace, which store some Azure SQL event data. We have previously configured Azure SQL to write its selected events to a Log Analytics workspace. Learn more about how to do this here.
 
@@ -44,7 +43,7 @@ You can connect to a [Log Analytics workspace](/azure/azure-monitor/logs/data-pl
 
 The following steps show how to create a notebook file in Azure Data Studio:
 
-1. In Azure Data Studio, connect to your Log analytics workspace.
+1. In Azure Data Studio, connect to your Log Analytics workspace.
 
 2. Navigate to the **Connections** pane and under the **Servers** window, right-click the Log analytics workspace and select *New Notebook*. You can also go to **File** > **New Notebook**.
 
@@ -67,9 +66,9 @@ To change the Azure Monitor Log connection for a notebook:
    :::image type="content" source="media/notebooks-azure-monitor-logs/notebooks-azure-monitor-logs-select-attach-to-change-connections.png" alt-text="change connections":::
 
    > [!Note]
-   > Ensure that the workspace value is populated. Anure Monitor Log notebooks require to have the Workspace ID specified in the **Server** field.
+   > Ensure that the workspace value is populated. Azure Monitor Log notebooks require to have the Workspace ID specified in the **Server** field.
 
-2. Now you can either select a recent connection workspace or enter new connection details to connect.
+2. Now, you can either select a recent connection workspace or enter new connection details to connect.
 
    :::image type="content" source="media/notebooks-azure-monitor-logs/notebooks-azure-monitor-logs-change-connection-cluster.png" alt-text="Select a different cluster":::
 
@@ -83,9 +82,18 @@ Add a new code cell by selecting the **+Code** command in the toolbar.
 
    :::image type="content" source="media/notebooks-azure-monitor-logs/notebooks-azure-monitor-logs-kernel-code.png" alt-text="kernel code block":::
 
-### Azure Metrics
+## Query log results for an Azure SQL database
 
-This is a sample query to dig into AzureMetrics.
+You can connect to your Log Analytics workspace(s) to browse tables, write KQL queries against workspaces, and create notebooks connected to the Log Analytics kernel.
+
+> [!Note]
+> Allow about 15 minutes before the log results appear.
+
+Some sample queries are listed below.
+
+### AzureMetrics
+
+Here's a sample query to view AzureMetrics results.
 
 ```kusto
 AzureMetrics
@@ -93,9 +101,11 @@ AzureMetrics
 
    :::image type="content" source="media/notebooks-azure-monitor-logs/azure-metrics-results.png" alt-text="azure metrics code cell results":::
 
-### Azure Diagnostics
+### AzureDiagnostics
 
-This is a sample query to dig into AzureDiagnostics. This table tends to have more details than AzureMetrics.
+Here's a sample query to view AzureDiagnostics results.
+
+The **AzureDiagnostics** table tends to have more details than **AzureMetrics**.
 
 ```kusto
 AzureDiagnostics
@@ -124,4 +134,5 @@ You can try some more examples from the [Azure Monitor Logs samples repo](https:
 ## Next steps
 
 - [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md)
+- [Azure Monitor Log samples](https://github.com/MsSQLGirl/jubilant-data-wizards/blob/main/Simple%20Demo/KQL%20Notebooks/AzureMonitorLogsSample.ipynb)
 - [Notebook guidance](notebooks-guidance.md)

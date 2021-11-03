@@ -80,6 +80,8 @@ There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace 
 1. [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#azure-diagnostics-mode)
 2. [AzureMetric](/azure/azure-monitor/reference/tables/azuremetrics#resource-types)
 
+To execute the samples below, you must be logged in to an [Azure SQL database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal).
+
 Here are some samples of KQL queries:
 
 ```kusto

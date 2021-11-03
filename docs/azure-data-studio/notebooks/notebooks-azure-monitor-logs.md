@@ -15,12 +15,7 @@ ms.date: 11/03/2021
 
 This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md) connecting to a [Log Analytics workspace](/azure/azure-monitor/logs/log-analytics-overview).
 
-Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspace(s), browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
-
-There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events:
-
-1. [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#azure-diagnostics-mode)
-2. [AzureMetric](/azure/azure-monitor/reference/tables/azuremetrics#resource-types)
+Once the Azure Monitor Logs extension is installed, you can connect to your Azure Monitor Log workspaces, browse the tables, write/execute KQL queries against workspaces and write/execute Notebooks connected to the Azure Monitor Log kernel.
 
 With the Azure Monitor Log extension, you can change the kernel option to **Azure Monitor Log**.
 
@@ -32,11 +27,16 @@ If you don't have an Azure subscription, create a [free Azure account](https://a
 
 The following prerequisites are also required:
 
+- [Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal)
 - [Azure Data Studio installed](../download-azure-data-studio.md).
 - [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces).
-- [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md)
+- [Azure Monitor Log extension](../extensions/azure-monitor-logs-extension.md).
 
 ## Connect to an Azure Monitor Logs (Log Analytics) workspace
+
+There are two main tables in Azure Log Analytics (Azure Monitor Logs) workspace that capture Azure SQL events:
+
+In the examples below, this article uses the [AzureDiagnostics](/azure/azure-monitor/reference/tables/azurediagnostics#azure-diagnostics-mode) table and the [AzureMetric](/azure/azure-monitor/reference/tables/azuremetrics#resource-types) table in a Log Analytics workspace, which store some Azure SQL event data. We have previously configured Azure SQL to write its selected events to a Log Analytics workspace. Learn more about how to do this here.
 
 You can connect to a [Log Analytics workspace](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces).
 
@@ -119,15 +119,7 @@ AzureDiagnostics
 
    :::image type="content" source="media/notebooks-azure-monitor-logs/azure-diagnostics-summarize results-operation-name.png" alt-text="azure diagnostics summarize code cell results":::
 
-The above query's equivalent in SQL is:
-
-```sql
-SELECT OperationName, COUNT(*) AS [count_]
-FROM AzureDiagnostics
-GROUP BY OperationName
-```
-
-You can try more examples from the [Azure Monitor Logs samples repo](https://github.com/MsSQLGirl/jubilant-data-wizards/blob/main/Simple%20Demo/KQL%20Notebooks/AzureMonitorLogsSample.ipynb). 
+You can try some more examples from the [Azure Monitor Logs samples repo](https://github.com/MsSQLGirl/jubilant-data-wizards/blob/main/Simple%20Demo/KQL%20Notebooks/AzureMonitorLogsSample.ipynb).
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: This article provides guidelines for Spark workload management usin
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 11/01/2021
+ms.date: 11/02/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -16,27 +16,27 @@ ms.technology: big-data-cluster
 
 ## Introduction
 
-This article describes how to segment your Spark workload using YARN’s Capacity Scheduler of SQL Server Big Data Clusters. The capacity scheduler allows the configuration of multiple queues with different resource usage profiles to best fit your workload requirements. It provides a hierarchy queue design, capacity can be assigned as min and max percentages of the parent in the hierarchy. 
+This article describes how to segment your Spark workload using YARN's Capacity Scheduler of SQL Server Big Data Clusters. The capacity scheduler allows the configuration of multiple queues with different resource usage profiles to best fit your workload requirements. It provides a hierarchy queue design, capacity can be assigned as min and max percentages of the parent in the hierarchy. 
 
 The YARN Capacity Scheduler can manage resource management scenarios of any complexity. For more information, see [Apache Hadoop 3.1.4 – Hadoop: Capacity Scheduler](https://hadoop.apache.org/docs/r3.1.4/hadoop-yarn/hadoop-yarn-site/CapacityScheduler.html) and [YARN - The Capacity Scheduler](https://blog.cloudera.com/yarn-capacity-scheduler/).
 
-SQL Server Big Data Clusters contains a single pre-configured YARN queue for all job types. The ***default*** queue is configured to consume all cluster resources (CPU and memory) for all jobs submitted in a first come first serve method, including:
+SQL Server Big Data Clusters contains a single pre-configured YARN queue for all job types. The `default` queue is configured to consume all cluster resources (CPU and memory) for all jobs submitted in a first come first serve method, including:
 
-* Spark Jobs and interactive sessions (such as Notebooks)
-* HDFS copy and distributed copy commands
-* SQL Server Compute Pool access to the Storage Pool distributed file system (HDFS)
+- Spark Jobs and interactive sessions (such as Notebooks)
+- HDFS copy and distributed copy commands
+- SQL Server Compute Pool access to the Storage Pool distributed file system (HDFS)
 
 Depending on Spark job parameters specified (such as executors, cores, and memory), a big data cluster may be able to serve one to multiple concurrent Spark jobs out of the box.
 
-To achieve more granular resource management on SQL Server Big Data Clusters, use the YARN Capacity Scheduler. YARN’s Capacity Scheduler is a highly configurable feature, allowing queues, sub-queues, preemption, priorities, etc. This samples in this article will show how to implement a common Spark resource management scenario using YARN capacity scheduler and the [configuration framework](configure-bdc-postdeployment.md). More advanced scenarios may well leverage the building blocks from this article.
+To achieve more granular resource management on SQL Server Big Data Clusters, use the YARN Capacity Scheduler. YARN's Capacity Scheduler is a highly configurable feature, allowing queues, sub-queues, preemption, priorities, etc. This samples in this article will show how to implement a common Spark resource management scenario using YARN capacity scheduler and the [configuration framework](configure-bdc-postdeployment.md). More advanced scenarios may well leverage the building blocks from this article.
 
 ## Sample Spark resource management scenario
 
 In this end-to-end resource map example, the following configuration is applied:
 
-- Creates a queue called ***largebatch*** for long running ETL and data transformation. Configured with 70% capacity and 90% max capacity. Jobs submitted to this queue won’t be preempted. Note that it is still possible to achieve concurrency in this queue if the jobs are configured not to take all queue capacity. Accessible only by the admin user.
-- Creates a queue called ***smallbatch*** for select data transformation jobs. Configured with 25% capacity and 50% max capacity. Accessible by the admin user and dataengineers group.
-3. Creates a queue called ***powerusers*** for notebook-based experimentation for data engineers and data scientists. Configured from 5% capacity to 50% max capacity. Accessible by the admin user, and the dataengineers and datascientists groups.
+1. Creates a queue called `largebatch` for long running ETL and data transformation. Configured with 70% capacity and 90% max capacity. Jobs submitted to this queue won't be preempted. Note that it is still possible to achieve concurrency in this queue if the jobs are configured not to take all queue capacity. Accessible only by the admin user.
+2. Creates a queue called `smallbatch` for select data transformation jobs. Configured with 25% capacity and 50% max capacity. Accessible by the admin user and `dataengineers` group.
+3. Creates a queue called `powerusers` for notebook-based experimentation for data engineers and data scientists. Configured from 5% capacity to 50% max capacity. Accessible by the admin user, and the `dataengineers` and `datascientists` groups.-
 4. Setup access control lists (ACLs) for these three queues so that only authorized users and groups can access a given queue, and setup automatic user/group queue mapping. 
 
 > [!NOTE]
@@ -67,7 +67,7 @@ azdata bdc spark settings set --settings
 ```
 
 > [!NOTE]
-> An ACL is of the form “user1,user2 space group1,group2”. The special value of * implies anyone.
+> An ACL is of the form "user1,user2 space group1,group2". The special value of * implies anyone.
 
 Apply the new configuration using the following commands. Pods will restart.
 
@@ -80,13 +80,13 @@ Use the YARN UI page to validate and monitor queue usage.
 
 :::image type="content" source="media/spark-yarn-capacity-scheduler/yarn-ui.png" alt-text="YARN UI shows configured queues":::
 
-It’s also possible to monitor YARN queue placement for jobs and sessions using the monitoring patterns described in [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).
+It's also possible to monitor YARN queue placement for jobs and sessions using the monitoring patterns described in [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).
 
 ## Submit Spark jobs on YARN queues
 
 Use the ```-–queue-name``` or ```-q``` options on ```azdata``` to assign the jobs to a specific queue. If queue is not specified and ```capacity-scheduler.yarn.scheduler.capacity.queue-mappings``` is not configured, the ```spark.yarn.queue``` parameter in ```spark-defaults.conf``` will be applied. It is possible to change the default queue for all sessions on [spark-defaults.conf using the configuration framework](configure-bdc-postdeployment.md).
 
-The following example runs a PySpark python file on the ***smallbatch*** queue:
+The following example runs a PySpark python file on the `smallbatch` queue:
 
 ```bash
 azdata bdc spark batch create -q smallbatch \
@@ -96,7 +96,7 @@ azdata bdc spark batch create -q smallbatch \
 
 ## Notebooks using YARN queues
 
-If ACLs and user mappings were configured, the Notebook session will automatically be assigned to the correct queue. The example below is how an Azure Data Studio notebook would explicitly configure the ***smallbatch*** queue in the Livy session:
+If ACLs and user mappings were configured, the Notebook session will automatically be assigned to the correct queue. The example below is how an Azure Data Studio notebook would explicitly configure the `smallbatch` queue in the Livy session:
 
 ```python
 %%configure -f \
@@ -120,8 +120,8 @@ In order to implement complete worker segmentation, make use of [YARN node label
 
 For more resources on Spark performance and configuration for SQL Server Big Data Clusters, see:
 
-* [How to configure big data clusters settings post deployment](configure-bdc-postdeployment.md)
+- [How to configure big data clusters settings post deployment](configure-bdc-postdeployment.md)
 
-* [Performance best practices and configuration guidelines for SQL Server Big Data Clusters](performance-guidelines-tuned.md)
+- [Performance best practices and configuration guidelines for SQL Server Big Data Clusters](performance-guidelines-tuned.md)
 
-* [Case Study: SQL Workloads running on Apache Spark in MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf/)
+- [Case Study: SQL Workloads running on Apache Spark in MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf/)

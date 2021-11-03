@@ -77,7 +77,7 @@ To set up an Azure Data Explorer cluster to connect to, follow the steps below.
     7. For **Name (optional)**, leave blank.
         1. You can use this field to give your server an alias.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Connection details":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-detail.png" alt-text="Connection details":::
 
 ## How to query an Azure Data Explorer database in Azure Data Studio
 

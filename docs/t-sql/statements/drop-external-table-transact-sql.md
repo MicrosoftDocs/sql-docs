@@ -1,8 +1,8 @@
 ---
 description: "DROP EXTERNAL TABLE (Transact-SQL)"
-title: "DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
+title: "DROP EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "11/02/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.technology: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -28,17 +27,20 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
-  
-
+ 
 ## Arguments  
+
  `[ database_name . [schema_name] . | schema_name . ] table_name`  
  The one- to three-part name of the external table to remove. The table name can optionally include the schema, or the database and schema.  
   
 ## Permissions  
   
--   Requires **ALTER** permission on the schema to which the table belongs.  
+ Requires: 
+ - **ALTER** permission on the schema to which the table belongs.
+ - **ALTER ANY EXTERNAL DATA SOURCE**
+ - **ALTER ANY EXTERNAL FILE FORMAT**
   
-## General Remarks  
+## Remarks  
  Dropping an external table removes all table-related metadata. It doesn't delete the external data.  
   
 ## Examples  

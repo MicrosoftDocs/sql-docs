@@ -58,7 +58,7 @@ To change the Kusto connection for a notebook:
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Select a different cluster":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection.png" alt-text="Select a different cluster":::
 
    > [!Note]
    > Specify the cluster name without the `https://`.

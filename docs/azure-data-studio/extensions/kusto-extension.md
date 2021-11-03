@@ -128,7 +128,7 @@ The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension
 | Details | Workaround |
 |---------|------------|
 | [In Kusto notebook, Changing a database connection on a saved alias connection is stuck after an error in code cell execution](https://github.com/microsoft/azuredatastudio/issues/12384) | Close and reopen the Notebook, then connect to the right cluster with the database |
-| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) | 
+| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 | [In Kusto Notebook, the database dropdown isn't populated when creating a new ADX connection](https://github.com/microsoft/azuredatastudio/issues/12666) | Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  

@@ -4,7 +4,6 @@ description: "Transact-SQL reference for the STRING_SPLIT function. This table-v
 ms.date: "11/04/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: 
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -14,8 +13,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "STRING_SPLIT function"
-author: wiassaf
-ms.author: WilliamDAssafMSFT
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017" 
 ---
 # STRING_SPLIT (Transact-SQL)

@@ -50,8 +50,6 @@ author: minewiskan
   
 -   AS  
   
--   DISTINCT  
-  
 -   :  
   
 -   ^  

@@ -59,8 +59,8 @@ FROM
            <SELECT query axis clause>,...n ] )   
          ]   
             FROM   
-         <SELECT subcube clause>   
-         <SELECT slicer axis clause> )  
+           <SELECT subcube clause>   
+         [ <SELECT slicer axis clause> ] )  
   
 <SELECT slicer axis clause> ::=   
       WHERE Tuple_Expression  

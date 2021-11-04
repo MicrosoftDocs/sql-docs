@@ -1,10 +1,10 @@
 ---
 title: "STRING_SPLIT (Transact-SQL)"
 description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
-ms.date: "09/02/2021"
+ms.date: "11/04/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: wiassaf
+ms.reviewer: 
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -14,8 +14,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "STRING_SPLIT function"
-author: julieMSFT
-ms.author: jrasnick
+author: wiassaf
+ms.author: WilliamDAssafMSFT
 monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017" 
 ---
 # STRING_SPLIT (Transact-SQL)
@@ -89,7 +89,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 In a practice run, the preceding SELECT returned following result table:  
   
-|value|  
+|**value**|  
 | :-- |  
 |Lorem|  
 |ipsum|  
@@ -106,7 +106,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
 
 This statement then returns the following result table:  
 
-|value|ordinal|  
+|**value**|**ordinal**|  
 | :-- | :-- |  
 |Lorem|1|  
 |ipsum|2|  
@@ -135,7 +135,7 @@ STRING_SPLIT will return empty string if there is nothing between separator. Con
 
 Product table has a column with comma-separate list of tags shown in the following example:  
   
-|ProductId|Name|Tags|  
+|**ProductId**|**Name**|**Tags**|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -151,7 +151,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|value|  
+|**ProductId**|**Name**|**value**|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|road|  
@@ -230,7 +230,7 @@ WHERE ordinal % 2 = 0;
 
 The above statement returns the following table:  
 
-|value|ordinal|  
+|**value**|**ordinal**|  
 |----------|--------|  
 |Texas|2|  
 |Washington|4|  
@@ -246,7 +246,7 @@ SELECT * FROM STRING_SPLIT('E-D-C-B-A', '-', 1) ORDER BY ordinal DESC;
 
 The above statement returns the following table:
 
-|value|ordinal|  
+|**value**|**ordinal**|  
 |-----|--------|  
 |A|5|  
 |B|4|  
@@ -255,7 +255,7 @@ The above statement returns the following table:
 |E|1|  
 
 
-## See Also
+## Next Steps
 
 - [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
 - [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)

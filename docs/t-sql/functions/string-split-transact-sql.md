@@ -41,9 +41,6 @@ To change the compatibility level of a database, refer to [View or Change the Co
 STRING_SPLIT ( string , separator [ , enable_ordinal ] )  
 ```
 
-> [!NOTE]
-> The *enable_ordinal* argument and `ordinal` output column are currently only supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only).
-
 ## Arguments
 
 #### *string*
@@ -55,6 +52,8 @@ STRING_SPLIT ( string , separator [ , enable_ordinal ] )
 #### *enable_ordinal*  
 An **int** or **bit** [expression](../../t-sql/language-elements/expressions-transact-sql.md) that serves as a flag to enable or disable the `ordinal` output column. A value of 1 enables the `ordinal` column. If *enable_ordinal* is omitted, `NULL`, or has a value of 0, the `ordinal` column is disabled.  
 
+> [!NOTE]
+> The *enable_ordinal* argument and `ordinal` output column are currently only supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only).
 
 ## Return Types  
 

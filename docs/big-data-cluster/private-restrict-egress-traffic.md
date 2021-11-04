@@ -171,7 +171,7 @@ See the following example:
 ```azurecli
 # Create SP and Assign Permission to Virtual Network
 
-az ad sp create-for-rbac -n "bdcaks-sp" --skip-assignment
+az ad sp create-for-rbac -n "bdcaks-sp" --role Contributor --skip-assignment
 
 APPID=<your service principal ID >
 PASSWORD=< your service principal password >

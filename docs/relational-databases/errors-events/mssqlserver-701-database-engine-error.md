@@ -36,7 +36,7 @@ Diagnostic queries, such as DBCC statements, may fail because server the does no
   
 A timeout occurred while waiting for memory resources to execute the query in the resource pool 'default'.  
   
-## User Action  
+## User action  
 If you are not using Resource Governor, we recommend that you verify the overall server state and load, or check the resource pool or workload group settings.  
   
 The following list outlines general steps that will help in troubleshooting memory errors:  

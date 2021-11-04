@@ -4,13 +4,13 @@ title: "MSSQLSERVER_701"
 ms.custom: ""
 ms.date: "11/04/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "701 (Database Engine error)"
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: wiassaf
 ---
 # MSSQLSERVER_701
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +30,9 @@ ms.author: mathoma
 > **This article is focused on SQL Server.** For information on troubleshooting out of memory issues in Azure SQL Database, see [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
 
 ## Explanation  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has failed to allocate sufficient memory to run the query. This can be caused by a variety of reasons including operating system settings, physical memory availability, or memory limits on the current workload. In most cases, the transaction that failed is not the cause of this error.  
+This error occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has failed to allocate sufficient memory to run the query. This can be caused by various reasons including operating system settings, physical memory availability, or memory limits on the current workload. In most cases, the transaction that failed is not the cause of this error.  
   
-Diagnostic queries, such as DBCC statements, may fail because server the does not have sufficient memory.  
+Diagnostic queries, such as DBCC statements, may fail because the server does not have sufficient memory.  
   
 A timeout occurred while waiting for memory resources to execute the query in the resource pool 'default'.  
   
@@ -61,7 +61,7 @@ The following list outlines general steps that will help in troubleshooting memo
 
 The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  
+-   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. These steps will remove external memory pressure.  
   
 -   If you have configured **max server memory**, increase its setting. For more information, see [Set options manually](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).
   
@@ -73,5 +73,5 @@ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../inc
   
 -   DBCC FREEPROCCACHE  
   
-If the problem continues, you will need to investigate further and possibly reduce workload.  
+If the problem continues, you will need to investigate further and possibly increase server resources or reduce workload.  
   

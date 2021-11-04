@@ -1,17 +1,16 @@
 ---
 description: "MSSQLSERVER_802 - Database Engine error"
-title: "MSSQLSERVER_802 - Database Engine error | Microsoft Docs"
+title: "MSSQLSERVER_802 - Database Engine error"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: "11/04/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "802 (Database Engine error)"
-ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: wiassaf
 ---
 # MSSQLSERVER_802 - Database Engine error
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +25,12 @@ ms.author: mathoma
 |Component|SQLEngine|  
 |Symbolic Name|NO_BUFS|  
 |Message Text|There is insufficient memory available in the buffer pool.|  
+
+> [!NOTE]
+> **This article is focused on SQL Server.** For information on troubleshooting out of memory issues in Azure SQL Database, see [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
   
 ## Explanation  
-This is caused when the buffer pool is full and the buffer pool can not grow any larger.  
+This is caused when the buffer pool is full and the buffer pool cannot grow any larger.  
   
 ## User Action  
 The following list outlines general steps that will help in troubleshooting memory errors:  
@@ -45,7 +47,7 @@ The following list outlines general steps that will help in troubleshooting memo
   
     -   **min memory per query**  
   
-    Notice any unusual settings and correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Default settings are listed in "Setting Server Configuration Options" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+    Notice any unusual settings and correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Default settings are listed in [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   
@@ -55,7 +57,7 @@ The following actions may make more memory available to [!INCLUDE[ssNoVersion](.
   
 -   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping these applications or running them on a separate server.  
   
--   If you have configured **max server memory,** increase the setting.  
+-   If you have configured **max server memory**, increase its setting. For more information, see [Set options manually](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).
   
 Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.  
   

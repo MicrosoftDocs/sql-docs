@@ -37,7 +37,7 @@ FROM
      ( CELL CALCULATION <CREATE CELL CALCULATION body clause> )   
    | ( [ CALCULATED ] MEMBER <CREATE MEMBER body clause>)   
    | ( SET <CREATE SET body clause>)  
-   | ( MEASURE = <measure body clause> )  
+   | ( Measure_Name = <measure body clause> )  
   
 <SELECT query axis clause> ::=  
    [ NON EMPTY ] Set_Expression  

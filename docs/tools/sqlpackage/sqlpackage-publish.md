@@ -149,7 +149,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for check constraints will be ignored or updated when you publish.|
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for foreign keys will be ignored or updated when you publish to a database.|
 |**p:**|IgnoreWorkloadClassifiers=(BOOLEAN 'False')|Specifies whether to exclude workload classifiers that exist on the target during deployment.|
-|**/p:**|IncludeCompositeObjects=(BOOLEAN)|Include all composite elements as part of a single publish operation.|
+|**/p:**|IncludeCompositeObjects=(BOOLEAN)|Include all composite elements with the same database as part of a single publish operation.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Specifies whether transactional statements should be used where possible when you publish to a database.|
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
 |**/p:**|LongRunningCommandTimeout=(INT32)|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|

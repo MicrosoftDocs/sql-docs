@@ -32,7 +32,7 @@ ms.reviewer: wiassaf
 ## Explanation  
 This is caused when the buffer pool is full and the buffer pool cannot grow any larger.  
   
-## User Action  
+## User action  
 The following list outlines general steps that will help in troubleshooting memory errors:  
   
 1.  Verify whether other applications or services are consuming memory on this server. Reconfigure less critical applications or services to consume less memory.  

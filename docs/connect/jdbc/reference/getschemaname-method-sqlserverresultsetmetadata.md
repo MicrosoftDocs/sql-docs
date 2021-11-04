@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSchemaName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

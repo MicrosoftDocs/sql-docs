@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC [ODBC], about ODBC"
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Introduction to ODBC
 This section provides a brief history of Structured Query Language and ODBC, and includes conceptual information about the ODBC interface.  

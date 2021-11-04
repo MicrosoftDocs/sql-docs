@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], connection strings"
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connection String Format and Attributes
 > [!IMPORTANT]  

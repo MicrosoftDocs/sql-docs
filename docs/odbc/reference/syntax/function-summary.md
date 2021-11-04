@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "functions [ODBC]"
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Function Summary
 The following sections summarize the functions used by ODBC-enabled applications and related software.  

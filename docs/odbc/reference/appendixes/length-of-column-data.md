@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "cache [ODBC]"
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Length of Column Data
 > [!IMPORTANT]  

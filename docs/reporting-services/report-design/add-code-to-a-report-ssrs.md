@@ -1,6 +1,6 @@
 ---
-title: "Add Code to a Report | Microsoft Docs"
-description: Find out how to call your own custom code for any expression you have in your report in Report Builder.
+title: "Add code to a paginated report | Microsoft Docs"
+description: Find out how to call your own custom code for any expression you have in your paginated report in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -18,8 +18,11 @@ ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add Code to a Report (SSRS)
-  In any expression, you can call your own custom code. You can provide code in the following two ways:  
+# Add code to a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In any expression, you can call your own custom code in a paginated report. You can provide code in the following two ways:  
   
 -   Embed code written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] directly in your report. If your code refers to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] that is not <xref:System.Math> or <xref:System.Convert>, you must add the reference to the report. For more information, see [Add an Assembly Reference to a Report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md). For more information about other references you can make from your code, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   

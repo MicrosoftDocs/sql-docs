@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLColAttributes"
 ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttributes (Access Driver)
 > [!NOTE]  

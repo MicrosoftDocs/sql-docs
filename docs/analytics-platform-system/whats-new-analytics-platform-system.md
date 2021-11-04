@@ -8,7 +8,9 @@ ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: charlesf
 ms.reviewer: "martinle"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-whats-new
 ---
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
@@ -284,4 +286,3 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 
   
-

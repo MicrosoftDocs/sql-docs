@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Understanding Java EE support
 

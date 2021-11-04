@@ -1,14 +1,16 @@
 ---
 title: App deployment extension
 titleSuffix: SQL Server Big Data Clusters
-description: Deploy a Python or R script as an application on SQL Server Big Data Clusters. 
-author: cloudmelon 
+description: Deploy a Python or R script as an application on SQL Server Big Data Clusters.
+author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # How to use Visual Studio Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

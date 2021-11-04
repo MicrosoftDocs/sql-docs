@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-jizho2
 ---
 
@@ -381,11 +381,11 @@ class Program
 
 #### Column encryption key cache precedence
 
-This section applies to version 3.0 and higher of the provider.
+This section applies to version 3.0 and higher of the **Microsoft .NET Data Provider for SQL Server**.
 
 The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or command instance will not be cached by the **Microsoft .NET Data Provider for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
 
-Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or command instance, CEKs decrypted by an instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` will be cleared when that instance goes out of scope:
+Starting with **v3.0.0** of the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`, each instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or command instance, CEKs decrypted by an instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` will be cleared when that instance goes out of scope:
 
 [!code-csharp [AzureKeyVaultProviderColumnEncryptionKeyCacheScope#1](~/../sqlclient/doc/samples/AzureKeyVaultProvider_ColumnEncryptionKeyCacheScope.cs#1)]
 
@@ -531,6 +531,12 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 To reduce the number of calls to a column master key store to decrypt column encryption keys, the **Microsoft .NET Data Provider for SQL Server** caches the plaintext column encryption keys in memory. After receiving the encrypted column encryption key value from the database metadata, the driver first tries to find the plaintext column encryption key corresponding to the encrypted key value. The driver calls the key store containing the column master key only if it cannot find the encrypted column encryption key value in the cache.
 
 The cache entries are evicted after a configurable time-to-live interval for security reasons. The default time-to-live value is 2 hours. If you have stricter security requirements about how long column encryption keys can be cached in plaintext in the application, you can change it using the [SqlConnection.ColumnEncryptionKeyCacheTtl property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl).
+
+Custom key store providers registered using [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) and [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) won't have their decrypted column encryption keys cached by the **Microsoft .NET Data Provider for SQL Server**. Instead, custom key store providers must implement their own caching mechanism. `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` **v3.0.0** and higher comes with its own caching implementation.
+
+To support scenarios where different users of the same application may execute multiple queries, custom key store providers can be mapped to a user and registered on a connection or command instance specific to that user. The following example shows how an instance of `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` can be reused across different `SqlCommand` objects for the same user. Its column encryption key cache will persist across multiple queries, reducing the number of round trips to the key store:
+
+[!code-csharp [RegisterCustomKeyStoreProviderExample#1](~/../sqlclient/doc/samples/RegisterCustomKeyStoreProvider_Example.cs#1)]
 
 ## Enabling extra protection for a compromised SQL Server
 

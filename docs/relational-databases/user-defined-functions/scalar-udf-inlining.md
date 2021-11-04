@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
 ---
 # Scalar UDF Inlining
 
-[!INCLUDE [SQL Server 2019 SQL Database](../../includes/applies-to-version/sqlserver2019-asdb.md)]
+[!INCLUDE [SQL Server 2019 SQL Database SQL Managed Instance](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
 This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
@@ -160,10 +160,10 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - The UDF does not reference the `STRING_AGG` function <sup>6</sup>. 
 - The UDF does not reference remote tables <sup>7</sup>.
 - The UDF-calling query does not use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
-- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
-- The UDF references encrypted columns <sup>8</sup>.
-- The UDF contains references to 'WITH XMLNAMESPACES' <sup>8</sup>.
-- The query invoking the UDF has Common Table Expressions (CTEs)<sup>8</sup>.
+- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`) <sup>7</sup>.
+- The UDF does not reference encrypted columns <sup>8</sup>.
+- The UDF does not contain references to `WITH XMLNAMESPACES` <sup>8</sup>.
+- The query invoking the UDF does not have Common Table Expressions (CTEs) <sup>8</sup>.
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation is not supported for inlining (such as `SELECT @val += col1 FROM table1`).
 
@@ -285,6 +285,7 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
 In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
 1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (for example `@@ROWCOUNT`).
+1. If a variable is assigned with the result of an inlined UDF and it also used as index_column_name in FORCESEEK [Query hint](../../t-sql/queries/hints-transact-sql-query.md), it will result in error Msg 8622 indicating that the Query processor could not produce a query plan because of the hints defined in the query.
 
 ## See Also
 [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

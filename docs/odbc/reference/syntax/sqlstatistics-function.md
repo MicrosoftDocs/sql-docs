@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLStatistics function [ODBC]"
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLStatistics Function
 **Conformance**  

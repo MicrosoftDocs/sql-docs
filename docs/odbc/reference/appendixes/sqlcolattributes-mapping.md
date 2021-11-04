@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLColAttribute function [ODBC], mapping"
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttributes Mapping
 When an application calls **SQLColAttributes** through an ODBC *3.x* driver, the call to **SQLColAttributes** is mapped to **SQLColAttribute** as follows:  

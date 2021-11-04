@@ -2,7 +2,7 @@
 description: "ALTER WORKLOAD GROUP (Transact-SQL)"
 title: ALTER WORKLOAD GROUP (Transact-SQL) 
 ms.custom: ""
-ms.date: "05/04/2021"
+ms.date: "09/23/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -105,34 +105,34 @@ ALTER WORKLOAD GROUP group_name
 
 ## Arguments
 
-group_name  
-Is the name of the existing user-defined workload group being altered.  group_name is not alterable. 
+#### group_name  
+Is the name of the existing user-defined workload group being altered. group_name is not alterable. 
 
-MIN_PERCENTAGE_RESOURCE = value  
-Value is an integer range from 0 to 100.  When altering min_percentage_resource, the sum of min_percentage_resource across all workload groups cannot exceed 100.  Altering min_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details.
+#### MIN_PERCENTAGE_RESOURCE = value  
+Value is an integer range from 0 to 100.  When altering min_percentage_resource, the sum of min_percentage_resource across all workload groups cannot exceed 100.  Altering min_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the [ALTER WORKLOAD GROUP behavior](#alter-workload-group-behavior) section in this doc for further details.
 
-CAP_PERCENTAGE_RESOURCE = value  
-Value is an integer range from 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  Altering cap_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details. 
+#### CAP_PERCENTAGE_RESOURCE = value  
+Value is an integer range from 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  Altering cap_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the [ALTER WORKLOAD GROUP behavior](#alter-workload-group-behavior) section in this doc for further details. 
 
-REQUEST_MIN_RESOURCE_GRANT_PERCENT = value  
+#### REQUEST_MIN_RESOURCE_GRANT_PERCENT = value  
 Value is a decimal with a range between 0.75 to 100.00.  The value for request_min_resource_grant_percent needs to be a factor of min_percentage_resource and be less than cap_percentage_resource. 
   
-REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
+#### REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
 Value is a decimal and must be greater than request_min_resource_grant_percent.
 
-IMPORTANCE = { LOW \|  BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
+#### IMPORTANCE = { LOW \|  BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Alters the default importance of a request for the workload group.
 
-QUERY_EXECUTION_TIMEOUT_SEC = value  
+#### QUERY_EXECUTION_TIMEOUT_SEC = value  
 Alters the maximum time, in seconds, that a query can execute before it is canceled. Value must be 0 or a positive integer. The default setting for value is 0, which means unlimited.   
 
 ## Permissions
 
-Requires CONTROL DATABASE permission
+Requires **CONTROL DATABASE** permission.
 
 ## Example
 
-The below example checks the values in the catalog view for wgDataLoads and changes the values.
+The below example checks the values in the catalog view for a workload group named **wgDataLoads**, and changes the values.
 
 ```sql
 SELECT *
@@ -147,7 +147,8 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
 
 ## ALTER WORKLOAD GROUP behavior
 
-At any point in time there are 3 types of requests in the system
+At any point in time there are 3 types of requests in the system:
+
 - Requests which have not been classified yet.
 - Requests which are classified - and waiting - for object locks or system resources.
 - Requests which are classified - and running.
@@ -163,7 +164,7 @@ For request_min_resource_grant_percent and request_max_resource_grant_percent, r
 **Min_percentage_resource or cap_percentage_resource**
 For min_percentage_resource and cap_percentage_resource, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values. 
 
-Changing min_percentage_resource and cap_percentage_resource requires draining of running requests in the workload group that is being altered.  When decreasing min_percentage_resource, the freed resources are returned to the share pool allowing requests from other workload groups the ability to utilize.  Conversely, increasing the min_percentage_resource will wait until requests utilizing only the needed resources from the shared pool to complete.  Alter workload group operation will have prioritized access to shared resources over other requests waiting to be executed on shared pool.  If the sum of min_percentage_resource exceeds 100%, the ALTER WORKLOAD GROUP request fails immediately. 
+Changing min_percentage_resource and cap_percentage_resource requires draining of running requests in the workload group that is being altered.  When decreasing min_percentage_resource, the freed resources are returned to the share pool allowing requests from other workload groups the ability to utilize.  Conversely, increasing the min_percentage_resource will wait until requests utilizing only the needed resources from the shared pool to complete.  The `ALTER WORKLOAD GROUP` operation will have prioritized access to shared resources over other requests waiting to be executed on shared pool.  If the sum of min_percentage_resource exceeds 100%, the `ALTER WORKLOAD GROUP` request fails immediately. 
 
 **Locking behavior**
 Altering a workload group requires a global lock across all workload groups.  A request to alter a workload group would queue behind already submitted create or drop workload group requests.  If a batch of alter statements is submitted at once, they are processed in the order in which they are submitted.  

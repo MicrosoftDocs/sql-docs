@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC literals [ODBC], interval"
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Interval Literal Syntax
 The following syntax is used for interval literals in ODBC.  

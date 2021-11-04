@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "testing interoperable applications [ODBC]"
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Testing Interoperable Applications
 Testing interoperable applications is at best a time-consuming business and at worst impossible because new drivers continually appear on the market. However, a reasonable degree of testing is possible. Applications with limited or low interoperability need only be tested against those drivers they are guaranteed to support. However, they must be fully tested against these drivers.  

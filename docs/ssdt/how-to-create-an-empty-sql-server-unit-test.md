@@ -40,13 +40,13 @@ You have two options for creating a SQL Server unit test:
   
 3.  Under **Test Name**, enter a name for the test.  
   
-4.  Under **Add to Test Project**, select an existing test project, into which to add this test. If no test project exists or if you want to create a new test project, select **Create a new <language> test project**.  
+4.  Under **Add to Test Project**, select an existing test project, into which to add this test. If no test project exists or if you want to create a new test project, select **Create a new \<language\> test project**.  
   
 5.  Click **OK**.  
   
     If your test project is new, the **New Test Project** dialog box appears. Name the project and click **OK**.  
   
-    If your test project is new or has not been configured, the **SQL Server Test Configuration <ProjectName>** dialog box appears. This dialog box allows you to configure the following information for your test project:  
+    If your test project is new or has not been configured, the **SQL Server Test Configuration \<ProjectName\>** dialog box appears. This dialog box allows you to configure the following information for your test project:  
   
     -   The database connection used to execute tests.  
   

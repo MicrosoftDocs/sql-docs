@@ -8,6 +8,8 @@ ms.topic: tutorial
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
+ms.custom:
+  - intro-deployment
 ---
 
 # Tutorial - Setup a three node Always On availability group with HPE Serviceguard for Linux 

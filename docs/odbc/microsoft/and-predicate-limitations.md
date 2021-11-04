@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "AND predicate limitations [ODBC]"
 ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # AND Predicate Limitations
 A maximum of 40 is supported.

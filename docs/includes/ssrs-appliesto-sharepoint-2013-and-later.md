@@ -11,4 +11,4 @@
 ---
 
 
-✔ SharePoint 2013 & later
+✔️ SharePoint 2013 & later

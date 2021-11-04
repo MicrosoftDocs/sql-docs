@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLDataSources function [ODBC]"
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDataSources Function
 **Conformance**  

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # cancelRowUpdates Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

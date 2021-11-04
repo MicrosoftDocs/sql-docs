@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4bc3e82b-a7e7-43a5-8938-6f29c7570163
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsOpenCursorsAcrossRollback Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

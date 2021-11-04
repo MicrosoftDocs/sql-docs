@@ -5,6 +5,8 @@ ms.date: 03/18/2021
 ms.topic: include
 author: garyericson
 ms.author: garye
+ms.custom:
+  - intro-installation
 ---
 + RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your Red Hat Enterprise Linux (RHEL) installation provides this.
 

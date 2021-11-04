@@ -17,6 +17,8 @@ ms.author: chadam
 # Database Snapshots with Always On Availability Groups (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
+[!NOTE] Creating database snapshots on any database has cpu and IO overhead due to copy on write activity. On database replicas, this can hurt redo throughput among other operations, especially as the number of snapshots increases.
+
   You can create a database snapshot on an primary or secondary database in an availability group. The replica role must be either PRIMARY or SECONDARY, not in the RESOLVING state.  
   
  We recommend that the database synchronization state be SYNCHRONIZING or SYNCHRONIZED when you create a database snapshot. However, database snapshots can be created when the database synchronization state is NOT SYNCHRONIZING.  

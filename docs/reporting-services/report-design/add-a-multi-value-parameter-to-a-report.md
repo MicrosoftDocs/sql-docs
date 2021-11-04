@@ -1,6 +1,6 @@
 ---
-title: "Add a multi-value parameter to a Report | Microsoft Docs"
-description: Learn how to add a parameter to a report that allows the user to select more than one value for the parameter in Report Builder.
+title: "Add a multi-value parameter to a paginated report | Microsoft Docs"
+description: Learn how to add a parameter to a paginated report that allows the user to select more than one value for the parameter in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add a multi-value parameter to a Report
-  You can add a parameter to a report that allows the user to select more than one value for the parameter.  
+# Add a multi-value parameter to a paginated report
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can add a parameter to a paginated report that allows the user to select more than one value for the parameter.  
   
  You can pass multiple parameter values to the report within the report URL. For a URL example includes a multi-value parameter, see [Pass a Report Parameter Within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   

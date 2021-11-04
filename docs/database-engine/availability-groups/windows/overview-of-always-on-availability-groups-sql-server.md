@@ -1,13 +1,15 @@
 ---
 title: "What is an Always On availability group?"
-description: "An introduction to the concepts that are central for configuring and managing Always On availability groups." 
-ms.custom: seo-lt-2019
+description: "An introduction to the concepts that are central for configuring and managing Always On availability groups."
+ms.custom:
+  - seo-lt-2019
+  - intro-overview
 ms.date: "04/29/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], about"
@@ -155,12 +157,6 @@ The availability mode is a property of each availability replica. The availabili
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
--   **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   

@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB], schema rowsets"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Metadata - Date and Time and Schema Rowsets
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

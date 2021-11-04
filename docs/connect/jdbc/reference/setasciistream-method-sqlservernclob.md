@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setAsciiStream Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

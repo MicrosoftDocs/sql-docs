@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getCatalogName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

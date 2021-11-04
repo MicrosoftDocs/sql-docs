@@ -1,8 +1,8 @@
 ---
 description: "sp_query_store_force_plan (Transact-SQL)"
-title: "sp_query_store_force_plan (Transact-SQL) | Microsoft Docs"
+title: "sp_query_store_force_plan (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/29/2016"
+ms.date: "09/20/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_query_store_force_plan"
   - "sp_query_store_force_plan"
-ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: markingmyname
 ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -35,22 +34,23 @@ Enables forcing a particular plan for a particular query.
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
 ## Arguments  
-`[ @query_id = ] query_id`
+#### `[ @query_id = ] query_id`
  Is the id of the query. *query_id* is a **bigint**, with no default.  
   
-`[ @plan_id = ] plan_id`
+#### `[ @plan_id = ] plan_id`
  Is the id of the query plan to be forced. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  
   
 ## Remarks  
-  
+  The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by `sp_query_store_force_plan`, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
+
 ## Permissions  
  Requires the **ALTER** permission on the database.
   

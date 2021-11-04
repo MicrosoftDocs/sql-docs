@@ -108,10 +108,12 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### C: Returning budget amounts that contain no data  
- The following example creates a `budgets` table, loads data, and uses `NULLIF` to return a null if neither `current_year` nor `previous_year` contains data.  
-  
-```sql  
+### C: Returning budget amounts that contain no data
+The following example creates a `budgets` table, loads data, and uses `NULLIF` to return a null if `current_year` is null or contains the same data as `previous_year`.
+
+```SQL
+
+Copy
 CREATE TABLE budgets (  
    dept           TINYINT,  
    current_year   DECIMAL(10,2),  
@@ -127,8 +129,8 @@ INSERT INTO budgets VALUES(5, 300000, 300000);
 SELECT dept, NULLIF(current_year,  
    previous_year) AS LastBudget  
 FROM budgets;  
-```  
-  
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```

@@ -305,7 +305,7 @@ This algorithm is single-threaded and will always attempt to load the entire dat
 
 [Wikipedia: Anomaly detection](https://en.wikipedia.org/wiki/Anomaly_detection)
 
-[Microsoft Azure Machine Learning Studio (classic): One-Class Support Vector Machine](https://msdn.microsoft.com/library/azure/dn913103.aspx)
+[Microsoft Azure Machine Learning Studio (classic): One-Class Support Vector Machine](/azure/machine-learning/studio-module-reference/one-class-support-vector-machine)
 
 [Estimating the Support of a High-Dimensional Distribution](https://research.microsoft.com/pubs/69731/tr-99-87.pdf)
 
@@ -393,4 +393,3 @@ Writing completed.
 38     0.0  0.635845
 39     0.0  0.555602
 ```
-

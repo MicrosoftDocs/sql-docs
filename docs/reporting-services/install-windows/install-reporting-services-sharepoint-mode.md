@@ -4,9 +4,8 @@ title: "Install Reporting Services 2016 in SharePoint mode | Microsoft Docs"
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default configuration [Reporting Services]"
   - "installing Reporting Services, SharePoint integrated mode"
   - "installation options [Reporting Services]"
@@ -14,6 +13,8 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install Reporting Services 2016 in SharePoint mode
 
@@ -58,4 +59,4 @@ There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
  [Data Alerts Architecture and Workflow](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Data Alert Manager for Alerting Administrators](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

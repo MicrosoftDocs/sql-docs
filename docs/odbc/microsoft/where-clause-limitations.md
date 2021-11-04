@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "WHERE clause limitations [ODBC]"
 ms.assetid: 46b54f74-e4a3-4318-87cf-8a97c38a2718
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # WHERE Clause Limitations
 The maximum number of clauses in a WHERE clause is 40.  

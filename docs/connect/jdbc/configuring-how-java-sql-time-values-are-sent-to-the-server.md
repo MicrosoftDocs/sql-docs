@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Configuring how java.sql.Time values are sent to the server
 

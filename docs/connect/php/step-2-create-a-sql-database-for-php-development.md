@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 2: Create a SQL database for PHP development
 

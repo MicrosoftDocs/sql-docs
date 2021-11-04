@@ -27,7 +27,10 @@ This topic describes how to change the scheduling details for a job definition i
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
-  
+
+> [!WARNING]
+> It is possible to attach multiple jobs to the same schedule. Note that updating a schedule will impact all the jobs attached to the schedule.
+
 ### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Permissions  

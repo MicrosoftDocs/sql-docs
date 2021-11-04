@@ -1,17 +1,17 @@
 ---
-title: AD mode deployment hangs - unhealthy `sparkhead` pods
+title: AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy `sparkhead` pods.
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: wiassaf
 ms.date: 08/20/2020
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# AD mode deployment hangs - unhealthy `sparkhead` pods
+# AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
 
 Deployment in Active Directory (AD) mode freezes. Check symptoms to see if the cause is a missing reverse lookup zone entry for the domain controller on the different networks of the cluster nodes.
 

@@ -1,8 +1,8 @@
 ---
-title: "Create a Database Schema | Microsoft Docs"
+title: "Create a Database Schema"
 description: Learn how to create a schema in SQL Server by using SQL Server Management Studio or Transact-SQL, including limitations and restrictions.
 ms.custom: ""
-ms.date: "07/05/2017"
+ms.date: 10/25/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create a Database Schema
+# Create a database schema
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This topic describes how to create a schema in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
@@ -66,7 +66,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   The **Extended properties** page allows you to add custom properties to database users.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+##  <a name="TsqlProcedure"></a> Using transact-SQL  
   
 #### To create a schema  
   
@@ -96,6 +96,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
    SELECT * FROM sys.schemas;
    ```
 
- For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  
-  
-  
+## Next steps
+
+For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  

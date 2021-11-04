@@ -1,14 +1,16 @@
 ---
 description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database (preview)"
 title: "What is change data capture (CDC)?"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-overview
 ms.date: "01/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: "vanto"
 ms.technology: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture, about"
   - "change data capture"
   - "22832 (Database Engine error)"
@@ -189,6 +191,9 @@ Configuring the frequency of the capture and the cleanup processes for CDC in Az
 
 **ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
 DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
+
+**Computed columns**
+CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

@@ -107,8 +107,6 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 
 Use azdata with Big Data Clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)
-
 To use an external key provider for encryption at rest, see [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md).
 
 ## See also

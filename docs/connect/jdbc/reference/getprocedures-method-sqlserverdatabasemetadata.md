@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getProcedures Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

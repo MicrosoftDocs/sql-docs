@@ -31,7 +31,7 @@ To perform these steps, you will need:
   
 2.  Use the Run as Administrator option to open a Command Prompt.  
   
-3.  Change directories to `C:\PDWINST\Patches\<kbarticle>\media` where *<kbarticle>* is the Knowledge Base article number for the hotfix to uninstall.  
+3.  Change directories to `C:\PDWINST\Patches\<kbarticle>\media` where *\<kbarticle\>* is the Knowledge Base article number for the hotfix to uninstall.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

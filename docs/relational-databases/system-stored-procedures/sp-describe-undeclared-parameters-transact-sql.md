@@ -42,7 +42,7 @@ sp_describe_undeclared_parameters
 
 ## Arguments
 
-`[ \@tsql = ] 'Transact-SQL\_batch'`
+`[ @tsql = ] 'Transact-SQL\_batch'`
 One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
 
 [ \@params = ] N'parameters'`

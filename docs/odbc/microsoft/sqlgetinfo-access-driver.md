@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLGetInfo"
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetInfo (Access Driver)
 > [!NOTE]  

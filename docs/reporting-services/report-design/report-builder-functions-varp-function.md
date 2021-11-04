@@ -1,6 +1,6 @@
 ---
-title: "VarP Function (Report Builder) | Microsoft Docs"
-description: The VarP Function in Report Builder returns the population variance of all non-null numeric values specified by the expression.
+title: "VarP function in a paginated report | Microsoft Docs"
+description: The VarP Function in Report Builder returns the population variance of all non-null numeric values in a paginated report specified by the expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - VarP Function
-  Returns the population variance of all non-null numeric values specified by the expression, evaluated in the context of the given scope.  
+# Report Builder functions - VarP function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the population variance of all non-null numeric values specified by the expression, evaluated in the context of the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

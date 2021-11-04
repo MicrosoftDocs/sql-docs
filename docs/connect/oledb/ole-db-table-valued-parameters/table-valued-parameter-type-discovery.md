@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, type discovery"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Table-Valued Parameter Type Discovery (OLE DB driver)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

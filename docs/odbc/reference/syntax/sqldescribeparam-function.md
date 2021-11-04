@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLDescribeParam function [ODBC]"
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDescribeParam Function
 **Conformance**  

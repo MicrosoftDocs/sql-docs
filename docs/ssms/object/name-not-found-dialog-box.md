@@ -33,6 +33,6 @@ Click to open the **Select Object Types** dialog box and select the object types
 **Enter the object name**  
 Contains the name of the object that was not found. Correct the name of the object or type a new object name.  
   
-**Remove** *<object name>* **from selection**  
+**Remove** *\<object name\>* **from selection**  
 Select to close the **Name Not Found** dialog box and remove the item from the **Select Objects** dialog box.  
   

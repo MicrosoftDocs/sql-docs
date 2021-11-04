@@ -2,7 +2,7 @@
 title: Start, stop, pause, resume, restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 ms.custom: ""
-ms.date: "03/05/2020"
+ms.date: "10/19/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
@@ -51,11 +51,11 @@ This topic describes how to start, stop, pause, resume, or restart the SQL Serve
 
 ## Identify the service
 
-SQL Server components are executable programs that run as a Windows service. Programs that run as a Windows service can continue to operate without displaying any activity on the computer screen.
+SQL Server components are executable programs that run as Windows services. A program that run as a Windows service can continue to operate without displaying any activity on the computer screen and without the need for user interaction in the console.
 
 ### Database Engine service
 
-The executable process that is the SQL Server Database Engine. The Database Engine can be the default instance (limit one per computer) or can be one of many named instances of the Database Engine. Use SQL Server Configuration Manager to determine which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
+The service process that represents the SQL Server Database Engine is referred to as the Database Engine service. The Database Engine can be the default instance (limit one per computer) or can be one of many named instances on the computer. Use [**SQL Server Configuration Manager**](/sql/relational-databases/sql-server-configuration-manager) to determine which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
 
 ### SQL Server Agent service
 
@@ -63,7 +63,7 @@ A Windows service that executes scheduled administrative tasks, which are called
 
 ### SQL Server Browser service
 
-A Windows service that listens for incoming requests for SQL Server resources and provides clients information about SQL Server instances installed on the computer. A single instance of the SQL Server Browser service is used for all instances of SQL Server installed on the computer.
+A Windows service that listens for incoming requests for SQL Server resources and provides clients information about SQL Server instances installed on the computer. A single instance of the SQL Server Browser service is used by all instances of SQL Server installed on the computer.
 
 ### Additional Information
 
@@ -175,31 +175,42 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
 
 - From a command prompt, enter one of the following commands:  
   
-    **net start "SQL Server (MSSQLSERVER)"**
+  ```cmd
+  net start "SQL Server (MSSQLSERVER)"
+  ```
 
    -or-  
 
-    **net start MSSQLSERVER**
+  ```cmd
+  net start MSSQLSERVER
+  ```
 
 ### <a name="dbNamed"></a> To start a named instance of the Database Engine
 
 - From a command prompt, enter one of the following commands. Replace *\<instancename>* with the name of the instance you want to manage.  
   
-    **net start "SQL Server (** *instancename* **)"**
-  
+    ```cmd
+    net start "SQL Server (instancename)"
+    ```
+   
    -or-  
   
-    **net start MSSQL$** *instancename*  
+   ```cmd
+   net start MSSQL$instancename
+   ```
   
 ### <a name="dbStartup"></a> To start the Database Engine with startup options  
 
 - Add startup options to the end of the **net start "SQL Server (MSSQLSERVER)"** statement, separated by a space. When started using **net start**, startup options use a slash (/) instead of a hyphen (-).  
   
-    **net start "SQL Server (MSSQLSERVER)" /f /m**
-  
+  ```cmd
+  net start "SQL Server (MSSQLSERVER)" /f /m
+  ```
    -or-  
   
-    **net start MSSQLSERVER /f /m**
+  ```cmd
+  net start MSSQLSERVER /f /m
+  ```
   
   > [!NOTE]
   >  For more information about startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
@@ -208,21 +219,29 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
   
 - From a command prompt, enter one of the following commands:  
   
-    **net start "SQL Server Agent (MSSQLSERVER)"**
+   ```cmd 
+   net start "SQL Server Agent (MSSQLSERVER)"
+   ```
   
    -or-  
   
-    **net start SQLSERVERAGENT**
+  ```cmd
+  net start SQLSERVERAGENT
+  ```
   
 ###  <a name="agNamed"></a> To start the SQL Server Agent on a named instance of SQL Server  
   
 - From a command prompt, enter one of the following commands. Replace *instancename* with the name of the instance you want to manage.  
   
-    **net start "SQL Server Agent(** *instancename* **)"**
+  ```cmd
+  net start "SQL Server Agent(instancename)"
+  ```
   
    -or-  
   
-    **net start SQLAgent$** *instancename*  
+  ```cmd
+  net start SQLAgent$instancename
+  ```
   
  For information about how to run SQL Server Agent in verbose mode for troubleshooting, see [sqlagent90 Application](../../tools/sqlagent90-application.md).  
 
@@ -230,11 +249,15 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
 
 - From a command prompt, enter one of the following commands:  
   
-    **net start "SQL Server Browser"**
+  ```cmd
+  net start "SQL Server Browser"
+  ```
   
    -or-  
   
-    **net start SQLBrowser**
+  ```cmd
+  net start SQLBrowser
+  ```
   
 ### <a name="pauseStop"></a> To pause or stop services from the Command Prompt window  
 
@@ -363,6 +386,6 @@ You can stop, start, or restart the SQL Server service as needed using the follo
 
 - [Overview of SQL Server Setup Documentation](../install-windows/install-sql-server.md)
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager)
 - [Start SQL Server with Minimal Configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
 - [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)

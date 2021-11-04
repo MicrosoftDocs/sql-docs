@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSQLKeywords Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

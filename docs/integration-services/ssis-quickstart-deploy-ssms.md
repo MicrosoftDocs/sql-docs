@@ -9,7 +9,8 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: 05/21/2018
 ---
 

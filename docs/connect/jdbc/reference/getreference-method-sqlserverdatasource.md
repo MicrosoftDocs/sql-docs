@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getReference Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSystemFunctions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

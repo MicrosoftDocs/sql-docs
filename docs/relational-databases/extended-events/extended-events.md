@@ -6,13 +6,14 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
 ms.topic: overview
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extended events [SQL Server]"
   - "xe"
   - "XEvents"
 author: rothja
 ms.author: jroth
-ms.custom: 
+ms.custom:
+  - intro-overview
 ms.date: "07/23/2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

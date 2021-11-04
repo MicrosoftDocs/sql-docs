@@ -4,11 +4,13 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn the steps and resources for deploying SQL Server Big Data Clusters.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
+ms.reviewer: wiassaf
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] deployment

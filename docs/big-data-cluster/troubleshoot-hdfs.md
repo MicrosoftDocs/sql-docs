@@ -19,15 +19,13 @@ In SQL Server Big Data Clusters CU9 or prior: `[Big Data Cluster] - nmnode pods 
 
 ## Cause
 
-HDFS heap size may not be properly configured. The proper settings of the namenode's JVM heap depends on a number of factors such as the number of files/blocks and the load in the HDFS system. For more information on calculating the heap size, see [Configuring namenode heap size](https://docs.cloudera.com/HDPDocuments/HDP2/HDP-2.6.5/bk_command-line-installation/content/configuring-namenode-heap-size.html).
+HDFS heap size may not be properly configured. The proper settings of the namenode's JVM heap depends on many factors, such as the number of files and blocks, and the load on the HDFS system. For more information on calculating the heap size, see [Configuring namenode heap size](https://docs.cloudera.com/HDPDocuments/HDP2/HDP-2.6.5/bk_command-line-installation/content/configuring-namenode-heap-size.html).
 
 ## Resolution
 
-In SQL Server Big Data Clusters, the heap size of HDFS namenode process is controlled by BDC configuration hdfs-env.HDFS_NAMENODE_OPTS, the default value is 2GB as specified in [HDFS configuration properties](reference-config-spark-hadoop.md).
+In SQL Server Big Data Clusters, the heap size of HDFS namenode process is controlled by BDC configuration hdfs-env.HDFS_NAMENODE_OPTS, the default value is 2 GB as specified in [HDFS configuration properties](reference-config-spark-hadoop.md).
  
-SQL Server Big Data Clusters runtime configuration feature is enabled after CU9, please upgrade your cluster to CU9+ (preferably to the latest version available).
- 
-To increase the heap size of HDFS namenode in CU9+, we can follow the [post deployment configuration guide](configure-bdc-postdeployment.md).
+The SQL Server Big Data Clusters runtime configuration feature is enabled after CU9. To proceed, upgrade your cluster to CU9+ (preferably to the latest version available). To increase the heap size of HDFS namenode in CU9+, we can follow the [post deployment configuration guide](configure-bdc-postdeployment.md).
  
 ```bash
 # Assuming we want to increase HDFS namenode heap to 4GB:

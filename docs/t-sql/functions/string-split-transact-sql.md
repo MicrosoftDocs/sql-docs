@@ -235,7 +235,7 @@ The above statement returns the following table:
 |Washington|4|  
 |Colorado|6|  
 
-## G. Order rows by ordinal values  
+### G. Order rows by ordinal values  
 
 The following statement returns the split substring values of the input string and their ordinal values, ordered by the `ordinal` column:  
 

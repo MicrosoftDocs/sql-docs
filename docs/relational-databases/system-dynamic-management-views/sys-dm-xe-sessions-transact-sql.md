@@ -1,6 +1,6 @@
 ---
 description: "sys.dm_xe_sessions (Transact-SQL)"
-title: "sys.dm_xe_sessions (Transact-SQL)""
+title: "sys.dm_xe_sessions (Transact-SQL)"
 ms.custom: ""
 ms.date: "11/05/2021"
 ms.prod: sql

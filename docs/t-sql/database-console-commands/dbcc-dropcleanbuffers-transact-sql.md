@@ -2,7 +2,7 @@
 description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "11/5/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
   

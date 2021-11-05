@@ -13,10 +13,9 @@ ms.technology: big-data-cluster
 
 # Troubleshoot HDFS 
 
-
 ## Symptom
 
-In SQL Server Big Data Clusters CU9 or prior, 
+In SQL Server Big Data Clusters CU9 or prior:
 
 "[Big Data Cluster] - nmnode pods down with Failed to start namenode.java.lang.OutOfMemoryError: Java heap space and WARN util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC)"
 

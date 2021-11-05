@@ -63,8 +63,7 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
     ```azurepowershell-interactive
     $sp = New-AzADServicePrincipal -DisplayName "Arc-for-servers" -Role <your custom role>
     ```
-. 
-1
+
 1. Retrieve the password stored in the `$sp` variable:
 
    ```azurepowershell-interactive

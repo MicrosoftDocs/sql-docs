@@ -57,8 +57,8 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 
 To assign the *Azure Connected SQL Server Onboarding* role to Arc machine managed identity, use the following steps:
 
-1. Select the resource group with the **Server - Azure Arc** resource.
-1. Select **Access control (IAM)**
+1. Select the resource group that contains the **Server - Azure Arc** resource
+1. Select **Access control (IAM)** on the left side of the resource group page
 1. Click **+ Add** and select **Add role assignment**
    - For **Role**, select `Azure Connected SQL Server Onboarding`
    - For **Assign access to**, select `User, group or service principal`

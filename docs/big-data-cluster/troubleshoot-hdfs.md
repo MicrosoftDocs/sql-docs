@@ -15,9 +15,7 @@ ms.technology: big-data-cluster
 
 ## Symptom
 
-In SQL Server Big Data Clusters CU9 or prior:
-
-"[Big Data Cluster] - nmnode pods down with Failed to start namenode.java.lang.OutOfMemoryError: Java heap space and WARN util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC)"
+In SQL Server Big Data Clusters CU9 or prior: `[Big Data Cluster] - nmnode pods down with Failed to start namenode.java.lang.OutOfMemoryError: Java heap space and WARN util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC)`
 
 ## Cause
 
@@ -25,8 +23,7 @@ HDFS heap size may not be properly configured. The proper settings of the nameno
 
 ## Resolution
 
-In SQL Server Big Data Clusters, the heap size of HDFS namenode process is controlled by BDC configuration hdfs-env.HDFS_NAMENODE_OPTS, the default value is 2GB as specified in:
-https://docs.microsoft.com/en-us/sql/big-data-cluster/reference-config-spark-hadoop?view=sql-server-ver15
+In SQL Server Big Data Clusters, the heap size of HDFS namenode process is controlled by BDC configuration hdfs-env.HDFS_NAMENODE_OPTS, the default value is 2GB as specified in [HDFS configuration properties](reference-config-spark-hadoop.md).
  
 SQL Server Big Data Clusters runtime configuration feature is enabled after CU9, please upgrade your cluster to CU9+ (preferably to the latest version available).
  

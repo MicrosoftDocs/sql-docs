@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ISQLServerDataSource Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

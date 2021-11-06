@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLDriverConnect"
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDriverConnect (Text File Driver)
 > [!NOTE]  

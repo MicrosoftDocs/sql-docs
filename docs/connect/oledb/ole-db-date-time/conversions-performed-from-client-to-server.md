@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB], client to server"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Conversions Performed from Client to Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

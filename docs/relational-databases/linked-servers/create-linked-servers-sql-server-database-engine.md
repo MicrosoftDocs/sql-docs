@@ -1,7 +1,7 @@
 ---
 description: "Create Linked Servers (SQL Server Database Engine)"
 title: "Create Linked Servers"
-ms.date: "10/21/2021"
+ms.date: "11/03/2021"
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -79,7 +79,7 @@ ms.custom: seo-dt-2019
 4.  On the **Security** page, specify the security context that will be used when the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to the linked server. In a domain environment where users are connecting by using their domain logins, selecting **Be made using the login's current security context** is often the best choice. When users connect to the original **SQL Server** by using a **SQL Server** login, the best choice is often to select **By using this security context**, and then providing the necessary credentials to authenticate at the linked server.  
   
      **Local login**  
-     Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  
+     Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Using a Windows group is not supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  
   
      **Impersonate**  
      Pass the username and password from the local login to the linked server. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, a login with the exact same name and password must exist on the remote server. For Windows logins, the login must be a valid login on the linked server.  
@@ -87,7 +87,7 @@ ms.custom: seo-dt-2019
      To use impersonation, the configuration must meet the requirement for delegation.  
   
      **Remote User**  
-     Use the remote user to map users not defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
+     Use the remote user to map user defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
 
      **Remote Password**  
      Specify the password of the Remote User.  

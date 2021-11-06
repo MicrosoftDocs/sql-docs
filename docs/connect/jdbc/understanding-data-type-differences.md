@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Understanding data type differences
 

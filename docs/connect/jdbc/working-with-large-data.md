@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Working with large data
 

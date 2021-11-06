@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC [ODBC], component installation"
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installing ODBC Components
 > [!NOTE]  

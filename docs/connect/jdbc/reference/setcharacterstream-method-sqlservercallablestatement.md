@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 3b4c3234-09f6-44fa-9757-0a20ca90e13e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setCharacterStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

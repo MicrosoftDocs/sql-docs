@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "encryption [ODBC]"
 ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Encryption (Access Driver)
 (This control is available only when Version 4.*x* format is selected.)  

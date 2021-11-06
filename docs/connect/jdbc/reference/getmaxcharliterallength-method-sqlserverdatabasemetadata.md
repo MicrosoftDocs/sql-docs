@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxCharLiteralLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

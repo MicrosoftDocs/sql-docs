@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # System requirements for the JDBC driver
 

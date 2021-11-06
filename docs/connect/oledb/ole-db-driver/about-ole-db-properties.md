@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "property values [OLE DB Driver for SQL Server]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # About OLE DB Properties
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

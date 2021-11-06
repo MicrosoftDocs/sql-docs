@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, asynchronous operations"
   - "OLE DB Driver for SQL Server, asynchronous operations"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Performing Asynchronous Operations
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

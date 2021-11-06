@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLExecDirect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExecDirect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "OLE DB Driver for SQL Server, fetching"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Fetching a Single Row with IRow (OLE DB Driver)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

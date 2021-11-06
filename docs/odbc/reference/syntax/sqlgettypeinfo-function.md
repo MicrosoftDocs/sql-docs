@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetTypeInfo function [ODBC]"
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetTypeInfo Function
 **Conformance**  

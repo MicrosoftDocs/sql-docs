@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 

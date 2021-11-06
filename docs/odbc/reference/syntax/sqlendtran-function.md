@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLEndTran function [ODBC]"
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLEndTran Function
 **Conformance**  

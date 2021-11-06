@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "call-level interface [ODBC], about call-level interface"
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC and the Standard CLI
 ODBC aligns with the following specifications and standards that deal with the Call-Level Interface (CLI). (The ODBC features are a superset of each of these standards.)  

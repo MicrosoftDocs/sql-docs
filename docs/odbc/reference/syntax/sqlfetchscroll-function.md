@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLFetchScroll function [ODBC]"
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFetchScroll Function
 **Conformance**  

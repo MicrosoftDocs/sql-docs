@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getDateTimeOffset Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

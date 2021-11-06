@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Working with data types (JDBC)
 

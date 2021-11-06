@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL Server Login Dialog Box (ODBC)
 

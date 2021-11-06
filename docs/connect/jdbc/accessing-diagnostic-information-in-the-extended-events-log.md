@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Accessing diagnostic information in the extended events log
 

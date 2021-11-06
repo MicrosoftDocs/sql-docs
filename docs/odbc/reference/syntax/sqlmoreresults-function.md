@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLMoreResults function [ODBC]"
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLMoreResults Function
 **Conformance**  

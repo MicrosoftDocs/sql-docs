@@ -439,6 +439,8 @@ items:
       items:
       - name: Tuning guide
         href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Spark workloads and YARN queues
+        href: big-data-cluster/spark-yarn-capacity-scheduler.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
@@ -5259,7 +5261,7 @@ items:
         items:
         - name: Monitor replication agents
           href: relational-databases/replication/monitor/monitor-replication-agents.md
-        - name: System Monitor
+        - name: Performance Monitor
           href: relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md
         - name: Replication Monitor
           href: relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
@@ -6714,7 +6716,7 @@ items:
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
-      - name: Start System Monitor (Windows)
+      - name: Start Performance Monitor (Windows)
         href: relational-databases/performance/start-system-monitor-windows.md
       - name: Set Up a SQL Server Database Alert (Windows)
         href: relational-databases/performance/set-up-a-sql-server-database-alert-windows.md
@@ -6736,7 +6738,7 @@ items:
         href: relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       - name: Concepts
         items:
-        - name: Run System Monitor
+        - name: Run Performance Monitor
           href: relational-databases/performance-monitor/run-system-monitor.md
         - name: Monitor Disk Usage
           href: relational-databases/performance-monitor/monitor-disk-usage.md
@@ -10355,7 +10357,7 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: SQL Server on Azure Arc-enabled servers (preview)
+- name: SQL Server on Azure Arc-enabled servers
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md

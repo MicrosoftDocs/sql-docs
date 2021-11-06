@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "binding parameters by name [ODBC]"
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Binding Parameters by Name (Named Parameters)
 Certain DBMSs allow an application to specify the parameters to a stored procedure by name instead of by position in the procedure call. Such parameters are called *named parameters*. ODBC supports the use of named parameters. In ODBC, named parameters are used only in calls to stored procedures and cannot be used in other SQL statements.  

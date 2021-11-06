@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "XML [SQL Server], OLE DB Driver for SQL Server"
   - "COLUMNS rowset"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using XML Data Types
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

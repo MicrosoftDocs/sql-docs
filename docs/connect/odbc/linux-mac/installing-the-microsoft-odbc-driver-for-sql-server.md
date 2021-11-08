@@ -77,6 +77,9 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 #Debian 10
 curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Debian 11
+curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17

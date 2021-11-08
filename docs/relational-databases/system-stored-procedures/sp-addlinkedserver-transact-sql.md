@@ -295,31 +295,31 @@ EXEC sp_addlinkedserver
 -- Configure the linked server  
 -- Add one Azure SQL Database as Linked Server  
 EXEC sp_addlinkedserver  
-  @server='myLinkedServer', -- here you can specify the name of the linked server  
+  @server='LinkedServerName', -- here you can specify the name of the linked server  
   @srvproduct='',       
   @provider='sqlncli', -- using SQL Server Native Client  
-  @datasrc='myServer.database.windows.net',   -- add here your server name  
+  @datasrc='ServerName.database.windows.net',   -- add here your server name  
   @location='',  
   @provstr='',  
-  @catalog='myDatabase'  -- add here your database name as initial catalog (you cannot connect to the master database)  
+  @catalog='DatabaseName'  -- add here your database name as initial catalog (you cannot connect to the master database)  
 
 -- Add credentials and options to this linked server  
 EXEC sp_addlinkedsrvlogin  
-  @rmtsrvname = 'myLinkedServer',  
+  @rmtsrvname = 'LinkedServerName',  
   @useself = 'false',  
-  @rmtuser = 'myLogin',             -- add here your login on Azure DB  
+  @rmtuser = 'LoginName',             -- add here your login on Azure DB  
   @rmtpassword = 'myPassword' -- add here your password on Azure DB  
 
-EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;  
+EXEC sp_serveroption 'LinkedServerName', 'rpc out', true;  
 
 -- Now you can use the linked server to execute 4-part queries  
 -- You can create a new table in the Azure DB  
-EXEC ('CREATE TABLE t1tutut2(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at myLinkedServer  
+EXEC ('CREATE TABLE SchemaName.TableName(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at LinkedServerName  
 -- Insert data from your local SQL Server  
-EXEC ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer  
+EXEC ('INSERT INTO SchemaName.TableName VALUES(1),(2),(3)') at LinkedServerName  
   
 -- Query the data using 4-part names  
-SELECT * FROM myLinkedServer.myDatabase.dbo.myTable  
+SELECT * FROM LinkedServerName.DatabaseName.SchemaName.TableName 
 ```  
 
 ### H. Create SQL Managed Instance linked server with managed identity Azure AD authentication

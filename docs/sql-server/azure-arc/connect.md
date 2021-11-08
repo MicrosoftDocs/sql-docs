@@ -50,24 +50,24 @@ az provider register --namespace 'Microsoft.AzureArcData'
 If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, if will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions how to install and uninstall extensions using  the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
->1. The Managed System Identity for the corresponding **Machine - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.
->2. The __SQL Server - Azure Arc__ resource for each SQL Server instance installed on the machine will be created in the same region and the resource group as the corresponding __Machine - Azure Arc__ resource.
+>1. The Managed System Identity for the corresponding **Server - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.
+>2. The __SQL Server - Azure Arc__ resource for each SQL Server instance installed on the machine will be created in the same region and the resource group as the corresponding __Server - Azure Arc__ resource.
 
 # [Azure portal](#tab/azure)
 
 To assign the *Azure Connected SQL Server Onboarding* role to Arc machine managed identity, use the following steps:
 
-1. Select the resource group with the **Machine - Azure Arc** resource.
-1. Select **Access control (IAM)**
+1. Select the resource group that contains the **Server - Azure Arc** resource
+1. Select **Access control (IAM)** on the left side of the resource group page
 1. Click **+ Add** and select **Add role assignment**
    - For **Role**, select `Azure Connected SQL Server Onboarding`
    - For **Assign access to**, select `User, group or service principal`
-   - For **Select**, search for your **Machine - Azure Arc** name and select it.
+   - For **Select**, search for your **Server - Azure Arc** name and select it.
 1. Click **Save**.
 
 To install the SQL Server extension, use the following steps:
 
-1. Open the __Machine - Azure Arc__ resource. 
+1. Open the __Server - Azure Arc__ resource. 
 2. Under __Extensions__, click __+ Add__ 
 1. Select `WindowsAgent.SqlServer` from the list and click __Create__.
 
@@ -105,7 +105,7 @@ To install the SQL Server extension, run:
 ---
 
 > [!NOTE]
-> The specified resource group must match the resource group of the corresponding __Machine - Azure Arc__ resource. Otherwise, the command will fail.
+> The specified resource group must match the resource group of the corresponding __Server - Azure Arc__ resource. Otherwise, the command will fail.
 
 ## Initiate the connection from the target machine
 
@@ -123,7 +123,7 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 3. Select the subscription, resource group, Azure region, and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
 
    > [!IMPORTANT]
-   > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Machine - Azure Arc__ resource.
+   > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Server - Azure Arc__ resource.
 
    ![Server details](media/join/server-details-sql-server-azure-arc.png)
 
@@ -133,7 +133,7 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 
 ### Connect SQL Server instances to Azure Arc
 
-In this step you will take the script you downloaded from Azure portal and execute it on the target machine. The script installs the SQL Server extension. If the machine itself does not have the guest configuration agent installed, the script first installs it then installs the SQL Server extension. The guest agent and the SQL extension will in turn register the connected server and the SQL Server instances on it as the __Machine - Azure Arc__ and __SQL Server - Azure Arc__ resources respectively.
+In this step you will take the script you downloaded from Azure portal and execute it on the target machine. The script installs the SQL Server extension. If the machine itself does not have the guest configuration agent installed, the script first installs it then installs the SQL Server extension. The guest agent and the SQL extension will in turn register the connected server and the SQL Server instances on it as the __Server - Azure Arc__ and __SQL Server - Azure Arc__ resources respectively.
 
 > [!IMPORTANT]
 > Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
@@ -189,7 +189,7 @@ If you disconnected your SQL Server instance by mistake, you can restore its __S
    az connectedmachine extension create --machine-name "{your machine name}" --location {"azure region"} --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
  > [!NOTE]
-   > The location property must match the location of the **Machine - Azure Arc** resource for the server specified by the *--machine-name* parameter.
+   > The location property must match the location of the **Server - Azure Arc** resource for the server specified by the *--machine-name* parameter.
 
 2. Check to make sure your instance is in the exclusion list (see the value of the _excludedSqlInstances_ property).
 

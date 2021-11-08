@@ -1,7 +1,7 @@
 ---
 description: "Operators (MDX Syntax)"
 title: "Operators (MDX Syntax) | Microsoft Docs"
-ms.date: 06/04/2018
+ms.date: 11/08/2021
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -48,10 +48,6 @@ author: minewiskan
   
 -   IS  
   
--   AS  
-  
--   DISTINCT  
-  
 -   :  
   
 -   ^  
@@ -59,8 +55,6 @@ author: minewiskan
 -   /, *  
   
 -   +, -  
-  
--   EXISTING  
   
 -   <>, >=, =, \<=, >, <  
   

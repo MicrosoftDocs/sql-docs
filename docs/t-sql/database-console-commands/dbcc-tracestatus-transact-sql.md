@@ -50,7 +50,7 @@ Is the number of the trace flag for which the status is displayed. If *trace#*, 
 Is a placeholder that indicates multiple trace flags can be specified.
   
 -1  
-Displays the status of trace flags that are enabled globally. If -1 is specified without *trace#*, all the global trace flags that are enabled are displayed.
+Displays the status of trace flags that are enabled globally and for the current session. If -1 is specified without *trace#*, all the global trace flags that are enabled are displayed.
   
 WITH NO_INFOMSGS  
 Suppresses all informational messages that have severity levels from 0 through 10.
@@ -65,7 +65,7 @@ The following table describes the information in the result set.
 |**Global**|Indicates whether the trace flag is set globally<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Session**|Indicates whether the trace flag is set for the session<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS returns a column for the trace flag number and a column for the status. This indicates whether the trace flag is ON (1) or OFF (0). The column heading for the trace flag number is either **Global Trace Flag** or **Session Trace Flag**, depending on whether you are checking the status for a global or a session trace flag.
+DBCC TRACESTATUS returns a column for the trace flag number and a column for the status. This indicates whether the trace flag is ON (1) or OFF (0). The column heading for the trace flag number is either **Global** or **Session**, depending on whether you are checking the status for a global or a session trace flag.
   
 ## Remarks  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are two types of trace flags: session and global. Session trace flags are active for a connection and are visible only for that connection. Global trace flags are set at the server level and are visible to every connection on the server.
@@ -88,7 +88,7 @@ DBCC TRACESTATUS (2528, 3205);
 GO  
 ```  
   
-The following example displays whether trace flag `3205` is enabled globally.
+The following example displays whether trace flag `3205` is enabled for the current session or globally.
   
 ```sql  
 DBCC TRACESTATUS (3205, -1);  

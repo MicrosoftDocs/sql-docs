@@ -21,18 +21,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 **SQL Server Data Tools (SSDT)** is a modern development tool for building SQL Server relational databases, databases in Azure SQL, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
-## SSDT for Visual Studio 2022 (Preview)
+## SSDT for Visual Studio 2022
 
 ### Changes in SSDT for Visual Studio 2022
 
-The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, Integration Services, and Reporting Services projects are not available for Visual Studio 2022 (Preview) at this time.
+The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, Integration Services, and Reporting Services projects are not available for Visual Studio 2022 at this time.
 
 > [!NOTE]
-> There's no SSDT standalone installer for Visual Studio 2022 (Preview).
+> There's no SSDT standalone installer for Visual Studio 2022.
 
-### Install SSDT with Visual Studio 2022 (Preview)
+### Install SSDT with Visual Studio 2022
 
-If [Visual Studio 2022 (Preview)](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2022 (Preview) installed, then you can download and install [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/downloads/).
+If [Visual Studio 2022](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2022 installed, then you can download and install [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/downloads/).
 
 To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
 

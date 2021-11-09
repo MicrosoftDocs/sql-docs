@@ -50,7 +50,7 @@ Is the number of the trace flag for which the status is displayed. If *trace#*, 
 Is a placeholder that indicates multiple trace flags can be specified.
   
 -1  
-Displays the status of trace flags that are enabled globally and for the current session. If -1 is specified without *trace#*, all the global trace flags that are enabled are displayed.
+Displays the status of trace flags that are enabled globally and for the current session.  If -1 is specified without *trace#*, all trace flags including session enabled are returned.
   
 WITH NO_INFOMSGS  
 Suppresses all informational messages that have severity levels from 0 through 10.

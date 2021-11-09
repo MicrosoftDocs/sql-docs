@@ -20,8 +20,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The OLE Automation system stored procedures return an **int** return code that is the HRESULT returned by the underlying OLE Automation operation. An HRESULT of 0 indicates success. A nonzero HRESULT is an OLE error code of the hexadecimal form 0x800*nnnnn*, but when returned as an **int** value in a stored procedure return code, HRESULT has the form 214*nnnnnnn*.  
   
- For example, passing an invalid object name (SQLDMO.Xyzzy) to sp_OACreate causes the procedure to return an **int** HRESULT of 2147221005, which is 0x800401f3 in hexadecimal.  
+Use `CONVERT ()` to convert binary values to hexadecimal strings. See [/t-sql/functions/cast-and-convert-transact-sql#h-using-convert-with-binary-and-character-data](../t-sql/functions/cast-and-convert-transact-sql.md#h-using-convert-with-binary-and-character-data) for details. 
+
+For example, passing an invalid object name (SQLDMO.Xyzzy) to sp_OACreate causes the procedure to return an **int** HRESULT of 2147221005, which is 0x800401f3 in hexadecimal.  
   
+To render the example, run:
+
+
+
+
  You can use `CONVERT(binary(4), @hresult)` to convert an **int** HRESULT to a **binary** value. However, using `CONVERT(char(10), CONVERT(binary(4), @hresult))` results in an unreadable string, because each byte of the HRESULT is converted to a single ASCII character. You can use the following sample HexToChar stored procedure to convert an **int** HRESULT to a **char** value that contains a readable hexadecimal string.  
   
 ```  

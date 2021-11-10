@@ -107,8 +107,6 @@ For syntax-specific information, see the following articles:
 
 - [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 
-For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](https://msftdpprodsamples.codeplex.com/).
-
 ## See Also
 
 [OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)  

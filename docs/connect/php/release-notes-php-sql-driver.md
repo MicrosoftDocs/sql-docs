@@ -1,11 +1,11 @@
 ---
-title: "Release Notes for the Microsoft Drivers for PHP"
-description: "This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server."
+title: Release Notes for the Microsoft Drivers for PHP
+description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -36,7 +36,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.9
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=?????)
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2152937)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
 
 ### Version information

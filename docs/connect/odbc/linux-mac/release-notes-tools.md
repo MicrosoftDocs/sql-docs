@@ -1,11 +1,11 @@
 ---
-title: "Release notes for mssql-tools on Linux and macOS"
+title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
-ms.date: "07/30/2021"
+ms.date: 11/10/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
@@ -17,6 +17,13 @@ manager: kenvh
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools on Linux and macOS.
+
+## 17.8.1.2, October 2021
+
+| New item | Details |
+| :------- | :------ |
+| Package update | Updated RPM packages for Red Hat 7, Red Hat 8, SUSE 12, and SUSE 15 to use SHA256 RPM signing. |
+| &nbsp; | &nbsp; |
 
 ## 17.8.1.1, July 2021
 

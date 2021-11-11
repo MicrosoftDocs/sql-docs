@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "sp_cdc_cleanup_change_tables"
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: briancarrig
-ms.author: briancarrig
+ms.author: brcarrig
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

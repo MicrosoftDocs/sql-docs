@@ -2,7 +2,7 @@
 description: "Rename Columns (Database Engine)"
 title: "Rename Columns (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2017"
+ms.date: "11/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -24,25 +24,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 You can rename a table column in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-**In This Topic**
-
-- **Before you begin:**
-
-   [Limitations and Restrictions](#Restrictions)
-
-   [Security](#Security)
-
-- **To rename columns, using:**
-
-   [SQL Server Management Studio](#SSMSProcedure)
-
-   [Transact-SQL](#TsqlProcedure)
-
 ## <a name="BeforeYouBegin"></a> Before You Begin
 
 ### <a name="Restrictions"></a> Limitations and Restrictions
 
-Renaming a column will not automatically rename references to that column. You must modify any objects that reference the renamed column manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
+Renaming a column won't automatically rename references to that column. You must modify any objects that reference the renamed column manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
 
 ### <a name="Security"></a> Security
 
@@ -80,3 +66,9 @@ EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
 ```
 
 For more information, see [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).
+
+## Next steps 
+
+- [Modify Columns](modify-columns-database-engine)
+- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) 

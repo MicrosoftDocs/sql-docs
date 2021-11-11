@@ -139,7 +139,7 @@ FROM
 ...
 ```
 
-In this case, it is not guaranteed that `@Var` would be updated for each row row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order of the rows processed in row mode is nondeterminant. In batch mode, rows may be processed in large groups, not iteratively.
+In this case, it is not guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order of the rows processed in row mode is nondeterminant. In batch mode, rows may be processed in large groups, not iteratively.
 
   
 ## See Also  

@@ -56,7 +56,7 @@ Assign the value on the right to the variable on the left.
   
 Compound assignment operator:  
 
-| operator | action |  
+| **operator** | **action** |  
 | -------- | ------ |  
 | = | Assigns the expression that follows, to the variable. |  
 | += | Add and assign |  
@@ -84,18 +84,21 @@ One SELECT statement can initialize multiple local variables.
 
 ## Examples  
   
+
+
 ### A. Use SELECT @local_variable to return a single value  
- In the following example, the variable `@var1` is assigned `Generic Name` as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the `Generic Name` value.  
+ In the following example, the variable `@var1` is assigned "Generic Name" as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the "Generic Name" value. 
+
+ This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ```sql  
--- Uses AdventureWorks    
-  
+-- Uses AdventureWorks2019LT
 DECLARE @var1 VARCHAR(30);         
 SELECT @var1 = 'Generic Name';         
-SELECT @var1 = Name         
-FROM Sales.Store         
-WHERE CustomerID = 1000 ;        
-SELECT @var1 AS 'Company Name';  
+SELECT @var1 = [Name]
+FROM SalesLT.Product         
+WHERE ProductID = 1000000; --Value does not exist
+SELECT @var1 AS 'ProductName';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -108,16 +111,19 @@ SELECT @var1 AS 'Company Name';
   
 ### B. Use SELECT @local_variable to return null  
  In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` does not exist, the subquery returns no value and the variable is set to `NULL`.  
+
+ This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ```sql  
--- Uses AdventureWorks  
-  
-DECLARE @var1 VARCHAR(30)   
-SELECT @var1 = 'Generic Name'   
-SELECT @var1 = (SELECT Name   
-FROM Sales.Store   
-WHERE CustomerID = 1000)   
-SELECT @var1 AS 'Company Name' ;  
+-- Uses AdventureWorks2019  
+DECLARE @var1 VARCHAR(30);   
+SELECT @var1 = 'Generic Name';
+   
+SELECT @var1 = (SELECT [Name]
+FROM SalesLT.Product         
+WHERE ProductID = 1000000); --Value does not exist   
+
+SELECT @var1 AS 'Company Name';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -128,23 +134,47 @@ Company Name
 NULL  
 ```  
 
-### C. Antipattern
+### C. Antipattern use of recursive variable assignment
 
-Avoid the following pattern: 
+Avoid the following pattern for concatenation of values: 
 
 ```sqlsyntax 
 SELECT @Var = <expression containing @Var> 
-...
 FROM 
 ...
 ```
 
-In this case, it is not guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order of the rows processed in row mode is nondeterminant. In batch mode, rows may be processed in large groups, not iteratively.
+In this case, it is not guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order and frequency in which the assignments are processed is nondeterminant.
+
+Instead, consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md). This example uses the AdventureWorks2016 or AdventureWorks2019 sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). 
+
+```sql
+--Avoid
+DECLARE @List AS nvarchar(max);
+SELECT @List = CONCAT(COALESCE(@List + ', ',''), p.LastName)
+  FROM Person.Person AS p
+  WHERE p.FirstName = 'William'
+  ORDER BY p.BusinessEntityID; --Using ORDER BY in attempt to order concatenation causes list to be incomplete
+SELECT @List;
+```
+
+```sql
+--Instead
+DECLARE @List AS nvarchar(max);
+SELECT @List = STRING_AGG(p.LastName,', ') WITHIN GROUP (ORDER BY p.BusinessEntityID)
+  FROM Person.Person AS p
+  WHERE p.FirstName = 'William';
+SELECT @List;       
+```
 
   
-## See Also  
+## See also  
 
  - [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  - [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  - [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+
+## Next steps
+
+ - [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md)

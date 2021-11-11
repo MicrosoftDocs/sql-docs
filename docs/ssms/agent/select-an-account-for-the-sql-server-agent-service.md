@@ -13,7 +13,7 @@ ms.date: 11/11/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
-# Select an Account for the SQL Server Agent Service
+# Select an account for the SQL Server Agent service
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -31,14 +31,14 @@ The service startup account defines the Microsoft Windows account in which SQL S
   
 - **This account**. Lets you specify the Windows domain account in which the SQL Server Agent service runs. We recommend choosing a Windows user account that isn't a member of the Windows **Administrators** group. However, there are limitations for using multiserver administration when the SQL Server Agent service account isn't a member of the local **Administrators** group. For more information, see 'Supported Service Account Types' that follows in this topic.  
   
-## Windows Domain Account Permissions
+## Windows domain account permissions
 
 For improved security, select **This account**, which specifies a Windows domain account. The Windows domain account that you specify must have the following permissions:  
   
 - In all Windows versions, permission to log on as a service (SeServiceLogonRight)  
   
-> [!NOTE]  
-> The SQL Server Agent service account must be part of the Pre-Windows 2000 Compatible Access group on the domain controller, or jobs that are owned by domain users who are not members of the Windows Administrators group fails.  
+   > [!NOTE]  
+   > The SQL Server Agent service account must be part of the Pre-Windows 2000 Compatible Access group on the domain controller, or jobs that are owned by domain users who are not members of the Windows Administrators group fails.  
   
 - In Windows servers, the account that the SQL Server Agent Service runs as requires the following permissions can support SQL Server Agent proxies.  
   
@@ -56,13 +56,13 @@ For improved security, select **This account**, which specifies a Windows domain
 > [!NOTE]  
 > To receive WMI alert notification, the service account for SQL Server Agent must have been granted permission to the namespace that contains the WMI events, and ALTER ANY EVENT NOTIFICATION.  
   
-## SQL Server Role Membership
+## SQL Server role membership
 
 The account that the SQL Server Agent service runs as must be a member of the following SQL Server roles:  
   
 - To use multiserver job processing, the account must be a member of the **msdb** database role **TargetServersRole** on the master server.  
   
-## Supported Service Account Types
+## Supported service account types
 
 The following table lists the Windows account types that can be used for the SQL Server Agent service.  
   
@@ -75,13 +75,13 @@ The following table lists the Windows account types that can be used for the SQL
 |Local System account (NT AUTHORITY\System)|Supported<br /><br />See Limitation 2 below.|Not supported|Supported<br /><br />See Limitation 2 below.|  
 |Local Service account (NT AUTHORITY\LocalService)|Not supported|Not supported|Not supported|  
   
-### Limitation 1: Using Non-administrative Accounts for Multiserver Administration
+### Limitation 1: Using non-administrative accounts for multiserver administration
 
 Enlisting target servers to a master server may fail with the following error message: "The enlist operation failed."  
   
 To resolve this error, restart both the SQL Server and the SQL Server Agent services. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine,  SQL Server Agent, or  SQL Server  Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-### Limitation 2: Using the Local System Account for Multiserver Administration
+### Limitation 2: Using the Local System account for multiserver administration
 
 Multiserver administration is supported when the SQL Server Agent service is run under the Local System account only when both the master server and the target server reside on the same computer. If you use this configuration, the following message is returned when you enlist target servers to the master server:  
   
@@ -89,19 +89,19 @@ Multiserver administration is supported when the SQL Server Agent service is run
   
 You can ignore this informational message. The enlistment operation should complete successfully. For more information, see [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md).  
   
-### Limitation 3: Using the Network Service Account When it's a SQL Server User
+### Limitation 3: Using the Network Service account when it's a SQL Server user
 
   SQL Server Agent may fail to start if you run the SQL Server Agent service under the Network Service account, and the Network Service account has been explicitly granted access to log into a SQL Server  instance as a SQL Server user.  
   
 To resolve this, reboot the computer where SQL Server is running. This only needs to be done once.
   
-### Limitation 4: Using the Network Service Account When SQL Server Reporting Services Is Running on the Same Computer
+### Limitation 4: Using the Network Service account when SQL Server Reporting Services is running on the same computer
 
   SQL Server Agent may fail to start if you run the SQL Server Agent service under the Network Service account and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is also running on the same computer.  
   
 To resolve this, reboot the computer where SQL Server is running, and then restart both the SQL Server and the SQL Server Agent services. This only needs to be done once.  
   
-## Common Tasks
+## Common tasks
 
 **To specify the startup account for the SQL Server Agent service**
   
@@ -114,7 +114,7 @@ To resolve this, reboot the computer where SQL Server is running, and then resta
 > [!NOTE]  
 > Use SQL Server Configuration Manager to specify that SQL Server Agent must start up when the operating system starts.  
   
-## See Also
+## See also
 
 - [Setting Up Windows Service Accounts](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 - [Managing Services Using SQL Computer Manager](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)  

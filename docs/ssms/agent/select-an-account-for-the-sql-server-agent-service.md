@@ -9,7 +9,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 05/04/2017
+ms.date: 11/11/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

@@ -2,7 +2,7 @@
 description: "SELECT @local_variable (Transact-SQL)"
 title: SELECT @local_variable (Transact-SQL)
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "11/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "SELECT statement [SQL Server], @local_variable"
   - "@local_variable"
   - "local variables [SQL Server]"
-ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: cawrites
 ms.author: chadam
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017"
@@ -49,7 +48,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 
 ## Arguments
 
-@*local_variable*  
+#### @*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
 {= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
@@ -69,7 +68,7 @@ Compound assignment operator:
 | ^= | Bitwise XOR and assign |  
 | \|= | Bitwise OR and assign |  
 
-*expression*  
+#### *expression*  
 Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
 
 ## Remarks
@@ -82,7 +81,7 @@ One SELECT statement can initialize multiple local variables.
 
 > [!NOTE]
 > A SELECT statement that contains a variable assignment cannot be used to also perform typical result set retrieval operations.  
-  
+
 ## Examples  
   
 ### A. Use SELECT @local_variable to return a single value  
@@ -128,9 +127,24 @@ Company Name
 ----------------------------  
 NULL  
 ```  
+
+### C. Antipattern
+
+Avoid the following pattern: 
+
+```sqlsyntax 
+SELECT @Var = <expression containing @Var> 
+...
+FROM 
+...
+```
+
+In this case, it is not guaranteed that `@Var` would be updated for each row row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order of the rows processed in row mode is nondeterminant. In batch mode, rows may be processed in large groups, not iteratively.
+
   
 ## See Also  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+
+ - [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ - [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ - [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

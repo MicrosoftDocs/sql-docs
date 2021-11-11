@@ -53,6 +53,90 @@ ms.author: mikeray
   
 13. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
 
+## <a name="ps_check_enable"></a> Check and enable FILESTREAM using PowerShell  
+
+The following PowerShell script will list installed instances  
+![ps_instances_info](https://user-images.githubusercontent.com/31902386/141381161-068f2838-2234-43a7-b0bd-322c622c79dd.png)  
+
+print current setup for FILESTREAM  
+![ps_filestream_options](https://user-images.githubusercontent.com/31902386/141381159-a9ab96a8-b0b3-445e-93a1-908be925572a.png)  
+
+and allow user to change Access Level
+
+ 
+```powershell
+# Get Name, Edition and Version of all instances
+$inst = (get-itemproperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
+$table = foreach ($i in $inst)
+{
+    @(
+        @{
+            InstanceName = $p = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL').$i
+            Edition = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup").Edition
+            Version = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup").Version
+        }
+    ) | % { New-Object object | Add-Member -NotePropertyMembers $_ -PassThru }
+}
+$table | Format-Table InstanceName, Edition, Version -AutoSize
+
+# Show FILESTREAM status for selected instance
+$instance = Read-Host -Prompt 'Enter instance name: '
+$instance = $instance.ToUpper()
+$version = Read-Host -Prompt 'Enter Major Version Number (ex. for 14.0.1000.169, enter: 14): '
+
+# Full instance name is required to restart the DB Engine
+$def_inst = if($instance -eq 'MSSQLSERVER'){$true} else{$false}
+$fullInstance = if($def_inst){$instance} else{'MSSQL$'+$instance}
+
+$wmiName = 'root\Microsoft\SqlServer\ComputerManagement' + $version
+$wmi = Get-WmiObject -Namespace $wmiName -Class FilestreamSettings | where {$_.InstanceName -eq $instance} 
+$wmi | Format-Table PSComputerName, InstanceName, ShareName, AccessLevel -AutoSize
+
+$accsLvl = @(
+    @{AccessLevel='0';FILESTREAM='disabled';FileIO='disabled';RemoteClientAccess='disabled'},
+    @{AccessLevel='1';FILESTREAM='enabled';FileIO='disabled';RemoteClientAccess='disabled'},
+    @{AccessLevel='2';FILESTREAM='enabled';FileIO='enabled';RemoteClientAccess='disabled'},
+    @{AccessLevel='3';FILESTREAM='enabled';FileIO='enabled';RemoteClientAccess='enabled'}
+    ) | % { New-Object object | Add-Member -NotePropertyMembers $_ -PassThru }
+
+$accsLvl | Format-Table AccessLevel, FILESTREAM, FileIO, RemoteClientAccess
+
+# Enable FILESTREAM
+$lvl = Read-Host -Prompt 'Enter access level to setup: '
+$wmi.EnableFilestream($lvl, $instance)
+
+Write-Host 'Restaring SQL Server Instance to apply settings'
+Get-Service -Name $fullInstance | Restart-Service -Force
+Start-Sleep -Seconds 3
+
+Set-ExecutionPolicy RemoteSigned
+Import-Module "sqlps" -DisableNameChecking
+
+$mcn = (get-item env:\computername).Value
+$fullInstance = $mcn + '\' + $instance
+
+Write-Host 'Checking if current user is sysadmin...'
+
+$sysadmin = Invoke-Sqlcmd "SELECT IS_SRVROLEMEMBER ('sysadmin') AS IsSysAdmin" -ServerInstance $fullInstance
+if ($sysadmin.IsSysAdmin -eq 0) {
+    $user = Read-Host -Prompt 'Enter SQL UserName with sysadmin rights'
+    $securePwd = Read-Host -Prompt 'Enter Password' -AsSecureString
+    $plainPwd =[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePwd))
+
+    Write-Host 'Configuring Server Instance'
+    Invoke-Sqlcmd "EXEC sp_configure filestream_access_level, 2" -ServerInstance $fullInstance -Username $user -Password $plainPwd
+    Invoke-Sqlcmd "RECONFIGURE" -ServerInstance $fullInstance -Username $user -Password $plainPwd
+}
+else {
+    Write-Host 'Configuring Server Instance'
+
+    Invoke-Sqlcmd "EXEC sp_configure filestream_access_level, 2" -ServerInstance $fullInstance
+    Invoke-Sqlcmd "RECONFIGURE" -ServerInstance $fullInstance
+}
+
+Write-Host 'SQL Server Instance' $instance 'has been configured for FILESTREAM.'
+```
+
 ##  <a name="best"></a> Best practices  
   
 ###  <a name="config"></a> Physical configuration and maintenance  
@@ -86,5 +170,3 @@ ms.author: mikeray
 -   For performance reasons, FILESTREAM filegroups and containers should reside on volumes other than the operating system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log, tempdb, or paging file.  
   
 -   Space management and policies are not directly supported by FILESTREAM. However, you can manage space and apply policies indirectly by assigning each FILESTREAM filegroup to a separate volume and using the volume's management features.  
-  
-  

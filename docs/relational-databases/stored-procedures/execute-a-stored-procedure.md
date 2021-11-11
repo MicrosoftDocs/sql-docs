@@ -21,16 +21,16 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Execute a Stored Procedure
+# Execute a stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how to execute a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  There are two different ways to execute a stored procedure. The first and most common approach is for an application or user to call the procedure. The second approach is to set the procedure to run automatically when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. When a procedure is called by an application or user, the [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE or EXEC keyword is explicitly stated in the call. The procedure can be called and executed without the EXEC keyword if the procedure is the first statement in the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+##  <a name="BeforeYouBegin"></a> Before you begin  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 The calling database collation is used when matching system procedure names. For this reason, always use the exact case of system procedure names in procedure calls. For example, this code will fail if executed in the context of a database that has a case-sensitive collation:  
   
@@ -44,7 +44,7 @@ If a user-defined procedure has the same name as a system procedure, the user-de
   
 ###  <a name="Recommendations"></a> Recommendations  
   
-#### Executing System Stored Procedures  
+#### Executing system stored procedures  
   
 System procedures begin with the prefix **sp_**. Because they logically appear in all user- and system- defined databases, they can be executed from any database without having to fully qualify the procedure name. However, we recommend schema-qualifying all system procedure names with the **sys** schema name to prevent name conflicts. The following example demonstrates the recommended method of calling a system procedure.  
   
@@ -52,7 +52,7 @@ System procedures begin with the prefix **sp_**. Because they logically appear i
 EXEC sys.sp_who;  
 ```  
   
-#### Executing User-defined Stored Procedures
+#### Executing user-defined stored procedures
   
 When executing a user-defined procedure, we recommend qualifying the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not have to search multiple schemas. It also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
 
@@ -79,7 +79,7 @@ If a nonqualified user-defined procedure is specified, the [!INCLUDE[ssDE](../..
 
 3. The **dbo** schema in the current database.  
   
-#### Executing Stored Procedures Automatically  
+#### Executing stored procedures automatically  
 
 Procedures marked for automatic execution are executed every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts and the **master** database is recovered during that startup process. Setting up procedures to execute automatically can be useful for performing database maintenance operations or for having procedures run continuously as background processes. Another use for automatic execution is to have the procedure perform system or maintenance tasks in **tempdb**, such as creating a global temporary table. This makes sure that such a temporary table will always exist when **tempdb** is re-created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
 
@@ -90,7 +90,7 @@ There is no limit to the number of startup procedures you can have, but be aware
 > [!TIP]  
 >  Do not return any result sets from a procedure that is executed automatically. Because the procedure is being executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of an application or user, there is nowhere for the result sets to go.  
   
-#### Setting, Clearing, and Controlling Automatic Execution  
+#### Setting, clearing, and controlling automatic execution  
   
 Only the system administrator (**sa**) can mark a procedure to execute automatically. In addition, the procedure must be in the **master** database, owned by **sa**, and cannot have input or output parameters.  
 

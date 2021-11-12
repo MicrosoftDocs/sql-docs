@@ -50,7 +50,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 | Release <sup>1</sup> | [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
 | [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | 2021-09-29 |
-| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.1 | 20.3.7    | 2021-08-04 |
+| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.13 | 20.3.7    | 2021-08-04 |
 | [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
 | [CU10](release-notes-cumulative-updates-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](release-notes-cumulative-updates-history.md#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |

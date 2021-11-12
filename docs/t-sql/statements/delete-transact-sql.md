@@ -2,7 +2,7 @@
 description: "DELETE (Transact-SQL)"
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/19/2020"
+ms.date: "11/12/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql

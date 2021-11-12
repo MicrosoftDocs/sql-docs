@@ -215,7 +215,7 @@ DELETE
   
  To delete rows in a heap and deallocate pages, use one of the following methods.  
   
--   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an exclusive lock on the table instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an IX lock on the object instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   Use `TRUNCATE TABLE` if all rows are to be deleted from the table.  
   

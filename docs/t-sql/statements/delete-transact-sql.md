@@ -209,7 +209,8 @@ DELETE
  TOP cannot be used in a DELETE statement against partitioned views.  
   
 ## Locking Behavior  
- By default, a DELETE statement acquires an intent exclusive (IX) lock on the table it modifies, and and a exclusive (X) Key, Page, or Row lock for each row deleted, and holds those locks until the transaction completes. With an intent exclusive (IX) lock, other transactions can read modify data, but can't take a an exclusive table lock. You can specify the TABLOCK table hint to override this default behavior and force DELETE to use an exclusive (X) table lock, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ By default, a DELETE statement acquires an intent exclusive (IX) lock on the table it modifies, and an exclusive (X) Key, Page, or Row lock for each row deleted, and holds those locks until the transaction completes. With an intent exclusive (IX) lock, other transactions can read data but can't take an exclusive table lock. You can specify the TABLOCK table hint to override this default behavior and force DELETE to use an exclusive (X) table lock, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+
   
  When rows are deleted from a heap the [!INCLUDE[ssDE](../../includes/ssde-md.md)] may use row or page locking for the operation. As a result, the pages made empty by the delete operation remain allocated to the heap. When empty pages are not deallocated, the associated space cannot be reused by other objects in the database.  
   

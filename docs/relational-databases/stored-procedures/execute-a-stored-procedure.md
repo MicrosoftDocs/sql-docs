@@ -154,6 +154,10 @@ GO
 ```  
 
 ### Set or clear a procedure for executing automatically  
+
+Startup procedures must be in the `master` database and cannot contain INPUT or OUTPUT parameters. Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup.  
+
+For more information, see [sp_procoption &#40;Transact-SQL&#41;](../system-stored-procedures/sp-procoption-transact-sql.md).
   
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -162,14 +166,12 @@ GO
 3. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to set a procedure for automatic execution.  
   
 ```sql  
-USE AdventureWorks2019;  
-GO  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
     , @OptionName = 'startup'   
-    , @OptionValue = 'on';  
+    , @OptionValue = 'on';
 ```  
   
-### Stop a procedure from executing automatically  
+### Stop a procedure from executing automatically
   
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -178,16 +180,16 @@ EXEC sp_procoption @ProcName = '<procedure name>'
 3. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to stop a procedure from executing automatically.  
   
 ```sql  
-USE AdventureWorks2019;  
-GO  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionValue = 'off';  
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
+    , @OptionValue = 'off';
 ```  
   
 ## Next steps
 
 - [Specify Parameters](../../relational-databases/stored-procedures/specify-parameters.md)
-- [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)
 - [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)
 - [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)
 - [Stored Procedures &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+- [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)
+- [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)

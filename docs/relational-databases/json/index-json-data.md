@@ -28,7 +28,8 @@ When you store JSON data in SQL Server, typically you want to filter or sort que
 ### Example 
 In this example, assume that the AdventureWorks `SalesOrderHeader` table has an `Info` column that contains various information in JSON format about sales orders. For example, it contains unstructured data about customer, sales person, shipping and billing addresses, and so forth. You could use values from the `Info` column to filter sales orders for a customer. 
 
-By default, the column `Info` used does not exist, it can be created in the `AdventureWorks` database with the following code:
+By default, the column `Info` used does not exist, it can be created in the `AdventureWorks` database with the following code. Note this does not apply to the AdventureWorksLT series of sample databases.
+
 
 
 ```sql  

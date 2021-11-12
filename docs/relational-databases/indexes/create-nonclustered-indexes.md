@@ -2,7 +2,7 @@
 description: "Create Nonclustered Indexes"
 title: "Create Nonclustered Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/17/2017"
+ms.date: 11/12/2021
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
@@ -56,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 3.  Right-click the table on which you want to create a nonclustered index and select **Design**.  
   
-4.  On the **Table Designer** menu, click **Indexes/Keys**.  
+4.  Right-click on the column you want to create the nonclustered index on and select **Indexes/Keys**.  
   
 5.  In the **Indexes/Keys** dialog box, click **Add**.  
   
@@ -92,14 +92,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 #### To create a nonclustered index on a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] with AdventurWorks2019 installed. See [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md?view=sql-server-ver15&tabs=ssms&preserve-view=true) to download AdventureWorks2019.
 2.  On the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2019;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
     IF EXISTS (SELECT name FROM sys.indexes  
@@ -113,6 +112,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     GO  
     ```  
   
-## Related content  
+## Next steps
+  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
 [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md) 

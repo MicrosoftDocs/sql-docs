@@ -1,6 +1,6 @@
 ---
-description: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
-title: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
+description: "Tutorial: Use Azure Blob Storage Service with SQL Server 2016"
+title: "Tutorial: Use Azure Blob Storage Service with SQL Server 2016"
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Tutorial: Use Azure Blob storage service with SQL Server 2016
+# Tutorial: Use Azure Blob Storage Service with SQL Server 2016
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage service tutorial. This tutorial helps you understand how to use the Microsoft Azure Blob storage service for SQL Server data files and SQL Server backups.  
+Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage service tutorial. This tutorial helps you understand how to use the Microsoft Azure Blob Storage Service for SQL Server data files and SQL Server backups.  
   
-SQL Server integration support for the Microsoft Azure Blob storage service began as a SQL Server 2012 Service Pack 1 CU2 enhancement, and has been enhanced further with SQL Server 2014 and SQL Server 2016. For an overview of the functionality and benefits of using this feature, see [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
+SQL Server integration support for the Microsoft Azure Blob Storage Service began as a SQL Server 2012 Service Pack 1 CU2 enhancement, and has been enhanced further with SQL Server 2014 and SQL Server 2016. For an overview of the functionality and benefits of using this feature, see [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
 
-This tutorial shows you how to work with  SQL Server Data Files in Microsoft Azure Blob storage service in multiple sections. Each section is focused on a specific task and the sections should be completed in sequence. First, you will learn how to create a new container in Blob storage with a stored access policy and a shared access signature. Then, you will learn how to create a SQL Server credential to integrate SQL Server with Azure Blob storage. Next, you will back up a database to Blob storage and restore it to an Azure virtual machine. You will then use SQL Server 2016 file-snapshot transaction log backup to restore to a point in time and to a new database. Finally, the tutorial will demonstrate the use of meta data system stored procedures and functions to help you understand and work with file-snapshot backups.
+This tutorial shows you how to work with  SQL Server Data Files in Microsoft Azure Blob Storage Service in multiple sections. Each section is focused on a specific task and the sections should be completed in sequence. First, you will learn how to create a new container in Blob storage with a stored access policy and a shared access signature. Then, you will learn how to create a SQL Server credential to integrate SQL Server with Azure Blob storage. Next, you will back up a database to Blob storage and restore it to an Azure virtual machine. You will then use SQL Server 2016 file-snapshot transaction log backup to restore to a point in time and to a new database. Finally, the tutorial will demonstrate the use of meta data system stored procedures and functions to help you understand and work with file-snapshot backups.
   
 ## Prerequisites
 

@@ -35,23 +35,22 @@ By default, the column `Info` used does not exist, it can be created in the `Adv
 IF NOT EXISTS(SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('[Sales].[SalesOrderHeader]') AND name = 'Info')
 	ALTER TABLE [Sales].[SalesOrderHeader] ADD [Info] NVARCHAR(MAX) NULL
 GO
-UPDATE d
-  SET 
-      Info =
+UPDATE h 
+SET [Info] =
 (
-    SELECT concat(p.FirstName, N' ', p.LastName) AS [Customer.Name], 
-           p.BusinessEntityID AS [Customer.ID], 
-           P.[PersonType] AS [Customer.Type], 
-           j.SalesOrderID AS [Order.ID], 
-           j.SalesOrderNumber AS [Order.Number], 
-           j.OrderDate AS [Order.CreationData], 
-           j.TotalDue AS [Order.TotalDue]
-    FROM Sales.SalesOrderHeader j
-         INNER JOIN [Sales].[Customer] c ON c.CustomerID = j.CustomerID
-         INNER JOIN [Person].[Person] p ON p.BusinessEntityID = c.CustomerID
-    WHERE j.SalesOrderID = d.SalesOrderID FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
+    SELECT [Customer.Name]	= concat(p.FirstName, N' ', p.LastName), 
+           [Customer.ID]	= p.BusinessEntityID, 
+           [Customer.Type]	= p.[PersonType], 
+           [Order.ID]		= soh.SalesOrderID, 
+           [Order.Number]	= soh.SalesOrderNumber, 
+           [Order.CreationData] = soh.OrderDate, 
+           [Order.TotalDue]	= soh.TotalDue
+    FROM [Sales].SalesOrderHeader AS soh
+         INNER JOIN [Sales].[Customer] AS c ON c.CustomerID = soh.CustomerID
+         INNER JOIN [Person].[Person] AS p ON p.BusinessEntityID = c.CustomerID
+    WHERE soh.SalesOrderID = h.SalesOrderID FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 )
-FROM Sales.SalesOrderHeader d; 
+FROM [Sales].SalesOrderHeader AS h; 
 ```  
 
 ### Query to optimize

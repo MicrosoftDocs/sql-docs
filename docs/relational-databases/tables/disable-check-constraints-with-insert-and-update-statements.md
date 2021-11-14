@@ -21,7 +21,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Disable Check Constraints with INSERT and UPDATE Statements
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  You can disable a check constraint for INSERT and UPDATE transactions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After you disable the check constraints, future inserts or updates to the column will not be validated against the constraint conditions. Use this option if you know that new data will violate the existing constraint or if the constraint applies only to the data already in the database.  
+  You can disable a check constraint for INSERT and UPDATE transactions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After you disable the check constraints, future inserts or updates to the column will not be validated against the constraint conditions. Use this option if you know that new data will violate the existing constraint or if the constraint applies only to the data already in the database.
+  
+  Note that check constraints are enabled and disabled with an `ALTER TABLE` statement, which always requires an Exclusive Schema Lock (`Sch-M`), so disabling constraints in a single `TRANSACTION` will block all other concurrent database connections from reading or writing to the table until your transaction is committed or rolled-back; consequently in databases with concurrent users (e.g. web-applications) you should not enable and disable check constraints using this approach as a workaround for SQL Server's lack of support for ISO SQL Deferrable Constraints. Instead, consider a database design that does not require any constraints to be violated during DML operations.
   
  **In This Topic**  
   

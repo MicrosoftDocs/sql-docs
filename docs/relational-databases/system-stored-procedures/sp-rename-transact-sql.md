@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.  
   
 > [!NOTE]
-> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object in the **dbo** schema.
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
 
 
 > [!CAUTION]  

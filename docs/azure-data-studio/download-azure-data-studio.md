@@ -25,7 +25,7 @@ Use Azure Data Studio to query, design, and manage your databases and data wareh
 For more information about Azure Data Studio, visit [What is Azure Data Studio?](what-is-azure-data-studio.md).
 
 > [!NOTE]
-> Shape the future of the Azure SQL products you're using by completing the following feedback survey: [https://aka.ms/AzureSQLSurveyNov2021](https://aka.ms/AzureSQLSurveyNov2021)
+> How can we make Azure SQL better? [Take the survey](https://aka.ms/AzureSQLSurveyNov2021)
 
 ## Download Azure Data Studio
 

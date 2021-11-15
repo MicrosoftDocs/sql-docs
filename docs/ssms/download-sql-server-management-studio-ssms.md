@@ -34,7 +34,7 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer, or in the cloud.
 
 > [!NOTE]
-> Shape the future of the Azure SQL products you're using by completing the following feedback survey: [https://aka.ms/AzureSQLSurveyNov2021](https://aka.ms/AzureSQLSurveyNov2021)
+> How can we make Azure SQL better? [Take the survey](https://aka.ms/AzureSQLSurveyNov2021)
 
 ## Download SSMS
 

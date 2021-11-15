@@ -42,7 +42,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|-|-|
-|Microsoft JDBC Driver 6.0 for SQL Server|6.0||July 14, 2021|
+|Microsoft JDBC Driver 6.0 for SQL Server|6.0|July 14, 2021|
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|August 24, 2020|
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|December 12, 2019|
 |Microsoft JDBC Driver 4.0 for SQL Server|4.0|March 6, 2017|

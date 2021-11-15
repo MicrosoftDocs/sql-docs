@@ -29,7 +29,7 @@ ms.custom: seo-dt-2019
 > [!NOTE]
 > Linked servers are available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. They are not enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] singleton and elastic pools. There are some [constraints in Managed Instance that can be found here](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
-## When to use Linked Servers?
+## When to use linked servers?
 
   Linked servers enable you to implement distributed databases that can fetch and update data in other databases. They are a good solution in the scenarios where you need to implement database sharding without need to create a custom application code or directly load from remote data sources. Linked servers offer the following advantages:  
   
@@ -41,7 +41,7 @@ ms.custom: seo-dt-2019
   
 You can configure a linked server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by using the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) statement. OLE DB providers vary greatly in the type and number of parameters required. For example, some providers require you to provide a security context for the connection using [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md). Some OLE DB providers allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to update data on the OLE DB source. Others provide only read-only data access. For information about each OLE DB provider, consult documentation for that OLE DB provider.  
   
-## Linked Server Components  
+## Linked server components  
  A linked server definition specifies the following objects:  
   
 -   An OLE DB provider  
@@ -61,7 +61,7 @@ Linked servers to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and
 ## Linked server details  
  The following illustration shows the basics of a linked server configuration.  
   
- :::image type="content" source="../../relational-databases/linked-servers/media/lsvr.gif" alt-text="Client tier, server tier, and database server tier" lightbox="../../relational-databases/linked-servers/media/lsvr.gif":::
+ :::image type="content" source="../../relational-databases/linked-servers/media/lsvr.gif" alt-text="Diagram showing client tier, server tier, and database server tier" lightbox="../../relational-databases/linked-servers/media/lsvr.gif":::
   
  Typically, linked servers are used to handle distributed queries. When a client application executes a distributed query through a linked server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parses the command and sends requests to OLE DB. The rowset request may be in the form of executing a query against the provider or opening a base table from the provider.  
 
@@ -74,10 +74,10 @@ Linked servers to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and
 > [!NOTE]
 > Linked servers support Active Directory pass-through authentication when using full delegation. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, pass-through authentication with constrained delegation is also supported; however, [resource-based constrained delegation](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is not supported.
 
-## Managing providers  
+## <a name="managing-providers"></a>Manage providers  
 There is a set of options that control how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] loads and uses OLE DB providers that are specified in the registry.  
   
-## Managing linked server definitions
+## <a name="managing-linked-server-definitions"></a>Manage linked server definitions
 When you are setting up a linked server, register the connection information and data source information with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After being registered, that data source can be referred to with a single logical name.  
   
 You can use stored procedures and catalog views to manage linked server definitions:  

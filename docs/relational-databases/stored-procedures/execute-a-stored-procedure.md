@@ -43,7 +43,7 @@ If a user-defined procedure has the same name as a system procedure, the user-de
   
 ###  <a name="Recommendations"></a> Recommendations  
   
-#### Executing system stored procedures  
+#### Execute system stored procedures  
   
 System procedures begin with the prefix `sp_`. Because they logically appear in all user- and system- defined databases, they can be executed from any database without having to fully qualify the procedure name. However, we recommend schema-qualifying all system procedure names with the `sys` schema name to prevent name conflicts. The following example demonstrates the recommended method of calling a system procedure.  
   
@@ -51,7 +51,7 @@ System procedures begin with the prefix `sp_`. Because they logically appear in 
 EXEC sys.sp_who;  
 ```  
   
-#### Executing user-defined stored procedures
+#### Execute user-defined stored procedures
   
 When executing a user-defined procedure, we recommend qualifying the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not have to search multiple schemas. It also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
 
@@ -60,7 +60,8 @@ The following example demonstrates the recommended method to execute a user-defi
 ```sql  
 USE AdventureWorks2019;  
 GO  
-EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
+EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;
+GO
 ```  
 
 -Or-  
@@ -78,7 +79,7 @@ If a nonqualified user-defined procedure is specified, the [!INCLUDE[ssDE](../..
 
 3. The `dbo` schema in the current database.  
   
-#### Executing stored procedures automatically  
+#### Execute stored procedures automatically  
 
 Procedures marked for automatic execution are executed every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts and the `master` database is recovered during that startup process. Setting up procedures to execute automatically can be useful for performing database maintenance operations or for having procedures run continuously as background processes. Another use for automatic execution is to have the procedure perform system or maintenance tasks in `tempdb`, such as creating a global temporary table. This makes sure that such a temporary table will always exist when `tempdb` is re-created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
 
@@ -89,7 +90,7 @@ There is no limit to the number of startup procedures you can have, but be aware
 > [!TIP]  
 >  Do not return any result sets from a procedure that is executed automatically. Because the procedure is being executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instead of an application or user, there is nowhere for the result sets to go.  
   
-#### Setting, clearing, and controlling automatic execution  
+#### Set, clear, and control automatic execution  
   
 Only the system administrator (`sa`) can mark a procedure to execute automatically. In addition, the procedure must be in the `master` database, owned by `sa`, and cannot have input or output parameters.  
 
@@ -169,6 +170,7 @@ For more information, see [sp_procoption &#40;Transact-SQL&#41;](../system-store
 EXEC sp_procoption @ProcName = N'<procedure name>'   
     , @OptionName = 'startup'   
     , @OptionValue = 'on';
+GO
 ```  
   
 ### Stop a procedure from executing automatically
@@ -183,6 +185,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
 EXEC sp_procoption @ProcName = N'<procedure name>'      
     , @OptionName = 'startup'
     , @OptionValue = 'off';
+GO
 ```  
   
 ## Next steps

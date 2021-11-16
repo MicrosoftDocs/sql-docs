@@ -216,28 +216,33 @@ EXEC sp_addlinkedserver 'ExcelShare',
  The following example creates a linked server for directly accessing text files, without linking the files as tables in an Access .mdb file. The provider is `Microsoft.Jet.OLEDB.4.0` and the provider string is `Text`.  
   
  The data source is the full path of the directory that contains the text files. A schema.ini file, which describes the structure of the text files, must exist in the same directory as the text files. For more information about how to create a schema.ini file, see the Jet Database Engine documentation.  
+
+ First, create a linked server.  
   
 ```sql  
---Create a linked server.  
 EXEC sp_addlinkedserver txtsrv, N'Jet 4.0',   
    N'Microsoft.Jet.OLEDB.4.0',  
    N'c:\data\distqry',  
    NULL,  
    N'Text';  
-GO  
-  
---Set up login mappings.  
+```
+
+ Set up login mappings.  
+
+```sql  
 EXEC sp_addlinkedsrvlogin txtsrv, FALSE, Admin, NULL;  
-GO  
-  
---List the tables in the linked server.  
+```
+
+List the tables in the linked server.  
+
+```sql  
 EXEC sp_tables_ex txtsrv;  
-GO  
+```
   
---Query one of the tables: file1#txt  
---using a four-part name.   
-SELECT *   
-FROM txtsrv...[file1#txt];  
+Query one of the tables, in this case `file1#txt`, using a four-part name.
+
+```sql  
+SELECT * FROM txtsrv...[file1#txt];  
 ```  
   
 ### F. Use the Microsoft OLE DB Provider for DB2  
@@ -265,42 +270,49 @@ EXEC sp_addlinkedserver
   
  The benefits of using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] include manageability, high availability, scalability, working with a familiar development model, and a relational data model. The requirements of your database application determine how it would use [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] in the cloud. You can move all of your data at once to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or progressively move some of your data while keeping the remaining data on-premises. For such a hybrid database application, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] can now be added as linked servers and the database application can issue distributed queries to combine data from [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and on-premises data sources.  
   
- Here's a simple example explaining how to connect to a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] using distributed queries:  
+ Here's a simple example explaining how to connect to a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] using distributed queries.
   
+ First, add one Azure SQL Database as linked server, using the using SQL Server Native Client. 
+
 ```sql  
--- Configure the linked server  
--- Add one Azure SQL Database as Linked Server  
 EXEC sp_addlinkedserver  
-  @server='LinkedServerName', -- here you can specify the name of the linked server  
+  @server='LinkedServerName', 
   @srvproduct='',       
-  @provider='sqlncli', -- using SQL Server Native Client  
-  @datasrc='ServerName.database.windows.net',   -- add here your server name  
+  @provider='sqlncli', 
+  @datasrc='ServerName.database.windows.net',   
   @location='',  
   @provstr='',  
-  @catalog='DatabaseName';  -- add here your database name as initial catalog (you cannot connect to the master database)  
+  @catalog='DatabaseName'; 
+```
 
--- Add credentials and options to this linked server  
+ Add credentials and options to this linked server.
+
+```sql
 EXEC sp_addlinkedsrvlogin  
   @rmtsrvname = 'LinkedServerName',  
   @useself = 'false',  
-  @rmtuser = 'LoginName',             -- add here your login on Azure DB  
-  @rmtpassword = 'myPassword'; -- add here your password on Azure DB  
+  @rmtuser = 'LoginName',
+  @rmtpassword = 'myPassword';
 
 EXEC sp_serveroption 'LinkedServerName', 'rpc out', true;  
+```
 
--- Now you can use the linked server to execute 4-part queries  
--- You can create a new table in the Azure DB  
+ Now, use the linked server to execute queries using four-part names, even to create a new table and insert data.
+
+```sql
 EXEC ('CREATE TABLE SchemaName.TableName(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at LinkedServerName;  
--- Insert data from your local SQL Server  
 EXEC ('INSERT INTO SchemaName.TableName VALUES(1),(2),(3)') at LinkedServerName; 
-  
--- Query the data using 4-part names  
+```
+
+ Query the data using four-part names:
+
+```sql
 SELECT * FROM LinkedServerName.DatabaseName.SchemaName.TableName; 
 ```  
 
 ### H. Create SQL Managed Instance linked server with managed identity Azure AD authentication
 
-To create a linked server with managed identity authentication execute following T-SQL. The authentication method uses `ActiveDirectoryMSI` in the `@provstr` parameter.
+To create a linked server with managed identity authentication, execute the following T-SQL. The authentication method uses `ActiveDirectoryMSI` in the `@provstr` parameter. Consider optionally using `@locallogin = NULL` to allow all local logins.
 
 ```sql  
 EXEC master.dbo.sp_addlinkedserver
@@ -312,12 +324,12 @@ EXEC master.dbo.sp_addlinkedserver
 EXEC master.dbo.sp_addlinkedsrvlogin
 @rmtsrvname = N'MyLinkedServer',
 @useself    = N'False',
-@locallogin = N'user1@domain1.com';  -- Use NULL to allow all local logins.
+@locallogin = N'user1@domain1.com';  
 ```  
 
 If Azure SQL Managed Instance managed identity (formerly called managed service identity) is added as login to a remote managed instance, then Managed Identity authentication is possible with linked server created as in the previous example. Both system assigned and user assigned managed identities are supported. 
 
-If primary identity is set then it will be used, otherwise system assigned managed identity will be used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, because new managed identity Application ID and Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
+If primary identity is set, it will be used, otherwise system assigned managed identity will be used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, because new managed identity Application ID and Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
 
 ```sql  
 SELECT convert(uniqueidentifier, sid) as AADApplicationID

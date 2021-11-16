@@ -1,11 +1,11 @@
 ---
 description: "sp_addlinkedserver (Transact-SQL)"
-title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
+title: "sp_addlinkedserver (Transact-SQL)"
 ms.custom: ""
 ms.date: "11/16/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -15,20 +15,19 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_addlinkedserver"
-ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: markingmyname
 ms.author: maghan
 ---
 # sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Creates a linked server. A linked server allows for access to distributed, heterogeneous queries against OLE DB data sources. After a linked server is created by using **sp_addlinkedserver**, distributed queries can be run against this server. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remote stored procedures can be executed.  
+  Creates a linked server. A linked server allows for access to distributed, heterogeneous queries against OLE DB data sources. After a linked server is created by using `sp_addlinkedserver`, distributed queries can be run against this server. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remote stored procedures can be executed.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]   
      [ , [ @provider= ] 'provider_name' ]  
      [ , [ @datasrc= ] 'data_source' ]   
@@ -38,13 +37,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## Arguments  
-[ @server = ] *\'server\'*          
+
+#### [ @server = ] *\'server\'*          
 Is the name of the linked server to create. *server* is **sysname**, with no default.  
   
-[ @srvproduct = ] *\'product_name\'*          
+#### [ @srvproduct = ] *\'product_name\'*          
 Is the product name of the OLE DB data source to add as a linked server. *product_name* is **nvarchar(**128**)**, with a default of NULL. If **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* do not have to be specified.  
   
-[ @provider = ] *\'provider_name\'*          
+#### [ @provider = ] *\'provider_name\'*          
 Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. *provider_name* must be unique for the specified OLE DB provider installed on the current computer. *provider_name* is **nvarchar(128)**, with a default of NULL; however, if *provider_name* is omitted, SQLNCLI is used. 
 
 > [!NOTE]
@@ -53,13 +53,13 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
 > [!IMPORTANT] 
 > The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
   
-[ @datasrc = ] *\'data_source\'*          
+#### [ @datasrc = ] *\'data_source\'*          
  Is the name of the data source as interpreted by the OLE DB provider. *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.  
   
-[ @location = ] *\'location\'*          
+#### [ @location = ] *\'location\'*          
  Is the location of the database as interpreted by the OLE DB provider. *location* is **nvarchar(**4000**)**, with a default of NULL. *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.  
   
-[ @provstr = ] *\'provider_string\'*          
+#### [ @provstr = ] *\'provider_string\'*          
  Is the OLE DB provider-specific connection string that identifies a unique data source. *provider_string* is **nvarchar(**4000**)**, with a default of NULL. *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.  
   
  When the linked server is created against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as SERVER=*servername*\\*instancename* to specify a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* is the name of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.  
@@ -67,7 +67,7 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
 > [!NOTE]
 > To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **\@provstr** or **\@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
   
-[ @catalog = ] *\'catalog\'*       
+#### [ @catalog = ] *\'catalog\'*       
  Is the catalog to be used when a connection is made to the OLE DB provider. *catalog* is **sysname**, with a default of NULL. *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  
   
 ## Return Code Values  
@@ -77,9 +77,9 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
  None.  
   
 ## Remarks  
- The following table shows the ways that a linked server can be set up for data sources that can be accessed through OLE DB. A linked server can be set up more than one way for a particular data source; there can be more than one row for a data source type. This table also shows the **sp_addlinkedserver** parameter values to be used for setting up the linked server.  
+ The following table shows the ways that a linked server can be set up for data sources that can be accessed through OLE DB. A linked server can be set up more than one way for a particular data source; there can be more than one row for a data source type. This table also shows the `sp_addlinkedserver` parameter values to be used for setting up the linked server.  
   
-|Remote OLE DB data source|OLE DB provider|product_name|provider_name|data_source|location|provider_string|catalog|  
+|**Remote OLE DB data source**|**OLE DB provider**|**product_name**|**provider_name**|**data_source**|**location**|**provider_string**|**catalog**|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (default)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider||**SQLNCLI**|Network name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for default instance)|||Database name (optional)|  
@@ -102,20 +102,20 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
   
  In a clustered environment, when you specify file names to point to OLE DB data sources, use the universal naming convention name (UNC) or a shared drive to specify the location.  
   
- **sp_addlinkedserver** cannot be executed within a user-defined transaction.  
+ The stored procedure `sp_addlinkedserver` cannot be executed within a user-defined transaction.  
    
  > [!IMPORTANT]
 > Azure SQL Managed Instance currently supports only SQL Server, SQL Database, and other SQL Managed Instance as remote data sources.
 
 > [!IMPORTANT]
-> When a linked server is created by using **sp_addlinkedserver**, a default self-mapping is added for all local logins. For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
+> When a linked server is created by using `sp_addlinkedserver`, a default self-mapping is added for all local logins. For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
   
 ## Permissions  
  The `sp_addlinkedserver` statement requires the `ALTER ANY LINKED SERVER` permission. (The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)  
   
 ## Examples  
   
-### A. Using the Microsoft SQL Server OLE DB Provider  
+### A. Use the Microsoft SQL Server OLE DB Provider  
  The following example creates a linked server named `SEATTLESales`. The product name is `SQL Server`, and no provider name is used.  
   
 ```sql  
@@ -150,11 +150,11 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
   
-### B. Using the Microsoft OLE DB Provider for Microsoft Access  
+### B. Use the Microsoft OLE DB Provider for Microsoft Access  
  The Microsoft.Jet.OLEDB.4.0 provider connects to Microsoft Access databases that use the 2002-2003 format. The following example creates a linked server named `SEATTLE Mktg`.  
  
 > [!NOTE]  
-> This example assumes that both [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and the sample **Northwind** database are installed and that the **Northwind** database resides in C:\Msoffice\Access\Samples.  
+> This example assumes that both [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and the sample `Northwind` database are installed and that the `Northwind` database resides in C:\Msoffice\Access\Samples on the same server as the SQL Server instance. 
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -162,11 +162,10 @@ EXEC sp_addlinkedserver
    @provider = N'Microsoft.Jet.OLEDB.4.0',   
    @srvproduct = N'OLE DB Provider for Jet',  
    @datasrc = N'C:\MSOffice\Access\Samples\Northwind.mdb';  
-
 GO  
 ```  
  
-### C. Using the Microsoft OLE DB Provider for ODBC with the data_source parameter  
+### C. Use the Microsoft OLE DB Provider for ODBC with the data_source parameter  
  The following example creates a linked server named `SEATTLE Payroll` that uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC (`MSDASQL`) and the *data_source* parameter.  
   
 > [!NOTE]  
@@ -181,7 +180,7 @@ EXEC sp_addlinkedserver
 GO  
 ```  
   
-### D. Using the Microsoft OLE DB Provider for Excel spreadsheet  
+### D. Use the Microsoft OLE DB Provider for Excel spreadsheet  
  To create a linked server definition using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet to access an Excel spreadsheet in the 1997 - 2003 format, first create a named range in Excel by specifying the columns and rows of the Excel worksheet to select. The name of the range can then be referenced as a table name in a distributed query.  
   
 ```sql  
@@ -202,7 +201,7 @@ SELECT *
 GO  
 ```  
   
- If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running under a domain account that has access to a remote share, a UNC path can be used instead of a mapped drive.  
+ If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running under a domain account that has access to a remote share, a UNC path can be used instead of a mapped drive.
   
 ```sql  
 EXEC sp_addlinkedserver 'ExcelShare',  
@@ -213,10 +212,10 @@ EXEC sp_addlinkedserver 'ExcelShare',
    'Excel 5.0';  
 ```  
     
-### E. Using the Microsoft OLE DB Provider for Jet to access a text file  
+### E. Use the Microsoft OLE DB Provider for Jet to access a text file  
  The following example creates a linked server for directly accessing text files, without linking the files as tables in an Access .mdb file. The provider is `Microsoft.Jet.OLEDB.4.0` and the provider string is `Text`.  
   
- The data source is the full path of the directory that contains the text files. A schema.ini file, which describes the structure of the text files, must exist in the same directory as the text files. For more information about how to create a Schema.ini file, see the Jet Database Engine documentation.  
+ The data source is the full path of the directory that contains the text files. A schema.ini file, which describes the structure of the text files, must exist in the same directory as the text files. For more information about how to create a schema.ini file, see the Jet Database Engine documentation.  
   
 ```sql  
 --Create a linked server.  
@@ -241,7 +240,7 @@ SELECT *
 FROM txtsrv...[file1#txt];  
 ```  
   
-### F. Using the Microsoft OLE DB Provider for DB2  
+### F. Use the Microsoft OLE DB Provider for DB2  
  The following example creates a linked server named `DB2` that uses the `Microsoft OLE DB Provider for DB2`.  
   
 ```sql  
@@ -278,25 +277,25 @@ EXEC sp_addlinkedserver
   @datasrc='ServerName.database.windows.net',   -- add here your server name  
   @location='',  
   @provstr='',  
-  @catalog='DatabaseName'  -- add here your database name as initial catalog (you cannot connect to the master database)  
+  @catalog='DatabaseName';  -- add here your database name as initial catalog (you cannot connect to the master database)  
 
 -- Add credentials and options to this linked server  
 EXEC sp_addlinkedsrvlogin  
   @rmtsrvname = 'LinkedServerName',  
   @useself = 'false',  
   @rmtuser = 'LoginName',             -- add here your login on Azure DB  
-  @rmtpassword = 'myPassword' -- add here your password on Azure DB  
+  @rmtpassword = 'myPassword'; -- add here your password on Azure DB  
 
 EXEC sp_serveroption 'LinkedServerName', 'rpc out', true;  
 
 -- Now you can use the linked server to execute 4-part queries  
 -- You can create a new table in the Azure DB  
-EXEC ('CREATE TABLE SchemaName.TableName(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at LinkedServerName  
+EXEC ('CREATE TABLE SchemaName.TableName(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at LinkedServerName;  
 -- Insert data from your local SQL Server  
-EXEC ('INSERT INTO SchemaName.TableName VALUES(1),(2),(3)') at LinkedServerName  
+EXEC ('INSERT INTO SchemaName.TableName VALUES(1),(2),(3)') at LinkedServerName; 
   
 -- Query the data using 4-part names  
-SELECT * FROM LinkedServerName.DatabaseName.SchemaName.TableName 
+SELECT * FROM LinkedServerName.DatabaseName.SchemaName.TableName; 
 ```  
 
 ### H. Create SQL Managed Instance linked server with managed identity Azure AD authentication
@@ -308,7 +307,7 @@ EXEC master.dbo.sp_addlinkedserver
 @server     = N'MyLinkedServer',
 @srvproduct = N'',
 @provider   = N'MSOLEDBSQL',
-@provstr    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433;Authentication=ActiveDirectoryMSI;'
+@provstr    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433;Authentication=ActiveDirectoryMSI;';
 
 EXEC master.dbo.sp_addlinkedsrvlogin
 @rmtsrvname = N'MyLinkedServer',
@@ -323,7 +322,7 @@ If primary identity is set then that one will be used, otherwise system assigned
 ```sql  
 SELECT convert(uniqueidentifier, sid) as AADApplicationID
 FROM sys.server_principals
-WHERE name = '<managed_instance_name>'
+WHERE name = '<managed_instance_name>';
 ```  
 
 ### I. Create SQL Managed Instance linked server with pass-through Azure AD authentication
@@ -335,13 +334,14 @@ EXEC master.dbo.sp_addlinkedserver
 @server     = N'MyLinkedServer',
 @srvproduct = N'',
 @provider   = N'MSOLEDBSQL',
-@datasrc    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433'
+@datasrc    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433';
 ```  
 
 With pass-through authentication, security context of the local login is carried over to a remote instance.
 Pass-through authentication requires the AAD principal to be added as login on both local and remote Azure SQL Managed Instance. Both Managed Instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can login to a local instance and query the remote instance via the linked server object.
 
-## See Also  
+## See also  
+
  [Distributed Queries Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
@@ -350,5 +350,3 @@ Pass-through authentication requires the AAD principal to be added as login on b
  [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
-  

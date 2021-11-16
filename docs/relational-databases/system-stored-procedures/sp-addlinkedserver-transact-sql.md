@@ -39,13 +39,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## Arguments  
 
 #### [ @server = ] *\'server\'*          
-Is the name of the linked server to create. *server* is **sysname**, with no default.  
+Is the name of the linked server to create. The argument *server* is **sysname**, with no default.  
   
 #### [ @srvproduct = ] *\'product_name\'*          
-Is the product name of the OLE DB data source to add as a linked server. *product_name* is **nvarchar(**128**)**, with a default of NULL. If **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* do not have to be specified.  
+Is the product name of the OLE DB data source to add as a linked server. The value *product_name* is **nvarchar(128)**, with a default of NULL. If the value is **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* do not have to be specified.  
   
 #### [ @provider = ] *\'provider_name\'*          
-Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. *provider_name* must be unique for the specified OLE DB provider installed on the current computer. *provider_name* is **nvarchar(128)**, with a default of NULL; however, if *provider_name* is omitted, SQLNCLI is used. 
+Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. The *provider_name* must be unique for the specified OLE DB provider installed on the current computer. The value *provider_name* is **nvarchar(128)**, with a default of NULL; however, if *provider_name* is omitted, SQLNCLI is used. 
 
 > [!NOTE]
 > Using SQLNCLI will redirect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry.
@@ -54,21 +54,21 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
 > The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
   
 #### [ @datasrc = ] *\'data_source\'*          
- Is the name of the data source as interpreted by the OLE DB provider. *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.  
+ Is the name of the data source as interpreted by the OLE DB provider. The value *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.  
   
 #### [ @location = ] *\'location\'*          
- Is the location of the database as interpreted by the OLE DB provider. *location* is **nvarchar(**4000**)**, with a default of NULL. *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.  
+ Is the location of the database as interpreted by the OLE DB provider. The value *location* is **nvarchar(**4000**)**, with a default of NULL. The argument *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.  
   
 #### [ @provstr = ] *\'provider_string\'*          
- Is the OLE DB provider-specific connection string that identifies a unique data source. *provider_string* is **nvarchar(**4000**)**, with a default of NULL. *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.  
+ Is the OLE DB provider-specific connection string that identifies a unique data source. The value *provider_string* is **nvarchar(**4000**)**, with a default of NULL. The argument *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.  
   
- When the linked server is created against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as SERVER=*servername*\\*instancename* to specify a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* is the name of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.  
+ When the linked server is created against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as `SERVER=servername\\instancename` to specify a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The *servername* is the name of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.  
   
 > [!NOTE]
 > To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **\@provstr** or **\@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
   
 #### [ @catalog = ] *\'catalog\'*       
- Is the catalog to be used when a connection is made to the OLE DB provider. *catalog* is **sysname**, with a default of NULL. *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  
+ Is the catalog to be used when a connection is made to the OLE DB provider. The value *catalog* is **sysname**, with a default of NULL. The argument *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  
@@ -111,7 +111,7 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
 > When a linked server is created by using `sp_addlinkedserver`, a default self-mapping is added for all local logins. For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
   
 ## Permissions  
- The `sp_addlinkedserver` statement requires the `ALTER ANY LINKED SERVER` permission. (The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)  
+ The `sp_addlinkedserver` statement requires the **ALTER ANY LINKED SERVER** permission. (The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)  
   
 ## Examples  
   
@@ -261,7 +261,7 @@ EXEC sp_addlinkedserver
 ### G. Add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a Linked Server For Use With Distributed Queries on Cloud and On-Premises Databases  
  You can add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a linked server and then use it with distributed queries that span the on-premises and cloud databases. This is a component for database hybrid solutions spanning on-premises corporate networks and the Azure cloud.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (except the virtual master) can be added as an individual linked server and then used directly in your database applications as any other database.  
+ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (except the logical server's `master` database) can be added as an individual linked server and then used directly in your database applications as any other database.  
   
  The benefits of using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] include manageability, high availability, scalability, working with a familiar development model, and a relational data model. The requirements of your database application determine how it would use [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] in the cloud. You can move all of your data at once to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or progressively move some of your data while keeping the remaining data on-premises. For such a hybrid database application, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] can now be added as linked servers and the database application can issue distributed queries to combine data from [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and on-premises data sources.  
   
@@ -317,7 +317,7 @@ EXEC master.dbo.sp_addlinkedsrvlogin
 
 If Azure SQL Managed Instance managed identity (formerly called managed service identity) is added as login to a remote managed instance, then Managed Identity authentication is possible with linked server created as in the previous example. Both system assigned and user assigned managed identities are supported. 
 
-If primary identity is set then that one will be used, otherwise system assigned managed identity will be used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, because new managed identity Application ID and Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
+If primary identity is set then it will be used, otherwise system assigned managed identity will be used. If managed identity is recreated with the same name, login on the remote instance also needs to be recreated, because new managed identity Application ID and Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
 
 ```sql  
 SELECT convert(uniqueidentifier, sid) as AADApplicationID
@@ -338,15 +338,15 @@ EXEC master.dbo.sp_addlinkedserver
 ```  
 
 With pass-through authentication, security context of the local login is carried over to a remote instance.
-Pass-through authentication requires the AAD principal to be added as login on both local and remote Azure SQL Managed Instance. Both Managed Instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can login to a local instance and query the remote instance via the linked server object.
+Pass-through authentication requires the AAD principal to be added as login on both local and remote Azure SQL Managed Instance. Both Managed Instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can sign in to a local instance and query the remote instance via the linked server object.
 
 ## See also  
 
- [Distributed Queries Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ - [Distributed Queries Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ - [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ - [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ - [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ - [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ - [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

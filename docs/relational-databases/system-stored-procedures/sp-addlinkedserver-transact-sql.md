@@ -2,7 +2,7 @@
 description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/26/2021"
+ms.date: "11/16/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -152,7 +152,7 @@ EXEC sp_addlinkedserver
   
 ### B. Using the Microsoft OLE DB Provider for Microsoft Access  
  The Microsoft.Jet.OLEDB.4.0 provider connects to Microsoft Access databases that use the 2002-2003 format. The following example creates a linked server named `SEATTLE Mktg`.  
-  
+ 
 > [!NOTE]  
 > This example assumes that both [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and the sample **Northwind** database are installed and that the **Northwind** database resides in C:\Msoffice\Access\Samples.  
   
@@ -162,23 +162,10 @@ EXEC sp_addlinkedserver
    @provider = N'Microsoft.Jet.OLEDB.4.0',   
    @srvproduct = N'OLE DB Provider for Jet',  
    @datasrc = N'C:\MSOffice\Access\Samples\Northwind.mdb';  
+
 GO  
 ```  
-  
- The Microsoft.ACE.OLEDB.12.0 provider connects to Microsoft Access databases that use the 2007 format. The following example creates a linked server named `SEATTLE Mktg`.  
-  
-> [!NOTE]  
-> This example assumes that both [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and the sample **Northwind** database are installed and that the **Northwind** database resides in C:\Msoffice\Access\Samples.  
-  
-```sql  
-EXEC sp_addlinkedserver   
-   @server = N'SEATTLE Mktg',   
-   @provider = N'Microsoft.ACE.OLEDB.12.0',   
-   @srvproduct = N'OLE DB Provider for ACE',  
-   @datasrc = N'C:\MSOffice\Access\Samples\Northwind.accdb';  
-GO  
-```  
-  
+ 
 ### C. Using the Microsoft OLE DB Provider for ODBC with the data_source parameter  
  The following example creates a linked server named `SEATTLE Payroll` that uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC (`MSDASQL`) and the *data_source* parameter.  
   
@@ -225,17 +212,7 @@ EXEC sp_addlinkedserver 'ExcelShare',
    NULL,  
    'Excel 5.0';  
 ```  
-  
- To connect to an Excel spreadsheet in the Excel 2007 format use the ACE provider.  
-  
-```sql  
-EXEC sp_addlinkedserver @server = N'ExcelDataSource',   
-@srvproduct=N'ExcelData', @provider=N'Microsoft.ACE.OLEDB.12.0',   
-@datasrc=N'C:\DataFolder\People.xlsx',  
-@provstr=N'EXCEL 12.0' ;  
-  
-```  
-  
+    
 ### E. Using the Microsoft OLE DB Provider for Jet to access a text file  
  The following example creates a linked server for directly accessing text files, without linking the files as tables in an Access .mdb file. The provider is `Microsoft.Jet.OLEDB.4.0` and the provider string is `Text`.  
   

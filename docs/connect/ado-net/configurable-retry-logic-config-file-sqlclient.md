@@ -48,6 +48,8 @@ Default retry logic options for an application can be changed by adding the foll
 
 ### Enable safety switch
 
+> [!NOTE] Starting from Microsoft.Data.SqlClient v4.0, the App Context switch "Switch.Microsoft.Data.SqlClient.EnableRetryLogic" will no longer be required to use the configurable retry logic feature. The feature is now supported in production. The default behavior of the feature will continue to be a non-retry policy, which will need to be overridden by client applications to enable retries.
+
 You can enable the safety switch through a configuration file. To learn how to enable it through application code, see [Enable configurable retry logic](appcontext-switches.md#enable-configurable-retry-logic).
 
 - **.NET Framework**: For more information, see [AppContextSwitchOverrides element](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element).

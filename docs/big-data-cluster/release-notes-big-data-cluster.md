@@ -4,8 +4,8 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: melqin,dacoelho
-ms.date: 10/05/2021
+ms.reviewer: dacoelho
+ms.date: 11/17/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -28,6 +28,7 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
 | CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
 | CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
 
@@ -49,6 +50,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 
 | Release <sup>1</sup> | [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | 2021-11-24 |
 | [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | 2021-09-29 |
 | [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.13 | 20.3.7    | 2021-08-04 |
 | [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |

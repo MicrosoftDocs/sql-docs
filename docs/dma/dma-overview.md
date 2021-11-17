@@ -63,7 +63,7 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
   - Information issues: detects partially supported or deprecated features that are used in source package(s).
 
 > [!NOTE]
-> DMA does not support data migrations to Azure SQL Managed Instance. Recommendation is to use the [Azure Database Migration Service](/azure/dms/dms-overview), which supports both online and offline data migrations to Azure SQL Managed Instance.
+> DMA does not support database migrations to Azure SQL Managed Instance. Recommendation is to use the [Azure Database Migration Service](/azure/dms/dms-overview), which supports both online and offline database migrations to Azure SQL Managed Instance.
 
 ## Prerequisites
 

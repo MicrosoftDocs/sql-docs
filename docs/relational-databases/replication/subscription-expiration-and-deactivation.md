@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Transactional Replication  
  Transactional replication uses the maximum distribution retention period (the `@max_distretention` parameter of [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) and the publication retention period (the `@retention` parameter of [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
--   If a subscription is not synchronized within the maximum distribution retention period (default of 72 hours) and there are changes in the distribution database that have not been delivered to the Subscriber, the subscription will be marked deactivated by the **Distribution clean up** job that runs on the Distributor. The subscription must be reinitialized.  
+-   If a subscription is not synchronized within the maximum distribution retention period (default of 72 hours) and there are changes in the distribution database that have not been delivered to the Subscriber, the subscription will be marked deactivated by the **Expired Subscription clean up** job that runs on the Distributor. The subscription must be reinitialized.  
   
 -   If a subscription is not synchronized within the publication retention period (default of 336 hours), the subscription will expire and be dropped by the **Expired subscription clean up** job that runs on the Publisher. The subscription must be recreated and synchronized.  
   

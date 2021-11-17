@@ -1,7 +1,7 @@
 ---
 title: SQL Server Big Data Clusters CU14 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server Big Data Clusters Cumulative Update 13 contents.
+description: This article describes the SQL Server Big Data Clusters Cumulative Update 14 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 13 (CU14).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 14 (CU14).
 
 ## CU14 changes and new capabilities
 

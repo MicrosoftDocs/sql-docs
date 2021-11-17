@@ -24,6 +24,9 @@ The following release notes apply to [!INCLUDE[big-data-clusters-nover](../inclu
    > [!IMPORTANT]
    > Kubernetes is a fast paced ecosystem. It is key to keep your platform updated in order to be secure, and to be on a tested configuration for SQL Server Big Data Clusters.
 
+   > [!WARNING]
+   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to kubernetes version 1.20 will fix the problem.
+
 The following table contains the tested configuration matrix for each release of SQL Server Big Data Clusters:
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |

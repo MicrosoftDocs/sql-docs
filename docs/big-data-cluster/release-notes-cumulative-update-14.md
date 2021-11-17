@@ -34,7 +34,7 @@ For detailed SQL Server engine changes, check the [official SQL Server CU14 know
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
-| Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
+| Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 

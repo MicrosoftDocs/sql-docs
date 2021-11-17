@@ -28,7 +28,7 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
-| CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
+| CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
 | CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
 

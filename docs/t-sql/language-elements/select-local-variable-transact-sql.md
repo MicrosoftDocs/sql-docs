@@ -136,7 +136,7 @@ NULL
 
 ### C. Antipattern use of recursive variable assignment
 
-Avoid the following pattern for concatenation of values: 
+Avoid the following pattern for recursive use of variables and expressions: 
 
 ```sqlsyntax 
 SELECT @Var = <expression containing @Var> 
@@ -144,22 +144,32 @@ FROM
 ...
 ```
 
-In this case, it is not guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order and frequency in which the assignments are processed is nondeterminant.
+In this case, it is not guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order and frequency in which the assignments are processed is nondeterminant. This applies to expressions containing variables string concatenation, as demonstrated below, but also to expressions with non-string variables or += style operators. Use aggregation functions instead for a set-based operation instead of a row-by-row operation.
 
-Instead, consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md). This example uses the AdventureWorks2016 or AdventureWorks2019 sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). 
+For string concatenation, instead consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md). This example uses the AdventureWorks2016 or AdventureWorks2019 sample database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). 
+
+An example to avoid, where using ORDER BY in attempt to order concatenation causes list to be incomplete:
 
 ```sql
---Avoid
 DECLARE @List AS nvarchar(max);
 SELECT @List = CONCAT(COALESCE(@List + ', ',''), p.LastName)
   FROM Person.Person AS p
   WHERE p.FirstName = 'William'
-  ORDER BY p.BusinessEntityID; --Using ORDER BY in attempt to order concatenation causes list to be incomplete
+  ORDER BY p.BusinessEntityID; 
 SELECT @List;
 ```
 
+Result set:
+
+```
+(No column name)
+---
+Walker
+```
+
+Instead, consider:
+
 ```sql
---Instead
 DECLARE @List AS nvarchar(max);
 SELECT @List = STRING_AGG(p.LastName,', ') WITHIN GROUP (ORDER BY p.BusinessEntityID)
   FROM Person.Person AS p
@@ -167,6 +177,13 @@ SELECT @List = STRING_AGG(p.LastName,', ') WITHIN GROUP (ORDER BY p.BusinessEnti
 SELECT @List;       
 ```
 
+Result set:
+
+```
+(No column name)
+---
+Vong, Conner, Hapke, Monroe, Richter, Sotelo, Vong, Ngoh, White, Harris, Martin, Thompson, Martinez, Robinson, Clark, Rodriguez, Smith, Johnson, Williams, Jones, Brown, Davis, Miller, Moore, Taylor, Anderson, Thomas, Lewis, Lee, Walker
+```
   
 ## See also  
 

@@ -2,7 +2,7 @@
 description: "SELECT @local_variable (Transact-SQL)"
 title: SELECT @local_variable (Transact-SQL)
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "11/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "SELECT statement [SQL Server], @local_variable"
   - "@local_variable"
   - "local variables [SQL Server]"
-ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: cawrites
 ms.author: chadam
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017"
@@ -49,7 +48,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 
 ## Arguments
 
-@*local_variable*  
+#### @*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
 {= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
@@ -57,7 +56,7 @@ Assign the value on the right to the variable on the left.
   
 Compound assignment operator:  
 
-| operator | action |  
+| **operator** | **action** |  
 | -------- | ------ |  
 | = | Assigns the expression that follows, to the variable. |  
 | += | Add and assign |  
@@ -69,7 +68,7 @@ Compound assignment operator:
 | ^= | Bitwise XOR and assign |  
 | \|= | Bitwise OR and assign |  
 
-*expression*  
+#### *expression*  
 Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
 
 ## Remarks
@@ -82,21 +81,24 @@ One SELECT statement can initialize multiple local variables.
 
 > [!NOTE]
 > A SELECT statement that contains a variable assignment cannot be used to also perform typical result set retrieval operations.  
-  
+
 ## Examples  
   
+
+
 ### A. Use SELECT @local_variable to return a single value  
- In the following example, the variable `@var1` is assigned `Generic Name` as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the `Generic Name` value.  
+ In the following example, the variable `@var1` is assigned "Generic Name" as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the "Generic Name" value. 
+
+ This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ```sql  
--- Uses AdventureWorks    
-  
+-- Uses AdventureWorks2019LT
 DECLARE @var1 VARCHAR(30);         
 SELECT @var1 = 'Generic Name';         
-SELECT @var1 = Name         
-FROM Sales.Store         
-WHERE CustomerID = 1000 ;        
-SELECT @var1 AS 'Company Name';  
+SELECT @var1 = [Name]
+FROM SalesLT.Product         
+WHERE ProductID = 1000000; --Value does not exist
+SELECT @var1 AS 'ProductName';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -109,16 +111,19 @@ SELECT @var1 AS 'Company Name';
   
 ### B. Use SELECT @local_variable to return null  
  In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` does not exist, the subquery returns no value and the variable is set to `NULL`.  
+
+ This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ```sql  
--- Uses AdventureWorks  
-  
-DECLARE @var1 VARCHAR(30)   
-SELECT @var1 = 'Generic Name'   
-SELECT @var1 = (SELECT Name   
-FROM Sales.Store   
-WHERE CustomerID = 1000)   
-SELECT @var1 AS 'Company Name' ;  
+-- Uses AdventureWorks2019  
+DECLARE @var1 VARCHAR(30);   
+SELECT @var1 = 'Generic Name';
+   
+SELECT @var1 = (SELECT [Name]
+FROM SalesLT.Product         
+WHERE ProductID = 1000000); --Value does not exist   
+
+SELECT @var1 AS 'Company Name';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -128,9 +133,65 @@ Company Name
 ----------------------------  
 NULL  
 ```  
+
+### C. Antipattern use of recursive variable assignment
+
+Avoid the following pattern for recursive use of variables and expressions: 
+
+```sqlsyntax 
+SELECT @Var = <expression containing @Var> 
+FROM 
+...
+```
+
+In this case, it is not guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order and frequency in which the assignments are processed is nondeterminant. This applies to expressions containing variables string concatenation, as demonstrated below, but also to expressions with non-string variables or += style operators. Use aggregation functions instead for a set-based operation instead of a row-by-row operation.
+
+For string concatenation, instead consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md). This example uses the AdventureWorks2016 or AdventureWorks2019 sample database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). 
+
+An example to avoid, where using ORDER BY in attempt to order concatenation causes list to be incomplete:
+
+```sql
+DECLARE @List AS nvarchar(max);
+SELECT @List = CONCAT(COALESCE(@List + ', ',''), p.LastName)
+  FROM Person.Person AS p
+  WHERE p.FirstName = 'William'
+  ORDER BY p.BusinessEntityID; 
+SELECT @List;
+```
+
+Result set:
+
+```
+(No column name)
+---
+Walker
+```
+
+Instead, consider:
+
+```sql
+DECLARE @List AS nvarchar(max);
+SELECT @List = STRING_AGG(p.LastName,', ') WITHIN GROUP (ORDER BY p.BusinessEntityID)
+  FROM Person.Person AS p
+  WHERE p.FirstName = 'William';
+SELECT @List;       
+```
+
+Result set:
+
+```
+(No column name)
+---
+Vong, Conner, Hapke, Monroe, Richter, Sotelo, Vong, Ngoh, White, Harris, Martin, Thompson, Martinez, Robinson, Clark, Rodriguez, Smith, Johnson, Williams, Jones, Brown, Davis, Miller, Moore, Taylor, Anderson, Thomas, Lewis, Lee, Walker
+```
   
-## See Also  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+## See also  
+
+ - [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ - [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ - [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+
+## Next steps
+
+ - [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md)

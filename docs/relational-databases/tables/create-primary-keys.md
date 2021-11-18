@@ -73,7 +73,7 @@ The following example creates a table and defines a primary key on the column `T
 CREATE TABLE Production.TransactionHistoryArchive1
    (
       TransactionID int IDENTITY (1,1) NOT NULL
-      , CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)
+      , CONSTRAINT PK_TransactionHistoryArchive1_TransactionID PRIMARY KEY CLUSTERED (TransactionID)
    )
 ;
 ```

@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
-author: bazizi
-ms.author: v-beaziz
+author: David-Engel
+ms.author: v-davidengel
 ---
 # Using Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

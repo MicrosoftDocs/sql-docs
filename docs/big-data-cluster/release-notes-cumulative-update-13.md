@@ -51,7 +51,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.3 LTS
-* __SQL Server__: 15.0.4153.1
+* __SQL Server__: 15.0.4178.15
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2

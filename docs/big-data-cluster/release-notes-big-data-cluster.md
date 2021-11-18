@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 11/17/2021
+ms.date: 11/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -53,7 +53,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 
 | Release <sup>1</sup> | [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | 2021-11-24 |
+| [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | 2021-11-22 |
 | [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | 2021-09-29 |
 | [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.13 | 20.3.7    | 2021-08-04 |
 | [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |

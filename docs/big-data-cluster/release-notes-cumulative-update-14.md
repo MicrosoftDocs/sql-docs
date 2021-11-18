@@ -5,7 +5,7 @@ description: This article describes the SQL Server Big Data Clusters Cumulative 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 11/17/2021
+ms.date: 11/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -27,9 +27,9 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 * [Apache Spark 3.1.2](spark-3-upgrade.md) and the [SQL Server Big Data Clusters runtime for Apache Spark](runtime-for-apache-spark.md) where brought in on Cumulative Update 13. If you are migrating from CU12 or earlier, beware of the Spark 3 upgrade.
 
     > [!CAUTION]
-    > Before upgrading make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).
+    > Before upgrading directly from CU12 or earlier, make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).
 
-For detailed SQL Server engine changes, check the [official SQL Server CU14 knowledge base article](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535).
+For detailed SQL Server engine changes, check the [official SQL Server CU14 knowledge base article](https://support.microsoft.com/help/5005679).
 
 ## Tested configurations for CU14
 
@@ -47,8 +47,8 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 
 ## System environment
 
-* __Operating System__: Ubuntu 20.04.3 LTS
-* __SQL Server__: 15.0.4153.1
+* __Operating System__: Ubuntu 20.04.5 LTS
+* __SQL Server__: 15.0.4188.2
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2
@@ -133,9 +133,9 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 |    chardet    |    4.0.0    |    libuv    |    1.41.1    |    tenacity    |    7.0.0    |
 |    charls    |    2.2.0    |    libvorbis    |    1.3.7    |    tensorboard    |    2.4.1    |
 |    click    |    8.0.1    |    libwebp-base    |    1.2.0    |    tensorboard-plugin-wit    |    1.8.0    |
-|    cloudpickle    |    1.6.0    |    libxcb    |    1.14    |    tensorflow    |    2.4.1    |
-|    conda    |    4.9.2    |    libxgboost    |    1.4.0    |    tensorflow-base    |    2.4.1    |
-|    conda-package-handling    |    1.7.3    |    libxkbcommon    |    1.0.3    |    tensorflow-estimator    |    2.4.0    |
+|    cloudpickle    |    1.6.0    |    libxcb    |    1.14    |    tensorflow    |    2.6.0    |
+|    conda    |    4.9.2    |    libxgboost    |    1.4.0    |    tensorflow-base    |    2.6.0    |
+|    conda-package-handling    |    1.7.3    |    libxkbcommon    |    1.0.3    |    tensorflow-estimator    |    2.6.0    |
 |    configparser    |    5.0.2    |    libxml2    |    2.9.12    |    termcolor    |    1.1.0    |
 |    cryptography    |    3.4.7    |    libzopfli    |    1.0.3    |    textblob    |    0.15.3    |
 |    cudatoolkit    |    11.1.1    |    lightgbm    |    3.2.1    |    threadpoolctl    |    2.1.0    |
@@ -148,7 +148,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 |    dash-renderer    |    1.9.1    |    markupsafe    |    2.0.1    |    typing-extensions    |    3.10.0.0    |
 |    dash-table    |    4.11.3    |    matplotlib    |    3.4.2    |    typing_extensions    |    3.10.0.0    |
 |    dash_cytoscape    |    0.2.0    |    matplotlib-base    |    3.4.2    |    unixodbc    |    2.3.9    |
-|    dask-core    |    2021.6.2    |    matplotlib-inline    |    0.1.2    |    urllib3    |    1.26.4    |
+|    dask-core    |    2021.6.2    |    matplotlib-inline    |    0.1.2    |    urllib3    |    1.26.7    |
 |    databricks-cli    |    0.12.1    |    mkl    |    2021.2.0    |    wcwidth    |    0.2.5    |
 |    dataclasses    |    0.8    |    mkl-devel    |    2021.2.0    |    webencodings    |    0.5.1    |
 |    dbus    |    1.13.18    |    mkl-include    |    2021.2.0    |    werkzeug    |    2.0.1    |
@@ -163,7 +163,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 |    flask-compress    |    1.10.1    |    ncurses    |    6.2    |    xorg-libxrender    |    0.9.10    |
 |    fontconfig    |    2.13.1    |    networkx    |    2.5.1    |    xorg-renderproto    |    0.11.1    |
 |    freetype    |    2.10.4    |    ninja    |    1.10.2    |    xorg-xextproto    |    7.3.0    |
-|    fsspec    |    2021.6.1    |    nltk    |    3.6.2    |    xorg-xproto    |    7.0.31    |
+|    fsspec    |    2021.6.1    |    nltk    |    3.6.5    |    xorg-xproto    |    7.0.31    |
 |    future    |    0.18.2    |    nspr    |    4.3    |    xz    |    5.2.5    |
 |    gast    |    0.3.3    |    nss    |    3.67    |    yaml    |    0.2.5    |
 |    gensim    |    3.8.3    |    numba    |    0.53.1    |    yarl    |    1.6.3    |
@@ -188,7 +188,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 |    gst-plugins-base    |    1.18.4    |    pcre    |    8.45    |    backports-tempfile    |    1    |
 |    gstreamer    |    1.18.4    |    pexpect    |    4.8.0    |    backports-weakref    |    1.0.post1    |
 |    h5py    |    2.10.0    |    pickleshare    |    0.7.5    |    contextlib2    |    0.6.0.post1    |
-|    hdf5    |    1.10.6    |    pillow    |    8.2.0    |    docker    |    4.4.4    |
+|    hdf5    |    1.10.6    |    pillow    |    8.3.2    |    docker    |    4.4.4    |
 |    html5lib    |    1.1    |    pip    |    21.1.1    |    jeepney    |    0.6.0    |
 |    hummingbird-ml    |    0.4.0    |    pixman    |    0.40.0    |    jmespath    |    0.10.0    |
 |    icu    |    68.1    |    plotly    |    4.14.3    |    jsonpickle    |    2.0.0    |

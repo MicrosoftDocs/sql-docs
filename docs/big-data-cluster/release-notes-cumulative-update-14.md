@@ -29,7 +29,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
     > [!CAUTION]
     > Before upgrading directly from CU12 or earlier, make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).
 
-For detailed SQL Server engine changes, check the [official SQL Server CU14 knowledge base article](https://support.microsoft.com/help/5005679).
+For detailed SQL Server engine changes, check the [official SQL Server CU14 knowledge base article](https://support.microsoft.com/help/5007182).
 
 ## Tested configurations for CU14
 

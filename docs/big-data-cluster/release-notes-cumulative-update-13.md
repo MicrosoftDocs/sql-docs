@@ -4,8 +4,8 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes the SQL Server Big Data Clusters Cumulative Update 13 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: melqin,dacoelho
-ms.date: 10/06/2021
+ms.reviewer: dacoelho
+ms.date: 11/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -33,6 +33,9 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 * [New Advanced Encryption Standard (AES) optional parameter for the automatically generated AD accounts](active-directory-deploy.md)
 
 For detailed SQL Server engine changes, check the [official SQL Server CU13 knowledge base article](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535).
+
+> [!NOTE]
+> Due to the [runtime for Apache Spark](runtime-for-apache-spark.md), some container image sizes increased considerably (two fold for the mssql-hadoop container). Average cluster upgrade time might be impacted by this.
 
 ## Tested configurations for CU13
 

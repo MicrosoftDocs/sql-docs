@@ -32,7 +32,7 @@ Consider a web application. This can benefit from peer-to-peer replication in th
   
 - If a node requires maintenance or the whole system requires an upgrade, each node can be taken offline and added back to the system without affecting the availability of the application.  
   
- Although peer-to-peer replication enables scaling out of read operations, write performance for the topology is like that for a single node. This is because ultimately all inserts, updates, and deletes are propagated to all nodes. Replication recognizes when a change has been applied to a given node and prevents changes from cycling through the nodes more than one time. We strongly recommend that write operations for each row be performed at only node, for the following reasons:  
+ Although peer-to-peer replication enables scaling out of read operations, write performance for the topology is like that for a single node. This is because ultimately all inserts, updates, and deletes are propagated to all nodes. Replication recognizes when a change has been applied to a given node and prevents changes from cycling through the nodes more than one time. We strongly recommend that write operations for each row be performed at only one node, for the following reasons:  
   
 - If a row is modified at more than one node, it can cause a conflict or even a lost update when the row is propagated to other nodes.  
   

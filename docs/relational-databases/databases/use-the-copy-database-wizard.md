@@ -46,7 +46,7 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
 > Considering a migration to Azure SQL? Review the following tools instead of the Copy Database Wizard:
 > - [Migrate to Azure SQL guides](/azure/azure-sql/migration-guides/)
 > - [Azure Database Migration Service](/azure/dms/)
-> - [Azure Data Migration Assistant](/sql/dma/dma-migrateonpremsqltosqldb)
+> - [Azure Data Migration Assistant](../../dma/dma-migrateonpremsqltosqldb.md)
 > - [Azure Migrate Service](/azure/migrate/migrate-services-overview)
 
 ##  <a name="Restrictions"></a> Limitations and restrictions  

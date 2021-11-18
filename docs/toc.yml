@@ -13449,7 +13449,7 @@ items:
       - name: sp_autostats
         href: relational-databases/system-stored-procedures/sp-autostats-transact-sql.md
       - name: sp_batch_params
-        href: relational-databases/system-stored-procedures/sp-batch-params-transact-sql.md
+        href: ./relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md
       - name: sp_bindefault
         href: relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md
       - name: sp_bindrule

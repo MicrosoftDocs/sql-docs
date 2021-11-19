@@ -55,7 +55,7 @@ SQL Server components are executable programs that run as Windows services. A pr
 
 ### Database Engine service
 
-The service process that represents the SQL Server Database Engine is referred to as the Database Engine service. The Database Engine can be the default instance (limit one per computer) or can be one of many named instances on the computer. Use [**SQL Server Configuration Manager**](/sql/relational-databases/sql-server-configuration-manager) to determine which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
+The service process that represents the SQL Server Database Engine is referred to as the Database Engine service. The Database Engine can be the default instance (limit one per computer) or can be one of many named instances on the computer. Use [**SQL Server Configuration Manager**](../../relational-databases/sql-server-configuration-manager.md) to determine which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
 
 ### SQL Server Agent service
 
@@ -386,6 +386,6 @@ You can stop, start, or restart the SQL Server service as needed using the follo
 
 - [Overview of SQL Server Setup Documentation](../install-windows/install-sql-server.md)
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager)
+- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
 - [Start SQL Server with Minimal Configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
 - [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)

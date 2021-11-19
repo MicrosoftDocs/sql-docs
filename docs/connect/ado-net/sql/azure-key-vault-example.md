@@ -10,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: David-Engel
 ms.author: v-davidengel
-ms.reviewer: v-jizho2
 ---
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted

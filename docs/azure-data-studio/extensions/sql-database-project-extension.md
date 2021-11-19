@@ -53,7 +53,7 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 
 ### VS Code
 
-The SQL Database Projects extension is installed with the [mssql](/sql/tools/visual-studio-code/sql-server-develop-use-vscode) extension for VS Code.
+The SQL Database Projects extension is installed with the [mssql](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) extension for VS Code.
 
 ## Dependencies
 

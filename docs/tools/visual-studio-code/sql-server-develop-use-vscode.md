@@ -17,7 +17,7 @@ ms.date: 10/27/2021
 
 This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to work with SQL Server and Azure SQL databases on Windows, macOS, and Linux. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
-The mssql extension for VS Code includes the [SQL Database projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) with support for SQL projects on Windows, macOS, and Linux.
+The mssql extension for VS Code includes the [SQL Database projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md) with support for SQL projects on Windows, macOS, and Linux.
 
 ## Install the mssql extension in VS Code
 
@@ -219,6 +219,6 @@ If you need to save and run SQL scripts later, for administration or a larger de
 ## Next steps
 
 - If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../../t-sql/language-reference.md).
-- Develop for SQL databases in VS Code with the [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension)
+- Develop for SQL databases in VS Code with the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md)
 - For more information on using or contributing to the mssql extension, see the [mssql extension project wiki](https://github.com/Microsoft/vscode-mssql/wiki).
 - For more information on using Visual Studio Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).

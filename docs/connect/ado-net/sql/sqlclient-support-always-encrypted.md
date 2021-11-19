@@ -9,7 +9,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
-ms.reviewer: v-jizho2
 ---
 
 # Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server

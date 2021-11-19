@@ -12,7 +12,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
-ms.reviewer: v-jizho2
 ---
 # SqlClient troubleshooting guide
 

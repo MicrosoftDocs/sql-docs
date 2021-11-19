@@ -47,10 +47,10 @@ ms.author: mlandzic
 ### A. Using STConvexHull() on an uninitialized geography instance  
  The following example uses `STConvexHull()` on an uninitialized **geography** instance.  
   
-```
+```sql
  DECLARE @g geography;  
  SELECT @g.STConvexHull();
- ```  
+```  
   
 ### B. Using STConvexHull on an empty geography instance  
  The following example uses `STConvexHull()` on an empty `Polygon` instance.  

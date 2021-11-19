@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ---
 # AppContext switches in Sqlclient
 

@@ -15,6 +15,7 @@ ms.author: v-davidengel
 # Download Microsoft SqlClient Data Provider for SQL Server
 
 ## Downloading the driver
+
 The Microsoft.Data.SqlClient package is available on NuGet.org. Refer to the dependencies section from the links below to download the dependencies.
 
 ## Download stable versions of Microsoft SqlClient Data Provider for SQL Server

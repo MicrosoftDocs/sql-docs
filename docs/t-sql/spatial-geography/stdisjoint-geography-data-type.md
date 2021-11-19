@@ -50,7 +50,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `STDisjoint()` to test two `geography` instances to see if they are spatially disjoint.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  

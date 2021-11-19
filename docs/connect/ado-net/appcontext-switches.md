@@ -22,7 +22,7 @@ The AppContext class allows SqlClient to provide new functionality while continu
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
-Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 is not supported by the driver and has been removed from the supported protocols list by default. Users can switch back to forcing use of operating system's client protocols, by setting  the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols"** to true as below:
+Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 is not supported by the driver and has been removed from the supported protocols list by default. Users can switch back to forcing use of the operating system's client protocols, by setting the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols"** to true:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols", true);

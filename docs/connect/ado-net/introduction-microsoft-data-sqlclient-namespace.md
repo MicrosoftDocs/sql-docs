@@ -15,6 +15,83 @@ ms.reviewer: v-jizho2
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
+### Release notes for Microsoft.Data.SqlClient 4.0
+
+Release notes are also available in the GitHub Repository: [4.0 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/4.0).
+
+
+### Breaking changes in 4.0
+
+- Changed `Encrypt` connection string property to be `true` by default. [#1210](https://github.com/dotnet/SqlClient/pull/1210) [Read more](#encrypt-default-value-set-to-true)
+- The driver now throws `SqlException` replacing `AggregateException` for active directory authentication modes. [#1213](https://github.com/dotnet/SqlClient/pull/1213)
+- Dropped obsolete `Asynchronous Processing` connection property from .NET Framework. [#1148](https://github.com/dotnet/SqlClient/pull/1148)
+- Removed `Configurable Retry Logic` safety switch. [#1254](https://github.com/dotnet/SqlClient/pull/1254) [Read more](#remove-configurable-retry-logic-safety-switch)
+- Dropped support for .NET Core 2.1 [#1272](https://github.com/dotnet/SqlClient/pull/1272)
+- [.NET Framework] Exception will not be thrown if a User ID is provided in the connection string when using `Active Directory Integrated` authentication [#1359](https://github.com/dotnet/SqlClient/pull/1359)
+
+### New features in 4.0
+
+### Encrypt default value set to true
+The default value of the `Encrypt` connection setting has been changed from `false` to `true`. With the growing use of cloud databases and the need to ensure those connections are secure, it's time for this backwards-compatibility-breaking change.
+
+### Ensure connections fail when encryption is required
+In scenarios where client encryption libraries were disabled or unavailable, it was possible for unencrypted connections to be made when Encrypt was set to true or the server required encryption.
+
+###  App Context Switch for using System default protocols
+TLS 1.3 is not supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the App Context switch below:
+
+ `Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols`
+
+### Enable optimized parameter binding
+Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names will not be sent to the SQL server when the command is executed.
+
+```cs
+public class SqlCommand
+{
+	public bool EnableOptimizedParameterBinding { get; set; }
+}
+```
+
+### Remove configurable retry logic safety switch
+
+The App Context switch "Switch.Microsoft.Data.SqlClient.EnableRetryLogic" will no longer be required to use the configurable retry logic feature. The feature is now supported in production. The default behavior of the feature will continue to be a non-retry policy, which will need to be overridden by client applications to enable retries.
+
+### SqlLocalDb shared instance support
+
+SqlLocalDb shared instances are now supported when using Managed SNI.
+
+- Possible scenarios:
+  - `(localdb)\.` (connects to default instance of SqlLocalDb)
+  - `(localdb)\<named instance>`
+  - `(localdb)\.\<shared instance name>` (*newly added support)
+
+###  `GetFieldValueAsync<T>` and `GetFieldValue<T>` support for `XmlReader`, `TextReader`, `Stream` types
+
+
+`XmlReader`, `TextReader`, `Stream` types are now supported when using `GetFieldValueAsync<T>` and `GetFieldValue<T>`.
+
+Example usage:
+
+```cs
+using (SqlConnection connection = new SqlConnection(connectionString))
+{
+    using (SqlCommand command = new SqlCommand(query, connection))
+    {
+        connection.Open();
+        using (SqlDataReader reader = await command.ExecuteReaderAsync())
+        {
+            if (await reader.ReadAsync())
+            {
+                using (Stream stream = await reader.GetFieldValueAsync<Stream>(1))
+                {
+                    // Continue to read from stream
+                }
+            }
+        }
+    }
+}
+```
+
 ## Release notes for Microsoft.Data.SqlClient 3.0
 
 Release notes are also available in the GitHub Repository: [3.0 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/3.0).
@@ -167,7 +244,7 @@ With this authentication mode, the driver acquires a token by passing "[DefaultA
 
 ### Custom master key store provider registration enhancements
 
-Microsoft.Data.SqlClient now offers more control of where master key store providers are accessible in an application in order to better support multi-tenant applications and their use of column encryption/decryption. The following APIs are introduced to allow registration of custom master key store providers on instances of `SqlConnection` and `SqlCommand`:
+Microsoft.Data.SqlClient now offers more control of where master key store providers are accessible in an application to better support multi-tenant applications and their use of column encryption/decryption. The following APIs are introduced to allow registration of custom master key store providers on instances of `SqlConnection` and `SqlCommand`:
 
 ```cs
 public class SqlConnection

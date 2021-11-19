@@ -18,6 +18,15 @@ ms.reviewer: v-daenge
 
 The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
 
+## Force use of operating system encryption protocols
+
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
+
+Starting with Microsoft.Data.SqlClient 4.0, TLS 1.3 is not supported by the driver and has been removed from the supported protocols list by default. Users can switch back to forcing use of the operating system's client protocols, by setting the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols"** to true:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols", true);
+```
 ## Enabling decimal truncation behavior
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
@@ -103,6 +112,9 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", true);
 ```
 
 * For information on how to enable the switch by using a configuration file see [Enable safety switch](configurable-retry-logic-config-file-sqlclient.md#enable-safety-switch).
+
+> [!NOTE]
+> Starting from Microsoft.Data.SqlClient v4.0, the App Context switch "Switch.Microsoft.Data.SqlClient.EnableRetryLogic" will no longer be required to use the configurable retry logic feature. The feature is now supported in production. The default behavior of the feature will continue to be a non-retry policy, which will need to be overridden by client applications to enable retries.
 
 ## Enabling rowversion null behavior
 

@@ -11,7 +11,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
-ms.reviewer: v-chmalh
 ---
 # Connection string builders
 

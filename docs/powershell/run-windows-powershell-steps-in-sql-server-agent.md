@@ -67,7 +67,20 @@ Each SQL Server Agent job step that runs PowerShell with the **sqlps** module la
 
 6. In the **Process exit code of a successful command** box, enter a value from 0 to 999999.
 
-7. In the **Command** box, enter powershell.exe with parameters specifying the PowerShell script to be run.
+7. In the **Command** box, enter PowerShell.exe with parameters specifying the PowerShell script to be run. This is pretty much what you would write at a cmd command prompt, so take a look at `PowerShell.exe -?` for all the possible options.
+
+   - Example 1: Runs a simple cmdlet.
+     ```cmd
+        PowerShell.exe -Command "& { Get-Date }"
+     ```
+   - Example 2: Runs a query via SQLCmd.exe against the current server (the example uses SQL Agent token replacement).
+     ```cmd
+        PowerShell.exe -Command "& {&SQLCmd.exe -S $(ESCAPE_NONE(SRVR)) -Q 'select @@version'}"
+     ```
+   - Example 3: Runs a PowerShell script (using PS7, which would have to be installed on the server). Note that the path to the script is local to the server where SQL Agent is running.
+     ```cmd
+        PWSH.exe -ExecutionPolicy RemoteSigned -File X:\MyScripts\script001.ps1 
+     ```
 
 8. select the **Advanced** page to set job step options, such as: what action to take if the job step succeeds or fails, how many times SQL Server Agent should try to execute the job step, and the file where SQL Server Agent can write the job step output. Only members of the **sysadmin** fixed server role can write job step output to an operating system file.
 
